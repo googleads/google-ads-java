@@ -1,0 +1,153 @@
+
+# Serialized TestSuite proto
+
+# Modify scalar in a wrapper proto
+test_cases {
+  description: "Modify scalar in a wrapper proto"
+  original_resource {
+    wrapper {
+      value: "a"
+    }
+  }
+  modified_resource {
+    wrapper {
+      value: "b"
+    }
+  }
+  expected_mask {
+    paths: "wrapper"
+  }
+}
+
+# Create wrapper proto
+test_cases {
+  description: "Create wrapper proto"
+  original_resource {
+  }
+  modified_resource {
+    wrapper {
+      value: "a"
+    }
+  }
+  expected_mask {
+    paths: "wrapper"
+  }
+}
+
+# Modify element in a repeated field
+test_cases {
+  description: "Modify element in a repeated field"
+  original_resource {
+    foos {
+      num: 1
+    }
+    foos {
+      num: 2
+    }
+  }
+  modified_resource {
+    foos {
+      num: 1
+    }
+    foos {
+      num: 3
+    }
+  }
+  expected_mask {
+    paths: "foos"
+  }
+}
+
+# Modify element in a nested repeated field
+test_cases {
+  description: "Modify element in a nested repeated field"
+  original_resource {
+    foos {
+      bars {
+        num: 1
+      }
+    }
+  }
+  modified_resource {
+    foos {
+      bars {
+        num: 2
+      }
+    }
+  }
+  expected_mask {
+    paths: "foos"
+  }
+}
+
+# Create submessage
+test_cases {
+  description: "Create submessage"
+  original_resource {
+  }
+  modified_resource {
+    foo {
+      num: 1
+    }
+  }
+  expected_mask {
+    # List of all fields of foo
+    paths: "foo.num"
+    paths: "foo.bar"
+    paths: "foo.bars"
+  }
+}
+
+# Modify submessage
+test_cases {
+  description: "Modify submessage"
+  original_resource {
+    foo {
+    }
+  }
+  modified_resource {
+    foo {
+      num: 1
+    }
+  }
+  expected_mask {
+    paths: "foo.num"
+  }
+}
+
+# Clear submessage
+test_cases {
+  description: "Clear submessage"
+  original_resource {
+    foo {
+    }
+  }
+  modified_resource {
+  }
+  expected_mask {
+    paths: "foo"
+  }
+}
+
+# No change
+test_cases {
+  description: "No change"
+  original_resource {
+    wrapper {
+      value: "a"
+    }
+    foos {
+      num: 1
+    }
+  }
+  modified_resource {
+    wrapper {
+      value: "a"
+    }
+    foos {
+      num: 1
+    }
+  }
+  expected_mask {
+  }
+}

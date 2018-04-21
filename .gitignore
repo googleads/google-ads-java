@@ -1,0 +1,45 @@
+# IntelliJ IDE files
+# See: https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
+.idea/
+*.iml
+google-ads/*.iml
+google-ads-examples/*.iml
+
+# Eclipse IDE files
+# See: https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
+.factorypath
+.metadata/
+.project
+.settings/
+google-ads/.classpath
+google-ads/.factorypath
+google-ads/.project
+google-ads/.settings/
+google-ads-examples/.classpath
+google-ads-examples/.factorypath
+google-ads-examples/.project
+google-ads-examples/.settings/
+
+# Maven build output
+target/
+google-ads/*/target/
+google-ads-examples/*/target/
+
+# maven-release-plugin output
+# See: https://github.com/github/gitignore/blob/master/Maven.gitignore
+pom.xml.releaseBackup
+pom.xml.tag
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+google-ads/*/pom.xml.releaseBackup
+google-ads/*/pom.xml.tag
+google-ads/*/pom.xml.versionsBackup
+google-ads/*/pom.xml.next
+google-ads/*/release.properties
+## maven-shade-plugin output
+dependency-reduced-pom.xml
+google-ads/*/dependency-reduced-pom.xml
+## buildnumber-maven-plugin output
+buildNumber.properties
+google-ads/*/buildNumber.properties
