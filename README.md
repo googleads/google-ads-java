@@ -76,8 +76,8 @@ This project hosts the Java client library for the Google Ads API.
     **If you're accessing the Google Ads API using your own credentials...**
 
     *   Follow the instructions at
-        https://developers.google.com/google-ads/api/docs/guides/authentication#installed
-        to create an OAuth2 client ID and secret for the installed application
+        https://developers.google.com/google-ads/api/docs/oauth/cloud-project
+        to create an OAuth2 client ID and secret for the **installed application**
         OAuth2 flow.
 
     *   Run the
@@ -106,9 +106,9 @@ This project hosts the Java client library for the Google Ads API.
     **If you're accessing the Google Ads API on behalf of clients...**
 
     *   Follow the instructions at
-        https://developers.google.com/google-ads/api/docs/guides/authentication#webapp
-        to create an OAuth2 client ID and secret for the web application OAuth2
-        flow.
+        https://developers.google.com/google-ads/api/docs/oauth/cloud-project
+        to create an OAuth2 client ID and secret for the **web application**
+        OAuth2 flow.
 
     *   Run the
         [AuthenticateInWebApplication](https://github.com/googleads/google-ads-java/blob/master/google-ads-examples/src/main/java/com/google/ads/googleads/examples/authentication/AuthenticateInWebApplication.java)
@@ -137,7 +137,7 @@ This project hosts the Java client library for the Google Ads API.
     file named `ads.properties` in your home directory.
 
     To ensure that the credentials in that file are valid, run the
-    [GetCampaigns example](https://github.com/googleads/google-ads-java/tree/master/google-ads-examples/src/main/java/com/google/ads/googleads/examples/basicoperations/GetCampaigns),
+    [GetCampaigns example](https://github.com/googleads/google-ads-java/tree/master/google-ads-examples/src/main/java/com/google/ads/googleads/examples/basicoperations/GetCampaigns.java),
     either via your IDE or from the command line using Maven. This example
     requires a `--customerId` parameter where the value is your AdWords
     account's customer ID without dashes. Here's how you can pass that
