@@ -48,8 +48,10 @@ import java.util.regex.Pattern;
  * flow.
  *
  * <p>This example will start a basic server that listens for requests at {@code
- * http://localhost:PORT}, where {@code PORT} is the port specified in {@link #main(String[])}. See
- * the comments in {@link #main(String[])} for details.
+ * http://localhost:PORT}, where {@code PORT} is dynamically assigned.
+ *
+ * <p>IMPORTANT: You must add {@code http://localhost/oauth2callback} to the "Authorize redirect
+ * URIs" list in your Google Cloud Console project before running this example.
  */
 public class AuthenticateInWebApplication {
 
