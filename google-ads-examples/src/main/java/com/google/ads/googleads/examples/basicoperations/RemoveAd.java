@@ -90,7 +90,7 @@ public class RemoveAd {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param adGroupId the ad group ID.
-   * @param adId the ID of the ad to pause.
+   * @param adId the ID of the ad to remove.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
