@@ -34,6 +34,21 @@
  * </code>
  * </pre>
  *
+ * =============================== AdGroupBidModifierServiceClient ===============================
+ *
+ * <p>Service Description: Service to manage ad group bid modifiers.
+ *
+ * <p>Sample for AdGroupBidModifierServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient = AdGroupBidModifierServiceClient.create()) {
+ *   String formattedResourceName = AdGroupBidModifierServiceClient.formatAdGroupBidModifierName("[CUSTOMER]", "[AD_GROUP_BID_MODIFIER]");
+ *   AdGroupBidModifier response = adGroupBidModifierServiceClient.getAdGroupBidModifier(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ============================= AdGroupCriterionServiceClient =============================
  *
  * <p>Service Description: Service to manage ad group criteria.
@@ -139,6 +154,21 @@
  * </code>
  * </pre>
  *
+ * ============================== GeoTargetConstantServiceClient ==============================
+ *
+ * <p>Service Description: Service to fetch geo target constants.
+ *
+ * <p>Sample for GeoTargetConstantServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
+ *   String formattedResourceName = GeoTargetConstantServiceClient.formatGeoTargetConstantName("[GEO_TARGET_CONSTANT]");
+ *   GeoTargetConstant response = geoTargetConstantServiceClient.getGeoTargetConstant(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * =========================== GoogleAdsFieldServiceClient ===========================
  *
  * <p>Service Description: Service to fetch Google Ads API fields.
@@ -181,6 +211,21 @@
  * try (KeywordViewServiceClient keywordViewServiceClient = KeywordViewServiceClient.create()) {
  *   String formattedResourceName = KeywordViewServiceClient.formatKeywordViewName("[CUSTOMER]", "[KEYWORD_VIEW]");
  *   KeywordView response = keywordViewServiceClient.getKeywordView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * =========================== RecommendationServiceClient ===========================
+ *
+ * <p>Service Description: Service to manage recommendations.
+ *
+ * <p>Sample for RecommendationServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
+ *   String formattedResourceName = RecommendationServiceClient.formatRecommendationName("[CUSTOMER]", "[RECOMMENDATION]");
+ *   Recommendation response = recommendationServiceClient.getRecommendation(formattedResourceName);
  * }
  * </code>
  * </pre>

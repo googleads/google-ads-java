@@ -1,19 +1,19 @@
 package com.google.ads.googleads.v0.services;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.2.0)",
+    value = "by gRPC proto compiler (version 1.10.0)",
     comments = "Source: google/ads/googleads/v0/services/campaign_service.proto")
 public final class CampaignServiceGrpc {
 
@@ -31,23 +31,79 @@ public final class CampaignServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGetCampaignMethod()} instead. 
   public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCampaignRequest,
-      com.google.ads.googleads.v0.resources.Campaign> METHOD_GET_CAMPAIGN =
-      io.grpc.MethodDescriptor.create(
-          io.grpc.MethodDescriptor.MethodType.UNARY,
-          generateFullMethodName(
-              "google.ads.googleads.v0.services.CampaignService", "GetCampaign"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.services.GetCampaignRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.resources.Campaign.getDefaultInstance()));
+      com.google.ads.googleads.v0.resources.Campaign> METHOD_GET_CAMPAIGN = getGetCampaignMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCampaignRequest,
+      com.google.ads.googleads.v0.resources.Campaign> getGetCampaignMethod;
+
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCampaignRequest,
+      com.google.ads.googleads.v0.resources.Campaign> getGetCampaignMethod() {
+    return getGetCampaignMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCampaignRequest,
+      com.google.ads.googleads.v0.resources.Campaign> getGetCampaignMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCampaignRequest, com.google.ads.googleads.v0.resources.Campaign> getGetCampaignMethod;
+    if ((getGetCampaignMethod = CampaignServiceGrpc.getGetCampaignMethod) == null) {
+      synchronized (CampaignServiceGrpc.class) {
+        if ((getGetCampaignMethod = CampaignServiceGrpc.getGetCampaignMethod) == null) {
+          CampaignServiceGrpc.getGetCampaignMethod = getGetCampaignMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.GetCampaignRequest, com.google.ads.googleads.v0.resources.Campaign>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.CampaignService", "GetCampaign"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.GetCampaignRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.resources.Campaign.getDefaultInstance()))
+                  .setSchemaDescriptor(new CampaignServiceMethodDescriptorSupplier("GetCampaign"))
+                  .build();
+          }
+        }
+     }
+     return getGetCampaignMethod;
+  }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getMutateCampaignsMethod()} instead. 
   public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCampaignsRequest,
-      com.google.ads.googleads.v0.services.MutateCampaignsResponse> METHOD_MUTATE_CAMPAIGNS =
-      io.grpc.MethodDescriptor.create(
-          io.grpc.MethodDescriptor.MethodType.UNARY,
-          generateFullMethodName(
-              "google.ads.googleads.v0.services.CampaignService", "MutateCampaigns"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.services.MutateCampaignsRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.services.MutateCampaignsResponse.getDefaultInstance()));
+      com.google.ads.googleads.v0.services.MutateCampaignsResponse> METHOD_MUTATE_CAMPAIGNS = getMutateCampaignsMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCampaignsRequest,
+      com.google.ads.googleads.v0.services.MutateCampaignsResponse> getMutateCampaignsMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCampaignsRequest,
+      com.google.ads.googleads.v0.services.MutateCampaignsResponse> getMutateCampaignsMethod() {
+    return getMutateCampaignsMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCampaignsRequest,
+      com.google.ads.googleads.v0.services.MutateCampaignsResponse> getMutateCampaignsMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCampaignsRequest, com.google.ads.googleads.v0.services.MutateCampaignsResponse> getMutateCampaignsMethod;
+    if ((getMutateCampaignsMethod = CampaignServiceGrpc.getMutateCampaignsMethod) == null) {
+      synchronized (CampaignServiceGrpc.class) {
+        if ((getMutateCampaignsMethod = CampaignServiceGrpc.getMutateCampaignsMethod) == null) {
+          CampaignServiceGrpc.getMutateCampaignsMethod = getMutateCampaignsMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.MutateCampaignsRequest, com.google.ads.googleads.v0.services.MutateCampaignsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.CampaignService", "MutateCampaigns"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateCampaignsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateCampaignsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CampaignServiceMethodDescriptorSupplier("MutateCampaigns"))
+                  .build();
+          }
+        }
+     }
+     return getMutateCampaignsMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -65,7 +121,7 @@ public final class CampaignServiceGrpc {
   }
 
   /**
-   * Creates a new ListenableFuture-style stub that supports unary and streaming output calls on the service
+   * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
   public static CampaignServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
@@ -86,7 +142,7 @@ public final class CampaignServiceGrpc {
      */
     public void getCampaign(com.google.ads.googleads.v0.services.GetCampaignRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.resources.Campaign> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_CAMPAIGN, responseObserver);
+      asyncUnimplementedUnaryCall(getGetCampaignMethodHelper(), responseObserver);
     }
 
     /**
@@ -96,20 +152,20 @@ public final class CampaignServiceGrpc {
      */
     public void mutateCampaigns(com.google.ads.googleads.v0.services.MutateCampaignsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCampaignsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_MUTATE_CAMPAIGNS, responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCampaignsMethodHelper(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_GET_CAMPAIGN,
+            getGetCampaignMethodHelper(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v0.services.GetCampaignRequest,
                 com.google.ads.googleads.v0.resources.Campaign>(
                   this, METHODID_GET_CAMPAIGN)))
           .addMethod(
-            METHOD_MUTATE_CAMPAIGNS,
+            getMutateCampaignsMethodHelper(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v0.services.MutateCampaignsRequest,
@@ -148,7 +204,7 @@ public final class CampaignServiceGrpc {
     public void getCampaign(com.google.ads.googleads.v0.services.GetCampaignRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.resources.Campaign> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_CAMPAIGN, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCampaignMethodHelper(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -159,7 +215,7 @@ public final class CampaignServiceGrpc {
     public void mutateCampaigns(com.google.ads.googleads.v0.services.MutateCampaignsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCampaignsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_MUTATE_CAMPAIGNS, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCampaignsMethodHelper(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -191,7 +247,7 @@ public final class CampaignServiceGrpc {
      */
     public com.google.ads.googleads.v0.resources.Campaign getCampaign(com.google.ads.googleads.v0.services.GetCampaignRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_CAMPAIGN, getCallOptions(), request);
+          getChannel(), getGetCampaignMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -201,7 +257,7 @@ public final class CampaignServiceGrpc {
      */
     public com.google.ads.googleads.v0.services.MutateCampaignsResponse mutateCampaigns(com.google.ads.googleads.v0.services.MutateCampaignsRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_MUTATE_CAMPAIGNS, getCallOptions(), request);
+          getChannel(), getMutateCampaignsMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -234,7 +290,7 @@ public final class CampaignServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.resources.Campaign> getCampaign(
         com.google.ads.googleads.v0.services.GetCampaignRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_CAMPAIGN, getCallOptions()), request);
+          getChannel().newCall(getGetCampaignMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -245,7 +301,7 @@ public final class CampaignServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.services.MutateCampaignsResponse> mutateCampaigns(
         com.google.ads.googleads.v0.services.MutateCampaignsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_MUTATE_CAMPAIGNS, getCallOptions()), request);
+          getChannel().newCall(getMutateCampaignsMethodHelper(), getCallOptions()), request);
     }
   }
 
@@ -293,10 +349,38 @@ public final class CampaignServiceGrpc {
     }
   }
 
-  private static final class CampaignServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class CampaignServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    CampaignServiceBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.google.ads.googleads.v0.services.CampaignServiceProto.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("CampaignService");
+    }
+  }
+
+  private static final class CampaignServiceFileDescriptorSupplier
+      extends CampaignServiceBaseDescriptorSupplier {
+    CampaignServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class CampaignServiceMethodDescriptorSupplier
+      extends CampaignServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    CampaignServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -309,9 +393,9 @@ public final class CampaignServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new CampaignServiceDescriptorSupplier())
-              .addMethod(METHOD_GET_CAMPAIGN)
-              .addMethod(METHOD_MUTATE_CAMPAIGNS)
+              .setSchemaDescriptor(new CampaignServiceFileDescriptorSupplier())
+              .addMethod(getGetCampaignMethodHelper())
+              .addMethod(getMutateCampaignsMethodHelper())
               .build();
         }
       }

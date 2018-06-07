@@ -413,5 +413,30 @@ public interface AdOrBuilder extends
    */
   com.google.ads.googleads.v0.common.ExpandedDynamicSearchAdInfoOrBuilder getExpandedDynamicSearchAdOrBuilder();
 
+  /**
+   * <pre>
+   * Details pertaining to a hotel ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+   */
+  boolean hasHotelAd();
+  /**
+   * <pre>
+   * Details pertaining to a hotel ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+   */
+  com.google.ads.googleads.v0.common.HotelAdInfo getHotelAd();
+  /**
+   * <pre>
+   * Details pertaining to a hotel ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+   */
+  com.google.ads.googleads.v0.common.HotelAdInfoOrBuilder getHotelAdOrBuilder();
+
   public com.google.ads.googleads.v0.common.Ad.AdDataCase getAdDataCase();
 }

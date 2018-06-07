@@ -315,6 +315,19 @@ private static final long serialVersionUID = 0L;
             campaignBiddingStrategyCase_ = 31;
             break;
           }
+          case 258: {
+            com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.Builder subBuilder = null;
+            if (hotelSetting_ != null) {
+              subBuilder = hotelSetting_.toBuilder();
+            }
+            hotelSetting_ = input.readMessage(com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelSetting_);
+              hotelSetting_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 266: {
             com.google.ads.googleads.v0.resources.Campaign.DynamicSearchAdsSetting.Builder subBuilder = null;
             if (dynamicSearchAdsSetting_ != null) {
@@ -1807,6 +1820,656 @@ private static final long serialVersionUID = 0L;
     }
 
     public com.google.ads.googleads.v0.resources.Campaign.NetworkSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HotelSettingInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v0.resources.Campaign.HotelSettingInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The linked Hotel Center account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+     */
+    boolean hasHotelCenterId();
+    /**
+     * <pre>
+     * The linked Hotel Center account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+     */
+    com.google.protobuf.Int64Value getHotelCenterId();
+    /**
+     * <pre>
+     * The linked Hotel Center account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * Campaign-level settings for hotel ads.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v0.resources.Campaign.HotelSettingInfo}
+   */
+  public  static final class HotelSettingInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v0.resources.Campaign.HotelSettingInfo)
+      HotelSettingInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HotelSettingInfo.newBuilder() to construct.
+    private HotelSettingInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HotelSettingInfo() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HotelSettingInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (hotelCenterId_ != null) {
+                subBuilder = hotelCenterId_.toBuilder();
+              }
+              hotelCenterId_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hotelCenterId_);
+                hotelCenterId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v0.resources.CampaignProto.internal_static_google_ads_googleads_v0_resources_Campaign_HotelSettingInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v0.resources.CampaignProto.internal_static_google_ads_googleads_v0_resources_Campaign_HotelSettingInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.class, com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.Builder.class);
+    }
+
+    public static final int HOTEL_CENTER_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int64Value hotelCenterId_;
+    /**
+     * <pre>
+     * The linked Hotel Center account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+     */
+    public boolean hasHotelCenterId() {
+      return hotelCenterId_ != null;
+    }
+    /**
+     * <pre>
+     * The linked Hotel Center account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+     */
+    public com.google.protobuf.Int64Value getHotelCenterId() {
+      return hotelCenterId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelCenterId_;
+    }
+    /**
+     * <pre>
+     * The linked Hotel Center account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder() {
+      return getHotelCenterId();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hotelCenterId_ != null) {
+        output.writeMessage(1, getHotelCenterId());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hotelCenterId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHotelCenterId());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo other = (com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo) obj;
+
+      boolean result = true;
+      result = result && (hasHotelCenterId() == other.hasHotelCenterId());
+      if (hasHotelCenterId()) {
+        result = result && getHotelCenterId()
+            .equals(other.getHotelCenterId());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHotelCenterId()) {
+        hash = (37 * hash) + HOTEL_CENTER_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getHotelCenterId().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Campaign-level settings for hotel ads.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v0.resources.Campaign.HotelSettingInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v0.resources.Campaign.HotelSettingInfo)
+        com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v0.resources.CampaignProto.internal_static_google_ads_googleads_v0_resources_Campaign_HotelSettingInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v0.resources.CampaignProto.internal_static_google_ads_googleads_v0_resources_Campaign_HotelSettingInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.class, com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (hotelCenterIdBuilder_ == null) {
+          hotelCenterId_ = null;
+        } else {
+          hotelCenterId_ = null;
+          hotelCenterIdBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v0.resources.CampaignProto.internal_static_google_ads_googleads_v0_resources_Campaign_HotelSettingInfo_descriptor;
+      }
+
+      public com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo getDefaultInstanceForType() {
+        return com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.getDefaultInstance();
+      }
+
+      public com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo build() {
+        com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo buildPartial() {
+        com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo result = new com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo(this);
+        if (hotelCenterIdBuilder_ == null) {
+          result.hotelCenterId_ = hotelCenterId_;
+        } else {
+          result.hotelCenterId_ = hotelCenterIdBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo) {
+          return mergeFrom((com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo other) {
+        if (other == com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.getDefaultInstance()) return this;
+        if (other.hasHotelCenterId()) {
+          mergeHotelCenterId(other.getHotelCenterId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value hotelCenterId_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> hotelCenterIdBuilder_;
+      /**
+       * <pre>
+       * The linked Hotel Center account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       */
+      public boolean hasHotelCenterId() {
+        return hotelCenterIdBuilder_ != null || hotelCenterId_ != null;
+      }
+      /**
+       * <pre>
+       * The linked Hotel Center account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       */
+      public com.google.protobuf.Int64Value getHotelCenterId() {
+        if (hotelCenterIdBuilder_ == null) {
+          return hotelCenterId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelCenterId_;
+        } else {
+          return hotelCenterIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The linked Hotel Center account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       */
+      public Builder setHotelCenterId(com.google.protobuf.Int64Value value) {
+        if (hotelCenterIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hotelCenterId_ = value;
+          onChanged();
+        } else {
+          hotelCenterIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The linked Hotel Center account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       */
+      public Builder setHotelCenterId(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (hotelCenterIdBuilder_ == null) {
+          hotelCenterId_ = builderForValue.build();
+          onChanged();
+        } else {
+          hotelCenterIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The linked Hotel Center account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       */
+      public Builder mergeHotelCenterId(com.google.protobuf.Int64Value value) {
+        if (hotelCenterIdBuilder_ == null) {
+          if (hotelCenterId_ != null) {
+            hotelCenterId_ =
+              com.google.protobuf.Int64Value.newBuilder(hotelCenterId_).mergeFrom(value).buildPartial();
+          } else {
+            hotelCenterId_ = value;
+          }
+          onChanged();
+        } else {
+          hotelCenterIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The linked Hotel Center account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       */
+      public Builder clearHotelCenterId() {
+        if (hotelCenterIdBuilder_ == null) {
+          hotelCenterId_ = null;
+          onChanged();
+        } else {
+          hotelCenterId_ = null;
+          hotelCenterIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The linked Hotel Center account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getHotelCenterIdBuilder() {
+        
+        onChanged();
+        return getHotelCenterIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The linked Hotel Center account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder() {
+        if (hotelCenterIdBuilder_ != null) {
+          return hotelCenterIdBuilder_.getMessageOrBuilder();
+        } else {
+          return hotelCenterId_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : hotelCenterId_;
+        }
+      }
+      /**
+       * <pre>
+       * The linked Hotel Center account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getHotelCenterIdFieldBuilder() {
+        if (hotelCenterIdBuilder_ == null) {
+          hotelCenterIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getHotelCenterId(),
+                  getParentForChildren(),
+                  isClean());
+          hotelCenterId_ = null;
+        }
+        return hotelCenterIdBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v0.resources.Campaign.HotelSettingInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v0.resources.Campaign.HotelSettingInfo)
+    private static final com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo();
+    }
+
+    public static com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HotelSettingInfo>
+        PARSER = new com.google.protobuf.AbstractParser<HotelSettingInfo>() {
+      public HotelSettingInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HotelSettingInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HotelSettingInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HotelSettingInfo> getParserForType() {
+      return PARSER;
+    }
+
+    public com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3904,6 +4567,39 @@ private static final long serialVersionUID = 0L;
     return getNetworkSettings();
   }
 
+  public static final int HOTEL_SETTING_FIELD_NUMBER = 32;
+  private com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotelSetting_;
+  /**
+   * <pre>
+   * The hotel setting for the campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+   */
+  public boolean hasHotelSetting() {
+    return hotelSetting_ != null;
+  }
+  /**
+   * <pre>
+   * The hotel setting for the campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+   */
+  public com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo getHotelSetting() {
+    return hotelSetting_ == null ? com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.getDefaultInstance() : hotelSetting_;
+  }
+  /**
+   * <pre>
+   * The hotel setting for the campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+   */
+  public com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfoOrBuilder getHotelSettingOrBuilder() {
+    return getHotelSetting();
+  }
+
   public static final int DYNAMIC_SEARCH_ADS_SETTING_FIELD_NUMBER = 33;
   private com.google.ads.googleads.v0.resources.Campaign.DynamicSearchAdsSetting dynamicSearchAdsSetting_;
   /**
@@ -4492,6 +5188,9 @@ private static final long serialVersionUID = 0L;
     if (campaignBiddingStrategyCase_ == 31) {
       output.writeMessage(31, (com.google.ads.googleads.v0.common.MaximizeConversionValue) campaignBiddingStrategy_);
     }
+    if (hotelSetting_ != null) {
+      output.writeMessage(32, getHotelSetting());
+    }
     if (dynamicSearchAdsSetting_ != null) {
       output.writeMessage(33, getDynamicSearchAdsSetting());
     }
@@ -4594,6 +5293,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(31, (com.google.ads.googleads.v0.common.MaximizeConversionValue) campaignBiddingStrategy_);
     }
+    if (hotelSetting_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(32, getHotelSetting());
+    }
     if (dynamicSearchAdsSetting_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(33, getDynamicSearchAdsSetting());
@@ -4642,6 +5345,11 @@ private static final long serialVersionUID = 0L;
     if (hasNetworkSettings()) {
       result = result && getNetworkSettings()
           .equals(other.getNetworkSettings());
+    }
+    result = result && (hasHotelSetting() == other.hasHotelSetting());
+    if (hasHotelSetting()) {
+      result = result && getHotelSetting()
+          .equals(other.getHotelSetting());
     }
     result = result && (hasDynamicSearchAdsSetting() == other.hasDynamicSearchAdsSetting());
     if (hasDynamicSearchAdsSetting()) {
@@ -4745,6 +5453,10 @@ private static final long serialVersionUID = 0L;
     if (hasNetworkSettings()) {
       hash = (37 * hash) + NETWORK_SETTINGS_FIELD_NUMBER;
       hash = (53 * hash) + getNetworkSettings().hashCode();
+    }
+    if (hasHotelSetting()) {
+      hash = (37 * hash) + HOTEL_SETTING_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelSetting().hashCode();
     }
     if (hasDynamicSearchAdsSetting()) {
       hash = (37 * hash) + DYNAMIC_SEARCH_ADS_SETTING_FIELD_NUMBER;
@@ -4976,6 +5688,12 @@ private static final long serialVersionUID = 0L;
         networkSettings_ = null;
         networkSettingsBuilder_ = null;
       }
+      if (hotelSettingBuilder_ == null) {
+        hotelSetting_ = null;
+      } else {
+        hotelSetting_ = null;
+        hotelSettingBuilder_ = null;
+      }
       if (dynamicSearchAdsSettingBuilder_ == null) {
         dynamicSearchAdsSetting_ = null;
       } else {
@@ -5062,6 +5780,11 @@ private static final long serialVersionUID = 0L;
         result.networkSettings_ = networkSettings_;
       } else {
         result.networkSettings_ = networkSettingsBuilder_.build();
+      }
+      if (hotelSettingBuilder_ == null) {
+        result.hotelSetting_ = hotelSetting_;
+      } else {
+        result.hotelSetting_ = hotelSettingBuilder_.build();
       }
       if (dynamicSearchAdsSettingBuilder_ == null) {
         result.dynamicSearchAdsSetting_ = dynamicSearchAdsSetting_;
@@ -5239,6 +5962,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasNetworkSettings()) {
         mergeNetworkSettings(other.getNetworkSettings());
+      }
+      if (other.hasHotelSetting()) {
+        mergeHotelSetting(other.getHotelSetting());
       }
       if (other.hasDynamicSearchAdsSetting()) {
         mergeDynamicSearchAdsSetting(other.getDynamicSearchAdsSetting());
@@ -6765,6 +7491,159 @@ private static final long serialVersionUID = 0L;
         networkSettings_ = null;
       }
       return networkSettingsBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotelSetting_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo, com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.Builder, com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfoOrBuilder> hotelSettingBuilder_;
+    /**
+     * <pre>
+     * The hotel setting for the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     */
+    public boolean hasHotelSetting() {
+      return hotelSettingBuilder_ != null || hotelSetting_ != null;
+    }
+    /**
+     * <pre>
+     * The hotel setting for the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     */
+    public com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo getHotelSetting() {
+      if (hotelSettingBuilder_ == null) {
+        return hotelSetting_ == null ? com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.getDefaultInstance() : hotelSetting_;
+      } else {
+        return hotelSettingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The hotel setting for the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     */
+    public Builder setHotelSetting(com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo value) {
+      if (hotelSettingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelSetting_ = value;
+        onChanged();
+      } else {
+        hotelSettingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The hotel setting for the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     */
+    public Builder setHotelSetting(
+        com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.Builder builderForValue) {
+      if (hotelSettingBuilder_ == null) {
+        hotelSetting_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelSettingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The hotel setting for the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     */
+    public Builder mergeHotelSetting(com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo value) {
+      if (hotelSettingBuilder_ == null) {
+        if (hotelSetting_ != null) {
+          hotelSetting_ =
+            com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.newBuilder(hotelSetting_).mergeFrom(value).buildPartial();
+        } else {
+          hotelSetting_ = value;
+        }
+        onChanged();
+      } else {
+        hotelSettingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The hotel setting for the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     */
+    public Builder clearHotelSetting() {
+      if (hotelSettingBuilder_ == null) {
+        hotelSetting_ = null;
+        onChanged();
+      } else {
+        hotelSetting_ = null;
+        hotelSettingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The hotel setting for the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     */
+    public com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.Builder getHotelSettingBuilder() {
+      
+      onChanged();
+      return getHotelSettingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The hotel setting for the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     */
+    public com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfoOrBuilder getHotelSettingOrBuilder() {
+      if (hotelSettingBuilder_ != null) {
+        return hotelSettingBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelSetting_ == null ?
+            com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.getDefaultInstance() : hotelSetting_;
+      }
+    }
+    /**
+     * <pre>
+     * The hotel setting for the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo, com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.Builder, com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfoOrBuilder> 
+        getHotelSettingFieldBuilder() {
+      if (hotelSettingBuilder_ == null) {
+        hotelSettingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo, com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo.Builder, com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfoOrBuilder>(
+                getHotelSetting(),
+                getParentForChildren(),
+                isClean());
+        hotelSetting_ = null;
+      }
+      return hotelSettingBuilder_;
     }
 
     private com.google.ads.googleads.v0.resources.Campaign.DynamicSearchAdsSetting dynamicSearchAdsSetting_ = null;

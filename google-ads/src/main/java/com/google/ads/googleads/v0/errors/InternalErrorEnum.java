@@ -118,6 +118,15 @@ private static final long serialVersionUID = 0L;
      * <code>ERROR_CODE_NOT_PUBLISHED = 3;</code>
      */
     ERROR_CODE_NOT_PUBLISHED(3),
+    /**
+     * <pre>
+     * Google Ads API encountered an unexpected transient error. The user
+     * should retry their request in these cases.
+     * </pre>
+     *
+     * <code>TRANSIENT_ERROR = 4;</code>
+     */
+    TRANSIENT_ERROR(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -154,6 +163,15 @@ private static final long serialVersionUID = 0L;
      * <code>ERROR_CODE_NOT_PUBLISHED = 3;</code>
      */
     public static final int ERROR_CODE_NOT_PUBLISHED_VALUE = 3;
+    /**
+     * <pre>
+     * Google Ads API encountered an unexpected transient error. The user
+     * should retry their request in these cases.
+     * </pre>
+     *
+     * <code>TRANSIENT_ERROR = 4;</code>
+     */
+    public static final int TRANSIENT_ERROR_VALUE = 4;
 
 
     public final int getNumber() {
@@ -178,6 +196,7 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 2: return INTERNAL_ERROR;
         case 3: return ERROR_CODE_NOT_PUBLISHED;
+        case 4: return TRANSIENT_ERROR;
         default: return null;
       }
     }

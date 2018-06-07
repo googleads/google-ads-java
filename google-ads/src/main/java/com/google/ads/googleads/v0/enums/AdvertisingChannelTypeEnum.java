@@ -109,6 +109,14 @@ private static final long serialVersionUID = 0L;
      * <code>SEARCH = 2;</code>
      */
     SEARCH(2),
+    /**
+     * <pre>
+     * Hotel Ads campaigns.
+     * </pre>
+     *
+     * <code>HOTEL = 5;</code>
+     */
+    HOTEL(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -136,6 +144,14 @@ private static final long serialVersionUID = 0L;
      * <code>SEARCH = 2;</code>
      */
     public static final int SEARCH_VALUE = 2;
+    /**
+     * <pre>
+     * Hotel Ads campaigns.
+     * </pre>
+     *
+     * <code>HOTEL = 5;</code>
+     */
+    public static final int HOTEL_VALUE = 5;
 
 
     public final int getNumber() {
@@ -159,6 +175,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return SEARCH;
+        case 5: return HOTEL;
         default: return null;
       }
     }

@@ -109,6 +109,30 @@ private static final long serialVersionUID = 0L;
      * <code>KEYWORD = 2;</code>
      */
     KEYWORD(2),
+    /**
+     * <pre>
+     * Platforms to target.
+     * </pre>
+     *
+     * <code>PLATFORM = 6;</code>
+     */
+    PLATFORM(6),
+    /**
+     * <pre>
+     * Locations to target.
+     * </pre>
+     *
+     * <code>LOCATION = 7;</code>
+     */
+    LOCATION(7),
+    /**
+     * <pre>
+     * Listing groups to target.
+     * </pre>
+     *
+     * <code>LISTING_GROUP = 8;</code>
+     */
+    LISTING_GROUP(8),
     UNRECOGNIZED(-1),
     ;
 
@@ -136,6 +160,30 @@ private static final long serialVersionUID = 0L;
      * <code>KEYWORD = 2;</code>
      */
     public static final int KEYWORD_VALUE = 2;
+    /**
+     * <pre>
+     * Platforms to target.
+     * </pre>
+     *
+     * <code>PLATFORM = 6;</code>
+     */
+    public static final int PLATFORM_VALUE = 6;
+    /**
+     * <pre>
+     * Locations to target.
+     * </pre>
+     *
+     * <code>LOCATION = 7;</code>
+     */
+    public static final int LOCATION_VALUE = 7;
+    /**
+     * <pre>
+     * Listing groups to target.
+     * </pre>
+     *
+     * <code>LISTING_GROUP = 8;</code>
+     */
+    public static final int LISTING_GROUP_VALUE = 8;
 
 
     public final int getNumber() {
@@ -159,6 +207,9 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return KEYWORD;
+        case 6: return PLATFORM;
+        case 7: return LOCATION;
+        case 8: return LISTING_GROUP;
         default: return null;
       }
     }

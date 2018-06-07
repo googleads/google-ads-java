@@ -82,6 +82,11 @@ public class GoogleAdsClientTest {
   }
 
   @Test
+  public void testGetAdGroupBidModifierServiceClient() {
+    assertNotNull(createTestGoogleAdsClient().getAdGroupBidModifierServiceClient());
+  }
+
+  @Test
   public void testGetAdGroupCriterionServiceClient() {
     assertNotNull(createTestGoogleAdsClient().getAdGroupCriterionServiceClient());
   }
@@ -117,13 +122,28 @@ public class GoogleAdsClientTest {
   }
 
   @Test
-  public void testGetGoogleAdsServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getGoogleAdsServiceClient());
+  public void testGetGeoTargetConstantServiceClient() {
+    assertNotNull(createTestGoogleAdsClient().getGeoTargetConstantServiceClient());
   }
 
   @Test
   public void testGetGoogleAdsFieldServiceClient() {
     assertNotNull(createTestGoogleAdsClient().getGoogleAdsFieldServiceClient());
+  }
+
+  @Test
+  public void testGetGoogleAdsServiceClient() {
+    assertNotNull(createTestGoogleAdsClient().getGoogleAdsServiceClient());
+  }
+
+  @Test
+  public void testGetKeywordViewServiceClient() {
+    assertNotNull(createTestGoogleAdsClient().getKeywordViewServiceClient());
+  }
+
+  @Test
+  public void testGetRecommendationServiceClient() {
+    assertNotNull(createTestGoogleAdsClient().getRecommendationServiceClient());
   }
 
   /**

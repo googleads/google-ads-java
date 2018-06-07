@@ -48,69 +48,80 @@ public final class GoogleAdsServiceProto {
       "proto\032(google/ads/googleads/v0/enums/slo" +
       "t.proto\0320google/ads/googleads/v0/resourc" +
       "es/ad_group.proto\0323google/ads/googleads/" +
-      "v0/resources/ad_group_ad.proto\032:google/a" +
-      "ds/googleads/v0/resources/ad_group_crite" +
-      "rion.proto\0328google/ads/googleads/v0/reso" +
-      "urces/bidding_strategy.proto\0320google/ads" +
-      "/googleads/v0/resources/campaign.proto\0327" +
+      "v0/resources/ad_group_ad.proto\032=google/a" +
+      "ds/googleads/v0/resources/ad_group_bid_m" +
+      "odifier.proto\032:google/ads/googleads/v0/r" +
+      "esources/ad_group_criterion.proto\0328googl" +
+      "e/ads/googleads/v0/resources/bidding_str" +
+      "ategy.proto\0320google/ads/googleads/v0/res" +
+      "ources/campaign.proto\0327google/ads/google" +
+      "ads/v0/resources/campaign_budget.proto\032:" +
       "google/ads/googleads/v0/resources/campai" +
-      "gn_budget.proto\032:google/ads/googleads/v0" +
-      "/resources/campaign_criterion.proto\0320goo" +
-      "gle/ads/googleads/v0/resources/customer." +
-      "proto\0324google/ads/googleads/v0/resources" +
-      "/keyword_view.proto\032\034google/api/annotati" +
-      "ons.proto\032 google/protobuf/field_mask.pr" +
-      "oto\032\036google/protobuf/wrappers.proto\"c\n\026S" +
-      "earchGoogleAdsRequest\022\023\n\013customer_id\030\001 \001" +
-      "(\t\022\r\n\005query\030\002 \001(\t\022\022\n\npage_token\030\003 \001(\t\022\021\n" +
-      "\tpage_size\030\004 \001(\005\"\300\001\n\027SearchGoogleAdsResp" +
-      "onse\022?\n\007results\030\001 \003(\0132..google.ads.googl" +
-      "eads.v0.services.GoogleAdsRow\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\022\033\n\023total_results_count\030\003 " +
-      "\001(\003\022.\n\nfield_mask\030\005 \001(\0132\032.google.protobu" +
-      "f.FieldMask\"\370\t\n\014GoogleAdsRow\022<\n\010ad_group" +
-      "\030\003 \001(\0132*.google.ads.googleads.v0.resourc" +
-      "es.AdGroup\022A\n\013ad_group_ad\030\020 \001(\0132,.google" +
-      ".ads.googleads.v0.resources.AdGroupAd\022O\n" +
-      "\022ad_group_criterion\030\021 \001(\01323.google.ads.g" +
-      "oogleads.v0.resources.AdGroupCriterion\022L" +
-      "\n\020bidding_strategy\030\022 \001(\01322.google.ads.go" +
-      "ogleads.v0.resources.BiddingStrategy\022J\n\017" +
-      "campaign_budget\030\023 \001(\01321.google.ads.googl" +
-      "eads.v0.resources.CampaignBudget\022=\n\010camp" +
-      "aign\030\002 \001(\0132+.google.ads.googleads.v0.res" +
-      "ources.Campaign\022P\n\022campaign_criterion\030\024 " +
-      "\001(\01324.google.ads.googleads.v0.resources." +
-      "CampaignCriterion\022=\n\010customer\030\001 \001(\0132+.go" +
-      "ogle.ads.googleads.v0.resources.Customer" +
-      "\022D\n\014keyword_view\030\025 \001(\0132..google.ads.goog" +
-      "leads.v0.resources.KeywordView\0228\n\007metric" +
-      "s\030\004 \001(\0132\'.google.ads.googleads.v0.common" +
-      ".Metrics\022W\n\017ad_network_type\030\005 \001(\0162>.goog" +
-      "le.ads.googleads.v0.enums.AdNetworkTypeE" +
-      "num.AdNetworkType\022*\n\004date\030\006 \001(\0132\034.google" +
-      ".protobuf.StringValue\022K\n\013day_of_week\030\007 \001" +
-      "(\01626.google.ads.googleads.v0.enums.DayOf" +
-      "WeekEnum.DayOfWeek\022@\n\006device\030\010 \001(\01620.goo" +
-      "gle.ads.googleads.v0.enums.DeviceEnum.De" +
-      "vice\022)\n\004hour\030\t \001(\0132\033.google.protobuf.Int" +
-      "32Value\022+\n\005month\030\n \001(\0132\034.google.protobuf" +
-      ".StringValue\022-\n\007quarter\030\014 \001(\0132\034.google.p" +
-      "rotobuf.StringValue\022:\n\004slot\030\r \001(\0162,.goog" +
-      "le.ads.googleads.v0.enums.SlotEnum.Slot\022" +
-      "*\n\004week\030\016 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\022)\n\004year\030\017 \001(\0132\033.google.protobuf.Int3" +
-      "2Value2\315\001\n\020GoogleAdsService\022\270\001\n\006Search\0228" +
-      ".google.ads.googleads.v0.services.Search" +
-      "GoogleAdsRequest\0329.google.ads.googleads." +
-      "v0.services.SearchGoogleAdsResponse\"9\202\323\344" +
-      "\223\0023\"./v0/customers/{customer_id=*}/googl" +
-      "eAds:search:\001*B\325\001\n$com.google.ads.google" +
-      "ads.v0.servicesB\025GoogleAdsServiceProtoP\001" +
-      "ZHgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v0/services;services\242\002\003GAA" +
-      "\252\002 Google.Ads.GoogleAds.V0.Services\312\002 Go" +
-      "ogle\\Ads\\GoogleAds\\V0\\Servicesb\006proto3"
+      "gn_criterion.proto\0320google/ads/googleads" +
+      "/v0/resources/customer.proto\032;google/ads" +
+      "/googleads/v0/resources/geo_target_const" +
+      "ant.proto\0324google/ads/googleads/v0/resou" +
+      "rces/keyword_view.proto\0326google/ads/goog" +
+      "leads/v0/resources/recommendation.proto\032" +
+      "\034google/api/annotations.proto\032 google/pr" +
+      "otobuf/field_mask.proto\032\036google/protobuf" +
+      "/wrappers.proto\"c\n\026SearchGoogleAdsReques" +
+      "t\022\023\n\013customer_id\030\001 \001(\t\022\r\n\005query\030\002 \001(\t\022\022\n" +
+      "\npage_token\030\003 \001(\t\022\021\n\tpage_size\030\004 \001(\005\"\300\001\n" +
+      "\027SearchGoogleAdsResponse\022?\n\007results\030\001 \003(" +
+      "\0132..google.ads.googleads.v0.services.Goo" +
+      "gleAdsRow\022\027\n\017next_page_token\030\002 \001(\t\022\033\n\023to" +
+      "tal_results_count\030\003 \001(\003\022.\n\nfield_mask\030\005 " +
+      "\001(\0132\032.google.protobuf.FieldMask\"\354\013\n\014Goog" +
+      "leAdsRow\022<\n\010ad_group\030\003 \001(\0132*.google.ads." +
+      "googleads.v0.resources.AdGroup\022A\n\013ad_gro" +
+      "up_ad\030\020 \001(\0132,.google.ads.googleads.v0.re" +
+      "sources.AdGroupAd\022T\n\025ad_group_bid_modifi" +
+      "er\030\030 \001(\01325.google.ads.googleads.v0.resou" +
+      "rces.AdGroupBidModifier\022O\n\022ad_group_crit" +
+      "erion\030\021 \001(\01323.google.ads.googleads.v0.re" +
+      "sources.AdGroupCriterion\022L\n\020bidding_stra" +
+      "tegy\030\022 \001(\01322.google.ads.googleads.v0.res" +
+      "ources.BiddingStrategy\022J\n\017campaign_budge" +
+      "t\030\023 \001(\01321.google.ads.googleads.v0.resour" +
+      "ces.CampaignBudget\022=\n\010campaign\030\002 \001(\0132+.g" +
+      "oogle.ads.googleads.v0.resources.Campaig" +
+      "n\022P\n\022campaign_criterion\030\024 \001(\01324.google.a" +
+      "ds.googleads.v0.resources.CampaignCriter" +
+      "ion\022=\n\010customer\030\001 \001(\0132+.google.ads.googl" +
+      "eads.v0.resources.Customer\022Q\n\023geo_target" +
+      "_constant\030\027 \001(\01324.google.ads.googleads.v" +
+      "0.resources.GeoTargetConstant\022D\n\014keyword" +
+      "_view\030\025 \001(\0132..google.ads.googleads.v0.re" +
+      "sources.KeywordView\022I\n\016recommendation\030\026 " +
+      "\001(\01321.google.ads.googleads.v0.resources." +
+      "Recommendation\0228\n\007metrics\030\004 \001(\0132\'.google" +
+      ".ads.googleads.v0.common.Metrics\022W\n\017ad_n" +
+      "etwork_type\030\005 \001(\0162>.google.ads.googleads" +
+      ".v0.enums.AdNetworkTypeEnum.AdNetworkTyp" +
+      "e\022*\n\004date\030\006 \001(\0132\034.google.protobuf.String" +
+      "Value\022K\n\013day_of_week\030\007 \001(\01626.google.ads." +
+      "googleads.v0.enums.DayOfWeekEnum.DayOfWe" +
+      "ek\022@\n\006device\030\010 \001(\01620.google.ads.googlead" +
+      "s.v0.enums.DeviceEnum.Device\022)\n\004hour\030\t \001" +
+      "(\0132\033.google.protobuf.Int32Value\022+\n\005month" +
+      "\030\n \001(\0132\034.google.protobuf.StringValue\022-\n\007" +
+      "quarter\030\014 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\022:\n\004slot\030\r \001(\0162,.google.ads.googleads" +
+      ".v0.enums.SlotEnum.Slot\022*\n\004week\030\016 \001(\0132\034." +
+      "google.protobuf.StringValue\022)\n\004year\030\017 \001(" +
+      "\0132\033.google.protobuf.Int32Value2\315\001\n\020Googl" +
+      "eAdsService\022\270\001\n\006Search\0228.google.ads.goog" +
+      "leads.v0.services.SearchGoogleAdsRequest" +
+      "\0329.google.ads.googleads.v0.services.Sear" +
+      "chGoogleAdsResponse\"9\202\323\344\223\0023\"./v0/custome" +
+      "rs/{customer_id=*}/googleAds:search:\001*B\325" +
+      "\001\n$com.google.ads.googleads.v0.servicesB" +
+      "\025GoogleAdsServiceProtoP\001ZHgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v0" +
+      "/services;services\242\002\003GAA\252\002 Google.Ads.Go" +
+      "ogleAds.V0.Services\312\002 Google\\Ads\\GoogleA" +
+      "ds\\V0\\Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -130,13 +141,16 @@ public final class GoogleAdsServiceProto {
           com.google.ads.googleads.v0.enums.SlotProto.getDescriptor(),
           com.google.ads.googleads.v0.resources.AdGroupProto.getDescriptor(),
           com.google.ads.googleads.v0.resources.AdGroupAdProto.getDescriptor(),
+          com.google.ads.googleads.v0.resources.AdGroupBidModifierProto.getDescriptor(),
           com.google.ads.googleads.v0.resources.AdGroupCriterionProto.getDescriptor(),
           com.google.ads.googleads.v0.resources.BiddingStrategyProto.getDescriptor(),
           com.google.ads.googleads.v0.resources.CampaignProto.getDescriptor(),
           com.google.ads.googleads.v0.resources.CampaignBudgetProto.getDescriptor(),
           com.google.ads.googleads.v0.resources.CampaignCriterionProto.getDescriptor(),
           com.google.ads.googleads.v0.resources.CustomerProto.getDescriptor(),
+          com.google.ads.googleads.v0.resources.GeoTargetConstantProto.getDescriptor(),
           com.google.ads.googleads.v0.resources.KeywordViewProto.getDescriptor(),
+          com.google.ads.googleads.v0.resources.RecommendationProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
@@ -158,7 +172,7 @@ public final class GoogleAdsServiceProto {
     internal_static_google_ads_googleads_v0_services_GoogleAdsRow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_GoogleAdsRow_descriptor,
-        new java.lang.String[] { "AdGroup", "AdGroupAd", "AdGroupCriterion", "BiddingStrategy", "CampaignBudget", "Campaign", "CampaignCriterion", "Customer", "KeywordView", "Metrics", "AdNetworkType", "Date", "DayOfWeek", "Device", "Hour", "Month", "Quarter", "Slot", "Week", "Year", });
+        new java.lang.String[] { "AdGroup", "AdGroupAd", "AdGroupBidModifier", "AdGroupCriterion", "BiddingStrategy", "CampaignBudget", "Campaign", "CampaignCriterion", "Customer", "GeoTargetConstant", "KeywordView", "Recommendation", "Metrics", "AdNetworkType", "Date", "DayOfWeek", "Device", "Hour", "Month", "Quarter", "Slot", "Week", "Year", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -171,13 +185,16 @@ public final class GoogleAdsServiceProto {
     com.google.ads.googleads.v0.enums.SlotProto.getDescriptor();
     com.google.ads.googleads.v0.resources.AdGroupProto.getDescriptor();
     com.google.ads.googleads.v0.resources.AdGroupAdProto.getDescriptor();
+    com.google.ads.googleads.v0.resources.AdGroupBidModifierProto.getDescriptor();
     com.google.ads.googleads.v0.resources.AdGroupCriterionProto.getDescriptor();
     com.google.ads.googleads.v0.resources.BiddingStrategyProto.getDescriptor();
     com.google.ads.googleads.v0.resources.CampaignProto.getDescriptor();
     com.google.ads.googleads.v0.resources.CampaignBudgetProto.getDescriptor();
     com.google.ads.googleads.v0.resources.CampaignCriterionProto.getDescriptor();
     com.google.ads.googleads.v0.resources.CustomerProto.getDescriptor();
+    com.google.ads.googleads.v0.resources.GeoTargetConstantProto.getDescriptor();
     com.google.ads.googleads.v0.resources.KeywordViewProto.getDescriptor();
+    com.google.ads.googleads.v0.resources.RecommendationProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();

@@ -282,6 +282,15 @@ private static final long serialVersionUID = 0L;
     INVALID_DATE_FORMAT(38),
     /**
      * <pre>
+     * Value passed was not a string when it should have been. I.e., it was a
+     * number or unquoted literal.
+     * </pre>
+     *
+     * <code>INVALID_STRING_VALUE = 57;</code>
+     */
+    INVALID_STRING_VALUE(57),
+    /**
+     * <pre>
      * A String value passed to the BETWEEN operator does not parse as a date.
      * </pre>
      *
@@ -296,6 +305,14 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_VALUE_WITH_DURING_OPERATOR = 22;</code>
      */
     INVALID_VALUE_WITH_DURING_OPERATOR(22),
+    /**
+     * <pre>
+     * A non-string value was passed to the LIKE operator.
+     * </pre>
+     *
+     * <code>INVALID_VALUE_WITH_LIKE_OPERATOR = 56;</code>
+     */
+    INVALID_VALUE_WITH_LIKE_OPERATOR(56),
     /**
      * <pre>
      * An operator was provided that is inapplicable to the field being
@@ -679,6 +696,15 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_DATE_FORMAT_VALUE = 38;
     /**
      * <pre>
+     * Value passed was not a string when it should have been. I.e., it was a
+     * number or unquoted literal.
+     * </pre>
+     *
+     * <code>INVALID_STRING_VALUE = 57;</code>
+     */
+    public static final int INVALID_STRING_VALUE_VALUE = 57;
+    /**
+     * <pre>
      * A String value passed to the BETWEEN operator does not parse as a date.
      * </pre>
      *
@@ -693,6 +719,14 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_VALUE_WITH_DURING_OPERATOR = 22;</code>
      */
     public static final int INVALID_VALUE_WITH_DURING_OPERATOR_VALUE = 22;
+    /**
+     * <pre>
+     * A non-string value was passed to the LIKE operator.
+     * </pre>
+     *
+     * <code>INVALID_VALUE_WITH_LIKE_OPERATOR = 56;</code>
+     */
+    public static final int INVALID_VALUE_WITH_LIKE_OPERATOR_VALUE = 56;
     /**
      * <pre>
      * An operator was provided that is inapplicable to the field being
@@ -920,8 +954,10 @@ private static final long serialVersionUID = 0L;
         case 42: return EXPECTED_SINGLE_VALUE;
         case 29: return EXPECTED_VALUE_WITH_BETWEEN_OPERATOR;
         case 38: return INVALID_DATE_FORMAT;
+        case 57: return INVALID_STRING_VALUE;
         case 26: return INVALID_VALUE_WITH_BETWEEN_OPERATOR;
         case 22: return INVALID_VALUE_WITH_DURING_OPERATOR;
+        case 56: return INVALID_VALUE_WITH_LIKE_OPERATOR;
         case 35: return OPERATOR_FIELD_MISMATCH;
         case 28: return PROHIBITED_EMPTY_LIST_IN_CONDITION;
         case 54: return PROHIBITED_ENUM_CONSTANT;

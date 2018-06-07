@@ -30,7 +30,7 @@ public final class AdErrorProto {
     java.lang.String[] descriptorData = {
       "\n-google/ads/googleads/v0/errors/ad_erro" +
       "r.proto\022\036google.ads.googleads.v0.errors\"" +
-      "\241 \n\013AdErrorEnum\"\221 \n\007AdError\022\017\n\013UNSPECIFI" +
+      "\312 \n\013AdErrorEnum\"\272 \n\007AdError\022\017\n\013UNSPECIFI" +
       "ED\020\000\022\013\n\007UNKNOWN\020\001\022,\n(AD_CUSTOMIZERS_NOT_" +
       "SUPPORTED_FOR_AD_TYPE\020\002\022\032\n\026APPROXIMATELY" +
       "_TOO_LONG\020\003\022\033\n\027APPROXIMATELY_TOO_SHORT\020\004" +
@@ -133,12 +133,13 @@ public final class AdErrorProto {
       "L_CONVERSION_AND_SET_CONVERSION_TYPE_ID\020" +
       "\177\022#\n\036CANNOT_SET_PATH2_WITHOUT_PATH1\020\200\001\0223" +
       "\n.MISSING_DYNAMIC_SEARCH_ADS_SETTING_DOM" +
-      "AIN_NAME\020\201\001B\302\001\n\"com.google.ads.googleads" +
-      ".v0.errorsB\014AdErrorProtoP\001ZDgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.Goog" +
-      "leAds.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V" +
-      "0\\Errorsb\006proto3"
+      "AIN_NAME\020\201\001\022\'\n\"INCOMPATIBLE_WITH_RESTRIC" +
+      "TION_TYPE\020\202\001B\302\001\n\"com.google.ads.googlead" +
+      "s.v0.errorsB\014AdErrorProtoP\001ZDgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.Goo" +
+      "gleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\" +
+      "V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

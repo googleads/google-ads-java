@@ -237,84 +237,6 @@ private static final long serialVersionUID = 0L;
     CANNOT_EXCLUDE_CRITERIA_TYPE(17),
     /**
      * <pre>
-     * Ad group is invalid due to the product partitions it contains.
-     * </pre>
-     *
-     * <code>INVALID_PRODUCT_PARTITION_HIERARCHY = 18;</code>
-     */
-    INVALID_PRODUCT_PARTITION_HIERARCHY(18),
-    /**
-     * <pre>
-     * Product partition unit cannot have children.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_UNIT_CANNOT_HAVE_CHILDREN = 19;</code>
-     */
-    PRODUCT_PARTITION_UNIT_CANNOT_HAVE_CHILDREN(19),
-    /**
-     * <pre>
-     * Subdivided product partitions must have an "others" case.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_SUBDIVISION_REQUIRES_OTHERS_CASE = 20;</code>
-     */
-    PRODUCT_PARTITION_SUBDIVISION_REQUIRES_OTHERS_CASE(20),
-    /**
-     * <pre>
-     * Dimension type of product partition must be the same as that of its
-     * siblings.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_REQUIRES_SAME_DIMENSION_TYPE_AS_SIBLINGS = 21;</code>
-     */
-    PRODUCT_PARTITION_REQUIRES_SAME_DIMENSION_TYPE_AS_SIBLINGS(21),
-    /**
-     * <pre>
-     * Product partition cannot be added to the ad group because it already
-     * exists.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_ALREADY_EXISTS = 22;</code>
-     */
-    PRODUCT_PARTITION_ALREADY_EXISTS(22),
-    /**
-     * <pre>
-     * Product partition referenced in the operation was not found in the ad
-     * group.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_DOES_NOT_EXIST = 23;</code>
-     */
-    PRODUCT_PARTITION_DOES_NOT_EXIST(23),
-    /**
-     * <pre>
-     * Recursive removal failed because product partition subdivision is being
-     * created or modified in this request.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_CANNOT_BE_REMOVED = 24;</code>
-     */
-    PRODUCT_PARTITION_CANNOT_BE_REMOVED(24),
-    /**
-     * <pre>
-     * Product partition type is not allowed for specified AdGroupCriterion
-     * type.
-     * </pre>
-     *
-     * <code>INVALID_PRODUCT_PARTITION_TYPE = 25;</code>
-     */
-    INVALID_PRODUCT_PARTITION_TYPE(25),
-    /**
-     * <pre>
-     * Product partition in an ADD operation specifies a non temporary
-     * CriterionId.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_ADD_MAY_ONLY_USE_TEMP_ID = 26;</code>
-     */
-    PRODUCT_PARTITION_ADD_MAY_ONLY_USE_TEMP_ID(26),
-    /**
-     * <pre>
      * Partial failure is not supported for shopping campaign mutate operations.
      * </pre>
      *
@@ -412,6 +334,79 @@ private static final long serialVersionUID = 0L;
      * <code>FINAL_MOBILE_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE = 38;</code>
      */
     FINAL_MOBILE_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE(38),
+    /**
+     * <pre>
+     * Ad group is invalid due to the listing groups it contains.
+     * </pre>
+     *
+     * <code>INVALID_LISTING_GROUP_HIERARCHY = 39;</code>
+     */
+    INVALID_LISTING_GROUP_HIERARCHY(39),
+    /**
+     * <pre>
+     * Listing group unit cannot have children.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_UNIT_CANNOT_HAVE_CHILDREN = 40;</code>
+     */
+    LISTING_GROUP_UNIT_CANNOT_HAVE_CHILDREN(40),
+    /**
+     * <pre>
+     * Subdivided listing groups must have an "others" case.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_SUBDIVISION_REQUIRES_OTHERS_CASE = 41;</code>
+     */
+    LISTING_GROUP_SUBDIVISION_REQUIRES_OTHERS_CASE(41),
+    /**
+     * <pre>
+     * Dimension type of listing group must be the same as that of its siblings.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_REQUIRES_SAME_DIMENSION_TYPE_AS_SIBLINGS = 42;</code>
+     */
+    LISTING_GROUP_REQUIRES_SAME_DIMENSION_TYPE_AS_SIBLINGS(42),
+    /**
+     * <pre>
+     * Listing group cannot be added to the ad group because it already exists.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_ALREADY_EXISTS = 43;</code>
+     */
+    LISTING_GROUP_ALREADY_EXISTS(43),
+    /**
+     * <pre>
+     * Listing group referenced in the operation was not found in the ad group.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_DOES_NOT_EXIST = 44;</code>
+     */
+    LISTING_GROUP_DOES_NOT_EXIST(44),
+    /**
+     * <pre>
+     * Recursive removal failed because listing group subdivision is being
+     * created or modified in this request.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_CANNOT_BE_REMOVED = 45;</code>
+     */
+    LISTING_GROUP_CANNOT_BE_REMOVED(45),
+    /**
+     * <pre>
+     * Listing group type is not allowed for specified ad group criterion type.
+     * </pre>
+     *
+     * <code>INVALID_LISTING_GROUP_TYPE = 46;</code>
+     */
+    INVALID_LISTING_GROUP_TYPE(46),
+    /**
+     * <pre>
+     * Listing group in an ADD operation specifies a non temporary criterion id.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_ADD_MAY_ONLY_USE_TEMP_ID = 47;</code>
+     */
+    LISTING_GROUP_ADD_MAY_ONLY_USE_TEMP_ID(47),
     UNRECOGNIZED(-1),
     ;
 
@@ -567,84 +562,6 @@ private static final long serialVersionUID = 0L;
     public static final int CANNOT_EXCLUDE_CRITERIA_TYPE_VALUE = 17;
     /**
      * <pre>
-     * Ad group is invalid due to the product partitions it contains.
-     * </pre>
-     *
-     * <code>INVALID_PRODUCT_PARTITION_HIERARCHY = 18;</code>
-     */
-    public static final int INVALID_PRODUCT_PARTITION_HIERARCHY_VALUE = 18;
-    /**
-     * <pre>
-     * Product partition unit cannot have children.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_UNIT_CANNOT_HAVE_CHILDREN = 19;</code>
-     */
-    public static final int PRODUCT_PARTITION_UNIT_CANNOT_HAVE_CHILDREN_VALUE = 19;
-    /**
-     * <pre>
-     * Subdivided product partitions must have an "others" case.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_SUBDIVISION_REQUIRES_OTHERS_CASE = 20;</code>
-     */
-    public static final int PRODUCT_PARTITION_SUBDIVISION_REQUIRES_OTHERS_CASE_VALUE = 20;
-    /**
-     * <pre>
-     * Dimension type of product partition must be the same as that of its
-     * siblings.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_REQUIRES_SAME_DIMENSION_TYPE_AS_SIBLINGS = 21;</code>
-     */
-    public static final int PRODUCT_PARTITION_REQUIRES_SAME_DIMENSION_TYPE_AS_SIBLINGS_VALUE = 21;
-    /**
-     * <pre>
-     * Product partition cannot be added to the ad group because it already
-     * exists.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_ALREADY_EXISTS = 22;</code>
-     */
-    public static final int PRODUCT_PARTITION_ALREADY_EXISTS_VALUE = 22;
-    /**
-     * <pre>
-     * Product partition referenced in the operation was not found in the ad
-     * group.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_DOES_NOT_EXIST = 23;</code>
-     */
-    public static final int PRODUCT_PARTITION_DOES_NOT_EXIST_VALUE = 23;
-    /**
-     * <pre>
-     * Recursive removal failed because product partition subdivision is being
-     * created or modified in this request.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_CANNOT_BE_REMOVED = 24;</code>
-     */
-    public static final int PRODUCT_PARTITION_CANNOT_BE_REMOVED_VALUE = 24;
-    /**
-     * <pre>
-     * Product partition type is not allowed for specified AdGroupCriterion
-     * type.
-     * </pre>
-     *
-     * <code>INVALID_PRODUCT_PARTITION_TYPE = 25;</code>
-     */
-    public static final int INVALID_PRODUCT_PARTITION_TYPE_VALUE = 25;
-    /**
-     * <pre>
-     * Product partition in an ADD operation specifies a non temporary
-     * CriterionId.
-     * </pre>
-     *
-     * <code>PRODUCT_PARTITION_ADD_MAY_ONLY_USE_TEMP_ID = 26;</code>
-     */
-    public static final int PRODUCT_PARTITION_ADD_MAY_ONLY_USE_TEMP_ID_VALUE = 26;
-    /**
-     * <pre>
      * Partial failure is not supported for shopping campaign mutate operations.
      * </pre>
      *
@@ -742,6 +659,79 @@ private static final long serialVersionUID = 0L;
      * <code>FINAL_MOBILE_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE = 38;</code>
      */
     public static final int FINAL_MOBILE_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE_VALUE = 38;
+    /**
+     * <pre>
+     * Ad group is invalid due to the listing groups it contains.
+     * </pre>
+     *
+     * <code>INVALID_LISTING_GROUP_HIERARCHY = 39;</code>
+     */
+    public static final int INVALID_LISTING_GROUP_HIERARCHY_VALUE = 39;
+    /**
+     * <pre>
+     * Listing group unit cannot have children.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_UNIT_CANNOT_HAVE_CHILDREN = 40;</code>
+     */
+    public static final int LISTING_GROUP_UNIT_CANNOT_HAVE_CHILDREN_VALUE = 40;
+    /**
+     * <pre>
+     * Subdivided listing groups must have an "others" case.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_SUBDIVISION_REQUIRES_OTHERS_CASE = 41;</code>
+     */
+    public static final int LISTING_GROUP_SUBDIVISION_REQUIRES_OTHERS_CASE_VALUE = 41;
+    /**
+     * <pre>
+     * Dimension type of listing group must be the same as that of its siblings.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_REQUIRES_SAME_DIMENSION_TYPE_AS_SIBLINGS = 42;</code>
+     */
+    public static final int LISTING_GROUP_REQUIRES_SAME_DIMENSION_TYPE_AS_SIBLINGS_VALUE = 42;
+    /**
+     * <pre>
+     * Listing group cannot be added to the ad group because it already exists.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_ALREADY_EXISTS = 43;</code>
+     */
+    public static final int LISTING_GROUP_ALREADY_EXISTS_VALUE = 43;
+    /**
+     * <pre>
+     * Listing group referenced in the operation was not found in the ad group.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_DOES_NOT_EXIST = 44;</code>
+     */
+    public static final int LISTING_GROUP_DOES_NOT_EXIST_VALUE = 44;
+    /**
+     * <pre>
+     * Recursive removal failed because listing group subdivision is being
+     * created or modified in this request.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_CANNOT_BE_REMOVED = 45;</code>
+     */
+    public static final int LISTING_GROUP_CANNOT_BE_REMOVED_VALUE = 45;
+    /**
+     * <pre>
+     * Listing group type is not allowed for specified ad group criterion type.
+     * </pre>
+     *
+     * <code>INVALID_LISTING_GROUP_TYPE = 46;</code>
+     */
+    public static final int INVALID_LISTING_GROUP_TYPE_VALUE = 46;
+    /**
+     * <pre>
+     * Listing group in an ADD operation specifies a non temporary criterion id.
+     * </pre>
+     *
+     * <code>LISTING_GROUP_ADD_MAY_ONLY_USE_TEMP_ID = 47;</code>
+     */
+    public static final int LISTING_GROUP_ADD_MAY_ONLY_USE_TEMP_ID_VALUE = 47;
 
 
     public final int getNumber() {
@@ -780,15 +770,6 @@ private static final long serialVersionUID = 0L;
         case 15: return INVALID_USER_STATUS;
         case 16: return CANNOT_ADD_CRITERIA_TYPE;
         case 17: return CANNOT_EXCLUDE_CRITERIA_TYPE;
-        case 18: return INVALID_PRODUCT_PARTITION_HIERARCHY;
-        case 19: return PRODUCT_PARTITION_UNIT_CANNOT_HAVE_CHILDREN;
-        case 20: return PRODUCT_PARTITION_SUBDIVISION_REQUIRES_OTHERS_CASE;
-        case 21: return PRODUCT_PARTITION_REQUIRES_SAME_DIMENSION_TYPE_AS_SIBLINGS;
-        case 22: return PRODUCT_PARTITION_ALREADY_EXISTS;
-        case 23: return PRODUCT_PARTITION_DOES_NOT_EXIST;
-        case 24: return PRODUCT_PARTITION_CANNOT_BE_REMOVED;
-        case 25: return INVALID_PRODUCT_PARTITION_TYPE;
-        case 26: return PRODUCT_PARTITION_ADD_MAY_ONLY_USE_TEMP_ID;
         case 27: return CAMPAIGN_TYPE_NOT_COMPATIBLE_WITH_PARTIAL_FAILURE;
         case 28: return OPERATIONS_FOR_TOO_MANY_SHOPPING_ADGROUPS;
         case 29: return CANNOT_MODIFY_URL_FIELDS_WITH_DUPLICATE_ELEMENTS;
@@ -801,6 +782,15 @@ private static final long serialVersionUID = 0L;
         case 36: return CANNOT_SET_BOTH_DESTINATION_URL_AND_TRACKING_URL_TEMPLATE;
         case 37: return FINAL_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE;
         case 38: return FINAL_MOBILE_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE;
+        case 39: return INVALID_LISTING_GROUP_HIERARCHY;
+        case 40: return LISTING_GROUP_UNIT_CANNOT_HAVE_CHILDREN;
+        case 41: return LISTING_GROUP_SUBDIVISION_REQUIRES_OTHERS_CASE;
+        case 42: return LISTING_GROUP_REQUIRES_SAME_DIMENSION_TYPE_AS_SIBLINGS;
+        case 43: return LISTING_GROUP_ALREADY_EXISTS;
+        case 44: return LISTING_GROUP_DOES_NOT_EXIST;
+        case 45: return LISTING_GROUP_CANNOT_BE_REMOVED;
+        case 46: return INVALID_LISTING_GROUP_TYPE;
+        case 47: return LISTING_GROUP_ADD_MAY_ONLY_USE_TEMP_ID;
         default: return null;
       }
     }

@@ -134,6 +134,14 @@ private static final long serialVersionUID = 0L;
      * <code>PROJECT_DISABLED = 5;</code>
      */
     PROJECT_DISABLED(5),
+    /**
+     * <pre>
+     * Authorization of the client failed.
+     * </pre>
+     *
+     * <code>AUTHORIZATION_ERROR = 6;</code>
+     */
+    AUTHORIZATION_ERROR(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -186,6 +194,14 @@ private static final long serialVersionUID = 0L;
      * <code>PROJECT_DISABLED = 5;</code>
      */
     public static final int PROJECT_DISABLED_VALUE = 5;
+    /**
+     * <pre>
+     * Authorization of the client failed.
+     * </pre>
+     *
+     * <code>AUTHORIZATION_ERROR = 6;</code>
+     */
+    public static final int AUTHORIZATION_ERROR_VALUE = 6;
 
 
     public final int getNumber() {
@@ -212,6 +228,7 @@ private static final long serialVersionUID = 0L;
         case 3: return DEVELOPER_TOKEN_NOT_WHITELISTED;
         case 4: return DEVELOPER_TOKEN_PROHIBITED;
         case 5: return PROJECT_DISABLED;
+        case 6: return AUTHORIZATION_ERROR;
         default: return null;
       }
     }

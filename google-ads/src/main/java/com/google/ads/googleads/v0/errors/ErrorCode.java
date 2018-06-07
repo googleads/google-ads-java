@@ -336,6 +336,30 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 464: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 58;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 472: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 59;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 480: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 60;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 488: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 61;
+            errorCode_ = rawValue;
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -404,6 +428,7 @@ private static final long serialVersionUID = 0L;
     NULL_ERROR(47),
     OPERATOR_ERROR(48),
     RANGE_ERROR(49),
+    RECOMMENDATION_ERROR(58),
     REGION_CODE_ERROR(51),
     SETTING_ERROR(52),
     STRING_FORMAT_ERROR(53),
@@ -411,6 +436,9 @@ private static final long serialVersionUID = 0L;
     OPERATION_ACCESS_DENIED_ERROR(55),
     RESOURCE_ACCESS_DENIED_ERROR(56),
     RESOURCE_COUNT_LIMIT_EXCEEDED_ERROR(57),
+    AD_GROUP_BID_MODIFIER_ERROR(59),
+    CONTEXT_ERROR(60),
+    FIELD_ERROR(61),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -466,6 +494,7 @@ private static final long serialVersionUID = 0L;
         case 47: return NULL_ERROR;
         case 48: return OPERATOR_ERROR;
         case 49: return RANGE_ERROR;
+        case 58: return RECOMMENDATION_ERROR;
         case 51: return REGION_CODE_ERROR;
         case 52: return SETTING_ERROR;
         case 53: return STRING_FORMAT_ERROR;
@@ -473,6 +502,9 @@ private static final long serialVersionUID = 0L;
         case 55: return OPERATION_ACCESS_DENIED_ERROR;
         case 56: return RESOURCE_ACCESS_DENIED_ERROR;
         case 57: return RESOURCE_COUNT_LIMIT_EXCEEDED_ERROR;
+        case 59: return AD_GROUP_BID_MODIFIER_ERROR;
+        case 60: return CONTEXT_ERROR;
+        case 61: return FIELD_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -1688,6 +1720,36 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.RangeErrorEnum.RangeError.UNSPECIFIED;
   }
 
+  public static final int RECOMMENDATION_ERROR_FIELD_NUMBER = 58;
+  /**
+   * <pre>
+   * The reasons for error in applying a recommendation
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+   */
+  public int getRecommendationErrorValue() {
+    if (errorCodeCase_ == 58) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for error in applying a recommendation
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+   */
+  public com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError getRecommendationError() {
+    if (errorCodeCase_ == 58) {
+      com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError result = com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError.UNSPECIFIED;
+  }
+
   public static final int REGION_CODE_ERROR_FIELD_NUMBER = 51;
   /**
    * <pre>
@@ -1898,6 +1960,96 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError.UNSPECIFIED;
   }
 
+  public static final int AD_GROUP_BID_MODIFIER_ERROR_FIELD_NUMBER = 59;
+  /**
+   * <pre>
+   * The reasons for the ad group bid modifier error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+   */
+  public int getAdGroupBidModifierErrorValue() {
+    if (errorCodeCase_ == 59) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the ad group bid modifier error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+   */
+  public com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError getAdGroupBidModifierError() {
+    if (errorCodeCase_ == 59) {
+      com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError result = com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError.UNSPECIFIED;
+  }
+
+  public static final int CONTEXT_ERROR_FIELD_NUMBER = 60;
+  /**
+   * <pre>
+   * The reasons for the context error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+   */
+  public int getContextErrorValue() {
+    if (errorCodeCase_ == 60) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the context error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+   */
+  public com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError getContextError() {
+    if (errorCodeCase_ == 60) {
+      com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError result = com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError.UNSPECIFIED;
+  }
+
+  public static final int FIELD_ERROR_FIELD_NUMBER = 61;
+  /**
+   * <pre>
+   * The reasons for the field error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+   */
+  public int getFieldErrorValue() {
+    if (errorCodeCase_ == 61) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the field error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+   */
+  public com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError getFieldError() {
+    if (errorCodeCase_ == 61) {
+      com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError result = com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -2050,6 +2202,18 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 57) {
       output.writeEnum(57, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 58) {
+      output.writeEnum(58, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 59) {
+      output.writeEnum(59, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 60) {
+      output.writeEnum(60, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 61) {
+      output.writeEnum(61, ((java.lang.Integer) errorCode_));
     }
     unknownFields.writeTo(output);
   }
@@ -2247,6 +2411,22 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(57, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 58) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(58, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 59) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(59, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 60) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(60, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 61) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(61, ((java.lang.Integer) errorCode_));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2427,6 +2607,10 @@ private static final long serialVersionUID = 0L;
         result = result && getRangeErrorValue()
             == other.getRangeErrorValue();
         break;
+      case 58:
+        result = result && getRecommendationErrorValue()
+            == other.getRecommendationErrorValue();
+        break;
       case 51:
         result = result && getRegionCodeErrorValue()
             == other.getRegionCodeErrorValue();
@@ -2454,6 +2638,18 @@ private static final long serialVersionUID = 0L;
       case 57:
         result = result && getResourceCountLimitExceededErrorValue()
             == other.getResourceCountLimitExceededErrorValue();
+        break;
+      case 59:
+        result = result && getAdGroupBidModifierErrorValue()
+            == other.getAdGroupBidModifierErrorValue();
+        break;
+      case 60:
+        result = result && getContextErrorValue()
+            == other.getContextErrorValue();
+        break;
+      case 61:
+        result = result && getFieldErrorValue()
+            == other.getFieldErrorValue();
         break;
       case 0:
       default:
@@ -2630,6 +2826,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + RANGE_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getRangeErrorValue();
         break;
+      case 58:
+        hash = (37 * hash) + RECOMMENDATION_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getRecommendationErrorValue();
+        break;
       case 51:
         hash = (37 * hash) + REGION_CODE_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getRegionCodeErrorValue();
@@ -2657,6 +2857,18 @@ private static final long serialVersionUID = 0L;
       case 57:
         hash = (37 * hash) + RESOURCE_COUNT_LIMIT_EXCEEDED_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getResourceCountLimitExceededErrorValue();
+        break;
+      case 59:
+        hash = (37 * hash) + AD_GROUP_BID_MODIFIER_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getAdGroupBidModifierErrorValue();
+        break;
+      case 60:
+        hash = (37 * hash) + CONTEXT_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getContextErrorValue();
+        break;
+      case 61:
+        hash = (37 * hash) + FIELD_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getFieldErrorValue();
         break;
       case 0:
       default:
@@ -2938,6 +3150,9 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 49) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 58) {
+        result.errorCode_ = errorCode_;
+      }
       if (errorCodeCase_ == 51) {
         result.errorCode_ = errorCode_;
       }
@@ -2957,6 +3172,15 @@ private static final long serialVersionUID = 0L;
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 57) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 59) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 60) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 61) {
         result.errorCode_ = errorCode_;
       }
       result.errorCodeCase_ = errorCodeCase_;
@@ -3162,6 +3386,10 @@ private static final long serialVersionUID = 0L;
           setRangeErrorValue(other.getRangeErrorValue());
           break;
         }
+        case RECOMMENDATION_ERROR: {
+          setRecommendationErrorValue(other.getRecommendationErrorValue());
+          break;
+        }
         case REGION_CODE_ERROR: {
           setRegionCodeErrorValue(other.getRegionCodeErrorValue());
           break;
@@ -3188,6 +3416,18 @@ private static final long serialVersionUID = 0L;
         }
         case RESOURCE_COUNT_LIMIT_EXCEEDED_ERROR: {
           setResourceCountLimitExceededErrorValue(other.getResourceCountLimitExceededErrorValue());
+          break;
+        }
+        case AD_GROUP_BID_MODIFIER_ERROR: {
+          setAdGroupBidModifierErrorValue(other.getAdGroupBidModifierErrorValue());
+          break;
+        }
+        case CONTEXT_ERROR: {
+          setContextErrorValue(other.getContextErrorValue());
+          break;
+        }
+        case FIELD_ERROR: {
+          setFieldErrorValue(other.getFieldErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -6158,6 +6398,79 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * The reasons for error in applying a recommendation
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+     */
+    public int getRecommendationErrorValue() {
+      if (errorCodeCase_ == 58) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for error in applying a recommendation
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+     */
+    public Builder setRecommendationErrorValue(int value) {
+      errorCodeCase_ = 58;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for error in applying a recommendation
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+     */
+    public com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError getRecommendationError() {
+      if (errorCodeCase_ == 58) {
+        com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError result = com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for error in applying a recommendation
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+     */
+    public Builder setRecommendationError(com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 58;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for error in applying a recommendation
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+     */
+    public Builder clearRecommendationError() {
+      if (errorCodeCase_ == 58) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
      * The reasons for the region code error
      * </pre>
      *
@@ -6660,6 +6973,225 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearResourceCountLimitExceededError() {
       if (errorCodeCase_ == 57) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the ad group bid modifier error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+     */
+    public int getAdGroupBidModifierErrorValue() {
+      if (errorCodeCase_ == 59) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the ad group bid modifier error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+     */
+    public Builder setAdGroupBidModifierErrorValue(int value) {
+      errorCodeCase_ = 59;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the ad group bid modifier error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+     */
+    public com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError getAdGroupBidModifierError() {
+      if (errorCodeCase_ == 59) {
+        com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError result = com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the ad group bid modifier error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+     */
+    public Builder setAdGroupBidModifierError(com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 59;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the ad group bid modifier error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+     */
+    public Builder clearAdGroupBidModifierError() {
+      if (errorCodeCase_ == 59) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the context error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+     */
+    public int getContextErrorValue() {
+      if (errorCodeCase_ == 60) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the context error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+     */
+    public Builder setContextErrorValue(int value) {
+      errorCodeCase_ = 60;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the context error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+     */
+    public com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError getContextError() {
+      if (errorCodeCase_ == 60) {
+        com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError result = com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the context error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+     */
+    public Builder setContextError(com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 60;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the context error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+     */
+    public Builder clearContextError() {
+      if (errorCodeCase_ == 60) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the field error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+     */
+    public int getFieldErrorValue() {
+      if (errorCodeCase_ == 61) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the field error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+     */
+    public Builder setFieldErrorValue(int value) {
+      errorCodeCase_ = 61;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the field error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+     */
+    public com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError getFieldError() {
+      if (errorCodeCase_ == 61) {
+        com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError result = com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the field error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+     */
+    public Builder setFieldError(com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 61;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the field error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+     */
+    public Builder clearFieldError() {
+      if (errorCodeCase_ == 61) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

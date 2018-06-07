@@ -285,6 +285,20 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 258: {
+            com.google.ads.googleads.v0.common.ListingGroupInfo.Builder subBuilder = null;
+            if (criterionCase_ == 32) {
+              subBuilder = ((com.google.ads.googleads.v0.common.ListingGroupInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.ListingGroupInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.ListingGroupInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 32;
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2588,6 +2602,7 @@ private static final long serialVersionUID = 0L;
   public enum CriterionCase
       implements com.google.protobuf.Internal.EnumLite {
     KEYWORD(27),
+    LISTING_GROUP(32),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -2604,6 +2619,7 @@ private static final long serialVersionUID = 0L;
     public static CriterionCase forNumber(int value) {
       switch (value) {
         case 27: return KEYWORD;
+        case 32: return LISTING_GROUP;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -3062,7 +3078,7 @@ private static final long serialVersionUID = 0L;
    * Source of the effective CPC bid.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpc_bid_source = 21;</code>
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21;</code>
    */
   public int getEffectiveCpcBidSourceValue() {
     return effectiveCpcBidSource_;
@@ -3072,11 +3088,11 @@ private static final long serialVersionUID = 0L;
    * Source of the effective CPC bid.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpc_bid_source = 21;</code>
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21;</code>
    */
-  public com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource getEffectiveCpcBidSource() {
-    com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource result = com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.valueOf(effectiveCpcBidSource_);
-    return result == null ? com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.UNRECOGNIZED : result;
+  public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpcBidSource() {
+    com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpcBidSource_);
+    return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
   }
 
   public static final int EFFECTIVE_CPM_BID_SOURCE_FIELD_NUMBER = 22;
@@ -3086,7 +3102,7 @@ private static final long serialVersionUID = 0L;
    * Source of the effective CPM bid.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpm_bid_source = 22;</code>
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22;</code>
    */
   public int getEffectiveCpmBidSourceValue() {
     return effectiveCpmBidSource_;
@@ -3096,11 +3112,11 @@ private static final long serialVersionUID = 0L;
    * Source of the effective CPM bid.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpm_bid_source = 22;</code>
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22;</code>
    */
-  public com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource getEffectiveCpmBidSource() {
-    com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource result = com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.valueOf(effectiveCpmBidSource_);
-    return result == null ? com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.UNRECOGNIZED : result;
+  public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpmBidSource() {
+    com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpmBidSource_);
+    return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
   }
 
   public static final int EFFECTIVE_CPV_BID_SOURCE_FIELD_NUMBER = 23;
@@ -3110,7 +3126,7 @@ private static final long serialVersionUID = 0L;
    * Source of the effective CPV bid.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpv_bid_source = 23;</code>
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23;</code>
    */
   public int getEffectiveCpvBidSourceValue() {
     return effectiveCpvBidSource_;
@@ -3120,11 +3136,11 @@ private static final long serialVersionUID = 0L;
    * Source of the effective CPV bid.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpv_bid_source = 23;</code>
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23;</code>
    */
-  public com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource getEffectiveCpvBidSource() {
-    com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource result = com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.valueOf(effectiveCpvBidSource_);
-    return result == null ? com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.UNRECOGNIZED : result;
+  public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpvBidSource() {
+    com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpvBidSource_);
+    return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
   }
 
   public static final int POSITION_ESTIMATES_FIELD_NUMBER = 10;
@@ -3351,6 +3367,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.KeywordInfo.getDefaultInstance();
   }
 
+  public static final int LISTING_GROUP_FIELD_NUMBER = 32;
+  /**
+   * <pre>
+   * Listing group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+   */
+  public boolean hasListingGroup() {
+    return criterionCase_ == 32;
+  }
+  /**
+   * <pre>
+   * Listing group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+   */
+  public com.google.ads.googleads.v0.common.ListingGroupInfo getListingGroup() {
+    if (criterionCase_ == 32) {
+       return (com.google.ads.googleads.v0.common.ListingGroupInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.ListingGroupInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Listing group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+   */
+  public com.google.ads.googleads.v0.common.ListingGroupInfoOrBuilder getListingGroupOrBuilder() {
+    if (criterionCase_ == 32) {
+       return (com.google.ads.googleads.v0.common.ListingGroupInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.ListingGroupInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -3402,13 +3456,13 @@ private static final long serialVersionUID = 0L;
     if (effectiveCpvBidMicros_ != null) {
       output.writeMessage(20, getEffectiveCpvBidMicros());
     }
-    if (effectiveCpcBidSource_ != com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.UNSPECIFIED.getNumber()) {
+    if (effectiveCpcBidSource_ != com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
       output.writeEnum(21, effectiveCpcBidSource_);
     }
-    if (effectiveCpmBidSource_ != com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.UNSPECIFIED.getNumber()) {
+    if (effectiveCpmBidSource_ != com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
       output.writeEnum(22, effectiveCpmBidSource_);
     }
-    if (effectiveCpvBidSource_ != com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.UNSPECIFIED.getNumber()) {
+    if (effectiveCpvBidSource_ != com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
       output.writeEnum(23, effectiveCpvBidSource_);
     }
     if (cpvBidMicros_ != null) {
@@ -3425,6 +3479,9 @@ private static final long serialVersionUID = 0L;
     }
     if (negative_ != null) {
       output.writeMessage(31, getNegative());
+    }
+    if (criterionCase_ == 32) {
+      output.writeMessage(32, (com.google.ads.googleads.v0.common.ListingGroupInfo) criterion_);
     }
     unknownFields.writeTo(output);
   }
@@ -3485,15 +3542,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getEffectiveCpvBidMicros());
     }
-    if (effectiveCpcBidSource_ != com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.UNSPECIFIED.getNumber()) {
+    if (effectiveCpcBidSource_ != com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(21, effectiveCpcBidSource_);
     }
-    if (effectiveCpmBidSource_ != com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.UNSPECIFIED.getNumber()) {
+    if (effectiveCpmBidSource_ != com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(22, effectiveCpmBidSource_);
     }
-    if (effectiveCpvBidSource_ != com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.UNSPECIFIED.getNumber()) {
+    if (effectiveCpvBidSource_ != com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(23, effectiveCpvBidSource_);
     }
@@ -3516,6 +3573,10 @@ private static final long serialVersionUID = 0L;
     if (negative_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(31, getNegative());
+    }
+    if (criterionCase_ == 32) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(32, (com.google.ads.googleads.v0.common.ListingGroupInfo) criterion_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -3612,6 +3673,10 @@ private static final long serialVersionUID = 0L;
         result = result && getKeyword()
             .equals(other.getKeyword());
         break;
+      case 32:
+        result = result && getListingGroup()
+            .equals(other.getListingGroup());
+        break;
       case 0:
       default:
     }
@@ -3698,6 +3763,10 @@ private static final long serialVersionUID = 0L;
       case 27:
         hash = (37 * hash) + KEYWORD_FIELD_NUMBER;
         hash = (53 * hash) + getKeyword().hashCode();
+        break;
+      case 32:
+        hash = (37 * hash) + LISTING_GROUP_FIELD_NUMBER;
+        hash = (53 * hash) + getListingGroup().hashCode();
         break;
       case 0:
       default:
@@ -4050,6 +4119,13 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = keywordBuilder_.build();
         }
       }
+      if (criterionCase_ == 32) {
+        if (listingGroupBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = listingGroupBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.criterionCase_ = criterionCase_;
       onBuilt();
@@ -4203,6 +4279,10 @@ private static final long serialVersionUID = 0L;
       switch (other.getCriterionCase()) {
         case KEYWORD: {
           mergeKeyword(other.getKeyword());
+          break;
+        }
+        case LISTING_GROUP: {
+          mergeListingGroup(other.getListingGroup());
           break;
         }
         case CRITERION_NOT_SET: {
@@ -6051,7 +6131,7 @@ private static final long serialVersionUID = 0L;
      * Source of the effective CPC bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpc_bid_source = 21;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21;</code>
      */
     public int getEffectiveCpcBidSourceValue() {
       return effectiveCpcBidSource_;
@@ -6061,7 +6141,7 @@ private static final long serialVersionUID = 0L;
      * Source of the effective CPC bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpc_bid_source = 21;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21;</code>
      */
     public Builder setEffectiveCpcBidSourceValue(int value) {
       effectiveCpcBidSource_ = value;
@@ -6073,20 +6153,20 @@ private static final long serialVersionUID = 0L;
      * Source of the effective CPC bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpc_bid_source = 21;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21;</code>
      */
-    public com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource getEffectiveCpcBidSource() {
-      com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource result = com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.valueOf(effectiveCpcBidSource_);
-      return result == null ? com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.UNRECOGNIZED : result;
+    public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpcBidSource() {
+      com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpcBidSource_);
+      return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * Source of the effective CPC bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpc_bid_source = 21;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21;</code>
      */
-    public Builder setEffectiveCpcBidSource(com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource value) {
+    public Builder setEffectiveCpcBidSource(com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -6100,7 +6180,7 @@ private static final long serialVersionUID = 0L;
      * Source of the effective CPC bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpc_bid_source = 21;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21;</code>
      */
     public Builder clearEffectiveCpcBidSource() {
       
@@ -6115,7 +6195,7 @@ private static final long serialVersionUID = 0L;
      * Source of the effective CPM bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpm_bid_source = 22;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22;</code>
      */
     public int getEffectiveCpmBidSourceValue() {
       return effectiveCpmBidSource_;
@@ -6125,7 +6205,7 @@ private static final long serialVersionUID = 0L;
      * Source of the effective CPM bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpm_bid_source = 22;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22;</code>
      */
     public Builder setEffectiveCpmBidSourceValue(int value) {
       effectiveCpmBidSource_ = value;
@@ -6137,20 +6217,20 @@ private static final long serialVersionUID = 0L;
      * Source of the effective CPM bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpm_bid_source = 22;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22;</code>
      */
-    public com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource getEffectiveCpmBidSource() {
-      com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource result = com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.valueOf(effectiveCpmBidSource_);
-      return result == null ? com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.UNRECOGNIZED : result;
+    public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpmBidSource() {
+      com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpmBidSource_);
+      return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * Source of the effective CPM bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpm_bid_source = 22;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22;</code>
      */
-    public Builder setEffectiveCpmBidSource(com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource value) {
+    public Builder setEffectiveCpmBidSource(com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -6164,7 +6244,7 @@ private static final long serialVersionUID = 0L;
      * Source of the effective CPM bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpm_bid_source = 22;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22;</code>
      */
     public Builder clearEffectiveCpmBidSource() {
       
@@ -6179,7 +6259,7 @@ private static final long serialVersionUID = 0L;
      * Source of the effective CPV bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpv_bid_source = 23;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23;</code>
      */
     public int getEffectiveCpvBidSourceValue() {
       return effectiveCpvBidSource_;
@@ -6189,7 +6269,7 @@ private static final long serialVersionUID = 0L;
      * Source of the effective CPV bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpv_bid_source = 23;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23;</code>
      */
     public Builder setEffectiveCpvBidSourceValue(int value) {
       effectiveCpvBidSource_ = value;
@@ -6201,20 +6281,20 @@ private static final long serialVersionUID = 0L;
      * Source of the effective CPV bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpv_bid_source = 23;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23;</code>
      */
-    public com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource getEffectiveCpvBidSource() {
-      com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource result = com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.valueOf(effectiveCpvBidSource_);
-      return result == null ? com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource.UNRECOGNIZED : result;
+    public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpvBidSource() {
+      com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpvBidSource_);
+      return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * Source of the effective CPV bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpv_bid_source = 23;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23;</code>
      */
-    public Builder setEffectiveCpvBidSource(com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource value) {
+    public Builder setEffectiveCpvBidSource(com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -6228,7 +6308,7 @@ private static final long serialVersionUID = 0L;
      * Source of the effective CPV bid.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpv_bid_source = 23;</code>
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23;</code>
      */
     public Builder clearEffectiveCpvBidSource() {
       
@@ -7373,6 +7453,178 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 27;
       onChanged();;
       return keywordBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ListingGroupInfo, com.google.ads.googleads.v0.common.ListingGroupInfo.Builder, com.google.ads.googleads.v0.common.ListingGroupInfoOrBuilder> listingGroupBuilder_;
+    /**
+     * <pre>
+     * Listing group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+     */
+    public boolean hasListingGroup() {
+      return criterionCase_ == 32;
+    }
+    /**
+     * <pre>
+     * Listing group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+     */
+    public com.google.ads.googleads.v0.common.ListingGroupInfo getListingGroup() {
+      if (listingGroupBuilder_ == null) {
+        if (criterionCase_ == 32) {
+          return (com.google.ads.googleads.v0.common.ListingGroupInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.ListingGroupInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 32) {
+          return listingGroupBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.ListingGroupInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Listing group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+     */
+    public Builder setListingGroup(com.google.ads.googleads.v0.common.ListingGroupInfo value) {
+      if (listingGroupBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        listingGroupBuilder_.setMessage(value);
+      }
+      criterionCase_ = 32;
+      return this;
+    }
+    /**
+     * <pre>
+     * Listing group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+     */
+    public Builder setListingGroup(
+        com.google.ads.googleads.v0.common.ListingGroupInfo.Builder builderForValue) {
+      if (listingGroupBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        listingGroupBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 32;
+      return this;
+    }
+    /**
+     * <pre>
+     * Listing group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+     */
+    public Builder mergeListingGroup(com.google.ads.googleads.v0.common.ListingGroupInfo value) {
+      if (listingGroupBuilder_ == null) {
+        if (criterionCase_ == 32 &&
+            criterion_ != com.google.ads.googleads.v0.common.ListingGroupInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.ListingGroupInfo.newBuilder((com.google.ads.googleads.v0.common.ListingGroupInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 32) {
+          listingGroupBuilder_.mergeFrom(value);
+        }
+        listingGroupBuilder_.setMessage(value);
+      }
+      criterionCase_ = 32;
+      return this;
+    }
+    /**
+     * <pre>
+     * Listing group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+     */
+    public Builder clearListingGroup() {
+      if (listingGroupBuilder_ == null) {
+        if (criterionCase_ == 32) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 32) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        listingGroupBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Listing group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+     */
+    public com.google.ads.googleads.v0.common.ListingGroupInfo.Builder getListingGroupBuilder() {
+      return getListingGroupFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Listing group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+     */
+    public com.google.ads.googleads.v0.common.ListingGroupInfoOrBuilder getListingGroupOrBuilder() {
+      if ((criterionCase_ == 32) && (listingGroupBuilder_ != null)) {
+        return listingGroupBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 32) {
+          return (com.google.ads.googleads.v0.common.ListingGroupInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.ListingGroupInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Listing group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ListingGroupInfo, com.google.ads.googleads.v0.common.ListingGroupInfo.Builder, com.google.ads.googleads.v0.common.ListingGroupInfoOrBuilder> 
+        getListingGroupFieldBuilder() {
+      if (listingGroupBuilder_ == null) {
+        if (!(criterionCase_ == 32)) {
+          criterion_ = com.google.ads.googleads.v0.common.ListingGroupInfo.getDefaultInstance();
+        }
+        listingGroupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.ListingGroupInfo, com.google.ads.googleads.v0.common.ListingGroupInfo.Builder, com.google.ads.googleads.v0.common.ListingGroupInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.ListingGroupInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 32;
+      onChanged();;
+      return listingGroupBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

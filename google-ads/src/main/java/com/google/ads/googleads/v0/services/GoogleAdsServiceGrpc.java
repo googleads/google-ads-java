@@ -1,19 +1,19 @@
 package com.google.ads.googleads.v0.services;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.2.0)",
+    value = "by gRPC proto compiler (version 1.10.0)",
     comments = "Source: google/ads/googleads/v0/services/google_ads_service.proto")
 public final class GoogleAdsServiceGrpc {
 
@@ -31,14 +31,42 @@ public final class GoogleAdsServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getSearchMethod()} instead. 
   public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.SearchGoogleAdsRequest,
-      com.google.ads.googleads.v0.services.SearchGoogleAdsResponse> METHOD_SEARCH =
-      io.grpc.MethodDescriptor.create(
-          io.grpc.MethodDescriptor.MethodType.UNARY,
-          generateFullMethodName(
-              "google.ads.googleads.v0.services.GoogleAdsService", "Search"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.services.SearchGoogleAdsRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.services.SearchGoogleAdsResponse.getDefaultInstance()));
+      com.google.ads.googleads.v0.services.SearchGoogleAdsResponse> METHOD_SEARCH = getSearchMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.SearchGoogleAdsRequest,
+      com.google.ads.googleads.v0.services.SearchGoogleAdsResponse> getSearchMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.SearchGoogleAdsRequest,
+      com.google.ads.googleads.v0.services.SearchGoogleAdsResponse> getSearchMethod() {
+    return getSearchMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.SearchGoogleAdsRequest,
+      com.google.ads.googleads.v0.services.SearchGoogleAdsResponse> getSearchMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.SearchGoogleAdsRequest, com.google.ads.googleads.v0.services.SearchGoogleAdsResponse> getSearchMethod;
+    if ((getSearchMethod = GoogleAdsServiceGrpc.getSearchMethod) == null) {
+      synchronized (GoogleAdsServiceGrpc.class) {
+        if ((getSearchMethod = GoogleAdsServiceGrpc.getSearchMethod) == null) {
+          GoogleAdsServiceGrpc.getSearchMethod = getSearchMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.SearchGoogleAdsRequest, com.google.ads.googleads.v0.services.SearchGoogleAdsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.GoogleAdsService", "Search"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.SearchGoogleAdsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.SearchGoogleAdsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new GoogleAdsServiceMethodDescriptorSupplier("Search"))
+                  .build();
+          }
+        }
+     }
+     return getSearchMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -56,7 +84,7 @@ public final class GoogleAdsServiceGrpc {
   }
 
   /**
-   * Creates a new ListenableFuture-style stub that supports unary and streaming output calls on the service
+   * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
   public static GoogleAdsServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
@@ -77,13 +105,13 @@ public final class GoogleAdsServiceGrpc {
      */
     public void search(com.google.ads.googleads.v0.services.SearchGoogleAdsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.SearchGoogleAdsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_SEARCH, responseObserver);
+      asyncUnimplementedUnaryCall(getSearchMethodHelper(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_SEARCH,
+            getSearchMethodHelper(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v0.services.SearchGoogleAdsRequest,
@@ -122,7 +150,7 @@ public final class GoogleAdsServiceGrpc {
     public void search(com.google.ads.googleads.v0.services.SearchGoogleAdsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.SearchGoogleAdsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_SEARCH, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSearchMethodHelper(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -154,7 +182,7 @@ public final class GoogleAdsServiceGrpc {
      */
     public com.google.ads.googleads.v0.services.SearchGoogleAdsResponse search(com.google.ads.googleads.v0.services.SearchGoogleAdsRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_SEARCH, getCallOptions(), request);
+          getChannel(), getSearchMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -187,7 +215,7 @@ public final class GoogleAdsServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.services.SearchGoogleAdsResponse> search(
         com.google.ads.googleads.v0.services.SearchGoogleAdsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_SEARCH, getCallOptions()), request);
+          getChannel().newCall(getSearchMethodHelper(), getCallOptions()), request);
     }
   }
 
@@ -230,10 +258,38 @@ public final class GoogleAdsServiceGrpc {
     }
   }
 
-  private static final class GoogleAdsServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class GoogleAdsServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    GoogleAdsServiceBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.google.ads.googleads.v0.services.GoogleAdsServiceProto.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("GoogleAdsService");
+    }
+  }
+
+  private static final class GoogleAdsServiceFileDescriptorSupplier
+      extends GoogleAdsServiceBaseDescriptorSupplier {
+    GoogleAdsServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class GoogleAdsServiceMethodDescriptorSupplier
+      extends GoogleAdsServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    GoogleAdsServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -246,8 +302,8 @@ public final class GoogleAdsServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new GoogleAdsServiceDescriptorSupplier())
-              .addMethod(METHOD_SEARCH)
+              .setSchemaDescriptor(new GoogleAdsServiceFileDescriptorSupplier())
+              .addMethod(getSearchMethodHelper())
               .build();
         }
       }

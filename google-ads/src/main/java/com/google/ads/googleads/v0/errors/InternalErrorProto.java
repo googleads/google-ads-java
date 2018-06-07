@@ -30,15 +30,15 @@ public final class InternalErrorProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v0/errors/interna" +
       "l_error.proto\022\036google.ads.googleads.v0.e" +
-      "rrors\"t\n\021InternalErrorEnum\"_\n\rInternalEr" +
-      "ror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n\016INT" +
-      "ERNAL_ERROR\020\002\022\034\n\030ERROR_CODE_NOT_PUBLISHE" +
-      "D\020\003B\310\001\n\"com.google.ads.googleads.v0.erro" +
-      "rsB\022InternalErrorProtoP\001ZDgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v0" +
-      "/errors;errors\242\002\003GAA\252\002\036Google.Ads.Google" +
-      "Ads.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\" +
-      "Errorsb\006proto3"
+      "rrors\"\211\001\n\021InternalErrorEnum\"t\n\rInternalE" +
+      "rror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n\016IN" +
+      "TERNAL_ERROR\020\002\022\034\n\030ERROR_CODE_NOT_PUBLISH" +
+      "ED\020\003\022\023\n\017TRANSIENT_ERROR\020\004B\310\001\n\"com.google" +
+      ".ads.googleads.v0.errorsB\022InternalErrorP" +
+      "rotoP\001ZDgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v0/errors;errors\242\002\003G" +
+      "AA\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Go" +
+      "ogle\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

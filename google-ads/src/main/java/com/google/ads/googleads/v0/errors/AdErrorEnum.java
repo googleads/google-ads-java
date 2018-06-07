@@ -1149,6 +1149,14 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_DYNAMIC_SEARCH_ADS_SETTING_DOMAIN_NAME = 129;</code>
      */
     MISSING_DYNAMIC_SEARCH_ADS_SETTING_DOMAIN_NAME(129),
+    /**
+     * <pre>
+     * The associated ad is not compatible with restriction type.
+     * </pre>
+     *
+     * <code>INCOMPATIBLE_WITH_RESTRICTION_TYPE = 130;</code>
+     */
+    INCOMPATIBLE_WITH_RESTRICTION_TYPE(130),
     UNRECOGNIZED(-1),
     ;
 
@@ -2216,6 +2224,14 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_DYNAMIC_SEARCH_ADS_SETTING_DOMAIN_NAME = 129;</code>
      */
     public static final int MISSING_DYNAMIC_SEARCH_ADS_SETTING_DOMAIN_NAME_VALUE = 129;
+    /**
+     * <pre>
+     * The associated ad is not compatible with restriction type.
+     * </pre>
+     *
+     * <code>INCOMPATIBLE_WITH_RESTRICTION_TYPE = 130;</code>
+     */
+    public static final int INCOMPATIBLE_WITH_RESTRICTION_TYPE_VALUE = 130;
 
 
     public final int getNumber() {
@@ -2366,6 +2382,7 @@ private static final long serialVersionUID = 0L;
         case 127: return CANNOT_DISABLE_CALL_CONVERSION_AND_SET_CONVERSION_TYPE_ID;
         case 128: return CANNOT_SET_PATH2_WITHOUT_PATH1;
         case 129: return MISSING_DYNAMIC_SEARCH_ADS_SETTING_DOMAIN_NAME;
+        case 130: return INCOMPATIBLE_WITH_RESTRICTION_TYPE;
         default: return null;
       }
     }

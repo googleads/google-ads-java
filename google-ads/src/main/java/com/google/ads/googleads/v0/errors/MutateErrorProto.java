@@ -30,11 +30,9 @@ public final class MutateErrorProto {
     java.lang.String[] descriptorData = {
       "\n1google/ads/googleads/v0/errors/mutate_" +
       "error.proto\022\036google.ads.googleads.v0.err" +
-      "ors\"\310\001\n\017MutateErrorEnum\"\264\001\n\013MutateError\022" +
-      "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n\022RESOURC" +
-      "E_NOT_FOUND\020\003\022\032\n\026REQUIRED_FIELD_MISSING\020" +
-      "\004\022\027\n\023FIELD_NOT_CLEARABLE\020\005\022\027\n\023INVALID_FI" +
-      "ELD_VALUE\020\006\022!\n\035ID_EXISTS_IN_MULTIPLE_MUT" +
+      "ors\"y\n\017MutateErrorEnum\"f\n\013MutateError\022\017\n" +
+      "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n\022RESOURCE_" +
+      "NOT_FOUND\020\003\022!\n\035ID_EXISTS_IN_MULTIPLE_MUT" +
       "ATES\020\007B\306\001\n\"com.google.ads.googleads.v0.e" +
       "rrorsB\020MutateErrorProtoP\001ZDgoogle.golang" +
       ".org/genproto/googleapis/ads/googleads/v" +

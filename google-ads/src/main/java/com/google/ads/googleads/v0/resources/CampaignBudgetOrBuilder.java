@@ -142,7 +142,7 @@ public interface CampaignBudgetOrBuilder extends
 
   /**
    * <pre>
-   * The status of this campaign budget.
+   * The status of this campaign budget. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
@@ -150,7 +150,7 @@ public interface CampaignBudgetOrBuilder extends
   int getStatusValue();
   /**
    * <pre>
-   * The status of this campaign budget.
+   * The status of this campaign budget. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>

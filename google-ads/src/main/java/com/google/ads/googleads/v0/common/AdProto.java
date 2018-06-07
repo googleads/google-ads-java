@@ -49,6 +49,11 @@ public final class AdProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_common_ExpandedDynamicSearchAdInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_HotelAdInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_HotelAdInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -63,7 +68,7 @@ public final class AdProto {
       "e/ads/googleads/v0/common/custom_paramet" +
       "er.proto\032+google/ads/googleads/v0/enums/" +
       "ad_type.proto\032\036google/protobuf/wrappers." +
-      "proto\"\211\007\n\002Ad\022\'\n\002id\030\001 \001(\0132\033.google.protob" +
+      "proto\"\312\007\n\002Ad\022\'\n\002id\030\001 \001(\0132\033.google.protob" +
       "uf.Int64Value\0220\n\nfinal_urls\030\002 \003(\0132\034.goog" +
       "le.protobuf.StringValue\0227\n\021final_mobile_" +
       "urls\030\020 \003(\0132\034.google.protobuf.StringValue" +
@@ -85,41 +90,43 @@ public final class AdProto {
       "le.ads.googleads.v0.common.CallOnlyAdInf" +
       "oH\000\022a\n\032expanded_dynamic_search_ad\030\016 \001(\0132" +
       ";.google.ads.googleads.v0.common.Expande" +
-      "dDynamicSearchAdInfoH\000B\t\n\007ad_data\"\244\001\n\nTe" +
-      "xtAdInfo\022.\n\010headline\030\001 \001(\0132\034.google.prot" +
-      "obuf.StringValue\0222\n\014description1\030\002 \001(\0132\034" +
-      ".google.protobuf.StringValue\0222\n\014descript" +
-      "ion2\030\003 \001(\0132\034.google.protobuf.StringValue" +
-      "\"\215\002\n\022ExpandedTextAdInfo\0224\n\016headline_part" +
-      "1\030\001 \001(\0132\034.google.protobuf.StringValue\0224\n" +
-      "\016headline_part2\030\002 \001(\0132\034.google.protobuf." +
-      "StringValue\0221\n\013description\030\003 \001(\0132\034.googl" +
-      "e.protobuf.StringValue\022+\n\005path1\030\004 \001(\0132\034." +
-      "google.protobuf.StringValue\022+\n\005path2\030\005 \001" +
-      "(\0132\034.google.protobuf.StringValue\"}\n\023Dyna" +
-      "micSearchAdInfo\0222\n\014description1\030\001 \001(\0132\034." +
-      "google.protobuf.StringValue\0222\n\014descripti" +
-      "on2\030\002 \001(\0132\034.google.protobuf.StringValue\"" +
-      "\354\001\n\027ResponsiveDisplayAdInfo\0224\n\016short_hea" +
+      "dDynamicSearchAdInfoH\000\022?\n\010hotel_ad\030\017 \001(\013" +
+      "2+.google.ads.googleads.v0.common.HotelA" +
+      "dInfoH\000B\t\n\007ad_data\"\244\001\n\nTextAdInfo\022.\n\010hea" +
       "dline\030\001 \001(\0132\034.google.protobuf.StringValu" +
-      "e\0223\n\rlong_headline\030\002 \001(\0132\034.google.protob" +
-      "uf.StringValue\0221\n\013description\030\003 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\0223\n\rbusiness_na" +
-      "me\030\004 \001(\0132\034.google.protobuf.StringValue\"\311" +
-      "\003\n\016CallOnlyAdInfo\0222\n\014country_code\030\001 \001(\0132" +
-      "\034.google.protobuf.StringValue\0222\n\014phone_n" +
-      "umber\030\002 \001(\0132\034.google.protobuf.StringValu" +
-      "e\0223\n\rbusiness_name\030\003 \001(\0132\034.google.protob" +
-      "uf.StringValue\0222\n\014description1\030\004 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\0222\n\014descriptio" +
-      "n2\030\005 \001(\0132\034.google.protobuf.StringValue\0220" +
-      "\n\014call_tracked\030\006 \001(\0132\032.google.protobuf.B" +
-      "oolValue\022;\n\027disable_call_conversion\030\007 \001(" +
-      "\0132\032.google.protobuf.BoolValue\022C\n\035phone_n" +
-      "umber_verification_url\030\010 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\"P\n\033ExpandedDynamicSea" +
-      "rchAdInfo\0221\n\013description\030\001 \001(\0132\034.google." +
-      "protobuf.StringValueB\275\001\n\"com.google.ads." +
+      "e\0222\n\014description1\030\002 \001(\0132\034.google.protobu" +
+      "f.StringValue\0222\n\014description2\030\003 \001(\0132\034.go" +
+      "ogle.protobuf.StringValue\"\215\002\n\022ExpandedTe" +
+      "xtAdInfo\0224\n\016headline_part1\030\001 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\0224\n\016headline_part2" +
+      "\030\002 \001(\0132\034.google.protobuf.StringValue\0221\n\013" +
+      "description\030\003 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\022+\n\005path1\030\004 \001(\0132\034.google.protobuf" +
+      ".StringValue\022+\n\005path2\030\005 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\"}\n\023DynamicSearchAdInfo" +
+      "\0222\n\014description1\030\001 \001(\0132\034.google.protobuf" +
+      ".StringValue\0222\n\014description2\030\002 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\"\354\001\n\027ResponsiveD" +
+      "isplayAdInfo\0224\n\016short_headline\030\001 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\0223\n\rlong_headl" +
+      "ine\030\002 \001(\0132\034.google.protobuf.StringValue\022" +
+      "1\n\013description\030\003 \001(\0132\034.google.protobuf.S" +
+      "tringValue\0223\n\rbusiness_name\030\004 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\"\311\003\n\016CallOnlyAdIn" +
+      "fo\0222\n\014country_code\030\001 \001(\0132\034.google.protob" +
+      "uf.StringValue\0222\n\014phone_number\030\002 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\0223\n\rbusiness_n" +
+      "ame\030\003 \001(\0132\034.google.protobuf.StringValue\022" +
+      "2\n\014description1\030\004 \001(\0132\034.google.protobuf." +
+      "StringValue\0222\n\014description2\030\005 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\0220\n\014call_tracked\030" +
+      "\006 \001(\0132\032.google.protobuf.BoolValue\022;\n\027dis" +
+      "able_call_conversion\030\007 \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022C\n\035phone_number_verificat" +
+      "ion_url\030\010 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\"P\n\033ExpandedDynamicSearchAdInfo\0221\n\013de" +
+      "scription\030\001 \001(\0132\034.google.protobuf.String" +
+      "Value\"\r\n\013HotelAdInfoB\275\001\n\"com.google.ads." +
       "googleads.v0.commonB\007AdProtoP\001ZDgoogle.g" +
       "olang.org/genproto/googleapis/ads/google" +
       "ads/v0/common;common\242\002\003GAA\252\002\036Google.Ads." +
@@ -146,7 +153,7 @@ public final class AdProto {
     internal_static_google_ads_googleads_v0_common_Ad_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_Ad_descriptor,
-        new java.lang.String[] { "Id", "FinalUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "DisplayUrl", "Type", "TextAd", "ExpandedTextAd", "DynamicSearchAd", "ResponsiveDisplayAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "AdData", });
+        new java.lang.String[] { "Id", "FinalUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "DisplayUrl", "Type", "TextAd", "ExpandedTextAd", "DynamicSearchAd", "ResponsiveDisplayAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "AdData", });
     internal_static_google_ads_googleads_v0_common_TextAdInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v0_common_TextAdInfo_fieldAccessorTable = new
@@ -183,6 +190,12 @@ public final class AdProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_ExpandedDynamicSearchAdInfo_descriptor,
         new java.lang.String[] { "Description", });
+    internal_static_google_ads_googleads_v0_common_HotelAdInfo_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_google_ads_googleads_v0_common_HotelAdInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_HotelAdInfo_descriptor,
+        new java.lang.String[] { });
     com.google.ads.googleads.v0.common.CustomParameterProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdTypeProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
