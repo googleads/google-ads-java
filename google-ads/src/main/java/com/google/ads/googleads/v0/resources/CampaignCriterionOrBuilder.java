@@ -87,6 +87,40 @@ public interface CampaignCriterionOrBuilder extends
 
   /**
    * <pre>
+   * The modifier for the bids when the criterion matches.
+   * Allowable modifier values depend on the criterion:
+   *  - 0.1 - 10.0: Location
+   *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+   */
+  boolean hasBidModifier();
+  /**
+   * <pre>
+   * The modifier for the bids when the criterion matches.
+   * Allowable modifier values depend on the criterion:
+   *  - 0.1 - 10.0: Location
+   *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+   */
+  com.google.protobuf.FloatValue getBidModifier();
+  /**
+   * <pre>
+   * The modifier for the bids when the criterion matches.
+   * Allowable modifier values depend on the criterion:
+   *  - 0.1 - 10.0: Location
+   *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getBidModifierOrBuilder();
+
+  /**
+   * <pre>
    * Whether to target (`false`) or exclude (`true`) the criterion.
    * </pre>
    *
@@ -151,6 +185,56 @@ public interface CampaignCriterionOrBuilder extends
    * <code>.google.ads.googleads.v0.common.KeywordInfo keyword = 8;</code>
    */
   com.google.ads.googleads.v0.common.KeywordInfoOrBuilder getKeywordOrBuilder();
+
+  /**
+   * <pre>
+   * Location.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+   */
+  boolean hasLocation();
+  /**
+   * <pre>
+   * Location.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+   */
+  com.google.ads.googleads.v0.common.LocationInfo getLocation();
+  /**
+   * <pre>
+   * Location.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+   */
+  com.google.ads.googleads.v0.common.LocationInfoOrBuilder getLocationOrBuilder();
+
+  /**
+   * <pre>
+   * Platform.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+   */
+  boolean hasPlatform();
+  /**
+   * <pre>
+   * Platform.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+   */
+  com.google.ads.googleads.v0.common.PlatformInfo getPlatform();
+  /**
+   * <pre>
+   * Platform.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+   */
+  com.google.ads.googleads.v0.common.PlatformInfoOrBuilder getPlatformOrBuilder();
 
   public com.google.ads.googleads.v0.resources.CampaignCriterion.CriterionCase getCriterionCase();
 }

@@ -184,4 +184,35 @@ public interface CustomerOrBuilder extends
    * <code>.google.protobuf.BoolValue auto_tagging_enabled = 8;</code>
    */
   com.google.protobuf.BoolValueOrBuilder getAutoTaggingEnabledOrBuilder();
+
+  /**
+   * <pre>
+   * Whether the Customer has a Partners program badge. If the Customer is not
+   * associated with the Partners program, this will be false. For more
+   * information, see https://support.google.com/partners/answer/3125774
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+   */
+  boolean hasHasPartnersBadge();
+  /**
+   * <pre>
+   * Whether the Customer has a Partners program badge. If the Customer is not
+   * associated with the Partners program, this will be false. For more
+   * information, see https://support.google.com/partners/answer/3125774
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+   */
+  com.google.protobuf.BoolValue getHasPartnersBadge();
+  /**
+   * <pre>
+   * Whether the Customer has a Partners program badge. If the Customer is not
+   * associated with the Partners program, this will be false. For more
+   * information, see https://support.google.com/partners/answer/3125774
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getHasPartnersBadgeOrBuilder();
 }

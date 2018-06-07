@@ -111,47 +111,12 @@ private static final long serialVersionUID = 0L;
     AUTHENTICATION_ERROR(2),
     /**
      * <pre>
-     * Client Customer Id is required if CustomerIdMode is set to
-     * CLIENT_EXTERNAL_CUSTOMER_ID. Starting version V201409 ClientCustomerId
-     * will be required for all requests except for {&#64;link CustomerService#get}
-     * </pre>
-     *
-     * <code>CLIENT_CUSTOMER_ID_IS_REQUIRED = 3;</code>
-     */
-    CLIENT_CUSTOMER_ID_IS_REQUIRED(3),
-    /**
-     * <pre>
-     * Client Email is required if CustomerIdMode is set to
-     * CLIENT_EXTERNAL_EMAIL_FIELD.
-     * </pre>
-     *
-     * <code>CLIENT_EMAIL_REQUIRED = 4;</code>
-     */
-    CLIENT_EMAIL_REQUIRED(4),
-    /**
-     * <pre>
      * Client customer Id is not a number.
      * </pre>
      *
      * <code>CLIENT_CUSTOMER_ID_INVALID = 5;</code>
      */
     CLIENT_CUSTOMER_ID_INVALID(5),
-    /**
-     * <pre>
-     * Client customer Id is not a number.
-     * </pre>
-     *
-     * <code>CLIENT_EMAIL_INVALID = 6;</code>
-     */
-    CLIENT_EMAIL_INVALID(6),
-    /**
-     * <pre>
-     * Client email is not a valid customer email.
-     * </pre>
-     *
-     * <code>CLIENT_EMAIL_FAILED_TO_AUTHENTICATE = 7;</code>
-     */
-    CLIENT_EMAIL_FAILED_TO_AUTHENTICATE(7),
     /**
      * <pre>
      * No customer found for the customer id provided in the header.
@@ -302,47 +267,12 @@ private static final long serialVersionUID = 0L;
     public static final int AUTHENTICATION_ERROR_VALUE = 2;
     /**
      * <pre>
-     * Client Customer Id is required if CustomerIdMode is set to
-     * CLIENT_EXTERNAL_CUSTOMER_ID. Starting version V201409 ClientCustomerId
-     * will be required for all requests except for {&#64;link CustomerService#get}
-     * </pre>
-     *
-     * <code>CLIENT_CUSTOMER_ID_IS_REQUIRED = 3;</code>
-     */
-    public static final int CLIENT_CUSTOMER_ID_IS_REQUIRED_VALUE = 3;
-    /**
-     * <pre>
-     * Client Email is required if CustomerIdMode is set to
-     * CLIENT_EXTERNAL_EMAIL_FIELD.
-     * </pre>
-     *
-     * <code>CLIENT_EMAIL_REQUIRED = 4;</code>
-     */
-    public static final int CLIENT_EMAIL_REQUIRED_VALUE = 4;
-    /**
-     * <pre>
      * Client customer Id is not a number.
      * </pre>
      *
      * <code>CLIENT_CUSTOMER_ID_INVALID = 5;</code>
      */
     public static final int CLIENT_CUSTOMER_ID_INVALID_VALUE = 5;
-    /**
-     * <pre>
-     * Client customer Id is not a number.
-     * </pre>
-     *
-     * <code>CLIENT_EMAIL_INVALID = 6;</code>
-     */
-    public static final int CLIENT_EMAIL_INVALID_VALUE = 6;
-    /**
-     * <pre>
-     * Client email is not a valid customer email.
-     * </pre>
-     *
-     * <code>CLIENT_EMAIL_FAILED_TO_AUTHENTICATE = 7;</code>
-     */
-    public static final int CLIENT_EMAIL_FAILED_TO_AUTHENTICATE_VALUE = 7;
     /**
      * <pre>
      * No customer found for the customer id provided in the header.
@@ -487,11 +417,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return AUTHENTICATION_ERROR;
-        case 3: return CLIENT_CUSTOMER_ID_IS_REQUIRED;
-        case 4: return CLIENT_EMAIL_REQUIRED;
         case 5: return CLIENT_CUSTOMER_ID_INVALID;
-        case 6: return CLIENT_EMAIL_INVALID;
-        case 7: return CLIENT_EMAIL_FAILED_TO_AUTHENTICATE;
         case 8: return CUSTOMER_NOT_FOUND;
         case 9: return GOOGLE_ACCOUNT_DELETED;
         case 10: return GOOGLE_ACCOUNT_COOKIE_INVALID;

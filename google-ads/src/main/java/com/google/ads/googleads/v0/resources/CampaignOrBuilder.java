@@ -291,6 +291,31 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * The hotel setting for the campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+   */
+  boolean hasHotelSetting();
+  /**
+   * <pre>
+   * The hotel setting for the campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+   */
+  com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo getHotelSetting();
+  /**
+   * <pre>
+   * The hotel setting for the campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+   */
+  com.google.ads.googleads.v0.resources.Campaign.HotelSettingInfoOrBuilder getHotelSettingOrBuilder();
+
+  /**
+   * <pre>
    * The setting for controlling Dynamic Search Ads (DSA).
    * </pre>
    *

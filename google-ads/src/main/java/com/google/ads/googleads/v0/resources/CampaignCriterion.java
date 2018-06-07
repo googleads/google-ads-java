@@ -120,6 +120,47 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 8;
             break;
           }
+          case 98: {
+            com.google.ads.googleads.v0.common.LocationInfo.Builder subBuilder = null;
+            if (criterionCase_ == 12) {
+              subBuilder = ((com.google.ads.googleads.v0.common.LocationInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.LocationInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.LocationInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 12;
+            break;
+          }
+          case 106: {
+            com.google.ads.googleads.v0.common.PlatformInfo.Builder subBuilder = null;
+            if (criterionCase_ == 13) {
+              subBuilder = ((com.google.ads.googleads.v0.common.PlatformInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.PlatformInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.PlatformInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 13;
+            break;
+          }
+          case 114: {
+            com.google.protobuf.FloatValue.Builder subBuilder = null;
+            if (bidModifier_ != null) {
+              subBuilder = bidModifier_.toBuilder();
+            }
+            bidModifier_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(bidModifier_);
+              bidModifier_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -149,6 +190,8 @@ private static final long serialVersionUID = 0L;
   public enum CriterionCase
       implements com.google.protobuf.Internal.EnumLite {
     KEYWORD(8),
+    LOCATION(12),
+    PLATFORM(13),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -165,6 +208,8 @@ private static final long serialVersionUID = 0L;
     public static CriterionCase forNumber(int value) {
       switch (value) {
         case 8: return KEYWORD;
+        case 12: return LOCATION;
+        case 13: return PLATFORM;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -298,6 +343,48 @@ private static final long serialVersionUID = 0L;
     return getCriterionId();
   }
 
+  public static final int BID_MODIFIER_FIELD_NUMBER = 14;
+  private com.google.protobuf.FloatValue bidModifier_;
+  /**
+   * <pre>
+   * The modifier for the bids when the criterion matches.
+   * Allowable modifier values depend on the criterion:
+   *  - 0.1 - 10.0: Location
+   *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+   */
+  public boolean hasBidModifier() {
+    return bidModifier_ != null;
+  }
+  /**
+   * <pre>
+   * The modifier for the bids when the criterion matches.
+   * Allowable modifier values depend on the criterion:
+   *  - 0.1 - 10.0: Location
+   *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+   */
+  public com.google.protobuf.FloatValue getBidModifier() {
+    return bidModifier_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : bidModifier_;
+  }
+  /**
+   * <pre>
+   * The modifier for the bids when the criterion matches.
+   * Allowable modifier values depend on the criterion:
+   *  - 0.1 - 10.0: Location
+   *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+   */
+  public com.google.protobuf.FloatValueOrBuilder getBidModifierOrBuilder() {
+    return getBidModifier();
+  }
+
   public static final int NEGATIVE_FIELD_NUMBER = 7;
   private com.google.protobuf.BoolValue negative_;
   /**
@@ -393,6 +480,82 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.KeywordInfo.getDefaultInstance();
   }
 
+  public static final int LOCATION_FIELD_NUMBER = 12;
+  /**
+   * <pre>
+   * Location.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+   */
+  public boolean hasLocation() {
+    return criterionCase_ == 12;
+  }
+  /**
+   * <pre>
+   * Location.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+   */
+  public com.google.ads.googleads.v0.common.LocationInfo getLocation() {
+    if (criterionCase_ == 12) {
+       return (com.google.ads.googleads.v0.common.LocationInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.LocationInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Location.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+   */
+  public com.google.ads.googleads.v0.common.LocationInfoOrBuilder getLocationOrBuilder() {
+    if (criterionCase_ == 12) {
+       return (com.google.ads.googleads.v0.common.LocationInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.LocationInfo.getDefaultInstance();
+  }
+
+  public static final int PLATFORM_FIELD_NUMBER = 13;
+  /**
+   * <pre>
+   * Platform.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+   */
+  public boolean hasPlatform() {
+    return criterionCase_ == 13;
+  }
+  /**
+   * <pre>
+   * Platform.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+   */
+  public com.google.ads.googleads.v0.common.PlatformInfo getPlatform() {
+    if (criterionCase_ == 13) {
+       return (com.google.ads.googleads.v0.common.PlatformInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.PlatformInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Platform.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+   */
+  public com.google.ads.googleads.v0.common.PlatformInfoOrBuilder getPlatformOrBuilder() {
+    if (criterionCase_ == 13) {
+       return (com.google.ads.googleads.v0.common.PlatformInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.PlatformInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -422,6 +585,15 @@ private static final long serialVersionUID = 0L;
     }
     if (criterionCase_ == 8) {
       output.writeMessage(8, (com.google.ads.googleads.v0.common.KeywordInfo) criterion_);
+    }
+    if (criterionCase_ == 12) {
+      output.writeMessage(12, (com.google.ads.googleads.v0.common.LocationInfo) criterion_);
+    }
+    if (criterionCase_ == 13) {
+      output.writeMessage(13, (com.google.ads.googleads.v0.common.PlatformInfo) criterion_);
+    }
+    if (bidModifier_ != null) {
+      output.writeMessage(14, getBidModifier());
     }
     unknownFields.writeTo(output);
   }
@@ -454,6 +626,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, (com.google.ads.googleads.v0.common.KeywordInfo) criterion_);
     }
+    if (criterionCase_ == 12) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, (com.google.ads.googleads.v0.common.LocationInfo) criterion_);
+    }
+    if (criterionCase_ == 13) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, (com.google.ads.googleads.v0.common.PlatformInfo) criterion_);
+    }
+    if (bidModifier_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getBidModifier());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -482,6 +666,11 @@ private static final long serialVersionUID = 0L;
       result = result && getCriterionId()
           .equals(other.getCriterionId());
     }
+    result = result && (hasBidModifier() == other.hasBidModifier());
+    if (hasBidModifier()) {
+      result = result && getBidModifier()
+          .equals(other.getBidModifier());
+    }
     result = result && (hasNegative() == other.hasNegative());
     if (hasNegative()) {
       result = result && getNegative()
@@ -495,6 +684,14 @@ private static final long serialVersionUID = 0L;
       case 8:
         result = result && getKeyword()
             .equals(other.getKeyword());
+        break;
+      case 12:
+        result = result && getLocation()
+            .equals(other.getLocation());
+        break;
+      case 13:
+        result = result && getPlatform()
+            .equals(other.getPlatform());
         break;
       case 0:
       default:
@@ -520,6 +717,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CRITERION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCriterionId().hashCode();
     }
+    if (hasBidModifier()) {
+      hash = (37 * hash) + BID_MODIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getBidModifier().hashCode();
+    }
     if (hasNegative()) {
       hash = (37 * hash) + NEGATIVE_FIELD_NUMBER;
       hash = (53 * hash) + getNegative().hashCode();
@@ -530,6 +731,14 @@ private static final long serialVersionUID = 0L;
       case 8:
         hash = (37 * hash) + KEYWORD_FIELD_NUMBER;
         hash = (53 * hash) + getKeyword().hashCode();
+        break;
+      case 12:
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+        break;
+      case 13:
+        hash = (37 * hash) + PLATFORM_FIELD_NUMBER;
+        hash = (53 * hash) + getPlatform().hashCode();
         break;
       case 0:
       default:
@@ -681,6 +890,12 @@ private static final long serialVersionUID = 0L;
         criterionId_ = null;
         criterionIdBuilder_ = null;
       }
+      if (bidModifierBuilder_ == null) {
+        bidModifier_ = null;
+      } else {
+        bidModifier_ = null;
+        bidModifierBuilder_ = null;
+      }
       if (negativeBuilder_ == null) {
         negative_ = null;
       } else {
@@ -724,6 +939,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.criterionId_ = criterionIdBuilder_.build();
       }
+      if (bidModifierBuilder_ == null) {
+        result.bidModifier_ = bidModifier_;
+      } else {
+        result.bidModifier_ = bidModifierBuilder_.build();
+      }
       if (negativeBuilder_ == null) {
         result.negative_ = negative_;
       } else {
@@ -735,6 +955,20 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = criterion_;
         } else {
           result.criterion_ = keywordBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 12) {
+        if (locationBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = locationBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 13) {
+        if (platformBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = platformBuilder_.build();
         }
       }
       result.criterionCase_ = criterionCase_;
@@ -789,6 +1023,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasCriterionId()) {
         mergeCriterionId(other.getCriterionId());
       }
+      if (other.hasBidModifier()) {
+        mergeBidModifier(other.getBidModifier());
+      }
       if (other.hasNegative()) {
         mergeNegative(other.getNegative());
       }
@@ -798,6 +1035,14 @@ private static final long serialVersionUID = 0L;
       switch (other.getCriterionCase()) {
         case KEYWORD: {
           mergeKeyword(other.getKeyword());
+          break;
+        }
+        case LOCATION: {
+          mergeLocation(other.getLocation());
+          break;
+        }
+        case PLATFORM: {
+          mergePlatform(other.getPlatform());
           break;
         }
         case CRITERION_NOT_SET: {
@@ -1269,6 +1514,186 @@ private static final long serialVersionUID = 0L;
       return criterionIdBuilder_;
     }
 
+    private com.google.protobuf.FloatValue bidModifier_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> bidModifierBuilder_;
+    /**
+     * <pre>
+     * The modifier for the bids when the criterion matches.
+     * Allowable modifier values depend on the criterion:
+     *  - 0.1 - 10.0: Location
+     *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+     */
+    public boolean hasBidModifier() {
+      return bidModifierBuilder_ != null || bidModifier_ != null;
+    }
+    /**
+     * <pre>
+     * The modifier for the bids when the criterion matches.
+     * Allowable modifier values depend on the criterion:
+     *  - 0.1 - 10.0: Location
+     *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+     */
+    public com.google.protobuf.FloatValue getBidModifier() {
+      if (bidModifierBuilder_ == null) {
+        return bidModifier_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : bidModifier_;
+      } else {
+        return bidModifierBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The modifier for the bids when the criterion matches.
+     * Allowable modifier values depend on the criterion:
+     *  - 0.1 - 10.0: Location
+     *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+     */
+    public Builder setBidModifier(com.google.protobuf.FloatValue value) {
+      if (bidModifierBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bidModifier_ = value;
+        onChanged();
+      } else {
+        bidModifierBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The modifier for the bids when the criterion matches.
+     * Allowable modifier values depend on the criterion:
+     *  - 0.1 - 10.0: Location
+     *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+     */
+    public Builder setBidModifier(
+        com.google.protobuf.FloatValue.Builder builderForValue) {
+      if (bidModifierBuilder_ == null) {
+        bidModifier_ = builderForValue.build();
+        onChanged();
+      } else {
+        bidModifierBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The modifier for the bids when the criterion matches.
+     * Allowable modifier values depend on the criterion:
+     *  - 0.1 - 10.0: Location
+     *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+     */
+    public Builder mergeBidModifier(com.google.protobuf.FloatValue value) {
+      if (bidModifierBuilder_ == null) {
+        if (bidModifier_ != null) {
+          bidModifier_ =
+            com.google.protobuf.FloatValue.newBuilder(bidModifier_).mergeFrom(value).buildPartial();
+        } else {
+          bidModifier_ = value;
+        }
+        onChanged();
+      } else {
+        bidModifierBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The modifier for the bids when the criterion matches.
+     * Allowable modifier values depend on the criterion:
+     *  - 0.1 - 10.0: Location
+     *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+     */
+    public Builder clearBidModifier() {
+      if (bidModifierBuilder_ == null) {
+        bidModifier_ = null;
+        onChanged();
+      } else {
+        bidModifier_ = null;
+        bidModifierBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The modifier for the bids when the criterion matches.
+     * Allowable modifier values depend on the criterion:
+     *  - 0.1 - 10.0: Location
+     *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+     */
+    public com.google.protobuf.FloatValue.Builder getBidModifierBuilder() {
+      
+      onChanged();
+      return getBidModifierFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The modifier for the bids when the criterion matches.
+     * Allowable modifier values depend on the criterion:
+     *  - 0.1 - 10.0: Location
+     *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+     */
+    public com.google.protobuf.FloatValueOrBuilder getBidModifierOrBuilder() {
+      if (bidModifierBuilder_ != null) {
+        return bidModifierBuilder_.getMessageOrBuilder();
+      } else {
+        return bidModifier_ == null ?
+            com.google.protobuf.FloatValue.getDefaultInstance() : bidModifier_;
+      }
+    }
+    /**
+     * <pre>
+     * The modifier for the bids when the criterion matches.
+     * Allowable modifier values depend on the criterion:
+     *  - 0.1 - 10.0: Location
+     *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+        getBidModifierFieldBuilder() {
+      if (bidModifierBuilder_ == null) {
+        bidModifierBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                getBidModifier(),
+                getParentForChildren(),
+                isClean());
+        bidModifier_ = null;
+      }
+      return bidModifierBuilder_;
+    }
+
     private com.google.protobuf.BoolValue negative_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> negativeBuilder_;
@@ -1656,6 +2081,350 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 8;
       onChanged();;
       return keywordBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.LocationInfo, com.google.ads.googleads.v0.common.LocationInfo.Builder, com.google.ads.googleads.v0.common.LocationInfoOrBuilder> locationBuilder_;
+    /**
+     * <pre>
+     * Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+     */
+    public boolean hasLocation() {
+      return criterionCase_ == 12;
+    }
+    /**
+     * <pre>
+     * Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+     */
+    public com.google.ads.googleads.v0.common.LocationInfo getLocation() {
+      if (locationBuilder_ == null) {
+        if (criterionCase_ == 12) {
+          return (com.google.ads.googleads.v0.common.LocationInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.LocationInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 12) {
+          return locationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.LocationInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+     */
+    public Builder setLocation(com.google.ads.googleads.v0.common.LocationInfo value) {
+      if (locationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        locationBuilder_.setMessage(value);
+      }
+      criterionCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+     */
+    public Builder setLocation(
+        com.google.ads.googleads.v0.common.LocationInfo.Builder builderForValue) {
+      if (locationBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        locationBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+     */
+    public Builder mergeLocation(com.google.ads.googleads.v0.common.LocationInfo value) {
+      if (locationBuilder_ == null) {
+        if (criterionCase_ == 12 &&
+            criterion_ != com.google.ads.googleads.v0.common.LocationInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.LocationInfo.newBuilder((com.google.ads.googleads.v0.common.LocationInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 12) {
+          locationBuilder_.mergeFrom(value);
+        }
+        locationBuilder_.setMessage(value);
+      }
+      criterionCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+     */
+    public Builder clearLocation() {
+      if (locationBuilder_ == null) {
+        if (criterionCase_ == 12) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 12) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        locationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+     */
+    public com.google.ads.googleads.v0.common.LocationInfo.Builder getLocationBuilder() {
+      return getLocationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+     */
+    public com.google.ads.googleads.v0.common.LocationInfoOrBuilder getLocationOrBuilder() {
+      if ((criterionCase_ == 12) && (locationBuilder_ != null)) {
+        return locationBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 12) {
+          return (com.google.ads.googleads.v0.common.LocationInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.LocationInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.LocationInfo location = 12;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.LocationInfo, com.google.ads.googleads.v0.common.LocationInfo.Builder, com.google.ads.googleads.v0.common.LocationInfoOrBuilder> 
+        getLocationFieldBuilder() {
+      if (locationBuilder_ == null) {
+        if (!(criterionCase_ == 12)) {
+          criterion_ = com.google.ads.googleads.v0.common.LocationInfo.getDefaultInstance();
+        }
+        locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.LocationInfo, com.google.ads.googleads.v0.common.LocationInfo.Builder, com.google.ads.googleads.v0.common.LocationInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.LocationInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 12;
+      onChanged();;
+      return locationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.PlatformInfo, com.google.ads.googleads.v0.common.PlatformInfo.Builder, com.google.ads.googleads.v0.common.PlatformInfoOrBuilder> platformBuilder_;
+    /**
+     * <pre>
+     * Platform.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+     */
+    public boolean hasPlatform() {
+      return criterionCase_ == 13;
+    }
+    /**
+     * <pre>
+     * Platform.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+     */
+    public com.google.ads.googleads.v0.common.PlatformInfo getPlatform() {
+      if (platformBuilder_ == null) {
+        if (criterionCase_ == 13) {
+          return (com.google.ads.googleads.v0.common.PlatformInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.PlatformInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 13) {
+          return platformBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.PlatformInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Platform.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+     */
+    public Builder setPlatform(com.google.ads.googleads.v0.common.PlatformInfo value) {
+      if (platformBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        platformBuilder_.setMessage(value);
+      }
+      criterionCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * Platform.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+     */
+    public Builder setPlatform(
+        com.google.ads.googleads.v0.common.PlatformInfo.Builder builderForValue) {
+      if (platformBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        platformBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * Platform.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+     */
+    public Builder mergePlatform(com.google.ads.googleads.v0.common.PlatformInfo value) {
+      if (platformBuilder_ == null) {
+        if (criterionCase_ == 13 &&
+            criterion_ != com.google.ads.googleads.v0.common.PlatformInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.PlatformInfo.newBuilder((com.google.ads.googleads.v0.common.PlatformInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 13) {
+          platformBuilder_.mergeFrom(value);
+        }
+        platformBuilder_.setMessage(value);
+      }
+      criterionCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * Platform.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+     */
+    public Builder clearPlatform() {
+      if (platformBuilder_ == null) {
+        if (criterionCase_ == 13) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 13) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        platformBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Platform.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+     */
+    public com.google.ads.googleads.v0.common.PlatformInfo.Builder getPlatformBuilder() {
+      return getPlatformFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Platform.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+     */
+    public com.google.ads.googleads.v0.common.PlatformInfoOrBuilder getPlatformOrBuilder() {
+      if ((criterionCase_ == 13) && (platformBuilder_ != null)) {
+        return platformBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 13) {
+          return (com.google.ads.googleads.v0.common.PlatformInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.PlatformInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Platform.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.PlatformInfo, com.google.ads.googleads.v0.common.PlatformInfo.Builder, com.google.ads.googleads.v0.common.PlatformInfoOrBuilder> 
+        getPlatformFieldBuilder() {
+      if (platformBuilder_ == null) {
+        if (!(criterionCase_ == 13)) {
+          criterion_ = com.google.ads.googleads.v0.common.PlatformInfo.getDefaultInstance();
+        }
+        platformBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.PlatformInfo, com.google.ads.googleads.v0.common.PlatformInfo.Builder, com.google.ads.googleads.v0.common.PlatformInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.PlatformInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 13;
+      onChanged();;
+      return platformBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

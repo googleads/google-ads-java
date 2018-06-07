@@ -30,17 +30,18 @@ public final class AuthorizationErrorProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v0/errors/authori" +
       "zation_error.proto\022\036google.ads.googleads" +
-      ".v0.errors\"\304\001\n\026AuthorizationErrorEnum\"\251\001" +
+      ".v0.errors\"\335\001\n\026AuthorizationErrorEnum\"\302\001" +
       "\n\022AuthorizationError\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
       "\007UNKNOWN\020\001\022\032\n\026USER_PERMISSION_DENIED\020\002\022#" +
       "\n\037DEVELOPER_TOKEN_NOT_WHITELISTED\020\003\022\036\n\032D" +
       "EVELOPER_TOKEN_PROHIBITED\020\004\022\024\n\020PROJECT_D" +
-      "ISABLED\020\005B\315\001\n\"com.google.ads.googleads.v" +
-      "0.errorsB\027AuthorizationErrorProtoP\001ZDgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v0/errors;errors\242\002\003GAA\252\002\036Google" +
-      ".Ads.GoogleAds.V0.Errors\312\002\036Google\\Ads\\Go" +
-      "ogleAds\\V0\\Errorsb\006proto3"
+      "ISABLED\020\005\022\027\n\023AUTHORIZATION_ERROR\020\006B\315\001\n\"c" +
+      "om.google.ads.googleads.v0.errorsB\027Autho" +
+      "rizationErrorProtoP\001ZDgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v0/err" +
+      "ors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds." +
+      "V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Erro" +
+      "rsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

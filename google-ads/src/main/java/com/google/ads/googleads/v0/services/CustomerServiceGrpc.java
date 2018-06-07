@@ -1,19 +1,19 @@
 package com.google.ads.googleads.v0.services;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.2.0)",
+    value = "by gRPC proto compiler (version 1.10.0)",
     comments = "Source: google/ads/googleads/v0/services/customer_service.proto")
 public final class CustomerServiceGrpc {
 
@@ -31,14 +31,42 @@ public final class CustomerServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGetCustomerMethod()} instead. 
   public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCustomerRequest,
-      com.google.ads.googleads.v0.resources.Customer> METHOD_GET_CUSTOMER =
-      io.grpc.MethodDescriptor.create(
-          io.grpc.MethodDescriptor.MethodType.UNARY,
-          generateFullMethodName(
-              "google.ads.googleads.v0.services.CustomerService", "GetCustomer"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.services.GetCustomerRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.resources.Customer.getDefaultInstance()));
+      com.google.ads.googleads.v0.resources.Customer> METHOD_GET_CUSTOMER = getGetCustomerMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCustomerRequest,
+      com.google.ads.googleads.v0.resources.Customer> getGetCustomerMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCustomerRequest,
+      com.google.ads.googleads.v0.resources.Customer> getGetCustomerMethod() {
+    return getGetCustomerMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCustomerRequest,
+      com.google.ads.googleads.v0.resources.Customer> getGetCustomerMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCustomerRequest, com.google.ads.googleads.v0.resources.Customer> getGetCustomerMethod;
+    if ((getGetCustomerMethod = CustomerServiceGrpc.getGetCustomerMethod) == null) {
+      synchronized (CustomerServiceGrpc.class) {
+        if ((getGetCustomerMethod = CustomerServiceGrpc.getGetCustomerMethod) == null) {
+          CustomerServiceGrpc.getGetCustomerMethod = getGetCustomerMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.GetCustomerRequest, com.google.ads.googleads.v0.resources.Customer>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.CustomerService", "GetCustomer"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.GetCustomerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.resources.Customer.getDefaultInstance()))
+                  .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("GetCustomer"))
+                  .build();
+          }
+        }
+     }
+     return getGetCustomerMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -56,7 +84,7 @@ public final class CustomerServiceGrpc {
   }
 
   /**
-   * Creates a new ListenableFuture-style stub that supports unary and streaming output calls on the service
+   * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
   public static CustomerServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
@@ -77,13 +105,13 @@ public final class CustomerServiceGrpc {
      */
     public void getCustomer(com.google.ads.googleads.v0.services.GetCustomerRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.resources.Customer> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_CUSTOMER, responseObserver);
+      asyncUnimplementedUnaryCall(getGetCustomerMethodHelper(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_GET_CUSTOMER,
+            getGetCustomerMethodHelper(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v0.services.GetCustomerRequest,
@@ -122,7 +150,7 @@ public final class CustomerServiceGrpc {
     public void getCustomer(com.google.ads.googleads.v0.services.GetCustomerRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.resources.Customer> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_CUSTOMER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCustomerMethodHelper(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -154,7 +182,7 @@ public final class CustomerServiceGrpc {
      */
     public com.google.ads.googleads.v0.resources.Customer getCustomer(com.google.ads.googleads.v0.services.GetCustomerRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_CUSTOMER, getCallOptions(), request);
+          getChannel(), getGetCustomerMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -187,7 +215,7 @@ public final class CustomerServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.resources.Customer> getCustomer(
         com.google.ads.googleads.v0.services.GetCustomerRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_CUSTOMER, getCallOptions()), request);
+          getChannel().newCall(getGetCustomerMethodHelper(), getCallOptions()), request);
     }
   }
 
@@ -230,10 +258,38 @@ public final class CustomerServiceGrpc {
     }
   }
 
-  private static final class CustomerServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class CustomerServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    CustomerServiceBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.google.ads.googleads.v0.services.CustomerServiceProto.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("CustomerService");
+    }
+  }
+
+  private static final class CustomerServiceFileDescriptorSupplier
+      extends CustomerServiceBaseDescriptorSupplier {
+    CustomerServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class CustomerServiceMethodDescriptorSupplier
+      extends CustomerServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    CustomerServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -246,8 +302,8 @@ public final class CustomerServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new CustomerServiceDescriptorSupplier())
-              .addMethod(METHOD_GET_CUSTOMER)
+              .setSchemaDescriptor(new CustomerServiceFileDescriptorSupplier())
+              .addMethod(getGetCustomerMethodHelper())
               .build();
         }
       }

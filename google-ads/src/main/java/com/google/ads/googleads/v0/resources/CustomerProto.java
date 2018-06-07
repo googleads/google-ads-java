@@ -30,7 +30,7 @@ public final class CustomerProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v0/resources/cust" +
       "omer.proto\022!google.ads.googleads.v0.reso" +
-      "urces\032\036google/protobuf/wrappers.proto\"\337\002" +
+      "urces\032\036google/protobuf/wrappers.proto\"\227\003" +
       "\n\010Customer\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030" +
       "\003 \001(\0132\033.google.protobuf.Int64Value\0226\n\020de" +
       "scriptive_name\030\004 \001(\0132\034.google.protobuf.S" +
@@ -39,13 +39,14 @@ public final class CustomerProto {
       "(\0132\034.google.protobuf.StringValue\022;\n\025trac" +
       "king_url_template\030\007 \001(\0132\034.google.protobu" +
       "f.StringValue\0228\n\024auto_tagging_enabled\030\010 " +
-      "\001(\0132\032.google.protobuf.BoolValueB\322\001\n%com." +
-      "google.ads.googleads.v0.resourcesB\rCusto" +
-      "merProtoP\001ZJgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v0/resources;res" +
-      "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.R" +
-      "esources\312\002!Google\\Ads\\GoogleAds\\V0\\Resou" +
-      "rcesb\006proto3"
+      "\001(\0132\032.google.protobuf.BoolValue\0226\n\022has_p" +
+      "artners_badge\030\t \001(\0132\032.google.protobuf.Bo" +
+      "olValueB\322\001\n%com.google.ads.googleads.v0." +
+      "resourcesB\rCustomerProtoP\001ZJgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v0/resources;resources\242\002\003GAA\252\002!Google.Ad" +
+      "s.GoogleAds.V0.Resources\312\002!Google\\Ads\\Go" +
+      "ogleAds\\V0\\Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -65,7 +66,7 @@ public final class CustomerProto {
     internal_static_google_ads_googleads_v0_resources_Customer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_Customer_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "DescriptiveName", "CurrencyCode", "TimeZone", "TrackingUrlTemplate", "AutoTaggingEnabled", });
+        new java.lang.String[] { "ResourceName", "Id", "DescriptiveName", "CurrencyCode", "TimeZone", "TrackingUrlTemplate", "AutoTaggingEnabled", "HasPartnersBadge", });
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

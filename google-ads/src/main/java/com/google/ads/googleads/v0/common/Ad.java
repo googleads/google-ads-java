@@ -204,6 +204,20 @@ private static final long serialVersionUID = 0L;
             adDataCase_ = 14;
             break;
           }
+          case 122: {
+            com.google.ads.googleads.v0.common.HotelAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 15) {
+              subBuilder = ((com.google.ads.googleads.v0.common.HotelAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v0.common.HotelAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.HotelAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 15;
+            break;
+          }
           case 130: {
             if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
               finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
@@ -257,6 +271,7 @@ private static final long serialVersionUID = 0L;
     RESPONSIVE_DISPLAY_AD(9),
     CALL_ONLY_AD(13),
     EXPANDED_DYNAMIC_SEARCH_AD(14),
+    HOTEL_AD(15),
     ADDATA_NOT_SET(0);
     private final int value;
     private AdDataCase(int value) {
@@ -278,6 +293,7 @@ private static final long serialVersionUID = 0L;
         case 9: return RESPONSIVE_DISPLAY_AD;
         case 13: return CALL_ONLY_AD;
         case 14: return EXPANDED_DYNAMIC_SEARCH_AD;
+        case 15: return HOTEL_AD;
         case 0: return ADDATA_NOT_SET;
         default: return null;
       }
@@ -841,6 +857,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.ExpandedDynamicSearchAdInfo.getDefaultInstance();
   }
 
+  public static final int HOTEL_AD_FIELD_NUMBER = 15;
+  /**
+   * <pre>
+   * Details pertaining to a hotel ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+   */
+  public boolean hasHotelAd() {
+    return adDataCase_ == 15;
+  }
+  /**
+   * <pre>
+   * Details pertaining to a hotel ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+   */
+  public com.google.ads.googleads.v0.common.HotelAdInfo getHotelAd() {
+    if (adDataCase_ == 15) {
+       return (com.google.ads.googleads.v0.common.HotelAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v0.common.HotelAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to a hotel ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+   */
+  public com.google.ads.googleads.v0.common.HotelAdInfoOrBuilder getHotelAdOrBuilder() {
+    if (adDataCase_ == 15) {
+       return (com.google.ads.googleads.v0.common.HotelAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v0.common.HotelAdInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -888,6 +942,9 @@ private static final long serialVersionUID = 0L;
     }
     if (adDataCase_ == 14) {
       output.writeMessage(14, (com.google.ads.googleads.v0.common.ExpandedDynamicSearchAdInfo) adData_);
+    }
+    if (adDataCase_ == 15) {
+      output.writeMessage(15, (com.google.ads.googleads.v0.common.HotelAdInfo) adData_);
     }
     for (int i = 0; i < finalMobileUrls_.size(); i++) {
       output.writeMessage(16, finalMobileUrls_.get(i));
@@ -947,6 +1004,10 @@ private static final long serialVersionUID = 0L;
     if (adDataCase_ == 14) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, (com.google.ads.googleads.v0.common.ExpandedDynamicSearchAdInfo) adData_);
+    }
+    if (adDataCase_ == 15) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, (com.google.ads.googleads.v0.common.HotelAdInfo) adData_);
     }
     for (int i = 0; i < finalMobileUrls_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -1018,6 +1079,10 @@ private static final long serialVersionUID = 0L;
         result = result && getExpandedDynamicSearchAd()
             .equals(other.getExpandedDynamicSearchAd());
         break;
+      case 15:
+        result = result && getHotelAd()
+            .equals(other.getHotelAd());
+        break;
       case 0:
       default:
     }
@@ -1082,6 +1147,10 @@ private static final long serialVersionUID = 0L;
       case 14:
         hash = (37 * hash) + EXPANDED_DYNAMIC_SEARCH_AD_FIELD_NUMBER;
         hash = (53 * hash) + getExpandedDynamicSearchAd().hashCode();
+        break;
+      case 15:
+        hash = (37 * hash) + HOTEL_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getHotelAd().hashCode();
         break;
       case 0:
       default:
@@ -1371,6 +1440,13 @@ private static final long serialVersionUID = 0L;
           result.adData_ = expandedDynamicSearchAdBuilder_.build();
         }
       }
+      if (adDataCase_ == 15) {
+        if (hotelAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = hotelAdBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.adDataCase_ = adDataCase_;
       onBuilt();
@@ -1527,6 +1603,10 @@ private static final long serialVersionUID = 0L;
         }
         case EXPANDED_DYNAMIC_SEARCH_AD: {
           mergeExpandedDynamicSearchAd(other.getExpandedDynamicSearchAd());
+          break;
+        }
+        case HOTEL_AD: {
+          mergeHotelAd(other.getHotelAd());
           break;
         }
         case ADDATA_NOT_SET: {
@@ -4173,6 +4253,178 @@ private static final long serialVersionUID = 0L;
       adDataCase_ = 14;
       onChanged();;
       return expandedDynamicSearchAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.HotelAdInfo, com.google.ads.googleads.v0.common.HotelAdInfo.Builder, com.google.ads.googleads.v0.common.HotelAdInfoOrBuilder> hotelAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to a hotel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+     */
+    public boolean hasHotelAd() {
+      return adDataCase_ == 15;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a hotel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+     */
+    public com.google.ads.googleads.v0.common.HotelAdInfo getHotelAd() {
+      if (hotelAdBuilder_ == null) {
+        if (adDataCase_ == 15) {
+          return (com.google.ads.googleads.v0.common.HotelAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v0.common.HotelAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 15) {
+          return hotelAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.HotelAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a hotel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+     */
+    public Builder setHotelAd(com.google.ads.googleads.v0.common.HotelAdInfo value) {
+      if (hotelAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        hotelAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 15;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a hotel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+     */
+    public Builder setHotelAd(
+        com.google.ads.googleads.v0.common.HotelAdInfo.Builder builderForValue) {
+      if (hotelAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 15;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a hotel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+     */
+    public Builder mergeHotelAd(com.google.ads.googleads.v0.common.HotelAdInfo value) {
+      if (hotelAdBuilder_ == null) {
+        if (adDataCase_ == 15 &&
+            adData_ != com.google.ads.googleads.v0.common.HotelAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v0.common.HotelAdInfo.newBuilder((com.google.ads.googleads.v0.common.HotelAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 15) {
+          hotelAdBuilder_.mergeFrom(value);
+        }
+        hotelAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 15;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a hotel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+     */
+    public Builder clearHotelAd() {
+      if (hotelAdBuilder_ == null) {
+        if (adDataCase_ == 15) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 15) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        hotelAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a hotel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+     */
+    public com.google.ads.googleads.v0.common.HotelAdInfo.Builder getHotelAdBuilder() {
+      return getHotelAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to a hotel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+     */
+    public com.google.ads.googleads.v0.common.HotelAdInfoOrBuilder getHotelAdOrBuilder() {
+      if ((adDataCase_ == 15) && (hotelAdBuilder_ != null)) {
+        return hotelAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 15) {
+          return (com.google.ads.googleads.v0.common.HotelAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v0.common.HotelAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a hotel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.HotelAdInfo hotel_ad = 15;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.HotelAdInfo, com.google.ads.googleads.v0.common.HotelAdInfo.Builder, com.google.ads.googleads.v0.common.HotelAdInfoOrBuilder> 
+        getHotelAdFieldBuilder() {
+      if (hotelAdBuilder_ == null) {
+        if (!(adDataCase_ == 15)) {
+          adData_ = com.google.ads.googleads.v0.common.HotelAdInfo.getDefaultInstance();
+        }
+        hotelAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.HotelAdInfo, com.google.ads.googleads.v0.common.HotelAdInfo.Builder, com.google.ads.googleads.v0.common.HotelAdInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.HotelAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 15;
+      onChanged();;
+      return hotelAdBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

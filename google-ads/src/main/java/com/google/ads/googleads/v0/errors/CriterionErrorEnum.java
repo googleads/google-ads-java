@@ -770,6 +770,24 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_ATTACH_CRITERIA_AT_CAMPAIGN_AND_ADGROUP = 81;</code>
      */
     CANNOT_ATTACH_CRITERIA_AT_CAMPAIGN_AND_ADGROUP(81),
+    /**
+     * <pre>
+     * Range represented by hotel length of stay's min nights and max nights
+     * overlaps with an existing criterion.
+     * </pre>
+     *
+     * <code>HOTEL_LENGTH_OF_STAY_OVERLAPS_WITH_EXISTING_CRITERION = 82;</code>
+     */
+    HOTEL_LENGTH_OF_STAY_OVERLAPS_WITH_EXISTING_CRITERION(82),
+    /**
+     * <pre>
+     * Range represented by hotel advance booking window's min days and max days
+     * overlaps with an existing criterion.
+     * </pre>
+     *
+     * <code>HOTEL_ADVANCE_BOOKING_WINDOW_OVERLAPS_WITH_EXISTING_CRITERION = 83;</code>
+     */
+    HOTEL_ADVANCE_BOOKING_WINDOW_OVERLAPS_WITH_EXISTING_CRITERION(83),
     UNRECOGNIZED(-1),
     ;
 
@@ -1458,6 +1476,24 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_ATTACH_CRITERIA_AT_CAMPAIGN_AND_ADGROUP = 81;</code>
      */
     public static final int CANNOT_ATTACH_CRITERIA_AT_CAMPAIGN_AND_ADGROUP_VALUE = 81;
+    /**
+     * <pre>
+     * Range represented by hotel length of stay's min nights and max nights
+     * overlaps with an existing criterion.
+     * </pre>
+     *
+     * <code>HOTEL_LENGTH_OF_STAY_OVERLAPS_WITH_EXISTING_CRITERION = 82;</code>
+     */
+    public static final int HOTEL_LENGTH_OF_STAY_OVERLAPS_WITH_EXISTING_CRITERION_VALUE = 82;
+    /**
+     * <pre>
+     * Range represented by hotel advance booking window's min days and max days
+     * overlaps with an existing criterion.
+     * </pre>
+     *
+     * <code>HOTEL_ADVANCE_BOOKING_WINDOW_OVERLAPS_WITH_EXISTING_CRITERION = 83;</code>
+     */
+    public static final int HOTEL_ADVANCE_BOOKING_WINDOW_OVERLAPS_WITH_EXISTING_CRITERION_VALUE = 83;
 
 
     public final int getNumber() {
@@ -1560,6 +1596,8 @@ private static final long serialVersionUID = 0L;
         case 79: return LOCATION_FILTER_NOT_ALLOWED;
         case 80: return LOCATION_FILTER_INVALID;
         case 81: return CANNOT_ATTACH_CRITERIA_AT_CAMPAIGN_AND_ADGROUP;
+        case 82: return HOTEL_LENGTH_OF_STAY_OVERLAPS_WITH_EXISTING_CRITERION;
+        case 83: return HOTEL_ADVANCE_BOOKING_WINDOW_OVERLAPS_WITH_EXISTING_CRITERION;
         default: return null;
       }
     }

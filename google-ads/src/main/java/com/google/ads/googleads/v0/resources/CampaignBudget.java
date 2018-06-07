@@ -348,7 +348,7 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * The status of this campaign budget.
+   * The status of this campaign budget. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
@@ -358,7 +358,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The status of this campaign budget.
+   * The status of this campaign budget. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
@@ -1636,7 +1636,7 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * The status of this campaign budget.
+     * The status of this campaign budget. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
@@ -1646,7 +1646,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of this campaign budget.
+     * The status of this campaign budget. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
@@ -1658,7 +1658,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of this campaign budget.
+     * The status of this campaign budget. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
@@ -1669,7 +1669,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of this campaign budget.
+     * The status of this campaign budget. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
@@ -1685,7 +1685,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of this campaign budget.
+     * The status of this campaign budget. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>

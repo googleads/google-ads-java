@@ -689,6 +689,23 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for error in applying a recommendation
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+   */
+  int getRecommendationErrorValue();
+  /**
+   * <pre>
+   * The reasons for error in applying a recommendation
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError recommendation_error = 58;</code>
+   */
+  com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError getRecommendationError();
+
+  /**
+   * <pre>
    * The reasons for the region code error
    * </pre>
    *
@@ -805,6 +822,57 @@ public interface ErrorCodeOrBuilder extends
    * <code>.google.ads.googleads.v0.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError resource_count_limit_exceeded_error = 57;</code>
    */
   com.google.ads.googleads.v0.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError getResourceCountLimitExceededError();
+
+  /**
+   * <pre>
+   * The reasons for the ad group bid modifier error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+   */
+  int getAdGroupBidModifierErrorValue();
+  /**
+   * <pre>
+   * The reasons for the ad group bid modifier error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError ad_group_bid_modifier_error = 59;</code>
+   */
+  com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError getAdGroupBidModifierError();
+
+  /**
+   * <pre>
+   * The reasons for the context error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+   */
+  int getContextErrorValue();
+  /**
+   * <pre>
+   * The reasons for the context error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError context_error = 60;</code>
+   */
+  com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError getContextError();
+
+  /**
+   * <pre>
+   * The reasons for the field error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+   */
+  int getFieldErrorValue();
+  /**
+   * <pre>
+   * The reasons for the field error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError field_error = 61;</code>
+   */
+  com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError getFieldError();
 
   public com.google.ads.googleads.v0.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

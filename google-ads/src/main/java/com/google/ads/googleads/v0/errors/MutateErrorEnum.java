@@ -111,30 +111,6 @@ private static final long serialVersionUID = 0L;
     RESOURCE_NOT_FOUND(3),
     /**
      * <pre>
-     * Required field is missing.
-     * </pre>
-     *
-     * <code>REQUIRED_FIELD_MISSING = 4;</code>
-     */
-    REQUIRED_FIELD_MISSING(4),
-    /**
-     * <pre>
-     * Field cannot be cleared.
-     * </pre>
-     *
-     * <code>FIELD_NOT_CLEARABLE = 5;</code>
-     */
-    FIELD_NOT_CLEARABLE(5),
-    /**
-     * <pre>
-     * Cannot set specified value for the field.
-     * </pre>
-     *
-     * <code>INVALID_FIELD_VALUE = 6;</code>
-     */
-    INVALID_FIELD_VALUE(6),
-    /**
-     * <pre>
      * Cannot mutate the same resource twice in one request.
      * </pre>
      *
@@ -170,30 +146,6 @@ private static final long serialVersionUID = 0L;
     public static final int RESOURCE_NOT_FOUND_VALUE = 3;
     /**
      * <pre>
-     * Required field is missing.
-     * </pre>
-     *
-     * <code>REQUIRED_FIELD_MISSING = 4;</code>
-     */
-    public static final int REQUIRED_FIELD_MISSING_VALUE = 4;
-    /**
-     * <pre>
-     * Field cannot be cleared.
-     * </pre>
-     *
-     * <code>FIELD_NOT_CLEARABLE = 5;</code>
-     */
-    public static final int FIELD_NOT_CLEARABLE_VALUE = 5;
-    /**
-     * <pre>
-     * Cannot set specified value for the field.
-     * </pre>
-     *
-     * <code>INVALID_FIELD_VALUE = 6;</code>
-     */
-    public static final int INVALID_FIELD_VALUE_VALUE = 6;
-    /**
-     * <pre>
      * Cannot mutate the same resource twice in one request.
      * </pre>
      *
@@ -223,9 +175,6 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 3: return RESOURCE_NOT_FOUND;
-        case 4: return REQUIRED_FIELD_MISSING;
-        case 5: return FIELD_NOT_CLEARABLE;
-        case 6: return INVALID_FIELD_VALUE;
         case 7: return ID_EXISTS_IN_MULTIPLE_MUTATES;
         default: return null;
       }

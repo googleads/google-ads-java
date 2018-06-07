@@ -112,6 +112,14 @@ private static final long serialVersionUID = 0L;
      * <code>SEARCH_STANDARD = 2;</code>
      */
     SEARCH_STANDARD(2),
+    /**
+     * <pre>
+     * The default ad group type for Hotel campaigns.
+     * </pre>
+     *
+     * <code>HOTEL_ADS = 6;</code>
+     */
+    HOTEL_ADS(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -140,6 +148,14 @@ private static final long serialVersionUID = 0L;
      * <code>SEARCH_STANDARD = 2;</code>
      */
     public static final int SEARCH_STANDARD_VALUE = 2;
+    /**
+     * <pre>
+     * The default ad group type for Hotel campaigns.
+     * </pre>
+     *
+     * <code>HOTEL_ADS = 6;</code>
+     */
+    public static final int HOTEL_ADS_VALUE = 6;
 
 
     public final int getNumber() {
@@ -163,6 +179,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return SEARCH_STANDARD;
+        case 6: return HOTEL_ADS;
         default: return null;
       }
     }

@@ -1,19 +1,19 @@
 package com.google.ads.googleads.v0.services;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.2.0)",
+    value = "by gRPC proto compiler (version 1.10.0)",
     comments = "Source: google/ads/googleads/v0/services/ad_group_service.proto")
 public final class AdGroupServiceGrpc {
 
@@ -31,23 +31,79 @@ public final class AdGroupServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGetAdGroupMethod()} instead. 
   public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetAdGroupRequest,
-      com.google.ads.googleads.v0.resources.AdGroup> METHOD_GET_AD_GROUP =
-      io.grpc.MethodDescriptor.create(
-          io.grpc.MethodDescriptor.MethodType.UNARY,
-          generateFullMethodName(
-              "google.ads.googleads.v0.services.AdGroupService", "GetAdGroup"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.services.GetAdGroupRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.resources.AdGroup.getDefaultInstance()));
+      com.google.ads.googleads.v0.resources.AdGroup> METHOD_GET_AD_GROUP = getGetAdGroupMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetAdGroupRequest,
+      com.google.ads.googleads.v0.resources.AdGroup> getGetAdGroupMethod;
+
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetAdGroupRequest,
+      com.google.ads.googleads.v0.resources.AdGroup> getGetAdGroupMethod() {
+    return getGetAdGroupMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetAdGroupRequest,
+      com.google.ads.googleads.v0.resources.AdGroup> getGetAdGroupMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetAdGroupRequest, com.google.ads.googleads.v0.resources.AdGroup> getGetAdGroupMethod;
+    if ((getGetAdGroupMethod = AdGroupServiceGrpc.getGetAdGroupMethod) == null) {
+      synchronized (AdGroupServiceGrpc.class) {
+        if ((getGetAdGroupMethod = AdGroupServiceGrpc.getGetAdGroupMethod) == null) {
+          AdGroupServiceGrpc.getGetAdGroupMethod = getGetAdGroupMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.GetAdGroupRequest, com.google.ads.googleads.v0.resources.AdGroup>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.AdGroupService", "GetAdGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.GetAdGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.resources.AdGroup.getDefaultInstance()))
+                  .setSchemaDescriptor(new AdGroupServiceMethodDescriptorSupplier("GetAdGroup"))
+                  .build();
+          }
+        }
+     }
+     return getGetAdGroupMethod;
+  }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getMutateAdGroupsMethod()} instead. 
   public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateAdGroupsRequest,
-      com.google.ads.googleads.v0.services.MutateAdGroupsResponse> METHOD_MUTATE_AD_GROUPS =
-      io.grpc.MethodDescriptor.create(
-          io.grpc.MethodDescriptor.MethodType.UNARY,
-          generateFullMethodName(
-              "google.ads.googleads.v0.services.AdGroupService", "MutateAdGroups"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.services.MutateAdGroupsRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.services.MutateAdGroupsResponse.getDefaultInstance()));
+      com.google.ads.googleads.v0.services.MutateAdGroupsResponse> METHOD_MUTATE_AD_GROUPS = getMutateAdGroupsMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateAdGroupsRequest,
+      com.google.ads.googleads.v0.services.MutateAdGroupsResponse> getMutateAdGroupsMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateAdGroupsRequest,
+      com.google.ads.googleads.v0.services.MutateAdGroupsResponse> getMutateAdGroupsMethod() {
+    return getMutateAdGroupsMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateAdGroupsRequest,
+      com.google.ads.googleads.v0.services.MutateAdGroupsResponse> getMutateAdGroupsMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateAdGroupsRequest, com.google.ads.googleads.v0.services.MutateAdGroupsResponse> getMutateAdGroupsMethod;
+    if ((getMutateAdGroupsMethod = AdGroupServiceGrpc.getMutateAdGroupsMethod) == null) {
+      synchronized (AdGroupServiceGrpc.class) {
+        if ((getMutateAdGroupsMethod = AdGroupServiceGrpc.getMutateAdGroupsMethod) == null) {
+          AdGroupServiceGrpc.getMutateAdGroupsMethod = getMutateAdGroupsMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.MutateAdGroupsRequest, com.google.ads.googleads.v0.services.MutateAdGroupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.AdGroupService", "MutateAdGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateAdGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateAdGroupsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new AdGroupServiceMethodDescriptorSupplier("MutateAdGroups"))
+                  .build();
+          }
+        }
+     }
+     return getMutateAdGroupsMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -65,7 +121,7 @@ public final class AdGroupServiceGrpc {
   }
 
   /**
-   * Creates a new ListenableFuture-style stub that supports unary and streaming output calls on the service
+   * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
   public static AdGroupServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
@@ -86,7 +142,7 @@ public final class AdGroupServiceGrpc {
      */
     public void getAdGroup(com.google.ads.googleads.v0.services.GetAdGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.resources.AdGroup> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_AD_GROUP, responseObserver);
+      asyncUnimplementedUnaryCall(getGetAdGroupMethodHelper(), responseObserver);
     }
 
     /**
@@ -96,20 +152,20 @@ public final class AdGroupServiceGrpc {
      */
     public void mutateAdGroups(com.google.ads.googleads.v0.services.MutateAdGroupsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateAdGroupsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_MUTATE_AD_GROUPS, responseObserver);
+      asyncUnimplementedUnaryCall(getMutateAdGroupsMethodHelper(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_GET_AD_GROUP,
+            getGetAdGroupMethodHelper(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v0.services.GetAdGroupRequest,
                 com.google.ads.googleads.v0.resources.AdGroup>(
                   this, METHODID_GET_AD_GROUP)))
           .addMethod(
-            METHOD_MUTATE_AD_GROUPS,
+            getMutateAdGroupsMethodHelper(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v0.services.MutateAdGroupsRequest,
@@ -148,7 +204,7 @@ public final class AdGroupServiceGrpc {
     public void getAdGroup(com.google.ads.googleads.v0.services.GetAdGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.resources.AdGroup> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_AD_GROUP, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAdGroupMethodHelper(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -159,7 +215,7 @@ public final class AdGroupServiceGrpc {
     public void mutateAdGroups(com.google.ads.googleads.v0.services.MutateAdGroupsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateAdGroupsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_MUTATE_AD_GROUPS, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateAdGroupsMethodHelper(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -191,7 +247,7 @@ public final class AdGroupServiceGrpc {
      */
     public com.google.ads.googleads.v0.resources.AdGroup getAdGroup(com.google.ads.googleads.v0.services.GetAdGroupRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_AD_GROUP, getCallOptions(), request);
+          getChannel(), getGetAdGroupMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -201,7 +257,7 @@ public final class AdGroupServiceGrpc {
      */
     public com.google.ads.googleads.v0.services.MutateAdGroupsResponse mutateAdGroups(com.google.ads.googleads.v0.services.MutateAdGroupsRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_MUTATE_AD_GROUPS, getCallOptions(), request);
+          getChannel(), getMutateAdGroupsMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -234,7 +290,7 @@ public final class AdGroupServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.resources.AdGroup> getAdGroup(
         com.google.ads.googleads.v0.services.GetAdGroupRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_AD_GROUP, getCallOptions()), request);
+          getChannel().newCall(getGetAdGroupMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -245,7 +301,7 @@ public final class AdGroupServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.services.MutateAdGroupsResponse> mutateAdGroups(
         com.google.ads.googleads.v0.services.MutateAdGroupsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_MUTATE_AD_GROUPS, getCallOptions()), request);
+          getChannel().newCall(getMutateAdGroupsMethodHelper(), getCallOptions()), request);
     }
   }
 
@@ -293,10 +349,38 @@ public final class AdGroupServiceGrpc {
     }
   }
 
-  private static final class AdGroupServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class AdGroupServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    AdGroupServiceBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.google.ads.googleads.v0.services.AdGroupServiceProto.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("AdGroupService");
+    }
+  }
+
+  private static final class AdGroupServiceFileDescriptorSupplier
+      extends AdGroupServiceBaseDescriptorSupplier {
+    AdGroupServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class AdGroupServiceMethodDescriptorSupplier
+      extends AdGroupServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    AdGroupServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -309,9 +393,9 @@ public final class AdGroupServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new AdGroupServiceDescriptorSupplier())
-              .addMethod(METHOD_GET_AD_GROUP)
-              .addMethod(METHOD_MUTATE_AD_GROUPS)
+              .setSchemaDescriptor(new AdGroupServiceFileDescriptorSupplier())
+              .addMethod(getGetAdGroupMethodHelper())
+              .addMethod(getMutateAdGroupsMethodHelper())
               .build();
         }
       }

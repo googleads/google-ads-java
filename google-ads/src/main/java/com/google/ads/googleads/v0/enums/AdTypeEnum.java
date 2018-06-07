@@ -150,6 +150,14 @@ private static final long serialVersionUID = 0L;
      * <code>EXPANDED_DYNAMIC_SEARCH_AD = 7;</code>
      */
     EXPANDED_DYNAMIC_SEARCH_AD(7),
+    /**
+     * <pre>
+     * The ad is a hotel ad.
+     * </pre>
+     *
+     * <code>HOTEL_AD = 8;</code>
+     */
+    HOTEL_AD(8),
     UNRECOGNIZED(-1),
     ;
 
@@ -218,6 +226,14 @@ private static final long serialVersionUID = 0L;
      * <code>EXPANDED_DYNAMIC_SEARCH_AD = 7;</code>
      */
     public static final int EXPANDED_DYNAMIC_SEARCH_AD_VALUE = 7;
+    /**
+     * <pre>
+     * The ad is a hotel ad.
+     * </pre>
+     *
+     * <code>HOTEL_AD = 8;</code>
+     */
+    public static final int HOTEL_AD_VALUE = 8;
 
 
     public final int getNumber() {
@@ -246,6 +262,7 @@ private static final long serialVersionUID = 0L;
         case 5: return RESPONSIVE_DISPLAY_AD;
         case 6: return CALL_ONLY_AD;
         case 7: return EXPANDED_DYNAMIC_SEARCH_AD;
+        case 8: return HOTEL_AD;
         default: return null;
       }
     }

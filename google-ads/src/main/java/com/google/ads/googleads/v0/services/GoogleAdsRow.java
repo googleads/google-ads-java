@@ -289,6 +289,45 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 178: {
+            com.google.ads.googleads.v0.resources.Recommendation.Builder subBuilder = null;
+            if (recommendation_ != null) {
+              subBuilder = recommendation_.toBuilder();
+            }
+            recommendation_ = input.readMessage(com.google.ads.googleads.v0.resources.Recommendation.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(recommendation_);
+              recommendation_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 186: {
+            com.google.ads.googleads.v0.resources.GeoTargetConstant.Builder subBuilder = null;
+            if (geoTargetConstant_ != null) {
+              subBuilder = geoTargetConstant_.toBuilder();
+            }
+            geoTargetConstant_ = input.readMessage(com.google.ads.googleads.v0.resources.GeoTargetConstant.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(geoTargetConstant_);
+              geoTargetConstant_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 194: {
+            com.google.ads.googleads.v0.resources.AdGroupBidModifier.Builder subBuilder = null;
+            if (adGroupBidModifier_ != null) {
+              subBuilder = adGroupBidModifier_.toBuilder();
+            }
+            adGroupBidModifier_ = input.readMessage(com.google.ads.googleads.v0.resources.AdGroupBidModifier.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(adGroupBidModifier_);
+              adGroupBidModifier_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -377,6 +416,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.resources.AdGroupAdOrBuilder getAdGroupAdOrBuilder() {
     return getAdGroupAd();
+  }
+
+  public static final int AD_GROUP_BID_MODIFIER_FIELD_NUMBER = 24;
+  private com.google.ads.googleads.v0.resources.AdGroupBidModifier adGroupBidModifier_;
+  /**
+   * <pre>
+   * The bid modifier referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+   */
+  public boolean hasAdGroupBidModifier() {
+    return adGroupBidModifier_ != null;
+  }
+  /**
+   * <pre>
+   * The bid modifier referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+   */
+  public com.google.ads.googleads.v0.resources.AdGroupBidModifier getAdGroupBidModifier() {
+    return adGroupBidModifier_ == null ? com.google.ads.googleads.v0.resources.AdGroupBidModifier.getDefaultInstance() : adGroupBidModifier_;
+  }
+  /**
+   * <pre>
+   * The bid modifier referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+   */
+  public com.google.ads.googleads.v0.resources.AdGroupBidModifierOrBuilder getAdGroupBidModifierOrBuilder() {
+    return getAdGroupBidModifier();
   }
 
   public static final int AD_GROUP_CRITERION_FIELD_NUMBER = 17;
@@ -577,6 +649,39 @@ private static final long serialVersionUID = 0L;
     return getCustomer();
   }
 
+  public static final int GEO_TARGET_CONSTANT_FIELD_NUMBER = 23;
+  private com.google.ads.googleads.v0.resources.GeoTargetConstant geoTargetConstant_;
+  /**
+   * <pre>
+   * The geo target constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+   */
+  public boolean hasGeoTargetConstant() {
+    return geoTargetConstant_ != null;
+  }
+  /**
+   * <pre>
+   * The geo target constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+   */
+  public com.google.ads.googleads.v0.resources.GeoTargetConstant getGeoTargetConstant() {
+    return geoTargetConstant_ == null ? com.google.ads.googleads.v0.resources.GeoTargetConstant.getDefaultInstance() : geoTargetConstant_;
+  }
+  /**
+   * <pre>
+   * The geo target constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+   */
+  public com.google.ads.googleads.v0.resources.GeoTargetConstantOrBuilder getGeoTargetConstantOrBuilder() {
+    return getGeoTargetConstant();
+  }
+
   public static final int KEYWORD_VIEW_FIELD_NUMBER = 21;
   private com.google.ads.googleads.v0.resources.KeywordView keywordView_;
   /**
@@ -608,6 +713,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.resources.KeywordViewOrBuilder getKeywordViewOrBuilder() {
     return getKeywordView();
+  }
+
+  public static final int RECOMMENDATION_FIELD_NUMBER = 22;
+  private com.google.ads.googleads.v0.resources.Recommendation recommendation_;
+  /**
+   * <pre>
+   * The recommendation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+   */
+  public boolean hasRecommendation() {
+    return recommendation_ != null;
+  }
+  /**
+   * <pre>
+   * The recommendation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+   */
+  public com.google.ads.googleads.v0.resources.Recommendation getRecommendation() {
+    return recommendation_ == null ? com.google.ads.googleads.v0.resources.Recommendation.getDefaultInstance() : recommendation_;
+  }
+  /**
+   * <pre>
+   * The recommendation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+   */
+  public com.google.ads.googleads.v0.resources.RecommendationOrBuilder getRecommendationOrBuilder() {
+    return getRecommendation();
   }
 
   public static final int METRICS_FIELD_NUMBER = 4;
@@ -1021,6 +1159,15 @@ private static final long serialVersionUID = 0L;
     if (keywordView_ != null) {
       output.writeMessage(21, getKeywordView());
     }
+    if (recommendation_ != null) {
+      output.writeMessage(22, getRecommendation());
+    }
+    if (geoTargetConstant_ != null) {
+      output.writeMessage(23, getGeoTargetConstant());
+    }
+    if (adGroupBidModifier_ != null) {
+      output.writeMessage(24, getAdGroupBidModifier());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -1109,6 +1256,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(21, getKeywordView());
     }
+    if (recommendation_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(22, getRecommendation());
+    }
+    if (geoTargetConstant_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(23, getGeoTargetConstant());
+    }
+    if (adGroupBidModifier_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(24, getAdGroupBidModifier());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1134,6 +1293,11 @@ private static final long serialVersionUID = 0L;
     if (hasAdGroupAd()) {
       result = result && getAdGroupAd()
           .equals(other.getAdGroupAd());
+    }
+    result = result && (hasAdGroupBidModifier() == other.hasAdGroupBidModifier());
+    if (hasAdGroupBidModifier()) {
+      result = result && getAdGroupBidModifier()
+          .equals(other.getAdGroupBidModifier());
     }
     result = result && (hasAdGroupCriterion() == other.hasAdGroupCriterion());
     if (hasAdGroupCriterion()) {
@@ -1165,10 +1329,20 @@ private static final long serialVersionUID = 0L;
       result = result && getCustomer()
           .equals(other.getCustomer());
     }
+    result = result && (hasGeoTargetConstant() == other.hasGeoTargetConstant());
+    if (hasGeoTargetConstant()) {
+      result = result && getGeoTargetConstant()
+          .equals(other.getGeoTargetConstant());
+    }
     result = result && (hasKeywordView() == other.hasKeywordView());
     if (hasKeywordView()) {
       result = result && getKeywordView()
           .equals(other.getKeywordView());
+    }
+    result = result && (hasRecommendation() == other.hasRecommendation());
+    if (hasRecommendation()) {
+      result = result && getRecommendation()
+          .equals(other.getRecommendation());
     }
     result = result && (hasMetrics() == other.hasMetrics());
     if (hasMetrics()) {
@@ -1228,6 +1402,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AD_GROUP_AD_FIELD_NUMBER;
       hash = (53 * hash) + getAdGroupAd().hashCode();
     }
+    if (hasAdGroupBidModifier()) {
+      hash = (37 * hash) + AD_GROUP_BID_MODIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getAdGroupBidModifier().hashCode();
+    }
     if (hasAdGroupCriterion()) {
       hash = (37 * hash) + AD_GROUP_CRITERION_FIELD_NUMBER;
       hash = (53 * hash) + getAdGroupCriterion().hashCode();
@@ -1252,9 +1430,17 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CUSTOMER_FIELD_NUMBER;
       hash = (53 * hash) + getCustomer().hashCode();
     }
+    if (hasGeoTargetConstant()) {
+      hash = (37 * hash) + GEO_TARGET_CONSTANT_FIELD_NUMBER;
+      hash = (53 * hash) + getGeoTargetConstant().hashCode();
+    }
     if (hasKeywordView()) {
       hash = (37 * hash) + KEYWORD_VIEW_FIELD_NUMBER;
       hash = (53 * hash) + getKeywordView().hashCode();
+    }
+    if (hasRecommendation()) {
+      hash = (37 * hash) + RECOMMENDATION_FIELD_NUMBER;
+      hash = (53 * hash) + getRecommendation().hashCode();
     }
     if (hasMetrics()) {
       hash = (37 * hash) + METRICS_FIELD_NUMBER;
@@ -1437,6 +1623,12 @@ private static final long serialVersionUID = 0L;
         adGroupAd_ = null;
         adGroupAdBuilder_ = null;
       }
+      if (adGroupBidModifierBuilder_ == null) {
+        adGroupBidModifier_ = null;
+      } else {
+        adGroupBidModifier_ = null;
+        adGroupBidModifierBuilder_ = null;
+      }
       if (adGroupCriterionBuilder_ == null) {
         adGroupCriterion_ = null;
       } else {
@@ -1473,11 +1665,23 @@ private static final long serialVersionUID = 0L;
         customer_ = null;
         customerBuilder_ = null;
       }
+      if (geoTargetConstantBuilder_ == null) {
+        geoTargetConstant_ = null;
+      } else {
+        geoTargetConstant_ = null;
+        geoTargetConstantBuilder_ = null;
+      }
       if (keywordViewBuilder_ == null) {
         keywordView_ = null;
       } else {
         keywordView_ = null;
         keywordViewBuilder_ = null;
+      }
+      if (recommendationBuilder_ == null) {
+        recommendation_ = null;
+      } else {
+        recommendation_ = null;
+        recommendationBuilder_ = null;
       }
       if (metricsBuilder_ == null) {
         metrics_ = null;
@@ -1561,6 +1765,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.adGroupAd_ = adGroupAdBuilder_.build();
       }
+      if (adGroupBidModifierBuilder_ == null) {
+        result.adGroupBidModifier_ = adGroupBidModifier_;
+      } else {
+        result.adGroupBidModifier_ = adGroupBidModifierBuilder_.build();
+      }
       if (adGroupCriterionBuilder_ == null) {
         result.adGroupCriterion_ = adGroupCriterion_;
       } else {
@@ -1591,10 +1800,20 @@ private static final long serialVersionUID = 0L;
       } else {
         result.customer_ = customerBuilder_.build();
       }
+      if (geoTargetConstantBuilder_ == null) {
+        result.geoTargetConstant_ = geoTargetConstant_;
+      } else {
+        result.geoTargetConstant_ = geoTargetConstantBuilder_.build();
+      }
       if (keywordViewBuilder_ == null) {
         result.keywordView_ = keywordView_;
       } else {
         result.keywordView_ = keywordViewBuilder_.build();
+      }
+      if (recommendationBuilder_ == null) {
+        result.recommendation_ = recommendation_;
+      } else {
+        result.recommendation_ = recommendationBuilder_.build();
       }
       if (metricsBuilder_ == null) {
         result.metrics_ = metrics_;
@@ -1682,6 +1901,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasAdGroupAd()) {
         mergeAdGroupAd(other.getAdGroupAd());
       }
+      if (other.hasAdGroupBidModifier()) {
+        mergeAdGroupBidModifier(other.getAdGroupBidModifier());
+      }
       if (other.hasAdGroupCriterion()) {
         mergeAdGroupCriterion(other.getAdGroupCriterion());
       }
@@ -1700,8 +1922,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasCustomer()) {
         mergeCustomer(other.getCustomer());
       }
+      if (other.hasGeoTargetConstant()) {
+        mergeGeoTargetConstant(other.getGeoTargetConstant());
+      }
       if (other.hasKeywordView()) {
         mergeKeywordView(other.getKeywordView());
+      }
+      if (other.hasRecommendation()) {
+        mergeRecommendation(other.getRecommendation());
       }
       if (other.hasMetrics()) {
         mergeMetrics(other.getMetrics());
@@ -2067,6 +2295,159 @@ private static final long serialVersionUID = 0L;
         adGroupAd_ = null;
       }
       return adGroupAdBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.AdGroupBidModifier adGroupBidModifier_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.AdGroupBidModifier, com.google.ads.googleads.v0.resources.AdGroupBidModifier.Builder, com.google.ads.googleads.v0.resources.AdGroupBidModifierOrBuilder> adGroupBidModifierBuilder_;
+    /**
+     * <pre>
+     * The bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+     */
+    public boolean hasAdGroupBidModifier() {
+      return adGroupBidModifierBuilder_ != null || adGroupBidModifier_ != null;
+    }
+    /**
+     * <pre>
+     * The bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AdGroupBidModifier getAdGroupBidModifier() {
+      if (adGroupBidModifierBuilder_ == null) {
+        return adGroupBidModifier_ == null ? com.google.ads.googleads.v0.resources.AdGroupBidModifier.getDefaultInstance() : adGroupBidModifier_;
+      } else {
+        return adGroupBidModifierBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+     */
+    public Builder setAdGroupBidModifier(com.google.ads.googleads.v0.resources.AdGroupBidModifier value) {
+      if (adGroupBidModifierBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adGroupBidModifier_ = value;
+        onChanged();
+      } else {
+        adGroupBidModifierBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+     */
+    public Builder setAdGroupBidModifier(
+        com.google.ads.googleads.v0.resources.AdGroupBidModifier.Builder builderForValue) {
+      if (adGroupBidModifierBuilder_ == null) {
+        adGroupBidModifier_ = builderForValue.build();
+        onChanged();
+      } else {
+        adGroupBidModifierBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+     */
+    public Builder mergeAdGroupBidModifier(com.google.ads.googleads.v0.resources.AdGroupBidModifier value) {
+      if (adGroupBidModifierBuilder_ == null) {
+        if (adGroupBidModifier_ != null) {
+          adGroupBidModifier_ =
+            com.google.ads.googleads.v0.resources.AdGroupBidModifier.newBuilder(adGroupBidModifier_).mergeFrom(value).buildPartial();
+        } else {
+          adGroupBidModifier_ = value;
+        }
+        onChanged();
+      } else {
+        adGroupBidModifierBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+     */
+    public Builder clearAdGroupBidModifier() {
+      if (adGroupBidModifierBuilder_ == null) {
+        adGroupBidModifier_ = null;
+        onChanged();
+      } else {
+        adGroupBidModifier_ = null;
+        adGroupBidModifierBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AdGroupBidModifier.Builder getAdGroupBidModifierBuilder() {
+      
+      onChanged();
+      return getAdGroupBidModifierFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AdGroupBidModifierOrBuilder getAdGroupBidModifierOrBuilder() {
+      if (adGroupBidModifierBuilder_ != null) {
+        return adGroupBidModifierBuilder_.getMessageOrBuilder();
+      } else {
+        return adGroupBidModifier_ == null ?
+            com.google.ads.googleads.v0.resources.AdGroupBidModifier.getDefaultInstance() : adGroupBidModifier_;
+      }
+    }
+    /**
+     * <pre>
+     * The bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.AdGroupBidModifier, com.google.ads.googleads.v0.resources.AdGroupBidModifier.Builder, com.google.ads.googleads.v0.resources.AdGroupBidModifierOrBuilder> 
+        getAdGroupBidModifierFieldBuilder() {
+      if (adGroupBidModifierBuilder_ == null) {
+        adGroupBidModifierBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.AdGroupBidModifier, com.google.ads.googleads.v0.resources.AdGroupBidModifier.Builder, com.google.ads.googleads.v0.resources.AdGroupBidModifierOrBuilder>(
+                getAdGroupBidModifier(),
+                getParentForChildren(),
+                isClean());
+        adGroupBidModifier_ = null;
+      }
+      return adGroupBidModifierBuilder_;
     }
 
     private com.google.ads.googleads.v0.resources.AdGroupCriterion adGroupCriterion_ = null;
@@ -2987,6 +3368,159 @@ private static final long serialVersionUID = 0L;
       return customerBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.GeoTargetConstant geoTargetConstant_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.GeoTargetConstant, com.google.ads.googleads.v0.resources.GeoTargetConstant.Builder, com.google.ads.googleads.v0.resources.GeoTargetConstantOrBuilder> geoTargetConstantBuilder_;
+    /**
+     * <pre>
+     * The geo target constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+     */
+    public boolean hasGeoTargetConstant() {
+      return geoTargetConstantBuilder_ != null || geoTargetConstant_ != null;
+    }
+    /**
+     * <pre>
+     * The geo target constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+     */
+    public com.google.ads.googleads.v0.resources.GeoTargetConstant getGeoTargetConstant() {
+      if (geoTargetConstantBuilder_ == null) {
+        return geoTargetConstant_ == null ? com.google.ads.googleads.v0.resources.GeoTargetConstant.getDefaultInstance() : geoTargetConstant_;
+      } else {
+        return geoTargetConstantBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The geo target constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+     */
+    public Builder setGeoTargetConstant(com.google.ads.googleads.v0.resources.GeoTargetConstant value) {
+      if (geoTargetConstantBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        geoTargetConstant_ = value;
+        onChanged();
+      } else {
+        geoTargetConstantBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The geo target constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+     */
+    public Builder setGeoTargetConstant(
+        com.google.ads.googleads.v0.resources.GeoTargetConstant.Builder builderForValue) {
+      if (geoTargetConstantBuilder_ == null) {
+        geoTargetConstant_ = builderForValue.build();
+        onChanged();
+      } else {
+        geoTargetConstantBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The geo target constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+     */
+    public Builder mergeGeoTargetConstant(com.google.ads.googleads.v0.resources.GeoTargetConstant value) {
+      if (geoTargetConstantBuilder_ == null) {
+        if (geoTargetConstant_ != null) {
+          geoTargetConstant_ =
+            com.google.ads.googleads.v0.resources.GeoTargetConstant.newBuilder(geoTargetConstant_).mergeFrom(value).buildPartial();
+        } else {
+          geoTargetConstant_ = value;
+        }
+        onChanged();
+      } else {
+        geoTargetConstantBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The geo target constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+     */
+    public Builder clearGeoTargetConstant() {
+      if (geoTargetConstantBuilder_ == null) {
+        geoTargetConstant_ = null;
+        onChanged();
+      } else {
+        geoTargetConstant_ = null;
+        geoTargetConstantBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The geo target constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+     */
+    public com.google.ads.googleads.v0.resources.GeoTargetConstant.Builder getGeoTargetConstantBuilder() {
+      
+      onChanged();
+      return getGeoTargetConstantFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The geo target constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+     */
+    public com.google.ads.googleads.v0.resources.GeoTargetConstantOrBuilder getGeoTargetConstantOrBuilder() {
+      if (geoTargetConstantBuilder_ != null) {
+        return geoTargetConstantBuilder_.getMessageOrBuilder();
+      } else {
+        return geoTargetConstant_ == null ?
+            com.google.ads.googleads.v0.resources.GeoTargetConstant.getDefaultInstance() : geoTargetConstant_;
+      }
+    }
+    /**
+     * <pre>
+     * The geo target constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.GeoTargetConstant, com.google.ads.googleads.v0.resources.GeoTargetConstant.Builder, com.google.ads.googleads.v0.resources.GeoTargetConstantOrBuilder> 
+        getGeoTargetConstantFieldBuilder() {
+      if (geoTargetConstantBuilder_ == null) {
+        geoTargetConstantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.GeoTargetConstant, com.google.ads.googleads.v0.resources.GeoTargetConstant.Builder, com.google.ads.googleads.v0.resources.GeoTargetConstantOrBuilder>(
+                getGeoTargetConstant(),
+                getParentForChildren(),
+                isClean());
+        geoTargetConstant_ = null;
+      }
+      return geoTargetConstantBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.KeywordView keywordView_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.KeywordView, com.google.ads.googleads.v0.resources.KeywordView.Builder, com.google.ads.googleads.v0.resources.KeywordViewOrBuilder> keywordViewBuilder_;
@@ -3138,6 +3672,159 @@ private static final long serialVersionUID = 0L;
         keywordView_ = null;
       }
       return keywordViewBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.Recommendation recommendation_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.Recommendation, com.google.ads.googleads.v0.resources.Recommendation.Builder, com.google.ads.googleads.v0.resources.RecommendationOrBuilder> recommendationBuilder_;
+    /**
+     * <pre>
+     * The recommendation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+     */
+    public boolean hasRecommendation() {
+      return recommendationBuilder_ != null || recommendation_ != null;
+    }
+    /**
+     * <pre>
+     * The recommendation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+     */
+    public com.google.ads.googleads.v0.resources.Recommendation getRecommendation() {
+      if (recommendationBuilder_ == null) {
+        return recommendation_ == null ? com.google.ads.googleads.v0.resources.Recommendation.getDefaultInstance() : recommendation_;
+      } else {
+        return recommendationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The recommendation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+     */
+    public Builder setRecommendation(com.google.ads.googleads.v0.resources.Recommendation value) {
+      if (recommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        recommendationBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The recommendation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+     */
+    public Builder setRecommendation(
+        com.google.ads.googleads.v0.resources.Recommendation.Builder builderForValue) {
+      if (recommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        recommendationBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The recommendation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+     */
+    public Builder mergeRecommendation(com.google.ads.googleads.v0.resources.Recommendation value) {
+      if (recommendationBuilder_ == null) {
+        if (recommendation_ != null) {
+          recommendation_ =
+            com.google.ads.googleads.v0.resources.Recommendation.newBuilder(recommendation_).mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        recommendationBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The recommendation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+     */
+    public Builder clearRecommendation() {
+      if (recommendationBuilder_ == null) {
+        recommendation_ = null;
+        onChanged();
+      } else {
+        recommendation_ = null;
+        recommendationBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The recommendation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+     */
+    public com.google.ads.googleads.v0.resources.Recommendation.Builder getRecommendationBuilder() {
+      
+      onChanged();
+      return getRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The recommendation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+     */
+    public com.google.ads.googleads.v0.resources.RecommendationOrBuilder getRecommendationOrBuilder() {
+      if (recommendationBuilder_ != null) {
+        return recommendationBuilder_.getMessageOrBuilder();
+      } else {
+        return recommendation_ == null ?
+            com.google.ads.googleads.v0.resources.Recommendation.getDefaultInstance() : recommendation_;
+      }
+    }
+    /**
+     * <pre>
+     * The recommendation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.Recommendation, com.google.ads.googleads.v0.resources.Recommendation.Builder, com.google.ads.googleads.v0.resources.RecommendationOrBuilder> 
+        getRecommendationFieldBuilder() {
+      if (recommendationBuilder_ == null) {
+        recommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.Recommendation, com.google.ads.googleads.v0.resources.Recommendation.Builder, com.google.ads.googleads.v0.resources.RecommendationOrBuilder>(
+                getRecommendation(),
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      return recommendationBuilder_;
     }
 
     private com.google.ads.googleads.v0.common.Metrics metrics_ = null;

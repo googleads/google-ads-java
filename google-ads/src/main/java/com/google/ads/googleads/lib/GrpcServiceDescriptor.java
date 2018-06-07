@@ -16,6 +16,8 @@ package com.google.ads.googleads.lib;
 
 import com.google.ads.googleads.v0.services.AdGroupAdServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupAdServiceSettings;
+import com.google.ads.googleads.v0.services.AdGroupBidModifierServiceClient;
+import com.google.ads.googleads.v0.services.AdGroupBidModifierServiceSettings;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceSettings;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
@@ -30,10 +32,16 @@ import com.google.ads.googleads.v0.services.CampaignServiceClient;
 import com.google.ads.googleads.v0.services.CampaignServiceSettings;
 import com.google.ads.googleads.v0.services.CustomerServiceClient;
 import com.google.ads.googleads.v0.services.CustomerServiceSettings;
+import com.google.ads.googleads.v0.services.GeoTargetConstantServiceClient;
+import com.google.ads.googleads.v0.services.GeoTargetConstantServiceSettings;
 import com.google.ads.googleads.v0.services.GoogleAdsFieldServiceClient;
 import com.google.ads.googleads.v0.services.GoogleAdsFieldServiceSettings;
 import com.google.ads.googleads.v0.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v0.services.GoogleAdsServiceSettings;
+import com.google.ads.googleads.v0.services.KeywordViewServiceClient;
+import com.google.ads.googleads.v0.services.KeywordViewServiceSettings;
+import com.google.ads.googleads.v0.services.RecommendationServiceClient;
+import com.google.ads.googleads.v0.services.RecommendationServiceSettings;
 import com.google.api.gax.core.FixedCredentialsProvider;
 import com.google.api.gax.rpc.ClientSettings;
 import com.google.common.annotations.VisibleForTesting;
@@ -52,6 +60,7 @@ abstract class GrpcServiceDescriptor<ClientT, SettingsBuilderT extends ClientSet
           ImmutableMap
               .<Class<?>, GrpcServiceDescriptor<?, ? extends ClientSettings.Builder>>builder()
               .put(AdGroupAdServiceClient.class, new AdGroupAdServiceDescriptor())
+              .put(AdGroupBidModifierServiceClient.class, new AdGroupBidModifierServiceDescriptor())
               .put(AdGroupCriterionServiceClient.class, new AdGroupCriterionServiceDescriptor())
               .put(AdGroupServiceClient.class, new AdGroupServiceDescriptor())
               .put(BiddingStrategyServiceClient.class, new BiddingStrategyServiceDescriptor())
@@ -59,8 +68,11 @@ abstract class GrpcServiceDescriptor<ClientT, SettingsBuilderT extends ClientSet
               .put(CampaignCriterionServiceClient.class, new CampaignCriterionServiceDescriptor())
               .put(CampaignServiceClient.class, new CampaignServiceDescriptor())
               .put(CustomerServiceClient.class, new CustomerServiceDescriptor())
-              .put(GoogleAdsServiceClient.class, new GoogleAdsServiceDescriptor())
+              .put(GeoTargetConstantServiceClient.class, new GeoTargetConstantServiceDescriptor())
               .put(GoogleAdsFieldServiceClient.class, new GoogleAdsFieldServiceDescriptor())
+              .put(GoogleAdsServiceClient.class, new GoogleAdsServiceDescriptor())
+              .put(KeywordViewServiceClient.class, new KeywordViewServiceDescriptor())
+              .put(RecommendationServiceClient.class, new RecommendationServiceDescriptor())
               .build();
 
   private GrpcServiceDescriptor() {
@@ -112,6 +124,26 @@ abstract class GrpcServiceDescriptor<ClientT, SettingsBuilderT extends ClientSet
       try {
         return AdGroupAdServiceClient.create(
             AdGroupAdServiceSettings.newBuilder()
+                .setTransportChannelProvider(googleAdsClient)
+                .setCredentialsProvider(
+                    FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
+                .build());
+      } catch (IOException ioe) {
+        throw new ServiceClientCreationException(this, ioe);
+      }
+    }
+  }
+
+  private static final class AdGroupBidModifierServiceDescriptor
+      extends GrpcServiceDescriptor<
+          AdGroupBidModifierServiceClient, AdGroupBidModifierServiceSettings.Builder> {
+
+    @Override
+    public AdGroupBidModifierServiceClient newServiceClient(GoogleAdsClient googleAdsClient)
+        throws ServiceClientCreationException {
+      try {
+        return AdGroupBidModifierServiceClient.create(
+            AdGroupBidModifierServiceSettings.newBuilder()
                 .setTransportChannelProvider(googleAdsClient)
                 .setCredentialsProvider(
                     FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
@@ -259,6 +291,26 @@ abstract class GrpcServiceDescriptor<ClientT, SettingsBuilderT extends ClientSet
     }
   }
 
+  private static final class GeoTargetConstantServiceDescriptor
+      extends GrpcServiceDescriptor<
+          GeoTargetConstantServiceClient, GeoTargetConstantServiceSettings.Builder> {
+
+    @Override
+    public GeoTargetConstantServiceClient newServiceClient(GoogleAdsClient googleAdsClient)
+        throws ServiceClientCreationException {
+      try {
+        return GeoTargetConstantServiceClient.create(
+            GeoTargetConstantServiceSettings.newBuilder()
+                .setTransportChannelProvider(googleAdsClient)
+                .setCredentialsProvider(
+                    FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
+                .build());
+      } catch (IOException ioe) {
+        throw new ServiceClientCreationException(this, ioe);
+      }
+    }
+  }
+
   private static final class GoogleAdsServiceDescriptor
       extends GrpcServiceDescriptor<GoogleAdsServiceClient, GoogleAdsServiceSettings.Builder> {
 
@@ -288,6 +340,45 @@ abstract class GrpcServiceDescriptor<ClientT, SettingsBuilderT extends ClientSet
       try {
         return GoogleAdsFieldServiceClient.create(
             GoogleAdsFieldServiceSettings.newBuilder()
+                .setTransportChannelProvider(googleAdsClient)
+                .setCredentialsProvider(
+                    FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
+                .build());
+      } catch (IOException ioe) {
+        throw new ServiceClientCreationException(this, ioe);
+      }
+    }
+  }
+
+  private static final class KeywordViewServiceDescriptor
+      extends GrpcServiceDescriptor<KeywordViewServiceClient, KeywordViewServiceSettings.Builder> {
+
+    @Override
+    public KeywordViewServiceClient newServiceClient(GoogleAdsClient googleAdsClient)
+        throws ServiceClientCreationException {
+      try {
+        return KeywordViewServiceClient.create(
+            KeywordViewServiceSettings.newBuilder()
+                .setTransportChannelProvider(googleAdsClient)
+                .setCredentialsProvider(
+                    FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
+                .build());
+      } catch (IOException ioe) {
+        throw new ServiceClientCreationException(this, ioe);
+      }
+    }
+  }
+
+  private static final class RecommendationServiceDescriptor
+      extends GrpcServiceDescriptor<
+          RecommendationServiceClient, RecommendationServiceSettings.Builder> {
+
+    @Override
+    public RecommendationServiceClient newServiceClient(GoogleAdsClient googleAdsClient)
+        throws ServiceClientCreationException {
+      try {
+        return RecommendationServiceClient.create(
+            RecommendationServiceSettings.newBuilder()
                 .setTransportChannelProvider(googleAdsClient)
                 .setCredentialsProvider(
                     FixedCredentialsProvider.create(googleAdsClient.getCredentials()))

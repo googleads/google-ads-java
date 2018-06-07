@@ -138,6 +138,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 74: {
+            com.google.protobuf.BoolValue.Builder subBuilder = null;
+            if (hasPartnersBadge_ != null) {
+              subBuilder = hasPartnersBadge_.toBuilder();
+            }
+            hasPartnersBadge_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hasPartnersBadge_);
+              hasPartnersBadge_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -412,6 +425,45 @@ private static final long serialVersionUID = 0L;
     return getAutoTaggingEnabled();
   }
 
+  public static final int HAS_PARTNERS_BADGE_FIELD_NUMBER = 9;
+  private com.google.protobuf.BoolValue hasPartnersBadge_;
+  /**
+   * <pre>
+   * Whether the Customer has a Partners program badge. If the Customer is not
+   * associated with the Partners program, this will be false. For more
+   * information, see https://support.google.com/partners/answer/3125774
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+   */
+  public boolean hasHasPartnersBadge() {
+    return hasPartnersBadge_ != null;
+  }
+  /**
+   * <pre>
+   * Whether the Customer has a Partners program badge. If the Customer is not
+   * associated with the Partners program, this will be false. For more
+   * information, see https://support.google.com/partners/answer/3125774
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+   */
+  public com.google.protobuf.BoolValue getHasPartnersBadge() {
+    return hasPartnersBadge_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasPartnersBadge_;
+  }
+  /**
+   * <pre>
+   * Whether the Customer has a Partners program badge. If the Customer is not
+   * associated with the Partners program, this will be false. For more
+   * information, see https://support.google.com/partners/answer/3125774
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+   */
+  public com.google.protobuf.BoolValueOrBuilder getHasPartnersBadgeOrBuilder() {
+    return getHasPartnersBadge();
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -444,6 +496,9 @@ private static final long serialVersionUID = 0L;
     }
     if (autoTaggingEnabled_ != null) {
       output.writeMessage(8, getAutoTaggingEnabled());
+    }
+    if (hasPartnersBadge_ != null) {
+      output.writeMessage(9, getHasPartnersBadge());
     }
     unknownFields.writeTo(output);
   }
@@ -479,6 +534,10 @@ private static final long serialVersionUID = 0L;
     if (autoTaggingEnabled_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getAutoTaggingEnabled());
+    }
+    if (hasPartnersBadge_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getHasPartnersBadge());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -528,6 +587,11 @@ private static final long serialVersionUID = 0L;
       result = result && getAutoTaggingEnabled()
           .equals(other.getAutoTaggingEnabled());
     }
+    result = result && (hasHasPartnersBadge() == other.hasHasPartnersBadge());
+    if (hasHasPartnersBadge()) {
+      result = result && getHasPartnersBadge()
+          .equals(other.getHasPartnersBadge());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -564,6 +628,10 @@ private static final long serialVersionUID = 0L;
     if (hasAutoTaggingEnabled()) {
       hash = (37 * hash) + AUTO_TAGGING_ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + getAutoTaggingEnabled().hashCode();
+    }
+    if (hasHasPartnersBadge()) {
+      hash = (37 * hash) + HAS_PARTNERS_BADGE_FIELD_NUMBER;
+      hash = (53 * hash) + getHasPartnersBadge().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -736,6 +804,12 @@ private static final long serialVersionUID = 0L;
         autoTaggingEnabled_ = null;
         autoTaggingEnabledBuilder_ = null;
       }
+      if (hasPartnersBadgeBuilder_ == null) {
+        hasPartnersBadge_ = null;
+      } else {
+        hasPartnersBadge_ = null;
+        hasPartnersBadgeBuilder_ = null;
+      }
       return this;
     }
 
@@ -788,6 +862,11 @@ private static final long serialVersionUID = 0L;
         result.autoTaggingEnabled_ = autoTaggingEnabled_;
       } else {
         result.autoTaggingEnabled_ = autoTaggingEnabledBuilder_.build();
+      }
+      if (hasPartnersBadgeBuilder_ == null) {
+        result.hasPartnersBadge_ = hasPartnersBadge_;
+      } else {
+        result.hasPartnersBadge_ = hasPartnersBadgeBuilder_.build();
       }
       onBuilt();
       return result;
@@ -851,6 +930,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAutoTaggingEnabled()) {
         mergeAutoTaggingEnabled(other.getAutoTaggingEnabled());
+      }
+      if (other.hasHasPartnersBadge()) {
+        mergeHasPartnersBadge(other.getHasPartnersBadge());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1912,6 +1994,177 @@ private static final long serialVersionUID = 0L;
         autoTaggingEnabled_ = null;
       }
       return autoTaggingEnabledBuilder_;
+    }
+
+    private com.google.protobuf.BoolValue hasPartnersBadge_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> hasPartnersBadgeBuilder_;
+    /**
+     * <pre>
+     * Whether the Customer has a Partners program badge. If the Customer is not
+     * associated with the Partners program, this will be false. For more
+     * information, see https://support.google.com/partners/answer/3125774
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     */
+    public boolean hasHasPartnersBadge() {
+      return hasPartnersBadgeBuilder_ != null || hasPartnersBadge_ != null;
+    }
+    /**
+     * <pre>
+     * Whether the Customer has a Partners program badge. If the Customer is not
+     * associated with the Partners program, this will be false. For more
+     * information, see https://support.google.com/partners/answer/3125774
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     */
+    public com.google.protobuf.BoolValue getHasPartnersBadge() {
+      if (hasPartnersBadgeBuilder_ == null) {
+        return hasPartnersBadge_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasPartnersBadge_;
+      } else {
+        return hasPartnersBadgeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Whether the Customer has a Partners program badge. If the Customer is not
+     * associated with the Partners program, this will be false. For more
+     * information, see https://support.google.com/partners/answer/3125774
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     */
+    public Builder setHasPartnersBadge(com.google.protobuf.BoolValue value) {
+      if (hasPartnersBadgeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hasPartnersBadge_ = value;
+        onChanged();
+      } else {
+        hasPartnersBadgeBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the Customer has a Partners program badge. If the Customer is not
+     * associated with the Partners program, this will be false. For more
+     * information, see https://support.google.com/partners/answer/3125774
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     */
+    public Builder setHasPartnersBadge(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (hasPartnersBadgeBuilder_ == null) {
+        hasPartnersBadge_ = builderForValue.build();
+        onChanged();
+      } else {
+        hasPartnersBadgeBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the Customer has a Partners program badge. If the Customer is not
+     * associated with the Partners program, this will be false. For more
+     * information, see https://support.google.com/partners/answer/3125774
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     */
+    public Builder mergeHasPartnersBadge(com.google.protobuf.BoolValue value) {
+      if (hasPartnersBadgeBuilder_ == null) {
+        if (hasPartnersBadge_ != null) {
+          hasPartnersBadge_ =
+            com.google.protobuf.BoolValue.newBuilder(hasPartnersBadge_).mergeFrom(value).buildPartial();
+        } else {
+          hasPartnersBadge_ = value;
+        }
+        onChanged();
+      } else {
+        hasPartnersBadgeBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the Customer has a Partners program badge. If the Customer is not
+     * associated with the Partners program, this will be false. For more
+     * information, see https://support.google.com/partners/answer/3125774
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     */
+    public Builder clearHasPartnersBadge() {
+      if (hasPartnersBadgeBuilder_ == null) {
+        hasPartnersBadge_ = null;
+        onChanged();
+      } else {
+        hasPartnersBadge_ = null;
+        hasPartnersBadgeBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the Customer has a Partners program badge. If the Customer is not
+     * associated with the Partners program, this will be false. For more
+     * information, see https://support.google.com/partners/answer/3125774
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getHasPartnersBadgeBuilder() {
+      
+      onChanged();
+      return getHasPartnersBadgeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Whether the Customer has a Partners program badge. If the Customer is not
+     * associated with the Partners program, this will be false. For more
+     * information, see https://support.google.com/partners/answer/3125774
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getHasPartnersBadgeOrBuilder() {
+      if (hasPartnersBadgeBuilder_ != null) {
+        return hasPartnersBadgeBuilder_.getMessageOrBuilder();
+      } else {
+        return hasPartnersBadge_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : hasPartnersBadge_;
+      }
+    }
+    /**
+     * <pre>
+     * Whether the Customer has a Partners program badge. If the Customer is not
+     * associated with the Partners program, this will be false. For more
+     * information, see https://support.google.com/partners/answer/3125774
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getHasPartnersBadgeFieldBuilder() {
+      if (hasPartnersBadgeBuilder_ == null) {
+        hasPartnersBadgeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getHasPartnersBadge(),
+                getParentForChildren(),
+                isClean());
+        hasPartnersBadge_ = null;
+      }
+      return hasPartnersBadgeBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

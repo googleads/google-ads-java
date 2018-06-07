@@ -30,7 +30,7 @@ public final class CampaignErrorProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v0/errors/campaig" +
       "n_error.proto\022\036google.ads.googleads.v0.e" +
-      "rrors\"\362\013\n\021CampaignErrorEnum\"\334\013\n\rCampaign" +
+      "rrors\"\317\014\n\021CampaignErrorEnum\"\271\014\n\rCampaign" +
       "Error\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022!\n\035C" +
       "ANNOT_TARGET_CONTENT_NETWORK\020\003\022 \n\034CANNOT" +
       "_TARGET_SEARCH_NETWORK\020\004\0226\n2CANNOT_TARGE" +
@@ -68,12 +68,14 @@ public final class CampaignErrorProto {
       "_MUST_BE_SELECTED\020!\022\037\n\033CANNOT_SET_AD_ROT" +
       "ATION_MODE\020\"\022/\n+CANNOT_MODIFY_START_DATE" +
       "_IF_ALREADY_STARTED\020#\022\033\n\027CANNOT_SET_DATE" +
-      "_TO_PAST\020$B\310\001\n\"com.google.ads.googleads." +
-      "v0.errorsB\022CampaignErrorProtoP\001ZDgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads" +
-      ".GoogleAds.V0.Errors\312\002\036Google\\Ads\\Google" +
-      "Ads\\V0\\Errorsb\006proto3"
+      "_TO_PAST\020$\022\037\n\033MISSING_HOTEL_CUSTOMER_LIN" +
+      "K\020%\022\037\n\033INVALID_HOTEL_CUSTOMER_LINK\020&\022\031\n\025" +
+      "MISSING_HOTEL_SETTING\020\'B\310\001\n\"com.google.a" +
+      "ds.googleads.v0.errorsB\022CampaignErrorPro" +
+      "toP\001ZDgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v0/errors;errors\242\002\003GAA" +
+      "\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Goog" +
+      "le\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -59,6 +59,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The bid modifier referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+   */
+  boolean hasAdGroupBidModifier();
+  /**
+   * <pre>
+   * The bid modifier referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+   */
+  com.google.ads.googleads.v0.resources.AdGroupBidModifier getAdGroupBidModifier();
+  /**
+   * <pre>
+   * The bid modifier referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupBidModifier ad_group_bid_modifier = 24;</code>
+   */
+  com.google.ads.googleads.v0.resources.AdGroupBidModifierOrBuilder getAdGroupBidModifierOrBuilder();
+
+  /**
+   * <pre>
    * The criterion referenced in the query.
    * </pre>
    *
@@ -209,6 +234,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The geo target constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+   */
+  boolean hasGeoTargetConstant();
+  /**
+   * <pre>
+   * The geo target constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+   */
+  com.google.ads.googleads.v0.resources.GeoTargetConstant getGeoTargetConstant();
+  /**
+   * <pre>
+   * The geo target constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.GeoTargetConstant geo_target_constant = 23;</code>
+   */
+  com.google.ads.googleads.v0.resources.GeoTargetConstantOrBuilder getGeoTargetConstantOrBuilder();
+
+  /**
+   * <pre>
    * The keyword view referenced in the query.
    * </pre>
    *
@@ -231,6 +281,31 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.KeywordView keyword_view = 21;</code>
    */
   com.google.ads.googleads.v0.resources.KeywordViewOrBuilder getKeywordViewOrBuilder();
+
+  /**
+   * <pre>
+   * The recommendation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+   */
+  boolean hasRecommendation();
+  /**
+   * <pre>
+   * The recommendation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+   */
+  com.google.ads.googleads.v0.resources.Recommendation getRecommendation();
+  /**
+   * <pre>
+   * The recommendation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation recommendation = 22;</code>
+   */
+  com.google.ads.googleads.v0.resources.RecommendationOrBuilder getRecommendationOrBuilder();
 
   /**
    * <pre>

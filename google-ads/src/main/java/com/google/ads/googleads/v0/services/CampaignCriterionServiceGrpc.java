@@ -1,19 +1,19 @@
 package com.google.ads.googleads.v0.services;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.2.0)",
+    value = "by gRPC proto compiler (version 1.10.0)",
     comments = "Source: google/ads/googleads/v0/services/campaign_criterion_service.proto")
 public final class CampaignCriterionServiceGrpc {
 
@@ -31,23 +31,79 @@ public final class CampaignCriterionServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGetCampaignCriterionMethod()} instead. 
   public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCampaignCriterionRequest,
-      com.google.ads.googleads.v0.resources.CampaignCriterion> METHOD_GET_CAMPAIGN_CRITERION =
-      io.grpc.MethodDescriptor.create(
-          io.grpc.MethodDescriptor.MethodType.UNARY,
-          generateFullMethodName(
-              "google.ads.googleads.v0.services.CampaignCriterionService", "GetCampaignCriterion"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.services.GetCampaignCriterionRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.resources.CampaignCriterion.getDefaultInstance()));
+      com.google.ads.googleads.v0.resources.CampaignCriterion> METHOD_GET_CAMPAIGN_CRITERION = getGetCampaignCriterionMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCampaignCriterionRequest,
+      com.google.ads.googleads.v0.resources.CampaignCriterion> getGetCampaignCriterionMethod;
+
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCampaignCriterionRequest,
+      com.google.ads.googleads.v0.resources.CampaignCriterion> getGetCampaignCriterionMethod() {
+    return getGetCampaignCriterionMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCampaignCriterionRequest,
+      com.google.ads.googleads.v0.resources.CampaignCriterion> getGetCampaignCriterionMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.GetCampaignCriterionRequest, com.google.ads.googleads.v0.resources.CampaignCriterion> getGetCampaignCriterionMethod;
+    if ((getGetCampaignCriterionMethod = CampaignCriterionServiceGrpc.getGetCampaignCriterionMethod) == null) {
+      synchronized (CampaignCriterionServiceGrpc.class) {
+        if ((getGetCampaignCriterionMethod = CampaignCriterionServiceGrpc.getGetCampaignCriterionMethod) == null) {
+          CampaignCriterionServiceGrpc.getGetCampaignCriterionMethod = getGetCampaignCriterionMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.GetCampaignCriterionRequest, com.google.ads.googleads.v0.resources.CampaignCriterion>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.CampaignCriterionService", "GetCampaignCriterion"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.GetCampaignCriterionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.resources.CampaignCriterion.getDefaultInstance()))
+                  .setSchemaDescriptor(new CampaignCriterionServiceMethodDescriptorSupplier("GetCampaignCriterion"))
+                  .build();
+          }
+        }
+     }
+     return getGetCampaignCriterionMethod;
+  }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getMutateCampaignCriteriaMethod()} instead. 
   public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest,
-      com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse> METHOD_MUTATE_CAMPAIGN_CRITERIA =
-      io.grpc.MethodDescriptor.create(
-          io.grpc.MethodDescriptor.MethodType.UNARY,
-          generateFullMethodName(
-              "google.ads.googleads.v0.services.CampaignCriterionService", "MutateCampaignCriteria"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse.getDefaultInstance()));
+      com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse> METHOD_MUTATE_CAMPAIGN_CRITERIA = getMutateCampaignCriteriaMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest,
+      com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse> getMutateCampaignCriteriaMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest,
+      com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse> getMutateCampaignCriteriaMethod() {
+    return getMutateCampaignCriteriaMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest,
+      com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse> getMutateCampaignCriteriaMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest, com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse> getMutateCampaignCriteriaMethod;
+    if ((getMutateCampaignCriteriaMethod = CampaignCriterionServiceGrpc.getMutateCampaignCriteriaMethod) == null) {
+      synchronized (CampaignCriterionServiceGrpc.class) {
+        if ((getMutateCampaignCriteriaMethod = CampaignCriterionServiceGrpc.getMutateCampaignCriteriaMethod) == null) {
+          CampaignCriterionServiceGrpc.getMutateCampaignCriteriaMethod = getMutateCampaignCriteriaMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest, com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.CampaignCriterionService", "MutateCampaignCriteria"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CampaignCriterionServiceMethodDescriptorSupplier("MutateCampaignCriteria"))
+                  .build();
+          }
+        }
+     }
+     return getMutateCampaignCriteriaMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -65,7 +121,7 @@ public final class CampaignCriterionServiceGrpc {
   }
 
   /**
-   * Creates a new ListenableFuture-style stub that supports unary and streaming output calls on the service
+   * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
   public static CampaignCriterionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
@@ -86,7 +142,7 @@ public final class CampaignCriterionServiceGrpc {
      */
     public void getCampaignCriterion(com.google.ads.googleads.v0.services.GetCampaignCriterionRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.resources.CampaignCriterion> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_CAMPAIGN_CRITERION, responseObserver);
+      asyncUnimplementedUnaryCall(getGetCampaignCriterionMethodHelper(), responseObserver);
     }
 
     /**
@@ -96,20 +152,20 @@ public final class CampaignCriterionServiceGrpc {
      */
     public void mutateCampaignCriteria(com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_MUTATE_CAMPAIGN_CRITERIA, responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCampaignCriteriaMethodHelper(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_GET_CAMPAIGN_CRITERION,
+            getGetCampaignCriterionMethodHelper(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v0.services.GetCampaignCriterionRequest,
                 com.google.ads.googleads.v0.resources.CampaignCriterion>(
                   this, METHODID_GET_CAMPAIGN_CRITERION)))
           .addMethod(
-            METHOD_MUTATE_CAMPAIGN_CRITERIA,
+            getMutateCampaignCriteriaMethodHelper(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest,
@@ -148,7 +204,7 @@ public final class CampaignCriterionServiceGrpc {
     public void getCampaignCriterion(com.google.ads.googleads.v0.services.GetCampaignCriterionRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.resources.CampaignCriterion> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_CAMPAIGN_CRITERION, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCampaignCriterionMethodHelper(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -159,7 +215,7 @@ public final class CampaignCriterionServiceGrpc {
     public void mutateCampaignCriteria(com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_MUTATE_CAMPAIGN_CRITERIA, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCampaignCriteriaMethodHelper(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -191,7 +247,7 @@ public final class CampaignCriterionServiceGrpc {
      */
     public com.google.ads.googleads.v0.resources.CampaignCriterion getCampaignCriterion(com.google.ads.googleads.v0.services.GetCampaignCriterionRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_CAMPAIGN_CRITERION, getCallOptions(), request);
+          getChannel(), getGetCampaignCriterionMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -201,7 +257,7 @@ public final class CampaignCriterionServiceGrpc {
      */
     public com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse mutateCampaignCriteria(com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_MUTATE_CAMPAIGN_CRITERIA, getCallOptions(), request);
+          getChannel(), getMutateCampaignCriteriaMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -234,7 +290,7 @@ public final class CampaignCriterionServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.resources.CampaignCriterion> getCampaignCriterion(
         com.google.ads.googleads.v0.services.GetCampaignCriterionRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_CAMPAIGN_CRITERION, getCallOptions()), request);
+          getChannel().newCall(getGetCampaignCriterionMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -245,7 +301,7 @@ public final class CampaignCriterionServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse> mutateCampaignCriteria(
         com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_MUTATE_CAMPAIGN_CRITERIA, getCallOptions()), request);
+          getChannel().newCall(getMutateCampaignCriteriaMethodHelper(), getCallOptions()), request);
     }
   }
 
@@ -293,10 +349,38 @@ public final class CampaignCriterionServiceGrpc {
     }
   }
 
-  private static final class CampaignCriterionServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class CampaignCriterionServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    CampaignCriterionServiceBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.google.ads.googleads.v0.services.CampaignCriterionServiceProto.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("CampaignCriterionService");
+    }
+  }
+
+  private static final class CampaignCriterionServiceFileDescriptorSupplier
+      extends CampaignCriterionServiceBaseDescriptorSupplier {
+    CampaignCriterionServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class CampaignCriterionServiceMethodDescriptorSupplier
+      extends CampaignCriterionServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    CampaignCriterionServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -309,9 +393,9 @@ public final class CampaignCriterionServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new CampaignCriterionServiceDescriptorSupplier())
-              .addMethod(METHOD_GET_CAMPAIGN_CRITERION)
-              .addMethod(METHOD_MUTATE_CAMPAIGN_CRITERIA)
+              .setSchemaDescriptor(new CampaignCriterionServiceFileDescriptorSupplier())
+              .addMethod(getGetCampaignCriterionMethodHelper())
+              .addMethod(getMutateCampaignCriteriaMethodHelper())
               .build();
         }
       }

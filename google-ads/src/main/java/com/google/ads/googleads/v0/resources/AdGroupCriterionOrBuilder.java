@@ -330,7 +330,7 @@ public interface AdGroupCriterionOrBuilder extends
    * Source of the effective CPC bid.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpc_bid_source = 21;</code>
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21;</code>
    */
   int getEffectiveCpcBidSourceValue();
   /**
@@ -338,16 +338,16 @@ public interface AdGroupCriterionOrBuilder extends
    * Source of the effective CPC bid.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpc_bid_source = 21;</code>
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21;</code>
    */
-  com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource getEffectiveCpcBidSource();
+  com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpcBidSource();
 
   /**
    * <pre>
    * Source of the effective CPM bid.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpm_bid_source = 22;</code>
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22;</code>
    */
   int getEffectiveCpmBidSourceValue();
   /**
@@ -355,16 +355,16 @@ public interface AdGroupCriterionOrBuilder extends
    * Source of the effective CPM bid.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpm_bid_source = 22;</code>
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22;</code>
    */
-  com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource getEffectiveCpmBidSource();
+  com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpmBidSource();
 
   /**
    * <pre>
    * Source of the effective CPV bid.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpv_bid_source = 23;</code>
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23;</code>
    */
   int getEffectiveCpvBidSourceValue();
   /**
@@ -372,9 +372,9 @@ public interface AdGroupCriterionOrBuilder extends
    * Source of the effective CPV bid.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.BidSourceEnum.BidSource effective_cpv_bid_source = 23;</code>
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23;</code>
    */
-  com.google.ads.googleads.v0.enums.BidSourceEnum.BidSource getEffectiveCpvBidSource();
+  com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpvBidSource();
 
   /**
    * <pre>
@@ -548,6 +548,31 @@ public interface AdGroupCriterionOrBuilder extends
    * <code>.google.ads.googleads.v0.common.KeywordInfo keyword = 27;</code>
    */
   com.google.ads.googleads.v0.common.KeywordInfoOrBuilder getKeywordOrBuilder();
+
+  /**
+   * <pre>
+   * Listing group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+   */
+  boolean hasListingGroup();
+  /**
+   * <pre>
+   * Listing group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+   */
+  com.google.ads.googleads.v0.common.ListingGroupInfo getListingGroup();
+  /**
+   * <pre>
+   * Listing group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
+   */
+  com.google.ads.googleads.v0.common.ListingGroupInfoOrBuilder getListingGroupOrBuilder();
 
   public com.google.ads.googleads.v0.resources.AdGroupCriterion.CriterionCase getCriterionCase();
 }

@@ -30,14 +30,15 @@ public final class CriterionTypeProto {
     java.lang.String[] descriptorData = {
       "\n2google/ads/googleads/v0/enums/criterio" +
       "n_type.proto\022\035google.ads.googleads.v0.en" +
-      "ums\"O\n\021CriterionTypeEnum\":\n\rCriterionTyp" +
+      "ums\"~\n\021CriterionTypeEnum\"i\n\rCriterionTyp" +
       "e\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007KEYWO" +
-      "RD\020\002B\303\001\n!com.google.ads.googleads.v0.enu" +
-      "msB\022CriterionTypeProtoP\001ZBgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v0" +
-      "/enums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAd" +
-      "s.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enu" +
-      "msb\006proto3"
+      "RD\020\002\022\014\n\010PLATFORM\020\006\022\014\n\010LOCATION\020\007\022\021\n\rLIST" +
+      "ING_GROUP\020\010B\303\001\n!com.google.ads.googleads" +
+      ".v0.enumsB\022CriterionTypeProtoP\001ZBgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.G" +
+      "oogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleAds" +
+      "\\V0\\Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -30,7 +30,7 @@ public final class CriterionErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v0/errors/criteri" +
       "on_error.proto\022\036google.ads.googleads.v0." +
-      "errors\"\365\026\n\022CriterionErrorEnum\"\336\026\n\016Criter" +
+      "errors\"\363\027\n\022CriterionErrorEnum\"\334\027\n\016Criter" +
       "ionError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\032" +
       "\n\026CONCRETE_TYPE_REQUIRED\020\002\022\035\n\031INVALID_EX" +
       "CLUDED_CATEGORY\020\003\022\030\n\024INVALID_KEYWORD_TEX" +
@@ -103,12 +103,15 @@ public final class CriterionErrorProto {
       "\031INVALID_MATCHING_FUNCTION\020N\022\037\n\033LOCATION" +
       "_FILTER_NOT_ALLOWED\020O\022\033\n\027LOCATION_FILTER" +
       "_INVALID\020P\0222\n.CANNOT_ATTACH_CRITERIA_AT_" +
-      "CAMPAIGN_AND_ADGROUP\020QB\311\001\n\"com.google.ad" +
-      "s.googleads.v0.errorsB\023CriterionErrorPro" +
-      "toP\001ZDgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v0/errors;errors\242\002\003GAA" +
-      "\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Goog" +
-      "le\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "CAMPAIGN_AND_ADGROUP\020Q\0229\n5HOTEL_LENGTH_O" +
+      "F_STAY_OVERLAPS_WITH_EXISTING_CRITERION\020" +
+      "R\022A\n=HOTEL_ADVANCE_BOOKING_WINDOW_OVERLA" +
+      "PS_WITH_EXISTING_CRITERION\020SB\311\001\n\"com.goo" +
+      "gle.ads.googleads.v0.errorsB\023CriterionEr" +
+      "rorProtoP\001ZDgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v0/errors;errors" +
+      "\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Errors\312" +
+      "\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

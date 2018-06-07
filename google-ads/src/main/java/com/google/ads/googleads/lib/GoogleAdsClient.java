@@ -15,6 +15,7 @@
 package com.google.ads.googleads.lib;
 
 import com.google.ads.googleads.v0.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v0.services.AdGroupBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
 import com.google.ads.googleads.v0.services.BiddingStrategyServiceClient;
@@ -22,8 +23,11 @@ import com.google.ads.googleads.v0.services.CampaignBudgetServiceClient;
 import com.google.ads.googleads.v0.services.CampaignCriterionServiceClient;
 import com.google.ads.googleads.v0.services.CampaignServiceClient;
 import com.google.ads.googleads.v0.services.CustomerServiceClient;
+import com.google.ads.googleads.v0.services.GeoTargetConstantServiceClient;
 import com.google.ads.googleads.v0.services.GoogleAdsFieldServiceClient;
 import com.google.ads.googleads.v0.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v0.services.KeywordViewServiceClient;
+import com.google.ads.googleads.v0.services.RecommendationServiceClient;
 import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
 import com.google.api.gax.rpc.FixedHeaderProvider;
 import com.google.api.gax.rpc.TransportChannel;
@@ -174,6 +178,11 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   }
 
   @Override
+  public AdGroupBidModifierServiceClient getAdGroupBidModifierServiceClient() {
+    return GrpcServiceDescriptor.get(AdGroupBidModifierServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
   public AdGroupCriterionServiceClient getAdGroupCriterionServiceClient() {
     return GrpcServiceDescriptor.get(AdGroupCriterionServiceClient.class).newServiceClient(this);
   }
@@ -209,13 +218,28 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   }
 
   @Override
-  public GoogleAdsServiceClient getGoogleAdsServiceClient() {
-    return GrpcServiceDescriptor.get(GoogleAdsServiceClient.class).newServiceClient(this);
+  public GeoTargetConstantServiceClient getGeoTargetConstantServiceClient() {
+    return GrpcServiceDescriptor.get(GeoTargetConstantServiceClient.class).newServiceClient(this);
   }
 
   @Override
   public GoogleAdsFieldServiceClient getGoogleAdsFieldServiceClient() {
     return GrpcServiceDescriptor.get(GoogleAdsFieldServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public GoogleAdsServiceClient getGoogleAdsServiceClient() {
+    return GrpcServiceDescriptor.get(GoogleAdsServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public KeywordViewServiceClient getKeywordViewServiceClient() {
+    return GrpcServiceDescriptor.get(KeywordViewServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public RecommendationServiceClient getRecommendationServiceClient() {
+    return GrpcServiceDescriptor.get(RecommendationServiceClient.class).newServiceClient(this);
   }
 
   /** Builder for configuring and creating an instance of {@link GoogleAdsClient}. */
@@ -303,16 +327,15 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
     /**
      * Updates this builder with values set from a properties file.
      *
-     * The format is similar to the format specified in the AdWords API's client library
-     * for Java, except the property keys have changed. See {@link ConfigPropertyKey} for the
-     * list of expected keys.
+     * <p>The format is similar to the format specified in the AdWords API's client library for
+     * Java, except the property keys have changed. See {@link ConfigPropertyKey} for the list of
+     * expected keys.
      *
      * @throws FileNotFoundException if the specified file does not exist.
      * @throws IOException if the file exists, but a failure occurs when trying to load properties
      *     from the file.
      */
-    public Builder fromPropertiesFile(File propertiesFile)
-        throws IOException {
+    public Builder fromPropertiesFile(File propertiesFile) throws IOException {
       Preconditions.checkNotNull(propertiesFile, "Null properties file");
       Properties adsProperties = new Properties();
       try (FileInputStream fileInputStream = new FileInputStream(propertiesFile)) {

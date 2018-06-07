@@ -30,15 +30,15 @@ public final class AdvertisingChannelTypeProto {
     java.lang.String[] descriptorData = {
       "\n<google/ads/googleads/v0/enums/advertis" +
       "ing_channel_type.proto\022\035google.ads.googl" +
-      "eads.v0.enums\"`\n\032AdvertisingChannelTypeE" +
-      "num\"B\n\026AdvertisingChannelType\022\017\n\013UNSPECI" +
-      "FIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006SEARCH\020\002B\314\001\n!com." +
-      "google.ads.googleads.v0.enumsB\033Advertisi" +
-      "ngChannelTypeProtoP\001ZBgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v0/enu" +
-      "ms;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0" +
-      ".Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006" +
-      "proto3"
+      "eads.v0.enums\"k\n\032AdvertisingChannelTypeE" +
+      "num\"M\n\026AdvertisingChannelType\022\017\n\013UNSPECI" +
+      "FIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006SEARCH\020\002\022\t\n\005HOTEL" +
+      "\020\005B\314\001\n!com.google.ads.googleads.v0.enums" +
+      "B\033AdvertisingChannelTypeProtoP\001ZBgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.G" +
+      "oogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleAds" +
+      "\\V0\\Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

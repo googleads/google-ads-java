@@ -77,7 +77,7 @@ import org.threeten.bp.Duration;
  * </code>
  * </pre>
  */
-@Generated("by GAPIC v0.0.5")
+@Generated("by gapic-generator")
 @BetaApi
 public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceStubSettings> {
   /** The default scopes of the service. */

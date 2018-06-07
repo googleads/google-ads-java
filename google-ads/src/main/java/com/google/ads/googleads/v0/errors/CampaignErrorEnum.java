@@ -385,6 +385,30 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_SET_DATE_TO_PAST = 36;</code>
      */
     CANNOT_SET_DATE_TO_PAST(36),
+    /**
+     * <pre>
+     * Hotel center id in the hotel setting does not match any customer links.
+     * </pre>
+     *
+     * <code>MISSING_HOTEL_CUSTOMER_LINK = 37;</code>
+     */
+    MISSING_HOTEL_CUSTOMER_LINK(37),
+    /**
+     * <pre>
+     * Hotel center id in the hotel setting must match an active customer link.
+     * </pre>
+     *
+     * <code>INVALID_HOTEL_CUSTOMER_LINK = 38;</code>
+     */
+    INVALID_HOTEL_CUSTOMER_LINK(38),
+    /**
+     * <pre>
+     * Hotel setting was not found when creating a hotel ads campaign.
+     * </pre>
+     *
+     * <code>MISSING_HOTEL_SETTING = 39;</code>
+     */
+    MISSING_HOTEL_SETTING(39),
     UNRECOGNIZED(-1),
     ;
 
@@ -688,6 +712,30 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_SET_DATE_TO_PAST = 36;</code>
      */
     public static final int CANNOT_SET_DATE_TO_PAST_VALUE = 36;
+    /**
+     * <pre>
+     * Hotel center id in the hotel setting does not match any customer links.
+     * </pre>
+     *
+     * <code>MISSING_HOTEL_CUSTOMER_LINK = 37;</code>
+     */
+    public static final int MISSING_HOTEL_CUSTOMER_LINK_VALUE = 37;
+    /**
+     * <pre>
+     * Hotel center id in the hotel setting must match an active customer link.
+     * </pre>
+     *
+     * <code>INVALID_HOTEL_CUSTOMER_LINK = 38;</code>
+     */
+    public static final int INVALID_HOTEL_CUSTOMER_LINK_VALUE = 38;
+    /**
+     * <pre>
+     * Hotel setting was not found when creating a hotel ads campaign.
+     * </pre>
+     *
+     * <code>MISSING_HOTEL_SETTING = 39;</code>
+     */
+    public static final int MISSING_HOTEL_SETTING_VALUE = 39;
 
 
     public final int getNumber() {
@@ -744,6 +792,9 @@ private static final long serialVersionUID = 0L;
         case 34: return CANNOT_SET_AD_ROTATION_MODE;
         case 35: return CANNOT_MODIFY_START_DATE_IF_ALREADY_STARTED;
         case 36: return CANNOT_SET_DATE_TO_PAST;
+        case 37: return MISSING_HOTEL_CUSTOMER_LINK;
+        case 38: return INVALID_HOTEL_CUSTOMER_LINK;
+        case 39: return MISSING_HOTEL_SETTING;
         default: return null;
       }
     }
