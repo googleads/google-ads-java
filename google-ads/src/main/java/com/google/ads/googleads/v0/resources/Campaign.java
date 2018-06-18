@@ -341,6 +341,20 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 274: {
+            com.google.ads.googleads.v0.common.PercentCpc.Builder subBuilder = null;
+            if (campaignBiddingStrategyCase_ == 34) {
+              subBuilder = ((com.google.ads.googleads.v0.common.PercentCpc) campaignBiddingStrategy_).toBuilder();
+            }
+            campaignBiddingStrategy_ =
+                input.readMessage(com.google.ads.googleads.v0.common.PercentCpc.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.PercentCpc) campaignBiddingStrategy_);
+              campaignBiddingStrategy_ = subBuilder.buildPartial();
+            }
+            campaignBiddingStrategyCase_ = 34;
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -4145,6 +4159,7 @@ private static final long serialVersionUID = 0L;
     TARGET_CPA(26),
     TARGET_ROAS(29),
     TARGET_SPEND(27),
+    PERCENT_CPC(34),
     CAMPAIGNBIDDINGSTRATEGY_NOT_SET(0);
     private final int value;
     private CampaignBiddingStrategyCase(int value) {
@@ -4168,6 +4183,7 @@ private static final long serialVersionUID = 0L;
         case 26: return TARGET_CPA;
         case 29: return TARGET_ROAS;
         case 27: return TARGET_SPEND;
+        case 34: return PERCENT_CPC;
         case 0: return CAMPAIGNBIDDINGSTRATEGY_NOT_SET;
         default: return null;
       }
@@ -5107,6 +5123,47 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.TargetSpend.getDefaultInstance();
   }
 
+  public static final int PERCENT_CPC_FIELD_NUMBER = 34;
+  /**
+   * <pre>
+   * Standard Percent Cpc bidding strategy where bids are a fraction of the
+   * advertised price for some good or service.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+   */
+  public boolean hasPercentCpc() {
+    return campaignBiddingStrategyCase_ == 34;
+  }
+  /**
+   * <pre>
+   * Standard Percent Cpc bidding strategy where bids are a fraction of the
+   * advertised price for some good or service.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+   */
+  public com.google.ads.googleads.v0.common.PercentCpc getPercentCpc() {
+    if (campaignBiddingStrategyCase_ == 34) {
+       return (com.google.ads.googleads.v0.common.PercentCpc) campaignBiddingStrategy_;
+    }
+    return com.google.ads.googleads.v0.common.PercentCpc.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Standard Percent Cpc bidding strategy where bids are a fraction of the
+   * advertised price for some good or service.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+   */
+  public com.google.ads.googleads.v0.common.PercentCpcOrBuilder getPercentCpcOrBuilder() {
+    if (campaignBiddingStrategyCase_ == 34) {
+       return (com.google.ads.googleads.v0.common.PercentCpc) campaignBiddingStrategy_;
+    }
+    return com.google.ads.googleads.v0.common.PercentCpc.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -5193,6 +5250,9 @@ private static final long serialVersionUID = 0L;
     }
     if (dynamicSearchAdsSetting_ != null) {
       output.writeMessage(33, getDynamicSearchAdsSetting());
+    }
+    if (campaignBiddingStrategyCase_ == 34) {
+      output.writeMessage(34, (com.google.ads.googleads.v0.common.PercentCpc) campaignBiddingStrategy_);
     }
     unknownFields.writeTo(output);
   }
@@ -5301,6 +5361,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(33, getDynamicSearchAdsSetting());
     }
+    if (campaignBiddingStrategyCase_ == 34) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(34, (com.google.ads.googleads.v0.common.PercentCpc) campaignBiddingStrategy_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -5408,6 +5472,10 @@ private static final long serialVersionUID = 0L;
         result = result && getTargetSpend()
             .equals(other.getTargetSpend());
         break;
+      case 34:
+        result = result && getPercentCpc()
+            .equals(other.getPercentCpc());
+        break;
       case 0:
       default:
     }
@@ -5508,6 +5576,10 @@ private static final long serialVersionUID = 0L;
       case 27:
         hash = (37 * hash) + TARGET_SPEND_FIELD_NUMBER;
         hash = (53 * hash) + getTargetSpend().hashCode();
+        break;
+      case 34:
+        hash = (37 * hash) + PERCENT_CPC_FIELD_NUMBER;
+        hash = (53 * hash) + getPercentCpc().hashCode();
         break;
       case 0:
       default:
@@ -5863,6 +5935,13 @@ private static final long serialVersionUID = 0L;
           result.campaignBiddingStrategy_ = targetSpendBuilder_.build();
         }
       }
+      if (campaignBiddingStrategyCase_ == 34) {
+        if (percentCpcBuilder_ == null) {
+          result.campaignBiddingStrategy_ = campaignBiddingStrategy_;
+        } else {
+          result.campaignBiddingStrategy_ = percentCpcBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.campaignBiddingStrategyCase_ = campaignBiddingStrategyCase_;
       onBuilt();
@@ -6012,6 +6091,10 @@ private static final long serialVersionUID = 0L;
         }
         case TARGET_SPEND: {
           mergeTargetSpend(other.getTargetSpend());
+          break;
+        }
+        case PERCENT_CPC: {
+          mergePercentCpc(other.getPercentCpc());
           break;
         }
         case CAMPAIGNBIDDINGSTRATEGY_NOT_SET: {
@@ -9833,6 +9916,187 @@ private static final long serialVersionUID = 0L;
       campaignBiddingStrategyCase_ = 27;
       onChanged();;
       return targetSpendBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.PercentCpc, com.google.ads.googleads.v0.common.PercentCpc.Builder, com.google.ads.googleads.v0.common.PercentCpcOrBuilder> percentCpcBuilder_;
+    /**
+     * <pre>
+     * Standard Percent Cpc bidding strategy where bids are a fraction of the
+     * advertised price for some good or service.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+     */
+    public boolean hasPercentCpc() {
+      return campaignBiddingStrategyCase_ == 34;
+    }
+    /**
+     * <pre>
+     * Standard Percent Cpc bidding strategy where bids are a fraction of the
+     * advertised price for some good or service.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+     */
+    public com.google.ads.googleads.v0.common.PercentCpc getPercentCpc() {
+      if (percentCpcBuilder_ == null) {
+        if (campaignBiddingStrategyCase_ == 34) {
+          return (com.google.ads.googleads.v0.common.PercentCpc) campaignBiddingStrategy_;
+        }
+        return com.google.ads.googleads.v0.common.PercentCpc.getDefaultInstance();
+      } else {
+        if (campaignBiddingStrategyCase_ == 34) {
+          return percentCpcBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.PercentCpc.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Standard Percent Cpc bidding strategy where bids are a fraction of the
+     * advertised price for some good or service.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+     */
+    public Builder setPercentCpc(com.google.ads.googleads.v0.common.PercentCpc value) {
+      if (percentCpcBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignBiddingStrategy_ = value;
+        onChanged();
+      } else {
+        percentCpcBuilder_.setMessage(value);
+      }
+      campaignBiddingStrategyCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Standard Percent Cpc bidding strategy where bids are a fraction of the
+     * advertised price for some good or service.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+     */
+    public Builder setPercentCpc(
+        com.google.ads.googleads.v0.common.PercentCpc.Builder builderForValue) {
+      if (percentCpcBuilder_ == null) {
+        campaignBiddingStrategy_ = builderForValue.build();
+        onChanged();
+      } else {
+        percentCpcBuilder_.setMessage(builderForValue.build());
+      }
+      campaignBiddingStrategyCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Standard Percent Cpc bidding strategy where bids are a fraction of the
+     * advertised price for some good or service.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+     */
+    public Builder mergePercentCpc(com.google.ads.googleads.v0.common.PercentCpc value) {
+      if (percentCpcBuilder_ == null) {
+        if (campaignBiddingStrategyCase_ == 34 &&
+            campaignBiddingStrategy_ != com.google.ads.googleads.v0.common.PercentCpc.getDefaultInstance()) {
+          campaignBiddingStrategy_ = com.google.ads.googleads.v0.common.PercentCpc.newBuilder((com.google.ads.googleads.v0.common.PercentCpc) campaignBiddingStrategy_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          campaignBiddingStrategy_ = value;
+        }
+        onChanged();
+      } else {
+        if (campaignBiddingStrategyCase_ == 34) {
+          percentCpcBuilder_.mergeFrom(value);
+        }
+        percentCpcBuilder_.setMessage(value);
+      }
+      campaignBiddingStrategyCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Standard Percent Cpc bidding strategy where bids are a fraction of the
+     * advertised price for some good or service.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+     */
+    public Builder clearPercentCpc() {
+      if (percentCpcBuilder_ == null) {
+        if (campaignBiddingStrategyCase_ == 34) {
+          campaignBiddingStrategyCase_ = 0;
+          campaignBiddingStrategy_ = null;
+          onChanged();
+        }
+      } else {
+        if (campaignBiddingStrategyCase_ == 34) {
+          campaignBiddingStrategyCase_ = 0;
+          campaignBiddingStrategy_ = null;
+        }
+        percentCpcBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Standard Percent Cpc bidding strategy where bids are a fraction of the
+     * advertised price for some good or service.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+     */
+    public com.google.ads.googleads.v0.common.PercentCpc.Builder getPercentCpcBuilder() {
+      return getPercentCpcFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Standard Percent Cpc bidding strategy where bids are a fraction of the
+     * advertised price for some good or service.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+     */
+    public com.google.ads.googleads.v0.common.PercentCpcOrBuilder getPercentCpcOrBuilder() {
+      if ((campaignBiddingStrategyCase_ == 34) && (percentCpcBuilder_ != null)) {
+        return percentCpcBuilder_.getMessageOrBuilder();
+      } else {
+        if (campaignBiddingStrategyCase_ == 34) {
+          return (com.google.ads.googleads.v0.common.PercentCpc) campaignBiddingStrategy_;
+        }
+        return com.google.ads.googleads.v0.common.PercentCpc.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Standard Percent Cpc bidding strategy where bids are a fraction of the
+     * advertised price for some good or service.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.PercentCpc, com.google.ads.googleads.v0.common.PercentCpc.Builder, com.google.ads.googleads.v0.common.PercentCpcOrBuilder> 
+        getPercentCpcFieldBuilder() {
+      if (percentCpcBuilder_ == null) {
+        if (!(campaignBiddingStrategyCase_ == 34)) {
+          campaignBiddingStrategy_ = com.google.ads.googleads.v0.common.PercentCpc.getDefaultInstance();
+        }
+        percentCpcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.PercentCpc, com.google.ads.googleads.v0.common.PercentCpc.Builder, com.google.ads.googleads.v0.common.PercentCpcOrBuilder>(
+                (com.google.ads.googleads.v0.common.PercentCpc) campaignBiddingStrategy_,
+                getParentForChildren(),
+                isClean());
+        campaignBiddingStrategy_ = null;
+      }
+      campaignBiddingStrategyCase_ = 34;
+      onChanged();;
+      return percentCpcBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

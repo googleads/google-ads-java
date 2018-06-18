@@ -157,6 +157,15 @@ private static final long serialVersionUID = 0L;
     PAGE_ONE_PROMOTED(5),
     /**
      * <pre>
+     * Percent Cpc is bidding strategy where bids are a fraction of the
+     * advertised price for some good or service.
+     * </pre>
+     *
+     * <code>PERCENT_CPC = 12;</code>
+     */
+    PERCENT_CPC(12),
+    /**
+     * <pre>
      * Target CPA is an automated bid strategy that sets bids
      * to help get as many conversions as possible
      * at the target cost-per-acquisition (CPA) you set.
@@ -269,6 +278,15 @@ private static final long serialVersionUID = 0L;
     public static final int PAGE_ONE_PROMOTED_VALUE = 5;
     /**
      * <pre>
+     * Percent Cpc is bidding strategy where bids are a fraction of the
+     * advertised price for some good or service.
+     * </pre>
+     *
+     * <code>PERCENT_CPC = 12;</code>
+     */
+    public static final int PERCENT_CPC_VALUE = 12;
+    /**
+     * <pre>
      * Target CPA is an automated bid strategy that sets bids
      * to help get as many conversions as possible
      * at the target cost-per-acquisition (CPA) you set.
@@ -334,6 +352,7 @@ private static final long serialVersionUID = 0L;
         case 10: return MAXIMIZE_CONVERSIONS;
         case 11: return MAXIMIZE_CONVERSION_VALUE;
         case 5: return PAGE_ONE_PROMOTED;
+        case 12: return PERCENT_CPC;
         case 6: return TARGET_CPA;
         case 7: return TARGET_OUTRANK_SHARE;
         case 8: return TARGET_ROAS;

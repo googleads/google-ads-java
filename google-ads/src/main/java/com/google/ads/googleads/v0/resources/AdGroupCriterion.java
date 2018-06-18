@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     effectiveCpcBidSource_ = 0;
     effectiveCpmBidSource_ = 0;
     effectiveCpvBidSource_ = 0;
+    effectivePercentCpcBidSource_ = 0;
     finalUrls_ = java.util.Collections.emptyList();
     urlCustomParameters_ = java.util.Collections.emptyList();
   }
@@ -113,9 +114,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 90: {
-            if (!((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+            if (!((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
               finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00020000;
+              mutable_bitField0_ |= 0x00100000;
             }
             finalUrls_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -135,9 +136,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 114: {
-            if (!((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+            if (!((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v0.common.CustomParameter>();
-              mutable_bitField0_ |= 0x00080000;
+              mutable_bitField0_ |= 0x00400000;
             }
             urlCustomParameters_.add(
                 input.readMessage(com.google.ads.googleads.v0.common.CustomParameter.parser(), extensionRegistry));
@@ -299,6 +300,38 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 32;
             break;
           }
+          case 266: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (percentCpcBidMicros_ != null) {
+              subBuilder = percentCpcBidMicros_.toBuilder();
+            }
+            percentCpcBidMicros_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(percentCpcBidMicros_);
+              percentCpcBidMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 274: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (effectivePercentCpcBidMicros_ != null) {
+              subBuilder = effectivePercentCpcBidMicros_.toBuilder();
+            }
+            effectivePercentCpcBidMicros_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(effectivePercentCpcBidMicros_);
+              effectivePercentCpcBidMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 280: {
+            int rawValue = input.readEnum();
+
+            effectivePercentCpcBidSource_ = rawValue;
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -307,10 +340,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+      if (((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
         finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
       }
-      if (((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+      if (((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
       this.unknownFields = unknownFields.build();
@@ -2972,6 +3005,45 @@ private static final long serialVersionUID = 0L;
     return getCpvBidMicros();
   }
 
+  public static final int PERCENT_CPC_BID_MICROS_FIELD_NUMBER = 33;
+  private com.google.protobuf.Int64Value percentCpcBidMicros_;
+  /**
+   * <pre>
+   * The CPC bid amount, expressed as a fraction of the advertised price
+   * for some good or service. The valid range for the fraction is [0,1) and the
+   * value stored here is 1,000,000 * [fraction].
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+   */
+  public boolean hasPercentCpcBidMicros() {
+    return percentCpcBidMicros_ != null;
+  }
+  /**
+   * <pre>
+   * The CPC bid amount, expressed as a fraction of the advertised price
+   * for some good or service. The valid range for the fraction is [0,1) and the
+   * value stored here is 1,000,000 * [fraction].
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+   */
+  public com.google.protobuf.Int64Value getPercentCpcBidMicros() {
+    return percentCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : percentCpcBidMicros_;
+  }
+  /**
+   * <pre>
+   * The CPC bid amount, expressed as a fraction of the advertised price
+   * for some good or service. The valid range for the fraction is [0,1) and the
+   * value stored here is 1,000,000 * [fraction].
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getPercentCpcBidMicrosOrBuilder() {
+    return getPercentCpcBidMicros();
+  }
+
   public static final int EFFECTIVE_CPC_BID_MICROS_FIELD_NUMBER = 18;
   private com.google.protobuf.Int64Value effectiveCpcBidMicros_;
   /**
@@ -3071,6 +3143,39 @@ private static final long serialVersionUID = 0L;
     return getEffectiveCpvBidMicros();
   }
 
+  public static final int EFFECTIVE_PERCENT_CPC_BID_MICROS_FIELD_NUMBER = 34;
+  private com.google.protobuf.Int64Value effectivePercentCpcBidMicros_;
+  /**
+   * <pre>
+   * The effective Percent CPC bid amount.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+   */
+  public boolean hasEffectivePercentCpcBidMicros() {
+    return effectivePercentCpcBidMicros_ != null;
+  }
+  /**
+   * <pre>
+   * The effective Percent CPC bid amount.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+   */
+  public com.google.protobuf.Int64Value getEffectivePercentCpcBidMicros() {
+    return effectivePercentCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectivePercentCpcBidMicros_;
+  }
+  /**
+   * <pre>
+   * The effective Percent CPC bid amount.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getEffectivePercentCpcBidMicrosOrBuilder() {
+    return getEffectivePercentCpcBidMicros();
+  }
+
   public static final int EFFECTIVE_CPC_BID_SOURCE_FIELD_NUMBER = 21;
   private int effectiveCpcBidSource_;
   /**
@@ -3140,6 +3245,30 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpvBidSource() {
     com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpvBidSource_);
+    return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
+  }
+
+  public static final int EFFECTIVE_PERCENT_CPC_BID_SOURCE_FIELD_NUMBER = 35;
+  private int effectivePercentCpcBidSource_;
+  /**
+   * <pre>
+   * Source of the effective Percent CPC bid.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35;</code>
+   */
+  public int getEffectivePercentCpcBidSourceValue() {
+    return effectivePercentCpcBidSource_;
+  }
+  /**
+   * <pre>
+   * Source of the effective Percent CPC bid.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35;</code>
+   */
+  public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectivePercentCpcBidSource() {
+    com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectivePercentCpcBidSource_);
     return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
   }
 
@@ -3483,6 +3612,15 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 32) {
       output.writeMessage(32, (com.google.ads.googleads.v0.common.ListingGroupInfo) criterion_);
     }
+    if (percentCpcBidMicros_ != null) {
+      output.writeMessage(33, getPercentCpcBidMicros());
+    }
+    if (effectivePercentCpcBidMicros_ != null) {
+      output.writeMessage(34, getEffectivePercentCpcBidMicros());
+    }
+    if (effectivePercentCpcBidSource_ != com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
+      output.writeEnum(35, effectivePercentCpcBidSource_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -3578,6 +3716,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(32, (com.google.ads.googleads.v0.common.ListingGroupInfo) criterion_);
     }
+    if (percentCpcBidMicros_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(33, getPercentCpcBidMicros());
+    }
+    if (effectivePercentCpcBidMicros_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(34, getEffectivePercentCpcBidMicros());
+    }
+    if (effectivePercentCpcBidSource_ != com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(35, effectivePercentCpcBidSource_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3633,6 +3783,11 @@ private static final long serialVersionUID = 0L;
       result = result && getCpvBidMicros()
           .equals(other.getCpvBidMicros());
     }
+    result = result && (hasPercentCpcBidMicros() == other.hasPercentCpcBidMicros());
+    if (hasPercentCpcBidMicros()) {
+      result = result && getPercentCpcBidMicros()
+          .equals(other.getPercentCpcBidMicros());
+    }
     result = result && (hasEffectiveCpcBidMicros() == other.hasEffectiveCpcBidMicros());
     if (hasEffectiveCpcBidMicros()) {
       result = result && getEffectiveCpcBidMicros()
@@ -3648,9 +3803,15 @@ private static final long serialVersionUID = 0L;
       result = result && getEffectiveCpvBidMicros()
           .equals(other.getEffectiveCpvBidMicros());
     }
+    result = result && (hasEffectivePercentCpcBidMicros() == other.hasEffectivePercentCpcBidMicros());
+    if (hasEffectivePercentCpcBidMicros()) {
+      result = result && getEffectivePercentCpcBidMicros()
+          .equals(other.getEffectivePercentCpcBidMicros());
+    }
     result = result && effectiveCpcBidSource_ == other.effectiveCpcBidSource_;
     result = result && effectiveCpmBidSource_ == other.effectiveCpmBidSource_;
     result = result && effectiveCpvBidSource_ == other.effectiveCpvBidSource_;
+    result = result && effectivePercentCpcBidSource_ == other.effectivePercentCpcBidSource_;
     result = result && (hasPositionEstimates() == other.hasPositionEstimates());
     if (hasPositionEstimates()) {
       result = result && getPositionEstimates()
@@ -3725,6 +3886,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CPV_BID_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + getCpvBidMicros().hashCode();
     }
+    if (hasPercentCpcBidMicros()) {
+      hash = (37 * hash) + PERCENT_CPC_BID_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + getPercentCpcBidMicros().hashCode();
+    }
     if (hasEffectiveCpcBidMicros()) {
       hash = (37 * hash) + EFFECTIVE_CPC_BID_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + getEffectiveCpcBidMicros().hashCode();
@@ -3737,12 +3902,18 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EFFECTIVE_CPV_BID_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + getEffectiveCpvBidMicros().hashCode();
     }
+    if (hasEffectivePercentCpcBidMicros()) {
+      hash = (37 * hash) + EFFECTIVE_PERCENT_CPC_BID_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + getEffectivePercentCpcBidMicros().hashCode();
+    }
     hash = (37 * hash) + EFFECTIVE_CPC_BID_SOURCE_FIELD_NUMBER;
     hash = (53 * hash) + effectiveCpcBidSource_;
     hash = (37 * hash) + EFFECTIVE_CPM_BID_SOURCE_FIELD_NUMBER;
     hash = (53 * hash) + effectiveCpmBidSource_;
     hash = (37 * hash) + EFFECTIVE_CPV_BID_SOURCE_FIELD_NUMBER;
     hash = (53 * hash) + effectiveCpvBidSource_;
+    hash = (37 * hash) + EFFECTIVE_PERCENT_CPC_BID_SOURCE_FIELD_NUMBER;
+    hash = (53 * hash) + effectivePercentCpcBidSource_;
     if (hasPositionEstimates()) {
       hash = (37 * hash) + POSITION_ESTIMATES_FIELD_NUMBER;
       hash = (53 * hash) + getPositionEstimates().hashCode();
@@ -3954,6 +4125,12 @@ private static final long serialVersionUID = 0L;
         cpvBidMicros_ = null;
         cpvBidMicrosBuilder_ = null;
       }
+      if (percentCpcBidMicrosBuilder_ == null) {
+        percentCpcBidMicros_ = null;
+      } else {
+        percentCpcBidMicros_ = null;
+        percentCpcBidMicrosBuilder_ = null;
+      }
       if (effectiveCpcBidMicrosBuilder_ == null) {
         effectiveCpcBidMicros_ = null;
       } else {
@@ -3972,11 +4149,19 @@ private static final long serialVersionUID = 0L;
         effectiveCpvBidMicros_ = null;
         effectiveCpvBidMicrosBuilder_ = null;
       }
+      if (effectivePercentCpcBidMicrosBuilder_ == null) {
+        effectivePercentCpcBidMicros_ = null;
+      } else {
+        effectivePercentCpcBidMicros_ = null;
+        effectivePercentCpcBidMicrosBuilder_ = null;
+      }
       effectiveCpcBidSource_ = 0;
 
       effectiveCpmBidSource_ = 0;
 
       effectiveCpvBidSource_ = 0;
+
+      effectivePercentCpcBidSource_ = 0;
 
       if (positionEstimatesBuilder_ == null) {
         positionEstimates_ = null;
@@ -3986,7 +4171,7 @@ private static final long serialVersionUID = 0L;
       }
       if (finalUrlsBuilder_ == null) {
         finalUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00100000);
       } else {
         finalUrlsBuilder_.clear();
       }
@@ -3998,7 +4183,7 @@ private static final long serialVersionUID = 0L;
       }
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00400000);
       } else {
         urlCustomParametersBuilder_.clear();
       }
@@ -4066,6 +4251,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.cpvBidMicros_ = cpvBidMicrosBuilder_.build();
       }
+      if (percentCpcBidMicrosBuilder_ == null) {
+        result.percentCpcBidMicros_ = percentCpcBidMicros_;
+      } else {
+        result.percentCpcBidMicros_ = percentCpcBidMicrosBuilder_.build();
+      }
       if (effectiveCpcBidMicrosBuilder_ == null) {
         result.effectiveCpcBidMicros_ = effectiveCpcBidMicros_;
       } else {
@@ -4081,18 +4271,24 @@ private static final long serialVersionUID = 0L;
       } else {
         result.effectiveCpvBidMicros_ = effectiveCpvBidMicrosBuilder_.build();
       }
+      if (effectivePercentCpcBidMicrosBuilder_ == null) {
+        result.effectivePercentCpcBidMicros_ = effectivePercentCpcBidMicros_;
+      } else {
+        result.effectivePercentCpcBidMicros_ = effectivePercentCpcBidMicrosBuilder_.build();
+      }
       result.effectiveCpcBidSource_ = effectiveCpcBidSource_;
       result.effectiveCpmBidSource_ = effectiveCpmBidSource_;
       result.effectiveCpvBidSource_ = effectiveCpvBidSource_;
+      result.effectivePercentCpcBidSource_ = effectivePercentCpcBidSource_;
       if (positionEstimatesBuilder_ == null) {
         result.positionEstimates_ = positionEstimates_;
       } else {
         result.positionEstimates_ = positionEstimatesBuilder_.build();
       }
       if (finalUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        if (((bitField0_ & 0x00100000) == 0x00100000)) {
           finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
-          bitField0_ = (bitField0_ & ~0x00020000);
+          bitField0_ = (bitField0_ & ~0x00100000);
         }
         result.finalUrls_ = finalUrls_;
       } else {
@@ -4104,9 +4300,9 @@ private static final long serialVersionUID = 0L;
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        if (((bitField0_ & 0x00400000) == 0x00400000)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00080000);
+          bitField0_ = (bitField0_ & ~0x00400000);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
@@ -4200,6 +4396,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasCpvBidMicros()) {
         mergeCpvBidMicros(other.getCpvBidMicros());
       }
+      if (other.hasPercentCpcBidMicros()) {
+        mergePercentCpcBidMicros(other.getPercentCpcBidMicros());
+      }
       if (other.hasEffectiveCpcBidMicros()) {
         mergeEffectiveCpcBidMicros(other.getEffectiveCpcBidMicros());
       }
@@ -4208,6 +4407,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasEffectiveCpvBidMicros()) {
         mergeEffectiveCpvBidMicros(other.getEffectiveCpvBidMicros());
+      }
+      if (other.hasEffectivePercentCpcBidMicros()) {
+        mergeEffectivePercentCpcBidMicros(other.getEffectivePercentCpcBidMicros());
       }
       if (other.effectiveCpcBidSource_ != 0) {
         setEffectiveCpcBidSourceValue(other.getEffectiveCpcBidSourceValue());
@@ -4218,6 +4420,9 @@ private static final long serialVersionUID = 0L;
       if (other.effectiveCpvBidSource_ != 0) {
         setEffectiveCpvBidSourceValue(other.getEffectiveCpvBidSourceValue());
       }
+      if (other.effectivePercentCpcBidSource_ != 0) {
+        setEffectivePercentCpcBidSourceValue(other.getEffectivePercentCpcBidSourceValue());
+      }
       if (other.hasPositionEstimates()) {
         mergePositionEstimates(other.getPositionEstimates());
       }
@@ -4225,7 +4430,7 @@ private static final long serialVersionUID = 0L;
         if (!other.finalUrls_.isEmpty()) {
           if (finalUrls_.isEmpty()) {
             finalUrls_ = other.finalUrls_;
-            bitField0_ = (bitField0_ & ~0x00020000);
+            bitField0_ = (bitField0_ & ~0x00100000);
           } else {
             ensureFinalUrlsIsMutable();
             finalUrls_.addAll(other.finalUrls_);
@@ -4238,7 +4443,7 @@ private static final long serialVersionUID = 0L;
             finalUrlsBuilder_.dispose();
             finalUrlsBuilder_ = null;
             finalUrls_ = other.finalUrls_;
-            bitField0_ = (bitField0_ & ~0x00020000);
+            bitField0_ = (bitField0_ & ~0x00100000);
             finalUrlsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFinalUrlsFieldBuilder() : null;
@@ -4254,7 +4459,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00080000);
+            bitField0_ = (bitField0_ & ~0x00400000);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -4267,7 +4472,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00080000);
+            bitField0_ = (bitField0_ & ~0x00400000);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -5666,6 +5871,177 @@ private static final long serialVersionUID = 0L;
       return cpvBidMicrosBuilder_;
     }
 
+    private com.google.protobuf.Int64Value percentCpcBidMicros_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> percentCpcBidMicrosBuilder_;
+    /**
+     * <pre>
+     * The CPC bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+     */
+    public boolean hasPercentCpcBidMicros() {
+      return percentCpcBidMicrosBuilder_ != null || percentCpcBidMicros_ != null;
+    }
+    /**
+     * <pre>
+     * The CPC bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+     */
+    public com.google.protobuf.Int64Value getPercentCpcBidMicros() {
+      if (percentCpcBidMicrosBuilder_ == null) {
+        return percentCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : percentCpcBidMicros_;
+      } else {
+        return percentCpcBidMicrosBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The CPC bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+     */
+    public Builder setPercentCpcBidMicros(com.google.protobuf.Int64Value value) {
+      if (percentCpcBidMicrosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        percentCpcBidMicros_ = value;
+        onChanged();
+      } else {
+        percentCpcBidMicrosBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The CPC bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+     */
+    public Builder setPercentCpcBidMicros(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (percentCpcBidMicrosBuilder_ == null) {
+        percentCpcBidMicros_ = builderForValue.build();
+        onChanged();
+      } else {
+        percentCpcBidMicrosBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The CPC bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+     */
+    public Builder mergePercentCpcBidMicros(com.google.protobuf.Int64Value value) {
+      if (percentCpcBidMicrosBuilder_ == null) {
+        if (percentCpcBidMicros_ != null) {
+          percentCpcBidMicros_ =
+            com.google.protobuf.Int64Value.newBuilder(percentCpcBidMicros_).mergeFrom(value).buildPartial();
+        } else {
+          percentCpcBidMicros_ = value;
+        }
+        onChanged();
+      } else {
+        percentCpcBidMicrosBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The CPC bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+     */
+    public Builder clearPercentCpcBidMicros() {
+      if (percentCpcBidMicrosBuilder_ == null) {
+        percentCpcBidMicros_ = null;
+        onChanged();
+      } else {
+        percentCpcBidMicros_ = null;
+        percentCpcBidMicrosBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The CPC bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getPercentCpcBidMicrosBuilder() {
+      
+      onChanged();
+      return getPercentCpcBidMicrosFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The CPC bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getPercentCpcBidMicrosOrBuilder() {
+      if (percentCpcBidMicrosBuilder_ != null) {
+        return percentCpcBidMicrosBuilder_.getMessageOrBuilder();
+      } else {
+        return percentCpcBidMicros_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : percentCpcBidMicros_;
+      }
+    }
+    /**
+     * <pre>
+     * The CPC bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getPercentCpcBidMicrosFieldBuilder() {
+      if (percentCpcBidMicrosBuilder_ == null) {
+        percentCpcBidMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getPercentCpcBidMicros(),
+                getParentForChildren(),
+                isClean());
+        percentCpcBidMicros_ = null;
+      }
+      return percentCpcBidMicrosBuilder_;
+    }
+
     private com.google.protobuf.Int64Value effectiveCpcBidMicros_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> effectiveCpcBidMicrosBuilder_;
@@ -6125,6 +6501,159 @@ private static final long serialVersionUID = 0L;
       return effectiveCpvBidMicrosBuilder_;
     }
 
+    private com.google.protobuf.Int64Value effectivePercentCpcBidMicros_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> effectivePercentCpcBidMicrosBuilder_;
+    /**
+     * <pre>
+     * The effective Percent CPC bid amount.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+     */
+    public boolean hasEffectivePercentCpcBidMicros() {
+      return effectivePercentCpcBidMicrosBuilder_ != null || effectivePercentCpcBidMicros_ != null;
+    }
+    /**
+     * <pre>
+     * The effective Percent CPC bid amount.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+     */
+    public com.google.protobuf.Int64Value getEffectivePercentCpcBidMicros() {
+      if (effectivePercentCpcBidMicrosBuilder_ == null) {
+        return effectivePercentCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectivePercentCpcBidMicros_;
+      } else {
+        return effectivePercentCpcBidMicrosBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The effective Percent CPC bid amount.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+     */
+    public Builder setEffectivePercentCpcBidMicros(com.google.protobuf.Int64Value value) {
+      if (effectivePercentCpcBidMicrosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        effectivePercentCpcBidMicros_ = value;
+        onChanged();
+      } else {
+        effectivePercentCpcBidMicrosBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The effective Percent CPC bid amount.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+     */
+    public Builder setEffectivePercentCpcBidMicros(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (effectivePercentCpcBidMicrosBuilder_ == null) {
+        effectivePercentCpcBidMicros_ = builderForValue.build();
+        onChanged();
+      } else {
+        effectivePercentCpcBidMicrosBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The effective Percent CPC bid amount.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+     */
+    public Builder mergeEffectivePercentCpcBidMicros(com.google.protobuf.Int64Value value) {
+      if (effectivePercentCpcBidMicrosBuilder_ == null) {
+        if (effectivePercentCpcBidMicros_ != null) {
+          effectivePercentCpcBidMicros_ =
+            com.google.protobuf.Int64Value.newBuilder(effectivePercentCpcBidMicros_).mergeFrom(value).buildPartial();
+        } else {
+          effectivePercentCpcBidMicros_ = value;
+        }
+        onChanged();
+      } else {
+        effectivePercentCpcBidMicrosBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The effective Percent CPC bid amount.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+     */
+    public Builder clearEffectivePercentCpcBidMicros() {
+      if (effectivePercentCpcBidMicrosBuilder_ == null) {
+        effectivePercentCpcBidMicros_ = null;
+        onChanged();
+      } else {
+        effectivePercentCpcBidMicros_ = null;
+        effectivePercentCpcBidMicrosBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The effective Percent CPC bid amount.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getEffectivePercentCpcBidMicrosBuilder() {
+      
+      onChanged();
+      return getEffectivePercentCpcBidMicrosFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The effective Percent CPC bid amount.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getEffectivePercentCpcBidMicrosOrBuilder() {
+      if (effectivePercentCpcBidMicrosBuilder_ != null) {
+        return effectivePercentCpcBidMicrosBuilder_.getMessageOrBuilder();
+      } else {
+        return effectivePercentCpcBidMicros_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : effectivePercentCpcBidMicros_;
+      }
+    }
+    /**
+     * <pre>
+     * The effective Percent CPC bid amount.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getEffectivePercentCpcBidMicrosFieldBuilder() {
+      if (effectivePercentCpcBidMicrosBuilder_ == null) {
+        effectivePercentCpcBidMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getEffectivePercentCpcBidMicros(),
+                getParentForChildren(),
+                isClean());
+        effectivePercentCpcBidMicros_ = null;
+      }
+      return effectivePercentCpcBidMicrosBuilder_;
+    }
+
     private int effectiveCpcBidSource_ = 0;
     /**
      * <pre>
@@ -6317,6 +6846,70 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int effectivePercentCpcBidSource_ = 0;
+    /**
+     * <pre>
+     * Source of the effective Percent CPC bid.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35;</code>
+     */
+    public int getEffectivePercentCpcBidSourceValue() {
+      return effectivePercentCpcBidSource_;
+    }
+    /**
+     * <pre>
+     * Source of the effective Percent CPC bid.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35;</code>
+     */
+    public Builder setEffectivePercentCpcBidSourceValue(int value) {
+      effectivePercentCpcBidSource_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Source of the effective Percent CPC bid.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35;</code>
+     */
+    public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectivePercentCpcBidSource() {
+      com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectivePercentCpcBidSource_);
+      return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Source of the effective Percent CPC bid.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35;</code>
+     */
+    public Builder setEffectivePercentCpcBidSource(com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      effectivePercentCpcBidSource_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Source of the effective Percent CPC bid.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35;</code>
+     */
+    public Builder clearEffectivePercentCpcBidSource() {
+      
+      effectivePercentCpcBidSource_ = 0;
+      onChanged();
+      return this;
+    }
+
     private com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates positionEstimates_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates, com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates.Builder, com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimatesOrBuilder> positionEstimatesBuilder_;
@@ -6473,9 +7066,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalUrlsIsMutable() {
-      if (!((bitField0_ & 0x00020000) == 0x00020000)) {
+      if (!((bitField0_ & 0x00100000) == 0x00100000)) {
         finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalUrls_);
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00100000;
        }
     }
 
@@ -6680,7 +7273,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFinalUrls() {
       if (finalUrlsBuilder_ == null) {
         finalUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         onChanged();
       } else {
         finalUrlsBuilder_.clear();
@@ -6792,7 +7385,7 @@ private static final long serialVersionUID = 0L;
         finalUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalUrls_,
-                ((bitField0_ & 0x00020000) == 0x00020000),
+                ((bitField0_ & 0x00100000) == 0x00100000),
                 getParentForChildren(),
                 isClean());
         finalUrls_ = null;
@@ -6956,9 +7549,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v0.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00080000) == 0x00080000)) {
+      if (!((bitField0_ & 0x00400000) == 0x00400000)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v0.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00400000;
        }
     }
 
@@ -7163,7 +7756,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -7275,7 +7868,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v0.common.CustomParameter, com.google.ads.googleads.v0.common.CustomParameter.Builder, com.google.ads.googleads.v0.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00080000) == 0x00080000),
+                ((bitField0_ & 0x00400000) == 0x00400000),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;

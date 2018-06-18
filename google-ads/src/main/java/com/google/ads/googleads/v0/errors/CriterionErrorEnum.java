@@ -788,6 +788,15 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL_ADVANCE_BOOKING_WINDOW_OVERLAPS_WITH_EXISTING_CRITERION = 83;</code>
      */
     HOTEL_ADVANCE_BOOKING_WINDOW_OVERLAPS_WITH_EXISTING_CRITERION(83),
+    /**
+     * <pre>
+     * The field is not allowed to be set when the negative field is set to
+     * true, e.g. we don't allow bids in negative ad group or campaign criteria.
+     * </pre>
+     *
+     * <code>FIELD_INCOMPATIBLE_WITH_NEGATIVE_TARGETING = 84;</code>
+     */
+    FIELD_INCOMPATIBLE_WITH_NEGATIVE_TARGETING(84),
     UNRECOGNIZED(-1),
     ;
 
@@ -1494,6 +1503,15 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL_ADVANCE_BOOKING_WINDOW_OVERLAPS_WITH_EXISTING_CRITERION = 83;</code>
      */
     public static final int HOTEL_ADVANCE_BOOKING_WINDOW_OVERLAPS_WITH_EXISTING_CRITERION_VALUE = 83;
+    /**
+     * <pre>
+     * The field is not allowed to be set when the negative field is set to
+     * true, e.g. we don't allow bids in negative ad group or campaign criteria.
+     * </pre>
+     *
+     * <code>FIELD_INCOMPATIBLE_WITH_NEGATIVE_TARGETING = 84;</code>
+     */
+    public static final int FIELD_INCOMPATIBLE_WITH_NEGATIVE_TARGETING_VALUE = 84;
 
 
     public final int getNumber() {
@@ -1598,6 +1616,7 @@ private static final long serialVersionUID = 0L;
         case 81: return CANNOT_ATTACH_CRITERIA_AT_CAMPAIGN_AND_ADGROUP;
         case 82: return HOTEL_LENGTH_OF_STAY_OVERLAPS_WITH_EXISTING_CRITERION;
         case 83: return HOTEL_ADVANCE_BOOKING_WINDOW_OVERLAPS_WITH_EXISTING_CRITERION;
+        case 84: return FIELD_INCOMPATIBLE_WITH_NEGATIVE_TARGETING;
         default: return null;
       }
     }

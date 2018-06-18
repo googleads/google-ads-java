@@ -363,4 +363,35 @@ public interface AdGroupOrBuilder extends
    * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getTargetRoasOverrideOrBuilder();
+
+  /**
+   * <pre>
+   * The percent cpc bid amount, expressed as a fraction of the advertised price
+   * for some good or service. The valid range for the fraction is [0,1) and the
+   * value stored here is 1,000,000 * [fraction].
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+   */
+  boolean hasPercentCpcBidMicros();
+  /**
+   * <pre>
+   * The percent cpc bid amount, expressed as a fraction of the advertised price
+   * for some good or service. The valid range for the fraction is [0,1) and the
+   * value stored here is 1,000,000 * [fraction].
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+   */
+  com.google.protobuf.Int64Value getPercentCpcBidMicros();
+  /**
+   * <pre>
+   * The percent cpc bid amount, expressed as a fraction of the advertised price
+   * for some good or service. The valid range for the fraction is [0,1) and the
+   * value stored here is 1,000,000 * [fraction].
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getPercentCpcBidMicrosOrBuilder();
 }

@@ -21,7 +21,7 @@ import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
 import com.google.ads.googleads.v0.common.Ad;
 import com.google.ads.googleads.v0.common.HotelAdInfo;
-import com.google.ads.googleads.v0.common.ManualCpc;
+import com.google.ads.googleads.v0.common.PercentCpc;
 import com.google.ads.googleads.v0.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
 import com.google.ads.googleads.v0.enums.AdGroupStatusEnum.AdGroupStatus;
 import com.google.ads.googleads.v0.enums.AdGroupTypeEnum.AdGroupType;
@@ -72,6 +72,9 @@ public class AddHotelAd {
 
     @Parameter(names = ArgumentNames.HOTEL_CENTER_ACCOUNT_ID, required = true)
     private Long hotelCenterAccountId;
+
+    @Parameter(names = ArgumentNames.CPC_BID_CEILING_MICRO_AMOUNT)
+    private Long cpcBidCeilingMicroAmount = 20_000_000L;
   }
 
   public static void main(String[] args) {
@@ -82,6 +85,7 @@ public class AddHotelAd {
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.hotelCenterAccountId = Long.parseLong("INSERT_HOTEL_CENTER_ACCOUNT_ID_HERE");
+      params.cpcBidCeilingMicroAmount = Long.parseLong("INSERT_CPC_BID_CEILING_MICRO_AMOUNT_HERE");
     }
 
     GoogleAdsClient googleAdsClient;
@@ -97,7 +101,12 @@ public class AddHotelAd {
     }
 
     try {
-      new AddHotelAd().runExample(googleAdsClient, params.customerId, params.hotelCenterAccountId);
+      new AddHotelAd()
+          .runExample(
+              googleAdsClient,
+              params.customerId,
+              params.hotelCenterAccountId,
+              params.cpcBidCeilingMicroAmount);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -119,17 +128,27 @@ public class AddHotelAd {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param hotelCenterAccountId the Hotel Center account ID.
+   * @param cpcBidCeilingMicroAmount the maximum bid limit that can be set when creating a campaign
+   *     using the Percent CPC bidding strategy.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, long hotelCenterAccountId) {
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      long hotelCenterAccountId,
+      long cpcBidCeilingMicroAmount) {
 
     // Creates a budget to be used by the campaign that will be created below.
     String budgetResourceName = addCampaignBudget(googleAdsClient, customerId);
 
     // Creates a hotel campaign.
     String campaignResourceName =
-        addHotelCampaign(googleAdsClient, customerId, budgetResourceName, hotelCenterAccountId);
+        addHotelCampaign(
+            googleAdsClient,
+            customerId,
+            budgetResourceName,
+            hotelCenterAccountId,
+            cpcBidCeilingMicroAmount);
 
     // Creates a hotel ad group.
     String adGroupResourceName = addHotelAdGroup(googleAdsClient, customerId, campaignResourceName);
@@ -174,6 +193,8 @@ public class AddHotelAd {
    * @param customerId the client customer ID.
    * @param budgetResourceName the resource name of the budget for the campaign.
    * @param hotelCenterAccountId the Hotel Center account ID.
+   * @param cpcBidCeilingMicroAmount the maximum bid limit that can be set when creating a campaign
+   *     using the Percent CPC bidding strategy.
    * @return resource name of the newly created campaign.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
@@ -181,7 +202,8 @@ public class AddHotelAd {
       GoogleAdsClient googleAdsClient,
       long customerId,
       String budgetResourceName,
-      long hotelCenterAccountId) {
+      long hotelCenterAccountId,
+      long cpcBidCeilingMicroAmount) {
 
     // Configures the hotel settings.
     HotelSettingInfo hotelSettingInfo =
@@ -204,8 +226,12 @@ public class AddHotelAd {
             // the ads from immediately serving. Set to ENABLED once you've added
             // targeting and the ads are ready to serve
             .setStatus(CampaignStatus.PAUSED)
-            // Sets the bidding strategy. Only Manual CPC can be used for hotel campaigns.
-            .setManualCpc(ManualCpc.newBuilder().build())
+            // Sets the bidding strategy to Percent CPC. Only Manual CPC and Percent CPC can be used
+            // for hotel campaigns.
+            .setPercentCpc(
+                PercentCpc.newBuilder()
+                    .setCpcBidCeilingMicros(Int64Value.of(cpcBidCeilingMicroAmount))
+                    .build())
             // Sets the budget.
             .setCampaignBudget(StringValue.of(budgetResourceName))
             // Adds the networkSettings configured above.

@@ -23,6 +23,7 @@ public final class ArgumentNames {
   public static final String CRITERION_ID = "--criterionId";
   public static final String CAMPAIGN_BUDGET_ID = "--campaignBudgetId";
   public static final String CPC_BID_MICRO_AMOUNT = "--cpcBidMicroAmount";
+  public static final String CPC_BID_CEILING_MICRO_AMOUNT = "--cpcBidCeilingMicroAmount";
   public static final String ARTIFACT_NAME = "--artifactName";
   public static final String KEYWORD_TEXT = "--keywordText";
   public static final String RECOMMENDATION_ID = "--recommendationId";

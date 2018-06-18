@@ -201,6 +201,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 162: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (percentCpcBidMicros_ != null) {
+              subBuilder = percentCpcBidMicros_.toBuilder();
+            }
+            percentCpcBidMicros_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(percentCpcBidMicros_);
+              percentCpcBidMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -707,6 +720,45 @@ private static final long serialVersionUID = 0L;
     return getTargetRoasOverride();
   }
 
+  public static final int PERCENT_CPC_BID_MICROS_FIELD_NUMBER = 20;
+  private com.google.protobuf.Int64Value percentCpcBidMicros_;
+  /**
+   * <pre>
+   * The percent cpc bid amount, expressed as a fraction of the advertised price
+   * for some good or service. The valid range for the fraction is [0,1) and the
+   * value stored here is 1,000,000 * [fraction].
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+   */
+  public boolean hasPercentCpcBidMicros() {
+    return percentCpcBidMicros_ != null;
+  }
+  /**
+   * <pre>
+   * The percent cpc bid amount, expressed as a fraction of the advertised price
+   * for some good or service. The valid range for the fraction is [0,1) and the
+   * value stored here is 1,000,000 * [fraction].
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+   */
+  public com.google.protobuf.Int64Value getPercentCpcBidMicros() {
+    return percentCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : percentCpcBidMicros_;
+  }
+  /**
+   * <pre>
+   * The percent cpc bid amount, expressed as a fraction of the advertised price
+   * for some good or service. The valid range for the fraction is [0,1) and the
+   * value stored here is 1,000,000 * [fraction].
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getPercentCpcBidMicrosOrBuilder() {
+    return getPercentCpcBidMicros();
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -757,6 +809,9 @@ private static final long serialVersionUID = 0L;
     }
     if (targetRoasOverride_ != null) {
       output.writeMessage(19, getTargetRoasOverride());
+    }
+    if (percentCpcBidMicros_ != null) {
+      output.writeMessage(20, getPercentCpcBidMicros());
     }
     unknownFields.writeTo(output);
   }
@@ -816,6 +871,10 @@ private static final long serialVersionUID = 0L;
     if (targetRoasOverride_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, getTargetRoasOverride());
+    }
+    if (percentCpcBidMicros_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, getPercentCpcBidMicros());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -884,6 +943,11 @@ private static final long serialVersionUID = 0L;
       result = result && getTargetRoasOverride()
           .equals(other.getTargetRoasOverride());
     }
+    result = result && (hasPercentCpcBidMicros() == other.hasPercentCpcBidMicros());
+    if (hasPercentCpcBidMicros()) {
+      result = result && getPercentCpcBidMicros()
+          .equals(other.getPercentCpcBidMicros());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -940,6 +1004,10 @@ private static final long serialVersionUID = 0L;
     if (hasTargetRoasOverride()) {
       hash = (37 * hash) + TARGET_ROAS_OVERRIDE_FIELD_NUMBER;
       hash = (53 * hash) + getTargetRoasOverride().hashCode();
+    }
+    if (hasPercentCpcBidMicros()) {
+      hash = (37 * hash) + PERCENT_CPC_BID_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + getPercentCpcBidMicros().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -1141,6 +1209,12 @@ private static final long serialVersionUID = 0L;
         targetRoasOverride_ = null;
         targetRoasOverrideBuilder_ = null;
       }
+      if (percentCpcBidMicrosBuilder_ == null) {
+        percentCpcBidMicros_ = null;
+      } else {
+        percentCpcBidMicros_ = null;
+        percentCpcBidMicrosBuilder_ = null;
+      }
       return this;
     }
 
@@ -1221,6 +1295,11 @@ private static final long serialVersionUID = 0L;
         result.targetRoasOverride_ = targetRoasOverride_;
       } else {
         result.targetRoasOverride_ = targetRoasOverrideBuilder_.build();
+      }
+      if (percentCpcBidMicrosBuilder_ == null) {
+        result.percentCpcBidMicros_ = percentCpcBidMicros_;
+      } else {
+        result.percentCpcBidMicros_ = percentCpcBidMicrosBuilder_.build();
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -1326,6 +1405,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasTargetRoasOverride()) {
         mergeTargetRoasOverride(other.getTargetRoasOverride());
+      }
+      if (other.hasPercentCpcBidMicros()) {
+        mergePercentCpcBidMicros(other.getPercentCpcBidMicros());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -3368,6 +3450,177 @@ private static final long serialVersionUID = 0L;
         targetRoasOverride_ = null;
       }
       return targetRoasOverrideBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value percentCpcBidMicros_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> percentCpcBidMicrosBuilder_;
+    /**
+     * <pre>
+     * The percent cpc bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+     */
+    public boolean hasPercentCpcBidMicros() {
+      return percentCpcBidMicrosBuilder_ != null || percentCpcBidMicros_ != null;
+    }
+    /**
+     * <pre>
+     * The percent cpc bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+     */
+    public com.google.protobuf.Int64Value getPercentCpcBidMicros() {
+      if (percentCpcBidMicrosBuilder_ == null) {
+        return percentCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : percentCpcBidMicros_;
+      } else {
+        return percentCpcBidMicrosBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The percent cpc bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+     */
+    public Builder setPercentCpcBidMicros(com.google.protobuf.Int64Value value) {
+      if (percentCpcBidMicrosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        percentCpcBidMicros_ = value;
+        onChanged();
+      } else {
+        percentCpcBidMicrosBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percent cpc bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+     */
+    public Builder setPercentCpcBidMicros(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (percentCpcBidMicrosBuilder_ == null) {
+        percentCpcBidMicros_ = builderForValue.build();
+        onChanged();
+      } else {
+        percentCpcBidMicrosBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percent cpc bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+     */
+    public Builder mergePercentCpcBidMicros(com.google.protobuf.Int64Value value) {
+      if (percentCpcBidMicrosBuilder_ == null) {
+        if (percentCpcBidMicros_ != null) {
+          percentCpcBidMicros_ =
+            com.google.protobuf.Int64Value.newBuilder(percentCpcBidMicros_).mergeFrom(value).buildPartial();
+        } else {
+          percentCpcBidMicros_ = value;
+        }
+        onChanged();
+      } else {
+        percentCpcBidMicrosBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percent cpc bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+     */
+    public Builder clearPercentCpcBidMicros() {
+      if (percentCpcBidMicrosBuilder_ == null) {
+        percentCpcBidMicros_ = null;
+        onChanged();
+      } else {
+        percentCpcBidMicros_ = null;
+        percentCpcBidMicrosBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percent cpc bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getPercentCpcBidMicrosBuilder() {
+      
+      onChanged();
+      return getPercentCpcBidMicrosFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The percent cpc bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getPercentCpcBidMicrosOrBuilder() {
+      if (percentCpcBidMicrosBuilder_ != null) {
+        return percentCpcBidMicrosBuilder_.getMessageOrBuilder();
+      } else {
+        return percentCpcBidMicros_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : percentCpcBidMicros_;
+      }
+    }
+    /**
+     * <pre>
+     * The percent cpc bid amount, expressed as a fraction of the advertised price
+     * for some good or service. The valid range for the fraction is [0,1) and the
+     * value stored here is 1,000,000 * [fraction].
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getPercentCpcBidMicrosFieldBuilder() {
+      if (percentCpcBidMicrosBuilder_ == null) {
+        percentCpcBidMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getPercentCpcBidMicros(),
+                getParentForChildren(),
+                isClean());
+        percentCpcBidMicros_ = null;
+      }
+      return percentCpcBidMicrosBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

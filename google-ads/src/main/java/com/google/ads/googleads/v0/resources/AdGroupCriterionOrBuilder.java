@@ -252,6 +252,37 @@ public interface AdGroupCriterionOrBuilder extends
 
   /**
    * <pre>
+   * The CPC bid amount, expressed as a fraction of the advertised price
+   * for some good or service. The valid range for the fraction is [0,1) and the
+   * value stored here is 1,000,000 * [fraction].
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+   */
+  boolean hasPercentCpcBidMicros();
+  /**
+   * <pre>
+   * The CPC bid amount, expressed as a fraction of the advertised price
+   * for some good or service. The valid range for the fraction is [0,1) and the
+   * value stored here is 1,000,000 * [fraction].
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+   */
+  com.google.protobuf.Int64Value getPercentCpcBidMicros();
+  /**
+   * <pre>
+   * The CPC bid amount, expressed as a fraction of the advertised price
+   * for some good or service. The valid range for the fraction is [0,1) and the
+   * value stored here is 1,000,000 * [fraction].
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getPercentCpcBidMicrosOrBuilder();
+
+  /**
+   * <pre>
    * The effective CPC (cost-per-click) bid.
    * </pre>
    *
@@ -327,6 +358,31 @@ public interface AdGroupCriterionOrBuilder extends
 
   /**
    * <pre>
+   * The effective Percent CPC bid amount.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+   */
+  boolean hasEffectivePercentCpcBidMicros();
+  /**
+   * <pre>
+   * The effective Percent CPC bid amount.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+   */
+  com.google.protobuf.Int64Value getEffectivePercentCpcBidMicros();
+  /**
+   * <pre>
+   * The effective Percent CPC bid amount.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getEffectivePercentCpcBidMicrosOrBuilder();
+
+  /**
+   * <pre>
    * Source of the effective CPC bid.
    * </pre>
    *
@@ -375,6 +431,23 @@ public interface AdGroupCriterionOrBuilder extends
    * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23;</code>
    */
   com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpvBidSource();
+
+  /**
+   * <pre>
+   * Source of the effective Percent CPC bid.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35;</code>
+   */
+  int getEffectivePercentCpcBidSourceValue();
+  /**
+   * <pre>
+   * Source of the effective Percent CPC bid.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35;</code>
+   */
+  com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectivePercentCpcBidSource();
 
   /**
    * <pre>
