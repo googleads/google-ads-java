@@ -57,7 +57,7 @@ public final class CampaignProto {
       "o\032;google/ads/googleads/v0/enums/campaig" +
       "n_serving_status.proto\0323google/ads/googl" +
       "eads/v0/enums/campaign_status.proto\032\036goo" +
-      "gle/protobuf/wrappers.proto\"\343\023\n\010Campaign" +
+      "gle/protobuf/wrappers.proto\"\246\024\n\010Campaign" +
       "\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\003 \001(\0132\033.go" +
       "ogle.protobuf.Int64Value\022*\n\004name\030\004 \001(\0132\034" +
       ".google.protobuf.StringValue\022P\n\006status\030\005" +
@@ -105,28 +105,30 @@ public final class CampaignProto {
       ".common.TargetCpaH\000\022A\n\013target_roas\030\035 \001(\013" +
       "2*.google.ads.googleads.v0.common.Target" +
       "RoasH\000\022C\n\014target_spend\030\033 \001(\0132+.google.ad" +
-      "s.googleads.v0.common.TargetSpendH\000\032\205\002\n\017" +
-      "NetworkSettings\0228\n\024target_google_search\030" +
-      "\001 \001(\0132\032.google.protobuf.BoolValue\0229\n\025tar" +
-      "get_search_network\030\002 \001(\0132\032.google.protob" +
-      "uf.BoolValue\022:\n\026target_content_network\030\003" +
-      " \001(\0132\032.google.protobuf.BoolValue\022A\n\035targ" +
-      "et_partner_search_network\030\004 \001(\0132\032.google" +
-      ".protobuf.BoolValue\032H\n\020HotelSettingInfo\022" +
-      "4\n\017hotel_center_id\030\001 \001(\0132\033.google.protob" +
-      "uf.Int64Value\032\354\001\n\027DynamicSearchAdsSettin" +
-      "g\0221\n\013domain_name\030\001 \001(\0132\034.google.protobuf" +
-      ".StringValue\0223\n\rlanguage_code\030\002 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\022:\n\026use_supplie" +
-      "d_urls_only\030\003 \001(\0132\032.google.protobuf.Bool" +
-      "Value\022-\n\010feed_ids\030\004 \003(\0132\033.google.protobu" +
-      "f.Int64ValueB\033\n\031campaign_bidding_strateg" +
-      "yB\322\001\n%com.google.ads.googleads.v0.resour" +
-      "cesB\rCampaignProtoP\001ZJgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v0/res" +
-      "ources;resources\242\002\003GAA\252\002!Google.Ads.Goog" +
-      "leAds.V0.Resources\312\002!Google\\Ads\\GoogleAd" +
-      "s\\V0\\Resourcesb\006proto3"
+      "s.googleads.v0.common.TargetSpendH\000\022A\n\013p" +
+      "ercent_cpc\030\" \001(\0132*.google.ads.googleads." +
+      "v0.common.PercentCpcH\000\032\205\002\n\017NetworkSettin" +
+      "gs\0228\n\024target_google_search\030\001 \001(\0132\032.googl" +
+      "e.protobuf.BoolValue\0229\n\025target_search_ne" +
+      "twork\030\002 \001(\0132\032.google.protobuf.BoolValue\022" +
+      ":\n\026target_content_network\030\003 \001(\0132\032.google" +
+      ".protobuf.BoolValue\022A\n\035target_partner_se" +
+      "arch_network\030\004 \001(\0132\032.google.protobuf.Boo" +
+      "lValue\032H\n\020HotelSettingInfo\0224\n\017hotel_cent" +
+      "er_id\030\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "\032\354\001\n\027DynamicSearchAdsSetting\0221\n\013domain_n" +
+      "ame\030\001 \001(\0132\034.google.protobuf.StringValue\022" +
+      "3\n\rlanguage_code\030\002 \001(\0132\034.google.protobuf" +
+      ".StringValue\022:\n\026use_supplied_urls_only\030\003" +
+      " \001(\0132\032.google.protobuf.BoolValue\022-\n\010feed" +
+      "_ids\030\004 \003(\0132\033.google.protobuf.Int64ValueB" +
+      "\033\n\031campaign_bidding_strategyB\322\001\n%com.goo" +
+      "gle.ads.googleads.v0.resourcesB\rCampaign" +
+      "ProtoP\001ZJgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v0/resources;resour" +
+      "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Reso" +
+      "urces\312\002!Google\\Ads\\GoogleAds\\V0\\Resource" +
+      "sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -154,7 +156,7 @@ public final class CampaignProto {
     internal_static_google_ads_googleads_v0_resources_Campaign_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_Campaign_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "ServingStatus", "AdServingOptimizationStatus", "AdvertisingChannelType", "AdvertisingChannelSubType", "TrackingUrlTemplate", "UrlCustomParameters", "NetworkSettings", "HotelSetting", "DynamicSearchAdsSetting", "CampaignBudget", "BiddingStrategyType", "StartDate", "EndDate", "BiddingStrategy", "ManualCpc", "ManualCpm", "MaximizeConversions", "MaximizeConversionValue", "TargetCpa", "TargetRoas", "TargetSpend", "CampaignBiddingStrategy", });
+        new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "ServingStatus", "AdServingOptimizationStatus", "AdvertisingChannelType", "AdvertisingChannelSubType", "TrackingUrlTemplate", "UrlCustomParameters", "NetworkSettings", "HotelSetting", "DynamicSearchAdsSetting", "CampaignBudget", "BiddingStrategyType", "StartDate", "EndDate", "BiddingStrategy", "ManualCpc", "ManualCpm", "MaximizeConversions", "MaximizeConversionValue", "TargetCpa", "TargetRoas", "TargetSpend", "PercentCpc", "CampaignBiddingStrategy", });
     internal_static_google_ads_googleads_v0_resources_Campaign_NetworkSettings_descriptor =
       internal_static_google_ads_googleads_v0_resources_Campaign_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v0_resources_Campaign_NetworkSettings_fieldAccessorTable = new

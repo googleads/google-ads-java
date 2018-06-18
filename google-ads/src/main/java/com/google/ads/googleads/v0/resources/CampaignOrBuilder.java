@@ -678,5 +678,33 @@ public interface CampaignOrBuilder extends
    */
   com.google.ads.googleads.v0.common.TargetSpendOrBuilder getTargetSpendOrBuilder();
 
+  /**
+   * <pre>
+   * Standard Percent Cpc bidding strategy where bids are a fraction of the
+   * advertised price for some good or service.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+   */
+  boolean hasPercentCpc();
+  /**
+   * <pre>
+   * Standard Percent Cpc bidding strategy where bids are a fraction of the
+   * advertised price for some good or service.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+   */
+  com.google.ads.googleads.v0.common.PercentCpc getPercentCpc();
+  /**
+   * <pre>
+   * Standard Percent Cpc bidding strategy where bids are a fraction of the
+   * advertised price for some good or service.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
+   */
+  com.google.ads.googleads.v0.common.PercentCpcOrBuilder getPercentCpcOrBuilder();
+
   public com.google.ads.googleads.v0.resources.Campaign.CampaignBiddingStrategyCase getCampaignBiddingStrategyCase();
 }

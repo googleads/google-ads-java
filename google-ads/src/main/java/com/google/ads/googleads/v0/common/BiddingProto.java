@@ -64,6 +64,11 @@ public final class BiddingProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_common_TargetSpend_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_PercentCpc_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_PercentCpc_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -115,12 +120,15 @@ public final class BiddingProto {
       "rgetSpend\0228\n\023target_spend_micros\030\001 \001(\0132\033" +
       ".google.protobuf.Int64Value\022;\n\026cpc_bid_c" +
       "eiling_micros\030\002 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\302\001\n\"com.google.ads.googleads.v0" +
-      ".commonB\014BiddingProtoP\001ZDgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v0/" +
-      "common;common\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
-      "ds.V0.Common\312\002\036Google\\Ads\\GoogleAds\\V0\\C" +
-      "ommonb\006proto3"
+      "t64Value\"\203\001\n\nPercentCpc\022;\n\026cpc_bid_ceili" +
+      "ng_micros\030\001 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\0228\n\024enhanced_cpc_enabled\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValueB\302\001\n\"com.google.ad" +
+      "s.googleads.v0.commonB\014BiddingProtoP\001ZDg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v0/common;common\242\002\003GAA\252\002\036Goog" +
+      "le.Ads.GoogleAds.V0.Common\312\002\036Google\\Ads\\" +
+      "GoogleAds\\V0\\Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -196,6 +204,12 @@ public final class BiddingProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_TargetSpend_descriptor,
         new java.lang.String[] { "TargetSpendMicros", "CpcBidCeilingMicros", });
+    internal_static_google_ads_googleads_v0_common_PercentCpc_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_google_ads_googleads_v0_common_PercentCpc_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_PercentCpc_descriptor,
+        new java.lang.String[] { "CpcBidCeilingMicros", "EnhancedCpcEnabled", });
     com.google.ads.googleads.v0.enums.PageOnePromotedStrategyGoalProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }

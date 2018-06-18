@@ -49,7 +49,7 @@ public final class AdGroupCriterionProto {
       "/ads/googleads/v0/enums/criterion_type.p" +
       "roto\0328google/ads/googleads/v0/enums/qual" +
       "ity_score_bucket.proto\032\036google/protobuf/" +
-      "wrappers.proto\"\316\020\n\020AdGroupCriterion\022\025\n\rr" +
+      "wrappers.proto\"\274\022\n\020AdGroupCriterion\022\025\n\rr" +
       "esource_name\030\001 \001(\t\0221\n\014criterion_id\030\032 \001(\013" +
       "2\033.google.protobuf.Int64Value\022`\n\006status\030" +
       "\003 \001(\0162P.google.ads.googleads.v0.enums.Ad" +
@@ -64,51 +64,57 @@ public final class AdGroupCriterionProto {
       "cros\030\020 \001(\0132\033.google.protobuf.Int64Value\022" +
       "3\n\016cpm_bid_micros\030\021 \001(\0132\033.google.protobu" +
       "f.Int64Value\0223\n\016cpv_bid_micros\030\030 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022=\n\030effective_c" +
-      "pc_bid_micros\030\022 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022=\n\030effective_cpm_bid_micros\030\023 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022=\n\030effec" +
-      "tive_cpv_bid_micros\030\024 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022`\n\030effective_cpc_bid_sour" +
-      "ce\030\025 \001(\0162>.google.ads.googleads.v0.enums" +
-      ".BiddingSourceEnum.BiddingSource\022`\n\030effe" +
-      "ctive_cpm_bid_source\030\026 \001(\0162>.google.ads." +
-      "googleads.v0.enums.BiddingSourceEnum.Bid" +
-      "dingSource\022`\n\030effective_cpv_bid_source\030\027" +
-      " \001(\0162>.google.ads.googleads.v0.enums.Bid" +
-      "dingSourceEnum.BiddingSource\022a\n\022position" +
-      "_estimates\030\n \001(\0132E.google.ads.googleads." +
-      "v0.resources.AdGroupCriterion.PositionEs" +
-      "timates\0220\n\nfinal_urls\030\013 \003(\0132\034.google.pro" +
-      "tobuf.StringValue\022;\n\025tracking_url_templa" +
-      "te\030\r \001(\0132\034.google.protobuf.StringValue\022N" +
-      "\n\025url_custom_parameters\030\016 \003(\0132/.google.a" +
-      "ds.googleads.v0.common.CustomParameter\022>" +
-      "\n\007keyword\030\033 \001(\0132+.google.ads.googleads.v" +
-      "0.common.KeywordInfoH\000\022I\n\rlisting_group\030" +
-      "  \001(\01320.google.ads.googleads.v0.common.L" +
-      "istingGroupInfoH\000\032\377\002\n\013QualityInfo\0222\n\rqua" +
-      "lity_score\030\001 \001(\0132\033.google.protobuf.Int32" +
-      "Value\022h\n\026creative_quality_score\030\002 \001(\0162H." +
-      "google.ads.googleads.v0.enums.QualitySco" +
-      "reBucketEnum.QualityScoreBucket\022j\n\030post_" +
-      "click_quality_score\030\003 \001(\0162H.google.ads.g" +
-      "oogleads.v0.enums.QualityScoreBucketEnum" +
-      ".QualityScoreBucket\022f\n\024search_predicted_" +
-      "ctr\030\004 \001(\0162H.google.ads.googleads.v0.enum" +
-      "s.QualityScoreBucketEnum.QualityScoreBuc" +
-      "ket\032\314\001\n\021PositionEstimates\022:\n\025first_page_" +
-      "cpc_micros\030\001 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022>\n\031first_position_cpc_micros\030\002 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022;\n\026top_of_" +
-      "page_cpc_micros\030\003 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\013\n\tcriterionB\332\001\n%com.google.a" +
-      "ds.googleads.v0.resourcesB\025AdGroupCriter" +
-      "ionProtoP\001ZJgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v0/resources;res" +
-      "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.R" +
-      "esources\312\002!Google\\Ads\\GoogleAds\\V0\\Resou" +
-      "rcesb\006proto3"
+      "oogle.protobuf.Int64Value\022;\n\026percent_cpc" +
+      "_bid_micros\030! \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022=\n\030effective_cpc_bid_micros\030\022 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022=\n\030effecti" +
+      "ve_cpm_bid_micros\030\023 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022=\n\030effective_cpv_bid_micros" +
+      "\030\024 \001(\0132\033.google.protobuf.Int64Value\022E\n e" +
+      "ffective_percent_cpc_bid_micros\030\" \001(\0132\033." +
+      "google.protobuf.Int64Value\022`\n\030effective_" +
+      "cpc_bid_source\030\025 \001(\0162>.google.ads.google" +
+      "ads.v0.enums.BiddingSourceEnum.BiddingSo" +
+      "urce\022`\n\030effective_cpm_bid_source\030\026 \001(\0162>" +
+      ".google.ads.googleads.v0.enums.BiddingSo" +
+      "urceEnum.BiddingSource\022`\n\030effective_cpv_" +
+      "bid_source\030\027 \001(\0162>.google.ads.googleads." +
+      "v0.enums.BiddingSourceEnum.BiddingSource" +
+      "\022h\n effective_percent_cpc_bid_source\030# \001" +
+      "(\0162>.google.ads.googleads.v0.enums.Biddi" +
+      "ngSourceEnum.BiddingSource\022a\n\022position_e" +
+      "stimates\030\n \001(\0132E.google.ads.googleads.v0" +
+      ".resources.AdGroupCriterion.PositionEsti" +
+      "mates\0220\n\nfinal_urls\030\013 \003(\0132\034.google.proto" +
+      "buf.StringValue\022;\n\025tracking_url_template" +
+      "\030\r \001(\0132\034.google.protobuf.StringValue\022N\n\025" +
+      "url_custom_parameters\030\016 \003(\0132/.google.ads" +
+      ".googleads.v0.common.CustomParameter\022>\n\007" +
+      "keyword\030\033 \001(\0132+.google.ads.googleads.v0." +
+      "common.KeywordInfoH\000\022I\n\rlisting_group\030  " +
+      "\001(\01320.google.ads.googleads.v0.common.Lis" +
+      "tingGroupInfoH\000\032\377\002\n\013QualityInfo\0222\n\rquali" +
+      "ty_score\030\001 \001(\0132\033.google.protobuf.Int32Va" +
+      "lue\022h\n\026creative_quality_score\030\002 \001(\0162H.go" +
+      "ogle.ads.googleads.v0.enums.QualityScore" +
+      "BucketEnum.QualityScoreBucket\022j\n\030post_cl" +
+      "ick_quality_score\030\003 \001(\0162H.google.ads.goo" +
+      "gleads.v0.enums.QualityScoreBucketEnum.Q" +
+      "ualityScoreBucket\022f\n\024search_predicted_ct" +
+      "r\030\004 \001(\0162H.google.ads.googleads.v0.enums." +
+      "QualityScoreBucketEnum.QualityScoreBucke" +
+      "t\032\314\001\n\021PositionEstimates\022:\n\025first_page_cp" +
+      "c_micros\030\001 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022>\n\031first_position_cpc_micros\030\002 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022;\n\026top_of_pa" +
+      "ge_cpc_micros\030\003 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\013\n\tcriterionB\332\001\n%com.google.ads" +
+      ".googleads.v0.resourcesB\025AdGroupCriterio" +
+      "nProtoP\001ZJgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v0/resources;resou" +
+      "rces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Res" +
+      "ources\312\002!Google\\Ads\\GoogleAds\\V0\\Resourc" +
+      "esb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -134,7 +140,7 @@ public final class AdGroupCriterionProto {
     internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_descriptor,
-        new java.lang.String[] { "ResourceName", "CriterionId", "Status", "QualityInfo", "AdGroup", "Type", "Negative", "CpcBidMicros", "CpmBidMicros", "CpvBidMicros", "EffectiveCpcBidMicros", "EffectiveCpmBidMicros", "EffectiveCpvBidMicros", "EffectiveCpcBidSource", "EffectiveCpmBidSource", "EffectiveCpvBidSource", "PositionEstimates", "FinalUrls", "TrackingUrlTemplate", "UrlCustomParameters", "Keyword", "ListingGroup", "Criterion", });
+        new java.lang.String[] { "ResourceName", "CriterionId", "Status", "QualityInfo", "AdGroup", "Type", "Negative", "CpcBidMicros", "CpmBidMicros", "CpvBidMicros", "PercentCpcBidMicros", "EffectiveCpcBidMicros", "EffectiveCpmBidMicros", "EffectiveCpvBidMicros", "EffectivePercentCpcBidMicros", "EffectiveCpcBidSource", "EffectiveCpmBidSource", "EffectiveCpvBidSource", "EffectivePercentCpcBidSource", "PositionEstimates", "FinalUrls", "TrackingUrlTemplate", "UrlCustomParameters", "Keyword", "ListingGroup", "Criterion", });
     internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_QualityInfo_descriptor =
       internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_QualityInfo_fieldAccessorTable = new

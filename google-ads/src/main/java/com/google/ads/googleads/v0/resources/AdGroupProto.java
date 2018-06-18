@@ -34,7 +34,7 @@ public final class AdGroupProto {
       "stom_parameter.proto\0323google/ads/googlea" +
       "ds/v0/enums/ad_group_status.proto\0321googl" +
       "e/ads/googleads/v0/enums/ad_group_type.p" +
-      "roto\032\036google/protobuf/wrappers.proto\"\334\005\n" +
+      "roto\032\036google/protobuf/wrappers.proto\"\231\006\n" +
       "\007AdGroup\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\003 " +
       "\001(\0132\033.google.protobuf.Int64Value\022*\n\004name" +
       "\030\004 \001(\0132\034.google.protobuf.StringValue\022N\n\006" +
@@ -53,12 +53,14 @@ public final class AdGroupProto {
       "rotobuf.Int64Value\0223\n\016cpv_bid_micros\030\021 \001" +
       "(\0132\033.google.protobuf.Int64Value\022:\n\024targe" +
       "t_roas_override\030\023 \001(\0132\034.google.protobuf." +
-      "DoubleValueB\321\001\n%com.google.ads.googleads" +
-      ".v0.resourcesB\014AdGroupProtoP\001ZJgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v0/resources;resources\242\002\003GAA\252\002!Google" +
-      ".Ads.GoogleAds.V0.Resources\312\002!Google\\Ads" +
-      "\\GoogleAds\\V0\\Resourcesb\006proto3"
+      "DoubleValue\022;\n\026percent_cpc_bid_micros\030\024 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\321\001\n%com" +
+      ".google.ads.googleads.v0.resourcesB\014AdGr" +
+      "oupProtoP\001ZJgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v0/resources;res" +
+      "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.R" +
+      "esources\312\002!Google\\Ads\\GoogleAds\\V0\\Resou" +
+      "rcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -81,7 +83,7 @@ public final class AdGroupProto {
     internal_static_google_ads_googleads_v0_resources_AdGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_AdGroup_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "Type", "TrackingUrlTemplate", "UrlCustomParameters", "Campaign", "CpcBidMicros", "CpmBidMicros", "CpaBidMicros", "CpvBidMicros", "TargetRoasOverride", });
+        new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "Type", "TrackingUrlTemplate", "UrlCustomParameters", "Campaign", "CpcBidMicros", "CpmBidMicros", "CpaBidMicros", "CpvBidMicros", "TargetRoasOverride", "PercentCpcBidMicros", });
     com.google.ads.googleads.v0.common.CustomParameterProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdGroupStatusProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdGroupTypeProto.getDescriptor();
