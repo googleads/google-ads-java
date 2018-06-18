@@ -1,3 +1,11 @@
+0.3.0 - 2018-06-18
+------------------
+
+Added support and examples for Google Ads API v0_2.
+
+- Added PercentCpc bidding strategy.
+- Updated Hotel Ads example to use PercentCpc.
+
 0.2.0 - 2018-06-07
 ------------------
 
