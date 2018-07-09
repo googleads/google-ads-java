@@ -11,4 +11,17 @@ public interface BarOrBuilder extends
    * <code>int64 num = 1;</code>
    */
   long getNum();
+
+  /**
+   * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+   */
+  boolean hasNestedWrapper();
+  /**
+   * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+   */
+  com.google.protobuf.BoolValue getNestedWrapper();
+  /**
+   * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getNestedWrapperOrBuilder();
 }

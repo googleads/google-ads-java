@@ -64,9 +64,11 @@ public final class TestSuiteProto {
       "o\022,\n\004foos\030\003 \003(\0132\036.google.ads.googleads.t" +
       "est.Foo\"m\n\003Foo\022\013\n\003num\030\001 \001(\003\022+\n\003bar\030\002 \001(\013" +
       "2\036.google.ads.googleads.test.Bar\022,\n\004bars" +
-      "\030\003 \003(\0132\036.google.ads.googleads.test.Bar\"\022" +
-      "\n\003Bar\022\013\n\003num\030\001 \001(\003B1\n\035com.google.ads.goo" +
-      "gleads.testB\016TestSuiteProtoP\001b\006proto3"
+      "\030\003 \003(\0132\036.google.ads.googleads.test.Bar\"F" +
+      "\n\003Bar\022\013\n\003num\030\001 \001(\003\0222\n\016nested_wrapper\030\002 \001" +
+      "(\0132\032.google.protobuf.BoolValueB1\n\035com.go" +
+      "ogle.ads.googleads.testB\016TestSuiteProtoP" +
+      "\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -111,7 +113,7 @@ public final class TestSuiteProto {
     internal_static_google_ads_googleads_test_Bar_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_test_Bar_descriptor,
-        new java.lang.String[] { "Num", });
+        new java.lang.String[] { "Num", "NestedWrapper", });
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
   }
