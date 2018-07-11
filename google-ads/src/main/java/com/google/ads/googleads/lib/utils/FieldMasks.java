@@ -133,22 +133,24 @@ public class FieldMasks {
   /**
    * Recursively add field names for a new message. Repeated fields, primitive fields and
    * unpopulated single message fields are included just by name; populated single message fields
-   * are processed recursively, only including leaf nodes.
+   * are processed recursively, only including leaf nodes. For wrapper types, the 'value' leaf
+   * node is excluded.
    */
   private static void addNewFields(FieldMask.Builder mask, String currentField, Message message) {
     Descriptor descriptor = message.getDescriptorForType();
-    for (FieldDescriptor field : descriptor.getFields()) {
-      String name = getFieldName(currentField, field);
-      // For single message fields, recurse if there's a value; otherwise just add the field name.
-      if (!field.isRepeated() && field.getType() == Type.MESSAGE) {
-        Message value = (Message) message.getField(field);
-        if (message.hasField(field)) {
+    if (isWrapperType(descriptor)) {
+      // For wrapper types, don't recurse over the fields of the message.
+      mask.addPaths(currentField);
+    } else {
+      for (FieldDescriptor field : descriptor.getFields()) {
+        String name = getFieldName(currentField, field);
+        // For single message fields, recurse if there's a value; otherwise just add the field name.
+        if (!field.isRepeated() && field.getType() == Type.MESSAGE && message.hasField(field)) {
+          Message value = (Message) message.getField(field);
           addNewFields(mask, name, value);
         } else {
           mask.addPaths(name);
         }
-      } else {
-        mask.addPaths(name);
       }
     }
   }

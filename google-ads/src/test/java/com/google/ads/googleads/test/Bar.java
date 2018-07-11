@@ -55,6 +55,19 @@ private static final long serialVersionUID = 0L;
             num_ = input.readInt64();
             break;
           }
+          case 18: {
+            com.google.protobuf.BoolValue.Builder subBuilder = null;
+            if (nestedWrapper_ != null) {
+              subBuilder = nestedWrapper_.toBuilder();
+            }
+            nestedWrapper_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(nestedWrapper_);
+              nestedWrapper_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -88,6 +101,27 @@ private static final long serialVersionUID = 0L;
     return num_;
   }
 
+  public static final int NESTED_WRAPPER_FIELD_NUMBER = 2;
+  private com.google.protobuf.BoolValue nestedWrapper_;
+  /**
+   * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+   */
+  public boolean hasNestedWrapper() {
+    return nestedWrapper_ != null;
+  }
+  /**
+   * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+   */
+  public com.google.protobuf.BoolValue getNestedWrapper() {
+    return nestedWrapper_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : nestedWrapper_;
+  }
+  /**
+   * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+   */
+  public com.google.protobuf.BoolValueOrBuilder getNestedWrapperOrBuilder() {
+    return getNestedWrapper();
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -103,6 +137,9 @@ private static final long serialVersionUID = 0L;
     if (num_ != 0L) {
       output.writeInt64(1, num_);
     }
+    if (nestedWrapper_ != null) {
+      output.writeMessage(2, getNestedWrapper());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -114,6 +151,10 @@ private static final long serialVersionUID = 0L;
     if (num_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, num_);
+    }
+    if (nestedWrapper_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getNestedWrapper());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -133,6 +174,11 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && (getNum()
         == other.getNum());
+    result = result && (hasNestedWrapper() == other.hasNestedWrapper());
+    if (hasNestedWrapper()) {
+      result = result && getNestedWrapper()
+          .equals(other.getNestedWrapper());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -147,6 +193,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + NUM_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getNum());
+    if (hasNestedWrapper()) {
+      hash = (37 * hash) + NESTED_WRAPPER_FIELD_NUMBER;
+      hash = (53 * hash) + getNestedWrapper().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -278,6 +328,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       num_ = 0L;
 
+      if (nestedWrapperBuilder_ == null) {
+        nestedWrapper_ = null;
+      } else {
+        nestedWrapper_ = null;
+        nestedWrapperBuilder_ = null;
+      }
       return this;
     }
 
@@ -301,6 +357,11 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.test.Bar buildPartial() {
       com.google.ads.googleads.test.Bar result = new com.google.ads.googleads.test.Bar(this);
       result.num_ = num_;
+      if (nestedWrapperBuilder_ == null) {
+        result.nestedWrapper_ = nestedWrapper_;
+      } else {
+        result.nestedWrapper_ = nestedWrapperBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -344,6 +405,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.test.Bar.getDefaultInstance()) return this;
       if (other.getNum() != 0L) {
         setNum(other.getNum());
+      }
+      if (other.hasNestedWrapper()) {
+        mergeNestedWrapper(other.getNestedWrapper());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -396,6 +460,123 @@ private static final long serialVersionUID = 0L;
       num_ = 0L;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.BoolValue nestedWrapper_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> nestedWrapperBuilder_;
+    /**
+     * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+     */
+    public boolean hasNestedWrapper() {
+      return nestedWrapperBuilder_ != null || nestedWrapper_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+     */
+    public com.google.protobuf.BoolValue getNestedWrapper() {
+      if (nestedWrapperBuilder_ == null) {
+        return nestedWrapper_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : nestedWrapper_;
+      } else {
+        return nestedWrapperBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+     */
+    public Builder setNestedWrapper(com.google.protobuf.BoolValue value) {
+      if (nestedWrapperBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        nestedWrapper_ = value;
+        onChanged();
+      } else {
+        nestedWrapperBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+     */
+    public Builder setNestedWrapper(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (nestedWrapperBuilder_ == null) {
+        nestedWrapper_ = builderForValue.build();
+        onChanged();
+      } else {
+        nestedWrapperBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+     */
+    public Builder mergeNestedWrapper(com.google.protobuf.BoolValue value) {
+      if (nestedWrapperBuilder_ == null) {
+        if (nestedWrapper_ != null) {
+          nestedWrapper_ =
+            com.google.protobuf.BoolValue.newBuilder(nestedWrapper_).mergeFrom(value).buildPartial();
+        } else {
+          nestedWrapper_ = value;
+        }
+        onChanged();
+      } else {
+        nestedWrapperBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+     */
+    public Builder clearNestedWrapper() {
+      if (nestedWrapperBuilder_ == null) {
+        nestedWrapper_ = null;
+        onChanged();
+      } else {
+        nestedWrapper_ = null;
+        nestedWrapperBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getNestedWrapperBuilder() {
+      
+      onChanged();
+      return getNestedWrapperFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getNestedWrapperOrBuilder() {
+      if (nestedWrapperBuilder_ != null) {
+        return nestedWrapperBuilder_.getMessageOrBuilder();
+      } else {
+        return nestedWrapper_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : nestedWrapper_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.BoolValue nested_wrapper = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getNestedWrapperFieldBuilder() {
+      if (nestedWrapperBuilder_ == null) {
+        nestedWrapperBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getNestedWrapper(),
+                getParentForChildren(),
+                isClean());
+        nestedWrapper_ = null;
+      }
+      return nestedWrapperBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
