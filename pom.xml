@@ -77,6 +77,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <google-ads-java.autoRelease>false</google-ads-java.autoRelease>
   </properties>
 
   <build>
@@ -247,7 +248,7 @@
             <configuration>
               <serverId>sonatype-nexus-staging</serverId>
               <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-              <autoReleaseAfterClose>false</autoReleaseAfterClose>
+              <autoReleaseAfterClose>${google-ads-java.autoRelease}</autoReleaseAfterClose>
             </configuration>
           </plugin>
         </plugins>
