@@ -1,3 +1,8 @@
+0.3.1 - 2018-08-08
+------------------
+
+- Updated FieldMasks utility to properly handle wrapper types.
+
 0.3.0 - 2018-06-18
 ------------------
 
