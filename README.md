@@ -38,7 +38,8 @@ This project hosts the Java client library for the Google Ads API.
     *   `google-ads-examples`: multiple examples that demonstrate how to use
         the library to execute common use cases via the Google Ads API.
 
-3.  To run examples, you'll need to compile the `google-ads-examples` code.
+3.  To run examples, you'll need to compile the `google-ads` and
+    `google-ads-examples` code.
 
     **If you are using an IDE...**
 
@@ -46,6 +47,11 @@ This project hosts the Java client library for the Google Ads API.
         builds the project successfully.
 
     **If you are using Maven from the command line...**
+
+    *   From the `google-ads-java` directory, install the snapshot version
+        of the library.
+
+            mvn install
 
     *   Change into the `google-ads-examples` directory.
 
