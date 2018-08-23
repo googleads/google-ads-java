@@ -19,6 +19,7 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.AdGroupCriteriaName;
 import com.google.ads.googleads.v0.services.AdGroupCriterionOperation;
@@ -101,10 +102,8 @@ public class RemoveKeyword {
       GoogleAdsClient googleAdsClient, long customerId, long adGroupId, long criterionId) {
     try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
         googleAdsClient.getAdGroupCriterionServiceClient()) {
-      String adGroupCriterionResourceName =
-          AdGroupCriteriaName.format(
-              Long.toString(customerId),
-              String.format("%s_%s", Long.toString(adGroupId), Long.toString(criterionId)));
+      String adGroupCriterionResourceName = ResourceNames.adGroupCriterion(customerId, adGroupId, criterionId);
+
       // Construct an operation that will remove the keyword with the specified resource name.
       AdGroupCriterionOperation operation =
           AdGroupCriterionOperation.newBuilder().setRemove(adGroupCriterionResourceName).build();

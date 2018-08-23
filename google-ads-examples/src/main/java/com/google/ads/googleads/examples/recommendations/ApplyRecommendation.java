@@ -19,6 +19,7 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.RecommendationName;
 import com.google.ads.googleads.v0.services.ApplyRecommendationOperation;
@@ -100,8 +101,7 @@ public class ApplyRecommendation {
    */
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, String recommendationId) {
-    String recommendationResourceName =
-        RecommendationName.format(Long.toString(customerId), recommendationId);
+    String recommendationResourceName = ResourceNames.recommendation(customerId, recommendationId);
 
     ApplyRecommendationOperation.Builder operationBuilder =
         ApplyRecommendationOperation.newBuilder().setResourceName(recommendationResourceName);
