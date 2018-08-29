@@ -94,6 +94,22 @@
  * </code>
  * </pre>
  *
+ * ================================ CampaignBidModifierServiceClient
+ * ================================
+ *
+ * <p>Service Description: Service to manage campaign bid modifiers.
+ *
+ * <p>Sample for CampaignBidModifierServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (CampaignBidModifierServiceClient campaignBidModifierServiceClient = CampaignBidModifierServiceClient.create()) {
+ *   String formattedResourceName = CampaignBidModifierServiceClient.formatCampaignBidModifierName("[CUSTOMER]", "[CAMPAIGN_BID_MODIFIER]");
+ *   CampaignBidModifier response = campaignBidModifierServiceClient.getCampaignBidModifier(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * =========================== CampaignBudgetServiceClient ===========================
  *
  * <p>Service Description: Service to manage campaign budgets.
@@ -124,6 +140,21 @@
  * </code>
  * </pre>
  *
+ * ========================== CampaignGroupServiceClient ==========================
+ *
+ * <p>Service Description: Service to manage campaign groups.
+ *
+ * <p>Sample for CampaignGroupServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (CampaignGroupServiceClient campaignGroupServiceClient = CampaignGroupServiceClient.create()) {
+ *   String formattedResourceName = CampaignGroupServiceClient.formatCampaignGroupName("[CUSTOMER]", "[CAMPAIGN_GROUP]");
+ *   CampaignGroup response = campaignGroupServiceClient.getCampaignGroup(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ===================== CampaignServiceClient =====================
  *
  * <p>Service Description: Service to manage campaigns.
@@ -135,6 +166,21 @@
  * try (CampaignServiceClient campaignServiceClient = CampaignServiceClient.create()) {
  *   String formattedResourceName = CampaignServiceClient.formatCampaignName("[CUSTOMER]", "[CAMPAIGN]");
  *   Campaign response = campaignServiceClient.getCampaign(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ============================== CampaignSharedSetServiceClient ==============================
+ *
+ * <p>Service Description: Service to manage campaign shared sets.
+ *
+ * <p>Sample for CampaignSharedSetServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (CampaignSharedSetServiceClient campaignSharedSetServiceClient = CampaignSharedSetServiceClient.create()) {
+ *   String formattedResourceName = CampaignSharedSetServiceClient.formatCampaignSharedSetName("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
+ *   CampaignSharedSet response = campaignSharedSetServiceClient.getCampaignSharedSet(formattedResourceName);
  * }
  * </code>
  * </pre>
@@ -226,6 +272,36 @@
  * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
  *   String formattedResourceName = RecommendationServiceClient.formatRecommendationName("[CUSTOMER]", "[RECOMMENDATION]");
  *   Recommendation response = recommendationServiceClient.getRecommendation(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ============================ SharedCriterionServiceClient ============================
+ *
+ * <p>Service Description: Service to manage shared criteria.
+ *
+ * <p>Sample for SharedCriterionServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (SharedCriterionServiceClient sharedCriterionServiceClient = SharedCriterionServiceClient.create()) {
+ *   String formattedResourceName = SharedCriterionServiceClient.formatSharedCriteriaName("[CUSTOMER]", "[SHARED_CRITERIA]");
+ *   SharedCriterion response = sharedCriterionServiceClient.getSharedCriterion(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ====================== SharedSetServiceClient ======================
+ *
+ * <p>Service Description: Service to manage shared sets.
+ *
+ * <p>Sample for SharedSetServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
+ *   String formattedResourceName = SharedSetServiceClient.formatSharedSetName("[CUSTOMER]", "[SHARED_SET]");
+ *   SharedSet response = sharedSetServiceClient.getSharedSet(formattedResourceName);
  * }
  * </code>
  * </pre>

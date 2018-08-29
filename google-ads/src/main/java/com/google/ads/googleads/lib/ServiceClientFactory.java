@@ -19,15 +19,20 @@ import com.google.ads.googleads.v0.services.AdGroupBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
 import com.google.ads.googleads.v0.services.BiddingStrategyServiceClient;
+import com.google.ads.googleads.v0.services.CampaignBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.CampaignBudgetServiceClient;
 import com.google.ads.googleads.v0.services.CampaignCriterionServiceClient;
+import com.google.ads.googleads.v0.services.CampaignGroupServiceClient;
 import com.google.ads.googleads.v0.services.CampaignServiceClient;
+import com.google.ads.googleads.v0.services.CampaignSharedSetServiceClient;
 import com.google.ads.googleads.v0.services.CustomerServiceClient;
 import com.google.ads.googleads.v0.services.GeoTargetConstantServiceClient;
 import com.google.ads.googleads.v0.services.GoogleAdsFieldServiceClient;
 import com.google.ads.googleads.v0.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v0.services.KeywordViewServiceClient;
 import com.google.ads.googleads.v0.services.RecommendationServiceClient;
+import com.google.ads.googleads.v0.services.SharedCriterionServiceClient;
+import com.google.ads.googleads.v0.services.SharedSetServiceClient;
 
 public interface ServiceClientFactory {
   AdGroupAdServiceClient getAdGroupAdServiceClient();
@@ -40,11 +45,17 @@ public interface ServiceClientFactory {
 
   BiddingStrategyServiceClient getBiddingStrategyServiceClient();
 
+  CampaignBidModifierServiceClient getCampaignBidModifierServiceClient();
+
   CampaignBudgetServiceClient getCampaignBudgetServiceClient();
 
   CampaignCriterionServiceClient getCampaignCriterionServiceClient();
 
+  CampaignGroupServiceClient getCampaignGroupServiceClient();
+
   CampaignServiceClient getCampaignServiceClient();
+
+  CampaignSharedSetServiceClient getCampaignSharedSetServiceClient();
 
   CustomerServiceClient getCustomerServiceClient();
 
@@ -57,4 +68,8 @@ public interface ServiceClientFactory {
   KeywordViewServiceClient getKeywordViewServiceClient();
 
   RecommendationServiceClient getRecommendationServiceClient();
+
+  SharedCriterionServiceClient getSharedCriterionServiceClient();
+
+  SharedSetServiceClient getSharedSetServiceClient();
 }

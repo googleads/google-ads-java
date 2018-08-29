@@ -9,53 +9,56 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * All conversions divided by the number of ad interactions.
+   * All conversions from interactions (as oppose to view through conversions)
+   * divided by the number of ad interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
    */
-  boolean hasAllConversionRate();
+  boolean hasAllConversionsFromInteractionsRate();
   /**
    * <pre>
-   * All conversions divided by the number of ad interactions.
+   * All conversions from interactions (as oppose to view through conversions)
+   * divided by the number of ad interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
    */
-  com.google.protobuf.DoubleValue getAllConversionRate();
+  com.google.protobuf.DoubleValue getAllConversionsFromInteractionsRate();
   /**
    * <pre>
-   * All conversions divided by the number of ad interactions.
+   * All conversions from interactions (as oppose to view through conversions)
+   * divided by the number of ad interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
    */
-  com.google.protobuf.DoubleValueOrBuilder getAllConversionRateOrBuilder();
+  com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromInteractionsRateOrBuilder();
 
   /**
    * <pre>
    * The total value of all conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
    */
-  boolean hasAllConversionValue();
+  boolean hasAllConversionsValue();
   /**
    * <pre>
    * The total value of all conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
    */
-  com.google.protobuf.DoubleValue getAllConversionValue();
+  com.google.protobuf.DoubleValue getAllConversionsValue();
   /**
    * <pre>
    * The total value of all conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
    */
-  com.google.protobuf.DoubleValueOrBuilder getAllConversionValueOrBuilder();
+  com.google.protobuf.DoubleValueOrBuilder getAllConversionsValueOrBuilder();
 
   /**
    * <pre>
@@ -115,28 +118,31 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The value of all conversions divided by the total number of interactions.
+   * The value of all conversions from interactions divided by the total number
+   * of interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
    */
-  boolean hasAllConversionsValuePerInteraction();
+  boolean hasAllConversionsFromInteractionsValuePerInteraction();
   /**
    * <pre>
-   * The value of all conversions divided by the total number of interactions.
+   * The value of all conversions from interactions divided by the total number
+   * of interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
    */
-  com.google.protobuf.DoubleValue getAllConversionsValuePerInteraction();
+  com.google.protobuf.DoubleValue getAllConversionsFromInteractionsValuePerInteraction();
   /**
    * <pre>
-   * The value of all conversions divided by the total number of interactions.
+   * The value of all conversions from interactions divided by the total number
+   * of interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
    */
-  com.google.protobuf.DoubleValueOrBuilder getAllConversionsValuePerInteractionOrBuilder();
+  com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromInteractionsValuePerInteractionOrBuilder();
 
   /**
    * <pre>
@@ -401,106 +407,109 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * Conversions divided by the number of ad interactions (such as clicks for
-   * text ads or views for video ads).
+   * Conversions from interactions divided by the number of ad interactions
+   * (such as clicks for text ads or views for video ads).
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+   * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
    */
-  boolean hasConversionRate();
+  boolean hasConversionsFromInteractionsRate();
   /**
    * <pre>
-   * Conversions divided by the number of ad interactions (such as clicks for
-   * text ads or views for video ads).
+   * Conversions from interactions divided by the number of ad interactions
+   * (such as clicks for text ads or views for video ads).
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+   * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
    */
-  com.google.protobuf.DoubleValue getConversionRate();
+  com.google.protobuf.DoubleValue getConversionsFromInteractionsRate();
   /**
    * <pre>
-   * Conversions divided by the number of ad interactions (such as clicks for
-   * text ads or views for video ads).
+   * Conversions from interactions divided by the number of ad interactions
+   * (such as clicks for text ads or views for video ads).
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+   * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
    */
-  com.google.protobuf.DoubleValueOrBuilder getConversionRateOrBuilder();
+  com.google.protobuf.DoubleValueOrBuilder getConversionsFromInteractionsRateOrBuilder();
 
   /**
    * <pre>
    * The total value of conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+   * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
    */
-  boolean hasConversionValue();
+  boolean hasConversionsValue();
   /**
    * <pre>
    * The total value of conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+   * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
    */
-  com.google.protobuf.DoubleValue getConversionValue();
+  com.google.protobuf.DoubleValue getConversionsValue();
   /**
    * <pre>
    * The total value of conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+   * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
    */
-  com.google.protobuf.DoubleValueOrBuilder getConversionValueOrBuilder();
+  com.google.protobuf.DoubleValueOrBuilder getConversionsValueOrBuilder();
 
   /**
    * <pre>
    * The value of conversions divided by the cost of ad interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+   * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
    */
-  boolean hasConversionValuePerCost();
+  boolean hasConversionsValuePerCost();
   /**
    * <pre>
    * The value of conversions divided by the cost of ad interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+   * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
    */
-  com.google.protobuf.DoubleValue getConversionValuePerCost();
+  com.google.protobuf.DoubleValue getConversionsValuePerCost();
   /**
    * <pre>
    * The value of conversions divided by the cost of ad interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+   * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
    */
-  com.google.protobuf.DoubleValueOrBuilder getConversionValuePerCostOrBuilder();
+  com.google.protobuf.DoubleValueOrBuilder getConversionsValuePerCostOrBuilder();
 
   /**
    * <pre>
-   * The value of conversions divided by the number of ad interactions.
+   * The value of conversions from interactions divided by the number of ad
+   * interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+   * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
    */
-  boolean hasConversionValuePerInteraction();
+  boolean hasConversionsFromInteractionsValuePerInteraction();
   /**
    * <pre>
-   * The value of conversions divided by the number of ad interactions.
+   * The value of conversions from interactions divided by the number of ad
+   * interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+   * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
    */
-  com.google.protobuf.DoubleValue getConversionValuePerInteraction();
+  com.google.protobuf.DoubleValue getConversionsFromInteractionsValuePerInteraction();
   /**
    * <pre>
-   * The value of conversions divided by the number of ad interactions.
+   * The value of conversions from interactions divided by the number of ad
+   * interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+   * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
    */
-  com.google.protobuf.DoubleValueOrBuilder getConversionValuePerInteractionOrBuilder();
+  com.google.protobuf.DoubleValueOrBuilder getConversionsFromInteractionsValuePerInteractionOrBuilder();
 
   /**
    * <pre>
@@ -563,25 +572,25 @@ public interface MetricsOrBuilder extends
    * The cost of ad interactions divided by all conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+   * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
    */
-  boolean hasCostPerAllConversion();
+  boolean hasCostPerAllConversions();
   /**
    * <pre>
    * The cost of ad interactions divided by all conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+   * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
    */
-  com.google.protobuf.DoubleValue getCostPerAllConversion();
+  com.google.protobuf.DoubleValue getCostPerAllConversions();
   /**
    * <pre>
    * The cost of ad interactions divided by all conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+   * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
    */
-  com.google.protobuf.DoubleValueOrBuilder getCostPerAllConversionOrBuilder();
+  com.google.protobuf.DoubleValueOrBuilder getCostPerAllConversionsOrBuilder();
 
   /**
    * <pre>
@@ -610,7 +619,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * Conversions from when a customer clicks on an AdWords ad on one device,
+   * Conversions from when a customer clicks on a Google Ads ad on one device,
    * then converts on a different device or browser.
    * Cross-device conversions are already included in all_conversions.
    * </pre>
@@ -620,7 +629,7 @@ public interface MetricsOrBuilder extends
   boolean hasCrossDeviceConversions();
   /**
    * <pre>
-   * Conversions from when a customer clicks on an AdWords ad on one device,
+   * Conversions from when a customer clicks on a Google Ads ad on one device,
    * then converts on a different device or browser.
    * Cross-device conversions are already included in all_conversions.
    * </pre>
@@ -630,7 +639,7 @@ public interface MetricsOrBuilder extends
   com.google.protobuf.DoubleValue getCrossDeviceConversions();
   /**
    * <pre>
-   * Conversions from when a customer clicks on an AdWords ad on one device,
+   * Conversions from when a customer clicks on a Google Ads ad on one device,
    * then converts on a different device or browser.
    * Cross-device conversions are already included in all_conversions.
    * </pre>

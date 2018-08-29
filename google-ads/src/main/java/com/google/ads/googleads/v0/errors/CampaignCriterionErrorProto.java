@@ -30,8 +30,8 @@ public final class CampaignCriterionErrorProto {
     java.lang.String[] descriptorData = {
       "\n=google/ads/googleads/v0/errors/campaig" +
       "n_criterion_error.proto\022\036google.ads.goog" +
-      "leads.v0.errors\"\317\003\n\032CampaignCriterionErr" +
-      "orEnum\"\260\003\n\026CampaignCriterionError\022\017\n\013UNS" +
+      "leads.v0.errors\"\365\003\n\032CampaignCriterionErr" +
+      "orEnum\"\326\003\n\026CampaignCriterionError\022\017\n\013UNS" +
       "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\032\n\026CONCRETE_TYPE" +
       "_REQUIRED\020\002\022\031\n\025INVALID_PLACEMENT_URL\020\003\022 " +
       "\n\034CANNOT_EXCLUDE_CRITERIA_TYPE\020\004\022\'\n#CANN" +
@@ -42,12 +42,13 @@ public final class CampaignCriterionErrorProto {
       "_FOR_CRITERION_TYPE\020\t\022C\n?SHOPPING_CAMPAI" +
       "GN_SALES_COUNTRY_NOT_SUPPORTED_FOR_SALES" +
       "_CHANNEL\020\n\022\035\n\031CANNOT_ADD_EXISTING_FIELD\020" +
-      "\013B\321\001\n\"com.google.ads.googleads.v0.errors" +
-      "B\033CampaignCriterionErrorProtoP\001ZDgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads" +
-      ".GoogleAds.V0.Errors\312\002\036Google\\Ads\\Google" +
-      "Ads\\V0\\Errorsb\006proto3"
+      "\013\022$\n CANNOT_UPDATE_NEGATIVE_CRITERION\020\014B" +
+      "\321\001\n\"com.google.ads.googleads.v0.errorsB\033" +
+      "CampaignCriterionErrorProtoP\001ZDgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.G" +
+      "oogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAd" +
+      "s\\V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

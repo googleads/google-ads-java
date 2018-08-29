@@ -30,21 +30,21 @@ public final class AdGroupAdProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v0/resources/ad_g" +
       "roup_ad.proto\022!google.ads.googleads.v0.r" +
-      "esources\032\'google/ads/googleads/v0/common" +
-      "/ad.proto\0326google/ads/googleads/v0/enums" +
-      "/ad_group_ad_status.proto\032\036google/protob" +
-      "uf/wrappers.proto\"\326\001\n\tAdGroupAd\022\025\n\rresou" +
-      "rce_name\030\001 \001(\t\022R\n\006status\030\003 \001(\0162B.google." +
-      "ads.googleads.v0.enums.AdGroupAdStatusEn" +
-      "um.AdGroupAdStatus\022.\n\010ad_group\030\004 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\022.\n\002ad\030\005 \001(\0132\"" +
-      ".google.ads.googleads.v0.common.AdB\323\001\n%c" +
-      "om.google.ads.googleads.v0.resourcesB\016Ad" +
-      "GroupAdProtoP\001ZJgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v0/resources" +
-      ";resources\242\002\003GAA\252\002!Google.Ads.GoogleAds." +
-      "V0.Resources\312\002!Google\\Ads\\GoogleAds\\V0\\R" +
-      "esourcesb\006proto3"
+      "esources\0326google/ads/googleads/v0/enums/" +
+      "ad_group_ad_status.proto\032*google/ads/goo" +
+      "gleads/v0/resources/ad.proto\032\036google/pro" +
+      "tobuf/wrappers.proto\"\331\001\n\tAdGroupAd\022\025\n\rre" +
+      "source_name\030\001 \001(\t\022R\n\006status\030\003 \001(\0162B.goog" +
+      "le.ads.googleads.v0.enums.AdGroupAdStatu" +
+      "sEnum.AdGroupAdStatus\022.\n\010ad_group\030\004 \001(\0132" +
+      "\034.google.protobuf.StringValue\0221\n\002ad\030\005 \001(" +
+      "\0132%.google.ads.googleads.v0.resources.Ad" +
+      "B\323\001\n%com.google.ads.googleads.v0.resourc" +
+      "esB\016AdGroupAdProtoP\001ZJgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v0/res" +
+      "ources;resources\242\002\003GAA\252\002!Google.Ads.Goog" +
+      "leAds.V0.Resources\312\002!Google\\Ads\\GoogleAd" +
+      "s\\V0\\Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -57,8 +57,8 @@ public final class AdGroupAdProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.ads.googleads.v0.common.AdProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.AdGroupAdStatusProto.getDescriptor(),
+          com.google.ads.googleads.v0.resources.AdProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_resources_AdGroupAd_descriptor =
@@ -67,8 +67,8 @@ public final class AdGroupAdProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_AdGroupAd_descriptor,
         new java.lang.String[] { "ResourceName", "Status", "AdGroup", "Ad", });
-    com.google.ads.googleads.v0.common.AdProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdGroupAdStatusProto.getDescriptor();
+    com.google.ads.googleads.v0.resources.AdProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

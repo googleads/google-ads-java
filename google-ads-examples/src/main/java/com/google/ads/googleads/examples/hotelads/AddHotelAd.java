@@ -19,7 +19,6 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.common.Ad;
 import com.google.ads.googleads.v0.common.HotelAdInfo;
 import com.google.ads.googleads.v0.common.PercentCpc;
 import com.google.ads.googleads.v0.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
@@ -29,6 +28,7 @@ import com.google.ads.googleads.v0.enums.AdvertisingChannelTypeEnum.AdvertisingC
 import com.google.ads.googleads.v0.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
 import com.google.ads.googleads.v0.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
+import com.google.ads.googleads.v0.resources.Ad;
 import com.google.ads.googleads.v0.resources.AdGroup;
 import com.google.ads.googleads.v0.resources.AdGroupAd;
 import com.google.ads.googleads.v0.resources.Campaign;

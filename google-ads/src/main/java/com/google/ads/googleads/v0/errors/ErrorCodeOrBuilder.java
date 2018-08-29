@@ -874,5 +874,141 @@ public interface ErrorCodeOrBuilder extends
    */
   com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError getFieldError();
 
+  /**
+   * <pre>
+   * The reasons for the shared set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+   */
+  int getSharedSetErrorValue();
+  /**
+   * <pre>
+   * The reasons for the shared set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+   */
+  com.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError getSharedSetError();
+
+  /**
+   * <pre>
+   * The reasons for the shared criterion error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+   */
+  int getSharedCriterionErrorValue();
+  /**
+   * <pre>
+   * The reasons for the shared criterion error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+   */
+  com.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError getSharedCriterionError();
+
+  /**
+   * <pre>
+   * The reasons for the campaign shared set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+   */
+  int getCampaignSharedSetErrorValue();
+  /**
+   * <pre>
+   * The reasons for the campaign shared set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+   */
+  com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError getCampaignSharedSetError();
+
+  /**
+   * <pre>
+   * The reasons for the header error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+   */
+  int getHeaderErrorValue();
+  /**
+   * <pre>
+   * The reasons for the header error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+   */
+  com.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError getHeaderError();
+
+  /**
+   * <pre>
+   * The reasons for the database error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+   */
+  int getDatabaseErrorValue();
+  /**
+   * <pre>
+   * The reasons for the database error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+   */
+  com.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError getDatabaseError();
+
+  /**
+   * <pre>
+   * The reasons for the policy finding error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+   */
+  int getPolicyFindingErrorValue();
+  /**
+   * <pre>
+   * The reasons for the policy finding error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+   */
+  com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError getPolicyFindingError();
+
+  /**
+   * <pre>
+   * The reasons for campaign group error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
+   */
+  int getCampaignGroupErrorValue();
+  /**
+   * <pre>
+   * The reasons for campaign group error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
+   */
+  com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError getCampaignGroupError();
+
+  /**
+   * <pre>
+   * The reason for enum error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+   */
+  int getEnumErrorValue();
+  /**
+   * <pre>
+   * The reason for enum error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+   */
+  com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError getEnumError();
+
   public com.google.ads.googleads.v0.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

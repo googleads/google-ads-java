@@ -51,4 +51,29 @@ public interface ErrorDetailsOrBuilder extends
    * <code>.google.ads.googleads.v0.errors.PolicyViolationDetails policy_violation_details = 2;</code>
    */
   com.google.ads.googleads.v0.errors.PolicyViolationDetailsOrBuilder getPolicyViolationDetailsOrBuilder();
+
+  /**
+   * <pre>
+   * Describes policy violation findings.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.PolicyFindingDetails policy_finding_details = 3;</code>
+   */
+  boolean hasPolicyFindingDetails();
+  /**
+   * <pre>
+   * Describes policy violation findings.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.PolicyFindingDetails policy_finding_details = 3;</code>
+   */
+  com.google.ads.googleads.v0.errors.PolicyFindingDetails getPolicyFindingDetails();
+  /**
+   * <pre>
+   * Describes policy violation findings.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.PolicyFindingDetails policy_finding_details = 3;</code>
+   */
+  com.google.ads.googleads.v0.errors.PolicyFindingDetailsOrBuilder getPolicyFindingDetailsOrBuilder();
 }

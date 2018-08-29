@@ -69,6 +69,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeProto.internal_static_google_ads_googleads_v0_enums_AdvertisingChannelSubTypeEnum_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeProto.internal_static_google_ads_googleads_v0_enums_AdvertisingChannelSubTypeEnum_fieldAccessorTable
@@ -111,12 +112,36 @@ private static final long serialVersionUID = 0L;
     SEARCH_MOBILE_APP(2),
     /**
      * <pre>
+     * Mobile app campaigns for Display.
+     * </pre>
+     *
+     * <code>DISPLAY_MOBILE_APP = 3;</code>
+     */
+    DISPLAY_MOBILE_APP(3),
+    /**
+     * <pre>
      * AdWords express campaigns for search.
      * </pre>
      *
      * <code>SEARCH_EXPRESS = 4;</code>
      */
     SEARCH_EXPRESS(4),
+    /**
+     * <pre>
+     * AdWords Express campaigns for display.
+     * </pre>
+     *
+     * <code>DISPLAY_EXPRESS = 5;</code>
+     */
+    DISPLAY_EXPRESS(5),
+    /**
+     * <pre>
+     * Smart Shopping campaigns.
+     * </pre>
+     *
+     * <code>SHOPPING_SMART_ADS = 6;</code>
+     */
+    SHOPPING_SMART_ADS(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -146,12 +171,36 @@ private static final long serialVersionUID = 0L;
     public static final int SEARCH_MOBILE_APP_VALUE = 2;
     /**
      * <pre>
+     * Mobile app campaigns for Display.
+     * </pre>
+     *
+     * <code>DISPLAY_MOBILE_APP = 3;</code>
+     */
+    public static final int DISPLAY_MOBILE_APP_VALUE = 3;
+    /**
+     * <pre>
      * AdWords express campaigns for search.
      * </pre>
      *
      * <code>SEARCH_EXPRESS = 4;</code>
      */
     public static final int SEARCH_EXPRESS_VALUE = 4;
+    /**
+     * <pre>
+     * AdWords Express campaigns for display.
+     * </pre>
+     *
+     * <code>DISPLAY_EXPRESS = 5;</code>
+     */
+    public static final int DISPLAY_EXPRESS_VALUE = 5;
+    /**
+     * <pre>
+     * Smart Shopping campaigns.
+     * </pre>
+     *
+     * <code>SHOPPING_SMART_ADS = 6;</code>
+     */
+    public static final int SHOPPING_SMART_ADS_VALUE = 6;
 
 
     public final int getNumber() {
@@ -175,7 +224,10 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return SEARCH_MOBILE_APP;
+        case 3: return DISPLAY_MOBILE_APP;
         case 4: return SEARCH_EXPRESS;
+        case 5: return DISPLAY_EXPRESS;
+        case 6: return SHOPPING_SMART_ADS;
         default: return null;
       }
     }
@@ -229,6 +281,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -238,11 +291,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -350,6 +405,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -357,6 +413,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeEnum prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -384,6 +441,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeProto.internal_static_google_ads_googleads_v0_enums_AdvertisingChannelSubTypeEnum_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeProto.internal_static_google_ads_googleads_v0_enums_AdvertisingChannelSubTypeEnum_fieldAccessorTable
@@ -406,20 +464,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeProto.internal_static_google_ads_googleads_v0_enums_AdvertisingChannelSubTypeEnum_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeEnum getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeEnum.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeEnum build() {
       com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeEnum result = buildPartial();
       if (!result.isInitialized()) {
@@ -428,38 +490,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeEnum buildPartial() {
       com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeEnum result = new com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeEnum(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeEnum) {
         return mergeFrom((com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeEnum)other);
@@ -476,10 +546,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -497,11 +569,13 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -523,6 +597,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<AdvertisingChannelSubTypeEnum>
       PARSER = new com.google.protobuf.AbstractParser<AdvertisingChannelSubTypeEnum>() {
+    @java.lang.Override
     public AdvertisingChannelSubTypeEnum parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -540,6 +615,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeEnum getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

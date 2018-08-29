@@ -30,15 +30,16 @@ public final class MutateErrorProto {
     java.lang.String[] descriptorData = {
       "\n1google/ads/googleads/v0/errors/mutate_" +
       "error.proto\022\036google.ads.googleads.v0.err" +
-      "ors\"y\n\017MutateErrorEnum\"f\n\013MutateError\022\017\n" +
-      "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n\022RESOURCE_" +
-      "NOT_FOUND\020\003\022!\n\035ID_EXISTS_IN_MULTIPLE_MUT" +
-      "ATES\020\007B\306\001\n\"com.google.ads.googleads.v0.e" +
-      "rrorsB\020MutateErrorProtoP\001ZDgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "0/errors;errors\242\002\003GAA\252\002\036Google.Ads.Googl" +
-      "eAds.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0" +
-      "\\Errorsb\006proto3"
+      "ors\"\231\001\n\017MutateErrorEnum\"\205\001\n\013MutateError\022" +
+      "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n\022RESOURC" +
+      "E_NOT_FOUND\020\003\022!\n\035ID_EXISTS_IN_MULTIPLE_M" +
+      "UTATES\020\007\022\035\n\031INCONSISTENT_FIELD_VALUES\020\010B" +
+      "\306\001\n\"com.google.ads.googleads.v0.errorsB\020" +
+      "MutateErrorProtoP\001ZDgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v0/error" +
+      "s;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0" +
+      ".Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
