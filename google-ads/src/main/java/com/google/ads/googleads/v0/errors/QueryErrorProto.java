@@ -30,7 +30,7 @@ public final class QueryErrorProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v0/errors/query_e" +
       "rror.proto\022\036google.ads.googleads.v0.erro" +
-      "rs\"\266\014\n\016QueryErrorEnum\"\243\014\n\nQueryError\022\017\n\013" +
+      "rs\"\344\014\n\016QueryErrorEnum\"\321\014\n\nQueryError\022\017\n\013" +
       "UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013QUERY_ERRO" +
       "R\0202\022\025\n\021BAD_ENUM_CONSTANT\020\022\022\027\n\023BAD_ESCAPE" +
       "_SEQUENCE\020\007\022\022\n\016BAD_FIELD_NAME\020\014\022\023\n\017BAD_L" +
@@ -58,24 +58,25 @@ public final class QueryErrorProto {
       "OHIBITED_FIELD_IN_WHERE_CLAUSE\020\030\022+\n\'PROH" +
       "IBITED_RESOURCE_TYPE_IN_FROM_CLAUSE\020+\022-\n" +
       ")PROHIBITED_RESOURCE_TYPE_IN_SELECT_CLAU" +
-      "SE\0200\022/\n+PROHIBITED_METRIC_IN_SELECT_OR_W" +
-      "HERE_CLAUSE\0201\0220\n,PROHIBITED_SEGMENT_IN_S" +
-      "ELECT_OR_WHERE_CLAUSE\0203\022<\n8PROHIBITED_SE" +
-      "GMENT_WITH_METRIC_IN_SELECT_OR_WHERE_CLA" +
-      "USE\0205\022\027\n\023LIMIT_VALUE_TOO_LOW\020\031\022 \n\034PROHIB" +
-      "ITED_NEWLINE_IN_STRING\020\010\022(\n$PROHIBITED_V" +
-      "ALUE_COMBINATION_IN_LIST\020\n\0226\n2PROHIBITED" +
-      "_VALUE_COMBINATION_WITH_BETWEEN_OPERATOR" +
-      "\020\025\022\031\n\025STRING_NOT_TERMINATED\020\006\022\025\n\021TOO_MAN" +
-      "Y_SEGMENTS\020\"\022\033\n\027UNEXPECTED_END_OF_QUERY\020" +
-      "\t\022\032\n\026UNEXPECTED_FROM_CLAUSE\020/\022\026\n\022UNRECOG" +
-      "NIZED_FIELD\020 \022\024\n\020UNEXPECTED_INPUT\020\013B\305\001\n\"" +
-      "com.google.ads.googleads.v0.errorsB\017Quer" +
-      "yErrorProtoP\001ZDgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v0/errors;err" +
-      "ors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Erro" +
-      "rs\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006pro" +
-      "to3"
+      "SE\0200\022,\n(PROHIBITED_RESOURCE_TYPE_IN_WHER" +
+      "E_CLAUSE\020:\022/\n+PROHIBITED_METRIC_IN_SELEC" +
+      "T_OR_WHERE_CLAUSE\0201\0220\n,PROHIBITED_SEGMEN" +
+      "T_IN_SELECT_OR_WHERE_CLAUSE\0203\022<\n8PROHIBI" +
+      "TED_SEGMENT_WITH_METRIC_IN_SELECT_OR_WHE" +
+      "RE_CLAUSE\0205\022\027\n\023LIMIT_VALUE_TOO_LOW\020\031\022 \n\034" +
+      "PROHIBITED_NEWLINE_IN_STRING\020\010\022(\n$PROHIB" +
+      "ITED_VALUE_COMBINATION_IN_LIST\020\n\0226\n2PROH" +
+      "IBITED_VALUE_COMBINATION_WITH_BETWEEN_OP" +
+      "ERATOR\020\025\022\031\n\025STRING_NOT_TERMINATED\020\006\022\025\n\021T" +
+      "OO_MANY_SEGMENTS\020\"\022\033\n\027UNEXPECTED_END_OF_" +
+      "QUERY\020\t\022\032\n\026UNEXPECTED_FROM_CLAUSE\020/\022\026\n\022U" +
+      "NRECOGNIZED_FIELD\020 \022\024\n\020UNEXPECTED_INPUT\020" +
+      "\013B\305\001\n\"com.google.ads.googleads.v0.errors" +
+      "B\017QueryErrorProtoP\001ZDgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v0/erro" +
+      "rs;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
+      "0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Error" +
+      "sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

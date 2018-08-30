@@ -21,9 +21,9 @@ import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
 import com.google.ads.googleads.v0.common.HotelCheckInDayInfo;
 import com.google.ads.googleads.v0.common.HotelLengthOfStayInfo;
+import com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.AdGroupBidModifier;
-import com.google.ads.googleads.v0.resources.AdGroupBidModifierName;
 import com.google.ads.googleads.v0.resources.AdGroupName;
 import com.google.ads.googleads.v0.services.AdGroupBidModifierOperation;
 import com.google.ads.googleads.v0.services.AdGroupBidModifierServiceClient;
@@ -38,18 +38,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This example shows how to add ad group bid modifiers to a hotel ad group.
- *
- * <p>Ad group bid modifiers based on hotel check-in day and hotel length of stay will be added.
- *
- * <p>For hotel check-in day, you need to specify the resource name, which includes the fixed
- * criterion ID of the check-in day you want to set. In addition, you don't call {@link
- * com.google.ads.googleads.v0.resources.AdGroupBidModifier.Builder#setAdGroup(StringValue)} to set
- * an ad group for this bid modifier type.
- *
- * <p>For hotel length of stay, you don't need to specify the resource name, but need to call {@link
- * com.google.ads.googleads.v0.resources.AdGroupBidModifier.Builder#setAdGroup(StringValue)} to set
- * an ad group instead.
+ * This example shows how to add ad group bid modifiers to a hotel ad group based on hotel check-in
+ * day and hotel length of stay.
  */
 public class AddHotelAdGroupBidModifiers {
 
@@ -60,14 +50,6 @@ public class AddHotelAdGroupBidModifiers {
 
     @Parameter(names = ArgumentNames.AD_GROUP_ID, required = true)
     private Long adGroupId;
-
-    /**
-     * The criterion ID for the bid modifier. Defaults to 60, which represents Monday. See the table
-     * of check-in days and criterion IDs at:
-     * https://developers.google.com/google-ads/api/docs/hotel-ads/create-ad-group-bid-modifier#hotelcheckindayinfo
-     */
-    @Parameter(names = ArgumentNames.CRITERION_ID)
-    private long criterionId = 60;
   }
 
   public static void main(String[] args) {
@@ -97,7 +79,7 @@ public class AddHotelAdGroupBidModifiers {
 
     try {
       new AddHotelAdGroupBidModifiers()
-          .runExample(googleAdsClient, params.customerId, params.adGroupId, params.criterionId);
+          .runExample(googleAdsClient, params.customerId, params.adGroupId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -119,29 +101,24 @@ public class AddHotelAdGroupBidModifiers {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param adGroupId the ID of the ad group.
-   * @param checkInDayCriterionId the criterion ID of the hotel check-in day to set a bid modifier
-   *     for
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient,
-      long customerId,
-      long adGroupId,
-      long checkInDayCriterionId) {
+  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
     List<AdGroupBidModifierOperation> operations = new ArrayList<>();
+
+    // Constructs the ad group resource name to use for each bid modifier.
+    String adGroupResourceName =
+        AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId));
 
     // 1) Creates an ad group bid modifier based on the hotel check-in day.
     AdGroupBidModifier checkInDayAdGroupBidModifier =
         AdGroupBidModifier.newBuilder()
             // Sets the resource name to the ad group resource name joined with the criterion ID
             // whose value corresponds to the desired check-in day.
-            .setResourceName(
-                AdGroupBidModifierName.format(
-                    Long.toString(customerId),
-                    String.format("%d_%d", adGroupId, checkInDayCriterionId)))
+            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setHotelCheckInDay(HotelCheckInDayInfo.newBuilder().setDayOfWeek(DayOfWeek.MONDAY))
             // Sets the bid modifier value to 150%.
             .setBidModifier(DoubleValue.of(1.5d))
-            .setHotelCheckInDay(HotelCheckInDayInfo.newBuilder().build())
             .build();
     operations.add(
         AdGroupBidModifierOperation.newBuilder().setCreate(checkInDayAdGroupBidModifier).build());
@@ -150,9 +127,7 @@ public class AddHotelAdGroupBidModifiers {
     AdGroupBidModifier lengthOfStayAdGroupBidModifier =
         AdGroupBidModifier.newBuilder()
             // Sets the ad group.
-            .setAdGroup(
-                StringValue.of(
-                    AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId))))
+            .setAdGroup(StringValue.of(adGroupResourceName))
             // Creates the hotel length of stay info.
             .setHotelLengthOfStay(
                 HotelLengthOfStayInfo.newBuilder()
@@ -173,7 +148,7 @@ public class AddHotelAdGroupBidModifiers {
               Long.toString(customerId), operations);
 
       // Print the resource names of the added ad group bid modifiers.
-      System.out.printf("Added %d hotel ad group bid modifiers: %d%n", response.getResultsCount());
+      System.out.printf("Added %d hotel ad group bid modifiers:%n", response.getResultsCount());
       for (MutateAdGroupBidModifierResult mutateAdGroupBidModifierResult :
           response.getResultsList()) {
         System.out.printf("  %s%n", mutateAdGroupBidModifierResult.getResourceName());

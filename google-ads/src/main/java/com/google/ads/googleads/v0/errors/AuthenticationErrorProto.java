@@ -30,8 +30,8 @@ public final class AuthenticationErrorProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v0/errors/authent" +
       "ication_error.proto\022\036google.ads.googlead" +
-      "s.v0.errors\"\300\004\n\027AuthenticationErrorEnum\"" +
-      "\244\004\n\023AuthenticationError\022\017\n\013UNSPECIFIED\020\000" +
+      "s.v0.errors\"\216\005\n\027AuthenticationErrorEnum\"" +
+      "\362\004\n\023AuthenticationError\022\017\n\013UNSPECIFIED\020\000" +
       "\022\013\n\007UNKNOWN\020\001\022\030\n\024AUTHENTICATION_ERROR\020\002\022" +
       "\036\n\032CLIENT_CUSTOMER_ID_INVALID\020\005\022\026\n\022CUSTO" +
       "MER_NOT_FOUND\020\010\022\032\n\026GOOGLE_ACCOUNT_DELETE" +
@@ -44,13 +44,15 @@ public final class AuthenticationErrorProto {
       "ISABLED\020\021\022\027\n\023OAUTH_TOKEN_REVOKED\020\022\022\036\n\032OA" +
       "UTH_TOKEN_HEADER_INVALID\020\023\022\030\n\024LOGIN_COOK" +
       "IE_INVALID\020\024\022#\n\037FAILED_TO_RETRIEVE_LOGIN" +
-      "_COOKIE\020\025\022\023\n\017USER_ID_INVALID\020\026B\316\001\n\"com.g" +
-      "oogle.ads.googleads.v0.errorsB\030Authentic" +
-      "ationErrorProtoP\001ZDgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v0/errors" +
-      ";errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0." +
-      "Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb" +
-      "\006proto3"
+      "_COOKIE\020\025\022\023\n\017USER_ID_INVALID\020\026\022&\n\"TWO_ST" +
+      "EP_VERIFICATION_NOT_ENROLLED\020\027\022$\n ADVANC" +
+      "ED_PROTECTION_NOT_ENROLLED\020\030B\316\001\n\"com.goo" +
+      "gle.ads.googleads.v0.errorsB\030Authenticat" +
+      "ionErrorProtoP\001ZDgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v0/errors;e" +
+      "rrors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Er" +
+      "rors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -49,13 +49,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
@@ -139,6 +132,13 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -156,6 +156,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.resources.CampaignBudgetProto.internal_static_google_ads_googleads_v0_resources_CampaignBudget_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.resources.CampaignBudgetProto.internal_static_google_ads_googleads_v0_resources_CampaignBudget_fieldAccessorTable
@@ -364,6 +365,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
    */
   public com.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus getStatus() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus result = com.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus.UNRECOGNIZED : result;
   }
@@ -392,6 +394,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v0.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
    */
   public com.google.ads.googleads.v0.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod getDeliveryMethod() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod result = com.google.ads.googleads.v0.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod.valueOf(deliveryMethod_);
     return result == null ? com.google.ads.googleads.v0.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod.UNRECOGNIZED : result;
   }
@@ -499,6 +502,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -508,6 +512,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getResourceNameBytes().isEmpty()) {
@@ -537,6 +542,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -730,6 +736,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -737,6 +744,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.resources.CampaignBudget prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -764,6 +772,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.resources.CampaignBudgetProto.internal_static_google_ads_googleads_v0_resources_CampaignBudget_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.resources.CampaignBudgetProto.internal_static_google_ads_googleads_v0_resources_CampaignBudget_fieldAccessorTable
@@ -786,6 +795,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       resourceName_ = "";
@@ -827,15 +837,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.resources.CampaignBudgetProto.internal_static_google_ads_googleads_v0_resources_CampaignBudget_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.resources.CampaignBudget getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.resources.CampaignBudget.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.resources.CampaignBudget build() {
       com.google.ads.googleads.v0.resources.CampaignBudget result = buildPartial();
       if (!result.isInitialized()) {
@@ -844,6 +857,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.resources.CampaignBudget buildPartial() {
       com.google.ads.googleads.v0.resources.CampaignBudget result = new com.google.ads.googleads.v0.resources.CampaignBudget(this);
       result.resourceName_ = resourceName_;
@@ -878,32 +892,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.resources.CampaignBudget) {
         return mergeFrom((com.google.ads.googleads.v0.resources.CampaignBudget)other);
@@ -945,10 +966,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1664,6 +1687,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus status = 6;</code>
      */
     public com.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus getStatus() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus result = com.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus.valueOf(status_);
       return result == null ? com.google.ads.googleads.v0.enums.BudgetStatusEnum.BudgetStatus.UNRECOGNIZED : result;
     }
@@ -1734,6 +1758,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod delivery_method = 7;</code>
      */
     public com.google.ads.googleads.v0.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod getDeliveryMethod() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod result = com.google.ads.googleads.v0.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod.valueOf(deliveryMethod_);
       return result == null ? com.google.ads.googleads.v0.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod.UNRECOGNIZED : result;
     }
@@ -2184,11 +2209,13 @@ private static final long serialVersionUID = 0L;
       }
       return referenceCountBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -2210,6 +2237,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<CampaignBudget>
       PARSER = new com.google.protobuf.AbstractParser<CampaignBudget>() {
+    @java.lang.Override
     public CampaignBudget parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2227,6 +2255,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.resources.CampaignBudget getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

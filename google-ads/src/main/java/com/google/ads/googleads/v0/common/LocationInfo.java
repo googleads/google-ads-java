@@ -35,6 +35,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -45,6 +46,19 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 10: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (geoTargetConstant_ != null) {
+              subBuilder = geoTargetConstant_.toBuilder();
+            }
+            geoTargetConstant_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(geoTargetConstant_);
+              geoTargetConstant_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -69,6 +83,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_LocationInfo_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_LocationInfo_fieldAccessorTable
@@ -76,7 +91,41 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v0.common.LocationInfo.class, com.google.ads.googleads.v0.common.LocationInfo.Builder.class);
   }
 
+  public static final int GEO_TARGET_CONSTANT_FIELD_NUMBER = 1;
+  private com.google.protobuf.StringValue geoTargetConstant_;
+  /**
+   * <pre>
+   * The geo target constant resource name.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   */
+  public boolean hasGeoTargetConstant() {
+    return geoTargetConstant_ != null;
+  }
+  /**
+   * <pre>
+   * The geo target constant resource name.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   */
+  public com.google.protobuf.StringValue getGeoTargetConstant() {
+    return geoTargetConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetConstant_;
+  }
+  /**
+   * <pre>
+   * The geo target constant resource name.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantOrBuilder() {
+    return getGeoTargetConstant();
+  }
+
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -86,16 +135,25 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (geoTargetConstant_ != null) {
+      output.writeMessage(1, getGeoTargetConstant());
+    }
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
 
     size = 0;
+    if (geoTargetConstant_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getGeoTargetConstant());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -112,6 +170,11 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v0.common.LocationInfo other = (com.google.ads.googleads.v0.common.LocationInfo) obj;
 
     boolean result = true;
+    result = result && (hasGeoTargetConstant() == other.hasGeoTargetConstant());
+    if (hasGeoTargetConstant()) {
+      result = result && getGeoTargetConstant()
+          .equals(other.getGeoTargetConstant());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -123,6 +186,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasGeoTargetConstant()) {
+      hash = (37 * hash) + GEO_TARGET_CONSTANT_FIELD_NUMBER;
+      hash = (53 * hash) + getGeoTargetConstant().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -198,6 +265,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -205,6 +273,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.common.LocationInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -232,6 +301,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_LocationInfo_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_LocationInfo_fieldAccessorTable
@@ -254,20 +324,30 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
+      if (geoTargetConstantBuilder_ == null) {
+        geoTargetConstant_ = null;
+      } else {
+        geoTargetConstant_ = null;
+        geoTargetConstantBuilder_ = null;
+      }
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_LocationInfo_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.common.LocationInfo getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.common.LocationInfo.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.common.LocationInfo build() {
       com.google.ads.googleads.v0.common.LocationInfo result = buildPartial();
       if (!result.isInitialized()) {
@@ -276,38 +356,51 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.common.LocationInfo buildPartial() {
       com.google.ads.googleads.v0.common.LocationInfo result = new com.google.ads.googleads.v0.common.LocationInfo(this);
+      if (geoTargetConstantBuilder_ == null) {
+        result.geoTargetConstant_ = geoTargetConstant_;
+      } else {
+        result.geoTargetConstant_ = geoTargetConstantBuilder_.build();
+      }
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.common.LocationInfo) {
         return mergeFrom((com.google.ads.googleads.v0.common.LocationInfo)other);
@@ -319,15 +412,20 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v0.common.LocationInfo other) {
       if (other == com.google.ads.googleads.v0.common.LocationInfo.getDefaultInstance()) return this;
+      if (other.hasGeoTargetConstant()) {
+        mergeGeoTargetConstant(other.getGeoTargetConstant());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -345,11 +443,166 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
+    private com.google.protobuf.StringValue geoTargetConstant_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetConstantBuilder_;
+    /**
+     * <pre>
+     * The geo target constant resource name.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     */
+    public boolean hasGeoTargetConstant() {
+      return geoTargetConstantBuilder_ != null || geoTargetConstant_ != null;
+    }
+    /**
+     * <pre>
+     * The geo target constant resource name.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     */
+    public com.google.protobuf.StringValue getGeoTargetConstant() {
+      if (geoTargetConstantBuilder_ == null) {
+        return geoTargetConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetConstant_;
+      } else {
+        return geoTargetConstantBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The geo target constant resource name.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     */
+    public Builder setGeoTargetConstant(com.google.protobuf.StringValue value) {
+      if (geoTargetConstantBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        geoTargetConstant_ = value;
+        onChanged();
+      } else {
+        geoTargetConstantBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The geo target constant resource name.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     */
+    public Builder setGeoTargetConstant(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (geoTargetConstantBuilder_ == null) {
+        geoTargetConstant_ = builderForValue.build();
+        onChanged();
+      } else {
+        geoTargetConstantBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The geo target constant resource name.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     */
+    public Builder mergeGeoTargetConstant(com.google.protobuf.StringValue value) {
+      if (geoTargetConstantBuilder_ == null) {
+        if (geoTargetConstant_ != null) {
+          geoTargetConstant_ =
+            com.google.protobuf.StringValue.newBuilder(geoTargetConstant_).mergeFrom(value).buildPartial();
+        } else {
+          geoTargetConstant_ = value;
+        }
+        onChanged();
+      } else {
+        geoTargetConstantBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The geo target constant resource name.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     */
+    public Builder clearGeoTargetConstant() {
+      if (geoTargetConstantBuilder_ == null) {
+        geoTargetConstant_ = null;
+        onChanged();
+      } else {
+        geoTargetConstant_ = null;
+        geoTargetConstantBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The geo target constant resource name.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getGeoTargetConstantBuilder() {
+      
+      onChanged();
+      return getGeoTargetConstantFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The geo target constant resource name.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantOrBuilder() {
+      if (geoTargetConstantBuilder_ != null) {
+        return geoTargetConstantBuilder_.getMessageOrBuilder();
+      } else {
+        return geoTargetConstant_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : geoTargetConstant_;
+      }
+    }
+    /**
+     * <pre>
+     * The geo target constant resource name.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getGeoTargetConstantFieldBuilder() {
+      if (geoTargetConstantBuilder_ == null) {
+        geoTargetConstantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getGeoTargetConstant(),
+                getParentForChildren(),
+                isClean());
+        geoTargetConstant_ = null;
+      }
+      return geoTargetConstantBuilder_;
+    }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -371,6 +624,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<LocationInfo>
       PARSER = new com.google.protobuf.AbstractParser<LocationInfo>() {
+    @java.lang.Override
     public LocationInfo parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -388,6 +642,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.common.LocationInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

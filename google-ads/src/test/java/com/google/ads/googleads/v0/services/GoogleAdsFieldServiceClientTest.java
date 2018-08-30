@@ -18,6 +18,9 @@ package com.google.ads.googleads.v0.services;
 import static com.google.ads.googleads.v0.services.GoogleAdsFieldServiceClient.SearchGoogleAdsFieldsPagedResponse;
 
 import com.google.ads.googleads.v0.resources.GoogleAdsField;
+import com.google.ads.googleads.v0.services.GetGoogleAdsFieldRequest;
+import com.google.ads.googleads.v0.services.SearchGoogleAdsFieldsRequest;
+import com.google.ads.googleads.v0.services.SearchGoogleAdsFieldsResponse;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -46,15 +49,20 @@ public class GoogleAdsFieldServiceClientTest {
   private static MockAdGroupCriterionService mockAdGroupCriterionService;
   private static MockAdGroupService mockAdGroupService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
+  private static MockCampaignBidModifierService mockCampaignBidModifierService;
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
+  private static MockCampaignGroupService mockCampaignGroupService;
   private static MockCampaignService mockCampaignService;
+  private static MockCampaignSharedSetService mockCampaignSharedSetService;
   private static MockCustomerService mockCustomerService;
   private static MockGeoTargetConstantService mockGeoTargetConstantService;
   private static MockGoogleAdsFieldService mockGoogleAdsFieldService;
   private static MockGoogleAdsService mockGoogleAdsService;
   private static MockKeywordViewService mockKeywordViewService;
   private static MockRecommendationService mockRecommendationService;
+  private static MockSharedCriterionService mockSharedCriterionService;
+  private static MockSharedSetService mockSharedSetService;
   private static MockServiceHelper serviceHelper;
   private GoogleAdsFieldServiceClient client;
   private LocalChannelProvider channelProvider;
@@ -66,15 +74,20 @@ public class GoogleAdsFieldServiceClientTest {
     mockAdGroupCriterionService = new MockAdGroupCriterionService();
     mockAdGroupService = new MockAdGroupService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
+    mockCampaignBidModifierService = new MockCampaignBidModifierService();
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
+    mockCampaignGroupService = new MockCampaignGroupService();
     mockCampaignService = new MockCampaignService();
+    mockCampaignSharedSetService = new MockCampaignSharedSetService();
     mockCustomerService = new MockCustomerService();
     mockGeoTargetConstantService = new MockGeoTargetConstantService();
     mockGoogleAdsFieldService = new MockGoogleAdsFieldService();
     mockGoogleAdsService = new MockGoogleAdsService();
     mockKeywordViewService = new MockKeywordViewService();
     mockRecommendationService = new MockRecommendationService();
+    mockSharedCriterionService = new MockSharedCriterionService();
+    mockSharedSetService = new MockSharedSetService();
     serviceHelper =
         new MockServiceHelper(
             "in-process-1",
@@ -84,15 +97,20 @@ public class GoogleAdsFieldServiceClientTest {
                 mockAdGroupCriterionService,
                 mockAdGroupService,
                 mockBiddingStrategyService,
+                mockCampaignBidModifierService,
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
+                mockCampaignGroupService,
                 mockCampaignService,
+                mockCampaignSharedSetService,
                 mockCustomerService,
                 mockGeoTargetConstantService,
                 mockGoogleAdsFieldService,
                 mockGoogleAdsService,
                 mockKeywordViewService,
-                mockRecommendationService));
+                mockRecommendationService,
+                mockSharedCriterionService,
+                mockSharedSetService));
     serviceHelper.start();
   }
 

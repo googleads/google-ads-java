@@ -69,6 +69,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.AuthorizationErrorProto.internal_static_google_ads_googleads_v0_errors_AuthorizationErrorEnum_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.errors.AuthorizationErrorProto.internal_static_google_ads_googleads_v0_errors_AuthorizationErrorEnum_fieldAccessorTable
@@ -142,6 +143,23 @@ private static final long serialVersionUID = 0L;
      * <code>AUTHORIZATION_ERROR = 6;</code>
      */
     AUTHORIZATION_ERROR(6),
+    /**
+     * <pre>
+     * The user does not have permission to perform this action
+     * (e.g., ADD, UPDATE, REMOVE) on the resource or call a method.
+     * </pre>
+     *
+     * <code>ACTION_NOT_PERMITTED = 7;</code>
+     */
+    ACTION_NOT_PERMITTED(7),
+    /**
+     * <pre>
+     * Signup not complete.
+     * </pre>
+     *
+     * <code>INCOMPLETE_SIGNUP = 8;</code>
+     */
+    INCOMPLETE_SIGNUP(8),
     UNRECOGNIZED(-1),
     ;
 
@@ -202,6 +220,23 @@ private static final long serialVersionUID = 0L;
      * <code>AUTHORIZATION_ERROR = 6;</code>
      */
     public static final int AUTHORIZATION_ERROR_VALUE = 6;
+    /**
+     * <pre>
+     * The user does not have permission to perform this action
+     * (e.g., ADD, UPDATE, REMOVE) on the resource or call a method.
+     * </pre>
+     *
+     * <code>ACTION_NOT_PERMITTED = 7;</code>
+     */
+    public static final int ACTION_NOT_PERMITTED_VALUE = 7;
+    /**
+     * <pre>
+     * Signup not complete.
+     * </pre>
+     *
+     * <code>INCOMPLETE_SIGNUP = 8;</code>
+     */
+    public static final int INCOMPLETE_SIGNUP_VALUE = 8;
 
 
     public final int getNumber() {
@@ -229,6 +264,8 @@ private static final long serialVersionUID = 0L;
         case 4: return DEVELOPER_TOKEN_PROHIBITED;
         case 5: return PROJECT_DISABLED;
         case 6: return AUTHORIZATION_ERROR;
+        case 7: return ACTION_NOT_PERMITTED;
+        case 8: return INCOMPLETE_SIGNUP;
         default: return null;
       }
     }
@@ -282,6 +319,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -291,11 +329,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -403,6 +443,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -410,6 +451,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.errors.AuthorizationErrorEnum prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -437,6 +479,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.errors.AuthorizationErrorProto.internal_static_google_ads_googleads_v0_errors_AuthorizationErrorEnum_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.errors.AuthorizationErrorProto.internal_static_google_ads_googleads_v0_errors_AuthorizationErrorEnum_fieldAccessorTable
@@ -459,20 +502,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.errors.AuthorizationErrorProto.internal_static_google_ads_googleads_v0_errors_AuthorizationErrorEnum_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.errors.AuthorizationErrorEnum getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.errors.AuthorizationErrorEnum.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.errors.AuthorizationErrorEnum build() {
       com.google.ads.googleads.v0.errors.AuthorizationErrorEnum result = buildPartial();
       if (!result.isInitialized()) {
@@ -481,38 +528,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.errors.AuthorizationErrorEnum buildPartial() {
       com.google.ads.googleads.v0.errors.AuthorizationErrorEnum result = new com.google.ads.googleads.v0.errors.AuthorizationErrorEnum(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.errors.AuthorizationErrorEnum) {
         return mergeFrom((com.google.ads.googleads.v0.errors.AuthorizationErrorEnum)other);
@@ -529,10 +584,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -550,11 +607,13 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -576,6 +635,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<AuthorizationErrorEnum>
       PARSER = new com.google.protobuf.AbstractParser<AuthorizationErrorEnum>() {
+    @java.lang.Override
     public AuthorizationErrorEnum parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -593,6 +653,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.errors.AuthorizationErrorEnum getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

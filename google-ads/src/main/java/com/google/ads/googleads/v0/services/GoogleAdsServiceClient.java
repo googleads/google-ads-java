@@ -15,8 +15,9 @@
  */
 package com.google.ads.googleads.v0.services;
 
-import com.google.ads.googleads.v0.services.stub.GoogleAdsServiceStub;
-import com.google.ads.googleads.v0.services.stub.GoogleAdsServiceStubSettings;
+import com.google.ads.googleads.v0.services.GoogleAdsRow;
+import com.google.ads.googleads.v0.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v0.services.SearchGoogleAdsResponse;
 import com.google.api.core.ApiFunction;
 import com.google.api.core.ApiFuture;
 import com.google.api.core.ApiFutures;
@@ -27,6 +28,8 @@ import com.google.api.gax.paging.AbstractPage;
 import com.google.api.gax.paging.AbstractPagedListResponse;
 import com.google.api.gax.rpc.PageContext;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.ads.googleads.v0.services.stub.GoogleAdsServiceStub;
+import com.google.ads.googleads.v0.services.stub.GoogleAdsServiceStubSettings;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;

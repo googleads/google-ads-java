@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private AdGroupBidModifier() {
     resourceName_ = "";
+    bidModifierSource_ = 0;
   }
 
   @java.lang.Override
@@ -47,13 +48,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
@@ -155,6 +149,46 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 8;
             break;
           }
+          case 74: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (baseAdGroup_ != null) {
+              subBuilder = baseAdGroup_.toBuilder();
+            }
+            baseAdGroup_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(baseAdGroup_);
+              baseAdGroup_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 80: {
+            int rawValue = input.readEnum();
+
+            bidModifierSource_ = rawValue;
+            break;
+          }
+          case 90: {
+            com.google.ads.googleads.v0.common.DeviceInfo.Builder subBuilder = null;
+            if (criterionCase_ == 11) {
+              subBuilder = ((com.google.ads.googleads.v0.common.DeviceInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.DeviceInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.DeviceInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 11;
+            break;
+          }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -172,6 +206,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.resources.AdGroupBidModifierProto.internal_static_google_ads_googleads_v0_resources_AdGroupBidModifier_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.resources.AdGroupBidModifierProto.internal_static_google_ads_googleads_v0_resources_AdGroupBidModifier_fieldAccessorTable
@@ -187,6 +222,7 @@ private static final long serialVersionUID = 0L;
     HOTEL_ADVANCE_BOOKING_WINDOW(6),
     HOTEL_LENGTH_OF_STAY(7),
     HOTEL_CHECK_IN_DAY(8),
+    DEVICE(11),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -206,6 +242,7 @@ private static final long serialVersionUID = 0L;
         case 6: return HOTEL_ADVANCE_BOOKING_WINDOW;
         case 7: return HOTEL_LENGTH_OF_STAY;
         case 8: return HOTEL_CHECK_IN_DAY;
+        case 11: return DEVICE;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -372,6 +409,76 @@ private static final long serialVersionUID = 0L;
     return getBidModifier();
   }
 
+  public static final int BASE_AD_GROUP_FIELD_NUMBER = 9;
+  private com.google.protobuf.StringValue baseAdGroup_;
+  /**
+   * <pre>
+   * The base ad group from which this draft/trial adgroup bid modifier was
+   * created. If ad_group is a base ad group then this field will be equal to
+   * ad_group. If the ad group was created in the draft or trial and has no
+   * corresponding base ad group, then this field will be null.
+   * This field is readonly.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+   */
+  public boolean hasBaseAdGroup() {
+    return baseAdGroup_ != null;
+  }
+  /**
+   * <pre>
+   * The base ad group from which this draft/trial adgroup bid modifier was
+   * created. If ad_group is a base ad group then this field will be equal to
+   * ad_group. If the ad group was created in the draft or trial and has no
+   * corresponding base ad group, then this field will be null.
+   * This field is readonly.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+   */
+  public com.google.protobuf.StringValue getBaseAdGroup() {
+    return baseAdGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : baseAdGroup_;
+  }
+  /**
+   * <pre>
+   * The base ad group from which this draft/trial adgroup bid modifier was
+   * created. If ad_group is a base ad group then this field will be equal to
+   * ad_group. If the ad group was created in the draft or trial and has no
+   * corresponding base ad group, then this field will be null.
+   * This field is readonly.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder() {
+    return getBaseAdGroup();
+  }
+
+  public static final int BID_MODIFIER_SOURCE_FIELD_NUMBER = 10;
+  private int bidModifierSource_;
+  /**
+   * <pre>
+   * Bid modifier source.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+   */
+  public int getBidModifierSourceValue() {
+    return bidModifierSource_;
+  }
+  /**
+   * <pre>
+   * Bid modifier source.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+   */
+  public com.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource getBidModifierSource() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource result = com.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource.valueOf(bidModifierSource_);
+    return result == null ? com.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource.UNRECOGNIZED : result;
+  }
+
   public static final int HOTEL_DATE_SELECTION_TYPE_FIELD_NUMBER = 5;
   /**
    * <pre>
@@ -524,7 +631,46 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.HotelCheckInDayInfo.getDefaultInstance();
   }
 
+  public static final int DEVICE_FIELD_NUMBER = 11;
+  /**
+   * <pre>
+   * A device criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+   */
+  public boolean hasDevice() {
+    return criterionCase_ == 11;
+  }
+  /**
+   * <pre>
+   * A device criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+   */
+  public com.google.ads.googleads.v0.common.DeviceInfo getDevice() {
+    if (criterionCase_ == 11) {
+       return (com.google.ads.googleads.v0.common.DeviceInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.DeviceInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A device criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+   */
+  public com.google.ads.googleads.v0.common.DeviceInfoOrBuilder getDeviceOrBuilder() {
+    if (criterionCase_ == 11) {
+       return (com.google.ads.googleads.v0.common.DeviceInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.DeviceInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -534,6 +680,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getResourceNameBytes().isEmpty()) {
@@ -560,9 +707,19 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 8) {
       output.writeMessage(8, (com.google.ads.googleads.v0.common.HotelCheckInDayInfo) criterion_);
     }
+    if (baseAdGroup_ != null) {
+      output.writeMessage(9, getBaseAdGroup());
+    }
+    if (bidModifierSource_ != com.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource.UNSPECIFIED.getNumber()) {
+      output.writeEnum(10, bidModifierSource_);
+    }
+    if (criterionCase_ == 11) {
+      output.writeMessage(11, (com.google.ads.googleads.v0.common.DeviceInfo) criterion_);
+    }
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -599,6 +756,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, (com.google.ads.googleads.v0.common.HotelCheckInDayInfo) criterion_);
     }
+    if (baseAdGroup_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getBaseAdGroup());
+    }
+    if (bidModifierSource_ != com.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(10, bidModifierSource_);
+    }
+    if (criterionCase_ == 11) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, (com.google.ads.googleads.v0.common.DeviceInfo) criterion_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -632,6 +801,12 @@ private static final long serialVersionUID = 0L;
       result = result && getBidModifier()
           .equals(other.getBidModifier());
     }
+    result = result && (hasBaseAdGroup() == other.hasBaseAdGroup());
+    if (hasBaseAdGroup()) {
+      result = result && getBaseAdGroup()
+          .equals(other.getBaseAdGroup());
+    }
+    result = result && bidModifierSource_ == other.bidModifierSource_;
     result = result && getCriterionCase().equals(
         other.getCriterionCase());
     if (!result) return false;
@@ -651,6 +826,10 @@ private static final long serialVersionUID = 0L;
       case 8:
         result = result && getHotelCheckInDay()
             .equals(other.getHotelCheckInDay());
+        break;
+      case 11:
+        result = result && getDevice()
+            .equals(other.getDevice());
         break;
       case 0:
       default:
@@ -680,6 +859,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BID_MODIFIER_FIELD_NUMBER;
       hash = (53 * hash) + getBidModifier().hashCode();
     }
+    if (hasBaseAdGroup()) {
+      hash = (37 * hash) + BASE_AD_GROUP_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseAdGroup().hashCode();
+    }
+    hash = (37 * hash) + BID_MODIFIER_SOURCE_FIELD_NUMBER;
+    hash = (53 * hash) + bidModifierSource_;
     switch (criterionCase_) {
       case 5:
         hash = (37 * hash) + HOTEL_DATE_SELECTION_TYPE_FIELD_NUMBER;
@@ -696,6 +881,10 @@ private static final long serialVersionUID = 0L;
       case 8:
         hash = (37 * hash) + HOTEL_CHECK_IN_DAY_FIELD_NUMBER;
         hash = (53 * hash) + getHotelCheckInDay().hashCode();
+        break;
+      case 11:
+        hash = (37 * hash) + DEVICE_FIELD_NUMBER;
+        hash = (53 * hash) + getDevice().hashCode();
         break;
       case 0:
       default:
@@ -775,6 +964,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -782,6 +972,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.resources.AdGroupBidModifier prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -809,6 +1000,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.resources.AdGroupBidModifierProto.internal_static_google_ads_googleads_v0_resources_AdGroupBidModifier_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.resources.AdGroupBidModifierProto.internal_static_google_ads_googleads_v0_resources_AdGroupBidModifier_fieldAccessorTable
@@ -831,6 +1023,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       resourceName_ = "";
@@ -853,20 +1046,31 @@ private static final long serialVersionUID = 0L;
         bidModifier_ = null;
         bidModifierBuilder_ = null;
       }
+      if (baseAdGroupBuilder_ == null) {
+        baseAdGroup_ = null;
+      } else {
+        baseAdGroup_ = null;
+        baseAdGroupBuilder_ = null;
+      }
+      bidModifierSource_ = 0;
+
       criterionCase_ = 0;
       criterion_ = null;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.resources.AdGroupBidModifierProto.internal_static_google_ads_googleads_v0_resources_AdGroupBidModifier_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.resources.AdGroupBidModifier getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.resources.AdGroupBidModifier.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.resources.AdGroupBidModifier build() {
       com.google.ads.googleads.v0.resources.AdGroupBidModifier result = buildPartial();
       if (!result.isInitialized()) {
@@ -875,6 +1079,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.resources.AdGroupBidModifier buildPartial() {
       com.google.ads.googleads.v0.resources.AdGroupBidModifier result = new com.google.ads.googleads.v0.resources.AdGroupBidModifier(this);
       result.resourceName_ = resourceName_;
@@ -893,6 +1098,12 @@ private static final long serialVersionUID = 0L;
       } else {
         result.bidModifier_ = bidModifierBuilder_.build();
       }
+      if (baseAdGroupBuilder_ == null) {
+        result.baseAdGroup_ = baseAdGroup_;
+      } else {
+        result.baseAdGroup_ = baseAdGroupBuilder_.build();
+      }
+      result.bidModifierSource_ = bidModifierSource_;
       if (criterionCase_ == 5) {
         if (hotelDateSelectionTypeBuilder_ == null) {
           result.criterion_ = criterion_;
@@ -921,37 +1132,51 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = hotelCheckInDayBuilder_.build();
         }
       }
+      if (criterionCase_ == 11) {
+        if (deviceBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = deviceBuilder_.build();
+        }
+      }
       result.criterionCase_ = criterionCase_;
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.resources.AdGroupBidModifier) {
         return mergeFrom((com.google.ads.googleads.v0.resources.AdGroupBidModifier)other);
@@ -976,6 +1201,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasBidModifier()) {
         mergeBidModifier(other.getBidModifier());
       }
+      if (other.hasBaseAdGroup()) {
+        mergeBaseAdGroup(other.getBaseAdGroup());
+      }
+      if (other.bidModifierSource_ != 0) {
+        setBidModifierSourceValue(other.getBidModifierSourceValue());
+      }
       switch (other.getCriterionCase()) {
         case HOTEL_DATE_SELECTION_TYPE: {
           mergeHotelDateSelectionType(other.getHotelDateSelectionType());
@@ -993,6 +1224,10 @@ private static final long serialVersionUID = 0L;
           mergeHotelCheckInDay(other.getHotelCheckInDay());
           break;
         }
+        case DEVICE: {
+          mergeDevice(other.getDevice());
+          break;
+        }
         case CRITERION_NOT_SET: {
           break;
         }
@@ -1002,10 +1237,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1613,6 +1850,260 @@ private static final long serialVersionUID = 0L;
         bidModifier_ = null;
       }
       return bidModifierBuilder_;
+    }
+
+    private com.google.protobuf.StringValue baseAdGroup_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> baseAdGroupBuilder_;
+    /**
+     * <pre>
+     * The base ad group from which this draft/trial adgroup bid modifier was
+     * created. If ad_group is a base ad group then this field will be equal to
+     * ad_group. If the ad group was created in the draft or trial and has no
+     * corresponding base ad group, then this field will be null.
+     * This field is readonly.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     */
+    public boolean hasBaseAdGroup() {
+      return baseAdGroupBuilder_ != null || baseAdGroup_ != null;
+    }
+    /**
+     * <pre>
+     * The base ad group from which this draft/trial adgroup bid modifier was
+     * created. If ad_group is a base ad group then this field will be equal to
+     * ad_group. If the ad group was created in the draft or trial and has no
+     * corresponding base ad group, then this field will be null.
+     * This field is readonly.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     */
+    public com.google.protobuf.StringValue getBaseAdGroup() {
+      if (baseAdGroupBuilder_ == null) {
+        return baseAdGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : baseAdGroup_;
+      } else {
+        return baseAdGroupBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The base ad group from which this draft/trial adgroup bid modifier was
+     * created. If ad_group is a base ad group then this field will be equal to
+     * ad_group. If the ad group was created in the draft or trial and has no
+     * corresponding base ad group, then this field will be null.
+     * This field is readonly.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     */
+    public Builder setBaseAdGroup(com.google.protobuf.StringValue value) {
+      if (baseAdGroupBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        baseAdGroup_ = value;
+        onChanged();
+      } else {
+        baseAdGroupBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The base ad group from which this draft/trial adgroup bid modifier was
+     * created. If ad_group is a base ad group then this field will be equal to
+     * ad_group. If the ad group was created in the draft or trial and has no
+     * corresponding base ad group, then this field will be null.
+     * This field is readonly.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     */
+    public Builder setBaseAdGroup(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (baseAdGroupBuilder_ == null) {
+        baseAdGroup_ = builderForValue.build();
+        onChanged();
+      } else {
+        baseAdGroupBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The base ad group from which this draft/trial adgroup bid modifier was
+     * created. If ad_group is a base ad group then this field will be equal to
+     * ad_group. If the ad group was created in the draft or trial and has no
+     * corresponding base ad group, then this field will be null.
+     * This field is readonly.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     */
+    public Builder mergeBaseAdGroup(com.google.protobuf.StringValue value) {
+      if (baseAdGroupBuilder_ == null) {
+        if (baseAdGroup_ != null) {
+          baseAdGroup_ =
+            com.google.protobuf.StringValue.newBuilder(baseAdGroup_).mergeFrom(value).buildPartial();
+        } else {
+          baseAdGroup_ = value;
+        }
+        onChanged();
+      } else {
+        baseAdGroupBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The base ad group from which this draft/trial adgroup bid modifier was
+     * created. If ad_group is a base ad group then this field will be equal to
+     * ad_group. If the ad group was created in the draft or trial and has no
+     * corresponding base ad group, then this field will be null.
+     * This field is readonly.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     */
+    public Builder clearBaseAdGroup() {
+      if (baseAdGroupBuilder_ == null) {
+        baseAdGroup_ = null;
+        onChanged();
+      } else {
+        baseAdGroup_ = null;
+        baseAdGroupBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The base ad group from which this draft/trial adgroup bid modifier was
+     * created. If ad_group is a base ad group then this field will be equal to
+     * ad_group. If the ad group was created in the draft or trial and has no
+     * corresponding base ad group, then this field will be null.
+     * This field is readonly.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getBaseAdGroupBuilder() {
+      
+      onChanged();
+      return getBaseAdGroupFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The base ad group from which this draft/trial adgroup bid modifier was
+     * created. If ad_group is a base ad group then this field will be equal to
+     * ad_group. If the ad group was created in the draft or trial and has no
+     * corresponding base ad group, then this field will be null.
+     * This field is readonly.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder() {
+      if (baseAdGroupBuilder_ != null) {
+        return baseAdGroupBuilder_.getMessageOrBuilder();
+      } else {
+        return baseAdGroup_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : baseAdGroup_;
+      }
+    }
+    /**
+     * <pre>
+     * The base ad group from which this draft/trial adgroup bid modifier was
+     * created. If ad_group is a base ad group then this field will be equal to
+     * ad_group. If the ad group was created in the draft or trial and has no
+     * corresponding base ad group, then this field will be null.
+     * This field is readonly.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getBaseAdGroupFieldBuilder() {
+      if (baseAdGroupBuilder_ == null) {
+        baseAdGroupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getBaseAdGroup(),
+                getParentForChildren(),
+                isClean());
+        baseAdGroup_ = null;
+      }
+      return baseAdGroupBuilder_;
+    }
+
+    private int bidModifierSource_ = 0;
+    /**
+     * <pre>
+     * Bid modifier source.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+     */
+    public int getBidModifierSourceValue() {
+      return bidModifierSource_;
+    }
+    /**
+     * <pre>
+     * Bid modifier source.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+     */
+    public Builder setBidModifierSourceValue(int value) {
+      bidModifierSource_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Bid modifier source.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+     */
+    public com.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource getBidModifierSource() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource result = com.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource.valueOf(bidModifierSource_);
+      return result == null ? com.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Bid modifier source.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+     */
+    public Builder setBidModifierSource(com.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      bidModifierSource_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Bid modifier source.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+     */
+    public Builder clearBidModifierSource() {
+      
+      bidModifierSource_ = 0;
+      onChanged();
+      return this;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -2302,11 +2793,185 @@ private static final long serialVersionUID = 0L;
       onChanged();;
       return hotelCheckInDayBuilder_;
     }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.DeviceInfo, com.google.ads.googleads.v0.common.DeviceInfo.Builder, com.google.ads.googleads.v0.common.DeviceInfoOrBuilder> deviceBuilder_;
+    /**
+     * <pre>
+     * A device criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+     */
+    public boolean hasDevice() {
+      return criterionCase_ == 11;
+    }
+    /**
+     * <pre>
+     * A device criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+     */
+    public com.google.ads.googleads.v0.common.DeviceInfo getDevice() {
+      if (deviceBuilder_ == null) {
+        if (criterionCase_ == 11) {
+          return (com.google.ads.googleads.v0.common.DeviceInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.DeviceInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 11) {
+          return deviceBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.DeviceInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A device criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+     */
+    public Builder setDevice(com.google.ads.googleads.v0.common.DeviceInfo value) {
+      if (deviceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        deviceBuilder_.setMessage(value);
+      }
+      criterionCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * A device criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+     */
+    public Builder setDevice(
+        com.google.ads.googleads.v0.common.DeviceInfo.Builder builderForValue) {
+      if (deviceBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        deviceBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * A device criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+     */
+    public Builder mergeDevice(com.google.ads.googleads.v0.common.DeviceInfo value) {
+      if (deviceBuilder_ == null) {
+        if (criterionCase_ == 11 &&
+            criterion_ != com.google.ads.googleads.v0.common.DeviceInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.DeviceInfo.newBuilder((com.google.ads.googleads.v0.common.DeviceInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 11) {
+          deviceBuilder_.mergeFrom(value);
+        }
+        deviceBuilder_.setMessage(value);
+      }
+      criterionCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * A device criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+     */
+    public Builder clearDevice() {
+      if (deviceBuilder_ == null) {
+        if (criterionCase_ == 11) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 11) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        deviceBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A device criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+     */
+    public com.google.ads.googleads.v0.common.DeviceInfo.Builder getDeviceBuilder() {
+      return getDeviceFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A device criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+     */
+    public com.google.ads.googleads.v0.common.DeviceInfoOrBuilder getDeviceOrBuilder() {
+      if ((criterionCase_ == 11) && (deviceBuilder_ != null)) {
+        return deviceBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 11) {
+          return (com.google.ads.googleads.v0.common.DeviceInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.DeviceInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A device criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.DeviceInfo, com.google.ads.googleads.v0.common.DeviceInfo.Builder, com.google.ads.googleads.v0.common.DeviceInfoOrBuilder> 
+        getDeviceFieldBuilder() {
+      if (deviceBuilder_ == null) {
+        if (!(criterionCase_ == 11)) {
+          criterion_ = com.google.ads.googleads.v0.common.DeviceInfo.getDefaultInstance();
+        }
+        deviceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.DeviceInfo, com.google.ads.googleads.v0.common.DeviceInfo.Builder, com.google.ads.googleads.v0.common.DeviceInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.DeviceInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 11;
+      onChanged();;
+      return deviceBuilder_;
+    }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -2328,6 +2993,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<AdGroupBidModifier>
       PARSER = new com.google.protobuf.AbstractParser<AdGroupBidModifier>() {
+    @java.lang.Override
     public AdGroupBidModifier parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2345,6 +3011,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.resources.AdGroupBidModifier getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

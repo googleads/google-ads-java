@@ -30,16 +30,18 @@ public final class AdvertisingChannelSubTypeProto {
     java.lang.String[] descriptorData = {
       "\n@google/ads/googleads/v0/enums/advertis" +
       "ing_channel_sub_type.proto\022\035google.ads.g" +
-      "oogleads.v0.enums\"\205\001\n\035AdvertisingChannel" +
-      "SubTypeEnum\"d\n\031AdvertisingChannelSubType" +
-      "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\025\n\021SEARCH" +
-      "_MOBILE_APP\020\002\022\022\n\016SEARCH_EXPRESS\020\004B\317\001\n!co" +
-      "m.google.ads.googleads.v0.enumsB\036Adverti" +
-      "singChannelSubTypeProtoP\001ZBgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "0/enums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleA" +
-      "ds.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\En" +
-      "umsb\006proto3"
+      "oogleads.v0.enums\"\313\001\n\035AdvertisingChannel" +
+      "SubTypeEnum\"\251\001\n\031AdvertisingChannelSubTyp" +
+      "e\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\025\n\021SEARC" +
+      "H_MOBILE_APP\020\002\022\026\n\022DISPLAY_MOBILE_APP\020\003\022\022" +
+      "\n\016SEARCH_EXPRESS\020\004\022\023\n\017DISPLAY_EXPRESS\020\005\022" +
+      "\026\n\022SHOPPING_SMART_ADS\020\006B\317\001\n!com.google.a" +
+      "ds.googleads.v0.enumsB\036AdvertisingChanne" +
+      "lSubTypeProtoP\001ZBgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v0/enums;en" +
+      "ums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enum" +
+      "s\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

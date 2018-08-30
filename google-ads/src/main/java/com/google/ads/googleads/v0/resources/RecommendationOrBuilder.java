@@ -115,7 +115,9 @@ public interface RecommendationOrBuilder extends
    * the recommendation affects a single campaign.
    * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
-   * KEYWORD, TEXT_AD, TARGET_CPA_OPT_IN
+   * ENHANCED_CPC_OPT_IN, KEYWORD, MAXIMIZE_CLICKS_OPT_IN,
+   * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION, SEARCH_PARTNERS_OPT_IN,
+   * TARGET_CPA_OPT_IN, TEXT_AD
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 6;</code>
@@ -127,7 +129,9 @@ public interface RecommendationOrBuilder extends
    * the recommendation affects a single campaign.
    * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
-   * KEYWORD, TEXT_AD, TARGET_CPA_OPT_IN
+   * ENHANCED_CPC_OPT_IN, KEYWORD, MAXIMIZE_CLICKS_OPT_IN,
+   * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION, SEARCH_PARTNERS_OPT_IN,
+   * TARGET_CPA_OPT_IN, TEXT_AD
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 6;</code>
@@ -139,7 +143,9 @@ public interface RecommendationOrBuilder extends
    * the recommendation affects a single campaign.
    * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
-   * KEYWORD, TEXT_AD, TARGET_CPA_OPT_IN
+   * ENHANCED_CPC_OPT_IN, KEYWORD, MAXIMIZE_CLICKS_OPT_IN,
+   * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION, SEARCH_PARTNERS_OPT_IN,
+   * TARGET_CPA_OPT_IN, TEXT_AD
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 6;</code>
@@ -152,7 +158,7 @@ public interface RecommendationOrBuilder extends
    * the recommendation affects a single ad group.
    * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
-   * KEYWORD, TEXT_AD
+   * KEYWORD, OPTIMIZE_AD_ROTATION, TEXT_AD
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 7;</code>
@@ -164,7 +170,7 @@ public interface RecommendationOrBuilder extends
    * the recommendation affects a single ad group.
    * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
-   * KEYWORD, TEXT_AD
+   * KEYWORD, OPTIMIZE_AD_ROTATION, TEXT_AD
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 7;</code>
@@ -176,12 +182,37 @@ public interface RecommendationOrBuilder extends
    * the recommendation affects a single ad group.
    * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
-   * KEYWORD, TEXT_AD
+   * KEYWORD, OPTIMIZE_AD_ROTATION, TEXT_AD
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 7;</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder();
+
+  /**
+   * <pre>
+   * Whether the recommendation is dismissed or not.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue dismissed = 13;</code>
+   */
+  boolean hasDismissed();
+  /**
+   * <pre>
+   * Whether the recommendation is dismissed or not.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue dismissed = 13;</code>
+   */
+  com.google.protobuf.BoolValue getDismissed();
+  /**
+   * <pre>
+   * Whether the recommendation is dismissed or not.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue dismissed = 13;</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getDismissedOrBuilder();
 
   /**
    * <pre>
@@ -282,6 +313,131 @@ public interface RecommendationOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.Recommendation.TargetCpaOptInRecommendation target_cpa_opt_in_recommendation = 10;</code>
    */
   com.google.ads.googleads.v0.resources.Recommendation.TargetCpaOptInRecommendationOrBuilder getTargetCpaOptInRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * The MaximizeConversions Opt-In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.MaximizeConversionsOptInRecommendation maximize_conversions_opt_in_recommendation = 11;</code>
+   */
+  boolean hasMaximizeConversionsOptInRecommendation();
+  /**
+   * <pre>
+   * The MaximizeConversions Opt-In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.MaximizeConversionsOptInRecommendation maximize_conversions_opt_in_recommendation = 11;</code>
+   */
+  com.google.ads.googleads.v0.resources.Recommendation.MaximizeConversionsOptInRecommendation getMaximizeConversionsOptInRecommendation();
+  /**
+   * <pre>
+   * The MaximizeConversions Opt-In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.MaximizeConversionsOptInRecommendation maximize_conversions_opt_in_recommendation = 11;</code>
+   */
+  com.google.ads.googleads.v0.resources.Recommendation.MaximizeConversionsOptInRecommendationOrBuilder getMaximizeConversionsOptInRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * The Enhanced Cost-Per-Click Opt-In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.EnhancedCpcOptInRecommendation enhanced_cpc_opt_in_recommendation = 12;</code>
+   */
+  boolean hasEnhancedCpcOptInRecommendation();
+  /**
+   * <pre>
+   * The Enhanced Cost-Per-Click Opt-In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.EnhancedCpcOptInRecommendation enhanced_cpc_opt_in_recommendation = 12;</code>
+   */
+  com.google.ads.googleads.v0.resources.Recommendation.EnhancedCpcOptInRecommendation getEnhancedCpcOptInRecommendation();
+  /**
+   * <pre>
+   * The Enhanced Cost-Per-Click Opt-In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.EnhancedCpcOptInRecommendation enhanced_cpc_opt_in_recommendation = 12;</code>
+   */
+  com.google.ads.googleads.v0.resources.Recommendation.EnhancedCpcOptInRecommendationOrBuilder getEnhancedCpcOptInRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * The Search Partners Opt-In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.SearchPartnersOptInRecommendation search_partners_opt_in_recommendation = 14;</code>
+   */
+  boolean hasSearchPartnersOptInRecommendation();
+  /**
+   * <pre>
+   * The Search Partners Opt-In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.SearchPartnersOptInRecommendation search_partners_opt_in_recommendation = 14;</code>
+   */
+  com.google.ads.googleads.v0.resources.Recommendation.SearchPartnersOptInRecommendation getSearchPartnersOptInRecommendation();
+  /**
+   * <pre>
+   * The Search Partners Opt-In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.SearchPartnersOptInRecommendation search_partners_opt_in_recommendation = 14;</code>
+   */
+  com.google.ads.googleads.v0.resources.Recommendation.SearchPartnersOptInRecommendationOrBuilder getSearchPartnersOptInRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * The MaximizeClicks Opt-In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.MaximizeClicksOptInRecommendation maximize_clicks_opt_in_recommendation = 15;</code>
+   */
+  boolean hasMaximizeClicksOptInRecommendation();
+  /**
+   * <pre>
+   * The MaximizeClicks Opt-In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.MaximizeClicksOptInRecommendation maximize_clicks_opt_in_recommendation = 15;</code>
+   */
+  com.google.ads.googleads.v0.resources.Recommendation.MaximizeClicksOptInRecommendation getMaximizeClicksOptInRecommendation();
+  /**
+   * <pre>
+   * The MaximizeClicks Opt-In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.MaximizeClicksOptInRecommendation maximize_clicks_opt_in_recommendation = 15;</code>
+   */
+  com.google.ads.googleads.v0.resources.Recommendation.MaximizeClicksOptInRecommendationOrBuilder getMaximizeClicksOptInRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * The Optimize Ad Rotation recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.OptimizeAdRotationRecommendation optimize_ad_rotation_recommendation = 16;</code>
+   */
+  boolean hasOptimizeAdRotationRecommendation();
+  /**
+   * <pre>
+   * The Optimize Ad Rotation recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.OptimizeAdRotationRecommendation optimize_ad_rotation_recommendation = 16;</code>
+   */
+  com.google.ads.googleads.v0.resources.Recommendation.OptimizeAdRotationRecommendation getOptimizeAdRotationRecommendation();
+  /**
+   * <pre>
+   * The Optimize Ad Rotation recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Recommendation.OptimizeAdRotationRecommendation optimize_ad_rotation_recommendation = 16;</code>
+   */
+  com.google.ads.googleads.v0.resources.Recommendation.OptimizeAdRotationRecommendationOrBuilder getOptimizeAdRotationRecommendationOrBuilder();
 
   public com.google.ads.googleads.v0.resources.Recommendation.RecommendationCase getRecommendationCase();
 }

@@ -69,6 +69,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.enums.CriterionTypeProto.internal_static_google_ads_googleads_v0_enums_CriterionTypeEnum_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.enums.CriterionTypeProto.internal_static_google_ads_googleads_v0_enums_CriterionTypeEnum_fieldAccessorTable
@@ -111,12 +112,12 @@ private static final long serialVersionUID = 0L;
     KEYWORD(2),
     /**
      * <pre>
-     * Platforms to target.
+     * Devices to target.
      * </pre>
      *
-     * <code>PLATFORM = 6;</code>
+     * <code>DEVICE = 6;</code>
      */
-    PLATFORM(6),
+    DEVICE(6),
     /**
      * <pre>
      * Locations to target.
@@ -133,6 +134,14 @@ private static final long serialVersionUID = 0L;
      * <code>LISTING_GROUP = 8;</code>
      */
     LISTING_GROUP(8),
+    /**
+     * <pre>
+     * Ad Schedule.
+     * </pre>
+     *
+     * <code>AD_SCHEDULE = 9;</code>
+     */
+    AD_SCHEDULE(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -162,12 +171,12 @@ private static final long serialVersionUID = 0L;
     public static final int KEYWORD_VALUE = 2;
     /**
      * <pre>
-     * Platforms to target.
+     * Devices to target.
      * </pre>
      *
-     * <code>PLATFORM = 6;</code>
+     * <code>DEVICE = 6;</code>
      */
-    public static final int PLATFORM_VALUE = 6;
+    public static final int DEVICE_VALUE = 6;
     /**
      * <pre>
      * Locations to target.
@@ -184,6 +193,14 @@ private static final long serialVersionUID = 0L;
      * <code>LISTING_GROUP = 8;</code>
      */
     public static final int LISTING_GROUP_VALUE = 8;
+    /**
+     * <pre>
+     * Ad Schedule.
+     * </pre>
+     *
+     * <code>AD_SCHEDULE = 9;</code>
+     */
+    public static final int AD_SCHEDULE_VALUE = 9;
 
 
     public final int getNumber() {
@@ -207,9 +224,10 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return KEYWORD;
-        case 6: return PLATFORM;
+        case 6: return DEVICE;
         case 7: return LOCATION;
         case 8: return LISTING_GROUP;
+        case 9: return AD_SCHEDULE;
         default: return null;
       }
     }
@@ -263,6 +281,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -272,11 +291,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -384,6 +405,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -391,6 +413,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.enums.CriterionTypeEnum prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -418,6 +441,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.enums.CriterionTypeProto.internal_static_google_ads_googleads_v0_enums_CriterionTypeEnum_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.enums.CriterionTypeProto.internal_static_google_ads_googleads_v0_enums_CriterionTypeEnum_fieldAccessorTable
@@ -440,20 +464,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.enums.CriterionTypeProto.internal_static_google_ads_googleads_v0_enums_CriterionTypeEnum_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.enums.CriterionTypeEnum getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.enums.CriterionTypeEnum.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.enums.CriterionTypeEnum build() {
       com.google.ads.googleads.v0.enums.CriterionTypeEnum result = buildPartial();
       if (!result.isInitialized()) {
@@ -462,38 +490,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.enums.CriterionTypeEnum buildPartial() {
       com.google.ads.googleads.v0.enums.CriterionTypeEnum result = new com.google.ads.googleads.v0.enums.CriterionTypeEnum(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.enums.CriterionTypeEnum) {
         return mergeFrom((com.google.ads.googleads.v0.enums.CriterionTypeEnum)other);
@@ -510,10 +546,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -531,11 +569,13 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -557,6 +597,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<CriterionTypeEnum>
       PARSER = new com.google.protobuf.AbstractParser<CriterionTypeEnum>() {
+    @java.lang.Override
     public CriterionTypeEnum parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -574,6 +615,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.enums.CriterionTypeEnum getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

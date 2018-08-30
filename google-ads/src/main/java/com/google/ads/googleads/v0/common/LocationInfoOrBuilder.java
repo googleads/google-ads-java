@@ -6,4 +6,29 @@ package com.google.ads.googleads.v0.common;
 public interface LocationInfoOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.ads.googleads.v0.common.LocationInfo)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * The geo target constant resource name.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   */
+  boolean hasGeoTargetConstant();
+  /**
+   * <pre>
+   * The geo target constant resource name.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   */
+  com.google.protobuf.StringValue getGeoTargetConstant();
+  /**
+   * <pre>
+   * The geo target constant resource name.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getGeoTargetConstantOrBuilder();
 }

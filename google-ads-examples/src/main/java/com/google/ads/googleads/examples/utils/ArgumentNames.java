@@ -20,6 +20,7 @@ public final class ArgumentNames {
   public static final String CAMPAIGN_ID = "--campaignId";
   public static final String AD_GROUP_ID = "--adGroupId";
   public static final String AD_ID = "--adId";
+  public static final String BID_MODIFIER = "--bidModifier";
   public static final String CRITERION_ID = "--criterionId";
   public static final String CAMPAIGN_BUDGET_ID = "--campaignBudgetId";
   public static final String CPC_BID_MICRO_AMOUNT = "--cpcBidMicroAmount";
@@ -28,4 +29,5 @@ public final class ArgumentNames {
   public static final String KEYWORD_TEXT = "--keywordText";
   public static final String RECOMMENDATION_ID = "--recommendationId";
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
+  public static final String BID_MODIFIER = "--bidModifier";
 }

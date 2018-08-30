@@ -55,13 +55,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
@@ -332,6 +325,13 @@ private static final long serialVersionUID = 0L;
             effectivePercentCpcBidSource_ = rawValue;
             break;
           }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -355,6 +355,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_fieldAccessorTable
@@ -494,13 +495,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.google.protobuf.Int32Value.Builder subBuilder = null;
               if (qualityScore_ != null) {
@@ -532,6 +526,13 @@ private static final long serialVersionUID = 0L;
               searchPredictedCtr_ = rawValue;
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -549,6 +550,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_QualityInfo_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_QualityInfo_fieldAccessorTable
@@ -615,6 +617,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket creative_quality_score = 2;</code>
      */
     public com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getCreativeQualityScore() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(creativeQualityScore_);
       return result == null ? com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
     }
@@ -639,6 +642,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket post_click_quality_score = 3;</code>
      */
     public com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getPostClickQualityScore() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(postClickQualityScore_);
       return result == null ? com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
     }
@@ -663,11 +667,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket search_predicted_ctr = 4;</code>
      */
     public com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getSearchPredictedCtr() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(searchPredictedCtr_);
       return result == null ? com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -677,6 +683,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (qualityScore_ != null) {
@@ -694,6 +701,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -835,6 +843,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -842,6 +851,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(com.google.ads.googleads.v0.resources.AdGroupCriterion.QualityInfo prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -869,6 +879,7 @@ private static final long serialVersionUID = 0L;
         return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_QualityInfo_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_QualityInfo_fieldAccessorTable
@@ -891,6 +902,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (qualityScoreBuilder_ == null) {
@@ -908,15 +920,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_QualityInfo_descriptor;
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.resources.AdGroupCriterion.QualityInfo getDefaultInstanceForType() {
         return com.google.ads.googleads.v0.resources.AdGroupCriterion.QualityInfo.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.resources.AdGroupCriterion.QualityInfo build() {
         com.google.ads.googleads.v0.resources.AdGroupCriterion.QualityInfo result = buildPartial();
         if (!result.isInitialized()) {
@@ -925,6 +940,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.resources.AdGroupCriterion.QualityInfo buildPartial() {
         com.google.ads.googleads.v0.resources.AdGroupCriterion.QualityInfo result = new com.google.ads.googleads.v0.resources.AdGroupCriterion.QualityInfo(this);
         if (qualityScoreBuilder_ == null) {
@@ -939,32 +955,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.ads.googleads.v0.resources.AdGroupCriterion.QualityInfo) {
           return mergeFrom((com.google.ads.googleads.v0.resources.AdGroupCriterion.QualityInfo)other);
@@ -993,10 +1016,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1217,6 +1242,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket creative_quality_score = 2;</code>
        */
       public com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getCreativeQualityScore() {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(creativeQualityScore_);
         return result == null ? com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
       }
@@ -1281,6 +1307,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket post_click_quality_score = 3;</code>
        */
       public com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getPostClickQualityScore() {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(postClickQualityScore_);
         return result == null ? com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
       }
@@ -1345,6 +1372,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket search_predicted_ctr = 4;</code>
        */
       public com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getSearchPredictedCtr() {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(searchPredictedCtr_);
         return result == null ? com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
       }
@@ -1377,11 +1405,13 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1403,6 +1433,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<QualityInfo>
         PARSER = new com.google.protobuf.AbstractParser<QualityInfo>() {
+      @java.lang.Override
       public QualityInfo parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1420,6 +1451,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.resources.AdGroupCriterion.QualityInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1557,13 +1589,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.google.protobuf.Int64Value.Builder subBuilder = null;
               if (firstPageCpcMicros_ != null) {
@@ -1603,6 +1628,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1620,6 +1652,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_PositionEstimates_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_PositionEstimates_fieldAccessorTable
@@ -1736,6 +1769,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1745,6 +1779,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (firstPageCpcMicros_ != null) {
@@ -1759,6 +1794,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1905,6 +1941,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1912,6 +1949,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1939,6 +1977,7 @@ private static final long serialVersionUID = 0L;
         return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_PositionEstimates_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_PositionEstimates_fieldAccessorTable
@@ -1961,6 +2000,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (firstPageCpcMicrosBuilder_ == null) {
@@ -1984,15 +2024,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_PositionEstimates_descriptor;
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates getDefaultInstanceForType() {
         return com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates build() {
         com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates result = buildPartial();
         if (!result.isInitialized()) {
@@ -2001,6 +2044,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates buildPartial() {
         com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates result = new com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates(this);
         if (firstPageCpcMicrosBuilder_ == null) {
@@ -2022,32 +2066,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates) {
           return mergeFrom((com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates)other);
@@ -2073,10 +2124,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2580,11 +2633,13 @@ private static final long serialVersionUID = 0L;
         }
         return topOfPageCpcMicrosBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2606,6 +2661,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<PositionEstimates>
         PARSER = new com.google.protobuf.AbstractParser<PositionEstimates>() {
+      @java.lang.Override
       public PositionEstimates parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2623,6 +2679,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.resources.AdGroupCriterion.PositionEstimates getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2770,6 +2827,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus status = 3;</code>
    */
   public com.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus getStatus() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus result = com.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus.UNRECOGNIZED : result;
   }
@@ -2863,6 +2921,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v0.enums.CriterionTypeEnum.CriterionType type = 25;</code>
    */
   public com.google.ads.googleads.v0.enums.CriterionTypeEnum.CriterionType getType() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.CriterionTypeEnum.CriterionType result = com.google.ads.googleads.v0.enums.CriterionTypeEnum.CriterionType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v0.enums.CriterionTypeEnum.CriterionType.UNRECOGNIZED : result;
   }
@@ -3196,6 +3255,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21;</code>
    */
   public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpcBidSource() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpcBidSource_);
     return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
   }
@@ -3220,6 +3280,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22;</code>
    */
   public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpmBidSource() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpmBidSource_);
     return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
   }
@@ -3244,6 +3305,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23;</code>
    */
   public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpvBidSource() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpvBidSource_);
     return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
   }
@@ -3268,6 +3330,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35;</code>
    */
   public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectivePercentCpcBidSource() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectivePercentCpcBidSource_);
     return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
   }
@@ -3535,6 +3598,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -3544,6 +3608,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getResourceNameBytes().isEmpty()) {
@@ -3624,6 +3689,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -4017,6 +4083,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -4024,6 +4091,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.resources.AdGroupCriterion prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -4051,6 +4119,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_fieldAccessorTable
@@ -4075,6 +4144,7 @@ private static final long serialVersionUID = 0L;
         getUrlCustomParametersFieldBuilder();
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       resourceName_ = "";
@@ -4192,15 +4262,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.resources.AdGroupCriterion getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.resources.AdGroupCriterion.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.resources.AdGroupCriterion build() {
       com.google.ads.googleads.v0.resources.AdGroupCriterion result = buildPartial();
       if (!result.isInitialized()) {
@@ -4209,6 +4282,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.resources.AdGroupCriterion buildPartial() {
       com.google.ads.googleads.v0.resources.AdGroupCriterion result = new com.google.ads.googleads.v0.resources.AdGroupCriterion(this);
       int from_bitField0_ = bitField0_;
@@ -4328,32 +4402,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.resources.AdGroupCriterion) {
         return mergeFrom((com.google.ads.googleads.v0.resources.AdGroupCriterion)other);
@@ -4499,10 +4580,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4829,6 +4912,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus status = 3;</code>
      */
     public com.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus getStatus() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus result = com.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus.valueOf(status_);
       return result == null ? com.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus.UNRECOGNIZED : result;
     }
@@ -5208,6 +5292,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.CriterionTypeEnum.CriterionType type = 25;</code>
      */
     public com.google.ads.googleads.v0.enums.CriterionTypeEnum.CriterionType getType() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.CriterionTypeEnum.CriterionType result = com.google.ads.googleads.v0.enums.CriterionTypeEnum.CriterionType.valueOf(type_);
       return result == null ? com.google.ads.googleads.v0.enums.CriterionTypeEnum.CriterionType.UNRECOGNIZED : result;
     }
@@ -6685,6 +6770,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21;</code>
      */
     public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpcBidSource() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpcBidSource_);
       return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
     }
@@ -6749,6 +6835,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22;</code>
      */
     public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpmBidSource() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpmBidSource_);
       return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
     }
@@ -6813,6 +6900,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23;</code>
      */
     public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveCpvBidSource() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpvBidSource_);
       return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
     }
@@ -6877,6 +6965,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35;</code>
      */
     public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectivePercentCpcBidSource() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectivePercentCpcBidSource_);
       return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
     }
@@ -8219,11 +8308,13 @@ private static final long serialVersionUID = 0L;
       onChanged();;
       return listingGroupBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -8245,6 +8336,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<AdGroupCriterion>
       PARSER = new com.google.protobuf.AbstractParser<AdGroupCriterion>() {
+    @java.lang.Override
     public AdGroupCriterion parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8262,6 +8354,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.resources.AdGroupCriterion getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

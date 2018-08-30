@@ -30,18 +30,19 @@ public final class RecommendationErrorProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v0/errors/recomme" +
       "ndation_error.proto\022\036google.ads.googlead" +
-      "s.v0.errors\"\351\001\n\027RecommendationErrorEnum\"" +
-      "\315\001\n\023RecommendationError\022\017\n\013UNSPECIFIED\020\000" +
+      "s.v0.errors\"\215\002\n\027RecommendationErrorEnum\"" +
+      "\361\001\n\023RecommendationError\022\017\n\013UNSPECIFIED\020\000" +
       "\022\013\n\007UNKNOWN\020\001\022\033\n\027BUDGET_AMOUNT_TOO_SMALL" +
       "\020\002\022\033\n\027BUDGET_AMOUNT_TOO_LARGE\020\003\022\031\n\025INVAL" +
       "ID_BUDGET_AMOUNT\020\004\022\020\n\014POLICY_ERROR\020\005\022\026\n\022" +
       "INVALID_BID_AMOUNT\020\006\022\031\n\025ADGROUP_KEYWORD_" +
-      "LIMIT\020\007B\316\001\n\"com.google.ads.googleads.v0." +
-      "errorsB\030RecommendationErrorProtoP\001ZDgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v0/errors;errors\242\002\003GAA\252\002\036Google." +
-      "Ads.GoogleAds.V0.Errors\312\002\036Google\\Ads\\Goo" +
-      "gleAds\\V0\\Errorsb\006proto3"
+      "LIMIT\020\007\022\"\n\036RECOMMENDATION_ALREADY_APPLIE" +
+      "D\020\010B\316\001\n\"com.google.ads.googleads.v0.erro" +
+      "rsB\030RecommendationErrorProtoP\001ZDgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads." +
+      "GoogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleA" +
+      "ds\\V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

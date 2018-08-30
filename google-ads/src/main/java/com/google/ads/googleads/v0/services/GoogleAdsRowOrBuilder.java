@@ -184,6 +184,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The campaign bid modifier referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+   */
+  boolean hasCampaignBidModifier();
+  /**
+   * <pre>
+   * The campaign bid modifier referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+   */
+  com.google.ads.googleads.v0.resources.CampaignBidModifier getCampaignBidModifier();
+  /**
+   * <pre>
+   * The campaign bid modifier referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+   */
+  com.google.ads.googleads.v0.resources.CampaignBidModifierOrBuilder getCampaignBidModifierOrBuilder();
+
+  /**
+   * <pre>
    * The campaign criterion referenced in the query.
    * </pre>
    *
@@ -206,6 +231,56 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.CampaignCriterion campaign_criterion = 20;</code>
    */
   com.google.ads.googleads.v0.resources.CampaignCriterionOrBuilder getCampaignCriterionOrBuilder();
+
+  /**
+   * <pre>
+   * Campaign Group referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+   */
+  boolean hasCampaignGroup();
+  /**
+   * <pre>
+   * Campaign Group referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+   */
+  com.google.ads.googleads.v0.resources.CampaignGroup getCampaignGroup();
+  /**
+   * <pre>
+   * Campaign Group referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+   */
+  com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder getCampaignGroupOrBuilder();
+
+  /**
+   * <pre>
+   * Campaign Shared Set referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+   */
+  boolean hasCampaignSharedSet();
+  /**
+   * <pre>
+   * Campaign Shared Set referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+   */
+  com.google.ads.googleads.v0.resources.CampaignSharedSet getCampaignSharedSet();
+  /**
+   * <pre>
+   * Campaign Shared Set referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+   */
+  com.google.ads.googleads.v0.resources.CampaignSharedSetOrBuilder getCampaignSharedSetOrBuilder();
 
   /**
    * <pre>
@@ -309,6 +384,56 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The shared set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+   */
+  boolean hasSharedCriterion();
+  /**
+   * <pre>
+   * The shared set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+   */
+  com.google.ads.googleads.v0.resources.SharedCriterion getSharedCriterion();
+  /**
+   * <pre>
+   * The shared set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+   */
+  com.google.ads.googleads.v0.resources.SharedCriterionOrBuilder getSharedCriterionOrBuilder();
+
+  /**
+   * <pre>
+   * The shared set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+   */
+  boolean hasSharedSet();
+  /**
+   * <pre>
+   * The shared set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+   */
+  com.google.ads.googleads.v0.resources.SharedSet getSharedSet();
+  /**
+   * <pre>
+   * The shared set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+   */
+  com.google.ads.googleads.v0.resources.SharedSetOrBuilder getSharedSetOrBuilder();
+
+  /**
+   * <pre>
    * The metrics.
    * </pre>
    *
@@ -396,7 +521,7 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
-   * Platform to which metrics apply.
+   * Device to which metrics apply.
    * </pre>
    *
    * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
@@ -404,7 +529,7 @@ public interface GoogleAdsRowOrBuilder extends
   int getDeviceValue();
   /**
    * <pre>
-   * Platform to which metrics apply.
+   * Device to which metrics apply.
    * </pre>
    *
    * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
@@ -460,6 +585,23 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.protobuf.StringValue month = 10;</code>
    */
   com.google.protobuf.StringValueOrBuilder getMonthOrBuilder();
+
+  /**
+   * <pre>
+   * Month of the year, e.g., January.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
+   */
+  int getMonthOfYearValue();
+  /**
+   * <pre>
+   * Month of the year, e.g., January.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
+   */
+  com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear getMonthOfYear();
 
   /**
    * <pre>

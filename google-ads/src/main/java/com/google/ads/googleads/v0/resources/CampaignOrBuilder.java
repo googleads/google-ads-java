@@ -148,6 +148,8 @@ public interface CampaignOrBuilder extends
    * <pre>
    * The primary serving target for ads within the campaign.
    * The targeting options can be refined in `network_settings`.
+   * This field is required and should not be empty when creating new
+   * campaigns.
    * Can be set only when creating campaigns.
    * After the campaign is created, the field can not be changed.
    * </pre>
@@ -159,6 +161,8 @@ public interface CampaignOrBuilder extends
    * <pre>
    * The primary serving target for ads within the campaign.
    * The targeting options can be refined in `network_settings`.
+   * This field is required and should not be empty when creating new
+   * campaigns.
    * Can be set only when creating campaigns.
    * After the campaign is created, the field can not be changed.
    * </pre>
@@ -341,6 +345,31 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * The setting for controlling Shopping campaigns.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.ShoppingSetting shopping_setting = 36;</code>
+   */
+  boolean hasShoppingSetting();
+  /**
+   * <pre>
+   * The setting for controlling Shopping campaigns.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.ShoppingSetting shopping_setting = 36;</code>
+   */
+  com.google.ads.googleads.v0.resources.Campaign.ShoppingSetting getShoppingSetting();
+  /**
+   * <pre>
+   * The setting for controlling Shopping campaigns.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.ShoppingSetting shopping_setting = 36;</code>
+   */
+  com.google.ads.googleads.v0.resources.Campaign.ShoppingSettingOrBuilder getShoppingSettingOrBuilder();
+
+  /**
+   * <pre>
    * The budget of the campaign.
    * This field must not be used in WHERE clauses.
    * </pre>
@@ -419,6 +448,31 @@ public interface CampaignOrBuilder extends
    * <code>.google.protobuf.StringValue start_date = 19;</code>
    */
   com.google.protobuf.StringValueOrBuilder getStartDateOrBuilder();
+
+  /**
+   * <pre>
+   * The campaign group this campaign belongs to.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue campaign_group = 35;</code>
+   */
+  boolean hasCampaignGroup();
+  /**
+   * <pre>
+   * The campaign group this campaign belongs to.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue campaign_group = 35;</code>
+   */
+  com.google.protobuf.StringValue getCampaignGroup();
+  /**
+   * <pre>
+   * The campaign group this campaign belongs to.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue campaign_group = 35;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getCampaignGroupOrBuilder();
 
   /**
    * <pre>

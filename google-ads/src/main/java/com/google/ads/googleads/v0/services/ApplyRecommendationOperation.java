@@ -49,13 +49,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
@@ -118,6 +111,13 @@ private static final long serialVersionUID = 0L;
             applyParametersCase_ = 5;
             break;
           }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -135,6 +135,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_fieldAccessorTable
@@ -217,13 +218,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.google.protobuf.Int64Value.Builder subBuilder = null;
               if (newBudgetAmountMicros_ != null) {
@@ -235,6 +229,13 @@ private static final long serialVersionUID = 0L;
                 newBudgetAmountMicros_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -254,6 +255,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_CampaignBudgetParameters_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_CampaignBudgetParameters_fieldAccessorTable
@@ -298,6 +300,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -307,6 +310,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (newBudgetAmountMicros_ != null) {
@@ -315,6 +319,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -435,6 +440,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -442,6 +448,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(com.google.ads.googleads.v0.services.ApplyRecommendationOperation.CampaignBudgetParameters prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -469,6 +476,7 @@ private static final long serialVersionUID = 0L;
         return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_CampaignBudgetParameters_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_CampaignBudgetParameters_fieldAccessorTable
@@ -491,6 +499,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (newBudgetAmountMicrosBuilder_ == null) {
@@ -502,15 +511,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_CampaignBudgetParameters_descriptor;
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.CampaignBudgetParameters getDefaultInstanceForType() {
         return com.google.ads.googleads.v0.services.ApplyRecommendationOperation.CampaignBudgetParameters.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.CampaignBudgetParameters build() {
         com.google.ads.googleads.v0.services.ApplyRecommendationOperation.CampaignBudgetParameters result = buildPartial();
         if (!result.isInitialized()) {
@@ -519,6 +531,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.CampaignBudgetParameters buildPartial() {
         com.google.ads.googleads.v0.services.ApplyRecommendationOperation.CampaignBudgetParameters result = new com.google.ads.googleads.v0.services.ApplyRecommendationOperation.CampaignBudgetParameters(this);
         if (newBudgetAmountMicrosBuilder_ == null) {
@@ -530,32 +543,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.ads.googleads.v0.services.ApplyRecommendationOperation.CampaignBudgetParameters) {
           return mergeFrom((com.google.ads.googleads.v0.services.ApplyRecommendationOperation.CampaignBudgetParameters)other);
@@ -575,10 +595,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -758,11 +780,13 @@ private static final long serialVersionUID = 0L;
         }
         return newBudgetAmountMicrosBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -784,6 +808,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<CampaignBudgetParameters>
         PARSER = new com.google.protobuf.AbstractParser<CampaignBudgetParameters>() {
+      @java.lang.Override
       public CampaignBudgetParameters parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -801,6 +826,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.CampaignBudgetParameters getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -817,7 +843,7 @@ private static final long serialVersionUID = 0L;
      * set in this message. This is a required field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+     * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
      */
     boolean hasAd();
     /**
@@ -826,18 +852,18 @@ private static final long serialVersionUID = 0L;
      * set in this message. This is a required field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+     * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
      */
-    com.google.ads.googleads.v0.common.Ad getAd();
+    com.google.ads.googleads.v0.resources.Ad getAd();
     /**
      * <pre>
      * New ad to add to recommended ad group. All necessary fields need to be
      * set in this message. This is a required field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+     * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
      */
-    com.google.ads.googleads.v0.common.AdOrBuilder getAdOrBuilder();
+    com.google.ads.googleads.v0.resources.AdOrBuilder getAdOrBuilder();
   }
   /**
    * <pre>
@@ -882,24 +908,24 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
-              com.google.ads.googleads.v0.common.Ad.Builder subBuilder = null;
+              com.google.ads.googleads.v0.resources.Ad.Builder subBuilder = null;
               if (ad_ != null) {
                 subBuilder = ad_.toBuilder();
               }
-              ad_ = input.readMessage(com.google.ads.googleads.v0.common.Ad.parser(), extensionRegistry);
+              ad_ = input.readMessage(com.google.ads.googleads.v0.resources.Ad.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(ad_);
                 ad_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -919,6 +945,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_TextAdParameters_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_TextAdParameters_fieldAccessorTable
@@ -927,14 +954,14 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int AD_FIELD_NUMBER = 1;
-    private com.google.ads.googleads.v0.common.Ad ad_;
+    private com.google.ads.googleads.v0.resources.Ad ad_;
     /**
      * <pre>
      * New ad to add to recommended ad group. All necessary fields need to be
      * set in this message. This is a required field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+     * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
      */
     public boolean hasAd() {
       return ad_ != null;
@@ -945,10 +972,10 @@ private static final long serialVersionUID = 0L;
      * set in this message. This is a required field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+     * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
      */
-    public com.google.ads.googleads.v0.common.Ad getAd() {
-      return ad_ == null ? com.google.ads.googleads.v0.common.Ad.getDefaultInstance() : ad_;
+    public com.google.ads.googleads.v0.resources.Ad getAd() {
+      return ad_ == null ? com.google.ads.googleads.v0.resources.Ad.getDefaultInstance() : ad_;
     }
     /**
      * <pre>
@@ -956,13 +983,14 @@ private static final long serialVersionUID = 0L;
      * set in this message. This is a required field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+     * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
      */
-    public com.google.ads.googleads.v0.common.AdOrBuilder getAdOrBuilder() {
+    public com.google.ads.googleads.v0.resources.AdOrBuilder getAdOrBuilder() {
       return getAd();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -972,6 +1000,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (ad_ != null) {
@@ -980,6 +1009,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1100,6 +1130,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1107,6 +1138,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TextAdParameters prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1134,6 +1166,7 @@ private static final long serialVersionUID = 0L;
         return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_TextAdParameters_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_TextAdParameters_fieldAccessorTable
@@ -1156,6 +1189,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (adBuilder_ == null) {
@@ -1167,15 +1201,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_TextAdParameters_descriptor;
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TextAdParameters getDefaultInstanceForType() {
         return com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TextAdParameters.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TextAdParameters build() {
         com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TextAdParameters result = buildPartial();
         if (!result.isInitialized()) {
@@ -1184,6 +1221,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TextAdParameters buildPartial() {
         com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TextAdParameters result = new com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TextAdParameters(this);
         if (adBuilder_ == null) {
@@ -1195,32 +1233,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TextAdParameters) {
           return mergeFrom((com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TextAdParameters)other);
@@ -1240,10 +1285,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1262,16 +1309,16 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.google.ads.googleads.v0.common.Ad ad_ = null;
+      private com.google.ads.googleads.v0.resources.Ad ad_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.ads.googleads.v0.common.Ad, com.google.ads.googleads.v0.common.Ad.Builder, com.google.ads.googleads.v0.common.AdOrBuilder> adBuilder_;
+          com.google.ads.googleads.v0.resources.Ad, com.google.ads.googleads.v0.resources.Ad.Builder, com.google.ads.googleads.v0.resources.AdOrBuilder> adBuilder_;
       /**
        * <pre>
        * New ad to add to recommended ad group. All necessary fields need to be
        * set in this message. This is a required field.
        * </pre>
        *
-       * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+       * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
        */
       public boolean hasAd() {
         return adBuilder_ != null || ad_ != null;
@@ -1282,11 +1329,11 @@ private static final long serialVersionUID = 0L;
        * set in this message. This is a required field.
        * </pre>
        *
-       * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+       * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
        */
-      public com.google.ads.googleads.v0.common.Ad getAd() {
+      public com.google.ads.googleads.v0.resources.Ad getAd() {
         if (adBuilder_ == null) {
-          return ad_ == null ? com.google.ads.googleads.v0.common.Ad.getDefaultInstance() : ad_;
+          return ad_ == null ? com.google.ads.googleads.v0.resources.Ad.getDefaultInstance() : ad_;
         } else {
           return adBuilder_.getMessage();
         }
@@ -1297,9 +1344,9 @@ private static final long serialVersionUID = 0L;
        * set in this message. This is a required field.
        * </pre>
        *
-       * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+       * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
        */
-      public Builder setAd(com.google.ads.googleads.v0.common.Ad value) {
+      public Builder setAd(com.google.ads.googleads.v0.resources.Ad value) {
         if (adBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1318,10 +1365,10 @@ private static final long serialVersionUID = 0L;
        * set in this message. This is a required field.
        * </pre>
        *
-       * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+       * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
        */
       public Builder setAd(
-          com.google.ads.googleads.v0.common.Ad.Builder builderForValue) {
+          com.google.ads.googleads.v0.resources.Ad.Builder builderForValue) {
         if (adBuilder_ == null) {
           ad_ = builderForValue.build();
           onChanged();
@@ -1337,13 +1384,13 @@ private static final long serialVersionUID = 0L;
        * set in this message. This is a required field.
        * </pre>
        *
-       * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+       * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
        */
-      public Builder mergeAd(com.google.ads.googleads.v0.common.Ad value) {
+      public Builder mergeAd(com.google.ads.googleads.v0.resources.Ad value) {
         if (adBuilder_ == null) {
           if (ad_ != null) {
             ad_ =
-              com.google.ads.googleads.v0.common.Ad.newBuilder(ad_).mergeFrom(value).buildPartial();
+              com.google.ads.googleads.v0.resources.Ad.newBuilder(ad_).mergeFrom(value).buildPartial();
           } else {
             ad_ = value;
           }
@@ -1360,7 +1407,7 @@ private static final long serialVersionUID = 0L;
        * set in this message. This is a required field.
        * </pre>
        *
-       * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+       * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
        */
       public Builder clearAd() {
         if (adBuilder_ == null) {
@@ -1379,9 +1426,9 @@ private static final long serialVersionUID = 0L;
        * set in this message. This is a required field.
        * </pre>
        *
-       * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+       * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
        */
-      public com.google.ads.googleads.v0.common.Ad.Builder getAdBuilder() {
+      public com.google.ads.googleads.v0.resources.Ad.Builder getAdBuilder() {
         
         onChanged();
         return getAdFieldBuilder().getBuilder();
@@ -1392,14 +1439,14 @@ private static final long serialVersionUID = 0L;
        * set in this message. This is a required field.
        * </pre>
        *
-       * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+       * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
        */
-      public com.google.ads.googleads.v0.common.AdOrBuilder getAdOrBuilder() {
+      public com.google.ads.googleads.v0.resources.AdOrBuilder getAdOrBuilder() {
         if (adBuilder_ != null) {
           return adBuilder_.getMessageOrBuilder();
         } else {
           return ad_ == null ?
-              com.google.ads.googleads.v0.common.Ad.getDefaultInstance() : ad_;
+              com.google.ads.googleads.v0.resources.Ad.getDefaultInstance() : ad_;
         }
       }
       /**
@@ -1408,14 +1455,14 @@ private static final long serialVersionUID = 0L;
        * set in this message. This is a required field.
        * </pre>
        *
-       * <code>.google.ads.googleads.v0.common.Ad ad = 1;</code>
+       * <code>.google.ads.googleads.v0.resources.Ad ad = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.ads.googleads.v0.common.Ad, com.google.ads.googleads.v0.common.Ad.Builder, com.google.ads.googleads.v0.common.AdOrBuilder> 
+          com.google.ads.googleads.v0.resources.Ad, com.google.ads.googleads.v0.resources.Ad.Builder, com.google.ads.googleads.v0.resources.AdOrBuilder> 
           getAdFieldBuilder() {
         if (adBuilder_ == null) {
           adBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.ads.googleads.v0.common.Ad, com.google.ads.googleads.v0.common.Ad.Builder, com.google.ads.googleads.v0.common.AdOrBuilder>(
+              com.google.ads.googleads.v0.resources.Ad, com.google.ads.googleads.v0.resources.Ad.Builder, com.google.ads.googleads.v0.resources.AdOrBuilder>(
                   getAd(),
                   getParentForChildren(),
                   isClean());
@@ -1423,11 +1470,13 @@ private static final long serialVersionUID = 0L;
         }
         return adBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1449,6 +1498,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<TextAdParameters>
         PARSER = new com.google.protobuf.AbstractParser<TextAdParameters>() {
+      @java.lang.Override
       public TextAdParameters parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1466,6 +1516,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TextAdParameters getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1590,13 +1641,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.google.protobuf.StringValue.Builder subBuilder = null;
               if (adGroup_ != null) {
@@ -1629,6 +1673,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1646,6 +1697,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_KeywordParameters_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_KeywordParameters_fieldAccessorTable
@@ -1706,6 +1758,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
      */
     public com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(matchType_);
       return result == null ? com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
     }
@@ -1747,6 +1800,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1756,6 +1810,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (adGroup_ != null) {
@@ -1770,6 +1825,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1910,6 +1966,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1917,6 +1974,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(com.google.ads.googleads.v0.services.ApplyRecommendationOperation.KeywordParameters prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1944,6 +2002,7 @@ private static final long serialVersionUID = 0L;
         return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_KeywordParameters_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_KeywordParameters_fieldAccessorTable
@@ -1966,6 +2025,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (adGroupBuilder_ == null) {
@@ -1985,15 +2045,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_KeywordParameters_descriptor;
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.KeywordParameters getDefaultInstanceForType() {
         return com.google.ads.googleads.v0.services.ApplyRecommendationOperation.KeywordParameters.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.KeywordParameters build() {
         com.google.ads.googleads.v0.services.ApplyRecommendationOperation.KeywordParameters result = buildPartial();
         if (!result.isInitialized()) {
@@ -2002,6 +2065,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.KeywordParameters buildPartial() {
         com.google.ads.googleads.v0.services.ApplyRecommendationOperation.KeywordParameters result = new com.google.ads.googleads.v0.services.ApplyRecommendationOperation.KeywordParameters(this);
         if (adGroupBuilder_ == null) {
@@ -2019,32 +2083,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.ads.googleads.v0.services.ApplyRecommendationOperation.KeywordParameters) {
           return mergeFrom((com.google.ads.googleads.v0.services.ApplyRecommendationOperation.KeywordParameters)other);
@@ -2070,10 +2141,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2276,6 +2349,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
        */
       public com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(matchType_);
         return result == null ? com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
       }
@@ -2470,11 +2544,13 @@ private static final long serialVersionUID = 0L;
         }
         return cpcBidMicrosBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2496,6 +2572,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<KeywordParameters>
         PARSER = new com.google.protobuf.AbstractParser<KeywordParameters>() {
+      @java.lang.Override
       public KeywordParameters parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2513,6 +2590,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.KeywordParameters getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2619,13 +2697,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.google.protobuf.Int64Value.Builder subBuilder = null;
               if (targetCpaMicros_ != null) {
@@ -2652,6 +2723,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2669,6 +2747,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_TargetCpaOptInParameters_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_TargetCpaOptInParameters_fieldAccessorTable
@@ -2746,6 +2825,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2755,6 +2835,7 @@ private static final long serialVersionUID = 0L;
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (targetCpaMicros_ != null) {
@@ -2766,6 +2847,7 @@ private static final long serialVersionUID = 0L;
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2899,6 +2981,7 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2906,6 +2989,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder(com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TargetCpaOptInParameters prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2933,6 +3017,7 @@ private static final long serialVersionUID = 0L;
         return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_TargetCpaOptInParameters_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_TargetCpaOptInParameters_fieldAccessorTable
@@ -2955,6 +3040,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (targetCpaMicrosBuilder_ == null) {
@@ -2972,15 +3058,18 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_TargetCpaOptInParameters_descriptor;
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TargetCpaOptInParameters getDefaultInstanceForType() {
         return com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TargetCpaOptInParameters.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TargetCpaOptInParameters build() {
         com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TargetCpaOptInParameters result = buildPartial();
         if (!result.isInitialized()) {
@@ -2989,6 +3078,7 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TargetCpaOptInParameters buildPartial() {
         com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TargetCpaOptInParameters result = new com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TargetCpaOptInParameters(this);
         if (targetCpaMicrosBuilder_ == null) {
@@ -3005,32 +3095,39 @@ private static final long serialVersionUID = 0L;
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TargetCpaOptInParameters) {
           return mergeFrom((com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TargetCpaOptInParameters)other);
@@ -3053,10 +3150,12 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3389,11 +3488,13 @@ private static final long serialVersionUID = 0L;
         }
         return newCampaignBudgetAmountMicrosBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3415,6 +3516,7 @@ private static final long serialVersionUID = 0L;
 
     private static final com.google.protobuf.Parser<TargetCpaOptInParameters>
         PARSER = new com.google.protobuf.AbstractParser<TargetCpaOptInParameters>() {
+      @java.lang.Override
       public TargetCpaOptInParameters parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3432,6 +3534,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.services.ApplyRecommendationOperation.TargetCpaOptInParameters getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3681,6 +3784,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -3690,6 +3794,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getResourceNameBytes().isEmpty()) {
@@ -3710,6 +3815,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -3883,6 +3989,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -3890,6 +3997,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.services.ApplyRecommendationOperation prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -3919,6 +4027,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_fieldAccessorTable
@@ -3941,6 +4050,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       resourceName_ = "";
@@ -3950,15 +4060,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.services.RecommendationServiceProto.internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.services.ApplyRecommendationOperation getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.services.ApplyRecommendationOperation.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.services.ApplyRecommendationOperation build() {
       com.google.ads.googleads.v0.services.ApplyRecommendationOperation result = buildPartial();
       if (!result.isInitialized()) {
@@ -3967,6 +4080,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.services.ApplyRecommendationOperation buildPartial() {
       com.google.ads.googleads.v0.services.ApplyRecommendationOperation result = new com.google.ads.googleads.v0.services.ApplyRecommendationOperation(this);
       result.resourceName_ = resourceName_;
@@ -4003,32 +4117,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.services.ApplyRecommendationOperation) {
         return mergeFrom((com.google.ads.googleads.v0.services.ApplyRecommendationOperation)other);
@@ -4070,10 +4191,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4901,11 +5024,13 @@ private static final long serialVersionUID = 0L;
       onChanged();;
       return targetCpaOptInBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -4927,6 +5052,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<ApplyRecommendationOperation>
       PARSER = new com.google.protobuf.AbstractParser<ApplyRecommendationOperation>() {
+    @java.lang.Override
     public ApplyRecommendationOperation parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4944,6 +5070,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.services.ApplyRecommendationOperation getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

@@ -54,26 +54,29 @@ public interface ListingGroupInfoOrBuilder extends
 
   /**
    * <pre>
-   * ID of the parent listing group subdivision. Undefined for the root group.
+   * Resource name of ad group criterion which is the parent listing group
+   * subdivision. Null for the root group.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+   * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
    */
-  boolean hasParentCriterionId();
+  boolean hasParentAdGroupCriterion();
   /**
    * <pre>
-   * ID of the parent listing group subdivision. Undefined for the root group.
+   * Resource name of ad group criterion which is the parent listing group
+   * subdivision. Null for the root group.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+   * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
    */
-  com.google.protobuf.Int64Value getParentCriterionId();
+  com.google.protobuf.StringValue getParentAdGroupCriterion();
   /**
    * <pre>
-   * ID of the parent listing group subdivision. Undefined for the root group.
+   * Resource name of ad group criterion which is the parent listing group
+   * subdivision. Null for the root group.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+   * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
    */
-  com.google.protobuf.Int64ValueOrBuilder getParentCriterionIdOrBuilder();
+  com.google.protobuf.StringValueOrBuilder getParentAdGroupCriterionOrBuilder();
 }

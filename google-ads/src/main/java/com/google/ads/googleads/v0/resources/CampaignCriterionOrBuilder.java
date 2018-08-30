@@ -11,7 +11,7 @@ public interface CampaignCriterionOrBuilder extends
    * <pre>
    * The resource name of the campaign criterion.
    * Campaign criterion resource names have the form:
-   * `customers/{customer_id}/campaignCriteria/{campaign_id}_{criterion_id}
+   * `customers/{customer_id}/campaignCriteria/{campaign_id}_{criterion_id}`
    * </pre>
    *
    * <code>string resource_name = 1;</code>
@@ -21,7 +21,7 @@ public interface CampaignCriterionOrBuilder extends
    * <pre>
    * The resource name of the campaign criterion.
    * Campaign criterion resource names have the form:
-   * `customers/{customer_id}/campaignCriteria/{campaign_id}_{criterion_id}
+   * `customers/{customer_id}/campaignCriteria/{campaign_id}_{criterion_id}`
    * </pre>
    *
    * <code>string resource_name = 1;</code>
@@ -90,7 +90,7 @@ public interface CampaignCriterionOrBuilder extends
    * The modifier for the bids when the criterion matches.
    * Allowable modifier values depend on the criterion:
    *  - 0.1 - 10.0: Location
-   *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+   *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
    * </pre>
    *
    * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -101,7 +101,7 @@ public interface CampaignCriterionOrBuilder extends
    * The modifier for the bids when the criterion matches.
    * Allowable modifier values depend on the criterion:
    *  - 0.1 - 10.0: Location
-   *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+   *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
    * </pre>
    *
    * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -112,7 +112,7 @@ public interface CampaignCriterionOrBuilder extends
    * The modifier for the bids when the criterion matches.
    * Allowable modifier values depend on the criterion:
    *  - 0.1 - 10.0: Location
-   *  - 0.1 - 4.0: Platform (mobile). Use 0 to opt out of mobile.
+   *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
    * </pre>
    *
    * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -213,28 +213,53 @@ public interface CampaignCriterionOrBuilder extends
 
   /**
    * <pre>
-   * Platform.
+   * Device.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+   * <code>.google.ads.googleads.v0.common.DeviceInfo device = 13;</code>
    */
-  boolean hasPlatform();
+  boolean hasDevice();
   /**
    * <pre>
-   * Platform.
+   * Device.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+   * <code>.google.ads.googleads.v0.common.DeviceInfo device = 13;</code>
    */
-  com.google.ads.googleads.v0.common.PlatformInfo getPlatform();
+  com.google.ads.googleads.v0.common.DeviceInfo getDevice();
   /**
    * <pre>
-   * Platform.
+   * Device.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.common.PlatformInfo platform = 13;</code>
+   * <code>.google.ads.googleads.v0.common.DeviceInfo device = 13;</code>
    */
-  com.google.ads.googleads.v0.common.PlatformInfoOrBuilder getPlatformOrBuilder();
+  com.google.ads.googleads.v0.common.DeviceInfoOrBuilder getDeviceOrBuilder();
+
+  /**
+   * <pre>
+   * Ad Schedule.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AdScheduleInfo ad_schedule = 15;</code>
+   */
+  boolean hasAdSchedule();
+  /**
+   * <pre>
+   * Ad Schedule.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AdScheduleInfo ad_schedule = 15;</code>
+   */
+  com.google.ads.googleads.v0.common.AdScheduleInfo getAdSchedule();
+  /**
+   * <pre>
+   * Ad Schedule.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AdScheduleInfo ad_schedule = 15;</code>
+   */
+  com.google.ads.googleads.v0.common.AdScheduleInfoOrBuilder getAdScheduleOrBuilder();
 
   public com.google.ads.googleads.v0.resources.CampaignCriterion.CriterionCase getCriterionCase();
 }
