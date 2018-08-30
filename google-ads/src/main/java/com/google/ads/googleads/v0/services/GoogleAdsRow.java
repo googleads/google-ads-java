@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     adNetworkType_ = 0;
     dayOfWeek_ = 0;
     device_ = 0;
+    monthOfYear_ = 0;
     slot_ = 0;
   }
 
@@ -50,13 +51,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 10: {
             com.google.ads.googleads.v0.resources.Customer.Builder subBuilder = null;
             if (customer_ != null) {
@@ -328,6 +322,84 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 202: {
+            com.google.ads.googleads.v0.resources.CampaignGroup.Builder subBuilder = null;
+            if (campaignGroup_ != null) {
+              subBuilder = campaignGroup_.toBuilder();
+            }
+            campaignGroup_ = input.readMessage(com.google.ads.googleads.v0.resources.CampaignGroup.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(campaignGroup_);
+              campaignGroup_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 210: {
+            com.google.ads.googleads.v0.resources.CampaignBidModifier.Builder subBuilder = null;
+            if (campaignBidModifier_ != null) {
+              subBuilder = campaignBidModifier_.toBuilder();
+            }
+            campaignBidModifier_ = input.readMessage(com.google.ads.googleads.v0.resources.CampaignBidModifier.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(campaignBidModifier_);
+              campaignBidModifier_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 218: {
+            com.google.ads.googleads.v0.resources.SharedSet.Builder subBuilder = null;
+            if (sharedSet_ != null) {
+              subBuilder = sharedSet_.toBuilder();
+            }
+            sharedSet_ = input.readMessage(com.google.ads.googleads.v0.resources.SharedSet.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(sharedSet_);
+              sharedSet_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 224: {
+            int rawValue = input.readEnum();
+
+            monthOfYear_ = rawValue;
+            break;
+          }
+          case 234: {
+            com.google.ads.googleads.v0.resources.SharedCriterion.Builder subBuilder = null;
+            if (sharedCriterion_ != null) {
+              subBuilder = sharedCriterion_.toBuilder();
+            }
+            sharedCriterion_ = input.readMessage(com.google.ads.googleads.v0.resources.SharedCriterion.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(sharedCriterion_);
+              sharedCriterion_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 242: {
+            com.google.ads.googleads.v0.resources.CampaignSharedSet.Builder subBuilder = null;
+            if (campaignSharedSet_ != null) {
+              subBuilder = campaignSharedSet_.toBuilder();
+            }
+            campaignSharedSet_ = input.readMessage(com.google.ads.googleads.v0.resources.CampaignSharedSet.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(campaignSharedSet_);
+              campaignSharedSet_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -345,6 +417,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v0_services_GoogleAdsRow_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v0_services_GoogleAdsRow_fieldAccessorTable
@@ -583,6 +656,39 @@ private static final long serialVersionUID = 0L;
     return getCampaign();
   }
 
+  public static final int CAMPAIGN_BID_MODIFIER_FIELD_NUMBER = 26;
+  private com.google.ads.googleads.v0.resources.CampaignBidModifier campaignBidModifier_;
+  /**
+   * <pre>
+   * The campaign bid modifier referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+   */
+  public boolean hasCampaignBidModifier() {
+    return campaignBidModifier_ != null;
+  }
+  /**
+   * <pre>
+   * The campaign bid modifier referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CampaignBidModifier getCampaignBidModifier() {
+    return campaignBidModifier_ == null ? com.google.ads.googleads.v0.resources.CampaignBidModifier.getDefaultInstance() : campaignBidModifier_;
+  }
+  /**
+   * <pre>
+   * The campaign bid modifier referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CampaignBidModifierOrBuilder getCampaignBidModifierOrBuilder() {
+    return getCampaignBidModifier();
+  }
+
   public static final int CAMPAIGN_CRITERION_FIELD_NUMBER = 20;
   private com.google.ads.googleads.v0.resources.CampaignCriterion campaignCriterion_;
   /**
@@ -614,6 +720,72 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.resources.CampaignCriterionOrBuilder getCampaignCriterionOrBuilder() {
     return getCampaignCriterion();
+  }
+
+  public static final int CAMPAIGN_GROUP_FIELD_NUMBER = 25;
+  private com.google.ads.googleads.v0.resources.CampaignGroup campaignGroup_;
+  /**
+   * <pre>
+   * Campaign Group referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+   */
+  public boolean hasCampaignGroup() {
+    return campaignGroup_ != null;
+  }
+  /**
+   * <pre>
+   * Campaign Group referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CampaignGroup getCampaignGroup() {
+    return campaignGroup_ == null ? com.google.ads.googleads.v0.resources.CampaignGroup.getDefaultInstance() : campaignGroup_;
+  }
+  /**
+   * <pre>
+   * Campaign Group referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder getCampaignGroupOrBuilder() {
+    return getCampaignGroup();
+  }
+
+  public static final int CAMPAIGN_SHARED_SET_FIELD_NUMBER = 30;
+  private com.google.ads.googleads.v0.resources.CampaignSharedSet campaignSharedSet_;
+  /**
+   * <pre>
+   * Campaign Shared Set referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+   */
+  public boolean hasCampaignSharedSet() {
+    return campaignSharedSet_ != null;
+  }
+  /**
+   * <pre>
+   * Campaign Shared Set referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CampaignSharedSet getCampaignSharedSet() {
+    return campaignSharedSet_ == null ? com.google.ads.googleads.v0.resources.CampaignSharedSet.getDefaultInstance() : campaignSharedSet_;
+  }
+  /**
+   * <pre>
+   * Campaign Shared Set referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CampaignSharedSetOrBuilder getCampaignSharedSetOrBuilder() {
+    return getCampaignSharedSet();
   }
 
   public static final int CUSTOMER_FIELD_NUMBER = 1;
@@ -748,6 +920,72 @@ private static final long serialVersionUID = 0L;
     return getRecommendation();
   }
 
+  public static final int SHARED_CRITERION_FIELD_NUMBER = 29;
+  private com.google.ads.googleads.v0.resources.SharedCriterion sharedCriterion_;
+  /**
+   * <pre>
+   * The shared set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+   */
+  public boolean hasSharedCriterion() {
+    return sharedCriterion_ != null;
+  }
+  /**
+   * <pre>
+   * The shared set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+   */
+  public com.google.ads.googleads.v0.resources.SharedCriterion getSharedCriterion() {
+    return sharedCriterion_ == null ? com.google.ads.googleads.v0.resources.SharedCriterion.getDefaultInstance() : sharedCriterion_;
+  }
+  /**
+   * <pre>
+   * The shared set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+   */
+  public com.google.ads.googleads.v0.resources.SharedCriterionOrBuilder getSharedCriterionOrBuilder() {
+    return getSharedCriterion();
+  }
+
+  public static final int SHARED_SET_FIELD_NUMBER = 27;
+  private com.google.ads.googleads.v0.resources.SharedSet sharedSet_;
+  /**
+   * <pre>
+   * The shared set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+   */
+  public boolean hasSharedSet() {
+    return sharedSet_ != null;
+  }
+  /**
+   * <pre>
+   * The shared set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+   */
+  public com.google.ads.googleads.v0.resources.SharedSet getSharedSet() {
+    return sharedSet_ == null ? com.google.ads.googleads.v0.resources.SharedSet.getDefaultInstance() : sharedSet_;
+  }
+  /**
+   * <pre>
+   * The shared set referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+   */
+  public com.google.ads.googleads.v0.resources.SharedSetOrBuilder getSharedSetOrBuilder() {
+    return getSharedSet();
+  }
+
   public static final int METRICS_FIELD_NUMBER = 4;
   private com.google.ads.googleads.v0.common.Metrics metrics_;
   /**
@@ -801,6 +1039,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 5;</code>
    */
   public com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType getAdNetworkType() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType result = com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType.valueOf(adNetworkType_);
     return result == null ? com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType.UNRECOGNIZED : result;
   }
@@ -861,6 +1100,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 7;</code>
    */
   public com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
     return result == null ? com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
   }
@@ -869,7 +1109,7 @@ private static final long serialVersionUID = 0L;
   private int device_;
   /**
    * <pre>
-   * Platform to which metrics apply.
+   * Device to which metrics apply.
    * </pre>
    *
    * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
@@ -879,12 +1119,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Platform to which metrics apply.
+   * Device to which metrics apply.
    * </pre>
    *
    * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
    */
   public com.google.ads.googleads.v0.enums.DeviceEnum.Device getDevice() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.DeviceEnum.Device result = com.google.ads.googleads.v0.enums.DeviceEnum.Device.valueOf(device_);
     return result == null ? com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNRECOGNIZED : result;
   }
@@ -955,6 +1196,31 @@ private static final long serialVersionUID = 0L;
     return getMonth();
   }
 
+  public static final int MONTH_OF_YEAR_FIELD_NUMBER = 28;
+  private int monthOfYear_;
+  /**
+   * <pre>
+   * Month of the year, e.g., January.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
+   */
+  public int getMonthOfYearValue() {
+    return monthOfYear_;
+  }
+  /**
+   * <pre>
+   * Month of the year, e.g., January.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
+   */
+  public com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear getMonthOfYear() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.valueOf(monthOfYear_);
+    return result == null ? com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.UNRECOGNIZED : result;
+  }
+
   public static final int QUARTER_FIELD_NUMBER = 12;
   private com.google.protobuf.StringValue quarter_;
   /**
@@ -1014,6 +1280,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v0.enums.SlotEnum.Slot slot = 13;</code>
    */
   public com.google.ads.googleads.v0.enums.SlotEnum.Slot getSlot() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.SlotEnum.Slot result = com.google.ads.googleads.v0.enums.SlotEnum.Slot.valueOf(slot_);
     return result == null ? com.google.ads.googleads.v0.enums.SlotEnum.Slot.UNRECOGNIZED : result;
   }
@@ -1088,6 +1355,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -1097,6 +1365,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (customer_ != null) {
@@ -1168,9 +1437,28 @@ private static final long serialVersionUID = 0L;
     if (adGroupBidModifier_ != null) {
       output.writeMessage(24, getAdGroupBidModifier());
     }
+    if (campaignGroup_ != null) {
+      output.writeMessage(25, getCampaignGroup());
+    }
+    if (campaignBidModifier_ != null) {
+      output.writeMessage(26, getCampaignBidModifier());
+    }
+    if (sharedSet_ != null) {
+      output.writeMessage(27, getSharedSet());
+    }
+    if (monthOfYear_ != com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.UNSPECIFIED.getNumber()) {
+      output.writeEnum(28, monthOfYear_);
+    }
+    if (sharedCriterion_ != null) {
+      output.writeMessage(29, getSharedCriterion());
+    }
+    if (campaignSharedSet_ != null) {
+      output.writeMessage(30, getCampaignSharedSet());
+    }
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -1268,6 +1556,30 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(24, getAdGroupBidModifier());
     }
+    if (campaignGroup_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(25, getCampaignGroup());
+    }
+    if (campaignBidModifier_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(26, getCampaignBidModifier());
+    }
+    if (sharedSet_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(27, getSharedSet());
+    }
+    if (monthOfYear_ != com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(28, monthOfYear_);
+    }
+    if (sharedCriterion_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(29, getSharedCriterion());
+    }
+    if (campaignSharedSet_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(30, getCampaignSharedSet());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1319,10 +1631,25 @@ private static final long serialVersionUID = 0L;
       result = result && getCampaign()
           .equals(other.getCampaign());
     }
+    result = result && (hasCampaignBidModifier() == other.hasCampaignBidModifier());
+    if (hasCampaignBidModifier()) {
+      result = result && getCampaignBidModifier()
+          .equals(other.getCampaignBidModifier());
+    }
     result = result && (hasCampaignCriterion() == other.hasCampaignCriterion());
     if (hasCampaignCriterion()) {
       result = result && getCampaignCriterion()
           .equals(other.getCampaignCriterion());
+    }
+    result = result && (hasCampaignGroup() == other.hasCampaignGroup());
+    if (hasCampaignGroup()) {
+      result = result && getCampaignGroup()
+          .equals(other.getCampaignGroup());
+    }
+    result = result && (hasCampaignSharedSet() == other.hasCampaignSharedSet());
+    if (hasCampaignSharedSet()) {
+      result = result && getCampaignSharedSet()
+          .equals(other.getCampaignSharedSet());
     }
     result = result && (hasCustomer() == other.hasCustomer());
     if (hasCustomer()) {
@@ -1343,6 +1670,16 @@ private static final long serialVersionUID = 0L;
     if (hasRecommendation()) {
       result = result && getRecommendation()
           .equals(other.getRecommendation());
+    }
+    result = result && (hasSharedCriterion() == other.hasSharedCriterion());
+    if (hasSharedCriterion()) {
+      result = result && getSharedCriterion()
+          .equals(other.getSharedCriterion());
+    }
+    result = result && (hasSharedSet() == other.hasSharedSet());
+    if (hasSharedSet()) {
+      result = result && getSharedSet()
+          .equals(other.getSharedSet());
     }
     result = result && (hasMetrics() == other.hasMetrics());
     if (hasMetrics()) {
@@ -1367,6 +1704,7 @@ private static final long serialVersionUID = 0L;
       result = result && getMonth()
           .equals(other.getMonth());
     }
+    result = result && monthOfYear_ == other.monthOfYear_;
     result = result && (hasQuarter() == other.hasQuarter());
     if (hasQuarter()) {
       result = result && getQuarter()
@@ -1422,9 +1760,21 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CAMPAIGN_FIELD_NUMBER;
       hash = (53 * hash) + getCampaign().hashCode();
     }
+    if (hasCampaignBidModifier()) {
+      hash = (37 * hash) + CAMPAIGN_BID_MODIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignBidModifier().hashCode();
+    }
     if (hasCampaignCriterion()) {
       hash = (37 * hash) + CAMPAIGN_CRITERION_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignCriterion().hashCode();
+    }
+    if (hasCampaignGroup()) {
+      hash = (37 * hash) + CAMPAIGN_GROUP_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignGroup().hashCode();
+    }
+    if (hasCampaignSharedSet()) {
+      hash = (37 * hash) + CAMPAIGN_SHARED_SET_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignSharedSet().hashCode();
     }
     if (hasCustomer()) {
       hash = (37 * hash) + CUSTOMER_FIELD_NUMBER;
@@ -1441,6 +1791,14 @@ private static final long serialVersionUID = 0L;
     if (hasRecommendation()) {
       hash = (37 * hash) + RECOMMENDATION_FIELD_NUMBER;
       hash = (53 * hash) + getRecommendation().hashCode();
+    }
+    if (hasSharedCriterion()) {
+      hash = (37 * hash) + SHARED_CRITERION_FIELD_NUMBER;
+      hash = (53 * hash) + getSharedCriterion().hashCode();
+    }
+    if (hasSharedSet()) {
+      hash = (37 * hash) + SHARED_SET_FIELD_NUMBER;
+      hash = (53 * hash) + getSharedSet().hashCode();
     }
     if (hasMetrics()) {
       hash = (37 * hash) + METRICS_FIELD_NUMBER;
@@ -1464,6 +1822,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MONTH_FIELD_NUMBER;
       hash = (53 * hash) + getMonth().hashCode();
     }
+    hash = (37 * hash) + MONTH_OF_YEAR_FIELD_NUMBER;
+    hash = (53 * hash) + monthOfYear_;
     if (hasQuarter()) {
       hash = (37 * hash) + QUARTER_FIELD_NUMBER;
       hash = (53 * hash) + getQuarter().hashCode();
@@ -1553,6 +1913,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -1560,6 +1921,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.services.GoogleAdsRow prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -1587,6 +1949,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v0_services_GoogleAdsRow_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v0_services_GoogleAdsRow_fieldAccessorTable
@@ -1609,6 +1972,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       if (adGroupBuilder_ == null) {
@@ -1653,11 +2017,29 @@ private static final long serialVersionUID = 0L;
         campaign_ = null;
         campaignBuilder_ = null;
       }
+      if (campaignBidModifierBuilder_ == null) {
+        campaignBidModifier_ = null;
+      } else {
+        campaignBidModifier_ = null;
+        campaignBidModifierBuilder_ = null;
+      }
       if (campaignCriterionBuilder_ == null) {
         campaignCriterion_ = null;
       } else {
         campaignCriterion_ = null;
         campaignCriterionBuilder_ = null;
+      }
+      if (campaignGroupBuilder_ == null) {
+        campaignGroup_ = null;
+      } else {
+        campaignGroup_ = null;
+        campaignGroupBuilder_ = null;
+      }
+      if (campaignSharedSetBuilder_ == null) {
+        campaignSharedSet_ = null;
+      } else {
+        campaignSharedSet_ = null;
+        campaignSharedSetBuilder_ = null;
       }
       if (customerBuilder_ == null) {
         customer_ = null;
@@ -1682,6 +2064,18 @@ private static final long serialVersionUID = 0L;
       } else {
         recommendation_ = null;
         recommendationBuilder_ = null;
+      }
+      if (sharedCriterionBuilder_ == null) {
+        sharedCriterion_ = null;
+      } else {
+        sharedCriterion_ = null;
+        sharedCriterionBuilder_ = null;
+      }
+      if (sharedSetBuilder_ == null) {
+        sharedSet_ = null;
+      } else {
+        sharedSet_ = null;
+        sharedSetBuilder_ = null;
       }
       if (metricsBuilder_ == null) {
         metrics_ = null;
@@ -1713,6 +2107,8 @@ private static final long serialVersionUID = 0L;
         month_ = null;
         monthBuilder_ = null;
       }
+      monthOfYear_ = 0;
+
       if (quarterBuilder_ == null) {
         quarter_ = null;
       } else {
@@ -1736,15 +2132,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v0_services_GoogleAdsRow_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.services.GoogleAdsRow getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.services.GoogleAdsRow.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.services.GoogleAdsRow build() {
       com.google.ads.googleads.v0.services.GoogleAdsRow result = buildPartial();
       if (!result.isInitialized()) {
@@ -1753,6 +2152,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.services.GoogleAdsRow buildPartial() {
       com.google.ads.googleads.v0.services.GoogleAdsRow result = new com.google.ads.googleads.v0.services.GoogleAdsRow(this);
       if (adGroupBuilder_ == null) {
@@ -1790,10 +2190,25 @@ private static final long serialVersionUID = 0L;
       } else {
         result.campaign_ = campaignBuilder_.build();
       }
+      if (campaignBidModifierBuilder_ == null) {
+        result.campaignBidModifier_ = campaignBidModifier_;
+      } else {
+        result.campaignBidModifier_ = campaignBidModifierBuilder_.build();
+      }
       if (campaignCriterionBuilder_ == null) {
         result.campaignCriterion_ = campaignCriterion_;
       } else {
         result.campaignCriterion_ = campaignCriterionBuilder_.build();
+      }
+      if (campaignGroupBuilder_ == null) {
+        result.campaignGroup_ = campaignGroup_;
+      } else {
+        result.campaignGroup_ = campaignGroupBuilder_.build();
+      }
+      if (campaignSharedSetBuilder_ == null) {
+        result.campaignSharedSet_ = campaignSharedSet_;
+      } else {
+        result.campaignSharedSet_ = campaignSharedSetBuilder_.build();
       }
       if (customerBuilder_ == null) {
         result.customer_ = customer_;
@@ -1814,6 +2229,16 @@ private static final long serialVersionUID = 0L;
         result.recommendation_ = recommendation_;
       } else {
         result.recommendation_ = recommendationBuilder_.build();
+      }
+      if (sharedCriterionBuilder_ == null) {
+        result.sharedCriterion_ = sharedCriterion_;
+      } else {
+        result.sharedCriterion_ = sharedCriterionBuilder_.build();
+      }
+      if (sharedSetBuilder_ == null) {
+        result.sharedSet_ = sharedSet_;
+      } else {
+        result.sharedSet_ = sharedSetBuilder_.build();
       }
       if (metricsBuilder_ == null) {
         result.metrics_ = metrics_;
@@ -1838,6 +2263,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.month_ = monthBuilder_.build();
       }
+      result.monthOfYear_ = monthOfYear_;
       if (quarterBuilder_ == null) {
         result.quarter_ = quarter_;
       } else {
@@ -1858,32 +2284,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.services.GoogleAdsRow) {
         return mergeFrom((com.google.ads.googleads.v0.services.GoogleAdsRow)other);
@@ -1916,8 +2349,17 @@ private static final long serialVersionUID = 0L;
       if (other.hasCampaign()) {
         mergeCampaign(other.getCampaign());
       }
+      if (other.hasCampaignBidModifier()) {
+        mergeCampaignBidModifier(other.getCampaignBidModifier());
+      }
       if (other.hasCampaignCriterion()) {
         mergeCampaignCriterion(other.getCampaignCriterion());
+      }
+      if (other.hasCampaignGroup()) {
+        mergeCampaignGroup(other.getCampaignGroup());
+      }
+      if (other.hasCampaignSharedSet()) {
+        mergeCampaignSharedSet(other.getCampaignSharedSet());
       }
       if (other.hasCustomer()) {
         mergeCustomer(other.getCustomer());
@@ -1930,6 +2372,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasRecommendation()) {
         mergeRecommendation(other.getRecommendation());
+      }
+      if (other.hasSharedCriterion()) {
+        mergeSharedCriterion(other.getSharedCriterion());
+      }
+      if (other.hasSharedSet()) {
+        mergeSharedSet(other.getSharedSet());
       }
       if (other.hasMetrics()) {
         mergeMetrics(other.getMetrics());
@@ -1952,6 +2400,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasMonth()) {
         mergeMonth(other.getMonth());
       }
+      if (other.monthOfYear_ != 0) {
+        setMonthOfYearValue(other.getMonthOfYearValue());
+      }
       if (other.hasQuarter()) {
         mergeQuarter(other.getQuarter());
       }
@@ -1969,10 +2420,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3062,6 +3515,159 @@ private static final long serialVersionUID = 0L;
       return campaignBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.CampaignBidModifier campaignBidModifier_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CampaignBidModifier, com.google.ads.googleads.v0.resources.CampaignBidModifier.Builder, com.google.ads.googleads.v0.resources.CampaignBidModifierOrBuilder> campaignBidModifierBuilder_;
+    /**
+     * <pre>
+     * The campaign bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+     */
+    public boolean hasCampaignBidModifier() {
+      return campaignBidModifierBuilder_ != null || campaignBidModifier_ != null;
+    }
+    /**
+     * <pre>
+     * The campaign bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignBidModifier getCampaignBidModifier() {
+      if (campaignBidModifierBuilder_ == null) {
+        return campaignBidModifier_ == null ? com.google.ads.googleads.v0.resources.CampaignBidModifier.getDefaultInstance() : campaignBidModifier_;
+      } else {
+        return campaignBidModifierBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The campaign bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+     */
+    public Builder setCampaignBidModifier(com.google.ads.googleads.v0.resources.CampaignBidModifier value) {
+      if (campaignBidModifierBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignBidModifier_ = value;
+        onChanged();
+      } else {
+        campaignBidModifierBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+     */
+    public Builder setCampaignBidModifier(
+        com.google.ads.googleads.v0.resources.CampaignBidModifier.Builder builderForValue) {
+      if (campaignBidModifierBuilder_ == null) {
+        campaignBidModifier_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignBidModifierBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+     */
+    public Builder mergeCampaignBidModifier(com.google.ads.googleads.v0.resources.CampaignBidModifier value) {
+      if (campaignBidModifierBuilder_ == null) {
+        if (campaignBidModifier_ != null) {
+          campaignBidModifier_ =
+            com.google.ads.googleads.v0.resources.CampaignBidModifier.newBuilder(campaignBidModifier_).mergeFrom(value).buildPartial();
+        } else {
+          campaignBidModifier_ = value;
+        }
+        onChanged();
+      } else {
+        campaignBidModifierBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+     */
+    public Builder clearCampaignBidModifier() {
+      if (campaignBidModifierBuilder_ == null) {
+        campaignBidModifier_ = null;
+        onChanged();
+      } else {
+        campaignBidModifier_ = null;
+        campaignBidModifierBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignBidModifier.Builder getCampaignBidModifierBuilder() {
+      
+      onChanged();
+      return getCampaignBidModifierFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The campaign bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignBidModifierOrBuilder getCampaignBidModifierOrBuilder() {
+      if (campaignBidModifierBuilder_ != null) {
+        return campaignBidModifierBuilder_.getMessageOrBuilder();
+      } else {
+        return campaignBidModifier_ == null ?
+            com.google.ads.googleads.v0.resources.CampaignBidModifier.getDefaultInstance() : campaignBidModifier_;
+      }
+    }
+    /**
+     * <pre>
+     * The campaign bid modifier referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignBidModifier campaign_bid_modifier = 26;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CampaignBidModifier, com.google.ads.googleads.v0.resources.CampaignBidModifier.Builder, com.google.ads.googleads.v0.resources.CampaignBidModifierOrBuilder> 
+        getCampaignBidModifierFieldBuilder() {
+      if (campaignBidModifierBuilder_ == null) {
+        campaignBidModifierBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.CampaignBidModifier, com.google.ads.googleads.v0.resources.CampaignBidModifier.Builder, com.google.ads.googleads.v0.resources.CampaignBidModifierOrBuilder>(
+                getCampaignBidModifier(),
+                getParentForChildren(),
+                isClean());
+        campaignBidModifier_ = null;
+      }
+      return campaignBidModifierBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.CampaignCriterion campaignCriterion_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.CampaignCriterion, com.google.ads.googleads.v0.resources.CampaignCriterion.Builder, com.google.ads.googleads.v0.resources.CampaignCriterionOrBuilder> campaignCriterionBuilder_;
@@ -3213,6 +3819,312 @@ private static final long serialVersionUID = 0L;
         campaignCriterion_ = null;
       }
       return campaignCriterionBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.CampaignGroup campaignGroup_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CampaignGroup, com.google.ads.googleads.v0.resources.CampaignGroup.Builder, com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder> campaignGroupBuilder_;
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public boolean hasCampaignGroup() {
+      return campaignGroupBuilder_ != null || campaignGroup_ != null;
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignGroup getCampaignGroup() {
+      if (campaignGroupBuilder_ == null) {
+        return campaignGroup_ == null ? com.google.ads.googleads.v0.resources.CampaignGroup.getDefaultInstance() : campaignGroup_;
+      } else {
+        return campaignGroupBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public Builder setCampaignGroup(com.google.ads.googleads.v0.resources.CampaignGroup value) {
+      if (campaignGroupBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignGroup_ = value;
+        onChanged();
+      } else {
+        campaignGroupBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public Builder setCampaignGroup(
+        com.google.ads.googleads.v0.resources.CampaignGroup.Builder builderForValue) {
+      if (campaignGroupBuilder_ == null) {
+        campaignGroup_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignGroupBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public Builder mergeCampaignGroup(com.google.ads.googleads.v0.resources.CampaignGroup value) {
+      if (campaignGroupBuilder_ == null) {
+        if (campaignGroup_ != null) {
+          campaignGroup_ =
+            com.google.ads.googleads.v0.resources.CampaignGroup.newBuilder(campaignGroup_).mergeFrom(value).buildPartial();
+        } else {
+          campaignGroup_ = value;
+        }
+        onChanged();
+      } else {
+        campaignGroupBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public Builder clearCampaignGroup() {
+      if (campaignGroupBuilder_ == null) {
+        campaignGroup_ = null;
+        onChanged();
+      } else {
+        campaignGroup_ = null;
+        campaignGroupBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignGroup.Builder getCampaignGroupBuilder() {
+      
+      onChanged();
+      return getCampaignGroupFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder getCampaignGroupOrBuilder() {
+      if (campaignGroupBuilder_ != null) {
+        return campaignGroupBuilder_.getMessageOrBuilder();
+      } else {
+        return campaignGroup_ == null ?
+            com.google.ads.googleads.v0.resources.CampaignGroup.getDefaultInstance() : campaignGroup_;
+      }
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CampaignGroup, com.google.ads.googleads.v0.resources.CampaignGroup.Builder, com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder> 
+        getCampaignGroupFieldBuilder() {
+      if (campaignGroupBuilder_ == null) {
+        campaignGroupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.CampaignGroup, com.google.ads.googleads.v0.resources.CampaignGroup.Builder, com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder>(
+                getCampaignGroup(),
+                getParentForChildren(),
+                isClean());
+        campaignGroup_ = null;
+      }
+      return campaignGroupBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.CampaignSharedSet campaignSharedSet_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CampaignSharedSet, com.google.ads.googleads.v0.resources.CampaignSharedSet.Builder, com.google.ads.googleads.v0.resources.CampaignSharedSetOrBuilder> campaignSharedSetBuilder_;
+    /**
+     * <pre>
+     * Campaign Shared Set referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+     */
+    public boolean hasCampaignSharedSet() {
+      return campaignSharedSetBuilder_ != null || campaignSharedSet_ != null;
+    }
+    /**
+     * <pre>
+     * Campaign Shared Set referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignSharedSet getCampaignSharedSet() {
+      if (campaignSharedSetBuilder_ == null) {
+        return campaignSharedSet_ == null ? com.google.ads.googleads.v0.resources.CampaignSharedSet.getDefaultInstance() : campaignSharedSet_;
+      } else {
+        return campaignSharedSetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Campaign Shared Set referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+     */
+    public Builder setCampaignSharedSet(com.google.ads.googleads.v0.resources.CampaignSharedSet value) {
+      if (campaignSharedSetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignSharedSet_ = value;
+        onChanged();
+      } else {
+        campaignSharedSetBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Campaign Shared Set referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+     */
+    public Builder setCampaignSharedSet(
+        com.google.ads.googleads.v0.resources.CampaignSharedSet.Builder builderForValue) {
+      if (campaignSharedSetBuilder_ == null) {
+        campaignSharedSet_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignSharedSetBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Campaign Shared Set referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+     */
+    public Builder mergeCampaignSharedSet(com.google.ads.googleads.v0.resources.CampaignSharedSet value) {
+      if (campaignSharedSetBuilder_ == null) {
+        if (campaignSharedSet_ != null) {
+          campaignSharedSet_ =
+            com.google.ads.googleads.v0.resources.CampaignSharedSet.newBuilder(campaignSharedSet_).mergeFrom(value).buildPartial();
+        } else {
+          campaignSharedSet_ = value;
+        }
+        onChanged();
+      } else {
+        campaignSharedSetBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Campaign Shared Set referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+     */
+    public Builder clearCampaignSharedSet() {
+      if (campaignSharedSetBuilder_ == null) {
+        campaignSharedSet_ = null;
+        onChanged();
+      } else {
+        campaignSharedSet_ = null;
+        campaignSharedSetBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Campaign Shared Set referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignSharedSet.Builder getCampaignSharedSetBuilder() {
+      
+      onChanged();
+      return getCampaignSharedSetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Campaign Shared Set referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignSharedSetOrBuilder getCampaignSharedSetOrBuilder() {
+      if (campaignSharedSetBuilder_ != null) {
+        return campaignSharedSetBuilder_.getMessageOrBuilder();
+      } else {
+        return campaignSharedSet_ == null ?
+            com.google.ads.googleads.v0.resources.CampaignSharedSet.getDefaultInstance() : campaignSharedSet_;
+      }
+    }
+    /**
+     * <pre>
+     * Campaign Shared Set referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CampaignSharedSet, com.google.ads.googleads.v0.resources.CampaignSharedSet.Builder, com.google.ads.googleads.v0.resources.CampaignSharedSetOrBuilder> 
+        getCampaignSharedSetFieldBuilder() {
+      if (campaignSharedSetBuilder_ == null) {
+        campaignSharedSetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.CampaignSharedSet, com.google.ads.googleads.v0.resources.CampaignSharedSet.Builder, com.google.ads.googleads.v0.resources.CampaignSharedSetOrBuilder>(
+                getCampaignSharedSet(),
+                getParentForChildren(),
+                isClean());
+        campaignSharedSet_ = null;
+      }
+      return campaignSharedSetBuilder_;
     }
 
     private com.google.ads.googleads.v0.resources.Customer customer_ = null;
@@ -3827,6 +4739,312 @@ private static final long serialVersionUID = 0L;
       return recommendationBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.SharedCriterion sharedCriterion_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.SharedCriterion, com.google.ads.googleads.v0.resources.SharedCriterion.Builder, com.google.ads.googleads.v0.resources.SharedCriterionOrBuilder> sharedCriterionBuilder_;
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+     */
+    public boolean hasSharedCriterion() {
+      return sharedCriterionBuilder_ != null || sharedCriterion_ != null;
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+     */
+    public com.google.ads.googleads.v0.resources.SharedCriterion getSharedCriterion() {
+      if (sharedCriterionBuilder_ == null) {
+        return sharedCriterion_ == null ? com.google.ads.googleads.v0.resources.SharedCriterion.getDefaultInstance() : sharedCriterion_;
+      } else {
+        return sharedCriterionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+     */
+    public Builder setSharedCriterion(com.google.ads.googleads.v0.resources.SharedCriterion value) {
+      if (sharedCriterionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        sharedCriterion_ = value;
+        onChanged();
+      } else {
+        sharedCriterionBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+     */
+    public Builder setSharedCriterion(
+        com.google.ads.googleads.v0.resources.SharedCriterion.Builder builderForValue) {
+      if (sharedCriterionBuilder_ == null) {
+        sharedCriterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        sharedCriterionBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+     */
+    public Builder mergeSharedCriterion(com.google.ads.googleads.v0.resources.SharedCriterion value) {
+      if (sharedCriterionBuilder_ == null) {
+        if (sharedCriterion_ != null) {
+          sharedCriterion_ =
+            com.google.ads.googleads.v0.resources.SharedCriterion.newBuilder(sharedCriterion_).mergeFrom(value).buildPartial();
+        } else {
+          sharedCriterion_ = value;
+        }
+        onChanged();
+      } else {
+        sharedCriterionBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+     */
+    public Builder clearSharedCriterion() {
+      if (sharedCriterionBuilder_ == null) {
+        sharedCriterion_ = null;
+        onChanged();
+      } else {
+        sharedCriterion_ = null;
+        sharedCriterionBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+     */
+    public com.google.ads.googleads.v0.resources.SharedCriterion.Builder getSharedCriterionBuilder() {
+      
+      onChanged();
+      return getSharedCriterionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+     */
+    public com.google.ads.googleads.v0.resources.SharedCriterionOrBuilder getSharedCriterionOrBuilder() {
+      if (sharedCriterionBuilder_ != null) {
+        return sharedCriterionBuilder_.getMessageOrBuilder();
+      } else {
+        return sharedCriterion_ == null ?
+            com.google.ads.googleads.v0.resources.SharedCriterion.getDefaultInstance() : sharedCriterion_;
+      }
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedCriterion shared_criterion = 29;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.SharedCriterion, com.google.ads.googleads.v0.resources.SharedCriterion.Builder, com.google.ads.googleads.v0.resources.SharedCriterionOrBuilder> 
+        getSharedCriterionFieldBuilder() {
+      if (sharedCriterionBuilder_ == null) {
+        sharedCriterionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.SharedCriterion, com.google.ads.googleads.v0.resources.SharedCriterion.Builder, com.google.ads.googleads.v0.resources.SharedCriterionOrBuilder>(
+                getSharedCriterion(),
+                getParentForChildren(),
+                isClean());
+        sharedCriterion_ = null;
+      }
+      return sharedCriterionBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.SharedSet sharedSet_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.SharedSet, com.google.ads.googleads.v0.resources.SharedSet.Builder, com.google.ads.googleads.v0.resources.SharedSetOrBuilder> sharedSetBuilder_;
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+     */
+    public boolean hasSharedSet() {
+      return sharedSetBuilder_ != null || sharedSet_ != null;
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+     */
+    public com.google.ads.googleads.v0.resources.SharedSet getSharedSet() {
+      if (sharedSetBuilder_ == null) {
+        return sharedSet_ == null ? com.google.ads.googleads.v0.resources.SharedSet.getDefaultInstance() : sharedSet_;
+      } else {
+        return sharedSetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+     */
+    public Builder setSharedSet(com.google.ads.googleads.v0.resources.SharedSet value) {
+      if (sharedSetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        sharedSet_ = value;
+        onChanged();
+      } else {
+        sharedSetBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+     */
+    public Builder setSharedSet(
+        com.google.ads.googleads.v0.resources.SharedSet.Builder builderForValue) {
+      if (sharedSetBuilder_ == null) {
+        sharedSet_ = builderForValue.build();
+        onChanged();
+      } else {
+        sharedSetBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+     */
+    public Builder mergeSharedSet(com.google.ads.googleads.v0.resources.SharedSet value) {
+      if (sharedSetBuilder_ == null) {
+        if (sharedSet_ != null) {
+          sharedSet_ =
+            com.google.ads.googleads.v0.resources.SharedSet.newBuilder(sharedSet_).mergeFrom(value).buildPartial();
+        } else {
+          sharedSet_ = value;
+        }
+        onChanged();
+      } else {
+        sharedSetBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+     */
+    public Builder clearSharedSet() {
+      if (sharedSetBuilder_ == null) {
+        sharedSet_ = null;
+        onChanged();
+      } else {
+        sharedSet_ = null;
+        sharedSetBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+     */
+    public com.google.ads.googleads.v0.resources.SharedSet.Builder getSharedSetBuilder() {
+      
+      onChanged();
+      return getSharedSetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+     */
+    public com.google.ads.googleads.v0.resources.SharedSetOrBuilder getSharedSetOrBuilder() {
+      if (sharedSetBuilder_ != null) {
+        return sharedSetBuilder_.getMessageOrBuilder();
+      } else {
+        return sharedSet_ == null ?
+            com.google.ads.googleads.v0.resources.SharedSet.getDefaultInstance() : sharedSet_;
+      }
+    }
+    /**
+     * <pre>
+     * The shared set referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.SharedSet, com.google.ads.googleads.v0.resources.SharedSet.Builder, com.google.ads.googleads.v0.resources.SharedSetOrBuilder> 
+        getSharedSetFieldBuilder() {
+      if (sharedSetBuilder_ == null) {
+        sharedSetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.SharedSet, com.google.ads.googleads.v0.resources.SharedSet.Builder, com.google.ads.googleads.v0.resources.SharedSetOrBuilder>(
+                getSharedSet(),
+                getParentForChildren(),
+                isClean());
+        sharedSet_ = null;
+      }
+      return sharedSetBuilder_;
+    }
+
     private com.google.ads.googleads.v0.common.Metrics metrics_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.common.Metrics, com.google.ads.googleads.v0.common.Metrics.Builder, com.google.ads.googleads.v0.common.MetricsOrBuilder> metricsBuilder_;
@@ -4011,6 +5229,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 5;</code>
      */
     public com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType getAdNetworkType() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType result = com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType.valueOf(adNetworkType_);
       return result == null ? com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType.UNRECOGNIZED : result;
     }
@@ -4237,6 +5456,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 7;</code>
      */
     public com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
       return result == null ? com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
     }
@@ -4273,7 +5493,7 @@ private static final long serialVersionUID = 0L;
     private int device_ = 0;
     /**
      * <pre>
-     * Platform to which metrics apply.
+     * Device to which metrics apply.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
@@ -4283,7 +5503,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Platform to which metrics apply.
+     * Device to which metrics apply.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
@@ -4295,18 +5515,19 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Platform to which metrics apply.
+     * Device to which metrics apply.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
      */
     public com.google.ads.googleads.v0.enums.DeviceEnum.Device getDevice() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.DeviceEnum.Device result = com.google.ads.googleads.v0.enums.DeviceEnum.Device.valueOf(device_);
       return result == null ? com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Platform to which metrics apply.
+     * Device to which metrics apply.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
@@ -4322,7 +5543,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Platform to which metrics apply.
+     * Device to which metrics apply.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
@@ -4640,6 +5861,71 @@ private static final long serialVersionUID = 0L;
       return monthBuilder_;
     }
 
+    private int monthOfYear_ = 0;
+    /**
+     * <pre>
+     * Month of the year, e.g., January.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
+     */
+    public int getMonthOfYearValue() {
+      return monthOfYear_;
+    }
+    /**
+     * <pre>
+     * Month of the year, e.g., January.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
+     */
+    public Builder setMonthOfYearValue(int value) {
+      monthOfYear_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Month of the year, e.g., January.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
+     */
+    public com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear getMonthOfYear() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.valueOf(monthOfYear_);
+      return result == null ? com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Month of the year, e.g., January.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
+     */
+    public Builder setMonthOfYear(com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      monthOfYear_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Month of the year, e.g., January.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
+     */
+    public Builder clearMonthOfYear() {
+      
+      monthOfYear_ = 0;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.StringValue quarter_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> quarterBuilder_;
@@ -4842,6 +6128,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.SlotEnum.Slot slot = 13;</code>
      */
     public com.google.ads.googleads.v0.enums.SlotEnum.Slot getSlot() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.SlotEnum.Slot result = com.google.ads.googleads.v0.enums.SlotEnum.Slot.valueOf(slot_);
       return result == null ? com.google.ads.googleads.v0.enums.SlotEnum.Slot.UNRECOGNIZED : result;
     }
@@ -5189,11 +6476,13 @@ private static final long serialVersionUID = 0L;
       }
       return yearBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -5215,6 +6504,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<GoogleAdsRow>
       PARSER = new com.google.protobuf.AbstractParser<GoogleAdsRow>() {
+    @java.lang.Override
     public GoogleAdsRow parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5232,6 +6522,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.services.GoogleAdsRow getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

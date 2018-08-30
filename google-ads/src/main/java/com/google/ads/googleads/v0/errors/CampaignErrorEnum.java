@@ -69,6 +69,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.CampaignErrorProto.internal_static_google_ads_googleads_v0_errors_CampaignErrorEnum_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.errors.CampaignErrorProto.internal_static_google_ads_googleads_v0_errors_CampaignErrorEnum_fieldAccessorTable
@@ -308,23 +309,6 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_SHOPPING_SALES_COUNTRY = 27;</code>
      */
     INVALID_SHOPPING_SALES_COUNTRY(27),
-    /**
-     * <pre>
-     * Shopping merchant is not enabled for Purchases on Google.
-     * </pre>
-     *
-     * <code>SHOPPING_MERCHANT_NOT_ALLOWED_FOR_PURCHASES_ON_GOOGLE = 28;</code>
-     */
-    SHOPPING_MERCHANT_NOT_ALLOWED_FOR_PURCHASES_ON_GOOGLE(28),
-    /**
-     * <pre>
-     * Purchases on Google not enabled for the shopping campaign's sales
-     * country.
-     * </pre>
-     *
-     * <code>PURCHASES_ON_GOOGLE_NOT_SUPPORTED_FOR_SHOPPING_SALES_COUNTRY = 29;</code>
-     */
-    PURCHASES_ON_GOOGLE_NOT_SUPPORTED_FOR_SHOPPING_SALES_COUNTRY(29),
     /**
      * <pre>
      * A Campaign with channel sub type UNIVERSAL_APP_CAMPAIGN must have a
@@ -637,23 +621,6 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_SHOPPING_SALES_COUNTRY_VALUE = 27;
     /**
      * <pre>
-     * Shopping merchant is not enabled for Purchases on Google.
-     * </pre>
-     *
-     * <code>SHOPPING_MERCHANT_NOT_ALLOWED_FOR_PURCHASES_ON_GOOGLE = 28;</code>
-     */
-    public static final int SHOPPING_MERCHANT_NOT_ALLOWED_FOR_PURCHASES_ON_GOOGLE_VALUE = 28;
-    /**
-     * <pre>
-     * Purchases on Google not enabled for the shopping campaign's sales
-     * country.
-     * </pre>
-     *
-     * <code>PURCHASES_ON_GOOGLE_NOT_SUPPORTED_FOR_SHOPPING_SALES_COUNTRY = 29;</code>
-     */
-    public static final int PURCHASES_ON_GOOGLE_NOT_SUPPORTED_FOR_SHOPPING_SALES_COUNTRY_VALUE = 29;
-    /**
-     * <pre>
      * A Campaign with channel sub type UNIVERSAL_APP_CAMPAIGN must have a
      * UniversalAppCampaignSetting specified.
      * </pre>
@@ -783,8 +750,6 @@ private static final long serialVersionUID = 0L;
         case 25: return CAMPAIGN_LABEL_ALREADY_EXISTS;
         case 26: return MISSING_SHOPPING_SETTING;
         case 27: return INVALID_SHOPPING_SALES_COUNTRY;
-        case 28: return SHOPPING_MERCHANT_NOT_ALLOWED_FOR_PURCHASES_ON_GOOGLE;
-        case 29: return PURCHASES_ON_GOOGLE_NOT_SUPPORTED_FOR_SHOPPING_SALES_COUNTRY;
         case 30: return MISSING_UNIVERSAL_APP_CAMPAIGN_SETTING;
         case 31: return ADVERTISING_CHANNEL_TYPE_NOT_AVAILABLE_FOR_ACCOUNT_TYPE;
         case 32: return INVALID_ADVERTISING_CHANNEL_SUB_TYPE;
@@ -848,6 +813,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -857,11 +823,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -969,6 +937,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -976,6 +945,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.errors.CampaignErrorEnum prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -1003,6 +973,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.errors.CampaignErrorProto.internal_static_google_ads_googleads_v0_errors_CampaignErrorEnum_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.errors.CampaignErrorProto.internal_static_google_ads_googleads_v0_errors_CampaignErrorEnum_fieldAccessorTable
@@ -1025,20 +996,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.errors.CampaignErrorProto.internal_static_google_ads_googleads_v0_errors_CampaignErrorEnum_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.errors.CampaignErrorEnum getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.errors.CampaignErrorEnum.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.errors.CampaignErrorEnum build() {
       com.google.ads.googleads.v0.errors.CampaignErrorEnum result = buildPartial();
       if (!result.isInitialized()) {
@@ -1047,38 +1022,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.errors.CampaignErrorEnum buildPartial() {
       com.google.ads.googleads.v0.errors.CampaignErrorEnum result = new com.google.ads.googleads.v0.errors.CampaignErrorEnum(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.errors.CampaignErrorEnum) {
         return mergeFrom((com.google.ads.googleads.v0.errors.CampaignErrorEnum)other);
@@ -1095,10 +1078,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1116,11 +1101,13 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -1142,6 +1129,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<CampaignErrorEnum>
       PARSER = new com.google.protobuf.AbstractParser<CampaignErrorEnum>() {
+    @java.lang.Override
     public CampaignErrorEnum parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1159,6 +1147,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.errors.CampaignErrorEnum getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

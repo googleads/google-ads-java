@@ -79,7 +79,7 @@ public interface AdGroupAdOrBuilder extends
    * The ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.common.Ad ad = 5;</code>
+   * <code>.google.ads.googleads.v0.resources.Ad ad = 5;</code>
    */
   boolean hasAd();
   /**
@@ -87,15 +87,15 @@ public interface AdGroupAdOrBuilder extends
    * The ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.common.Ad ad = 5;</code>
+   * <code>.google.ads.googleads.v0.resources.Ad ad = 5;</code>
    */
-  com.google.ads.googleads.v0.common.Ad getAd();
+  com.google.ads.googleads.v0.resources.Ad getAd();
   /**
    * <pre>
    * The ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.common.Ad ad = 5;</code>
+   * <code>.google.ads.googleads.v0.resources.Ad ad = 5;</code>
    */
-  com.google.ads.googleads.v0.common.AdOrBuilder getAdOrBuilder();
+  com.google.ads.googleads.v0.resources.AdOrBuilder getAdOrBuilder();
 }

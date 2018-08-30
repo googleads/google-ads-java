@@ -30,7 +30,7 @@ public final class CampaignErrorProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v0/errors/campaig" +
       "n_error.proto\022\036google.ads.googleads.v0.e" +
-      "rrors\"\317\014\n\021CampaignErrorEnum\"\271\014\n\rCampaign" +
+      "rrors\"\322\013\n\021CampaignErrorEnum\"\274\013\n\rCampaign" +
       "Error\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022!\n\035C" +
       "ANNOT_TARGET_CONTENT_NETWORK\020\003\022 \n\034CANNOT" +
       "_TARGET_SEARCH_NETWORK\020\004\0226\n2CANNOT_TARGE" +
@@ -57,25 +57,22 @@ public final class CampaignErrorProto {
       "ALS\020\027\022!\n\035CAMPAIGN_LABEL_DOES_NOT_EXIST\020\030" +
       "\022!\n\035CAMPAIGN_LABEL_ALREADY_EXISTS\020\031\022\034\n\030M" +
       "ISSING_SHOPPING_SETTING\020\032\022\"\n\036INVALID_SHO" +
-      "PPING_SALES_COUNTRY\020\033\0229\n5SHOPPING_MERCHA" +
-      "NT_NOT_ALLOWED_FOR_PURCHASES_ON_GOOGLE\020\034" +
-      "\022@\n<PURCHASES_ON_GOOGLE_NOT_SUPPORTED_FO" +
-      "R_SHOPPING_SALES_COUNTRY\020\035\022*\n&MISSING_UN" +
-      "IVERSAL_APP_CAMPAIGN_SETTING\020\036\022;\n7ADVERT" +
-      "ISING_CHANNEL_TYPE_NOT_AVAILABLE_FOR_ACC" +
-      "OUNT_TYPE\020\037\022(\n$INVALID_ADVERTISING_CHANN" +
-      "EL_SUB_TYPE\020 \022,\n(AT_LEAST_ONE_CONVERSION" +
-      "_MUST_BE_SELECTED\020!\022\037\n\033CANNOT_SET_AD_ROT" +
-      "ATION_MODE\020\"\022/\n+CANNOT_MODIFY_START_DATE" +
-      "_IF_ALREADY_STARTED\020#\022\033\n\027CANNOT_SET_DATE" +
-      "_TO_PAST\020$\022\037\n\033MISSING_HOTEL_CUSTOMER_LIN" +
-      "K\020%\022\037\n\033INVALID_HOTEL_CUSTOMER_LINK\020&\022\031\n\025" +
-      "MISSING_HOTEL_SETTING\020\'B\310\001\n\"com.google.a" +
-      "ds.googleads.v0.errorsB\022CampaignErrorPro" +
-      "toP\001ZDgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v0/errors;errors\242\002\003GAA" +
-      "\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Goog" +
-      "le\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "PPING_SALES_COUNTRY\020\033\022*\n&MISSING_UNIVERS" +
+      "AL_APP_CAMPAIGN_SETTING\020\036\022;\n7ADVERTISING" +
+      "_CHANNEL_TYPE_NOT_AVAILABLE_FOR_ACCOUNT_" +
+      "TYPE\020\037\022(\n$INVALID_ADVERTISING_CHANNEL_SU" +
+      "B_TYPE\020 \022,\n(AT_LEAST_ONE_CONVERSION_MUST" +
+      "_BE_SELECTED\020!\022\037\n\033CANNOT_SET_AD_ROTATION" +
+      "_MODE\020\"\022/\n+CANNOT_MODIFY_START_DATE_IF_A" +
+      "LREADY_STARTED\020#\022\033\n\027CANNOT_SET_DATE_TO_P" +
+      "AST\020$\022\037\n\033MISSING_HOTEL_CUSTOMER_LINK\020%\022\037" +
+      "\n\033INVALID_HOTEL_CUSTOMER_LINK\020&\022\031\n\025MISSI" +
+      "NG_HOTEL_SETTING\020\'B\310\001\n\"com.google.ads.go" +
+      "ogleads.v0.errorsB\022CampaignErrorProtoP\001Z" +
+      "Dgoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v0/errors;errors\242\002\003GAA\252\002\036Go" +
+      "ogle.Ads.GoogleAds.V0.Errors\312\002\036Google\\Ad" +
+      "s\\GoogleAds\\V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

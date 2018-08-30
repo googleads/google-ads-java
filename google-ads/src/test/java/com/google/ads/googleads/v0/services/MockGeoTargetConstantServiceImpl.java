@@ -17,6 +17,7 @@ package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.GeoTargetConstant;
 import com.google.ads.googleads.v0.services.GeoTargetConstantServiceGrpc.GeoTargetConstantServiceImplBase;
+import com.google.ads.googleads.v0.services.GetGeoTargetConstantRequest;
 import com.google.api.core.BetaApi;
 import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.stub.StreamObserver;

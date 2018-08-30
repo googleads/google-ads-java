@@ -17,6 +17,9 @@ package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.CampaignCriterion;
 import com.google.ads.googleads.v0.services.CampaignCriterionServiceGrpc.CampaignCriterionServiceImplBase;
+import com.google.ads.googleads.v0.services.GetCampaignCriterionRequest;
+import com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest;
+import com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse;
 import com.google.api.core.BetaApi;
 import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.stub.StreamObserver;

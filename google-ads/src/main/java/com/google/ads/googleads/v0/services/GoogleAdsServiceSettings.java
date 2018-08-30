@@ -17,7 +17,8 @@ package com.google.ads.googleads.v0.services;
 
 import static com.google.ads.googleads.v0.services.GoogleAdsServiceClient.SearchPagedResponse;
 
-import com.google.ads.googleads.v0.services.stub.GoogleAdsServiceStubSettings;
+import com.google.ads.googleads.v0.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v0.services.SearchGoogleAdsResponse;
 import com.google.api.core.ApiFunction;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.GoogleCredentialsProvider;
@@ -29,6 +30,7 @@ import com.google.api.gax.rpc.ClientSettings;
 import com.google.api.gax.rpc.PagedCallSettings;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.api.gax.rpc.UnaryCallSettings;
+import com.google.ads.googleads.v0.services.stub.GoogleAdsServiceStubSettings;
 import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;

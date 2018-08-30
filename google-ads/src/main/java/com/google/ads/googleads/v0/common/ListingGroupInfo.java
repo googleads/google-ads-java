@@ -47,13 +47,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 8: {
             int rawValue = input.readEnum();
 
@@ -74,16 +67,23 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            com.google.protobuf.Int64Value.Builder subBuilder = null;
-            if (parentCriterionId_ != null) {
-              subBuilder = parentCriterionId_.toBuilder();
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (parentAdGroupCriterion_ != null) {
+              subBuilder = parentAdGroupCriterion_.toBuilder();
             }
-            parentCriterionId_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            parentAdGroupCriterion_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(parentCriterionId_);
-              parentCriterionId_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(parentAdGroupCriterion_);
+              parentAdGroupCriterion_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
             break;
           }
         }
@@ -103,6 +103,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_ListingGroupInfo_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_ListingGroupInfo_fieldAccessorTable
@@ -130,6 +131,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v0.enums.ListingGroupTypeEnum.ListingGroupType type = 1;</code>
    */
   public com.google.ads.googleads.v0.enums.ListingGroupTypeEnum.ListingGroupType getType() {
+    @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.ListingGroupTypeEnum.ListingGroupType result = com.google.ads.googleads.v0.enums.ListingGroupTypeEnum.ListingGroupType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v0.enums.ListingGroupTypeEnum.ListingGroupType.UNRECOGNIZED : result;
   }
@@ -170,40 +172,44 @@ private static final long serialVersionUID = 0L;
     return getCaseValue();
   }
 
-  public static final int PARENT_CRITERION_ID_FIELD_NUMBER = 3;
-  private com.google.protobuf.Int64Value parentCriterionId_;
+  public static final int PARENT_AD_GROUP_CRITERION_FIELD_NUMBER = 3;
+  private com.google.protobuf.StringValue parentAdGroupCriterion_;
   /**
    * <pre>
-   * ID of the parent listing group subdivision. Undefined for the root group.
+   * Resource name of ad group criterion which is the parent listing group
+   * subdivision. Null for the root group.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+   * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
    */
-  public boolean hasParentCriterionId() {
-    return parentCriterionId_ != null;
+  public boolean hasParentAdGroupCriterion() {
+    return parentAdGroupCriterion_ != null;
   }
   /**
    * <pre>
-   * ID of the parent listing group subdivision. Undefined for the root group.
+   * Resource name of ad group criterion which is the parent listing group
+   * subdivision. Null for the root group.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+   * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
    */
-  public com.google.protobuf.Int64Value getParentCriterionId() {
-    return parentCriterionId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentCriterionId_;
+  public com.google.protobuf.StringValue getParentAdGroupCriterion() {
+    return parentAdGroupCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : parentAdGroupCriterion_;
   }
   /**
    * <pre>
-   * ID of the parent listing group subdivision. Undefined for the root group.
+   * Resource name of ad group criterion which is the parent listing group
+   * subdivision. Null for the root group.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+   * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
    */
-  public com.google.protobuf.Int64ValueOrBuilder getParentCriterionIdOrBuilder() {
-    return getParentCriterionId();
+  public com.google.protobuf.StringValueOrBuilder getParentAdGroupCriterionOrBuilder() {
+    return getParentAdGroupCriterion();
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -213,6 +219,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (type_ != com.google.ads.googleads.v0.enums.ListingGroupTypeEnum.ListingGroupType.UNSPECIFIED.getNumber()) {
@@ -221,12 +228,13 @@ private static final long serialVersionUID = 0L;
     if (caseValue_ != null) {
       output.writeMessage(2, getCaseValue());
     }
-    if (parentCriterionId_ != null) {
-      output.writeMessage(3, getParentCriterionId());
+    if (parentAdGroupCriterion_ != null) {
+      output.writeMessage(3, getParentAdGroupCriterion());
     }
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -240,9 +248,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getCaseValue());
     }
-    if (parentCriterionId_ != null) {
+    if (parentAdGroupCriterion_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getParentCriterionId());
+        .computeMessageSize(3, getParentAdGroupCriterion());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -266,10 +274,10 @@ private static final long serialVersionUID = 0L;
       result = result && getCaseValue()
           .equals(other.getCaseValue());
     }
-    result = result && (hasParentCriterionId() == other.hasParentCriterionId());
-    if (hasParentCriterionId()) {
-      result = result && getParentCriterionId()
-          .equals(other.getParentCriterionId());
+    result = result && (hasParentAdGroupCriterion() == other.hasParentAdGroupCriterion());
+    if (hasParentAdGroupCriterion()) {
+      result = result && getParentAdGroupCriterion()
+          .equals(other.getParentAdGroupCriterion());
     }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
@@ -288,9 +296,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CASE_VALUE_FIELD_NUMBER;
       hash = (53 * hash) + getCaseValue().hashCode();
     }
-    if (hasParentCriterionId()) {
-      hash = (37 * hash) + PARENT_CRITERION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getParentCriterionId().hashCode();
+    if (hasParentAdGroupCriterion()) {
+      hash = (37 * hash) + PARENT_AD_GROUP_CRITERION_FIELD_NUMBER;
+      hash = (53 * hash) + getParentAdGroupCriterion().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -367,6 +375,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -374,6 +383,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.common.ListingGroupInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -401,6 +411,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_ListingGroupInfo_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_ListingGroupInfo_fieldAccessorTable
@@ -423,6 +434,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       type_ = 0;
@@ -433,24 +445,27 @@ private static final long serialVersionUID = 0L;
         caseValue_ = null;
         caseValueBuilder_ = null;
       }
-      if (parentCriterionIdBuilder_ == null) {
-        parentCriterionId_ = null;
+      if (parentAdGroupCriterionBuilder_ == null) {
+        parentAdGroupCriterion_ = null;
       } else {
-        parentCriterionId_ = null;
-        parentCriterionIdBuilder_ = null;
+        parentAdGroupCriterion_ = null;
+        parentAdGroupCriterionBuilder_ = null;
       }
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_ListingGroupInfo_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.common.ListingGroupInfo getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.common.ListingGroupInfo.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.common.ListingGroupInfo build() {
       com.google.ads.googleads.v0.common.ListingGroupInfo result = buildPartial();
       if (!result.isInitialized()) {
@@ -459,6 +474,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.common.ListingGroupInfo buildPartial() {
       com.google.ads.googleads.v0.common.ListingGroupInfo result = new com.google.ads.googleads.v0.common.ListingGroupInfo(this);
       result.type_ = type_;
@@ -467,41 +483,48 @@ private static final long serialVersionUID = 0L;
       } else {
         result.caseValue_ = caseValueBuilder_.build();
       }
-      if (parentCriterionIdBuilder_ == null) {
-        result.parentCriterionId_ = parentCriterionId_;
+      if (parentAdGroupCriterionBuilder_ == null) {
+        result.parentAdGroupCriterion_ = parentAdGroupCriterion_;
       } else {
-        result.parentCriterionId_ = parentCriterionIdBuilder_.build();
+        result.parentAdGroupCriterion_ = parentAdGroupCriterionBuilder_.build();
       }
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.common.ListingGroupInfo) {
         return mergeFrom((com.google.ads.googleads.v0.common.ListingGroupInfo)other);
@@ -519,18 +542,20 @@ private static final long serialVersionUID = 0L;
       if (other.hasCaseValue()) {
         mergeCaseValue(other.getCaseValue());
       }
-      if (other.hasParentCriterionId()) {
-        mergeParentCriterionId(other.getParentCriterionId());
+      if (other.hasParentAdGroupCriterion()) {
+        mergeParentAdGroupCriterion(other.getParentAdGroupCriterion());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -580,6 +605,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v0.enums.ListingGroupTypeEnum.ListingGroupType type = 1;</code>
      */
     public com.google.ads.googleads.v0.enums.ListingGroupTypeEnum.ListingGroupType getType() {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.ListingGroupTypeEnum.ListingGroupType result = com.google.ads.googleads.v0.enums.ListingGroupTypeEnum.ListingGroupType.valueOf(type_);
       return result == null ? com.google.ads.googleads.v0.enums.ListingGroupTypeEnum.ListingGroupType.UNRECOGNIZED : result;
     }
@@ -775,163 +801,174 @@ private static final long serialVersionUID = 0L;
       return caseValueBuilder_;
     }
 
-    private com.google.protobuf.Int64Value parentCriterionId_ = null;
+    private com.google.protobuf.StringValue parentAdGroupCriterion_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> parentCriterionIdBuilder_;
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> parentAdGroupCriterionBuilder_;
     /**
      * <pre>
-     * ID of the parent listing group subdivision. Undefined for the root group.
+     * Resource name of ad group criterion which is the parent listing group
+     * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+     * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
      */
-    public boolean hasParentCriterionId() {
-      return parentCriterionIdBuilder_ != null || parentCriterionId_ != null;
+    public boolean hasParentAdGroupCriterion() {
+      return parentAdGroupCriterionBuilder_ != null || parentAdGroupCriterion_ != null;
     }
     /**
      * <pre>
-     * ID of the parent listing group subdivision. Undefined for the root group.
+     * Resource name of ad group criterion which is the parent listing group
+     * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+     * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
      */
-    public com.google.protobuf.Int64Value getParentCriterionId() {
-      if (parentCriterionIdBuilder_ == null) {
-        return parentCriterionId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentCriterionId_;
+    public com.google.protobuf.StringValue getParentAdGroupCriterion() {
+      if (parentAdGroupCriterionBuilder_ == null) {
+        return parentAdGroupCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : parentAdGroupCriterion_;
       } else {
-        return parentCriterionIdBuilder_.getMessage();
+        return parentAdGroupCriterionBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * ID of the parent listing group subdivision. Undefined for the root group.
+     * Resource name of ad group criterion which is the parent listing group
+     * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+     * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
      */
-    public Builder setParentCriterionId(com.google.protobuf.Int64Value value) {
-      if (parentCriterionIdBuilder_ == null) {
+    public Builder setParentAdGroupCriterion(com.google.protobuf.StringValue value) {
+      if (parentAdGroupCriterionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        parentCriterionId_ = value;
+        parentAdGroupCriterion_ = value;
         onChanged();
       } else {
-        parentCriterionIdBuilder_.setMessage(value);
+        parentAdGroupCriterionBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * ID of the parent listing group subdivision. Undefined for the root group.
+     * Resource name of ad group criterion which is the parent listing group
+     * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+     * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
      */
-    public Builder setParentCriterionId(
-        com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (parentCriterionIdBuilder_ == null) {
-        parentCriterionId_ = builderForValue.build();
+    public Builder setParentAdGroupCriterion(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (parentAdGroupCriterionBuilder_ == null) {
+        parentAdGroupCriterion_ = builderForValue.build();
         onChanged();
       } else {
-        parentCriterionIdBuilder_.setMessage(builderForValue.build());
+        parentAdGroupCriterionBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * ID of the parent listing group subdivision. Undefined for the root group.
+     * Resource name of ad group criterion which is the parent listing group
+     * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+     * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
      */
-    public Builder mergeParentCriterionId(com.google.protobuf.Int64Value value) {
-      if (parentCriterionIdBuilder_ == null) {
-        if (parentCriterionId_ != null) {
-          parentCriterionId_ =
-            com.google.protobuf.Int64Value.newBuilder(parentCriterionId_).mergeFrom(value).buildPartial();
+    public Builder mergeParentAdGroupCriterion(com.google.protobuf.StringValue value) {
+      if (parentAdGroupCriterionBuilder_ == null) {
+        if (parentAdGroupCriterion_ != null) {
+          parentAdGroupCriterion_ =
+            com.google.protobuf.StringValue.newBuilder(parentAdGroupCriterion_).mergeFrom(value).buildPartial();
         } else {
-          parentCriterionId_ = value;
+          parentAdGroupCriterion_ = value;
         }
         onChanged();
       } else {
-        parentCriterionIdBuilder_.mergeFrom(value);
+        parentAdGroupCriterionBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * ID of the parent listing group subdivision. Undefined for the root group.
+     * Resource name of ad group criterion which is the parent listing group
+     * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+     * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
      */
-    public Builder clearParentCriterionId() {
-      if (parentCriterionIdBuilder_ == null) {
-        parentCriterionId_ = null;
+    public Builder clearParentAdGroupCriterion() {
+      if (parentAdGroupCriterionBuilder_ == null) {
+        parentAdGroupCriterion_ = null;
         onChanged();
       } else {
-        parentCriterionId_ = null;
-        parentCriterionIdBuilder_ = null;
+        parentAdGroupCriterion_ = null;
+        parentAdGroupCriterionBuilder_ = null;
       }
 
       return this;
     }
     /**
      * <pre>
-     * ID of the parent listing group subdivision. Undefined for the root group.
+     * Resource name of ad group criterion which is the parent listing group
+     * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+     * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
      */
-    public com.google.protobuf.Int64Value.Builder getParentCriterionIdBuilder() {
+    public com.google.protobuf.StringValue.Builder getParentAdGroupCriterionBuilder() {
       
       onChanged();
-      return getParentCriterionIdFieldBuilder().getBuilder();
+      return getParentAdGroupCriterionFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * ID of the parent listing group subdivision. Undefined for the root group.
+     * Resource name of ad group criterion which is the parent listing group
+     * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+     * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
      */
-    public com.google.protobuf.Int64ValueOrBuilder getParentCriterionIdOrBuilder() {
-      if (parentCriterionIdBuilder_ != null) {
-        return parentCriterionIdBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.StringValueOrBuilder getParentAdGroupCriterionOrBuilder() {
+      if (parentAdGroupCriterionBuilder_ != null) {
+        return parentAdGroupCriterionBuilder_.getMessageOrBuilder();
       } else {
-        return parentCriterionId_ == null ?
-            com.google.protobuf.Int64Value.getDefaultInstance() : parentCriterionId_;
+        return parentAdGroupCriterion_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : parentAdGroupCriterion_;
       }
     }
     /**
      * <pre>
-     * ID of the parent listing group subdivision. Undefined for the root group.
+     * Resource name of ad group criterion which is the parent listing group
+     * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parent_criterion_id = 3;</code>
+     * <code>.google.protobuf.StringValue parent_ad_group_criterion = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-        getParentCriterionIdFieldBuilder() {
-      if (parentCriterionIdBuilder_ == null) {
-        parentCriterionIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                getParentCriterionId(),
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getParentAdGroupCriterionFieldBuilder() {
+      if (parentAdGroupCriterionBuilder_ == null) {
+        parentAdGroupCriterionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getParentAdGroupCriterion(),
                 getParentForChildren(),
                 isClean());
-        parentCriterionId_ = null;
+        parentAdGroupCriterion_ = null;
       }
-      return parentCriterionIdBuilder_;
+      return parentAdGroupCriterionBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -953,6 +990,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<ListingGroupInfo>
       PARSER = new com.google.protobuf.AbstractParser<ListingGroupInfo>() {
+    @java.lang.Override
     public ListingGroupInfo parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -970,6 +1008,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.common.ListingGroupInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

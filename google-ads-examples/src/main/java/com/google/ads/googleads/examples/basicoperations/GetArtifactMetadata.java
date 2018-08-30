@@ -100,7 +100,7 @@ public class GetArtifactMetadata {
           googleAdsFieldServiceClient.searchGoogleAdsFields(
               String.format(
                   "SELECT name, category, selectable, filterable, sortable, selectable_with, "
-                      + "data_type, is_repeated WHERE name = %s",
+                      + "data_type, is_repeated WHERE name = '%s'",
                   artifactName));
 
       // Get all returned artifacts and print out their metadata.

@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private HotelCheckInDayInfo() {
+    dayOfWeek_ = 0;
   }
 
   @java.lang.Override
@@ -35,6 +36,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -45,6 +47,12 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 8: {
+            int rawValue = input.readEnum();
+
+            dayOfWeek_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -69,6 +77,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_HotelCheckInDayInfo_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_HotelCheckInDayInfo_fieldAccessorTable
@@ -76,7 +85,33 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v0.common.HotelCheckInDayInfo.class, com.google.ads.googleads.v0.common.HotelCheckInDayInfo.Builder.class);
   }
 
+  public static final int DAY_OF_WEEK_FIELD_NUMBER = 1;
+  private int dayOfWeek_;
+  /**
+   * <pre>
+   * The day of the week.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+   */
+  public int getDayOfWeekValue() {
+    return dayOfWeek_;
+  }
+  /**
+   * <pre>
+   * The day of the week.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+   */
+  public com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
+    return result == null ? com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -86,16 +121,25 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (dayOfWeek_ != com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNSPECIFIED.getNumber()) {
+      output.writeEnum(1, dayOfWeek_);
+    }
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
 
     size = 0;
+    if (dayOfWeek_ != com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(1, dayOfWeek_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -112,6 +156,7 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v0.common.HotelCheckInDayInfo other = (com.google.ads.googleads.v0.common.HotelCheckInDayInfo) obj;
 
     boolean result = true;
+    result = result && dayOfWeek_ == other.dayOfWeek_;
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -123,6 +168,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + DAY_OF_WEEK_FIELD_NUMBER;
+    hash = (53 * hash) + dayOfWeek_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -198,6 +245,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -205,6 +253,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.common.HotelCheckInDayInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -232,6 +281,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_HotelCheckInDayInfo_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_HotelCheckInDayInfo_fieldAccessorTable
@@ -254,20 +304,26 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
+      dayOfWeek_ = 0;
+
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.common.CriteriaProto.internal_static_google_ads_googleads_v0_common_HotelCheckInDayInfo_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.common.HotelCheckInDayInfo getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.common.HotelCheckInDayInfo.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.common.HotelCheckInDayInfo build() {
       com.google.ads.googleads.v0.common.HotelCheckInDayInfo result = buildPartial();
       if (!result.isInitialized()) {
@@ -276,38 +332,47 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.common.HotelCheckInDayInfo buildPartial() {
       com.google.ads.googleads.v0.common.HotelCheckInDayInfo result = new com.google.ads.googleads.v0.common.HotelCheckInDayInfo(this);
+      result.dayOfWeek_ = dayOfWeek_;
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.common.HotelCheckInDayInfo) {
         return mergeFrom((com.google.ads.googleads.v0.common.HotelCheckInDayInfo)other);
@@ -319,15 +384,20 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v0.common.HotelCheckInDayInfo other) {
       if (other == com.google.ads.googleads.v0.common.HotelCheckInDayInfo.getDefaultInstance()) return this;
+      if (other.dayOfWeek_ != 0) {
+        setDayOfWeekValue(other.getDayOfWeekValue());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -345,11 +415,78 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
+    private int dayOfWeek_ = 0;
+    /**
+     * <pre>
+     * The day of the week.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+     */
+    public int getDayOfWeekValue() {
+      return dayOfWeek_;
+    }
+    /**
+     * <pre>
+     * The day of the week.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+     */
+    public Builder setDayOfWeekValue(int value) {
+      dayOfWeek_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The day of the week.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+     */
+    public com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
+      return result == null ? com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The day of the week.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+     */
+    public Builder setDayOfWeek(com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      dayOfWeek_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The day of the week.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+     */
+    public Builder clearDayOfWeek() {
+      
+      dayOfWeek_ = 0;
+      onChanged();
+      return this;
+    }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -371,6 +508,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<HotelCheckInDayInfo>
       PARSER = new com.google.protobuf.AbstractParser<HotelCheckInDayInfo>() {
+    @java.lang.Override
     public HotelCheckInDayInfo parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -388,6 +526,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.common.HotelCheckInDayInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

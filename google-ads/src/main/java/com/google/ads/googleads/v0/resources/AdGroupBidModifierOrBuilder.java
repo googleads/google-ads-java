@@ -112,6 +112,60 @@ public interface AdGroupBidModifierOrBuilder extends
 
   /**
    * <pre>
+   * The base ad group from which this draft/trial adgroup bid modifier was
+   * created. If ad_group is a base ad group then this field will be equal to
+   * ad_group. If the ad group was created in the draft or trial and has no
+   * corresponding base ad group, then this field will be null.
+   * This field is readonly.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+   */
+  boolean hasBaseAdGroup();
+  /**
+   * <pre>
+   * The base ad group from which this draft/trial adgroup bid modifier was
+   * created. If ad_group is a base ad group then this field will be equal to
+   * ad_group. If the ad group was created in the draft or trial and has no
+   * corresponding base ad group, then this field will be null.
+   * This field is readonly.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+   */
+  com.google.protobuf.StringValue getBaseAdGroup();
+  /**
+   * <pre>
+   * The base ad group from which this draft/trial adgroup bid modifier was
+   * created. If ad_group is a base ad group then this field will be equal to
+   * ad_group. If the ad group was created in the draft or trial and has no
+   * corresponding base ad group, then this field will be null.
+   * This field is readonly.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder();
+
+  /**
+   * <pre>
+   * Bid modifier source.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+   */
+  int getBidModifierSourceValue();
+  /**
+   * <pre>
+   * Bid modifier source.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+   */
+  com.google.ads.googleads.v0.enums.BidModifierSourceEnum.BidModifierSource getBidModifierSource();
+
+  /**
+   * <pre>
    * Criterion for hotel date selection (default dates vs. user selected).
    * </pre>
    *
@@ -209,6 +263,31 @@ public interface AdGroupBidModifierOrBuilder extends
    * <code>.google.ads.googleads.v0.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
    */
   com.google.ads.googleads.v0.common.HotelCheckInDayInfoOrBuilder getHotelCheckInDayOrBuilder();
+
+  /**
+   * <pre>
+   * A device criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+   */
+  boolean hasDevice();
+  /**
+   * <pre>
+   * A device criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+   */
+  com.google.ads.googleads.v0.common.DeviceInfo getDevice();
+  /**
+   * <pre>
+   * A device criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
+   */
+  com.google.ads.googleads.v0.common.DeviceInfoOrBuilder getDeviceOrBuilder();
 
   public com.google.ads.googleads.v0.resources.AdGroupBidModifier.CriterionCase getCriterionCase();
 }

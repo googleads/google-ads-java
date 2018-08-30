@@ -6,4 +6,21 @@ package com.google.ads.googleads.v0.common;
 public interface HotelCheckInDayInfoOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.ads.googleads.v0.common.HotelCheckInDayInfo)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * The day of the week.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+   */
+  int getDayOfWeekValue();
+  /**
+   * <pre>
+   * The day of the week.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+   */
+  com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek();
 }

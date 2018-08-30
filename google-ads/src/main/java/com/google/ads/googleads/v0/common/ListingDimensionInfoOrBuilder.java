@@ -182,5 +182,55 @@ public interface ListingDimensionInfoOrBuilder extends
    */
   com.google.ads.googleads.v0.common.ListingCustomAttributeInfoOrBuilder getListingCustomAttributeOrBuilder();
 
+  /**
+   * <pre>
+   * Condition of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductConditionInfo product_condition = 10;</code>
+   */
+  boolean hasProductCondition();
+  /**
+   * <pre>
+   * Condition of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductConditionInfo product_condition = 10;</code>
+   */
+  com.google.ads.googleads.v0.common.ProductConditionInfo getProductCondition();
+  /**
+   * <pre>
+   * Condition of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductConditionInfo product_condition = 10;</code>
+   */
+  com.google.ads.googleads.v0.common.ProductConditionInfoOrBuilder getProductConditionOrBuilder();
+
+  /**
+   * <pre>
+   * Type of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductTypeInfo product_type = 12;</code>
+   */
+  boolean hasProductType();
+  /**
+   * <pre>
+   * Type of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductTypeInfo product_type = 12;</code>
+   */
+  com.google.ads.googleads.v0.common.ProductTypeInfo getProductType();
+  /**
+   * <pre>
+   * Type of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductTypeInfo product_type = 12;</code>
+   */
+  com.google.ads.googleads.v0.common.ProductTypeInfoOrBuilder getProductTypeOrBuilder();
+
   public com.google.ads.googleads.v0.common.ListingDimensionInfo.DimensionCase getDimensionCase();
 }

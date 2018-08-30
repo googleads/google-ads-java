@@ -30,15 +30,16 @@ public final class ContextErrorProto {
     java.lang.String[] descriptorData = {
       "\n2google/ads/googleads/v0/errors/context" +
       "_error.proto\022\036google.ads.googleads.v0.er" +
-      "rors\"i\n\020ContextErrorEnum\"U\n\014ContextError" +
-      "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\'\n#OPERAT" +
-      "ION_NOT_PERMITTED_FOR_CONTEXT\020\002B\307\001\n\"com." +
-      "google.ads.googleads.v0.errorsB\021ContextE" +
-      "rrorProtoP\001ZDgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v0/errors;error" +
-      "s\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Errors" +
-      "\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006proto" +
-      "3"
+      "rors\"\234\001\n\020ContextErrorEnum\"\207\001\n\014ContextErr" +
+      "or\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\'\n#OPER" +
+      "ATION_NOT_PERMITTED_FOR_CONTEXT\020\002\0220\n,OPE" +
+      "RATION_NOT_PERMITTED_FOR_REMOVED_RESOURC" +
+      "E\020\003B\307\001\n\"com.google.ads.googleads.v0.erro" +
+      "rsB\021ContextErrorProtoP\001ZDgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v0/" +
+      "errors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
+      "ds.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\E" +
+      "rrorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -69,6 +69,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.enums.SlotProto.internal_static_google_ads_googleads_v0_enums_SlotEnum_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.enums.SlotProto.internal_static_google_ads_googleads_v0_enums_SlotEnum_fieldAccessorTable
@@ -149,6 +150,14 @@ private static final long serialVersionUID = 0L;
      * <code>SEARCH_PARTNER_OTHER = 7;</code>
      */
     SEARCH_PARTNER_OTHER(7),
+    /**
+     * <pre>
+     * Cross-network.
+     * </pre>
+     *
+     * <code>MIXED = 8;</code>
+     */
+    MIXED(8),
     UNRECOGNIZED(-1),
     ;
 
@@ -216,6 +225,14 @@ private static final long serialVersionUID = 0L;
      * <code>SEARCH_PARTNER_OTHER = 7;</code>
      */
     public static final int SEARCH_PARTNER_OTHER_VALUE = 7;
+    /**
+     * <pre>
+     * Cross-network.
+     * </pre>
+     *
+     * <code>MIXED = 8;</code>
+     */
+    public static final int MIXED_VALUE = 8;
 
 
     public final int getNumber() {
@@ -244,6 +261,7 @@ private static final long serialVersionUID = 0L;
         case 5: return CONTENT;
         case 6: return SEARCH_PARTNER_TOP;
         case 7: return SEARCH_PARTNER_OTHER;
+        case 8: return MIXED;
         default: return null;
       }
     }
@@ -297,6 +315,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -306,11 +325,13 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -418,6 +439,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -425,6 +447,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.enums.SlotEnum prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -452,6 +475,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.enums.SlotProto.internal_static_google_ads_googleads_v0_enums_SlotEnum_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.enums.SlotProto.internal_static_google_ads_googleads_v0_enums_SlotEnum_fieldAccessorTable
@@ -474,20 +498,24 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.enums.SlotProto.internal_static_google_ads_googleads_v0_enums_SlotEnum_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.enums.SlotEnum getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.enums.SlotEnum.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.enums.SlotEnum build() {
       com.google.ads.googleads.v0.enums.SlotEnum result = buildPartial();
       if (!result.isInitialized()) {
@@ -496,38 +524,46 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.enums.SlotEnum buildPartial() {
       com.google.ads.googleads.v0.enums.SlotEnum result = new com.google.ads.googleads.v0.enums.SlotEnum(this);
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.enums.SlotEnum) {
         return mergeFrom((com.google.ads.googleads.v0.enums.SlotEnum)other);
@@ -544,10 +580,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -565,11 +603,13 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -591,6 +631,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<SlotEnum>
       PARSER = new com.google.protobuf.AbstractParser<SlotEnum>() {
+    @java.lang.Override
     public SlotEnum parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -608,6 +649,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.enums.SlotEnum getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

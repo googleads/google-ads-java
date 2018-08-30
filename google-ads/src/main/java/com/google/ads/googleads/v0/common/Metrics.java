@@ -47,39 +47,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-          case 42: {
-            com.google.protobuf.DoubleValue.Builder subBuilder = null;
-            if (allConversionRate_ != null) {
-              subBuilder = allConversionRate_.toBuilder();
-            }
-            allConversionRate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(allConversionRate_);
-              allConversionRate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 50: {
-            com.google.protobuf.DoubleValue.Builder subBuilder = null;
-            if (allConversionValue_ != null) {
-              subBuilder = allConversionValue_.toBuilder();
-            }
-            allConversionValue_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(allConversionValue_);
-              allConversionValue_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
           case 58: {
             com.google.protobuf.DoubleValue.Builder subBuilder = null;
             if (allConversions_ != null) {
@@ -210,32 +177,6 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 186: {
-            com.google.protobuf.DoubleValue.Builder subBuilder = null;
-            if (conversionRate_ != null) {
-              subBuilder = conversionRate_.toBuilder();
-            }
-            conversionRate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(conversionRate_);
-              conversionRate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 194: {
-            com.google.protobuf.DoubleValue.Builder subBuilder = null;
-            if (conversionValue_ != null) {
-              subBuilder = conversionValue_.toBuilder();
-            }
-            conversionValue_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(conversionValue_);
-              conversionValue_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
           case 202: {
             com.google.protobuf.DoubleValue.Builder subBuilder = null;
             if (conversions_ != null) {
@@ -258,19 +199,6 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(costMicros_);
               costMicros_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 218: {
-            com.google.protobuf.DoubleValue.Builder subBuilder = null;
-            if (costPerAllConversion_ != null) {
-              subBuilder = costPerAllConversion_.toBuilder();
-            }
-            costPerAllConversion_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(costPerAllConversion_);
-              costPerAllConversion_ = subBuilder.buildPartial();
             }
 
             break;
@@ -561,19 +489,6 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 490: {
-            com.google.protobuf.DoubleValue.Builder subBuilder = null;
-            if (allConversionsValuePerInteraction_ != null) {
-              subBuilder = allConversionsValuePerInteraction_.toBuilder();
-            }
-            allConversionsValuePerInteraction_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(allConversionsValuePerInteraction_);
-              allConversionsValuePerInteraction_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
           case 498: {
             com.google.protobuf.DoubleValue.Builder subBuilder = null;
             if (allConversionsValuePerCost_ != null) {
@@ -587,30 +502,115 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 506: {
+          case 522: {
             com.google.protobuf.DoubleValue.Builder subBuilder = null;
-            if (conversionValuePerInteraction_ != null) {
-              subBuilder = conversionValuePerInteraction_.toBuilder();
+            if (allConversionsFromInteractionsRate_ != null) {
+              subBuilder = allConversionsFromInteractionsRate_.toBuilder();
             }
-            conversionValuePerInteraction_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            allConversionsFromInteractionsRate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(conversionValuePerInteraction_);
-              conversionValuePerInteraction_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(allConversionsFromInteractionsRate_);
+              allConversionsFromInteractionsRate_ = subBuilder.buildPartial();
             }
 
             break;
           }
-          case 514: {
+          case 530: {
             com.google.protobuf.DoubleValue.Builder subBuilder = null;
-            if (conversionValuePerCost_ != null) {
-              subBuilder = conversionValuePerCost_.toBuilder();
+            if (allConversionsValue_ != null) {
+              subBuilder = allConversionsValue_.toBuilder();
             }
-            conversionValuePerCost_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            allConversionsValue_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(conversionValuePerCost_);
-              conversionValuePerCost_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(allConversionsValue_);
+              allConversionsValue_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 538: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (allConversionsFromInteractionsValuePerInteraction_ != null) {
+              subBuilder = allConversionsFromInteractionsValuePerInteraction_.toBuilder();
+            }
+            allConversionsFromInteractionsValuePerInteraction_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(allConversionsFromInteractionsValuePerInteraction_);
+              allConversionsFromInteractionsValuePerInteraction_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 546: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (costPerAllConversions_ != null) {
+              subBuilder = costPerAllConversions_.toBuilder();
+            }
+            costPerAllConversions_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(costPerAllConversions_);
+              costPerAllConversions_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 554: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (conversionsFromInteractionsRate_ != null) {
+              subBuilder = conversionsFromInteractionsRate_.toBuilder();
+            }
+            conversionsFromInteractionsRate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(conversionsFromInteractionsRate_);
+              conversionsFromInteractionsRate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 562: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (conversionsValue_ != null) {
+              subBuilder = conversionsValue_.toBuilder();
+            }
+            conversionsValue_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(conversionsValue_);
+              conversionsValue_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 570: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (conversionsValuePerCost_ != null) {
+              subBuilder = conversionsValuePerCost_.toBuilder();
+            }
+            conversionsValuePerCost_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(conversionsValuePerCost_);
+              conversionsValuePerCost_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 578: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (conversionsFromInteractionsValuePerInteraction_ != null) {
+              subBuilder = conversionsFromInteractionsValuePerInteraction_.toBuilder();
+            }
+            conversionsFromInteractionsValuePerInteraction_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(conversionsFromInteractionsValuePerInteraction_);
+              conversionsFromInteractionsValuePerInteraction_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
             break;
           }
         }
@@ -630,6 +630,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.MetricsProto.internal_static_google_ads_googleads_v0_common_Metrics_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.common.MetricsProto.internal_static_google_ads_googleads_v0_common_Metrics_fieldAccessorTable
@@ -637,70 +638,73 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v0.common.Metrics.class, com.google.ads.googleads.v0.common.Metrics.Builder.class);
   }
 
-  public static final int ALL_CONVERSION_RATE_FIELD_NUMBER = 5;
-  private com.google.protobuf.DoubleValue allConversionRate_;
+  public static final int ALL_CONVERSIONS_FROM_INTERACTIONS_RATE_FIELD_NUMBER = 65;
+  private com.google.protobuf.DoubleValue allConversionsFromInteractionsRate_;
   /**
    * <pre>
-   * All conversions divided by the number of ad interactions.
+   * All conversions from interactions (as oppose to view through conversions)
+   * divided by the number of ad interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
    */
-  public boolean hasAllConversionRate() {
-    return allConversionRate_ != null;
+  public boolean hasAllConversionsFromInteractionsRate() {
+    return allConversionsFromInteractionsRate_ != null;
   }
   /**
    * <pre>
-   * All conversions divided by the number of ad interactions.
+   * All conversions from interactions (as oppose to view through conversions)
+   * divided by the number of ad interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
    */
-  public com.google.protobuf.DoubleValue getAllConversionRate() {
-    return allConversionRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionRate_;
+  public com.google.protobuf.DoubleValue getAllConversionsFromInteractionsRate() {
+    return allConversionsFromInteractionsRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromInteractionsRate_;
   }
   /**
    * <pre>
-   * All conversions divided by the number of ad interactions.
+   * All conversions from interactions (as oppose to view through conversions)
+   * divided by the number of ad interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
    */
-  public com.google.protobuf.DoubleValueOrBuilder getAllConversionRateOrBuilder() {
-    return getAllConversionRate();
+  public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromInteractionsRateOrBuilder() {
+    return getAllConversionsFromInteractionsRate();
   }
 
-  public static final int ALL_CONVERSION_VALUE_FIELD_NUMBER = 6;
-  private com.google.protobuf.DoubleValue allConversionValue_;
+  public static final int ALL_CONVERSIONS_VALUE_FIELD_NUMBER = 66;
+  private com.google.protobuf.DoubleValue allConversionsValue_;
   /**
    * <pre>
    * The total value of all conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
    */
-  public boolean hasAllConversionValue() {
-    return allConversionValue_ != null;
+  public boolean hasAllConversionsValue() {
+    return allConversionsValue_ != null;
   }
   /**
    * <pre>
    * The total value of all conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
    */
-  public com.google.protobuf.DoubleValue getAllConversionValue() {
-    return allConversionValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionValue_;
+  public com.google.protobuf.DoubleValue getAllConversionsValue() {
+    return allConversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsValue_;
   }
   /**
    * <pre>
    * The total value of all conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
    */
-  public com.google.protobuf.DoubleValueOrBuilder getAllConversionValueOrBuilder() {
-    return getAllConversionValue();
+  public com.google.protobuf.DoubleValueOrBuilder getAllConversionsValueOrBuilder() {
+    return getAllConversionsValue();
   }
 
   public static final int ALL_CONVERSIONS_FIELD_NUMBER = 7;
@@ -775,37 +779,40 @@ private static final long serialVersionUID = 0L;
     return getAllConversionsValuePerCost();
   }
 
-  public static final int ALL_CONVERSIONS_VALUE_PER_INTERACTION_FIELD_NUMBER = 61;
-  private com.google.protobuf.DoubleValue allConversionsValuePerInteraction_;
+  public static final int ALL_CONVERSIONS_FROM_INTERACTIONS_VALUE_PER_INTERACTION_FIELD_NUMBER = 67;
+  private com.google.protobuf.DoubleValue allConversionsFromInteractionsValuePerInteraction_;
   /**
    * <pre>
-   * The value of all conversions divided by the total number of interactions.
+   * The value of all conversions from interactions divided by the total number
+   * of interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
    */
-  public boolean hasAllConversionsValuePerInteraction() {
-    return allConversionsValuePerInteraction_ != null;
+  public boolean hasAllConversionsFromInteractionsValuePerInteraction() {
+    return allConversionsFromInteractionsValuePerInteraction_ != null;
   }
   /**
    * <pre>
-   * The value of all conversions divided by the total number of interactions.
+   * The value of all conversions from interactions divided by the total number
+   * of interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
    */
-  public com.google.protobuf.DoubleValue getAllConversionsValuePerInteraction() {
-    return allConversionsValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsValuePerInteraction_;
+  public com.google.protobuf.DoubleValue getAllConversionsFromInteractionsValuePerInteraction() {
+    return allConversionsFromInteractionsValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromInteractionsValuePerInteraction_;
   }
   /**
    * <pre>
-   * The value of all conversions divided by the total number of interactions.
+   * The value of all conversions from interactions divided by the total number
+   * of interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+   * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
    */
-  public com.google.protobuf.DoubleValueOrBuilder getAllConversionsValuePerInteractionOrBuilder() {
-    return getAllConversionsValuePerInteraction();
+  public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromInteractionsValuePerInteractionOrBuilder() {
+    return getAllConversionsFromInteractionsValuePerInteraction();
   }
 
   public static final int AVERAGE_COST_FIELD_NUMBER = 8;
@@ -1141,139 +1148,142 @@ private static final long serialVersionUID = 0L;
     return getContentRankLostImpressionShare();
   }
 
-  public static final int CONVERSION_RATE_FIELD_NUMBER = 23;
-  private com.google.protobuf.DoubleValue conversionRate_;
+  public static final int CONVERSIONS_FROM_INTERACTIONS_RATE_FIELD_NUMBER = 69;
+  private com.google.protobuf.DoubleValue conversionsFromInteractionsRate_;
   /**
    * <pre>
-   * Conversions divided by the number of ad interactions (such as clicks for
-   * text ads or views for video ads).
+   * Conversions from interactions divided by the number of ad interactions
+   * (such as clicks for text ads or views for video ads).
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+   * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
    */
-  public boolean hasConversionRate() {
-    return conversionRate_ != null;
+  public boolean hasConversionsFromInteractionsRate() {
+    return conversionsFromInteractionsRate_ != null;
   }
   /**
    * <pre>
-   * Conversions divided by the number of ad interactions (such as clicks for
-   * text ads or views for video ads).
+   * Conversions from interactions divided by the number of ad interactions
+   * (such as clicks for text ads or views for video ads).
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+   * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
    */
-  public com.google.protobuf.DoubleValue getConversionRate() {
-    return conversionRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionRate_;
+  public com.google.protobuf.DoubleValue getConversionsFromInteractionsRate() {
+    return conversionsFromInteractionsRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsFromInteractionsRate_;
   }
   /**
    * <pre>
-   * Conversions divided by the number of ad interactions (such as clicks for
-   * text ads or views for video ads).
+   * Conversions from interactions divided by the number of ad interactions
+   * (such as clicks for text ads or views for video ads).
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+   * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
    */
-  public com.google.protobuf.DoubleValueOrBuilder getConversionRateOrBuilder() {
-    return getConversionRate();
+  public com.google.protobuf.DoubleValueOrBuilder getConversionsFromInteractionsRateOrBuilder() {
+    return getConversionsFromInteractionsRate();
   }
 
-  public static final int CONVERSION_VALUE_FIELD_NUMBER = 24;
-  private com.google.protobuf.DoubleValue conversionValue_;
+  public static final int CONVERSIONS_VALUE_FIELD_NUMBER = 70;
+  private com.google.protobuf.DoubleValue conversionsValue_;
   /**
    * <pre>
    * The total value of conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+   * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
    */
-  public boolean hasConversionValue() {
-    return conversionValue_ != null;
-  }
-  /**
-   * <pre>
-   * The total value of conversions.
-   * </pre>
-   *
-   * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
-   */
-  public com.google.protobuf.DoubleValue getConversionValue() {
-    return conversionValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionValue_;
+  public boolean hasConversionsValue() {
+    return conversionsValue_ != null;
   }
   /**
    * <pre>
    * The total value of conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+   * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
    */
-  public com.google.protobuf.DoubleValueOrBuilder getConversionValueOrBuilder() {
-    return getConversionValue();
+  public com.google.protobuf.DoubleValue getConversionsValue() {
+    return conversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsValue_;
+  }
+  /**
+   * <pre>
+   * The total value of conversions.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getConversionsValueOrBuilder() {
+    return getConversionsValue();
   }
 
-  public static final int CONVERSION_VALUE_PER_COST_FIELD_NUMBER = 64;
-  private com.google.protobuf.DoubleValue conversionValuePerCost_;
+  public static final int CONVERSIONS_VALUE_PER_COST_FIELD_NUMBER = 71;
+  private com.google.protobuf.DoubleValue conversionsValuePerCost_;
   /**
    * <pre>
    * The value of conversions divided by the cost of ad interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+   * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
    */
-  public boolean hasConversionValuePerCost() {
-    return conversionValuePerCost_ != null;
+  public boolean hasConversionsValuePerCost() {
+    return conversionsValuePerCost_ != null;
   }
   /**
    * <pre>
    * The value of conversions divided by the cost of ad interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+   * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
    */
-  public com.google.protobuf.DoubleValue getConversionValuePerCost() {
-    return conversionValuePerCost_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionValuePerCost_;
+  public com.google.protobuf.DoubleValue getConversionsValuePerCost() {
+    return conversionsValuePerCost_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsValuePerCost_;
   }
   /**
    * <pre>
    * The value of conversions divided by the cost of ad interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+   * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
    */
-  public com.google.protobuf.DoubleValueOrBuilder getConversionValuePerCostOrBuilder() {
-    return getConversionValuePerCost();
+  public com.google.protobuf.DoubleValueOrBuilder getConversionsValuePerCostOrBuilder() {
+    return getConversionsValuePerCost();
   }
 
-  public static final int CONVERSION_VALUE_PER_INTERACTION_FIELD_NUMBER = 63;
-  private com.google.protobuf.DoubleValue conversionValuePerInteraction_;
+  public static final int CONVERSIONS_FROM_INTERACTIONS_VALUE_PER_INTERACTION_FIELD_NUMBER = 72;
+  private com.google.protobuf.DoubleValue conversionsFromInteractionsValuePerInteraction_;
   /**
    * <pre>
-   * The value of conversions divided by the number of ad interactions.
+   * The value of conversions from interactions divided by the number of ad
+   * interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+   * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
    */
-  public boolean hasConversionValuePerInteraction() {
-    return conversionValuePerInteraction_ != null;
+  public boolean hasConversionsFromInteractionsValuePerInteraction() {
+    return conversionsFromInteractionsValuePerInteraction_ != null;
   }
   /**
    * <pre>
-   * The value of conversions divided by the number of ad interactions.
+   * The value of conversions from interactions divided by the number of ad
+   * interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+   * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
    */
-  public com.google.protobuf.DoubleValue getConversionValuePerInteraction() {
-    return conversionValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionValuePerInteraction_;
+  public com.google.protobuf.DoubleValue getConversionsFromInteractionsValuePerInteraction() {
+    return conversionsFromInteractionsValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsFromInteractionsValuePerInteraction_;
   }
   /**
    * <pre>
-   * The value of conversions divided by the number of ad interactions.
+   * The value of conversions from interactions divided by the number of ad
+   * interactions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+   * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
    */
-  public com.google.protobuf.DoubleValueOrBuilder getConversionValuePerInteractionOrBuilder() {
-    return getConversionValuePerInteraction();
+  public com.google.protobuf.DoubleValueOrBuilder getConversionsFromInteractionsValuePerInteractionOrBuilder() {
+    return getConversionsFromInteractionsValuePerInteraction();
   }
 
   public static final int CONVERSIONS_FIELD_NUMBER = 25;
@@ -1348,37 +1358,37 @@ private static final long serialVersionUID = 0L;
     return getCostMicros();
   }
 
-  public static final int COST_PER_ALL_CONVERSION_FIELD_NUMBER = 27;
-  private com.google.protobuf.DoubleValue costPerAllConversion_;
+  public static final int COST_PER_ALL_CONVERSIONS_FIELD_NUMBER = 68;
+  private com.google.protobuf.DoubleValue costPerAllConversions_;
   /**
    * <pre>
    * The cost of ad interactions divided by all conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+   * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
    */
-  public boolean hasCostPerAllConversion() {
-    return costPerAllConversion_ != null;
+  public boolean hasCostPerAllConversions() {
+    return costPerAllConversions_ != null;
   }
   /**
    * <pre>
    * The cost of ad interactions divided by all conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+   * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
    */
-  public com.google.protobuf.DoubleValue getCostPerAllConversion() {
-    return costPerAllConversion_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : costPerAllConversion_;
+  public com.google.protobuf.DoubleValue getCostPerAllConversions() {
+    return costPerAllConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : costPerAllConversions_;
   }
   /**
    * <pre>
    * The cost of ad interactions divided by all conversions.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+   * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
    */
-  public com.google.protobuf.DoubleValueOrBuilder getCostPerAllConversionOrBuilder() {
-    return getCostPerAllConversion();
+  public com.google.protobuf.DoubleValueOrBuilder getCostPerAllConversionsOrBuilder() {
+    return getCostPerAllConversions();
   }
 
   public static final int COST_PER_CONVERSION_FIELD_NUMBER = 28;
@@ -1418,7 +1428,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue crossDeviceConversions_;
   /**
    * <pre>
-   * Conversions from when a customer clicks on an AdWords ad on one device,
+   * Conversions from when a customer clicks on a Google Ads ad on one device,
    * then converts on a different device or browser.
    * Cross-device conversions are already included in all_conversions.
    * </pre>
@@ -1430,7 +1440,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Conversions from when a customer clicks on an AdWords ad on one device,
+   * Conversions from when a customer clicks on a Google Ads ad on one device,
    * then converts on a different device or browser.
    * Cross-device conversions are already included in all_conversions.
    * </pre>
@@ -1442,7 +1452,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Conversions from when a customer clicks on an AdWords ad on one device,
+   * Conversions from when a customer clicks on a Google Ads ad on one device,
    * then converts on a different device or browser.
    * Cross-device conversions are already included in all_conversions.
    * </pre>
@@ -2207,6 +2217,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -2216,14 +2227,9 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (allConversionRate_ != null) {
-      output.writeMessage(5, getAllConversionRate());
-    }
-    if (allConversionValue_ != null) {
-      output.writeMessage(6, getAllConversionValue());
-    }
     if (allConversions_ != null) {
       output.writeMessage(7, getAllConversions());
     }
@@ -2254,20 +2260,11 @@ private static final long serialVersionUID = 0L;
     if (contentRankLostImpressionShare_ != null) {
       output.writeMessage(22, getContentRankLostImpressionShare());
     }
-    if (conversionRate_ != null) {
-      output.writeMessage(23, getConversionRate());
-    }
-    if (conversionValue_ != null) {
-      output.writeMessage(24, getConversionValue());
-    }
     if (conversions_ != null) {
       output.writeMessage(25, getConversions());
     }
     if (costMicros_ != null) {
       output.writeMessage(26, getCostMicros());
-    }
-    if (costPerAllConversion_ != null) {
-      output.writeMessage(27, getCostPerAllConversion());
     }
     if (costPerConversion_ != null) {
       output.writeMessage(28, getCostPerConversion());
@@ -2335,34 +2332,42 @@ private static final long serialVersionUID = 0L;
     if (viewThroughConversions_ != null) {
       output.writeMessage(60, getViewThroughConversions());
     }
-    if (allConversionsValuePerInteraction_ != null) {
-      output.writeMessage(61, getAllConversionsValuePerInteraction());
-    }
     if (allConversionsValuePerCost_ != null) {
       output.writeMessage(62, getAllConversionsValuePerCost());
     }
-    if (conversionValuePerInteraction_ != null) {
-      output.writeMessage(63, getConversionValuePerInteraction());
+    if (allConversionsFromInteractionsRate_ != null) {
+      output.writeMessage(65, getAllConversionsFromInteractionsRate());
     }
-    if (conversionValuePerCost_ != null) {
-      output.writeMessage(64, getConversionValuePerCost());
+    if (allConversionsValue_ != null) {
+      output.writeMessage(66, getAllConversionsValue());
+    }
+    if (allConversionsFromInteractionsValuePerInteraction_ != null) {
+      output.writeMessage(67, getAllConversionsFromInteractionsValuePerInteraction());
+    }
+    if (costPerAllConversions_ != null) {
+      output.writeMessage(68, getCostPerAllConversions());
+    }
+    if (conversionsFromInteractionsRate_ != null) {
+      output.writeMessage(69, getConversionsFromInteractionsRate());
+    }
+    if (conversionsValue_ != null) {
+      output.writeMessage(70, getConversionsValue());
+    }
+    if (conversionsValuePerCost_ != null) {
+      output.writeMessage(71, getConversionsValuePerCost());
+    }
+    if (conversionsFromInteractionsValuePerInteraction_ != null) {
+      output.writeMessage(72, getConversionsFromInteractionsValuePerInteraction());
     }
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
 
     size = 0;
-    if (allConversionRate_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getAllConversionRate());
-    }
-    if (allConversionValue_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getAllConversionValue());
-    }
     if (allConversions_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getAllConversions());
@@ -2403,14 +2408,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getContentRankLostImpressionShare());
     }
-    if (conversionRate_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(23, getConversionRate());
-    }
-    if (conversionValue_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(24, getConversionValue());
-    }
     if (conversions_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(25, getConversions());
@@ -2418,10 +2415,6 @@ private static final long serialVersionUID = 0L;
     if (costMicros_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(26, getCostMicros());
-    }
-    if (costPerAllConversion_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(27, getCostPerAllConversion());
     }
     if (costPerConversion_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -2511,21 +2504,41 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(60, getViewThroughConversions());
     }
-    if (allConversionsValuePerInteraction_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(61, getAllConversionsValuePerInteraction());
-    }
     if (allConversionsValuePerCost_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(62, getAllConversionsValuePerCost());
     }
-    if (conversionValuePerInteraction_ != null) {
+    if (allConversionsFromInteractionsRate_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(63, getConversionValuePerInteraction());
+        .computeMessageSize(65, getAllConversionsFromInteractionsRate());
     }
-    if (conversionValuePerCost_ != null) {
+    if (allConversionsValue_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(64, getConversionValuePerCost());
+        .computeMessageSize(66, getAllConversionsValue());
+    }
+    if (allConversionsFromInteractionsValuePerInteraction_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(67, getAllConversionsFromInteractionsValuePerInteraction());
+    }
+    if (costPerAllConversions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(68, getCostPerAllConversions());
+    }
+    if (conversionsFromInteractionsRate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(69, getConversionsFromInteractionsRate());
+    }
+    if (conversionsValue_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(70, getConversionsValue());
+    }
+    if (conversionsValuePerCost_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(71, getConversionsValuePerCost());
+    }
+    if (conversionsFromInteractionsValuePerInteraction_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(72, getConversionsFromInteractionsValuePerInteraction());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2543,15 +2556,15 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v0.common.Metrics other = (com.google.ads.googleads.v0.common.Metrics) obj;
 
     boolean result = true;
-    result = result && (hasAllConversionRate() == other.hasAllConversionRate());
-    if (hasAllConversionRate()) {
-      result = result && getAllConversionRate()
-          .equals(other.getAllConversionRate());
+    result = result && (hasAllConversionsFromInteractionsRate() == other.hasAllConversionsFromInteractionsRate());
+    if (hasAllConversionsFromInteractionsRate()) {
+      result = result && getAllConversionsFromInteractionsRate()
+          .equals(other.getAllConversionsFromInteractionsRate());
     }
-    result = result && (hasAllConversionValue() == other.hasAllConversionValue());
-    if (hasAllConversionValue()) {
-      result = result && getAllConversionValue()
-          .equals(other.getAllConversionValue());
+    result = result && (hasAllConversionsValue() == other.hasAllConversionsValue());
+    if (hasAllConversionsValue()) {
+      result = result && getAllConversionsValue()
+          .equals(other.getAllConversionsValue());
     }
     result = result && (hasAllConversions() == other.hasAllConversions());
     if (hasAllConversions()) {
@@ -2563,10 +2576,10 @@ private static final long serialVersionUID = 0L;
       result = result && getAllConversionsValuePerCost()
           .equals(other.getAllConversionsValuePerCost());
     }
-    result = result && (hasAllConversionsValuePerInteraction() == other.hasAllConversionsValuePerInteraction());
-    if (hasAllConversionsValuePerInteraction()) {
-      result = result && getAllConversionsValuePerInteraction()
-          .equals(other.getAllConversionsValuePerInteraction());
+    result = result && (hasAllConversionsFromInteractionsValuePerInteraction() == other.hasAllConversionsFromInteractionsValuePerInteraction());
+    if (hasAllConversionsFromInteractionsValuePerInteraction()) {
+      result = result && getAllConversionsFromInteractionsValuePerInteraction()
+          .equals(other.getAllConversionsFromInteractionsValuePerInteraction());
     }
     result = result && (hasAverageCost() == other.hasAverageCost());
     if (hasAverageCost()) {
@@ -2613,25 +2626,25 @@ private static final long serialVersionUID = 0L;
       result = result && getContentRankLostImpressionShare()
           .equals(other.getContentRankLostImpressionShare());
     }
-    result = result && (hasConversionRate() == other.hasConversionRate());
-    if (hasConversionRate()) {
-      result = result && getConversionRate()
-          .equals(other.getConversionRate());
+    result = result && (hasConversionsFromInteractionsRate() == other.hasConversionsFromInteractionsRate());
+    if (hasConversionsFromInteractionsRate()) {
+      result = result && getConversionsFromInteractionsRate()
+          .equals(other.getConversionsFromInteractionsRate());
     }
-    result = result && (hasConversionValue() == other.hasConversionValue());
-    if (hasConversionValue()) {
-      result = result && getConversionValue()
-          .equals(other.getConversionValue());
+    result = result && (hasConversionsValue() == other.hasConversionsValue());
+    if (hasConversionsValue()) {
+      result = result && getConversionsValue()
+          .equals(other.getConversionsValue());
     }
-    result = result && (hasConversionValuePerCost() == other.hasConversionValuePerCost());
-    if (hasConversionValuePerCost()) {
-      result = result && getConversionValuePerCost()
-          .equals(other.getConversionValuePerCost());
+    result = result && (hasConversionsValuePerCost() == other.hasConversionsValuePerCost());
+    if (hasConversionsValuePerCost()) {
+      result = result && getConversionsValuePerCost()
+          .equals(other.getConversionsValuePerCost());
     }
-    result = result && (hasConversionValuePerInteraction() == other.hasConversionValuePerInteraction());
-    if (hasConversionValuePerInteraction()) {
-      result = result && getConversionValuePerInteraction()
-          .equals(other.getConversionValuePerInteraction());
+    result = result && (hasConversionsFromInteractionsValuePerInteraction() == other.hasConversionsFromInteractionsValuePerInteraction());
+    if (hasConversionsFromInteractionsValuePerInteraction()) {
+      result = result && getConversionsFromInteractionsValuePerInteraction()
+          .equals(other.getConversionsFromInteractionsValuePerInteraction());
     }
     result = result && (hasConversions() == other.hasConversions());
     if (hasConversions()) {
@@ -2643,10 +2656,10 @@ private static final long serialVersionUID = 0L;
       result = result && getCostMicros()
           .equals(other.getCostMicros());
     }
-    result = result && (hasCostPerAllConversion() == other.hasCostPerAllConversion());
-    if (hasCostPerAllConversion()) {
-      result = result && getCostPerAllConversion()
-          .equals(other.getCostPerAllConversion());
+    result = result && (hasCostPerAllConversions() == other.hasCostPerAllConversions());
+    if (hasCostPerAllConversions()) {
+      result = result && getCostPerAllConversions()
+          .equals(other.getCostPerAllConversions());
     }
     result = result && (hasCostPerConversion() == other.hasCostPerConversion());
     if (hasCostPerConversion()) {
@@ -2769,13 +2782,13 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasAllConversionRate()) {
-      hash = (37 * hash) + ALL_CONVERSION_RATE_FIELD_NUMBER;
-      hash = (53 * hash) + getAllConversionRate().hashCode();
+    if (hasAllConversionsFromInteractionsRate()) {
+      hash = (37 * hash) + ALL_CONVERSIONS_FROM_INTERACTIONS_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getAllConversionsFromInteractionsRate().hashCode();
     }
-    if (hasAllConversionValue()) {
-      hash = (37 * hash) + ALL_CONVERSION_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getAllConversionValue().hashCode();
+    if (hasAllConversionsValue()) {
+      hash = (37 * hash) + ALL_CONVERSIONS_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getAllConversionsValue().hashCode();
     }
     if (hasAllConversions()) {
       hash = (37 * hash) + ALL_CONVERSIONS_FIELD_NUMBER;
@@ -2785,9 +2798,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ALL_CONVERSIONS_VALUE_PER_COST_FIELD_NUMBER;
       hash = (53 * hash) + getAllConversionsValuePerCost().hashCode();
     }
-    if (hasAllConversionsValuePerInteraction()) {
-      hash = (37 * hash) + ALL_CONVERSIONS_VALUE_PER_INTERACTION_FIELD_NUMBER;
-      hash = (53 * hash) + getAllConversionsValuePerInteraction().hashCode();
+    if (hasAllConversionsFromInteractionsValuePerInteraction()) {
+      hash = (37 * hash) + ALL_CONVERSIONS_FROM_INTERACTIONS_VALUE_PER_INTERACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAllConversionsFromInteractionsValuePerInteraction().hashCode();
     }
     if (hasAverageCost()) {
       hash = (37 * hash) + AVERAGE_COST_FIELD_NUMBER;
@@ -2825,21 +2838,21 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CONTENT_RANK_LOST_IMPRESSION_SHARE_FIELD_NUMBER;
       hash = (53 * hash) + getContentRankLostImpressionShare().hashCode();
     }
-    if (hasConversionRate()) {
-      hash = (37 * hash) + CONVERSION_RATE_FIELD_NUMBER;
-      hash = (53 * hash) + getConversionRate().hashCode();
+    if (hasConversionsFromInteractionsRate()) {
+      hash = (37 * hash) + CONVERSIONS_FROM_INTERACTIONS_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getConversionsFromInteractionsRate().hashCode();
     }
-    if (hasConversionValue()) {
-      hash = (37 * hash) + CONVERSION_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getConversionValue().hashCode();
+    if (hasConversionsValue()) {
+      hash = (37 * hash) + CONVERSIONS_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getConversionsValue().hashCode();
     }
-    if (hasConversionValuePerCost()) {
-      hash = (37 * hash) + CONVERSION_VALUE_PER_COST_FIELD_NUMBER;
-      hash = (53 * hash) + getConversionValuePerCost().hashCode();
+    if (hasConversionsValuePerCost()) {
+      hash = (37 * hash) + CONVERSIONS_VALUE_PER_COST_FIELD_NUMBER;
+      hash = (53 * hash) + getConversionsValuePerCost().hashCode();
     }
-    if (hasConversionValuePerInteraction()) {
-      hash = (37 * hash) + CONVERSION_VALUE_PER_INTERACTION_FIELD_NUMBER;
-      hash = (53 * hash) + getConversionValuePerInteraction().hashCode();
+    if (hasConversionsFromInteractionsValuePerInteraction()) {
+      hash = (37 * hash) + CONVERSIONS_FROM_INTERACTIONS_VALUE_PER_INTERACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getConversionsFromInteractionsValuePerInteraction().hashCode();
     }
     if (hasConversions()) {
       hash = (37 * hash) + CONVERSIONS_FIELD_NUMBER;
@@ -2849,9 +2862,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + COST_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + getCostMicros().hashCode();
     }
-    if (hasCostPerAllConversion()) {
-      hash = (37 * hash) + COST_PER_ALL_CONVERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getCostPerAllConversion().hashCode();
+    if (hasCostPerAllConversions()) {
+      hash = (37 * hash) + COST_PER_ALL_CONVERSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getCostPerAllConversions().hashCode();
     }
     if (hasCostPerConversion()) {
       hash = (37 * hash) + COST_PER_CONVERSION_FIELD_NUMBER;
@@ -3016,6 +3029,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -3023,6 +3037,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.common.Metrics prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -3050,6 +3065,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.common.MetricsProto.internal_static_google_ads_googleads_v0_common_Metrics_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.common.MetricsProto.internal_static_google_ads_googleads_v0_common_Metrics_fieldAccessorTable
@@ -3072,19 +3088,20 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (allConversionRateBuilder_ == null) {
-        allConversionRate_ = null;
+      if (allConversionsFromInteractionsRateBuilder_ == null) {
+        allConversionsFromInteractionsRate_ = null;
       } else {
-        allConversionRate_ = null;
-        allConversionRateBuilder_ = null;
+        allConversionsFromInteractionsRate_ = null;
+        allConversionsFromInteractionsRateBuilder_ = null;
       }
-      if (allConversionValueBuilder_ == null) {
-        allConversionValue_ = null;
+      if (allConversionsValueBuilder_ == null) {
+        allConversionsValue_ = null;
       } else {
-        allConversionValue_ = null;
-        allConversionValueBuilder_ = null;
+        allConversionsValue_ = null;
+        allConversionsValueBuilder_ = null;
       }
       if (allConversionsBuilder_ == null) {
         allConversions_ = null;
@@ -3098,11 +3115,11 @@ private static final long serialVersionUID = 0L;
         allConversionsValuePerCost_ = null;
         allConversionsValuePerCostBuilder_ = null;
       }
-      if (allConversionsValuePerInteractionBuilder_ == null) {
-        allConversionsValuePerInteraction_ = null;
+      if (allConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        allConversionsFromInteractionsValuePerInteraction_ = null;
       } else {
-        allConversionsValuePerInteraction_ = null;
-        allConversionsValuePerInteractionBuilder_ = null;
+        allConversionsFromInteractionsValuePerInteraction_ = null;
+        allConversionsFromInteractionsValuePerInteractionBuilder_ = null;
       }
       if (averageCostBuilder_ == null) {
         averageCost_ = null;
@@ -3158,29 +3175,29 @@ private static final long serialVersionUID = 0L;
         contentRankLostImpressionShare_ = null;
         contentRankLostImpressionShareBuilder_ = null;
       }
-      if (conversionRateBuilder_ == null) {
-        conversionRate_ = null;
+      if (conversionsFromInteractionsRateBuilder_ == null) {
+        conversionsFromInteractionsRate_ = null;
       } else {
-        conversionRate_ = null;
-        conversionRateBuilder_ = null;
+        conversionsFromInteractionsRate_ = null;
+        conversionsFromInteractionsRateBuilder_ = null;
       }
-      if (conversionValueBuilder_ == null) {
-        conversionValue_ = null;
+      if (conversionsValueBuilder_ == null) {
+        conversionsValue_ = null;
       } else {
-        conversionValue_ = null;
-        conversionValueBuilder_ = null;
+        conversionsValue_ = null;
+        conversionsValueBuilder_ = null;
       }
-      if (conversionValuePerCostBuilder_ == null) {
-        conversionValuePerCost_ = null;
+      if (conversionsValuePerCostBuilder_ == null) {
+        conversionsValuePerCost_ = null;
       } else {
-        conversionValuePerCost_ = null;
-        conversionValuePerCostBuilder_ = null;
+        conversionsValuePerCost_ = null;
+        conversionsValuePerCostBuilder_ = null;
       }
-      if (conversionValuePerInteractionBuilder_ == null) {
-        conversionValuePerInteraction_ = null;
+      if (conversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        conversionsFromInteractionsValuePerInteraction_ = null;
       } else {
-        conversionValuePerInteraction_ = null;
-        conversionValuePerInteractionBuilder_ = null;
+        conversionsFromInteractionsValuePerInteraction_ = null;
+        conversionsFromInteractionsValuePerInteractionBuilder_ = null;
       }
       if (conversionsBuilder_ == null) {
         conversions_ = null;
@@ -3194,11 +3211,11 @@ private static final long serialVersionUID = 0L;
         costMicros_ = null;
         costMicrosBuilder_ = null;
       }
-      if (costPerAllConversionBuilder_ == null) {
-        costPerAllConversion_ = null;
+      if (costPerAllConversionsBuilder_ == null) {
+        costPerAllConversions_ = null;
       } else {
-        costPerAllConversion_ = null;
-        costPerAllConversionBuilder_ = null;
+        costPerAllConversions_ = null;
+        costPerAllConversionsBuilder_ = null;
       }
       if (costPerConversionBuilder_ == null) {
         costPerConversion_ = null;
@@ -3335,15 +3352,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.common.MetricsProto.internal_static_google_ads_googleads_v0_common_Metrics_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.common.Metrics getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.common.Metrics.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.common.Metrics build() {
       com.google.ads.googleads.v0.common.Metrics result = buildPartial();
       if (!result.isInitialized()) {
@@ -3352,17 +3372,18 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.common.Metrics buildPartial() {
       com.google.ads.googleads.v0.common.Metrics result = new com.google.ads.googleads.v0.common.Metrics(this);
-      if (allConversionRateBuilder_ == null) {
-        result.allConversionRate_ = allConversionRate_;
+      if (allConversionsFromInteractionsRateBuilder_ == null) {
+        result.allConversionsFromInteractionsRate_ = allConversionsFromInteractionsRate_;
       } else {
-        result.allConversionRate_ = allConversionRateBuilder_.build();
+        result.allConversionsFromInteractionsRate_ = allConversionsFromInteractionsRateBuilder_.build();
       }
-      if (allConversionValueBuilder_ == null) {
-        result.allConversionValue_ = allConversionValue_;
+      if (allConversionsValueBuilder_ == null) {
+        result.allConversionsValue_ = allConversionsValue_;
       } else {
-        result.allConversionValue_ = allConversionValueBuilder_.build();
+        result.allConversionsValue_ = allConversionsValueBuilder_.build();
       }
       if (allConversionsBuilder_ == null) {
         result.allConversions_ = allConversions_;
@@ -3374,10 +3395,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.allConversionsValuePerCost_ = allConversionsValuePerCostBuilder_.build();
       }
-      if (allConversionsValuePerInteractionBuilder_ == null) {
-        result.allConversionsValuePerInteraction_ = allConversionsValuePerInteraction_;
+      if (allConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        result.allConversionsFromInteractionsValuePerInteraction_ = allConversionsFromInteractionsValuePerInteraction_;
       } else {
-        result.allConversionsValuePerInteraction_ = allConversionsValuePerInteractionBuilder_.build();
+        result.allConversionsFromInteractionsValuePerInteraction_ = allConversionsFromInteractionsValuePerInteractionBuilder_.build();
       }
       if (averageCostBuilder_ == null) {
         result.averageCost_ = averageCost_;
@@ -3424,25 +3445,25 @@ private static final long serialVersionUID = 0L;
       } else {
         result.contentRankLostImpressionShare_ = contentRankLostImpressionShareBuilder_.build();
       }
-      if (conversionRateBuilder_ == null) {
-        result.conversionRate_ = conversionRate_;
+      if (conversionsFromInteractionsRateBuilder_ == null) {
+        result.conversionsFromInteractionsRate_ = conversionsFromInteractionsRate_;
       } else {
-        result.conversionRate_ = conversionRateBuilder_.build();
+        result.conversionsFromInteractionsRate_ = conversionsFromInteractionsRateBuilder_.build();
       }
-      if (conversionValueBuilder_ == null) {
-        result.conversionValue_ = conversionValue_;
+      if (conversionsValueBuilder_ == null) {
+        result.conversionsValue_ = conversionsValue_;
       } else {
-        result.conversionValue_ = conversionValueBuilder_.build();
+        result.conversionsValue_ = conversionsValueBuilder_.build();
       }
-      if (conversionValuePerCostBuilder_ == null) {
-        result.conversionValuePerCost_ = conversionValuePerCost_;
+      if (conversionsValuePerCostBuilder_ == null) {
+        result.conversionsValuePerCost_ = conversionsValuePerCost_;
       } else {
-        result.conversionValuePerCost_ = conversionValuePerCostBuilder_.build();
+        result.conversionsValuePerCost_ = conversionsValuePerCostBuilder_.build();
       }
-      if (conversionValuePerInteractionBuilder_ == null) {
-        result.conversionValuePerInteraction_ = conversionValuePerInteraction_;
+      if (conversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        result.conversionsFromInteractionsValuePerInteraction_ = conversionsFromInteractionsValuePerInteraction_;
       } else {
-        result.conversionValuePerInteraction_ = conversionValuePerInteractionBuilder_.build();
+        result.conversionsFromInteractionsValuePerInteraction_ = conversionsFromInteractionsValuePerInteractionBuilder_.build();
       }
       if (conversionsBuilder_ == null) {
         result.conversions_ = conversions_;
@@ -3454,10 +3475,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.costMicros_ = costMicrosBuilder_.build();
       }
-      if (costPerAllConversionBuilder_ == null) {
-        result.costPerAllConversion_ = costPerAllConversion_;
+      if (costPerAllConversionsBuilder_ == null) {
+        result.costPerAllConversions_ = costPerAllConversions_;
       } else {
-        result.costPerAllConversion_ = costPerAllConversionBuilder_.build();
+        result.costPerAllConversions_ = costPerAllConversionsBuilder_.build();
       }
       if (costPerConversionBuilder_ == null) {
         result.costPerConversion_ = costPerConversion_;
@@ -3573,32 +3594,39 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.common.Metrics) {
         return mergeFrom((com.google.ads.googleads.v0.common.Metrics)other);
@@ -3610,11 +3638,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v0.common.Metrics other) {
       if (other == com.google.ads.googleads.v0.common.Metrics.getDefaultInstance()) return this;
-      if (other.hasAllConversionRate()) {
-        mergeAllConversionRate(other.getAllConversionRate());
+      if (other.hasAllConversionsFromInteractionsRate()) {
+        mergeAllConversionsFromInteractionsRate(other.getAllConversionsFromInteractionsRate());
       }
-      if (other.hasAllConversionValue()) {
-        mergeAllConversionValue(other.getAllConversionValue());
+      if (other.hasAllConversionsValue()) {
+        mergeAllConversionsValue(other.getAllConversionsValue());
       }
       if (other.hasAllConversions()) {
         mergeAllConversions(other.getAllConversions());
@@ -3622,8 +3650,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasAllConversionsValuePerCost()) {
         mergeAllConversionsValuePerCost(other.getAllConversionsValuePerCost());
       }
-      if (other.hasAllConversionsValuePerInteraction()) {
-        mergeAllConversionsValuePerInteraction(other.getAllConversionsValuePerInteraction());
+      if (other.hasAllConversionsFromInteractionsValuePerInteraction()) {
+        mergeAllConversionsFromInteractionsValuePerInteraction(other.getAllConversionsFromInteractionsValuePerInteraction());
       }
       if (other.hasAverageCost()) {
         mergeAverageCost(other.getAverageCost());
@@ -3652,17 +3680,17 @@ private static final long serialVersionUID = 0L;
       if (other.hasContentRankLostImpressionShare()) {
         mergeContentRankLostImpressionShare(other.getContentRankLostImpressionShare());
       }
-      if (other.hasConversionRate()) {
-        mergeConversionRate(other.getConversionRate());
+      if (other.hasConversionsFromInteractionsRate()) {
+        mergeConversionsFromInteractionsRate(other.getConversionsFromInteractionsRate());
       }
-      if (other.hasConversionValue()) {
-        mergeConversionValue(other.getConversionValue());
+      if (other.hasConversionsValue()) {
+        mergeConversionsValue(other.getConversionsValue());
       }
-      if (other.hasConversionValuePerCost()) {
-        mergeConversionValuePerCost(other.getConversionValuePerCost());
+      if (other.hasConversionsValuePerCost()) {
+        mergeConversionsValuePerCost(other.getConversionsValuePerCost());
       }
-      if (other.hasConversionValuePerInteraction()) {
-        mergeConversionValuePerInteraction(other.getConversionValuePerInteraction());
+      if (other.hasConversionsFromInteractionsValuePerInteraction()) {
+        mergeConversionsFromInteractionsValuePerInteraction(other.getConversionsFromInteractionsValuePerInteraction());
       }
       if (other.hasConversions()) {
         mergeConversions(other.getConversions());
@@ -3670,8 +3698,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasCostMicros()) {
         mergeCostMicros(other.getCostMicros());
       }
-      if (other.hasCostPerAllConversion()) {
-        mergeCostPerAllConversion(other.getCostPerAllConversion());
+      if (other.hasCostPerAllConversions()) {
+        mergeCostPerAllConversions(other.getCostPerAllConversions());
       }
       if (other.hasCostPerConversion()) {
         mergeCostPerConversion(other.getCostPerConversion());
@@ -3744,10 +3772,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3766,184 +3796,193 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.DoubleValue allConversionRate_ = null;
+    private com.google.protobuf.DoubleValue allConversionsFromInteractionsRate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionRateBuilder_;
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromInteractionsRateBuilder_;
     /**
      * <pre>
-     * All conversions divided by the number of ad interactions.
+     * All conversions from interactions (as oppose to view through conversions)
+     * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
      */
-    public boolean hasAllConversionRate() {
-      return allConversionRateBuilder_ != null || allConversionRate_ != null;
+    public boolean hasAllConversionsFromInteractionsRate() {
+      return allConversionsFromInteractionsRateBuilder_ != null || allConversionsFromInteractionsRate_ != null;
     }
     /**
      * <pre>
-     * All conversions divided by the number of ad interactions.
+     * All conversions from interactions (as oppose to view through conversions)
+     * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
      */
-    public com.google.protobuf.DoubleValue getAllConversionRate() {
-      if (allConversionRateBuilder_ == null) {
-        return allConversionRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionRate_;
+    public com.google.protobuf.DoubleValue getAllConversionsFromInteractionsRate() {
+      if (allConversionsFromInteractionsRateBuilder_ == null) {
+        return allConversionsFromInteractionsRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromInteractionsRate_;
       } else {
-        return allConversionRateBuilder_.getMessage();
+        return allConversionsFromInteractionsRateBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * All conversions divided by the number of ad interactions.
+     * All conversions from interactions (as oppose to view through conversions)
+     * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
      */
-    public Builder setAllConversionRate(com.google.protobuf.DoubleValue value) {
-      if (allConversionRateBuilder_ == null) {
+    public Builder setAllConversionsFromInteractionsRate(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromInteractionsRateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        allConversionRate_ = value;
+        allConversionsFromInteractionsRate_ = value;
         onChanged();
       } else {
-        allConversionRateBuilder_.setMessage(value);
+        allConversionsFromInteractionsRateBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * All conversions divided by the number of ad interactions.
+     * All conversions from interactions (as oppose to view through conversions)
+     * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
      */
-    public Builder setAllConversionRate(
+    public Builder setAllConversionsFromInteractionsRate(
         com.google.protobuf.DoubleValue.Builder builderForValue) {
-      if (allConversionRateBuilder_ == null) {
-        allConversionRate_ = builderForValue.build();
+      if (allConversionsFromInteractionsRateBuilder_ == null) {
+        allConversionsFromInteractionsRate_ = builderForValue.build();
         onChanged();
       } else {
-        allConversionRateBuilder_.setMessage(builderForValue.build());
+        allConversionsFromInteractionsRateBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * All conversions divided by the number of ad interactions.
+     * All conversions from interactions (as oppose to view through conversions)
+     * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
      */
-    public Builder mergeAllConversionRate(com.google.protobuf.DoubleValue value) {
-      if (allConversionRateBuilder_ == null) {
-        if (allConversionRate_ != null) {
-          allConversionRate_ =
-            com.google.protobuf.DoubleValue.newBuilder(allConversionRate_).mergeFrom(value).buildPartial();
+    public Builder mergeAllConversionsFromInteractionsRate(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromInteractionsRateBuilder_ == null) {
+        if (allConversionsFromInteractionsRate_ != null) {
+          allConversionsFromInteractionsRate_ =
+            com.google.protobuf.DoubleValue.newBuilder(allConversionsFromInteractionsRate_).mergeFrom(value).buildPartial();
         } else {
-          allConversionRate_ = value;
+          allConversionsFromInteractionsRate_ = value;
         }
         onChanged();
       } else {
-        allConversionRateBuilder_.mergeFrom(value);
+        allConversionsFromInteractionsRateBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * All conversions divided by the number of ad interactions.
+     * All conversions from interactions (as oppose to view through conversions)
+     * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
      */
-    public Builder clearAllConversionRate() {
-      if (allConversionRateBuilder_ == null) {
-        allConversionRate_ = null;
+    public Builder clearAllConversionsFromInteractionsRate() {
+      if (allConversionsFromInteractionsRateBuilder_ == null) {
+        allConversionsFromInteractionsRate_ = null;
         onChanged();
       } else {
-        allConversionRate_ = null;
-        allConversionRateBuilder_ = null;
+        allConversionsFromInteractionsRate_ = null;
+        allConversionsFromInteractionsRateBuilder_ = null;
       }
 
       return this;
     }
     /**
      * <pre>
-     * All conversions divided by the number of ad interactions.
+     * All conversions from interactions (as oppose to view through conversions)
+     * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
      */
-    public com.google.protobuf.DoubleValue.Builder getAllConversionRateBuilder() {
+    public com.google.protobuf.DoubleValue.Builder getAllConversionsFromInteractionsRateBuilder() {
       
       onChanged();
-      return getAllConversionRateFieldBuilder().getBuilder();
+      return getAllConversionsFromInteractionsRateFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * All conversions divided by the number of ad interactions.
+     * All conversions from interactions (as oppose to view through conversions)
+     * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getAllConversionRateOrBuilder() {
-      if (allConversionRateBuilder_ != null) {
-        return allConversionRateBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromInteractionsRateOrBuilder() {
+      if (allConversionsFromInteractionsRateBuilder_ != null) {
+        return allConversionsFromInteractionsRateBuilder_.getMessageOrBuilder();
       } else {
-        return allConversionRate_ == null ?
-            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionRate_;
+        return allConversionsFromInteractionsRate_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromInteractionsRate_;
       }
     }
     /**
      * <pre>
-     * All conversions divided by the number of ad interactions.
+     * All conversions from interactions (as oppose to view through conversions)
+     * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_rate = 5;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
-        getAllConversionRateFieldBuilder() {
-      if (allConversionRateBuilder_ == null) {
-        allConversionRateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getAllConversionsFromInteractionsRateFieldBuilder() {
+      if (allConversionsFromInteractionsRateBuilder_ == null) {
+        allConversionsFromInteractionsRateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
-                getAllConversionRate(),
+                getAllConversionsFromInteractionsRate(),
                 getParentForChildren(),
                 isClean());
-        allConversionRate_ = null;
+        allConversionsFromInteractionsRate_ = null;
       }
-      return allConversionRateBuilder_;
+      return allConversionsFromInteractionsRateBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionValue_ = null;
+    private com.google.protobuf.DoubleValue allConversionsValue_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionValueBuilder_;
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsValueBuilder_;
     /**
      * <pre>
      * The total value of all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
      */
-    public boolean hasAllConversionValue() {
-      return allConversionValueBuilder_ != null || allConversionValue_ != null;
+    public boolean hasAllConversionsValue() {
+      return allConversionsValueBuilder_ != null || allConversionsValue_ != null;
     }
     /**
      * <pre>
      * The total value of all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
      */
-    public com.google.protobuf.DoubleValue getAllConversionValue() {
-      if (allConversionValueBuilder_ == null) {
-        return allConversionValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionValue_;
+    public com.google.protobuf.DoubleValue getAllConversionsValue() {
+      if (allConversionsValueBuilder_ == null) {
+        return allConversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsValue_;
       } else {
-        return allConversionValueBuilder_.getMessage();
+        return allConversionsValueBuilder_.getMessage();
       }
     }
     /**
@@ -3951,17 +3990,17 @@ private static final long serialVersionUID = 0L;
      * The total value of all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
      */
-    public Builder setAllConversionValue(com.google.protobuf.DoubleValue value) {
-      if (allConversionValueBuilder_ == null) {
+    public Builder setAllConversionsValue(com.google.protobuf.DoubleValue value) {
+      if (allConversionsValueBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        allConversionValue_ = value;
+        allConversionsValue_ = value;
         onChanged();
       } else {
-        allConversionValueBuilder_.setMessage(value);
+        allConversionsValueBuilder_.setMessage(value);
       }
 
       return this;
@@ -3971,15 +4010,15 @@ private static final long serialVersionUID = 0L;
      * The total value of all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
      */
-    public Builder setAllConversionValue(
+    public Builder setAllConversionsValue(
         com.google.protobuf.DoubleValue.Builder builderForValue) {
-      if (allConversionValueBuilder_ == null) {
-        allConversionValue_ = builderForValue.build();
+      if (allConversionsValueBuilder_ == null) {
+        allConversionsValue_ = builderForValue.build();
         onChanged();
       } else {
-        allConversionValueBuilder_.setMessage(builderForValue.build());
+        allConversionsValueBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
@@ -3989,19 +4028,19 @@ private static final long serialVersionUID = 0L;
      * The total value of all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
      */
-    public Builder mergeAllConversionValue(com.google.protobuf.DoubleValue value) {
-      if (allConversionValueBuilder_ == null) {
-        if (allConversionValue_ != null) {
-          allConversionValue_ =
-            com.google.protobuf.DoubleValue.newBuilder(allConversionValue_).mergeFrom(value).buildPartial();
+    public Builder mergeAllConversionsValue(com.google.protobuf.DoubleValue value) {
+      if (allConversionsValueBuilder_ == null) {
+        if (allConversionsValue_ != null) {
+          allConversionsValue_ =
+            com.google.protobuf.DoubleValue.newBuilder(allConversionsValue_).mergeFrom(value).buildPartial();
         } else {
-          allConversionValue_ = value;
+          allConversionsValue_ = value;
         }
         onChanged();
       } else {
-        allConversionValueBuilder_.mergeFrom(value);
+        allConversionsValueBuilder_.mergeFrom(value);
       }
 
       return this;
@@ -4011,15 +4050,15 @@ private static final long serialVersionUID = 0L;
      * The total value of all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
      */
-    public Builder clearAllConversionValue() {
-      if (allConversionValueBuilder_ == null) {
-        allConversionValue_ = null;
+    public Builder clearAllConversionsValue() {
+      if (allConversionsValueBuilder_ == null) {
+        allConversionsValue_ = null;
         onChanged();
       } else {
-        allConversionValue_ = null;
-        allConversionValueBuilder_ = null;
+        allConversionsValue_ = null;
+        allConversionsValueBuilder_ = null;
       }
 
       return this;
@@ -4029,26 +4068,26 @@ private static final long serialVersionUID = 0L;
      * The total value of all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
      */
-    public com.google.protobuf.DoubleValue.Builder getAllConversionValueBuilder() {
+    public com.google.protobuf.DoubleValue.Builder getAllConversionsValueBuilder() {
       
       onChanged();
-      return getAllConversionValueFieldBuilder().getBuilder();
+      return getAllConversionsValueFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * The total value of all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getAllConversionValueOrBuilder() {
-      if (allConversionValueBuilder_ != null) {
-        return allConversionValueBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.DoubleValueOrBuilder getAllConversionsValueOrBuilder() {
+      if (allConversionsValueBuilder_ != null) {
+        return allConversionsValueBuilder_.getMessageOrBuilder();
       } else {
-        return allConversionValue_ == null ?
-            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionValue_;
+        return allConversionsValue_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsValue_;
       }
     }
     /**
@@ -4056,20 +4095,20 @@ private static final long serialVersionUID = 0L;
      * The total value of all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversion_value = 6;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
-        getAllConversionValueFieldBuilder() {
-      if (allConversionValueBuilder_ == null) {
-        allConversionValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getAllConversionsValueFieldBuilder() {
+      if (allConversionsValueBuilder_ == null) {
+        allConversionsValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
-                getAllConversionValue(),
+                getAllConversionsValue(),
                 getParentForChildren(),
                 isClean());
-        allConversionValue_ = null;
+        allConversionsValue_ = null;
       }
-      return allConversionValueBuilder_;
+      return allConversionsValueBuilder_;
     }
 
     private com.google.protobuf.DoubleValue allConversions_ = null;
@@ -4396,157 +4435,166 @@ private static final long serialVersionUID = 0L;
       return allConversionsValuePerCostBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionsValuePerInteraction_ = null;
+    private com.google.protobuf.DoubleValue allConversionsFromInteractionsValuePerInteraction_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsValuePerInteractionBuilder_;
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromInteractionsValuePerInteractionBuilder_;
     /**
      * <pre>
-     * The value of all conversions divided by the total number of interactions.
+     * The value of all conversions from interactions divided by the total number
+     * of interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
      */
-    public boolean hasAllConversionsValuePerInteraction() {
-      return allConversionsValuePerInteractionBuilder_ != null || allConversionsValuePerInteraction_ != null;
+    public boolean hasAllConversionsFromInteractionsValuePerInteraction() {
+      return allConversionsFromInteractionsValuePerInteractionBuilder_ != null || allConversionsFromInteractionsValuePerInteraction_ != null;
     }
     /**
      * <pre>
-     * The value of all conversions divided by the total number of interactions.
+     * The value of all conversions from interactions divided by the total number
+     * of interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
      */
-    public com.google.protobuf.DoubleValue getAllConversionsValuePerInteraction() {
-      if (allConversionsValuePerInteractionBuilder_ == null) {
-        return allConversionsValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsValuePerInteraction_;
+    public com.google.protobuf.DoubleValue getAllConversionsFromInteractionsValuePerInteraction() {
+      if (allConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        return allConversionsFromInteractionsValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromInteractionsValuePerInteraction_;
       } else {
-        return allConversionsValuePerInteractionBuilder_.getMessage();
+        return allConversionsFromInteractionsValuePerInteractionBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * The value of all conversions divided by the total number of interactions.
+     * The value of all conversions from interactions divided by the total number
+     * of interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
      */
-    public Builder setAllConversionsValuePerInteraction(com.google.protobuf.DoubleValue value) {
-      if (allConversionsValuePerInteractionBuilder_ == null) {
+    public Builder setAllConversionsFromInteractionsValuePerInteraction(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        allConversionsValuePerInteraction_ = value;
+        allConversionsFromInteractionsValuePerInteraction_ = value;
         onChanged();
       } else {
-        allConversionsValuePerInteractionBuilder_.setMessage(value);
+        allConversionsFromInteractionsValuePerInteractionBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * The value of all conversions divided by the total number of interactions.
+     * The value of all conversions from interactions divided by the total number
+     * of interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
      */
-    public Builder setAllConversionsValuePerInteraction(
+    public Builder setAllConversionsFromInteractionsValuePerInteraction(
         com.google.protobuf.DoubleValue.Builder builderForValue) {
-      if (allConversionsValuePerInteractionBuilder_ == null) {
-        allConversionsValuePerInteraction_ = builderForValue.build();
+      if (allConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        allConversionsFromInteractionsValuePerInteraction_ = builderForValue.build();
         onChanged();
       } else {
-        allConversionsValuePerInteractionBuilder_.setMessage(builderForValue.build());
+        allConversionsFromInteractionsValuePerInteractionBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * The value of all conversions divided by the total number of interactions.
+     * The value of all conversions from interactions divided by the total number
+     * of interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
      */
-    public Builder mergeAllConversionsValuePerInteraction(com.google.protobuf.DoubleValue value) {
-      if (allConversionsValuePerInteractionBuilder_ == null) {
-        if (allConversionsValuePerInteraction_ != null) {
-          allConversionsValuePerInteraction_ =
-            com.google.protobuf.DoubleValue.newBuilder(allConversionsValuePerInteraction_).mergeFrom(value).buildPartial();
+    public Builder mergeAllConversionsFromInteractionsValuePerInteraction(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        if (allConversionsFromInteractionsValuePerInteraction_ != null) {
+          allConversionsFromInteractionsValuePerInteraction_ =
+            com.google.protobuf.DoubleValue.newBuilder(allConversionsFromInteractionsValuePerInteraction_).mergeFrom(value).buildPartial();
         } else {
-          allConversionsValuePerInteraction_ = value;
+          allConversionsFromInteractionsValuePerInteraction_ = value;
         }
         onChanged();
       } else {
-        allConversionsValuePerInteractionBuilder_.mergeFrom(value);
+        allConversionsFromInteractionsValuePerInteractionBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * The value of all conversions divided by the total number of interactions.
+     * The value of all conversions from interactions divided by the total number
+     * of interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
      */
-    public Builder clearAllConversionsValuePerInteraction() {
-      if (allConversionsValuePerInteractionBuilder_ == null) {
-        allConversionsValuePerInteraction_ = null;
+    public Builder clearAllConversionsFromInteractionsValuePerInteraction() {
+      if (allConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        allConversionsFromInteractionsValuePerInteraction_ = null;
         onChanged();
       } else {
-        allConversionsValuePerInteraction_ = null;
-        allConversionsValuePerInteractionBuilder_ = null;
+        allConversionsFromInteractionsValuePerInteraction_ = null;
+        allConversionsFromInteractionsValuePerInteractionBuilder_ = null;
       }
 
       return this;
     }
     /**
      * <pre>
-     * The value of all conversions divided by the total number of interactions.
+     * The value of all conversions from interactions divided by the total number
+     * of interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
      */
-    public com.google.protobuf.DoubleValue.Builder getAllConversionsValuePerInteractionBuilder() {
+    public com.google.protobuf.DoubleValue.Builder getAllConversionsFromInteractionsValuePerInteractionBuilder() {
       
       onChanged();
-      return getAllConversionsValuePerInteractionFieldBuilder().getBuilder();
+      return getAllConversionsFromInteractionsValuePerInteractionFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The value of all conversions divided by the total number of interactions.
+     * The value of all conversions from interactions divided by the total number
+     * of interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getAllConversionsValuePerInteractionOrBuilder() {
-      if (allConversionsValuePerInteractionBuilder_ != null) {
-        return allConversionsValuePerInteractionBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromInteractionsValuePerInteractionOrBuilder() {
+      if (allConversionsFromInteractionsValuePerInteractionBuilder_ != null) {
+        return allConversionsFromInteractionsValuePerInteractionBuilder_.getMessageOrBuilder();
       } else {
-        return allConversionsValuePerInteraction_ == null ?
-            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsValuePerInteraction_;
+        return allConversionsFromInteractionsValuePerInteraction_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromInteractionsValuePerInteraction_;
       }
     }
     /**
      * <pre>
-     * The value of all conversions divided by the total number of interactions.
+     * The value of all conversions from interactions divided by the total number
+     * of interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue all_conversions_value_per_interaction = 61;</code>
+     * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
-        getAllConversionsValuePerInteractionFieldBuilder() {
-      if (allConversionsValuePerInteractionBuilder_ == null) {
-        allConversionsValuePerInteractionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getAllConversionsFromInteractionsValuePerInteractionFieldBuilder() {
+      if (allConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        allConversionsFromInteractionsValuePerInteractionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
-                getAllConversionsValuePerInteraction(),
+                getAllConversionsFromInteractionsValuePerInteraction(),
                 getParentForChildren(),
                 isClean());
-        allConversionsValuePerInteraction_ = null;
+        allConversionsFromInteractionsValuePerInteraction_ = null;
       }
-      return allConversionsValuePerInteractionBuilder_;
+      return allConversionsFromInteractionsValuePerInteractionBuilder_;
     }
 
     private com.google.protobuf.DoubleValue averageCost_ = null;
@@ -6034,193 +6082,193 @@ private static final long serialVersionUID = 0L;
       return contentRankLostImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue conversionRate_ = null;
+    private com.google.protobuf.DoubleValue conversionsFromInteractionsRate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionRateBuilder_;
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsFromInteractionsRateBuilder_;
     /**
      * <pre>
-     * Conversions divided by the number of ad interactions (such as clicks for
-     * text ads or views for video ads).
+     * Conversions from interactions divided by the number of ad interactions
+     * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
      */
-    public boolean hasConversionRate() {
-      return conversionRateBuilder_ != null || conversionRate_ != null;
+    public boolean hasConversionsFromInteractionsRate() {
+      return conversionsFromInteractionsRateBuilder_ != null || conversionsFromInteractionsRate_ != null;
     }
     /**
      * <pre>
-     * Conversions divided by the number of ad interactions (such as clicks for
-     * text ads or views for video ads).
+     * Conversions from interactions divided by the number of ad interactions
+     * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
      */
-    public com.google.protobuf.DoubleValue getConversionRate() {
-      if (conversionRateBuilder_ == null) {
-        return conversionRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionRate_;
+    public com.google.protobuf.DoubleValue getConversionsFromInteractionsRate() {
+      if (conversionsFromInteractionsRateBuilder_ == null) {
+        return conversionsFromInteractionsRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsFromInteractionsRate_;
       } else {
-        return conversionRateBuilder_.getMessage();
+        return conversionsFromInteractionsRateBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Conversions divided by the number of ad interactions (such as clicks for
-     * text ads or views for video ads).
+     * Conversions from interactions divided by the number of ad interactions
+     * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
      */
-    public Builder setConversionRate(com.google.protobuf.DoubleValue value) {
-      if (conversionRateBuilder_ == null) {
+    public Builder setConversionsFromInteractionsRate(com.google.protobuf.DoubleValue value) {
+      if (conversionsFromInteractionsRateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        conversionRate_ = value;
+        conversionsFromInteractionsRate_ = value;
         onChanged();
       } else {
-        conversionRateBuilder_.setMessage(value);
+        conversionsFromInteractionsRateBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * Conversions divided by the number of ad interactions (such as clicks for
-     * text ads or views for video ads).
+     * Conversions from interactions divided by the number of ad interactions
+     * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
      */
-    public Builder setConversionRate(
+    public Builder setConversionsFromInteractionsRate(
         com.google.protobuf.DoubleValue.Builder builderForValue) {
-      if (conversionRateBuilder_ == null) {
-        conversionRate_ = builderForValue.build();
+      if (conversionsFromInteractionsRateBuilder_ == null) {
+        conversionsFromInteractionsRate_ = builderForValue.build();
         onChanged();
       } else {
-        conversionRateBuilder_.setMessage(builderForValue.build());
+        conversionsFromInteractionsRateBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * Conversions divided by the number of ad interactions (such as clicks for
-     * text ads or views for video ads).
+     * Conversions from interactions divided by the number of ad interactions
+     * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
      */
-    public Builder mergeConversionRate(com.google.protobuf.DoubleValue value) {
-      if (conversionRateBuilder_ == null) {
-        if (conversionRate_ != null) {
-          conversionRate_ =
-            com.google.protobuf.DoubleValue.newBuilder(conversionRate_).mergeFrom(value).buildPartial();
+    public Builder mergeConversionsFromInteractionsRate(com.google.protobuf.DoubleValue value) {
+      if (conversionsFromInteractionsRateBuilder_ == null) {
+        if (conversionsFromInteractionsRate_ != null) {
+          conversionsFromInteractionsRate_ =
+            com.google.protobuf.DoubleValue.newBuilder(conversionsFromInteractionsRate_).mergeFrom(value).buildPartial();
         } else {
-          conversionRate_ = value;
+          conversionsFromInteractionsRate_ = value;
         }
         onChanged();
       } else {
-        conversionRateBuilder_.mergeFrom(value);
+        conversionsFromInteractionsRateBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * Conversions divided by the number of ad interactions (such as clicks for
-     * text ads or views for video ads).
+     * Conversions from interactions divided by the number of ad interactions
+     * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
      */
-    public Builder clearConversionRate() {
-      if (conversionRateBuilder_ == null) {
-        conversionRate_ = null;
+    public Builder clearConversionsFromInteractionsRate() {
+      if (conversionsFromInteractionsRateBuilder_ == null) {
+        conversionsFromInteractionsRate_ = null;
         onChanged();
       } else {
-        conversionRate_ = null;
-        conversionRateBuilder_ = null;
+        conversionsFromInteractionsRate_ = null;
+        conversionsFromInteractionsRateBuilder_ = null;
       }
 
       return this;
     }
     /**
      * <pre>
-     * Conversions divided by the number of ad interactions (such as clicks for
-     * text ads or views for video ads).
+     * Conversions from interactions divided by the number of ad interactions
+     * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
      */
-    public com.google.protobuf.DoubleValue.Builder getConversionRateBuilder() {
+    public com.google.protobuf.DoubleValue.Builder getConversionsFromInteractionsRateBuilder() {
       
       onChanged();
-      return getConversionRateFieldBuilder().getBuilder();
+      return getConversionsFromInteractionsRateFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Conversions divided by the number of ad interactions (such as clicks for
-     * text ads or views for video ads).
+     * Conversions from interactions divided by the number of ad interactions
+     * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getConversionRateOrBuilder() {
-      if (conversionRateBuilder_ != null) {
-        return conversionRateBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.DoubleValueOrBuilder getConversionsFromInteractionsRateOrBuilder() {
+      if (conversionsFromInteractionsRateBuilder_ != null) {
+        return conversionsFromInteractionsRateBuilder_.getMessageOrBuilder();
       } else {
-        return conversionRate_ == null ?
-            com.google.protobuf.DoubleValue.getDefaultInstance() : conversionRate_;
+        return conversionsFromInteractionsRate_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsFromInteractionsRate_;
       }
     }
     /**
      * <pre>
-     * Conversions divided by the number of ad interactions (such as clicks for
-     * text ads or views for video ads).
+     * Conversions from interactions divided by the number of ad interactions
+     * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_rate = 23;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
-        getConversionRateFieldBuilder() {
-      if (conversionRateBuilder_ == null) {
-        conversionRateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getConversionsFromInteractionsRateFieldBuilder() {
+      if (conversionsFromInteractionsRateBuilder_ == null) {
+        conversionsFromInteractionsRateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
-                getConversionRate(),
+                getConversionsFromInteractionsRate(),
                 getParentForChildren(),
                 isClean());
-        conversionRate_ = null;
+        conversionsFromInteractionsRate_ = null;
       }
-      return conversionRateBuilder_;
+      return conversionsFromInteractionsRateBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue conversionValue_ = null;
+    private com.google.protobuf.DoubleValue conversionsValue_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionValueBuilder_;
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsValueBuilder_;
     /**
      * <pre>
      * The total value of conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
      */
-    public boolean hasConversionValue() {
-      return conversionValueBuilder_ != null || conversionValue_ != null;
+    public boolean hasConversionsValue() {
+      return conversionsValueBuilder_ != null || conversionsValue_ != null;
     }
     /**
      * <pre>
      * The total value of conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
      */
-    public com.google.protobuf.DoubleValue getConversionValue() {
-      if (conversionValueBuilder_ == null) {
-        return conversionValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionValue_;
+    public com.google.protobuf.DoubleValue getConversionsValue() {
+      if (conversionsValueBuilder_ == null) {
+        return conversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsValue_;
       } else {
-        return conversionValueBuilder_.getMessage();
+        return conversionsValueBuilder_.getMessage();
       }
     }
     /**
@@ -6228,17 +6276,17 @@ private static final long serialVersionUID = 0L;
      * The total value of conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
      */
-    public Builder setConversionValue(com.google.protobuf.DoubleValue value) {
-      if (conversionValueBuilder_ == null) {
+    public Builder setConversionsValue(com.google.protobuf.DoubleValue value) {
+      if (conversionsValueBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        conversionValue_ = value;
+        conversionsValue_ = value;
         onChanged();
       } else {
-        conversionValueBuilder_.setMessage(value);
+        conversionsValueBuilder_.setMessage(value);
       }
 
       return this;
@@ -6248,15 +6296,15 @@ private static final long serialVersionUID = 0L;
      * The total value of conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
      */
-    public Builder setConversionValue(
+    public Builder setConversionsValue(
         com.google.protobuf.DoubleValue.Builder builderForValue) {
-      if (conversionValueBuilder_ == null) {
-        conversionValue_ = builderForValue.build();
+      if (conversionsValueBuilder_ == null) {
+        conversionsValue_ = builderForValue.build();
         onChanged();
       } else {
-        conversionValueBuilder_.setMessage(builderForValue.build());
+        conversionsValueBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
@@ -6266,19 +6314,19 @@ private static final long serialVersionUID = 0L;
      * The total value of conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
      */
-    public Builder mergeConversionValue(com.google.protobuf.DoubleValue value) {
-      if (conversionValueBuilder_ == null) {
-        if (conversionValue_ != null) {
-          conversionValue_ =
-            com.google.protobuf.DoubleValue.newBuilder(conversionValue_).mergeFrom(value).buildPartial();
+    public Builder mergeConversionsValue(com.google.protobuf.DoubleValue value) {
+      if (conversionsValueBuilder_ == null) {
+        if (conversionsValue_ != null) {
+          conversionsValue_ =
+            com.google.protobuf.DoubleValue.newBuilder(conversionsValue_).mergeFrom(value).buildPartial();
         } else {
-          conversionValue_ = value;
+          conversionsValue_ = value;
         }
         onChanged();
       } else {
-        conversionValueBuilder_.mergeFrom(value);
+        conversionsValueBuilder_.mergeFrom(value);
       }
 
       return this;
@@ -6288,15 +6336,15 @@ private static final long serialVersionUID = 0L;
      * The total value of conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
      */
-    public Builder clearConversionValue() {
-      if (conversionValueBuilder_ == null) {
-        conversionValue_ = null;
+    public Builder clearConversionsValue() {
+      if (conversionsValueBuilder_ == null) {
+        conversionsValue_ = null;
         onChanged();
       } else {
-        conversionValue_ = null;
-        conversionValueBuilder_ = null;
+        conversionsValue_ = null;
+        conversionsValueBuilder_ = null;
       }
 
       return this;
@@ -6306,26 +6354,26 @@ private static final long serialVersionUID = 0L;
      * The total value of conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
      */
-    public com.google.protobuf.DoubleValue.Builder getConversionValueBuilder() {
+    public com.google.protobuf.DoubleValue.Builder getConversionsValueBuilder() {
       
       onChanged();
-      return getConversionValueFieldBuilder().getBuilder();
+      return getConversionsValueFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * The total value of conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getConversionValueOrBuilder() {
-      if (conversionValueBuilder_ != null) {
-        return conversionValueBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.DoubleValueOrBuilder getConversionsValueOrBuilder() {
+      if (conversionsValueBuilder_ != null) {
+        return conversionsValueBuilder_.getMessageOrBuilder();
       } else {
-        return conversionValue_ == null ?
-            com.google.protobuf.DoubleValue.getDefaultInstance() : conversionValue_;
+        return conversionsValue_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsValue_;
       }
     }
     /**
@@ -6333,47 +6381,47 @@ private static final long serialVersionUID = 0L;
      * The total value of conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value = 24;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
-        getConversionValueFieldBuilder() {
-      if (conversionValueBuilder_ == null) {
-        conversionValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getConversionsValueFieldBuilder() {
+      if (conversionsValueBuilder_ == null) {
+        conversionsValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
-                getConversionValue(),
+                getConversionsValue(),
                 getParentForChildren(),
                 isClean());
-        conversionValue_ = null;
+        conversionsValue_ = null;
       }
-      return conversionValueBuilder_;
+      return conversionsValueBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue conversionValuePerCost_ = null;
+    private com.google.protobuf.DoubleValue conversionsValuePerCost_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionValuePerCostBuilder_;
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsValuePerCostBuilder_;
     /**
      * <pre>
      * The value of conversions divided by the cost of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
      */
-    public boolean hasConversionValuePerCost() {
-      return conversionValuePerCostBuilder_ != null || conversionValuePerCost_ != null;
+    public boolean hasConversionsValuePerCost() {
+      return conversionsValuePerCostBuilder_ != null || conversionsValuePerCost_ != null;
     }
     /**
      * <pre>
      * The value of conversions divided by the cost of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
      */
-    public com.google.protobuf.DoubleValue getConversionValuePerCost() {
-      if (conversionValuePerCostBuilder_ == null) {
-        return conversionValuePerCost_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionValuePerCost_;
+    public com.google.protobuf.DoubleValue getConversionsValuePerCost() {
+      if (conversionsValuePerCostBuilder_ == null) {
+        return conversionsValuePerCost_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsValuePerCost_;
       } else {
-        return conversionValuePerCostBuilder_.getMessage();
+        return conversionsValuePerCostBuilder_.getMessage();
       }
     }
     /**
@@ -6381,17 +6429,17 @@ private static final long serialVersionUID = 0L;
      * The value of conversions divided by the cost of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
      */
-    public Builder setConversionValuePerCost(com.google.protobuf.DoubleValue value) {
-      if (conversionValuePerCostBuilder_ == null) {
+    public Builder setConversionsValuePerCost(com.google.protobuf.DoubleValue value) {
+      if (conversionsValuePerCostBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        conversionValuePerCost_ = value;
+        conversionsValuePerCost_ = value;
         onChanged();
       } else {
-        conversionValuePerCostBuilder_.setMessage(value);
+        conversionsValuePerCostBuilder_.setMessage(value);
       }
 
       return this;
@@ -6401,15 +6449,15 @@ private static final long serialVersionUID = 0L;
      * The value of conversions divided by the cost of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
      */
-    public Builder setConversionValuePerCost(
+    public Builder setConversionsValuePerCost(
         com.google.protobuf.DoubleValue.Builder builderForValue) {
-      if (conversionValuePerCostBuilder_ == null) {
-        conversionValuePerCost_ = builderForValue.build();
+      if (conversionsValuePerCostBuilder_ == null) {
+        conversionsValuePerCost_ = builderForValue.build();
         onChanged();
       } else {
-        conversionValuePerCostBuilder_.setMessage(builderForValue.build());
+        conversionsValuePerCostBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
@@ -6419,19 +6467,19 @@ private static final long serialVersionUID = 0L;
      * The value of conversions divided by the cost of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
      */
-    public Builder mergeConversionValuePerCost(com.google.protobuf.DoubleValue value) {
-      if (conversionValuePerCostBuilder_ == null) {
-        if (conversionValuePerCost_ != null) {
-          conversionValuePerCost_ =
-            com.google.protobuf.DoubleValue.newBuilder(conversionValuePerCost_).mergeFrom(value).buildPartial();
+    public Builder mergeConversionsValuePerCost(com.google.protobuf.DoubleValue value) {
+      if (conversionsValuePerCostBuilder_ == null) {
+        if (conversionsValuePerCost_ != null) {
+          conversionsValuePerCost_ =
+            com.google.protobuf.DoubleValue.newBuilder(conversionsValuePerCost_).mergeFrom(value).buildPartial();
         } else {
-          conversionValuePerCost_ = value;
+          conversionsValuePerCost_ = value;
         }
         onChanged();
       } else {
-        conversionValuePerCostBuilder_.mergeFrom(value);
+        conversionsValuePerCostBuilder_.mergeFrom(value);
       }
 
       return this;
@@ -6441,15 +6489,15 @@ private static final long serialVersionUID = 0L;
      * The value of conversions divided by the cost of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
      */
-    public Builder clearConversionValuePerCost() {
-      if (conversionValuePerCostBuilder_ == null) {
-        conversionValuePerCost_ = null;
+    public Builder clearConversionsValuePerCost() {
+      if (conversionsValuePerCostBuilder_ == null) {
+        conversionsValuePerCost_ = null;
         onChanged();
       } else {
-        conversionValuePerCost_ = null;
-        conversionValuePerCostBuilder_ = null;
+        conversionsValuePerCost_ = null;
+        conversionsValuePerCostBuilder_ = null;
       }
 
       return this;
@@ -6459,26 +6507,26 @@ private static final long serialVersionUID = 0L;
      * The value of conversions divided by the cost of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
      */
-    public com.google.protobuf.DoubleValue.Builder getConversionValuePerCostBuilder() {
+    public com.google.protobuf.DoubleValue.Builder getConversionsValuePerCostBuilder() {
       
       onChanged();
-      return getConversionValuePerCostFieldBuilder().getBuilder();
+      return getConversionsValuePerCostFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * The value of conversions divided by the cost of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getConversionValuePerCostOrBuilder() {
-      if (conversionValuePerCostBuilder_ != null) {
-        return conversionValuePerCostBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.DoubleValueOrBuilder getConversionsValuePerCostOrBuilder() {
+      if (conversionsValuePerCostBuilder_ != null) {
+        return conversionsValuePerCostBuilder_.getMessageOrBuilder();
       } else {
-        return conversionValuePerCost_ == null ?
-            com.google.protobuf.DoubleValue.getDefaultInstance() : conversionValuePerCost_;
+        return conversionsValuePerCost_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsValuePerCost_;
       }
     }
     /**
@@ -6486,173 +6534,182 @@ private static final long serialVersionUID = 0L;
      * The value of conversions divided by the cost of ad interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_cost = 64;</code>
+     * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
-        getConversionValuePerCostFieldBuilder() {
-      if (conversionValuePerCostBuilder_ == null) {
-        conversionValuePerCostBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getConversionsValuePerCostFieldBuilder() {
+      if (conversionsValuePerCostBuilder_ == null) {
+        conversionsValuePerCostBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
-                getConversionValuePerCost(),
+                getConversionsValuePerCost(),
                 getParentForChildren(),
                 isClean());
-        conversionValuePerCost_ = null;
+        conversionsValuePerCost_ = null;
       }
-      return conversionValuePerCostBuilder_;
+      return conversionsValuePerCostBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue conversionValuePerInteraction_ = null;
+    private com.google.protobuf.DoubleValue conversionsFromInteractionsValuePerInteraction_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionValuePerInteractionBuilder_;
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsFromInteractionsValuePerInteractionBuilder_;
     /**
      * <pre>
-     * The value of conversions divided by the number of ad interactions.
+     * The value of conversions from interactions divided by the number of ad
+     * interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
      */
-    public boolean hasConversionValuePerInteraction() {
-      return conversionValuePerInteractionBuilder_ != null || conversionValuePerInteraction_ != null;
+    public boolean hasConversionsFromInteractionsValuePerInteraction() {
+      return conversionsFromInteractionsValuePerInteractionBuilder_ != null || conversionsFromInteractionsValuePerInteraction_ != null;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of ad interactions.
+     * The value of conversions from interactions divided by the number of ad
+     * interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
      */
-    public com.google.protobuf.DoubleValue getConversionValuePerInteraction() {
-      if (conversionValuePerInteractionBuilder_ == null) {
-        return conversionValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionValuePerInteraction_;
+    public com.google.protobuf.DoubleValue getConversionsFromInteractionsValuePerInteraction() {
+      if (conversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        return conversionsFromInteractionsValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsFromInteractionsValuePerInteraction_;
       } else {
-        return conversionValuePerInteractionBuilder_.getMessage();
+        return conversionsFromInteractionsValuePerInteractionBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of ad interactions.
+     * The value of conversions from interactions divided by the number of ad
+     * interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
      */
-    public Builder setConversionValuePerInteraction(com.google.protobuf.DoubleValue value) {
-      if (conversionValuePerInteractionBuilder_ == null) {
+    public Builder setConversionsFromInteractionsValuePerInteraction(com.google.protobuf.DoubleValue value) {
+      if (conversionsFromInteractionsValuePerInteractionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        conversionValuePerInteraction_ = value;
+        conversionsFromInteractionsValuePerInteraction_ = value;
         onChanged();
       } else {
-        conversionValuePerInteractionBuilder_.setMessage(value);
+        conversionsFromInteractionsValuePerInteractionBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of ad interactions.
+     * The value of conversions from interactions divided by the number of ad
+     * interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
      */
-    public Builder setConversionValuePerInteraction(
+    public Builder setConversionsFromInteractionsValuePerInteraction(
         com.google.protobuf.DoubleValue.Builder builderForValue) {
-      if (conversionValuePerInteractionBuilder_ == null) {
-        conversionValuePerInteraction_ = builderForValue.build();
+      if (conversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        conversionsFromInteractionsValuePerInteraction_ = builderForValue.build();
         onChanged();
       } else {
-        conversionValuePerInteractionBuilder_.setMessage(builderForValue.build());
+        conversionsFromInteractionsValuePerInteractionBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of ad interactions.
+     * The value of conversions from interactions divided by the number of ad
+     * interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
      */
-    public Builder mergeConversionValuePerInteraction(com.google.protobuf.DoubleValue value) {
-      if (conversionValuePerInteractionBuilder_ == null) {
-        if (conversionValuePerInteraction_ != null) {
-          conversionValuePerInteraction_ =
-            com.google.protobuf.DoubleValue.newBuilder(conversionValuePerInteraction_).mergeFrom(value).buildPartial();
+    public Builder mergeConversionsFromInteractionsValuePerInteraction(com.google.protobuf.DoubleValue value) {
+      if (conversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        if (conversionsFromInteractionsValuePerInteraction_ != null) {
+          conversionsFromInteractionsValuePerInteraction_ =
+            com.google.protobuf.DoubleValue.newBuilder(conversionsFromInteractionsValuePerInteraction_).mergeFrom(value).buildPartial();
         } else {
-          conversionValuePerInteraction_ = value;
+          conversionsFromInteractionsValuePerInteraction_ = value;
         }
         onChanged();
       } else {
-        conversionValuePerInteractionBuilder_.mergeFrom(value);
+        conversionsFromInteractionsValuePerInteractionBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of ad interactions.
+     * The value of conversions from interactions divided by the number of ad
+     * interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
      */
-    public Builder clearConversionValuePerInteraction() {
-      if (conversionValuePerInteractionBuilder_ == null) {
-        conversionValuePerInteraction_ = null;
+    public Builder clearConversionsFromInteractionsValuePerInteraction() {
+      if (conversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        conversionsFromInteractionsValuePerInteraction_ = null;
         onChanged();
       } else {
-        conversionValuePerInteraction_ = null;
-        conversionValuePerInteractionBuilder_ = null;
+        conversionsFromInteractionsValuePerInteraction_ = null;
+        conversionsFromInteractionsValuePerInteractionBuilder_ = null;
       }
 
       return this;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of ad interactions.
+     * The value of conversions from interactions divided by the number of ad
+     * interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
      */
-    public com.google.protobuf.DoubleValue.Builder getConversionValuePerInteractionBuilder() {
+    public com.google.protobuf.DoubleValue.Builder getConversionsFromInteractionsValuePerInteractionBuilder() {
       
       onChanged();
-      return getConversionValuePerInteractionFieldBuilder().getBuilder();
+      return getConversionsFromInteractionsValuePerInteractionFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of ad interactions.
+     * The value of conversions from interactions divided by the number of ad
+     * interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getConversionValuePerInteractionOrBuilder() {
-      if (conversionValuePerInteractionBuilder_ != null) {
-        return conversionValuePerInteractionBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.DoubleValueOrBuilder getConversionsFromInteractionsValuePerInteractionOrBuilder() {
+      if (conversionsFromInteractionsValuePerInteractionBuilder_ != null) {
+        return conversionsFromInteractionsValuePerInteractionBuilder_.getMessageOrBuilder();
       } else {
-        return conversionValuePerInteraction_ == null ?
-            com.google.protobuf.DoubleValue.getDefaultInstance() : conversionValuePerInteraction_;
+        return conversionsFromInteractionsValuePerInteraction_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsFromInteractionsValuePerInteraction_;
       }
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of ad interactions.
+     * The value of conversions from interactions divided by the number of ad
+     * interactions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue conversion_value_per_interaction = 63;</code>
+     * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
-        getConversionValuePerInteractionFieldBuilder() {
-      if (conversionValuePerInteractionBuilder_ == null) {
-        conversionValuePerInteractionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getConversionsFromInteractionsValuePerInteractionFieldBuilder() {
+      if (conversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        conversionsFromInteractionsValuePerInteractionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
-                getConversionValuePerInteraction(),
+                getConversionsFromInteractionsValuePerInteraction(),
                 getParentForChildren(),
                 isClean());
-        conversionValuePerInteraction_ = null;
+        conversionsFromInteractionsValuePerInteraction_ = null;
       }
-      return conversionValuePerInteractionBuilder_;
+      return conversionsFromInteractionsValuePerInteractionBuilder_;
     }
 
     private com.google.protobuf.DoubleValue conversions_ = null;
@@ -6979,31 +7036,31 @@ private static final long serialVersionUID = 0L;
       return costMicrosBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue costPerAllConversion_ = null;
+    private com.google.protobuf.DoubleValue costPerAllConversions_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> costPerAllConversionBuilder_;
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> costPerAllConversionsBuilder_;
     /**
      * <pre>
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+     * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
      */
-    public boolean hasCostPerAllConversion() {
-      return costPerAllConversionBuilder_ != null || costPerAllConversion_ != null;
+    public boolean hasCostPerAllConversions() {
+      return costPerAllConversionsBuilder_ != null || costPerAllConversions_ != null;
     }
     /**
      * <pre>
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+     * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
      */
-    public com.google.protobuf.DoubleValue getCostPerAllConversion() {
-      if (costPerAllConversionBuilder_ == null) {
-        return costPerAllConversion_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : costPerAllConversion_;
+    public com.google.protobuf.DoubleValue getCostPerAllConversions() {
+      if (costPerAllConversionsBuilder_ == null) {
+        return costPerAllConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : costPerAllConversions_;
       } else {
-        return costPerAllConversionBuilder_.getMessage();
+        return costPerAllConversionsBuilder_.getMessage();
       }
     }
     /**
@@ -7011,17 +7068,17 @@ private static final long serialVersionUID = 0L;
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+     * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
      */
-    public Builder setCostPerAllConversion(com.google.protobuf.DoubleValue value) {
-      if (costPerAllConversionBuilder_ == null) {
+    public Builder setCostPerAllConversions(com.google.protobuf.DoubleValue value) {
+      if (costPerAllConversionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        costPerAllConversion_ = value;
+        costPerAllConversions_ = value;
         onChanged();
       } else {
-        costPerAllConversionBuilder_.setMessage(value);
+        costPerAllConversionsBuilder_.setMessage(value);
       }
 
       return this;
@@ -7031,15 +7088,15 @@ private static final long serialVersionUID = 0L;
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+     * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
      */
-    public Builder setCostPerAllConversion(
+    public Builder setCostPerAllConversions(
         com.google.protobuf.DoubleValue.Builder builderForValue) {
-      if (costPerAllConversionBuilder_ == null) {
-        costPerAllConversion_ = builderForValue.build();
+      if (costPerAllConversionsBuilder_ == null) {
+        costPerAllConversions_ = builderForValue.build();
         onChanged();
       } else {
-        costPerAllConversionBuilder_.setMessage(builderForValue.build());
+        costPerAllConversionsBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
@@ -7049,19 +7106,19 @@ private static final long serialVersionUID = 0L;
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+     * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
      */
-    public Builder mergeCostPerAllConversion(com.google.protobuf.DoubleValue value) {
-      if (costPerAllConversionBuilder_ == null) {
-        if (costPerAllConversion_ != null) {
-          costPerAllConversion_ =
-            com.google.protobuf.DoubleValue.newBuilder(costPerAllConversion_).mergeFrom(value).buildPartial();
+    public Builder mergeCostPerAllConversions(com.google.protobuf.DoubleValue value) {
+      if (costPerAllConversionsBuilder_ == null) {
+        if (costPerAllConversions_ != null) {
+          costPerAllConversions_ =
+            com.google.protobuf.DoubleValue.newBuilder(costPerAllConversions_).mergeFrom(value).buildPartial();
         } else {
-          costPerAllConversion_ = value;
+          costPerAllConversions_ = value;
         }
         onChanged();
       } else {
-        costPerAllConversionBuilder_.mergeFrom(value);
+        costPerAllConversionsBuilder_.mergeFrom(value);
       }
 
       return this;
@@ -7071,15 +7128,15 @@ private static final long serialVersionUID = 0L;
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+     * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
      */
-    public Builder clearCostPerAllConversion() {
-      if (costPerAllConversionBuilder_ == null) {
-        costPerAllConversion_ = null;
+    public Builder clearCostPerAllConversions() {
+      if (costPerAllConversionsBuilder_ == null) {
+        costPerAllConversions_ = null;
         onChanged();
       } else {
-        costPerAllConversion_ = null;
-        costPerAllConversionBuilder_ = null;
+        costPerAllConversions_ = null;
+        costPerAllConversionsBuilder_ = null;
       }
 
       return this;
@@ -7089,26 +7146,26 @@ private static final long serialVersionUID = 0L;
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+     * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
      */
-    public com.google.protobuf.DoubleValue.Builder getCostPerAllConversionBuilder() {
+    public com.google.protobuf.DoubleValue.Builder getCostPerAllConversionsBuilder() {
       
       onChanged();
-      return getCostPerAllConversionFieldBuilder().getBuilder();
+      return getCostPerAllConversionsFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+     * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getCostPerAllConversionOrBuilder() {
-      if (costPerAllConversionBuilder_ != null) {
-        return costPerAllConversionBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.DoubleValueOrBuilder getCostPerAllConversionsOrBuilder() {
+      if (costPerAllConversionsBuilder_ != null) {
+        return costPerAllConversionsBuilder_.getMessageOrBuilder();
       } else {
-        return costPerAllConversion_ == null ?
-            com.google.protobuf.DoubleValue.getDefaultInstance() : costPerAllConversion_;
+        return costPerAllConversions_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : costPerAllConversions_;
       }
     }
     /**
@@ -7116,20 +7173,20 @@ private static final long serialVersionUID = 0L;
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue cost_per_all_conversion = 27;</code>
+     * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
-        getCostPerAllConversionFieldBuilder() {
-      if (costPerAllConversionBuilder_ == null) {
-        costPerAllConversionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getCostPerAllConversionsFieldBuilder() {
+      if (costPerAllConversionsBuilder_ == null) {
+        costPerAllConversionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
-                getCostPerAllConversion(),
+                getCostPerAllConversions(),
                 getParentForChildren(),
                 isClean());
-        costPerAllConversion_ = null;
+        costPerAllConversions_ = null;
       }
-      return costPerAllConversionBuilder_;
+      return costPerAllConversionsBuilder_;
     }
 
     private com.google.protobuf.DoubleValue costPerConversion_ = null;
@@ -7290,7 +7347,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> crossDeviceConversionsBuilder_;
     /**
      * <pre>
-     * Conversions from when a customer clicks on an AdWords ad on one device,
+     * Conversions from when a customer clicks on a Google Ads ad on one device,
      * then converts on a different device or browser.
      * Cross-device conversions are already included in all_conversions.
      * </pre>
@@ -7302,7 +7359,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversions from when a customer clicks on an AdWords ad on one device,
+     * Conversions from when a customer clicks on a Google Ads ad on one device,
      * then converts on a different device or browser.
      * Cross-device conversions are already included in all_conversions.
      * </pre>
@@ -7318,7 +7375,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversions from when a customer clicks on an AdWords ad on one device,
+     * Conversions from when a customer clicks on a Google Ads ad on one device,
      * then converts on a different device or browser.
      * Cross-device conversions are already included in all_conversions.
      * </pre>
@@ -7340,7 +7397,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversions from when a customer clicks on an AdWords ad on one device,
+     * Conversions from when a customer clicks on a Google Ads ad on one device,
      * then converts on a different device or browser.
      * Cross-device conversions are already included in all_conversions.
      * </pre>
@@ -7360,7 +7417,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversions from when a customer clicks on an AdWords ad on one device,
+     * Conversions from when a customer clicks on a Google Ads ad on one device,
      * then converts on a different device or browser.
      * Cross-device conversions are already included in all_conversions.
      * </pre>
@@ -7384,7 +7441,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversions from when a customer clicks on an AdWords ad on one device,
+     * Conversions from when a customer clicks on a Google Ads ad on one device,
      * then converts on a different device or browser.
      * Cross-device conversions are already included in all_conversions.
      * </pre>
@@ -7404,7 +7461,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversions from when a customer clicks on an AdWords ad on one device,
+     * Conversions from when a customer clicks on a Google Ads ad on one device,
      * then converts on a different device or browser.
      * Cross-device conversions are already included in all_conversions.
      * </pre>
@@ -7418,7 +7475,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversions from when a customer clicks on an AdWords ad on one device,
+     * Conversions from when a customer clicks on a Google Ads ad on one device,
      * then converts on a different device or browser.
      * Cross-device conversions are already included in all_conversions.
      * </pre>
@@ -7435,7 +7492,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversions from when a customer clicks on an AdWords ad on one device,
+     * Conversions from when a customer clicks on a Google Ads ad on one device,
      * then converts on a different device or browser.
      * Cross-device conversions are already included in all_conversions.
      * </pre>
@@ -10794,11 +10851,13 @@ private static final long serialVersionUID = 0L;
       }
       return viewThroughConversionsBuilder_;
     }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -10820,6 +10879,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<Metrics>
       PARSER = new com.google.protobuf.AbstractParser<Metrics>() {
+    @java.lang.Override
     public Metrics parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10837,6 +10897,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.common.Metrics getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }

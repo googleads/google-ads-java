@@ -70,65 +70,66 @@ public final class RecommendationServiceProto {
     java.lang.String[] descriptorData = {
       "\n=google/ads/googleads/v0/services/recom" +
       "mendation_service.proto\022 google.ads.goog" +
-      "leads.v0.services\032\'google/ads/googleads/" +
-      "v0/common/ad.proto\0326google/ads/googleads" +
-      "/v0/enums/keyword_match_type.proto\0326goog" +
-      "le/ads/googleads/v0/resources/recommenda" +
-      "tion.proto\032\034google/api/annotations.proto" +
-      "\032\036google/protobuf/wrappers.proto\032\027google" +
-      "/rpc/status.proto\"1\n\030GetRecommendationRe" +
-      "quest\022\025\n\rresource_name\030\001 \001(\t\"\205\001\n\032ApplyRe" +
-      "commendationRequest\022\023\n\013customer_id\030\001 \001(\t" +
-      "\022R\n\noperations\030\002 \003(\0132>.google.ads.google" +
-      "ads.v0.services.ApplyRecommendationOpera" +
-      "tion\"\215\010\n\034ApplyRecommendationOperation\022\025\n" +
-      "\rresource_name\030\001 \001(\t\022r\n\017campaign_budget\030" +
-      "\002 \001(\0132W.google.ads.googleads.v0.services" +
-      ".ApplyRecommendationOperation.CampaignBu" +
-      "dgetParametersH\000\022b\n\007text_ad\030\003 \001(\0132O.goog" +
-      "le.ads.googleads.v0.services.ApplyRecomm" +
-      "endationOperation.TextAdParametersH\000\022c\n\007" +
-      "keyword\030\004 \001(\0132P.google.ads.googleads.v0." +
-      "services.ApplyRecommendationOperation.Ke" +
-      "ywordParametersH\000\022t\n\021target_cpa_opt_in\030\005" +
-      " \001(\0132W.google.ads.googleads.v0.services." +
-      "ApplyRecommendationOperation.TargetCpaOp" +
-      "tInParametersH\000\032Y\n\030CampaignBudgetParamet" +
-      "ers\022=\n\030new_budget_amount_micros\030\001 \001(\0132\033." +
-      "google.protobuf.Int64Value\032B\n\020TextAdPara" +
-      "meters\022.\n\002ad\030\001 \001(\0132\".google.ads.googlead" +
-      "s.v0.common.Ad\032\322\001\n\021KeywordParameters\022.\n\010" +
-      "ad_group\030\001 \001(\0132\034.google.protobuf.StringV" +
-      "alue\022X\n\nmatch_type\030\002 \001(\0162D.google.ads.go" +
-      "ogleads.v0.enums.KeywordMatchTypeEnum.Ke" +
-      "ywordMatchType\0223\n\016cpc_bid_micros\030\003 \001(\0132\033" +
-      ".google.protobuf.Int64Value\032\232\001\n\030TargetCp" +
-      "aOptInParameters\0226\n\021target_cpa_micros\030\001 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022F\n!new_" +
-      "campaign_budget_amount_micros\030\002 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\022\n\020apply_parame" +
-      "ters\"k\n\033ApplyRecommendationResponse\022L\n\007r" +
-      "esults\030\001 \003(\0132;.google.ads.googleads.v0.s" +
-      "ervices.ApplyRecommendationResult\"d\n\031App" +
-      "lyRecommendationResult\022\027\n\rresource_name\030" +
-      "\001 \001(\tH\000\022$\n\006status\030\002 \001(\0132\022.google.rpc.Sta" +
-      "tusH\000B\010\n\006result2\254\003\n\025RecommendationServic" +
-      "e\022\275\001\n\021GetRecommendation\022:.google.ads.goo" +
-      "gleads.v0.services.GetRecommendationRequ" +
-      "est\0321.google.ads.googleads.v0.resources." +
-      "Recommendation\"9\202\323\344\223\0023\0221/v0/{resource_na" +
-      "me=customers/*/recommendations/*}\022\322\001\n\023Ap" +
-      "plyRecommendation\022<.google.ads.googleads" +
-      ".v0.services.ApplyRecommendationRequest\032" +
-      "=.google.ads.googleads.v0.services.Apply" +
-      "RecommendationResponse\">\202\323\344\223\0028\"3/v0/cust" +
-      "omers/{customer_id=*}/recommendations:ap" +
-      "ply:\001*B\332\001\n$com.google.ads.googleads.v0.s" +
-      "ervicesB\032RecommendationServiceProtoP\001ZHg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v0/services;services\242\002\003GAA\252\002 " +
-      "Google.Ads.GoogleAds.V0.Services\312\002 Googl" +
-      "e\\Ads\\GoogleAds\\V0\\Servicesb\006proto3"
+      "leads.v0.services\0326google/ads/googleads/" +
+      "v0/enums/keyword_match_type.proto\032*googl" +
+      "e/ads/googleads/v0/resources/ad.proto\0326g" +
+      "oogle/ads/googleads/v0/resources/recomme" +
+      "ndation.proto\032\034google/api/annotations.pr" +
+      "oto\032\036google/protobuf/wrappers.proto\032\027goo" +
+      "gle/rpc/status.proto\"1\n\030GetRecommendatio" +
+      "nRequest\022\025\n\rresource_name\030\001 \001(\t\"\205\001\n\032Appl" +
+      "yRecommendationRequest\022\023\n\013customer_id\030\001 " +
+      "\001(\t\022R\n\noperations\030\002 \003(\0132>.google.ads.goo" +
+      "gleads.v0.services.ApplyRecommendationOp" +
+      "eration\"\220\010\n\034ApplyRecommendationOperation" +
+      "\022\025\n\rresource_name\030\001 \001(\t\022r\n\017campaign_budg" +
+      "et\030\002 \001(\0132W.google.ads.googleads.v0.servi" +
+      "ces.ApplyRecommendationOperation.Campaig" +
+      "nBudgetParametersH\000\022b\n\007text_ad\030\003 \001(\0132O.g" +
+      "oogle.ads.googleads.v0.services.ApplyRec" +
+      "ommendationOperation.TextAdParametersH\000\022" +
+      "c\n\007keyword\030\004 \001(\0132P.google.ads.googleads." +
+      "v0.services.ApplyRecommendationOperation" +
+      ".KeywordParametersH\000\022t\n\021target_cpa_opt_i" +
+      "n\030\005 \001(\0132W.google.ads.googleads.v0.servic" +
+      "es.ApplyRecommendationOperation.TargetCp" +
+      "aOptInParametersH\000\032Y\n\030CampaignBudgetPara" +
+      "meters\022=\n\030new_budget_amount_micros\030\001 \001(\013" +
+      "2\033.google.protobuf.Int64Value\032E\n\020TextAdP" +
+      "arameters\0221\n\002ad\030\001 \001(\0132%.google.ads.googl" +
+      "eads.v0.resources.Ad\032\322\001\n\021KeywordParamete" +
+      "rs\022.\n\010ad_group\030\001 \001(\0132\034.google.protobuf.S" +
+      "tringValue\022X\n\nmatch_type\030\002 \001(\0162D.google." +
+      "ads.googleads.v0.enums.KeywordMatchTypeE" +
+      "num.KeywordMatchType\0223\n\016cpc_bid_micros\030\003" +
+      " \001(\0132\033.google.protobuf.Int64Value\032\232\001\n\030Ta" +
+      "rgetCpaOptInParameters\0226\n\021target_cpa_mic" +
+      "ros\030\001 \001(\0132\033.google.protobuf.Int64Value\022F" +
+      "\n!new_campaign_budget_amount_micros\030\002 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\022\n\020apply_" +
+      "parameters\"k\n\033ApplyRecommendationRespons" +
+      "e\022L\n\007results\030\001 \003(\0132;.google.ads.googlead" +
+      "s.v0.services.ApplyRecommendationResult\"" +
+      "d\n\031ApplyRecommendationResult\022\027\n\rresource" +
+      "_name\030\001 \001(\tH\000\022$\n\006status\030\002 \001(\0132\022.google.r" +
+      "pc.StatusH\000B\010\n\006result2\254\003\n\025Recommendation" +
+      "Service\022\275\001\n\021GetRecommendation\022:.google.a" +
+      "ds.googleads.v0.services.GetRecommendati" +
+      "onRequest\0321.google.ads.googleads.v0.reso" +
+      "urces.Recommendation\"9\202\323\344\223\0023\0221/v0/{resou" +
+      "rce_name=customers/*/recommendations/*}\022" +
+      "\322\001\n\023ApplyRecommendation\022<.google.ads.goo" +
+      "gleads.v0.services.ApplyRecommendationRe" +
+      "quest\032=.google.ads.googleads.v0.services" +
+      ".ApplyRecommendationResponse\">\202\323\344\223\0028\"3/v" +
+      "0/customers/{customer_id=*}/recommendati" +
+      "ons:apply:\001*B\332\001\n$com.google.ads.googlead" +
+      "s.v0.servicesB\032RecommendationServiceProt" +
+      "oP\001ZHgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v0/services;services\242\002\003" +
+      "GAA\252\002 Google.Ads.GoogleAds.V0.Services\312\002" +
+      " Google\\Ads\\GoogleAds\\V0\\Servicesb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -141,8 +142,8 @@ public final class RecommendationServiceProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.ads.googleads.v0.common.AdProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.KeywordMatchTypeProto.getDescriptor(),
+          com.google.ads.googleads.v0.resources.AdProto.getDescriptor(),
           com.google.ads.googleads.v0.resources.RecommendationProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
@@ -207,8 +208,8 @@ public final class RecommendationServiceProto {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.ads.googleads.v0.common.AdProto.getDescriptor();
     com.google.ads.googleads.v0.enums.KeywordMatchTypeProto.getDescriptor();
+    com.google.ads.googleads.v0.resources.AdProto.getDescriptor();
     com.google.ads.googleads.v0.resources.RecommendationProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();

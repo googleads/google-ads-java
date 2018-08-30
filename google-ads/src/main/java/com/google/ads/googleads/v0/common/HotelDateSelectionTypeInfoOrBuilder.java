@@ -6,4 +6,21 @@ package com.google.ads.googleads.v0.common;
 public interface HotelDateSelectionTypeInfoOrBuilder extends
     // @@protoc_insertion_point(interface_extends:google.ads.googleads.v0.common.HotelDateSelectionTypeInfo)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * Type of the hotel date selection
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType type = 1;</code>
+   */
+  int getTypeValue();
+  /**
+   * <pre>
+   * Type of the hotel date selection
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType type = 1;</code>
+   */
+  com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getType();
 }

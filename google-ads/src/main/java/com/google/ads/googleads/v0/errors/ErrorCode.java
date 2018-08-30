@@ -47,13 +47,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          default: {
-            if (!parseUnknownFieldProto3(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
           case 8: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 1;
@@ -360,6 +353,61 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 496: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 62;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 504: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 63;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 512: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 64;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 528: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 66;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 536: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 67;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 544: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 68;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 552: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 69;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 560: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 70;
+            errorCode_ = rawValue;
+            break;
+          }
+          default: {
+            if (!parseUnknownFieldProto3(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -377,6 +425,7 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.ErrorsProto.internal_static_google_ads_googleads_v0_errors_ErrorCode_descriptor;
   }
 
+  @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v0.errors.ErrorsProto.internal_static_google_ads_googleads_v0_errors_ErrorCode_fieldAccessorTable
@@ -439,6 +488,14 @@ private static final long serialVersionUID = 0L;
     AD_GROUP_BID_MODIFIER_ERROR(59),
     CONTEXT_ERROR(60),
     FIELD_ERROR(61),
+    SHARED_SET_ERROR(62),
+    SHARED_CRITERION_ERROR(63),
+    CAMPAIGN_SHARED_SET_ERROR(64),
+    HEADER_ERROR(66),
+    DATABASE_ERROR(67),
+    POLICY_FINDING_ERROR(68),
+    CAMPAIGN_GROUP_ERROR(69),
+    ENUM_ERROR(70),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -505,6 +562,14 @@ private static final long serialVersionUID = 0L;
         case 59: return AD_GROUP_BID_MODIFIER_ERROR;
         case 60: return CONTEXT_ERROR;
         case 61: return FIELD_ERROR;
+        case 62: return SHARED_SET_ERROR;
+        case 63: return SHARED_CRITERION_ERROR;
+        case 64: return CAMPAIGN_SHARED_SET_ERROR;
+        case 66: return HEADER_ERROR;
+        case 67: return DATABASE_ERROR;
+        case 68: return POLICY_FINDING_ERROR;
+        case 69: return CAMPAIGN_GROUP_ERROR;
+        case 70: return ENUM_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -543,6 +608,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.RequestErrorEnum.RequestError getRequestError() {
     if (errorCodeCase_ == 1) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.RequestErrorEnum.RequestError result = com.google.ads.googleads.v0.errors.RequestErrorEnum.RequestError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.RequestErrorEnum.RequestError.UNRECOGNIZED : result;
@@ -573,6 +639,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.BiddingStrategyErrorEnum.BiddingStrategyError getBiddingStrategyError() {
     if (errorCodeCase_ == 2) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.BiddingStrategyErrorEnum.BiddingStrategyError result = com.google.ads.googleads.v0.errors.BiddingStrategyErrorEnum.BiddingStrategyError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.BiddingStrategyErrorEnum.BiddingStrategyError.UNRECOGNIZED : result;
@@ -603,6 +670,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.UrlFieldErrorEnum.UrlFieldError getUrlFieldError() {
     if (errorCodeCase_ == 3) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.UrlFieldErrorEnum.UrlFieldError result = com.google.ads.googleads.v0.errors.UrlFieldErrorEnum.UrlFieldError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.UrlFieldErrorEnum.UrlFieldError.UNRECOGNIZED : result;
@@ -633,6 +701,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.ListOperationErrorEnum.ListOperationError getListOperationError() {
     if (errorCodeCase_ == 4) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.ListOperationErrorEnum.ListOperationError result = com.google.ads.googleads.v0.errors.ListOperationErrorEnum.ListOperationError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.ListOperationErrorEnum.ListOperationError.UNRECOGNIZED : result;
@@ -663,6 +732,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.QueryErrorEnum.QueryError getQueryError() {
     if (errorCodeCase_ == 5) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.QueryErrorEnum.QueryError result = com.google.ads.googleads.v0.errors.QueryErrorEnum.QueryError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.QueryErrorEnum.QueryError.UNRECOGNIZED : result;
@@ -693,6 +763,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.MutateErrorEnum.MutateError getMutateError() {
     if (errorCodeCase_ == 7) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.MutateErrorEnum.MutateError result = com.google.ads.googleads.v0.errors.MutateErrorEnum.MutateError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.MutateErrorEnum.MutateError.UNRECOGNIZED : result;
@@ -723,6 +794,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.FieldMaskErrorEnum.FieldMaskError getFieldMaskError() {
     if (errorCodeCase_ == 8) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.FieldMaskErrorEnum.FieldMaskError result = com.google.ads.googleads.v0.errors.FieldMaskErrorEnum.FieldMaskError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.FieldMaskErrorEnum.FieldMaskError.UNRECOGNIZED : result;
@@ -753,6 +825,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.AuthorizationErrorEnum.AuthorizationError getAuthorizationError() {
     if (errorCodeCase_ == 9) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.AuthorizationErrorEnum.AuthorizationError result = com.google.ads.googleads.v0.errors.AuthorizationErrorEnum.AuthorizationError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.AuthorizationErrorEnum.AuthorizationError.UNRECOGNIZED : result;
@@ -783,6 +856,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.InternalErrorEnum.InternalError getInternalError() {
     if (errorCodeCase_ == 10) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.InternalErrorEnum.InternalError result = com.google.ads.googleads.v0.errors.InternalErrorEnum.InternalError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.InternalErrorEnum.InternalError.UNRECOGNIZED : result;
@@ -813,6 +887,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.QuotaErrorEnum.QuotaError getQuotaError() {
     if (errorCodeCase_ == 11) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.QuotaErrorEnum.QuotaError result = com.google.ads.googleads.v0.errors.QuotaErrorEnum.QuotaError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.QuotaErrorEnum.QuotaError.UNRECOGNIZED : result;
@@ -843,6 +918,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.AdErrorEnum.AdError getAdError() {
     if (errorCodeCase_ == 12) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.AdErrorEnum.AdError result = com.google.ads.googleads.v0.errors.AdErrorEnum.AdError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.AdErrorEnum.AdError.UNRECOGNIZED : result;
@@ -873,6 +949,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.AdGroupErrorEnum.AdGroupError getAdGroupError() {
     if (errorCodeCase_ == 13) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.AdGroupErrorEnum.AdGroupError result = com.google.ads.googleads.v0.errors.AdGroupErrorEnum.AdGroupError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.AdGroupErrorEnum.AdGroupError.UNRECOGNIZED : result;
@@ -903,6 +980,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.CampaignBudgetErrorEnum.CampaignBudgetError getCampaignBudgetError() {
     if (errorCodeCase_ == 14) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.CampaignBudgetErrorEnum.CampaignBudgetError result = com.google.ads.googleads.v0.errors.CampaignBudgetErrorEnum.CampaignBudgetError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.CampaignBudgetErrorEnum.CampaignBudgetError.UNRECOGNIZED : result;
@@ -933,6 +1011,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.CampaignErrorEnum.CampaignError getCampaignError() {
     if (errorCodeCase_ == 15) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.CampaignErrorEnum.CampaignError result = com.google.ads.googleads.v0.errors.CampaignErrorEnum.CampaignError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.CampaignErrorEnum.CampaignError.UNRECOGNIZED : result;
@@ -963,6 +1042,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.AuthenticationErrorEnum.AuthenticationError getAuthenticationError() {
     if (errorCodeCase_ == 17) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.AuthenticationErrorEnum.AuthenticationError result = com.google.ads.googleads.v0.errors.AuthenticationErrorEnum.AuthenticationError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.AuthenticationErrorEnum.AuthenticationError.UNRECOGNIZED : result;
@@ -993,6 +1073,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError getAdGroupCriterionError() {
     if (errorCodeCase_ == 18) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError result = com.google.ads.googleads.v0.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError.UNRECOGNIZED : result;
@@ -1023,6 +1104,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.AdCustomizerErrorEnum.AdCustomizerError getAdCustomizerError() {
     if (errorCodeCase_ == 19) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.AdCustomizerErrorEnum.AdCustomizerError result = com.google.ads.googleads.v0.errors.AdCustomizerErrorEnum.AdCustomizerError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.AdCustomizerErrorEnum.AdCustomizerError.UNRECOGNIZED : result;
@@ -1053,6 +1135,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.AdGroupAdErrorEnum.AdGroupAdError getAdGroupAdError() {
     if (errorCodeCase_ == 21) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.AdGroupAdErrorEnum.AdGroupAdError result = com.google.ads.googleads.v0.errors.AdGroupAdErrorEnum.AdGroupAdError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.AdGroupAdErrorEnum.AdGroupAdError.UNRECOGNIZED : result;
@@ -1083,6 +1166,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.AdSharingErrorEnum.AdSharingError getAdSharingError() {
     if (errorCodeCase_ == 24) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.AdSharingErrorEnum.AdSharingError result = com.google.ads.googleads.v0.errors.AdSharingErrorEnum.AdSharingError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.AdSharingErrorEnum.AdSharingError.UNRECOGNIZED : result;
@@ -1113,6 +1197,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.AdxErrorEnum.AdxError getAdxError() {
     if (errorCodeCase_ == 25) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.AdxErrorEnum.AdxError result = com.google.ads.googleads.v0.errors.AdxErrorEnum.AdxError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.AdxErrorEnum.AdxError.UNRECOGNIZED : result;
@@ -1143,6 +1228,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.BiddingErrorEnum.BiddingError getBiddingError() {
     if (errorCodeCase_ == 26) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.BiddingErrorEnum.BiddingError result = com.google.ads.googleads.v0.errors.BiddingErrorEnum.BiddingError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.BiddingErrorEnum.BiddingError.UNRECOGNIZED : result;
@@ -1173,6 +1259,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.CampaignCriterionErrorEnum.CampaignCriterionError getCampaignCriterionError() {
     if (errorCodeCase_ == 29) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.CampaignCriterionErrorEnum.CampaignCriterionError result = com.google.ads.googleads.v0.errors.CampaignCriterionErrorEnum.CampaignCriterionError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.CampaignCriterionErrorEnum.CampaignCriterionError.UNRECOGNIZED : result;
@@ -1203,6 +1290,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.CollectionSizeErrorEnum.CollectionSizeError getCollectionSizeError() {
     if (errorCodeCase_ == 31) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.CollectionSizeErrorEnum.CollectionSizeError result = com.google.ads.googleads.v0.errors.CollectionSizeErrorEnum.CollectionSizeError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.CollectionSizeErrorEnum.CollectionSizeError.UNRECOGNIZED : result;
@@ -1233,6 +1321,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.CriterionErrorEnum.CriterionError getCriterionError() {
     if (errorCodeCase_ == 32) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.CriterionErrorEnum.CriterionError result = com.google.ads.googleads.v0.errors.CriterionErrorEnum.CriterionError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.CriterionErrorEnum.CriterionError.UNRECOGNIZED : result;
@@ -1263,6 +1352,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.DateErrorEnum.DateError getDateError() {
     if (errorCodeCase_ == 33) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.DateErrorEnum.DateError result = com.google.ads.googleads.v0.errors.DateErrorEnum.DateError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.DateErrorEnum.DateError.UNRECOGNIZED : result;
@@ -1293,6 +1383,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.DateRangeErrorEnum.DateRangeError getDateRangeError() {
     if (errorCodeCase_ == 34) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.DateRangeErrorEnum.DateRangeError result = com.google.ads.googleads.v0.errors.DateRangeErrorEnum.DateRangeError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.DateRangeErrorEnum.DateRangeError.UNRECOGNIZED : result;
@@ -1323,6 +1414,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.DistinctErrorEnum.DistinctError getDistinctError() {
     if (errorCodeCase_ == 35) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.DistinctErrorEnum.DistinctError result = com.google.ads.googleads.v0.errors.DistinctErrorEnum.DistinctError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.DistinctErrorEnum.DistinctError.UNRECOGNIZED : result;
@@ -1353,6 +1445,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError getFeedAttributeReferenceError() {
     if (errorCodeCase_ == 36) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError result = com.google.ads.googleads.v0.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError.UNRECOGNIZED : result;
@@ -1383,6 +1476,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.FunctionErrorEnum.FunctionError getFunctionError() {
     if (errorCodeCase_ == 37) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.FunctionErrorEnum.FunctionError result = com.google.ads.googleads.v0.errors.FunctionErrorEnum.FunctionError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.FunctionErrorEnum.FunctionError.UNRECOGNIZED : result;
@@ -1413,6 +1507,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.FunctionParsingErrorEnum.FunctionParsingError getFunctionParsingError() {
     if (errorCodeCase_ == 38) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.FunctionParsingErrorEnum.FunctionParsingError result = com.google.ads.googleads.v0.errors.FunctionParsingErrorEnum.FunctionParsingError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.FunctionParsingErrorEnum.FunctionParsingError.UNRECOGNIZED : result;
@@ -1443,6 +1538,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.IdErrorEnum.IdError getIdError() {
     if (errorCodeCase_ == 39) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.IdErrorEnum.IdError result = com.google.ads.googleads.v0.errors.IdErrorEnum.IdError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.IdErrorEnum.IdError.UNRECOGNIZED : result;
@@ -1473,6 +1569,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.ImageErrorEnum.ImageError getImageError() {
     if (errorCodeCase_ == 40) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.ImageErrorEnum.ImageError result = com.google.ads.googleads.v0.errors.ImageErrorEnum.ImageError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.ImageErrorEnum.ImageError.UNRECOGNIZED : result;
@@ -1503,6 +1600,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.MediaBundleErrorEnum.MediaBundleError getMediaBundleError() {
     if (errorCodeCase_ == 42) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.MediaBundleErrorEnum.MediaBundleError result = com.google.ads.googleads.v0.errors.MediaBundleErrorEnum.MediaBundleError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.MediaBundleErrorEnum.MediaBundleError.UNRECOGNIZED : result;
@@ -1533,6 +1631,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError getMediaError() {
     if (errorCodeCase_ == 43) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError result = com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError.UNRECOGNIZED : result;
@@ -1563,6 +1662,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.MultiplierErrorEnum.MultiplierError getMultiplierError() {
     if (errorCodeCase_ == 44) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.MultiplierErrorEnum.MultiplierError result = com.google.ads.googleads.v0.errors.MultiplierErrorEnum.MultiplierError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.MultiplierErrorEnum.MultiplierError.UNRECOGNIZED : result;
@@ -1593,6 +1693,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.NewResourceCreationErrorEnum.NewResourceCreationError getNewResourceCreationError() {
     if (errorCodeCase_ == 45) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.NewResourceCreationErrorEnum.NewResourceCreationError result = com.google.ads.googleads.v0.errors.NewResourceCreationErrorEnum.NewResourceCreationError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.NewResourceCreationErrorEnum.NewResourceCreationError.UNRECOGNIZED : result;
@@ -1623,6 +1724,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.NotEmptyErrorEnum.NotEmptyError getNotEmptyError() {
     if (errorCodeCase_ == 46) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.NotEmptyErrorEnum.NotEmptyError result = com.google.ads.googleads.v0.errors.NotEmptyErrorEnum.NotEmptyError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.NotEmptyErrorEnum.NotEmptyError.UNRECOGNIZED : result;
@@ -1653,6 +1755,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.NullErrorEnum.NullError getNullError() {
     if (errorCodeCase_ == 47) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.NullErrorEnum.NullError result = com.google.ads.googleads.v0.errors.NullErrorEnum.NullError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.NullErrorEnum.NullError.UNRECOGNIZED : result;
@@ -1683,6 +1786,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.OperatorErrorEnum.OperatorError getOperatorError() {
     if (errorCodeCase_ == 48) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.OperatorErrorEnum.OperatorError result = com.google.ads.googleads.v0.errors.OperatorErrorEnum.OperatorError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.OperatorErrorEnum.OperatorError.UNRECOGNIZED : result;
@@ -1713,6 +1817,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.RangeErrorEnum.RangeError getRangeError() {
     if (errorCodeCase_ == 49) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.RangeErrorEnum.RangeError result = com.google.ads.googleads.v0.errors.RangeErrorEnum.RangeError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.RangeErrorEnum.RangeError.UNRECOGNIZED : result;
@@ -1743,6 +1848,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError getRecommendationError() {
     if (errorCodeCase_ == 58) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError result = com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError.UNRECOGNIZED : result;
@@ -1773,6 +1879,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.RegionCodeErrorEnum.RegionCodeError getRegionCodeError() {
     if (errorCodeCase_ == 51) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.RegionCodeErrorEnum.RegionCodeError result = com.google.ads.googleads.v0.errors.RegionCodeErrorEnum.RegionCodeError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.RegionCodeErrorEnum.RegionCodeError.UNRECOGNIZED : result;
@@ -1803,6 +1910,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.SettingErrorEnum.SettingError getSettingError() {
     if (errorCodeCase_ == 52) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.SettingErrorEnum.SettingError result = com.google.ads.googleads.v0.errors.SettingErrorEnum.SettingError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.SettingErrorEnum.SettingError.UNRECOGNIZED : result;
@@ -1833,6 +1941,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.StringFormatErrorEnum.StringFormatError getStringFormatError() {
     if (errorCodeCase_ == 53) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.StringFormatErrorEnum.StringFormatError result = com.google.ads.googleads.v0.errors.StringFormatErrorEnum.StringFormatError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.StringFormatErrorEnum.StringFormatError.UNRECOGNIZED : result;
@@ -1863,6 +1972,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.StringLengthErrorEnum.StringLengthError getStringLengthError() {
     if (errorCodeCase_ == 54) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.StringLengthErrorEnum.StringLengthError result = com.google.ads.googleads.v0.errors.StringLengthErrorEnum.StringLengthError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.StringLengthErrorEnum.StringLengthError.UNRECOGNIZED : result;
@@ -1893,6 +2003,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError getOperationAccessDeniedError() {
     if (errorCodeCase_ == 55) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError result = com.google.ads.googleads.v0.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError.UNRECOGNIZED : result;
@@ -1923,6 +2034,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError getResourceAccessDeniedError() {
     if (errorCodeCase_ == 56) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError result = com.google.ads.googleads.v0.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError.UNRECOGNIZED : result;
@@ -1953,6 +2065,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError getResourceCountLimitExceededError() {
     if (errorCodeCase_ == 57) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError result = com.google.ads.googleads.v0.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError.UNRECOGNIZED : result;
@@ -1983,6 +2096,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError getAdGroupBidModifierError() {
     if (errorCodeCase_ == 59) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError result = com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError.UNRECOGNIZED : result;
@@ -2013,6 +2127,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError getContextError() {
     if (errorCodeCase_ == 60) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError result = com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError.UNRECOGNIZED : result;
@@ -2043,6 +2158,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError getFieldError() {
     if (errorCodeCase_ == 61) {
+      @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError result = com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError.valueOf(
           (java.lang.Integer) errorCode_);
       return result == null ? com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError.UNRECOGNIZED : result;
@@ -2050,7 +2166,256 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError.UNSPECIFIED;
   }
 
+  public static final int SHARED_SET_ERROR_FIELD_NUMBER = 62;
+  /**
+   * <pre>
+   * The reasons for the shared set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+   */
+  public int getSharedSetErrorValue() {
+    if (errorCodeCase_ == 62) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the shared set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+   */
+  public com.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError getSharedSetError() {
+    if (errorCodeCase_ == 62) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError result = com.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError.UNSPECIFIED;
+  }
+
+  public static final int SHARED_CRITERION_ERROR_FIELD_NUMBER = 63;
+  /**
+   * <pre>
+   * The reasons for the shared criterion error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+   */
+  public int getSharedCriterionErrorValue() {
+    if (errorCodeCase_ == 63) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the shared criterion error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+   */
+  public com.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError getSharedCriterionError() {
+    if (errorCodeCase_ == 63) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError result = com.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError.UNSPECIFIED;
+  }
+
+  public static final int CAMPAIGN_SHARED_SET_ERROR_FIELD_NUMBER = 64;
+  /**
+   * <pre>
+   * The reasons for the campaign shared set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+   */
+  public int getCampaignSharedSetErrorValue() {
+    if (errorCodeCase_ == 64) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the campaign shared set error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+   */
+  public com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError getCampaignSharedSetError() {
+    if (errorCodeCase_ == 64) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError result = com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError.UNSPECIFIED;
+  }
+
+  public static final int HEADER_ERROR_FIELD_NUMBER = 66;
+  /**
+   * <pre>
+   * The reasons for the header error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+   */
+  public int getHeaderErrorValue() {
+    if (errorCodeCase_ == 66) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the header error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+   */
+  public com.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError getHeaderError() {
+    if (errorCodeCase_ == 66) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError result = com.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError.UNSPECIFIED;
+  }
+
+  public static final int DATABASE_ERROR_FIELD_NUMBER = 67;
+  /**
+   * <pre>
+   * The reasons for the database error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+   */
+  public int getDatabaseErrorValue() {
+    if (errorCodeCase_ == 67) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the database error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+   */
+  public com.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError getDatabaseError() {
+    if (errorCodeCase_ == 67) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError result = com.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError.UNSPECIFIED;
+  }
+
+  public static final int POLICY_FINDING_ERROR_FIELD_NUMBER = 68;
+  /**
+   * <pre>
+   * The reasons for the policy finding error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+   */
+  public int getPolicyFindingErrorValue() {
+    if (errorCodeCase_ == 68) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the policy finding error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+   */
+  public com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError getPolicyFindingError() {
+    if (errorCodeCase_ == 68) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError result = com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError.UNSPECIFIED;
+  }
+
+  public static final int CAMPAIGN_GROUP_ERROR_FIELD_NUMBER = 69;
+  /**
+   * <pre>
+   * The reasons for campaign group error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
+   */
+  public int getCampaignGroupErrorValue() {
+    if (errorCodeCase_ == 69) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for campaign group error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
+   */
+  public com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError getCampaignGroupError() {
+    if (errorCodeCase_ == 69) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError result = com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError.UNSPECIFIED;
+  }
+
+  public static final int ENUM_ERROR_FIELD_NUMBER = 70;
+  /**
+   * <pre>
+   * The reason for enum error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+   */
+  public int getEnumErrorValue() {
+    if (errorCodeCase_ == 70) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reason for enum error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+   */
+  public com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError getEnumError() {
+    if (errorCodeCase_ == 70) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError result = com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -2060,6 +2425,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (errorCodeCase_ == 1) {
@@ -2215,9 +2581,34 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 61) {
       output.writeEnum(61, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 62) {
+      output.writeEnum(62, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 63) {
+      output.writeEnum(63, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 64) {
+      output.writeEnum(64, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 66) {
+      output.writeEnum(66, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 67) {
+      output.writeEnum(67, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 68) {
+      output.writeEnum(68, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 69) {
+      output.writeEnum(69, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 70) {
+      output.writeEnum(70, ((java.lang.Integer) errorCode_));
+    }
     unknownFields.writeTo(output);
   }
 
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -2426,6 +2817,38 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 61) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(61, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 62) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(62, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 63) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(63, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 64) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(64, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 66) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(66, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 67) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(67, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 68) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(68, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 69) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(69, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 70) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(70, ((java.lang.Integer) errorCode_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2651,6 +3074,38 @@ private static final long serialVersionUID = 0L;
         result = result && getFieldErrorValue()
             == other.getFieldErrorValue();
         break;
+      case 62:
+        result = result && getSharedSetErrorValue()
+            == other.getSharedSetErrorValue();
+        break;
+      case 63:
+        result = result && getSharedCriterionErrorValue()
+            == other.getSharedCriterionErrorValue();
+        break;
+      case 64:
+        result = result && getCampaignSharedSetErrorValue()
+            == other.getCampaignSharedSetErrorValue();
+        break;
+      case 66:
+        result = result && getHeaderErrorValue()
+            == other.getHeaderErrorValue();
+        break;
+      case 67:
+        result = result && getDatabaseErrorValue()
+            == other.getDatabaseErrorValue();
+        break;
+      case 68:
+        result = result && getPolicyFindingErrorValue()
+            == other.getPolicyFindingErrorValue();
+        break;
+      case 69:
+        result = result && getCampaignGroupErrorValue()
+            == other.getCampaignGroupErrorValue();
+        break;
+      case 70:
+        result = result && getEnumErrorValue()
+            == other.getEnumErrorValue();
+        break;
       case 0:
       default:
     }
@@ -2870,6 +3325,38 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + FIELD_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getFieldErrorValue();
         break;
+      case 62:
+        hash = (37 * hash) + SHARED_SET_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getSharedSetErrorValue();
+        break;
+      case 63:
+        hash = (37 * hash) + SHARED_CRITERION_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getSharedCriterionErrorValue();
+        break;
+      case 64:
+        hash = (37 * hash) + CAMPAIGN_SHARED_SET_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignSharedSetErrorValue();
+        break;
+      case 66:
+        hash = (37 * hash) + HEADER_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getHeaderErrorValue();
+        break;
+      case 67:
+        hash = (37 * hash) + DATABASE_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getDatabaseErrorValue();
+        break;
+      case 68:
+        hash = (37 * hash) + POLICY_FINDING_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getPolicyFindingErrorValue();
+        break;
+      case 69:
+        hash = (37 * hash) + CAMPAIGN_GROUP_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignGroupErrorValue();
+        break;
+      case 70:
+        hash = (37 * hash) + ENUM_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getEnumErrorValue();
+        break;
       case 0:
       default:
     }
@@ -2948,6 +3435,7 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
@@ -2955,6 +3443,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder(com.google.ads.googleads.v0.errors.ErrorCode prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
@@ -2982,6 +3471,7 @@ private static final long serialVersionUID = 0L;
       return com.google.ads.googleads.v0.errors.ErrorsProto.internal_static_google_ads_googleads_v0_errors_ErrorCode_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v0.errors.ErrorsProto.internal_static_google_ads_googleads_v0_errors_ErrorCode_fieldAccessorTable
@@ -3004,6 +3494,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       errorCodeCase_ = 0;
@@ -3011,15 +3502,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
       return com.google.ads.googleads.v0.errors.ErrorsProto.internal_static_google_ads_googleads_v0_errors_ErrorCode_descriptor;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.errors.ErrorCode getDefaultInstanceForType() {
       return com.google.ads.googleads.v0.errors.ErrorCode.getDefaultInstance();
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.errors.ErrorCode build() {
       com.google.ads.googleads.v0.errors.ErrorCode result = buildPartial();
       if (!result.isInitialized()) {
@@ -3028,6 +3522,7 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
+    @java.lang.Override
     public com.google.ads.googleads.v0.errors.ErrorCode buildPartial() {
       com.google.ads.googleads.v0.errors.ErrorCode result = new com.google.ads.googleads.v0.errors.ErrorCode(this);
       if (errorCodeCase_ == 1) {
@@ -3183,37 +3678,68 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 61) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 62) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 63) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 64) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 66) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 67) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 68) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 69) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 70) {
+        result.errorCode_ = errorCode_;
+      }
       result.errorCodeCase_ = errorCodeCase_;
       onBuilt();
       return result;
     }
 
+    @java.lang.Override
     public Builder clone() {
       return (Builder) super.clone();
     }
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return (Builder) super.clearField(field);
     }
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return (Builder) super.clearOneof(oneof);
     }
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v0.errors.ErrorCode) {
         return mergeFrom((com.google.ads.googleads.v0.errors.ErrorCode)other);
@@ -3430,6 +3956,38 @@ private static final long serialVersionUID = 0L;
           setFieldErrorValue(other.getFieldErrorValue());
           break;
         }
+        case SHARED_SET_ERROR: {
+          setSharedSetErrorValue(other.getSharedSetErrorValue());
+          break;
+        }
+        case SHARED_CRITERION_ERROR: {
+          setSharedCriterionErrorValue(other.getSharedCriterionErrorValue());
+          break;
+        }
+        case CAMPAIGN_SHARED_SET_ERROR: {
+          setCampaignSharedSetErrorValue(other.getCampaignSharedSetErrorValue());
+          break;
+        }
+        case HEADER_ERROR: {
+          setHeaderErrorValue(other.getHeaderErrorValue());
+          break;
+        }
+        case DATABASE_ERROR: {
+          setDatabaseErrorValue(other.getDatabaseErrorValue());
+          break;
+        }
+        case POLICY_FINDING_ERROR: {
+          setPolicyFindingErrorValue(other.getPolicyFindingErrorValue());
+          break;
+        }
+        case CAMPAIGN_GROUP_ERROR: {
+          setCampaignGroupErrorValue(other.getCampaignGroupErrorValue());
+          break;
+        }
+        case ENUM_ERROR: {
+          setEnumErrorValue(other.getEnumErrorValue());
+          break;
+        }
         case ERRORCODE_NOT_SET: {
           break;
         }
@@ -3439,10 +3997,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3511,6 +4071,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.RequestErrorEnum.RequestError getRequestError() {
       if (errorCodeCase_ == 1) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.RequestErrorEnum.RequestError result = com.google.ads.googleads.v0.errors.RequestErrorEnum.RequestError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.RequestErrorEnum.RequestError.UNRECOGNIZED : result;
@@ -3584,6 +4145,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.BiddingStrategyErrorEnum.BiddingStrategyError getBiddingStrategyError() {
       if (errorCodeCase_ == 2) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.BiddingStrategyErrorEnum.BiddingStrategyError result = com.google.ads.googleads.v0.errors.BiddingStrategyErrorEnum.BiddingStrategyError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.BiddingStrategyErrorEnum.BiddingStrategyError.UNRECOGNIZED : result;
@@ -3657,6 +4219,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.UrlFieldErrorEnum.UrlFieldError getUrlFieldError() {
       if (errorCodeCase_ == 3) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.UrlFieldErrorEnum.UrlFieldError result = com.google.ads.googleads.v0.errors.UrlFieldErrorEnum.UrlFieldError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.UrlFieldErrorEnum.UrlFieldError.UNRECOGNIZED : result;
@@ -3730,6 +4293,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.ListOperationErrorEnum.ListOperationError getListOperationError() {
       if (errorCodeCase_ == 4) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.ListOperationErrorEnum.ListOperationError result = com.google.ads.googleads.v0.errors.ListOperationErrorEnum.ListOperationError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.ListOperationErrorEnum.ListOperationError.UNRECOGNIZED : result;
@@ -3803,6 +4367,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.QueryErrorEnum.QueryError getQueryError() {
       if (errorCodeCase_ == 5) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.QueryErrorEnum.QueryError result = com.google.ads.googleads.v0.errors.QueryErrorEnum.QueryError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.QueryErrorEnum.QueryError.UNRECOGNIZED : result;
@@ -3876,6 +4441,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.MutateErrorEnum.MutateError getMutateError() {
       if (errorCodeCase_ == 7) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.MutateErrorEnum.MutateError result = com.google.ads.googleads.v0.errors.MutateErrorEnum.MutateError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.MutateErrorEnum.MutateError.UNRECOGNIZED : result;
@@ -3949,6 +4515,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.FieldMaskErrorEnum.FieldMaskError getFieldMaskError() {
       if (errorCodeCase_ == 8) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.FieldMaskErrorEnum.FieldMaskError result = com.google.ads.googleads.v0.errors.FieldMaskErrorEnum.FieldMaskError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.FieldMaskErrorEnum.FieldMaskError.UNRECOGNIZED : result;
@@ -4022,6 +4589,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.AuthorizationErrorEnum.AuthorizationError getAuthorizationError() {
       if (errorCodeCase_ == 9) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.AuthorizationErrorEnum.AuthorizationError result = com.google.ads.googleads.v0.errors.AuthorizationErrorEnum.AuthorizationError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.AuthorizationErrorEnum.AuthorizationError.UNRECOGNIZED : result;
@@ -4095,6 +4663,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.InternalErrorEnum.InternalError getInternalError() {
       if (errorCodeCase_ == 10) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.InternalErrorEnum.InternalError result = com.google.ads.googleads.v0.errors.InternalErrorEnum.InternalError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.InternalErrorEnum.InternalError.UNRECOGNIZED : result;
@@ -4168,6 +4737,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.QuotaErrorEnum.QuotaError getQuotaError() {
       if (errorCodeCase_ == 11) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.QuotaErrorEnum.QuotaError result = com.google.ads.googleads.v0.errors.QuotaErrorEnum.QuotaError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.QuotaErrorEnum.QuotaError.UNRECOGNIZED : result;
@@ -4241,6 +4811,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.AdErrorEnum.AdError getAdError() {
       if (errorCodeCase_ == 12) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.AdErrorEnum.AdError result = com.google.ads.googleads.v0.errors.AdErrorEnum.AdError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.AdErrorEnum.AdError.UNRECOGNIZED : result;
@@ -4314,6 +4885,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.AdGroupErrorEnum.AdGroupError getAdGroupError() {
       if (errorCodeCase_ == 13) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.AdGroupErrorEnum.AdGroupError result = com.google.ads.googleads.v0.errors.AdGroupErrorEnum.AdGroupError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.AdGroupErrorEnum.AdGroupError.UNRECOGNIZED : result;
@@ -4387,6 +4959,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.CampaignBudgetErrorEnum.CampaignBudgetError getCampaignBudgetError() {
       if (errorCodeCase_ == 14) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.CampaignBudgetErrorEnum.CampaignBudgetError result = com.google.ads.googleads.v0.errors.CampaignBudgetErrorEnum.CampaignBudgetError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.CampaignBudgetErrorEnum.CampaignBudgetError.UNRECOGNIZED : result;
@@ -4460,6 +5033,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.CampaignErrorEnum.CampaignError getCampaignError() {
       if (errorCodeCase_ == 15) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.CampaignErrorEnum.CampaignError result = com.google.ads.googleads.v0.errors.CampaignErrorEnum.CampaignError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.CampaignErrorEnum.CampaignError.UNRECOGNIZED : result;
@@ -4533,6 +5107,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.AuthenticationErrorEnum.AuthenticationError getAuthenticationError() {
       if (errorCodeCase_ == 17) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.AuthenticationErrorEnum.AuthenticationError result = com.google.ads.googleads.v0.errors.AuthenticationErrorEnum.AuthenticationError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.AuthenticationErrorEnum.AuthenticationError.UNRECOGNIZED : result;
@@ -4606,6 +5181,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError getAdGroupCriterionError() {
       if (errorCodeCase_ == 18) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError result = com.google.ads.googleads.v0.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.AdGroupCriterionErrorEnum.AdGroupCriterionError.UNRECOGNIZED : result;
@@ -4679,6 +5255,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.AdCustomizerErrorEnum.AdCustomizerError getAdCustomizerError() {
       if (errorCodeCase_ == 19) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.AdCustomizerErrorEnum.AdCustomizerError result = com.google.ads.googleads.v0.errors.AdCustomizerErrorEnum.AdCustomizerError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.AdCustomizerErrorEnum.AdCustomizerError.UNRECOGNIZED : result;
@@ -4752,6 +5329,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.AdGroupAdErrorEnum.AdGroupAdError getAdGroupAdError() {
       if (errorCodeCase_ == 21) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.AdGroupAdErrorEnum.AdGroupAdError result = com.google.ads.googleads.v0.errors.AdGroupAdErrorEnum.AdGroupAdError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.AdGroupAdErrorEnum.AdGroupAdError.UNRECOGNIZED : result;
@@ -4825,6 +5403,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.AdSharingErrorEnum.AdSharingError getAdSharingError() {
       if (errorCodeCase_ == 24) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.AdSharingErrorEnum.AdSharingError result = com.google.ads.googleads.v0.errors.AdSharingErrorEnum.AdSharingError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.AdSharingErrorEnum.AdSharingError.UNRECOGNIZED : result;
@@ -4898,6 +5477,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.AdxErrorEnum.AdxError getAdxError() {
       if (errorCodeCase_ == 25) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.AdxErrorEnum.AdxError result = com.google.ads.googleads.v0.errors.AdxErrorEnum.AdxError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.AdxErrorEnum.AdxError.UNRECOGNIZED : result;
@@ -4971,6 +5551,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.BiddingErrorEnum.BiddingError getBiddingError() {
       if (errorCodeCase_ == 26) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.BiddingErrorEnum.BiddingError result = com.google.ads.googleads.v0.errors.BiddingErrorEnum.BiddingError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.BiddingErrorEnum.BiddingError.UNRECOGNIZED : result;
@@ -5044,6 +5625,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.CampaignCriterionErrorEnum.CampaignCriterionError getCampaignCriterionError() {
       if (errorCodeCase_ == 29) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.CampaignCriterionErrorEnum.CampaignCriterionError result = com.google.ads.googleads.v0.errors.CampaignCriterionErrorEnum.CampaignCriterionError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.CampaignCriterionErrorEnum.CampaignCriterionError.UNRECOGNIZED : result;
@@ -5117,6 +5699,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.CollectionSizeErrorEnum.CollectionSizeError getCollectionSizeError() {
       if (errorCodeCase_ == 31) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.CollectionSizeErrorEnum.CollectionSizeError result = com.google.ads.googleads.v0.errors.CollectionSizeErrorEnum.CollectionSizeError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.CollectionSizeErrorEnum.CollectionSizeError.UNRECOGNIZED : result;
@@ -5190,6 +5773,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.CriterionErrorEnum.CriterionError getCriterionError() {
       if (errorCodeCase_ == 32) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.CriterionErrorEnum.CriterionError result = com.google.ads.googleads.v0.errors.CriterionErrorEnum.CriterionError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.CriterionErrorEnum.CriterionError.UNRECOGNIZED : result;
@@ -5263,6 +5847,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.DateErrorEnum.DateError getDateError() {
       if (errorCodeCase_ == 33) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.DateErrorEnum.DateError result = com.google.ads.googleads.v0.errors.DateErrorEnum.DateError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.DateErrorEnum.DateError.UNRECOGNIZED : result;
@@ -5336,6 +5921,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.DateRangeErrorEnum.DateRangeError getDateRangeError() {
       if (errorCodeCase_ == 34) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.DateRangeErrorEnum.DateRangeError result = com.google.ads.googleads.v0.errors.DateRangeErrorEnum.DateRangeError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.DateRangeErrorEnum.DateRangeError.UNRECOGNIZED : result;
@@ -5409,6 +5995,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.DistinctErrorEnum.DistinctError getDistinctError() {
       if (errorCodeCase_ == 35) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.DistinctErrorEnum.DistinctError result = com.google.ads.googleads.v0.errors.DistinctErrorEnum.DistinctError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.DistinctErrorEnum.DistinctError.UNRECOGNIZED : result;
@@ -5482,6 +6069,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError getFeedAttributeReferenceError() {
       if (errorCodeCase_ == 36) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError result = com.google.ads.googleads.v0.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError.UNRECOGNIZED : result;
@@ -5555,6 +6143,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.FunctionErrorEnum.FunctionError getFunctionError() {
       if (errorCodeCase_ == 37) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.FunctionErrorEnum.FunctionError result = com.google.ads.googleads.v0.errors.FunctionErrorEnum.FunctionError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.FunctionErrorEnum.FunctionError.UNRECOGNIZED : result;
@@ -5628,6 +6217,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.FunctionParsingErrorEnum.FunctionParsingError getFunctionParsingError() {
       if (errorCodeCase_ == 38) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.FunctionParsingErrorEnum.FunctionParsingError result = com.google.ads.googleads.v0.errors.FunctionParsingErrorEnum.FunctionParsingError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.FunctionParsingErrorEnum.FunctionParsingError.UNRECOGNIZED : result;
@@ -5701,6 +6291,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.IdErrorEnum.IdError getIdError() {
       if (errorCodeCase_ == 39) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.IdErrorEnum.IdError result = com.google.ads.googleads.v0.errors.IdErrorEnum.IdError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.IdErrorEnum.IdError.UNRECOGNIZED : result;
@@ -5774,6 +6365,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.ImageErrorEnum.ImageError getImageError() {
       if (errorCodeCase_ == 40) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.ImageErrorEnum.ImageError result = com.google.ads.googleads.v0.errors.ImageErrorEnum.ImageError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.ImageErrorEnum.ImageError.UNRECOGNIZED : result;
@@ -5847,6 +6439,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.MediaBundleErrorEnum.MediaBundleError getMediaBundleError() {
       if (errorCodeCase_ == 42) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.MediaBundleErrorEnum.MediaBundleError result = com.google.ads.googleads.v0.errors.MediaBundleErrorEnum.MediaBundleError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.MediaBundleErrorEnum.MediaBundleError.UNRECOGNIZED : result;
@@ -5920,6 +6513,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError getMediaError() {
       if (errorCodeCase_ == 43) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError result = com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError.UNRECOGNIZED : result;
@@ -5993,6 +6587,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.MultiplierErrorEnum.MultiplierError getMultiplierError() {
       if (errorCodeCase_ == 44) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.MultiplierErrorEnum.MultiplierError result = com.google.ads.googleads.v0.errors.MultiplierErrorEnum.MultiplierError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.MultiplierErrorEnum.MultiplierError.UNRECOGNIZED : result;
@@ -6066,6 +6661,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.NewResourceCreationErrorEnum.NewResourceCreationError getNewResourceCreationError() {
       if (errorCodeCase_ == 45) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.NewResourceCreationErrorEnum.NewResourceCreationError result = com.google.ads.googleads.v0.errors.NewResourceCreationErrorEnum.NewResourceCreationError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.NewResourceCreationErrorEnum.NewResourceCreationError.UNRECOGNIZED : result;
@@ -6139,6 +6735,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.NotEmptyErrorEnum.NotEmptyError getNotEmptyError() {
       if (errorCodeCase_ == 46) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.NotEmptyErrorEnum.NotEmptyError result = com.google.ads.googleads.v0.errors.NotEmptyErrorEnum.NotEmptyError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.NotEmptyErrorEnum.NotEmptyError.UNRECOGNIZED : result;
@@ -6212,6 +6809,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.NullErrorEnum.NullError getNullError() {
       if (errorCodeCase_ == 47) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.NullErrorEnum.NullError result = com.google.ads.googleads.v0.errors.NullErrorEnum.NullError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.NullErrorEnum.NullError.UNRECOGNIZED : result;
@@ -6285,6 +6883,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.OperatorErrorEnum.OperatorError getOperatorError() {
       if (errorCodeCase_ == 48) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.OperatorErrorEnum.OperatorError result = com.google.ads.googleads.v0.errors.OperatorErrorEnum.OperatorError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.OperatorErrorEnum.OperatorError.UNRECOGNIZED : result;
@@ -6358,6 +6957,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.RangeErrorEnum.RangeError getRangeError() {
       if (errorCodeCase_ == 49) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.RangeErrorEnum.RangeError result = com.google.ads.googleads.v0.errors.RangeErrorEnum.RangeError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.RangeErrorEnum.RangeError.UNRECOGNIZED : result;
@@ -6431,6 +7031,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError getRecommendationError() {
       if (errorCodeCase_ == 58) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError result = com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.RecommendationErrorEnum.RecommendationError.UNRECOGNIZED : result;
@@ -6504,6 +7105,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.RegionCodeErrorEnum.RegionCodeError getRegionCodeError() {
       if (errorCodeCase_ == 51) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.RegionCodeErrorEnum.RegionCodeError result = com.google.ads.googleads.v0.errors.RegionCodeErrorEnum.RegionCodeError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.RegionCodeErrorEnum.RegionCodeError.UNRECOGNIZED : result;
@@ -6577,6 +7179,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.SettingErrorEnum.SettingError getSettingError() {
       if (errorCodeCase_ == 52) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.SettingErrorEnum.SettingError result = com.google.ads.googleads.v0.errors.SettingErrorEnum.SettingError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.SettingErrorEnum.SettingError.UNRECOGNIZED : result;
@@ -6650,6 +7253,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.StringFormatErrorEnum.StringFormatError getStringFormatError() {
       if (errorCodeCase_ == 53) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.StringFormatErrorEnum.StringFormatError result = com.google.ads.googleads.v0.errors.StringFormatErrorEnum.StringFormatError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.StringFormatErrorEnum.StringFormatError.UNRECOGNIZED : result;
@@ -6723,6 +7327,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.StringLengthErrorEnum.StringLengthError getStringLengthError() {
       if (errorCodeCase_ == 54) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.StringLengthErrorEnum.StringLengthError result = com.google.ads.googleads.v0.errors.StringLengthErrorEnum.StringLengthError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.StringLengthErrorEnum.StringLengthError.UNRECOGNIZED : result;
@@ -6796,6 +7401,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError getOperationAccessDeniedError() {
       if (errorCodeCase_ == 55) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError result = com.google.ads.googleads.v0.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError.UNRECOGNIZED : result;
@@ -6869,6 +7475,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError getResourceAccessDeniedError() {
       if (errorCodeCase_ == 56) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError result = com.google.ads.googleads.v0.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError.UNRECOGNIZED : result;
@@ -6942,6 +7549,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError getResourceCountLimitExceededError() {
       if (errorCodeCase_ == 57) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError result = com.google.ads.googleads.v0.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError.UNRECOGNIZED : result;
@@ -7015,6 +7623,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError getAdGroupBidModifierError() {
       if (errorCodeCase_ == 59) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError result = com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError.UNRECOGNIZED : result;
@@ -7088,6 +7697,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError getContextError() {
       if (errorCodeCase_ == 60) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError result = com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.ContextErrorEnum.ContextError.UNRECOGNIZED : result;
@@ -7161,6 +7771,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError getFieldError() {
       if (errorCodeCase_ == 61) {
+        @SuppressWarnings("deprecation")
         com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError result = com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError.valueOf(
             (java.lang.Integer) errorCode_);
         return result == null ? com.google.ads.googleads.v0.errors.FieldErrorEnum.FieldError.UNRECOGNIZED : result;
@@ -7198,11 +7809,605 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
+    /**
+     * <pre>
+     * The reasons for the shared set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+     */
+    public int getSharedSetErrorValue() {
+      if (errorCodeCase_ == 62) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the shared set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+     */
+    public Builder setSharedSetErrorValue(int value) {
+      errorCodeCase_ = 62;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the shared set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+     */
+    public com.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError getSharedSetError() {
+      if (errorCodeCase_ == 62) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError result = com.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the shared set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+     */
+    public Builder setSharedSetError(com.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 62;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the shared set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.SharedSetErrorEnum.SharedSetError shared_set_error = 62;</code>
+     */
+    public Builder clearSharedSetError() {
+      if (errorCodeCase_ == 62) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the shared criterion error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+     */
+    public int getSharedCriterionErrorValue() {
+      if (errorCodeCase_ == 63) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the shared criterion error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+     */
+    public Builder setSharedCriterionErrorValue(int value) {
+      errorCodeCase_ = 63;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the shared criterion error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+     */
+    public com.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError getSharedCriterionError() {
+      if (errorCodeCase_ == 63) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError result = com.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the shared criterion error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+     */
+    public Builder setSharedCriterionError(com.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 63;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the shared criterion error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.SharedCriterionErrorEnum.SharedCriterionError shared_criterion_error = 63;</code>
+     */
+    public Builder clearSharedCriterionError() {
+      if (errorCodeCase_ == 63) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the campaign shared set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+     */
+    public int getCampaignSharedSetErrorValue() {
+      if (errorCodeCase_ == 64) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign shared set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+     */
+    public Builder setCampaignSharedSetErrorValue(int value) {
+      errorCodeCase_ = 64;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign shared set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+     */
+    public com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError getCampaignSharedSetError() {
+      if (errorCodeCase_ == 64) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError result = com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign shared set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+     */
+    public Builder setCampaignSharedSetError(com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 64;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign shared set error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError campaign_shared_set_error = 64;</code>
+     */
+    public Builder clearCampaignSharedSetError() {
+      if (errorCodeCase_ == 64) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the header error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+     */
+    public int getHeaderErrorValue() {
+      if (errorCodeCase_ == 66) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the header error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+     */
+    public Builder setHeaderErrorValue(int value) {
+      errorCodeCase_ = 66;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the header error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+     */
+    public com.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError getHeaderError() {
+      if (errorCodeCase_ == 66) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError result = com.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the header error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+     */
+    public Builder setHeaderError(com.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 66;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the header error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.HeaderErrorEnum.HeaderError header_error = 66;</code>
+     */
+    public Builder clearHeaderError() {
+      if (errorCodeCase_ == 66) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the database error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+     */
+    public int getDatabaseErrorValue() {
+      if (errorCodeCase_ == 67) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the database error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+     */
+    public Builder setDatabaseErrorValue(int value) {
+      errorCodeCase_ = 67;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the database error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+     */
+    public com.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError getDatabaseError() {
+      if (errorCodeCase_ == 67) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError result = com.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the database error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+     */
+    public Builder setDatabaseError(com.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 67;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the database error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.DatabaseErrorEnum.DatabaseError database_error = 67;</code>
+     */
+    public Builder clearDatabaseError() {
+      if (errorCodeCase_ == 67) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the policy finding error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+     */
+    public int getPolicyFindingErrorValue() {
+      if (errorCodeCase_ == 68) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the policy finding error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+     */
+    public Builder setPolicyFindingErrorValue(int value) {
+      errorCodeCase_ = 68;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the policy finding error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+     */
+    public com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError getPolicyFindingError() {
+      if (errorCodeCase_ == 68) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError result = com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the policy finding error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+     */
+    public Builder setPolicyFindingError(com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 68;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the policy finding error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError policy_finding_error = 68;</code>
+     */
+    public Builder clearPolicyFindingError() {
+      if (errorCodeCase_ == 68) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for campaign group error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
+     */
+    public int getCampaignGroupErrorValue() {
+      if (errorCodeCase_ == 69) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for campaign group error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
+     */
+    public Builder setCampaignGroupErrorValue(int value) {
+      errorCodeCase_ = 69;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for campaign group error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
+     */
+    public com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError getCampaignGroupError() {
+      if (errorCodeCase_ == 69) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError result = com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for campaign group error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
+     */
+    public Builder setCampaignGroupError(com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 69;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for campaign group error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
+     */
+    public Builder clearCampaignGroupError() {
+      if (errorCodeCase_ == 69) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reason for enum error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+     */
+    public int getEnumErrorValue() {
+      if (errorCodeCase_ == 70) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reason for enum error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+     */
+    public Builder setEnumErrorValue(int value) {
+      errorCodeCase_ = 70;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for enum error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+     */
+    public com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError getEnumError() {
+      if (errorCodeCase_ == 70) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError result = com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reason for enum error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+     */
+    public Builder setEnumError(com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 70;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for enum error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
+     */
+    public Builder clearEnumError() {
+      if (errorCodeCase_ == 70) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
     }
 
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -7224,6 +8429,7 @@ private static final long serialVersionUID = 0L;
 
   private static final com.google.protobuf.Parser<ErrorCode>
       PARSER = new com.google.protobuf.AbstractParser<ErrorCode>() {
+    @java.lang.Override
     public ErrorCode parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7241,6 +8447,7 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
+  @java.lang.Override
   public com.google.ads.googleads.v0.errors.ErrorCode getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
