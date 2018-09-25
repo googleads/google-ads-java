@@ -1,3 +1,16 @@
+0.4.0 - 2018-09-25
+------------------
+Added support and examples for Google Ads API v0_4.
+
+- Added examples showing how to add and get account budget proposals.
+- Added examples showing how to get and remove billing setups.
+- Added an example showing how to retrieve all disapproved ads in a campaign.
+- Added an example showing how to add a conversion action.
+- Added an example showing how to create a standard shopping campaign, a
+  shopping product ad group, and a shopping product ad.
+- Added an example showing how to add a shopping listing group tree to a
+  shopping ad group.
+
 0.3.2 - 2018-08-29
 ------------------
 Added support and examples for Google Ads API v0_3.
