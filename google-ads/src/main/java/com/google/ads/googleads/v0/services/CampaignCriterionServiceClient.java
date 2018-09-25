@@ -16,16 +16,12 @@
 package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.CampaignCriterion;
-import com.google.ads.googleads.v0.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v0.services.GetCampaignCriterionRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignCriteriaRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse;
+import com.google.ads.googleads.v0.services.stub.CampaignCriterionServiceStub;
+import com.google.ads.googleads.v0.services.stub.CampaignCriterionServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.api.pathtemplate.PathTemplate;
-import com.google.ads.googleads.v0.services.stub.CampaignCriterionServiceStub;
-import com.google.ads.googleads.v0.services.stub.CampaignCriterionServiceStubSettings;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;

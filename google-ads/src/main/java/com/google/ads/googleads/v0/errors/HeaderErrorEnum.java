@@ -104,7 +104,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * The user selected customer id could not be parsed.
+     * The user selected customer id could not be validated.
      * </pre>
      *
      * <code>INVALID_USER_SELECTED_CUSTOMER_ID = 2;</code>
@@ -131,7 +131,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * The user selected customer id could not be parsed.
+     * The user selected customer id could not be validated.
      * </pre>
      *
      * <code>INVALID_USER_SELECTED_CUSTOMER_ID = 2;</code>

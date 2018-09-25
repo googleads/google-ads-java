@@ -178,6 +178,15 @@ private static final long serialVersionUID = 0L;
      * <code>MATCHING_FUNCTION_LIMIT = 8;</code>
      */
     MATCHING_FUNCTION_LIMIT(8),
+    /**
+     * <pre>
+     * The response for this request would exceed the maximum number of rows
+     * that can be returned.
+     * </pre>
+     *
+     * <code>RESPONSE_ROW_LIMIT_EXCEEDED = 9;</code>
+     */
+    RESPONSE_ROW_LIMIT_EXCEEDED(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -273,6 +282,15 @@ private static final long serialVersionUID = 0L;
      * <code>MATCHING_FUNCTION_LIMIT = 8;</code>
      */
     public static final int MATCHING_FUNCTION_LIMIT_VALUE = 8;
+    /**
+     * <pre>
+     * The response for this request would exceed the maximum number of rows
+     * that can be returned.
+     * </pre>
+     *
+     * <code>RESPONSE_ROW_LIMIT_EXCEEDED = 9;</code>
+     */
+    public static final int RESPONSE_ROW_LIMIT_EXCEEDED_VALUE = 9;
 
 
     public final int getNumber() {
@@ -302,6 +320,7 @@ private static final long serialVersionUID = 0L;
         case 6: return AD_GROUP_CRITERION_LIMIT;
         case 7: return SHARED_SET_LIMIT;
         case 8: return MATCHING_FUNCTION_LIMIT;
+        case 9: return RESPONSE_ROW_LIMIT_EXCEEDED;
         default: return null;
       }
     }

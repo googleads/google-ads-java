@@ -75,10 +75,25 @@ public final class CriteriaProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_common_ListingCustomAttributeInfo_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_ProductChannelInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_ProductChannelInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_ProductChannelExclusivityInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_ProductChannelExclusivityInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v0_common_ProductConditionInfo_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_common_ProductConditionInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_ProductOfferIdInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_ProductOfferIdInfo_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v0_common_ProductTypeInfo_descriptor;
   static final 
@@ -136,92 +151,110 @@ public final class CriteriaProto {
       "e_index.proto\0326google/ads/googleads/v0/e" +
       "nums/listing_group_type.proto\0322google/ad" +
       "s/googleads/v0/enums/minute_of_hour.prot" +
-      "o\0325google/ads/googleads/v0/enums/product" +
-      "_condition.proto\0326google/ads/googleads/v" +
-      "0/enums/product_type_level.proto\032\036google" +
-      "/protobuf/wrappers.proto\"\223\001\n\013KeywordInfo" +
-      "\022*\n\004text\030\001 \001(\0132\034.google.protobuf.StringV" +
-      "alue\022X\n\nmatch_type\030\002 \001(\0162D.google.ads.go" +
-      "ogleads.v0.enums.KeywordMatchTypeEnum.Ke" +
-      "ywordMatchType\"I\n\014LocationInfo\0229\n\023geo_ta" +
-      "rget_constant\030\001 \001(\0132\034.google.protobuf.St" +
-      "ringValue\"L\n\nDeviceInfo\022>\n\004type\030\001 \001(\01620." +
-      "google.ads.googleads.v0.enums.DeviceEnum" +
-      ".Device\"\361\001\n\020ListingGroupInfo\022R\n\004type\030\001 \001" +
-      "(\0162D.google.ads.googleads.v0.enums.Listi" +
-      "ngGroupTypeEnum.ListingGroupType\022H\n\ncase" +
-      "_value\030\002 \001(\01324.google.ads.googleads.v0.c" +
-      "ommon.ListingDimensionInfo\022?\n\031parent_ad_" +
-      "group_criterion\030\003 \001(\0132\034.google.protobuf." +
-      "StringValue\"\326\005\n\024ListingDimensionInfo\022I\n\r" +
-      "listing_brand\030\001 \001(\01320.google.ads.googlea" +
-      "ds.v0.common.ListingBrandInfoH\000\022?\n\010hotel" +
-      "_id\030\002 \001(\0132+.google.ads.googleads.v0.comm" +
-      "on.HotelIdInfoH\000\022E\n\013hotel_class\030\003 \001(\0132.." +
-      "google.ads.googleads.v0.common.HotelClas" +
-      "sInfoH\000\022V\n\024hotel_country_region\030\004 \001(\01326." +
-      "google.ads.googleads.v0.common.HotelCoun" +
-      "tryRegionInfoH\000\022E\n\013hotel_state\030\005 \001(\0132..g" +
-      "oogle.ads.googleads.v0.common.HotelState" +
-      "InfoH\000\022C\n\nhotel_city\030\006 \001(\0132-.google.ads." +
-      "googleads.v0.common.HotelCityInfoH\000\022^\n\030l" +
-      "isting_custom_attribute\030\007 \001(\0132:.google.a" +
-      "ds.googleads.v0.common.ListingCustomAttr" +
-      "ibuteInfoH\000\022Q\n\021product_condition\030\n \001(\01324" +
-      ".google.ads.googleads.v0.common.ProductC" +
-      "onditionInfoH\000\022G\n\014product_type\030\014 \001(\0132/.g" +
-      "oogle.ads.googleads.v0.common.ProductTyp" +
-      "eInfoH\000B\013\n\tdimension\"?\n\020ListingBrandInfo" +
-      "\022+\n\005value\030\001 \001(\0132\034.google.protobuf.String" +
-      "Value\":\n\013HotelIdInfo\022+\n\005value\030\001 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\"<\n\016HotelClassI" +
-      "nfo\022*\n\005value\030\001 \001(\0132\033.google.protobuf.Int" +
-      "64Value\"X\n\026HotelCountryRegionInfo\022>\n\030cou" +
-      "ntry_region_criterion\030\001 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\"G\n\016HotelStateInfo\0225\n\017s" +
-      "tate_criterion\030\001 \001(\0132\034.google.protobuf.S" +
-      "tringValue\"E\n\rHotelCityInfo\0224\n\016city_crit" +
-      "erion\030\001 \001(\0132\034.google.protobuf.StringValu" +
-      "e\"\264\001\n\032ListingCustomAttributeInfo\022+\n\005valu" +
-      "e\030\001 \001(\0132\034.google.protobuf.StringValue\022i\n" +
-      "\005index\030\002 \001(\0162Z.google.ads.googleads.v0.e" +
-      "nums.ListingCustomAttributeIndexEnum.Lis" +
-      "tingCustomAttributeIndex\"o\n\024ProductCondi" +
-      "tionInfo\022W\n\tcondition\030\001 \001(\0162D.google.ads" +
-      ".googleads.v0.enums.ProductConditionEnum" +
-      ".ProductCondition\"\223\001\n\017ProductTypeInfo\022+\n" +
-      "\005value\030\001 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022S\n\005level\030\002 \001(\0162D.google.ads.googleads" +
-      ".v0.enums.ProductTypeLevelEnum.ProductTy" +
-      "peLevel\"|\n\032HotelDateSelectionTypeInfo\022^\n" +
-      "\004type\030\001 \001(\0162P.google.ads.googleads.v0.en" +
-      "ums.HotelDateSelectionTypeEnum.HotelDate" +
-      "SelectionType\"}\n\035HotelAdvanceBookingWind" +
-      "owInfo\022-\n\010min_days\030\001 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022-\n\010max_days\030\002 \001(\0132\033.google" +
-      ".protobuf.Int64Value\"y\n\025HotelLengthOfSta" +
-      "yInfo\022/\n\nmin_nights\030\001 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022/\n\nmax_nights\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\"b\n\023HotelCheckInD" +
-      "ayInfo\022K\n\013day_of_week\030\001 \001(\01626.google.ads" +
-      ".googleads.v0.enums.DayOfWeekEnum.DayOfW" +
-      "eek\"g\n\023InteractionTypeInfo\022P\n\004type\030\001 \001(\016" +
-      "2B.google.ads.googleads.v0.enums.Interac" +
-      "tionTypeEnum.InteractionType\"\343\002\n\016AdSched" +
-      "uleInfo\022R\n\014start_minute\030\001 \001(\0162<.google.a" +
-      "ds.googleads.v0.enums.MinuteOfHourEnum.M" +
-      "inuteOfHour\022P\n\nend_minute\030\002 \001(\0162<.google" +
-      ".ads.googleads.v0.enums.MinuteOfHourEnum" +
-      ".MinuteOfHour\022/\n\nstart_hour\030\003 \001(\0132\033.goog" +
-      "le.protobuf.Int32Value\022-\n\010end_hour\030\004 \001(\013" +
-      "2\033.google.protobuf.Int32Value\022K\n\013day_of_" +
-      "week\030\005 \001(\01626.google.ads.googleads.v0.enu" +
-      "ms.DayOfWeekEnum.DayOfWeekB\303\001\n\"com.googl" +
-      "e.ads.googleads.v0.commonB\rCriteriaProto" +
-      "P\001ZDgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v0/common;common\242\002\003GAA\252\002" +
-      "\036Google.Ads.GoogleAds.V0.Common\312\002\036Google" +
-      "\\Ads\\GoogleAds\\V0\\Commonb\006proto3"
+      "o\0323google/ads/googleads/v0/enums/product" +
+      "_channel.proto\032?google/ads/googleads/v0/" +
+      "enums/product_channel_exclusivity.proto\032" +
+      "5google/ads/googleads/v0/enums/product_c" +
+      "ondition.proto\0326google/ads/googleads/v0/" +
+      "enums/product_type_level.proto\032\036google/p" +
+      "rotobuf/wrappers.proto\"\223\001\n\013KeywordInfo\022*" +
+      "\n\004text\030\001 \001(\0132\034.google.protobuf.StringVal" +
+      "ue\022X\n\nmatch_type\030\002 \001(\0162D.google.ads.goog" +
+      "leads.v0.enums.KeywordMatchTypeEnum.Keyw" +
+      "ordMatchType\"I\n\014LocationInfo\0229\n\023geo_targ" +
+      "et_constant\030\001 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\"L\n\nDeviceInfo\022>\n\004type\030\001 \001(\01620.go" +
+      "ogle.ads.googleads.v0.enums.DeviceEnum.D" +
+      "evice\"\361\001\n\020ListingGroupInfo\022R\n\004type\030\001 \001(\016" +
+      "2D.google.ads.googleads.v0.enums.Listing" +
+      "GroupTypeEnum.ListingGroupType\022H\n\ncase_v" +
+      "alue\030\002 \001(\01324.google.ads.googleads.v0.com" +
+      "mon.ListingDimensionInfo\022?\n\031parent_ad_gr" +
+      "oup_criterion\030\003 \001(\0132\034.google.protobuf.St" +
+      "ringValue\"\333\007\n\024ListingDimensionInfo\022I\n\rli" +
+      "sting_brand\030\001 \001(\01320.google.ads.googleads" +
+      ".v0.common.ListingBrandInfoH\000\022?\n\010hotel_i" +
+      "d\030\002 \001(\0132+.google.ads.googleads.v0.common" +
+      ".HotelIdInfoH\000\022E\n\013hotel_class\030\003 \001(\0132..go" +
+      "ogle.ads.googleads.v0.common.HotelClassI" +
+      "nfoH\000\022V\n\024hotel_country_region\030\004 \001(\01326.go" +
+      "ogle.ads.googleads.v0.common.HotelCountr" +
+      "yRegionInfoH\000\022E\n\013hotel_state\030\005 \001(\0132..goo" +
+      "gle.ads.googleads.v0.common.HotelStateIn" +
+      "foH\000\022C\n\nhotel_city\030\006 \001(\0132-.google.ads.go" +
+      "ogleads.v0.common.HotelCityInfoH\000\022^\n\030lis" +
+      "ting_custom_attribute\030\007 \001(\0132:.google.ads" +
+      ".googleads.v0.common.ListingCustomAttrib" +
+      "uteInfoH\000\022M\n\017product_channel\030\010 \001(\01322.goo" +
+      "gle.ads.googleads.v0.common.ProductChann" +
+      "elInfoH\000\022d\n\033product_channel_exclusivity\030" +
+      "\t \001(\0132=.google.ads.googleads.v0.common.P" +
+      "roductChannelExclusivityInfoH\000\022Q\n\021produc" +
+      "t_condition\030\n \001(\01324.google.ads.googleads" +
+      ".v0.common.ProductConditionInfoH\000\022N\n\020pro" +
+      "duct_offer_id\030\013 \001(\01322.google.ads.googlea" +
+      "ds.v0.common.ProductOfferIdInfoH\000\022G\n\014pro" +
+      "duct_type\030\014 \001(\0132/.google.ads.googleads.v" +
+      "0.common.ProductTypeInfoH\000B\013\n\tdimension\"" +
+      "?\n\020ListingBrandInfo\022+\n\005value\030\001 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\":\n\013HotelIdInfo\022" +
+      "+\n\005value\030\001 \001(\0132\034.google.protobuf.StringV" +
+      "alue\"<\n\016HotelClassInfo\022*\n\005value\030\001 \001(\0132\033." +
+      "google.protobuf.Int64Value\"X\n\026HotelCount" +
+      "ryRegionInfo\022>\n\030country_region_criterion" +
+      "\030\001 \001(\0132\034.google.protobuf.StringValue\"G\n\016" +
+      "HotelStateInfo\0225\n\017state_criterion\030\001 \001(\0132" +
+      "\034.google.protobuf.StringValue\"E\n\rHotelCi" +
+      "tyInfo\0224\n\016city_criterion\030\001 \001(\0132\034.google." +
+      "protobuf.StringValue\"\264\001\n\032ListingCustomAt" +
+      "tributeInfo\022+\n\005value\030\001 \001(\0132\034.google.prot" +
+      "obuf.StringValue\022i\n\005index\030\002 \001(\0162Z.google" +
+      ".ads.googleads.v0.enums.ListingCustomAtt" +
+      "ributeIndexEnum.ListingCustomAttributeIn" +
+      "dex\"g\n\022ProductChannelInfo\022Q\n\007channel\030\001 \001" +
+      "(\0162@.google.ads.googleads.v0.enums.Produ" +
+      "ctChannelEnum.ProductChannel\"\224\001\n\035Product" +
+      "ChannelExclusivityInfo\022s\n\023channel_exclus" +
+      "ivity\030\001 \001(\0162V.google.ads.googleads.v0.en" +
+      "ums.ProductChannelExclusivityEnum.Produc" +
+      "tChannelExclusivity\"o\n\024ProductConditionI" +
+      "nfo\022W\n\tcondition\030\001 \001(\0162D.google.ads.goog" +
+      "leads.v0.enums.ProductConditionEnum.Prod" +
+      "uctCondition\"A\n\022ProductOfferIdInfo\022+\n\005va" +
+      "lue\030\001 \001(\0132\034.google.protobuf.StringValue\"" +
+      "\223\001\n\017ProductTypeInfo\022+\n\005value\030\001 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\022S\n\005level\030\002 \001(\0162" +
+      "D.google.ads.googleads.v0.enums.ProductT" +
+      "ypeLevelEnum.ProductTypeLevel\"|\n\032HotelDa" +
+      "teSelectionTypeInfo\022^\n\004type\030\001 \001(\0162P.goog" +
+      "le.ads.googleads.v0.enums.HotelDateSelec" +
+      "tionTypeEnum.HotelDateSelectionType\"}\n\035H" +
+      "otelAdvanceBookingWindowInfo\022-\n\010min_days" +
+      "\030\001 \001(\0132\033.google.protobuf.Int64Value\022-\n\010m" +
+      "ax_days\030\002 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\"y\n\025HotelLengthOfStayInfo\022/\n\nmin_night" +
+      "s\030\001 \001(\0132\033.google.protobuf.Int64Value\022/\n\n" +
+      "max_nights\030\002 \001(\0132\033.google.protobuf.Int64" +
+      "Value\"b\n\023HotelCheckInDayInfo\022K\n\013day_of_w" +
+      "eek\030\001 \001(\01626.google.ads.googleads.v0.enum" +
+      "s.DayOfWeekEnum.DayOfWeek\"g\n\023Interaction" +
+      "TypeInfo\022P\n\004type\030\001 \001(\0162B.google.ads.goog" +
+      "leads.v0.enums.InteractionTypeEnum.Inter" +
+      "actionType\"\343\002\n\016AdScheduleInfo\022R\n\014start_m" +
+      "inute\030\001 \001(\0162<.google.ads.googleads.v0.en" +
+      "ums.MinuteOfHourEnum.MinuteOfHour\022P\n\nend" +
+      "_minute\030\002 \001(\0162<.google.ads.googleads.v0." +
+      "enums.MinuteOfHourEnum.MinuteOfHour\022/\n\ns" +
+      "tart_hour\030\003 \001(\0132\033.google.protobuf.Int32V" +
+      "alue\022-\n\010end_hour\030\004 \001(\0132\033.google.protobuf" +
+      ".Int32Value\022K\n\013day_of_week\030\005 \001(\01626.googl" +
+      "e.ads.googleads.v0.enums.DayOfWeekEnum.D" +
+      "ayOfWeekB\303\001\n\"com.google.ads.googleads.v0" +
+      ".commonB\rCriteriaProtoP\001ZDgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v0" +
+      "/common;common\242\002\003GAA\252\002\036Google.Ads.Google" +
+      "Ads.V0.Common\312\002\036Google\\Ads\\GoogleAds\\V0\\" +
+      "Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -242,6 +275,8 @@ public final class CriteriaProto {
           com.google.ads.googleads.v0.enums.ListingCustomAttributeIndexProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.ListingGroupTypeProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.MinuteOfHourProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.ProductChannelProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.ProductChannelExclusivityProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.ProductConditionProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.ProductTypeLevelProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
@@ -275,7 +310,7 @@ public final class CriteriaProto {
     internal_static_google_ads_googleads_v0_common_ListingDimensionInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_ListingDimensionInfo_descriptor,
-        new java.lang.String[] { "ListingBrand", "HotelId", "HotelClass", "HotelCountryRegion", "HotelState", "HotelCity", "ListingCustomAttribute", "ProductCondition", "ProductType", "Dimension", });
+        new java.lang.String[] { "ListingBrand", "HotelId", "HotelClass", "HotelCountryRegion", "HotelState", "HotelCity", "ListingCustomAttribute", "ProductChannel", "ProductChannelExclusivity", "ProductCondition", "ProductOfferId", "ProductType", "Dimension", });
     internal_static_google_ads_googleads_v0_common_ListingBrandInfo_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_google_ads_googleads_v0_common_ListingBrandInfo_fieldAccessorTable = new
@@ -318,50 +353,68 @@ public final class CriteriaProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_ListingCustomAttributeInfo_descriptor,
         new java.lang.String[] { "Value", "Index", });
-    internal_static_google_ads_googleads_v0_common_ProductConditionInfo_descriptor =
+    internal_static_google_ads_googleads_v0_common_ProductChannelInfo_descriptor =
       getDescriptor().getMessageTypes().get(12);
+    internal_static_google_ads_googleads_v0_common_ProductChannelInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_ProductChannelInfo_descriptor,
+        new java.lang.String[] { "Channel", });
+    internal_static_google_ads_googleads_v0_common_ProductChannelExclusivityInfo_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_google_ads_googleads_v0_common_ProductChannelExclusivityInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_ProductChannelExclusivityInfo_descriptor,
+        new java.lang.String[] { "ChannelExclusivity", });
+    internal_static_google_ads_googleads_v0_common_ProductConditionInfo_descriptor =
+      getDescriptor().getMessageTypes().get(14);
     internal_static_google_ads_googleads_v0_common_ProductConditionInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_ProductConditionInfo_descriptor,
         new java.lang.String[] { "Condition", });
+    internal_static_google_ads_googleads_v0_common_ProductOfferIdInfo_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_google_ads_googleads_v0_common_ProductOfferIdInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_ProductOfferIdInfo_descriptor,
+        new java.lang.String[] { "Value", });
     internal_static_google_ads_googleads_v0_common_ProductTypeInfo_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_google_ads_googleads_v0_common_ProductTypeInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_ProductTypeInfo_descriptor,
         new java.lang.String[] { "Value", "Level", });
     internal_static_google_ads_googleads_v0_common_HotelDateSelectionTypeInfo_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_google_ads_googleads_v0_common_HotelDateSelectionTypeInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_HotelDateSelectionTypeInfo_descriptor,
         new java.lang.String[] { "Type", });
     internal_static_google_ads_googleads_v0_common_HotelAdvanceBookingWindowInfo_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_google_ads_googleads_v0_common_HotelAdvanceBookingWindowInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_HotelAdvanceBookingWindowInfo_descriptor,
         new java.lang.String[] { "MinDays", "MaxDays", });
     internal_static_google_ads_googleads_v0_common_HotelLengthOfStayInfo_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_google_ads_googleads_v0_common_HotelLengthOfStayInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_HotelLengthOfStayInfo_descriptor,
         new java.lang.String[] { "MinNights", "MaxNights", });
     internal_static_google_ads_googleads_v0_common_HotelCheckInDayInfo_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_google_ads_googleads_v0_common_HotelCheckInDayInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_HotelCheckInDayInfo_descriptor,
         new java.lang.String[] { "DayOfWeek", });
     internal_static_google_ads_googleads_v0_common_InteractionTypeInfo_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_google_ads_googleads_v0_common_InteractionTypeInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_InteractionTypeInfo_descriptor,
         new java.lang.String[] { "Type", });
     internal_static_google_ads_googleads_v0_common_AdScheduleInfo_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_google_ads_googleads_v0_common_AdScheduleInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_AdScheduleInfo_descriptor,
@@ -374,6 +427,8 @@ public final class CriteriaProto {
     com.google.ads.googleads.v0.enums.ListingCustomAttributeIndexProto.getDescriptor();
     com.google.ads.googleads.v0.enums.ListingGroupTypeProto.getDescriptor();
     com.google.ads.googleads.v0.enums.MinuteOfHourProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.ProductChannelProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.ProductChannelExclusivityProto.getDescriptor();
     com.google.ads.googleads.v0.enums.ProductConditionProto.getDescriptor();
     com.google.ads.googleads.v0.enums.ProductTypeLevelProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();

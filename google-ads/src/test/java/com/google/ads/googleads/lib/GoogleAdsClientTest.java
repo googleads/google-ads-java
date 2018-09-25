@@ -77,6 +77,11 @@ public class GoogleAdsClientTest {
   }
 
   @Test
+  public void testGetAccountBudgetProposalServiceClient() {
+    assertNotNull(createTestGoogleAdsClient().getAccountBudgetProposalServiceClient());
+  }
+
+  @Test
   public void testGetAdGroupAdServiceClient() {
     assertNotNull(createTestGoogleAdsClient().getAdGroupAdServiceClient());
   }
@@ -99,6 +104,11 @@ public class GoogleAdsClientTest {
   @Test
   public void testGetBiddingStrategyServiceClient() {
     assertNotNull(createTestGoogleAdsClient().getBiddingStrategyServiceClient());
+  }
+
+  @Test
+  public void testGetBillingSetupServiceClient() {
+    assertNotNull(createTestGoogleAdsClient().getBillingSetupServiceClient());
   }
 
   @Test
@@ -129,6 +139,16 @@ public class GoogleAdsClientTest {
   @Test
   public void testGetCampaignSharedSetServiceClient() {
     assertNotNull(createTestGoogleAdsClient().getCampaignSharedSetServiceClient());
+  }
+
+  @Test
+  public void testGetChangeStatusServiceClient() {
+    assertNotNull(createTestGoogleAdsClient().getChangeStatusServiceClient());
+  }
+
+  @Test
+  public void testGetConversionActionServiceClient() {
+    assertNotNull(createTestGoogleAdsClient().getConversionActionServiceClient());
   }
 
   @Test
@@ -169,6 +189,11 @@ public class GoogleAdsClientTest {
   @Test
   public void testGetSharedSetServiceClient() {
     assertNotNull(createTestGoogleAdsClient().getSharedSetServiceClient());
+  }
+
+  @Test
+  public void testGetVideoServiceClient() {
+    assertNotNull(createTestGoogleAdsClient().getVideoServiceClient());
   }
 
   /**

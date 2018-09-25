@@ -476,6 +476,84 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 434: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (videoQuartile100Rate_ != null) {
+              subBuilder = videoQuartile100Rate_.toBuilder();
+            }
+            videoQuartile100Rate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(videoQuartile100Rate_);
+              videoQuartile100Rate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 442: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (videoQuartile25Rate_ != null) {
+              subBuilder = videoQuartile25Rate_.toBuilder();
+            }
+            videoQuartile25Rate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(videoQuartile25Rate_);
+              videoQuartile25Rate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 450: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (videoQuartile50Rate_ != null) {
+              subBuilder = videoQuartile50Rate_.toBuilder();
+            }
+            videoQuartile50Rate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(videoQuartile50Rate_);
+              videoQuartile50Rate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 458: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (videoQuartile75Rate_ != null) {
+              subBuilder = videoQuartile75Rate_.toBuilder();
+            }
+            videoQuartile75Rate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(videoQuartile75Rate_);
+              videoQuartile75Rate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 466: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (videoViewRate_ != null) {
+              subBuilder = videoViewRate_.toBuilder();
+            }
+            videoViewRate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(videoViewRate_);
+              videoViewRate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 474: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (videoViews_ != null) {
+              subBuilder = videoViews_.toBuilder();
+            }
+            videoViews_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(videoViews_);
+              videoViews_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 482: {
             com.google.protobuf.Int64Value.Builder subBuilder = null;
             if (viewThroughConversions_ != null) {
@@ -602,6 +680,32 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(conversionsFromInteractionsValuePerInteraction_);
               conversionsFromInteractionsValuePerInteraction_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 586: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (conversionLastReceivedRequestDateTime_ != null) {
+              subBuilder = conversionLastReceivedRequestDateTime_.toBuilder();
+            }
+            conversionLastReceivedRequestDateTime_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(conversionLastReceivedRequestDateTime_);
+              conversionLastReceivedRequestDateTime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 594: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (conversionLastConversionDate_ != null) {
+              subBuilder = conversionLastConversionDate_.toBuilder();
+            }
+            conversionLastConversionDate_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(conversionLastConversionDate_);
+              conversionLastConversionDate_ = subBuilder.buildPartial();
             }
 
             break;
@@ -1104,6 +1208,87 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.DoubleValueOrBuilder getContentImpressionShareOrBuilder() {
     return getContentImpressionShare();
+  }
+
+  public static final int CONVERSION_LAST_RECEIVED_REQUEST_DATE_TIME_FIELD_NUMBER = 73;
+  private com.google.protobuf.StringValue conversionLastReceivedRequestDateTime_;
+  /**
+   * <pre>
+   * The last date/time a conversion tag for this conversion action successfully
+   * fired and was seen by Google Ads. This firing event may not have been the
+   * result of an attributable conversion (e.g. because the tag was fired from a
+   * browser that did not previously click an ad from an appropriate
+   * advertiser). The date/time is in the customer's time zone.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+   */
+  public boolean hasConversionLastReceivedRequestDateTime() {
+    return conversionLastReceivedRequestDateTime_ != null;
+  }
+  /**
+   * <pre>
+   * The last date/time a conversion tag for this conversion action successfully
+   * fired and was seen by Google Ads. This firing event may not have been the
+   * result of an attributable conversion (e.g. because the tag was fired from a
+   * browser that did not previously click an ad from an appropriate
+   * advertiser). The date/time is in the customer's time zone.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+   */
+  public com.google.protobuf.StringValue getConversionLastReceivedRequestDateTime() {
+    return conversionLastReceivedRequestDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionLastReceivedRequestDateTime_;
+  }
+  /**
+   * <pre>
+   * The last date/time a conversion tag for this conversion action successfully
+   * fired and was seen by Google Ads. This firing event may not have been the
+   * result of an attributable conversion (e.g. because the tag was fired from a
+   * browser that did not previously click an ad from an appropriate
+   * advertiser). The date/time is in the customer's time zone.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getConversionLastReceivedRequestDateTimeOrBuilder() {
+    return getConversionLastReceivedRequestDateTime();
+  }
+
+  public static final int CONVERSION_LAST_CONVERSION_DATE_FIELD_NUMBER = 74;
+  private com.google.protobuf.StringValue conversionLastConversionDate_;
+  /**
+   * <pre>
+   * The date of the most recent conversion for this conversion action. The date
+   * is in the customer's time zone.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+   */
+  public boolean hasConversionLastConversionDate() {
+    return conversionLastConversionDate_ != null;
+  }
+  /**
+   * <pre>
+   * The date of the most recent conversion for this conversion action. The date
+   * is in the customer's time zone.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+   */
+  public com.google.protobuf.StringValue getConversionLastConversionDate() {
+    return conversionLastConversionDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionLastConversionDate_;
+  }
+  /**
+   * <pre>
+   * The date of the most recent conversion for this conversion action. The date
+   * is in the customer's time zone.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getConversionLastConversionDateOrBuilder() {
+    return getConversionLastConversionDate();
   }
 
   public static final int CONTENT_RANK_LOST_IMPRESSION_SHARE_FIELD_NUMBER = 22;
@@ -2174,6 +2359,210 @@ private static final long serialVersionUID = 0L;
     return getValuePerConversion();
   }
 
+  public static final int VIDEO_QUARTILE_100_RATE_FIELD_NUMBER = 54;
+  private com.google.protobuf.DoubleValue videoQuartile100Rate_;
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched all of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+   */
+  public boolean hasVideoQuartile100Rate() {
+    return videoQuartile100Rate_ != null;
+  }
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched all of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+   */
+  public com.google.protobuf.DoubleValue getVideoQuartile100Rate() {
+    return videoQuartile100Rate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile100Rate_;
+  }
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched all of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getVideoQuartile100RateOrBuilder() {
+    return getVideoQuartile100Rate();
+  }
+
+  public static final int VIDEO_QUARTILE_25_RATE_FIELD_NUMBER = 55;
+  private com.google.protobuf.DoubleValue videoQuartile25Rate_;
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 25% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+   */
+  public boolean hasVideoQuartile25Rate() {
+    return videoQuartile25Rate_ != null;
+  }
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 25% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+   */
+  public com.google.protobuf.DoubleValue getVideoQuartile25Rate() {
+    return videoQuartile25Rate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile25Rate_;
+  }
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 25% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getVideoQuartile25RateOrBuilder() {
+    return getVideoQuartile25Rate();
+  }
+
+  public static final int VIDEO_QUARTILE_50_RATE_FIELD_NUMBER = 56;
+  private com.google.protobuf.DoubleValue videoQuartile50Rate_;
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 50% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+   */
+  public boolean hasVideoQuartile50Rate() {
+    return videoQuartile50Rate_ != null;
+  }
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 50% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+   */
+  public com.google.protobuf.DoubleValue getVideoQuartile50Rate() {
+    return videoQuartile50Rate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile50Rate_;
+  }
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 50% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getVideoQuartile50RateOrBuilder() {
+    return getVideoQuartile50Rate();
+  }
+
+  public static final int VIDEO_QUARTILE_75_RATE_FIELD_NUMBER = 57;
+  private com.google.protobuf.DoubleValue videoQuartile75Rate_;
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 75% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+   */
+  public boolean hasVideoQuartile75Rate() {
+    return videoQuartile75Rate_ != null;
+  }
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 75% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+   */
+  public com.google.protobuf.DoubleValue getVideoQuartile75Rate() {
+    return videoQuartile75Rate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile75Rate_;
+  }
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 75% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getVideoQuartile75RateOrBuilder() {
+    return getVideoQuartile75Rate();
+  }
+
+  public static final int VIDEO_VIEW_RATE_FIELD_NUMBER = 58;
+  private com.google.protobuf.DoubleValue videoViewRate_;
+  /**
+   * <pre>
+   * The number of views your TrueView video ad receives divided by its number
+   * of impressions, including thumbnail impressions for TrueView in-display
+   * ads.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+   */
+  public boolean hasVideoViewRate() {
+    return videoViewRate_ != null;
+  }
+  /**
+   * <pre>
+   * The number of views your TrueView video ad receives divided by its number
+   * of impressions, including thumbnail impressions for TrueView in-display
+   * ads.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+   */
+  public com.google.protobuf.DoubleValue getVideoViewRate() {
+    return videoViewRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoViewRate_;
+  }
+  /**
+   * <pre>
+   * The number of views your TrueView video ad receives divided by its number
+   * of impressions, including thumbnail impressions for TrueView in-display
+   * ads.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getVideoViewRateOrBuilder() {
+    return getVideoViewRate();
+  }
+
+  public static final int VIDEO_VIEWS_FIELD_NUMBER = 59;
+  private com.google.protobuf.Int64Value videoViews_;
+  /**
+   * <pre>
+   * The number of times your video ads were viewed.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value video_views = 59;</code>
+   */
+  public boolean hasVideoViews() {
+    return videoViews_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times your video ads were viewed.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value video_views = 59;</code>
+   */
+  public com.google.protobuf.Int64Value getVideoViews() {
+    return videoViews_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : videoViews_;
+  }
+  /**
+   * <pre>
+   * The number of times your video ads were viewed.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value video_views = 59;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getVideoViewsOrBuilder() {
+    return getVideoViews();
+  }
+
   public static final int VIEW_THROUGH_CONVERSIONS_FIELD_NUMBER = 60;
   private com.google.protobuf.Int64Value viewThroughConversions_;
   /**
@@ -2329,6 +2718,24 @@ private static final long serialVersionUID = 0L;
     if (valuePerConversion_ != null) {
       output.writeMessage(53, getValuePerConversion());
     }
+    if (videoQuartile100Rate_ != null) {
+      output.writeMessage(54, getVideoQuartile100Rate());
+    }
+    if (videoQuartile25Rate_ != null) {
+      output.writeMessage(55, getVideoQuartile25Rate());
+    }
+    if (videoQuartile50Rate_ != null) {
+      output.writeMessage(56, getVideoQuartile50Rate());
+    }
+    if (videoQuartile75Rate_ != null) {
+      output.writeMessage(57, getVideoQuartile75Rate());
+    }
+    if (videoViewRate_ != null) {
+      output.writeMessage(58, getVideoViewRate());
+    }
+    if (videoViews_ != null) {
+      output.writeMessage(59, getVideoViews());
+    }
     if (viewThroughConversions_ != null) {
       output.writeMessage(60, getViewThroughConversions());
     }
@@ -2358,6 +2765,12 @@ private static final long serialVersionUID = 0L;
     }
     if (conversionsFromInteractionsValuePerInteraction_ != null) {
       output.writeMessage(72, getConversionsFromInteractionsValuePerInteraction());
+    }
+    if (conversionLastReceivedRequestDateTime_ != null) {
+      output.writeMessage(73, getConversionLastReceivedRequestDateTime());
+    }
+    if (conversionLastConversionDate_ != null) {
+      output.writeMessage(74, getConversionLastConversionDate());
     }
     unknownFields.writeTo(output);
   }
@@ -2500,6 +2913,30 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(53, getValuePerConversion());
     }
+    if (videoQuartile100Rate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(54, getVideoQuartile100Rate());
+    }
+    if (videoQuartile25Rate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(55, getVideoQuartile25Rate());
+    }
+    if (videoQuartile50Rate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(56, getVideoQuartile50Rate());
+    }
+    if (videoQuartile75Rate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(57, getVideoQuartile75Rate());
+    }
+    if (videoViewRate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(58, getVideoViewRate());
+    }
+    if (videoViews_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(59, getVideoViews());
+    }
     if (viewThroughConversions_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(60, getViewThroughConversions());
@@ -2539,6 +2976,14 @@ private static final long serialVersionUID = 0L;
     if (conversionsFromInteractionsValuePerInteraction_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(72, getConversionsFromInteractionsValuePerInteraction());
+    }
+    if (conversionLastReceivedRequestDateTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(73, getConversionLastReceivedRequestDateTime());
+    }
+    if (conversionLastConversionDate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(74, getConversionLastConversionDate());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2620,6 +3065,16 @@ private static final long serialVersionUID = 0L;
     if (hasContentImpressionShare()) {
       result = result && getContentImpressionShare()
           .equals(other.getContentImpressionShare());
+    }
+    result = result && (hasConversionLastReceivedRequestDateTime() == other.hasConversionLastReceivedRequestDateTime());
+    if (hasConversionLastReceivedRequestDateTime()) {
+      result = result && getConversionLastReceivedRequestDateTime()
+          .equals(other.getConversionLastReceivedRequestDateTime());
+    }
+    result = result && (hasConversionLastConversionDate() == other.hasConversionLastConversionDate());
+    if (hasConversionLastConversionDate()) {
+      result = result && getConversionLastConversionDate()
+          .equals(other.getConversionLastConversionDate());
     }
     result = result && (hasContentRankLostImpressionShare() == other.hasContentRankLostImpressionShare());
     if (hasContentRankLostImpressionShare()) {
@@ -2766,6 +3221,36 @@ private static final long serialVersionUID = 0L;
       result = result && getValuePerConversion()
           .equals(other.getValuePerConversion());
     }
+    result = result && (hasVideoQuartile100Rate() == other.hasVideoQuartile100Rate());
+    if (hasVideoQuartile100Rate()) {
+      result = result && getVideoQuartile100Rate()
+          .equals(other.getVideoQuartile100Rate());
+    }
+    result = result && (hasVideoQuartile25Rate() == other.hasVideoQuartile25Rate());
+    if (hasVideoQuartile25Rate()) {
+      result = result && getVideoQuartile25Rate()
+          .equals(other.getVideoQuartile25Rate());
+    }
+    result = result && (hasVideoQuartile50Rate() == other.hasVideoQuartile50Rate());
+    if (hasVideoQuartile50Rate()) {
+      result = result && getVideoQuartile50Rate()
+          .equals(other.getVideoQuartile50Rate());
+    }
+    result = result && (hasVideoQuartile75Rate() == other.hasVideoQuartile75Rate());
+    if (hasVideoQuartile75Rate()) {
+      result = result && getVideoQuartile75Rate()
+          .equals(other.getVideoQuartile75Rate());
+    }
+    result = result && (hasVideoViewRate() == other.hasVideoViewRate());
+    if (hasVideoViewRate()) {
+      result = result && getVideoViewRate()
+          .equals(other.getVideoViewRate());
+    }
+    result = result && (hasVideoViews() == other.hasVideoViews());
+    if (hasVideoViews()) {
+      result = result && getVideoViews()
+          .equals(other.getVideoViews());
+    }
     result = result && (hasViewThroughConversions() == other.hasViewThroughConversions());
     if (hasViewThroughConversions()) {
       result = result && getViewThroughConversions()
@@ -2833,6 +3318,14 @@ private static final long serialVersionUID = 0L;
     if (hasContentImpressionShare()) {
       hash = (37 * hash) + CONTENT_IMPRESSION_SHARE_FIELD_NUMBER;
       hash = (53 * hash) + getContentImpressionShare().hashCode();
+    }
+    if (hasConversionLastReceivedRequestDateTime()) {
+      hash = (37 * hash) + CONVERSION_LAST_RECEIVED_REQUEST_DATE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getConversionLastReceivedRequestDateTime().hashCode();
+    }
+    if (hasConversionLastConversionDate()) {
+      hash = (37 * hash) + CONVERSION_LAST_CONVERSION_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getConversionLastConversionDate().hashCode();
     }
     if (hasContentRankLostImpressionShare()) {
       hash = (37 * hash) + CONTENT_RANK_LOST_IMPRESSION_SHARE_FIELD_NUMBER;
@@ -2949,6 +3442,30 @@ private static final long serialVersionUID = 0L;
     if (hasValuePerConversion()) {
       hash = (37 * hash) + VALUE_PER_CONVERSION_FIELD_NUMBER;
       hash = (53 * hash) + getValuePerConversion().hashCode();
+    }
+    if (hasVideoQuartile100Rate()) {
+      hash = (37 * hash) + VIDEO_QUARTILE_100_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getVideoQuartile100Rate().hashCode();
+    }
+    if (hasVideoQuartile25Rate()) {
+      hash = (37 * hash) + VIDEO_QUARTILE_25_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getVideoQuartile25Rate().hashCode();
+    }
+    if (hasVideoQuartile50Rate()) {
+      hash = (37 * hash) + VIDEO_QUARTILE_50_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getVideoQuartile50Rate().hashCode();
+    }
+    if (hasVideoQuartile75Rate()) {
+      hash = (37 * hash) + VIDEO_QUARTILE_75_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getVideoQuartile75Rate().hashCode();
+    }
+    if (hasVideoViewRate()) {
+      hash = (37 * hash) + VIDEO_VIEW_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getVideoViewRate().hashCode();
+    }
+    if (hasVideoViews()) {
+      hash = (37 * hash) + VIDEO_VIEWS_FIELD_NUMBER;
+      hash = (53 * hash) + getVideoViews().hashCode();
     }
     if (hasViewThroughConversions()) {
       hash = (37 * hash) + VIEW_THROUGH_CONVERSIONS_FIELD_NUMBER;
@@ -3169,6 +3686,18 @@ private static final long serialVersionUID = 0L;
         contentImpressionShare_ = null;
         contentImpressionShareBuilder_ = null;
       }
+      if (conversionLastReceivedRequestDateTimeBuilder_ == null) {
+        conversionLastReceivedRequestDateTime_ = null;
+      } else {
+        conversionLastReceivedRequestDateTime_ = null;
+        conversionLastReceivedRequestDateTimeBuilder_ = null;
+      }
+      if (conversionLastConversionDateBuilder_ == null) {
+        conversionLastConversionDate_ = null;
+      } else {
+        conversionLastConversionDate_ = null;
+        conversionLastConversionDateBuilder_ = null;
+      }
       if (contentRankLostImpressionShareBuilder_ == null) {
         contentRankLostImpressionShare_ = null;
       } else {
@@ -3343,6 +3872,42 @@ private static final long serialVersionUID = 0L;
         valuePerConversion_ = null;
         valuePerConversionBuilder_ = null;
       }
+      if (videoQuartile100RateBuilder_ == null) {
+        videoQuartile100Rate_ = null;
+      } else {
+        videoQuartile100Rate_ = null;
+        videoQuartile100RateBuilder_ = null;
+      }
+      if (videoQuartile25RateBuilder_ == null) {
+        videoQuartile25Rate_ = null;
+      } else {
+        videoQuartile25Rate_ = null;
+        videoQuartile25RateBuilder_ = null;
+      }
+      if (videoQuartile50RateBuilder_ == null) {
+        videoQuartile50Rate_ = null;
+      } else {
+        videoQuartile50Rate_ = null;
+        videoQuartile50RateBuilder_ = null;
+      }
+      if (videoQuartile75RateBuilder_ == null) {
+        videoQuartile75Rate_ = null;
+      } else {
+        videoQuartile75Rate_ = null;
+        videoQuartile75RateBuilder_ = null;
+      }
+      if (videoViewRateBuilder_ == null) {
+        videoViewRate_ = null;
+      } else {
+        videoViewRate_ = null;
+        videoViewRateBuilder_ = null;
+      }
+      if (videoViewsBuilder_ == null) {
+        videoViews_ = null;
+      } else {
+        videoViews_ = null;
+        videoViewsBuilder_ = null;
+      }
       if (viewThroughConversionsBuilder_ == null) {
         viewThroughConversions_ = null;
       } else {
@@ -3439,6 +4004,16 @@ private static final long serialVersionUID = 0L;
         result.contentImpressionShare_ = contentImpressionShare_;
       } else {
         result.contentImpressionShare_ = contentImpressionShareBuilder_.build();
+      }
+      if (conversionLastReceivedRequestDateTimeBuilder_ == null) {
+        result.conversionLastReceivedRequestDateTime_ = conversionLastReceivedRequestDateTime_;
+      } else {
+        result.conversionLastReceivedRequestDateTime_ = conversionLastReceivedRequestDateTimeBuilder_.build();
+      }
+      if (conversionLastConversionDateBuilder_ == null) {
+        result.conversionLastConversionDate_ = conversionLastConversionDate_;
+      } else {
+        result.conversionLastConversionDate_ = conversionLastConversionDateBuilder_.build();
       }
       if (contentRankLostImpressionShareBuilder_ == null) {
         result.contentRankLostImpressionShare_ = contentRankLostImpressionShare_;
@@ -3585,6 +4160,36 @@ private static final long serialVersionUID = 0L;
       } else {
         result.valuePerConversion_ = valuePerConversionBuilder_.build();
       }
+      if (videoQuartile100RateBuilder_ == null) {
+        result.videoQuartile100Rate_ = videoQuartile100Rate_;
+      } else {
+        result.videoQuartile100Rate_ = videoQuartile100RateBuilder_.build();
+      }
+      if (videoQuartile25RateBuilder_ == null) {
+        result.videoQuartile25Rate_ = videoQuartile25Rate_;
+      } else {
+        result.videoQuartile25Rate_ = videoQuartile25RateBuilder_.build();
+      }
+      if (videoQuartile50RateBuilder_ == null) {
+        result.videoQuartile50Rate_ = videoQuartile50Rate_;
+      } else {
+        result.videoQuartile50Rate_ = videoQuartile50RateBuilder_.build();
+      }
+      if (videoQuartile75RateBuilder_ == null) {
+        result.videoQuartile75Rate_ = videoQuartile75Rate_;
+      } else {
+        result.videoQuartile75Rate_ = videoQuartile75RateBuilder_.build();
+      }
+      if (videoViewRateBuilder_ == null) {
+        result.videoViewRate_ = videoViewRate_;
+      } else {
+        result.videoViewRate_ = videoViewRateBuilder_.build();
+      }
+      if (videoViewsBuilder_ == null) {
+        result.videoViews_ = videoViews_;
+      } else {
+        result.videoViews_ = videoViewsBuilder_.build();
+      }
       if (viewThroughConversionsBuilder_ == null) {
         result.viewThroughConversions_ = viewThroughConversions_;
       } else {
@@ -3677,6 +4282,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasContentImpressionShare()) {
         mergeContentImpressionShare(other.getContentImpressionShare());
       }
+      if (other.hasConversionLastReceivedRequestDateTime()) {
+        mergeConversionLastReceivedRequestDateTime(other.getConversionLastReceivedRequestDateTime());
+      }
+      if (other.hasConversionLastConversionDate()) {
+        mergeConversionLastConversionDate(other.getConversionLastConversionDate());
+      }
       if (other.hasContentRankLostImpressionShare()) {
         mergeContentRankLostImpressionShare(other.getContentRankLostImpressionShare());
       }
@@ -3763,6 +4374,24 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasValuePerConversion()) {
         mergeValuePerConversion(other.getValuePerConversion());
+      }
+      if (other.hasVideoQuartile100Rate()) {
+        mergeVideoQuartile100Rate(other.getVideoQuartile100Rate());
+      }
+      if (other.hasVideoQuartile25Rate()) {
+        mergeVideoQuartile25Rate(other.getVideoQuartile25Rate());
+      }
+      if (other.hasVideoQuartile50Rate()) {
+        mergeVideoQuartile50Rate(other.getVideoQuartile50Rate());
+      }
+      if (other.hasVideoQuartile75Rate()) {
+        mergeVideoQuartile75Rate(other.getVideoQuartile75Rate());
+      }
+      if (other.hasVideoViewRate()) {
+        mergeVideoViewRate(other.getVideoViewRate());
+      }
+      if (other.hasVideoViews()) {
+        mergeVideoViews(other.getVideoViews());
       }
       if (other.hasViewThroughConversions()) {
         mergeViewThroughConversions(other.getViewThroughConversions());
@@ -5900,6 +6529,357 @@ private static final long serialVersionUID = 0L;
         contentImpressionShare_ = null;
       }
       return contentImpressionShareBuilder_;
+    }
+
+    private com.google.protobuf.StringValue conversionLastReceivedRequestDateTime_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> conversionLastReceivedRequestDateTimeBuilder_;
+    /**
+     * <pre>
+     * The last date/time a conversion tag for this conversion action successfully
+     * fired and was seen by Google Ads. This firing event may not have been the
+     * result of an attributable conversion (e.g. because the tag was fired from a
+     * browser that did not previously click an ad from an appropriate
+     * advertiser). The date/time is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+     */
+    public boolean hasConversionLastReceivedRequestDateTime() {
+      return conversionLastReceivedRequestDateTimeBuilder_ != null || conversionLastReceivedRequestDateTime_ != null;
+    }
+    /**
+     * <pre>
+     * The last date/time a conversion tag for this conversion action successfully
+     * fired and was seen by Google Ads. This firing event may not have been the
+     * result of an attributable conversion (e.g. because the tag was fired from a
+     * browser that did not previously click an ad from an appropriate
+     * advertiser). The date/time is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+     */
+    public com.google.protobuf.StringValue getConversionLastReceivedRequestDateTime() {
+      if (conversionLastReceivedRequestDateTimeBuilder_ == null) {
+        return conversionLastReceivedRequestDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionLastReceivedRequestDateTime_;
+      } else {
+        return conversionLastReceivedRequestDateTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The last date/time a conversion tag for this conversion action successfully
+     * fired and was seen by Google Ads. This firing event may not have been the
+     * result of an attributable conversion (e.g. because the tag was fired from a
+     * browser that did not previously click an ad from an appropriate
+     * advertiser). The date/time is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+     */
+    public Builder setConversionLastReceivedRequestDateTime(com.google.protobuf.StringValue value) {
+      if (conversionLastReceivedRequestDateTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        conversionLastReceivedRequestDateTime_ = value;
+        onChanged();
+      } else {
+        conversionLastReceivedRequestDateTimeBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The last date/time a conversion tag for this conversion action successfully
+     * fired and was seen by Google Ads. This firing event may not have been the
+     * result of an attributable conversion (e.g. because the tag was fired from a
+     * browser that did not previously click an ad from an appropriate
+     * advertiser). The date/time is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+     */
+    public Builder setConversionLastReceivedRequestDateTime(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (conversionLastReceivedRequestDateTimeBuilder_ == null) {
+        conversionLastReceivedRequestDateTime_ = builderForValue.build();
+        onChanged();
+      } else {
+        conversionLastReceivedRequestDateTimeBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The last date/time a conversion tag for this conversion action successfully
+     * fired and was seen by Google Ads. This firing event may not have been the
+     * result of an attributable conversion (e.g. because the tag was fired from a
+     * browser that did not previously click an ad from an appropriate
+     * advertiser). The date/time is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+     */
+    public Builder mergeConversionLastReceivedRequestDateTime(com.google.protobuf.StringValue value) {
+      if (conversionLastReceivedRequestDateTimeBuilder_ == null) {
+        if (conversionLastReceivedRequestDateTime_ != null) {
+          conversionLastReceivedRequestDateTime_ =
+            com.google.protobuf.StringValue.newBuilder(conversionLastReceivedRequestDateTime_).mergeFrom(value).buildPartial();
+        } else {
+          conversionLastReceivedRequestDateTime_ = value;
+        }
+        onChanged();
+      } else {
+        conversionLastReceivedRequestDateTimeBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The last date/time a conversion tag for this conversion action successfully
+     * fired and was seen by Google Ads. This firing event may not have been the
+     * result of an attributable conversion (e.g. because the tag was fired from a
+     * browser that did not previously click an ad from an appropriate
+     * advertiser). The date/time is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+     */
+    public Builder clearConversionLastReceivedRequestDateTime() {
+      if (conversionLastReceivedRequestDateTimeBuilder_ == null) {
+        conversionLastReceivedRequestDateTime_ = null;
+        onChanged();
+      } else {
+        conversionLastReceivedRequestDateTime_ = null;
+        conversionLastReceivedRequestDateTimeBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The last date/time a conversion tag for this conversion action successfully
+     * fired and was seen by Google Ads. This firing event may not have been the
+     * result of an attributable conversion (e.g. because the tag was fired from a
+     * browser that did not previously click an ad from an appropriate
+     * advertiser). The date/time is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getConversionLastReceivedRequestDateTimeBuilder() {
+      
+      onChanged();
+      return getConversionLastReceivedRequestDateTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The last date/time a conversion tag for this conversion action successfully
+     * fired and was seen by Google Ads. This firing event may not have been the
+     * result of an attributable conversion (e.g. because the tag was fired from a
+     * browser that did not previously click an ad from an appropriate
+     * advertiser). The date/time is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getConversionLastReceivedRequestDateTimeOrBuilder() {
+      if (conversionLastReceivedRequestDateTimeBuilder_ != null) {
+        return conversionLastReceivedRequestDateTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return conversionLastReceivedRequestDateTime_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : conversionLastReceivedRequestDateTime_;
+      }
+    }
+    /**
+     * <pre>
+     * The last date/time a conversion tag for this conversion action successfully
+     * fired and was seen by Google Ads. This firing event may not have been the
+     * result of an attributable conversion (e.g. because the tag was fired from a
+     * browser that did not previously click an ad from an appropriate
+     * advertiser). The date/time is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getConversionLastReceivedRequestDateTimeFieldBuilder() {
+      if (conversionLastReceivedRequestDateTimeBuilder_ == null) {
+        conversionLastReceivedRequestDateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getConversionLastReceivedRequestDateTime(),
+                getParentForChildren(),
+                isClean());
+        conversionLastReceivedRequestDateTime_ = null;
+      }
+      return conversionLastReceivedRequestDateTimeBuilder_;
+    }
+
+    private com.google.protobuf.StringValue conversionLastConversionDate_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> conversionLastConversionDateBuilder_;
+    /**
+     * <pre>
+     * The date of the most recent conversion for this conversion action. The date
+     * is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+     */
+    public boolean hasConversionLastConversionDate() {
+      return conversionLastConversionDateBuilder_ != null || conversionLastConversionDate_ != null;
+    }
+    /**
+     * <pre>
+     * The date of the most recent conversion for this conversion action. The date
+     * is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+     */
+    public com.google.protobuf.StringValue getConversionLastConversionDate() {
+      if (conversionLastConversionDateBuilder_ == null) {
+        return conversionLastConversionDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionLastConversionDate_;
+      } else {
+        return conversionLastConversionDateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The date of the most recent conversion for this conversion action. The date
+     * is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+     */
+    public Builder setConversionLastConversionDate(com.google.protobuf.StringValue value) {
+      if (conversionLastConversionDateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        conversionLastConversionDate_ = value;
+        onChanged();
+      } else {
+        conversionLastConversionDateBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The date of the most recent conversion for this conversion action. The date
+     * is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+     */
+    public Builder setConversionLastConversionDate(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (conversionLastConversionDateBuilder_ == null) {
+        conversionLastConversionDate_ = builderForValue.build();
+        onChanged();
+      } else {
+        conversionLastConversionDateBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The date of the most recent conversion for this conversion action. The date
+     * is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+     */
+    public Builder mergeConversionLastConversionDate(com.google.protobuf.StringValue value) {
+      if (conversionLastConversionDateBuilder_ == null) {
+        if (conversionLastConversionDate_ != null) {
+          conversionLastConversionDate_ =
+            com.google.protobuf.StringValue.newBuilder(conversionLastConversionDate_).mergeFrom(value).buildPartial();
+        } else {
+          conversionLastConversionDate_ = value;
+        }
+        onChanged();
+      } else {
+        conversionLastConversionDateBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The date of the most recent conversion for this conversion action. The date
+     * is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+     */
+    public Builder clearConversionLastConversionDate() {
+      if (conversionLastConversionDateBuilder_ == null) {
+        conversionLastConversionDate_ = null;
+        onChanged();
+      } else {
+        conversionLastConversionDate_ = null;
+        conversionLastConversionDateBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The date of the most recent conversion for this conversion action. The date
+     * is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getConversionLastConversionDateBuilder() {
+      
+      onChanged();
+      return getConversionLastConversionDateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The date of the most recent conversion for this conversion action. The date
+     * is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getConversionLastConversionDateOrBuilder() {
+      if (conversionLastConversionDateBuilder_ != null) {
+        return conversionLastConversionDateBuilder_.getMessageOrBuilder();
+      } else {
+        return conversionLastConversionDate_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : conversionLastConversionDate_;
+      }
+    }
+    /**
+     * <pre>
+     * The date of the most recent conversion for this conversion action. The date
+     * is in the customer's time zone.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getConversionLastConversionDateFieldBuilder() {
+      if (conversionLastConversionDateBuilder_ == null) {
+        conversionLastConversionDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getConversionLastConversionDate(),
+                getParentForChildren(),
+                isClean());
+        conversionLastConversionDate_ = null;
+      }
+      return conversionLastConversionDateBuilder_;
     }
 
     private com.google.protobuf.DoubleValue contentRankLostImpressionShare_ = null;
@@ -10670,6 +11650,942 @@ private static final long serialVersionUID = 0L;
         valuePerConversion_ = null;
       }
       return valuePerConversionBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue videoQuartile100Rate_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> videoQuartile100RateBuilder_;
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched all of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+     */
+    public boolean hasVideoQuartile100Rate() {
+      return videoQuartile100RateBuilder_ != null || videoQuartile100Rate_ != null;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched all of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+     */
+    public com.google.protobuf.DoubleValue getVideoQuartile100Rate() {
+      if (videoQuartile100RateBuilder_ == null) {
+        return videoQuartile100Rate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile100Rate_;
+      } else {
+        return videoQuartile100RateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched all of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+     */
+    public Builder setVideoQuartile100Rate(com.google.protobuf.DoubleValue value) {
+      if (videoQuartile100RateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        videoQuartile100Rate_ = value;
+        onChanged();
+      } else {
+        videoQuartile100RateBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched all of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+     */
+    public Builder setVideoQuartile100Rate(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (videoQuartile100RateBuilder_ == null) {
+        videoQuartile100Rate_ = builderForValue.build();
+        onChanged();
+      } else {
+        videoQuartile100RateBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched all of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+     */
+    public Builder mergeVideoQuartile100Rate(com.google.protobuf.DoubleValue value) {
+      if (videoQuartile100RateBuilder_ == null) {
+        if (videoQuartile100Rate_ != null) {
+          videoQuartile100Rate_ =
+            com.google.protobuf.DoubleValue.newBuilder(videoQuartile100Rate_).mergeFrom(value).buildPartial();
+        } else {
+          videoQuartile100Rate_ = value;
+        }
+        onChanged();
+      } else {
+        videoQuartile100RateBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched all of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+     */
+    public Builder clearVideoQuartile100Rate() {
+      if (videoQuartile100RateBuilder_ == null) {
+        videoQuartile100Rate_ = null;
+        onChanged();
+      } else {
+        videoQuartile100Rate_ = null;
+        videoQuartile100RateBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched all of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getVideoQuartile100RateBuilder() {
+      
+      onChanged();
+      return getVideoQuartile100RateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched all of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getVideoQuartile100RateOrBuilder() {
+      if (videoQuartile100RateBuilder_ != null) {
+        return videoQuartile100RateBuilder_.getMessageOrBuilder();
+      } else {
+        return videoQuartile100Rate_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile100Rate_;
+      }
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched all of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getVideoQuartile100RateFieldBuilder() {
+      if (videoQuartile100RateBuilder_ == null) {
+        videoQuartile100RateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getVideoQuartile100Rate(),
+                getParentForChildren(),
+                isClean());
+        videoQuartile100Rate_ = null;
+      }
+      return videoQuartile100RateBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue videoQuartile25Rate_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> videoQuartile25RateBuilder_;
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 25% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+     */
+    public boolean hasVideoQuartile25Rate() {
+      return videoQuartile25RateBuilder_ != null || videoQuartile25Rate_ != null;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 25% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+     */
+    public com.google.protobuf.DoubleValue getVideoQuartile25Rate() {
+      if (videoQuartile25RateBuilder_ == null) {
+        return videoQuartile25Rate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile25Rate_;
+      } else {
+        return videoQuartile25RateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 25% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+     */
+    public Builder setVideoQuartile25Rate(com.google.protobuf.DoubleValue value) {
+      if (videoQuartile25RateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        videoQuartile25Rate_ = value;
+        onChanged();
+      } else {
+        videoQuartile25RateBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 25% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+     */
+    public Builder setVideoQuartile25Rate(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (videoQuartile25RateBuilder_ == null) {
+        videoQuartile25Rate_ = builderForValue.build();
+        onChanged();
+      } else {
+        videoQuartile25RateBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 25% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+     */
+    public Builder mergeVideoQuartile25Rate(com.google.protobuf.DoubleValue value) {
+      if (videoQuartile25RateBuilder_ == null) {
+        if (videoQuartile25Rate_ != null) {
+          videoQuartile25Rate_ =
+            com.google.protobuf.DoubleValue.newBuilder(videoQuartile25Rate_).mergeFrom(value).buildPartial();
+        } else {
+          videoQuartile25Rate_ = value;
+        }
+        onChanged();
+      } else {
+        videoQuartile25RateBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 25% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+     */
+    public Builder clearVideoQuartile25Rate() {
+      if (videoQuartile25RateBuilder_ == null) {
+        videoQuartile25Rate_ = null;
+        onChanged();
+      } else {
+        videoQuartile25Rate_ = null;
+        videoQuartile25RateBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 25% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getVideoQuartile25RateBuilder() {
+      
+      onChanged();
+      return getVideoQuartile25RateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 25% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getVideoQuartile25RateOrBuilder() {
+      if (videoQuartile25RateBuilder_ != null) {
+        return videoQuartile25RateBuilder_.getMessageOrBuilder();
+      } else {
+        return videoQuartile25Rate_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile25Rate_;
+      }
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 25% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getVideoQuartile25RateFieldBuilder() {
+      if (videoQuartile25RateBuilder_ == null) {
+        videoQuartile25RateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getVideoQuartile25Rate(),
+                getParentForChildren(),
+                isClean());
+        videoQuartile25Rate_ = null;
+      }
+      return videoQuartile25RateBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue videoQuartile50Rate_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> videoQuartile50RateBuilder_;
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 50% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+     */
+    public boolean hasVideoQuartile50Rate() {
+      return videoQuartile50RateBuilder_ != null || videoQuartile50Rate_ != null;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 50% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+     */
+    public com.google.protobuf.DoubleValue getVideoQuartile50Rate() {
+      if (videoQuartile50RateBuilder_ == null) {
+        return videoQuartile50Rate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile50Rate_;
+      } else {
+        return videoQuartile50RateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 50% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+     */
+    public Builder setVideoQuartile50Rate(com.google.protobuf.DoubleValue value) {
+      if (videoQuartile50RateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        videoQuartile50Rate_ = value;
+        onChanged();
+      } else {
+        videoQuartile50RateBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 50% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+     */
+    public Builder setVideoQuartile50Rate(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (videoQuartile50RateBuilder_ == null) {
+        videoQuartile50Rate_ = builderForValue.build();
+        onChanged();
+      } else {
+        videoQuartile50RateBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 50% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+     */
+    public Builder mergeVideoQuartile50Rate(com.google.protobuf.DoubleValue value) {
+      if (videoQuartile50RateBuilder_ == null) {
+        if (videoQuartile50Rate_ != null) {
+          videoQuartile50Rate_ =
+            com.google.protobuf.DoubleValue.newBuilder(videoQuartile50Rate_).mergeFrom(value).buildPartial();
+        } else {
+          videoQuartile50Rate_ = value;
+        }
+        onChanged();
+      } else {
+        videoQuartile50RateBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 50% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+     */
+    public Builder clearVideoQuartile50Rate() {
+      if (videoQuartile50RateBuilder_ == null) {
+        videoQuartile50Rate_ = null;
+        onChanged();
+      } else {
+        videoQuartile50Rate_ = null;
+        videoQuartile50RateBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 50% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getVideoQuartile50RateBuilder() {
+      
+      onChanged();
+      return getVideoQuartile50RateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 50% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getVideoQuartile50RateOrBuilder() {
+      if (videoQuartile50RateBuilder_ != null) {
+        return videoQuartile50RateBuilder_.getMessageOrBuilder();
+      } else {
+        return videoQuartile50Rate_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile50Rate_;
+      }
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 50% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getVideoQuartile50RateFieldBuilder() {
+      if (videoQuartile50RateBuilder_ == null) {
+        videoQuartile50RateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getVideoQuartile50Rate(),
+                getParentForChildren(),
+                isClean());
+        videoQuartile50Rate_ = null;
+      }
+      return videoQuartile50RateBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue videoQuartile75Rate_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> videoQuartile75RateBuilder_;
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 75% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+     */
+    public boolean hasVideoQuartile75Rate() {
+      return videoQuartile75RateBuilder_ != null || videoQuartile75Rate_ != null;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 75% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+     */
+    public com.google.protobuf.DoubleValue getVideoQuartile75Rate() {
+      if (videoQuartile75RateBuilder_ == null) {
+        return videoQuartile75Rate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile75Rate_;
+      } else {
+        return videoQuartile75RateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 75% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+     */
+    public Builder setVideoQuartile75Rate(com.google.protobuf.DoubleValue value) {
+      if (videoQuartile75RateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        videoQuartile75Rate_ = value;
+        onChanged();
+      } else {
+        videoQuartile75RateBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 75% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+     */
+    public Builder setVideoQuartile75Rate(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (videoQuartile75RateBuilder_ == null) {
+        videoQuartile75Rate_ = builderForValue.build();
+        onChanged();
+      } else {
+        videoQuartile75RateBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 75% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+     */
+    public Builder mergeVideoQuartile75Rate(com.google.protobuf.DoubleValue value) {
+      if (videoQuartile75RateBuilder_ == null) {
+        if (videoQuartile75Rate_ != null) {
+          videoQuartile75Rate_ =
+            com.google.protobuf.DoubleValue.newBuilder(videoQuartile75Rate_).mergeFrom(value).buildPartial();
+        } else {
+          videoQuartile75Rate_ = value;
+        }
+        onChanged();
+      } else {
+        videoQuartile75RateBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 75% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+     */
+    public Builder clearVideoQuartile75Rate() {
+      if (videoQuartile75RateBuilder_ == null) {
+        videoQuartile75Rate_ = null;
+        onChanged();
+      } else {
+        videoQuartile75Rate_ = null;
+        videoQuartile75RateBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 75% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getVideoQuartile75RateBuilder() {
+      
+      onChanged();
+      return getVideoQuartile75RateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 75% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getVideoQuartile75RateOrBuilder() {
+      if (videoQuartile75RateBuilder_ != null) {
+        return videoQuartile75RateBuilder_.getMessageOrBuilder();
+      } else {
+        return videoQuartile75Rate_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile75Rate_;
+      }
+    }
+    /**
+     * <pre>
+     * Percentage of impressions where the viewer watched 75% of your video.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getVideoQuartile75RateFieldBuilder() {
+      if (videoQuartile75RateBuilder_ == null) {
+        videoQuartile75RateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getVideoQuartile75Rate(),
+                getParentForChildren(),
+                isClean());
+        videoQuartile75Rate_ = null;
+      }
+      return videoQuartile75RateBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue videoViewRate_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> videoViewRateBuilder_;
+    /**
+     * <pre>
+     * The number of views your TrueView video ad receives divided by its number
+     * of impressions, including thumbnail impressions for TrueView in-display
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+     */
+    public boolean hasVideoViewRate() {
+      return videoViewRateBuilder_ != null || videoViewRate_ != null;
+    }
+    /**
+     * <pre>
+     * The number of views your TrueView video ad receives divided by its number
+     * of impressions, including thumbnail impressions for TrueView in-display
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+     */
+    public com.google.protobuf.DoubleValue getVideoViewRate() {
+      if (videoViewRateBuilder_ == null) {
+        return videoViewRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoViewRate_;
+      } else {
+        return videoViewRateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of views your TrueView video ad receives divided by its number
+     * of impressions, including thumbnail impressions for TrueView in-display
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+     */
+    public Builder setVideoViewRate(com.google.protobuf.DoubleValue value) {
+      if (videoViewRateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        videoViewRate_ = value;
+        onChanged();
+      } else {
+        videoViewRateBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of views your TrueView video ad receives divided by its number
+     * of impressions, including thumbnail impressions for TrueView in-display
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+     */
+    public Builder setVideoViewRate(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (videoViewRateBuilder_ == null) {
+        videoViewRate_ = builderForValue.build();
+        onChanged();
+      } else {
+        videoViewRateBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of views your TrueView video ad receives divided by its number
+     * of impressions, including thumbnail impressions for TrueView in-display
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+     */
+    public Builder mergeVideoViewRate(com.google.protobuf.DoubleValue value) {
+      if (videoViewRateBuilder_ == null) {
+        if (videoViewRate_ != null) {
+          videoViewRate_ =
+            com.google.protobuf.DoubleValue.newBuilder(videoViewRate_).mergeFrom(value).buildPartial();
+        } else {
+          videoViewRate_ = value;
+        }
+        onChanged();
+      } else {
+        videoViewRateBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of views your TrueView video ad receives divided by its number
+     * of impressions, including thumbnail impressions for TrueView in-display
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+     */
+    public Builder clearVideoViewRate() {
+      if (videoViewRateBuilder_ == null) {
+        videoViewRate_ = null;
+        onChanged();
+      } else {
+        videoViewRate_ = null;
+        videoViewRateBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of views your TrueView video ad receives divided by its number
+     * of impressions, including thumbnail impressions for TrueView in-display
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getVideoViewRateBuilder() {
+      
+      onChanged();
+      return getVideoViewRateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of views your TrueView video ad receives divided by its number
+     * of impressions, including thumbnail impressions for TrueView in-display
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getVideoViewRateOrBuilder() {
+      if (videoViewRateBuilder_ != null) {
+        return videoViewRateBuilder_.getMessageOrBuilder();
+      } else {
+        return videoViewRate_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : videoViewRate_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of views your TrueView video ad receives divided by its number
+     * of impressions, including thumbnail impressions for TrueView in-display
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getVideoViewRateFieldBuilder() {
+      if (videoViewRateBuilder_ == null) {
+        videoViewRateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getVideoViewRate(),
+                getParentForChildren(),
+                isClean());
+        videoViewRate_ = null;
+      }
+      return videoViewRateBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value videoViews_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> videoViewsBuilder_;
+    /**
+     * <pre>
+     * The number of times your video ads were viewed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value video_views = 59;</code>
+     */
+    public boolean hasVideoViews() {
+      return videoViewsBuilder_ != null || videoViews_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times your video ads were viewed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value video_views = 59;</code>
+     */
+    public com.google.protobuf.Int64Value getVideoViews() {
+      if (videoViewsBuilder_ == null) {
+        return videoViews_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : videoViews_;
+      } else {
+        return videoViewsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times your video ads were viewed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value video_views = 59;</code>
+     */
+    public Builder setVideoViews(com.google.protobuf.Int64Value value) {
+      if (videoViewsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        videoViews_ = value;
+        onChanged();
+      } else {
+        videoViewsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your video ads were viewed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value video_views = 59;</code>
+     */
+    public Builder setVideoViews(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (videoViewsBuilder_ == null) {
+        videoViews_ = builderForValue.build();
+        onChanged();
+      } else {
+        videoViewsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your video ads were viewed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value video_views = 59;</code>
+     */
+    public Builder mergeVideoViews(com.google.protobuf.Int64Value value) {
+      if (videoViewsBuilder_ == null) {
+        if (videoViews_ != null) {
+          videoViews_ =
+            com.google.protobuf.Int64Value.newBuilder(videoViews_).mergeFrom(value).buildPartial();
+        } else {
+          videoViews_ = value;
+        }
+        onChanged();
+      } else {
+        videoViewsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your video ads were viewed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value video_views = 59;</code>
+     */
+    public Builder clearVideoViews() {
+      if (videoViewsBuilder_ == null) {
+        videoViews_ = null;
+        onChanged();
+      } else {
+        videoViews_ = null;
+        videoViewsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your video ads were viewed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value video_views = 59;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getVideoViewsBuilder() {
+      
+      onChanged();
+      return getVideoViewsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times your video ads were viewed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value video_views = 59;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getVideoViewsOrBuilder() {
+      if (videoViewsBuilder_ != null) {
+        return videoViewsBuilder_.getMessageOrBuilder();
+      } else {
+        return videoViews_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : videoViews_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times your video ads were viewed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value video_views = 59;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getVideoViewsFieldBuilder() {
+      if (videoViewsBuilder_ == null) {
+        videoViewsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getVideoViews(),
+                getParentForChildren(),
+                isClean());
+        videoViews_ = null;
+      }
+      return videoViewsBuilder_;
     }
 
     private com.google.protobuf.Int64Value viewThroughConversions_ = null;

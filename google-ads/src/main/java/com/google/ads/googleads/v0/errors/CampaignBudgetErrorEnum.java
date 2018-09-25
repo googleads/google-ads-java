@@ -104,6 +104,14 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
+     * The campaign budget cannot be shared.
+     * </pre>
+     *
+     * <code>CAMPAIGN_BUDGET_CANNOT_BE_SHARED = 17;</code>
+     */
+    CAMPAIGN_BUDGET_CANNOT_BE_SHARED(17),
+    /**
+     * <pre>
      * The requested campaign budget no longer exists.
      * </pre>
      *
@@ -238,6 +246,14 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN = 1;</code>
      */
     public static final int UNKNOWN_VALUE = 1;
+    /**
+     * <pre>
+     * The campaign budget cannot be shared.
+     * </pre>
+     *
+     * <code>CAMPAIGN_BUDGET_CANNOT_BE_SHARED = 17;</code>
+     */
+    public static final int CAMPAIGN_BUDGET_CANNOT_BE_SHARED_VALUE = 17;
     /**
      * <pre>
      * The requested campaign budget no longer exists.
@@ -377,6 +393,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
+        case 17: return CAMPAIGN_BUDGET_CANNOT_BE_SHARED;
         case 2: return CAMPAIGN_BUDGET_REMOVED;
         case 3: return CAMPAIGN_BUDGET_IN_USE;
         case 4: return CAMPAIGN_BUDGET_PERIOD_NOT_AVAILABLE;

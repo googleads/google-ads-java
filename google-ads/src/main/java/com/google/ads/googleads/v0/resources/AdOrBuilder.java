@@ -253,6 +253,67 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
+   * Indicates if this ad was automatically added by Google Ads and not by a
+   * user. For example, this could happen when ads are automatically created as
+   * suggestions for new ads based on knowledge of how existing ads are
+   * performing.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   */
+  boolean hasAddedByGoogleAds();
+  /**
+   * <pre>
+   * Indicates if this ad was automatically added by Google Ads and not by a
+   * user. For example, this could happen when ads are automatically created as
+   * suggestions for new ads based on knowledge of how existing ads are
+   * performing.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   */
+  com.google.protobuf.BoolValue getAddedByGoogleAds();
+  /**
+   * <pre>
+   * Indicates if this ad was automatically added by Google Ads and not by a
+   * user. For example, this could happen when ads are automatically created as
+   * suggestions for new ads based on knowledge of how existing ads are
+   * performing.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getAddedByGoogleAdsOrBuilder();
+
+  /**
+   * <pre>
+   * The device preference for the ad. You can only specify a preference for
+   * mobile devices. When this preference is set the ad will be preferred over
+   * other ads when being displayed on a mobile device. The ad can still be
+   * displayed on other device types, e.g. if no other ads are available.
+   * If unspecified (no device preference), all devices are targeted.
+   * This is only supported by some ad types.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device_preference = 20;</code>
+   */
+  int getDevicePreferenceValue();
+  /**
+   * <pre>
+   * The device preference for the ad. You can only specify a preference for
+   * mobile devices. When this preference is set the ad will be preferred over
+   * other ads when being displayed on a mobile device. The ad can still be
+   * displayed on other device types, e.g. if no other ads are available.
+   * If unspecified (no device preference), all devices are targeted.
+   * This is only supported by some ad types.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device_preference = 20;</code>
+   */
+  com.google.ads.googleads.v0.enums.DeviceEnum.Device getDevicePreference();
+
+  /**
+   * <pre>
    * Details pertaining to a text ad.
    * </pre>
    *
@@ -462,6 +523,31 @@ public interface AdOrBuilder extends
    * <code>.google.ads.googleads.v0.common.ShoppingSmartAdInfo shopping_smart_ad = 17;</code>
    */
   com.google.ads.googleads.v0.common.ShoppingSmartAdInfoOrBuilder getShoppingSmartAdOrBuilder();
+
+  /**
+   * <pre>
+   * Details pertaining to a Shopping product ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+   */
+  boolean hasShoppingProductAd();
+  /**
+   * <pre>
+   * Details pertaining to a Shopping product ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+   */
+  com.google.ads.googleads.v0.common.ShoppingProductAdInfo getShoppingProductAd();
+  /**
+   * <pre>
+   * Details pertaining to a Shopping product ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+   */
+  com.google.ads.googleads.v0.common.ShoppingProductAdInfoOrBuilder getShoppingProductAdOrBuilder();
 
   public com.google.ads.googleads.v0.resources.Ad.AdDataCase getAdDataCase();
 }

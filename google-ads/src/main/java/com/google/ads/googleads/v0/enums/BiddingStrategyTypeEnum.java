@@ -131,6 +131,14 @@ private static final long serialVersionUID = 0L;
     MANUAL_CPM(4),
     /**
      * <pre>
+     * A bidding strategy that pays a configurable amount per video view.
+     * </pre>
+     *
+     * <code>MANUAL_CPV = 13;</code>
+     */
+    MANUAL_CPV(13),
+    /**
+     * <pre>
      * A bidding strategy that automatically maximizes number of conversions
      * given a daily budget.
      * </pre>
@@ -252,6 +260,14 @@ private static final long serialVersionUID = 0L;
     public static final int MANUAL_CPM_VALUE = 4;
     /**
      * <pre>
+     * A bidding strategy that pays a configurable amount per video view.
+     * </pre>
+     *
+     * <code>MANUAL_CPV = 13;</code>
+     */
+    public static final int MANUAL_CPV_VALUE = 13;
+    /**
+     * <pre>
      * A bidding strategy that automatically maximizes number of conversions
      * given a daily budget.
      * </pre>
@@ -350,6 +366,7 @@ private static final long serialVersionUID = 0L;
         case 2: return ENHANCED_CPC;
         case 3: return MANUAL_CPC;
         case 4: return MANUAL_CPM;
+        case 13: return MANUAL_CPV;
         case 10: return MAXIMIZE_CONVERSIONS;
         case 11: return MAXIMIZE_CONVERSION_VALUE;
         case 5: return PAGE_ONE_PROMOTED;

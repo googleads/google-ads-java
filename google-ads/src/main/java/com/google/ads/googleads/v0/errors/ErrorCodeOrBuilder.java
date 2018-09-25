@@ -927,6 +927,23 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for the conversion action error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+   */
+  int getConversionActionErrorValue();
+  /**
+   * <pre>
+   * The reasons for the conversion action error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+   */
+  com.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError getConversionActionError();
+
+  /**
+   * <pre>
    * The reasons for the header error.
    * </pre>
    *
@@ -1009,6 +1026,40 @@ public interface ErrorCodeOrBuilder extends
    * <code>.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError enum_error = 70;</code>
    */
   com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError getEnumError();
+
+  /**
+   * <pre>
+   * The reasons for account budget proposal errors.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+   */
+  int getAccountBudgetProposalErrorValue();
+  /**
+   * <pre>
+   * The reasons for account budget proposal errors.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+   */
+  com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError getAccountBudgetProposalError();
+
+  /**
+   * <pre>
+   * The reasons for the change status error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+   */
+  int getChangeStatusErrorValue();
+  /**
+   * <pre>
+   * The reasons for the change status error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+   */
+  com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError getChangeStatusError();
 
   public com.google.ads.googleads.v0.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

@@ -30,15 +30,16 @@ public final class AdGroupTypeProto {
     java.lang.String[] descriptorData = {
       "\n1google/ads/googleads/v0/enums/ad_group" +
       "_type.proto\022\035google.ads.googleads.v0.enu" +
-      "ms\"\220\001\n\017AdGroupTypeEnum\"}\n\013AdGroupType\022\017\n" +
-      "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\023\n\017SEARCH_ST" +
-      "ANDARD\020\002\022\024\n\020DISPLAY_STANDARD\020\003\022\r\n\tHOTEL_" +
-      "ADS\020\006\022\026\n\022SHOPPING_SMART_ADS\020\007B\301\001\n!com.go" +
-      "ogle.ads.googleads.v0.enumsB\020AdGroupType" +
-      "ProtoP\001ZBgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v0/enums;enums\242\002\003GA" +
-      "A\252\002\035Google.Ads.GoogleAds.V0.Enums\312\002\035Goog" +
-      "le\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "ms\"\275\001\n\017AdGroupTypeEnum\"\251\001\n\013AdGroupType\022\017" +
+      "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\023\n\017SEARCH_S" +
+      "TANDARD\020\002\022\024\n\020DISPLAY_STANDARD\020\003\022\030\n\024SHOPP" +
+      "ING_PRODUCT_ADS\020\004\022\r\n\tHOTEL_ADS\020\006\022\026\n\022SHOP" +
+      "PING_SMART_ADS\020\007\022\020\n\014VIDEO_BUMPER\020\010B\301\001\n!c" +
+      "om.google.ads.googleads.v0.enumsB\020AdGrou" +
+      "pTypeProtoP\001ZBgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v0/enums;enums" +
+      "\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312\002" +
+      "\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

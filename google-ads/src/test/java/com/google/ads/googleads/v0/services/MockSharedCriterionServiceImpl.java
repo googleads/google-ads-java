@@ -16,9 +16,6 @@
 package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.SharedCriterion;
-import com.google.ads.googleads.v0.services.GetSharedCriterionRequest;
-import com.google.ads.googleads.v0.services.MutateSharedCriteriaRequest;
-import com.google.ads.googleads.v0.services.MutateSharedCriteriaResponse;
 import com.google.ads.googleads.v0.services.SharedCriterionServiceGrpc.SharedCriterionServiceImplBase;
 import com.google.api.core.BetaApi;
 import com.google.protobuf.GeneratedMessageV3;

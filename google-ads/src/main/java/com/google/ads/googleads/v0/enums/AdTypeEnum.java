@@ -167,6 +167,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_SMART_AD = 9;</code>
      */
     SHOPPING_SMART_AD(9),
+    /**
+     * <pre>
+     * The ad is a standard Shopping ad.
+     * </pre>
+     *
+     * <code>SHOPPING_PRODUCT_AD = 10;</code>
+     */
+    SHOPPING_PRODUCT_AD(10),
     UNRECOGNIZED(-1),
     ;
 
@@ -251,6 +259,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_SMART_AD = 9;</code>
      */
     public static final int SHOPPING_SMART_AD_VALUE = 9;
+    /**
+     * <pre>
+     * The ad is a standard Shopping ad.
+     * </pre>
+     *
+     * <code>SHOPPING_PRODUCT_AD = 10;</code>
+     */
+    public static final int SHOPPING_PRODUCT_AD_VALUE = 10;
 
 
     public final int getNumber() {
@@ -281,6 +297,7 @@ private static final long serialVersionUID = 0L;
         case 7: return EXPANDED_DYNAMIC_SEARCH_AD;
         case 8: return HOTEL_AD;
         case 9: return SHOPPING_SMART_AD;
+        case 10: return SHOPPING_PRODUCT_AD;
         default: return null;
       }
     }

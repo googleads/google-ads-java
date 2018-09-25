@@ -16,9 +16,6 @@
 package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.Recommendation;
-import com.google.ads.googleads.v0.services.ApplyRecommendationRequest;
-import com.google.ads.googleads.v0.services.ApplyRecommendationResponse;
-import com.google.ads.googleads.v0.services.GetRecommendationRequest;
 import com.google.ads.googleads.v0.services.RecommendationServiceGrpc.RecommendationServiceImplBase;
 import com.google.api.core.BetaApi;
 import com.google.protobuf.GeneratedMessageV3;

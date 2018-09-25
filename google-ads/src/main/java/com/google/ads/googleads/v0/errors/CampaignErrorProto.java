@@ -30,7 +30,7 @@ public final class CampaignErrorProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v0/errors/campaig" +
       "n_error.proto\022\036google.ads.googleads.v0.e" +
-      "rrors\"\322\013\n\021CampaignErrorEnum\"\274\013\n\rCampaign" +
+      "rrors\"\226\014\n\021CampaignErrorEnum\"\200\014\n\rCampaign" +
       "Error\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022!\n\035C" +
       "ANNOT_TARGET_CONTENT_NETWORK\020\003\022 \n\034CANNOT" +
       "_TARGET_SEARCH_NETWORK\020\004\0226\n2CANNOT_TARGE" +
@@ -67,12 +67,14 @@ public final class CampaignErrorProto {
       "LREADY_STARTED\020#\022\033\n\027CANNOT_SET_DATE_TO_P" +
       "AST\020$\022\037\n\033MISSING_HOTEL_CUSTOMER_LINK\020%\022\037" +
       "\n\033INVALID_HOTEL_CUSTOMER_LINK\020&\022\031\n\025MISSI" +
-      "NG_HOTEL_SETTING\020\'B\310\001\n\"com.google.ads.go" +
-      "ogleads.v0.errorsB\022CampaignErrorProtoP\001Z" +
-      "Dgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v0/errors;errors\242\002\003GAA\252\002\036Go" +
-      "ogle.Ads.GoogleAds.V0.Errors\312\002\036Google\\Ad" +
-      "s\\GoogleAds\\V0\\Errorsb\006proto3"
+      "NG_HOTEL_SETTING\020\'\022B\n>CANNOT_USE_SHARED_" +
+      "CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_G" +
+      "ROUP\020(B\310\001\n\"com.google.ads.googleads.v0.e" +
+      "rrorsB\022CampaignErrorProtoP\001ZDgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.Goo" +
+      "gleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\" +
+      "V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

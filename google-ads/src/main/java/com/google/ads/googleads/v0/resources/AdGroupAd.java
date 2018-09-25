@@ -86,6 +86,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 50: {
+            com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary.Builder subBuilder = null;
+            if (policySummary_ != null) {
+              subBuilder = policySummary_.toBuilder();
+            }
+            policySummary_ = input.readMessage(com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(policySummary_);
+              policySummary_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -258,6 +271,39 @@ private static final long serialVersionUID = 0L;
     return getAd();
   }
 
+  public static final int POLICY_SUMMARY_FIELD_NUMBER = 6;
+  private com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policySummary_;
+  /**
+   * <pre>
+   * Policy information for the ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+   */
+  public boolean hasPolicySummary() {
+    return policySummary_ != null;
+  }
+  /**
+   * <pre>
+   * Policy information for the ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+   */
+  public com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary getPolicySummary() {
+    return policySummary_ == null ? com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary.getDefaultInstance() : policySummary_;
+  }
+  /**
+   * <pre>
+   * Policy information for the ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+   */
+  public com.google.ads.googleads.v0.resources.AdGroupAdPolicySummaryOrBuilder getPolicySummaryOrBuilder() {
+    return getPolicySummary();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -284,6 +330,9 @@ private static final long serialVersionUID = 0L;
     if (ad_ != null) {
       output.writeMessage(5, getAd());
     }
+    if (policySummary_ != null) {
+      output.writeMessage(6, getPolicySummary());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -307,6 +356,10 @@ private static final long serialVersionUID = 0L;
     if (ad_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getAd());
+    }
+    if (policySummary_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getPolicySummary());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -337,6 +390,11 @@ private static final long serialVersionUID = 0L;
       result = result && getAd()
           .equals(other.getAd());
     }
+    result = result && (hasPolicySummary() == other.hasPolicySummary());
+    if (hasPolicySummary()) {
+      result = result && getPolicySummary()
+          .equals(other.getPolicySummary());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -359,6 +417,10 @@ private static final long serialVersionUID = 0L;
     if (hasAd()) {
       hash = (37 * hash) + AD_FIELD_NUMBER;
       hash = (53 * hash) + getAd().hashCode();
+    }
+    if (hasPolicySummary()) {
+      hash = (37 * hash) + POLICY_SUMMARY_FIELD_NUMBER;
+      hash = (53 * hash) + getPolicySummary().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -513,6 +575,12 @@ private static final long serialVersionUID = 0L;
         ad_ = null;
         adBuilder_ = null;
       }
+      if (policySummaryBuilder_ == null) {
+        policySummary_ = null;
+      } else {
+        policySummary_ = null;
+        policySummaryBuilder_ = null;
+      }
       return this;
     }
 
@@ -550,6 +618,11 @@ private static final long serialVersionUID = 0L;
         result.ad_ = ad_;
       } else {
         result.ad_ = adBuilder_.build();
+      }
+      if (policySummaryBuilder_ == null) {
+        result.policySummary_ = policySummary_;
+      } else {
+        result.policySummary_ = policySummaryBuilder_.build();
       }
       onBuilt();
       return result;
@@ -611,6 +684,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAd()) {
         mergeAd(other.getAd());
+      }
+      if (other.hasPolicySummary()) {
+        mergePolicySummary(other.getPolicySummary());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1118,6 +1194,159 @@ private static final long serialVersionUID = 0L;
         ad_ = null;
       }
       return adBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policySummary_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary, com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary.Builder, com.google.ads.googleads.v0.resources.AdGroupAdPolicySummaryOrBuilder> policySummaryBuilder_;
+    /**
+     * <pre>
+     * Policy information for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     */
+    public boolean hasPolicySummary() {
+      return policySummaryBuilder_ != null || policySummary_ != null;
+    }
+    /**
+     * <pre>
+     * Policy information for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary getPolicySummary() {
+      if (policySummaryBuilder_ == null) {
+        return policySummary_ == null ? com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary.getDefaultInstance() : policySummary_;
+      } else {
+        return policySummaryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Policy information for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     */
+    public Builder setPolicySummary(com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary value) {
+      if (policySummaryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        policySummary_ = value;
+        onChanged();
+      } else {
+        policySummaryBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Policy information for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     */
+    public Builder setPolicySummary(
+        com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary.Builder builderForValue) {
+      if (policySummaryBuilder_ == null) {
+        policySummary_ = builderForValue.build();
+        onChanged();
+      } else {
+        policySummaryBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Policy information for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     */
+    public Builder mergePolicySummary(com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary value) {
+      if (policySummaryBuilder_ == null) {
+        if (policySummary_ != null) {
+          policySummary_ =
+            com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary.newBuilder(policySummary_).mergeFrom(value).buildPartial();
+        } else {
+          policySummary_ = value;
+        }
+        onChanged();
+      } else {
+        policySummaryBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Policy information for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     */
+    public Builder clearPolicySummary() {
+      if (policySummaryBuilder_ == null) {
+        policySummary_ = null;
+        onChanged();
+      } else {
+        policySummary_ = null;
+        policySummaryBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Policy information for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary.Builder getPolicySummaryBuilder() {
+      
+      onChanged();
+      return getPolicySummaryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Policy information for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AdGroupAdPolicySummaryOrBuilder getPolicySummaryOrBuilder() {
+      if (policySummaryBuilder_ != null) {
+        return policySummaryBuilder_.getMessageOrBuilder();
+      } else {
+        return policySummary_ == null ?
+            com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary.getDefaultInstance() : policySummary_;
+      }
+    }
+    /**
+     * <pre>
+     * Policy information for the ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary, com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary.Builder, com.google.ads.googleads.v0.resources.AdGroupAdPolicySummaryOrBuilder> 
+        getPolicySummaryFieldBuilder() {
+      if (policySummaryBuilder_ == null) {
+        policySummaryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary, com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary.Builder, com.google.ads.googleads.v0.resources.AdGroupAdPolicySummaryOrBuilder>(
+                getPolicySummary(),
+                getParentForChildren(),
+                isClean());
+        policySummary_ = null;
+      }
+      return policySummaryBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

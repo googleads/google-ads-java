@@ -16,16 +16,12 @@
 package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.CampaignSharedSet;
-import com.google.ads.googleads.v0.services.CampaignSharedSetOperation;
-import com.google.ads.googleads.v0.services.GetCampaignSharedSetRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignSharedSetsRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignSharedSetsResponse;
+import com.google.ads.googleads.v0.services.stub.CampaignSharedSetServiceStub;
+import com.google.ads.googleads.v0.services.stub.CampaignSharedSetServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.api.pathtemplate.PathTemplate;
-import com.google.ads.googleads.v0.services.stub.CampaignSharedSetServiceStub;
-import com.google.ads.googleads.v0.services.stub.CampaignSharedSetServiceStubSettings;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;

@@ -30,20 +30,20 @@ public final class ResourceCountLimitExceededErrorProto {
     java.lang.String[] descriptorData = {
       "\nHgoogle/ads/googleads/v0/errors/resourc" +
       "e_count_limit_exceeded_error.proto\022\036goog" +
-      "le.ads.googleads.v0.errors\"\211\002\n#ResourceC" +
-      "ountLimitExceededErrorEnum\"\341\001\n\037ResourceC" +
+      "le.ads.googleads.v0.errors\"\252\002\n#ResourceC" +
+      "ountLimitExceededErrorEnum\"\202\002\n\037ResourceC" +
       "ountLimitExceededError\022\017\n\013UNSPECIFIED\020\000\022" +
       "\013\n\007UNKNOWN\020\001\022\021\n\rACCOUNT_LIMIT\020\002\022\022\n\016CAMPA" +
       "IGN_LIMIT\020\003\022\021\n\rADGROUP_LIMIT\020\004\022\025\n\021AD_GRO" +
       "UP_AD_LIMIT\020\005\022\034\n\030AD_GROUP_CRITERION_LIMI" +
       "T\020\006\022\024\n\020SHARED_SET_LIMIT\020\007\022\033\n\027MATCHING_FU" +
-      "NCTION_LIMIT\020\010B\332\001\n\"com.google.ads.google" +
-      "ads.v0.errorsB$ResourceCountLimitExceede" +
-      "dErrorProtoP\001ZDgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v0/errors;err" +
-      "ors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Erro" +
-      "rs\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006pro" +
-      "to3"
+      "NCTION_LIMIT\020\010\022\037\n\033RESPONSE_ROW_LIMIT_EXC" +
+      "EEDED\020\tB\332\001\n\"com.google.ads.googleads.v0." +
+      "errorsB$ResourceCountLimitExceededErrorP" +
+      "rotoP\001ZDgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v0/errors;errors\242\002\003G" +
+      "AA\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Go" +
+      "ogle\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

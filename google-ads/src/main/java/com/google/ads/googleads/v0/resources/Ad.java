@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     finalMobileUrls_ = java.util.Collections.emptyList();
     urlCustomParameters_ = java.util.Collections.emptyList();
     type_ = 0;
+    devicePreference_ = 0;
   }
 
   @java.lang.Override
@@ -234,6 +235,39 @@ private static final long serialVersionUID = 0L;
             adDataCase_ = 17;
             break;
           }
+          case 146: {
+            com.google.ads.googleads.v0.common.ShoppingProductAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 18) {
+              subBuilder = ((com.google.ads.googleads.v0.common.ShoppingProductAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v0.common.ShoppingProductAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.ShoppingProductAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 18;
+            break;
+          }
+          case 154: {
+            com.google.protobuf.BoolValue.Builder subBuilder = null;
+            if (addedByGoogleAds_ != null) {
+              subBuilder = addedByGoogleAds_.toBuilder();
+            }
+            addedByGoogleAds_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(addedByGoogleAds_);
+              addedByGoogleAds_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 160: {
+            int rawValue = input.readEnum();
+
+            devicePreference_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -288,6 +322,7 @@ private static final long serialVersionUID = 0L;
     EXPANDED_DYNAMIC_SEARCH_AD(14),
     HOTEL_AD(15),
     SHOPPING_SMART_AD(17),
+    SHOPPING_PRODUCT_AD(18),
     ADDATA_NOT_SET(0);
     private final int value;
     private AdDataCase(int value) {
@@ -311,6 +346,7 @@ private static final long serialVersionUID = 0L;
         case 14: return EXPANDED_DYNAMIC_SEARCH_AD;
         case 15: return HOTEL_AD;
         case 17: return SHOPPING_SMART_AD;
+        case 18: return SHOPPING_PRODUCT_AD;
         case 0: return ADDATA_NOT_SET;
         default: return null;
       }
@@ -635,6 +671,83 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v0.enums.AdTypeEnum.AdType.UNRECOGNIZED : result;
   }
 
+  public static final int ADDED_BY_GOOGLE_ADS_FIELD_NUMBER = 19;
+  private com.google.protobuf.BoolValue addedByGoogleAds_;
+  /**
+   * <pre>
+   * Indicates if this ad was automatically added by Google Ads and not by a
+   * user. For example, this could happen when ads are automatically created as
+   * suggestions for new ads based on knowledge of how existing ads are
+   * performing.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   */
+  public boolean hasAddedByGoogleAds() {
+    return addedByGoogleAds_ != null;
+  }
+  /**
+   * <pre>
+   * Indicates if this ad was automatically added by Google Ads and not by a
+   * user. For example, this could happen when ads are automatically created as
+   * suggestions for new ads based on knowledge of how existing ads are
+   * performing.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   */
+  public com.google.protobuf.BoolValue getAddedByGoogleAds() {
+    return addedByGoogleAds_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : addedByGoogleAds_;
+  }
+  /**
+   * <pre>
+   * Indicates if this ad was automatically added by Google Ads and not by a
+   * user. For example, this could happen when ads are automatically created as
+   * suggestions for new ads based on knowledge of how existing ads are
+   * performing.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   */
+  public com.google.protobuf.BoolValueOrBuilder getAddedByGoogleAdsOrBuilder() {
+    return getAddedByGoogleAds();
+  }
+
+  public static final int DEVICE_PREFERENCE_FIELD_NUMBER = 20;
+  private int devicePreference_;
+  /**
+   * <pre>
+   * The device preference for the ad. You can only specify a preference for
+   * mobile devices. When this preference is set the ad will be preferred over
+   * other ads when being displayed on a mobile device. The ad can still be
+   * displayed on other device types, e.g. if no other ads are available.
+   * If unspecified (no device preference), all devices are targeted.
+   * This is only supported by some ad types.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device_preference = 20;</code>
+   */
+  public int getDevicePreferenceValue() {
+    return devicePreference_;
+  }
+  /**
+   * <pre>
+   * The device preference for the ad. You can only specify a preference for
+   * mobile devices. When this preference is set the ad will be preferred over
+   * other ads when being displayed on a mobile device. The ad can still be
+   * displayed on other device types, e.g. if no other ads are available.
+   * If unspecified (no device preference), all devices are targeted.
+   * This is only supported by some ad types.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device_preference = 20;</code>
+   */
+  public com.google.ads.googleads.v0.enums.DeviceEnum.Device getDevicePreference() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.DeviceEnum.Device result = com.google.ads.googleads.v0.enums.DeviceEnum.Device.valueOf(devicePreference_);
+    return result == null ? com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNRECOGNIZED : result;
+  }
+
   public static final int TEXT_AD_FIELD_NUMBER = 6;
   /**
    * <pre>
@@ -951,6 +1064,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.ShoppingSmartAdInfo.getDefaultInstance();
   }
 
+  public static final int SHOPPING_PRODUCT_AD_FIELD_NUMBER = 18;
+  /**
+   * <pre>
+   * Details pertaining to a Shopping product ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+   */
+  public boolean hasShoppingProductAd() {
+    return adDataCase_ == 18;
+  }
+  /**
+   * <pre>
+   * Details pertaining to a Shopping product ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+   */
+  public com.google.ads.googleads.v0.common.ShoppingProductAdInfo getShoppingProductAd() {
+    if (adDataCase_ == 18) {
+       return (com.google.ads.googleads.v0.common.ShoppingProductAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v0.common.ShoppingProductAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to a Shopping product ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+   */
+  public com.google.ads.googleads.v0.common.ShoppingProductAdInfoOrBuilder getShoppingProductAdOrBuilder() {
+    if (adDataCase_ == 18) {
+       return (com.google.ads.googleads.v0.common.ShoppingProductAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v0.common.ShoppingProductAdInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1009,6 +1160,15 @@ private static final long serialVersionUID = 0L;
     }
     if (adDataCase_ == 17) {
       output.writeMessage(17, (com.google.ads.googleads.v0.common.ShoppingSmartAdInfo) adData_);
+    }
+    if (adDataCase_ == 18) {
+      output.writeMessage(18, (com.google.ads.googleads.v0.common.ShoppingProductAdInfo) adData_);
+    }
+    if (addedByGoogleAds_ != null) {
+      output.writeMessage(19, getAddedByGoogleAds());
+    }
+    if (devicePreference_ != com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNSPECIFIED.getNumber()) {
+      output.writeEnum(20, devicePreference_);
     }
     unknownFields.writeTo(output);
   }
@@ -1079,6 +1239,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, (com.google.ads.googleads.v0.common.ShoppingSmartAdInfo) adData_);
     }
+    if (adDataCase_ == 18) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, (com.google.ads.googleads.v0.common.ShoppingProductAdInfo) adData_);
+    }
+    if (addedByGoogleAds_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, getAddedByGoogleAds());
+    }
+    if (devicePreference_ != com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(20, devicePreference_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1117,6 +1289,12 @@ private static final long serialVersionUID = 0L;
           .equals(other.getDisplayUrl());
     }
     result = result && type_ == other.type_;
+    result = result && (hasAddedByGoogleAds() == other.hasAddedByGoogleAds());
+    if (hasAddedByGoogleAds()) {
+      result = result && getAddedByGoogleAds()
+          .equals(other.getAddedByGoogleAds());
+    }
+    result = result && devicePreference_ == other.devicePreference_;
     result = result && getAdDataCase().equals(
         other.getAdDataCase());
     if (!result) return false;
@@ -1152,6 +1330,10 @@ private static final long serialVersionUID = 0L;
       case 17:
         result = result && getShoppingSmartAd()
             .equals(other.getShoppingSmartAd());
+        break;
+      case 18:
+        result = result && getShoppingProductAd()
+            .equals(other.getShoppingProductAd());
         break;
       case 0:
       default:
@@ -1193,6 +1375,12 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + type_;
+    if (hasAddedByGoogleAds()) {
+      hash = (37 * hash) + ADDED_BY_GOOGLE_ADS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddedByGoogleAds().hashCode();
+    }
+    hash = (37 * hash) + DEVICE_PREFERENCE_FIELD_NUMBER;
+    hash = (53 * hash) + devicePreference_;
     switch (adDataCase_) {
       case 6:
         hash = (37 * hash) + TEXT_AD_FIELD_NUMBER;
@@ -1225,6 +1413,10 @@ private static final long serialVersionUID = 0L;
       case 17:
         hash = (37 * hash) + SHOPPING_SMART_AD_FIELD_NUMBER;
         hash = (53 * hash) + getShoppingSmartAd().hashCode();
+        break;
+      case 18:
+        hash = (37 * hash) + SHOPPING_PRODUCT_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingProductAd().hashCode();
         break;
       case 0:
       default:
@@ -1407,6 +1599,14 @@ private static final long serialVersionUID = 0L;
       }
       type_ = 0;
 
+      if (addedByGoogleAdsBuilder_ == null) {
+        addedByGoogleAds_ = null;
+      } else {
+        addedByGoogleAds_ = null;
+        addedByGoogleAdsBuilder_ = null;
+      }
+      devicePreference_ = 0;
+
       adDataCase_ = 0;
       adData_ = null;
       return this;
@@ -1480,6 +1680,12 @@ private static final long serialVersionUID = 0L;
         result.displayUrl_ = displayUrlBuilder_.build();
       }
       result.type_ = type_;
+      if (addedByGoogleAdsBuilder_ == null) {
+        result.addedByGoogleAds_ = addedByGoogleAds_;
+      } else {
+        result.addedByGoogleAds_ = addedByGoogleAdsBuilder_.build();
+      }
+      result.devicePreference_ = devicePreference_;
       if (adDataCase_ == 6) {
         if (textAdBuilder_ == null) {
           result.adData_ = adData_;
@@ -1534,6 +1740,13 @@ private static final long serialVersionUID = 0L;
           result.adData_ = adData_;
         } else {
           result.adData_ = shoppingSmartAdBuilder_.build();
+        }
+      }
+      if (adDataCase_ == 18) {
+        if (shoppingProductAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = shoppingProductAdBuilder_.build();
         }
       }
       result.bitField0_ = to_bitField0_;
@@ -1676,6 +1889,12 @@ private static final long serialVersionUID = 0L;
       if (other.type_ != 0) {
         setTypeValue(other.getTypeValue());
       }
+      if (other.hasAddedByGoogleAds()) {
+        mergeAddedByGoogleAds(other.getAddedByGoogleAds());
+      }
+      if (other.devicePreference_ != 0) {
+        setDevicePreferenceValue(other.getDevicePreferenceValue());
+      }
       switch (other.getAdDataCase()) {
         case TEXT_AD: {
           mergeTextAd(other.getTextAd());
@@ -1707,6 +1926,10 @@ private static final long serialVersionUID = 0L;
         }
         case SHOPPING_SMART_AD: {
           mergeShoppingSmartAd(other.getShoppingSmartAd());
+          break;
+        }
+        case SHOPPING_PRODUCT_AD: {
+          mergeShoppingProductAd(other.getShoppingProductAd());
           break;
         }
         case ADDATA_NOT_SET: {
@@ -3290,6 +3513,276 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.BoolValue addedByGoogleAds_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> addedByGoogleAdsBuilder_;
+    /**
+     * <pre>
+     * Indicates if this ad was automatically added by Google Ads and not by a
+     * user. For example, this could happen when ads are automatically created as
+     * suggestions for new ads based on knowledge of how existing ads are
+     * performing.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     */
+    public boolean hasAddedByGoogleAds() {
+      return addedByGoogleAdsBuilder_ != null || addedByGoogleAds_ != null;
+    }
+    /**
+     * <pre>
+     * Indicates if this ad was automatically added by Google Ads and not by a
+     * user. For example, this could happen when ads are automatically created as
+     * suggestions for new ads based on knowledge of how existing ads are
+     * performing.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     */
+    public com.google.protobuf.BoolValue getAddedByGoogleAds() {
+      if (addedByGoogleAdsBuilder_ == null) {
+        return addedByGoogleAds_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : addedByGoogleAds_;
+      } else {
+        return addedByGoogleAdsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Indicates if this ad was automatically added by Google Ads and not by a
+     * user. For example, this could happen when ads are automatically created as
+     * suggestions for new ads based on knowledge of how existing ads are
+     * performing.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     */
+    public Builder setAddedByGoogleAds(com.google.protobuf.BoolValue value) {
+      if (addedByGoogleAdsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        addedByGoogleAds_ = value;
+        onChanged();
+      } else {
+        addedByGoogleAdsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates if this ad was automatically added by Google Ads and not by a
+     * user. For example, this could happen when ads are automatically created as
+     * suggestions for new ads based on knowledge of how existing ads are
+     * performing.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     */
+    public Builder setAddedByGoogleAds(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (addedByGoogleAdsBuilder_ == null) {
+        addedByGoogleAds_ = builderForValue.build();
+        onChanged();
+      } else {
+        addedByGoogleAdsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates if this ad was automatically added by Google Ads and not by a
+     * user. For example, this could happen when ads are automatically created as
+     * suggestions for new ads based on knowledge of how existing ads are
+     * performing.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     */
+    public Builder mergeAddedByGoogleAds(com.google.protobuf.BoolValue value) {
+      if (addedByGoogleAdsBuilder_ == null) {
+        if (addedByGoogleAds_ != null) {
+          addedByGoogleAds_ =
+            com.google.protobuf.BoolValue.newBuilder(addedByGoogleAds_).mergeFrom(value).buildPartial();
+        } else {
+          addedByGoogleAds_ = value;
+        }
+        onChanged();
+      } else {
+        addedByGoogleAdsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates if this ad was automatically added by Google Ads and not by a
+     * user. For example, this could happen when ads are automatically created as
+     * suggestions for new ads based on knowledge of how existing ads are
+     * performing.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     */
+    public Builder clearAddedByGoogleAds() {
+      if (addedByGoogleAdsBuilder_ == null) {
+        addedByGoogleAds_ = null;
+        onChanged();
+      } else {
+        addedByGoogleAds_ = null;
+        addedByGoogleAdsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates if this ad was automatically added by Google Ads and not by a
+     * user. For example, this could happen when ads are automatically created as
+     * suggestions for new ads based on knowledge of how existing ads are
+     * performing.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getAddedByGoogleAdsBuilder() {
+      
+      onChanged();
+      return getAddedByGoogleAdsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Indicates if this ad was automatically added by Google Ads and not by a
+     * user. For example, this could happen when ads are automatically created as
+     * suggestions for new ads based on knowledge of how existing ads are
+     * performing.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getAddedByGoogleAdsOrBuilder() {
+      if (addedByGoogleAdsBuilder_ != null) {
+        return addedByGoogleAdsBuilder_.getMessageOrBuilder();
+      } else {
+        return addedByGoogleAds_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : addedByGoogleAds_;
+      }
+    }
+    /**
+     * <pre>
+     * Indicates if this ad was automatically added by Google Ads and not by a
+     * user. For example, this could happen when ads are automatically created as
+     * suggestions for new ads based on knowledge of how existing ads are
+     * performing.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getAddedByGoogleAdsFieldBuilder() {
+      if (addedByGoogleAdsBuilder_ == null) {
+        addedByGoogleAdsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getAddedByGoogleAds(),
+                getParentForChildren(),
+                isClean());
+        addedByGoogleAds_ = null;
+      }
+      return addedByGoogleAdsBuilder_;
+    }
+
+    private int devicePreference_ = 0;
+    /**
+     * <pre>
+     * The device preference for the ad. You can only specify a preference for
+     * mobile devices. When this preference is set the ad will be preferred over
+     * other ads when being displayed on a mobile device. The ad can still be
+     * displayed on other device types, e.g. if no other ads are available.
+     * If unspecified (no device preference), all devices are targeted.
+     * This is only supported by some ad types.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device_preference = 20;</code>
+     */
+    public int getDevicePreferenceValue() {
+      return devicePreference_;
+    }
+    /**
+     * <pre>
+     * The device preference for the ad. You can only specify a preference for
+     * mobile devices. When this preference is set the ad will be preferred over
+     * other ads when being displayed on a mobile device. The ad can still be
+     * displayed on other device types, e.g. if no other ads are available.
+     * If unspecified (no device preference), all devices are targeted.
+     * This is only supported by some ad types.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device_preference = 20;</code>
+     */
+    public Builder setDevicePreferenceValue(int value) {
+      devicePreference_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The device preference for the ad. You can only specify a preference for
+     * mobile devices. When this preference is set the ad will be preferred over
+     * other ads when being displayed on a mobile device. The ad can still be
+     * displayed on other device types, e.g. if no other ads are available.
+     * If unspecified (no device preference), all devices are targeted.
+     * This is only supported by some ad types.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device_preference = 20;</code>
+     */
+    public com.google.ads.googleads.v0.enums.DeviceEnum.Device getDevicePreference() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.DeviceEnum.Device result = com.google.ads.googleads.v0.enums.DeviceEnum.Device.valueOf(devicePreference_);
+      return result == null ? com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The device preference for the ad. You can only specify a preference for
+     * mobile devices. When this preference is set the ad will be preferred over
+     * other ads when being displayed on a mobile device. The ad can still be
+     * displayed on other device types, e.g. if no other ads are available.
+     * If unspecified (no device preference), all devices are targeted.
+     * This is only supported by some ad types.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device_preference = 20;</code>
+     */
+    public Builder setDevicePreference(com.google.ads.googleads.v0.enums.DeviceEnum.Device value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      devicePreference_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The device preference for the ad. You can only specify a preference for
+     * mobile devices. When this preference is set the ad will be preferred over
+     * other ads when being displayed on a mobile device. The ad can still be
+     * displayed on other device types, e.g. if no other ads are available.
+     * If unspecified (no device preference), all devices are targeted.
+     * This is only supported by some ad types.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device_preference = 20;</code>
+     */
+    public Builder clearDevicePreference() {
+      
+      devicePreference_ = 0;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.common.TextAdInfo, com.google.ads.googleads.v0.common.TextAdInfo.Builder, com.google.ads.googleads.v0.common.TextAdInfoOrBuilder> textAdBuilder_;
     /**
@@ -4700,6 +5193,178 @@ private static final long serialVersionUID = 0L;
       adDataCase_ = 17;
       onChanged();;
       return shoppingSmartAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ShoppingProductAdInfo, com.google.ads.googleads.v0.common.ShoppingProductAdInfo.Builder, com.google.ads.googleads.v0.common.ShoppingProductAdInfoOrBuilder> shoppingProductAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to a Shopping product ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+     */
+    public boolean hasShoppingProductAd() {
+      return adDataCase_ == 18;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping product ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+     */
+    public com.google.ads.googleads.v0.common.ShoppingProductAdInfo getShoppingProductAd() {
+      if (shoppingProductAdBuilder_ == null) {
+        if (adDataCase_ == 18) {
+          return (com.google.ads.googleads.v0.common.ShoppingProductAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v0.common.ShoppingProductAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 18) {
+          return shoppingProductAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.ShoppingProductAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping product ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+     */
+    public Builder setShoppingProductAd(com.google.ads.googleads.v0.common.ShoppingProductAdInfo value) {
+      if (shoppingProductAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        shoppingProductAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 18;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping product ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+     */
+    public Builder setShoppingProductAd(
+        com.google.ads.googleads.v0.common.ShoppingProductAdInfo.Builder builderForValue) {
+      if (shoppingProductAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingProductAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 18;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping product ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+     */
+    public Builder mergeShoppingProductAd(com.google.ads.googleads.v0.common.ShoppingProductAdInfo value) {
+      if (shoppingProductAdBuilder_ == null) {
+        if (adDataCase_ == 18 &&
+            adData_ != com.google.ads.googleads.v0.common.ShoppingProductAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v0.common.ShoppingProductAdInfo.newBuilder((com.google.ads.googleads.v0.common.ShoppingProductAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 18) {
+          shoppingProductAdBuilder_.mergeFrom(value);
+        }
+        shoppingProductAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 18;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping product ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+     */
+    public Builder clearShoppingProductAd() {
+      if (shoppingProductAdBuilder_ == null) {
+        if (adDataCase_ == 18) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 18) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        shoppingProductAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping product ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+     */
+    public com.google.ads.googleads.v0.common.ShoppingProductAdInfo.Builder getShoppingProductAdBuilder() {
+      return getShoppingProductAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping product ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+     */
+    public com.google.ads.googleads.v0.common.ShoppingProductAdInfoOrBuilder getShoppingProductAdOrBuilder() {
+      if ((adDataCase_ == 18) && (shoppingProductAdBuilder_ != null)) {
+        return shoppingProductAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 18) {
+          return (com.google.ads.googleads.v0.common.ShoppingProductAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v0.common.ShoppingProductAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping product ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ShoppingProductAdInfo, com.google.ads.googleads.v0.common.ShoppingProductAdInfo.Builder, com.google.ads.googleads.v0.common.ShoppingProductAdInfoOrBuilder> 
+        getShoppingProductAdFieldBuilder() {
+      if (shoppingProductAdBuilder_ == null) {
+        if (!(adDataCase_ == 18)) {
+          adData_ = com.google.ads.googleads.v0.common.ShoppingProductAdInfo.getDefaultInstance();
+        }
+        shoppingProductAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.ShoppingProductAdInfo, com.google.ads.googleads.v0.common.ShoppingProductAdInfo.Builder, com.google.ads.googleads.v0.common.ShoppingProductAdInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.ShoppingProductAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 18;
+      onChanged();;
+      return shoppingProductAdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

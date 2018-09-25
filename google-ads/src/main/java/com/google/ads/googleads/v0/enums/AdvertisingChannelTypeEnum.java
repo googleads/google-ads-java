@@ -135,6 +135,14 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL = 5;</code>
      */
     HOTEL(5),
+    /**
+     * <pre>
+     * Video campaigns.
+     * </pre>
+     *
+     * <code>VIDEO = 6;</code>
+     */
+    VIDEO(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -187,6 +195,14 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL = 5;</code>
      */
     public static final int HOTEL_VALUE = 5;
+    /**
+     * <pre>
+     * Video campaigns.
+     * </pre>
+     *
+     * <code>VIDEO = 6;</code>
+     */
+    public static final int VIDEO_VALUE = 6;
 
 
     public final int getNumber() {
@@ -213,6 +229,7 @@ private static final long serialVersionUID = 0L;
         case 3: return DISPLAY;
         case 4: return SHOPPING;
         case 5: return HOTEL;
+        case 6: return VIDEO;
         default: return null;
       }
     }

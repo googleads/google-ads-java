@@ -30,16 +30,16 @@ public final class AdvertisingChannelTypeProto {
     java.lang.String[] descriptorData = {
       "\n<google/ads/googleads/v0/enums/advertis" +
       "ing_channel_type.proto\022\035google.ads.googl" +
-      "eads.v0.enums\"\206\001\n\032AdvertisingChannelType" +
-      "Enum\"h\n\026AdvertisingChannelType\022\017\n\013UNSPEC" +
+      "eads.v0.enums\"\221\001\n\032AdvertisingChannelType" +
+      "Enum\"s\n\026AdvertisingChannelType\022\017\n\013UNSPEC" +
       "IFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006SEARCH\020\002\022\013\n\007DISP" +
-      "LAY\020\003\022\014\n\010SHOPPING\020\004\022\t\n\005HOTEL\020\005B\314\001\n!com.g" +
-      "oogle.ads.googleads.v0.enumsB\033Advertisin" +
-      "gChannelTypeProtoP\001ZBgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v0/enum" +
-      "s;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0." +
-      "Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006p" +
-      "roto3"
+      "LAY\020\003\022\014\n\010SHOPPING\020\004\022\t\n\005HOTEL\020\005\022\t\n\005VIDEO\020" +
+      "\006B\314\001\n!com.google.ads.googleads.v0.enumsB" +
+      "\033AdvertisingChannelTypeProtoP\001ZBgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.Go" +
+      "ogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\" +
+      "V0\\Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

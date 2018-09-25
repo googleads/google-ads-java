@@ -16,8 +16,6 @@
 package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.services.GoogleAdsServiceGrpc.GoogleAdsServiceImplBase;
-import com.google.ads.googleads.v0.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v0.services.SearchGoogleAdsResponse;
 import com.google.api.core.BetaApi;
 import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.stub.StreamObserver;

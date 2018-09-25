@@ -373,6 +373,71 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The last date/time a conversion tag for this conversion action successfully
+   * fired and was seen by Google Ads. This firing event may not have been the
+   * result of an attributable conversion (e.g. because the tag was fired from a
+   * browser that did not previously click an ad from an appropriate
+   * advertiser). The date/time is in the customer's time zone.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+   */
+  boolean hasConversionLastReceivedRequestDateTime();
+  /**
+   * <pre>
+   * The last date/time a conversion tag for this conversion action successfully
+   * fired and was seen by Google Ads. This firing event may not have been the
+   * result of an attributable conversion (e.g. because the tag was fired from a
+   * browser that did not previously click an ad from an appropriate
+   * advertiser). The date/time is in the customer's time zone.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+   */
+  com.google.protobuf.StringValue getConversionLastReceivedRequestDateTime();
+  /**
+   * <pre>
+   * The last date/time a conversion tag for this conversion action successfully
+   * fired and was seen by Google Ads. This firing event may not have been the
+   * result of an attributable conversion (e.g. because the tag was fired from a
+   * browser that did not previously click an ad from an appropriate
+   * advertiser). The date/time is in the customer's time zone.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getConversionLastReceivedRequestDateTimeOrBuilder();
+
+  /**
+   * <pre>
+   * The date of the most recent conversion for this conversion action. The date
+   * is in the customer's time zone.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+   */
+  boolean hasConversionLastConversionDate();
+  /**
+   * <pre>
+   * The date of the most recent conversion for this conversion action. The date
+   * is in the customer's time zone.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+   */
+  com.google.protobuf.StringValue getConversionLastConversionDate();
+  /**
+   * <pre>
+   * The date of the most recent conversion for this conversion action. The date
+   * is in the customer's time zone.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getConversionLastConversionDateOrBuilder();
+
+  /**
+   * <pre>
    * The estimated percentage of impressions on the Display Network
    * that your ads didn't receive due to poor Ad Rank.
    * Note: Content rank lost impression share is reported in the range of 0
@@ -1206,6 +1271,162 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getValuePerConversionOrBuilder();
+
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched all of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+   */
+  boolean hasVideoQuartile100Rate();
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched all of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+   */
+  com.google.protobuf.DoubleValue getVideoQuartile100Rate();
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched all of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getVideoQuartile100RateOrBuilder();
+
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 25% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+   */
+  boolean hasVideoQuartile25Rate();
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 25% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+   */
+  com.google.protobuf.DoubleValue getVideoQuartile25Rate();
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 25% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getVideoQuartile25RateOrBuilder();
+
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 50% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+   */
+  boolean hasVideoQuartile50Rate();
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 50% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+   */
+  com.google.protobuf.DoubleValue getVideoQuartile50Rate();
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 50% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getVideoQuartile50RateOrBuilder();
+
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 75% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+   */
+  boolean hasVideoQuartile75Rate();
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 75% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+   */
+  com.google.protobuf.DoubleValue getVideoQuartile75Rate();
+  /**
+   * <pre>
+   * Percentage of impressions where the viewer watched 75% of your video.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getVideoQuartile75RateOrBuilder();
+
+  /**
+   * <pre>
+   * The number of views your TrueView video ad receives divided by its number
+   * of impressions, including thumbnail impressions for TrueView in-display
+   * ads.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+   */
+  boolean hasVideoViewRate();
+  /**
+   * <pre>
+   * The number of views your TrueView video ad receives divided by its number
+   * of impressions, including thumbnail impressions for TrueView in-display
+   * ads.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+   */
+  com.google.protobuf.DoubleValue getVideoViewRate();
+  /**
+   * <pre>
+   * The number of views your TrueView video ad receives divided by its number
+   * of impressions, including thumbnail impressions for TrueView in-display
+   * ads.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getVideoViewRateOrBuilder();
+
+  /**
+   * <pre>
+   * The number of times your video ads were viewed.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value video_views = 59;</code>
+   */
+  boolean hasVideoViews();
+  /**
+   * <pre>
+   * The number of times your video ads were viewed.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value video_views = 59;</code>
+   */
+  com.google.protobuf.Int64Value getVideoViews();
+  /**
+   * <pre>
+   * The number of times your video ads were viewed.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value video_views = 59;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getVideoViewsOrBuilder();
 
   /**
    * <pre>

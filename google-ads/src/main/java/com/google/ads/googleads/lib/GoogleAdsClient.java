@@ -14,17 +14,21 @@
 
 package com.google.ads.googleads.lib;
 
+import com.google.ads.googleads.v0.services.AccountBudgetProposalServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupAdServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
 import com.google.ads.googleads.v0.services.BiddingStrategyServiceClient;
+import com.google.ads.googleads.v0.services.BillingSetupServiceClient;
 import com.google.ads.googleads.v0.services.CampaignBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.CampaignBudgetServiceClient;
 import com.google.ads.googleads.v0.services.CampaignCriterionServiceClient;
 import com.google.ads.googleads.v0.services.CampaignGroupServiceClient;
 import com.google.ads.googleads.v0.services.CampaignServiceClient;
 import com.google.ads.googleads.v0.services.CampaignSharedSetServiceClient;
+import com.google.ads.googleads.v0.services.ChangeStatusServiceClient;
+import com.google.ads.googleads.v0.services.ConversionActionServiceClient;
 import com.google.ads.googleads.v0.services.CustomerServiceClient;
 import com.google.ads.googleads.v0.services.GeoTargetConstantServiceClient;
 import com.google.ads.googleads.v0.services.GoogleAdsFieldServiceClient;
@@ -33,6 +37,7 @@ import com.google.ads.googleads.v0.services.KeywordViewServiceClient;
 import com.google.ads.googleads.v0.services.RecommendationServiceClient;
 import com.google.ads.googleads.v0.services.SharedCriterionServiceClient;
 import com.google.ads.googleads.v0.services.SharedSetServiceClient;
+import com.google.ads.googleads.v0.services.VideoServiceClient;
 import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
 import com.google.api.gax.rpc.FixedHeaderProvider;
 import com.google.api.gax.rpc.TransportChannel;
@@ -178,6 +183,12 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   }
 
   @Override
+  public AccountBudgetProposalServiceClient getAccountBudgetProposalServiceClient() {
+    return GrpcServiceDescriptor.get(AccountBudgetProposalServiceClient.class)
+        .newServiceClient(this);
+  }
+
+  @Override
   public AdGroupAdServiceClient getAdGroupAdServiceClient() {
     return GrpcServiceDescriptor.get(AdGroupAdServiceClient.class).newServiceClient(this);
   }
@@ -200,6 +211,11 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   @Override
   public BiddingStrategyServiceClient getBiddingStrategyServiceClient() {
     return GrpcServiceDescriptor.get(BiddingStrategyServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public BillingSetupServiceClient getBillingSetupServiceClient() {
+    return GrpcServiceDescriptor.get(BillingSetupServiceClient.class).newServiceClient(this);
   }
 
   @Override
@@ -230,6 +246,16 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   @Override
   public CampaignSharedSetServiceClient getCampaignSharedSetServiceClient() {
     return GrpcServiceDescriptor.get(CampaignSharedSetServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public ChangeStatusServiceClient getChangeStatusServiceClient() {
+    return GrpcServiceDescriptor.get(ChangeStatusServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public ConversionActionServiceClient getConversionActionServiceClient() {
+    return GrpcServiceDescriptor.get(ConversionActionServiceClient.class).newServiceClient(this);
   }
 
   @Override
@@ -270,6 +296,11 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   @Override
   public SharedSetServiceClient getSharedSetServiceClient() {
     return GrpcServiceDescriptor.get(SharedSetServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public VideoServiceClient getVideoServiceClient() {
+    return GrpcServiceDescriptor.get(VideoServiceClient.class).newServiceClient(this);
   }
 
   /** Builder for configuring and creating an instance of {@link GoogleAdsClient}. */

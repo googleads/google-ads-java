@@ -123,6 +123,14 @@ private static final long serialVersionUID = 0L;
     DISPLAY_STANDARD(3),
     /**
      * <pre>
+     * The ad group type for Shopping campaigns serving standard product ads.
+     * </pre>
+     *
+     * <code>SHOPPING_PRODUCT_ADS = 4;</code>
+     */
+    SHOPPING_PRODUCT_ADS(4),
+    /**
+     * <pre>
      * The default ad group type for Hotel campaigns.
      * </pre>
      *
@@ -137,6 +145,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_SMART_ADS = 7;</code>
      */
     SHOPPING_SMART_ADS(7),
+    /**
+     * <pre>
+     * Short unskippable in-stream video ads.
+     * </pre>
+     *
+     * <code>VIDEO_BUMPER = 8;</code>
+     */
+    VIDEO_BUMPER(8),
     UNRECOGNIZED(-1),
     ;
 
@@ -175,6 +191,14 @@ private static final long serialVersionUID = 0L;
     public static final int DISPLAY_STANDARD_VALUE = 3;
     /**
      * <pre>
+     * The ad group type for Shopping campaigns serving standard product ads.
+     * </pre>
+     *
+     * <code>SHOPPING_PRODUCT_ADS = 4;</code>
+     */
+    public static final int SHOPPING_PRODUCT_ADS_VALUE = 4;
+    /**
+     * <pre>
      * The default ad group type for Hotel campaigns.
      * </pre>
      *
@@ -189,6 +213,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_SMART_ADS = 7;</code>
      */
     public static final int SHOPPING_SMART_ADS_VALUE = 7;
+    /**
+     * <pre>
+     * Short unskippable in-stream video ads.
+     * </pre>
+     *
+     * <code>VIDEO_BUMPER = 8;</code>
+     */
+    public static final int VIDEO_BUMPER_VALUE = 8;
 
 
     public final int getNumber() {
@@ -213,8 +245,10 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 2: return SEARCH_STANDARD;
         case 3: return DISPLAY_STANDARD;
+        case 4: return SHOPPING_PRODUCT_ADS;
         case 6: return HOTEL_ADS;
         case 7: return SHOPPING_SMART_ADS;
+        case 8: return VIDEO_BUMPER;
         default: return null;
       }
     }

@@ -17,9 +17,6 @@ package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.CampaignSharedSet;
 import com.google.ads.googleads.v0.services.CampaignSharedSetServiceGrpc.CampaignSharedSetServiceImplBase;
-import com.google.ads.googleads.v0.services.GetCampaignSharedSetRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignSharedSetsRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignSharedSetsResponse;
 import com.google.api.core.BetaApi;
 import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.stub.StreamObserver;
