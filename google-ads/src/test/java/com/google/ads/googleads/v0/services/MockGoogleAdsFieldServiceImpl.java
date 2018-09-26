@@ -16,10 +16,7 @@
 package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.GoogleAdsField;
-import com.google.ads.googleads.v0.services.GetGoogleAdsFieldRequest;
 import com.google.ads.googleads.v0.services.GoogleAdsFieldServiceGrpc.GoogleAdsFieldServiceImplBase;
-import com.google.ads.googleads.v0.services.SearchGoogleAdsFieldsRequest;
-import com.google.ads.googleads.v0.services.SearchGoogleAdsFieldsResponse;
 import com.google.api.core.BetaApi;
 import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.stub.StreamObserver;

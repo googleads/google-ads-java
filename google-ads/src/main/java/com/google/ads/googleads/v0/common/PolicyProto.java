@@ -20,6 +20,11 @@ public final class PolicyProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_common_PolicyViolationKey_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_PolicyValidationParameter_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_PolicyValidationParameter_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v0_common_PolicyTopicEntry_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -87,62 +92,64 @@ public final class PolicyProto {
       "obuf/wrappers.proto\"}\n\022PolicyViolationKe" +
       "y\0221\n\013policy_name\030\001 \001(\0132\034.google.protobuf" +
       ".StringValue\0224\n\016violating_text\030\002 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\"\257\002\n\020PolicyTop" +
-      "icEntry\022+\n\005topic\030\001 \001(\0132\034.google.protobuf" +
-      ".StringValue\022Z\n\004type\030\002 \001(\0162L.google.ads." +
-      "googleads.v0.enums.PolicyTopicEntryTypeE" +
-      "num.PolicyTopicEntryType\022F\n\tevidences\030\003 " +
-      "\003(\01323.google.ads.googleads.v0.common.Pol" +
-      "icyTopicEvidence\022J\n\013constraints\030\004 \003(\01325." +
-      "google.ads.googleads.v0.common.PolicyTop" +
-      "icConstraint\"\372\006\n\023PolicyTopicEvidence\0220\n\t" +
-      "http_code\030\002 \001(\0132\033.google.protobuf.Int32V" +
-      "alueH\000\022W\n\014website_list\030\003 \001(\0132?.google.ad" +
-      "s.googleads.v0.common.PolicyTopicEvidenc" +
-      "e.WebsiteListH\000\022Q\n\ttext_list\030\004 \001(\0132<.goo" +
-      "gle.ads.googleads.v0.common.PolicyTopicE" +
-      "vidence.TextListH\000\0225\n\rlanguage_code\030\005 \001(" +
-      "\0132\034.google.protobuf.StringValueH\000\022h\n\025des" +
-      "tination_text_list\030\006 \001(\0132G.google.ads.go" +
-      "ogleads.v0.common.PolicyTopicEvidence.De" +
-      "stinationTextListH\000\022g\n\024destination_misma" +
-      "tch\030\007 \001(\0132G.google.ads.googleads.v0.comm" +
-      "on.PolicyTopicEvidence.DestinationMismat" +
-      "chH\000\0327\n\010TextList\022+\n\005texts\030\001 \003(\0132\034.google" +
-      ".protobuf.StringValue\032=\n\013WebsiteList\022.\n\010" +
-      "websites\030\001 \003(\0132\034.google.protobuf.StringV" +
-      "alue\032N\n\023DestinationTextList\0227\n\021destinati" +
-      "on_texts\030\001 \003(\0132\034.google.protobuf.StringV" +
-      "alue\032\251\001\n\023DestinationMismatch\022\221\001\n\turl_typ" +
-      "es\030\001 \003(\0162~.google.ads.googleads.v0.enums" +
-      ".PolicyTopicEvidenceDestinationMismatchU" +
-      "rlTypeEnum.PolicyTopicEvidenceDestinatio" +
-      "nMismatchUrlTypeB\007\n\005value\"\223\006\n\025PolicyTopi" +
-      "cConstraint\022n\n\027country_constraint_list\030\001" +
-      " \001(\0132K.google.ads.googleads.v0.common.Po" +
-      "licyTopicConstraint.CountryConstraintLis" +
-      "tH\000\022g\n\023reseller_constraint\030\002 \001(\0132H.googl" +
-      "e.ads.googleads.v0.common.PolicyTopicCon" +
-      "straint.ResellerConstraintH\000\022z\n#certific" +
-      "ate_missing_in_country_list\030\003 \001(\0132K.goog" +
-      "le.ads.googleads.v0.common.PolicyTopicCo" +
-      "nstraint.CountryConstraintListH\000\022\202\001\n+cer" +
-      "tificate_domain_mismatch_in_country_list" +
-      "\030\004 \001(\0132K.google.ads.googleads.v0.common." +
-      "PolicyTopicConstraint.CountryConstraintL" +
-      "istH\000\032\262\001\n\025CountryConstraintList\022=\n\030total" +
-      "_targeted_countries\030\001 \001(\0132\033.google.proto" +
-      "buf.Int32Value\022Z\n\tcountries\030\002 \003(\0132G.goog" +
-      "le.ads.googleads.v0.common.PolicyTopicCo" +
-      "nstraint.CountryConstraint\032\024\n\022ResellerCo" +
-      "nstraint\032L\n\021CountryConstraint\0227\n\021country" +
-      "_criterion\030\001 \001(\0132\034.google.protobuf.Strin" +
-      "gValueB\007\n\005valueB\301\001\n\"com.google.ads.googl" +
-      "eads.v0.commonB\013PolicyProtoP\001ZDgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v0/common;common\242\002\003GAA\252\002\036Google.Ads.G" +
-      "oogleAds.V0.Common\312\002\036Google\\Ads\\GoogleAd" +
-      "s\\V0\\Commonb\006proto3"
+      "oogle.protobuf.StringValue\"Z\n\031PolicyVali" +
+      "dationParameter\022=\n\027ignorable_policy_topi" +
+      "cs\030\001 \003(\0132\034.google.protobuf.StringValue\"\257" +
+      "\002\n\020PolicyTopicEntry\022+\n\005topic\030\001 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\022Z\n\004type\030\002 \001(\0162L" +
+      ".google.ads.googleads.v0.enums.PolicyTop" +
+      "icEntryTypeEnum.PolicyTopicEntryType\022F\n\t" +
+      "evidences\030\003 \003(\01323.google.ads.googleads.v" +
+      "0.common.PolicyTopicEvidence\022J\n\013constrai" +
+      "nts\030\004 \003(\01325.google.ads.googleads.v0.comm" +
+      "on.PolicyTopicConstraint\"\372\006\n\023PolicyTopic" +
+      "Evidence\0220\n\thttp_code\030\002 \001(\0132\033.google.pro" +
+      "tobuf.Int32ValueH\000\022W\n\014website_list\030\003 \001(\013" +
+      "2?.google.ads.googleads.v0.common.Policy" +
+      "TopicEvidence.WebsiteListH\000\022Q\n\ttext_list" +
+      "\030\004 \001(\0132<.google.ads.googleads.v0.common." +
+      "PolicyTopicEvidence.TextListH\000\0225\n\rlangua" +
+      "ge_code\030\005 \001(\0132\034.google.protobuf.StringVa" +
+      "lueH\000\022h\n\025destination_text_list\030\006 \001(\0132G.g" +
+      "oogle.ads.googleads.v0.common.PolicyTopi" +
+      "cEvidence.DestinationTextListH\000\022g\n\024desti" +
+      "nation_mismatch\030\007 \001(\0132G.google.ads.googl" +
+      "eads.v0.common.PolicyTopicEvidence.Desti" +
+      "nationMismatchH\000\0327\n\010TextList\022+\n\005texts\030\001 " +
+      "\003(\0132\034.google.protobuf.StringValue\032=\n\013Web" +
+      "siteList\022.\n\010websites\030\001 \003(\0132\034.google.prot" +
+      "obuf.StringValue\032N\n\023DestinationTextList\022" +
+      "7\n\021destination_texts\030\001 \003(\0132\034.google.prot" +
+      "obuf.StringValue\032\251\001\n\023DestinationMismatch" +
+      "\022\221\001\n\turl_types\030\001 \003(\0162~.google.ads.google" +
+      "ads.v0.enums.PolicyTopicEvidenceDestinat" +
+      "ionMismatchUrlTypeEnum.PolicyTopicEviden" +
+      "ceDestinationMismatchUrlTypeB\007\n\005value\"\223\006" +
+      "\n\025PolicyTopicConstraint\022n\n\027country_const" +
+      "raint_list\030\001 \001(\0132K.google.ads.googleads." +
+      "v0.common.PolicyTopicConstraint.CountryC" +
+      "onstraintListH\000\022g\n\023reseller_constraint\030\002" +
+      " \001(\0132H.google.ads.googleads.v0.common.Po" +
+      "licyTopicConstraint.ResellerConstraintH\000" +
+      "\022z\n#certificate_missing_in_country_list\030" +
+      "\003 \001(\0132K.google.ads.googleads.v0.common.P" +
+      "olicyTopicConstraint.CountryConstraintLi" +
+      "stH\000\022\202\001\n+certificate_domain_mismatch_in_" +
+      "country_list\030\004 \001(\0132K.google.ads.googlead" +
+      "s.v0.common.PolicyTopicConstraint.Countr" +
+      "yConstraintListH\000\032\262\001\n\025CountryConstraintL" +
+      "ist\022=\n\030total_targeted_countries\030\001 \001(\0132\033." +
+      "google.protobuf.Int32Value\022Z\n\tcountries\030" +
+      "\002 \003(\0132G.google.ads.googleads.v0.common.P" +
+      "olicyTopicConstraint.CountryConstraint\032\024" +
+      "\n\022ResellerConstraint\032L\n\021CountryConstrain" +
+      "t\0227\n\021country_criterion\030\001 \001(\0132\034.google.pr" +
+      "otobuf.StringValueB\007\n\005valueB\301\001\n\"com.goog" +
+      "le.ads.googleads.v0.commonB\013PolicyProtoP" +
+      "\001ZDgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v0/common;common\242\002\003GAA\252\002\036" +
+      "Google.Ads.GoogleAds.V0.Common\312\002\036Google\\" +
+      "Ads\\GoogleAds\\V0\\Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -165,14 +172,20 @@ public final class PolicyProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_PolicyViolationKey_descriptor,
         new java.lang.String[] { "PolicyName", "ViolatingText", });
-    internal_static_google_ads_googleads_v0_common_PolicyTopicEntry_descriptor =
+    internal_static_google_ads_googleads_v0_common_PolicyValidationParameter_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v0_common_PolicyValidationParameter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_PolicyValidationParameter_descriptor,
+        new java.lang.String[] { "IgnorablePolicyTopics", });
+    internal_static_google_ads_googleads_v0_common_PolicyTopicEntry_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v0_common_PolicyTopicEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_PolicyTopicEntry_descriptor,
         new java.lang.String[] { "Topic", "Type", "Evidences", "Constraints", });
     internal_static_google_ads_googleads_v0_common_PolicyTopicEvidence_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_google_ads_googleads_v0_common_PolicyTopicEvidence_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_PolicyTopicEvidence_descriptor,
@@ -202,7 +215,7 @@ public final class PolicyProto {
         internal_static_google_ads_googleads_v0_common_PolicyTopicEvidence_DestinationMismatch_descriptor,
         new java.lang.String[] { "UrlTypes", });
     internal_static_google_ads_googleads_v0_common_PolicyTopicConstraint_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_google_ads_googleads_v0_common_PolicyTopicConstraint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_PolicyTopicConstraint_descriptor,

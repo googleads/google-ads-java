@@ -54,6 +54,11 @@ public final class AdTypeInfosProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_common_ShoppingSmartAdInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_ShoppingProductAdInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_ShoppingProductAdInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -100,12 +105,13 @@ public final class AdTypeInfosProto {
       ".protobuf.StringValue\"P\n\033ExpandedDynamic" +
       "SearchAdInfo\0221\n\013description\030\001 \001(\0132\034.goog" +
       "le.protobuf.StringValue\"\r\n\013HotelAdInfo\"\025" +
-      "\n\023ShoppingSmartAdInfoB\306\001\n\"com.google.ads" +
-      ".googleads.v0.commonB\020AdTypeInfosProtoP\001" +
-      "ZDgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v0/common;common\242\002\003GAA\252\002\036G" +
-      "oogle.Ads.GoogleAds.V0.Common\312\002\036Google\\A" +
-      "ds\\GoogleAds\\V0\\Commonb\006proto3"
+      "\n\023ShoppingSmartAdInfo\"\027\n\025ShoppingProduct" +
+      "AdInfoB\306\001\n\"com.google.ads.googleads.v0.c" +
+      "ommonB\020AdTypeInfosProtoP\001ZDgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "0/common;common\242\002\003GAA\252\002\036Google.Ads.Googl" +
+      "eAds.V0.Common\312\002\036Google\\Ads\\GoogleAds\\V0" +
+      "\\Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -167,6 +173,12 @@ public final class AdTypeInfosProto {
     internal_static_google_ads_googleads_v0_common_ShoppingSmartAdInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_ShoppingSmartAdInfo_descriptor,
+        new java.lang.String[] { });
+    internal_static_google_ads_googleads_v0_common_ShoppingProductAdInfo_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_google_ads_googleads_v0_common_ShoppingProductAdInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_ShoppingProductAdInfo_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.WrappersProto.getDescriptor();
   }

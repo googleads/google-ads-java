@@ -34,6 +34,31 @@ public interface AdGroupAdOperationOrBuilder extends
 
   /**
    * <pre>
+   * Configuration for how policies are validated.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+   */
+  boolean hasPolicyValidationParameter();
+  /**
+   * <pre>
+   * Configuration for how policies are validated.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+   */
+  com.google.ads.googleads.v0.common.PolicyValidationParameter getPolicyValidationParameter();
+  /**
+   * <pre>
+   * Configuration for how policies are validated.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+   */
+  com.google.ads.googleads.v0.common.PolicyValidationParameterOrBuilder getPolicyValidationParameterOrBuilder();
+
+  /**
+   * <pre>
    * Create operation: No resource name is expected for the new ad.
    * </pre>
    *

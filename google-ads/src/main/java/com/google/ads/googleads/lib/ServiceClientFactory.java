@@ -14,17 +14,21 @@
 
 package com.google.ads.googleads.lib;
 
+import com.google.ads.googleads.v0.services.AccountBudgetProposalServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupAdServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
 import com.google.ads.googleads.v0.services.BiddingStrategyServiceClient;
+import com.google.ads.googleads.v0.services.BillingSetupServiceClient;
 import com.google.ads.googleads.v0.services.CampaignBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.CampaignBudgetServiceClient;
 import com.google.ads.googleads.v0.services.CampaignCriterionServiceClient;
 import com.google.ads.googleads.v0.services.CampaignGroupServiceClient;
 import com.google.ads.googleads.v0.services.CampaignServiceClient;
 import com.google.ads.googleads.v0.services.CampaignSharedSetServiceClient;
+import com.google.ads.googleads.v0.services.ChangeStatusServiceClient;
+import com.google.ads.googleads.v0.services.ConversionActionServiceClient;
 import com.google.ads.googleads.v0.services.CustomerServiceClient;
 import com.google.ads.googleads.v0.services.GeoTargetConstantServiceClient;
 import com.google.ads.googleads.v0.services.GoogleAdsFieldServiceClient;
@@ -33,8 +37,11 @@ import com.google.ads.googleads.v0.services.KeywordViewServiceClient;
 import com.google.ads.googleads.v0.services.RecommendationServiceClient;
 import com.google.ads.googleads.v0.services.SharedCriterionServiceClient;
 import com.google.ads.googleads.v0.services.SharedSetServiceClient;
+import com.google.ads.googleads.v0.services.VideoServiceClient;
 
 public interface ServiceClientFactory {
+  AccountBudgetProposalServiceClient getAccountBudgetProposalServiceClient();
+
   AdGroupAdServiceClient getAdGroupAdServiceClient();
 
   AdGroupBidModifierServiceClient getAdGroupBidModifierServiceClient();
@@ -44,6 +51,8 @@ public interface ServiceClientFactory {
   AdGroupServiceClient getAdGroupServiceClient();
 
   BiddingStrategyServiceClient getBiddingStrategyServiceClient();
+
+  BillingSetupServiceClient getBillingSetupServiceClient();
 
   CampaignBidModifierServiceClient getCampaignBidModifierServiceClient();
 
@@ -56,6 +65,10 @@ public interface ServiceClientFactory {
   CampaignServiceClient getCampaignServiceClient();
 
   CampaignSharedSetServiceClient getCampaignSharedSetServiceClient();
+
+  ChangeStatusServiceClient getChangeStatusServiceClient();
+
+  ConversionActionServiceClient getConversionActionServiceClient();
 
   CustomerServiceClient getCustomerServiceClient();
 
@@ -72,4 +85,6 @@ public interface ServiceClientFactory {
   SharedCriterionServiceClient getSharedCriterionServiceClient();
 
   SharedSetServiceClient getSharedSetServiceClient();
+
+  VideoServiceClient getVideoServiceClient();
 }

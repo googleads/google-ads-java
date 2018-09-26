@@ -161,6 +161,14 @@ private static final long serialVersionUID = 0L;
      * <code>RECOMMENDATION_ALREADY_APPLIED = 8;</code>
      */
     RECOMMENDATION_ALREADY_APPLIED(8),
+    /**
+     * <pre>
+     * The recommendation requested to apply has been invalidated.
+     * </pre>
+     *
+     * <code>RECOMMENDATION_INVALIDATED = 9;</code>
+     */
+    RECOMMENDATION_INVALIDATED(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -239,6 +247,14 @@ private static final long serialVersionUID = 0L;
      * <code>RECOMMENDATION_ALREADY_APPLIED = 8;</code>
      */
     public static final int RECOMMENDATION_ALREADY_APPLIED_VALUE = 8;
+    /**
+     * <pre>
+     * The recommendation requested to apply has been invalidated.
+     * </pre>
+     *
+     * <code>RECOMMENDATION_INVALIDATED = 9;</code>
+     */
+    public static final int RECOMMENDATION_INVALIDATED_VALUE = 9;
 
 
     public final int getNumber() {
@@ -268,6 +284,7 @@ private static final long serialVersionUID = 0L;
         case 6: return INVALID_BID_AMOUNT;
         case 7: return ADGROUP_KEYWORD_LIMIT;
         case 8: return RECOMMENDATION_ALREADY_APPLIED;
+        case 9: return RECOMMENDATION_INVALIDATED;
         default: return null;
       }
     }

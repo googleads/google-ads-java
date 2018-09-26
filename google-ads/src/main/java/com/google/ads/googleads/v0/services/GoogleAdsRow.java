@@ -41,6 +41,7 @@ private static final long serialVersionUID = 0L;
       throw new java.lang.NullPointerException();
     }
     int mutable_bitField0_ = 0;
+    int mutable_bitField1_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -393,6 +394,71 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 298: {
+            com.google.ads.googleads.v0.resources.ChangeStatus.Builder subBuilder = null;
+            if (changeStatus_ != null) {
+              subBuilder = changeStatus_.toBuilder();
+            }
+            changeStatus_ = input.readMessage(com.google.ads.googleads.v0.resources.ChangeStatus.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(changeStatus_);
+              changeStatus_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 314: {
+            com.google.ads.googleads.v0.resources.Video.Builder subBuilder = null;
+            if (video_ != null) {
+              subBuilder = video_.toBuilder();
+            }
+            video_ = input.readMessage(com.google.ads.googleads.v0.resources.Video.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(video_);
+              video_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 330: {
+            com.google.ads.googleads.v0.resources.BillingSetup.Builder subBuilder = null;
+            if (billingSetup_ != null) {
+              subBuilder = billingSetup_.toBuilder();
+            }
+            billingSetup_ = input.readMessage(com.google.ads.googleads.v0.resources.BillingSetup.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(billingSetup_);
+              billingSetup_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 338: {
+            com.google.ads.googleads.v0.resources.AccountBudget.Builder subBuilder = null;
+            if (accountBudget_ != null) {
+              subBuilder = accountBudget_.toBuilder();
+            }
+            accountBudget_ = input.readMessage(com.google.ads.googleads.v0.resources.AccountBudget.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(accountBudget_);
+              accountBudget_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 346: {
+            com.google.ads.googleads.v0.resources.AccountBudgetProposal.Builder subBuilder = null;
+            if (accountBudgetProposal_ != null) {
+              subBuilder = accountBudgetProposal_.toBuilder();
+            }
+            accountBudgetProposal_ = input.readMessage(com.google.ads.googleads.v0.resources.AccountBudgetProposal.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(accountBudgetProposal_);
+              accountBudgetProposal_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -423,6 +489,72 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v0_services_GoogleAdsRow_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.ads.googleads.v0.services.GoogleAdsRow.class, com.google.ads.googleads.v0.services.GoogleAdsRow.Builder.class);
+  }
+
+  public static final int ACCOUNT_BUDGET_FIELD_NUMBER = 42;
+  private com.google.ads.googleads.v0.resources.AccountBudget accountBudget_;
+  /**
+   * <pre>
+   * The account budget in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+   */
+  public boolean hasAccountBudget() {
+    return accountBudget_ != null;
+  }
+  /**
+   * <pre>
+   * The account budget in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+   */
+  public com.google.ads.googleads.v0.resources.AccountBudget getAccountBudget() {
+    return accountBudget_ == null ? com.google.ads.googleads.v0.resources.AccountBudget.getDefaultInstance() : accountBudget_;
+  }
+  /**
+   * <pre>
+   * The account budget in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+   */
+  public com.google.ads.googleads.v0.resources.AccountBudgetOrBuilder getAccountBudgetOrBuilder() {
+    return getAccountBudget();
+  }
+
+  public static final int ACCOUNT_BUDGET_PROPOSAL_FIELD_NUMBER = 43;
+  private com.google.ads.googleads.v0.resources.AccountBudgetProposal accountBudgetProposal_;
+  /**
+   * <pre>
+   * The account budget proposal referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+   */
+  public boolean hasAccountBudgetProposal() {
+    return accountBudgetProposal_ != null;
+  }
+  /**
+   * <pre>
+   * The account budget proposal referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+   */
+  public com.google.ads.googleads.v0.resources.AccountBudgetProposal getAccountBudgetProposal() {
+    return accountBudgetProposal_ == null ? com.google.ads.googleads.v0.resources.AccountBudgetProposal.getDefaultInstance() : accountBudgetProposal_;
+  }
+  /**
+   * <pre>
+   * The account budget proposal referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+   */
+  public com.google.ads.googleads.v0.resources.AccountBudgetProposalOrBuilder getAccountBudgetProposalOrBuilder() {
+    return getAccountBudgetProposal();
   }
 
   public static final int AD_GROUP_FIELD_NUMBER = 3;
@@ -588,6 +720,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.resources.BiddingStrategyOrBuilder getBiddingStrategyOrBuilder() {
     return getBiddingStrategy();
+  }
+
+  public static final int BILLING_SETUP_FIELD_NUMBER = 41;
+  private com.google.ads.googleads.v0.resources.BillingSetup billingSetup_;
+  /**
+   * <pre>
+   * The billing setup referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+   */
+  public boolean hasBillingSetup() {
+    return billingSetup_ != null;
+  }
+  /**
+   * <pre>
+   * The billing setup referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+   */
+  public com.google.ads.googleads.v0.resources.BillingSetup getBillingSetup() {
+    return billingSetup_ == null ? com.google.ads.googleads.v0.resources.BillingSetup.getDefaultInstance() : billingSetup_;
+  }
+  /**
+   * <pre>
+   * The billing setup referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+   */
+  public com.google.ads.googleads.v0.resources.BillingSetupOrBuilder getBillingSetupOrBuilder() {
+    return getBillingSetup();
   }
 
   public static final int CAMPAIGN_BUDGET_FIELD_NUMBER = 19;
@@ -788,6 +953,39 @@ private static final long serialVersionUID = 0L;
     return getCampaignSharedSet();
   }
 
+  public static final int CHANGE_STATUS_FIELD_NUMBER = 37;
+  private com.google.ads.googleads.v0.resources.ChangeStatus changeStatus_;
+  /**
+   * <pre>
+   * The ChangeStatus referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+   */
+  public boolean hasChangeStatus() {
+    return changeStatus_ != null;
+  }
+  /**
+   * <pre>
+   * The ChangeStatus referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+   */
+  public com.google.ads.googleads.v0.resources.ChangeStatus getChangeStatus() {
+    return changeStatus_ == null ? com.google.ads.googleads.v0.resources.ChangeStatus.getDefaultInstance() : changeStatus_;
+  }
+  /**
+   * <pre>
+   * The ChangeStatus referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+   */
+  public com.google.ads.googleads.v0.resources.ChangeStatusOrBuilder getChangeStatusOrBuilder() {
+    return getChangeStatus();
+  }
+
   public static final int CUSTOMER_FIELD_NUMBER = 1;
   private com.google.ads.googleads.v0.resources.Customer customer_;
   /**
@@ -984,6 +1182,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.resources.SharedSetOrBuilder getSharedSetOrBuilder() {
     return getSharedSet();
+  }
+
+  public static final int VIDEO_FIELD_NUMBER = 39;
+  private com.google.ads.googleads.v0.resources.Video video_;
+  /**
+   * <pre>
+   * The video referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+   */
+  public boolean hasVideo() {
+    return video_ != null;
+  }
+  /**
+   * <pre>
+   * The video referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+   */
+  public com.google.ads.googleads.v0.resources.Video getVideo() {
+    return video_ == null ? com.google.ads.googleads.v0.resources.Video.getDefaultInstance() : video_;
+  }
+  /**
+   * <pre>
+   * The video referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+   */
+  public com.google.ads.googleads.v0.resources.VideoOrBuilder getVideoOrBuilder() {
+    return getVideo();
   }
 
   public static final int METRICS_FIELD_NUMBER = 4;
@@ -1455,6 +1686,21 @@ private static final long serialVersionUID = 0L;
     if (campaignSharedSet_ != null) {
       output.writeMessage(30, getCampaignSharedSet());
     }
+    if (changeStatus_ != null) {
+      output.writeMessage(37, getChangeStatus());
+    }
+    if (video_ != null) {
+      output.writeMessage(39, getVideo());
+    }
+    if (billingSetup_ != null) {
+      output.writeMessage(41, getBillingSetup());
+    }
+    if (accountBudget_ != null) {
+      output.writeMessage(42, getAccountBudget());
+    }
+    if (accountBudgetProposal_ != null) {
+      output.writeMessage(43, getAccountBudgetProposal());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -1580,6 +1826,26 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(30, getCampaignSharedSet());
     }
+    if (changeStatus_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(37, getChangeStatus());
+    }
+    if (video_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(39, getVideo());
+    }
+    if (billingSetup_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(41, getBillingSetup());
+    }
+    if (accountBudget_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(42, getAccountBudget());
+    }
+    if (accountBudgetProposal_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(43, getAccountBudgetProposal());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1596,6 +1862,16 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v0.services.GoogleAdsRow other = (com.google.ads.googleads.v0.services.GoogleAdsRow) obj;
 
     boolean result = true;
+    result = result && (hasAccountBudget() == other.hasAccountBudget());
+    if (hasAccountBudget()) {
+      result = result && getAccountBudget()
+          .equals(other.getAccountBudget());
+    }
+    result = result && (hasAccountBudgetProposal() == other.hasAccountBudgetProposal());
+    if (hasAccountBudgetProposal()) {
+      result = result && getAccountBudgetProposal()
+          .equals(other.getAccountBudgetProposal());
+    }
     result = result && (hasAdGroup() == other.hasAdGroup());
     if (hasAdGroup()) {
       result = result && getAdGroup()
@@ -1620,6 +1896,11 @@ private static final long serialVersionUID = 0L;
     if (hasBiddingStrategy()) {
       result = result && getBiddingStrategy()
           .equals(other.getBiddingStrategy());
+    }
+    result = result && (hasBillingSetup() == other.hasBillingSetup());
+    if (hasBillingSetup()) {
+      result = result && getBillingSetup()
+          .equals(other.getBillingSetup());
     }
     result = result && (hasCampaignBudget() == other.hasCampaignBudget());
     if (hasCampaignBudget()) {
@@ -1651,6 +1932,11 @@ private static final long serialVersionUID = 0L;
       result = result && getCampaignSharedSet()
           .equals(other.getCampaignSharedSet());
     }
+    result = result && (hasChangeStatus() == other.hasChangeStatus());
+    if (hasChangeStatus()) {
+      result = result && getChangeStatus()
+          .equals(other.getChangeStatus());
+    }
     result = result && (hasCustomer() == other.hasCustomer());
     if (hasCustomer()) {
       result = result && getCustomer()
@@ -1680,6 +1966,11 @@ private static final long serialVersionUID = 0L;
     if (hasSharedSet()) {
       result = result && getSharedSet()
           .equals(other.getSharedSet());
+    }
+    result = result && (hasVideo() == other.hasVideo());
+    if (hasVideo()) {
+      result = result && getVideo()
+          .equals(other.getVideo());
     }
     result = result && (hasMetrics() == other.hasMetrics());
     if (hasMetrics()) {
@@ -1732,6 +2023,14 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasAccountBudget()) {
+      hash = (37 * hash) + ACCOUNT_BUDGET_FIELD_NUMBER;
+      hash = (53 * hash) + getAccountBudget().hashCode();
+    }
+    if (hasAccountBudgetProposal()) {
+      hash = (37 * hash) + ACCOUNT_BUDGET_PROPOSAL_FIELD_NUMBER;
+      hash = (53 * hash) + getAccountBudgetProposal().hashCode();
+    }
     if (hasAdGroup()) {
       hash = (37 * hash) + AD_GROUP_FIELD_NUMBER;
       hash = (53 * hash) + getAdGroup().hashCode();
@@ -1751,6 +2050,10 @@ private static final long serialVersionUID = 0L;
     if (hasBiddingStrategy()) {
       hash = (37 * hash) + BIDDING_STRATEGY_FIELD_NUMBER;
       hash = (53 * hash) + getBiddingStrategy().hashCode();
+    }
+    if (hasBillingSetup()) {
+      hash = (37 * hash) + BILLING_SETUP_FIELD_NUMBER;
+      hash = (53 * hash) + getBillingSetup().hashCode();
     }
     if (hasCampaignBudget()) {
       hash = (37 * hash) + CAMPAIGN_BUDGET_FIELD_NUMBER;
@@ -1776,6 +2079,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CAMPAIGN_SHARED_SET_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignSharedSet().hashCode();
     }
+    if (hasChangeStatus()) {
+      hash = (37 * hash) + CHANGE_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getChangeStatus().hashCode();
+    }
     if (hasCustomer()) {
       hash = (37 * hash) + CUSTOMER_FIELD_NUMBER;
       hash = (53 * hash) + getCustomer().hashCode();
@@ -1799,6 +2106,10 @@ private static final long serialVersionUID = 0L;
     if (hasSharedSet()) {
       hash = (37 * hash) + SHARED_SET_FIELD_NUMBER;
       hash = (53 * hash) + getSharedSet().hashCode();
+    }
+    if (hasVideo()) {
+      hash = (37 * hash) + VIDEO_FIELD_NUMBER;
+      hash = (53 * hash) + getVideo().hashCode();
     }
     if (hasMetrics()) {
       hash = (37 * hash) + METRICS_FIELD_NUMBER;
@@ -1975,6 +2286,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      if (accountBudgetBuilder_ == null) {
+        accountBudget_ = null;
+      } else {
+        accountBudget_ = null;
+        accountBudgetBuilder_ = null;
+      }
+      if (accountBudgetProposalBuilder_ == null) {
+        accountBudgetProposal_ = null;
+      } else {
+        accountBudgetProposal_ = null;
+        accountBudgetProposalBuilder_ = null;
+      }
       if (adGroupBuilder_ == null) {
         adGroup_ = null;
       } else {
@@ -2004,6 +2327,12 @@ private static final long serialVersionUID = 0L;
       } else {
         biddingStrategy_ = null;
         biddingStrategyBuilder_ = null;
+      }
+      if (billingSetupBuilder_ == null) {
+        billingSetup_ = null;
+      } else {
+        billingSetup_ = null;
+        billingSetupBuilder_ = null;
       }
       if (campaignBudgetBuilder_ == null) {
         campaignBudget_ = null;
@@ -2041,6 +2370,12 @@ private static final long serialVersionUID = 0L;
         campaignSharedSet_ = null;
         campaignSharedSetBuilder_ = null;
       }
+      if (changeStatusBuilder_ == null) {
+        changeStatus_ = null;
+      } else {
+        changeStatus_ = null;
+        changeStatusBuilder_ = null;
+      }
       if (customerBuilder_ == null) {
         customer_ = null;
       } else {
@@ -2076,6 +2411,12 @@ private static final long serialVersionUID = 0L;
       } else {
         sharedSet_ = null;
         sharedSetBuilder_ = null;
+      }
+      if (videoBuilder_ == null) {
+        video_ = null;
+      } else {
+        video_ = null;
+        videoBuilder_ = null;
       }
       if (metricsBuilder_ == null) {
         metrics_ = null;
@@ -2155,6 +2496,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v0.services.GoogleAdsRow buildPartial() {
       com.google.ads.googleads.v0.services.GoogleAdsRow result = new com.google.ads.googleads.v0.services.GoogleAdsRow(this);
+      if (accountBudgetBuilder_ == null) {
+        result.accountBudget_ = accountBudget_;
+      } else {
+        result.accountBudget_ = accountBudgetBuilder_.build();
+      }
+      if (accountBudgetProposalBuilder_ == null) {
+        result.accountBudgetProposal_ = accountBudgetProposal_;
+      } else {
+        result.accountBudgetProposal_ = accountBudgetProposalBuilder_.build();
+      }
       if (adGroupBuilder_ == null) {
         result.adGroup_ = adGroup_;
       } else {
@@ -2179,6 +2530,11 @@ private static final long serialVersionUID = 0L;
         result.biddingStrategy_ = biddingStrategy_;
       } else {
         result.biddingStrategy_ = biddingStrategyBuilder_.build();
+      }
+      if (billingSetupBuilder_ == null) {
+        result.billingSetup_ = billingSetup_;
+      } else {
+        result.billingSetup_ = billingSetupBuilder_.build();
       }
       if (campaignBudgetBuilder_ == null) {
         result.campaignBudget_ = campaignBudget_;
@@ -2210,6 +2566,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.campaignSharedSet_ = campaignSharedSetBuilder_.build();
       }
+      if (changeStatusBuilder_ == null) {
+        result.changeStatus_ = changeStatus_;
+      } else {
+        result.changeStatus_ = changeStatusBuilder_.build();
+      }
       if (customerBuilder_ == null) {
         result.customer_ = customer_;
       } else {
@@ -2239,6 +2600,11 @@ private static final long serialVersionUID = 0L;
         result.sharedSet_ = sharedSet_;
       } else {
         result.sharedSet_ = sharedSetBuilder_.build();
+      }
+      if (videoBuilder_ == null) {
+        result.video_ = video_;
+      } else {
+        result.video_ = videoBuilder_.build();
       }
       if (metricsBuilder_ == null) {
         result.metrics_ = metrics_;
@@ -2328,6 +2694,12 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v0.services.GoogleAdsRow other) {
       if (other == com.google.ads.googleads.v0.services.GoogleAdsRow.getDefaultInstance()) return this;
+      if (other.hasAccountBudget()) {
+        mergeAccountBudget(other.getAccountBudget());
+      }
+      if (other.hasAccountBudgetProposal()) {
+        mergeAccountBudgetProposal(other.getAccountBudgetProposal());
+      }
       if (other.hasAdGroup()) {
         mergeAdGroup(other.getAdGroup());
       }
@@ -2342,6 +2714,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasBiddingStrategy()) {
         mergeBiddingStrategy(other.getBiddingStrategy());
+      }
+      if (other.hasBillingSetup()) {
+        mergeBillingSetup(other.getBillingSetup());
       }
       if (other.hasCampaignBudget()) {
         mergeCampaignBudget(other.getCampaignBudget());
@@ -2361,6 +2736,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasCampaignSharedSet()) {
         mergeCampaignSharedSet(other.getCampaignSharedSet());
       }
+      if (other.hasChangeStatus()) {
+        mergeChangeStatus(other.getChangeStatus());
+      }
       if (other.hasCustomer()) {
         mergeCustomer(other.getCustomer());
       }
@@ -2378,6 +2756,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSharedSet()) {
         mergeSharedSet(other.getSharedSet());
+      }
+      if (other.hasVideo()) {
+        mergeVideo(other.getVideo());
       }
       if (other.hasMetrics()) {
         mergeMetrics(other.getMetrics());
@@ -2442,6 +2823,312 @@ private static final long serialVersionUID = 0L;
         }
       }
       return this;
+    }
+
+    private com.google.ads.googleads.v0.resources.AccountBudget accountBudget_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.AccountBudget, com.google.ads.googleads.v0.resources.AccountBudget.Builder, com.google.ads.googleads.v0.resources.AccountBudgetOrBuilder> accountBudgetBuilder_;
+    /**
+     * <pre>
+     * The account budget in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+     */
+    public boolean hasAccountBudget() {
+      return accountBudgetBuilder_ != null || accountBudget_ != null;
+    }
+    /**
+     * <pre>
+     * The account budget in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AccountBudget getAccountBudget() {
+      if (accountBudgetBuilder_ == null) {
+        return accountBudget_ == null ? com.google.ads.googleads.v0.resources.AccountBudget.getDefaultInstance() : accountBudget_;
+      } else {
+        return accountBudgetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The account budget in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+     */
+    public Builder setAccountBudget(com.google.ads.googleads.v0.resources.AccountBudget value) {
+      if (accountBudgetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        accountBudget_ = value;
+        onChanged();
+      } else {
+        accountBudgetBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The account budget in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+     */
+    public Builder setAccountBudget(
+        com.google.ads.googleads.v0.resources.AccountBudget.Builder builderForValue) {
+      if (accountBudgetBuilder_ == null) {
+        accountBudget_ = builderForValue.build();
+        onChanged();
+      } else {
+        accountBudgetBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The account budget in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+     */
+    public Builder mergeAccountBudget(com.google.ads.googleads.v0.resources.AccountBudget value) {
+      if (accountBudgetBuilder_ == null) {
+        if (accountBudget_ != null) {
+          accountBudget_ =
+            com.google.ads.googleads.v0.resources.AccountBudget.newBuilder(accountBudget_).mergeFrom(value).buildPartial();
+        } else {
+          accountBudget_ = value;
+        }
+        onChanged();
+      } else {
+        accountBudgetBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The account budget in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+     */
+    public Builder clearAccountBudget() {
+      if (accountBudgetBuilder_ == null) {
+        accountBudget_ = null;
+        onChanged();
+      } else {
+        accountBudget_ = null;
+        accountBudgetBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The account budget in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AccountBudget.Builder getAccountBudgetBuilder() {
+      
+      onChanged();
+      return getAccountBudgetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The account budget in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AccountBudgetOrBuilder getAccountBudgetOrBuilder() {
+      if (accountBudgetBuilder_ != null) {
+        return accountBudgetBuilder_.getMessageOrBuilder();
+      } else {
+        return accountBudget_ == null ?
+            com.google.ads.googleads.v0.resources.AccountBudget.getDefaultInstance() : accountBudget_;
+      }
+    }
+    /**
+     * <pre>
+     * The account budget in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.AccountBudget, com.google.ads.googleads.v0.resources.AccountBudget.Builder, com.google.ads.googleads.v0.resources.AccountBudgetOrBuilder> 
+        getAccountBudgetFieldBuilder() {
+      if (accountBudgetBuilder_ == null) {
+        accountBudgetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.AccountBudget, com.google.ads.googleads.v0.resources.AccountBudget.Builder, com.google.ads.googleads.v0.resources.AccountBudgetOrBuilder>(
+                getAccountBudget(),
+                getParentForChildren(),
+                isClean());
+        accountBudget_ = null;
+      }
+      return accountBudgetBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.AccountBudgetProposal accountBudgetProposal_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.AccountBudgetProposal, com.google.ads.googleads.v0.resources.AccountBudgetProposal.Builder, com.google.ads.googleads.v0.resources.AccountBudgetProposalOrBuilder> accountBudgetProposalBuilder_;
+    /**
+     * <pre>
+     * The account budget proposal referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+     */
+    public boolean hasAccountBudgetProposal() {
+      return accountBudgetProposalBuilder_ != null || accountBudgetProposal_ != null;
+    }
+    /**
+     * <pre>
+     * The account budget proposal referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AccountBudgetProposal getAccountBudgetProposal() {
+      if (accountBudgetProposalBuilder_ == null) {
+        return accountBudgetProposal_ == null ? com.google.ads.googleads.v0.resources.AccountBudgetProposal.getDefaultInstance() : accountBudgetProposal_;
+      } else {
+        return accountBudgetProposalBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The account budget proposal referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+     */
+    public Builder setAccountBudgetProposal(com.google.ads.googleads.v0.resources.AccountBudgetProposal value) {
+      if (accountBudgetProposalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        accountBudgetProposal_ = value;
+        onChanged();
+      } else {
+        accountBudgetProposalBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The account budget proposal referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+     */
+    public Builder setAccountBudgetProposal(
+        com.google.ads.googleads.v0.resources.AccountBudgetProposal.Builder builderForValue) {
+      if (accountBudgetProposalBuilder_ == null) {
+        accountBudgetProposal_ = builderForValue.build();
+        onChanged();
+      } else {
+        accountBudgetProposalBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The account budget proposal referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+     */
+    public Builder mergeAccountBudgetProposal(com.google.ads.googleads.v0.resources.AccountBudgetProposal value) {
+      if (accountBudgetProposalBuilder_ == null) {
+        if (accountBudgetProposal_ != null) {
+          accountBudgetProposal_ =
+            com.google.ads.googleads.v0.resources.AccountBudgetProposal.newBuilder(accountBudgetProposal_).mergeFrom(value).buildPartial();
+        } else {
+          accountBudgetProposal_ = value;
+        }
+        onChanged();
+      } else {
+        accountBudgetProposalBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The account budget proposal referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+     */
+    public Builder clearAccountBudgetProposal() {
+      if (accountBudgetProposalBuilder_ == null) {
+        accountBudgetProposal_ = null;
+        onChanged();
+      } else {
+        accountBudgetProposal_ = null;
+        accountBudgetProposalBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The account budget proposal referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AccountBudgetProposal.Builder getAccountBudgetProposalBuilder() {
+      
+      onChanged();
+      return getAccountBudgetProposalFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The account budget proposal referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AccountBudgetProposalOrBuilder getAccountBudgetProposalOrBuilder() {
+      if (accountBudgetProposalBuilder_ != null) {
+        return accountBudgetProposalBuilder_.getMessageOrBuilder();
+      } else {
+        return accountBudgetProposal_ == null ?
+            com.google.ads.googleads.v0.resources.AccountBudgetProposal.getDefaultInstance() : accountBudgetProposal_;
+      }
+    }
+    /**
+     * <pre>
+     * The account budget proposal referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.AccountBudgetProposal, com.google.ads.googleads.v0.resources.AccountBudgetProposal.Builder, com.google.ads.googleads.v0.resources.AccountBudgetProposalOrBuilder> 
+        getAccountBudgetProposalFieldBuilder() {
+      if (accountBudgetProposalBuilder_ == null) {
+        accountBudgetProposalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.AccountBudgetProposal, com.google.ads.googleads.v0.resources.AccountBudgetProposal.Builder, com.google.ads.googleads.v0.resources.AccountBudgetProposalOrBuilder>(
+                getAccountBudgetProposal(),
+                getParentForChildren(),
+                isClean());
+        accountBudgetProposal_ = null;
+      }
+      return accountBudgetProposalBuilder_;
     }
 
     private com.google.ads.googleads.v0.resources.AdGroup adGroup_ = null;
@@ -3207,6 +3894,159 @@ private static final long serialVersionUID = 0L;
         biddingStrategy_ = null;
       }
       return biddingStrategyBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.BillingSetup billingSetup_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.BillingSetup, com.google.ads.googleads.v0.resources.BillingSetup.Builder, com.google.ads.googleads.v0.resources.BillingSetupOrBuilder> billingSetupBuilder_;
+    /**
+     * <pre>
+     * The billing setup referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+     */
+    public boolean hasBillingSetup() {
+      return billingSetupBuilder_ != null || billingSetup_ != null;
+    }
+    /**
+     * <pre>
+     * The billing setup referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+     */
+    public com.google.ads.googleads.v0.resources.BillingSetup getBillingSetup() {
+      if (billingSetupBuilder_ == null) {
+        return billingSetup_ == null ? com.google.ads.googleads.v0.resources.BillingSetup.getDefaultInstance() : billingSetup_;
+      } else {
+        return billingSetupBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The billing setup referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+     */
+    public Builder setBillingSetup(com.google.ads.googleads.v0.resources.BillingSetup value) {
+      if (billingSetupBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        billingSetup_ = value;
+        onChanged();
+      } else {
+        billingSetupBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The billing setup referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+     */
+    public Builder setBillingSetup(
+        com.google.ads.googleads.v0.resources.BillingSetup.Builder builderForValue) {
+      if (billingSetupBuilder_ == null) {
+        billingSetup_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingSetupBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The billing setup referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+     */
+    public Builder mergeBillingSetup(com.google.ads.googleads.v0.resources.BillingSetup value) {
+      if (billingSetupBuilder_ == null) {
+        if (billingSetup_ != null) {
+          billingSetup_ =
+            com.google.ads.googleads.v0.resources.BillingSetup.newBuilder(billingSetup_).mergeFrom(value).buildPartial();
+        } else {
+          billingSetup_ = value;
+        }
+        onChanged();
+      } else {
+        billingSetupBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The billing setup referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+     */
+    public Builder clearBillingSetup() {
+      if (billingSetupBuilder_ == null) {
+        billingSetup_ = null;
+        onChanged();
+      } else {
+        billingSetup_ = null;
+        billingSetupBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The billing setup referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+     */
+    public com.google.ads.googleads.v0.resources.BillingSetup.Builder getBillingSetupBuilder() {
+      
+      onChanged();
+      return getBillingSetupFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The billing setup referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+     */
+    public com.google.ads.googleads.v0.resources.BillingSetupOrBuilder getBillingSetupOrBuilder() {
+      if (billingSetupBuilder_ != null) {
+        return billingSetupBuilder_.getMessageOrBuilder();
+      } else {
+        return billingSetup_ == null ?
+            com.google.ads.googleads.v0.resources.BillingSetup.getDefaultInstance() : billingSetup_;
+      }
+    }
+    /**
+     * <pre>
+     * The billing setup referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.BillingSetup, com.google.ads.googleads.v0.resources.BillingSetup.Builder, com.google.ads.googleads.v0.resources.BillingSetupOrBuilder> 
+        getBillingSetupFieldBuilder() {
+      if (billingSetupBuilder_ == null) {
+        billingSetupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.BillingSetup, com.google.ads.googleads.v0.resources.BillingSetup.Builder, com.google.ads.googleads.v0.resources.BillingSetupOrBuilder>(
+                getBillingSetup(),
+                getParentForChildren(),
+                isClean());
+        billingSetup_ = null;
+      }
+      return billingSetupBuilder_;
     }
 
     private com.google.ads.googleads.v0.resources.CampaignBudget campaignBudget_ = null;
@@ -4127,6 +4967,159 @@ private static final long serialVersionUID = 0L;
       return campaignSharedSetBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.ChangeStatus changeStatus_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.ChangeStatus, com.google.ads.googleads.v0.resources.ChangeStatus.Builder, com.google.ads.googleads.v0.resources.ChangeStatusOrBuilder> changeStatusBuilder_;
+    /**
+     * <pre>
+     * The ChangeStatus referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+     */
+    public boolean hasChangeStatus() {
+      return changeStatusBuilder_ != null || changeStatus_ != null;
+    }
+    /**
+     * <pre>
+     * The ChangeStatus referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+     */
+    public com.google.ads.googleads.v0.resources.ChangeStatus getChangeStatus() {
+      if (changeStatusBuilder_ == null) {
+        return changeStatus_ == null ? com.google.ads.googleads.v0.resources.ChangeStatus.getDefaultInstance() : changeStatus_;
+      } else {
+        return changeStatusBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The ChangeStatus referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+     */
+    public Builder setChangeStatus(com.google.ads.googleads.v0.resources.ChangeStatus value) {
+      if (changeStatusBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        changeStatus_ = value;
+        onChanged();
+      } else {
+        changeStatusBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ChangeStatus referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+     */
+    public Builder setChangeStatus(
+        com.google.ads.googleads.v0.resources.ChangeStatus.Builder builderForValue) {
+      if (changeStatusBuilder_ == null) {
+        changeStatus_ = builderForValue.build();
+        onChanged();
+      } else {
+        changeStatusBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ChangeStatus referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+     */
+    public Builder mergeChangeStatus(com.google.ads.googleads.v0.resources.ChangeStatus value) {
+      if (changeStatusBuilder_ == null) {
+        if (changeStatus_ != null) {
+          changeStatus_ =
+            com.google.ads.googleads.v0.resources.ChangeStatus.newBuilder(changeStatus_).mergeFrom(value).buildPartial();
+        } else {
+          changeStatus_ = value;
+        }
+        onChanged();
+      } else {
+        changeStatusBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ChangeStatus referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+     */
+    public Builder clearChangeStatus() {
+      if (changeStatusBuilder_ == null) {
+        changeStatus_ = null;
+        onChanged();
+      } else {
+        changeStatus_ = null;
+        changeStatusBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ChangeStatus referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+     */
+    public com.google.ads.googleads.v0.resources.ChangeStatus.Builder getChangeStatusBuilder() {
+      
+      onChanged();
+      return getChangeStatusFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The ChangeStatus referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+     */
+    public com.google.ads.googleads.v0.resources.ChangeStatusOrBuilder getChangeStatusOrBuilder() {
+      if (changeStatusBuilder_ != null) {
+        return changeStatusBuilder_.getMessageOrBuilder();
+      } else {
+        return changeStatus_ == null ?
+            com.google.ads.googleads.v0.resources.ChangeStatus.getDefaultInstance() : changeStatus_;
+      }
+    }
+    /**
+     * <pre>
+     * The ChangeStatus referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.ChangeStatus, com.google.ads.googleads.v0.resources.ChangeStatus.Builder, com.google.ads.googleads.v0.resources.ChangeStatusOrBuilder> 
+        getChangeStatusFieldBuilder() {
+      if (changeStatusBuilder_ == null) {
+        changeStatusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.ChangeStatus, com.google.ads.googleads.v0.resources.ChangeStatus.Builder, com.google.ads.googleads.v0.resources.ChangeStatusOrBuilder>(
+                getChangeStatus(),
+                getParentForChildren(),
+                isClean());
+        changeStatus_ = null;
+      }
+      return changeStatusBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.Customer customer_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.Customer, com.google.ads.googleads.v0.resources.Customer.Builder, com.google.ads.googleads.v0.resources.CustomerOrBuilder> customerBuilder_;
@@ -5043,6 +6036,159 @@ private static final long serialVersionUID = 0L;
         sharedSet_ = null;
       }
       return sharedSetBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.Video video_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.Video, com.google.ads.googleads.v0.resources.Video.Builder, com.google.ads.googleads.v0.resources.VideoOrBuilder> videoBuilder_;
+    /**
+     * <pre>
+     * The video referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+     */
+    public boolean hasVideo() {
+      return videoBuilder_ != null || video_ != null;
+    }
+    /**
+     * <pre>
+     * The video referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+     */
+    public com.google.ads.googleads.v0.resources.Video getVideo() {
+      if (videoBuilder_ == null) {
+        return video_ == null ? com.google.ads.googleads.v0.resources.Video.getDefaultInstance() : video_;
+      } else {
+        return videoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The video referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+     */
+    public Builder setVideo(com.google.ads.googleads.v0.resources.Video value) {
+      if (videoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        video_ = value;
+        onChanged();
+      } else {
+        videoBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The video referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+     */
+    public Builder setVideo(
+        com.google.ads.googleads.v0.resources.Video.Builder builderForValue) {
+      if (videoBuilder_ == null) {
+        video_ = builderForValue.build();
+        onChanged();
+      } else {
+        videoBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The video referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+     */
+    public Builder mergeVideo(com.google.ads.googleads.v0.resources.Video value) {
+      if (videoBuilder_ == null) {
+        if (video_ != null) {
+          video_ =
+            com.google.ads.googleads.v0.resources.Video.newBuilder(video_).mergeFrom(value).buildPartial();
+        } else {
+          video_ = value;
+        }
+        onChanged();
+      } else {
+        videoBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The video referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+     */
+    public Builder clearVideo() {
+      if (videoBuilder_ == null) {
+        video_ = null;
+        onChanged();
+      } else {
+        video_ = null;
+        videoBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The video referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+     */
+    public com.google.ads.googleads.v0.resources.Video.Builder getVideoBuilder() {
+      
+      onChanged();
+      return getVideoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The video referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+     */
+    public com.google.ads.googleads.v0.resources.VideoOrBuilder getVideoOrBuilder() {
+      if (videoBuilder_ != null) {
+        return videoBuilder_.getMessageOrBuilder();
+      } else {
+        return video_ == null ?
+            com.google.ads.googleads.v0.resources.Video.getDefaultInstance() : video_;
+      }
+    }
+    /**
+     * <pre>
+     * The video referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.Video, com.google.ads.googleads.v0.resources.Video.Builder, com.google.ads.googleads.v0.resources.VideoOrBuilder> 
+        getVideoFieldBuilder() {
+      if (videoBuilder_ == null) {
+        videoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.Video, com.google.ads.googleads.v0.resources.Video.Builder, com.google.ads.googleads.v0.resources.VideoOrBuilder>(
+                getVideo(),
+                getParentForChildren(),
+                isClean());
+        video_ = null;
+      }
+      return videoBuilder_;
     }
 
     private com.google.ads.googleads.v0.common.Metrics metrics_ = null;

@@ -18,9 +18,6 @@ package com.google.ads.googleads.v0.services;
 import static com.google.ads.googleads.v0.services.GoogleAdsFieldServiceClient.SearchGoogleAdsFieldsPagedResponse;
 
 import com.google.ads.googleads.v0.resources.GoogleAdsField;
-import com.google.ads.googleads.v0.services.GetGoogleAdsFieldRequest;
-import com.google.ads.googleads.v0.services.SearchGoogleAdsFieldsRequest;
-import com.google.ads.googleads.v0.services.SearchGoogleAdsFieldsResponse;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -44,17 +41,21 @@ import org.junit.Test;
 
 @javax.annotation.Generated("by GAPIC")
 public class GoogleAdsFieldServiceClientTest {
+  private static MockAccountBudgetProposalService mockAccountBudgetProposalService;
   private static MockAdGroupAdService mockAdGroupAdService;
   private static MockAdGroupBidModifierService mockAdGroupBidModifierService;
   private static MockAdGroupCriterionService mockAdGroupCriterionService;
   private static MockAdGroupService mockAdGroupService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
+  private static MockBillingSetupService mockBillingSetupService;
   private static MockCampaignBidModifierService mockCampaignBidModifierService;
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
   private static MockCampaignGroupService mockCampaignGroupService;
   private static MockCampaignService mockCampaignService;
   private static MockCampaignSharedSetService mockCampaignSharedSetService;
+  private static MockChangeStatusService mockChangeStatusService;
+  private static MockConversionActionService mockConversionActionService;
   private static MockCustomerService mockCustomerService;
   private static MockGeoTargetConstantService mockGeoTargetConstantService;
   private static MockGoogleAdsFieldService mockGoogleAdsFieldService;
@@ -63,23 +64,28 @@ public class GoogleAdsFieldServiceClientTest {
   private static MockRecommendationService mockRecommendationService;
   private static MockSharedCriterionService mockSharedCriterionService;
   private static MockSharedSetService mockSharedSetService;
+  private static MockVideoService mockVideoService;
   private static MockServiceHelper serviceHelper;
   private GoogleAdsFieldServiceClient client;
   private LocalChannelProvider channelProvider;
 
   @BeforeClass
   public static void startStaticServer() {
+    mockAccountBudgetProposalService = new MockAccountBudgetProposalService();
     mockAdGroupAdService = new MockAdGroupAdService();
     mockAdGroupBidModifierService = new MockAdGroupBidModifierService();
     mockAdGroupCriterionService = new MockAdGroupCriterionService();
     mockAdGroupService = new MockAdGroupService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
+    mockBillingSetupService = new MockBillingSetupService();
     mockCampaignBidModifierService = new MockCampaignBidModifierService();
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
     mockCampaignGroupService = new MockCampaignGroupService();
     mockCampaignService = new MockCampaignService();
     mockCampaignSharedSetService = new MockCampaignSharedSetService();
+    mockChangeStatusService = new MockChangeStatusService();
+    mockConversionActionService = new MockConversionActionService();
     mockCustomerService = new MockCustomerService();
     mockGeoTargetConstantService = new MockGeoTargetConstantService();
     mockGoogleAdsFieldService = new MockGoogleAdsFieldService();
@@ -88,21 +94,26 @@ public class GoogleAdsFieldServiceClientTest {
     mockRecommendationService = new MockRecommendationService();
     mockSharedCriterionService = new MockSharedCriterionService();
     mockSharedSetService = new MockSharedSetService();
+    mockVideoService = new MockVideoService();
     serviceHelper =
         new MockServiceHelper(
             "in-process-1",
             Arrays.<MockGrpcService>asList(
+                mockAccountBudgetProposalService,
                 mockAdGroupAdService,
                 mockAdGroupBidModifierService,
                 mockAdGroupCriterionService,
                 mockAdGroupService,
                 mockBiddingStrategyService,
+                mockBillingSetupService,
                 mockCampaignBidModifierService,
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
                 mockCampaignGroupService,
                 mockCampaignService,
                 mockCampaignSharedSetService,
+                mockChangeStatusService,
+                mockConversionActionService,
                 mockCustomerService,
                 mockGeoTargetConstantService,
                 mockGoogleAdsFieldService,
@@ -110,7 +121,8 @@ public class GoogleAdsFieldServiceClientTest {
                 mockKeywordViewService,
                 mockRecommendationService,
                 mockSharedCriterionService,
-                mockSharedSetService));
+                mockSharedSetService,
+                mockVideoService));
     serviceHelper.start();
   }
 

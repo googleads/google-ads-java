@@ -9,6 +9,56 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The account budget in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+   */
+  boolean hasAccountBudget();
+  /**
+   * <pre>
+   * The account budget in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+   */
+  com.google.ads.googleads.v0.resources.AccountBudget getAccountBudget();
+  /**
+   * <pre>
+   * The account budget in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AccountBudget account_budget = 42;</code>
+   */
+  com.google.ads.googleads.v0.resources.AccountBudgetOrBuilder getAccountBudgetOrBuilder();
+
+  /**
+   * <pre>
+   * The account budget proposal referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+   */
+  boolean hasAccountBudgetProposal();
+  /**
+   * <pre>
+   * The account budget proposal referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+   */
+  com.google.ads.googleads.v0.resources.AccountBudgetProposal getAccountBudgetProposal();
+  /**
+   * <pre>
+   * The account budget proposal referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AccountBudgetProposal account_budget_proposal = 43;</code>
+   */
+  com.google.ads.googleads.v0.resources.AccountBudgetProposalOrBuilder getAccountBudgetProposalOrBuilder();
+
+  /**
+   * <pre>
    * The ad group referenced in the query.
    * </pre>
    *
@@ -131,6 +181,31 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.BiddingStrategy bidding_strategy = 18;</code>
    */
   com.google.ads.googleads.v0.resources.BiddingStrategyOrBuilder getBiddingStrategyOrBuilder();
+
+  /**
+   * <pre>
+   * The billing setup referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+   */
+  boolean hasBillingSetup();
+  /**
+   * <pre>
+   * The billing setup referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+   */
+  com.google.ads.googleads.v0.resources.BillingSetup getBillingSetup();
+  /**
+   * <pre>
+   * The billing setup referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.BillingSetup billing_setup = 41;</code>
+   */
+  com.google.ads.googleads.v0.resources.BillingSetupOrBuilder getBillingSetupOrBuilder();
 
   /**
    * <pre>
@@ -284,6 +359,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The ChangeStatus referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+   */
+  boolean hasChangeStatus();
+  /**
+   * <pre>
+   * The ChangeStatus referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+   */
+  com.google.ads.googleads.v0.resources.ChangeStatus getChangeStatus();
+  /**
+   * <pre>
+   * The ChangeStatus referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
+   */
+  com.google.ads.googleads.v0.resources.ChangeStatusOrBuilder getChangeStatusOrBuilder();
+
+  /**
+   * <pre>
    * The customer referenced in the query.
    * </pre>
    *
@@ -431,6 +531,31 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.SharedSet shared_set = 27;</code>
    */
   com.google.ads.googleads.v0.resources.SharedSetOrBuilder getSharedSetOrBuilder();
+
+  /**
+   * <pre>
+   * The video referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+   */
+  boolean hasVideo();
+  /**
+   * <pre>
+   * The video referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+   */
+  com.google.ads.googleads.v0.resources.Video getVideo();
+  /**
+   * <pre>
+   * The video referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Video video = 39;</code>
+   */
+  com.google.ads.googleads.v0.resources.VideoOrBuilder getVideoOrBuilder();
 
   /**
    * <pre>

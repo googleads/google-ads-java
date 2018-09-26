@@ -393,6 +393,15 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_HOTEL_SETTING = 39;</code>
      */
     MISSING_HOTEL_SETTING(39),
+    /**
+     * <pre>
+     * A Campaign cannot use shared campaign budgets and be part of a campaign
+     * group.
+     * </pre>
+     *
+     * <code>CANNOT_USE_SHARED_CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_GROUP = 40;</code>
+     */
+    CANNOT_USE_SHARED_CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_GROUP(40),
     UNRECOGNIZED(-1),
     ;
 
@@ -703,6 +712,15 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_HOTEL_SETTING = 39;</code>
      */
     public static final int MISSING_HOTEL_SETTING_VALUE = 39;
+    /**
+     * <pre>
+     * A Campaign cannot use shared campaign budgets and be part of a campaign
+     * group.
+     * </pre>
+     *
+     * <code>CANNOT_USE_SHARED_CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_GROUP = 40;</code>
+     */
+    public static final int CANNOT_USE_SHARED_CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_GROUP_VALUE = 40;
 
 
     public final int getNumber() {
@@ -760,6 +778,7 @@ private static final long serialVersionUID = 0L;
         case 37: return MISSING_HOTEL_CUSTOMER_LINK;
         case 38: return INVALID_HOTEL_CUSTOMER_LINK;
         case 39: return MISSING_HOTEL_SETTING;
+        case 40: return CANNOT_USE_SHARED_CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_GROUP;
         default: return null;
       }
     }

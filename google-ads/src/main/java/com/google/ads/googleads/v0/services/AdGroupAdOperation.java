@@ -93,6 +93,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 42: {
+            com.google.ads.googleads.v0.common.PolicyValidationParameter.Builder subBuilder = null;
+            if (policyValidationParameter_ != null) {
+              subBuilder = policyValidationParameter_.toBuilder();
+            }
+            policyValidationParameter_ = input.readMessage(com.google.ads.googleads.v0.common.PolicyValidationParameter.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(policyValidationParameter_);
+              policyValidationParameter_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -196,6 +209,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
     return getUpdateMask();
+  }
+
+  public static final int POLICY_VALIDATION_PARAMETER_FIELD_NUMBER = 5;
+  private com.google.ads.googleads.v0.common.PolicyValidationParameter policyValidationParameter_;
+  /**
+   * <pre>
+   * Configuration for how policies are validated.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+   */
+  public boolean hasPolicyValidationParameter() {
+    return policyValidationParameter_ != null;
+  }
+  /**
+   * <pre>
+   * Configuration for how policies are validated.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+   */
+  public com.google.ads.googleads.v0.common.PolicyValidationParameter getPolicyValidationParameter() {
+    return policyValidationParameter_ == null ? com.google.ads.googleads.v0.common.PolicyValidationParameter.getDefaultInstance() : policyValidationParameter_;
+  }
+  /**
+   * <pre>
+   * Configuration for how policies are validated.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+   */
+  public com.google.ads.googleads.v0.common.PolicyValidationParameterOrBuilder getPolicyValidationParameterOrBuilder() {
+    return getPolicyValidationParameter();
   }
 
   public static final int CREATE_FIELD_NUMBER = 1;
@@ -355,6 +401,9 @@ private static final long serialVersionUID = 0L;
     if (updateMask_ != null) {
       output.writeMessage(4, getUpdateMask());
     }
+    if (policyValidationParameter_ != null) {
+      output.writeMessage(5, getPolicyValidationParameter());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -379,6 +428,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getUpdateMask());
     }
+    if (policyValidationParameter_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getPolicyValidationParameter());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -399,6 +452,11 @@ private static final long serialVersionUID = 0L;
     if (hasUpdateMask()) {
       result = result && getUpdateMask()
           .equals(other.getUpdateMask());
+    }
+    result = result && (hasPolicyValidationParameter() == other.hasPolicyValidationParameter());
+    if (hasPolicyValidationParameter()) {
+      result = result && getPolicyValidationParameter()
+          .equals(other.getPolicyValidationParameter());
     }
     result = result && getOperationCase().equals(
         other.getOperationCase());
@@ -433,6 +491,10 @@ private static final long serialVersionUID = 0L;
     if (hasUpdateMask()) {
       hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getUpdateMask().hashCode();
+    }
+    if (hasPolicyValidationParameter()) {
+      hash = (37 * hash) + POLICY_VALIDATION_PARAMETER_FIELD_NUMBER;
+      hash = (53 * hash) + getPolicyValidationParameter().hashCode();
     }
     switch (operationCase_) {
       case 1:
@@ -593,6 +655,12 @@ private static final long serialVersionUID = 0L;
         updateMask_ = null;
         updateMaskBuilder_ = null;
       }
+      if (policyValidationParameterBuilder_ == null) {
+        policyValidationParameter_ = null;
+      } else {
+        policyValidationParameter_ = null;
+        policyValidationParameterBuilder_ = null;
+      }
       operationCase_ = 0;
       operation_ = null;
       return this;
@@ -625,6 +693,11 @@ private static final long serialVersionUID = 0L;
         result.updateMask_ = updateMask_;
       } else {
         result.updateMask_ = updateMaskBuilder_.build();
+      }
+      if (policyValidationParameterBuilder_ == null) {
+        result.policyValidationParameter_ = policyValidationParameter_;
+      } else {
+        result.policyValidationParameter_ = policyValidationParameterBuilder_.build();
       }
       if (operationCase_ == 1) {
         if (createBuilder_ == null) {
@@ -694,6 +767,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v0.services.AdGroupAdOperation.getDefaultInstance()) return this;
       if (other.hasUpdateMask()) {
         mergeUpdateMask(other.getUpdateMask());
+      }
+      if (other.hasPolicyValidationParameter()) {
+        mergePolicyValidationParameter(other.getPolicyValidationParameter());
       }
       switch (other.getOperationCase()) {
         case CREATE: {
@@ -909,6 +985,159 @@ private static final long serialVersionUID = 0L;
         updateMask_ = null;
       }
       return updateMaskBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.common.PolicyValidationParameter policyValidationParameter_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.PolicyValidationParameter, com.google.ads.googleads.v0.common.PolicyValidationParameter.Builder, com.google.ads.googleads.v0.common.PolicyValidationParameterOrBuilder> policyValidationParameterBuilder_;
+    /**
+     * <pre>
+     * Configuration for how policies are validated.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+     */
+    public boolean hasPolicyValidationParameter() {
+      return policyValidationParameterBuilder_ != null || policyValidationParameter_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for how policies are validated.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+     */
+    public com.google.ads.googleads.v0.common.PolicyValidationParameter getPolicyValidationParameter() {
+      if (policyValidationParameterBuilder_ == null) {
+        return policyValidationParameter_ == null ? com.google.ads.googleads.v0.common.PolicyValidationParameter.getDefaultInstance() : policyValidationParameter_;
+      } else {
+        return policyValidationParameterBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Configuration for how policies are validated.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+     */
+    public Builder setPolicyValidationParameter(com.google.ads.googleads.v0.common.PolicyValidationParameter value) {
+      if (policyValidationParameterBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        policyValidationParameter_ = value;
+        onChanged();
+      } else {
+        policyValidationParameterBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration for how policies are validated.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+     */
+    public Builder setPolicyValidationParameter(
+        com.google.ads.googleads.v0.common.PolicyValidationParameter.Builder builderForValue) {
+      if (policyValidationParameterBuilder_ == null) {
+        policyValidationParameter_ = builderForValue.build();
+        onChanged();
+      } else {
+        policyValidationParameterBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration for how policies are validated.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+     */
+    public Builder mergePolicyValidationParameter(com.google.ads.googleads.v0.common.PolicyValidationParameter value) {
+      if (policyValidationParameterBuilder_ == null) {
+        if (policyValidationParameter_ != null) {
+          policyValidationParameter_ =
+            com.google.ads.googleads.v0.common.PolicyValidationParameter.newBuilder(policyValidationParameter_).mergeFrom(value).buildPartial();
+        } else {
+          policyValidationParameter_ = value;
+        }
+        onChanged();
+      } else {
+        policyValidationParameterBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration for how policies are validated.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+     */
+    public Builder clearPolicyValidationParameter() {
+      if (policyValidationParameterBuilder_ == null) {
+        policyValidationParameter_ = null;
+        onChanged();
+      } else {
+        policyValidationParameter_ = null;
+        policyValidationParameterBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Configuration for how policies are validated.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+     */
+    public com.google.ads.googleads.v0.common.PolicyValidationParameter.Builder getPolicyValidationParameterBuilder() {
+      
+      onChanged();
+      return getPolicyValidationParameterFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Configuration for how policies are validated.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+     */
+    public com.google.ads.googleads.v0.common.PolicyValidationParameterOrBuilder getPolicyValidationParameterOrBuilder() {
+      if (policyValidationParameterBuilder_ != null) {
+        return policyValidationParameterBuilder_.getMessageOrBuilder();
+      } else {
+        return policyValidationParameter_ == null ?
+            com.google.ads.googleads.v0.common.PolicyValidationParameter.getDefaultInstance() : policyValidationParameter_;
+      }
+    }
+    /**
+     * <pre>
+     * Configuration for how policies are validated.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.PolicyValidationParameter, com.google.ads.googleads.v0.common.PolicyValidationParameter.Builder, com.google.ads.googleads.v0.common.PolicyValidationParameterOrBuilder> 
+        getPolicyValidationParameterFieldBuilder() {
+      if (policyValidationParameterBuilder_ == null) {
+        policyValidationParameterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.PolicyValidationParameter, com.google.ads.googleads.v0.common.PolicyValidationParameter.Builder, com.google.ads.googleads.v0.common.PolicyValidationParameterOrBuilder>(
+                getPolicyValidationParameter(),
+                getParentForChildren(),
+                isClean());
+        policyValidationParameter_ = null;
+      }
+      return policyValidationParameterBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

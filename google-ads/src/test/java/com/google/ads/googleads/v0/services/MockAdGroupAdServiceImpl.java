@@ -17,9 +17,6 @@ package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.AdGroupAd;
 import com.google.ads.googleads.v0.services.AdGroupAdServiceGrpc.AdGroupAdServiceImplBase;
-import com.google.ads.googleads.v0.services.GetAdGroupAdRequest;
-import com.google.ads.googleads.v0.services.MutateAdGroupAdsRequest;
-import com.google.ads.googleads.v0.services.MutateAdGroupAdsResponse;
 import com.google.api.core.BetaApi;
 import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.stub.StreamObserver;

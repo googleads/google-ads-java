@@ -16,16 +16,12 @@
 package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.CampaignBidModifier;
-import com.google.ads.googleads.v0.services.CampaignBidModifierOperation;
-import com.google.ads.googleads.v0.services.GetCampaignBidModifierRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignBidModifiersRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignBidModifiersResponse;
+import com.google.ads.googleads.v0.services.stub.CampaignBidModifierServiceStub;
+import com.google.ads.googleads.v0.services.stub.CampaignBidModifierServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.api.pathtemplate.PathTemplate;
-import com.google.ads.googleads.v0.services.stub.CampaignBidModifierServiceStub;
-import com.google.ads.googleads.v0.services.stub.CampaignBidModifierServiceStubSettings;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;

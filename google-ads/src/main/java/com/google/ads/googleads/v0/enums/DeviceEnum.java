@@ -126,14 +126,6 @@ private static final long serialVersionUID = 0L;
      * <code>DESKTOP = 4;</code>
      */
     DESKTOP(4),
-    /**
-     * <pre>
-     * Connected TV.
-     * </pre>
-     *
-     * <code>CONNECTED_TV = 5;</code>
-     */
-    CONNECTED_TV(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -177,14 +169,6 @@ private static final long serialVersionUID = 0L;
      * <code>DESKTOP = 4;</code>
      */
     public static final int DESKTOP_VALUE = 4;
-    /**
-     * <pre>
-     * Connected TV.
-     * </pre>
-     *
-     * <code>CONNECTED_TV = 5;</code>
-     */
-    public static final int CONNECTED_TV_VALUE = 5;
 
 
     public final int getNumber() {
@@ -210,7 +194,6 @@ private static final long serialVersionUID = 0L;
         case 2: return MOBILE;
         case 3: return TABLET;
         case 4: return DESKTOP;
-        case 5: return CONNECTED_TV;
         default: return null;
       }
     }

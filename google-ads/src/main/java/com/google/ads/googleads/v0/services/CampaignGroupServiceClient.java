@@ -16,16 +16,12 @@
 package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.CampaignGroup;
-import com.google.ads.googleads.v0.services.CampaignGroupOperation;
-import com.google.ads.googleads.v0.services.GetCampaignGroupRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignGroupsRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignGroupsResponse;
+import com.google.ads.googleads.v0.services.stub.CampaignGroupServiceStub;
+import com.google.ads.googleads.v0.services.stub.CampaignGroupServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.api.pathtemplate.PathTemplate;
-import com.google.ads.googleads.v0.services.stub.CampaignGroupServiceStub;
-import com.google.ads.googleads.v0.services.stub.CampaignGroupServiceStubSettings;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;

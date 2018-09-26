@@ -29,15 +29,15 @@ public final class DeviceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n*google/ads/googleads/v0/enums/device.p" +
-      "roto\022\035google.ads.googleads.v0.enums\"k\n\nD" +
-      "eviceEnum\"]\n\006Device\022\017\n\013UNSPECIFIED\020\000\022\013\n\007" +
+      "roto\022\035google.ads.googleads.v0.enums\"Y\n\nD" +
+      "eviceEnum\"K\n\006Device\022\017\n\013UNSPECIFIED\020\000\022\013\n\007" +
       "UNKNOWN\020\001\022\n\n\006MOBILE\020\002\022\n\n\006TABLET\020\003\022\013\n\007DES" +
-      "KTOP\020\004\022\020\n\014CONNECTED_TV\020\005B\274\001\n!com.google." +
-      "ads.googleads.v0.enumsB\013DeviceProtoP\001ZBg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v0/enums;enums\242\002\003GAA\252\002\035Google" +
-      ".Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Goo" +
-      "gleAds\\V0\\Enumsb\006proto3"
+      "KTOP\020\004B\274\001\n!com.google.ads.googleads.v0.e" +
+      "numsB\013DeviceProtoP\001ZBgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v0/enum" +
+      "s;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0." +
+      "Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

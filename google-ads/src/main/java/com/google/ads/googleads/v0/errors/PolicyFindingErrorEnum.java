@@ -111,6 +111,14 @@ private static final long serialVersionUID = 0L;
      * <code>POLICY_FINDING = 2;</code>
      */
     POLICY_FINDING(2),
+    /**
+     * <pre>
+     * The given policy topic does not exist.
+     * </pre>
+     *
+     * <code>POLICY_TOPIC_NOT_FOUND = 3;</code>
+     */
+    POLICY_TOPIC_NOT_FOUND(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -139,6 +147,14 @@ private static final long serialVersionUID = 0L;
      * <code>POLICY_FINDING = 2;</code>
      */
     public static final int POLICY_FINDING_VALUE = 2;
+    /**
+     * <pre>
+     * The given policy topic does not exist.
+     * </pre>
+     *
+     * <code>POLICY_TOPIC_NOT_FOUND = 3;</code>
+     */
+    public static final int POLICY_TOPIC_NOT_FOUND_VALUE = 3;
 
 
     public final int getNumber() {
@@ -162,6 +178,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return POLICY_FINDING;
+        case 3: return POLICY_TOPIC_NOT_FOUND;
         default: return null;
       }
     }

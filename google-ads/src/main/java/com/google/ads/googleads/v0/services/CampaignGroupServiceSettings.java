@@ -16,9 +16,7 @@
 package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.CampaignGroup;
-import com.google.ads.googleads.v0.services.GetCampaignGroupRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignGroupsRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignGroupsResponse;
+import com.google.ads.googleads.v0.services.stub.CampaignGroupServiceStubSettings;
 import com.google.api.core.ApiFunction;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.GoogleCredentialsProvider;
@@ -29,7 +27,6 @@ import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.ClientSettings;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.api.gax.rpc.UnaryCallSettings;
-import com.google.ads.googleads.v0.services.stub.CampaignGroupServiceStubSettings;
 import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;

@@ -127,6 +127,14 @@ private static final long serialVersionUID = 0L;
      * <code>INCONSISTENT_FIELD_VALUES = 8;</code>
      */
     INCONSISTENT_FIELD_VALUES(8),
+    /**
+     * <pre>
+     * Mutates are not allowed for the requested resource.
+     * </pre>
+     *
+     * <code>MUTATE_NOT_ALLOWED = 9;</code>
+     */
+    MUTATE_NOT_ALLOWED(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -171,6 +179,14 @@ private static final long serialVersionUID = 0L;
      * <code>INCONSISTENT_FIELD_VALUES = 8;</code>
      */
     public static final int INCONSISTENT_FIELD_VALUES_VALUE = 8;
+    /**
+     * <pre>
+     * Mutates are not allowed for the requested resource.
+     * </pre>
+     *
+     * <code>MUTATE_NOT_ALLOWED = 9;</code>
+     */
+    public static final int MUTATE_NOT_ALLOWED_VALUE = 9;
 
 
     public final int getNumber() {
@@ -196,6 +212,7 @@ private static final long serialVersionUID = 0L;
         case 3: return RESOURCE_NOT_FOUND;
         case 7: return ID_EXISTS_IN_MULTIPLE_MUTATES;
         case 8: return INCONSISTENT_FIELD_VALUES;
+        case 9: return MUTATE_NOT_ALLOWED;
         default: return null;
       }
     }

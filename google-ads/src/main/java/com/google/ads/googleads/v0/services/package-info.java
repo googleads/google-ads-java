@@ -19,7 +19,32 @@
  *
  * <p>The interfaces provided are listed below, along with usage samples.
  *
- * <p>====================== AdGroupAdServiceClient ======================
+ * <p>================================== AccountBudgetProposalServiceClient
+ * ==================================
+ *
+ * <p>Service Description: A service for managing account-level budgets via proposals.
+ *
+ * <p>A proposal is a request to create a new budget or make changes to an existing one.
+ *
+ * <p>Reads for account-level budgets managed by these proposals will be supported in a future
+ * version. Please use BudgetOrderService until then:
+ * https://developers.google.com/adwords/api/docs/guides/budget-order
+ *
+ * <p>Mutates: The CREATE operation creates a new proposal. UPDATE operations aren't supported. The
+ * REMOVE operation cancels a pending proposal.
+ *
+ * <p>Sample for AccountBudgetProposalServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient = AccountBudgetProposalServiceClient.create()) {
+ *   String formattedResourceName = AccountBudgetProposalServiceClient.formatAccountBudgetProposalName("[CUSTOMER]", "[ACCOUNT_BUDGET_PROPOSAL]");
+ *   AccountBudgetProposal response = accountBudgetProposalServiceClient.getAccountBudgetProposal(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ====================== AdGroupAdServiceClient ======================
  *
  * <p>Service Description: Service to manage ads in an ad group.
  *
@@ -90,6 +115,29 @@
  * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
  *   String formattedResourceName = BiddingStrategyServiceClient.formatBiddingStrategyName("[CUSTOMER]", "[BIDDING_STRATEGY]");
  *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ========================= BillingSetupServiceClient =========================
+ *
+ * <p>Service Description: A service for designating the business entity responsible for accrued
+ * costs.
+ *
+ * <p>A billing setup is associated with a Payments account. Billing-related activity for all
+ * billing setups associated with a particular Payments account will appear on a single invoice
+ * generated monthly.
+ *
+ * <p>Mutates: The REMOVE operation cancels a pending billing setup. Functionality for creating new
+ * billing setups will be supported in a future version.
+ *
+ * <p>Sample for BillingSetupServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
+ *   String formattedResourceName = BillingSetupServiceClient.formatBillingSetupName("[CUSTOMER]", "[BILLING_SETUP]");
+ *   BillingSetup response = billingSetupServiceClient.getBillingSetup(formattedResourceName);
  * }
  * </code>
  * </pre>
@@ -181,6 +229,36 @@
  * try (CampaignSharedSetServiceClient campaignSharedSetServiceClient = CampaignSharedSetServiceClient.create()) {
  *   String formattedResourceName = CampaignSharedSetServiceClient.formatCampaignSharedSetName("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
  *   CampaignSharedSet response = campaignSharedSetServiceClient.getCampaignSharedSet(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ========================= ChangeStatusServiceClient =========================
+ *
+ * <p>Service Description: Service to fetch change statuses.
+ *
+ * <p>Sample for ChangeStatusServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (ChangeStatusServiceClient changeStatusServiceClient = ChangeStatusServiceClient.create()) {
+ *   String formattedResourceName = ChangeStatusServiceClient.formatChangeStatusName("[CUSTOMER]", "[CHANGE_STATUS]");
+ *   ChangeStatus response = changeStatusServiceClient.getChangeStatus(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ============================= ConversionActionServiceClient =============================
+ *
+ * <p>Service Description: Service to manage conversion actions.
+ *
+ * <p>Sample for ConversionActionServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
+ *   String formattedResourceName = ConversionActionServiceClient.formatConversionActionName("[CUSTOMER]", "[CONVERSION_ACTION]");
+ *   ConversionAction response = conversionActionServiceClient.getConversionAction(formattedResourceName);
  * }
  * </code>
  * </pre>
@@ -302,6 +380,21 @@
  * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
  *   String formattedResourceName = SharedSetServiceClient.formatSharedSetName("[CUSTOMER]", "[SHARED_SET]");
  *   SharedSet response = sharedSetServiceClient.getSharedSet(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ================== VideoServiceClient ==================
+ *
+ * <p>Service Description: Service to manage videos.
+ *
+ * <p>Sample for VideoServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (VideoServiceClient videoServiceClient = VideoServiceClient.create()) {
+ *   String formattedResourceName = VideoServiceClient.formatVideoName("[CUSTOMER]", "[VIDEO]");
+ *   Video response = videoServiceClient.getVideo(formattedResourceName);
  * }
  * </code>
  * </pre>

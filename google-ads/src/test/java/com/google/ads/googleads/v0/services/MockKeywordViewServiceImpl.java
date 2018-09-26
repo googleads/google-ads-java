@@ -16,7 +16,6 @@
 package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.KeywordView;
-import com.google.ads.googleads.v0.services.GetKeywordViewRequest;
 import com.google.ads.googleads.v0.services.KeywordViewServiceGrpc.KeywordViewServiceImplBase;
 import com.google.api.core.BetaApi;
 import com.google.protobuf.GeneratedMessageV3;

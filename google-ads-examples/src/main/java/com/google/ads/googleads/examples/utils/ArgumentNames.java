@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.utils;
 
 /** Contains command line argument formats for example code. */
 public final class ArgumentNames {
+  public static final String BILLING_SETUP_ID = "--billingSetupId";
   public static final String CUSTOMER_ID = "--customerId";
   public static final String CAMPAIGN_ID = "--campaignId";
   public static final String AD_GROUP_ID = "--adGroupId";
@@ -29,4 +30,7 @@ public final class ArgumentNames {
   public static final String KEYWORD_TEXT = "--keywordText";
   public static final String RECOMMENDATION_ID = "--recommendationId";
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
+  public static final String MERCHANT_CENTER_ACCOUNT_ID = "--merchantCenterAccountId";
+  public static final String CREATE_DEFAULT_LISTING_GROUP = "--createDefaultListingGroup";
+  public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
 }

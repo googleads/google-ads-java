@@ -184,6 +184,56 @@ public interface ListingDimensionInfoOrBuilder extends
 
   /**
    * <pre>
+   * Locality of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductChannelInfo product_channel = 8;</code>
+   */
+  boolean hasProductChannel();
+  /**
+   * <pre>
+   * Locality of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductChannelInfo product_channel = 8;</code>
+   */
+  com.google.ads.googleads.v0.common.ProductChannelInfo getProductChannel();
+  /**
+   * <pre>
+   * Locality of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductChannelInfo product_channel = 8;</code>
+   */
+  com.google.ads.googleads.v0.common.ProductChannelInfoOrBuilder getProductChannelOrBuilder();
+
+  /**
+   * <pre>
+   * Availability of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductChannelExclusivityInfo product_channel_exclusivity = 9;</code>
+   */
+  boolean hasProductChannelExclusivity();
+  /**
+   * <pre>
+   * Availability of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductChannelExclusivityInfo product_channel_exclusivity = 9;</code>
+   */
+  com.google.ads.googleads.v0.common.ProductChannelExclusivityInfo getProductChannelExclusivity();
+  /**
+   * <pre>
+   * Availability of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductChannelExclusivityInfo product_channel_exclusivity = 9;</code>
+   */
+  com.google.ads.googleads.v0.common.ProductChannelExclusivityInfoOrBuilder getProductChannelExclusivityOrBuilder();
+
+  /**
+   * <pre>
    * Condition of a product offer.
    * </pre>
    *
@@ -206,6 +256,31 @@ public interface ListingDimensionInfoOrBuilder extends
    * <code>.google.ads.googleads.v0.common.ProductConditionInfo product_condition = 10;</code>
    */
   com.google.ads.googleads.v0.common.ProductConditionInfoOrBuilder getProductConditionOrBuilder();
+
+  /**
+   * <pre>
+   * Id of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductOfferIdInfo product_offer_id = 11;</code>
+   */
+  boolean hasProductOfferId();
+  /**
+   * <pre>
+   * Id of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductOfferIdInfo product_offer_id = 11;</code>
+   */
+  com.google.ads.googleads.v0.common.ProductOfferIdInfo getProductOfferId();
+  /**
+   * <pre>
+   * Id of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProductOfferIdInfo product_offer_id = 11;</code>
+   */
+  com.google.ads.googleads.v0.common.ProductOfferIdInfoOrBuilder getProductOfferIdOrBuilder();
 
   /**
    * <pre>

@@ -16,13 +16,12 @@
 package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.Customer;
-import com.google.ads.googleads.v0.services.GetCustomerRequest;
+import com.google.ads.googleads.v0.services.stub.CustomerServiceStub;
+import com.google.ads.googleads.v0.services.stub.CustomerServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.api.pathtemplate.PathTemplate;
-import com.google.ads.googleads.v0.services.stub.CustomerServiceStub;
-import com.google.ads.googleads.v0.services.stub.CustomerServiceStubSettings;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;

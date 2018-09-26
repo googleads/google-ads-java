@@ -591,6 +591,31 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * A bidding strategy that pays a configurable amount per video view.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+   */
+  boolean hasManualCpv();
+  /**
+   * <pre>
+   * A bidding strategy that pays a configurable amount per video view.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+   */
+  com.google.ads.googleads.v0.common.ManualCpv getManualCpv();
+  /**
+   * <pre>
+   * A bidding strategy that pays a configurable amount per video view.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+   */
+  com.google.ads.googleads.v0.common.ManualCpvOrBuilder getManualCpvOrBuilder();
+
+  /**
+   * <pre>
    * Standard Maximize Conversions bidding strategy that automatically
    * maximizes number of conversions given a daily budget.
    * </pre>

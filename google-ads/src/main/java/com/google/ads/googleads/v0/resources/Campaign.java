@@ -374,6 +374,20 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 298: {
+            com.google.ads.googleads.v0.common.ManualCpv.Builder subBuilder = null;
+            if (campaignBiddingStrategyCase_ == 37) {
+              subBuilder = ((com.google.ads.googleads.v0.common.ManualCpv) campaignBiddingStrategy_).toBuilder();
+            }
+            campaignBiddingStrategy_ =
+                input.readMessage(com.google.ads.googleads.v0.common.ManualCpv.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.ManualCpv) campaignBiddingStrategy_);
+              campaignBiddingStrategy_ = subBuilder.buildPartial();
+            }
+            campaignBiddingStrategyCase_ = 37;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4256,7 +4270,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * ID of the Merchant Center account.
      * This field is required for create operations. This field is immutable for
-     * campaigns of type AdvertisingChannelType.SHOPPING.
+     * Shopping campaigns.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -4266,7 +4280,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * ID of the Merchant Center account.
      * This field is required for create operations. This field is immutable for
-     * campaigns of type AdvertisingChannelType.SHOPPING.
+     * Shopping campaigns.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -4276,7 +4290,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * ID of the Merchant Center account.
      * This field is required for create operations. This field is immutable for
-     * campaigns of type AdvertisingChannelType.SHOPPING.
+     * Shopping campaigns.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -4286,9 +4300,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Sales country of products to include in the campaign.
-     * This field is required for create operations. This field is immutable.
-     * This field must be set to 'ZZ' for campaigns of types other than
-     * AdvertisingChannelType.SHOPPING.
+     * This field is required for Shopping campaigns. This field is immutable.
+     * This field is optional for non-Shopping campaigns, but it must be equal
+     * to 'ZZ' if set.
      * </pre>
      *
      * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -4297,9 +4311,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Sales country of products to include in the campaign.
-     * This field is required for create operations. This field is immutable.
-     * This field must be set to 'ZZ' for campaigns of types other than
-     * AdvertisingChannelType.SHOPPING.
+     * This field is required for Shopping campaigns. This field is immutable.
+     * This field is optional for non-Shopping campaigns, but it must be equal
+     * to 'ZZ' if set.
      * </pre>
      *
      * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -4308,9 +4322,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Sales country of products to include in the campaign.
-     * This field is required for create operations. This field is immutable.
-     * This field must be set to 'ZZ' for campaigns of types other than
-     * AdvertisingChannelType.SHOPPING.
+     * This field is required for Shopping campaigns. This field is immutable.
+     * This field is optional for non-Shopping campaigns, but it must be equal
+     * to 'ZZ' if set.
      * </pre>
      *
      * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -4321,9 +4335,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Priority of the campaign. Campaigns with numerically higher priorities
      * take precedence over those with lower priorities.
-     * This field is required for create operations. Allowed values are between
-     * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-     * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+     * This field is required for Shopping campaigns, with values between 0 and
+     * 2, inclusive.
+     * This field is optional for Smart Shopping campaigns, but must be equal to
+     * 3 if set.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -4333,9 +4348,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Priority of the campaign. Campaigns with numerically higher priorities
      * take precedence over those with lower priorities.
-     * This field is required for create operations. Allowed values are between
-     * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-     * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+     * This field is required for Shopping campaigns, with values between 0 and
+     * 2, inclusive.
+     * This field is optional for Smart Shopping campaigns, but must be equal to
+     * 3 if set.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -4345,9 +4361,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Priority of the campaign. Campaigns with numerically higher priorities
      * take precedence over those with lower priorities.
-     * This field is required for create operations. Allowed values are between
-     * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-     * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+     * This field is required for Shopping campaigns, with values between 0 and
+     * 2, inclusive.
+     * This field is optional for Smart Shopping campaigns, but must be equal to
+     * 3 if set.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -4514,7 +4531,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * ID of the Merchant Center account.
      * This field is required for create operations. This field is immutable for
-     * campaigns of type AdvertisingChannelType.SHOPPING.
+     * Shopping campaigns.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -4526,7 +4543,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * ID of the Merchant Center account.
      * This field is required for create operations. This field is immutable for
-     * campaigns of type AdvertisingChannelType.SHOPPING.
+     * Shopping campaigns.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -4538,7 +4555,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * ID of the Merchant Center account.
      * This field is required for create operations. This field is immutable for
-     * campaigns of type AdvertisingChannelType.SHOPPING.
+     * Shopping campaigns.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -4552,9 +4569,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Sales country of products to include in the campaign.
-     * This field is required for create operations. This field is immutable.
-     * This field must be set to 'ZZ' for campaigns of types other than
-     * AdvertisingChannelType.SHOPPING.
+     * This field is required for Shopping campaigns. This field is immutable.
+     * This field is optional for non-Shopping campaigns, but it must be equal
+     * to 'ZZ' if set.
      * </pre>
      *
      * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -4565,9 +4582,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Sales country of products to include in the campaign.
-     * This field is required for create operations. This field is immutable.
-     * This field must be set to 'ZZ' for campaigns of types other than
-     * AdvertisingChannelType.SHOPPING.
+     * This field is required for Shopping campaigns. This field is immutable.
+     * This field is optional for non-Shopping campaigns, but it must be equal
+     * to 'ZZ' if set.
      * </pre>
      *
      * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -4578,9 +4595,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Sales country of products to include in the campaign.
-     * This field is required for create operations. This field is immutable.
-     * This field must be set to 'ZZ' for campaigns of types other than
-     * AdvertisingChannelType.SHOPPING.
+     * This field is required for Shopping campaigns. This field is immutable.
+     * This field is optional for non-Shopping campaigns, but it must be equal
+     * to 'ZZ' if set.
      * </pre>
      *
      * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -4595,9 +4612,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Priority of the campaign. Campaigns with numerically higher priorities
      * take precedence over those with lower priorities.
-     * This field is required for create operations. Allowed values are between
-     * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-     * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+     * This field is required for Shopping campaigns, with values between 0 and
+     * 2, inclusive.
+     * This field is optional for Smart Shopping campaigns, but must be equal to
+     * 3 if set.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -4609,9 +4627,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Priority of the campaign. Campaigns with numerically higher priorities
      * take precedence over those with lower priorities.
-     * This field is required for create operations. Allowed values are between
-     * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-     * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+     * This field is required for Shopping campaigns, with values between 0 and
+     * 2, inclusive.
+     * This field is optional for Smart Shopping campaigns, but must be equal to
+     * 3 if set.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -4623,9 +4642,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Priority of the campaign. Campaigns with numerically higher priorities
      * take precedence over those with lower priorities.
-     * This field is required for create operations. Allowed values are between
-     * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-     * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+     * This field is required for Shopping campaigns, with values between 0 and
+     * 2, inclusive.
+     * This field is optional for Smart Shopping campaigns, but must be equal to
+     * 3 if set.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -5086,7 +5106,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
-       * campaigns of type AdvertisingChannelType.SHOPPING.
+       * Shopping campaigns.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -5098,7 +5118,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
-       * campaigns of type AdvertisingChannelType.SHOPPING.
+       * Shopping campaigns.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -5114,7 +5134,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
-       * campaigns of type AdvertisingChannelType.SHOPPING.
+       * Shopping campaigns.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -5136,7 +5156,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
-       * campaigns of type AdvertisingChannelType.SHOPPING.
+       * Shopping campaigns.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -5156,7 +5176,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
-       * campaigns of type AdvertisingChannelType.SHOPPING.
+       * Shopping campaigns.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -5180,7 +5200,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
-       * campaigns of type AdvertisingChannelType.SHOPPING.
+       * Shopping campaigns.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -5200,7 +5220,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
-       * campaigns of type AdvertisingChannelType.SHOPPING.
+       * Shopping campaigns.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -5214,7 +5234,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
-       * campaigns of type AdvertisingChannelType.SHOPPING.
+       * Shopping campaigns.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -5231,7 +5251,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
-       * campaigns of type AdvertisingChannelType.SHOPPING.
+       * Shopping campaigns.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
@@ -5256,9 +5276,9 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Sales country of products to include in the campaign.
-       * This field is required for create operations. This field is immutable.
-       * This field must be set to 'ZZ' for campaigns of types other than
-       * AdvertisingChannelType.SHOPPING.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
        * </pre>
        *
        * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -5269,9 +5289,9 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Sales country of products to include in the campaign.
-       * This field is required for create operations. This field is immutable.
-       * This field must be set to 'ZZ' for campaigns of types other than
-       * AdvertisingChannelType.SHOPPING.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
        * </pre>
        *
        * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -5286,9 +5306,9 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Sales country of products to include in the campaign.
-       * This field is required for create operations. This field is immutable.
-       * This field must be set to 'ZZ' for campaigns of types other than
-       * AdvertisingChannelType.SHOPPING.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
        * </pre>
        *
        * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -5309,9 +5329,9 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Sales country of products to include in the campaign.
-       * This field is required for create operations. This field is immutable.
-       * This field must be set to 'ZZ' for campaigns of types other than
-       * AdvertisingChannelType.SHOPPING.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
        * </pre>
        *
        * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -5330,9 +5350,9 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Sales country of products to include in the campaign.
-       * This field is required for create operations. This field is immutable.
-       * This field must be set to 'ZZ' for campaigns of types other than
-       * AdvertisingChannelType.SHOPPING.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
        * </pre>
        *
        * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -5355,9 +5375,9 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Sales country of products to include in the campaign.
-       * This field is required for create operations. This field is immutable.
-       * This field must be set to 'ZZ' for campaigns of types other than
-       * AdvertisingChannelType.SHOPPING.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
        * </pre>
        *
        * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -5376,9 +5396,9 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Sales country of products to include in the campaign.
-       * This field is required for create operations. This field is immutable.
-       * This field must be set to 'ZZ' for campaigns of types other than
-       * AdvertisingChannelType.SHOPPING.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
        * </pre>
        *
        * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -5391,9 +5411,9 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Sales country of products to include in the campaign.
-       * This field is required for create operations. This field is immutable.
-       * This field must be set to 'ZZ' for campaigns of types other than
-       * AdvertisingChannelType.SHOPPING.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
        * </pre>
        *
        * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -5409,9 +5429,9 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Sales country of products to include in the campaign.
-       * This field is required for create operations. This field is immutable.
-       * This field must be set to 'ZZ' for campaigns of types other than
-       * AdvertisingChannelType.SHOPPING.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
        * </pre>
        *
        * <code>.google.protobuf.StringValue sales_country = 2;</code>
@@ -5437,9 +5457,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Priority of the campaign. Campaigns with numerically higher priorities
        * take precedence over those with lower priorities.
-       * This field is required for create operations. Allowed values are between
-       * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-       * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
        * </pre>
        *
        * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -5451,9 +5472,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Priority of the campaign. Campaigns with numerically higher priorities
        * take precedence over those with lower priorities.
-       * This field is required for create operations. Allowed values are between
-       * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-       * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
        * </pre>
        *
        * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -5469,9 +5491,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Priority of the campaign. Campaigns with numerically higher priorities
        * take precedence over those with lower priorities.
-       * This field is required for create operations. Allowed values are between
-       * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-       * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
        * </pre>
        *
        * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -5493,9 +5516,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Priority of the campaign. Campaigns with numerically higher priorities
        * take precedence over those with lower priorities.
-       * This field is required for create operations. Allowed values are between
-       * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-       * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
        * </pre>
        *
        * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -5515,9 +5539,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Priority of the campaign. Campaigns with numerically higher priorities
        * take precedence over those with lower priorities.
-       * This field is required for create operations. Allowed values are between
-       * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-       * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
        * </pre>
        *
        * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -5541,9 +5566,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Priority of the campaign. Campaigns with numerically higher priorities
        * take precedence over those with lower priorities.
-       * This field is required for create operations. Allowed values are between
-       * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-       * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
        * </pre>
        *
        * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -5563,9 +5589,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Priority of the campaign. Campaigns with numerically higher priorities
        * take precedence over those with lower priorities.
-       * This field is required for create operations. Allowed values are between
-       * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-       * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
        * </pre>
        *
        * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -5579,9 +5606,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Priority of the campaign. Campaigns with numerically higher priorities
        * take precedence over those with lower priorities.
-       * This field is required for create operations. Allowed values are between
-       * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-       * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
        * </pre>
        *
        * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -5598,9 +5626,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Priority of the campaign. Campaigns with numerically higher priorities
        * take precedence over those with lower priorities.
-       * This field is required for create operations. Allowed values are between
-       * 0 and 2, inclusive. This field must be set to 3 for campaigns of type
-       * AdvertisingChannelSubType.SHOPPING_SMART_ADS.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
        * </pre>
        *
        * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
@@ -5832,6 +5861,7 @@ private static final long serialVersionUID = 0L;
     BIDDING_STRATEGY(23),
     MANUAL_CPC(24),
     MANUAL_CPM(25),
+    MANUAL_CPV(37),
     MAXIMIZE_CONVERSIONS(30),
     MAXIMIZE_CONVERSION_VALUE(31),
     TARGET_CPA(26),
@@ -5856,6 +5886,7 @@ private static final long serialVersionUID = 0L;
         case 23: return BIDDING_STRATEGY;
         case 24: return MANUAL_CPC;
         case 25: return MANUAL_CPM;
+        case 37: return MANUAL_CPV;
         case 30: return MAXIMIZE_CONVERSIONS;
         case 31: return MAXIMIZE_CONVERSION_VALUE;
         case 26: return TARGET_CPA;
@@ -6669,6 +6700,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.ManualCpm.getDefaultInstance();
   }
 
+  public static final int MANUAL_CPV_FIELD_NUMBER = 37;
+  /**
+   * <pre>
+   * A bidding strategy that pays a configurable amount per video view.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+   */
+  public boolean hasManualCpv() {
+    return campaignBiddingStrategyCase_ == 37;
+  }
+  /**
+   * <pre>
+   * A bidding strategy that pays a configurable amount per video view.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+   */
+  public com.google.ads.googleads.v0.common.ManualCpv getManualCpv() {
+    if (campaignBiddingStrategyCase_ == 37) {
+       return (com.google.ads.googleads.v0.common.ManualCpv) campaignBiddingStrategy_;
+    }
+    return com.google.ads.googleads.v0.common.ManualCpv.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A bidding strategy that pays a configurable amount per video view.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+   */
+  public com.google.ads.googleads.v0.common.ManualCpvOrBuilder getManualCpvOrBuilder() {
+    if (campaignBiddingStrategyCase_ == 37) {
+       return (com.google.ads.googleads.v0.common.ManualCpv) campaignBiddingStrategy_;
+    }
+    return com.google.ads.googleads.v0.common.ManualCpv.getDefaultInstance();
+  }
+
   public static final int MAXIMIZE_CONVERSIONS_FIELD_NUMBER = 30;
   /**
    * <pre>
@@ -7016,6 +7085,9 @@ private static final long serialVersionUID = 0L;
     if (shoppingSetting_ != null) {
       output.writeMessage(36, getShoppingSetting());
     }
+    if (campaignBiddingStrategyCase_ == 37) {
+      output.writeMessage(37, (com.google.ads.googleads.v0.common.ManualCpv) campaignBiddingStrategy_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -7136,6 +7208,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(36, getShoppingSetting());
     }
+    if (campaignBiddingStrategyCase_ == 37) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(37, (com.google.ads.googleads.v0.common.ManualCpv) campaignBiddingStrategy_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -7232,6 +7308,10 @@ private static final long serialVersionUID = 0L;
       case 25:
         result = result && getManualCpm()
             .equals(other.getManualCpm());
+        break;
+      case 37:
+        result = result && getManualCpv()
+            .equals(other.getManualCpv());
         break;
       case 30:
         result = result && getMaximizeConversions()
@@ -7345,6 +7425,10 @@ private static final long serialVersionUID = 0L;
       case 25:
         hash = (37 * hash) + MANUAL_CPM_FIELD_NUMBER;
         hash = (53 * hash) + getManualCpm().hashCode();
+        break;
+      case 37:
+        hash = (37 * hash) + MANUAL_CPV_FIELD_NUMBER;
+        hash = (53 * hash) + getManualCpv().hashCode();
         break;
       case 30:
         hash = (37 * hash) + MAXIMIZE_CONVERSIONS_FIELD_NUMBER;
@@ -7719,6 +7803,13 @@ private static final long serialVersionUID = 0L;
           result.campaignBiddingStrategy_ = manualCpmBuilder_.build();
         }
       }
+      if (campaignBiddingStrategyCase_ == 37) {
+        if (manualCpvBuilder_ == null) {
+          result.campaignBiddingStrategy_ = campaignBiddingStrategy_;
+        } else {
+          result.campaignBiddingStrategy_ = manualCpvBuilder_.build();
+        }
+      }
       if (campaignBiddingStrategyCase_ == 30) {
         if (maximizeConversionsBuilder_ == null) {
           result.campaignBiddingStrategy_ = campaignBiddingStrategy_;
@@ -7903,6 +7994,10 @@ private static final long serialVersionUID = 0L;
         }
         case MANUAL_CPM: {
           mergeManualCpm(other.getManualCpm());
+          break;
+        }
+        case MANUAL_CPV: {
+          mergeManualCpv(other.getManualCpv());
           break;
         }
         case MAXIMIZE_CONVERSIONS: {
@@ -11158,6 +11253,178 @@ private static final long serialVersionUID = 0L;
       campaignBiddingStrategyCase_ = 25;
       onChanged();;
       return manualCpmBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ManualCpv, com.google.ads.googleads.v0.common.ManualCpv.Builder, com.google.ads.googleads.v0.common.ManualCpvOrBuilder> manualCpvBuilder_;
+    /**
+     * <pre>
+     * A bidding strategy that pays a configurable amount per video view.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+     */
+    public boolean hasManualCpv() {
+      return campaignBiddingStrategyCase_ == 37;
+    }
+    /**
+     * <pre>
+     * A bidding strategy that pays a configurable amount per video view.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+     */
+    public com.google.ads.googleads.v0.common.ManualCpv getManualCpv() {
+      if (manualCpvBuilder_ == null) {
+        if (campaignBiddingStrategyCase_ == 37) {
+          return (com.google.ads.googleads.v0.common.ManualCpv) campaignBiddingStrategy_;
+        }
+        return com.google.ads.googleads.v0.common.ManualCpv.getDefaultInstance();
+      } else {
+        if (campaignBiddingStrategyCase_ == 37) {
+          return manualCpvBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.ManualCpv.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A bidding strategy that pays a configurable amount per video view.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+     */
+    public Builder setManualCpv(com.google.ads.googleads.v0.common.ManualCpv value) {
+      if (manualCpvBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignBiddingStrategy_ = value;
+        onChanged();
+      } else {
+        manualCpvBuilder_.setMessage(value);
+      }
+      campaignBiddingStrategyCase_ = 37;
+      return this;
+    }
+    /**
+     * <pre>
+     * A bidding strategy that pays a configurable amount per video view.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+     */
+    public Builder setManualCpv(
+        com.google.ads.googleads.v0.common.ManualCpv.Builder builderForValue) {
+      if (manualCpvBuilder_ == null) {
+        campaignBiddingStrategy_ = builderForValue.build();
+        onChanged();
+      } else {
+        manualCpvBuilder_.setMessage(builderForValue.build());
+      }
+      campaignBiddingStrategyCase_ = 37;
+      return this;
+    }
+    /**
+     * <pre>
+     * A bidding strategy that pays a configurable amount per video view.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+     */
+    public Builder mergeManualCpv(com.google.ads.googleads.v0.common.ManualCpv value) {
+      if (manualCpvBuilder_ == null) {
+        if (campaignBiddingStrategyCase_ == 37 &&
+            campaignBiddingStrategy_ != com.google.ads.googleads.v0.common.ManualCpv.getDefaultInstance()) {
+          campaignBiddingStrategy_ = com.google.ads.googleads.v0.common.ManualCpv.newBuilder((com.google.ads.googleads.v0.common.ManualCpv) campaignBiddingStrategy_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          campaignBiddingStrategy_ = value;
+        }
+        onChanged();
+      } else {
+        if (campaignBiddingStrategyCase_ == 37) {
+          manualCpvBuilder_.mergeFrom(value);
+        }
+        manualCpvBuilder_.setMessage(value);
+      }
+      campaignBiddingStrategyCase_ = 37;
+      return this;
+    }
+    /**
+     * <pre>
+     * A bidding strategy that pays a configurable amount per video view.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+     */
+    public Builder clearManualCpv() {
+      if (manualCpvBuilder_ == null) {
+        if (campaignBiddingStrategyCase_ == 37) {
+          campaignBiddingStrategyCase_ = 0;
+          campaignBiddingStrategy_ = null;
+          onChanged();
+        }
+      } else {
+        if (campaignBiddingStrategyCase_ == 37) {
+          campaignBiddingStrategyCase_ = 0;
+          campaignBiddingStrategy_ = null;
+        }
+        manualCpvBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A bidding strategy that pays a configurable amount per video view.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+     */
+    public com.google.ads.googleads.v0.common.ManualCpv.Builder getManualCpvBuilder() {
+      return getManualCpvFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A bidding strategy that pays a configurable amount per video view.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+     */
+    public com.google.ads.googleads.v0.common.ManualCpvOrBuilder getManualCpvOrBuilder() {
+      if ((campaignBiddingStrategyCase_ == 37) && (manualCpvBuilder_ != null)) {
+        return manualCpvBuilder_.getMessageOrBuilder();
+      } else {
+        if (campaignBiddingStrategyCase_ == 37) {
+          return (com.google.ads.googleads.v0.common.ManualCpv) campaignBiddingStrategy_;
+        }
+        return com.google.ads.googleads.v0.common.ManualCpv.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A bidding strategy that pays a configurable amount per video view.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ManualCpv manual_cpv = 37;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ManualCpv, com.google.ads.googleads.v0.common.ManualCpv.Builder, com.google.ads.googleads.v0.common.ManualCpvOrBuilder> 
+        getManualCpvFieldBuilder() {
+      if (manualCpvBuilder_ == null) {
+        if (!(campaignBiddingStrategyCase_ == 37)) {
+          campaignBiddingStrategy_ = com.google.ads.googleads.v0.common.ManualCpv.getDefaultInstance();
+        }
+        manualCpvBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.ManualCpv, com.google.ads.googleads.v0.common.ManualCpv.Builder, com.google.ads.googleads.v0.common.ManualCpvOrBuilder>(
+                (com.google.ads.googleads.v0.common.ManualCpv) campaignBiddingStrategy_,
+                getParentForChildren(),
+                isClean());
+        campaignBiddingStrategy_ = null;
+      }
+      campaignBiddingStrategyCase_ = 37;
+      onChanged();;
+      return manualCpvBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

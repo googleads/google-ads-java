@@ -98,4 +98,29 @@ public interface AdGroupAdOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.Ad ad = 5;</code>
    */
   com.google.ads.googleads.v0.resources.AdOrBuilder getAdOrBuilder();
+
+  /**
+   * <pre>
+   * Policy information for the ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+   */
+  boolean hasPolicySummary();
+  /**
+   * <pre>
+   * Policy information for the ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+   */
+  com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary getPolicySummary();
+  /**
+   * <pre>
+   * Policy information for the ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+   */
+  com.google.ads.googleads.v0.resources.AdGroupAdPolicySummaryOrBuilder getPolicySummaryOrBuilder();
 }

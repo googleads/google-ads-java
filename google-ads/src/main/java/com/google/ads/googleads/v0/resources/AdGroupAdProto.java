@@ -19,6 +19,11 @@ public final class AdGroupAdProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_resources_AdGroupAd_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_resources_AdGroupAdPolicySummary_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_resources_AdGroupAdPolicySummary_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -30,21 +35,35 @@ public final class AdGroupAdProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v0/resources/ad_g" +
       "roup_ad.proto\022!google.ads.googleads.v0.r" +
-      "esources\0326google/ads/googleads/v0/enums/" +
-      "ad_group_ad_status.proto\032*google/ads/goo" +
-      "gleads/v0/resources/ad.proto\032\036google/pro" +
-      "tobuf/wrappers.proto\"\331\001\n\tAdGroupAd\022\025\n\rre" +
-      "source_name\030\001 \001(\t\022R\n\006status\030\003 \001(\0162B.goog" +
-      "le.ads.googleads.v0.enums.AdGroupAdStatu" +
-      "sEnum.AdGroupAdStatus\022.\n\010ad_group\030\004 \001(\0132" +
-      "\034.google.protobuf.StringValue\0221\n\002ad\030\005 \001(" +
-      "\0132%.google.ads.googleads.v0.resources.Ad" +
-      "B\323\001\n%com.google.ads.googleads.v0.resourc" +
-      "esB\016AdGroupAdProtoP\001ZJgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v0/res" +
-      "ources;resources\242\002\003GAA\252\002!Google.Ads.Goog" +
-      "leAds.V0.Resources\312\002!Google\\Ads\\GoogleAd" +
-      "s\\V0\\Resourcesb\006proto3"
+      "esources\032+google/ads/googleads/v0/common" +
+      "/policy.proto\0326google/ads/googleads/v0/e" +
+      "nums/ad_group_ad_status.proto\032:google/ad" +
+      "s/googleads/v0/enums/policy_approval_sta" +
+      "tus.proto\0328google/ads/googleads/v0/enums" +
+      "/policy_review_status.proto\032*google/ads/" +
+      "googleads/v0/resources/ad.proto\032\036google/" +
+      "protobuf/wrappers.proto\"\254\002\n\tAdGroupAd\022\025\n" +
+      "\rresource_name\030\001 \001(\t\022R\n\006status\030\003 \001(\0162B.g" +
+      "oogle.ads.googleads.v0.enums.AdGroupAdSt" +
+      "atusEnum.AdGroupAdStatus\022.\n\010ad_group\030\004 \001" +
+      "(\0132\034.google.protobuf.StringValue\0221\n\002ad\030\005" +
+      " \001(\0132%.google.ads.googleads.v0.resources" +
+      ".Ad\022Q\n\016policy_summary\030\006 \001(\01329.google.ads" +
+      ".googleads.v0.resources.AdGroupAdPolicyS" +
+      "ummary\"\260\002\n\026AdGroupAdPolicySummary\022N\n\024pol" +
+      "icy_topic_entries\030\001 \003(\01320.google.ads.goo" +
+      "gleads.v0.common.PolicyTopicEntry\022_\n\rrev" +
+      "iew_status\030\002 \001(\0162H.google.ads.googleads." +
+      "v0.enums.PolicyReviewStatusEnum.PolicyRe" +
+      "viewStatus\022e\n\017approval_status\030\003 \001(\0162L.go" +
+      "ogle.ads.googleads.v0.enums.PolicyApprov" +
+      "alStatusEnum.PolicyApprovalStatusB\323\001\n%co" +
+      "m.google.ads.googleads.v0.resourcesB\016AdG" +
+      "roupAdProtoP\001ZJgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v0/resources;" +
+      "resources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
+      "0.Resources\312\002!Google\\Ads\\GoogleAds\\V0\\Re" +
+      "sourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -57,7 +76,10 @@ public final class AdGroupAdProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v0.common.PolicyProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.AdGroupAdStatusProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.PolicyApprovalStatusProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.PolicyReviewStatusProto.getDescriptor(),
           com.google.ads.googleads.v0.resources.AdProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
@@ -66,8 +88,17 @@ public final class AdGroupAdProto {
     internal_static_google_ads_googleads_v0_resources_AdGroupAd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_AdGroupAd_descriptor,
-        new java.lang.String[] { "ResourceName", "Status", "AdGroup", "Ad", });
+        new java.lang.String[] { "ResourceName", "Status", "AdGroup", "Ad", "PolicySummary", });
+    internal_static_google_ads_googleads_v0_resources_AdGroupAdPolicySummary_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v0_resources_AdGroupAdPolicySummary_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_resources_AdGroupAdPolicySummary_descriptor,
+        new java.lang.String[] { "PolicyTopicEntries", "ReviewStatus", "ApprovalStatus", });
+    com.google.ads.googleads.v0.common.PolicyProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdGroupAdStatusProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.PolicyApprovalStatusProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.PolicyReviewStatusProto.getDescriptor();
     com.google.ads.googleads.v0.resources.AdProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }

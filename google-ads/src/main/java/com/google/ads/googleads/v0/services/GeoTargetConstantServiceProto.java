@@ -32,20 +32,21 @@ public final class GeoTargetConstantServiceProto {
       "arget_constant_service.proto\022 google.ads" +
       ".googleads.v0.services\032;google/ads/googl" +
       "eads/v0/resources/geo_target_constant.pr" +
-      "oto\032\034google/api/annotations.proto\"4\n\033Get" +
-      "GeoTargetConstantRequest\022\025\n\rresource_nam" +
-      "e\030\001 \001(\t2\332\001\n\030GeoTargetConstantService\022\275\001\n" +
-      "\024GetGeoTargetConstant\022=.google.ads.googl" +
-      "eads.v0.services.GetGeoTargetConstantReq" +
-      "uest\0324.google.ads.googleads.v0.resources" +
-      ".GeoTargetConstant\"0\202\323\344\223\002*\022(/v0/{resourc" +
-      "e_name=geoTargetConstants/*}B\335\001\n$com.goo" +
-      "gle.ads.googleads.v0.servicesB\035GeoTarget" +
-      "ConstantServiceProtoP\001ZHgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v0/s" +
-      "ervices;services\242\002\003GAA\252\002 Google.Ads.Goog" +
-      "leAds.V0.Services\312\002 Google\\Ads\\GoogleAds" +
-      "\\V0\\Servicesb\006proto3"
+      "oto\032\034google/api/annotations.proto\032\036googl" +
+      "e/protobuf/wrappers.proto\"4\n\033GetGeoTarge" +
+      "tConstantRequest\022\025\n\rresource_name\030\001 \001(\t2" +
+      "\332\001\n\030GeoTargetConstantService\022\275\001\n\024GetGeoT" +
+      "argetConstant\022=.google.ads.googleads.v0." +
+      "services.GetGeoTargetConstantRequest\0324.g" +
+      "oogle.ads.googleads.v0.resources.GeoTarg" +
+      "etConstant\"0\202\323\344\223\002*\022(/v0/{resource_name=g" +
+      "eoTargetConstants/*}B\335\001\n$com.google.ads." +
+      "googleads.v0.servicesB\035GeoTargetConstant" +
+      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v0/services;" +
+      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V0" +
+      ".Services\312\002 Google\\Ads\\GoogleAds\\V0\\Serv" +
+      "icesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -60,6 +61,7 @@ public final class GeoTargetConstantServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v0.resources.GeoTargetConstantProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_services_GetGeoTargetConstantRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -74,6 +76,7 @@ public final class GeoTargetConstantServiceProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v0.resources.GeoTargetConstantProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

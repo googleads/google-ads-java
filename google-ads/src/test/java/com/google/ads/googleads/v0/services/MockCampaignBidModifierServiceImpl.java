@@ -17,9 +17,6 @@ package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.CampaignBidModifier;
 import com.google.ads.googleads.v0.services.CampaignBidModifierServiceGrpc.CampaignBidModifierServiceImplBase;
-import com.google.ads.googleads.v0.services.GetCampaignBidModifierRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignBidModifiersRequest;
-import com.google.ads.googleads.v0.services.MutateCampaignBidModifiersResponse;
 import com.google.api.core.BetaApi;
 import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.stub.StreamObserver;

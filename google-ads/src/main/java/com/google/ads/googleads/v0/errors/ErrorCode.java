@@ -371,6 +371,12 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 520: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 65;
+            errorCode_ = rawValue;
+            break;
+          }
           case 528: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 66;
@@ -398,6 +404,18 @@ private static final long serialVersionUID = 0L;
           case 560: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 70;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 616: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 77;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 632: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 79;
             errorCode_ = rawValue;
             break;
           }
@@ -491,11 +509,14 @@ private static final long serialVersionUID = 0L;
     SHARED_SET_ERROR(62),
     SHARED_CRITERION_ERROR(63),
     CAMPAIGN_SHARED_SET_ERROR(64),
+    CONVERSION_ACTION_ERROR(65),
     HEADER_ERROR(66),
     DATABASE_ERROR(67),
     POLICY_FINDING_ERROR(68),
     CAMPAIGN_GROUP_ERROR(69),
     ENUM_ERROR(70),
+    ACCOUNT_BUDGET_PROPOSAL_ERROR(77),
+    CHANGE_STATUS_ERROR(79),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -565,11 +586,14 @@ private static final long serialVersionUID = 0L;
         case 62: return SHARED_SET_ERROR;
         case 63: return SHARED_CRITERION_ERROR;
         case 64: return CAMPAIGN_SHARED_SET_ERROR;
+        case 65: return CONVERSION_ACTION_ERROR;
         case 66: return HEADER_ERROR;
         case 67: return DATABASE_ERROR;
         case 68: return POLICY_FINDING_ERROR;
         case 69: return CAMPAIGN_GROUP_ERROR;
         case 70: return ENUM_ERROR;
+        case 77: return ACCOUNT_BUDGET_PROPOSAL_ERROR;
+        case 79: return CHANGE_STATUS_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -2259,6 +2283,37 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.CampaignSharedSetErrorEnum.CampaignSharedSetError.UNSPECIFIED;
   }
 
+  public static final int CONVERSION_ACTION_ERROR_FIELD_NUMBER = 65;
+  /**
+   * <pre>
+   * The reasons for the conversion action error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+   */
+  public int getConversionActionErrorValue() {
+    if (errorCodeCase_ == 65) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the conversion action error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+   */
+  public com.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError getConversionActionError() {
+    if (errorCodeCase_ == 65) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError result = com.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError.UNSPECIFIED;
+  }
+
   public static final int HEADER_ERROR_FIELD_NUMBER = 66;
   /**
    * <pre>
@@ -2412,6 +2467,68 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError.UNRECOGNIZED : result;
     }
     return com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError.UNSPECIFIED;
+  }
+
+  public static final int ACCOUNT_BUDGET_PROPOSAL_ERROR_FIELD_NUMBER = 77;
+  /**
+   * <pre>
+   * The reasons for account budget proposal errors.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+   */
+  public int getAccountBudgetProposalErrorValue() {
+    if (errorCodeCase_ == 77) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for account budget proposal errors.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+   */
+  public com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError getAccountBudgetProposalError() {
+    if (errorCodeCase_ == 77) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError result = com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError.UNSPECIFIED;
+  }
+
+  public static final int CHANGE_STATUS_ERROR_FIELD_NUMBER = 79;
+  /**
+   * <pre>
+   * The reasons for the change status error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+   */
+  public int getChangeStatusErrorValue() {
+    if (errorCodeCase_ == 79) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the change status error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+   */
+  public com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError getChangeStatusError() {
+    if (errorCodeCase_ == 79) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError result = com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError.UNSPECIFIED;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -2590,6 +2707,9 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 64) {
       output.writeEnum(64, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 65) {
+      output.writeEnum(65, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 66) {
       output.writeEnum(66, ((java.lang.Integer) errorCode_));
     }
@@ -2604,6 +2724,12 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 70) {
       output.writeEnum(70, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 77) {
+      output.writeEnum(77, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 79) {
+      output.writeEnum(79, ((java.lang.Integer) errorCode_));
     }
     unknownFields.writeTo(output);
   }
@@ -2830,6 +2956,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(64, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 65) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(65, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 66) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(66, ((java.lang.Integer) errorCode_));
@@ -2849,6 +2979,14 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 70) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(70, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 77) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(77, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 79) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(79, ((java.lang.Integer) errorCode_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -3086,6 +3224,10 @@ private static final long serialVersionUID = 0L;
         result = result && getCampaignSharedSetErrorValue()
             == other.getCampaignSharedSetErrorValue();
         break;
+      case 65:
+        result = result && getConversionActionErrorValue()
+            == other.getConversionActionErrorValue();
+        break;
       case 66:
         result = result && getHeaderErrorValue()
             == other.getHeaderErrorValue();
@@ -3105,6 +3247,14 @@ private static final long serialVersionUID = 0L;
       case 70:
         result = result && getEnumErrorValue()
             == other.getEnumErrorValue();
+        break;
+      case 77:
+        result = result && getAccountBudgetProposalErrorValue()
+            == other.getAccountBudgetProposalErrorValue();
+        break;
+      case 79:
+        result = result && getChangeStatusErrorValue()
+            == other.getChangeStatusErrorValue();
         break;
       case 0:
       default:
@@ -3337,6 +3487,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CAMPAIGN_SHARED_SET_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignSharedSetErrorValue();
         break;
+      case 65:
+        hash = (37 * hash) + CONVERSION_ACTION_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getConversionActionErrorValue();
+        break;
       case 66:
         hash = (37 * hash) + HEADER_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getHeaderErrorValue();
@@ -3356,6 +3510,14 @@ private static final long serialVersionUID = 0L;
       case 70:
         hash = (37 * hash) + ENUM_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getEnumErrorValue();
+        break;
+      case 77:
+        hash = (37 * hash) + ACCOUNT_BUDGET_PROPOSAL_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountBudgetProposalErrorValue();
+        break;
+      case 79:
+        hash = (37 * hash) + CHANGE_STATUS_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getChangeStatusErrorValue();
         break;
       case 0:
       default:
@@ -3687,6 +3849,9 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 64) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 65) {
+        result.errorCode_ = errorCode_;
+      }
       if (errorCodeCase_ == 66) {
         result.errorCode_ = errorCode_;
       }
@@ -3700,6 +3865,12 @@ private static final long serialVersionUID = 0L;
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 70) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 77) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 79) {
         result.errorCode_ = errorCode_;
       }
       result.errorCodeCase_ = errorCodeCase_;
@@ -3968,6 +4139,10 @@ private static final long serialVersionUID = 0L;
           setCampaignSharedSetErrorValue(other.getCampaignSharedSetErrorValue());
           break;
         }
+        case CONVERSION_ACTION_ERROR: {
+          setConversionActionErrorValue(other.getConversionActionErrorValue());
+          break;
+        }
         case HEADER_ERROR: {
           setHeaderErrorValue(other.getHeaderErrorValue());
           break;
@@ -3986,6 +4161,14 @@ private static final long serialVersionUID = 0L;
         }
         case ENUM_ERROR: {
           setEnumErrorValue(other.getEnumErrorValue());
+          break;
+        }
+        case ACCOUNT_BUDGET_PROPOSAL_ERROR: {
+          setAccountBudgetProposalErrorValue(other.getAccountBudgetProposalErrorValue());
+          break;
+        }
+        case CHANGE_STATUS_ERROR: {
+          setChangeStatusErrorValue(other.getChangeStatusErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -8034,6 +8217,80 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * The reasons for the conversion action error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+     */
+    public int getConversionActionErrorValue() {
+      if (errorCodeCase_ == 65) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion action error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+     */
+    public Builder setConversionActionErrorValue(int value) {
+      errorCodeCase_ = 65;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion action error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+     */
+    public com.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError getConversionActionError() {
+      if (errorCodeCase_ == 65) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError result = com.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion action error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+     */
+    public Builder setConversionActionError(com.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 65;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion action error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
+     */
+    public Builder clearConversionActionError() {
+      if (errorCodeCase_ == 65) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
      * The reasons for the header error.
      * </pre>
      *
@@ -8395,6 +8652,154 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEnumError() {
       if (errorCodeCase_ == 70) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for account budget proposal errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+     */
+    public int getAccountBudgetProposalErrorValue() {
+      if (errorCodeCase_ == 77) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for account budget proposal errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+     */
+    public Builder setAccountBudgetProposalErrorValue(int value) {
+      errorCodeCase_ = 77;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for account budget proposal errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+     */
+    public com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError getAccountBudgetProposalError() {
+      if (errorCodeCase_ == 77) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError result = com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for account budget proposal errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+     */
+    public Builder setAccountBudgetProposalError(com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 77;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for account budget proposal errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
+     */
+    public Builder clearAccountBudgetProposalError() {
+      if (errorCodeCase_ == 77) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the change status error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+     */
+    public int getChangeStatusErrorValue() {
+      if (errorCodeCase_ == 79) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the change status error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+     */
+    public Builder setChangeStatusErrorValue(int value) {
+      errorCodeCase_ = 79;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the change status error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+     */
+    public com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError getChangeStatusError() {
+      if (errorCodeCase_ == 79) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError result = com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the change status error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+     */
+    public Builder setChangeStatusError(com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 79;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the change status error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
+     */
+    public Builder clearChangeStatusError() {
+      if (errorCodeCase_ == 79) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();
