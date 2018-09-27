@@ -77,123 +77,123 @@ public class GoogleAdsClientTest {
   }
 
   @Test
-  public void testGetAccountBudgetProposalServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getAccountBudgetProposalServiceClient());
+  public void testGetAccountBudgetProposalServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getAccountBudgetProposalServiceClient());
   }
 
   @Test
-  public void testGetAdGroupAdServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getAdGroupAdServiceClient());
+  public void testGetAdGroupAdServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getAdGroupAdServiceClient());
   }
 
   @Test
-  public void testGetAdGroupBidModifierServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getAdGroupBidModifierServiceClient());
+  public void testGetAdGroupBidModifierServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getAdGroupBidModifierServiceClient());
   }
 
   @Test
-  public void testGetAdGroupCriterionServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getAdGroupCriterionServiceClient());
+  public void testGetAdGroupCriterionServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getAdGroupCriterionServiceClient());
   }
 
   @Test
-  public void testGetAdGroupServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getAdGroupServiceClient());
+  public void testGetAdGroupServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getAdGroupServiceClient());
   }
 
   @Test
-  public void testGetBiddingStrategyServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getBiddingStrategyServiceClient());
+  public void testGetBiddingStrategyServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getBiddingStrategyServiceClient());
   }
 
   @Test
-  public void testGetBillingSetupServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getBillingSetupServiceClient());
+  public void testGetBillingSetupServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getBillingSetupServiceClient());
   }
 
   @Test
-  public void testGetCampaignBidModifierServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getCampaignBidModifierServiceClient());
+  public void testGetCampaignBidModifierServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getCampaignBidModifierServiceClient());
   }
 
   @Test
-  public void testGetCampaignBudgetServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getCampaignBudgetServiceClient());
+  public void testGetCampaignBudgetServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getCampaignBudgetServiceClient());
   }
 
   @Test
-  public void testGetCampaignCriterionServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getCampaignCriterionServiceClient());
+  public void testGetCampaignCriterionServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getCampaignCriterionServiceClient());
   }
 
   @Test
-  public void testGetCampaignGroupServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getCampaignGroupServiceClient());
+  public void testGetCampaignGroupServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getCampaignGroupServiceClient());
   }
 
   @Test
-  public void testGetCampaignServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getCampaignServiceClient());
+  public void testGetCampaignServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getCampaignServiceClient());
   }
 
   @Test
-  public void testGetCampaignSharedSetServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getCampaignSharedSetServiceClient());
+  public void testGetCampaignSharedSetServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getCampaignSharedSetServiceClient());
   }
 
   @Test
-  public void testGetChangeStatusServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getChangeStatusServiceClient());
+  public void testGetChangeStatusServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getChangeStatusServiceClient());
   }
 
   @Test
-  public void testGetConversionActionServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getConversionActionServiceClient());
+  public void testGetConversionActionServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getConversionActionServiceClient());
   }
 
   @Test
-  public void testGetCustomerServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getCustomerServiceClient());
+  public void testGetCustomerServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getCustomerServiceClient());
   }
 
   @Test
-  public void testGetGeoTargetConstantServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getGeoTargetConstantServiceClient());
+  public void testGetGeoTargetConstantServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getGeoTargetConstantServiceClient());
   }
 
   @Test
-  public void testGetGoogleAdsFieldServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getGoogleAdsFieldServiceClient());
+  public void testGetGoogleAdsFieldServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getGoogleAdsFieldServiceClient());
   }
 
   @Test
-  public void testGetGoogleAdsServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getGoogleAdsServiceClient());
+  public void testGetGoogleAdsServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getGoogleAdsServiceClient());
   }
 
   @Test
-  public void testGetKeywordViewServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getKeywordViewServiceClient());
+  public void testGetKeywordViewServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getKeywordViewServiceClient());
   }
 
   @Test
-  public void testGetRecommendationServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getRecommendationServiceClient());
+  public void testGetRecommendationServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getRecommendationServiceClient());
   }
 
   @Test
-  public void testGetSharedCriterionServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getSharedCriterionServiceClient());
+  public void testGetSharedCriterionServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getSharedCriterionServiceClient());
   }
 
   @Test
-  public void testGetSharedSetServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getSharedSetServiceClient());
+  public void testGetSharedSetServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getSharedSetServiceClient());
   }
 
   @Test
-  public void testGetVideoServiceClient() {
-    assertNotNull(createTestGoogleAdsClient().getVideoServiceClient());
+  public void testGetVideoServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getVideoServiceClient());
   }
 
   /**
@@ -307,6 +307,18 @@ public class GoogleAdsClientTest {
             .setDeveloperToken(DEVELOPER_TOKEN)
             .build();
     assertGoogleAdsClient(client);
+  }
+
+  /**
+   * Asserts the argument is not null and closes it in a {@code finally} block to clean up
+   * resources. Useful for tests that instantiate closeable objects such as service clients.
+   */
+  private void assertNotNullAndClose(AutoCloseable closeable) throws Exception {
+    try {
+      assertNotNull(closeable);
+    } finally {
+      closeable.close();
+    }
   }
 
   /** Asserts that the provided client matches expectations. */
