@@ -146,7 +146,8 @@ public class ResourceNames {
 
   /** Returns the conversion action resource name for the specified components. */
   public static String conversionAction(long customerId, long conversionActionId) {
-    return ConversionActionName.format(Long.toString(customerId), Long.toString(conversionActionId));
+    return ConversionActionName.format(
+        Long.toString(customerId), Long.toString(conversionActionId));
   }
 
   /** Returns the customer resource name for the specified components. */
