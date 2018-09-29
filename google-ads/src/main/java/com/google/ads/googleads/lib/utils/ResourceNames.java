@@ -71,7 +71,7 @@ public class ResourceNames {
   /** Returns the account budget proposal resource name for the specified components. */
   public static String accountBudgetProposal(long customerId, long accountBudgetProposalId) {
     return AccountBudgetProposalName.format(
-        Long.toString(customerId), concatLongs(accountBudgetProposalId));
+        Long.toString(customerId), Long.toString(accountBudgetProposalId));
   }
 
   /** Returns the ad group ad resource name for the specified components. */
@@ -103,7 +103,7 @@ public class ResourceNames {
 
   /** Returns the billing setup resource name for the specified components. */
   public static String billingSetup(long customerId, long billingSetupId) {
-    return BillingSetupName.format(Long.toString(customerId), concatLongs(billingSetupId));
+    return BillingSetupName.format(Long.toString(customerId), Long.toString(billingSetupId));
   }
 
   /** Returns the campaign bid modifier resource name for the specified components. */
@@ -141,12 +141,12 @@ public class ResourceNames {
 
   /** Returns the change status resource name for the specified components. */
   public static String changeStatus(long customerId, long changeStatusId) {
-    return ChangeStatusName.format(Long.toString(customerId), concatLongs(changeStatusId));
+    return ChangeStatusName.format(Long.toString(customerId), Long.toString(changeStatusId));
   }
 
   /** Returns the conversion action resource name for the specified components. */
   public static String conversionAction(long customerId, long conversionActionId) {
-    return ConversionActionName.format(Long.toString(customerId), concatLongs(conversionActionId));
+    return ConversionActionName.format(Long.toString(customerId), Long.toString(conversionActionId));
   }
 
   /** Returns the customer resource name for the specified components. */
@@ -186,6 +186,6 @@ public class ResourceNames {
 
   /** Returns the video resource name for the specified components. */
   public static String video(long customerId, long videoId) {
-    return VideoName.format(Long.toString(customerId), concatLongs(videoId));
+    return VideoName.format(Long.toString(customerId), Long.toString(videoId));
   }
 }
