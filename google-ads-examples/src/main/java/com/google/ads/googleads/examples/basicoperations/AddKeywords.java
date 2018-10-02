@@ -19,6 +19,7 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.common.KeywordInfo;
 import com.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
 import com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType;
@@ -118,8 +119,7 @@ public class AddKeywords {
             .setMatchType(KeywordMatchType.EXACT)
             .build();
 
-    String adGroupResourceName =
-        AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId));
+    String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
     // Construct an ad group criterion using the keywordText configuration above.
     AdGroupCriterion criterion =
