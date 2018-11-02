@@ -104,14 +104,6 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * The requested start date is invalid.
-     * </pre>
-     *
-     * <code>INVALID_START_DATE = 2;</code>
-     */
-    INVALID_START_DATE(2),
-    /**
-     * <pre>
      * The requested start date is too old.
      * </pre>
      *
@@ -137,14 +129,6 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN = 1;</code>
      */
     public static final int UNKNOWN_VALUE = 1;
-    /**
-     * <pre>
-     * The requested start date is invalid.
-     * </pre>
-     *
-     * <code>INVALID_START_DATE = 2;</code>
-     */
-    public static final int INVALID_START_DATE_VALUE = 2;
     /**
      * <pre>
      * The requested start date is too old.
@@ -175,7 +159,6 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
-        case 2: return INVALID_START_DATE;
         case 3: return START_DATE_TOO_OLD;
         default: return null;
       }

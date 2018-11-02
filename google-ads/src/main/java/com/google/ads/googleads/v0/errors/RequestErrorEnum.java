@@ -225,6 +225,14 @@ private static final long serialVersionUID = 0L;
      * <code>DEVELOPER_TOKEN_PARAMETER_MISSING = 19;</code>
      */
     DEVELOPER_TOKEN_PARAMETER_MISSING(19),
+    /**
+     * <pre>
+     * The login-customer-id parameter is required for this request.
+     * </pre>
+     *
+     * <code>LOGIN_CUSTOMER_ID_PARAMETER_MISSING = 20;</code>
+     */
+    LOGIN_CUSTOMER_ID_PARAMETER_MISSING(20),
     UNRECOGNIZED(-1),
     ;
 
@@ -367,6 +375,14 @@ private static final long serialVersionUID = 0L;
      * <code>DEVELOPER_TOKEN_PARAMETER_MISSING = 19;</code>
      */
     public static final int DEVELOPER_TOKEN_PARAMETER_MISSING_VALUE = 19;
+    /**
+     * <pre>
+     * The login-customer-id parameter is required for this request.
+     * </pre>
+     *
+     * <code>LOGIN_CUSTOMER_ID_PARAMETER_MISSING = 20;</code>
+     */
+    public static final int LOGIN_CUSTOMER_ID_PARAMETER_MISSING_VALUE = 20;
 
 
     public final int getNumber() {
@@ -404,6 +420,7 @@ private static final long serialVersionUID = 0L;
         case 15: return CANNOT_MODIFY_FOREIGN_FIELD;
         case 18: return INVALID_ENUM_VALUE;
         case 19: return DEVELOPER_TOKEN_PARAMETER_MISSING;
+        case 20: return LOGIN_CUSTOMER_ID_PARAMETER_MISSING;
         default: return null;
       }
     }

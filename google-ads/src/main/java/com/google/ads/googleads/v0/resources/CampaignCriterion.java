@@ -113,6 +113,20 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 8;
             break;
           }
+          case 74: {
+            com.google.ads.googleads.v0.common.PlacementInfo.Builder subBuilder = null;
+            if (criterionCase_ == 9) {
+              subBuilder = ((com.google.ads.googleads.v0.common.PlacementInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.PlacementInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.PlacementInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 9;
+            break;
+          }
           case 98: {
             com.google.ads.googleads.v0.common.LocationInfo.Builder subBuilder = null;
             if (criterionCase_ == 12) {
@@ -168,6 +182,118 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 15;
             break;
           }
+          case 130: {
+            com.google.ads.googleads.v0.common.AgeRangeInfo.Builder subBuilder = null;
+            if (criterionCase_ == 16) {
+              subBuilder = ((com.google.ads.googleads.v0.common.AgeRangeInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.AgeRangeInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.AgeRangeInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 16;
+            break;
+          }
+          case 138: {
+            com.google.ads.googleads.v0.common.GenderInfo.Builder subBuilder = null;
+            if (criterionCase_ == 17) {
+              subBuilder = ((com.google.ads.googleads.v0.common.GenderInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.GenderInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.GenderInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 17;
+            break;
+          }
+          case 146: {
+            com.google.ads.googleads.v0.common.IncomeRangeInfo.Builder subBuilder = null;
+            if (criterionCase_ == 18) {
+              subBuilder = ((com.google.ads.googleads.v0.common.IncomeRangeInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.IncomeRangeInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.IncomeRangeInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 18;
+            break;
+          }
+          case 154: {
+            com.google.ads.googleads.v0.common.ParentalStatusInfo.Builder subBuilder = null;
+            if (criterionCase_ == 19) {
+              subBuilder = ((com.google.ads.googleads.v0.common.ParentalStatusInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.ParentalStatusInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.ParentalStatusInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 19;
+            break;
+          }
+          case 162: {
+            com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder subBuilder = null;
+            if (criterionCase_ == 20) {
+              subBuilder = ((com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.YouTubeVideoInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 20;
+            break;
+          }
+          case 170: {
+            com.google.ads.googleads.v0.common.YouTubeChannelInfo.Builder subBuilder = null;
+            if (criterionCase_ == 21) {
+              subBuilder = ((com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.YouTubeChannelInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 21;
+            break;
+          }
+          case 186: {
+            com.google.ads.googleads.v0.common.ProximityInfo.Builder subBuilder = null;
+            if (criterionCase_ == 23) {
+              subBuilder = ((com.google.ads.googleads.v0.common.ProximityInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.ProximityInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.ProximityInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 23;
+            break;
+          }
+          case 194: {
+            com.google.ads.googleads.v0.common.TopicInfo.Builder subBuilder = null;
+            if (criterionCase_ == 24) {
+              subBuilder = ((com.google.ads.googleads.v0.common.TopicInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.TopicInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.TopicInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 24;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -205,9 +331,18 @@ private static final long serialVersionUID = 0L;
   public enum CriterionCase
       implements com.google.protobuf.Internal.EnumLite {
     KEYWORD(8),
+    PLACEMENT(9),
     LOCATION(12),
     DEVICE(13),
     AD_SCHEDULE(15),
+    AGE_RANGE(16),
+    GENDER(17),
+    INCOME_RANGE(18),
+    PARENTAL_STATUS(19),
+    YOUTUBE_VIDEO(20),
+    YOUTUBE_CHANNEL(21),
+    PROXIMITY(23),
+    TOPIC(24),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -224,9 +359,18 @@ private static final long serialVersionUID = 0L;
     public static CriterionCase forNumber(int value) {
       switch (value) {
         case 8: return KEYWORD;
+        case 9: return PLACEMENT;
         case 12: return LOCATION;
         case 13: return DEVICE;
         case 15: return AD_SCHEDULE;
+        case 16: return AGE_RANGE;
+        case 17: return GENDER;
+        case 18: return INCOME_RANGE;
+        case 19: return PARENTAL_STATUS;
+        case 20: return YOUTUBE_VIDEO;
+        case 21: return YOUTUBE_CHANNEL;
+        case 23: return PROXIMITY;
+        case 24: return TOPIC;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -364,10 +508,9 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.FloatValue bidModifier_;
   /**
    * <pre>
-   * The modifier for the bids when the criterion matches.
-   * Allowable modifier values depend on the criterion:
-   *  - 0.1 - 10.0: Location
-   *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
+   * The modifier for the bids when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+   * Use 0 to opt out of a Device type.
    * </pre>
    *
    * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -377,10 +520,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The modifier for the bids when the criterion matches.
-   * Allowable modifier values depend on the criterion:
-   *  - 0.1 - 10.0: Location
-   *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
+   * The modifier for the bids when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+   * Use 0 to opt out of a Device type.
    * </pre>
    *
    * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -390,10 +532,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The modifier for the bids when the criterion matches.
-   * Allowable modifier values depend on the criterion:
-   *  - 0.1 - 10.0: Location
-   *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
+   * The modifier for the bids when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+   * Use 0 to opt out of a Device type.
    * </pre>
    *
    * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -496,6 +637,44 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v0.common.KeywordInfo) criterion_;
     }
     return com.google.ads.googleads.v0.common.KeywordInfo.getDefaultInstance();
+  }
+
+  public static final int PLACEMENT_FIELD_NUMBER = 9;
+  /**
+   * <pre>
+   * Placement.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 9;</code>
+   */
+  public boolean hasPlacement() {
+    return criterionCase_ == 9;
+  }
+  /**
+   * <pre>
+   * Placement.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 9;</code>
+   */
+  public com.google.ads.googleads.v0.common.PlacementInfo getPlacement() {
+    if (criterionCase_ == 9) {
+       return (com.google.ads.googleads.v0.common.PlacementInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Placement.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 9;</code>
+   */
+  public com.google.ads.googleads.v0.common.PlacementInfoOrBuilder getPlacementOrBuilder() {
+    if (criterionCase_ == 9) {
+       return (com.google.ads.googleads.v0.common.PlacementInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
   }
 
   public static final int LOCATION_FIELD_NUMBER = 12;
@@ -612,6 +791,310 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.AdScheduleInfo.getDefaultInstance();
   }
 
+  public static final int AGE_RANGE_FIELD_NUMBER = 16;
+  /**
+   * <pre>
+   * Age range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 16;</code>
+   */
+  public boolean hasAgeRange() {
+    return criterionCase_ == 16;
+  }
+  /**
+   * <pre>
+   * Age range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 16;</code>
+   */
+  public com.google.ads.googleads.v0.common.AgeRangeInfo getAgeRange() {
+    if (criterionCase_ == 16) {
+       return (com.google.ads.googleads.v0.common.AgeRangeInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.AgeRangeInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Age range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 16;</code>
+   */
+  public com.google.ads.googleads.v0.common.AgeRangeInfoOrBuilder getAgeRangeOrBuilder() {
+    if (criterionCase_ == 16) {
+       return (com.google.ads.googleads.v0.common.AgeRangeInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.AgeRangeInfo.getDefaultInstance();
+  }
+
+  public static final int GENDER_FIELD_NUMBER = 17;
+  /**
+   * <pre>
+   * Gender.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.GenderInfo gender = 17;</code>
+   */
+  public boolean hasGender() {
+    return criterionCase_ == 17;
+  }
+  /**
+   * <pre>
+   * Gender.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.GenderInfo gender = 17;</code>
+   */
+  public com.google.ads.googleads.v0.common.GenderInfo getGender() {
+    if (criterionCase_ == 17) {
+       return (com.google.ads.googleads.v0.common.GenderInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.GenderInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Gender.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.GenderInfo gender = 17;</code>
+   */
+  public com.google.ads.googleads.v0.common.GenderInfoOrBuilder getGenderOrBuilder() {
+    if (criterionCase_ == 17) {
+       return (com.google.ads.googleads.v0.common.GenderInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.GenderInfo.getDefaultInstance();
+  }
+
+  public static final int INCOME_RANGE_FIELD_NUMBER = 18;
+  /**
+   * <pre>
+   * Income range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 18;</code>
+   */
+  public boolean hasIncomeRange() {
+    return criterionCase_ == 18;
+  }
+  /**
+   * <pre>
+   * Income range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 18;</code>
+   */
+  public com.google.ads.googleads.v0.common.IncomeRangeInfo getIncomeRange() {
+    if (criterionCase_ == 18) {
+       return (com.google.ads.googleads.v0.common.IncomeRangeInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.IncomeRangeInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Income range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 18;</code>
+   */
+  public com.google.ads.googleads.v0.common.IncomeRangeInfoOrBuilder getIncomeRangeOrBuilder() {
+    if (criterionCase_ == 18) {
+       return (com.google.ads.googleads.v0.common.IncomeRangeInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.IncomeRangeInfo.getDefaultInstance();
+  }
+
+  public static final int PARENTAL_STATUS_FIELD_NUMBER = 19;
+  /**
+   * <pre>
+   * Parental status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 19;</code>
+   */
+  public boolean hasParentalStatus() {
+    return criterionCase_ == 19;
+  }
+  /**
+   * <pre>
+   * Parental status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 19;</code>
+   */
+  public com.google.ads.googleads.v0.common.ParentalStatusInfo getParentalStatus() {
+    if (criterionCase_ == 19) {
+       return (com.google.ads.googleads.v0.common.ParentalStatusInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.ParentalStatusInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Parental status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 19;</code>
+   */
+  public com.google.ads.googleads.v0.common.ParentalStatusInfoOrBuilder getParentalStatusOrBuilder() {
+    if (criterionCase_ == 19) {
+       return (com.google.ads.googleads.v0.common.ParentalStatusInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.ParentalStatusInfo.getDefaultInstance();
+  }
+
+  public static final int YOUTUBE_VIDEO_FIELD_NUMBER = 20;
+  /**
+   * <pre>
+   * YouTube Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 20;</code>
+   */
+  public boolean hasYoutubeVideo() {
+    return criterionCase_ == 20;
+  }
+  /**
+   * <pre>
+   * YouTube Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 20;</code>
+   */
+  public com.google.ads.googleads.v0.common.YouTubeVideoInfo getYoutubeVideo() {
+    if (criterionCase_ == 20) {
+       return (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * YouTube Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 20;</code>
+   */
+  public com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder getYoutubeVideoOrBuilder() {
+    if (criterionCase_ == 20) {
+       return (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance();
+  }
+
+  public static final int YOUTUBE_CHANNEL_FIELD_NUMBER = 21;
+  /**
+   * <pre>
+   * YouTube Channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 21;</code>
+   */
+  public boolean hasYoutubeChannel() {
+    return criterionCase_ == 21;
+  }
+  /**
+   * <pre>
+   * YouTube Channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 21;</code>
+   */
+  public com.google.ads.googleads.v0.common.YouTubeChannelInfo getYoutubeChannel() {
+    if (criterionCase_ == 21) {
+       return (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * YouTube Channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 21;</code>
+   */
+  public com.google.ads.googleads.v0.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder() {
+    if (criterionCase_ == 21) {
+       return (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance();
+  }
+
+  public static final int PROXIMITY_FIELD_NUMBER = 23;
+  /**
+   * <pre>
+   * Proximity.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProximityInfo proximity = 23;</code>
+   */
+  public boolean hasProximity() {
+    return criterionCase_ == 23;
+  }
+  /**
+   * <pre>
+   * Proximity.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProximityInfo proximity = 23;</code>
+   */
+  public com.google.ads.googleads.v0.common.ProximityInfo getProximity() {
+    if (criterionCase_ == 23) {
+       return (com.google.ads.googleads.v0.common.ProximityInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.ProximityInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Proximity.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ProximityInfo proximity = 23;</code>
+   */
+  public com.google.ads.googleads.v0.common.ProximityInfoOrBuilder getProximityOrBuilder() {
+    if (criterionCase_ == 23) {
+       return (com.google.ads.googleads.v0.common.ProximityInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.ProximityInfo.getDefaultInstance();
+  }
+
+  public static final int TOPIC_FIELD_NUMBER = 24;
+  /**
+   * <pre>
+   * Topic.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
+   */
+  public boolean hasTopic() {
+    return criterionCase_ == 24;
+  }
+  /**
+   * <pre>
+   * Topic.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
+   */
+  public com.google.ads.googleads.v0.common.TopicInfo getTopic() {
+    if (criterionCase_ == 24) {
+       return (com.google.ads.googleads.v0.common.TopicInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.TopicInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Topic.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
+   */
+  public com.google.ads.googleads.v0.common.TopicInfoOrBuilder getTopicOrBuilder() {
+    if (criterionCase_ == 24) {
+       return (com.google.ads.googleads.v0.common.TopicInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.TopicInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -644,6 +1127,9 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 8) {
       output.writeMessage(8, (com.google.ads.googleads.v0.common.KeywordInfo) criterion_);
     }
+    if (criterionCase_ == 9) {
+      output.writeMessage(9, (com.google.ads.googleads.v0.common.PlacementInfo) criterion_);
+    }
     if (criterionCase_ == 12) {
       output.writeMessage(12, (com.google.ads.googleads.v0.common.LocationInfo) criterion_);
     }
@@ -655,6 +1141,30 @@ private static final long serialVersionUID = 0L;
     }
     if (criterionCase_ == 15) {
       output.writeMessage(15, (com.google.ads.googleads.v0.common.AdScheduleInfo) criterion_);
+    }
+    if (criterionCase_ == 16) {
+      output.writeMessage(16, (com.google.ads.googleads.v0.common.AgeRangeInfo) criterion_);
+    }
+    if (criterionCase_ == 17) {
+      output.writeMessage(17, (com.google.ads.googleads.v0.common.GenderInfo) criterion_);
+    }
+    if (criterionCase_ == 18) {
+      output.writeMessage(18, (com.google.ads.googleads.v0.common.IncomeRangeInfo) criterion_);
+    }
+    if (criterionCase_ == 19) {
+      output.writeMessage(19, (com.google.ads.googleads.v0.common.ParentalStatusInfo) criterion_);
+    }
+    if (criterionCase_ == 20) {
+      output.writeMessage(20, (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_);
+    }
+    if (criterionCase_ == 21) {
+      output.writeMessage(21, (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_);
+    }
+    if (criterionCase_ == 23) {
+      output.writeMessage(23, (com.google.ads.googleads.v0.common.ProximityInfo) criterion_);
+    }
+    if (criterionCase_ == 24) {
+      output.writeMessage(24, (com.google.ads.googleads.v0.common.TopicInfo) criterion_);
     }
     unknownFields.writeTo(output);
   }
@@ -688,6 +1198,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, (com.google.ads.googleads.v0.common.KeywordInfo) criterion_);
     }
+    if (criterionCase_ == 9) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, (com.google.ads.googleads.v0.common.PlacementInfo) criterion_);
+    }
     if (criterionCase_ == 12) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, (com.google.ads.googleads.v0.common.LocationInfo) criterion_);
@@ -703,6 +1217,38 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 15) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, (com.google.ads.googleads.v0.common.AdScheduleInfo) criterion_);
+    }
+    if (criterionCase_ == 16) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(16, (com.google.ads.googleads.v0.common.AgeRangeInfo) criterion_);
+    }
+    if (criterionCase_ == 17) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(17, (com.google.ads.googleads.v0.common.GenderInfo) criterion_);
+    }
+    if (criterionCase_ == 18) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, (com.google.ads.googleads.v0.common.IncomeRangeInfo) criterion_);
+    }
+    if (criterionCase_ == 19) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, (com.google.ads.googleads.v0.common.ParentalStatusInfo) criterion_);
+    }
+    if (criterionCase_ == 20) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_);
+    }
+    if (criterionCase_ == 21) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_);
+    }
+    if (criterionCase_ == 23) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(23, (com.google.ads.googleads.v0.common.ProximityInfo) criterion_);
+    }
+    if (criterionCase_ == 24) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(24, (com.google.ads.googleads.v0.common.TopicInfo) criterion_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -751,6 +1297,10 @@ private static final long serialVersionUID = 0L;
         result = result && getKeyword()
             .equals(other.getKeyword());
         break;
+      case 9:
+        result = result && getPlacement()
+            .equals(other.getPlacement());
+        break;
       case 12:
         result = result && getLocation()
             .equals(other.getLocation());
@@ -762,6 +1312,38 @@ private static final long serialVersionUID = 0L;
       case 15:
         result = result && getAdSchedule()
             .equals(other.getAdSchedule());
+        break;
+      case 16:
+        result = result && getAgeRange()
+            .equals(other.getAgeRange());
+        break;
+      case 17:
+        result = result && getGender()
+            .equals(other.getGender());
+        break;
+      case 18:
+        result = result && getIncomeRange()
+            .equals(other.getIncomeRange());
+        break;
+      case 19:
+        result = result && getParentalStatus()
+            .equals(other.getParentalStatus());
+        break;
+      case 20:
+        result = result && getYoutubeVideo()
+            .equals(other.getYoutubeVideo());
+        break;
+      case 21:
+        result = result && getYoutubeChannel()
+            .equals(other.getYoutubeChannel());
+        break;
+      case 23:
+        result = result && getProximity()
+            .equals(other.getProximity());
+        break;
+      case 24:
+        result = result && getTopic()
+            .equals(other.getTopic());
         break;
       case 0:
       default:
@@ -802,6 +1384,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + KEYWORD_FIELD_NUMBER;
         hash = (53 * hash) + getKeyword().hashCode();
         break;
+      case 9:
+        hash = (37 * hash) + PLACEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPlacement().hashCode();
+        break;
       case 12:
         hash = (37 * hash) + LOCATION_FIELD_NUMBER;
         hash = (53 * hash) + getLocation().hashCode();
@@ -813,6 +1399,38 @@ private static final long serialVersionUID = 0L;
       case 15:
         hash = (37 * hash) + AD_SCHEDULE_FIELD_NUMBER;
         hash = (53 * hash) + getAdSchedule().hashCode();
+        break;
+      case 16:
+        hash = (37 * hash) + AGE_RANGE_FIELD_NUMBER;
+        hash = (53 * hash) + getAgeRange().hashCode();
+        break;
+      case 17:
+        hash = (37 * hash) + GENDER_FIELD_NUMBER;
+        hash = (53 * hash) + getGender().hashCode();
+        break;
+      case 18:
+        hash = (37 * hash) + INCOME_RANGE_FIELD_NUMBER;
+        hash = (53 * hash) + getIncomeRange().hashCode();
+        break;
+      case 19:
+        hash = (37 * hash) + PARENTAL_STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getParentalStatus().hashCode();
+        break;
+      case 20:
+        hash = (37 * hash) + YOUTUBE_VIDEO_FIELD_NUMBER;
+        hash = (53 * hash) + getYoutubeVideo().hashCode();
+        break;
+      case 21:
+        hash = (37 * hash) + YOUTUBE_CHANNEL_FIELD_NUMBER;
+        hash = (53 * hash) + getYoutubeChannel().hashCode();
+        break;
+      case 23:
+        hash = (37 * hash) + PROXIMITY_FIELD_NUMBER;
+        hash = (53 * hash) + getProximity().hashCode();
+        break;
+      case 24:
+        hash = (37 * hash) + TOPIC_FIELD_NUMBER;
+        hash = (53 * hash) + getTopic().hashCode();
         break;
       case 0:
       default:
@@ -1039,6 +1657,13 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = keywordBuilder_.build();
         }
       }
+      if (criterionCase_ == 9) {
+        if (placementBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = placementBuilder_.build();
+        }
+      }
       if (criterionCase_ == 12) {
         if (locationBuilder_ == null) {
           result.criterion_ = criterion_;
@@ -1058,6 +1683,62 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = criterion_;
         } else {
           result.criterion_ = adScheduleBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 16) {
+        if (ageRangeBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = ageRangeBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 17) {
+        if (genderBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = genderBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 18) {
+        if (incomeRangeBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = incomeRangeBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 19) {
+        if (parentalStatusBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = parentalStatusBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 20) {
+        if (youtubeVideoBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = youtubeVideoBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 21) {
+        if (youtubeChannelBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = youtubeChannelBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 23) {
+        if (proximityBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = proximityBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 24) {
+        if (topicBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = topicBuilder_.build();
         }
       }
       result.criterionCase_ = criterionCase_;
@@ -1133,6 +1814,10 @@ private static final long serialVersionUID = 0L;
           mergeKeyword(other.getKeyword());
           break;
         }
+        case PLACEMENT: {
+          mergePlacement(other.getPlacement());
+          break;
+        }
         case LOCATION: {
           mergeLocation(other.getLocation());
           break;
@@ -1143,6 +1828,38 @@ private static final long serialVersionUID = 0L;
         }
         case AD_SCHEDULE: {
           mergeAdSchedule(other.getAdSchedule());
+          break;
+        }
+        case AGE_RANGE: {
+          mergeAgeRange(other.getAgeRange());
+          break;
+        }
+        case GENDER: {
+          mergeGender(other.getGender());
+          break;
+        }
+        case INCOME_RANGE: {
+          mergeIncomeRange(other.getIncomeRange());
+          break;
+        }
+        case PARENTAL_STATUS: {
+          mergeParentalStatus(other.getParentalStatus());
+          break;
+        }
+        case YOUTUBE_VIDEO: {
+          mergeYoutubeVideo(other.getYoutubeVideo());
+          break;
+        }
+        case YOUTUBE_CHANNEL: {
+          mergeYoutubeChannel(other.getYoutubeChannel());
+          break;
+        }
+        case PROXIMITY: {
+          mergeProximity(other.getProximity());
+          break;
+        }
+        case TOPIC: {
+          mergeTopic(other.getTopic());
           break;
         }
         case CRITERION_NOT_SET: {
@@ -1621,10 +2338,9 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> bidModifierBuilder_;
     /**
      * <pre>
-     * The modifier for the bids when the criterion matches.
-     * Allowable modifier values depend on the criterion:
-     *  - 0.1 - 10.0: Location
-     *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
+     * The modifier for the bids when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -1634,10 +2350,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bids when the criterion matches.
-     * Allowable modifier values depend on the criterion:
-     *  - 0.1 - 10.0: Location
-     *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
+     * The modifier for the bids when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -1651,10 +2366,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bids when the criterion matches.
-     * Allowable modifier values depend on the criterion:
-     *  - 0.1 - 10.0: Location
-     *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
+     * The modifier for the bids when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -1674,10 +2388,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bids when the criterion matches.
-     * Allowable modifier values depend on the criterion:
-     *  - 0.1 - 10.0: Location
-     *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
+     * The modifier for the bids when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -1695,10 +2408,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bids when the criterion matches.
-     * Allowable modifier values depend on the criterion:
-     *  - 0.1 - 10.0: Location
-     *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
+     * The modifier for the bids when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -1720,10 +2432,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bids when the criterion matches.
-     * Allowable modifier values depend on the criterion:
-     *  - 0.1 - 10.0: Location
-     *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
+     * The modifier for the bids when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -1741,10 +2452,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bids when the criterion matches.
-     * Allowable modifier values depend on the criterion:
-     *  - 0.1 - 10.0: Location
-     *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
+     * The modifier for the bids when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -1756,10 +2466,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bids when the criterion matches.
-     * Allowable modifier values depend on the criterion:
-     *  - 0.1 - 10.0: Location
-     *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
+     * The modifier for the bids when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -1774,10 +2483,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bids when the criterion matches.
-     * Allowable modifier values depend on the criterion:
-     *  - 0.1 - 10.0: Location
-     *  - 0.1 - 4.0: Device (mobile). Use 0 to opt out of mobile.
+     * The modifier for the bids when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
@@ -2184,6 +2892,178 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 8;
       onChanged();;
       return keywordBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.PlacementInfo, com.google.ads.googleads.v0.common.PlacementInfo.Builder, com.google.ads.googleads.v0.common.PlacementInfoOrBuilder> placementBuilder_;
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 9;</code>
+     */
+    public boolean hasPlacement() {
+      return criterionCase_ == 9;
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 9;</code>
+     */
+    public com.google.ads.googleads.v0.common.PlacementInfo getPlacement() {
+      if (placementBuilder_ == null) {
+        if (criterionCase_ == 9) {
+          return (com.google.ads.googleads.v0.common.PlacementInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 9) {
+          return placementBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 9;</code>
+     */
+    public Builder setPlacement(com.google.ads.googleads.v0.common.PlacementInfo value) {
+      if (placementBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        placementBuilder_.setMessage(value);
+      }
+      criterionCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 9;</code>
+     */
+    public Builder setPlacement(
+        com.google.ads.googleads.v0.common.PlacementInfo.Builder builderForValue) {
+      if (placementBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        placementBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 9;</code>
+     */
+    public Builder mergePlacement(com.google.ads.googleads.v0.common.PlacementInfo value) {
+      if (placementBuilder_ == null) {
+        if (criterionCase_ == 9 &&
+            criterion_ != com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.PlacementInfo.newBuilder((com.google.ads.googleads.v0.common.PlacementInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 9) {
+          placementBuilder_.mergeFrom(value);
+        }
+        placementBuilder_.setMessage(value);
+      }
+      criterionCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 9;</code>
+     */
+    public Builder clearPlacement() {
+      if (placementBuilder_ == null) {
+        if (criterionCase_ == 9) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 9) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        placementBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 9;</code>
+     */
+    public com.google.ads.googleads.v0.common.PlacementInfo.Builder getPlacementBuilder() {
+      return getPlacementFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 9;</code>
+     */
+    public com.google.ads.googleads.v0.common.PlacementInfoOrBuilder getPlacementOrBuilder() {
+      if ((criterionCase_ == 9) && (placementBuilder_ != null)) {
+        return placementBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 9) {
+          return (com.google.ads.googleads.v0.common.PlacementInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.PlacementInfo, com.google.ads.googleads.v0.common.PlacementInfo.Builder, com.google.ads.googleads.v0.common.PlacementInfoOrBuilder> 
+        getPlacementFieldBuilder() {
+      if (placementBuilder_ == null) {
+        if (!(criterionCase_ == 9)) {
+          criterion_ = com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
+        }
+        placementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.PlacementInfo, com.google.ads.googleads.v0.common.PlacementInfo.Builder, com.google.ads.googleads.v0.common.PlacementInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.PlacementInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 9;
+      onChanged();;
+      return placementBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -2700,6 +3580,1382 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 15;
       onChanged();;
       return adScheduleBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.AgeRangeInfo, com.google.ads.googleads.v0.common.AgeRangeInfo.Builder, com.google.ads.googleads.v0.common.AgeRangeInfoOrBuilder> ageRangeBuilder_;
+    /**
+     * <pre>
+     * Age range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 16;</code>
+     */
+    public boolean hasAgeRange() {
+      return criterionCase_ == 16;
+    }
+    /**
+     * <pre>
+     * Age range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 16;</code>
+     */
+    public com.google.ads.googleads.v0.common.AgeRangeInfo getAgeRange() {
+      if (ageRangeBuilder_ == null) {
+        if (criterionCase_ == 16) {
+          return (com.google.ads.googleads.v0.common.AgeRangeInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.AgeRangeInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 16) {
+          return ageRangeBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.AgeRangeInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Age range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 16;</code>
+     */
+    public Builder setAgeRange(com.google.ads.googleads.v0.common.AgeRangeInfo value) {
+      if (ageRangeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        ageRangeBuilder_.setMessage(value);
+      }
+      criterionCase_ = 16;
+      return this;
+    }
+    /**
+     * <pre>
+     * Age range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 16;</code>
+     */
+    public Builder setAgeRange(
+        com.google.ads.googleads.v0.common.AgeRangeInfo.Builder builderForValue) {
+      if (ageRangeBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        ageRangeBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 16;
+      return this;
+    }
+    /**
+     * <pre>
+     * Age range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 16;</code>
+     */
+    public Builder mergeAgeRange(com.google.ads.googleads.v0.common.AgeRangeInfo value) {
+      if (ageRangeBuilder_ == null) {
+        if (criterionCase_ == 16 &&
+            criterion_ != com.google.ads.googleads.v0.common.AgeRangeInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.AgeRangeInfo.newBuilder((com.google.ads.googleads.v0.common.AgeRangeInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 16) {
+          ageRangeBuilder_.mergeFrom(value);
+        }
+        ageRangeBuilder_.setMessage(value);
+      }
+      criterionCase_ = 16;
+      return this;
+    }
+    /**
+     * <pre>
+     * Age range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 16;</code>
+     */
+    public Builder clearAgeRange() {
+      if (ageRangeBuilder_ == null) {
+        if (criterionCase_ == 16) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 16) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        ageRangeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Age range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 16;</code>
+     */
+    public com.google.ads.googleads.v0.common.AgeRangeInfo.Builder getAgeRangeBuilder() {
+      return getAgeRangeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Age range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 16;</code>
+     */
+    public com.google.ads.googleads.v0.common.AgeRangeInfoOrBuilder getAgeRangeOrBuilder() {
+      if ((criterionCase_ == 16) && (ageRangeBuilder_ != null)) {
+        return ageRangeBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 16) {
+          return (com.google.ads.googleads.v0.common.AgeRangeInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.AgeRangeInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Age range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 16;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.AgeRangeInfo, com.google.ads.googleads.v0.common.AgeRangeInfo.Builder, com.google.ads.googleads.v0.common.AgeRangeInfoOrBuilder> 
+        getAgeRangeFieldBuilder() {
+      if (ageRangeBuilder_ == null) {
+        if (!(criterionCase_ == 16)) {
+          criterion_ = com.google.ads.googleads.v0.common.AgeRangeInfo.getDefaultInstance();
+        }
+        ageRangeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.AgeRangeInfo, com.google.ads.googleads.v0.common.AgeRangeInfo.Builder, com.google.ads.googleads.v0.common.AgeRangeInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.AgeRangeInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 16;
+      onChanged();;
+      return ageRangeBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.GenderInfo, com.google.ads.googleads.v0.common.GenderInfo.Builder, com.google.ads.googleads.v0.common.GenderInfoOrBuilder> genderBuilder_;
+    /**
+     * <pre>
+     * Gender.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GenderInfo gender = 17;</code>
+     */
+    public boolean hasGender() {
+      return criterionCase_ == 17;
+    }
+    /**
+     * <pre>
+     * Gender.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GenderInfo gender = 17;</code>
+     */
+    public com.google.ads.googleads.v0.common.GenderInfo getGender() {
+      if (genderBuilder_ == null) {
+        if (criterionCase_ == 17) {
+          return (com.google.ads.googleads.v0.common.GenderInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.GenderInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 17) {
+          return genderBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.GenderInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Gender.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GenderInfo gender = 17;</code>
+     */
+    public Builder setGender(com.google.ads.googleads.v0.common.GenderInfo value) {
+      if (genderBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        genderBuilder_.setMessage(value);
+      }
+      criterionCase_ = 17;
+      return this;
+    }
+    /**
+     * <pre>
+     * Gender.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GenderInfo gender = 17;</code>
+     */
+    public Builder setGender(
+        com.google.ads.googleads.v0.common.GenderInfo.Builder builderForValue) {
+      if (genderBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        genderBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 17;
+      return this;
+    }
+    /**
+     * <pre>
+     * Gender.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GenderInfo gender = 17;</code>
+     */
+    public Builder mergeGender(com.google.ads.googleads.v0.common.GenderInfo value) {
+      if (genderBuilder_ == null) {
+        if (criterionCase_ == 17 &&
+            criterion_ != com.google.ads.googleads.v0.common.GenderInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.GenderInfo.newBuilder((com.google.ads.googleads.v0.common.GenderInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 17) {
+          genderBuilder_.mergeFrom(value);
+        }
+        genderBuilder_.setMessage(value);
+      }
+      criterionCase_ = 17;
+      return this;
+    }
+    /**
+     * <pre>
+     * Gender.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GenderInfo gender = 17;</code>
+     */
+    public Builder clearGender() {
+      if (genderBuilder_ == null) {
+        if (criterionCase_ == 17) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 17) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        genderBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Gender.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GenderInfo gender = 17;</code>
+     */
+    public com.google.ads.googleads.v0.common.GenderInfo.Builder getGenderBuilder() {
+      return getGenderFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Gender.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GenderInfo gender = 17;</code>
+     */
+    public com.google.ads.googleads.v0.common.GenderInfoOrBuilder getGenderOrBuilder() {
+      if ((criterionCase_ == 17) && (genderBuilder_ != null)) {
+        return genderBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 17) {
+          return (com.google.ads.googleads.v0.common.GenderInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.GenderInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Gender.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GenderInfo gender = 17;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.GenderInfo, com.google.ads.googleads.v0.common.GenderInfo.Builder, com.google.ads.googleads.v0.common.GenderInfoOrBuilder> 
+        getGenderFieldBuilder() {
+      if (genderBuilder_ == null) {
+        if (!(criterionCase_ == 17)) {
+          criterion_ = com.google.ads.googleads.v0.common.GenderInfo.getDefaultInstance();
+        }
+        genderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.GenderInfo, com.google.ads.googleads.v0.common.GenderInfo.Builder, com.google.ads.googleads.v0.common.GenderInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.GenderInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 17;
+      onChanged();;
+      return genderBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.IncomeRangeInfo, com.google.ads.googleads.v0.common.IncomeRangeInfo.Builder, com.google.ads.googleads.v0.common.IncomeRangeInfoOrBuilder> incomeRangeBuilder_;
+    /**
+     * <pre>
+     * Income range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 18;</code>
+     */
+    public boolean hasIncomeRange() {
+      return criterionCase_ == 18;
+    }
+    /**
+     * <pre>
+     * Income range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 18;</code>
+     */
+    public com.google.ads.googleads.v0.common.IncomeRangeInfo getIncomeRange() {
+      if (incomeRangeBuilder_ == null) {
+        if (criterionCase_ == 18) {
+          return (com.google.ads.googleads.v0.common.IncomeRangeInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.IncomeRangeInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 18) {
+          return incomeRangeBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.IncomeRangeInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Income range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 18;</code>
+     */
+    public Builder setIncomeRange(com.google.ads.googleads.v0.common.IncomeRangeInfo value) {
+      if (incomeRangeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        incomeRangeBuilder_.setMessage(value);
+      }
+      criterionCase_ = 18;
+      return this;
+    }
+    /**
+     * <pre>
+     * Income range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 18;</code>
+     */
+    public Builder setIncomeRange(
+        com.google.ads.googleads.v0.common.IncomeRangeInfo.Builder builderForValue) {
+      if (incomeRangeBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        incomeRangeBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 18;
+      return this;
+    }
+    /**
+     * <pre>
+     * Income range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 18;</code>
+     */
+    public Builder mergeIncomeRange(com.google.ads.googleads.v0.common.IncomeRangeInfo value) {
+      if (incomeRangeBuilder_ == null) {
+        if (criterionCase_ == 18 &&
+            criterion_ != com.google.ads.googleads.v0.common.IncomeRangeInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.IncomeRangeInfo.newBuilder((com.google.ads.googleads.v0.common.IncomeRangeInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 18) {
+          incomeRangeBuilder_.mergeFrom(value);
+        }
+        incomeRangeBuilder_.setMessage(value);
+      }
+      criterionCase_ = 18;
+      return this;
+    }
+    /**
+     * <pre>
+     * Income range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 18;</code>
+     */
+    public Builder clearIncomeRange() {
+      if (incomeRangeBuilder_ == null) {
+        if (criterionCase_ == 18) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 18) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        incomeRangeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Income range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 18;</code>
+     */
+    public com.google.ads.googleads.v0.common.IncomeRangeInfo.Builder getIncomeRangeBuilder() {
+      return getIncomeRangeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Income range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 18;</code>
+     */
+    public com.google.ads.googleads.v0.common.IncomeRangeInfoOrBuilder getIncomeRangeOrBuilder() {
+      if ((criterionCase_ == 18) && (incomeRangeBuilder_ != null)) {
+        return incomeRangeBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 18) {
+          return (com.google.ads.googleads.v0.common.IncomeRangeInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.IncomeRangeInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Income range.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 18;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.IncomeRangeInfo, com.google.ads.googleads.v0.common.IncomeRangeInfo.Builder, com.google.ads.googleads.v0.common.IncomeRangeInfoOrBuilder> 
+        getIncomeRangeFieldBuilder() {
+      if (incomeRangeBuilder_ == null) {
+        if (!(criterionCase_ == 18)) {
+          criterion_ = com.google.ads.googleads.v0.common.IncomeRangeInfo.getDefaultInstance();
+        }
+        incomeRangeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.IncomeRangeInfo, com.google.ads.googleads.v0.common.IncomeRangeInfo.Builder, com.google.ads.googleads.v0.common.IncomeRangeInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.IncomeRangeInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 18;
+      onChanged();;
+      return incomeRangeBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ParentalStatusInfo, com.google.ads.googleads.v0.common.ParentalStatusInfo.Builder, com.google.ads.googleads.v0.common.ParentalStatusInfoOrBuilder> parentalStatusBuilder_;
+    /**
+     * <pre>
+     * Parental status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 19;</code>
+     */
+    public boolean hasParentalStatus() {
+      return criterionCase_ == 19;
+    }
+    /**
+     * <pre>
+     * Parental status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 19;</code>
+     */
+    public com.google.ads.googleads.v0.common.ParentalStatusInfo getParentalStatus() {
+      if (parentalStatusBuilder_ == null) {
+        if (criterionCase_ == 19) {
+          return (com.google.ads.googleads.v0.common.ParentalStatusInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.ParentalStatusInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 19) {
+          return parentalStatusBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.ParentalStatusInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Parental status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 19;</code>
+     */
+    public Builder setParentalStatus(com.google.ads.googleads.v0.common.ParentalStatusInfo value) {
+      if (parentalStatusBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        parentalStatusBuilder_.setMessage(value);
+      }
+      criterionCase_ = 19;
+      return this;
+    }
+    /**
+     * <pre>
+     * Parental status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 19;</code>
+     */
+    public Builder setParentalStatus(
+        com.google.ads.googleads.v0.common.ParentalStatusInfo.Builder builderForValue) {
+      if (parentalStatusBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        parentalStatusBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 19;
+      return this;
+    }
+    /**
+     * <pre>
+     * Parental status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 19;</code>
+     */
+    public Builder mergeParentalStatus(com.google.ads.googleads.v0.common.ParentalStatusInfo value) {
+      if (parentalStatusBuilder_ == null) {
+        if (criterionCase_ == 19 &&
+            criterion_ != com.google.ads.googleads.v0.common.ParentalStatusInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.ParentalStatusInfo.newBuilder((com.google.ads.googleads.v0.common.ParentalStatusInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 19) {
+          parentalStatusBuilder_.mergeFrom(value);
+        }
+        parentalStatusBuilder_.setMessage(value);
+      }
+      criterionCase_ = 19;
+      return this;
+    }
+    /**
+     * <pre>
+     * Parental status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 19;</code>
+     */
+    public Builder clearParentalStatus() {
+      if (parentalStatusBuilder_ == null) {
+        if (criterionCase_ == 19) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 19) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        parentalStatusBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Parental status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 19;</code>
+     */
+    public com.google.ads.googleads.v0.common.ParentalStatusInfo.Builder getParentalStatusBuilder() {
+      return getParentalStatusFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Parental status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 19;</code>
+     */
+    public com.google.ads.googleads.v0.common.ParentalStatusInfoOrBuilder getParentalStatusOrBuilder() {
+      if ((criterionCase_ == 19) && (parentalStatusBuilder_ != null)) {
+        return parentalStatusBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 19) {
+          return (com.google.ads.googleads.v0.common.ParentalStatusInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.ParentalStatusInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Parental status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 19;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ParentalStatusInfo, com.google.ads.googleads.v0.common.ParentalStatusInfo.Builder, com.google.ads.googleads.v0.common.ParentalStatusInfoOrBuilder> 
+        getParentalStatusFieldBuilder() {
+      if (parentalStatusBuilder_ == null) {
+        if (!(criterionCase_ == 19)) {
+          criterion_ = com.google.ads.googleads.v0.common.ParentalStatusInfo.getDefaultInstance();
+        }
+        parentalStatusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.ParentalStatusInfo, com.google.ads.googleads.v0.common.ParentalStatusInfo.Builder, com.google.ads.googleads.v0.common.ParentalStatusInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.ParentalStatusInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 19;
+      onChanged();;
+      return parentalStatusBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.YouTubeVideoInfo, com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder, com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder> youtubeVideoBuilder_;
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 20;</code>
+     */
+    public boolean hasYoutubeVideo() {
+      return criterionCase_ == 20;
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 20;</code>
+     */
+    public com.google.ads.googleads.v0.common.YouTubeVideoInfo getYoutubeVideo() {
+      if (youtubeVideoBuilder_ == null) {
+        if (criterionCase_ == 20) {
+          return (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 20) {
+          return youtubeVideoBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 20;</code>
+     */
+    public Builder setYoutubeVideo(com.google.ads.googleads.v0.common.YouTubeVideoInfo value) {
+      if (youtubeVideoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        youtubeVideoBuilder_.setMessage(value);
+      }
+      criterionCase_ = 20;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 20;</code>
+     */
+    public Builder setYoutubeVideo(
+        com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder builderForValue) {
+      if (youtubeVideoBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        youtubeVideoBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 20;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 20;</code>
+     */
+    public Builder mergeYoutubeVideo(com.google.ads.googleads.v0.common.YouTubeVideoInfo value) {
+      if (youtubeVideoBuilder_ == null) {
+        if (criterionCase_ == 20 &&
+            criterion_ != com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.YouTubeVideoInfo.newBuilder((com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 20) {
+          youtubeVideoBuilder_.mergeFrom(value);
+        }
+        youtubeVideoBuilder_.setMessage(value);
+      }
+      criterionCase_ = 20;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 20;</code>
+     */
+    public Builder clearYoutubeVideo() {
+      if (youtubeVideoBuilder_ == null) {
+        if (criterionCase_ == 20) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 20) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        youtubeVideoBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 20;</code>
+     */
+    public com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder getYoutubeVideoBuilder() {
+      return getYoutubeVideoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 20;</code>
+     */
+    public com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder getYoutubeVideoOrBuilder() {
+      if ((criterionCase_ == 20) && (youtubeVideoBuilder_ != null)) {
+        return youtubeVideoBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 20) {
+          return (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 20;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.YouTubeVideoInfo, com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder, com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder> 
+        getYoutubeVideoFieldBuilder() {
+      if (youtubeVideoBuilder_ == null) {
+        if (!(criterionCase_ == 20)) {
+          criterion_ = com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance();
+        }
+        youtubeVideoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.YouTubeVideoInfo, com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder, com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 20;
+      onChanged();;
+      return youtubeVideoBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.YouTubeChannelInfo, com.google.ads.googleads.v0.common.YouTubeChannelInfo.Builder, com.google.ads.googleads.v0.common.YouTubeChannelInfoOrBuilder> youtubeChannelBuilder_;
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 21;</code>
+     */
+    public boolean hasYoutubeChannel() {
+      return criterionCase_ == 21;
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 21;</code>
+     */
+    public com.google.ads.googleads.v0.common.YouTubeChannelInfo getYoutubeChannel() {
+      if (youtubeChannelBuilder_ == null) {
+        if (criterionCase_ == 21) {
+          return (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 21) {
+          return youtubeChannelBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 21;</code>
+     */
+    public Builder setYoutubeChannel(com.google.ads.googleads.v0.common.YouTubeChannelInfo value) {
+      if (youtubeChannelBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        youtubeChannelBuilder_.setMessage(value);
+      }
+      criterionCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 21;</code>
+     */
+    public Builder setYoutubeChannel(
+        com.google.ads.googleads.v0.common.YouTubeChannelInfo.Builder builderForValue) {
+      if (youtubeChannelBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        youtubeChannelBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 21;</code>
+     */
+    public Builder mergeYoutubeChannel(com.google.ads.googleads.v0.common.YouTubeChannelInfo value) {
+      if (youtubeChannelBuilder_ == null) {
+        if (criterionCase_ == 21 &&
+            criterion_ != com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.YouTubeChannelInfo.newBuilder((com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 21) {
+          youtubeChannelBuilder_.mergeFrom(value);
+        }
+        youtubeChannelBuilder_.setMessage(value);
+      }
+      criterionCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 21;</code>
+     */
+    public Builder clearYoutubeChannel() {
+      if (youtubeChannelBuilder_ == null) {
+        if (criterionCase_ == 21) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 21) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        youtubeChannelBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 21;</code>
+     */
+    public com.google.ads.googleads.v0.common.YouTubeChannelInfo.Builder getYoutubeChannelBuilder() {
+      return getYoutubeChannelFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 21;</code>
+     */
+    public com.google.ads.googleads.v0.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder() {
+      if ((criterionCase_ == 21) && (youtubeChannelBuilder_ != null)) {
+        return youtubeChannelBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 21) {
+          return (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 21;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.YouTubeChannelInfo, com.google.ads.googleads.v0.common.YouTubeChannelInfo.Builder, com.google.ads.googleads.v0.common.YouTubeChannelInfoOrBuilder> 
+        getYoutubeChannelFieldBuilder() {
+      if (youtubeChannelBuilder_ == null) {
+        if (!(criterionCase_ == 21)) {
+          criterion_ = com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance();
+        }
+        youtubeChannelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.YouTubeChannelInfo, com.google.ads.googleads.v0.common.YouTubeChannelInfo.Builder, com.google.ads.googleads.v0.common.YouTubeChannelInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 21;
+      onChanged();;
+      return youtubeChannelBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ProximityInfo, com.google.ads.googleads.v0.common.ProximityInfo.Builder, com.google.ads.googleads.v0.common.ProximityInfoOrBuilder> proximityBuilder_;
+    /**
+     * <pre>
+     * Proximity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ProximityInfo proximity = 23;</code>
+     */
+    public boolean hasProximity() {
+      return criterionCase_ == 23;
+    }
+    /**
+     * <pre>
+     * Proximity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ProximityInfo proximity = 23;</code>
+     */
+    public com.google.ads.googleads.v0.common.ProximityInfo getProximity() {
+      if (proximityBuilder_ == null) {
+        if (criterionCase_ == 23) {
+          return (com.google.ads.googleads.v0.common.ProximityInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.ProximityInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 23) {
+          return proximityBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.ProximityInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Proximity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ProximityInfo proximity = 23;</code>
+     */
+    public Builder setProximity(com.google.ads.googleads.v0.common.ProximityInfo value) {
+      if (proximityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        proximityBuilder_.setMessage(value);
+      }
+      criterionCase_ = 23;
+      return this;
+    }
+    /**
+     * <pre>
+     * Proximity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ProximityInfo proximity = 23;</code>
+     */
+    public Builder setProximity(
+        com.google.ads.googleads.v0.common.ProximityInfo.Builder builderForValue) {
+      if (proximityBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        proximityBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 23;
+      return this;
+    }
+    /**
+     * <pre>
+     * Proximity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ProximityInfo proximity = 23;</code>
+     */
+    public Builder mergeProximity(com.google.ads.googleads.v0.common.ProximityInfo value) {
+      if (proximityBuilder_ == null) {
+        if (criterionCase_ == 23 &&
+            criterion_ != com.google.ads.googleads.v0.common.ProximityInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.ProximityInfo.newBuilder((com.google.ads.googleads.v0.common.ProximityInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 23) {
+          proximityBuilder_.mergeFrom(value);
+        }
+        proximityBuilder_.setMessage(value);
+      }
+      criterionCase_ = 23;
+      return this;
+    }
+    /**
+     * <pre>
+     * Proximity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ProximityInfo proximity = 23;</code>
+     */
+    public Builder clearProximity() {
+      if (proximityBuilder_ == null) {
+        if (criterionCase_ == 23) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 23) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        proximityBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Proximity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ProximityInfo proximity = 23;</code>
+     */
+    public com.google.ads.googleads.v0.common.ProximityInfo.Builder getProximityBuilder() {
+      return getProximityFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Proximity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ProximityInfo proximity = 23;</code>
+     */
+    public com.google.ads.googleads.v0.common.ProximityInfoOrBuilder getProximityOrBuilder() {
+      if ((criterionCase_ == 23) && (proximityBuilder_ != null)) {
+        return proximityBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 23) {
+          return (com.google.ads.googleads.v0.common.ProximityInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.ProximityInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Proximity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ProximityInfo proximity = 23;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ProximityInfo, com.google.ads.googleads.v0.common.ProximityInfo.Builder, com.google.ads.googleads.v0.common.ProximityInfoOrBuilder> 
+        getProximityFieldBuilder() {
+      if (proximityBuilder_ == null) {
+        if (!(criterionCase_ == 23)) {
+          criterion_ = com.google.ads.googleads.v0.common.ProximityInfo.getDefaultInstance();
+        }
+        proximityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.ProximityInfo, com.google.ads.googleads.v0.common.ProximityInfo.Builder, com.google.ads.googleads.v0.common.ProximityInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.ProximityInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 23;
+      onChanged();;
+      return proximityBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.TopicInfo, com.google.ads.googleads.v0.common.TopicInfo.Builder, com.google.ads.googleads.v0.common.TopicInfoOrBuilder> topicBuilder_;
+    /**
+     * <pre>
+     * Topic.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
+     */
+    public boolean hasTopic() {
+      return criterionCase_ == 24;
+    }
+    /**
+     * <pre>
+     * Topic.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
+     */
+    public com.google.ads.googleads.v0.common.TopicInfo getTopic() {
+      if (topicBuilder_ == null) {
+        if (criterionCase_ == 24) {
+          return (com.google.ads.googleads.v0.common.TopicInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.TopicInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 24) {
+          return topicBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.TopicInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Topic.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
+     */
+    public Builder setTopic(com.google.ads.googleads.v0.common.TopicInfo value) {
+      if (topicBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        topicBuilder_.setMessage(value);
+      }
+      criterionCase_ = 24;
+      return this;
+    }
+    /**
+     * <pre>
+     * Topic.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
+     */
+    public Builder setTopic(
+        com.google.ads.googleads.v0.common.TopicInfo.Builder builderForValue) {
+      if (topicBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        topicBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 24;
+      return this;
+    }
+    /**
+     * <pre>
+     * Topic.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
+     */
+    public Builder mergeTopic(com.google.ads.googleads.v0.common.TopicInfo value) {
+      if (topicBuilder_ == null) {
+        if (criterionCase_ == 24 &&
+            criterion_ != com.google.ads.googleads.v0.common.TopicInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.TopicInfo.newBuilder((com.google.ads.googleads.v0.common.TopicInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 24) {
+          topicBuilder_.mergeFrom(value);
+        }
+        topicBuilder_.setMessage(value);
+      }
+      criterionCase_ = 24;
+      return this;
+    }
+    /**
+     * <pre>
+     * Topic.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
+     */
+    public Builder clearTopic() {
+      if (topicBuilder_ == null) {
+        if (criterionCase_ == 24) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 24) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        topicBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Topic.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
+     */
+    public com.google.ads.googleads.v0.common.TopicInfo.Builder getTopicBuilder() {
+      return getTopicFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Topic.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
+     */
+    public com.google.ads.googleads.v0.common.TopicInfoOrBuilder getTopicOrBuilder() {
+      if ((criterionCase_ == 24) && (topicBuilder_ != null)) {
+        return topicBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 24) {
+          return (com.google.ads.googleads.v0.common.TopicInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.TopicInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Topic.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.TopicInfo, com.google.ads.googleads.v0.common.TopicInfo.Builder, com.google.ads.googleads.v0.common.TopicInfoOrBuilder> 
+        getTopicFieldBuilder() {
+      if (topicBuilder_ == null) {
+        if (!(criterionCase_ == 24)) {
+          criterion_ = com.google.ads.googleads.v0.common.TopicInfo.getDefaultInstance();
+        }
+        topicBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.TopicInfo, com.google.ads.googleads.v0.common.TopicInfo.Builder, com.google.ads.googleads.v0.common.TopicInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.TopicInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 24;
+      onChanged();;
+      return topicBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

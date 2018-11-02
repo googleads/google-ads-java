@@ -177,6 +177,34 @@ public interface AdGroupCriterionOrBuilder extends
 
   /**
    * <pre>
+   * The modifier for the bid when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue bid_modifier = 44;</code>
+   */
+  boolean hasBidModifier();
+  /**
+   * <pre>
+   * The modifier for the bid when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue bid_modifier = 44;</code>
+   */
+  com.google.protobuf.DoubleValue getBidModifier();
+  /**
+   * <pre>
+   * The modifier for the bid when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue bid_modifier = 44;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getBidModifierOrBuilder();
+
+  /**
+   * <pre>
    * The CPC (cost-per-click) bid.
    * </pre>
    *
@@ -624,6 +652,31 @@ public interface AdGroupCriterionOrBuilder extends
 
   /**
    * <pre>
+   * Placement.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 28;</code>
+   */
+  boolean hasPlacement();
+  /**
+   * <pre>
+   * Placement.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 28;</code>
+   */
+  com.google.ads.googleads.v0.common.PlacementInfo getPlacement();
+  /**
+   * <pre>
+   * Placement.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 28;</code>
+   */
+  com.google.ads.googleads.v0.common.PlacementInfoOrBuilder getPlacementOrBuilder();
+
+  /**
+   * <pre>
    * Listing group.
    * </pre>
    *
@@ -646,6 +699,181 @@ public interface AdGroupCriterionOrBuilder extends
    * <code>.google.ads.googleads.v0.common.ListingGroupInfo listing_group = 32;</code>
    */
   com.google.ads.googleads.v0.common.ListingGroupInfoOrBuilder getListingGroupOrBuilder();
+
+  /**
+   * <pre>
+   * Age range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 36;</code>
+   */
+  boolean hasAgeRange();
+  /**
+   * <pre>
+   * Age range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 36;</code>
+   */
+  com.google.ads.googleads.v0.common.AgeRangeInfo getAgeRange();
+  /**
+   * <pre>
+   * Age range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AgeRangeInfo age_range = 36;</code>
+   */
+  com.google.ads.googleads.v0.common.AgeRangeInfoOrBuilder getAgeRangeOrBuilder();
+
+  /**
+   * <pre>
+   * Gender.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.GenderInfo gender = 37;</code>
+   */
+  boolean hasGender();
+  /**
+   * <pre>
+   * Gender.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.GenderInfo gender = 37;</code>
+   */
+  com.google.ads.googleads.v0.common.GenderInfo getGender();
+  /**
+   * <pre>
+   * Gender.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.GenderInfo gender = 37;</code>
+   */
+  com.google.ads.googleads.v0.common.GenderInfoOrBuilder getGenderOrBuilder();
+
+  /**
+   * <pre>
+   * Income range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 38;</code>
+   */
+  boolean hasIncomeRange();
+  /**
+   * <pre>
+   * Income range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 38;</code>
+   */
+  com.google.ads.googleads.v0.common.IncomeRangeInfo getIncomeRange();
+  /**
+   * <pre>
+   * Income range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.IncomeRangeInfo income_range = 38;</code>
+   */
+  com.google.ads.googleads.v0.common.IncomeRangeInfoOrBuilder getIncomeRangeOrBuilder();
+
+  /**
+   * <pre>
+   * Parental status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 39;</code>
+   */
+  boolean hasParentalStatus();
+  /**
+   * <pre>
+   * Parental status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 39;</code>
+   */
+  com.google.ads.googleads.v0.common.ParentalStatusInfo getParentalStatus();
+  /**
+   * <pre>
+   * Parental status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ParentalStatusInfo parental_status = 39;</code>
+   */
+  com.google.ads.googleads.v0.common.ParentalStatusInfoOrBuilder getParentalStatusOrBuilder();
+
+  /**
+   * <pre>
+   * YouTube Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 40;</code>
+   */
+  boolean hasYoutubeVideo();
+  /**
+   * <pre>
+   * YouTube Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 40;</code>
+   */
+  com.google.ads.googleads.v0.common.YouTubeVideoInfo getYoutubeVideo();
+  /**
+   * <pre>
+   * YouTube Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 40;</code>
+   */
+  com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder getYoutubeVideoOrBuilder();
+
+  /**
+   * <pre>
+   * YouTube Channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 41;</code>
+   */
+  boolean hasYoutubeChannel();
+  /**
+   * <pre>
+   * YouTube Channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 41;</code>
+   */
+  com.google.ads.googleads.v0.common.YouTubeChannelInfo getYoutubeChannel();
+  /**
+   * <pre>
+   * YouTube Channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 41;</code>
+   */
+  com.google.ads.googleads.v0.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder();
+
+  /**
+   * <pre>
+   * Topic.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TopicInfo topic = 43;</code>
+   */
+  boolean hasTopic();
+  /**
+   * <pre>
+   * Topic.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TopicInfo topic = 43;</code>
+   */
+  com.google.ads.googleads.v0.common.TopicInfo getTopic();
+  /**
+   * <pre>
+   * Topic.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TopicInfo topic = 43;</code>
+   */
+  com.google.ads.googleads.v0.common.TopicInfoOrBuilder getTopicOrBuilder();
 
   public com.google.ads.googleads.v0.resources.AdGroupCriterion.CriterionCase getCriterionCase();
 }

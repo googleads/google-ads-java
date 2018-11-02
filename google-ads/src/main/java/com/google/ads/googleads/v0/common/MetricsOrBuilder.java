@@ -802,6 +802,31 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * Average lead value of hotel.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+   */
+  boolean hasHotelAverageLeadValueMicros();
+  /**
+   * <pre>
+   * Average lead value of hotel.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+   */
+  com.google.protobuf.DoubleValue getHotelAverageLeadValueMicros();
+  /**
+   * <pre>
+   * Average lead value of hotel.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getHotelAverageLeadValueMicrosOrBuilder();
+
+  /**
+   * <pre>
    * Count of how often your ad has appeared on a search results page or
    * website on the Google Network.
    * </pre>

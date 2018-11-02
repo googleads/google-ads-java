@@ -128,4 +128,21 @@ public interface GeoTargetConstantOrBuilder extends
    * <code>.google.protobuf.StringValue target_type = 6;</code>
    */
   com.google.protobuf.StringValueOrBuilder getTargetTypeOrBuilder();
+
+  /**
+   * <pre>
+   * Geo target constant status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+   */
+  int getStatusValue();
+  /**
+   * <pre>
+   * Geo target constant status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+   */
+  com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus getStatus();
 }

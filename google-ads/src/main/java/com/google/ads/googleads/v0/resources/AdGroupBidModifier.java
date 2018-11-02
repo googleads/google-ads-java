@@ -380,7 +380,9 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue bidModifier_;
   /**
    * <pre>
-   * The modifier for the bid when the criterion matches.
+   * The modifier for the bid when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+   * Use 0 to opt out of a Device type.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -390,7 +392,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The modifier for the bid when the criterion matches.
+   * The modifier for the bid when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+   * Use 0 to opt out of a Device type.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -400,7 +404,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The modifier for the bid when the criterion matches.
+   * The modifier for the bid when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+   * Use 0 to opt out of a Device type.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -1704,7 +1710,9 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> bidModifierBuilder_;
     /**
      * <pre>
-     * The modifier for the bid when the criterion matches.
+     * The modifier for the bid when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -1714,7 +1722,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bid when the criterion matches.
+     * The modifier for the bid when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -1728,7 +1738,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bid when the criterion matches.
+     * The modifier for the bid when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -1748,7 +1760,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bid when the criterion matches.
+     * The modifier for the bid when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -1766,7 +1780,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bid when the criterion matches.
+     * The modifier for the bid when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -1788,7 +1804,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bid when the criterion matches.
+     * The modifier for the bid when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -1806,7 +1824,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bid when the criterion matches.
+     * The modifier for the bid when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -1818,7 +1838,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bid when the criterion matches.
+     * The modifier for the bid when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -1833,7 +1855,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The modifier for the bid when the criterion matches.
+     * The modifier for the bid when the criterion matches. The modifier must be
+     * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+     * Use 0 to opt out of a Device type.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>

@@ -33,7 +33,7 @@ public final class CampaignCriterionProto {
       "ds.v0.resources\032-google/ads/googleads/v0" +
       "/common/criteria.proto\0322google/ads/googl" +
       "eads/v0/enums/criterion_type.proto\032\036goog" +
-      "le/protobuf/wrappers.proto\"\320\004\n\021CampaignC" +
+      "le/protobuf/wrappers.proto\"\307\t\n\021CampaignC" +
       "riterion\022\025\n\rresource_name\030\001 \001(\t\022.\n\010campa" +
       "ign\030\004 \001(\0132\034.google.protobuf.StringValue\022" +
       "1\n\014criterion_id\030\005 \001(\0132\033.google.protobuf." +
@@ -43,18 +43,34 @@ public final class CampaignCriterionProto {
       "\0162>.google.ads.googleads.v0.enums.Criter" +
       "ionTypeEnum.CriterionType\022>\n\007keyword\030\010 \001" +
       "(\0132+.google.ads.googleads.v0.common.Keyw" +
-      "ordInfoH\000\022@\n\010location\030\014 \001(\0132,.google.ads" +
-      ".googleads.v0.common.LocationInfoH\000\022<\n\006d" +
-      "evice\030\r \001(\0132*.google.ads.googleads.v0.co" +
-      "mmon.DeviceInfoH\000\022E\n\013ad_schedule\030\017 \001(\0132." +
-      ".google.ads.googleads.v0.common.AdSchedu" +
-      "leInfoH\000B\013\n\tcriterionB\333\001\n%com.google.ads" +
-      ".googleads.v0.resourcesB\026CampaignCriteri" +
-      "onProtoP\001ZJgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v0/resources;reso" +
-      "urces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Re" +
-      "sources\312\002!Google\\Ads\\GoogleAds\\V0\\Resour" +
-      "cesb\006proto3"
+      "ordInfoH\000\022B\n\tplacement\030\t \001(\0132-.google.ad" +
+      "s.googleads.v0.common.PlacementInfoH\000\022@\n" +
+      "\010location\030\014 \001(\0132,.google.ads.googleads.v" +
+      "0.common.LocationInfoH\000\022<\n\006device\030\r \001(\0132" +
+      "*.google.ads.googleads.v0.common.DeviceI" +
+      "nfoH\000\022E\n\013ad_schedule\030\017 \001(\0132..google.ads." +
+      "googleads.v0.common.AdScheduleInfoH\000\022A\n\t" +
+      "age_range\030\020 \001(\0132,.google.ads.googleads.v" +
+      "0.common.AgeRangeInfoH\000\022<\n\006gender\030\021 \001(\0132" +
+      "*.google.ads.googleads.v0.common.GenderI" +
+      "nfoH\000\022G\n\014income_range\030\022 \001(\0132/.google.ads" +
+      ".googleads.v0.common.IncomeRangeInfoH\000\022M" +
+      "\n\017parental_status\030\023 \001(\01322.google.ads.goo" +
+      "gleads.v0.common.ParentalStatusInfoH\000\022I\n" +
+      "\ryoutube_video\030\024 \001(\01320.google.ads.google" +
+      "ads.v0.common.YouTubeVideoInfoH\000\022M\n\017yout" +
+      "ube_channel\030\025 \001(\01322.google.ads.googleads" +
+      ".v0.common.YouTubeChannelInfoH\000\022B\n\tproxi" +
+      "mity\030\027 \001(\0132-.google.ads.googleads.v0.com" +
+      "mon.ProximityInfoH\000\022:\n\005topic\030\030 \001(\0132).goo" +
+      "gle.ads.googleads.v0.common.TopicInfoH\000B" +
+      "\013\n\tcriterionB\333\001\n%com.google.ads.googlead" +
+      "s.v0.resourcesB\026CampaignCriterionProtoP\001" +
+      "ZJgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v0/resources;resources\242\002\003G" +
+      "AA\252\002!Google.Ads.GoogleAds.V0.Resources\312\002" +
+      "!Google\\Ads\\GoogleAds\\V0\\Resourcesb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -76,7 +92,7 @@ public final class CampaignCriterionProto {
     internal_static_google_ads_googleads_v0_resources_CampaignCriterion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_CampaignCriterion_descriptor,
-        new java.lang.String[] { "ResourceName", "Campaign", "CriterionId", "BidModifier", "Negative", "Type", "Keyword", "Location", "Device", "AdSchedule", "Criterion", });
+        new java.lang.String[] { "ResourceName", "Campaign", "CriterionId", "BidModifier", "Negative", "Type", "Keyword", "Placement", "Location", "Device", "AdSchedule", "AgeRange", "Gender", "IncomeRange", "ParentalStatus", "YoutubeVideo", "YoutubeChannel", "Proximity", "Topic", "Criterion", });
     com.google.ads.googleads.v0.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v0.enums.CriterionTypeProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();

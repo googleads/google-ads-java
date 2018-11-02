@@ -112,6 +112,14 @@ private static final long serialVersionUID = 0L;
     KEYWORD(2),
     /**
      * <pre>
+     * Placement, aka Website. e.g. 'www.flowers4sale.com'
+     * </pre>
+     *
+     * <code>PLACEMENT = 3;</code>
+     */
+    PLACEMENT(3),
+    /**
+     * <pre>
      * Devices to target.
      * </pre>
      *
@@ -142,6 +150,70 @@ private static final long serialVersionUID = 0L;
      * <code>AD_SCHEDULE = 9;</code>
      */
     AD_SCHEDULE(9),
+    /**
+     * <pre>
+     * Age range.
+     * </pre>
+     *
+     * <code>AGE_RANGE = 10;</code>
+     */
+    AGE_RANGE(10),
+    /**
+     * <pre>
+     * Gender.
+     * </pre>
+     *
+     * <code>GENDER = 11;</code>
+     */
+    GENDER(11),
+    /**
+     * <pre>
+     * Income Range.
+     * </pre>
+     *
+     * <code>INCOME_RANGE = 12;</code>
+     */
+    INCOME_RANGE(12),
+    /**
+     * <pre>
+     * Parental status.
+     * </pre>
+     *
+     * <code>PARENTAL_STATUS = 13;</code>
+     */
+    PARENTAL_STATUS(13),
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>YOUTUBE_VIDEO = 14;</code>
+     */
+    YOUTUBE_VIDEO(14),
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>YOUTUBE_CHANNEL = 15;</code>
+     */
+    YOUTUBE_CHANNEL(15),
+    /**
+     * <pre>
+     * Proximity.
+     * </pre>
+     *
+     * <code>PROXIMITY = 17;</code>
+     */
+    PROXIMITY(17),
+    /**
+     * <pre>
+     * A topic target on the content network (e.g. "Pets &amp; Animals").
+     * </pre>
+     *
+     * <code>TOPIC = 18;</code>
+     */
+    TOPIC(18),
     UNRECOGNIZED(-1),
     ;
 
@@ -169,6 +241,14 @@ private static final long serialVersionUID = 0L;
      * <code>KEYWORD = 2;</code>
      */
     public static final int KEYWORD_VALUE = 2;
+    /**
+     * <pre>
+     * Placement, aka Website. e.g. 'www.flowers4sale.com'
+     * </pre>
+     *
+     * <code>PLACEMENT = 3;</code>
+     */
+    public static final int PLACEMENT_VALUE = 3;
     /**
      * <pre>
      * Devices to target.
@@ -201,6 +281,70 @@ private static final long serialVersionUID = 0L;
      * <code>AD_SCHEDULE = 9;</code>
      */
     public static final int AD_SCHEDULE_VALUE = 9;
+    /**
+     * <pre>
+     * Age range.
+     * </pre>
+     *
+     * <code>AGE_RANGE = 10;</code>
+     */
+    public static final int AGE_RANGE_VALUE = 10;
+    /**
+     * <pre>
+     * Gender.
+     * </pre>
+     *
+     * <code>GENDER = 11;</code>
+     */
+    public static final int GENDER_VALUE = 11;
+    /**
+     * <pre>
+     * Income Range.
+     * </pre>
+     *
+     * <code>INCOME_RANGE = 12;</code>
+     */
+    public static final int INCOME_RANGE_VALUE = 12;
+    /**
+     * <pre>
+     * Parental status.
+     * </pre>
+     *
+     * <code>PARENTAL_STATUS = 13;</code>
+     */
+    public static final int PARENTAL_STATUS_VALUE = 13;
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>YOUTUBE_VIDEO = 14;</code>
+     */
+    public static final int YOUTUBE_VIDEO_VALUE = 14;
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>YOUTUBE_CHANNEL = 15;</code>
+     */
+    public static final int YOUTUBE_CHANNEL_VALUE = 15;
+    /**
+     * <pre>
+     * Proximity.
+     * </pre>
+     *
+     * <code>PROXIMITY = 17;</code>
+     */
+    public static final int PROXIMITY_VALUE = 17;
+    /**
+     * <pre>
+     * A topic target on the content network (e.g. "Pets &amp; Animals").
+     * </pre>
+     *
+     * <code>TOPIC = 18;</code>
+     */
+    public static final int TOPIC_VALUE = 18;
 
 
     public final int getNumber() {
@@ -224,10 +368,19 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return KEYWORD;
+        case 3: return PLACEMENT;
         case 6: return DEVICE;
         case 7: return LOCATION;
         case 8: return LISTING_GROUP;
         case 9: return AD_SCHEDULE;
+        case 10: return AGE_RANGE;
+        case 11: return GENDER;
+        case 12: return INCOME_RANGE;
+        case 13: return PARENTAL_STATUS;
+        case 14: return YOUTUBE_VIDEO;
+        case 15: return YOUTUBE_CHANNEL;
+        case 17: return PROXIMITY;
+        case 18: return TOPIC;
         default: return null;
       }
     }

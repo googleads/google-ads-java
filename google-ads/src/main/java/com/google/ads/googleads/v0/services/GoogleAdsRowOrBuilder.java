@@ -109,6 +109,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The ad group audience view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupAudienceView ad_group_audience_view = 57;</code>
+   */
+  boolean hasAdGroupAudienceView();
+  /**
+   * <pre>
+   * The ad group audience view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupAudienceView ad_group_audience_view = 57;</code>
+   */
+  com.google.ads.googleads.v0.resources.AdGroupAudienceView getAdGroupAudienceView();
+  /**
+   * <pre>
+   * The ad group audience view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupAudienceView ad_group_audience_view = 57;</code>
+   */
+  com.google.ads.googleads.v0.resources.AdGroupAudienceViewOrBuilder getAdGroupAudienceViewOrBuilder();
+
+  /**
+   * <pre>
    * The bid modifier referenced in the query.
    * </pre>
    *
@@ -156,6 +181,31 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.AdGroupCriterion ad_group_criterion = 17;</code>
    */
   com.google.ads.googleads.v0.resources.AdGroupCriterionOrBuilder getAdGroupCriterionOrBuilder();
+
+  /**
+   * <pre>
+   * The age range view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AgeRangeView age_range_view = 48;</code>
+   */
+  boolean hasAgeRangeView();
+  /**
+   * <pre>
+   * The age range view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AgeRangeView age_range_view = 48;</code>
+   */
+  com.google.ads.googleads.v0.resources.AgeRangeView getAgeRangeView();
+  /**
+   * <pre>
+   * The age range view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AgeRangeView age_range_view = 48;</code>
+   */
+  com.google.ads.googleads.v0.resources.AgeRangeViewOrBuilder getAgeRangeViewOrBuilder();
 
   /**
    * <pre>
@@ -409,6 +459,106 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The CustomerManagerLink referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerManagerLink customer_manager_link = 61;</code>
+   */
+  boolean hasCustomerManagerLink();
+  /**
+   * <pre>
+   * The CustomerManagerLink referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerManagerLink customer_manager_link = 61;</code>
+   */
+  com.google.ads.googleads.v0.resources.CustomerManagerLink getCustomerManagerLink();
+  /**
+   * <pre>
+   * The CustomerManagerLink referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerManagerLink customer_manager_link = 61;</code>
+   */
+  com.google.ads.googleads.v0.resources.CustomerManagerLinkOrBuilder getCustomerManagerLinkOrBuilder();
+
+  /**
+   * <pre>
+   * The CustomerClientLink referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerClientLink customer_client_link = 62;</code>
+   */
+  boolean hasCustomerClientLink();
+  /**
+   * <pre>
+   * The CustomerClientLink referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerClientLink customer_client_link = 62;</code>
+   */
+  com.google.ads.googleads.v0.resources.CustomerClientLink getCustomerClientLink();
+  /**
+   * <pre>
+   * The CustomerClientLink referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerClientLink customer_client_link = 62;</code>
+   */
+  com.google.ads.googleads.v0.resources.CustomerClientLinkOrBuilder getCustomerClientLinkOrBuilder();
+
+  /**
+   * <pre>
+   * The display keyword view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.DisplayKeywordView display_keyword_view = 47;</code>
+   */
+  boolean hasDisplayKeywordView();
+  /**
+   * <pre>
+   * The display keyword view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.DisplayKeywordView display_keyword_view = 47;</code>
+   */
+  com.google.ads.googleads.v0.resources.DisplayKeywordView getDisplayKeywordView();
+  /**
+   * <pre>
+   * The display keyword view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.DisplayKeywordView display_keyword_view = 47;</code>
+   */
+  com.google.ads.googleads.v0.resources.DisplayKeywordViewOrBuilder getDisplayKeywordViewOrBuilder();
+
+  /**
+   * <pre>
+   * The gender view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.GenderView gender_view = 40;</code>
+   */
+  boolean hasGenderView();
+  /**
+   * <pre>
+   * The gender view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.GenderView gender_view = 40;</code>
+   */
+  com.google.ads.googleads.v0.resources.GenderView getGenderView();
+  /**
+   * <pre>
+   * The gender view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.GenderView gender_view = 40;</code>
+   */
+  com.google.ads.googleads.v0.resources.GenderViewOrBuilder getGenderViewOrBuilder();
+
+  /**
+   * <pre>
    * The geo target constant referenced in the query.
    * </pre>
    *
@@ -434,6 +584,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The hotel group view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.HotelGroupView hotel_group_view = 51;</code>
+   */
+  boolean hasHotelGroupView();
+  /**
+   * <pre>
+   * The hotel group view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.HotelGroupView hotel_group_view = 51;</code>
+   */
+  com.google.ads.googleads.v0.resources.HotelGroupView getHotelGroupView();
+  /**
+   * <pre>
+   * The hotel group view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.HotelGroupView hotel_group_view = 51;</code>
+   */
+  com.google.ads.googleads.v0.resources.HotelGroupViewOrBuilder getHotelGroupViewOrBuilder();
+
+  /**
+   * <pre>
    * The keyword view referenced in the query.
    * </pre>
    *
@@ -456,6 +631,81 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.KeywordView keyword_view = 21;</code>
    */
   com.google.ads.googleads.v0.resources.KeywordViewOrBuilder getKeywordViewOrBuilder();
+
+  /**
+   * <pre>
+   * The managed placement view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ManagedPlacementView managed_placement_view = 53;</code>
+   */
+  boolean hasManagedPlacementView();
+  /**
+   * <pre>
+   * The managed placement view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ManagedPlacementView managed_placement_view = 53;</code>
+   */
+  com.google.ads.googleads.v0.resources.ManagedPlacementView getManagedPlacementView();
+  /**
+   * <pre>
+   * The managed placement view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ManagedPlacementView managed_placement_view = 53;</code>
+   */
+  com.google.ads.googleads.v0.resources.ManagedPlacementViewOrBuilder getManagedPlacementViewOrBuilder();
+
+  /**
+   * <pre>
+   * The parental status view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ParentalStatusView parental_status_view = 45;</code>
+   */
+  boolean hasParentalStatusView();
+  /**
+   * <pre>
+   * The parental status view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ParentalStatusView parental_status_view = 45;</code>
+   */
+  com.google.ads.googleads.v0.resources.ParentalStatusView getParentalStatusView();
+  /**
+   * <pre>
+   * The parental status view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ParentalStatusView parental_status_view = 45;</code>
+   */
+  com.google.ads.googleads.v0.resources.ParentalStatusViewOrBuilder getParentalStatusViewOrBuilder();
+
+  /**
+   * <pre>
+   * The product group view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ProductGroupView product_group_view = 54;</code>
+   */
+  boolean hasProductGroupView();
+  /**
+   * <pre>
+   * The product group view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ProductGroupView product_group_view = 54;</code>
+   */
+  com.google.ads.googleads.v0.resources.ProductGroupView getProductGroupView();
+  /**
+   * <pre>
+   * The product group view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ProductGroupView product_group_view = 54;</code>
+   */
+  com.google.ads.googleads.v0.resources.ProductGroupViewOrBuilder getProductGroupViewOrBuilder();
 
   /**
    * <pre>
@@ -534,6 +784,56 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The topic view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.TopicView topic_view = 44;</code>
+   */
+  boolean hasTopicView();
+  /**
+   * <pre>
+   * The topic view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.TopicView topic_view = 44;</code>
+   */
+  com.google.ads.googleads.v0.resources.TopicView getTopicView();
+  /**
+   * <pre>
+   * The topic view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.TopicView topic_view = 44;</code>
+   */
+  com.google.ads.googleads.v0.resources.TopicViewOrBuilder getTopicViewOrBuilder();
+
+  /**
+   * <pre>
+   * The topic constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.TopicConstant topic_constant = 31;</code>
+   */
+  boolean hasTopicConstant();
+  /**
+   * <pre>
+   * The topic constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.TopicConstant topic_constant = 31;</code>
+   */
+  com.google.ads.googleads.v0.resources.TopicConstant getTopicConstant();
+  /**
+   * <pre>
+   * The topic constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.TopicConstant topic_constant = 31;</code>
+   */
+  com.google.ads.googleads.v0.resources.TopicConstantOrBuilder getTopicConstantOrBuilder();
+
+  /**
+   * <pre>
    * The video referenced in the query.
    * </pre>
    *
@@ -602,7 +902,7 @@ public interface GoogleAdsRowOrBuilder extends
   /**
    * <pre>
    * Date to which metrics apply.
-   * YYYY-MM-DD format, e.g., 2018-04-17.
+   * yyyy-MM-dd format, e.g., 2018-04-17.
    * </pre>
    *
    * <code>.google.protobuf.StringValue date = 6;</code>
@@ -611,7 +911,7 @@ public interface GoogleAdsRowOrBuilder extends
   /**
    * <pre>
    * Date to which metrics apply.
-   * YYYY-MM-DD format, e.g., 2018-04-17.
+   * yyyy-MM-dd format, e.g., 2018-04-17.
    * </pre>
    *
    * <code>.google.protobuf.StringValue date = 6;</code>
@@ -620,7 +920,7 @@ public interface GoogleAdsRowOrBuilder extends
   /**
    * <pre>
    * Date to which metrics apply.
-   * YYYY-MM-DD format, e.g., 2018-04-17.
+   * yyyy-MM-dd format, e.g., 2018-04-17.
    * </pre>
    *
    * <code>.google.protobuf.StringValue date = 6;</code>
@@ -688,7 +988,8 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
-   * Month as represented by the date of the first day of a month.
+   * Month as represented by the date of the first day of a month. Formatted as
+   * yyyy-MM-dd.
    * </pre>
    *
    * <code>.google.protobuf.StringValue month = 10;</code>
@@ -696,7 +997,8 @@ public interface GoogleAdsRowOrBuilder extends
   boolean hasMonth();
   /**
    * <pre>
-   * Month as represented by the date of the first day of a month.
+   * Month as represented by the date of the first day of a month. Formatted as
+   * yyyy-MM-dd.
    * </pre>
    *
    * <code>.google.protobuf.StringValue month = 10;</code>
@@ -704,7 +1006,8 @@ public interface GoogleAdsRowOrBuilder extends
   com.google.protobuf.StringValue getMonth();
   /**
    * <pre>
-   * Month as represented by the date of the first day of a month.
+   * Month as represented by the date of the first day of a month. Formatted as
+   * yyyy-MM-dd.
    * </pre>
    *
    * <code>.google.protobuf.StringValue month = 10;</code>
@@ -731,8 +1034,8 @@ public interface GoogleAdsRowOrBuilder extends
   /**
    * <pre>
    * Quarter as represented by the date of the first day of a quarter.
-   * Uses the calendar year for quarters,
-   * e.g., the second quarter of 2018 starts on 2018-04-01.
+   * Uses the calendar year for quarters, e.g., the second quarter of 2018
+   * starts on 2018-04-01. Formatted as yyyy-MM-dd.
    * </pre>
    *
    * <code>.google.protobuf.StringValue quarter = 12;</code>
@@ -741,8 +1044,8 @@ public interface GoogleAdsRowOrBuilder extends
   /**
    * <pre>
    * Quarter as represented by the date of the first day of a quarter.
-   * Uses the calendar year for quarters,
-   * e.g., the second quarter of 2018 starts on 2018-04-01.
+   * Uses the calendar year for quarters, e.g., the second quarter of 2018
+   * starts on 2018-04-01. Formatted as yyyy-MM-dd.
    * </pre>
    *
    * <code>.google.protobuf.StringValue quarter = 12;</code>
@@ -751,8 +1054,8 @@ public interface GoogleAdsRowOrBuilder extends
   /**
    * <pre>
    * Quarter as represented by the date of the first day of a quarter.
-   * Uses the calendar year for quarters,
-   * e.g., the second quarter of 2018 starts on 2018-04-01.
+   * Uses the calendar year for quarters, e.g., the second quarter of 2018
+   * starts on 2018-04-01. Formatted as yyyy-MM-dd.
    * </pre>
    *
    * <code>.google.protobuf.StringValue quarter = 12;</code>
@@ -779,7 +1082,7 @@ public interface GoogleAdsRowOrBuilder extends
   /**
    * <pre>
    * Week as defined as Monday through Sunday, and represented by the date of
-   * Monday.
+   * Monday. Formatted as yyyy-MM-dd.
    * </pre>
    *
    * <code>.google.protobuf.StringValue week = 14;</code>
@@ -788,7 +1091,7 @@ public interface GoogleAdsRowOrBuilder extends
   /**
    * <pre>
    * Week as defined as Monday through Sunday, and represented by the date of
-   * Monday.
+   * Monday. Formatted as yyyy-MM-dd.
    * </pre>
    *
    * <code>.google.protobuf.StringValue week = 14;</code>
@@ -797,7 +1100,7 @@ public interface GoogleAdsRowOrBuilder extends
   /**
    * <pre>
    * Week as defined as Monday through Sunday, and represented by the date of
-   * Monday.
+   * Monday. Formatted as yyyy-MM-dd.
    * </pre>
    *
    * <code>.google.protobuf.StringValue week = 14;</code>

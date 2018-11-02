@@ -61,7 +61,7 @@ public interface ChangeStatusOrBuilder extends
    * be set.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType resource_type = 4;</code>
+   * <code>.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
    */
   int getResourceTypeValue();
   /**
@@ -71,9 +71,9 @@ public interface ChangeStatusOrBuilder extends
    * be set.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType resource_type = 4;</code>
+   * <code>.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
    */
-  com.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType getResourceType();
+  com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType getResourceType();
 
   /**
    * <pre>

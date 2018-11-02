@@ -22,6 +22,7 @@ import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.api.pathtemplate.PathTemplate;
+import com.google.protobuf.StringValue;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -238,6 +239,77 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
   public final UnaryCallable<GetGeoTargetConstantRequest, GeoTargetConstant>
       getGeoTargetConstantCallable() {
     return stub.getGeoTargetConstantCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns GeoTargetConstant suggestions by location name or by resource name.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
+   *   StringValue locale = StringValue.newBuilder().build();
+   *   SuggestGeoTargetConstantsResponse response = geoTargetConstantServiceClient.suggestGeoTargetConstants(locale);
+   * }
+   * </code></pre>
+   *
+   * @param locale If possible, returned geo targets are translated using this locale. If not, en is
+   *     used by default. This is also used as a hint for returned geo targets.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final SuggestGeoTargetConstantsResponse suggestGeoTargetConstants(StringValue locale) {
+
+    SuggestGeoTargetConstantsRequest request =
+        SuggestGeoTargetConstantsRequest.newBuilder().setLocale(locale).build();
+    return suggestGeoTargetConstants(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns GeoTargetConstant suggestions by location name or by resource name.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
+   *   StringValue locale = StringValue.newBuilder().build();
+   *   SuggestGeoTargetConstantsRequest request = SuggestGeoTargetConstantsRequest.newBuilder()
+   *     .setLocale(locale)
+   *     .build();
+   *   SuggestGeoTargetConstantsResponse response = geoTargetConstantServiceClient.suggestGeoTargetConstants(request);
+   * }
+   * </code></pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final SuggestGeoTargetConstantsResponse suggestGeoTargetConstants(
+      SuggestGeoTargetConstantsRequest request) {
+    return suggestGeoTargetConstantsCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns GeoTargetConstant suggestions by location name or by resource name.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
+   *   StringValue locale = StringValue.newBuilder().build();
+   *   SuggestGeoTargetConstantsRequest request = SuggestGeoTargetConstantsRequest.newBuilder()
+   *     .setLocale(locale)
+   *     .build();
+   *   ApiFuture&lt;SuggestGeoTargetConstantsResponse&gt; future = geoTargetConstantServiceClient.suggestGeoTargetConstantsCallable().futureCall(request);
+   *   // Do something
+   *   SuggestGeoTargetConstantsResponse response = future.get();
+   * }
+   * </code></pre>
+   */
+  public final UnaryCallable<SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>
+      suggestGeoTargetConstantsCallable() {
+    return stub.suggestGeoTargetConstantsCallable();
   }
 
   @Override

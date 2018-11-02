@@ -70,4 +70,20 @@ public class MockCustomerServiceImpl extends CustomerServiceImplBase {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
   }
+
+  @Override
+  public void listAccessibleCustomers(
+      ListAccessibleCustomersRequest request,
+      StreamObserver<ListAccessibleCustomersResponse> responseObserver) {
+    Object response = responses.remove();
+    if (response instanceof ListAccessibleCustomersResponse) {
+      requests.add(request);
+      responseObserver.onNext((ListAccessibleCustomersResponse) response);
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError((Exception) response);
+    } else {
+      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+    }
+  }
 }

@@ -142,6 +142,30 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_SMART_ADS = 6;</code>
      */
     SHOPPING_SMART_ADS(6),
+    /**
+     * <pre>
+     * Gmail Ad campaigns.
+     * </pre>
+     *
+     * <code>DISPLAY_GMAIL_AD = 7;</code>
+     */
+    DISPLAY_GMAIL_AD(7),
+    /**
+     * <pre>
+     * Smart display campaigns.
+     * </pre>
+     *
+     * <code>DISPLAY_SMART_CAMPAIGN = 8;</code>
+     */
+    DISPLAY_SMART_CAMPAIGN(8),
+    /**
+     * <pre>
+     * Video Outstream campaigns.
+     * </pre>
+     *
+     * <code>VIDEO_OUTSTREAM = 9;</code>
+     */
+    VIDEO_OUTSTREAM(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -201,6 +225,30 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_SMART_ADS = 6;</code>
      */
     public static final int SHOPPING_SMART_ADS_VALUE = 6;
+    /**
+     * <pre>
+     * Gmail Ad campaigns.
+     * </pre>
+     *
+     * <code>DISPLAY_GMAIL_AD = 7;</code>
+     */
+    public static final int DISPLAY_GMAIL_AD_VALUE = 7;
+    /**
+     * <pre>
+     * Smart display campaigns.
+     * </pre>
+     *
+     * <code>DISPLAY_SMART_CAMPAIGN = 8;</code>
+     */
+    public static final int DISPLAY_SMART_CAMPAIGN_VALUE = 8;
+    /**
+     * <pre>
+     * Video Outstream campaigns.
+     * </pre>
+     *
+     * <code>VIDEO_OUTSTREAM = 9;</code>
+     */
+    public static final int VIDEO_OUTSTREAM_VALUE = 9;
 
 
     public final int getNumber() {
@@ -228,6 +276,9 @@ private static final long serialVersionUID = 0L;
         case 4: return SEARCH_EXPRESS;
         case 5: return DISPLAY_EXPRESS;
         case 6: return SHOPPING_SMART_ADS;
+        case 7: return DISPLAY_GMAIL_AD;
+        case 8: return DISPLAY_SMART_CAMPAIGN;
+        case 9: return VIDEO_OUTSTREAM;
         default: return null;
       }
     }

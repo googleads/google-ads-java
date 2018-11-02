@@ -30,15 +30,15 @@ public final class ChangeStatusErrorProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v0/errors/change_" +
       "status_error.proto\022\036google.ads.googleads" +
-      ".v0.errors\"z\n\025ChangeStatusErrorEnum\"a\n\021C" +
+      ".v0.errors\"b\n\025ChangeStatusErrorEnum\"I\n\021C" +
       "hangeStatusError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
-      "NOWN\020\001\022\026\n\022INVALID_START_DATE\020\002\022\026\n\022START_" +
-      "DATE_TOO_OLD\020\003B\314\001\n\"com.google.ads.google" +
-      "ads.v0.errorsB\026ChangeStatusErrorProtoP\001Z" +
-      "Dgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v0/errors;errors\242\002\003GAA\252\002\036Go" +
-      "ogle.Ads.GoogleAds.V0.Errors\312\002\036Google\\Ad" +
-      "s\\GoogleAds\\V0\\Errorsb\006proto3"
+      "NOWN\020\001\022\026\n\022START_DATE_TOO_OLD\020\003B\314\001\n\"com.g" +
+      "oogle.ads.googleads.v0.errorsB\026ChangeSta" +
+      "tusErrorProtoP\001ZDgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v0/errors;e" +
+      "rrors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Er" +
+      "rors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

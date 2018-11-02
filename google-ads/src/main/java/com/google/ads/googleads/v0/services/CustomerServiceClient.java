@@ -230,6 +230,47 @@ public class CustomerServiceClient implements BackgroundResource {
     return stub.getCustomerCallable();
   }
 
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns resource names of customers directly accessible by the user authenticating the call.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
+   *   ListAccessibleCustomersRequest request = ListAccessibleCustomersRequest.newBuilder().build();
+   *   ListAccessibleCustomersResponse response = customerServiceClient.listAccessibleCustomers(request);
+   * }
+   * </code></pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final ListAccessibleCustomersResponse listAccessibleCustomers(
+      ListAccessibleCustomersRequest request) {
+    return listAccessibleCustomersCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns resource names of customers directly accessible by the user authenticating the call.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
+   *   ListAccessibleCustomersRequest request = ListAccessibleCustomersRequest.newBuilder().build();
+   *   ApiFuture&lt;ListAccessibleCustomersResponse&gt; future = customerServiceClient.listAccessibleCustomersCallable().futureCall(request);
+   *   // Do something
+   *   ListAccessibleCustomersResponse response = future.get();
+   * }
+   * </code></pre>
+   */
+  public final UnaryCallable<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
+      listAccessibleCustomersCallable() {
+    return stub.listAccessibleCustomersCallable();
+  }
+
   @Override
   public final void close() {
     stub.close();

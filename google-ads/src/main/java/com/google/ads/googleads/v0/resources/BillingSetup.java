@@ -75,67 +75,48 @@ private static final long serialVersionUID = 0L;
             status_ = rawValue;
             break;
           }
-          case 34: {
+          case 74: {
             com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (paymentsAccountId_ != null) {
-              subBuilder = paymentsAccountId_.toBuilder();
+            if (startTimeCase_ == 9) {
+              subBuilder = ((com.google.protobuf.StringValue) startTime_).toBuilder();
             }
-            paymentsAccountId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            startTime_ =
+                input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(paymentsAccountId_);
-              paymentsAccountId_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom((com.google.protobuf.StringValue) startTime_);
+              startTime_ = subBuilder.buildPartial();
+            }
+            startTimeCase_ = 9;
+            break;
+          }
+          case 80: {
+            int rawValue = input.readEnum();
+            startTimeCase_ = 10;
+            startTime_ = rawValue;
+            break;
+          }
+          case 90: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (paymentsAccount_ != null) {
+              subBuilder = paymentsAccount_.toBuilder();
+            }
+            paymentsAccount_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(paymentsAccount_);
+              paymentsAccount_ = subBuilder.buildPartial();
             }
 
             break;
           }
-          case 42: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (paymentsAccountName_ != null) {
-              subBuilder = paymentsAccountName_.toBuilder();
+          case 98: {
+            com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.Builder subBuilder = null;
+            if (paymentsAccountInfo_ != null) {
+              subBuilder = paymentsAccountInfo_.toBuilder();
             }
-            paymentsAccountName_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            paymentsAccountInfo_ = input.readMessage(com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(paymentsAccountName_);
-              paymentsAccountName_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 50: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (paymentsProfileId_ != null) {
-              subBuilder = paymentsProfileId_.toBuilder();
-            }
-            paymentsProfileId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(paymentsProfileId_);
-              paymentsProfileId_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 58: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (paymentsProfileName_ != null) {
-              subBuilder = paymentsProfileName_.toBuilder();
-            }
-            paymentsProfileName_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(paymentsProfileName_);
-              paymentsProfileName_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 66: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (secondaryPaymentsProfileId_ != null) {
-              subBuilder = secondaryPaymentsProfileId_.toBuilder();
-            }
-            secondaryPaymentsProfileId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(secondaryPaymentsProfileId_);
-              secondaryPaymentsProfileId_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(paymentsAccountInfo_);
+              paymentsAccountInfo_ = subBuilder.buildPartial();
             }
 
             break;
@@ -170,6 +151,1855 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.resources.BillingSetupProto.internal_static_google_ads_googleads_v0_resources_BillingSetup_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.ads.googleads.v0.resources.BillingSetup.class, com.google.ads.googleads.v0.resources.BillingSetup.Builder.class);
+  }
+
+  public interface PaymentsAccountInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A 16 digit id used to identify the Payments account associated with the
+     * billing setup.
+     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+     */
+    boolean hasPaymentsAccountId();
+    /**
+     * <pre>
+     * A 16 digit id used to identify the Payments account associated with the
+     * billing setup.
+     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+     */
+    com.google.protobuf.StringValue getPaymentsAccountId();
+    /**
+     * <pre>
+     * A 16 digit id used to identify the Payments account associated with the
+     * billing setup.
+     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder();
+
+    /**
+     * <pre>
+     * The name of the Payments account associated with the billing setup.
+     * This enables the user to specify a meaningful name for a Payments account
+     * to aid in reconciling monthly invoices.
+     * This name will be printed in the monthly invoices.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+     */
+    boolean hasPaymentsAccountName();
+    /**
+     * <pre>
+     * The name of the Payments account associated with the billing setup.
+     * This enables the user to specify a meaningful name for a Payments account
+     * to aid in reconciling monthly invoices.
+     * This name will be printed in the monthly invoices.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+     */
+    com.google.protobuf.StringValue getPaymentsAccountName();
+    /**
+     * <pre>
+     * The name of the Payments account associated with the billing setup.
+     * This enables the user to specify a meaningful name for a Payments account
+     * to aid in reconciling monthly invoices.
+     * This name will be printed in the monthly invoices.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getPaymentsAccountNameOrBuilder();
+
+    /**
+     * <pre>
+     * A 12 digit id used to identify the Payments profile associated with the
+     * billing setup.
+     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+     */
+    boolean hasPaymentsProfileId();
+    /**
+     * <pre>
+     * A 12 digit id used to identify the Payments profile associated with the
+     * billing setup.
+     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+     */
+    com.google.protobuf.StringValue getPaymentsProfileId();
+    /**
+     * <pre>
+     * A 12 digit id used to identify the Payments profile associated with the
+     * billing setup.
+     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder();
+
+    /**
+     * <pre>
+     * The name of the Payments profile associated with the billing setup.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+     */
+    boolean hasPaymentsProfileName();
+    /**
+     * <pre>
+     * The name of the Payments profile associated with the billing setup.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+     */
+    com.google.protobuf.StringValue getPaymentsProfileName();
+    /**
+     * <pre>
+     * The name of the Payments profile associated with the billing setup.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getPaymentsProfileNameOrBuilder();
+
+    /**
+     * <pre>
+     * A secondary payments profile id present in uncommon situations, e.g.
+     * when a sequential liability agreement has been arranged.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+     */
+    boolean hasSecondaryPaymentsProfileId();
+    /**
+     * <pre>
+     * A secondary payments profile id present in uncommon situations, e.g.
+     * when a sequential liability agreement has been arranged.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+     */
+    com.google.protobuf.StringValue getSecondaryPaymentsProfileId();
+    /**
+     * <pre>
+     * A secondary payments profile id present in uncommon situations, e.g.
+     * when a sequential liability agreement has been arranged.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * Container of Payments account information for this billing.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo}
+   */
+  public  static final class PaymentsAccountInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo)
+      PaymentsAccountInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PaymentsAccountInfo.newBuilder() to construct.
+    private PaymentsAccountInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PaymentsAccountInfo() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PaymentsAccountInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (paymentsAccountId_ != null) {
+                subBuilder = paymentsAccountId_.toBuilder();
+              }
+              paymentsAccountId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(paymentsAccountId_);
+                paymentsAccountId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (paymentsAccountName_ != null) {
+                subBuilder = paymentsAccountName_.toBuilder();
+              }
+              paymentsAccountName_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(paymentsAccountName_);
+                paymentsAccountName_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (paymentsProfileId_ != null) {
+                subBuilder = paymentsProfileId_.toBuilder();
+              }
+              paymentsProfileId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(paymentsProfileId_);
+                paymentsProfileId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (paymentsProfileName_ != null) {
+                subBuilder = paymentsProfileName_.toBuilder();
+              }
+              paymentsProfileName_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(paymentsProfileName_);
+                paymentsProfileName_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (secondaryPaymentsProfileId_ != null) {
+                subBuilder = secondaryPaymentsProfileId_.toBuilder();
+              }
+              secondaryPaymentsProfileId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(secondaryPaymentsProfileId_);
+                secondaryPaymentsProfileId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v0.resources.BillingSetupProto.internal_static_google_ads_googleads_v0_resources_BillingSetup_PaymentsAccountInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v0.resources.BillingSetupProto.internal_static_google_ads_googleads_v0_resources_BillingSetup_PaymentsAccountInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.class, com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.Builder.class);
+    }
+
+    public static final int PAYMENTS_ACCOUNT_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.StringValue paymentsAccountId_;
+    /**
+     * <pre>
+     * A 16 digit id used to identify the Payments account associated with the
+     * billing setup.
+     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+     */
+    public boolean hasPaymentsAccountId() {
+      return paymentsAccountId_ != null;
+    }
+    /**
+     * <pre>
+     * A 16 digit id used to identify the Payments account associated with the
+     * billing setup.
+     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+     */
+    public com.google.protobuf.StringValue getPaymentsAccountId() {
+      return paymentsAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountId_;
+    }
+    /**
+     * <pre>
+     * A 16 digit id used to identify the Payments account associated with the
+     * billing setup.
+     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
+      return getPaymentsAccountId();
+    }
+
+    public static final int PAYMENTS_ACCOUNT_NAME_FIELD_NUMBER = 2;
+    private com.google.protobuf.StringValue paymentsAccountName_;
+    /**
+     * <pre>
+     * The name of the Payments account associated with the billing setup.
+     * This enables the user to specify a meaningful name for a Payments account
+     * to aid in reconciling monthly invoices.
+     * This name will be printed in the monthly invoices.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+     */
+    public boolean hasPaymentsAccountName() {
+      return paymentsAccountName_ != null;
+    }
+    /**
+     * <pre>
+     * The name of the Payments account associated with the billing setup.
+     * This enables the user to specify a meaningful name for a Payments account
+     * to aid in reconciling monthly invoices.
+     * This name will be printed in the monthly invoices.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+     */
+    public com.google.protobuf.StringValue getPaymentsAccountName() {
+      return paymentsAccountName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountName_;
+    }
+    /**
+     * <pre>
+     * The name of the Payments account associated with the billing setup.
+     * This enables the user to specify a meaningful name for a Payments account
+     * to aid in reconciling monthly invoices.
+     * This name will be printed in the monthly invoices.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getPaymentsAccountNameOrBuilder() {
+      return getPaymentsAccountName();
+    }
+
+    public static final int PAYMENTS_PROFILE_ID_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue paymentsProfileId_;
+    /**
+     * <pre>
+     * A 12 digit id used to identify the Payments profile associated with the
+     * billing setup.
+     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+     */
+    public boolean hasPaymentsProfileId() {
+      return paymentsProfileId_ != null;
+    }
+    /**
+     * <pre>
+     * A 12 digit id used to identify the Payments profile associated with the
+     * billing setup.
+     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+     */
+    public com.google.protobuf.StringValue getPaymentsProfileId() {
+      return paymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileId_;
+    }
+    /**
+     * <pre>
+     * A 12 digit id used to identify the Payments profile associated with the
+     * billing setup.
+     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
+      return getPaymentsProfileId();
+    }
+
+    public static final int PAYMENTS_PROFILE_NAME_FIELD_NUMBER = 4;
+    private com.google.protobuf.StringValue paymentsProfileName_;
+    /**
+     * <pre>
+     * The name of the Payments profile associated with the billing setup.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+     */
+    public boolean hasPaymentsProfileName() {
+      return paymentsProfileName_ != null;
+    }
+    /**
+     * <pre>
+     * The name of the Payments profile associated with the billing setup.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+     */
+    public com.google.protobuf.StringValue getPaymentsProfileName() {
+      return paymentsProfileName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileName_;
+    }
+    /**
+     * <pre>
+     * The name of the Payments profile associated with the billing setup.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getPaymentsProfileNameOrBuilder() {
+      return getPaymentsProfileName();
+    }
+
+    public static final int SECONDARY_PAYMENTS_PROFILE_ID_FIELD_NUMBER = 5;
+    private com.google.protobuf.StringValue secondaryPaymentsProfileId_;
+    /**
+     * <pre>
+     * A secondary payments profile id present in uncommon situations, e.g.
+     * when a sequential liability agreement has been arranged.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+     */
+    public boolean hasSecondaryPaymentsProfileId() {
+      return secondaryPaymentsProfileId_ != null;
+    }
+    /**
+     * <pre>
+     * A secondary payments profile id present in uncommon situations, e.g.
+     * when a sequential liability agreement has been arranged.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+     */
+    public com.google.protobuf.StringValue getSecondaryPaymentsProfileId() {
+      return secondaryPaymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : secondaryPaymentsProfileId_;
+    }
+    /**
+     * <pre>
+     * A secondary payments profile id present in uncommon situations, e.g.
+     * when a sequential liability agreement has been arranged.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder() {
+      return getSecondaryPaymentsProfileId();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (paymentsAccountId_ != null) {
+        output.writeMessage(1, getPaymentsAccountId());
+      }
+      if (paymentsAccountName_ != null) {
+        output.writeMessage(2, getPaymentsAccountName());
+      }
+      if (paymentsProfileId_ != null) {
+        output.writeMessage(3, getPaymentsProfileId());
+      }
+      if (paymentsProfileName_ != null) {
+        output.writeMessage(4, getPaymentsProfileName());
+      }
+      if (secondaryPaymentsProfileId_ != null) {
+        output.writeMessage(5, getSecondaryPaymentsProfileId());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (paymentsAccountId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPaymentsAccountId());
+      }
+      if (paymentsAccountName_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPaymentsAccountName());
+      }
+      if (paymentsProfileId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPaymentsProfileId());
+      }
+      if (paymentsProfileName_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPaymentsProfileName());
+      }
+      if (secondaryPaymentsProfileId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSecondaryPaymentsProfileId());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo other = (com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo) obj;
+
+      boolean result = true;
+      result = result && (hasPaymentsAccountId() == other.hasPaymentsAccountId());
+      if (hasPaymentsAccountId()) {
+        result = result && getPaymentsAccountId()
+            .equals(other.getPaymentsAccountId());
+      }
+      result = result && (hasPaymentsAccountName() == other.hasPaymentsAccountName());
+      if (hasPaymentsAccountName()) {
+        result = result && getPaymentsAccountName()
+            .equals(other.getPaymentsAccountName());
+      }
+      result = result && (hasPaymentsProfileId() == other.hasPaymentsProfileId());
+      if (hasPaymentsProfileId()) {
+        result = result && getPaymentsProfileId()
+            .equals(other.getPaymentsProfileId());
+      }
+      result = result && (hasPaymentsProfileName() == other.hasPaymentsProfileName());
+      if (hasPaymentsProfileName()) {
+        result = result && getPaymentsProfileName()
+            .equals(other.getPaymentsProfileName());
+      }
+      result = result && (hasSecondaryPaymentsProfileId() == other.hasSecondaryPaymentsProfileId());
+      if (hasSecondaryPaymentsProfileId()) {
+        result = result && getSecondaryPaymentsProfileId()
+            .equals(other.getSecondaryPaymentsProfileId());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPaymentsAccountId()) {
+        hash = (37 * hash) + PAYMENTS_ACCOUNT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentsAccountId().hashCode();
+      }
+      if (hasPaymentsAccountName()) {
+        hash = (37 * hash) + PAYMENTS_ACCOUNT_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentsAccountName().hashCode();
+      }
+      if (hasPaymentsProfileId()) {
+        hash = (37 * hash) + PAYMENTS_PROFILE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentsProfileId().hashCode();
+      }
+      if (hasPaymentsProfileName()) {
+        hash = (37 * hash) + PAYMENTS_PROFILE_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentsProfileName().hashCode();
+      }
+      if (hasSecondaryPaymentsProfileId()) {
+        hash = (37 * hash) + SECONDARY_PAYMENTS_PROFILE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getSecondaryPaymentsProfileId().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Container of Payments account information for this billing.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo)
+        com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v0.resources.BillingSetupProto.internal_static_google_ads_googleads_v0_resources_BillingSetup_PaymentsAccountInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v0.resources.BillingSetupProto.internal_static_google_ads_googleads_v0_resources_BillingSetup_PaymentsAccountInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.class, com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (paymentsAccountIdBuilder_ == null) {
+          paymentsAccountId_ = null;
+        } else {
+          paymentsAccountId_ = null;
+          paymentsAccountIdBuilder_ = null;
+        }
+        if (paymentsAccountNameBuilder_ == null) {
+          paymentsAccountName_ = null;
+        } else {
+          paymentsAccountName_ = null;
+          paymentsAccountNameBuilder_ = null;
+        }
+        if (paymentsProfileIdBuilder_ == null) {
+          paymentsProfileId_ = null;
+        } else {
+          paymentsProfileId_ = null;
+          paymentsProfileIdBuilder_ = null;
+        }
+        if (paymentsProfileNameBuilder_ == null) {
+          paymentsProfileName_ = null;
+        } else {
+          paymentsProfileName_ = null;
+          paymentsProfileNameBuilder_ = null;
+        }
+        if (secondaryPaymentsProfileIdBuilder_ == null) {
+          secondaryPaymentsProfileId_ = null;
+        } else {
+          secondaryPaymentsProfileId_ = null;
+          secondaryPaymentsProfileIdBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v0.resources.BillingSetupProto.internal_static_google_ads_googleads_v0_resources_BillingSetup_PaymentsAccountInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo getDefaultInstanceForType() {
+        return com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo build() {
+        com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo buildPartial() {
+        com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo result = new com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo(this);
+        if (paymentsAccountIdBuilder_ == null) {
+          result.paymentsAccountId_ = paymentsAccountId_;
+        } else {
+          result.paymentsAccountId_ = paymentsAccountIdBuilder_.build();
+        }
+        if (paymentsAccountNameBuilder_ == null) {
+          result.paymentsAccountName_ = paymentsAccountName_;
+        } else {
+          result.paymentsAccountName_ = paymentsAccountNameBuilder_.build();
+        }
+        if (paymentsProfileIdBuilder_ == null) {
+          result.paymentsProfileId_ = paymentsProfileId_;
+        } else {
+          result.paymentsProfileId_ = paymentsProfileIdBuilder_.build();
+        }
+        if (paymentsProfileNameBuilder_ == null) {
+          result.paymentsProfileName_ = paymentsProfileName_;
+        } else {
+          result.paymentsProfileName_ = paymentsProfileNameBuilder_.build();
+        }
+        if (secondaryPaymentsProfileIdBuilder_ == null) {
+          result.secondaryPaymentsProfileId_ = secondaryPaymentsProfileId_;
+        } else {
+          result.secondaryPaymentsProfileId_ = secondaryPaymentsProfileIdBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo) {
+          return mergeFrom((com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo other) {
+        if (other == com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.getDefaultInstance()) return this;
+        if (other.hasPaymentsAccountId()) {
+          mergePaymentsAccountId(other.getPaymentsAccountId());
+        }
+        if (other.hasPaymentsAccountName()) {
+          mergePaymentsAccountName(other.getPaymentsAccountName());
+        }
+        if (other.hasPaymentsProfileId()) {
+          mergePaymentsProfileId(other.getPaymentsProfileId());
+        }
+        if (other.hasPaymentsProfileName()) {
+          mergePaymentsProfileName(other.getPaymentsProfileName());
+        }
+        if (other.hasSecondaryPaymentsProfileId()) {
+          mergeSecondaryPaymentsProfileId(other.getSecondaryPaymentsProfileId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.StringValue paymentsAccountId_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountIdBuilder_;
+      /**
+       * <pre>
+       * A 16 digit id used to identify the Payments account associated with the
+       * billing setup.
+       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       */
+      public boolean hasPaymentsAccountId() {
+        return paymentsAccountIdBuilder_ != null || paymentsAccountId_ != null;
+      }
+      /**
+       * <pre>
+       * A 16 digit id used to identify the Payments account associated with the
+       * billing setup.
+       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       */
+      public com.google.protobuf.StringValue getPaymentsAccountId() {
+        if (paymentsAccountIdBuilder_ == null) {
+          return paymentsAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountId_;
+        } else {
+          return paymentsAccountIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * A 16 digit id used to identify the Payments account associated with the
+       * billing setup.
+       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       */
+      public Builder setPaymentsAccountId(com.google.protobuf.StringValue value) {
+        if (paymentsAccountIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          paymentsAccountId_ = value;
+          onChanged();
+        } else {
+          paymentsAccountIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A 16 digit id used to identify the Payments account associated with the
+       * billing setup.
+       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       */
+      public Builder setPaymentsAccountId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (paymentsAccountIdBuilder_ == null) {
+          paymentsAccountId_ = builderForValue.build();
+          onChanged();
+        } else {
+          paymentsAccountIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A 16 digit id used to identify the Payments account associated with the
+       * billing setup.
+       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       */
+      public Builder mergePaymentsAccountId(com.google.protobuf.StringValue value) {
+        if (paymentsAccountIdBuilder_ == null) {
+          if (paymentsAccountId_ != null) {
+            paymentsAccountId_ =
+              com.google.protobuf.StringValue.newBuilder(paymentsAccountId_).mergeFrom(value).buildPartial();
+          } else {
+            paymentsAccountId_ = value;
+          }
+          onChanged();
+        } else {
+          paymentsAccountIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A 16 digit id used to identify the Payments account associated with the
+       * billing setup.
+       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       */
+      public Builder clearPaymentsAccountId() {
+        if (paymentsAccountIdBuilder_ == null) {
+          paymentsAccountId_ = null;
+          onChanged();
+        } else {
+          paymentsAccountId_ = null;
+          paymentsAccountIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A 16 digit id used to identify the Payments account associated with the
+       * billing setup.
+       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getPaymentsAccountIdBuilder() {
+        
+        onChanged();
+        return getPaymentsAccountIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A 16 digit id used to identify the Payments account associated with the
+       * billing setup.
+       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
+        if (paymentsAccountIdBuilder_ != null) {
+          return paymentsAccountIdBuilder_.getMessageOrBuilder();
+        } else {
+          return paymentsAccountId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountId_;
+        }
+      }
+      /**
+       * <pre>
+       * A 16 digit id used to identify the Payments account associated with the
+       * billing setup.
+       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getPaymentsAccountIdFieldBuilder() {
+        if (paymentsAccountIdBuilder_ == null) {
+          paymentsAccountIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getPaymentsAccountId(),
+                  getParentForChildren(),
+                  isClean());
+          paymentsAccountId_ = null;
+        }
+        return paymentsAccountIdBuilder_;
+      }
+
+      private com.google.protobuf.StringValue paymentsAccountName_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountNameBuilder_;
+      /**
+       * <pre>
+       * The name of the Payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a Payments account
+       * to aid in reconciling monthly invoices.
+       * This name will be printed in the monthly invoices.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       */
+      public boolean hasPaymentsAccountName() {
+        return paymentsAccountNameBuilder_ != null || paymentsAccountName_ != null;
+      }
+      /**
+       * <pre>
+       * The name of the Payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a Payments account
+       * to aid in reconciling monthly invoices.
+       * This name will be printed in the monthly invoices.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       */
+      public com.google.protobuf.StringValue getPaymentsAccountName() {
+        if (paymentsAccountNameBuilder_ == null) {
+          return paymentsAccountName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountName_;
+        } else {
+          return paymentsAccountNameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The name of the Payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a Payments account
+       * to aid in reconciling monthly invoices.
+       * This name will be printed in the monthly invoices.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       */
+      public Builder setPaymentsAccountName(com.google.protobuf.StringValue value) {
+        if (paymentsAccountNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          paymentsAccountName_ = value;
+          onChanged();
+        } else {
+          paymentsAccountNameBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the Payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a Payments account
+       * to aid in reconciling monthly invoices.
+       * This name will be printed in the monthly invoices.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       */
+      public Builder setPaymentsAccountName(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (paymentsAccountNameBuilder_ == null) {
+          paymentsAccountName_ = builderForValue.build();
+          onChanged();
+        } else {
+          paymentsAccountNameBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the Payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a Payments account
+       * to aid in reconciling monthly invoices.
+       * This name will be printed in the monthly invoices.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       */
+      public Builder mergePaymentsAccountName(com.google.protobuf.StringValue value) {
+        if (paymentsAccountNameBuilder_ == null) {
+          if (paymentsAccountName_ != null) {
+            paymentsAccountName_ =
+              com.google.protobuf.StringValue.newBuilder(paymentsAccountName_).mergeFrom(value).buildPartial();
+          } else {
+            paymentsAccountName_ = value;
+          }
+          onChanged();
+        } else {
+          paymentsAccountNameBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the Payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a Payments account
+       * to aid in reconciling monthly invoices.
+       * This name will be printed in the monthly invoices.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       */
+      public Builder clearPaymentsAccountName() {
+        if (paymentsAccountNameBuilder_ == null) {
+          paymentsAccountName_ = null;
+          onChanged();
+        } else {
+          paymentsAccountName_ = null;
+          paymentsAccountNameBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the Payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a Payments account
+       * to aid in reconciling monthly invoices.
+       * This name will be printed in the monthly invoices.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getPaymentsAccountNameBuilder() {
+        
+        onChanged();
+        return getPaymentsAccountNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The name of the Payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a Payments account
+       * to aid in reconciling monthly invoices.
+       * This name will be printed in the monthly invoices.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getPaymentsAccountNameOrBuilder() {
+        if (paymentsAccountNameBuilder_ != null) {
+          return paymentsAccountNameBuilder_.getMessageOrBuilder();
+        } else {
+          return paymentsAccountName_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountName_;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the Payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a Payments account
+       * to aid in reconciling monthly invoices.
+       * This name will be printed in the monthly invoices.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getPaymentsAccountNameFieldBuilder() {
+        if (paymentsAccountNameBuilder_ == null) {
+          paymentsAccountNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getPaymentsAccountName(),
+                  getParentForChildren(),
+                  isClean());
+          paymentsAccountName_ = null;
+        }
+        return paymentsAccountNameBuilder_;
+      }
+
+      private com.google.protobuf.StringValue paymentsProfileId_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileIdBuilder_;
+      /**
+       * <pre>
+       * A 12 digit id used to identify the Payments profile associated with the
+       * billing setup.
+       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       */
+      public boolean hasPaymentsProfileId() {
+        return paymentsProfileIdBuilder_ != null || paymentsProfileId_ != null;
+      }
+      /**
+       * <pre>
+       * A 12 digit id used to identify the Payments profile associated with the
+       * billing setup.
+       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       */
+      public com.google.protobuf.StringValue getPaymentsProfileId() {
+        if (paymentsProfileIdBuilder_ == null) {
+          return paymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileId_;
+        } else {
+          return paymentsProfileIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * A 12 digit id used to identify the Payments profile associated with the
+       * billing setup.
+       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       */
+      public Builder setPaymentsProfileId(com.google.protobuf.StringValue value) {
+        if (paymentsProfileIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          paymentsProfileId_ = value;
+          onChanged();
+        } else {
+          paymentsProfileIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A 12 digit id used to identify the Payments profile associated with the
+       * billing setup.
+       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       */
+      public Builder setPaymentsProfileId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (paymentsProfileIdBuilder_ == null) {
+          paymentsProfileId_ = builderForValue.build();
+          onChanged();
+        } else {
+          paymentsProfileIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A 12 digit id used to identify the Payments profile associated with the
+       * billing setup.
+       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       */
+      public Builder mergePaymentsProfileId(com.google.protobuf.StringValue value) {
+        if (paymentsProfileIdBuilder_ == null) {
+          if (paymentsProfileId_ != null) {
+            paymentsProfileId_ =
+              com.google.protobuf.StringValue.newBuilder(paymentsProfileId_).mergeFrom(value).buildPartial();
+          } else {
+            paymentsProfileId_ = value;
+          }
+          onChanged();
+        } else {
+          paymentsProfileIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A 12 digit id used to identify the Payments profile associated with the
+       * billing setup.
+       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       */
+      public Builder clearPaymentsProfileId() {
+        if (paymentsProfileIdBuilder_ == null) {
+          paymentsProfileId_ = null;
+          onChanged();
+        } else {
+          paymentsProfileId_ = null;
+          paymentsProfileIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A 12 digit id used to identify the Payments profile associated with the
+       * billing setup.
+       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getPaymentsProfileIdBuilder() {
+        
+        onChanged();
+        return getPaymentsProfileIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A 12 digit id used to identify the Payments profile associated with the
+       * billing setup.
+       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
+        if (paymentsProfileIdBuilder_ != null) {
+          return paymentsProfileIdBuilder_.getMessageOrBuilder();
+        } else {
+          return paymentsProfileId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileId_;
+        }
+      }
+      /**
+       * <pre>
+       * A 12 digit id used to identify the Payments profile associated with the
+       * billing setup.
+       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getPaymentsProfileIdFieldBuilder() {
+        if (paymentsProfileIdBuilder_ == null) {
+          paymentsProfileIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getPaymentsProfileId(),
+                  getParentForChildren(),
+                  isClean());
+          paymentsProfileId_ = null;
+        }
+        return paymentsProfileIdBuilder_;
+      }
+
+      private com.google.protobuf.StringValue paymentsProfileName_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileNameBuilder_;
+      /**
+       * <pre>
+       * The name of the Payments profile associated with the billing setup.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       */
+      public boolean hasPaymentsProfileName() {
+        return paymentsProfileNameBuilder_ != null || paymentsProfileName_ != null;
+      }
+      /**
+       * <pre>
+       * The name of the Payments profile associated with the billing setup.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       */
+      public com.google.protobuf.StringValue getPaymentsProfileName() {
+        if (paymentsProfileNameBuilder_ == null) {
+          return paymentsProfileName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileName_;
+        } else {
+          return paymentsProfileNameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The name of the Payments profile associated with the billing setup.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       */
+      public Builder setPaymentsProfileName(com.google.protobuf.StringValue value) {
+        if (paymentsProfileNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          paymentsProfileName_ = value;
+          onChanged();
+        } else {
+          paymentsProfileNameBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the Payments profile associated with the billing setup.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       */
+      public Builder setPaymentsProfileName(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (paymentsProfileNameBuilder_ == null) {
+          paymentsProfileName_ = builderForValue.build();
+          onChanged();
+        } else {
+          paymentsProfileNameBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the Payments profile associated with the billing setup.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       */
+      public Builder mergePaymentsProfileName(com.google.protobuf.StringValue value) {
+        if (paymentsProfileNameBuilder_ == null) {
+          if (paymentsProfileName_ != null) {
+            paymentsProfileName_ =
+              com.google.protobuf.StringValue.newBuilder(paymentsProfileName_).mergeFrom(value).buildPartial();
+          } else {
+            paymentsProfileName_ = value;
+          }
+          onChanged();
+        } else {
+          paymentsProfileNameBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the Payments profile associated with the billing setup.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       */
+      public Builder clearPaymentsProfileName() {
+        if (paymentsProfileNameBuilder_ == null) {
+          paymentsProfileName_ = null;
+          onChanged();
+        } else {
+          paymentsProfileName_ = null;
+          paymentsProfileNameBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the Payments profile associated with the billing setup.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getPaymentsProfileNameBuilder() {
+        
+        onChanged();
+        return getPaymentsProfileNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The name of the Payments profile associated with the billing setup.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getPaymentsProfileNameOrBuilder() {
+        if (paymentsProfileNameBuilder_ != null) {
+          return paymentsProfileNameBuilder_.getMessageOrBuilder();
+        } else {
+          return paymentsProfileName_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileName_;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the Payments profile associated with the billing setup.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getPaymentsProfileNameFieldBuilder() {
+        if (paymentsProfileNameBuilder_ == null) {
+          paymentsProfileNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getPaymentsProfileName(),
+                  getParentForChildren(),
+                  isClean());
+          paymentsProfileName_ = null;
+        }
+        return paymentsProfileNameBuilder_;
+      }
+
+      private com.google.protobuf.StringValue secondaryPaymentsProfileId_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> secondaryPaymentsProfileIdBuilder_;
+      /**
+       * <pre>
+       * A secondary payments profile id present in uncommon situations, e.g.
+       * when a sequential liability agreement has been arranged.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       */
+      public boolean hasSecondaryPaymentsProfileId() {
+        return secondaryPaymentsProfileIdBuilder_ != null || secondaryPaymentsProfileId_ != null;
+      }
+      /**
+       * <pre>
+       * A secondary payments profile id present in uncommon situations, e.g.
+       * when a sequential liability agreement has been arranged.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       */
+      public com.google.protobuf.StringValue getSecondaryPaymentsProfileId() {
+        if (secondaryPaymentsProfileIdBuilder_ == null) {
+          return secondaryPaymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : secondaryPaymentsProfileId_;
+        } else {
+          return secondaryPaymentsProfileIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * A secondary payments profile id present in uncommon situations, e.g.
+       * when a sequential liability agreement has been arranged.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       */
+      public Builder setSecondaryPaymentsProfileId(com.google.protobuf.StringValue value) {
+        if (secondaryPaymentsProfileIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secondaryPaymentsProfileId_ = value;
+          onChanged();
+        } else {
+          secondaryPaymentsProfileIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A secondary payments profile id present in uncommon situations, e.g.
+       * when a sequential liability agreement has been arranged.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       */
+      public Builder setSecondaryPaymentsProfileId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (secondaryPaymentsProfileIdBuilder_ == null) {
+          secondaryPaymentsProfileId_ = builderForValue.build();
+          onChanged();
+        } else {
+          secondaryPaymentsProfileIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A secondary payments profile id present in uncommon situations, e.g.
+       * when a sequential liability agreement has been arranged.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       */
+      public Builder mergeSecondaryPaymentsProfileId(com.google.protobuf.StringValue value) {
+        if (secondaryPaymentsProfileIdBuilder_ == null) {
+          if (secondaryPaymentsProfileId_ != null) {
+            secondaryPaymentsProfileId_ =
+              com.google.protobuf.StringValue.newBuilder(secondaryPaymentsProfileId_).mergeFrom(value).buildPartial();
+          } else {
+            secondaryPaymentsProfileId_ = value;
+          }
+          onChanged();
+        } else {
+          secondaryPaymentsProfileIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A secondary payments profile id present in uncommon situations, e.g.
+       * when a sequential liability agreement has been arranged.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       */
+      public Builder clearSecondaryPaymentsProfileId() {
+        if (secondaryPaymentsProfileIdBuilder_ == null) {
+          secondaryPaymentsProfileId_ = null;
+          onChanged();
+        } else {
+          secondaryPaymentsProfileId_ = null;
+          secondaryPaymentsProfileIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A secondary payments profile id present in uncommon situations, e.g.
+       * when a sequential liability agreement has been arranged.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getSecondaryPaymentsProfileIdBuilder() {
+        
+        onChanged();
+        return getSecondaryPaymentsProfileIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A secondary payments profile id present in uncommon situations, e.g.
+       * when a sequential liability agreement has been arranged.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder() {
+        if (secondaryPaymentsProfileIdBuilder_ != null) {
+          return secondaryPaymentsProfileIdBuilder_.getMessageOrBuilder();
+        } else {
+          return secondaryPaymentsProfileId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : secondaryPaymentsProfileId_;
+        }
+      }
+      /**
+       * <pre>
+       * A secondary payments profile id present in uncommon situations, e.g.
+       * when a sequential liability agreement has been arranged.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getSecondaryPaymentsProfileIdFieldBuilder() {
+        if (secondaryPaymentsProfileIdBuilder_ == null) {
+          secondaryPaymentsProfileIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getSecondaryPaymentsProfileId(),
+                  getParentForChildren(),
+                  isClean());
+          secondaryPaymentsProfileId_ = null;
+        }
+        return secondaryPaymentsProfileIdBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo)
+    private static final com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo();
+    }
+
+    public static com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PaymentsAccountInfo>
+        PARSER = new com.google.protobuf.AbstractParser<PaymentsAccountInfo>() {
+      @java.lang.Override
+      public PaymentsAccountInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PaymentsAccountInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PaymentsAccountInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PaymentsAccountInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private int startTimeCase_ = 0;
+  private java.lang.Object startTime_;
+  public enum StartTimeCase
+      implements com.google.protobuf.Internal.EnumLite {
+    START_DATE_TIME(9),
+    START_TIME_TYPE(10),
+    STARTTIME_NOT_SET(0);
+    private final int value;
+    private StartTimeCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static StartTimeCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static StartTimeCase forNumber(int value) {
+      switch (value) {
+        case 9: return START_DATE_TIME;
+        case 10: return START_TIME_TYPE;
+        case 0: return STARTTIME_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public StartTimeCase
+  getStartTimeCase() {
+    return StartTimeCase.forNumber(
+        startTimeCase_);
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
@@ -276,193 +2106,175 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v0.enums.BillingSetupStatusEnum.BillingSetupStatus.UNRECOGNIZED : result;
   }
 
-  public static final int PAYMENTS_ACCOUNT_ID_FIELD_NUMBER = 4;
-  private com.google.protobuf.StringValue paymentsAccountId_;
+  public static final int PAYMENTS_ACCOUNT_FIELD_NUMBER = 11;
+  private com.google.protobuf.StringValue paymentsAccount_;
   /**
    * <pre>
-   * A 16 digit id used to identify the Payments account associated with the
-   * billing setup.
-   * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+   * The resource name of the Payments account associated with this billing
+   * setup. Payments resource names have the form:
+   * `customers/{customer_id}/paymentsAccounts/
+   *                       {payments_profile_id}_{payments_account_id}`
+   * When setting up billing, this is used to signup with an existing Payments
+   * account (and then payments_account_info should not be set).
+   * When getting a billing setup, this and payments_account_info will be
+   * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+   * <code>.google.protobuf.StringValue payments_account = 11;</code>
    */
-  public boolean hasPaymentsAccountId() {
-    return paymentsAccountId_ != null;
+  public boolean hasPaymentsAccount() {
+    return paymentsAccount_ != null;
   }
   /**
    * <pre>
-   * A 16 digit id used to identify the Payments account associated with the
-   * billing setup.
-   * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+   * The resource name of the Payments account associated with this billing
+   * setup. Payments resource names have the form:
+   * `customers/{customer_id}/paymentsAccounts/
+   *                       {payments_profile_id}_{payments_account_id}`
+   * When setting up billing, this is used to signup with an existing Payments
+   * account (and then payments_account_info should not be set).
+   * When getting a billing setup, this and payments_account_info will be
+   * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+   * <code>.google.protobuf.StringValue payments_account = 11;</code>
    */
-  public com.google.protobuf.StringValue getPaymentsAccountId() {
-    return paymentsAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountId_;
+  public com.google.protobuf.StringValue getPaymentsAccount() {
+    return paymentsAccount_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccount_;
   }
   /**
    * <pre>
-   * A 16 digit id used to identify the Payments account associated with the
-   * billing setup.
-   * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+   * The resource name of the Payments account associated with this billing
+   * setup. Payments resource names have the form:
+   * `customers/{customer_id}/paymentsAccounts/
+   *                       {payments_profile_id}_{payments_account_id}`
+   * When setting up billing, this is used to signup with an existing Payments
+   * account (and then payments_account_info should not be set).
+   * When getting a billing setup, this and payments_account_info will be
+   * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+   * <code>.google.protobuf.StringValue payments_account = 11;</code>
    */
-  public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
-    return getPaymentsAccountId();
-  }
-
-  public static final int PAYMENTS_ACCOUNT_NAME_FIELD_NUMBER = 5;
-  private com.google.protobuf.StringValue paymentsAccountName_;
-  /**
-   * <pre>
-   * The name of the Payments account associated with the billing setup.
-   * This enables the user to specify a meaningful name for a Payments account
-   * to aid in reconciling monthly invoices.
-   * This name will be printed in the monthly invoices.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
-   */
-  public boolean hasPaymentsAccountName() {
-    return paymentsAccountName_ != null;
-  }
-  /**
-   * <pre>
-   * The name of the Payments account associated with the billing setup.
-   * This enables the user to specify a meaningful name for a Payments account
-   * to aid in reconciling monthly invoices.
-   * This name will be printed in the monthly invoices.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
-   */
-  public com.google.protobuf.StringValue getPaymentsAccountName() {
-    return paymentsAccountName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountName_;
-  }
-  /**
-   * <pre>
-   * The name of the Payments account associated with the billing setup.
-   * This enables the user to specify a meaningful name for a Payments account
-   * to aid in reconciling monthly invoices.
-   * This name will be printed in the monthly invoices.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
-   */
-  public com.google.protobuf.StringValueOrBuilder getPaymentsAccountNameOrBuilder() {
-    return getPaymentsAccountName();
+  public com.google.protobuf.StringValueOrBuilder getPaymentsAccountOrBuilder() {
+    return getPaymentsAccount();
   }
 
-  public static final int PAYMENTS_PROFILE_ID_FIELD_NUMBER = 6;
-  private com.google.protobuf.StringValue paymentsProfileId_;
+  public static final int PAYMENTS_ACCOUNT_INFO_FIELD_NUMBER = 12;
+  private com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo paymentsAccountInfo_;
   /**
    * <pre>
-   * A 12 digit id used to identify the Payments profile associated with the
-   * billing setup.
-   * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+   * The Payments account information associated with this billing setup.
+   * When setting up billing, this is used to signup with a new Payments account
+   * (and then payments_account should not be set).
+   * When getting a billing setup, this and payments_account will be
+   * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+   * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
    */
-  public boolean hasPaymentsProfileId() {
-    return paymentsProfileId_ != null;
+  public boolean hasPaymentsAccountInfo() {
+    return paymentsAccountInfo_ != null;
   }
   /**
    * <pre>
-   * A 12 digit id used to identify the Payments profile associated with the
-   * billing setup.
-   * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+   * The Payments account information associated with this billing setup.
+   * When setting up billing, this is used to signup with a new Payments account
+   * (and then payments_account should not be set).
+   * When getting a billing setup, this and payments_account will be
+   * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+   * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
    */
-  public com.google.protobuf.StringValue getPaymentsProfileId() {
-    return paymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileId_;
+  public com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo getPaymentsAccountInfo() {
+    return paymentsAccountInfo_ == null ? com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.getDefaultInstance() : paymentsAccountInfo_;
   }
   /**
    * <pre>
-   * A 12 digit id used to identify the Payments profile associated with the
-   * billing setup.
-   * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+   * The Payments account information associated with this billing setup.
+   * When setting up billing, this is used to signup with a new Payments account
+   * (and then payments_account should not be set).
+   * When getting a billing setup, this and payments_account will be
+   * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+   * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
    */
-  public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
-    return getPaymentsProfileId();
-  }
-
-  public static final int PAYMENTS_PROFILE_NAME_FIELD_NUMBER = 7;
-  private com.google.protobuf.StringValue paymentsProfileName_;
-  /**
-   * <pre>
-   * The name of the Payments profile associated with the billing setup.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
-   */
-  public boolean hasPaymentsProfileName() {
-    return paymentsProfileName_ != null;
-  }
-  /**
-   * <pre>
-   * The name of the Payments profile associated with the billing setup.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
-   */
-  public com.google.protobuf.StringValue getPaymentsProfileName() {
-    return paymentsProfileName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileName_;
-  }
-  /**
-   * <pre>
-   * The name of the Payments profile associated with the billing setup.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
-   */
-  public com.google.protobuf.StringValueOrBuilder getPaymentsProfileNameOrBuilder() {
-    return getPaymentsProfileName();
+  public com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfoOrBuilder getPaymentsAccountInfoOrBuilder() {
+    return getPaymentsAccountInfo();
   }
 
-  public static final int SECONDARY_PAYMENTS_PROFILE_ID_FIELD_NUMBER = 8;
-  private com.google.protobuf.StringValue secondaryPaymentsProfileId_;
+  public static final int START_DATE_TIME_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * A secondary payments profile id present in uncommon situations, e.g.
-   * when a sequential liability agreement has been arranged.
+   * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+   * future time is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
+   * <code>.google.protobuf.StringValue start_date_time = 9;</code>
    */
-  public boolean hasSecondaryPaymentsProfileId() {
-    return secondaryPaymentsProfileId_ != null;
+  public boolean hasStartDateTime() {
+    return startTimeCase_ == 9;
   }
   /**
    * <pre>
-   * A secondary payments profile id present in uncommon situations, e.g.
-   * when a sequential liability agreement has been arranged.
+   * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+   * future time is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
+   * <code>.google.protobuf.StringValue start_date_time = 9;</code>
    */
-  public com.google.protobuf.StringValue getSecondaryPaymentsProfileId() {
-    return secondaryPaymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : secondaryPaymentsProfileId_;
+  public com.google.protobuf.StringValue getStartDateTime() {
+    if (startTimeCase_ == 9) {
+       return (com.google.protobuf.StringValue) startTime_;
+    }
+    return com.google.protobuf.StringValue.getDefaultInstance();
   }
   /**
    * <pre>
-   * A secondary payments profile id present in uncommon situations, e.g.
-   * when a sequential liability agreement has been arranged.
+   * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+   * future time is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
+   * <code>.google.protobuf.StringValue start_date_time = 9;</code>
    */
-  public com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder() {
-    return getSecondaryPaymentsProfileId();
+  public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
+    if (startTimeCase_ == 9) {
+       return (com.google.protobuf.StringValue) startTime_;
+    }
+    return com.google.protobuf.StringValue.getDefaultInstance();
+  }
+
+  public static final int START_TIME_TYPE_FIELD_NUMBER = 10;
+  /**
+   * <pre>
+   * The start time as a type. Only NOW is allowed.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
+   */
+  public int getStartTimeTypeValue() {
+    if (startTimeCase_ == 10) {
+      return (java.lang.Integer) startTime_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The start time as a type. Only NOW is allowed.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
+   */
+  public com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType getStartTimeType() {
+    if (startTimeCase_ == 10) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.valueOf(
+          (java.lang.Integer) startTime_);
+      return result == null ? com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNSPECIFIED;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -488,20 +2300,17 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.google.ads.googleads.v0.enums.BillingSetupStatusEnum.BillingSetupStatus.UNSPECIFIED.getNumber()) {
       output.writeEnum(3, status_);
     }
-    if (paymentsAccountId_ != null) {
-      output.writeMessage(4, getPaymentsAccountId());
+    if (startTimeCase_ == 9) {
+      output.writeMessage(9, (com.google.protobuf.StringValue) startTime_);
     }
-    if (paymentsAccountName_ != null) {
-      output.writeMessage(5, getPaymentsAccountName());
+    if (startTimeCase_ == 10) {
+      output.writeEnum(10, ((java.lang.Integer) startTime_));
     }
-    if (paymentsProfileId_ != null) {
-      output.writeMessage(6, getPaymentsProfileId());
+    if (paymentsAccount_ != null) {
+      output.writeMessage(11, getPaymentsAccount());
     }
-    if (paymentsProfileName_ != null) {
-      output.writeMessage(7, getPaymentsProfileName());
-    }
-    if (secondaryPaymentsProfileId_ != null) {
-      output.writeMessage(8, getSecondaryPaymentsProfileId());
+    if (paymentsAccountInfo_ != null) {
+      output.writeMessage(12, getPaymentsAccountInfo());
     }
     unknownFields.writeTo(output);
   }
@@ -523,25 +2332,21 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, status_);
     }
-    if (paymentsAccountId_ != null) {
+    if (startTimeCase_ == 9) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getPaymentsAccountId());
+        .computeMessageSize(9, (com.google.protobuf.StringValue) startTime_);
     }
-    if (paymentsAccountName_ != null) {
+    if (startTimeCase_ == 10) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getPaymentsAccountName());
+        .computeEnumSize(10, ((java.lang.Integer) startTime_));
     }
-    if (paymentsProfileId_ != null) {
+    if (paymentsAccount_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getPaymentsProfileId());
+        .computeMessageSize(11, getPaymentsAccount());
     }
-    if (paymentsProfileName_ != null) {
+    if (paymentsAccountInfo_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getPaymentsProfileName());
-    }
-    if (secondaryPaymentsProfileId_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, getSecondaryPaymentsProfileId());
+        .computeMessageSize(12, getPaymentsAccountInfo());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -567,30 +2372,30 @@ private static final long serialVersionUID = 0L;
           .equals(other.getId());
     }
     result = result && status_ == other.status_;
-    result = result && (hasPaymentsAccountId() == other.hasPaymentsAccountId());
-    if (hasPaymentsAccountId()) {
-      result = result && getPaymentsAccountId()
-          .equals(other.getPaymentsAccountId());
+    result = result && (hasPaymentsAccount() == other.hasPaymentsAccount());
+    if (hasPaymentsAccount()) {
+      result = result && getPaymentsAccount()
+          .equals(other.getPaymentsAccount());
     }
-    result = result && (hasPaymentsAccountName() == other.hasPaymentsAccountName());
-    if (hasPaymentsAccountName()) {
-      result = result && getPaymentsAccountName()
-          .equals(other.getPaymentsAccountName());
+    result = result && (hasPaymentsAccountInfo() == other.hasPaymentsAccountInfo());
+    if (hasPaymentsAccountInfo()) {
+      result = result && getPaymentsAccountInfo()
+          .equals(other.getPaymentsAccountInfo());
     }
-    result = result && (hasPaymentsProfileId() == other.hasPaymentsProfileId());
-    if (hasPaymentsProfileId()) {
-      result = result && getPaymentsProfileId()
-          .equals(other.getPaymentsProfileId());
-    }
-    result = result && (hasPaymentsProfileName() == other.hasPaymentsProfileName());
-    if (hasPaymentsProfileName()) {
-      result = result && getPaymentsProfileName()
-          .equals(other.getPaymentsProfileName());
-    }
-    result = result && (hasSecondaryPaymentsProfileId() == other.hasSecondaryPaymentsProfileId());
-    if (hasSecondaryPaymentsProfileId()) {
-      result = result && getSecondaryPaymentsProfileId()
-          .equals(other.getSecondaryPaymentsProfileId());
+    result = result && getStartTimeCase().equals(
+        other.getStartTimeCase());
+    if (!result) return false;
+    switch (startTimeCase_) {
+      case 9:
+        result = result && getStartDateTime()
+            .equals(other.getStartDateTime());
+        break;
+      case 10:
+        result = result && getStartTimeTypeValue()
+            == other.getStartTimeTypeValue();
+        break;
+      case 0:
+      default:
     }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
@@ -611,25 +2416,25 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
-    if (hasPaymentsAccountId()) {
-      hash = (37 * hash) + PAYMENTS_ACCOUNT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPaymentsAccountId().hashCode();
+    if (hasPaymentsAccount()) {
+      hash = (37 * hash) + PAYMENTS_ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getPaymentsAccount().hashCode();
     }
-    if (hasPaymentsAccountName()) {
-      hash = (37 * hash) + PAYMENTS_ACCOUNT_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getPaymentsAccountName().hashCode();
+    if (hasPaymentsAccountInfo()) {
+      hash = (37 * hash) + PAYMENTS_ACCOUNT_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getPaymentsAccountInfo().hashCode();
     }
-    if (hasPaymentsProfileId()) {
-      hash = (37 * hash) + PAYMENTS_PROFILE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPaymentsProfileId().hashCode();
-    }
-    if (hasPaymentsProfileName()) {
-      hash = (37 * hash) + PAYMENTS_PROFILE_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getPaymentsProfileName().hashCode();
-    }
-    if (hasSecondaryPaymentsProfileId()) {
-      hash = (37 * hash) + SECONDARY_PAYMENTS_PROFILE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSecondaryPaymentsProfileId().hashCode();
+    switch (startTimeCase_) {
+      case 9:
+        hash = (37 * hash) + START_DATE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartDateTime().hashCode();
+        break;
+      case 10:
+        hash = (37 * hash) + START_TIME_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTimeTypeValue();
+        break;
+      case 0:
+      default:
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -780,36 +2585,20 @@ private static final long serialVersionUID = 0L;
       }
       status_ = 0;
 
-      if (paymentsAccountIdBuilder_ == null) {
-        paymentsAccountId_ = null;
+      if (paymentsAccountBuilder_ == null) {
+        paymentsAccount_ = null;
       } else {
-        paymentsAccountId_ = null;
-        paymentsAccountIdBuilder_ = null;
+        paymentsAccount_ = null;
+        paymentsAccountBuilder_ = null;
       }
-      if (paymentsAccountNameBuilder_ == null) {
-        paymentsAccountName_ = null;
+      if (paymentsAccountInfoBuilder_ == null) {
+        paymentsAccountInfo_ = null;
       } else {
-        paymentsAccountName_ = null;
-        paymentsAccountNameBuilder_ = null;
+        paymentsAccountInfo_ = null;
+        paymentsAccountInfoBuilder_ = null;
       }
-      if (paymentsProfileIdBuilder_ == null) {
-        paymentsProfileId_ = null;
-      } else {
-        paymentsProfileId_ = null;
-        paymentsProfileIdBuilder_ = null;
-      }
-      if (paymentsProfileNameBuilder_ == null) {
-        paymentsProfileName_ = null;
-      } else {
-        paymentsProfileName_ = null;
-        paymentsProfileNameBuilder_ = null;
-      }
-      if (secondaryPaymentsProfileIdBuilder_ == null) {
-        secondaryPaymentsProfileId_ = null;
-      } else {
-        secondaryPaymentsProfileId_ = null;
-        secondaryPaymentsProfileIdBuilder_ = null;
-      }
+      startTimeCase_ = 0;
+      startTime_ = null;
       return this;
     }
 
@@ -843,31 +2632,27 @@ private static final long serialVersionUID = 0L;
         result.id_ = idBuilder_.build();
       }
       result.status_ = status_;
-      if (paymentsAccountIdBuilder_ == null) {
-        result.paymentsAccountId_ = paymentsAccountId_;
+      if (paymentsAccountBuilder_ == null) {
+        result.paymentsAccount_ = paymentsAccount_;
       } else {
-        result.paymentsAccountId_ = paymentsAccountIdBuilder_.build();
+        result.paymentsAccount_ = paymentsAccountBuilder_.build();
       }
-      if (paymentsAccountNameBuilder_ == null) {
-        result.paymentsAccountName_ = paymentsAccountName_;
+      if (paymentsAccountInfoBuilder_ == null) {
+        result.paymentsAccountInfo_ = paymentsAccountInfo_;
       } else {
-        result.paymentsAccountName_ = paymentsAccountNameBuilder_.build();
+        result.paymentsAccountInfo_ = paymentsAccountInfoBuilder_.build();
       }
-      if (paymentsProfileIdBuilder_ == null) {
-        result.paymentsProfileId_ = paymentsProfileId_;
-      } else {
-        result.paymentsProfileId_ = paymentsProfileIdBuilder_.build();
+      if (startTimeCase_ == 9) {
+        if (startDateTimeBuilder_ == null) {
+          result.startTime_ = startTime_;
+        } else {
+          result.startTime_ = startDateTimeBuilder_.build();
+        }
       }
-      if (paymentsProfileNameBuilder_ == null) {
-        result.paymentsProfileName_ = paymentsProfileName_;
-      } else {
-        result.paymentsProfileName_ = paymentsProfileNameBuilder_.build();
+      if (startTimeCase_ == 10) {
+        result.startTime_ = startTime_;
       }
-      if (secondaryPaymentsProfileIdBuilder_ == null) {
-        result.secondaryPaymentsProfileId_ = secondaryPaymentsProfileId_;
-      } else {
-        result.secondaryPaymentsProfileId_ = secondaryPaymentsProfileIdBuilder_.build();
-      }
+      result.startTimeCase_ = startTimeCase_;
       onBuilt();
       return result;
     }
@@ -926,20 +2711,24 @@ private static final long serialVersionUID = 0L;
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
-      if (other.hasPaymentsAccountId()) {
-        mergePaymentsAccountId(other.getPaymentsAccountId());
+      if (other.hasPaymentsAccount()) {
+        mergePaymentsAccount(other.getPaymentsAccount());
       }
-      if (other.hasPaymentsAccountName()) {
-        mergePaymentsAccountName(other.getPaymentsAccountName());
+      if (other.hasPaymentsAccountInfo()) {
+        mergePaymentsAccountInfo(other.getPaymentsAccountInfo());
       }
-      if (other.hasPaymentsProfileId()) {
-        mergePaymentsProfileId(other.getPaymentsProfileId());
-      }
-      if (other.hasPaymentsProfileName()) {
-        mergePaymentsProfileName(other.getPaymentsProfileName());
-      }
-      if (other.hasSecondaryPaymentsProfileId()) {
-        mergeSecondaryPaymentsProfileId(other.getSecondaryPaymentsProfileId());
+      switch (other.getStartTimeCase()) {
+        case START_DATE_TIME: {
+          mergeStartDateTime(other.getStartDateTime());
+          break;
+        }
+        case START_TIME_TYPE: {
+          setStartTimeTypeValue(other.getStartTimeTypeValue());
+          break;
+        }
+        case STARTTIME_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -969,6 +2758,21 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    private int startTimeCase_ = 0;
+    private java.lang.Object startTime_;
+    public StartTimeCase
+        getStartTimeCase() {
+      return StartTimeCase.forNumber(
+          startTimeCase_);
+    }
+
+    public Builder clearStartTime() {
+      startTimeCase_ = 0;
+      startTime_ = null;
+      onChanged();
+      return this;
+    }
+
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -1287,841 +3091,664 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue paymentsAccountId_ = null;
+    private com.google.protobuf.StringValue paymentsAccount_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountIdBuilder_;
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountBuilder_;
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
-     * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * The resource name of the Payments account associated with this billing
+     * setup. Payments resource names have the form:
+     * `customers/{customer_id}/paymentsAccounts/
+     *                       {payments_profile_id}_{payments_account_id}`
+     * When setting up billing, this is used to signup with an existing Payments
+     * account (and then payments_account_info should not be set).
+     * When getting a billing setup, this and payments_account_info will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11;</code>
      */
-    public boolean hasPaymentsAccountId() {
-      return paymentsAccountIdBuilder_ != null || paymentsAccountId_ != null;
+    public boolean hasPaymentsAccount() {
+      return paymentsAccountBuilder_ != null || paymentsAccount_ != null;
     }
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
-     * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * The resource name of the Payments account associated with this billing
+     * setup. Payments resource names have the form:
+     * `customers/{customer_id}/paymentsAccounts/
+     *                       {payments_profile_id}_{payments_account_id}`
+     * When setting up billing, this is used to signup with an existing Payments
+     * account (and then payments_account_info should not be set).
+     * When getting a billing setup, this and payments_account_info will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11;</code>
      */
-    public com.google.protobuf.StringValue getPaymentsAccountId() {
-      if (paymentsAccountIdBuilder_ == null) {
-        return paymentsAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountId_;
+    public com.google.protobuf.StringValue getPaymentsAccount() {
+      if (paymentsAccountBuilder_ == null) {
+        return paymentsAccount_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccount_;
       } else {
-        return paymentsAccountIdBuilder_.getMessage();
+        return paymentsAccountBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
-     * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * The resource name of the Payments account associated with this billing
+     * setup. Payments resource names have the form:
+     * `customers/{customer_id}/paymentsAccounts/
+     *                       {payments_profile_id}_{payments_account_id}`
+     * When setting up billing, this is used to signup with an existing Payments
+     * account (and then payments_account_info should not be set).
+     * When getting a billing setup, this and payments_account_info will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11;</code>
      */
-    public Builder setPaymentsAccountId(com.google.protobuf.StringValue value) {
-      if (paymentsAccountIdBuilder_ == null) {
+    public Builder setPaymentsAccount(com.google.protobuf.StringValue value) {
+      if (paymentsAccountBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        paymentsAccountId_ = value;
+        paymentsAccount_ = value;
         onChanged();
       } else {
-        paymentsAccountIdBuilder_.setMessage(value);
+        paymentsAccountBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
-     * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * The resource name of the Payments account associated with this billing
+     * setup. Payments resource names have the form:
+     * `customers/{customer_id}/paymentsAccounts/
+     *                       {payments_profile_id}_{payments_account_id}`
+     * When setting up billing, this is used to signup with an existing Payments
+     * account (and then payments_account_info should not be set).
+     * When getting a billing setup, this and payments_account_info will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11;</code>
      */
-    public Builder setPaymentsAccountId(
+    public Builder setPaymentsAccount(
         com.google.protobuf.StringValue.Builder builderForValue) {
-      if (paymentsAccountIdBuilder_ == null) {
-        paymentsAccountId_ = builderForValue.build();
+      if (paymentsAccountBuilder_ == null) {
+        paymentsAccount_ = builderForValue.build();
         onChanged();
       } else {
-        paymentsAccountIdBuilder_.setMessage(builderForValue.build());
+        paymentsAccountBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
-     * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * The resource name of the Payments account associated with this billing
+     * setup. Payments resource names have the form:
+     * `customers/{customer_id}/paymentsAccounts/
+     *                       {payments_profile_id}_{payments_account_id}`
+     * When setting up billing, this is used to signup with an existing Payments
+     * account (and then payments_account_info should not be set).
+     * When getting a billing setup, this and payments_account_info will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11;</code>
      */
-    public Builder mergePaymentsAccountId(com.google.protobuf.StringValue value) {
-      if (paymentsAccountIdBuilder_ == null) {
-        if (paymentsAccountId_ != null) {
-          paymentsAccountId_ =
-            com.google.protobuf.StringValue.newBuilder(paymentsAccountId_).mergeFrom(value).buildPartial();
+    public Builder mergePaymentsAccount(com.google.protobuf.StringValue value) {
+      if (paymentsAccountBuilder_ == null) {
+        if (paymentsAccount_ != null) {
+          paymentsAccount_ =
+            com.google.protobuf.StringValue.newBuilder(paymentsAccount_).mergeFrom(value).buildPartial();
         } else {
-          paymentsAccountId_ = value;
+          paymentsAccount_ = value;
         }
         onChanged();
       } else {
-        paymentsAccountIdBuilder_.mergeFrom(value);
+        paymentsAccountBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
-     * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * The resource name of the Payments account associated with this billing
+     * setup. Payments resource names have the form:
+     * `customers/{customer_id}/paymentsAccounts/
+     *                       {payments_profile_id}_{payments_account_id}`
+     * When setting up billing, this is used to signup with an existing Payments
+     * account (and then payments_account_info should not be set).
+     * When getting a billing setup, this and payments_account_info will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11;</code>
      */
-    public Builder clearPaymentsAccountId() {
-      if (paymentsAccountIdBuilder_ == null) {
-        paymentsAccountId_ = null;
+    public Builder clearPaymentsAccount() {
+      if (paymentsAccountBuilder_ == null) {
+        paymentsAccount_ = null;
         onChanged();
       } else {
-        paymentsAccountId_ = null;
-        paymentsAccountIdBuilder_ = null;
+        paymentsAccount_ = null;
+        paymentsAccountBuilder_ = null;
       }
 
       return this;
     }
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
-     * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * The resource name of the Payments account associated with this billing
+     * setup. Payments resource names have the form:
+     * `customers/{customer_id}/paymentsAccounts/
+     *                       {payments_profile_id}_{payments_account_id}`
+     * When setting up billing, this is used to signup with an existing Payments
+     * account (and then payments_account_info should not be set).
+     * When getting a billing setup, this and payments_account_info will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11;</code>
      */
-    public com.google.protobuf.StringValue.Builder getPaymentsAccountIdBuilder() {
+    public com.google.protobuf.StringValue.Builder getPaymentsAccountBuilder() {
       
       onChanged();
-      return getPaymentsAccountIdFieldBuilder().getBuilder();
+      return getPaymentsAccountFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
-     * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * The resource name of the Payments account associated with this billing
+     * setup. Payments resource names have the form:
+     * `customers/{customer_id}/paymentsAccounts/
+     *                       {payments_profile_id}_{payments_account_id}`
+     * When setting up billing, this is used to signup with an existing Payments
+     * account (and then payments_account_info should not be set).
+     * When getting a billing setup, this and payments_account_info will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11;</code>
      */
-    public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
-      if (paymentsAccountIdBuilder_ != null) {
-        return paymentsAccountIdBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.StringValueOrBuilder getPaymentsAccountOrBuilder() {
+      if (paymentsAccountBuilder_ != null) {
+        return paymentsAccountBuilder_.getMessageOrBuilder();
       } else {
-        return paymentsAccountId_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountId_;
+        return paymentsAccount_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccount_;
       }
     }
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
-     * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * The resource name of the Payments account associated with this billing
+     * setup. Payments resource names have the form:
+     * `customers/{customer_id}/paymentsAccounts/
+     *                       {payments_profile_id}_{payments_account_id}`
+     * When setting up billing, this is used to signup with an existing Payments
+     * account (and then payments_account_info should not be set).
+     * When getting a billing setup, this and payments_account_info will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getPaymentsAccountIdFieldBuilder() {
-      if (paymentsAccountIdBuilder_ == null) {
-        paymentsAccountIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getPaymentsAccountFieldBuilder() {
+      if (paymentsAccountBuilder_ == null) {
+        paymentsAccountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getPaymentsAccountId(),
+                getPaymentsAccount(),
                 getParentForChildren(),
                 isClean());
-        paymentsAccountId_ = null;
+        paymentsAccount_ = null;
       }
-      return paymentsAccountIdBuilder_;
+      return paymentsAccountBuilder_;
     }
 
-    private com.google.protobuf.StringValue paymentsAccountName_ = null;
+    private com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo paymentsAccountInfo_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountNameBuilder_;
+        com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo, com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.Builder, com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfoOrBuilder> paymentsAccountInfoBuilder_;
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
-     * to aid in reconciling monthly invoices.
-     * This name will be printed in the monthly invoices.
+     * The Payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new Payments account
+     * (and then payments_account should not be set).
+     * When getting a billing setup, this and payments_account will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
+     * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
      */
-    public boolean hasPaymentsAccountName() {
-      return paymentsAccountNameBuilder_ != null || paymentsAccountName_ != null;
+    public boolean hasPaymentsAccountInfo() {
+      return paymentsAccountInfoBuilder_ != null || paymentsAccountInfo_ != null;
     }
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
-     * to aid in reconciling monthly invoices.
-     * This name will be printed in the monthly invoices.
+     * The Payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new Payments account
+     * (and then payments_account should not be set).
+     * When getting a billing setup, this and payments_account will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
+     * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
      */
-    public com.google.protobuf.StringValue getPaymentsAccountName() {
-      if (paymentsAccountNameBuilder_ == null) {
-        return paymentsAccountName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountName_;
+    public com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo getPaymentsAccountInfo() {
+      if (paymentsAccountInfoBuilder_ == null) {
+        return paymentsAccountInfo_ == null ? com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.getDefaultInstance() : paymentsAccountInfo_;
       } else {
-        return paymentsAccountNameBuilder_.getMessage();
+        return paymentsAccountInfoBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
-     * to aid in reconciling monthly invoices.
-     * This name will be printed in the monthly invoices.
+     * The Payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new Payments account
+     * (and then payments_account should not be set).
+     * When getting a billing setup, this and payments_account will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
+     * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
      */
-    public Builder setPaymentsAccountName(com.google.protobuf.StringValue value) {
-      if (paymentsAccountNameBuilder_ == null) {
+    public Builder setPaymentsAccountInfo(com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo value) {
+      if (paymentsAccountInfoBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        paymentsAccountName_ = value;
+        paymentsAccountInfo_ = value;
         onChanged();
       } else {
-        paymentsAccountNameBuilder_.setMessage(value);
+        paymentsAccountInfoBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
-     * to aid in reconciling monthly invoices.
-     * This name will be printed in the monthly invoices.
+     * The Payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new Payments account
+     * (and then payments_account should not be set).
+     * When getting a billing setup, this and payments_account will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
+     * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
      */
-    public Builder setPaymentsAccountName(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (paymentsAccountNameBuilder_ == null) {
-        paymentsAccountName_ = builderForValue.build();
+    public Builder setPaymentsAccountInfo(
+        com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.Builder builderForValue) {
+      if (paymentsAccountInfoBuilder_ == null) {
+        paymentsAccountInfo_ = builderForValue.build();
         onChanged();
       } else {
-        paymentsAccountNameBuilder_.setMessage(builderForValue.build());
+        paymentsAccountInfoBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
-     * to aid in reconciling monthly invoices.
-     * This name will be printed in the monthly invoices.
+     * The Payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new Payments account
+     * (and then payments_account should not be set).
+     * When getting a billing setup, this and payments_account will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
+     * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
      */
-    public Builder mergePaymentsAccountName(com.google.protobuf.StringValue value) {
-      if (paymentsAccountNameBuilder_ == null) {
-        if (paymentsAccountName_ != null) {
-          paymentsAccountName_ =
-            com.google.protobuf.StringValue.newBuilder(paymentsAccountName_).mergeFrom(value).buildPartial();
+    public Builder mergePaymentsAccountInfo(com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo value) {
+      if (paymentsAccountInfoBuilder_ == null) {
+        if (paymentsAccountInfo_ != null) {
+          paymentsAccountInfo_ =
+            com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.newBuilder(paymentsAccountInfo_).mergeFrom(value).buildPartial();
         } else {
-          paymentsAccountName_ = value;
+          paymentsAccountInfo_ = value;
         }
         onChanged();
       } else {
-        paymentsAccountNameBuilder_.mergeFrom(value);
+        paymentsAccountInfoBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
-     * to aid in reconciling monthly invoices.
-     * This name will be printed in the monthly invoices.
+     * The Payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new Payments account
+     * (and then payments_account should not be set).
+     * When getting a billing setup, this and payments_account will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
+     * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
      */
-    public Builder clearPaymentsAccountName() {
-      if (paymentsAccountNameBuilder_ == null) {
-        paymentsAccountName_ = null;
+    public Builder clearPaymentsAccountInfo() {
+      if (paymentsAccountInfoBuilder_ == null) {
+        paymentsAccountInfo_ = null;
         onChanged();
       } else {
-        paymentsAccountName_ = null;
-        paymentsAccountNameBuilder_ = null;
+        paymentsAccountInfo_ = null;
+        paymentsAccountInfoBuilder_ = null;
       }
 
       return this;
     }
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
-     * to aid in reconciling monthly invoices.
-     * This name will be printed in the monthly invoices.
+     * The Payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new Payments account
+     * (and then payments_account should not be set).
+     * When getting a billing setup, this and payments_account will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
+     * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
      */
-    public com.google.protobuf.StringValue.Builder getPaymentsAccountNameBuilder() {
+    public com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.Builder getPaymentsAccountInfoBuilder() {
       
       onChanged();
-      return getPaymentsAccountNameFieldBuilder().getBuilder();
+      return getPaymentsAccountInfoFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
-     * to aid in reconciling monthly invoices.
-     * This name will be printed in the monthly invoices.
+     * The Payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new Payments account
+     * (and then payments_account should not be set).
+     * When getting a billing setup, this and payments_account will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
+     * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
      */
-    public com.google.protobuf.StringValueOrBuilder getPaymentsAccountNameOrBuilder() {
-      if (paymentsAccountNameBuilder_ != null) {
-        return paymentsAccountNameBuilder_.getMessageOrBuilder();
+    public com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfoOrBuilder getPaymentsAccountInfoOrBuilder() {
+      if (paymentsAccountInfoBuilder_ != null) {
+        return paymentsAccountInfoBuilder_.getMessageOrBuilder();
       } else {
-        return paymentsAccountName_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountName_;
+        return paymentsAccountInfo_ == null ?
+            com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.getDefaultInstance() : paymentsAccountInfo_;
       }
     }
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
-     * to aid in reconciling monthly invoices.
-     * This name will be printed in the monthly invoices.
+     * The Payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new Payments account
+     * (and then payments_account should not be set).
+     * When getting a billing setup, this and payments_account will be
+     * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
+     * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getPaymentsAccountNameFieldBuilder() {
-      if (paymentsAccountNameBuilder_ == null) {
-        paymentsAccountNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getPaymentsAccountName(),
+        com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo, com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.Builder, com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfoOrBuilder> 
+        getPaymentsAccountInfoFieldBuilder() {
+      if (paymentsAccountInfoBuilder_ == null) {
+        paymentsAccountInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo, com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo.Builder, com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfoOrBuilder>(
+                getPaymentsAccountInfo(),
                 getParentForChildren(),
                 isClean());
-        paymentsAccountName_ = null;
+        paymentsAccountInfo_ = null;
       }
-      return paymentsAccountNameBuilder_;
+      return paymentsAccountInfoBuilder_;
     }
 
-    private com.google.protobuf.StringValue paymentsProfileId_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileIdBuilder_;
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> startDateTimeBuilder_;
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
-     * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
      */
-    public boolean hasPaymentsProfileId() {
-      return paymentsProfileIdBuilder_ != null || paymentsProfileId_ != null;
+    public boolean hasStartDateTime() {
+      return startTimeCase_ == 9;
     }
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
-     * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
      */
-    public com.google.protobuf.StringValue getPaymentsProfileId() {
-      if (paymentsProfileIdBuilder_ == null) {
-        return paymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileId_;
+    public com.google.protobuf.StringValue getStartDateTime() {
+      if (startDateTimeBuilder_ == null) {
+        if (startTimeCase_ == 9) {
+          return (com.google.protobuf.StringValue) startTime_;
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
       } else {
-        return paymentsProfileIdBuilder_.getMessage();
+        if (startTimeCase_ == 9) {
+          return startDateTimeBuilder_.getMessage();
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
       }
     }
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
-     * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
      */
-    public Builder setPaymentsProfileId(com.google.protobuf.StringValue value) {
-      if (paymentsProfileIdBuilder_ == null) {
+    public Builder setStartDateTime(com.google.protobuf.StringValue value) {
+      if (startDateTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        paymentsProfileId_ = value;
+        startTime_ = value;
         onChanged();
       } else {
-        paymentsProfileIdBuilder_.setMessage(value);
+        startDateTimeBuilder_.setMessage(value);
       }
-
+      startTimeCase_ = 9;
       return this;
     }
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
-     * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
      */
-    public Builder setPaymentsProfileId(
+    public Builder setStartDateTime(
         com.google.protobuf.StringValue.Builder builderForValue) {
-      if (paymentsProfileIdBuilder_ == null) {
-        paymentsProfileId_ = builderForValue.build();
+      if (startDateTimeBuilder_ == null) {
+        startTime_ = builderForValue.build();
         onChanged();
       } else {
-        paymentsProfileIdBuilder_.setMessage(builderForValue.build());
+        startDateTimeBuilder_.setMessage(builderForValue.build());
       }
-
+      startTimeCase_ = 9;
       return this;
     }
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
-     * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
      */
-    public Builder mergePaymentsProfileId(com.google.protobuf.StringValue value) {
-      if (paymentsProfileIdBuilder_ == null) {
-        if (paymentsProfileId_ != null) {
-          paymentsProfileId_ =
-            com.google.protobuf.StringValue.newBuilder(paymentsProfileId_).mergeFrom(value).buildPartial();
+    public Builder mergeStartDateTime(com.google.protobuf.StringValue value) {
+      if (startDateTimeBuilder_ == null) {
+        if (startTimeCase_ == 9 &&
+            startTime_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          startTime_ = com.google.protobuf.StringValue.newBuilder((com.google.protobuf.StringValue) startTime_)
+              .mergeFrom(value).buildPartial();
         } else {
-          paymentsProfileId_ = value;
+          startTime_ = value;
         }
         onChanged();
       } else {
-        paymentsProfileIdBuilder_.mergeFrom(value);
+        if (startTimeCase_ == 9) {
+          startDateTimeBuilder_.mergeFrom(value);
+        }
+        startDateTimeBuilder_.setMessage(value);
       }
-
+      startTimeCase_ = 9;
       return this;
     }
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
-     * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
      */
-    public Builder clearPaymentsProfileId() {
-      if (paymentsProfileIdBuilder_ == null) {
-        paymentsProfileId_ = null;
-        onChanged();
+    public Builder clearStartDateTime() {
+      if (startDateTimeBuilder_ == null) {
+        if (startTimeCase_ == 9) {
+          startTimeCase_ = 0;
+          startTime_ = null;
+          onChanged();
+        }
       } else {
-        paymentsProfileId_ = null;
-        paymentsProfileIdBuilder_ = null;
+        if (startTimeCase_ == 9) {
+          startTimeCase_ = 0;
+          startTime_ = null;
+        }
+        startDateTimeBuilder_.clear();
       }
-
       return this;
     }
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
-     * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
      */
-    public com.google.protobuf.StringValue.Builder getPaymentsProfileIdBuilder() {
-      
-      onChanged();
-      return getPaymentsProfileIdFieldBuilder().getBuilder();
+    public com.google.protobuf.StringValue.Builder getStartDateTimeBuilder() {
+      return getStartDateTimeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
-     * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
      */
-    public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
-      if (paymentsProfileIdBuilder_ != null) {
-        return paymentsProfileIdBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
+      if ((startTimeCase_ == 9) && (startDateTimeBuilder_ != null)) {
+        return startDateTimeBuilder_.getMessageOrBuilder();
       } else {
-        return paymentsProfileId_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileId_;
+        if (startTimeCase_ == 9) {
+          return (com.google.protobuf.StringValue) startTime_;
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
       }
     }
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
-     * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getPaymentsProfileIdFieldBuilder() {
-      if (paymentsProfileIdBuilder_ == null) {
-        paymentsProfileIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getStartDateTimeFieldBuilder() {
+      if (startDateTimeBuilder_ == null) {
+        if (!(startTimeCase_ == 9)) {
+          startTime_ = com.google.protobuf.StringValue.getDefaultInstance();
+        }
+        startDateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getPaymentsProfileId(),
+                (com.google.protobuf.StringValue) startTime_,
                 getParentForChildren(),
                 isClean());
-        paymentsProfileId_ = null;
+        startTime_ = null;
       }
-      return paymentsProfileIdBuilder_;
+      startTimeCase_ = 9;
+      onChanged();;
+      return startDateTimeBuilder_;
     }
 
-    private com.google.protobuf.StringValue paymentsProfileName_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileNameBuilder_;
     /**
      * <pre>
-     * The name of the Payments profile associated with the billing setup.
+     * The start time as a type. Only NOW is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
      */
-    public boolean hasPaymentsProfileName() {
-      return paymentsProfileNameBuilder_ != null || paymentsProfileName_ != null;
-    }
-    /**
-     * <pre>
-     * The name of the Payments profile associated with the billing setup.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
-     */
-    public com.google.protobuf.StringValue getPaymentsProfileName() {
-      if (paymentsProfileNameBuilder_ == null) {
-        return paymentsProfileName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileName_;
-      } else {
-        return paymentsProfileNameBuilder_.getMessage();
+    public int getStartTimeTypeValue() {
+      if (startTimeCase_ == 10) {
+        return ((java.lang.Integer) startTime_).intValue();
       }
+      return 0;
     }
     /**
      * <pre>
-     * The name of the Payments profile associated with the billing setup.
+     * The start time as a type. Only NOW is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
      */
-    public Builder setPaymentsProfileName(com.google.protobuf.StringValue value) {
-      if (paymentsProfileNameBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        paymentsProfileName_ = value;
-        onChanged();
-      } else {
-        paymentsProfileNameBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * The name of the Payments profile associated with the billing setup.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
-     */
-    public Builder setPaymentsProfileName(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (paymentsProfileNameBuilder_ == null) {
-        paymentsProfileName_ = builderForValue.build();
-        onChanged();
-      } else {
-        paymentsProfileNameBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * The name of the Payments profile associated with the billing setup.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
-     */
-    public Builder mergePaymentsProfileName(com.google.protobuf.StringValue value) {
-      if (paymentsProfileNameBuilder_ == null) {
-        if (paymentsProfileName_ != null) {
-          paymentsProfileName_ =
-            com.google.protobuf.StringValue.newBuilder(paymentsProfileName_).mergeFrom(value).buildPartial();
-        } else {
-          paymentsProfileName_ = value;
-        }
-        onChanged();
-      } else {
-        paymentsProfileNameBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * The name of the Payments profile associated with the billing setup.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
-     */
-    public Builder clearPaymentsProfileName() {
-      if (paymentsProfileNameBuilder_ == null) {
-        paymentsProfileName_ = null;
-        onChanged();
-      } else {
-        paymentsProfileName_ = null;
-        paymentsProfileNameBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * The name of the Payments profile associated with the billing setup.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
-     */
-    public com.google.protobuf.StringValue.Builder getPaymentsProfileNameBuilder() {
-      
+    public Builder setStartTimeTypeValue(int value) {
+      startTimeCase_ = 10;
+      startTime_ = value;
       onChanged();
-      return getPaymentsProfileNameFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * The name of the Payments profile associated with the billing setup.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getPaymentsProfileNameOrBuilder() {
-      if (paymentsProfileNameBuilder_ != null) {
-        return paymentsProfileNameBuilder_.getMessageOrBuilder();
-      } else {
-        return paymentsProfileName_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileName_;
-      }
-    }
-    /**
-     * <pre>
-     * The name of the Payments profile associated with the billing setup.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getPaymentsProfileNameFieldBuilder() {
-      if (paymentsProfileNameBuilder_ == null) {
-        paymentsProfileNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getPaymentsProfileName(),
-                getParentForChildren(),
-                isClean());
-        paymentsProfileName_ = null;
-      }
-      return paymentsProfileNameBuilder_;
-    }
-
-    private com.google.protobuf.StringValue secondaryPaymentsProfileId_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> secondaryPaymentsProfileIdBuilder_;
-    /**
-     * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
-     */
-    public boolean hasSecondaryPaymentsProfileId() {
-      return secondaryPaymentsProfileIdBuilder_ != null || secondaryPaymentsProfileId_ != null;
-    }
-    /**
-     * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
-     */
-    public com.google.protobuf.StringValue getSecondaryPaymentsProfileId() {
-      if (secondaryPaymentsProfileIdBuilder_ == null) {
-        return secondaryPaymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : secondaryPaymentsProfileId_;
-      } else {
-        return secondaryPaymentsProfileIdBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
-     */
-    public Builder setSecondaryPaymentsProfileId(com.google.protobuf.StringValue value) {
-      if (secondaryPaymentsProfileIdBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        secondaryPaymentsProfileId_ = value;
-        onChanged();
-      } else {
-        secondaryPaymentsProfileIdBuilder_.setMessage(value);
-      }
-
       return this;
     }
     /**
      * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * The start time as a type. Only NOW is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
      */
-    public Builder setSecondaryPaymentsProfileId(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (secondaryPaymentsProfileIdBuilder_ == null) {
-        secondaryPaymentsProfileId_ = builderForValue.build();
-        onChanged();
-      } else {
-        secondaryPaymentsProfileIdBuilder_.setMessage(builderForValue.build());
+    public com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType getStartTimeType() {
+      if (startTimeCase_ == 10) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.valueOf(
+            (java.lang.Integer) startTime_);
+        return result == null ? com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
       }
-
-      return this;
+      return com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNSPECIFIED;
     }
     /**
      * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * The start time as a type. Only NOW is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
      */
-    public Builder mergeSecondaryPaymentsProfileId(com.google.protobuf.StringValue value) {
-      if (secondaryPaymentsProfileIdBuilder_ == null) {
-        if (secondaryPaymentsProfileId_ != null) {
-          secondaryPaymentsProfileId_ =
-            com.google.protobuf.StringValue.newBuilder(secondaryPaymentsProfileId_).mergeFrom(value).buildPartial();
-        } else {
-          secondaryPaymentsProfileId_ = value;
-        }
-        onChanged();
-      } else {
-        secondaryPaymentsProfileIdBuilder_.mergeFrom(value);
+    public Builder setStartTimeType(com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType value) {
+      if (value == null) {
+        throw new NullPointerException();
       }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
-     */
-    public Builder clearSecondaryPaymentsProfileId() {
-      if (secondaryPaymentsProfileIdBuilder_ == null) {
-        secondaryPaymentsProfileId_ = null;
-        onChanged();
-      } else {
-        secondaryPaymentsProfileId_ = null;
-        secondaryPaymentsProfileIdBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
-     */
-    public com.google.protobuf.StringValue.Builder getSecondaryPaymentsProfileIdBuilder() {
-      
+      startTimeCase_ = 10;
+      startTime_ = value.getNumber();
       onChanged();
-      return getSecondaryPaymentsProfileIdFieldBuilder().getBuilder();
+      return this;
     }
     /**
      * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * The start time as a type. Only NOW is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
      */
-    public com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder() {
-      if (secondaryPaymentsProfileIdBuilder_ != null) {
-        return secondaryPaymentsProfileIdBuilder_.getMessageOrBuilder();
-      } else {
-        return secondaryPaymentsProfileId_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : secondaryPaymentsProfileId_;
+    public Builder clearStartTimeType() {
+      if (startTimeCase_ == 10) {
+        startTimeCase_ = 0;
+        startTime_ = null;
+        onChanged();
       }
-    }
-    /**
-     * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getSecondaryPaymentsProfileIdFieldBuilder() {
-      if (secondaryPaymentsProfileIdBuilder_ == null) {
-        secondaryPaymentsProfileIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getSecondaryPaymentsProfileId(),
-                getParentForChildren(),
-                isClean());
-        secondaryPaymentsProfileId_ = null;
-      }
-      return secondaryPaymentsProfileIdBuilder_;
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

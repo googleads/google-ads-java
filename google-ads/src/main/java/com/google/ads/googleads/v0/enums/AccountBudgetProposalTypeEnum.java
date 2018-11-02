@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
     END(4),
     /**
      * <pre>
-     * Identifies a request to remove a budget that hasn’t started yet.
+     * Identifies a request to remove a budget that hasn't started yet.
      * </pre>
      *
      * <code>REMOVE = 5;</code>
@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
     public static final int END_VALUE = 4;
     /**
      * <pre>
-     * Identifies a request to remove a budget that hasn’t started yet.
+     * Identifies a request to remove a budget that hasn't started yet.
      * </pre>
      *
      * <code>REMOVE = 5;</code>

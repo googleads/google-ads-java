@@ -17,6 +17,8 @@ package com.google.ads.googleads.v0.services.stub;
 
 import com.google.ads.googleads.v0.resources.GeoTargetConstant;
 import com.google.ads.googleads.v0.services.GetGeoTargetConstantRequest;
+import com.google.ads.googleads.v0.services.SuggestGeoTargetConstantsRequest;
+import com.google.ads.googleads.v0.services.SuggestGeoTargetConstantsResponse;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
@@ -35,6 +37,11 @@ public abstract class GeoTargetConstantServiceStub implements BackgroundResource
   public UnaryCallable<GetGeoTargetConstantRequest, GeoTargetConstant>
       getGeoTargetConstantCallable() {
     throw new UnsupportedOperationException("Not implemented: getGeoTargetConstantCallable()");
+  }
+
+  public UnaryCallable<SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>
+      suggestGeoTargetConstantsCallable() {
+    throw new UnsupportedOperationException("Not implemented: suggestGeoTargetConstantsCallable()");
   }
 
   @Override

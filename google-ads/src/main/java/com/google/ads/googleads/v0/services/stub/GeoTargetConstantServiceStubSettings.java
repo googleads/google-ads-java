@@ -17,6 +17,8 @@ package com.google.ads.googleads.v0.services.stub;
 
 import com.google.ads.googleads.v0.resources.GeoTargetConstant;
 import com.google.ads.googleads.v0.services.GetGeoTargetConstantRequest;
+import com.google.ads.googleads.v0.services.SuggestGeoTargetConstantsRequest;
+import com.google.ads.googleads.v0.services.SuggestGeoTargetConstantsResponse;
 import com.google.api.core.ApiFunction;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.GaxProperties;
@@ -77,11 +79,20 @@ public class GeoTargetConstantServiceStubSettings
 
   private final UnaryCallSettings<GetGeoTargetConstantRequest, GeoTargetConstant>
       getGeoTargetConstantSettings;
+  private final UnaryCallSettings<
+          SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>
+      suggestGeoTargetConstantsSettings;
 
   /** Returns the object with the settings used for calls to getGeoTargetConstant. */
   public UnaryCallSettings<GetGeoTargetConstantRequest, GeoTargetConstant>
       getGeoTargetConstantSettings() {
     return getGeoTargetConstantSettings;
+  }
+
+  /** Returns the object with the settings used for calls to suggestGeoTargetConstants. */
+  public UnaryCallSettings<SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>
+      suggestGeoTargetConstantsSettings() {
+    return suggestGeoTargetConstantsSettings;
   }
 
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
@@ -153,6 +164,7 @@ public class GeoTargetConstantServiceStubSettings
     super(settingsBuilder);
 
     getGeoTargetConstantSettings = settingsBuilder.getGeoTargetConstantSettings().build();
+    suggestGeoTargetConstantsSettings = settingsBuilder.suggestGeoTargetConstantsSettings().build();
   }
 
   /** Builder for GeoTargetConstantServiceStubSettings. */
@@ -162,6 +174,9 @@ public class GeoTargetConstantServiceStubSettings
 
     private final UnaryCallSettings.Builder<GetGeoTargetConstantRequest, GeoTargetConstant>
         getGeoTargetConstantSettings;
+    private final UnaryCallSettings.Builder<
+            SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>
+        suggestGeoTargetConstantsSettings;
 
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
@@ -206,8 +221,11 @@ public class GeoTargetConstantServiceStubSettings
 
       getGeoTargetConstantSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
+      suggestGeoTargetConstantsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(getGeoTargetConstantSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              getGeoTargetConstantSettings, suggestGeoTargetConstantsSettings);
 
       initDefaults(this);
     }
@@ -228,6 +246,11 @@ public class GeoTargetConstantServiceStubSettings
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
+      builder
+          .suggestGeoTargetConstantsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
+
       return builder;
     }
 
@@ -235,9 +258,11 @@ public class GeoTargetConstantServiceStubSettings
       super(settings);
 
       getGeoTargetConstantSettings = settings.getGeoTargetConstantSettings.toBuilder();
+      suggestGeoTargetConstantsSettings = settings.suggestGeoTargetConstantsSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(getGeoTargetConstantSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              getGeoTargetConstantSettings, suggestGeoTargetConstantsSettings);
     }
 
     // NEXT_MAJOR_VER: remove 'throws Exception'
@@ -260,6 +285,13 @@ public class GeoTargetConstantServiceStubSettings
     public UnaryCallSettings.Builder<GetGeoTargetConstantRequest, GeoTargetConstant>
         getGeoTargetConstantSettings() {
       return getGeoTargetConstantSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to suggestGeoTargetConstants. */
+    public UnaryCallSettings.Builder<
+            SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>
+        suggestGeoTargetConstantsSettings() {
+      return suggestGeoTargetConstantsSettings;
     }
 
     @Override

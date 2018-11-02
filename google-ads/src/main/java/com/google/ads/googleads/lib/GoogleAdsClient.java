@@ -15,10 +15,13 @@
 package com.google.ads.googleads.lib;
 
 import com.google.ads.googleads.v0.services.AccountBudgetProposalServiceClient;
+import com.google.ads.googleads.v0.services.AccountBudgetServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v0.services.AdGroupAudienceViewServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
+import com.google.ads.googleads.v0.services.AgeRangeViewServiceClient;
 import com.google.ads.googleads.v0.services.BiddingStrategyServiceClient;
 import com.google.ads.googleads.v0.services.BillingSetupServiceClient;
 import com.google.ads.googleads.v0.services.CampaignBidModifierServiceClient;
@@ -29,14 +32,25 @@ import com.google.ads.googleads.v0.services.CampaignServiceClient;
 import com.google.ads.googleads.v0.services.CampaignSharedSetServiceClient;
 import com.google.ads.googleads.v0.services.ChangeStatusServiceClient;
 import com.google.ads.googleads.v0.services.ConversionActionServiceClient;
+import com.google.ads.googleads.v0.services.CustomerClientLinkServiceClient;
+import com.google.ads.googleads.v0.services.CustomerManagerLinkServiceClient;
 import com.google.ads.googleads.v0.services.CustomerServiceClient;
+import com.google.ads.googleads.v0.services.DisplayKeywordViewServiceClient;
+import com.google.ads.googleads.v0.services.GenderViewServiceClient;
 import com.google.ads.googleads.v0.services.GeoTargetConstantServiceClient;
 import com.google.ads.googleads.v0.services.GoogleAdsFieldServiceClient;
 import com.google.ads.googleads.v0.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v0.services.HotelGroupViewServiceClient;
 import com.google.ads.googleads.v0.services.KeywordViewServiceClient;
+import com.google.ads.googleads.v0.services.ManagedPlacementViewServiceClient;
+import com.google.ads.googleads.v0.services.MediaFileServiceClient;
+import com.google.ads.googleads.v0.services.ParentalStatusViewServiceClient;
+import com.google.ads.googleads.v0.services.ProductGroupViewServiceClient;
 import com.google.ads.googleads.v0.services.RecommendationServiceClient;
 import com.google.ads.googleads.v0.services.SharedCriterionServiceClient;
 import com.google.ads.googleads.v0.services.SharedSetServiceClient;
+import com.google.ads.googleads.v0.services.TopicConstantServiceClient;
+import com.google.ads.googleads.v0.services.TopicViewServiceClient;
 import com.google.ads.googleads.v0.services.VideoServiceClient;
 import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
 import com.google.api.gax.rpc.FixedHeaderProvider;
@@ -189,8 +203,18 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   }
 
   @Override
+  public AccountBudgetServiceClient getAccountBudgetServiceClient() {
+    return GrpcServiceDescriptor.get(AccountBudgetServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
   public AdGroupAdServiceClient getAdGroupAdServiceClient() {
     return GrpcServiceDescriptor.get(AdGroupAdServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public AdGroupAudienceViewServiceClient getAdGroupAudienceViewServiceClient() {
+    return GrpcServiceDescriptor.get(AdGroupAudienceViewServiceClient.class).newServiceClient(this);
   }
 
   @Override
@@ -206,6 +230,11 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   @Override
   public AdGroupServiceClient getAdGroupServiceClient() {
     return GrpcServiceDescriptor.get(AdGroupServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public AgeRangeViewServiceClient getAgeRangeViewServiceClient() {
+    return GrpcServiceDescriptor.get(AgeRangeViewServiceClient.class).newServiceClient(this);
   }
 
   @Override
@@ -259,8 +288,28 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   }
 
   @Override
+  public CustomerClientLinkServiceClient getCustomerClientLinkServiceClient() {
+    return GrpcServiceDescriptor.get(CustomerClientLinkServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public CustomerManagerLinkServiceClient getCustomerManagerLinkServiceClient() {
+    return GrpcServiceDescriptor.get(CustomerManagerLinkServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
   public CustomerServiceClient getCustomerServiceClient() {
     return GrpcServiceDescriptor.get(CustomerServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public DisplayKeywordViewServiceClient getDisplayKeywordViewServiceClient() {
+    return GrpcServiceDescriptor.get(DisplayKeywordViewServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public GenderViewServiceClient getGenderViewServiceClient() {
+    return GrpcServiceDescriptor.get(GenderViewServiceClient.class).newServiceClient(this);
   }
 
   @Override
@@ -279,8 +328,34 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   }
 
   @Override
+  public HotelGroupViewServiceClient getHotelGroupViewServiceClient() {
+    return GrpcServiceDescriptor.get(HotelGroupViewServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
   public KeywordViewServiceClient getKeywordViewServiceClient() {
     return GrpcServiceDescriptor.get(KeywordViewServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public ManagedPlacementViewServiceClient getManagedPlacementViewServiceClient() {
+    return GrpcServiceDescriptor.get(ManagedPlacementViewServiceClient.class)
+        .newServiceClient(this);
+  }
+
+  @Override
+  public MediaFileServiceClient getMediaFileServiceClient() {
+    return GrpcServiceDescriptor.get(MediaFileServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public ParentalStatusViewServiceClient getParentalStatusViewServiceClient() {
+    return GrpcServiceDescriptor.get(ParentalStatusViewServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public ProductGroupViewServiceClient getProductGroupViewServiceClient() {
+    return GrpcServiceDescriptor.get(ProductGroupViewServiceClient.class).newServiceClient(this);
   }
 
   @Override
@@ -296,6 +371,16 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   @Override
   public SharedSetServiceClient getSharedSetServiceClient() {
     return GrpcServiceDescriptor.get(SharedSetServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public TopicConstantServiceClient getTopicConstantServiceClient() {
+    return GrpcServiceDescriptor.get(TopicConstantServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public TopicViewServiceClient getTopicViewServiceClient() {
+    return GrpcServiceDescriptor.get(TopicViewServiceClient.class).newServiceClient(this);
   }
 
   @Override
@@ -316,26 +401,6 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
     /** The property to set to override the location searched by {@link #fromPropertiesFile()}. */
     public static final String PROPERTIES_CONFIG_FILE_PROPERTY =
         "com.google.ads.googleads.GoogleAdsClient.propertiesFile";
-
-    /** Enum of keys expected in the {@value DEFAULT_PROPERTIES_CONFIG_FILE_NAME}. */
-    public enum ConfigPropertyKey {
-      CLIENT_ID("api.googleads.clientId"),
-      CLIENT_SECRET("api.googleads.clientSecret"),
-      DEVELOPER_TOKEN("api.googleads.developerToken"),
-      REFRESH_TOKEN("api.googleads.refreshToken"),
-      ENDPOINT("api.googleads.endpoint");
-
-      private final String key;
-
-      ConfigPropertyKey(String key) {
-        this.key = key;
-      }
-
-      /** The key corresponding to this config property. */
-      public String getPropertyKey() {
-        return key;
-      }
-    }
 
     public abstract Builder setCredentials(Credentials credentials);
 
@@ -431,6 +496,26 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
     public GoogleAdsClient build() {
       GoogleAdsClient provider = autoBuild();
       return provider;
+    }
+
+    /** Enum of keys expected in the {@value DEFAULT_PROPERTIES_CONFIG_FILE_NAME}. */
+    public enum ConfigPropertyKey {
+      CLIENT_ID("api.googleads.clientId"),
+      CLIENT_SECRET("api.googleads.clientSecret"),
+      DEVELOPER_TOKEN("api.googleads.developerToken"),
+      REFRESH_TOKEN("api.googleads.refreshToken"),
+      ENDPOINT("api.googleads.endpoint");
+
+      private final String key;
+
+      ConfigPropertyKey(String key) {
+        this.key = key;
+      }
+
+      /** The key corresponding to this config property. */
+      public String getPropertyKey() {
+        return key;
+      }
     }
   }
 }

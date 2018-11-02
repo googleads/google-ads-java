@@ -417,6 +417,23 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for the customer error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+   */
+  int getCustomerErrorValue();
+  /**
+   * <pre>
+   * The reasons for the customer error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+   */
+  com.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError getCustomerError();
+
+  /**
+   * <pre>
    * The reasons for the date error
    * </pre>
    *
@@ -570,20 +587,20 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
-   * The reasons for the media error
+   * The reasons for the media file error
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError media_error = 43;</code>
+   * <code>.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
    */
-  int getMediaErrorValue();
+  int getMediaFileErrorValue();
   /**
    * <pre>
-   * The reasons for the media error
+   * The reasons for the media file error
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError media_error = 43;</code>
+   * <code>.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
    */
-  com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError getMediaError();
+  com.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError getMediaFileError();
 
   /**
    * <pre>
@@ -1060,6 +1077,74 @@ public interface ErrorCodeOrBuilder extends
    * <code>.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError change_status_error = 79;</code>
    */
   com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError getChangeStatusError();
+
+  /**
+   * <pre>
+   * The reasons for the geo target constant suggestion error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+   */
+  int getGeoTargetConstantSuggestionErrorValue();
+  /**
+   * <pre>
+   * The reasons for the geo target constant suggestion error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+   */
+  com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError getGeoTargetConstantSuggestionError();
+
+  /**
+   * <pre>
+   * The reasons for the billing setup error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+   */
+  int getBillingSetupErrorValue();
+  /**
+   * <pre>
+   * The reasons for the billing setup error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+   */
+  com.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError getBillingSetupError();
+
+  /**
+   * <pre>
+   * The reasons for the customer client link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+   */
+  int getCustomerClientLinkErrorValue();
+  /**
+   * <pre>
+   * The reasons for the customer client link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+   */
+  com.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError getCustomerClientLinkError();
+
+  /**
+   * <pre>
+   * The reasons for the customer manager link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+   */
+  int getCustomerManagerLinkErrorValue();
+  /**
+   * <pre>
+   * The reasons for the customer manager link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+   */
+  com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError getCustomerManagerLinkError();
 
   public com.google.ads.googleads.v0.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

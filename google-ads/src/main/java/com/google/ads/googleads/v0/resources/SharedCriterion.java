@@ -87,6 +87,48 @@ private static final long serialVersionUID = 0L;
             type_ = rawValue;
             break;
           }
+          case 42: {
+            com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder subBuilder = null;
+            if (criterionCase_ == 5) {
+              subBuilder = ((com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.YouTubeVideoInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 5;
+            break;
+          }
+          case 50: {
+            com.google.ads.googleads.v0.common.YouTubeChannelInfo.Builder subBuilder = null;
+            if (criterionCase_ == 6) {
+              subBuilder = ((com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.YouTubeChannelInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 6;
+            break;
+          }
+          case 58: {
+            com.google.ads.googleads.v0.common.PlacementInfo.Builder subBuilder = null;
+            if (criterionCase_ == 7) {
+              subBuilder = ((com.google.ads.googleads.v0.common.PlacementInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.PlacementInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.PlacementInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 7;
+            break;
+          }
           case 210: {
             com.google.protobuf.Int64Value.Builder subBuilder = null;
             if (criterionId_ != null) {
@@ -137,6 +179,9 @@ private static final long serialVersionUID = 0L;
   public enum CriterionCase
       implements com.google.protobuf.Internal.EnumLite {
     KEYWORD(3),
+    YOUTUBE_VIDEO(5),
+    YOUTUBE_CHANNEL(6),
+    PLACEMENT(7),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -153,6 +198,9 @@ private static final long serialVersionUID = 0L;
     public static CriterionCase forNumber(int value) {
       switch (value) {
         case 3: return KEYWORD;
+        case 5: return YOUTUBE_VIDEO;
+        case 6: return YOUTUBE_CHANNEL;
+        case 7: return PLACEMENT;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -346,6 +394,120 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.KeywordInfo.getDefaultInstance();
   }
 
+  public static final int YOUTUBE_VIDEO_FIELD_NUMBER = 5;
+  /**
+   * <pre>
+   * YouTube Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+   */
+  public boolean hasYoutubeVideo() {
+    return criterionCase_ == 5;
+  }
+  /**
+   * <pre>
+   * YouTube Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+   */
+  public com.google.ads.googleads.v0.common.YouTubeVideoInfo getYoutubeVideo() {
+    if (criterionCase_ == 5) {
+       return (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * YouTube Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+   */
+  public com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder getYoutubeVideoOrBuilder() {
+    if (criterionCase_ == 5) {
+       return (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance();
+  }
+
+  public static final int YOUTUBE_CHANNEL_FIELD_NUMBER = 6;
+  /**
+   * <pre>
+   * YouTube Channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+   */
+  public boolean hasYoutubeChannel() {
+    return criterionCase_ == 6;
+  }
+  /**
+   * <pre>
+   * YouTube Channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+   */
+  public com.google.ads.googleads.v0.common.YouTubeChannelInfo getYoutubeChannel() {
+    if (criterionCase_ == 6) {
+       return (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * YouTube Channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+   */
+  public com.google.ads.googleads.v0.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder() {
+    if (criterionCase_ == 6) {
+       return (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance();
+  }
+
+  public static final int PLACEMENT_FIELD_NUMBER = 7;
+  /**
+   * <pre>
+   * Placement.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+   */
+  public boolean hasPlacement() {
+    return criterionCase_ == 7;
+  }
+  /**
+   * <pre>
+   * Placement.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+   */
+  public com.google.ads.googleads.v0.common.PlacementInfo getPlacement() {
+    if (criterionCase_ == 7) {
+       return (com.google.ads.googleads.v0.common.PlacementInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Placement.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+   */
+  public com.google.ads.googleads.v0.common.PlacementInfoOrBuilder getPlacementOrBuilder() {
+    if (criterionCase_ == 7) {
+       return (com.google.ads.googleads.v0.common.PlacementInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -371,6 +533,15 @@ private static final long serialVersionUID = 0L;
     }
     if (type_ != com.google.ads.googleads.v0.enums.CriterionTypeEnum.CriterionType.UNSPECIFIED.getNumber()) {
       output.writeEnum(4, type_);
+    }
+    if (criterionCase_ == 5) {
+      output.writeMessage(5, (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_);
+    }
+    if (criterionCase_ == 6) {
+      output.writeMessage(6, (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_);
+    }
+    if (criterionCase_ == 7) {
+      output.writeMessage(7, (com.google.ads.googleads.v0.common.PlacementInfo) criterion_);
     }
     if (criterionId_ != null) {
       output.writeMessage(26, getCriterionId());
@@ -398,6 +569,18 @@ private static final long serialVersionUID = 0L;
     if (type_ != com.google.ads.googleads.v0.enums.CriterionTypeEnum.CriterionType.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, type_);
+    }
+    if (criterionCase_ == 5) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_);
+    }
+    if (criterionCase_ == 6) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_);
+    }
+    if (criterionCase_ == 7) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, (com.google.ads.googleads.v0.common.PlacementInfo) criterion_);
     }
     if (criterionId_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -440,6 +623,18 @@ private static final long serialVersionUID = 0L;
         result = result && getKeyword()
             .equals(other.getKeyword());
         break;
+      case 5:
+        result = result && getYoutubeVideo()
+            .equals(other.getYoutubeVideo());
+        break;
+      case 6:
+        result = result && getYoutubeChannel()
+            .equals(other.getYoutubeChannel());
+        break;
+      case 7:
+        result = result && getPlacement()
+            .equals(other.getPlacement());
+        break;
       case 0:
       default:
     }
@@ -470,6 +665,18 @@ private static final long serialVersionUID = 0L;
       case 3:
         hash = (37 * hash) + KEYWORD_FIELD_NUMBER;
         hash = (53 * hash) + getKeyword().hashCode();
+        break;
+      case 5:
+        hash = (37 * hash) + YOUTUBE_VIDEO_FIELD_NUMBER;
+        hash = (53 * hash) + getYoutubeVideo().hashCode();
+        break;
+      case 6:
+        hash = (37 * hash) + YOUTUBE_CHANNEL_FIELD_NUMBER;
+        hash = (53 * hash) + getYoutubeChannel().hashCode();
+        break;
+      case 7:
+        hash = (37 * hash) + PLACEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPlacement().hashCode();
         break;
       case 0:
       default:
@@ -674,6 +881,27 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = keywordBuilder_.build();
         }
       }
+      if (criterionCase_ == 5) {
+        if (youtubeVideoBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = youtubeVideoBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 6) {
+        if (youtubeChannelBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = youtubeChannelBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 7) {
+        if (placementBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = placementBuilder_.build();
+        }
+      }
       result.criterionCase_ = criterionCase_;
       onBuilt();
       return result;
@@ -739,6 +967,18 @@ private static final long serialVersionUID = 0L;
       switch (other.getCriterionCase()) {
         case KEYWORD: {
           mergeKeyword(other.getKeyword());
+          break;
+        }
+        case YOUTUBE_VIDEO: {
+          mergeYoutubeVideo(other.getYoutubeVideo());
+          break;
+        }
+        case YOUTUBE_CHANNEL: {
+          mergeYoutubeChannel(other.getYoutubeChannel());
+          break;
+        }
+        case PLACEMENT: {
+          mergePlacement(other.getPlacement());
           break;
         }
         case CRITERION_NOT_SET: {
@@ -1438,6 +1678,522 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 3;
       onChanged();;
       return keywordBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.YouTubeVideoInfo, com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder, com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder> youtubeVideoBuilder_;
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+     */
+    public boolean hasYoutubeVideo() {
+      return criterionCase_ == 5;
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+     */
+    public com.google.ads.googleads.v0.common.YouTubeVideoInfo getYoutubeVideo() {
+      if (youtubeVideoBuilder_ == null) {
+        if (criterionCase_ == 5) {
+          return (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 5) {
+          return youtubeVideoBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+     */
+    public Builder setYoutubeVideo(com.google.ads.googleads.v0.common.YouTubeVideoInfo value) {
+      if (youtubeVideoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        youtubeVideoBuilder_.setMessage(value);
+      }
+      criterionCase_ = 5;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+     */
+    public Builder setYoutubeVideo(
+        com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder builderForValue) {
+      if (youtubeVideoBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        youtubeVideoBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 5;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+     */
+    public Builder mergeYoutubeVideo(com.google.ads.googleads.v0.common.YouTubeVideoInfo value) {
+      if (youtubeVideoBuilder_ == null) {
+        if (criterionCase_ == 5 &&
+            criterion_ != com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.YouTubeVideoInfo.newBuilder((com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 5) {
+          youtubeVideoBuilder_.mergeFrom(value);
+        }
+        youtubeVideoBuilder_.setMessage(value);
+      }
+      criterionCase_ = 5;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+     */
+    public Builder clearYoutubeVideo() {
+      if (youtubeVideoBuilder_ == null) {
+        if (criterionCase_ == 5) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 5) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        youtubeVideoBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+     */
+    public com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder getYoutubeVideoBuilder() {
+      return getYoutubeVideoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+     */
+    public com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder getYoutubeVideoOrBuilder() {
+      if ((criterionCase_ == 5) && (youtubeVideoBuilder_ != null)) {
+        return youtubeVideoBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 5) {
+          return (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * YouTube Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.YouTubeVideoInfo, com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder, com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder> 
+        getYoutubeVideoFieldBuilder() {
+      if (youtubeVideoBuilder_ == null) {
+        if (!(criterionCase_ == 5)) {
+          criterion_ = com.google.ads.googleads.v0.common.YouTubeVideoInfo.getDefaultInstance();
+        }
+        youtubeVideoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.YouTubeVideoInfo, com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder, com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.YouTubeVideoInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 5;
+      onChanged();;
+      return youtubeVideoBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.YouTubeChannelInfo, com.google.ads.googleads.v0.common.YouTubeChannelInfo.Builder, com.google.ads.googleads.v0.common.YouTubeChannelInfoOrBuilder> youtubeChannelBuilder_;
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     */
+    public boolean hasYoutubeChannel() {
+      return criterionCase_ == 6;
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     */
+    public com.google.ads.googleads.v0.common.YouTubeChannelInfo getYoutubeChannel() {
+      if (youtubeChannelBuilder_ == null) {
+        if (criterionCase_ == 6) {
+          return (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 6) {
+          return youtubeChannelBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     */
+    public Builder setYoutubeChannel(com.google.ads.googleads.v0.common.YouTubeChannelInfo value) {
+      if (youtubeChannelBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        youtubeChannelBuilder_.setMessage(value);
+      }
+      criterionCase_ = 6;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     */
+    public Builder setYoutubeChannel(
+        com.google.ads.googleads.v0.common.YouTubeChannelInfo.Builder builderForValue) {
+      if (youtubeChannelBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        youtubeChannelBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 6;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     */
+    public Builder mergeYoutubeChannel(com.google.ads.googleads.v0.common.YouTubeChannelInfo value) {
+      if (youtubeChannelBuilder_ == null) {
+        if (criterionCase_ == 6 &&
+            criterion_ != com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.YouTubeChannelInfo.newBuilder((com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 6) {
+          youtubeChannelBuilder_.mergeFrom(value);
+        }
+        youtubeChannelBuilder_.setMessage(value);
+      }
+      criterionCase_ = 6;
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     */
+    public Builder clearYoutubeChannel() {
+      if (youtubeChannelBuilder_ == null) {
+        if (criterionCase_ == 6) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 6) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        youtubeChannelBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     */
+    public com.google.ads.googleads.v0.common.YouTubeChannelInfo.Builder getYoutubeChannelBuilder() {
+      return getYoutubeChannelFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     */
+    public com.google.ads.googleads.v0.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder() {
+      if ((criterionCase_ == 6) && (youtubeChannelBuilder_ != null)) {
+        return youtubeChannelBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 6) {
+          return (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * YouTube Channel.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.YouTubeChannelInfo, com.google.ads.googleads.v0.common.YouTubeChannelInfo.Builder, com.google.ads.googleads.v0.common.YouTubeChannelInfoOrBuilder> 
+        getYoutubeChannelFieldBuilder() {
+      if (youtubeChannelBuilder_ == null) {
+        if (!(criterionCase_ == 6)) {
+          criterion_ = com.google.ads.googleads.v0.common.YouTubeChannelInfo.getDefaultInstance();
+        }
+        youtubeChannelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.YouTubeChannelInfo, com.google.ads.googleads.v0.common.YouTubeChannelInfo.Builder, com.google.ads.googleads.v0.common.YouTubeChannelInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 6;
+      onChanged();;
+      return youtubeChannelBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.PlacementInfo, com.google.ads.googleads.v0.common.PlacementInfo.Builder, com.google.ads.googleads.v0.common.PlacementInfoOrBuilder> placementBuilder_;
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+     */
+    public boolean hasPlacement() {
+      return criterionCase_ == 7;
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+     */
+    public com.google.ads.googleads.v0.common.PlacementInfo getPlacement() {
+      if (placementBuilder_ == null) {
+        if (criterionCase_ == 7) {
+          return (com.google.ads.googleads.v0.common.PlacementInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 7) {
+          return placementBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+     */
+    public Builder setPlacement(com.google.ads.googleads.v0.common.PlacementInfo value) {
+      if (placementBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        placementBuilder_.setMessage(value);
+      }
+      criterionCase_ = 7;
+      return this;
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+     */
+    public Builder setPlacement(
+        com.google.ads.googleads.v0.common.PlacementInfo.Builder builderForValue) {
+      if (placementBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        placementBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 7;
+      return this;
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+     */
+    public Builder mergePlacement(com.google.ads.googleads.v0.common.PlacementInfo value) {
+      if (placementBuilder_ == null) {
+        if (criterionCase_ == 7 &&
+            criterion_ != com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.PlacementInfo.newBuilder((com.google.ads.googleads.v0.common.PlacementInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 7) {
+          placementBuilder_.mergeFrom(value);
+        }
+        placementBuilder_.setMessage(value);
+      }
+      criterionCase_ = 7;
+      return this;
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+     */
+    public Builder clearPlacement() {
+      if (placementBuilder_ == null) {
+        if (criterionCase_ == 7) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 7) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        placementBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+     */
+    public com.google.ads.googleads.v0.common.PlacementInfo.Builder getPlacementBuilder() {
+      return getPlacementFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+     */
+    public com.google.ads.googleads.v0.common.PlacementInfoOrBuilder getPlacementOrBuilder() {
+      if ((criterionCase_ == 7) && (placementBuilder_ != null)) {
+        return placementBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 7) {
+          return (com.google.ads.googleads.v0.common.PlacementInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Placement.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.PlacementInfo, com.google.ads.googleads.v0.common.PlacementInfo.Builder, com.google.ads.googleads.v0.common.PlacementInfoOrBuilder> 
+        getPlacementFieldBuilder() {
+      if (placementBuilder_ == null) {
+        if (!(criterionCase_ == 7)) {
+          criterion_ = com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
+        }
+        placementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.PlacementInfo, com.google.ads.googleads.v0.common.PlacementInfo.Builder, com.google.ads.googleads.v0.common.PlacementInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.PlacementInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 7;
+      onChanged();;
+      return placementBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

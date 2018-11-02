@@ -17,6 +17,8 @@ package com.google.ads.googleads.v0.services.stub;
 
 import com.google.ads.googleads.v0.resources.Customer;
 import com.google.ads.googleads.v0.services.GetCustomerRequest;
+import com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest;
+import com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
@@ -47,10 +49,25 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
           .setRequestMarshaller(ProtoUtils.marshaller(GetCustomerRequest.getDefaultInstance()))
           .setResponseMarshaller(ProtoUtils.marshaller(Customer.getDefaultInstance()))
           .build();
+  private static final MethodDescriptor<
+          ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
+      listAccessibleCustomersMethodDescriptor =
+          MethodDescriptor
+              .<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v0.services.CustomerService/ListAccessibleCustomers")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(ListAccessibleCustomersRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(ListAccessibleCustomersResponse.getDefaultInstance()))
+              .build();
 
   private final BackgroundResource backgroundResources;
 
   private final UnaryCallable<GetCustomerRequest, Customer> getCustomerCallable;
+  private final UnaryCallable<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
+      listAccessibleCustomersCallable;
 
   private final GrpcStubCallableFactory callableFactory;
 
@@ -97,16 +114,32 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
         GrpcCallSettings.<GetCustomerRequest, Customer>newBuilder()
             .setMethodDescriptor(getCustomerMethodDescriptor)
             .build();
+    GrpcCallSettings<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
+        listAccessibleCustomersTransportSettings =
+            GrpcCallSettings
+                .<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>newBuilder()
+                .setMethodDescriptor(listAccessibleCustomersMethodDescriptor)
+                .build();
 
     this.getCustomerCallable =
         callableFactory.createUnaryCallable(
             getCustomerTransportSettings, settings.getCustomerSettings(), clientContext);
+    this.listAccessibleCustomersCallable =
+        callableFactory.createUnaryCallable(
+            listAccessibleCustomersTransportSettings,
+            settings.listAccessibleCustomersSettings(),
+            clientContext);
 
     backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
   }
 
   public UnaryCallable<GetCustomerRequest, Customer> getCustomerCallable() {
     return getCustomerCallable;
+  }
+
+  public UnaryCallable<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
+      listAccessibleCustomersCallable() {
+    return listAccessibleCustomersCallable;
   }
 
   @Override

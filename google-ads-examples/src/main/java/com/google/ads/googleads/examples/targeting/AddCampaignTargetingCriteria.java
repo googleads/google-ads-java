@@ -23,7 +23,9 @@ import com.google.ads.googleads.v0.common.KeywordInfo;
 import com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.CampaignCriterion;
+import com.google.ads.googleads.v0.resources.CampaignCriterion.Builder;
 import com.google.ads.googleads.v0.resources.CampaignName;
+import com.google.ads.googleads.v0.resources.GeoTargetConstantName;
 import com.google.ads.googleads.v0.services.CampaignCriterionOperation;
 import com.google.ads.googleads.v0.services.CampaignCriterionServiceClient;
 import com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse;
@@ -48,9 +50,21 @@ public class AddCampaignTargetingCriteria {
 
     @Parameter(names = ArgumentNames.CAMPAIGN_ID, required = true)
     private Long campaignId;
+
+    @Parameter(names = ArgumentNames.KEYWORD_TEXT, required = true)
+    private String keywordText;
+
+    @Parameter(
+        names = ArgumentNames.LOCATION_ID,
+        required = true,
+        description =
+            "A location criterion ID. For example, specify 21167 for New York. For more information"
+                + " on determining this value, see: "
+                + " https://developers.google.com/adwords/api/docs/appendix/geotargeting.")
+    private Long locationId;
   }
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) {
     AddCampaignTargetingCriteriaParams params = new AddCampaignTargetingCriteriaParams();
     if (!params.parseArguments(args)) {
 
@@ -58,6 +72,8 @@ public class AddCampaignTargetingCriteria {
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.campaignId = Long.parseLong("INSERT_CAMPAIGN_ID_HERE");
+      params.keywordText = "INSERT_KEYWORD_HERE";
+      params.locationId = Long.parseLong("INSERT_LOCATION_ID_HERE");
     }
 
     GoogleAdsClient googleAdsClient;
@@ -74,7 +90,12 @@ public class AddCampaignTargetingCriteria {
 
     try {
       new AddCampaignTargetingCriteria()
-          .runExample(googleAdsClient, params.customerId, params.campaignId);
+          .runExample(
+              googleAdsClient,
+              params.customerId,
+              params.campaignId,
+              params.keywordText,
+              params.locationId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -94,42 +115,29 @@ public class AddCampaignTargetingCriteria {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param campaignId the campaign ID.
+   * @param customerId the client customer ID in which to create criterion.
+   * @param campaignId the campaign ID in which to create criterion.
+   * @param keywordText the keyword text for which to add a criterion.
+   * @param locationId the locationId for which to add a criterion.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
+  private void runExample(
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      long campaignId,
+      String keywordText,
+      long locationId) {
     String campaignResourceName =
         CampaignName.format(Long.toString(customerId), Long.toString(campaignId));
 
-    // Create a negative keyword as a campaign targeting criterion.
-    CampaignCriterion campaignCriterion1 =
-        CampaignCriterion.newBuilder()
-            .setCampaign(StringValue.of(campaignResourceName))
-            .setNegative(BoolValue.of(true))
-            .setKeyword(
-                KeywordInfo.newBuilder()
-                    .setMatchType(KeywordMatchType.BROAD)
-                    .setText(StringValue.of("jupiter cruise"))
-                    .build())
-            .build();
-
-    // Create another negative keyword as a campaign targeting criterion.
-    CampaignCriterion campaignCriterion2 =
-        CampaignCriterion.newBuilder()
-            .setCampaign(StringValue.of(campaignResourceName))
-            .setNegative(BoolValue.of(true))
-            .setKeyword(
-                KeywordInfo.newBuilder()
-                    .setMatchType(KeywordMatchType.PHRASE)
-                    .setText(StringValue.of("mars cruise"))
-                    .build())
-            .build();
-
     List<CampaignCriterionOperation> operations =
         ImmutableList.of(
-            CampaignCriterionOperation.newBuilder().setCreate(campaignCriterion1).build(),
-            CampaignCriterionOperation.newBuilder().setCreate(campaignCriterion2).build());
+            CampaignCriterionOperation.newBuilder()
+                .setCreate(buildNegativeKeywordCriterion(keywordText, campaignResourceName))
+                .build(),
+            CampaignCriterionOperation.newBuilder()
+                .setCreate(buildLocationCriterion(locationId, campaignResourceName))
+                .build());
 
     try (CampaignCriterionServiceClient campaignCriterionServiceClient =
         googleAdsClient.getCampaignCriterionServiceClient()) {
@@ -141,5 +149,45 @@ public class AddCampaignTargetingCriteria {
         System.out.println(result.getResourceName());
       }
     }
+  }
+
+  /**
+   * Creates a negative keyword as a campaign targeting criterion.
+   *
+   * @param keywordText the keyword text to exclude.
+   * @param campaignResourceName the campaign where the keyword will be excluded.
+   * @return a campaign criterion object with the negative keyword targeting.
+   */
+  private static CampaignCriterion buildNegativeKeywordCriterion(
+      String keywordText, String campaignResourceName) {
+    return CampaignCriterion.newBuilder()
+        .setCampaign(StringValue.of(campaignResourceName))
+        .setNegative(BoolValue.of(true))
+        .setKeyword(
+            KeywordInfo.newBuilder()
+                .setMatchType(KeywordMatchType.BROAD)
+                .setText(StringValue.of(keywordText))
+                .build())
+        .build();
+  }
+
+  /**
+   * Creates a location constant (provided by GeoTargetConstantService) as a campaign targeting
+   * criterion. Please refer to GetGeoTargetConstantsByName.java for retrieval of location
+   * constants.
+   *
+   * @param locationId the location to target.
+   * @param campaignResourceName the campaign resource name to target.
+   * @return a campaign criterion object with the specified locationId and resource name.
+   */
+  private static CampaignCriterion buildLocationCriterion(
+      long locationId, String campaignResourceName) {
+    Builder criterionBuilder =
+        CampaignCriterion.newBuilder().setCampaign(StringValue.of(campaignResourceName));
+    criterionBuilder
+        .getLocationBuilder()
+        .setGeoTargetConstant(
+            StringValue.of(GeoTargetConstantName.format(String.valueOf(locationId))));
+    return criterionBuilder.build();
   }
 }

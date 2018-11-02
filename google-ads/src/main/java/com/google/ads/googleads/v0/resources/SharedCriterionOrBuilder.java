@@ -124,5 +124,80 @@ public interface SharedCriterionOrBuilder extends
    */
   com.google.ads.googleads.v0.common.KeywordInfoOrBuilder getKeywordOrBuilder();
 
+  /**
+   * <pre>
+   * YouTube Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+   */
+  boolean hasYoutubeVideo();
+  /**
+   * <pre>
+   * YouTube Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+   */
+  com.google.ads.googleads.v0.common.YouTubeVideoInfo getYoutubeVideo();
+  /**
+   * <pre>
+   * YouTube Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeVideoInfo youtube_video = 5;</code>
+   */
+  com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder getYoutubeVideoOrBuilder();
+
+  /**
+   * <pre>
+   * YouTube Channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+   */
+  boolean hasYoutubeChannel();
+  /**
+   * <pre>
+   * YouTube Channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+   */
+  com.google.ads.googleads.v0.common.YouTubeChannelInfo getYoutubeChannel();
+  /**
+   * <pre>
+   * YouTube Channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.YouTubeChannelInfo youtube_channel = 6;</code>
+   */
+  com.google.ads.googleads.v0.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder();
+
+  /**
+   * <pre>
+   * Placement.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+   */
+  boolean hasPlacement();
+  /**
+   * <pre>
+   * Placement.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+   */
+  com.google.ads.googleads.v0.common.PlacementInfo getPlacement();
+  /**
+   * <pre>
+   * Placement.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PlacementInfo placement = 7;</code>
+   */
+  com.google.ads.googleads.v0.common.PlacementInfoOrBuilder getPlacementOrBuilder();
+
   public com.google.ads.googleads.v0.resources.SharedCriterion.CriterionCase getCriterionCase();
 }

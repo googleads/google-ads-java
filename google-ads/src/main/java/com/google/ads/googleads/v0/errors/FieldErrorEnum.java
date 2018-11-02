@@ -142,6 +142,14 @@ private static final long serialVersionUID = 0L;
      * <code>REQUIRED_NONEMPTY_LIST = 6;</code>
      */
     REQUIRED_NONEMPTY_LIST(6),
+    /**
+     * <pre>
+     * The field cannot be cleared.
+     * </pre>
+     *
+     * <code>FIELD_CANNOT_BE_CLEARED = 7;</code>
+     */
+    FIELD_CANNOT_BE_CLEARED(7),
     UNRECOGNIZED(-1),
     ;
 
@@ -201,6 +209,14 @@ private static final long serialVersionUID = 0L;
      * <code>REQUIRED_NONEMPTY_LIST = 6;</code>
      */
     public static final int REQUIRED_NONEMPTY_LIST_VALUE = 6;
+    /**
+     * <pre>
+     * The field cannot be cleared.
+     * </pre>
+     *
+     * <code>FIELD_CANNOT_BE_CLEARED = 7;</code>
+     */
+    public static final int FIELD_CANNOT_BE_CLEARED_VALUE = 7;
 
 
     public final int getNumber() {
@@ -228,6 +244,7 @@ private static final long serialVersionUID = 0L;
         case 4: return INVALID_VALUE;
         case 5: return VALUE_MUST_BE_UNSET;
         case 6: return REQUIRED_NONEMPTY_LIST;
+        case 7: return FIELD_CANNOT_BE_CLEARED;
         default: return null;
       }
     }

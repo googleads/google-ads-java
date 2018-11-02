@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CallOnlyAdInfo() {
+    conversionReportingState_ = 0;
   }
 
   @java.lang.Override
@@ -148,6 +149,25 @@ private static final long serialVersionUID = 0L;
               phoneNumberVerificationUrl_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 74: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (conversionAction_ != null) {
+              subBuilder = conversionAction_.toBuilder();
+            }
+            conversionAction_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(conversionAction_);
+              conversionAction_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 80: {
+            int rawValue = input.readEnum();
+
+            conversionReportingState_ = rawValue;
             break;
           }
           default: {
@@ -458,6 +478,72 @@ private static final long serialVersionUID = 0L;
     return getPhoneNumberVerificationUrl();
   }
 
+  public static final int CONVERSION_ACTION_FIELD_NUMBER = 9;
+  private com.google.protobuf.StringValue conversionAction_;
+  /**
+   * <pre>
+   * The conversion action to attribute a call conversion to. If not set a
+   * default conversion action is used. This field only has effect if
+   * call_tracked is set to true. Otherwise this field is ignored.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+   */
+  public boolean hasConversionAction() {
+    return conversionAction_ != null;
+  }
+  /**
+   * <pre>
+   * The conversion action to attribute a call conversion to. If not set a
+   * default conversion action is used. This field only has effect if
+   * call_tracked is set to true. Otherwise this field is ignored.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+   */
+  public com.google.protobuf.StringValue getConversionAction() {
+    return conversionAction_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionAction_;
+  }
+  /**
+   * <pre>
+   * The conversion action to attribute a call conversion to. If not set a
+   * default conversion action is used. This field only has effect if
+   * call_tracked is set to true. Otherwise this field is ignored.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getConversionActionOrBuilder() {
+    return getConversionAction();
+  }
+
+  public static final int CONVERSION_REPORTING_STATE_FIELD_NUMBER = 10;
+  private int conversionReportingState_;
+  /**
+   * <pre>
+   * The call conversion behavior of this call only ad. It can use its own call
+   * conversion setting, inherit the account level setting, or be disabled.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState conversion_reporting_state = 10;</code>
+   */
+  public int getConversionReportingStateValue() {
+    return conversionReportingState_;
+  }
+  /**
+   * <pre>
+   * The call conversion behavior of this call only ad. It can use its own call
+   * conversion setting, inherit the account level setting, or be disabled.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState conversion_reporting_state = 10;</code>
+   */
+  public com.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState getConversionReportingState() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState result = com.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState.valueOf(conversionReportingState_);
+    return result == null ? com.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -495,6 +581,12 @@ private static final long serialVersionUID = 0L;
     }
     if (phoneNumberVerificationUrl_ != null) {
       output.writeMessage(8, getPhoneNumberVerificationUrl());
+    }
+    if (conversionAction_ != null) {
+      output.writeMessage(9, getConversionAction());
+    }
+    if (conversionReportingState_ != com.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState.UNSPECIFIED.getNumber()) {
+      output.writeEnum(10, conversionReportingState_);
     }
     unknownFields.writeTo(output);
   }
@@ -536,6 +628,14 @@ private static final long serialVersionUID = 0L;
     if (phoneNumberVerificationUrl_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getPhoneNumberVerificationUrl());
+    }
+    if (conversionAction_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getConversionAction());
+    }
+    if (conversionReportingState_ != com.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(10, conversionReportingState_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -593,6 +693,12 @@ private static final long serialVersionUID = 0L;
       result = result && getPhoneNumberVerificationUrl()
           .equals(other.getPhoneNumberVerificationUrl());
     }
+    result = result && (hasConversionAction() == other.hasConversionAction());
+    if (hasConversionAction()) {
+      result = result && getConversionAction()
+          .equals(other.getConversionAction());
+    }
+    result = result && conversionReportingState_ == other.conversionReportingState_;
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -636,6 +742,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PHONE_NUMBER_VERIFICATION_URL_FIELD_NUMBER;
       hash = (53 * hash) + getPhoneNumberVerificationUrl().hashCode();
     }
+    if (hasConversionAction()) {
+      hash = (37 * hash) + CONVERSION_ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getConversionAction().hashCode();
+    }
+    hash = (37 * hash) + CONVERSION_REPORTING_STATE_FIELD_NUMBER;
+    hash = (53 * hash) + conversionReportingState_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -821,6 +933,14 @@ private static final long serialVersionUID = 0L;
         phoneNumberVerificationUrl_ = null;
         phoneNumberVerificationUrlBuilder_ = null;
       }
+      if (conversionActionBuilder_ == null) {
+        conversionAction_ = null;
+      } else {
+        conversionAction_ = null;
+        conversionActionBuilder_ = null;
+      }
+      conversionReportingState_ = 0;
+
       return this;
     }
 
@@ -887,6 +1007,12 @@ private static final long serialVersionUID = 0L;
       } else {
         result.phoneNumberVerificationUrl_ = phoneNumberVerificationUrlBuilder_.build();
       }
+      if (conversionActionBuilder_ == null) {
+        result.conversionAction_ = conversionAction_;
+      } else {
+        result.conversionAction_ = conversionActionBuilder_.build();
+      }
+      result.conversionReportingState_ = conversionReportingState_;
       onBuilt();
       return result;
     }
@@ -958,6 +1084,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPhoneNumberVerificationUrl()) {
         mergePhoneNumberVerificationUrl(other.getPhoneNumberVerificationUrl());
+      }
+      if (other.hasConversionAction()) {
+        mergeConversionAction(other.getConversionAction());
+      }
+      if (other.conversionReportingState_ != 0) {
+        setConversionReportingStateValue(other.getConversionReportingStateValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -2246,6 +2378,247 @@ private static final long serialVersionUID = 0L;
         phoneNumberVerificationUrl_ = null;
       }
       return phoneNumberVerificationUrlBuilder_;
+    }
+
+    private com.google.protobuf.StringValue conversionAction_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> conversionActionBuilder_;
+    /**
+     * <pre>
+     * The conversion action to attribute a call conversion to. If not set a
+     * default conversion action is used. This field only has effect if
+     * call_tracked is set to true. Otherwise this field is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+     */
+    public boolean hasConversionAction() {
+      return conversionActionBuilder_ != null || conversionAction_ != null;
+    }
+    /**
+     * <pre>
+     * The conversion action to attribute a call conversion to. If not set a
+     * default conversion action is used. This field only has effect if
+     * call_tracked is set to true. Otherwise this field is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+     */
+    public com.google.protobuf.StringValue getConversionAction() {
+      if (conversionActionBuilder_ == null) {
+        return conversionAction_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionAction_;
+      } else {
+        return conversionActionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The conversion action to attribute a call conversion to. If not set a
+     * default conversion action is used. This field only has effect if
+     * call_tracked is set to true. Otherwise this field is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+     */
+    public Builder setConversionAction(com.google.protobuf.StringValue value) {
+      if (conversionActionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        conversionAction_ = value;
+        onChanged();
+      } else {
+        conversionActionBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion action to attribute a call conversion to. If not set a
+     * default conversion action is used. This field only has effect if
+     * call_tracked is set to true. Otherwise this field is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+     */
+    public Builder setConversionAction(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (conversionActionBuilder_ == null) {
+        conversionAction_ = builderForValue.build();
+        onChanged();
+      } else {
+        conversionActionBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion action to attribute a call conversion to. If not set a
+     * default conversion action is used. This field only has effect if
+     * call_tracked is set to true. Otherwise this field is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+     */
+    public Builder mergeConversionAction(com.google.protobuf.StringValue value) {
+      if (conversionActionBuilder_ == null) {
+        if (conversionAction_ != null) {
+          conversionAction_ =
+            com.google.protobuf.StringValue.newBuilder(conversionAction_).mergeFrom(value).buildPartial();
+        } else {
+          conversionAction_ = value;
+        }
+        onChanged();
+      } else {
+        conversionActionBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion action to attribute a call conversion to. If not set a
+     * default conversion action is used. This field only has effect if
+     * call_tracked is set to true. Otherwise this field is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+     */
+    public Builder clearConversionAction() {
+      if (conversionActionBuilder_ == null) {
+        conversionAction_ = null;
+        onChanged();
+      } else {
+        conversionAction_ = null;
+        conversionActionBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion action to attribute a call conversion to. If not set a
+     * default conversion action is used. This field only has effect if
+     * call_tracked is set to true. Otherwise this field is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getConversionActionBuilder() {
+      
+      onChanged();
+      return getConversionActionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The conversion action to attribute a call conversion to. If not set a
+     * default conversion action is used. This field only has effect if
+     * call_tracked is set to true. Otherwise this field is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getConversionActionOrBuilder() {
+      if (conversionActionBuilder_ != null) {
+        return conversionActionBuilder_.getMessageOrBuilder();
+      } else {
+        return conversionAction_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : conversionAction_;
+      }
+    }
+    /**
+     * <pre>
+     * The conversion action to attribute a call conversion to. If not set a
+     * default conversion action is used. This field only has effect if
+     * call_tracked is set to true. Otherwise this field is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getConversionActionFieldBuilder() {
+      if (conversionActionBuilder_ == null) {
+        conversionActionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getConversionAction(),
+                getParentForChildren(),
+                isClean());
+        conversionAction_ = null;
+      }
+      return conversionActionBuilder_;
+    }
+
+    private int conversionReportingState_ = 0;
+    /**
+     * <pre>
+     * The call conversion behavior of this call only ad. It can use its own call
+     * conversion setting, inherit the account level setting, or be disabled.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState conversion_reporting_state = 10;</code>
+     */
+    public int getConversionReportingStateValue() {
+      return conversionReportingState_;
+    }
+    /**
+     * <pre>
+     * The call conversion behavior of this call only ad. It can use its own call
+     * conversion setting, inherit the account level setting, or be disabled.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState conversion_reporting_state = 10;</code>
+     */
+    public Builder setConversionReportingStateValue(int value) {
+      conversionReportingState_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The call conversion behavior of this call only ad. It can use its own call
+     * conversion setting, inherit the account level setting, or be disabled.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState conversion_reporting_state = 10;</code>
+     */
+    public com.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState getConversionReportingState() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState result = com.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState.valueOf(conversionReportingState_);
+      return result == null ? com.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The call conversion behavior of this call only ad. It can use its own call
+     * conversion setting, inherit the account level setting, or be disabled.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState conversion_reporting_state = 10;</code>
+     */
+    public Builder setConversionReportingState(com.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      conversionReportingState_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The call conversion behavior of this call only ad. It can use its own call
+     * conversion setting, inherit the account level setting, or be disabled.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState conversion_reporting_state = 10;</code>
+     */
+    public Builder clearConversionReportingState() {
+      
+      conversionReportingState_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

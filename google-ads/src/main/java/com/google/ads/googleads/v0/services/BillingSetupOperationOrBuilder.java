@@ -9,10 +9,38 @@ public interface BillingSetupOperationOrBuilder extends
 
   /**
    * <pre>
-   * Resource name of the billing setup to remove.  A setup cannot be
+   * Creates a billing setup. No resource name is expected for the new billing
+   * setup.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+   */
+  boolean hasCreate();
+  /**
+   * <pre>
+   * Creates a billing setup. No resource name is expected for the new billing
+   * setup.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+   */
+  com.google.ads.googleads.v0.resources.BillingSetup getCreate();
+  /**
+   * <pre>
+   * Creates a billing setup. No resource name is expected for the new billing
+   * setup.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+   */
+  com.google.ads.googleads.v0.resources.BillingSetupOrBuilder getCreateOrBuilder();
+
+  /**
+   * <pre>
+   * Resource name of the billing setup to remove. A setup cannot be
    * removed unless it is in a pending state or its scheduled start time is in
    * the future. The resource name looks like
-   * “customers/{customer_id}/billingSetups/{billing_id}”.
+   * `customers/{customer_id}/billingSetups/{billing_id}`.
    * </pre>
    *
    * <code>string remove = 1;</code>
@@ -20,10 +48,10 @@ public interface BillingSetupOperationOrBuilder extends
   java.lang.String getRemove();
   /**
    * <pre>
-   * Resource name of the billing setup to remove.  A setup cannot be
+   * Resource name of the billing setup to remove. A setup cannot be
    * removed unless it is in a pending state or its scheduled start time is in
    * the future. The resource name looks like
-   * “customers/{customer_id}/billingSetups/{billing_id}”.
+   * `customers/{customer_id}/billingSetups/{billing_id}`.
    * </pre>
    *
    * <code>string remove = 1;</code>

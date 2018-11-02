@@ -111,6 +111,32 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 50: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (headlinePart3_ != null) {
+              subBuilder = headlinePart3_.toBuilder();
+            }
+            headlinePart3_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(headlinePart3_);
+              headlinePart3_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 58: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (description2_ != null) {
+              subBuilder = description2_.toBuilder();
+            }
+            description2_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(description2_);
+              description2_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -209,6 +235,39 @@ private static final long serialVersionUID = 0L;
     return getHeadlinePart2();
   }
 
+  public static final int HEADLINE_PART3_FIELD_NUMBER = 6;
+  private com.google.protobuf.StringValue headlinePart3_;
+  /**
+   * <pre>
+   * The third part of the ad's headline.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+   */
+  public boolean hasHeadlinePart3() {
+    return headlinePart3_ != null;
+  }
+  /**
+   * <pre>
+   * The third part of the ad's headline.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+   */
+  public com.google.protobuf.StringValue getHeadlinePart3() {
+    return headlinePart3_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : headlinePart3_;
+  }
+  /**
+   * <pre>
+   * The third part of the ad's headline.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getHeadlinePart3OrBuilder() {
+    return getHeadlinePart3();
+  }
+
   public static final int DESCRIPTION_FIELD_NUMBER = 3;
   private com.google.protobuf.StringValue description_;
   /**
@@ -240,6 +299,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
     return getDescription();
+  }
+
+  public static final int DESCRIPTION2_FIELD_NUMBER = 7;
+  private com.google.protobuf.StringValue description2_;
+  /**
+   * <pre>
+   * The second description of the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue description2 = 7;</code>
+   */
+  public boolean hasDescription2() {
+    return description2_ != null;
+  }
+  /**
+   * <pre>
+   * The second description of the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue description2 = 7;</code>
+   */
+  public com.google.protobuf.StringValue getDescription2() {
+    return description2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description2_;
+  }
+  /**
+   * <pre>
+   * The second description of the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue description2 = 7;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getDescription2OrBuilder() {
+    return getDescription2();
   }
 
   public static final int PATH1_FIELD_NUMBER = 4;
@@ -337,6 +429,12 @@ private static final long serialVersionUID = 0L;
     if (path2_ != null) {
       output.writeMessage(5, getPath2());
     }
+    if (headlinePart3_ != null) {
+      output.writeMessage(6, getHeadlinePart3());
+    }
+    if (description2_ != null) {
+      output.writeMessage(7, getDescription2());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -366,6 +464,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getPath2());
     }
+    if (headlinePart3_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getHeadlinePart3());
+    }
+    if (description2_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getDescription2());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -392,10 +498,20 @@ private static final long serialVersionUID = 0L;
       result = result && getHeadlinePart2()
           .equals(other.getHeadlinePart2());
     }
+    result = result && (hasHeadlinePart3() == other.hasHeadlinePart3());
+    if (hasHeadlinePart3()) {
+      result = result && getHeadlinePart3()
+          .equals(other.getHeadlinePart3());
+    }
     result = result && (hasDescription() == other.hasDescription());
     if (hasDescription()) {
       result = result && getDescription()
           .equals(other.getDescription());
+    }
+    result = result && (hasDescription2() == other.hasDescription2());
+    if (hasDescription2()) {
+      result = result && getDescription2()
+          .equals(other.getDescription2());
     }
     result = result && (hasPath1() == other.hasPath1());
     if (hasPath1()) {
@@ -426,9 +542,17 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HEADLINE_PART2_FIELD_NUMBER;
       hash = (53 * hash) + getHeadlinePart2().hashCode();
     }
+    if (hasHeadlinePart3()) {
+      hash = (37 * hash) + HEADLINE_PART3_FIELD_NUMBER;
+      hash = (53 * hash) + getHeadlinePart3().hashCode();
+    }
     if (hasDescription()) {
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+    }
+    if (hasDescription2()) {
+      hash = (37 * hash) + DESCRIPTION2_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription2().hashCode();
     }
     if (hasPath1()) {
       hash = (37 * hash) + PATH1_FIELD_NUMBER;
@@ -587,11 +711,23 @@ private static final long serialVersionUID = 0L;
         headlinePart2_ = null;
         headlinePart2Builder_ = null;
       }
+      if (headlinePart3Builder_ == null) {
+        headlinePart3_ = null;
+      } else {
+        headlinePart3_ = null;
+        headlinePart3Builder_ = null;
+      }
       if (descriptionBuilder_ == null) {
         description_ = null;
       } else {
         description_ = null;
         descriptionBuilder_ = null;
+      }
+      if (description2Builder_ == null) {
+        description2_ = null;
+      } else {
+        description2_ = null;
+        description2Builder_ = null;
       }
       if (path1Builder_ == null) {
         path1_ = null;
@@ -641,10 +777,20 @@ private static final long serialVersionUID = 0L;
       } else {
         result.headlinePart2_ = headlinePart2Builder_.build();
       }
+      if (headlinePart3Builder_ == null) {
+        result.headlinePart3_ = headlinePart3_;
+      } else {
+        result.headlinePart3_ = headlinePart3Builder_.build();
+      }
       if (descriptionBuilder_ == null) {
         result.description_ = description_;
       } else {
         result.description_ = descriptionBuilder_.build();
+      }
+      if (description2Builder_ == null) {
+        result.description2_ = description2_;
+      } else {
+        result.description2_ = description2Builder_.build();
       }
       if (path1Builder_ == null) {
         result.path1_ = path1_;
@@ -710,8 +856,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasHeadlinePart2()) {
         mergeHeadlinePart2(other.getHeadlinePart2());
       }
+      if (other.hasHeadlinePart3()) {
+        mergeHeadlinePart3(other.getHeadlinePart3());
+      }
       if (other.hasDescription()) {
         mergeDescription(other.getDescription());
+      }
+      if (other.hasDescription2()) {
+        mergeDescription2(other.getDescription2());
       }
       if (other.hasPath1()) {
         mergePath1(other.getPath1());
@@ -1054,6 +1206,159 @@ private static final long serialVersionUID = 0L;
       return headlinePart2Builder_;
     }
 
+    private com.google.protobuf.StringValue headlinePart3_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> headlinePart3Builder_;
+    /**
+     * <pre>
+     * The third part of the ad's headline.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+     */
+    public boolean hasHeadlinePart3() {
+      return headlinePart3Builder_ != null || headlinePart3_ != null;
+    }
+    /**
+     * <pre>
+     * The third part of the ad's headline.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+     */
+    public com.google.protobuf.StringValue getHeadlinePart3() {
+      if (headlinePart3Builder_ == null) {
+        return headlinePart3_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : headlinePart3_;
+      } else {
+        return headlinePart3Builder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The third part of the ad's headline.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+     */
+    public Builder setHeadlinePart3(com.google.protobuf.StringValue value) {
+      if (headlinePart3Builder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        headlinePart3_ = value;
+        onChanged();
+      } else {
+        headlinePart3Builder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The third part of the ad's headline.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+     */
+    public Builder setHeadlinePart3(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (headlinePart3Builder_ == null) {
+        headlinePart3_ = builderForValue.build();
+        onChanged();
+      } else {
+        headlinePart3Builder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The third part of the ad's headline.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+     */
+    public Builder mergeHeadlinePart3(com.google.protobuf.StringValue value) {
+      if (headlinePart3Builder_ == null) {
+        if (headlinePart3_ != null) {
+          headlinePart3_ =
+            com.google.protobuf.StringValue.newBuilder(headlinePart3_).mergeFrom(value).buildPartial();
+        } else {
+          headlinePart3_ = value;
+        }
+        onChanged();
+      } else {
+        headlinePart3Builder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The third part of the ad's headline.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+     */
+    public Builder clearHeadlinePart3() {
+      if (headlinePart3Builder_ == null) {
+        headlinePart3_ = null;
+        onChanged();
+      } else {
+        headlinePart3_ = null;
+        headlinePart3Builder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The third part of the ad's headline.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getHeadlinePart3Builder() {
+      
+      onChanged();
+      return getHeadlinePart3FieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The third part of the ad's headline.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getHeadlinePart3OrBuilder() {
+      if (headlinePart3Builder_ != null) {
+        return headlinePart3Builder_.getMessageOrBuilder();
+      } else {
+        return headlinePart3_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : headlinePart3_;
+      }
+    }
+    /**
+     * <pre>
+     * The third part of the ad's headline.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getHeadlinePart3FieldBuilder() {
+      if (headlinePart3Builder_ == null) {
+        headlinePart3Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getHeadlinePart3(),
+                getParentForChildren(),
+                isClean());
+        headlinePart3_ = null;
+      }
+      return headlinePart3Builder_;
+    }
+
     private com.google.protobuf.StringValue description_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> descriptionBuilder_;
@@ -1205,6 +1510,159 @@ private static final long serialVersionUID = 0L;
         description_ = null;
       }
       return descriptionBuilder_;
+    }
+
+    private com.google.protobuf.StringValue description2_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> description2Builder_;
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 7;</code>
+     */
+    public boolean hasDescription2() {
+      return description2Builder_ != null || description2_ != null;
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 7;</code>
+     */
+    public com.google.protobuf.StringValue getDescription2() {
+      if (description2Builder_ == null) {
+        return description2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description2_;
+      } else {
+        return description2Builder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 7;</code>
+     */
+    public Builder setDescription2(com.google.protobuf.StringValue value) {
+      if (description2Builder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        description2_ = value;
+        onChanged();
+      } else {
+        description2Builder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 7;</code>
+     */
+    public Builder setDescription2(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (description2Builder_ == null) {
+        description2_ = builderForValue.build();
+        onChanged();
+      } else {
+        description2Builder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 7;</code>
+     */
+    public Builder mergeDescription2(com.google.protobuf.StringValue value) {
+      if (description2Builder_ == null) {
+        if (description2_ != null) {
+          description2_ =
+            com.google.protobuf.StringValue.newBuilder(description2_).mergeFrom(value).buildPartial();
+        } else {
+          description2_ = value;
+        }
+        onChanged();
+      } else {
+        description2Builder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 7;</code>
+     */
+    public Builder clearDescription2() {
+      if (description2Builder_ == null) {
+        description2_ = null;
+        onChanged();
+      } else {
+        description2_ = null;
+        description2Builder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 7;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getDescription2Builder() {
+      
+      onChanged();
+      return getDescription2FieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 7;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getDescription2OrBuilder() {
+      if (description2Builder_ != null) {
+        return description2Builder_.getMessageOrBuilder();
+      } else {
+        return description2_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : description2_;
+      }
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 7;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getDescription2FieldBuilder() {
+      if (description2Builder_ == null) {
+        description2Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getDescription2(),
+                getParentForChildren(),
+                isClean());
+        description2_ = null;
+      }
+      return description2Builder_;
     }
 
     private com.google.protobuf.StringValue path1_ = null;

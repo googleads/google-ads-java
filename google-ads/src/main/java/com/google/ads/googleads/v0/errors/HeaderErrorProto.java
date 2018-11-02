@@ -30,14 +30,14 @@ public final class HeaderErrorProto {
     java.lang.String[] descriptorData = {
       "\n1google/ads/googleads/v0/errors/header_" +
       "error.proto\022\036google.ads.googleads.v0.err" +
-      "ors\"e\n\017HeaderErrorEnum\"R\n\013HeaderError\022\017\n" +
-      "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022%\n!INVALID_U" +
-      "SER_SELECTED_CUSTOMER_ID\020\002B\306\001\n\"com.googl" +
-      "e.ads.googleads.v0.errorsB\020HeaderErrorPr" +
-      "otoP\001ZDgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v0/errors;errors\242\002\003GA" +
-      "A\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Goo" +
-      "gle\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "ors\"]\n\017HeaderErrorEnum\"J\n\013HeaderError\022\017\n" +
+      "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\035\n\031INVALID_L" +
+      "OGIN_CUSTOMER_ID\020\003B\306\001\n\"com.google.ads.go" +
+      "ogleads.v0.errorsB\020HeaderErrorProtoP\001ZDg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v0/errors;errors\242\002\003GAA\252\002\036Goog" +
+      "le.Ads.GoogleAds.V0.Errors\312\002\036Google\\Ads\\" +
+      "GoogleAds\\V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

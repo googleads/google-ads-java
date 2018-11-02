@@ -218,4 +218,54 @@ public interface CallOnlyAdInfoOrBuilder extends
    * <code>.google.protobuf.StringValue phone_number_verification_url = 8;</code>
    */
   com.google.protobuf.StringValueOrBuilder getPhoneNumberVerificationUrlOrBuilder();
+
+  /**
+   * <pre>
+   * The conversion action to attribute a call conversion to. If not set a
+   * default conversion action is used. This field only has effect if
+   * call_tracked is set to true. Otherwise this field is ignored.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+   */
+  boolean hasConversionAction();
+  /**
+   * <pre>
+   * The conversion action to attribute a call conversion to. If not set a
+   * default conversion action is used. This field only has effect if
+   * call_tracked is set to true. Otherwise this field is ignored.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+   */
+  com.google.protobuf.StringValue getConversionAction();
+  /**
+   * <pre>
+   * The conversion action to attribute a call conversion to. If not set a
+   * default conversion action is used. This field only has effect if
+   * call_tracked is set to true. Otherwise this field is ignored.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue conversion_action = 9;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getConversionActionOrBuilder();
+
+  /**
+   * <pre>
+   * The call conversion behavior of this call only ad. It can use its own call
+   * conversion setting, inherit the account level setting, or be disabled.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState conversion_reporting_state = 10;</code>
+   */
+  int getConversionReportingStateValue();
+  /**
+   * <pre>
+   * The call conversion behavior of this call only ad. It can use its own call
+   * conversion setting, inherit the account level setting, or be disabled.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState conversion_reporting_state = 10;</code>
+   */
+  com.google.ads.googleads.v0.enums.CallConversionReportingStateEnum.CallConversionReportingState getConversionReportingState();
 }

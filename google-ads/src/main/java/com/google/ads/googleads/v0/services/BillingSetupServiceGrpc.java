@@ -23,8 +23,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * will appear on a single invoice generated monthly.
  * Mutates:
  * The REMOVE operation cancels a pending billing setup.
- * Functionality for creating new billing setups will be supported in a future
- * version.
+ * The CREATE operation creates a new billing setup.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -143,8 +142,7 @@ public final class BillingSetupServiceGrpc {
    * will appear on a single invoice generated monthly.
    * Mutates:
    * The REMOVE operation cancels a pending billing setup.
-   * Functionality for creating new billing setups will be supported in a future
-   * version.
+   * The CREATE operation creates a new billing setup.
    * </pre>
    */
   public static abstract class BillingSetupServiceImplBase implements io.grpc.BindableService {
@@ -161,7 +159,7 @@ public final class BillingSetupServiceGrpc {
 
     /**
      * <pre>
-     * Cancels a pending billing setup.
+     * Creates a billing setup, or cancels an existing billing setup.
      * </pre>
      */
     public void mutateBillingSetup(com.google.ads.googleads.v0.services.MutateBillingSetupRequest request,
@@ -197,8 +195,7 @@ public final class BillingSetupServiceGrpc {
    * will appear on a single invoice generated monthly.
    * Mutates:
    * The REMOVE operation cancels a pending billing setup.
-   * Functionality for creating new billing setups will be supported in a future
-   * version.
+   * The CREATE operation creates a new billing setup.
    * </pre>
    */
   public static final class BillingSetupServiceStub extends io.grpc.stub.AbstractStub<BillingSetupServiceStub> {
@@ -230,7 +227,7 @@ public final class BillingSetupServiceGrpc {
 
     /**
      * <pre>
-     * Cancels a pending billing setup.
+     * Creates a billing setup, or cancels an existing billing setup.
      * </pre>
      */
     public void mutateBillingSetup(com.google.ads.googleads.v0.services.MutateBillingSetupRequest request,
@@ -248,8 +245,7 @@ public final class BillingSetupServiceGrpc {
    * will appear on a single invoice generated monthly.
    * Mutates:
    * The REMOVE operation cancels a pending billing setup.
-   * Functionality for creating new billing setups will be supported in a future
-   * version.
+   * The CREATE operation creates a new billing setup.
    * </pre>
    */
   public static final class BillingSetupServiceBlockingStub extends io.grpc.stub.AbstractStub<BillingSetupServiceBlockingStub> {
@@ -280,7 +276,7 @@ public final class BillingSetupServiceGrpc {
 
     /**
      * <pre>
-     * Cancels a pending billing setup.
+     * Creates a billing setup, or cancels an existing billing setup.
      * </pre>
      */
     public com.google.ads.googleads.v0.services.MutateBillingSetupResponse mutateBillingSetup(com.google.ads.googleads.v0.services.MutateBillingSetupRequest request) {
@@ -297,8 +293,7 @@ public final class BillingSetupServiceGrpc {
    * will appear on a single invoice generated monthly.
    * Mutates:
    * The REMOVE operation cancels a pending billing setup.
-   * Functionality for creating new billing setups will be supported in a future
-   * version.
+   * The CREATE operation creates a new billing setup.
    * </pre>
    */
   public static final class BillingSetupServiceFutureStub extends io.grpc.stub.AbstractStub<BillingSetupServiceFutureStub> {
@@ -330,7 +325,7 @@ public final class BillingSetupServiceGrpc {
 
     /**
      * <pre>
-     * Cancels a pending billing setup.
+     * Creates a billing setup, or cancels an existing billing setup.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.services.MutateBillingSetupResponse> mutateBillingSetup(

@@ -45,7 +45,7 @@ public class GetCampaignTargetingCriteria {
     private Long campaignId;
   }
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) {
     GetCampaignsWithStatsParams params = new GetCampaignsWithStatsParams();
     if (!params.parseArguments(args)) {
 

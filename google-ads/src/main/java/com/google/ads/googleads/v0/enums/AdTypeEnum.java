@@ -175,6 +175,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_PRODUCT_AD = 10;</code>
      */
     SHOPPING_PRODUCT_AD(10),
+    /**
+     * <pre>
+     * Video outstream ad.
+     * </pre>
+     *
+     * <code>VIDEO_OUTSTREAM = 11;</code>
+     */
+    VIDEO_OUTSTREAM(11),
     UNRECOGNIZED(-1),
     ;
 
@@ -267,6 +275,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_PRODUCT_AD = 10;</code>
      */
     public static final int SHOPPING_PRODUCT_AD_VALUE = 10;
+    /**
+     * <pre>
+     * Video outstream ad.
+     * </pre>
+     *
+     * <code>VIDEO_OUTSTREAM = 11;</code>
+     */
+    public static final int VIDEO_OUTSTREAM_VALUE = 11;
 
 
     public final int getNumber() {
@@ -298,6 +314,7 @@ private static final long serialVersionUID = 0L;
         case 8: return HOTEL_AD;
         case 9: return SHOPPING_SMART_AD;
         case 10: return SHOPPING_PRODUCT_AD;
+        case 11: return VIDEO_OUTSTREAM;
         default: return null;
       }
     }

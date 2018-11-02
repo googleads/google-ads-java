@@ -19,6 +19,31 @@ public final class GeoTargetConstantServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_services_GetGeoTargetConstantRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_LocationNames_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_LocationNames_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_GeoTargets_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_GeoTargets_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_services_GeoTargetConstantSuggestion_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_services_GeoTargetConstantSuggestion_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -34,19 +59,47 @@ public final class GeoTargetConstantServiceProto {
       "eads/v0/resources/geo_target_constant.pr" +
       "oto\032\034google/api/annotations.proto\032\036googl" +
       "e/protobuf/wrappers.proto\"4\n\033GetGeoTarge" +
-      "tConstantRequest\022\025\n\rresource_name\030\001 \001(\t2" +
-      "\332\001\n\030GeoTargetConstantService\022\275\001\n\024GetGeoT" +
-      "argetConstant\022=.google.ads.googleads.v0." +
-      "services.GetGeoTargetConstantRequest\0324.g" +
-      "oogle.ads.googleads.v0.resources.GeoTarg" +
-      "etConstant\"0\202\323\344\223\002*\022(/v0/{resource_name=g" +
-      "eoTargetConstants/*}B\335\001\n$com.google.ads." +
-      "googleads.v0.servicesB\035GeoTargetConstant" +
-      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v0/services;" +
-      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V0" +
-      ".Services\312\002 Google\\Ads\\GoogleAds\\V0\\Serv" +
-      "icesb\006proto3"
+      "tConstantRequest\022\025\n\rresource_name\030\001 \001(\t\"" +
+      "\263\003\n SuggestGeoTargetConstantsRequest\022,\n\006" +
+      "locale\030\003 \001(\0132\034.google.protobuf.StringVal" +
+      "ue\022j\n\016location_names\030\001 \001(\0132P.google.ads." +
+      "googleads.v0.services.SuggestGeoTargetCo" +
+      "nstantsRequest.LocationNamesH\000\022d\n\013geo_ta" +
+      "rgets\030\002 \001(\0132M.google.ads.googleads.v0.se" +
+      "rvices.SuggestGeoTargetConstantsRequest." +
+      "GeoTargetsH\000\032<\n\rLocationNames\022+\n\005names\030\001" +
+      " \003(\0132\034.google.protobuf.StringValue\032H\n\nGe" +
+      "oTargets\022:\n\024geo_target_constants\030\001 \003(\0132\034" +
+      ".google.protobuf.StringValueB\007\n\005query\"\213\001" +
+      "\n!SuggestGeoTargetConstantsResponse\022f\n\037g" +
+      "eo_target_constant_suggestions\030\001 \003(\0132=.g" +
+      "oogle.ads.googleads.v0.services.GeoTarge" +
+      "tConstantSuggestion\"\330\002\n\033GeoTargetConstan" +
+      "tSuggestion\022,\n\006locale\030\001 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022*\n\005reach\030\002 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\0221\n\013search_term\030\003 \001" +
+      "(\0132\034.google.protobuf.StringValue\022Q\n\023geo_" +
+      "target_constant\030\004 \001(\01324.google.ads.googl" +
+      "eads.v0.resources.GeoTargetConstant\022Y\n\033g" +
+      "eo_target_constant_parents\030\005 \003(\01324.googl" +
+      "e.ads.googleads.v0.resources.GeoTargetCo" +
+      "nstant2\254\003\n\030GeoTargetConstantService\022\275\001\n\024" +
+      "GetGeoTargetConstant\022=.google.ads.google" +
+      "ads.v0.services.GetGeoTargetConstantRequ" +
+      "est\0324.google.ads.googleads.v0.resources." +
+      "GeoTargetConstant\"0\202\323\344\223\002*\022(/v0/{resource" +
+      "_name=geoTargetConstants/*}\022\317\001\n\031SuggestG" +
+      "eoTargetConstants\022B.google.ads.googleads" +
+      ".v0.services.SuggestGeoTargetConstantsRe" +
+      "quest\032C.google.ads.googleads.v0.services" +
+      ".SuggestGeoTargetConstantsResponse\")\202\323\344\223" +
+      "\002#\"\036/v0/geoTargetConstants:suggest:\001*B\335\001" +
+      "\n$com.google.ads.googleads.v0.servicesB\035" +
+      "GeoTargetConstantServiceProtoP\001ZHgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v0/services;services\242\002\003GAA\252\002 Google" +
+      ".Ads.GoogleAds.V0.Services\312\002 Google\\Ads\\" +
+      "GoogleAds\\V0\\Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -69,6 +122,36 @@ public final class GeoTargetConstantServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_GetGeoTargetConstantRequest_descriptor,
         new java.lang.String[] { "ResourceName", });
+    internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_descriptor,
+        new java.lang.String[] { "Locale", "LocationNames", "GeoTargets", "Query", });
+    internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_LocationNames_descriptor =
+      internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_descriptor.getNestedTypes().get(0);
+    internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_LocationNames_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_LocationNames_descriptor,
+        new java.lang.String[] { "Names", });
+    internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_GeoTargets_descriptor =
+      internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_descriptor.getNestedTypes().get(1);
+    internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_GeoTargets_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsRequest_GeoTargets_descriptor,
+        new java.lang.String[] { "GeoTargetConstants", });
+    internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_services_SuggestGeoTargetConstantsResponse_descriptor,
+        new java.lang.String[] { "GeoTargetConstantSuggestions", });
+    internal_static_google_ads_googleads_v0_services_GeoTargetConstantSuggestion_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_google_ads_googleads_v0_services_GeoTargetConstantSuggestion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_services_GeoTargetConstantSuggestion_descriptor,
+        new java.lang.String[] { "Locale", "Reach", "SearchTerm", "GeoTargetConstant", "GeoTargetConstantParents", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

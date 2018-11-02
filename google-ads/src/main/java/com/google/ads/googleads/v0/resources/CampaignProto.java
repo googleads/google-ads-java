@@ -62,7 +62,7 @@ public final class CampaignProto {
       "o\032;google/ads/googleads/v0/enums/campaig" +
       "n_serving_status.proto\0323google/ads/googl" +
       "eads/v0/enums/campaign_status.proto\032\036goo" +
-      "gle/protobuf/wrappers.proto\"\331\027\n\010Campaign" +
+      "gle/protobuf/wrappers.proto\"\221\030\n\010Campaign" +
       "\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\003 \001(\0132\033.go" +
       "ogle.protobuf.Int64Value\022*\n\004name\030\004 \001(\0132\034" +
       ".google.protobuf.StringValue\022P\n\006status\030\005" +
@@ -100,51 +100,52 @@ public final class CampaignProto {
       "oogle.protobuf.StringValue\0224\n\016campaign_g" +
       "roup\030# \001(\0132\034.google.protobuf.StringValue" +
       "\022.\n\010end_date\030\024 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\0228\n\020bidding_strategy\030\027 \001(\0132\034.goo" +
-      "gle.protobuf.StringValueH\000\022?\n\nmanual_cpc" +
-      "\030\030 \001(\0132).google.ads.googleads.v0.common." +
-      "ManualCpcH\000\022?\n\nmanual_cpm\030\031 \001(\0132).google" +
-      ".ads.googleads.v0.common.ManualCpmH\000\022?\n\n" +
-      "manual_cpv\030% \001(\0132).google.ads.googleads." +
-      "v0.common.ManualCpvH\000\022S\n\024maximize_conver" +
-      "sions\030\036 \001(\01323.google.ads.googleads.v0.co" +
-      "mmon.MaximizeConversionsH\000\022\\\n\031maximize_c" +
-      "onversion_value\030\037 \001(\01327.google.ads.googl" +
-      "eads.v0.common.MaximizeConversionValueH\000" +
-      "\022?\n\ntarget_cpa\030\032 \001(\0132).google.ads.google" +
-      "ads.v0.common.TargetCpaH\000\022A\n\013target_roas" +
-      "\030\035 \001(\0132*.google.ads.googleads.v0.common." +
-      "TargetRoasH\000\022C\n\014target_spend\030\033 \001(\0132+.goo" +
-      "gle.ads.googleads.v0.common.TargetSpendH" +
-      "\000\022A\n\013percent_cpc\030\" \001(\0132*.google.ads.goog" +
-      "leads.v0.common.PercentCpcH\000\032\205\002\n\017Network" +
-      "Settings\0228\n\024target_google_search\030\001 \001(\0132\032" +
-      ".google.protobuf.BoolValue\0229\n\025target_sea" +
-      "rch_network\030\002 \001(\0132\032.google.protobuf.Bool" +
-      "Value\022:\n\026target_content_network\030\003 \001(\0132\032." +
-      "google.protobuf.BoolValue\022A\n\035target_part" +
-      "ner_search_network\030\004 \001(\0132\032.google.protob" +
-      "uf.BoolValue\032H\n\020HotelSettingInfo\0224\n\017hote" +
-      "l_center_id\030\001 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\032\354\001\n\027DynamicSearchAdsSetting\0221\n\013do" +
-      "main_name\030\001 \001(\0132\034.google.protobuf.String" +
-      "Value\0223\n\rlanguage_code\030\002 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\022:\n\026use_supplied_urls_" +
-      "only\030\003 \001(\0132\032.google.protobuf.BoolValue\022-" +
-      "\n\010feed_ids\030\004 \003(\0132\033.google.protobuf.Int64" +
-      "Value\032\342\001\n\017ShoppingSetting\0220\n\013merchant_id" +
-      "\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n\rs" +
-      "ales_country\030\002 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\0226\n\021campaign_priority\030\003 \001(\0132\033.go" +
-      "ogle.protobuf.Int32Value\0220\n\014enable_local" +
-      "\030\004 \001(\0132\032.google.protobuf.BoolValueB\033\n\031ca" +
-      "mpaign_bidding_strategyB\322\001\n%com.google.a" +
-      "ds.googleads.v0.resourcesB\rCampaignProto" +
-      "P\001ZJgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v0/resources;resources\242\002" +
-      "\003GAA\252\002!Google.Ads.GoogleAds.V0.Resources" +
-      "\312\002!Google\\Ads\\GoogleAds\\V0\\Resourcesb\006pr" +
-      "oto3"
+      "ingValue\0226\n\020final_url_suffix\030& \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\0228\n\020bidding_stra" +
+      "tegy\030\027 \001(\0132\034.google.protobuf.StringValue" +
+      "H\000\022?\n\nmanual_cpc\030\030 \001(\0132).google.ads.goog" +
+      "leads.v0.common.ManualCpcH\000\022?\n\nmanual_cp" +
+      "m\030\031 \001(\0132).google.ads.googleads.v0.common" +
+      ".ManualCpmH\000\022?\n\nmanual_cpv\030% \001(\0132).googl" +
+      "e.ads.googleads.v0.common.ManualCpvH\000\022S\n" +
+      "\024maximize_conversions\030\036 \001(\01323.google.ads" +
+      ".googleads.v0.common.MaximizeConversions" +
+      "H\000\022\\\n\031maximize_conversion_value\030\037 \001(\01327." +
+      "google.ads.googleads.v0.common.MaximizeC" +
+      "onversionValueH\000\022?\n\ntarget_cpa\030\032 \001(\0132).g" +
+      "oogle.ads.googleads.v0.common.TargetCpaH" +
+      "\000\022A\n\013target_roas\030\035 \001(\0132*.google.ads.goog" +
+      "leads.v0.common.TargetRoasH\000\022C\n\014target_s" +
+      "pend\030\033 \001(\0132+.google.ads.googleads.v0.com" +
+      "mon.TargetSpendH\000\022A\n\013percent_cpc\030\" \001(\0132*" +
+      ".google.ads.googleads.v0.common.PercentC" +
+      "pcH\000\032\205\002\n\017NetworkSettings\0228\n\024target_googl" +
+      "e_search\030\001 \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\0229\n\025target_search_network\030\002 \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\022:\n\026target_content_" +
+      "network\030\003 \001(\0132\032.google.protobuf.BoolValu" +
+      "e\022A\n\035target_partner_search_network\030\004 \001(\013" +
+      "2\032.google.protobuf.BoolValue\032H\n\020HotelSet" +
+      "tingInfo\0224\n\017hotel_center_id\030\001 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\032\354\001\n\027DynamicSearch" +
+      "AdsSetting\0221\n\013domain_name\030\001 \001(\0132\034.google" +
+      ".protobuf.StringValue\0223\n\rlanguage_code\030\002" +
+      " \001(\0132\034.google.protobuf.StringValue\022:\n\026us" +
+      "e_supplied_urls_only\030\003 \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022-\n\010feed_ids\030\004 \003(\0132\033.googl" +
+      "e.protobuf.Int64Value\032\342\001\n\017ShoppingSettin" +
+      "g\0220\n\013merchant_id\030\001 \001(\0132\033.google.protobuf" +
+      ".Int64Value\0223\n\rsales_country\030\002 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\0226\n\021campaign_pri" +
+      "ority\030\003 \001(\0132\033.google.protobuf.Int32Value" +
+      "\0220\n\014enable_local\030\004 \001(\0132\032.google.protobuf" +
+      ".BoolValueB\033\n\031campaign_bidding_strategyB" +
+      "\322\001\n%com.google.ads.googleads.v0.resource" +
+      "sB\rCampaignProtoP\001ZJgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v0/resou" +
+      "rces;resources\242\002\003GAA\252\002!Google.Ads.Google" +
+      "Ads.V0.Resources\312\002!Google\\Ads\\GoogleAds\\" +
+      "V0\\Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -172,7 +173,7 @@ public final class CampaignProto {
     internal_static_google_ads_googleads_v0_resources_Campaign_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_Campaign_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "ServingStatus", "AdServingOptimizationStatus", "AdvertisingChannelType", "AdvertisingChannelSubType", "TrackingUrlTemplate", "UrlCustomParameters", "NetworkSettings", "HotelSetting", "DynamicSearchAdsSetting", "ShoppingSetting", "CampaignBudget", "BiddingStrategyType", "StartDate", "CampaignGroup", "EndDate", "BiddingStrategy", "ManualCpc", "ManualCpm", "ManualCpv", "MaximizeConversions", "MaximizeConversionValue", "TargetCpa", "TargetRoas", "TargetSpend", "PercentCpc", "CampaignBiddingStrategy", });
+        new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "ServingStatus", "AdServingOptimizationStatus", "AdvertisingChannelType", "AdvertisingChannelSubType", "TrackingUrlTemplate", "UrlCustomParameters", "NetworkSettings", "HotelSetting", "DynamicSearchAdsSetting", "ShoppingSetting", "CampaignBudget", "BiddingStrategyType", "StartDate", "CampaignGroup", "EndDate", "FinalUrlSuffix", "BiddingStrategy", "ManualCpc", "ManualCpm", "ManualCpv", "MaximizeConversions", "MaximizeConversionValue", "TargetCpa", "TargetRoas", "TargetSpend", "PercentCpc", "CampaignBiddingStrategy", });
     internal_static_google_ads_googleads_v0_resources_Campaign_NetworkSettings_descriptor =
       internal_static_google_ads_googleads_v0_resources_Campaign_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v0_resources_Campaign_NetworkSettings_fieldAccessorTable = new

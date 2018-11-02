@@ -17,6 +17,8 @@ package com.google.ads.googleads.v0.services.stub;
 
 import com.google.ads.googleads.v0.resources.Customer;
 import com.google.ads.googleads.v0.services.GetCustomerRequest;
+import com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest;
+import com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
@@ -34,6 +36,11 @@ public abstract class CustomerServiceStub implements BackgroundResource {
 
   public UnaryCallable<GetCustomerRequest, Customer> getCustomerCallable() {
     throw new UnsupportedOperationException("Not implemented: getCustomerCallable()");
+  }
+
+  public UnaryCallable<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
+      listAccessibleCustomersCallable() {
+    throw new UnsupportedOperationException("Not implemented: listAccessibleCustomersCallable()");
   }
 
   @Override

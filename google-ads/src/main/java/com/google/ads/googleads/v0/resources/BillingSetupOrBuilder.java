@@ -73,150 +73,131 @@ public interface BillingSetupOrBuilder extends
 
   /**
    * <pre>
-   * A 16 digit id used to identify the Payments account associated with the
-   * billing setup.
-   * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+   * The resource name of the Payments account associated with this billing
+   * setup. Payments resource names have the form:
+   * `customers/{customer_id}/paymentsAccounts/
+   *                       {payments_profile_id}_{payments_account_id}`
+   * When setting up billing, this is used to signup with an existing Payments
+   * account (and then payments_account_info should not be set).
+   * When getting a billing setup, this and payments_account_info will be
+   * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+   * <code>.google.protobuf.StringValue payments_account = 11;</code>
    */
-  boolean hasPaymentsAccountId();
+  boolean hasPaymentsAccount();
   /**
    * <pre>
-   * A 16 digit id used to identify the Payments account associated with the
-   * billing setup.
-   * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+   * The resource name of the Payments account associated with this billing
+   * setup. Payments resource names have the form:
+   * `customers/{customer_id}/paymentsAccounts/
+   *                       {payments_profile_id}_{payments_account_id}`
+   * When setting up billing, this is used to signup with an existing Payments
+   * account (and then payments_account_info should not be set).
+   * When getting a billing setup, this and payments_account_info will be
+   * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+   * <code>.google.protobuf.StringValue payments_account = 11;</code>
    */
-  com.google.protobuf.StringValue getPaymentsAccountId();
+  com.google.protobuf.StringValue getPaymentsAccount();
   /**
    * <pre>
-   * A 16 digit id used to identify the Payments account associated with the
-   * billing setup.
-   * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+   * The resource name of the Payments account associated with this billing
+   * setup. Payments resource names have the form:
+   * `customers/{customer_id}/paymentsAccounts/
+   *                       {payments_profile_id}_{payments_account_id}`
+   * When setting up billing, this is used to signup with an existing Payments
+   * account (and then payments_account_info should not be set).
+   * When getting a billing setup, this and payments_account_info will be
+   * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_id = 4;</code>
+   * <code>.google.protobuf.StringValue payments_account = 11;</code>
    */
-  com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder();
+  com.google.protobuf.StringValueOrBuilder getPaymentsAccountOrBuilder();
 
   /**
    * <pre>
-   * The name of the Payments account associated with the billing setup.
-   * This enables the user to specify a meaningful name for a Payments account
-   * to aid in reconciling monthly invoices.
-   * This name will be printed in the monthly invoices.
+   * The Payments account information associated with this billing setup.
+   * When setting up billing, this is used to signup with a new Payments account
+   * (and then payments_account should not be set).
+   * When getting a billing setup, this and payments_account will be
+   * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
+   * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
    */
-  boolean hasPaymentsAccountName();
+  boolean hasPaymentsAccountInfo();
   /**
    * <pre>
-   * The name of the Payments account associated with the billing setup.
-   * This enables the user to specify a meaningful name for a Payments account
-   * to aid in reconciling monthly invoices.
-   * This name will be printed in the monthly invoices.
+   * The Payments account information associated with this billing setup.
+   * When setting up billing, this is used to signup with a new Payments account
+   * (and then payments_account should not be set).
+   * When getting a billing setup, this and payments_account will be
+   * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
+   * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
    */
-  com.google.protobuf.StringValue getPaymentsAccountName();
+  com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo getPaymentsAccountInfo();
   /**
    * <pre>
-   * The name of the Payments account associated with the billing setup.
-   * This enables the user to specify a meaningful name for a Payments account
-   * to aid in reconciling monthly invoices.
-   * This name will be printed in the monthly invoices.
+   * The Payments account information associated with this billing setup.
+   * When setting up billing, this is used to signup with a new Payments account
+   * (and then payments_account should not be set).
+   * When getting a billing setup, this and payments_account will be
+   * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_name = 5;</code>
+   * <code>.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
    */
-  com.google.protobuf.StringValueOrBuilder getPaymentsAccountNameOrBuilder();
+  com.google.ads.googleads.v0.resources.BillingSetup.PaymentsAccountInfoOrBuilder getPaymentsAccountInfoOrBuilder();
 
   /**
    * <pre>
-   * A 12 digit id used to identify the Payments profile associated with the
-   * billing setup.
-   * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+   * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+   * future time is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+   * <code>.google.protobuf.StringValue start_date_time = 9;</code>
    */
-  boolean hasPaymentsProfileId();
+  boolean hasStartDateTime();
   /**
    * <pre>
-   * A 12 digit id used to identify the Payments profile associated with the
-   * billing setup.
-   * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+   * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+   * future time is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+   * <code>.google.protobuf.StringValue start_date_time = 9;</code>
    */
-  com.google.protobuf.StringValue getPaymentsProfileId();
+  com.google.protobuf.StringValue getStartDateTime();
   /**
    * <pre>
-   * A 12 digit id used to identify the Payments profile associated with the
-   * billing setup.
-   * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+   * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+   * future time is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+   * <code>.google.protobuf.StringValue start_date_time = 9;</code>
    */
-  com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder();
+  com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder();
 
   /**
    * <pre>
-   * The name of the Payments profile associated with the billing setup.
+   * The start time as a type. Only NOW is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
+   * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
    */
-  boolean hasPaymentsProfileName();
+  int getStartTimeTypeValue();
   /**
    * <pre>
-   * The name of the Payments profile associated with the billing setup.
+   * The start time as a type. Only NOW is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
+   * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
    */
-  com.google.protobuf.StringValue getPaymentsProfileName();
-  /**
-   * <pre>
-   * The name of the Payments profile associated with the billing setup.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue payments_profile_name = 7;</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getPaymentsProfileNameOrBuilder();
+  com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType getStartTimeType();
 
-  /**
-   * <pre>
-   * A secondary payments profile id present in uncommon situations, e.g.
-   * when a sequential liability agreement has been arranged.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
-   */
-  boolean hasSecondaryPaymentsProfileId();
-  /**
-   * <pre>
-   * A secondary payments profile id present in uncommon situations, e.g.
-   * when a sequential liability agreement has been arranged.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
-   */
-  com.google.protobuf.StringValue getSecondaryPaymentsProfileId();
-  /**
-   * <pre>
-   * A secondary payments profile id present in uncommon situations, e.g.
-   * when a sequential liability agreement has been arranged.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue secondary_payments_profile_id = 8;</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder();
+  public com.google.ads.googleads.v0.resources.BillingSetup.StartTimeCase getStartTimeCase();
 }

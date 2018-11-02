@@ -172,6 +172,31 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
+   * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+   */
+  boolean hasApprovedStartDateTime();
+  /**
+   * <pre>
+   * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+   */
+  com.google.protobuf.StringValue getApprovedStartDateTime();
+  /**
+   * <pre>
+   * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getApprovedStartDateTimeOrBuilder();
+
+  /**
+   * <pre>
    * A purchase order number is a value that enables the user to help them
    * reference this budget in their monthly invoices.
    * </pre>
@@ -345,7 +370,7 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * The proposed end date time as a well-defined type, e.g. INDEFINITE.
+   * The proposed end date time as a well-defined type, e.g. FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
@@ -353,12 +378,54 @@ public interface AccountBudgetProposalOrBuilder extends
   int getProposedEndTimeTypeValue();
   /**
    * <pre>
-   * The proposed end date time as a well-defined type, e.g. INDEFINITE.
+   * The proposed end date time as a well-defined type, e.g. FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
    */
   com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType getProposedEndTimeType();
+
+  /**
+   * <pre>
+   * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+   */
+  boolean hasApprovedEndDateTime();
+  /**
+   * <pre>
+   * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+   */
+  com.google.protobuf.StringValue getApprovedEndDateTime();
+  /**
+   * <pre>
+   * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getApprovedEndDateTimeOrBuilder();
+
+  /**
+   * <pre>
+   * The approved end date time as a well-defined type, e.g. FOREVER.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType approved_end_time_type = 22;</code>
+   */
+  int getApprovedEndTimeTypeValue();
+  /**
+   * <pre>
+   * The approved end date time as a well-defined type, e.g. FOREVER.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType approved_end_time_type = 22;</code>
+   */
+  com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType getApprovedEndTimeType();
 
   /**
    * <pre>
@@ -405,9 +472,58 @@ public interface AccountBudgetProposalOrBuilder extends
    */
   com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType getProposedSpendingLimitType();
 
+  /**
+   * <pre>
+   * The approved spending limit in micros.  One million is equivalent to
+   * one unit.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+   */
+  boolean hasApprovedSpendingLimitMicros();
+  /**
+   * <pre>
+   * The approved spending limit in micros.  One million is equivalent to
+   * one unit.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+   */
+  com.google.protobuf.Int64Value getApprovedSpendingLimitMicros();
+  /**
+   * <pre>
+   * The approved spending limit in micros.  One million is equivalent to
+   * one unit.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getApprovedSpendingLimitMicrosOrBuilder();
+
+  /**
+   * <pre>
+   * The approved spending limit as a well-defined type, e.g. INFINITE.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24;</code>
+   */
+  int getApprovedSpendingLimitTypeValue();
+  /**
+   * <pre>
+   * The approved spending limit as a well-defined type, e.g. INFINITE.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24;</code>
+   */
+  com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType getApprovedSpendingLimitType();
+
   public com.google.ads.googleads.v0.resources.AccountBudgetProposal.ProposedStartTimeCase getProposedStartTimeCase();
 
   public com.google.ads.googleads.v0.resources.AccountBudgetProposal.ProposedEndTimeCase getProposedEndTimeCase();
 
+  public com.google.ads.googleads.v0.resources.AccountBudgetProposal.ApprovedEndTimeCase getApprovedEndTimeCase();
+
   public com.google.ads.googleads.v0.resources.AccountBudgetProposal.ProposedSpendingLimitCase getProposedSpendingLimitCase();
+
+  public com.google.ads.googleads.v0.resources.AccountBudgetProposal.ApprovedSpendingLimitCase getApprovedSpendingLimitCase();
 }

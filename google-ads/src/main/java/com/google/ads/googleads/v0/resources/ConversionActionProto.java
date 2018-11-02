@@ -25,11 +25,6 @@ public final class ConversionActionProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_resources_ConversionAction_AttributionModelSettings_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v0_resources_ConversionAction_TagSnippet_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_google_ads_googleads_v0_resources_ConversionAction_TagSnippet_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v0_resources_ConversionAction_ValueSettings_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -45,74 +40,64 @@ public final class ConversionActionProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v0/resources/conv" +
       "ersion_action.proto\022!google.ads.googlead" +
-      "s.v0.resources\0325google/ads/googleads/v0/" +
-      "enums/attribution_model.proto\032>google/ad" +
-      "s/googleads/v0/enums/conversion_action_c" +
-      "ategory.proto\032Cgoogle/ads/googleads/v0/e" +
-      "nums/conversion_action_counting_type.pro" +
-      "to\032<google/ads/googleads/v0/enums/conver" +
-      "sion_action_status.proto\032:google/ads/goo" +
-      "gleads/v0/enums/conversion_action_type.p" +
-      "roto\032<google/ads/googleads/v0/enums/data" +
-      "_driven_model_status.proto\032=google/ads/g" +
-      "oogleads/v0/enums/tracking_code_page_for" +
-      "mat.proto\0326google/ads/googleads/v0/enums" +
-      "/tracking_code_type.proto\032\036google/protob" +
-      "uf/wrappers.proto\"\236\017\n\020ConversionAction\022\025" +
-      "\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022*\n\004name\030\003 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\022`\n\006status\030\004 \001" +
-      "(\0162P.google.ads.googleads.v0.enums.Conve" +
-      "rsionActionStatusEnum.ConversionActionSt" +
-      "atus\022Z\n\004type\030\005 \001(\0162L.google.ads.googlead" +
-      "s.v0.enums.ConversionActionTypeEnum.Conv" +
-      "ersionActionType\022f\n\010category\030\006 \001(\0162T.goo" +
-      "gle.ads.googleads.v0.enums.ConversionAct" +
-      "ionCategoryEnum.ConversionActionCategory" +
-      "\0224\n\016owner_customer\030\007 \001(\0132\034.google.protob" +
-      "uf.StringValue\022A\n\035include_in_conversions" +
-      "_metric\030\010 \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022G\n\"click_through_lookback_window_days\030" +
-      "\t \001(\0132\033.google.protobuf.Int64Value\022F\n!vi" +
-      "ew_through_lookback_window_days\030\n \001(\0132\033." +
-      "google.protobuf.Int64Value\022Y\n\016value_sett" +
-      "ings\030\013 \001(\0132A.google.ads.googleads.v0.res" +
-      "ources.ConversionAction.ValueSettings\022s\n" +
-      "\rcounting_type\030\014 \001(\0162\\.google.ads.google" +
-      "ads.v0.enums.ConversionActionCountingTyp" +
-      "eEnum.ConversionActionCountingType\022p\n\032at" +
-      "tribution_model_settings\030\r \001(\0132L.google." +
-      "ads.googleads.v0.resources.ConversionAct" +
-      "ion.AttributionModelSettings\022T\n\014tag_snip" +
-      "pets\030\016 \003(\0132>.google.ads.googleads.v0.res" +
-      "ources.ConversionAction.TagSnippet\022@\n\033ph" +
-      "one_call_duration_seconds\030\017 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022,\n\006app_id\030\020 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\032\355\001\n\030Attributi" +
-      "onModelSettings\022_\n\021attribution_model\030\001 \001" +
-      "(\0162D.google.ads.googleads.v0.enums.Attri" +
-      "butionModelEnum.AttributionModel\022p\n\030data" +
-      "_driven_model_status\030\002 \001(\0162N.google.ads." +
-      "googleads.v0.enums.DataDrivenModelStatus" +
-      "Enum.DataDrivenModelStatus\032\263\002\n\nTagSnippe" +
-      "t\022R\n\004type\030\001 \001(\0162D.google.ads.googleads.v" +
-      "0.enums.TrackingCodeTypeEnum.TrackingCod" +
-      "eType\022e\n\013page_format\030\002 \001(\0162P.google.ads." +
-      "googleads.v0.enums.TrackingCodePageForma" +
-      "tEnum.TrackingCodePageFormat\0225\n\017global_s" +
-      "ite_tag\030\003 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\0223\n\revent_snippet\030\004 \001(\0132\034.google.prot" +
-      "obuf.StringValue\032\277\001\n\rValueSettings\0223\n\rde" +
-      "fault_value\030\001 \001(\0132\034.google.protobuf.Doub" +
-      "leValue\022;\n\025default_currency_code\030\002 \001(\0132\034" +
-      ".google.protobuf.StringValue\022<\n\030always_u" +
-      "se_default_value\030\003 \001(\0132\032.google.protobuf" +
-      ".BoolValueB\332\001\n%com.google.ads.googleads." +
-      "v0.resourcesB\025ConversionActionProtoP\001ZJg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v0/resources;resources\242\002\003GAA\252" +
-      "\002!Google.Ads.GoogleAds.V0.Resources\312\002!Go" +
-      "ogle\\Ads\\GoogleAds\\V0\\Resourcesb\006proto3"
+      "s.v0.resources\0320google/ads/googleads/v0/" +
+      "common/tag_snippet.proto\0325google/ads/goo" +
+      "gleads/v0/enums/attribution_model.proto\032" +
+      ">google/ads/googleads/v0/enums/conversio" +
+      "n_action_category.proto\032Cgoogle/ads/goog" +
+      "leads/v0/enums/conversion_action_countin" +
+      "g_type.proto\032<google/ads/googleads/v0/en" +
+      "ums/conversion_action_status.proto\032:goog" +
+      "le/ads/googleads/v0/enums/conversion_act" +
+      "ion_type.proto\032<google/ads/googleads/v0/" +
+      "enums/data_driven_model_status.proto\032\036go" +
+      "ogle/protobuf/wrappers.proto\"\324\014\n\020Convers" +
+      "ionAction\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\002" +
+      " \001(\0132\033.google.protobuf.Int64Value\022*\n\004nam" +
+      "e\030\003 \001(\0132\034.google.protobuf.StringValue\022`\n" +
+      "\006status\030\004 \001(\0162P.google.ads.googleads.v0." +
+      "enums.ConversionActionStatusEnum.Convers" +
+      "ionActionStatus\022Z\n\004type\030\005 \001(\0162L.google.a" +
+      "ds.googleads.v0.enums.ConversionActionTy" +
+      "peEnum.ConversionActionType\022f\n\010category\030" +
+      "\006 \001(\0162T.google.ads.googleads.v0.enums.Co" +
+      "nversionActionCategoryEnum.ConversionAct" +
+      "ionCategory\0224\n\016owner_customer\030\007 \001(\0132\034.go" +
+      "ogle.protobuf.StringValue\022A\n\035include_in_" +
+      "conversions_metric\030\010 \001(\0132\032.google.protob" +
+      "uf.BoolValue\022G\n\"click_through_lookback_w" +
+      "indow_days\030\t \001(\0132\033.google.protobuf.Int64" +
+      "Value\022F\n!view_through_lookback_window_da" +
+      "ys\030\n \001(\0132\033.google.protobuf.Int64Value\022Y\n" +
+      "\016value_settings\030\013 \001(\0132A.google.ads.googl" +
+      "eads.v0.resources.ConversionAction.Value" +
+      "Settings\022s\n\rcounting_type\030\014 \001(\0162\\.google" +
+      ".ads.googleads.v0.enums.ConversionAction" +
+      "CountingTypeEnum.ConversionActionCountin" +
+      "gType\022p\n\032attribution_model_settings\030\r \001(" +
+      "\0132L.google.ads.googleads.v0.resources.Co" +
+      "nversionAction.AttributionModelSettings\022" +
+      "@\n\014tag_snippets\030\016 \003(\0132*.google.ads.googl" +
+      "eads.v0.common.TagSnippet\022@\n\033phone_call_" +
+      "duration_seconds\030\017 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022,\n\006app_id\030\020 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\032\355\001\n\030AttributionModelSe" +
+      "ttings\022_\n\021attribution_model\030\001 \001(\0162D.goog" +
+      "le.ads.googleads.v0.enums.AttributionMod" +
+      "elEnum.AttributionModel\022p\n\030data_driven_m" +
+      "odel_status\030\002 \001(\0162N.google.ads.googleads" +
+      ".v0.enums.DataDrivenModelStatusEnum.Data" +
+      "DrivenModelStatus\032\277\001\n\rValueSettings\0223\n\rd" +
+      "efault_value\030\001 \001(\0132\034.google.protobuf.Dou" +
+      "bleValue\022;\n\025default_currency_code\030\002 \001(\0132" +
+      "\034.google.protobuf.StringValue\022<\n\030always_" +
+      "use_default_value\030\003 \001(\0132\032.google.protobu" +
+      "f.BoolValueB\332\001\n%com.google.ads.googleads" +
+      ".v0.resourcesB\025ConversionActionProtoP\001ZJ" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v0/resources;resources\242\002\003GAA" +
+      "\252\002!Google.Ads.GoogleAds.V0.Resources\312\002!G" +
+      "oogle\\Ads\\GoogleAds\\V0\\Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -125,14 +110,13 @@ public final class ConversionActionProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v0.common.TagSnippetProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.AttributionModelProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.ConversionActionCategoryProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.ConversionActionCountingTypeProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.ConversionActionStatusProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.ConversionActionTypeProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.DataDrivenModelStatusProto.getDescriptor(),
-          com.google.ads.googleads.v0.enums.TrackingCodePageFormatProto.getDescriptor(),
-          com.google.ads.googleads.v0.enums.TrackingCodeTypeProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_resources_ConversionAction_descriptor =
@@ -147,26 +131,19 @@ public final class ConversionActionProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_ConversionAction_AttributionModelSettings_descriptor,
         new java.lang.String[] { "AttributionModel", "DataDrivenModelStatus", });
-    internal_static_google_ads_googleads_v0_resources_ConversionAction_TagSnippet_descriptor =
-      internal_static_google_ads_googleads_v0_resources_ConversionAction_descriptor.getNestedTypes().get(1);
-    internal_static_google_ads_googleads_v0_resources_ConversionAction_TagSnippet_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v0_resources_ConversionAction_TagSnippet_descriptor,
-        new java.lang.String[] { "Type", "PageFormat", "GlobalSiteTag", "EventSnippet", });
     internal_static_google_ads_googleads_v0_resources_ConversionAction_ValueSettings_descriptor =
-      internal_static_google_ads_googleads_v0_resources_ConversionAction_descriptor.getNestedTypes().get(2);
+      internal_static_google_ads_googleads_v0_resources_ConversionAction_descriptor.getNestedTypes().get(1);
     internal_static_google_ads_googleads_v0_resources_ConversionAction_ValueSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_ConversionAction_ValueSettings_descriptor,
         new java.lang.String[] { "DefaultValue", "DefaultCurrencyCode", "AlwaysUseDefaultValue", });
+    com.google.ads.googleads.v0.common.TagSnippetProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AttributionModelProto.getDescriptor();
     com.google.ads.googleads.v0.enums.ConversionActionCategoryProto.getDescriptor();
     com.google.ads.googleads.v0.enums.ConversionActionCountingTypeProto.getDescriptor();
     com.google.ads.googleads.v0.enums.ConversionActionStatusProto.getDescriptor();
     com.google.ads.googleads.v0.enums.ConversionActionTypeProto.getDescriptor();
     com.google.ads.googleads.v0.enums.DataDrivenModelStatusProto.getDescriptor();
-    com.google.ads.googleads.v0.enums.TrackingCodePageFormatProto.getDescriptor();
-    com.google.ads.googleads.v0.enums.TrackingCodeTypeProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

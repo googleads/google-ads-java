@@ -104,12 +104,12 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * The user selected customer id could not be validated.
+     * The login customer id could not be validated.
      * </pre>
      *
-     * <code>INVALID_USER_SELECTED_CUSTOMER_ID = 2;</code>
+     * <code>INVALID_LOGIN_CUSTOMER_ID = 3;</code>
      */
-    INVALID_USER_SELECTED_CUSTOMER_ID(2),
+    INVALID_LOGIN_CUSTOMER_ID(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -131,12 +131,12 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * The user selected customer id could not be validated.
+     * The login customer id could not be validated.
      * </pre>
      *
-     * <code>INVALID_USER_SELECTED_CUSTOMER_ID = 2;</code>
+     * <code>INVALID_LOGIN_CUSTOMER_ID = 3;</code>
      */
-    public static final int INVALID_USER_SELECTED_CUSTOMER_ID_VALUE = 2;
+    public static final int INVALID_LOGIN_CUSTOMER_ID_VALUE = 3;
 
 
     public final int getNumber() {
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
-        case 2: return INVALID_USER_SELECTED_CUSTOMER_ID;
+        case 3: return INVALID_LOGIN_CUSTOMER_ID;
         default: return null;
       }
     }

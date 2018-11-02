@@ -265,7 +265,7 @@ private static final long serialVersionUID = 0L;
    * be set.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType resource_type = 4;</code>
+   * <code>.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
    */
   public int getResourceTypeValue() {
     return resourceType_;
@@ -277,12 +277,12 @@ private static final long serialVersionUID = 0L;
    * be set.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType resource_type = 4;</code>
+   * <code>.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
    */
-  public com.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType getResourceType() {
+  public com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType getResourceType() {
     @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType result = com.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType.valueOf(resourceType_);
-    return result == null ? com.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType.UNRECOGNIZED : result;
+    com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType result = com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.valueOf(resourceType_);
+    return result == null ? com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.UNRECOGNIZED : result;
   }
 
   public static final int CAMPAIGN_FIELD_NUMBER = 5;
@@ -495,7 +495,7 @@ private static final long serialVersionUID = 0L;
     if (lastChangeDateTime_ != null) {
       output.writeMessage(3, getLastChangeDateTime());
     }
-    if (resourceType_ != com.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType.UNSPECIFIED.getNumber()) {
+    if (resourceType_ != com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.UNSPECIFIED.getNumber()) {
       output.writeEnum(4, resourceType_);
     }
     if (campaign_ != null) {
@@ -532,7 +532,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getLastChangeDateTime());
     }
-    if (resourceType_ != com.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType.UNSPECIFIED.getNumber()) {
+    if (resourceType_ != com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, resourceType_);
     }
@@ -1254,7 +1254,7 @@ private static final long serialVersionUID = 0L;
      * be set.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType resource_type = 4;</code>
+     * <code>.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
      */
     public int getResourceTypeValue() {
       return resourceType_;
@@ -1266,7 +1266,7 @@ private static final long serialVersionUID = 0L;
      * be set.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType resource_type = 4;</code>
+     * <code>.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
      */
     public Builder setResourceTypeValue(int value) {
       resourceType_ = value;
@@ -1280,12 +1280,12 @@ private static final long serialVersionUID = 0L;
      * be set.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType resource_type = 4;</code>
+     * <code>.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
      */
-    public com.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType getResourceType() {
+    public com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType getResourceType() {
       @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType result = com.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType.valueOf(resourceType_);
-      return result == null ? com.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType.UNRECOGNIZED : result;
+      com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType result = com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.valueOf(resourceType_);
+      return result == null ? com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
@@ -1294,9 +1294,9 @@ private static final long serialVersionUID = 0L;
      * be set.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType resource_type = 4;</code>
+     * <code>.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
      */
-    public Builder setResourceType(com.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType value) {
+    public Builder setResourceType(com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1312,7 +1312,7 @@ private static final long serialVersionUID = 0L;
      * be set.
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.enums.ResourceTypeEnum.ResourceType resource_type = 4;</code>
+     * <code>.google.ads.googleads.v0.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4;</code>
      */
     public Builder clearResourceType() {
       

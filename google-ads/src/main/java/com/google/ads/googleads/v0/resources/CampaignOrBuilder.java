@@ -371,7 +371,6 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The budget of the campaign.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -380,7 +379,6 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The budget of the campaign.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -389,7 +387,6 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The budget of the campaign.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -501,6 +498,34 @@ public interface CampaignOrBuilder extends
    * <code>.google.protobuf.StringValue end_date = 20;</code>
    */
   com.google.protobuf.StringValueOrBuilder getEndDateOrBuilder();
+
+  /**
+   * <pre>
+   * Suffix used to append query parameters to landing pages that are served
+   * with parallel tracking.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   */
+  boolean hasFinalUrlSuffix();
+  /**
+   * <pre>
+   * Suffix used to append query parameters to landing pages that are served
+   * with parallel tracking.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   */
+  com.google.protobuf.StringValue getFinalUrlSuffix();
+  /**
+   * <pre>
+   * Suffix used to append query parameters to landing pages that are served
+   * with parallel tracking.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder();
 
   /**
    * <pre>

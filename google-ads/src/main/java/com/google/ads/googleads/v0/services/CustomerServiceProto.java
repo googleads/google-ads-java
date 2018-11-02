@@ -19,6 +19,16 @@ public final class CustomerServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_services_GetCustomerRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_services_ListAccessibleCustomersRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_services_ListAccessibleCustomersRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_services_ListAccessibleCustomersResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_services_ListAccessibleCustomersResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -32,18 +42,26 @@ public final class CustomerServiceProto {
       "mer_service.proto\022 google.ads.googleads." +
       "v0.services\0320google/ads/googleads/v0/res" +
       "ources/customer.proto\032\034google/api/annota" +
-      "tions.proto\"+\n\022GetCustomerRequest\022\025\n\rres" +
-      "ource_name\030\001 \001(\t2\255\001\n\017CustomerService\022\231\001\n" +
-      "\013GetCustomer\0224.google.ads.googleads.v0.s" +
-      "ervices.GetCustomerRequest\032+.google.ads." +
-      "googleads.v0.resources.Customer\"\'\202\323\344\223\002!\022" +
-      "\037/v0/{resource_name=customers/*}B\324\001\n$com" +
-      ".google.ads.googleads.v0.servicesB\024Custo" +
-      "merServiceProtoP\001ZHgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v0/servic" +
-      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
-      ".V0.Services\312\002 Google\\Ads\\GoogleAds\\V0\\S" +
-      "ervicesb\006proto3"
+      "tions.proto\032\036google/protobuf/wrappers.pr" +
+      "oto\"+\n\022GetCustomerRequest\022\025\n\rresource_na" +
+      "me\030\001 \001(\t\" \n\036ListAccessibleCustomersReque" +
+      "st\"9\n\037ListAccessibleCustomersResponse\022\026\n" +
+      "\016resource_names\030\001 \003(\t2\375\002\n\017CustomerServic" +
+      "e\022\231\001\n\013GetCustomer\0224.google.ads.googleads" +
+      ".v0.services.GetCustomerRequest\032+.google" +
+      ".ads.googleads.v0.resources.Customer\"\'\202\323" +
+      "\344\223\002!\022\037/v0/{resource_name=customers/*}\022\315\001" +
+      "\n\027ListAccessibleCustomers\022@.google.ads.g" +
+      "oogleads.v0.services.ListAccessibleCusto" +
+      "mersRequest\032A.google.ads.googleads.v0.se" +
+      "rvices.ListAccessibleCustomersResponse\"-" +
+      "\202\323\344\223\002\'\022%/v0/customers:listAccessibleCust" +
+      "omersB\324\001\n$com.google.ads.googleads.v0.se" +
+      "rvicesB\024CustomerServiceProtoP\001ZHgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v0/services;services\242\002\003GAA\252\002 Google." +
+      "Ads.GoogleAds.V0.Services\312\002 Google\\Ads\\G" +
+      "oogleAds\\V0\\Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -58,6 +76,7 @@ public final class CustomerServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v0.resources.CustomerProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_services_GetCustomerRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -65,6 +84,18 @@ public final class CustomerServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_GetCustomerRequest_descriptor,
         new java.lang.String[] { "ResourceName", });
+    internal_static_google_ads_googleads_v0_services_ListAccessibleCustomersRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v0_services_ListAccessibleCustomersRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_services_ListAccessibleCustomersRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_google_ads_googleads_v0_services_ListAccessibleCustomersResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_google_ads_googleads_v0_services_ListAccessibleCustomersResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_services_ListAccessibleCustomersResponse_descriptor,
+        new java.lang.String[] { "ResourceNames", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -72,6 +103,7 @@ public final class CustomerServiceProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v0.resources.CustomerProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

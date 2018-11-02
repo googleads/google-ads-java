@@ -42,10 +42,13 @@ import org.junit.Test;
 @javax.annotation.Generated("by GAPIC")
 public class GoogleAdsFieldServiceClientTest {
   private static MockAccountBudgetProposalService mockAccountBudgetProposalService;
+  private static MockAccountBudgetService mockAccountBudgetService;
   private static MockAdGroupAdService mockAdGroupAdService;
+  private static MockAdGroupAudienceViewService mockAdGroupAudienceViewService;
   private static MockAdGroupBidModifierService mockAdGroupBidModifierService;
   private static MockAdGroupCriterionService mockAdGroupCriterionService;
   private static MockAdGroupService mockAdGroupService;
+  private static MockAgeRangeViewService mockAgeRangeViewService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
   private static MockBillingSetupService mockBillingSetupService;
   private static MockCampaignBidModifierService mockCampaignBidModifierService;
@@ -56,14 +59,25 @@ public class GoogleAdsFieldServiceClientTest {
   private static MockCampaignSharedSetService mockCampaignSharedSetService;
   private static MockChangeStatusService mockChangeStatusService;
   private static MockConversionActionService mockConversionActionService;
+  private static MockCustomerClientLinkService mockCustomerClientLinkService;
+  private static MockCustomerManagerLinkService mockCustomerManagerLinkService;
   private static MockCustomerService mockCustomerService;
+  private static MockDisplayKeywordViewService mockDisplayKeywordViewService;
+  private static MockGenderViewService mockGenderViewService;
   private static MockGeoTargetConstantService mockGeoTargetConstantService;
   private static MockGoogleAdsFieldService mockGoogleAdsFieldService;
   private static MockGoogleAdsService mockGoogleAdsService;
+  private static MockHotelGroupViewService mockHotelGroupViewService;
   private static MockKeywordViewService mockKeywordViewService;
+  private static MockManagedPlacementViewService mockManagedPlacementViewService;
+  private static MockMediaFileService mockMediaFileService;
+  private static MockParentalStatusViewService mockParentalStatusViewService;
+  private static MockProductGroupViewService mockProductGroupViewService;
   private static MockRecommendationService mockRecommendationService;
   private static MockSharedCriterionService mockSharedCriterionService;
   private static MockSharedSetService mockSharedSetService;
+  private static MockTopicConstantService mockTopicConstantService;
+  private static MockTopicViewService mockTopicViewService;
   private static MockVideoService mockVideoService;
   private static MockServiceHelper serviceHelper;
   private GoogleAdsFieldServiceClient client;
@@ -72,10 +86,13 @@ public class GoogleAdsFieldServiceClientTest {
   @BeforeClass
   public static void startStaticServer() {
     mockAccountBudgetProposalService = new MockAccountBudgetProposalService();
+    mockAccountBudgetService = new MockAccountBudgetService();
     mockAdGroupAdService = new MockAdGroupAdService();
+    mockAdGroupAudienceViewService = new MockAdGroupAudienceViewService();
     mockAdGroupBidModifierService = new MockAdGroupBidModifierService();
     mockAdGroupCriterionService = new MockAdGroupCriterionService();
     mockAdGroupService = new MockAdGroupService();
+    mockAgeRangeViewService = new MockAgeRangeViewService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
     mockBillingSetupService = new MockBillingSetupService();
     mockCampaignBidModifierService = new MockCampaignBidModifierService();
@@ -86,24 +103,38 @@ public class GoogleAdsFieldServiceClientTest {
     mockCampaignSharedSetService = new MockCampaignSharedSetService();
     mockChangeStatusService = new MockChangeStatusService();
     mockConversionActionService = new MockConversionActionService();
+    mockCustomerClientLinkService = new MockCustomerClientLinkService();
+    mockCustomerManagerLinkService = new MockCustomerManagerLinkService();
     mockCustomerService = new MockCustomerService();
+    mockDisplayKeywordViewService = new MockDisplayKeywordViewService();
+    mockGenderViewService = new MockGenderViewService();
     mockGeoTargetConstantService = new MockGeoTargetConstantService();
     mockGoogleAdsFieldService = new MockGoogleAdsFieldService();
     mockGoogleAdsService = new MockGoogleAdsService();
+    mockHotelGroupViewService = new MockHotelGroupViewService();
     mockKeywordViewService = new MockKeywordViewService();
+    mockManagedPlacementViewService = new MockManagedPlacementViewService();
+    mockMediaFileService = new MockMediaFileService();
+    mockParentalStatusViewService = new MockParentalStatusViewService();
+    mockProductGroupViewService = new MockProductGroupViewService();
     mockRecommendationService = new MockRecommendationService();
     mockSharedCriterionService = new MockSharedCriterionService();
     mockSharedSetService = new MockSharedSetService();
+    mockTopicConstantService = new MockTopicConstantService();
+    mockTopicViewService = new MockTopicViewService();
     mockVideoService = new MockVideoService();
     serviceHelper =
         new MockServiceHelper(
             "in-process-1",
             Arrays.<MockGrpcService>asList(
                 mockAccountBudgetProposalService,
+                mockAccountBudgetService,
                 mockAdGroupAdService,
+                mockAdGroupAudienceViewService,
                 mockAdGroupBidModifierService,
                 mockAdGroupCriterionService,
                 mockAdGroupService,
+                mockAgeRangeViewService,
                 mockBiddingStrategyService,
                 mockBillingSetupService,
                 mockCampaignBidModifierService,
@@ -114,14 +145,25 @@ public class GoogleAdsFieldServiceClientTest {
                 mockCampaignSharedSetService,
                 mockChangeStatusService,
                 mockConversionActionService,
+                mockCustomerClientLinkService,
+                mockCustomerManagerLinkService,
                 mockCustomerService,
+                mockDisplayKeywordViewService,
+                mockGenderViewService,
                 mockGeoTargetConstantService,
                 mockGoogleAdsFieldService,
                 mockGoogleAdsService,
+                mockHotelGroupViewService,
                 mockKeywordViewService,
+                mockManagedPlacementViewService,
+                mockMediaFileService,
+                mockParentalStatusViewService,
+                mockProductGroupViewService,
                 mockRecommendationService,
                 mockSharedCriterionService,
                 mockSharedSetService,
+                mockTopicConstantService,
+                mockTopicViewService,
                 mockVideoService));
     serviceHelper.start();
   }

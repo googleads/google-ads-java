@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private GeoTargetConstant() {
     resourceName_ = "";
+    status_ = 0;
   }
 
   @java.lang.Override
@@ -103,6 +104,12 @@ private static final long serialVersionUID = 0L;
               targetType_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 56: {
+            int rawValue = input.readEnum();
+
+            status_ = rawValue;
             break;
           }
           default: {
@@ -315,6 +322,31 @@ private static final long serialVersionUID = 0L;
     return getTargetType();
   }
 
+  public static final int STATUS_FIELD_NUMBER = 7;
+  private int status_;
+  /**
+   * <pre>
+   * Geo target constant status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+   */
+  public int getStatusValue() {
+    return status_;
+  }
+  /**
+   * <pre>
+   * Geo target constant status.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+   */
+  public com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus getStatus() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus result = com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.valueOf(status_);
+    return result == null ? com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -344,6 +376,9 @@ private static final long serialVersionUID = 0L;
     if (targetType_ != null) {
       output.writeMessage(6, getTargetType());
     }
+    if (status_ != com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNSPECIFIED.getNumber()) {
+      output.writeEnum(7, status_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -371,6 +406,10 @@ private static final long serialVersionUID = 0L;
     if (targetType_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getTargetType());
+    }
+    if (status_ != com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(7, status_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -410,6 +449,7 @@ private static final long serialVersionUID = 0L;
       result = result && getTargetType()
           .equals(other.getTargetType());
     }
+    result = result && status_ == other.status_;
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -439,6 +479,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TARGET_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getTargetType().hashCode();
     }
+    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + status_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -602,6 +644,8 @@ private static final long serialVersionUID = 0L;
         targetType_ = null;
         targetTypeBuilder_ = null;
       }
+      status_ = 0;
+
       return this;
     }
 
@@ -649,6 +693,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.targetType_ = targetTypeBuilder_.build();
       }
+      result.status_ = status_;
       onBuilt();
       return result;
     }
@@ -712,6 +757,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasTargetType()) {
         mergeTargetType(other.getTargetType());
+      }
+      if (other.status_ != 0) {
+        setStatusValue(other.getStatusValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1451,6 +1499,71 @@ private static final long serialVersionUID = 0L;
         targetType_ = null;
       }
       return targetTypeBuilder_;
+    }
+
+    private int status_ = 0;
+    /**
+     * <pre>
+     * Geo target constant status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+     */
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Geo target constant status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+     */
+    public Builder setStatusValue(int value) {
+      status_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Geo target constant status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+     */
+    public com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus result = com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.valueOf(status_);
+      return result == null ? com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Geo target constant status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+     */
+    public Builder setStatus(com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      status_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Geo target constant status.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+     */
+    public Builder clearStatus() {
+      
+      status_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

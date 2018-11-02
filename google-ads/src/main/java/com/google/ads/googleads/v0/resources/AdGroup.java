@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     resourceName_ = "";
     status_ = 0;
     type_ = 0;
+    adRotationMode_ = 0;
     urlCustomParameters_ = java.util.Collections.emptyList();
   }
 
@@ -89,9 +90,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 50: {
-            if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+            if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v0.common.CustomParameter>();
-              mutable_bitField0_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000080;
             }
             urlCustomParameters_.add(
                 input.readMessage(com.google.ads.googleads.v0.common.CustomParameter.parser(), extensionRegistry));
@@ -207,6 +208,12 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 176: {
+            int rawValue = input.readEnum();
+
+            adRotationMode_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -222,7 +229,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+      if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
       this.unknownFields = unknownFields.build();
@@ -418,6 +425,31 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v0.enums.AdGroupTypeEnum.AdGroupType result = com.google.ads.googleads.v0.enums.AdGroupTypeEnum.AdGroupType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v0.enums.AdGroupTypeEnum.AdGroupType.UNRECOGNIZED : result;
+  }
+
+  public static final int AD_ROTATION_MODE_FIELD_NUMBER = 22;
+  private int adRotationMode_;
+  /**
+   * <pre>
+   * The ad rotation mode of the ad group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+   */
+  public int getAdRotationModeValue() {
+    return adRotationMode_;
+  }
+  /**
+   * <pre>
+   * The ad rotation mode of the ad group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+   */
+  public com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode getAdRotationMode() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode result = com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.valueOf(adRotationMode_);
+    return result == null ? com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.UNRECOGNIZED : result;
   }
 
   public static final int TRACKING_URL_TEMPLATE_FIELD_NUMBER = 13;
@@ -818,6 +850,9 @@ private static final long serialVersionUID = 0L;
     if (percentCpcBidMicros_ != null) {
       output.writeMessage(20, getPercentCpcBidMicros());
     }
+    if (adRotationMode_ != com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.UNSPECIFIED.getNumber()) {
+      output.writeEnum(22, adRotationMode_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -882,6 +917,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getPercentCpcBidMicros());
     }
+    if (adRotationMode_ != com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(22, adRotationMode_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -912,6 +951,7 @@ private static final long serialVersionUID = 0L;
     }
     result = result && status_ == other.status_;
     result = result && type_ == other.type_;
+    result = result && adRotationMode_ == other.adRotationMode_;
     result = result && (hasTrackingUrlTemplate() == other.hasTrackingUrlTemplate());
     if (hasTrackingUrlTemplate()) {
       result = result && getTrackingUrlTemplate()
@@ -979,6 +1019,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + status_;
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + type_;
+    hash = (37 * hash) + AD_ROTATION_MODE_FIELD_NUMBER;
+    hash = (53 * hash) + adRotationMode_;
     if (hasTrackingUrlTemplate()) {
       hash = (37 * hash) + TRACKING_URL_TEMPLATE_FIELD_NUMBER;
       hash = (53 * hash) + getTrackingUrlTemplate().hashCode();
@@ -1171,6 +1213,8 @@ private static final long serialVersionUID = 0L;
 
       type_ = 0;
 
+      adRotationMode_ = 0;
+
       if (trackingUrlTemplateBuilder_ == null) {
         trackingUrlTemplate_ = null;
       } else {
@@ -1179,7 +1223,7 @@ private static final long serialVersionUID = 0L;
       }
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
       } else {
         urlCustomParametersBuilder_.clear();
       }
@@ -1266,15 +1310,16 @@ private static final long serialVersionUID = 0L;
       }
       result.status_ = status_;
       result.type_ = type_;
+      result.adRotationMode_ = adRotationMode_;
       if (trackingUrlTemplateBuilder_ == null) {
         result.trackingUrlTemplate_ = trackingUrlTemplate_;
       } else {
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
@@ -1380,6 +1425,9 @@ private static final long serialVersionUID = 0L;
       if (other.type_ != 0) {
         setTypeValue(other.getTypeValue());
       }
+      if (other.adRotationMode_ != 0) {
+        setAdRotationModeValue(other.getAdRotationModeValue());
+      }
       if (other.hasTrackingUrlTemplate()) {
         mergeTrackingUrlTemplate(other.getTrackingUrlTemplate());
       }
@@ -1387,7 +1435,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -1400,7 +1448,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -2040,6 +2088,71 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int adRotationMode_ = 0;
+    /**
+     * <pre>
+     * The ad rotation mode of the ad group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+     */
+    public int getAdRotationModeValue() {
+      return adRotationMode_;
+    }
+    /**
+     * <pre>
+     * The ad rotation mode of the ad group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+     */
+    public Builder setAdRotationModeValue(int value) {
+      adRotationMode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad rotation mode of the ad group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+     */
+    public com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode getAdRotationMode() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode result = com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.valueOf(adRotationMode_);
+      return result == null ? com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The ad rotation mode of the ad group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+     */
+    public Builder setAdRotationMode(com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      adRotationMode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad rotation mode of the ad group.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+     */
+    public Builder clearAdRotationMode() {
+      
+      adRotationMode_ = 0;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.StringValue trackingUrlTemplate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> trackingUrlTemplateBuilder_;
@@ -2196,9 +2309,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v0.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+      if (!((bitField0_ & 0x00000080) == 0x00000080)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v0.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
        }
     }
 
@@ -2403,7 +2516,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -2515,7 +2628,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v0.common.CustomParameter, com.google.ads.googleads.v0.common.CustomParameter.Builder, com.google.ads.googleads.v0.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000040) == 0x00000040),
+                ((bitField0_ & 0x00000080) == 0x00000080),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;

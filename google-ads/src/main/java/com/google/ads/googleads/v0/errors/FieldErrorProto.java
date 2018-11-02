@@ -30,16 +30,17 @@ public final class FieldErrorProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v0/errors/field_e" +
       "rror.proto\022\036google.ads.googleads.v0.erro" +
-      "rs\"\250\001\n\016FieldErrorEnum\"\225\001\n\nFieldError\022\017\n\013" +
+      "rs\"\305\001\n\016FieldErrorEnum\"\262\001\n\nFieldError\022\017\n\013" +
       "UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010REQUIRED\020\002" +
       "\022\023\n\017IMMUTABLE_FIELD\020\003\022\021\n\rINVALID_VALUE\020\004" +
       "\022\027\n\023VALUE_MUST_BE_UNSET\020\005\022\032\n\026REQUIRED_NO" +
-      "NEMPTY_LIST\020\006B\305\001\n\"com.google.ads.googlea" +
-      "ds.v0.errorsB\017FieldErrorProtoP\001ZDgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads" +
-      ".GoogleAds.V0.Errors\312\002\036Google\\Ads\\Google" +
-      "Ads\\V0\\Errorsb\006proto3"
+      "NEMPTY_LIST\020\006\022\033\n\027FIELD_CANNOT_BE_CLEARED" +
+      "\020\007B\305\001\n\"com.google.ads.googleads.v0.error" +
+      "sB\017FieldErrorProtoP\001ZDgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v0/err" +
+      "ors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds." +
+      "V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Erro" +
+      "rsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

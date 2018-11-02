@@ -323,24 +323,24 @@ public interface ConversionActionOrBuilder extends
    * The snippets used for tracking conversions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v0.resources.ConversionAction.TagSnippet tag_snippets = 14;</code>
+   * <code>repeated .google.ads.googleads.v0.common.TagSnippet tag_snippets = 14;</code>
    */
-  java.util.List<com.google.ads.googleads.v0.resources.ConversionAction.TagSnippet> 
+  java.util.List<com.google.ads.googleads.v0.common.TagSnippet> 
       getTagSnippetsList();
   /**
    * <pre>
    * The snippets used for tracking conversions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v0.resources.ConversionAction.TagSnippet tag_snippets = 14;</code>
+   * <code>repeated .google.ads.googleads.v0.common.TagSnippet tag_snippets = 14;</code>
    */
-  com.google.ads.googleads.v0.resources.ConversionAction.TagSnippet getTagSnippets(int index);
+  com.google.ads.googleads.v0.common.TagSnippet getTagSnippets(int index);
   /**
    * <pre>
    * The snippets used for tracking conversions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v0.resources.ConversionAction.TagSnippet tag_snippets = 14;</code>
+   * <code>repeated .google.ads.googleads.v0.common.TagSnippet tag_snippets = 14;</code>
    */
   int getTagSnippetsCount();
   /**
@@ -348,18 +348,18 @@ public interface ConversionActionOrBuilder extends
    * The snippets used for tracking conversions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v0.resources.ConversionAction.TagSnippet tag_snippets = 14;</code>
+   * <code>repeated .google.ads.googleads.v0.common.TagSnippet tag_snippets = 14;</code>
    */
-  java.util.List<? extends com.google.ads.googleads.v0.resources.ConversionAction.TagSnippetOrBuilder> 
+  java.util.List<? extends com.google.ads.googleads.v0.common.TagSnippetOrBuilder> 
       getTagSnippetsOrBuilderList();
   /**
    * <pre>
    * The snippets used for tracking conversions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v0.resources.ConversionAction.TagSnippet tag_snippets = 14;</code>
+   * <code>repeated .google.ads.googleads.v0.common.TagSnippet tag_snippets = 14;</code>
    */
-  com.google.ads.googleads.v0.resources.ConversionAction.TagSnippetOrBuilder getTagSnippetsOrBuilder(
+  com.google.ads.googleads.v0.common.TagSnippetOrBuilder getTagSnippetsOrBuilder(
       int index);
 
   /**
