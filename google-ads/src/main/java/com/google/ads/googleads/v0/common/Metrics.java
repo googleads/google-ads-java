@@ -710,6 +710,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 602: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (hotelAverageLeadValueMicros_ != null) {
+              subBuilder = hotelAverageLeadValueMicros_.toBuilder();
+            }
+            hotelAverageLeadValueMicros_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelAverageLeadValueMicros_);
+              hotelAverageLeadValueMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1759,6 +1772,39 @@ private static final long serialVersionUID = 0L;
     return getEngagements();
   }
 
+  public static final int HOTEL_AVERAGE_LEAD_VALUE_MICROS_FIELD_NUMBER = 75;
+  private com.google.protobuf.DoubleValue hotelAverageLeadValueMicros_;
+  /**
+   * <pre>
+   * Average lead value of hotel.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+   */
+  public boolean hasHotelAverageLeadValueMicros() {
+    return hotelAverageLeadValueMicros_ != null;
+  }
+  /**
+   * <pre>
+   * Average lead value of hotel.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+   */
+  public com.google.protobuf.DoubleValue getHotelAverageLeadValueMicros() {
+    return hotelAverageLeadValueMicros_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : hotelAverageLeadValueMicros_;
+  }
+  /**
+   * <pre>
+   * Average lead value of hotel.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getHotelAverageLeadValueMicrosOrBuilder() {
+    return getHotelAverageLeadValueMicros();
+  }
+
   public static final int IMPRESSIONS_FIELD_NUMBER = 37;
   private com.google.protobuf.Int64Value impressions_;
   /**
@@ -2772,6 +2818,9 @@ private static final long serialVersionUID = 0L;
     if (conversionLastConversionDate_ != null) {
       output.writeMessage(74, getConversionLastConversionDate());
     }
+    if (hotelAverageLeadValueMicros_ != null) {
+      output.writeMessage(75, getHotelAverageLeadValueMicros());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2985,6 +3034,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(74, getConversionLastConversionDate());
     }
+    if (hotelAverageLeadValueMicros_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(75, getHotelAverageLeadValueMicros());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3140,6 +3193,11 @@ private static final long serialVersionUID = 0L;
     if (hasEngagements()) {
       result = result && getEngagements()
           .equals(other.getEngagements());
+    }
+    result = result && (hasHotelAverageLeadValueMicros() == other.hasHotelAverageLeadValueMicros());
+    if (hasHotelAverageLeadValueMicros()) {
+      result = result && getHotelAverageLeadValueMicros()
+          .equals(other.getHotelAverageLeadValueMicros());
     }
     result = result && (hasImpressions() == other.hasImpressions());
     if (hasImpressions()) {
@@ -3378,6 +3436,10 @@ private static final long serialVersionUID = 0L;
     if (hasEngagements()) {
       hash = (37 * hash) + ENGAGEMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getEngagements().hashCode();
+    }
+    if (hasHotelAverageLeadValueMicros()) {
+      hash = (37 * hash) + HOTEL_AVERAGE_LEAD_VALUE_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelAverageLeadValueMicros().hashCode();
     }
     if (hasImpressions()) {
       hash = (37 * hash) + IMPRESSIONS_FIELD_NUMBER;
@@ -3776,6 +3838,12 @@ private static final long serialVersionUID = 0L;
         engagements_ = null;
         engagementsBuilder_ = null;
       }
+      if (hotelAverageLeadValueMicrosBuilder_ == null) {
+        hotelAverageLeadValueMicros_ = null;
+      } else {
+        hotelAverageLeadValueMicros_ = null;
+        hotelAverageLeadValueMicrosBuilder_ = null;
+      }
       if (impressionsBuilder_ == null) {
         impressions_ = null;
       } else {
@@ -4080,6 +4148,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.engagements_ = engagementsBuilder_.build();
       }
+      if (hotelAverageLeadValueMicrosBuilder_ == null) {
+        result.hotelAverageLeadValueMicros_ = hotelAverageLeadValueMicros_;
+      } else {
+        result.hotelAverageLeadValueMicros_ = hotelAverageLeadValueMicrosBuilder_.build();
+      }
       if (impressionsBuilder_ == null) {
         result.impressions_ = impressions_;
       } else {
@@ -4326,6 +4399,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasEngagements()) {
         mergeEngagements(other.getEngagements());
+      }
+      if (other.hasHotelAverageLeadValueMicros()) {
+        mergeHotelAverageLeadValueMicros(other.getHotelAverageLeadValueMicros());
       }
       if (other.hasImpressions()) {
         mergeImpressions(other.getImpressions());
@@ -8986,6 +9062,159 @@ private static final long serialVersionUID = 0L;
         engagements_ = null;
       }
       return engagementsBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue hotelAverageLeadValueMicros_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> hotelAverageLeadValueMicrosBuilder_;
+    /**
+     * <pre>
+     * Average lead value of hotel.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+     */
+    public boolean hasHotelAverageLeadValueMicros() {
+      return hotelAverageLeadValueMicrosBuilder_ != null || hotelAverageLeadValueMicros_ != null;
+    }
+    /**
+     * <pre>
+     * Average lead value of hotel.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+     */
+    public com.google.protobuf.DoubleValue getHotelAverageLeadValueMicros() {
+      if (hotelAverageLeadValueMicrosBuilder_ == null) {
+        return hotelAverageLeadValueMicros_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : hotelAverageLeadValueMicros_;
+      } else {
+        return hotelAverageLeadValueMicrosBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Average lead value of hotel.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+     */
+    public Builder setHotelAverageLeadValueMicros(com.google.protobuf.DoubleValue value) {
+      if (hotelAverageLeadValueMicrosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelAverageLeadValueMicros_ = value;
+        onChanged();
+      } else {
+        hotelAverageLeadValueMicrosBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average lead value of hotel.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+     */
+    public Builder setHotelAverageLeadValueMicros(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (hotelAverageLeadValueMicrosBuilder_ == null) {
+        hotelAverageLeadValueMicros_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelAverageLeadValueMicrosBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average lead value of hotel.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+     */
+    public Builder mergeHotelAverageLeadValueMicros(com.google.protobuf.DoubleValue value) {
+      if (hotelAverageLeadValueMicrosBuilder_ == null) {
+        if (hotelAverageLeadValueMicros_ != null) {
+          hotelAverageLeadValueMicros_ =
+            com.google.protobuf.DoubleValue.newBuilder(hotelAverageLeadValueMicros_).mergeFrom(value).buildPartial();
+        } else {
+          hotelAverageLeadValueMicros_ = value;
+        }
+        onChanged();
+      } else {
+        hotelAverageLeadValueMicrosBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average lead value of hotel.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+     */
+    public Builder clearHotelAverageLeadValueMicros() {
+      if (hotelAverageLeadValueMicrosBuilder_ == null) {
+        hotelAverageLeadValueMicros_ = null;
+        onChanged();
+      } else {
+        hotelAverageLeadValueMicros_ = null;
+        hotelAverageLeadValueMicrosBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average lead value of hotel.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getHotelAverageLeadValueMicrosBuilder() {
+      
+      onChanged();
+      return getHotelAverageLeadValueMicrosFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Average lead value of hotel.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getHotelAverageLeadValueMicrosOrBuilder() {
+      if (hotelAverageLeadValueMicrosBuilder_ != null) {
+        return hotelAverageLeadValueMicrosBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelAverageLeadValueMicros_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : hotelAverageLeadValueMicros_;
+      }
+    }
+    /**
+     * <pre>
+     * Average lead value of hotel.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getHotelAverageLeadValueMicrosFieldBuilder() {
+      if (hotelAverageLeadValueMicrosBuilder_ == null) {
+        hotelAverageLeadValueMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getHotelAverageLeadValueMicros(),
+                getParentForChildren(),
+                isClean());
+        hotelAverageLeadValueMicros_ = null;
+      }
+      return hotelAverageLeadValueMicrosBuilder_;
     }
 
     private com.google.protobuf.Int64Value impressions_ = null;

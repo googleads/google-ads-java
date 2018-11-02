@@ -144,6 +144,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 82: {
+            com.google.ads.googleads.v0.resources.CallReportingSetting.Builder subBuilder = null;
+            if (callReportingSetting_ != null) {
+              subBuilder = callReportingSetting_.toBuilder();
+            }
+            callReportingSetting_ = input.readMessage(com.google.ads.googleads.v0.resources.CallReportingSetting.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(callReportingSetting_);
+              callReportingSetting_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -432,7 +445,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Whether the Customer has a Partners program badge. If the Customer is not
    * associated with the Partners program, this will be false. For more
-   * information, see https://support.google.com/partners/answer/3125774
+   * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -444,7 +457,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Whether the Customer has a Partners program badge. If the Customer is not
    * associated with the Partners program, this will be false. For more
-   * information, see https://support.google.com/partners/answer/3125774
+   * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -456,13 +469,46 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Whether the Customer has a Partners program badge. If the Customer is not
    * associated with the Partners program, this will be false. For more
-   * information, see https://support.google.com/partners/answer/3125774
+   * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getHasPartnersBadgeOrBuilder() {
     return getHasPartnersBadge();
+  }
+
+  public static final int CALL_REPORTING_SETTING_FIELD_NUMBER = 10;
+  private com.google.ads.googleads.v0.resources.CallReportingSetting callReportingSetting_;
+  /**
+   * <pre>
+   * Call reporting setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+   */
+  public boolean hasCallReportingSetting() {
+    return callReportingSetting_ != null;
+  }
+  /**
+   * <pre>
+   * Call reporting setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CallReportingSetting getCallReportingSetting() {
+    return callReportingSetting_ == null ? com.google.ads.googleads.v0.resources.CallReportingSetting.getDefaultInstance() : callReportingSetting_;
+  }
+  /**
+   * <pre>
+   * Call reporting setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CallReportingSettingOrBuilder getCallReportingSettingOrBuilder() {
+    return getCallReportingSetting();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -503,6 +549,9 @@ private static final long serialVersionUID = 0L;
     if (hasPartnersBadge_ != null) {
       output.writeMessage(9, getHasPartnersBadge());
     }
+    if (callReportingSetting_ != null) {
+      output.writeMessage(10, getCallReportingSetting());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -542,6 +591,10 @@ private static final long serialVersionUID = 0L;
     if (hasPartnersBadge_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getHasPartnersBadge());
+    }
+    if (callReportingSetting_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getCallReportingSetting());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -596,6 +649,11 @@ private static final long serialVersionUID = 0L;
       result = result && getHasPartnersBadge()
           .equals(other.getHasPartnersBadge());
     }
+    result = result && (hasCallReportingSetting() == other.hasCallReportingSetting());
+    if (hasCallReportingSetting()) {
+      result = result && getCallReportingSetting()
+          .equals(other.getCallReportingSetting());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -636,6 +694,10 @@ private static final long serialVersionUID = 0L;
     if (hasHasPartnersBadge()) {
       hash = (37 * hash) + HAS_PARTNERS_BADGE_FIELD_NUMBER;
       hash = (53 * hash) + getHasPartnersBadge().hashCode();
+    }
+    if (hasCallReportingSetting()) {
+      hash = (37 * hash) + CALL_REPORTING_SETTING_FIELD_NUMBER;
+      hash = (53 * hash) + getCallReportingSetting().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -818,6 +880,12 @@ private static final long serialVersionUID = 0L;
         hasPartnersBadge_ = null;
         hasPartnersBadgeBuilder_ = null;
       }
+      if (callReportingSettingBuilder_ == null) {
+        callReportingSetting_ = null;
+      } else {
+        callReportingSetting_ = null;
+        callReportingSettingBuilder_ = null;
+      }
       return this;
     }
 
@@ -879,6 +947,11 @@ private static final long serialVersionUID = 0L;
         result.hasPartnersBadge_ = hasPartnersBadge_;
       } else {
         result.hasPartnersBadge_ = hasPartnersBadgeBuilder_.build();
+      }
+      if (callReportingSettingBuilder_ == null) {
+        result.callReportingSetting_ = callReportingSetting_;
+      } else {
+        result.callReportingSetting_ = callReportingSettingBuilder_.build();
       }
       onBuilt();
       return result;
@@ -952,6 +1025,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasHasPartnersBadge()) {
         mergeHasPartnersBadge(other.getHasPartnersBadge());
+      }
+      if (other.hasCallReportingSetting()) {
+        mergeCallReportingSetting(other.getCallReportingSetting());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -2024,7 +2100,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774
+     * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -2036,7 +2112,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774
+     * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -2052,7 +2128,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774
+     * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -2074,7 +2150,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774
+     * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -2094,7 +2170,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774
+     * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -2118,7 +2194,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774
+     * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -2138,7 +2214,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774
+     * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -2152,7 +2228,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774
+     * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -2169,7 +2245,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774
+     * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -2186,6 +2262,159 @@ private static final long serialVersionUID = 0L;
         hasPartnersBadge_ = null;
       }
       return hasPartnersBadgeBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.CallReportingSetting callReportingSetting_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CallReportingSetting, com.google.ads.googleads.v0.resources.CallReportingSetting.Builder, com.google.ads.googleads.v0.resources.CallReportingSettingOrBuilder> callReportingSettingBuilder_;
+    /**
+     * <pre>
+     * Call reporting setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+     */
+    public boolean hasCallReportingSetting() {
+      return callReportingSettingBuilder_ != null || callReportingSetting_ != null;
+    }
+    /**
+     * <pre>
+     * Call reporting setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CallReportingSetting getCallReportingSetting() {
+      if (callReportingSettingBuilder_ == null) {
+        return callReportingSetting_ == null ? com.google.ads.googleads.v0.resources.CallReportingSetting.getDefaultInstance() : callReportingSetting_;
+      } else {
+        return callReportingSettingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Call reporting setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+     */
+    public Builder setCallReportingSetting(com.google.ads.googleads.v0.resources.CallReportingSetting value) {
+      if (callReportingSettingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        callReportingSetting_ = value;
+        onChanged();
+      } else {
+        callReportingSettingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Call reporting setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+     */
+    public Builder setCallReportingSetting(
+        com.google.ads.googleads.v0.resources.CallReportingSetting.Builder builderForValue) {
+      if (callReportingSettingBuilder_ == null) {
+        callReportingSetting_ = builderForValue.build();
+        onChanged();
+      } else {
+        callReportingSettingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Call reporting setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+     */
+    public Builder mergeCallReportingSetting(com.google.ads.googleads.v0.resources.CallReportingSetting value) {
+      if (callReportingSettingBuilder_ == null) {
+        if (callReportingSetting_ != null) {
+          callReportingSetting_ =
+            com.google.ads.googleads.v0.resources.CallReportingSetting.newBuilder(callReportingSetting_).mergeFrom(value).buildPartial();
+        } else {
+          callReportingSetting_ = value;
+        }
+        onChanged();
+      } else {
+        callReportingSettingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Call reporting setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+     */
+    public Builder clearCallReportingSetting() {
+      if (callReportingSettingBuilder_ == null) {
+        callReportingSetting_ = null;
+        onChanged();
+      } else {
+        callReportingSetting_ = null;
+        callReportingSettingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Call reporting setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CallReportingSetting.Builder getCallReportingSettingBuilder() {
+      
+      onChanged();
+      return getCallReportingSettingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Call reporting setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CallReportingSettingOrBuilder getCallReportingSettingOrBuilder() {
+      if (callReportingSettingBuilder_ != null) {
+        return callReportingSettingBuilder_.getMessageOrBuilder();
+      } else {
+        return callReportingSetting_ == null ?
+            com.google.ads.googleads.v0.resources.CallReportingSetting.getDefaultInstance() : callReportingSetting_;
+      }
+    }
+    /**
+     * <pre>
+     * Call reporting setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CallReportingSetting, com.google.ads.googleads.v0.resources.CallReportingSetting.Builder, com.google.ads.googleads.v0.resources.CallReportingSettingOrBuilder> 
+        getCallReportingSettingFieldBuilder() {
+      if (callReportingSettingBuilder_ == null) {
+        callReportingSettingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.CallReportingSetting, com.google.ads.googleads.v0.resources.CallReportingSetting.Builder, com.google.ads.googleads.v0.resources.CallReportingSettingOrBuilder>(
+                getCallReportingSetting(),
+                getParentForChildren(),
+                isClean());
+        callReportingSetting_ = null;
+      }
+      return callReportingSettingBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

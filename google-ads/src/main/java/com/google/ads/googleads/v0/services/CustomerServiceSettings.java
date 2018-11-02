@@ -65,6 +65,12 @@ public class CustomerServiceSettings extends ClientSettings<CustomerServiceSetti
     return ((CustomerServiceStubSettings) getStubSettings()).getCustomerSettings();
   }
 
+  /** Returns the object with the settings used for calls to listAccessibleCustomers. */
+  public UnaryCallSettings<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
+      listAccessibleCustomersSettings() {
+    return ((CustomerServiceStubSettings) getStubSettings()).listAccessibleCustomersSettings();
+  }
+
   public static final CustomerServiceSettings create(CustomerServiceStubSettings stub)
       throws IOException {
     return new CustomerServiceSettings.Builder(stub.toBuilder()).build();
@@ -165,6 +171,13 @@ public class CustomerServiceSettings extends ClientSettings<CustomerServiceSetti
     /** Returns the builder for the settings used for calls to getCustomer. */
     public UnaryCallSettings.Builder<GetCustomerRequest, Customer> getCustomerSettings() {
       return getStubSettingsBuilder().getCustomerSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to listAccessibleCustomers. */
+    public UnaryCallSettings.Builder<
+            ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
+        listAccessibleCustomersSettings() {
+      return getStubSettingsBuilder().listAccessibleCustomersSettings();
     }
 
     @Override

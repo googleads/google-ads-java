@@ -87,7 +87,9 @@ public interface AdGroupBidModifierOrBuilder extends
 
   /**
    * <pre>
-   * The modifier for the bid when the criterion matches.
+   * The modifier for the bid when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+   * Use 0 to opt out of a Device type.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -95,7 +97,9 @@ public interface AdGroupBidModifierOrBuilder extends
   boolean hasBidModifier();
   /**
    * <pre>
-   * The modifier for the bid when the criterion matches.
+   * The modifier for the bid when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+   * Use 0 to opt out of a Device type.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
@@ -103,7 +107,9 @@ public interface AdGroupBidModifierOrBuilder extends
   com.google.protobuf.DoubleValue getBidModifier();
   /**
    * <pre>
-   * The modifier for the bid when the criterion matches.
+   * The modifier for the bid when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. The range is 1.0 - 6.0 for PreferredContent.
+   * Use 0 to opt out of a Device type.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>

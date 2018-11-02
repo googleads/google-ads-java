@@ -467,6 +467,23 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_URL_ID = 49;</code>
      */
     INVALID_URL_ID(49),
+    /**
+     * <pre>
+     * The final url suffix cannot begin with '?' or '&amp;' characters and must be
+     * a valid query string.
+     * </pre>
+     *
+     * <code>FINAL_URL_SUFFIX_MALFORMED = 50;</code>
+     */
+    FINAL_URL_SUFFIX_MALFORMED(50),
+    /**
+     * <pre>
+     * The final url suffix cannot contain {lpurl} related or {ignore} tags.
+     * </pre>
+     *
+     * <code>INVALID_TAG_IN_FINAL_URL_SUFFIX = 51;</code>
+     */
+    INVALID_TAG_IN_FINAL_URL_SUFFIX(51),
     UNRECOGNIZED(-1),
     ;
 
@@ -851,6 +868,23 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_URL_ID = 49;</code>
      */
     public static final int INVALID_URL_ID_VALUE = 49;
+    /**
+     * <pre>
+     * The final url suffix cannot begin with '?' or '&amp;' characters and must be
+     * a valid query string.
+     * </pre>
+     *
+     * <code>FINAL_URL_SUFFIX_MALFORMED = 50;</code>
+     */
+    public static final int FINAL_URL_SUFFIX_MALFORMED_VALUE = 50;
+    /**
+     * <pre>
+     * The final url suffix cannot contain {lpurl} related or {ignore} tags.
+     * </pre>
+     *
+     * <code>INVALID_TAG_IN_FINAL_URL_SUFFIX = 51;</code>
+     */
+    public static final int INVALID_TAG_IN_FINAL_URL_SUFFIX_VALUE = 51;
 
 
     public final int getNumber() {
@@ -917,6 +951,8 @@ private static final long serialVersionUID = 0L;
         case 47: return MISSING_URL_TAG;
         case 48: return DUPLICATE_URL_ID;
         case 49: return INVALID_URL_ID;
+        case 50: return FINAL_URL_SUFFIX_MALFORMED;
+        case 51: return INVALID_TAG_IN_FINAL_URL_SUFFIX;
         default: return null;
       }
     }

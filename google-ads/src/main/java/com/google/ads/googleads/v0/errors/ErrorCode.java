@@ -37,6 +37,7 @@ private static final long serialVersionUID = 0L;
     }
     int mutable_bitField0_ = 0;
     int mutable_bitField1_ = 0;
+    int mutable_bitField2_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -245,12 +246,6 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
-          case 344: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 43;
-            errorCode_ = rawValue;
-            break;
-          }
           case 352: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 44;
@@ -419,6 +414,42 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 648: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 81;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 688: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 86;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 696: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 87;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 704: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 88;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 720: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 90;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 728: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 91;
+            errorCode_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -479,6 +510,7 @@ private static final long serialVersionUID = 0L;
     CAMPAIGN_CRITERION_ERROR(29),
     COLLECTION_SIZE_ERROR(31),
     CRITERION_ERROR(32),
+    CUSTOMER_ERROR(90),
     DATE_ERROR(33),
     DATE_RANGE_ERROR(34),
     DISTINCT_ERROR(35),
@@ -488,7 +520,7 @@ private static final long serialVersionUID = 0L;
     ID_ERROR(39),
     IMAGE_ERROR(40),
     MEDIA_BUNDLE_ERROR(42),
-    MEDIA_ERROR(43),
+    MEDIA_FILE_ERROR(86),
     MULTIPLIER_ERROR(44),
     NEW_RESOURCE_CREATION_ERROR(45),
     NOT_EMPTY_ERROR(46),
@@ -517,6 +549,10 @@ private static final long serialVersionUID = 0L;
     ENUM_ERROR(70),
     ACCOUNT_BUDGET_PROPOSAL_ERROR(77),
     CHANGE_STATUS_ERROR(79),
+    GEO_TARGET_CONSTANT_SUGGESTION_ERROR(81),
+    BILLING_SETUP_ERROR(87),
+    CUSTOMER_CLIENT_LINK_ERROR(88),
+    CUSTOMER_MANAGER_LINK_ERROR(91),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -556,6 +592,7 @@ private static final long serialVersionUID = 0L;
         case 29: return CAMPAIGN_CRITERION_ERROR;
         case 31: return COLLECTION_SIZE_ERROR;
         case 32: return CRITERION_ERROR;
+        case 90: return CUSTOMER_ERROR;
         case 33: return DATE_ERROR;
         case 34: return DATE_RANGE_ERROR;
         case 35: return DISTINCT_ERROR;
@@ -565,7 +602,7 @@ private static final long serialVersionUID = 0L;
         case 39: return ID_ERROR;
         case 40: return IMAGE_ERROR;
         case 42: return MEDIA_BUNDLE_ERROR;
-        case 43: return MEDIA_ERROR;
+        case 86: return MEDIA_FILE_ERROR;
         case 44: return MULTIPLIER_ERROR;
         case 45: return NEW_RESOURCE_CREATION_ERROR;
         case 46: return NOT_EMPTY_ERROR;
@@ -594,6 +631,10 @@ private static final long serialVersionUID = 0L;
         case 70: return ENUM_ERROR;
         case 77: return ACCOUNT_BUDGET_PROPOSAL_ERROR;
         case 79: return CHANGE_STATUS_ERROR;
+        case 81: return GEO_TARGET_CONSTANT_SUGGESTION_ERROR;
+        case 87: return BILLING_SETUP_ERROR;
+        case 88: return CUSTOMER_CLIENT_LINK_ERROR;
+        case 91: return CUSTOMER_MANAGER_LINK_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -1353,6 +1394,37 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.CriterionErrorEnum.CriterionError.UNSPECIFIED;
   }
 
+  public static final int CUSTOMER_ERROR_FIELD_NUMBER = 90;
+  /**
+   * <pre>
+   * The reasons for the customer error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+   */
+  public int getCustomerErrorValue() {
+    if (errorCodeCase_ == 90) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the customer error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+   */
+  public com.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError getCustomerError() {
+    if (errorCodeCase_ == 90) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError result = com.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError.UNSPECIFIED;
+  }
+
   public static final int DATE_ERROR_FIELD_NUMBER = 33;
   /**
    * <pre>
@@ -1632,35 +1704,35 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.MediaBundleErrorEnum.MediaBundleError.UNSPECIFIED;
   }
 
-  public static final int MEDIA_ERROR_FIELD_NUMBER = 43;
+  public static final int MEDIA_FILE_ERROR_FIELD_NUMBER = 86;
   /**
    * <pre>
-   * The reasons for the media error
+   * The reasons for the media file error
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError media_error = 43;</code>
+   * <code>.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
    */
-  public int getMediaErrorValue() {
-    if (errorCodeCase_ == 43) {
+  public int getMediaFileErrorValue() {
+    if (errorCodeCase_ == 86) {
       return (java.lang.Integer) errorCode_;
     }
     return 0;
   }
   /**
    * <pre>
-   * The reasons for the media error
+   * The reasons for the media file error
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError media_error = 43;</code>
+   * <code>.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
    */
-  public com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError getMediaError() {
-    if (errorCodeCase_ == 43) {
+  public com.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError getMediaFileError() {
+    if (errorCodeCase_ == 86) {
       @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError result = com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError.valueOf(
+      com.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError result = com.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError.valueOf(
           (java.lang.Integer) errorCode_);
-      return result == null ? com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError.UNRECOGNIZED : result;
+      return result == null ? com.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError.UNRECOGNIZED : result;
     }
-    return com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError.UNSPECIFIED;
+    return com.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError.UNSPECIFIED;
   }
 
   public static final int MULTIPLIER_ERROR_FIELD_NUMBER = 44;
@@ -2531,6 +2603,130 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError.UNSPECIFIED;
   }
 
+  public static final int GEO_TARGET_CONSTANT_SUGGESTION_ERROR_FIELD_NUMBER = 81;
+  /**
+   * <pre>
+   * The reasons for the geo target constant suggestion error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+   */
+  public int getGeoTargetConstantSuggestionErrorValue() {
+    if (errorCodeCase_ == 81) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the geo target constant suggestion error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+   */
+  public com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError getGeoTargetConstantSuggestionError() {
+    if (errorCodeCase_ == 81) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError result = com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError.UNSPECIFIED;
+  }
+
+  public static final int BILLING_SETUP_ERROR_FIELD_NUMBER = 87;
+  /**
+   * <pre>
+   * The reasons for the billing setup error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+   */
+  public int getBillingSetupErrorValue() {
+    if (errorCodeCase_ == 87) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the billing setup error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+   */
+  public com.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError getBillingSetupError() {
+    if (errorCodeCase_ == 87) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError result = com.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError.UNSPECIFIED;
+  }
+
+  public static final int CUSTOMER_CLIENT_LINK_ERROR_FIELD_NUMBER = 88;
+  /**
+   * <pre>
+   * The reasons for the customer client link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+   */
+  public int getCustomerClientLinkErrorValue() {
+    if (errorCodeCase_ == 88) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the customer client link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+   */
+  public com.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError getCustomerClientLinkError() {
+    if (errorCodeCase_ == 88) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError result = com.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError.UNSPECIFIED;
+  }
+
+  public static final int CUSTOMER_MANAGER_LINK_ERROR_FIELD_NUMBER = 91;
+  /**
+   * <pre>
+   * The reasons for the customer manager link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+   */
+  public int getCustomerManagerLinkErrorValue() {
+    if (errorCodeCase_ == 91) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the customer manager link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+   */
+  public com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError getCustomerManagerLinkError() {
+    if (errorCodeCase_ == 91) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError result = com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2644,9 +2840,6 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 42) {
       output.writeEnum(42, ((java.lang.Integer) errorCode_));
     }
-    if (errorCodeCase_ == 43) {
-      output.writeEnum(43, ((java.lang.Integer) errorCode_));
-    }
     if (errorCodeCase_ == 44) {
       output.writeEnum(44, ((java.lang.Integer) errorCode_));
     }
@@ -2730,6 +2923,24 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 79) {
       output.writeEnum(79, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 81) {
+      output.writeEnum(81, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 86) {
+      output.writeEnum(86, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 87) {
+      output.writeEnum(87, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 88) {
+      output.writeEnum(88, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 90) {
+      output.writeEnum(90, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 91) {
+      output.writeEnum(91, ((java.lang.Integer) errorCode_));
     }
     unknownFields.writeTo(output);
   }
@@ -2872,10 +3083,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(42, ((java.lang.Integer) errorCode_));
     }
-    if (errorCodeCase_ == 43) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(43, ((java.lang.Integer) errorCode_));
-    }
     if (errorCodeCase_ == 44) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(44, ((java.lang.Integer) errorCode_));
@@ -2987,6 +3194,30 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 79) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(79, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 81) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(81, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 86) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(86, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 87) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(87, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 88) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(88, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 90) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(90, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 91) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(91, ((java.lang.Integer) errorCode_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -3104,6 +3335,10 @@ private static final long serialVersionUID = 0L;
         result = result && getCriterionErrorValue()
             == other.getCriterionErrorValue();
         break;
+      case 90:
+        result = result && getCustomerErrorValue()
+            == other.getCustomerErrorValue();
+        break;
       case 33:
         result = result && getDateErrorValue()
             == other.getDateErrorValue();
@@ -3140,9 +3375,9 @@ private static final long serialVersionUID = 0L;
         result = result && getMediaBundleErrorValue()
             == other.getMediaBundleErrorValue();
         break;
-      case 43:
-        result = result && getMediaErrorValue()
-            == other.getMediaErrorValue();
+      case 86:
+        result = result && getMediaFileErrorValue()
+            == other.getMediaFileErrorValue();
         break;
       case 44:
         result = result && getMultiplierErrorValue()
@@ -3256,6 +3491,22 @@ private static final long serialVersionUID = 0L;
         result = result && getChangeStatusErrorValue()
             == other.getChangeStatusErrorValue();
         break;
+      case 81:
+        result = result && getGeoTargetConstantSuggestionErrorValue()
+            == other.getGeoTargetConstantSuggestionErrorValue();
+        break;
+      case 87:
+        result = result && getBillingSetupErrorValue()
+            == other.getBillingSetupErrorValue();
+        break;
+      case 88:
+        result = result && getCustomerClientLinkErrorValue()
+            == other.getCustomerClientLinkErrorValue();
+        break;
+      case 91:
+        result = result && getCustomerManagerLinkErrorValue()
+            == other.getCustomerManagerLinkErrorValue();
+        break;
       case 0:
       default:
     }
@@ -3367,6 +3618,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CRITERION_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getCriterionErrorValue();
         break;
+      case 90:
+        hash = (37 * hash) + CUSTOMER_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerErrorValue();
+        break;
       case 33:
         hash = (37 * hash) + DATE_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getDateErrorValue();
@@ -3403,9 +3658,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + MEDIA_BUNDLE_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getMediaBundleErrorValue();
         break;
-      case 43:
-        hash = (37 * hash) + MEDIA_ERROR_FIELD_NUMBER;
-        hash = (53 * hash) + getMediaErrorValue();
+      case 86:
+        hash = (37 * hash) + MEDIA_FILE_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getMediaFileErrorValue();
         break;
       case 44:
         hash = (37 * hash) + MULTIPLIER_ERROR_FIELD_NUMBER;
@@ -3518,6 +3773,22 @@ private static final long serialVersionUID = 0L;
       case 79:
         hash = (37 * hash) + CHANGE_STATUS_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getChangeStatusErrorValue();
+        break;
+      case 81:
+        hash = (37 * hash) + GEO_TARGET_CONSTANT_SUGGESTION_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getGeoTargetConstantSuggestionErrorValue();
+        break;
+      case 87:
+        hash = (37 * hash) + BILLING_SETUP_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingSetupErrorValue();
+        break;
+      case 88:
+        hash = (37 * hash) + CUSTOMER_CLIENT_LINK_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerClientLinkErrorValue();
+        break;
+      case 91:
+        hash = (37 * hash) + CUSTOMER_MANAGER_LINK_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerManagerLinkErrorValue();
         break;
       case 0:
       default:
@@ -3759,6 +4030,9 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 32) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 90) {
+        result.errorCode_ = errorCode_;
+      }
       if (errorCodeCase_ == 33) {
         result.errorCode_ = errorCode_;
       }
@@ -3786,7 +4060,7 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 42) {
         result.errorCode_ = errorCode_;
       }
-      if (errorCodeCase_ == 43) {
+      if (errorCodeCase_ == 86) {
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 44) {
@@ -3871,6 +4145,18 @@ private static final long serialVersionUID = 0L;
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 79) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 81) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 87) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 88) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 91) {
         result.errorCode_ = errorCode_;
       }
       result.errorCodeCase_ = errorCodeCase_;
@@ -4019,6 +4305,10 @@ private static final long serialVersionUID = 0L;
           setCriterionErrorValue(other.getCriterionErrorValue());
           break;
         }
+        case CUSTOMER_ERROR: {
+          setCustomerErrorValue(other.getCustomerErrorValue());
+          break;
+        }
         case DATE_ERROR: {
           setDateErrorValue(other.getDateErrorValue());
           break;
@@ -4055,8 +4345,8 @@ private static final long serialVersionUID = 0L;
           setMediaBundleErrorValue(other.getMediaBundleErrorValue());
           break;
         }
-        case MEDIA_ERROR: {
-          setMediaErrorValue(other.getMediaErrorValue());
+        case MEDIA_FILE_ERROR: {
+          setMediaFileErrorValue(other.getMediaFileErrorValue());
           break;
         }
         case MULTIPLIER_ERROR: {
@@ -4169,6 +4459,22 @@ private static final long serialVersionUID = 0L;
         }
         case CHANGE_STATUS_ERROR: {
           setChangeStatusErrorValue(other.getChangeStatusErrorValue());
+          break;
+        }
+        case GEO_TARGET_CONSTANT_SUGGESTION_ERROR: {
+          setGeoTargetConstantSuggestionErrorValue(other.getGeoTargetConstantSuggestionErrorValue());
+          break;
+        }
+        case BILLING_SETUP_ERROR: {
+          setBillingSetupErrorValue(other.getBillingSetupErrorValue());
+          break;
+        }
+        case CUSTOMER_CLIENT_LINK_ERROR: {
+          setCustomerClientLinkErrorValue(other.getCustomerClientLinkErrorValue());
+          break;
+        }
+        case CUSTOMER_MANAGER_LINK_ERROR: {
+          setCustomerManagerLinkErrorValue(other.getCustomerManagerLinkErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -5997,6 +6303,80 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * The reasons for the customer error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+     */
+    public int getCustomerErrorValue() {
+      if (errorCodeCase_ == 90) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+     */
+    public Builder setCustomerErrorValue(int value) {
+      errorCodeCase_ = 90;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+     */
+    public com.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError getCustomerError() {
+      if (errorCodeCase_ == 90) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError result = com.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+     */
+    public Builder setCustomerError(com.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 90;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerErrorEnum.CustomerError customer_error = 90;</code>
+     */
+    public Builder clearCustomerError() {
+      if (errorCodeCase_ == 90) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
      * The reasons for the date error
      * </pre>
      *
@@ -6663,71 +7043,71 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The reasons for the media error
+     * The reasons for the media file error
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError media_error = 43;</code>
+     * <code>.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
      */
-    public int getMediaErrorValue() {
-      if (errorCodeCase_ == 43) {
+    public int getMediaFileErrorValue() {
+      if (errorCodeCase_ == 86) {
         return ((java.lang.Integer) errorCode_).intValue();
       }
       return 0;
     }
     /**
      * <pre>
-     * The reasons for the media error
+     * The reasons for the media file error
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError media_error = 43;</code>
+     * <code>.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
      */
-    public Builder setMediaErrorValue(int value) {
-      errorCodeCase_ = 43;
+    public Builder setMediaFileErrorValue(int value) {
+      errorCodeCase_ = 86;
       errorCode_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The reasons for the media error
+     * The reasons for the media file error
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError media_error = 43;</code>
+     * <code>.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
      */
-    public com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError getMediaError() {
-      if (errorCodeCase_ == 43) {
+    public com.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError getMediaFileError() {
+      if (errorCodeCase_ == 86) {
         @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError result = com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError.valueOf(
+        com.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError result = com.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError.valueOf(
             (java.lang.Integer) errorCode_);
-        return result == null ? com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError.UNRECOGNIZED : result;
+        return result == null ? com.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError.UNRECOGNIZED : result;
       }
-      return com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError.UNSPECIFIED;
+      return com.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError.UNSPECIFIED;
     }
     /**
      * <pre>
-     * The reasons for the media error
+     * The reasons for the media file error
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError media_error = 43;</code>
+     * <code>.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
      */
-    public Builder setMediaError(com.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError value) {
+    public Builder setMediaFileError(com.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError value) {
       if (value == null) {
         throw new NullPointerException();
       }
-      errorCodeCase_ = 43;
+      errorCodeCase_ = 86;
       errorCode_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The reasons for the media error
+     * The reasons for the media file error
      * </pre>
      *
-     * <code>.google.ads.googleads.v0.errors.MediaErrorEnum.MediaError media_error = 43;</code>
+     * <code>.google.ads.googleads.v0.errors.MediaFileErrorEnum.MediaFileError media_file_error = 86;</code>
      */
-    public Builder clearMediaError() {
-      if (errorCodeCase_ == 43) {
+    public Builder clearMediaFileError() {
+      if (errorCodeCase_ == 86) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();
@@ -8800,6 +9180,302 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearChangeStatusError() {
       if (errorCodeCase_ == 79) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the geo target constant suggestion error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+     */
+    public int getGeoTargetConstantSuggestionErrorValue() {
+      if (errorCodeCase_ == 81) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the geo target constant suggestion error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+     */
+    public Builder setGeoTargetConstantSuggestionErrorValue(int value) {
+      errorCodeCase_ = 81;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the geo target constant suggestion error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+     */
+    public com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError getGeoTargetConstantSuggestionError() {
+      if (errorCodeCase_ == 81) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError result = com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the geo target constant suggestion error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+     */
+    public Builder setGeoTargetConstantSuggestionError(com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 81;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the geo target constant suggestion error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
+     */
+    public Builder clearGeoTargetConstantSuggestionError() {
+      if (errorCodeCase_ == 81) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the billing setup error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+     */
+    public int getBillingSetupErrorValue() {
+      if (errorCodeCase_ == 87) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the billing setup error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+     */
+    public Builder setBillingSetupErrorValue(int value) {
+      errorCodeCase_ = 87;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the billing setup error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+     */
+    public com.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError getBillingSetupError() {
+      if (errorCodeCase_ == 87) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError result = com.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the billing setup error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+     */
+    public Builder setBillingSetupError(com.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 87;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the billing setup error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.BillingSetupErrorEnum.BillingSetupError billing_setup_error = 87;</code>
+     */
+    public Builder clearBillingSetupError() {
+      if (errorCodeCase_ == 87) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the customer client link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+     */
+    public int getCustomerClientLinkErrorValue() {
+      if (errorCodeCase_ == 88) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer client link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+     */
+    public Builder setCustomerClientLinkErrorValue(int value) {
+      errorCodeCase_ = 88;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer client link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+     */
+    public com.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError getCustomerClientLinkError() {
+      if (errorCodeCase_ == 88) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError result = com.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer client link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+     */
+    public Builder setCustomerClientLinkError(com.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 88;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer client link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerClientLinkErrorEnum.CustomerClientLinkError customer_client_link_error = 88;</code>
+     */
+    public Builder clearCustomerClientLinkError() {
+      if (errorCodeCase_ == 88) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the customer manager link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+     */
+    public int getCustomerManagerLinkErrorValue() {
+      if (errorCodeCase_ == 91) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer manager link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+     */
+    public Builder setCustomerManagerLinkErrorValue(int value) {
+      errorCodeCase_ = 91;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer manager link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+     */
+    public com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError getCustomerManagerLinkError() {
+      if (errorCodeCase_ == 91) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError result = com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer manager link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+     */
+    public Builder setCustomerManagerLinkError(com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 91;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer manager link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
+     */
+    public Builder clearCustomerManagerLinkError() {
+      if (errorCodeCase_ == 91) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

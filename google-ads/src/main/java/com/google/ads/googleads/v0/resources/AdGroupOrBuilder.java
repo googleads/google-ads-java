@@ -130,6 +130,23 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
+   * The ad rotation mode of the ad group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+   */
+  int getAdRotationModeValue();
+  /**
+   * <pre>
+   * The ad rotation mode of the ad group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+   */
+  com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode getAdRotationMode();
+
+  /**
+   * <pre>
    * The URL template for constructing a tracking URL.
    * </pre>
    *

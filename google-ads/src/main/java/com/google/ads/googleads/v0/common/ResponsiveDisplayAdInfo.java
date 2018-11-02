@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ResponsiveDisplayAdInfo() {
+    formatSetting_ = 0;
   }
 
   @java.lang.Override
@@ -94,6 +95,142 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(businessName_);
               businessName_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            com.google.protobuf.BoolValue.Builder subBuilder = null;
+            if (allowFlexibleColor_ != null) {
+              subBuilder = allowFlexibleColor_.toBuilder();
+            }
+            allowFlexibleColor_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(allowFlexibleColor_);
+              allowFlexibleColor_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 50: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (accentColor_ != null) {
+              subBuilder = accentColor_.toBuilder();
+            }
+            accentColor_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(accentColor_);
+              accentColor_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 58: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (mainColor_ != null) {
+              subBuilder = mainColor_.toBuilder();
+            }
+            mainColor_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(mainColor_);
+              mainColor_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 66: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (callToActionText_ != null) {
+              subBuilder = callToActionText_.toBuilder();
+            }
+            callToActionText_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(callToActionText_);
+              callToActionText_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 74: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (logoImage_ != null) {
+              subBuilder = logoImage_.toBuilder();
+            }
+            logoImage_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(logoImage_);
+              logoImage_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 82: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (squareLogoImage_ != null) {
+              subBuilder = squareLogoImage_.toBuilder();
+            }
+            squareLogoImage_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(squareLogoImage_);
+              squareLogoImage_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 90: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (marketingImage_ != null) {
+              subBuilder = marketingImage_.toBuilder();
+            }
+            marketingImage_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(marketingImage_);
+              marketingImage_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 98: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (squareMarketingImage_ != null) {
+              subBuilder = squareMarketingImage_.toBuilder();
+            }
+            squareMarketingImage_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(squareMarketingImage_);
+              squareMarketingImage_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 104: {
+            int rawValue = input.readEnum();
+
+            formatSetting_ = rawValue;
+            break;
+          }
+          case 114: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (pricePrefix_ != null) {
+              subBuilder = pricePrefix_.toBuilder();
+            }
+            pricePrefix_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(pricePrefix_);
+              pricePrefix_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 122: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (promoText_ != null) {
+              subBuilder = promoText_.toBuilder();
+            }
+            promoText_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(promoText_);
+              promoText_ = subBuilder.buildPartial();
             }
 
             break;
@@ -262,6 +399,388 @@ private static final long serialVersionUID = 0L;
     return getBusinessName();
   }
 
+  public static final int ALLOW_FLEXIBLE_COLOR_FIELD_NUMBER = 5;
+  private com.google.protobuf.BoolValue allowFlexibleColor_;
+  /**
+   * <pre>
+   * Advertiser's consent to allow flexible color. When true, the ad may be
+   * served with different color if necessary. When false, the ad will be served
+   * with the specified colors or a neutral color.
+   * The default value is true.
+   * Must be true if main_color and accent_color are not set.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+   */
+  public boolean hasAllowFlexibleColor() {
+    return allowFlexibleColor_ != null;
+  }
+  /**
+   * <pre>
+   * Advertiser's consent to allow flexible color. When true, the ad may be
+   * served with different color if necessary. When false, the ad will be served
+   * with the specified colors or a neutral color.
+   * The default value is true.
+   * Must be true if main_color and accent_color are not set.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+   */
+  public com.google.protobuf.BoolValue getAllowFlexibleColor() {
+    return allowFlexibleColor_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowFlexibleColor_;
+  }
+  /**
+   * <pre>
+   * Advertiser's consent to allow flexible color. When true, the ad may be
+   * served with different color if necessary. When false, the ad will be served
+   * with the specified colors or a neutral color.
+   * The default value is true.
+   * Must be true if main_color and accent_color are not set.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+   */
+  public com.google.protobuf.BoolValueOrBuilder getAllowFlexibleColorOrBuilder() {
+    return getAllowFlexibleColor();
+  }
+
+  public static final int ACCENT_COLOR_FIELD_NUMBER = 6;
+  private com.google.protobuf.StringValue accentColor_;
+  /**
+   * <pre>
+   * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+   * If one of main_color and accent_color is set, the other is required as
+   * well.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue accent_color = 6;</code>
+   */
+  public boolean hasAccentColor() {
+    return accentColor_ != null;
+  }
+  /**
+   * <pre>
+   * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+   * If one of main_color and accent_color is set, the other is required as
+   * well.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue accent_color = 6;</code>
+   */
+  public com.google.protobuf.StringValue getAccentColor() {
+    return accentColor_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : accentColor_;
+  }
+  /**
+   * <pre>
+   * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+   * If one of main_color and accent_color is set, the other is required as
+   * well.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue accent_color = 6;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getAccentColorOrBuilder() {
+    return getAccentColor();
+  }
+
+  public static final int MAIN_COLOR_FIELD_NUMBER = 7;
+  private com.google.protobuf.StringValue mainColor_;
+  /**
+   * <pre>
+   * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+   * If one of main_color and accent_color is set, the other is required as
+   * well.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue main_color = 7;</code>
+   */
+  public boolean hasMainColor() {
+    return mainColor_ != null;
+  }
+  /**
+   * <pre>
+   * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+   * If one of main_color and accent_color is set, the other is required as
+   * well.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue main_color = 7;</code>
+   */
+  public com.google.protobuf.StringValue getMainColor() {
+    return mainColor_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : mainColor_;
+  }
+  /**
+   * <pre>
+   * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+   * If one of main_color and accent_color is set, the other is required as
+   * well.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue main_color = 7;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getMainColorOrBuilder() {
+    return getMainColor();
+  }
+
+  public static final int CALL_TO_ACTION_TEXT_FIELD_NUMBER = 8;
+  private com.google.protobuf.StringValue callToActionText_;
+  /**
+   * <pre>
+   * The call-to-action text for the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+   */
+  public boolean hasCallToActionText() {
+    return callToActionText_ != null;
+  }
+  /**
+   * <pre>
+   * The call-to-action text for the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+   */
+  public com.google.protobuf.StringValue getCallToActionText() {
+    return callToActionText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callToActionText_;
+  }
+  /**
+   * <pre>
+   * The call-to-action text for the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getCallToActionTextOrBuilder() {
+    return getCallToActionText();
+  }
+
+  public static final int LOGO_IMAGE_FIELD_NUMBER = 9;
+  private com.google.protobuf.StringValue logoImage_;
+  /**
+   * <pre>
+   * The MediaFile resource name of the logo image used in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue logo_image = 9;</code>
+   */
+  public boolean hasLogoImage() {
+    return logoImage_ != null;
+  }
+  /**
+   * <pre>
+   * The MediaFile resource name of the logo image used in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue logo_image = 9;</code>
+   */
+  public com.google.protobuf.StringValue getLogoImage() {
+    return logoImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : logoImage_;
+  }
+  /**
+   * <pre>
+   * The MediaFile resource name of the logo image used in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue logo_image = 9;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getLogoImageOrBuilder() {
+    return getLogoImage();
+  }
+
+  public static final int SQUARE_LOGO_IMAGE_FIELD_NUMBER = 10;
+  private com.google.protobuf.StringValue squareLogoImage_;
+  /**
+   * <pre>
+   * The MediaFile resource name of the square logo image used in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+   */
+  public boolean hasSquareLogoImage() {
+    return squareLogoImage_ != null;
+  }
+  /**
+   * <pre>
+   * The MediaFile resource name of the square logo image used in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+   */
+  public com.google.protobuf.StringValue getSquareLogoImage() {
+    return squareLogoImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : squareLogoImage_;
+  }
+  /**
+   * <pre>
+   * The MediaFile resource name of the square logo image used in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getSquareLogoImageOrBuilder() {
+    return getSquareLogoImage();
+  }
+
+  public static final int MARKETING_IMAGE_FIELD_NUMBER = 11;
+  private com.google.protobuf.StringValue marketingImage_;
+  /**
+   * <pre>
+   * The MediaFile resource name of the marketing image used in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+   */
+  public boolean hasMarketingImage() {
+    return marketingImage_ != null;
+  }
+  /**
+   * <pre>
+   * The MediaFile resource name of the marketing image used in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+   */
+  public com.google.protobuf.StringValue getMarketingImage() {
+    return marketingImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : marketingImage_;
+  }
+  /**
+   * <pre>
+   * The MediaFile resource name of the marketing image used in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getMarketingImageOrBuilder() {
+    return getMarketingImage();
+  }
+
+  public static final int SQUARE_MARKETING_IMAGE_FIELD_NUMBER = 12;
+  private com.google.protobuf.StringValue squareMarketingImage_;
+  /**
+   * <pre>
+   * The MediaFile resource name of the square marketing image used in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+   */
+  public boolean hasSquareMarketingImage() {
+    return squareMarketingImage_ != null;
+  }
+  /**
+   * <pre>
+   * The MediaFile resource name of the square marketing image used in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+   */
+  public com.google.protobuf.StringValue getSquareMarketingImage() {
+    return squareMarketingImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : squareMarketingImage_;
+  }
+  /**
+   * <pre>
+   * The MediaFile resource name of the square marketing image used in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getSquareMarketingImageOrBuilder() {
+    return getSquareMarketingImage();
+  }
+
+  public static final int FORMAT_SETTING_FIELD_NUMBER = 13;
+  private int formatSetting_;
+  /**
+   * <pre>
+   * Specifies which format the ad will be served in. Default is ALL_FORMATS.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+   */
+  public int getFormatSettingValue() {
+    return formatSetting_;
+  }
+  /**
+   * <pre>
+   * Specifies which format the ad will be served in. Default is ALL_FORMATS.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+   */
+  public com.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting getFormatSetting() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting result = com.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.valueOf(formatSetting_);
+    return result == null ? com.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.UNRECOGNIZED : result;
+  }
+
+  public static final int PRICE_PREFIX_FIELD_NUMBER = 14;
+  private com.google.protobuf.StringValue pricePrefix_;
+  /**
+   * <pre>
+   * Prefix before price. E.g. 'as low as'.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+   */
+  public boolean hasPricePrefix() {
+    return pricePrefix_ != null;
+  }
+  /**
+   * <pre>
+   * Prefix before price. E.g. 'as low as'.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+   */
+  public com.google.protobuf.StringValue getPricePrefix() {
+    return pricePrefix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : pricePrefix_;
+  }
+  /**
+   * <pre>
+   * Prefix before price. E.g. 'as low as'.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getPricePrefixOrBuilder() {
+    return getPricePrefix();
+  }
+
+  public static final int PROMO_TEXT_FIELD_NUMBER = 15;
+  private com.google.protobuf.StringValue promoText_;
+  /**
+   * <pre>
+   * Promotion text used for dyanmic formats of responsive ads. For example
+   * 'Free two-day shipping'.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue promo_text = 15;</code>
+   */
+  public boolean hasPromoText() {
+    return promoText_ != null;
+  }
+  /**
+   * <pre>
+   * Promotion text used for dyanmic formats of responsive ads. For example
+   * 'Free two-day shipping'.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue promo_text = 15;</code>
+   */
+  public com.google.protobuf.StringValue getPromoText() {
+    return promoText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : promoText_;
+  }
+  /**
+   * <pre>
+   * Promotion text used for dyanmic formats of responsive ads. For example
+   * 'Free two-day shipping'.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue promo_text = 15;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getPromoTextOrBuilder() {
+    return getPromoText();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -288,6 +807,39 @@ private static final long serialVersionUID = 0L;
     if (businessName_ != null) {
       output.writeMessage(4, getBusinessName());
     }
+    if (allowFlexibleColor_ != null) {
+      output.writeMessage(5, getAllowFlexibleColor());
+    }
+    if (accentColor_ != null) {
+      output.writeMessage(6, getAccentColor());
+    }
+    if (mainColor_ != null) {
+      output.writeMessage(7, getMainColor());
+    }
+    if (callToActionText_ != null) {
+      output.writeMessage(8, getCallToActionText());
+    }
+    if (logoImage_ != null) {
+      output.writeMessage(9, getLogoImage());
+    }
+    if (squareLogoImage_ != null) {
+      output.writeMessage(10, getSquareLogoImage());
+    }
+    if (marketingImage_ != null) {
+      output.writeMessage(11, getMarketingImage());
+    }
+    if (squareMarketingImage_ != null) {
+      output.writeMessage(12, getSquareMarketingImage());
+    }
+    if (formatSetting_ != com.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.UNSPECIFIED.getNumber()) {
+      output.writeEnum(13, formatSetting_);
+    }
+    if (pricePrefix_ != null) {
+      output.writeMessage(14, getPricePrefix());
+    }
+    if (promoText_ != null) {
+      output.writeMessage(15, getPromoText());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -312,6 +864,50 @@ private static final long serialVersionUID = 0L;
     if (businessName_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getBusinessName());
+    }
+    if (allowFlexibleColor_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getAllowFlexibleColor());
+    }
+    if (accentColor_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getAccentColor());
+    }
+    if (mainColor_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getMainColor());
+    }
+    if (callToActionText_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getCallToActionText());
+    }
+    if (logoImage_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getLogoImage());
+    }
+    if (squareLogoImage_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getSquareLogoImage());
+    }
+    if (marketingImage_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getMarketingImage());
+    }
+    if (squareMarketingImage_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, getSquareMarketingImage());
+    }
+    if (formatSetting_ != com.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(13, formatSetting_);
+    }
+    if (pricePrefix_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getPricePrefix());
+    }
+    if (promoText_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getPromoText());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -349,6 +945,57 @@ private static final long serialVersionUID = 0L;
       result = result && getBusinessName()
           .equals(other.getBusinessName());
     }
+    result = result && (hasAllowFlexibleColor() == other.hasAllowFlexibleColor());
+    if (hasAllowFlexibleColor()) {
+      result = result && getAllowFlexibleColor()
+          .equals(other.getAllowFlexibleColor());
+    }
+    result = result && (hasAccentColor() == other.hasAccentColor());
+    if (hasAccentColor()) {
+      result = result && getAccentColor()
+          .equals(other.getAccentColor());
+    }
+    result = result && (hasMainColor() == other.hasMainColor());
+    if (hasMainColor()) {
+      result = result && getMainColor()
+          .equals(other.getMainColor());
+    }
+    result = result && (hasCallToActionText() == other.hasCallToActionText());
+    if (hasCallToActionText()) {
+      result = result && getCallToActionText()
+          .equals(other.getCallToActionText());
+    }
+    result = result && (hasLogoImage() == other.hasLogoImage());
+    if (hasLogoImage()) {
+      result = result && getLogoImage()
+          .equals(other.getLogoImage());
+    }
+    result = result && (hasSquareLogoImage() == other.hasSquareLogoImage());
+    if (hasSquareLogoImage()) {
+      result = result && getSquareLogoImage()
+          .equals(other.getSquareLogoImage());
+    }
+    result = result && (hasMarketingImage() == other.hasMarketingImage());
+    if (hasMarketingImage()) {
+      result = result && getMarketingImage()
+          .equals(other.getMarketingImage());
+    }
+    result = result && (hasSquareMarketingImage() == other.hasSquareMarketingImage());
+    if (hasSquareMarketingImage()) {
+      result = result && getSquareMarketingImage()
+          .equals(other.getSquareMarketingImage());
+    }
+    result = result && formatSetting_ == other.formatSetting_;
+    result = result && (hasPricePrefix() == other.hasPricePrefix());
+    if (hasPricePrefix()) {
+      result = result && getPricePrefix()
+          .equals(other.getPricePrefix());
+    }
+    result = result && (hasPromoText() == other.hasPromoText());
+    if (hasPromoText()) {
+      result = result && getPromoText()
+          .equals(other.getPromoText());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -375,6 +1022,48 @@ private static final long serialVersionUID = 0L;
     if (hasBusinessName()) {
       hash = (37 * hash) + BUSINESS_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getBusinessName().hashCode();
+    }
+    if (hasAllowFlexibleColor()) {
+      hash = (37 * hash) + ALLOW_FLEXIBLE_COLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getAllowFlexibleColor().hashCode();
+    }
+    if (hasAccentColor()) {
+      hash = (37 * hash) + ACCENT_COLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getAccentColor().hashCode();
+    }
+    if (hasMainColor()) {
+      hash = (37 * hash) + MAIN_COLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getMainColor().hashCode();
+    }
+    if (hasCallToActionText()) {
+      hash = (37 * hash) + CALL_TO_ACTION_TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getCallToActionText().hashCode();
+    }
+    if (hasLogoImage()) {
+      hash = (37 * hash) + LOGO_IMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getLogoImage().hashCode();
+    }
+    if (hasSquareLogoImage()) {
+      hash = (37 * hash) + SQUARE_LOGO_IMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getSquareLogoImage().hashCode();
+    }
+    if (hasMarketingImage()) {
+      hash = (37 * hash) + MARKETING_IMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMarketingImage().hashCode();
+    }
+    if (hasSquareMarketingImage()) {
+      hash = (37 * hash) + SQUARE_MARKETING_IMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getSquareMarketingImage().hashCode();
+    }
+    hash = (37 * hash) + FORMAT_SETTING_FIELD_NUMBER;
+    hash = (53 * hash) + formatSetting_;
+    if (hasPricePrefix()) {
+      hash = (37 * hash) + PRICE_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getPricePrefix().hashCode();
+    }
+    if (hasPromoText()) {
+      hash = (37 * hash) + PROMO_TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getPromoText().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -537,6 +1226,68 @@ private static final long serialVersionUID = 0L;
         businessName_ = null;
         businessNameBuilder_ = null;
       }
+      if (allowFlexibleColorBuilder_ == null) {
+        allowFlexibleColor_ = null;
+      } else {
+        allowFlexibleColor_ = null;
+        allowFlexibleColorBuilder_ = null;
+      }
+      if (accentColorBuilder_ == null) {
+        accentColor_ = null;
+      } else {
+        accentColor_ = null;
+        accentColorBuilder_ = null;
+      }
+      if (mainColorBuilder_ == null) {
+        mainColor_ = null;
+      } else {
+        mainColor_ = null;
+        mainColorBuilder_ = null;
+      }
+      if (callToActionTextBuilder_ == null) {
+        callToActionText_ = null;
+      } else {
+        callToActionText_ = null;
+        callToActionTextBuilder_ = null;
+      }
+      if (logoImageBuilder_ == null) {
+        logoImage_ = null;
+      } else {
+        logoImage_ = null;
+        logoImageBuilder_ = null;
+      }
+      if (squareLogoImageBuilder_ == null) {
+        squareLogoImage_ = null;
+      } else {
+        squareLogoImage_ = null;
+        squareLogoImageBuilder_ = null;
+      }
+      if (marketingImageBuilder_ == null) {
+        marketingImage_ = null;
+      } else {
+        marketingImage_ = null;
+        marketingImageBuilder_ = null;
+      }
+      if (squareMarketingImageBuilder_ == null) {
+        squareMarketingImage_ = null;
+      } else {
+        squareMarketingImage_ = null;
+        squareMarketingImageBuilder_ = null;
+      }
+      formatSetting_ = 0;
+
+      if (pricePrefixBuilder_ == null) {
+        pricePrefix_ = null;
+      } else {
+        pricePrefix_ = null;
+        pricePrefixBuilder_ = null;
+      }
+      if (promoTextBuilder_ == null) {
+        promoText_ = null;
+      } else {
+        promoText_ = null;
+        promoTextBuilder_ = null;
+      }
       return this;
     }
 
@@ -582,6 +1333,57 @@ private static final long serialVersionUID = 0L;
         result.businessName_ = businessName_;
       } else {
         result.businessName_ = businessNameBuilder_.build();
+      }
+      if (allowFlexibleColorBuilder_ == null) {
+        result.allowFlexibleColor_ = allowFlexibleColor_;
+      } else {
+        result.allowFlexibleColor_ = allowFlexibleColorBuilder_.build();
+      }
+      if (accentColorBuilder_ == null) {
+        result.accentColor_ = accentColor_;
+      } else {
+        result.accentColor_ = accentColorBuilder_.build();
+      }
+      if (mainColorBuilder_ == null) {
+        result.mainColor_ = mainColor_;
+      } else {
+        result.mainColor_ = mainColorBuilder_.build();
+      }
+      if (callToActionTextBuilder_ == null) {
+        result.callToActionText_ = callToActionText_;
+      } else {
+        result.callToActionText_ = callToActionTextBuilder_.build();
+      }
+      if (logoImageBuilder_ == null) {
+        result.logoImage_ = logoImage_;
+      } else {
+        result.logoImage_ = logoImageBuilder_.build();
+      }
+      if (squareLogoImageBuilder_ == null) {
+        result.squareLogoImage_ = squareLogoImage_;
+      } else {
+        result.squareLogoImage_ = squareLogoImageBuilder_.build();
+      }
+      if (marketingImageBuilder_ == null) {
+        result.marketingImage_ = marketingImage_;
+      } else {
+        result.marketingImage_ = marketingImageBuilder_.build();
+      }
+      if (squareMarketingImageBuilder_ == null) {
+        result.squareMarketingImage_ = squareMarketingImage_;
+      } else {
+        result.squareMarketingImage_ = squareMarketingImageBuilder_.build();
+      }
+      result.formatSetting_ = formatSetting_;
+      if (pricePrefixBuilder_ == null) {
+        result.pricePrefix_ = pricePrefix_;
+      } else {
+        result.pricePrefix_ = pricePrefixBuilder_.build();
+      }
+      if (promoTextBuilder_ == null) {
+        result.promoText_ = promoText_;
+      } else {
+        result.promoText_ = promoTextBuilder_.build();
       }
       onBuilt();
       return result;
@@ -642,6 +1444,39 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasBusinessName()) {
         mergeBusinessName(other.getBusinessName());
+      }
+      if (other.hasAllowFlexibleColor()) {
+        mergeAllowFlexibleColor(other.getAllowFlexibleColor());
+      }
+      if (other.hasAccentColor()) {
+        mergeAccentColor(other.getAccentColor());
+      }
+      if (other.hasMainColor()) {
+        mergeMainColor(other.getMainColor());
+      }
+      if (other.hasCallToActionText()) {
+        mergeCallToActionText(other.getCallToActionText());
+      }
+      if (other.hasLogoImage()) {
+        mergeLogoImage(other.getLogoImage());
+      }
+      if (other.hasSquareLogoImage()) {
+        mergeSquareLogoImage(other.getSquareLogoImage());
+      }
+      if (other.hasMarketingImage()) {
+        mergeMarketingImage(other.getMarketingImage());
+      }
+      if (other.hasSquareMarketingImage()) {
+        mergeSquareMarketingImage(other.getSquareMarketingImage());
+      }
+      if (other.formatSetting_ != 0) {
+        setFormatSettingValue(other.getFormatSettingValue());
+      }
+      if (other.hasPricePrefix()) {
+        mergePricePrefix(other.getPricePrefix());
+      }
+      if (other.hasPromoText()) {
+        mergePromoText(other.getPromoText());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1282,6 +2117,1682 @@ private static final long serialVersionUID = 0L;
         businessName_ = null;
       }
       return businessNameBuilder_;
+    }
+
+    private com.google.protobuf.BoolValue allowFlexibleColor_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> allowFlexibleColorBuilder_;
+    /**
+     * <pre>
+     * Advertiser's consent to allow flexible color. When true, the ad may be
+     * served with different color if necessary. When false, the ad will be served
+     * with the specified colors or a neutral color.
+     * The default value is true.
+     * Must be true if main_color and accent_color are not set.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+     */
+    public boolean hasAllowFlexibleColor() {
+      return allowFlexibleColorBuilder_ != null || allowFlexibleColor_ != null;
+    }
+    /**
+     * <pre>
+     * Advertiser's consent to allow flexible color. When true, the ad may be
+     * served with different color if necessary. When false, the ad will be served
+     * with the specified colors or a neutral color.
+     * The default value is true.
+     * Must be true if main_color and accent_color are not set.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+     */
+    public com.google.protobuf.BoolValue getAllowFlexibleColor() {
+      if (allowFlexibleColorBuilder_ == null) {
+        return allowFlexibleColor_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowFlexibleColor_;
+      } else {
+        return allowFlexibleColorBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Advertiser's consent to allow flexible color. When true, the ad may be
+     * served with different color if necessary. When false, the ad will be served
+     * with the specified colors or a neutral color.
+     * The default value is true.
+     * Must be true if main_color and accent_color are not set.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+     */
+    public Builder setAllowFlexibleColor(com.google.protobuf.BoolValue value) {
+      if (allowFlexibleColorBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        allowFlexibleColor_ = value;
+        onChanged();
+      } else {
+        allowFlexibleColorBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Advertiser's consent to allow flexible color. When true, the ad may be
+     * served with different color if necessary. When false, the ad will be served
+     * with the specified colors or a neutral color.
+     * The default value is true.
+     * Must be true if main_color and accent_color are not set.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+     */
+    public Builder setAllowFlexibleColor(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (allowFlexibleColorBuilder_ == null) {
+        allowFlexibleColor_ = builderForValue.build();
+        onChanged();
+      } else {
+        allowFlexibleColorBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Advertiser's consent to allow flexible color. When true, the ad may be
+     * served with different color if necessary. When false, the ad will be served
+     * with the specified colors or a neutral color.
+     * The default value is true.
+     * Must be true if main_color and accent_color are not set.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+     */
+    public Builder mergeAllowFlexibleColor(com.google.protobuf.BoolValue value) {
+      if (allowFlexibleColorBuilder_ == null) {
+        if (allowFlexibleColor_ != null) {
+          allowFlexibleColor_ =
+            com.google.protobuf.BoolValue.newBuilder(allowFlexibleColor_).mergeFrom(value).buildPartial();
+        } else {
+          allowFlexibleColor_ = value;
+        }
+        onChanged();
+      } else {
+        allowFlexibleColorBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Advertiser's consent to allow flexible color. When true, the ad may be
+     * served with different color if necessary. When false, the ad will be served
+     * with the specified colors or a neutral color.
+     * The default value is true.
+     * Must be true if main_color and accent_color are not set.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+     */
+    public Builder clearAllowFlexibleColor() {
+      if (allowFlexibleColorBuilder_ == null) {
+        allowFlexibleColor_ = null;
+        onChanged();
+      } else {
+        allowFlexibleColor_ = null;
+        allowFlexibleColorBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Advertiser's consent to allow flexible color. When true, the ad may be
+     * served with different color if necessary. When false, the ad will be served
+     * with the specified colors or a neutral color.
+     * The default value is true.
+     * Must be true if main_color and accent_color are not set.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getAllowFlexibleColorBuilder() {
+      
+      onChanged();
+      return getAllowFlexibleColorFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Advertiser's consent to allow flexible color. When true, the ad may be
+     * served with different color if necessary. When false, the ad will be served
+     * with the specified colors or a neutral color.
+     * The default value is true.
+     * Must be true if main_color and accent_color are not set.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getAllowFlexibleColorOrBuilder() {
+      if (allowFlexibleColorBuilder_ != null) {
+        return allowFlexibleColorBuilder_.getMessageOrBuilder();
+      } else {
+        return allowFlexibleColor_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : allowFlexibleColor_;
+      }
+    }
+    /**
+     * <pre>
+     * Advertiser's consent to allow flexible color. When true, the ad may be
+     * served with different color if necessary. When false, the ad will be served
+     * with the specified colors or a neutral color.
+     * The default value is true.
+     * Must be true if main_color and accent_color are not set.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue allow_flexible_color = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getAllowFlexibleColorFieldBuilder() {
+      if (allowFlexibleColorBuilder_ == null) {
+        allowFlexibleColorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getAllowFlexibleColor(),
+                getParentForChildren(),
+                isClean());
+        allowFlexibleColor_ = null;
+      }
+      return allowFlexibleColorBuilder_;
+    }
+
+    private com.google.protobuf.StringValue accentColor_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> accentColorBuilder_;
+    /**
+     * <pre>
+     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue accent_color = 6;</code>
+     */
+    public boolean hasAccentColor() {
+      return accentColorBuilder_ != null || accentColor_ != null;
+    }
+    /**
+     * <pre>
+     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue accent_color = 6;</code>
+     */
+    public com.google.protobuf.StringValue getAccentColor() {
+      if (accentColorBuilder_ == null) {
+        return accentColor_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : accentColor_;
+      } else {
+        return accentColorBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue accent_color = 6;</code>
+     */
+    public Builder setAccentColor(com.google.protobuf.StringValue value) {
+      if (accentColorBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        accentColor_ = value;
+        onChanged();
+      } else {
+        accentColorBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue accent_color = 6;</code>
+     */
+    public Builder setAccentColor(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (accentColorBuilder_ == null) {
+        accentColor_ = builderForValue.build();
+        onChanged();
+      } else {
+        accentColorBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue accent_color = 6;</code>
+     */
+    public Builder mergeAccentColor(com.google.protobuf.StringValue value) {
+      if (accentColorBuilder_ == null) {
+        if (accentColor_ != null) {
+          accentColor_ =
+            com.google.protobuf.StringValue.newBuilder(accentColor_).mergeFrom(value).buildPartial();
+        } else {
+          accentColor_ = value;
+        }
+        onChanged();
+      } else {
+        accentColorBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue accent_color = 6;</code>
+     */
+    public Builder clearAccentColor() {
+      if (accentColorBuilder_ == null) {
+        accentColor_ = null;
+        onChanged();
+      } else {
+        accentColor_ = null;
+        accentColorBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue accent_color = 6;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getAccentColorBuilder() {
+      
+      onChanged();
+      return getAccentColorFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue accent_color = 6;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getAccentColorOrBuilder() {
+      if (accentColorBuilder_ != null) {
+        return accentColorBuilder_.getMessageOrBuilder();
+      } else {
+        return accentColor_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : accentColor_;
+      }
+    }
+    /**
+     * <pre>
+     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue accent_color = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getAccentColorFieldBuilder() {
+      if (accentColorBuilder_ == null) {
+        accentColorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getAccentColor(),
+                getParentForChildren(),
+                isClean());
+        accentColor_ = null;
+      }
+      return accentColorBuilder_;
+    }
+
+    private com.google.protobuf.StringValue mainColor_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> mainColorBuilder_;
+    /**
+     * <pre>
+     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue main_color = 7;</code>
+     */
+    public boolean hasMainColor() {
+      return mainColorBuilder_ != null || mainColor_ != null;
+    }
+    /**
+     * <pre>
+     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue main_color = 7;</code>
+     */
+    public com.google.protobuf.StringValue getMainColor() {
+      if (mainColorBuilder_ == null) {
+        return mainColor_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : mainColor_;
+      } else {
+        return mainColorBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue main_color = 7;</code>
+     */
+    public Builder setMainColor(com.google.protobuf.StringValue value) {
+      if (mainColorBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        mainColor_ = value;
+        onChanged();
+      } else {
+        mainColorBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue main_color = 7;</code>
+     */
+    public Builder setMainColor(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (mainColorBuilder_ == null) {
+        mainColor_ = builderForValue.build();
+        onChanged();
+      } else {
+        mainColorBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue main_color = 7;</code>
+     */
+    public Builder mergeMainColor(com.google.protobuf.StringValue value) {
+      if (mainColorBuilder_ == null) {
+        if (mainColor_ != null) {
+          mainColor_ =
+            com.google.protobuf.StringValue.newBuilder(mainColor_).mergeFrom(value).buildPartial();
+        } else {
+          mainColor_ = value;
+        }
+        onChanged();
+      } else {
+        mainColorBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue main_color = 7;</code>
+     */
+    public Builder clearMainColor() {
+      if (mainColorBuilder_ == null) {
+        mainColor_ = null;
+        onChanged();
+      } else {
+        mainColor_ = null;
+        mainColorBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue main_color = 7;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getMainColorBuilder() {
+      
+      onChanged();
+      return getMainColorFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue main_color = 7;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getMainColorOrBuilder() {
+      if (mainColorBuilder_ != null) {
+        return mainColorBuilder_.getMessageOrBuilder();
+      } else {
+        return mainColor_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : mainColor_;
+      }
+    }
+    /**
+     * <pre>
+     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * If one of main_color and accent_color is set, the other is required as
+     * well.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue main_color = 7;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getMainColorFieldBuilder() {
+      if (mainColorBuilder_ == null) {
+        mainColorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getMainColor(),
+                getParentForChildren(),
+                isClean());
+        mainColor_ = null;
+      }
+      return mainColorBuilder_;
+    }
+
+    private com.google.protobuf.StringValue callToActionText_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> callToActionTextBuilder_;
+    /**
+     * <pre>
+     * The call-to-action text for the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+     */
+    public boolean hasCallToActionText() {
+      return callToActionTextBuilder_ != null || callToActionText_ != null;
+    }
+    /**
+     * <pre>
+     * The call-to-action text for the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+     */
+    public com.google.protobuf.StringValue getCallToActionText() {
+      if (callToActionTextBuilder_ == null) {
+        return callToActionText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callToActionText_;
+      } else {
+        return callToActionTextBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The call-to-action text for the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+     */
+    public Builder setCallToActionText(com.google.protobuf.StringValue value) {
+      if (callToActionTextBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        callToActionText_ = value;
+        onChanged();
+      } else {
+        callToActionTextBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The call-to-action text for the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+     */
+    public Builder setCallToActionText(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (callToActionTextBuilder_ == null) {
+        callToActionText_ = builderForValue.build();
+        onChanged();
+      } else {
+        callToActionTextBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The call-to-action text for the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+     */
+    public Builder mergeCallToActionText(com.google.protobuf.StringValue value) {
+      if (callToActionTextBuilder_ == null) {
+        if (callToActionText_ != null) {
+          callToActionText_ =
+            com.google.protobuf.StringValue.newBuilder(callToActionText_).mergeFrom(value).buildPartial();
+        } else {
+          callToActionText_ = value;
+        }
+        onChanged();
+      } else {
+        callToActionTextBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The call-to-action text for the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+     */
+    public Builder clearCallToActionText() {
+      if (callToActionTextBuilder_ == null) {
+        callToActionText_ = null;
+        onChanged();
+      } else {
+        callToActionText_ = null;
+        callToActionTextBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The call-to-action text for the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getCallToActionTextBuilder() {
+      
+      onChanged();
+      return getCallToActionTextFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The call-to-action text for the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getCallToActionTextOrBuilder() {
+      if (callToActionTextBuilder_ != null) {
+        return callToActionTextBuilder_.getMessageOrBuilder();
+      } else {
+        return callToActionText_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : callToActionText_;
+      }
+    }
+    /**
+     * <pre>
+     * The call-to-action text for the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue call_to_action_text = 8;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getCallToActionTextFieldBuilder() {
+      if (callToActionTextBuilder_ == null) {
+        callToActionTextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getCallToActionText(),
+                getParentForChildren(),
+                isClean());
+        callToActionText_ = null;
+      }
+      return callToActionTextBuilder_;
+    }
+
+    private com.google.protobuf.StringValue logoImage_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> logoImageBuilder_;
+    /**
+     * <pre>
+     * The MediaFile resource name of the logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue logo_image = 9;</code>
+     */
+    public boolean hasLogoImage() {
+      return logoImageBuilder_ != null || logoImage_ != null;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue logo_image = 9;</code>
+     */
+    public com.google.protobuf.StringValue getLogoImage() {
+      if (logoImageBuilder_ == null) {
+        return logoImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : logoImage_;
+      } else {
+        return logoImageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue logo_image = 9;</code>
+     */
+    public Builder setLogoImage(com.google.protobuf.StringValue value) {
+      if (logoImageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        logoImage_ = value;
+        onChanged();
+      } else {
+        logoImageBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue logo_image = 9;</code>
+     */
+    public Builder setLogoImage(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (logoImageBuilder_ == null) {
+        logoImage_ = builderForValue.build();
+        onChanged();
+      } else {
+        logoImageBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue logo_image = 9;</code>
+     */
+    public Builder mergeLogoImage(com.google.protobuf.StringValue value) {
+      if (logoImageBuilder_ == null) {
+        if (logoImage_ != null) {
+          logoImage_ =
+            com.google.protobuf.StringValue.newBuilder(logoImage_).mergeFrom(value).buildPartial();
+        } else {
+          logoImage_ = value;
+        }
+        onChanged();
+      } else {
+        logoImageBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue logo_image = 9;</code>
+     */
+    public Builder clearLogoImage() {
+      if (logoImageBuilder_ == null) {
+        logoImage_ = null;
+        onChanged();
+      } else {
+        logoImage_ = null;
+        logoImageBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue logo_image = 9;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getLogoImageBuilder() {
+      
+      onChanged();
+      return getLogoImageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue logo_image = 9;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getLogoImageOrBuilder() {
+      if (logoImageBuilder_ != null) {
+        return logoImageBuilder_.getMessageOrBuilder();
+      } else {
+        return logoImage_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : logoImage_;
+      }
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue logo_image = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getLogoImageFieldBuilder() {
+      if (logoImageBuilder_ == null) {
+        logoImageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getLogoImage(),
+                getParentForChildren(),
+                isClean());
+        logoImage_ = null;
+      }
+      return logoImageBuilder_;
+    }
+
+    private com.google.protobuf.StringValue squareLogoImage_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> squareLogoImageBuilder_;
+    /**
+     * <pre>
+     * The MediaFile resource name of the square logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+     */
+    public boolean hasSquareLogoImage() {
+      return squareLogoImageBuilder_ != null || squareLogoImage_ != null;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+     */
+    public com.google.protobuf.StringValue getSquareLogoImage() {
+      if (squareLogoImageBuilder_ == null) {
+        return squareLogoImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : squareLogoImage_;
+      } else {
+        return squareLogoImageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+     */
+    public Builder setSquareLogoImage(com.google.protobuf.StringValue value) {
+      if (squareLogoImageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        squareLogoImage_ = value;
+        onChanged();
+      } else {
+        squareLogoImageBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+     */
+    public Builder setSquareLogoImage(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (squareLogoImageBuilder_ == null) {
+        squareLogoImage_ = builderForValue.build();
+        onChanged();
+      } else {
+        squareLogoImageBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+     */
+    public Builder mergeSquareLogoImage(com.google.protobuf.StringValue value) {
+      if (squareLogoImageBuilder_ == null) {
+        if (squareLogoImage_ != null) {
+          squareLogoImage_ =
+            com.google.protobuf.StringValue.newBuilder(squareLogoImage_).mergeFrom(value).buildPartial();
+        } else {
+          squareLogoImage_ = value;
+        }
+        onChanged();
+      } else {
+        squareLogoImageBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+     */
+    public Builder clearSquareLogoImage() {
+      if (squareLogoImageBuilder_ == null) {
+        squareLogoImage_ = null;
+        onChanged();
+      } else {
+        squareLogoImage_ = null;
+        squareLogoImageBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getSquareLogoImageBuilder() {
+      
+      onChanged();
+      return getSquareLogoImageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getSquareLogoImageOrBuilder() {
+      if (squareLogoImageBuilder_ != null) {
+        return squareLogoImageBuilder_.getMessageOrBuilder();
+      } else {
+        return squareLogoImage_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : squareLogoImage_;
+      }
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square logo image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_logo_image = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getSquareLogoImageFieldBuilder() {
+      if (squareLogoImageBuilder_ == null) {
+        squareLogoImageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getSquareLogoImage(),
+                getParentForChildren(),
+                isClean());
+        squareLogoImage_ = null;
+      }
+      return squareLogoImageBuilder_;
+    }
+
+    private com.google.protobuf.StringValue marketingImage_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> marketingImageBuilder_;
+    /**
+     * <pre>
+     * The MediaFile resource name of the marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+     */
+    public boolean hasMarketingImage() {
+      return marketingImageBuilder_ != null || marketingImage_ != null;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+     */
+    public com.google.protobuf.StringValue getMarketingImage() {
+      if (marketingImageBuilder_ == null) {
+        return marketingImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : marketingImage_;
+      } else {
+        return marketingImageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+     */
+    public Builder setMarketingImage(com.google.protobuf.StringValue value) {
+      if (marketingImageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        marketingImage_ = value;
+        onChanged();
+      } else {
+        marketingImageBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+     */
+    public Builder setMarketingImage(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (marketingImageBuilder_ == null) {
+        marketingImage_ = builderForValue.build();
+        onChanged();
+      } else {
+        marketingImageBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+     */
+    public Builder mergeMarketingImage(com.google.protobuf.StringValue value) {
+      if (marketingImageBuilder_ == null) {
+        if (marketingImage_ != null) {
+          marketingImage_ =
+            com.google.protobuf.StringValue.newBuilder(marketingImage_).mergeFrom(value).buildPartial();
+        } else {
+          marketingImage_ = value;
+        }
+        onChanged();
+      } else {
+        marketingImageBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+     */
+    public Builder clearMarketingImage() {
+      if (marketingImageBuilder_ == null) {
+        marketingImage_ = null;
+        onChanged();
+      } else {
+        marketingImage_ = null;
+        marketingImageBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getMarketingImageBuilder() {
+      
+      onChanged();
+      return getMarketingImageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getMarketingImageOrBuilder() {
+      if (marketingImageBuilder_ != null) {
+        return marketingImageBuilder_.getMessageOrBuilder();
+      } else {
+        return marketingImage_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : marketingImage_;
+      }
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue marketing_image = 11;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getMarketingImageFieldBuilder() {
+      if (marketingImageBuilder_ == null) {
+        marketingImageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getMarketingImage(),
+                getParentForChildren(),
+                isClean());
+        marketingImage_ = null;
+      }
+      return marketingImageBuilder_;
+    }
+
+    private com.google.protobuf.StringValue squareMarketingImage_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> squareMarketingImageBuilder_;
+    /**
+     * <pre>
+     * The MediaFile resource name of the square marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+     */
+    public boolean hasSquareMarketingImage() {
+      return squareMarketingImageBuilder_ != null || squareMarketingImage_ != null;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+     */
+    public com.google.protobuf.StringValue getSquareMarketingImage() {
+      if (squareMarketingImageBuilder_ == null) {
+        return squareMarketingImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : squareMarketingImage_;
+      } else {
+        return squareMarketingImageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+     */
+    public Builder setSquareMarketingImage(com.google.protobuf.StringValue value) {
+      if (squareMarketingImageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        squareMarketingImage_ = value;
+        onChanged();
+      } else {
+        squareMarketingImageBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+     */
+    public Builder setSquareMarketingImage(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (squareMarketingImageBuilder_ == null) {
+        squareMarketingImage_ = builderForValue.build();
+        onChanged();
+      } else {
+        squareMarketingImageBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+     */
+    public Builder mergeSquareMarketingImage(com.google.protobuf.StringValue value) {
+      if (squareMarketingImageBuilder_ == null) {
+        if (squareMarketingImage_ != null) {
+          squareMarketingImage_ =
+            com.google.protobuf.StringValue.newBuilder(squareMarketingImage_).mergeFrom(value).buildPartial();
+        } else {
+          squareMarketingImage_ = value;
+        }
+        onChanged();
+      } else {
+        squareMarketingImageBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+     */
+    public Builder clearSquareMarketingImage() {
+      if (squareMarketingImageBuilder_ == null) {
+        squareMarketingImage_ = null;
+        onChanged();
+      } else {
+        squareMarketingImage_ = null;
+        squareMarketingImageBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getSquareMarketingImageBuilder() {
+      
+      onChanged();
+      return getSquareMarketingImageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getSquareMarketingImageOrBuilder() {
+      if (squareMarketingImageBuilder_ != null) {
+        return squareMarketingImageBuilder_.getMessageOrBuilder();
+      } else {
+        return squareMarketingImage_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : squareMarketingImage_;
+      }
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the square marketing image used in the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue square_marketing_image = 12;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getSquareMarketingImageFieldBuilder() {
+      if (squareMarketingImageBuilder_ == null) {
+        squareMarketingImageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getSquareMarketingImage(),
+                getParentForChildren(),
+                isClean());
+        squareMarketingImage_ = null;
+      }
+      return squareMarketingImageBuilder_;
+    }
+
+    private int formatSetting_ = 0;
+    /**
+     * <pre>
+     * Specifies which format the ad will be served in. Default is ALL_FORMATS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+     */
+    public int getFormatSettingValue() {
+      return formatSetting_;
+    }
+    /**
+     * <pre>
+     * Specifies which format the ad will be served in. Default is ALL_FORMATS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+     */
+    public Builder setFormatSettingValue(int value) {
+      formatSetting_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies which format the ad will be served in. Default is ALL_FORMATS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+     */
+    public com.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting getFormatSetting() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting result = com.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.valueOf(formatSetting_);
+      return result == null ? com.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Specifies which format the ad will be served in. Default is ALL_FORMATS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+     */
+    public Builder setFormatSetting(com.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      formatSetting_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies which format the ad will be served in. Default is ALL_FORMATS.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 13;</code>
+     */
+    public Builder clearFormatSetting() {
+      
+      formatSetting_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.StringValue pricePrefix_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> pricePrefixBuilder_;
+    /**
+     * <pre>
+     * Prefix before price. E.g. 'as low as'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+     */
+    public boolean hasPricePrefix() {
+      return pricePrefixBuilder_ != null || pricePrefix_ != null;
+    }
+    /**
+     * <pre>
+     * Prefix before price. E.g. 'as low as'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+     */
+    public com.google.protobuf.StringValue getPricePrefix() {
+      if (pricePrefixBuilder_ == null) {
+        return pricePrefix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : pricePrefix_;
+      } else {
+        return pricePrefixBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Prefix before price. E.g. 'as low as'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+     */
+    public Builder setPricePrefix(com.google.protobuf.StringValue value) {
+      if (pricePrefixBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        pricePrefix_ = value;
+        onChanged();
+      } else {
+        pricePrefixBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Prefix before price. E.g. 'as low as'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+     */
+    public Builder setPricePrefix(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (pricePrefixBuilder_ == null) {
+        pricePrefix_ = builderForValue.build();
+        onChanged();
+      } else {
+        pricePrefixBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Prefix before price. E.g. 'as low as'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+     */
+    public Builder mergePricePrefix(com.google.protobuf.StringValue value) {
+      if (pricePrefixBuilder_ == null) {
+        if (pricePrefix_ != null) {
+          pricePrefix_ =
+            com.google.protobuf.StringValue.newBuilder(pricePrefix_).mergeFrom(value).buildPartial();
+        } else {
+          pricePrefix_ = value;
+        }
+        onChanged();
+      } else {
+        pricePrefixBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Prefix before price. E.g. 'as low as'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+     */
+    public Builder clearPricePrefix() {
+      if (pricePrefixBuilder_ == null) {
+        pricePrefix_ = null;
+        onChanged();
+      } else {
+        pricePrefix_ = null;
+        pricePrefixBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Prefix before price. E.g. 'as low as'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getPricePrefixBuilder() {
+      
+      onChanged();
+      return getPricePrefixFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Prefix before price. E.g. 'as low as'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getPricePrefixOrBuilder() {
+      if (pricePrefixBuilder_ != null) {
+        return pricePrefixBuilder_.getMessageOrBuilder();
+      } else {
+        return pricePrefix_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : pricePrefix_;
+      }
+    }
+    /**
+     * <pre>
+     * Prefix before price. E.g. 'as low as'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue price_prefix = 14;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getPricePrefixFieldBuilder() {
+      if (pricePrefixBuilder_ == null) {
+        pricePrefixBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getPricePrefix(),
+                getParentForChildren(),
+                isClean());
+        pricePrefix_ = null;
+      }
+      return pricePrefixBuilder_;
+    }
+
+    private com.google.protobuf.StringValue promoText_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> promoTextBuilder_;
+    /**
+     * <pre>
+     * Promotion text used for dyanmic formats of responsive ads. For example
+     * 'Free two-day shipping'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue promo_text = 15;</code>
+     */
+    public boolean hasPromoText() {
+      return promoTextBuilder_ != null || promoText_ != null;
+    }
+    /**
+     * <pre>
+     * Promotion text used for dyanmic formats of responsive ads. For example
+     * 'Free two-day shipping'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue promo_text = 15;</code>
+     */
+    public com.google.protobuf.StringValue getPromoText() {
+      if (promoTextBuilder_ == null) {
+        return promoText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : promoText_;
+      } else {
+        return promoTextBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Promotion text used for dyanmic formats of responsive ads. For example
+     * 'Free two-day shipping'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue promo_text = 15;</code>
+     */
+    public Builder setPromoText(com.google.protobuf.StringValue value) {
+      if (promoTextBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        promoText_ = value;
+        onChanged();
+      } else {
+        promoTextBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Promotion text used for dyanmic formats of responsive ads. For example
+     * 'Free two-day shipping'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue promo_text = 15;</code>
+     */
+    public Builder setPromoText(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (promoTextBuilder_ == null) {
+        promoText_ = builderForValue.build();
+        onChanged();
+      } else {
+        promoTextBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Promotion text used for dyanmic formats of responsive ads. For example
+     * 'Free two-day shipping'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue promo_text = 15;</code>
+     */
+    public Builder mergePromoText(com.google.protobuf.StringValue value) {
+      if (promoTextBuilder_ == null) {
+        if (promoText_ != null) {
+          promoText_ =
+            com.google.protobuf.StringValue.newBuilder(promoText_).mergeFrom(value).buildPartial();
+        } else {
+          promoText_ = value;
+        }
+        onChanged();
+      } else {
+        promoTextBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Promotion text used for dyanmic formats of responsive ads. For example
+     * 'Free two-day shipping'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue promo_text = 15;</code>
+     */
+    public Builder clearPromoText() {
+      if (promoTextBuilder_ == null) {
+        promoText_ = null;
+        onChanged();
+      } else {
+        promoText_ = null;
+        promoTextBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Promotion text used for dyanmic formats of responsive ads. For example
+     * 'Free two-day shipping'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue promo_text = 15;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getPromoTextBuilder() {
+      
+      onChanged();
+      return getPromoTextFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Promotion text used for dyanmic formats of responsive ads. For example
+     * 'Free two-day shipping'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue promo_text = 15;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getPromoTextOrBuilder() {
+      if (promoTextBuilder_ != null) {
+        return promoTextBuilder_.getMessageOrBuilder();
+      } else {
+        return promoText_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : promoText_;
+      }
+    }
+    /**
+     * <pre>
+     * Promotion text used for dyanmic formats of responsive ads. For example
+     * 'Free two-day shipping'.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue promo_text = 15;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getPromoTextFieldBuilder() {
+      if (promoTextBuilder_ == null) {
+        promoTextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getPromoText(),
+                getParentForChildren(),
+                isClean());
+        promoText_ = null;
+      }
+      return promoTextBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

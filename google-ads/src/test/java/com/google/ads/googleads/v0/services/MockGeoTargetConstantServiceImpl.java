@@ -71,4 +71,20 @@ public class MockGeoTargetConstantServiceImpl extends GeoTargetConstantServiceIm
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
   }
+
+  @Override
+  public void suggestGeoTargetConstants(
+      SuggestGeoTargetConstantsRequest request,
+      StreamObserver<SuggestGeoTargetConstantsResponse> responseObserver) {
+    Object response = responses.remove();
+    if (response instanceof SuggestGeoTargetConstantsResponse) {
+      requests.add(request);
+      responseObserver.onNext((SuggestGeoTargetConstantsResponse) response);
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError((Exception) response);
+    } else {
+      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+    }
+  }
 }

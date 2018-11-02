@@ -14,11 +14,14 @@
 
 package com.google.ads.googleads.lib.utils;
 
+import com.google.ads.googleads.v0.resources.AccountBudgetName;
 import com.google.ads.googleads.v0.resources.AccountBudgetProposalName;
 import com.google.ads.googleads.v0.resources.AdGroupAdName;
+import com.google.ads.googleads.v0.resources.AdGroupAudienceViewName;
 import com.google.ads.googleads.v0.resources.AdGroupBidModifierName;
 import com.google.ads.googleads.v0.resources.AdGroupCriteriaName;
 import com.google.ads.googleads.v0.resources.AdGroupName;
+import com.google.ads.googleads.v0.resources.AgeRangeViewName;
 import com.google.ads.googleads.v0.resources.BiddingStrategyName;
 import com.google.ads.googleads.v0.resources.BillingSetupName;
 import com.google.ads.googleads.v0.resources.CampaignBidModifierName;
@@ -29,13 +32,24 @@ import com.google.ads.googleads.v0.resources.CampaignName;
 import com.google.ads.googleads.v0.resources.CampaignSharedSetName;
 import com.google.ads.googleads.v0.resources.ChangeStatusName;
 import com.google.ads.googleads.v0.resources.ConversionActionName;
+import com.google.ads.googleads.v0.resources.CustomerClientLinkName;
+import com.google.ads.googleads.v0.resources.CustomerManagerLinkName;
 import com.google.ads.googleads.v0.resources.CustomerName;
+import com.google.ads.googleads.v0.resources.DisplayKeywordViewName;
+import com.google.ads.googleads.v0.resources.GenderViewName;
 import com.google.ads.googleads.v0.resources.GeoTargetConstantName;
 import com.google.ads.googleads.v0.resources.GoogleAdsFieldName;
+import com.google.ads.googleads.v0.resources.HotelGroupViewName;
 import com.google.ads.googleads.v0.resources.KeywordViewName;
+import com.google.ads.googleads.v0.resources.ManagedPlacementViewName;
+import com.google.ads.googleads.v0.resources.MediaFileName;
+import com.google.ads.googleads.v0.resources.ParentalStatusViewName;
+import com.google.ads.googleads.v0.resources.ProductGroupViewName;
 import com.google.ads.googleads.v0.resources.RecommendationName;
 import com.google.ads.googleads.v0.resources.SharedCriteriaName;
 import com.google.ads.googleads.v0.resources.SharedSetName;
+import com.google.ads.googleads.v0.resources.TopicConstantName;
+import com.google.ads.googleads.v0.resources.TopicViewName;
 import com.google.ads.googleads.v0.resources.VideoName;
 import com.google.common.base.Joiner;
 import java.util.Arrays;
@@ -68,6 +82,13 @@ public class ResourceNames {
     return IDENTIFIER_JOINER.join(Arrays.stream(components).mapToObj(Long::toString).iterator());
   }
 
+  // -- Begin generated code
+
+  /** Returns the account budget resource name for the specified components. */
+  public static String accountBudget(long customerId, long accountBudgetId) {
+    return AccountBudgetName.format(Long.toString(customerId), Long.toString(accountBudgetId));
+  }
+
   /** Returns the account budget proposal resource name for the specified components. */
   public static String accountBudgetProposal(long customerId, long accountBudgetProposalId) {
     return AccountBudgetProposalName.format(
@@ -85,6 +106,12 @@ public class ResourceNames {
         Long.toString(customerId), concatLongs(adGroupId, criterionId));
   }
 
+  /** Returns the ad group audience view resource name for the specified components. */
+  public static String adGroupAudienceView(long customerId, long adGroupId, long criterionId) {
+    return AdGroupAudienceViewName.format(
+        Long.toString(customerId), concatLongs(adGroupId, criterionId));
+  }
+
   /** Returns the ad group criterion resource name for the specified components. */
   public static String adGroupCriterion(long customerId, long adGroupId, long criterionId) {
     return AdGroupCriteriaName.format(
@@ -94,6 +121,11 @@ public class ResourceNames {
   /** Returns the ad group resource name for the specified components. */
   public static String adGroup(long customerId, long adGroupId) {
     return AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId));
+  }
+
+  /** Returns the age range view resource name for the specified components. */
+  public static String ageRangeView(long customerId, long adGroupId, long criterionId) {
+    return AgeRangeViewName.format(Long.toString(customerId), concatLongs(adGroupId, criterionId));
   }
 
   /** Returns the bidding strategy resource name for the specified components. */
@@ -155,6 +187,35 @@ public class ResourceNames {
     return CustomerName.format(Long.toString(customerId));
   }
 
+  /** Returns the customer client link resource name for the specified components. */
+  public static String customerClientLink(long customerId, long linkedCustomerId, long linkId) {
+    return CustomerClientLinkName.format(
+        Long.toString(customerId), concatLongs(linkedCustomerId, linkId));
+  }
+
+  /** Returns the customer manager link resource name for the specified components. */
+  public static String customerManagerLink(long customerId, long linkedManagerId, long linkId) {
+    return CustomerManagerLinkName.format(
+        Long.toString(customerId), concatLongs(linkedManagerId, linkId));
+  }
+
+  /** Returns the display keyword view resource name for the specified components. */
+  public static String displayKeywordView(long customerId, long adGroupId, long criterionId) {
+    return DisplayKeywordViewName.format(
+        Long.toString(customerId), concatLongs(adGroupId, criterionId));
+  }
+
+  /** Returns the gender view resource name for the specified components. */
+  public static String genderView(long customerId, long adGroupId, long criterionId) {
+    return GenderViewName.format(Long.toString(customerId), concatLongs(adGroupId, criterionId));
+  }
+
+  /** Returns the hotel group view resource name for the specified components. */
+  public static String hotelGroupView(long customerId, long adGroupId, long criterionId) {
+    return HotelGroupViewName.format(
+        Long.toString(customerId), concatLongs(adGroupId, criterionId));
+  }
+
   /** Returns the geo target constant resource name for the specified components. */
   public static String geoTargetConstant(long geoTargetConstantId) {
     return GeoTargetConstantName.format(Long.toString(geoTargetConstantId));
@@ -168,6 +229,29 @@ public class ResourceNames {
   /** Returns the keyword view resource name for the specified components. */
   public static String keywordView(long customerId, long adGroupId, long criterionId) {
     return KeywordViewName.format(Long.toString(customerId), concatLongs(adGroupId, criterionId));
+  }
+
+  /** Returns the managed placement view resource name for the specified components. */
+  public static String managedPlacementView(long customerId, long adGroupId, long criterionId) {
+    return ManagedPlacementViewName.format(
+        Long.toString(customerId), concatLongs(adGroupId, criterionId));
+  }
+
+  /** Returns the media file resource name for the specified components. */
+  public static String mediaFile(long customerId, long mediaFileId) {
+    return MediaFileName.format(Long.toString(customerId), Long.toString(mediaFileId));
+  }
+
+  /** Returns the parental status view resource name for the specified components. */
+  public static String parentalStatusView(long customerId, long adGroupId, long criterionId) {
+    return ParentalStatusViewName.format(
+        Long.toString(customerId), concatLongs(adGroupId, criterionId));
+  }
+
+  /** Returns the product group view resource name for the specified components. */
+  public static String productGroupView(long customerId, long adGroupId, long criterionId) {
+    return ProductGroupViewName.format(
+        Long.toString(customerId), concatLongs(adGroupId, criterionId));
   }
 
   /** Returns the recommendation resource name for the specified components. */
@@ -185,8 +269,28 @@ public class ResourceNames {
     return SharedSetName.format(Long.toString(customerId), Long.toString(sharedSetId));
   }
 
+  /** Returns the topic view resource name for the specified components. */
+  public static String topicView(long customerId, long adGroupId, long criterionId) {
+    return TopicViewName.format(Long.toString(customerId), concatLongs(adGroupId, criterionId));
+  }
+
+  /** Returns the topic constant resource name for the specified components. */
+  public static String topicConstant(long topicId) {
+    return TopicConstantName.format(Long.toString(topicId));
+  }
+
   /** Returns the video resource name for the specified components. */
   public static String video(long customerId, long videoId) {
     return VideoName.format(Long.toString(customerId), Long.toString(videoId));
+  }
+
+  // -- End generated code
+
+  /** Returns the payments account resource name for the specified components. */
+  public static String paymentsAccount(
+      long customerId, String paymentsAccountId, String paymentsProfileId) {
+    // Support for resource will be added after v0.5, providing a default operation here instead.
+    return String.format(
+        "customers/%s/paymentsAccounts/%s_%s", customerId, paymentsProfileId, paymentsAccountId);
   }
 }

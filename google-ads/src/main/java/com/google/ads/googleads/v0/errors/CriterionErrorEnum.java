@@ -216,12 +216,12 @@ private static final long serialVersionUID = 0L;
     PLACEMENT_IS_NOT_AVAILABLE_FOR_TARGETING_OR_EXCLUSION(15),
     /**
      * <pre>
-     * Invalid vertical path.
+     * Invalid topic path.
      * </pre>
      *
-     * <code>INVALID_VERTICAL_PATH = 16;</code>
+     * <code>INVALID_TOPIC_PATH = 16;</code>
      */
-    INVALID_VERTICAL_PATH(16),
+    INVALID_TOPIC_PATH(16),
     /**
      * <pre>
      * The YouTube Channel Id is invalid.
@@ -450,7 +450,7 @@ private static final long serialVersionUID = 0L;
     INVALID_PROXIMITY_RADIUS_UNITS(43),
     /**
      * <pre>
-     * Street address is too short.
+     * Street address in the address is not valid.
      * </pre>
      *
      * <code>INVALID_STREETADDRESS_LENGTH = 44;</code>
@@ -458,7 +458,7 @@ private static final long serialVersionUID = 0L;
     INVALID_STREETADDRESS_LENGTH(44),
     /**
      * <pre>
-     * City name in the address is too short.
+     * City name in the address is not valid.
      * </pre>
      *
      * <code>INVALID_CITYNAME_LENGTH = 45;</code>
@@ -466,7 +466,7 @@ private static final long serialVersionUID = 0L;
     INVALID_CITYNAME_LENGTH(45),
     /**
      * <pre>
-     * Region code in the address is too short.
+     * Region code in the address is not valid.
      * </pre>
      *
      * <code>INVALID_REGIONCODE_LENGTH = 46;</code>
@@ -931,12 +931,12 @@ private static final long serialVersionUID = 0L;
     public static final int PLACEMENT_IS_NOT_AVAILABLE_FOR_TARGETING_OR_EXCLUSION_VALUE = 15;
     /**
      * <pre>
-     * Invalid vertical path.
+     * Invalid topic path.
      * </pre>
      *
-     * <code>INVALID_VERTICAL_PATH = 16;</code>
+     * <code>INVALID_TOPIC_PATH = 16;</code>
      */
-    public static final int INVALID_VERTICAL_PATH_VALUE = 16;
+    public static final int INVALID_TOPIC_PATH_VALUE = 16;
     /**
      * <pre>
      * The YouTube Channel Id is invalid.
@@ -1165,7 +1165,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_PROXIMITY_RADIUS_UNITS_VALUE = 43;
     /**
      * <pre>
-     * Street address is too short.
+     * Street address in the address is not valid.
      * </pre>
      *
      * <code>INVALID_STREETADDRESS_LENGTH = 44;</code>
@@ -1173,7 +1173,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_STREETADDRESS_LENGTH_VALUE = 44;
     /**
      * <pre>
-     * City name in the address is too short.
+     * City name in the address is not valid.
      * </pre>
      *
      * <code>INVALID_CITYNAME_LENGTH = 45;</code>
@@ -1181,7 +1181,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_CITYNAME_LENGTH_VALUE = 45;
     /**
      * <pre>
-     * Region code in the address is too short.
+     * Region code in the address is not valid.
      * </pre>
      *
      * <code>INVALID_REGIONCODE_LENGTH = 46;</code>
@@ -1549,7 +1549,7 @@ private static final long serialVersionUID = 0L;
         case 13: return PLACEMENT_URL_HAS_ILLEGAL_CHAR;
         case 14: return PLACEMENT_URL_HAS_MULTIPLE_SITES_IN_LINE;
         case 15: return PLACEMENT_IS_NOT_AVAILABLE_FOR_TARGETING_OR_EXCLUSION;
-        case 16: return INVALID_VERTICAL_PATH;
+        case 16: return INVALID_TOPIC_PATH;
         case 17: return INVALID_YOUTUBE_CHANNEL_ID;
         case 18: return INVALID_YOUTUBE_VIDEO_ID;
         case 19: return YOUTUBE_VERTICAL_CHANNEL_DEPRECATED;

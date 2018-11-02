@@ -189,7 +189,7 @@ public interface CustomerOrBuilder extends
    * <pre>
    * Whether the Customer has a Partners program badge. If the Customer is not
    * associated with the Partners program, this will be false. For more
-   * information, see https://support.google.com/partners/answer/3125774
+   * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -199,7 +199,7 @@ public interface CustomerOrBuilder extends
    * <pre>
    * Whether the Customer has a Partners program badge. If the Customer is not
    * associated with the Partners program, this will be false. For more
-   * information, see https://support.google.com/partners/answer/3125774
+   * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
@@ -209,10 +209,35 @@ public interface CustomerOrBuilder extends
    * <pre>
    * Whether the Customer has a Partners program badge. If the Customer is not
    * associated with the Partners program, this will be false. For more
-   * information, see https://support.google.com/partners/answer/3125774
+   * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
    */
   com.google.protobuf.BoolValueOrBuilder getHasPartnersBadgeOrBuilder();
+
+  /**
+   * <pre>
+   * Call reporting setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+   */
+  boolean hasCallReportingSetting();
+  /**
+   * <pre>
+   * Call reporting setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+   */
+  com.google.ads.googleads.v0.resources.CallReportingSetting getCallReportingSetting();
+  /**
+   * <pre>
+   * Call reporting setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
+   */
+  com.google.ads.googleads.v0.resources.CallReportingSettingOrBuilder getCallReportingSettingOrBuilder();
 }

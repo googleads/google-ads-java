@@ -44,6 +44,23 @@
  * </code>
  * </pre>
  *
+ * ========================== AccountBudgetServiceClient ==========================
+ *
+ * <p>Service Description: A service for fetching an account-level budget.
+ *
+ * <p>Account-level budgets are mutated by creating proposal resources.
+ *
+ * <p>Sample for AccountBudgetServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (AccountBudgetServiceClient accountBudgetServiceClient = AccountBudgetServiceClient.create()) {
+ *   String formattedResourceName = AccountBudgetServiceClient.formatAccountBudgetName("[CUSTOMER]", "[ACCOUNT_BUDGET]");
+ *   AccountBudget response = accountBudgetServiceClient.getAccountBudget(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ====================== AdGroupAdServiceClient ======================
  *
  * <p>Service Description: Service to manage ads in an ad group.
@@ -55,6 +72,22 @@
  * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
  *   String formattedResourceName = AdGroupAdServiceClient.formatAdGroupAdName("[CUSTOMER]", "[AD_GROUP_AD]");
  *   AdGroupAd response = adGroupAdServiceClient.getAdGroupAd(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ================================ AdGroupAudienceViewServiceClient
+ * ================================
+ *
+ * <p>Service Description: Service to manage ad group audience views.
+ *
+ * <p>Sample for AdGroupAudienceViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (AdGroupAudienceViewServiceClient adGroupAudienceViewServiceClient = AdGroupAudienceViewServiceClient.create()) {
+ *   String formattedResourceName = AdGroupAudienceViewServiceClient.formatAdGroupAudienceViewName("[CUSTOMER]", "[AD_GROUP_AUDIENCE_VIEW]");
+ *   AdGroupAudienceView response = adGroupAudienceViewServiceClient.getAdGroupAudienceView(formattedResourceName);
  * }
  * </code>
  * </pre>
@@ -104,6 +137,21 @@
  * </code>
  * </pre>
  *
+ * ========================= AgeRangeViewServiceClient =========================
+ *
+ * <p>Service Description: Service to manage age range views.
+ *
+ * <p>Sample for AgeRangeViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (AgeRangeViewServiceClient ageRangeViewServiceClient = AgeRangeViewServiceClient.create()) {
+ *   String formattedResourceName = AgeRangeViewServiceClient.formatAgeRangeViewName("[CUSTOMER]", "[AGE_RANGE_VIEW]");
+ *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ============================ BiddingStrategyServiceClient ============================
  *
  * <p>Service Description: Service to manage bidding strategies.
@@ -128,8 +176,8 @@
  * billing setups associated with a particular Payments account will appear on a single invoice
  * generated monthly.
  *
- * <p>Mutates: The REMOVE operation cancels a pending billing setup. Functionality for creating new
- * billing setups will be supported in a future version.
+ * <p>Mutates: The REMOVE operation cancels a pending billing setup. The CREATE operation creates a
+ * new billing setup.
  *
  * <p>Sample for BillingSetupServiceClient:
  *
@@ -263,6 +311,37 @@
  * </code>
  * </pre>
  *
+ * =============================== CustomerClientLinkServiceClient ===============================
+ *
+ * <p>Service Description: Service to manage customer client links.
+ *
+ * <p>Sample for CustomerClientLinkServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
+ *   String formattedResourceName = CustomerClientLinkServiceClient.formatCustomerClientLinkName("[CUSTOMER]", "[CUSTOMER_CLIENT_LINK]");
+ *   CustomerClientLink response = customerClientLinkServiceClient.getCustomerClientLink(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ================================ CustomerManagerLinkServiceClient
+ * ================================
+ *
+ * <p>Service Description: Service to manage customer-manager links.
+ *
+ * <p>Sample for CustomerManagerLinkServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (CustomerManagerLinkServiceClient customerManagerLinkServiceClient = CustomerManagerLinkServiceClient.create()) {
+ *   String formattedResourceName = CustomerManagerLinkServiceClient.formatCustomerManagerLinkName("[CUSTOMER]", "[CUSTOMER_MANAGER_LINK]");
+ *   CustomerManagerLink response = customerManagerLinkServiceClient.getCustomerManagerLink(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ===================== CustomerServiceClient =====================
  *
  * <p>Service Description: Service to manage customers.
@@ -274,6 +353,36 @@
  * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
  *   String formattedResourceName = CustomerServiceClient.formatCustomerName("[CUSTOMER]");
  *   Customer response = customerServiceClient.getCustomer(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * =============================== DisplayKeywordViewServiceClient ===============================
+ *
+ * <p>Service Description: Service to manage display keyword views.
+ *
+ * <p>Sample for DisplayKeywordViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (DisplayKeywordViewServiceClient displayKeywordViewServiceClient = DisplayKeywordViewServiceClient.create()) {
+ *   String formattedResourceName = DisplayKeywordViewServiceClient.formatDisplayKeywordViewName("[CUSTOMER]", "[DISPLAY_KEYWORD_VIEW]");
+ *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ======================= GenderViewServiceClient =======================
+ *
+ * <p>Service Description: Service to manage gender views.
+ *
+ * <p>Sample for GenderViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (GenderViewServiceClient genderViewServiceClient = GenderViewServiceClient.create()) {
+ *   String formattedResourceName = GenderViewServiceClient.formatGenderViewName("[CUSTOMER]", "[GENDER_VIEW]");
+ *   GenderView response = genderViewServiceClient.getGenderView(formattedResourceName);
  * }
  * </code>
  * </pre>
@@ -324,6 +433,21 @@
  * </code>
  * </pre>
  *
+ * =========================== HotelGroupViewServiceClient ===========================
+ *
+ * <p>Service Description: Service to manage Hotel Group Views.
+ *
+ * <p>Sample for HotelGroupViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (HotelGroupViewServiceClient hotelGroupViewServiceClient = HotelGroupViewServiceClient.create()) {
+ *   String formattedResourceName = HotelGroupViewServiceClient.formatHotelGroupViewName("[CUSTOMER]", "[HOTEL_GROUP_VIEW]");
+ *   HotelGroupView response = hotelGroupViewServiceClient.getHotelGroupView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ======================== KeywordViewServiceClient ========================
  *
  * <p>Service Description: Service to manage keyword views.
@@ -335,6 +459,67 @@
  * try (KeywordViewServiceClient keywordViewServiceClient = KeywordViewServiceClient.create()) {
  *   String formattedResourceName = KeywordViewServiceClient.formatKeywordViewName("[CUSTOMER]", "[KEYWORD_VIEW]");
  *   KeywordView response = keywordViewServiceClient.getKeywordView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ================================= ManagedPlacementViewServiceClient
+ * =================================
+ *
+ * <p>Service Description: Service to manage Managed Placement views.
+ *
+ * <p>Sample for ManagedPlacementViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (ManagedPlacementViewServiceClient managedPlacementViewServiceClient = ManagedPlacementViewServiceClient.create()) {
+ *   String formattedResourceName = ManagedPlacementViewServiceClient.formatManagedPlacementViewName("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
+ *   ManagedPlacementView response = managedPlacementViewServiceClient.getManagedPlacementView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ====================== MediaFileServiceClient ======================
+ *
+ * <p>Service Description: Service to manage media files.
+ *
+ * <p>Sample for MediaFileServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
+ *   String formattedResourceName = MediaFileServiceClient.formatMediaFileName("[CUSTOMER]", "[MEDIA_FILE]");
+ *   MediaFile response = mediaFileServiceClient.getMediaFile(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * =============================== ParentalStatusViewServiceClient ===============================
+ *
+ * <p>Service Description: Service to manage parental status views.
+ *
+ * <p>Sample for ParentalStatusViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (ParentalStatusViewServiceClient parentalStatusViewServiceClient = ParentalStatusViewServiceClient.create()) {
+ *   String formattedResourceName = ParentalStatusViewServiceClient.formatParentalStatusViewName("[CUSTOMER]", "[PARENTAL_STATUS_VIEW]");
+ *   ParentalStatusView response = parentalStatusViewServiceClient.getParentalStatusView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ============================= ProductGroupViewServiceClient =============================
+ *
+ * <p>Service Description: Service to manage product group views.
+ *
+ * <p>Sample for ProductGroupViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (ProductGroupViewServiceClient productGroupViewServiceClient = ProductGroupViewServiceClient.create()) {
+ *   String formattedResourceName = ProductGroupViewServiceClient.formatProductGroupViewName("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
+ *   ProductGroupView response = productGroupViewServiceClient.getProductGroupView(formattedResourceName);
  * }
  * </code>
  * </pre>
@@ -380,6 +565,36 @@
  * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
  *   String formattedResourceName = SharedSetServiceClient.formatSharedSetName("[CUSTOMER]", "[SHARED_SET]");
  *   SharedSet response = sharedSetServiceClient.getSharedSet(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ========================== TopicConstantServiceClient ==========================
+ *
+ * <p>Service Description: Service to fetch topic constants.
+ *
+ * <p>Sample for TopicConstantServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (TopicConstantServiceClient topicConstantServiceClient = TopicConstantServiceClient.create()) {
+ *   String formattedResourceName = TopicConstantServiceClient.formatTopicConstantName("[TOPIC_CONSTANT]");
+ *   TopicConstant response = topicConstantServiceClient.getTopicConstant(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ====================== TopicViewServiceClient ======================
+ *
+ * <p>Service Description: Service to manage topic views.
+ *
+ * <p>Sample for TopicViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (TopicViewServiceClient topicViewServiceClient = TopicViewServiceClient.create()) {
+ *   String formattedResourceName = TopicViewServiceClient.formatTopicViewName("[CUSTOMER]", "[TOPIC_VIEW]");
+ *   TopicView response = topicViewServiceClient.getTopicView(formattedResourceName);
  * }
  * </code>
  * </pre>

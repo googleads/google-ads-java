@@ -9,7 +9,7 @@ package com.google.ads.googleads.v0.resources;
  * All fields prefixed with 'proposed' may not necessarily be applied directly.
  * For example, proposed spending limits may be adjusted before their
  * application.  This is true if the 'proposed' field has an 'approved'
- * counterpart, to be introduced in a future version.
+ * counterpart, e.g. spending limits.
  * Please note that the proposal type (proposal_type) changes which fields are
  * required and which must remain empty.
  * </pre>
@@ -237,6 +237,59 @@ private static final long serialVersionUID = 0L;
             proposedEndTimeCase_ = 19;
             break;
           }
+          case 162: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (approvedStartDateTime_ != null) {
+              subBuilder = approvedStartDateTime_.toBuilder();
+            }
+            approvedStartDateTime_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(approvedStartDateTime_);
+              approvedStartDateTime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 170: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (approvedEndTimeCase_ == 21) {
+              subBuilder = ((com.google.protobuf.StringValue) approvedEndTime_).toBuilder();
+            }
+            approvedEndTime_ =
+                input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.protobuf.StringValue) approvedEndTime_);
+              approvedEndTime_ = subBuilder.buildPartial();
+            }
+            approvedEndTimeCase_ = 21;
+            break;
+          }
+          case 176: {
+            int rawValue = input.readEnum();
+            approvedEndTimeCase_ = 22;
+            approvedEndTime_ = rawValue;
+            break;
+          }
+          case 186: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (approvedSpendingLimitCase_ == 23) {
+              subBuilder = ((com.google.protobuf.Int64Value) approvedSpendingLimit_).toBuilder();
+            }
+            approvedSpendingLimit_ =
+                input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.protobuf.Int64Value) approvedSpendingLimit_);
+              approvedSpendingLimit_ = subBuilder.buildPartial();
+            }
+            approvedSpendingLimitCase_ = 23;
+            break;
+          }
+          case 192: {
+            int rawValue = input.readEnum();
+            approvedSpendingLimitCase_ = 24;
+            approvedSpendingLimit_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -345,6 +398,44 @@ private static final long serialVersionUID = 0L;
         proposedEndTimeCase_);
   }
 
+  private int approvedEndTimeCase_ = 0;
+  private java.lang.Object approvedEndTime_;
+  public enum ApprovedEndTimeCase
+      implements com.google.protobuf.Internal.EnumLite {
+    APPROVED_END_DATE_TIME(21),
+    APPROVED_END_TIME_TYPE(22),
+    APPROVEDENDTIME_NOT_SET(0);
+    private final int value;
+    private ApprovedEndTimeCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ApprovedEndTimeCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ApprovedEndTimeCase forNumber(int value) {
+      switch (value) {
+        case 21: return APPROVED_END_DATE_TIME;
+        case 22: return APPROVED_END_TIME_TYPE;
+        case 0: return APPROVEDENDTIME_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public ApprovedEndTimeCase
+  getApprovedEndTimeCase() {
+    return ApprovedEndTimeCase.forNumber(
+        approvedEndTimeCase_);
+  }
+
   private int proposedSpendingLimitCase_ = 0;
   private java.lang.Object proposedSpendingLimit_;
   public enum ProposedSpendingLimitCase
@@ -381,6 +472,44 @@ private static final long serialVersionUID = 0L;
   getProposedSpendingLimitCase() {
     return ProposedSpendingLimitCase.forNumber(
         proposedSpendingLimitCase_);
+  }
+
+  private int approvedSpendingLimitCase_ = 0;
+  private java.lang.Object approvedSpendingLimit_;
+  public enum ApprovedSpendingLimitCase
+      implements com.google.protobuf.Internal.EnumLite {
+    APPROVED_SPENDING_LIMIT_MICROS(23),
+    APPROVED_SPENDING_LIMIT_TYPE(24),
+    APPROVEDSPENDINGLIMIT_NOT_SET(0);
+    private final int value;
+    private ApprovedSpendingLimitCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ApprovedSpendingLimitCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ApprovedSpendingLimitCase forNumber(int value) {
+      switch (value) {
+        case 23: return APPROVED_SPENDING_LIMIT_MICROS;
+        case 24: return APPROVED_SPENDING_LIMIT_TYPE;
+        case 0: return APPROVEDSPENDINGLIMIT_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public ApprovedSpendingLimitCase
+  getApprovedSpendingLimitCase() {
+    return ApprovedSpendingLimitCase.forNumber(
+        approvedSpendingLimitCase_);
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
@@ -616,6 +745,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.StringValueOrBuilder getProposedNameOrBuilder() {
     return getProposedName();
+  }
+
+  public static final int APPROVED_START_DATE_TIME_FIELD_NUMBER = 20;
+  private com.google.protobuf.StringValue approvedStartDateTime_;
+  /**
+   * <pre>
+   * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+   */
+  public boolean hasApprovedStartDateTime() {
+    return approvedStartDateTime_ != null;
+  }
+  /**
+   * <pre>
+   * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+   */
+  public com.google.protobuf.StringValue getApprovedStartDateTime() {
+    return approvedStartDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : approvedStartDateTime_;
+  }
+  /**
+   * <pre>
+   * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getApprovedStartDateTimeOrBuilder() {
+    return getApprovedStartDateTime();
   }
 
   public static final int PROPOSED_PURCHASE_ORDER_NUMBER_FIELD_NUMBER = 12;
@@ -866,7 +1028,7 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_END_TIME_TYPE_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * The proposed end date time as a well-defined type, e.g. INDEFINITE.
+   * The proposed end date time as a well-defined type, e.g. FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
@@ -879,7 +1041,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The proposed end date time as a well-defined type, e.g. INDEFINITE.
+   * The proposed end date time as a well-defined type, e.g. FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
@@ -889,6 +1051,75 @@ private static final long serialVersionUID = 0L;
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.valueOf(
           (java.lang.Integer) proposedEndTime_);
+      return result == null ? com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNSPECIFIED;
+  }
+
+  public static final int APPROVED_END_DATE_TIME_FIELD_NUMBER = 21;
+  /**
+   * <pre>
+   * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+   */
+  public boolean hasApprovedEndDateTime() {
+    return approvedEndTimeCase_ == 21;
+  }
+  /**
+   * <pre>
+   * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+   */
+  public com.google.protobuf.StringValue getApprovedEndDateTime() {
+    if (approvedEndTimeCase_ == 21) {
+       return (com.google.protobuf.StringValue) approvedEndTime_;
+    }
+    return com.google.protobuf.StringValue.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getApprovedEndDateTimeOrBuilder() {
+    if (approvedEndTimeCase_ == 21) {
+       return (com.google.protobuf.StringValue) approvedEndTime_;
+    }
+    return com.google.protobuf.StringValue.getDefaultInstance();
+  }
+
+  public static final int APPROVED_END_TIME_TYPE_FIELD_NUMBER = 22;
+  /**
+   * <pre>
+   * The approved end date time as a well-defined type, e.g. FOREVER.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType approved_end_time_type = 22;</code>
+   */
+  public int getApprovedEndTimeTypeValue() {
+    if (approvedEndTimeCase_ == 22) {
+      return (java.lang.Integer) approvedEndTime_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The approved end date time as a well-defined type, e.g. FOREVER.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType approved_end_time_type = 22;</code>
+   */
+  public com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType getApprovedEndTimeType() {
+    if (approvedEndTimeCase_ == 22) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.valueOf(
+          (java.lang.Integer) approvedEndTime_);
       return result == null ? com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
     }
     return com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNSPECIFIED;
@@ -966,6 +1197,78 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType.UNSPECIFIED;
   }
 
+  public static final int APPROVED_SPENDING_LIMIT_MICROS_FIELD_NUMBER = 23;
+  /**
+   * <pre>
+   * The approved spending limit in micros.  One million is equivalent to
+   * one unit.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+   */
+  public boolean hasApprovedSpendingLimitMicros() {
+    return approvedSpendingLimitCase_ == 23;
+  }
+  /**
+   * <pre>
+   * The approved spending limit in micros.  One million is equivalent to
+   * one unit.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+   */
+  public com.google.protobuf.Int64Value getApprovedSpendingLimitMicros() {
+    if (approvedSpendingLimitCase_ == 23) {
+       return (com.google.protobuf.Int64Value) approvedSpendingLimit_;
+    }
+    return com.google.protobuf.Int64Value.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The approved spending limit in micros.  One million is equivalent to
+   * one unit.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getApprovedSpendingLimitMicrosOrBuilder() {
+    if (approvedSpendingLimitCase_ == 23) {
+       return (com.google.protobuf.Int64Value) approvedSpendingLimit_;
+    }
+    return com.google.protobuf.Int64Value.getDefaultInstance();
+  }
+
+  public static final int APPROVED_SPENDING_LIMIT_TYPE_FIELD_NUMBER = 24;
+  /**
+   * <pre>
+   * The approved spending limit as a well-defined type, e.g. INFINITE.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24;</code>
+   */
+  public int getApprovedSpendingLimitTypeValue() {
+    if (approvedSpendingLimitCase_ == 24) {
+      return (java.lang.Integer) approvedSpendingLimit_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The approved spending limit as a well-defined type, e.g. INFINITE.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24;</code>
+   */
+  public com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType getApprovedSpendingLimitType() {
+    if (approvedSpendingLimitCase_ == 24) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType.valueOf(
+          (java.lang.Integer) approvedSpendingLimit_);
+      return result == null ? com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1030,6 +1333,21 @@ private static final long serialVersionUID = 0L;
     }
     if (proposedEndTimeCase_ == 19) {
       output.writeMessage(19, (com.google.protobuf.StringValue) proposedEndTime_);
+    }
+    if (approvedStartDateTime_ != null) {
+      output.writeMessage(20, getApprovedStartDateTime());
+    }
+    if (approvedEndTimeCase_ == 21) {
+      output.writeMessage(21, (com.google.protobuf.StringValue) approvedEndTime_);
+    }
+    if (approvedEndTimeCase_ == 22) {
+      output.writeEnum(22, ((java.lang.Integer) approvedEndTime_));
+    }
+    if (approvedSpendingLimitCase_ == 23) {
+      output.writeMessage(23, (com.google.protobuf.Int64Value) approvedSpendingLimit_);
+    }
+    if (approvedSpendingLimitCase_ == 24) {
+      output.writeEnum(24, ((java.lang.Integer) approvedSpendingLimit_));
     }
     unknownFields.writeTo(output);
   }
@@ -1107,6 +1425,26 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, (com.google.protobuf.StringValue) proposedEndTime_);
     }
+    if (approvedStartDateTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, getApprovedStartDateTime());
+    }
+    if (approvedEndTimeCase_ == 21) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, (com.google.protobuf.StringValue) approvedEndTime_);
+    }
+    if (approvedEndTimeCase_ == 22) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(22, ((java.lang.Integer) approvedEndTime_));
+    }
+    if (approvedSpendingLimitCase_ == 23) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(23, (com.google.protobuf.Int64Value) approvedSpendingLimit_);
+    }
+    if (approvedSpendingLimitCase_ == 24) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(24, ((java.lang.Integer) approvedSpendingLimit_));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1146,6 +1484,11 @@ private static final long serialVersionUID = 0L;
     if (hasProposedName()) {
       result = result && getProposedName()
           .equals(other.getProposedName());
+    }
+    result = result && (hasApprovedStartDateTime() == other.hasApprovedStartDateTime());
+    if (hasApprovedStartDateTime()) {
+      result = result && getApprovedStartDateTime()
+          .equals(other.getApprovedStartDateTime());
     }
     result = result && (hasProposedPurchaseOrderNumber() == other.hasProposedPurchaseOrderNumber());
     if (hasProposedPurchaseOrderNumber()) {
@@ -1197,6 +1540,21 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
+    result = result && getApprovedEndTimeCase().equals(
+        other.getApprovedEndTimeCase());
+    if (!result) return false;
+    switch (approvedEndTimeCase_) {
+      case 21:
+        result = result && getApprovedEndDateTime()
+            .equals(other.getApprovedEndDateTime());
+        break;
+      case 22:
+        result = result && getApprovedEndTimeTypeValue()
+            == other.getApprovedEndTimeTypeValue();
+        break;
+      case 0:
+      default:
+    }
     result = result && getProposedSpendingLimitCase().equals(
         other.getProposedSpendingLimitCase());
     if (!result) return false;
@@ -1208,6 +1566,21 @@ private static final long serialVersionUID = 0L;
       case 11:
         result = result && getProposedSpendingLimitTypeValue()
             == other.getProposedSpendingLimitTypeValue();
+        break;
+      case 0:
+      default:
+    }
+    result = result && getApprovedSpendingLimitCase().equals(
+        other.getApprovedSpendingLimitCase());
+    if (!result) return false;
+    switch (approvedSpendingLimitCase_) {
+      case 23:
+        result = result && getApprovedSpendingLimitMicros()
+            .equals(other.getApprovedSpendingLimitMicros());
+        break;
+      case 24:
+        result = result && getApprovedSpendingLimitTypeValue()
+            == other.getApprovedSpendingLimitTypeValue();
         break;
       case 0:
       default:
@@ -1244,6 +1617,10 @@ private static final long serialVersionUID = 0L;
     if (hasProposedName()) {
       hash = (37 * hash) + PROPOSED_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getProposedName().hashCode();
+    }
+    if (hasApprovedStartDateTime()) {
+      hash = (37 * hash) + APPROVED_START_DATE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getApprovedStartDateTime().hashCode();
     }
     if (hasProposedPurchaseOrderNumber()) {
       hash = (37 * hash) + PROPOSED_PURCHASE_ORDER_NUMBER_FIELD_NUMBER;
@@ -1285,6 +1662,18 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
+    switch (approvedEndTimeCase_) {
+      case 21:
+        hash = (37 * hash) + APPROVED_END_DATE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getApprovedEndDateTime().hashCode();
+        break;
+      case 22:
+        hash = (37 * hash) + APPROVED_END_TIME_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getApprovedEndTimeTypeValue();
+        break;
+      case 0:
+      default:
+    }
     switch (proposedSpendingLimitCase_) {
       case 10:
         hash = (37 * hash) + PROPOSED_SPENDING_LIMIT_MICROS_FIELD_NUMBER;
@@ -1293,6 +1682,18 @@ private static final long serialVersionUID = 0L;
       case 11:
         hash = (37 * hash) + PROPOSED_SPENDING_LIMIT_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + getProposedSpendingLimitTypeValue();
+        break;
+      case 0:
+      default:
+    }
+    switch (approvedSpendingLimitCase_) {
+      case 23:
+        hash = (37 * hash) + APPROVED_SPENDING_LIMIT_MICROS_FIELD_NUMBER;
+        hash = (53 * hash) + getApprovedSpendingLimitMicros().hashCode();
+        break;
+      case 24:
+        hash = (37 * hash) + APPROVED_SPENDING_LIMIT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getApprovedSpendingLimitTypeValue();
         break;
       case 0:
       default:
@@ -1398,7 +1799,7 @@ private static final long serialVersionUID = 0L;
    * All fields prefixed with 'proposed' may not necessarily be applied directly.
    * For example, proposed spending limits may be adjusted before their
    * application.  This is true if the 'proposed' field has an 'approved'
-   * counterpart, to be introduced in a future version.
+   * counterpart, e.g. spending limits.
    * Please note that the proposal type (proposal_type) changes which fields are
    * required and which must remain empty.
    * </pre>
@@ -1470,6 +1871,12 @@ private static final long serialVersionUID = 0L;
         proposedName_ = null;
         proposedNameBuilder_ = null;
       }
+      if (approvedStartDateTimeBuilder_ == null) {
+        approvedStartDateTime_ = null;
+      } else {
+        approvedStartDateTime_ = null;
+        approvedStartDateTimeBuilder_ = null;
+      }
       if (proposedPurchaseOrderNumberBuilder_ == null) {
         proposedPurchaseOrderNumber_ = null;
       } else {
@@ -1498,8 +1905,12 @@ private static final long serialVersionUID = 0L;
       proposedStartTime_ = null;
       proposedEndTimeCase_ = 0;
       proposedEndTime_ = null;
+      approvedEndTimeCase_ = 0;
+      approvedEndTime_ = null;
       proposedSpendingLimitCase_ = 0;
       proposedSpendingLimit_ = null;
+      approvedSpendingLimitCase_ = 0;
+      approvedSpendingLimit_ = null;
       return this;
     }
 
@@ -1549,6 +1960,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.proposedName_ = proposedNameBuilder_.build();
       }
+      if (approvedStartDateTimeBuilder_ == null) {
+        result.approvedStartDateTime_ = approvedStartDateTime_;
+      } else {
+        result.approvedStartDateTime_ = approvedStartDateTimeBuilder_.build();
+      }
       if (proposedPurchaseOrderNumberBuilder_ == null) {
         result.proposedPurchaseOrderNumber_ = proposedPurchaseOrderNumber_;
       } else {
@@ -1589,6 +2005,16 @@ private static final long serialVersionUID = 0L;
       if (proposedEndTimeCase_ == 9) {
         result.proposedEndTime_ = proposedEndTime_;
       }
+      if (approvedEndTimeCase_ == 21) {
+        if (approvedEndDateTimeBuilder_ == null) {
+          result.approvedEndTime_ = approvedEndTime_;
+        } else {
+          result.approvedEndTime_ = approvedEndDateTimeBuilder_.build();
+        }
+      }
+      if (approvedEndTimeCase_ == 22) {
+        result.approvedEndTime_ = approvedEndTime_;
+      }
       if (proposedSpendingLimitCase_ == 10) {
         if (proposedSpendingLimitMicrosBuilder_ == null) {
           result.proposedSpendingLimit_ = proposedSpendingLimit_;
@@ -1599,9 +2025,21 @@ private static final long serialVersionUID = 0L;
       if (proposedSpendingLimitCase_ == 11) {
         result.proposedSpendingLimit_ = proposedSpendingLimit_;
       }
+      if (approvedSpendingLimitCase_ == 23) {
+        if (approvedSpendingLimitMicrosBuilder_ == null) {
+          result.approvedSpendingLimit_ = approvedSpendingLimit_;
+        } else {
+          result.approvedSpendingLimit_ = approvedSpendingLimitMicrosBuilder_.build();
+        }
+      }
+      if (approvedSpendingLimitCase_ == 24) {
+        result.approvedSpendingLimit_ = approvedSpendingLimit_;
+      }
       result.proposedStartTimeCase_ = proposedStartTimeCase_;
       result.proposedEndTimeCase_ = proposedEndTimeCase_;
+      result.approvedEndTimeCase_ = approvedEndTimeCase_;
       result.proposedSpendingLimitCase_ = proposedSpendingLimitCase_;
+      result.approvedSpendingLimitCase_ = approvedSpendingLimitCase_;
       onBuilt();
       return result;
     }
@@ -1672,6 +2110,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasProposedName()) {
         mergeProposedName(other.getProposedName());
       }
+      if (other.hasApprovedStartDateTime()) {
+        mergeApprovedStartDateTime(other.getApprovedStartDateTime());
+      }
       if (other.hasProposedPurchaseOrderNumber()) {
         mergeProposedPurchaseOrderNumber(other.getProposedPurchaseOrderNumber());
       }
@@ -1710,6 +2151,19 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
+      switch (other.getApprovedEndTimeCase()) {
+        case APPROVED_END_DATE_TIME: {
+          mergeApprovedEndDateTime(other.getApprovedEndDateTime());
+          break;
+        }
+        case APPROVED_END_TIME_TYPE: {
+          setApprovedEndTimeTypeValue(other.getApprovedEndTimeTypeValue());
+          break;
+        }
+        case APPROVEDENDTIME_NOT_SET: {
+          break;
+        }
+      }
       switch (other.getProposedSpendingLimitCase()) {
         case PROPOSED_SPENDING_LIMIT_MICROS: {
           mergeProposedSpendingLimitMicros(other.getProposedSpendingLimitMicros());
@@ -1720,6 +2174,19 @@ private static final long serialVersionUID = 0L;
           break;
         }
         case PROPOSEDSPENDINGLIMIT_NOT_SET: {
+          break;
+        }
+      }
+      switch (other.getApprovedSpendingLimitCase()) {
+        case APPROVED_SPENDING_LIMIT_MICROS: {
+          mergeApprovedSpendingLimitMicros(other.getApprovedSpendingLimitMicros());
+          break;
+        }
+        case APPROVED_SPENDING_LIMIT_TYPE: {
+          setApprovedSpendingLimitTypeValue(other.getApprovedSpendingLimitTypeValue());
+          break;
+        }
+        case APPROVEDSPENDINGLIMIT_NOT_SET: {
           break;
         }
       }
@@ -1781,6 +2248,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int approvedEndTimeCase_ = 0;
+    private java.lang.Object approvedEndTime_;
+    public ApprovedEndTimeCase
+        getApprovedEndTimeCase() {
+      return ApprovedEndTimeCase.forNumber(
+          approvedEndTimeCase_);
+    }
+
+    public Builder clearApprovedEndTime() {
+      approvedEndTimeCase_ = 0;
+      approvedEndTime_ = null;
+      onChanged();
+      return this;
+    }
+
     private int proposedSpendingLimitCase_ = 0;
     private java.lang.Object proposedSpendingLimit_;
     public ProposedSpendingLimitCase
@@ -1792,6 +2274,21 @@ private static final long serialVersionUID = 0L;
     public Builder clearProposedSpendingLimit() {
       proposedSpendingLimitCase_ = 0;
       proposedSpendingLimit_ = null;
+      onChanged();
+      return this;
+    }
+
+    private int approvedSpendingLimitCase_ = 0;
+    private java.lang.Object approvedSpendingLimit_;
+    public ApprovedSpendingLimitCase
+        getApprovedSpendingLimitCase() {
+      return ApprovedSpendingLimitCase.forNumber(
+          approvedSpendingLimitCase_);
+    }
+
+    public Builder clearApprovedSpendingLimit() {
+      approvedSpendingLimitCase_ = 0;
+      approvedSpendingLimit_ = null;
       onChanged();
       return this;
     }
@@ -2655,6 +3152,159 @@ private static final long serialVersionUID = 0L;
         proposedName_ = null;
       }
       return proposedNameBuilder_;
+    }
+
+    private com.google.protobuf.StringValue approvedStartDateTime_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> approvedStartDateTimeBuilder_;
+    /**
+     * <pre>
+     * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+     */
+    public boolean hasApprovedStartDateTime() {
+      return approvedStartDateTimeBuilder_ != null || approvedStartDateTime_ != null;
+    }
+    /**
+     * <pre>
+     * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+     */
+    public com.google.protobuf.StringValue getApprovedStartDateTime() {
+      if (approvedStartDateTimeBuilder_ == null) {
+        return approvedStartDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : approvedStartDateTime_;
+      } else {
+        return approvedStartDateTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+     */
+    public Builder setApprovedStartDateTime(com.google.protobuf.StringValue value) {
+      if (approvedStartDateTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        approvedStartDateTime_ = value;
+        onChanged();
+      } else {
+        approvedStartDateTimeBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+     */
+    public Builder setApprovedStartDateTime(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (approvedStartDateTimeBuilder_ == null) {
+        approvedStartDateTime_ = builderForValue.build();
+        onChanged();
+      } else {
+        approvedStartDateTimeBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+     */
+    public Builder mergeApprovedStartDateTime(com.google.protobuf.StringValue value) {
+      if (approvedStartDateTimeBuilder_ == null) {
+        if (approvedStartDateTime_ != null) {
+          approvedStartDateTime_ =
+            com.google.protobuf.StringValue.newBuilder(approvedStartDateTime_).mergeFrom(value).buildPartial();
+        } else {
+          approvedStartDateTime_ = value;
+        }
+        onChanged();
+      } else {
+        approvedStartDateTimeBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+     */
+    public Builder clearApprovedStartDateTime() {
+      if (approvedStartDateTimeBuilder_ == null) {
+        approvedStartDateTime_ = null;
+        onChanged();
+      } else {
+        approvedStartDateTime_ = null;
+        approvedStartDateTimeBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getApprovedStartDateTimeBuilder() {
+      
+      onChanged();
+      return getApprovedStartDateTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getApprovedStartDateTimeOrBuilder() {
+      if (approvedStartDateTimeBuilder_ != null) {
+        return approvedStartDateTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return approvedStartDateTime_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : approvedStartDateTime_;
+      }
+    }
+    /**
+     * <pre>
+     * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getApprovedStartDateTimeFieldBuilder() {
+      if (approvedStartDateTimeBuilder_ == null) {
+        approvedStartDateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getApprovedStartDateTime(),
+                getParentForChildren(),
+                isClean());
+        approvedStartDateTime_ = null;
+      }
+      return approvedStartDateTimeBuilder_;
     }
 
     private com.google.protobuf.StringValue proposedPurchaseOrderNumber_ = null;
@@ -3707,7 +4357,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The proposed end date time as a well-defined type, e.g. INDEFINITE.
+     * The proposed end date time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
@@ -3720,7 +4370,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end date time as a well-defined type, e.g. INDEFINITE.
+     * The proposed end date time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
@@ -3733,7 +4383,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end date time as a well-defined type, e.g. INDEFINITE.
+     * The proposed end date time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
@@ -3749,7 +4399,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end date time as a well-defined type, e.g. INDEFINITE.
+     * The proposed end date time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
@@ -3765,7 +4415,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end date time as a well-defined type, e.g. INDEFINITE.
+     * The proposed end date time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
@@ -3774,6 +4424,252 @@ private static final long serialVersionUID = 0L;
       if (proposedEndTimeCase_ == 9) {
         proposedEndTimeCase_ = 0;
         proposedEndTime_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> approvedEndDateTimeBuilder_;
+    /**
+     * <pre>
+     * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+     */
+    public boolean hasApprovedEndDateTime() {
+      return approvedEndTimeCase_ == 21;
+    }
+    /**
+     * <pre>
+     * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+     */
+    public com.google.protobuf.StringValue getApprovedEndDateTime() {
+      if (approvedEndDateTimeBuilder_ == null) {
+        if (approvedEndTimeCase_ == 21) {
+          return (com.google.protobuf.StringValue) approvedEndTime_;
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
+      } else {
+        if (approvedEndTimeCase_ == 21) {
+          return approvedEndDateTimeBuilder_.getMessage();
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+     */
+    public Builder setApprovedEndDateTime(com.google.protobuf.StringValue value) {
+      if (approvedEndDateTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        approvedEndTime_ = value;
+        onChanged();
+      } else {
+        approvedEndDateTimeBuilder_.setMessage(value);
+      }
+      approvedEndTimeCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+     */
+    public Builder setApprovedEndDateTime(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (approvedEndDateTimeBuilder_ == null) {
+        approvedEndTime_ = builderForValue.build();
+        onChanged();
+      } else {
+        approvedEndDateTimeBuilder_.setMessage(builderForValue.build());
+      }
+      approvedEndTimeCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+     */
+    public Builder mergeApprovedEndDateTime(com.google.protobuf.StringValue value) {
+      if (approvedEndDateTimeBuilder_ == null) {
+        if (approvedEndTimeCase_ == 21 &&
+            approvedEndTime_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          approvedEndTime_ = com.google.protobuf.StringValue.newBuilder((com.google.protobuf.StringValue) approvedEndTime_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          approvedEndTime_ = value;
+        }
+        onChanged();
+      } else {
+        if (approvedEndTimeCase_ == 21) {
+          approvedEndDateTimeBuilder_.mergeFrom(value);
+        }
+        approvedEndDateTimeBuilder_.setMessage(value);
+      }
+      approvedEndTimeCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+     */
+    public Builder clearApprovedEndDateTime() {
+      if (approvedEndDateTimeBuilder_ == null) {
+        if (approvedEndTimeCase_ == 21) {
+          approvedEndTimeCase_ = 0;
+          approvedEndTime_ = null;
+          onChanged();
+        }
+      } else {
+        if (approvedEndTimeCase_ == 21) {
+          approvedEndTimeCase_ = 0;
+          approvedEndTime_ = null;
+        }
+        approvedEndDateTimeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getApprovedEndDateTimeBuilder() {
+      return getApprovedEndDateTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getApprovedEndDateTimeOrBuilder() {
+      if ((approvedEndTimeCase_ == 21) && (approvedEndDateTimeBuilder_ != null)) {
+        return approvedEndDateTimeBuilder_.getMessageOrBuilder();
+      } else {
+        if (approvedEndTimeCase_ == 21) {
+          return (com.google.protobuf.StringValue) approvedEndTime_;
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getApprovedEndDateTimeFieldBuilder() {
+      if (approvedEndDateTimeBuilder_ == null) {
+        if (!(approvedEndTimeCase_ == 21)) {
+          approvedEndTime_ = com.google.protobuf.StringValue.getDefaultInstance();
+        }
+        approvedEndDateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                (com.google.protobuf.StringValue) approvedEndTime_,
+                getParentForChildren(),
+                isClean());
+        approvedEndTime_ = null;
+      }
+      approvedEndTimeCase_ = 21;
+      onChanged();;
+      return approvedEndDateTimeBuilder_;
+    }
+
+    /**
+     * <pre>
+     * The approved end date time as a well-defined type, e.g. FOREVER.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType approved_end_time_type = 22;</code>
+     */
+    public int getApprovedEndTimeTypeValue() {
+      if (approvedEndTimeCase_ == 22) {
+        return ((java.lang.Integer) approvedEndTime_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The approved end date time as a well-defined type, e.g. FOREVER.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType approved_end_time_type = 22;</code>
+     */
+    public Builder setApprovedEndTimeTypeValue(int value) {
+      approvedEndTimeCase_ = 22;
+      approvedEndTime_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved end date time as a well-defined type, e.g. FOREVER.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType approved_end_time_type = 22;</code>
+     */
+    public com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType getApprovedEndTimeType() {
+      if (approvedEndTimeCase_ == 22) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.valueOf(
+            (java.lang.Integer) approvedEndTime_);
+        return result == null ? com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The approved end date time as a well-defined type, e.g. FOREVER.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType approved_end_time_type = 22;</code>
+     */
+    public Builder setApprovedEndTimeType(com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      approvedEndTimeCase_ = 22;
+      approvedEndTime_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved end date time as a well-defined type, e.g. FOREVER.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType approved_end_time_type = 22;</code>
+     */
+    public Builder clearApprovedEndTimeType() {
+      if (approvedEndTimeCase_ == 22) {
+        approvedEndTimeCase_ = 0;
+        approvedEndTime_ = null;
         onChanged();
       }
       return this;
@@ -4029,6 +4925,261 @@ private static final long serialVersionUID = 0L;
       if (proposedSpendingLimitCase_ == 11) {
         proposedSpendingLimitCase_ = 0;
         proposedSpendingLimit_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> approvedSpendingLimitMicrosBuilder_;
+    /**
+     * <pre>
+     * The approved spending limit in micros.  One million is equivalent to
+     * one unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+     */
+    public boolean hasApprovedSpendingLimitMicros() {
+      return approvedSpendingLimitCase_ == 23;
+    }
+    /**
+     * <pre>
+     * The approved spending limit in micros.  One million is equivalent to
+     * one unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+     */
+    public com.google.protobuf.Int64Value getApprovedSpendingLimitMicros() {
+      if (approvedSpendingLimitMicrosBuilder_ == null) {
+        if (approvedSpendingLimitCase_ == 23) {
+          return (com.google.protobuf.Int64Value) approvedSpendingLimit_;
+        }
+        return com.google.protobuf.Int64Value.getDefaultInstance();
+      } else {
+        if (approvedSpendingLimitCase_ == 23) {
+          return approvedSpendingLimitMicrosBuilder_.getMessage();
+        }
+        return com.google.protobuf.Int64Value.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The approved spending limit in micros.  One million is equivalent to
+     * one unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+     */
+    public Builder setApprovedSpendingLimitMicros(com.google.protobuf.Int64Value value) {
+      if (approvedSpendingLimitMicrosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        approvedSpendingLimit_ = value;
+        onChanged();
+      } else {
+        approvedSpendingLimitMicrosBuilder_.setMessage(value);
+      }
+      approvedSpendingLimitCase_ = 23;
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved spending limit in micros.  One million is equivalent to
+     * one unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+     */
+    public Builder setApprovedSpendingLimitMicros(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (approvedSpendingLimitMicrosBuilder_ == null) {
+        approvedSpendingLimit_ = builderForValue.build();
+        onChanged();
+      } else {
+        approvedSpendingLimitMicrosBuilder_.setMessage(builderForValue.build());
+      }
+      approvedSpendingLimitCase_ = 23;
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved spending limit in micros.  One million is equivalent to
+     * one unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+     */
+    public Builder mergeApprovedSpendingLimitMicros(com.google.protobuf.Int64Value value) {
+      if (approvedSpendingLimitMicrosBuilder_ == null) {
+        if (approvedSpendingLimitCase_ == 23 &&
+            approvedSpendingLimit_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+          approvedSpendingLimit_ = com.google.protobuf.Int64Value.newBuilder((com.google.protobuf.Int64Value) approvedSpendingLimit_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          approvedSpendingLimit_ = value;
+        }
+        onChanged();
+      } else {
+        if (approvedSpendingLimitCase_ == 23) {
+          approvedSpendingLimitMicrosBuilder_.mergeFrom(value);
+        }
+        approvedSpendingLimitMicrosBuilder_.setMessage(value);
+      }
+      approvedSpendingLimitCase_ = 23;
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved spending limit in micros.  One million is equivalent to
+     * one unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+     */
+    public Builder clearApprovedSpendingLimitMicros() {
+      if (approvedSpendingLimitMicrosBuilder_ == null) {
+        if (approvedSpendingLimitCase_ == 23) {
+          approvedSpendingLimitCase_ = 0;
+          approvedSpendingLimit_ = null;
+          onChanged();
+        }
+      } else {
+        if (approvedSpendingLimitCase_ == 23) {
+          approvedSpendingLimitCase_ = 0;
+          approvedSpendingLimit_ = null;
+        }
+        approvedSpendingLimitMicrosBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved spending limit in micros.  One million is equivalent to
+     * one unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getApprovedSpendingLimitMicrosBuilder() {
+      return getApprovedSpendingLimitMicrosFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The approved spending limit in micros.  One million is equivalent to
+     * one unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getApprovedSpendingLimitMicrosOrBuilder() {
+      if ((approvedSpendingLimitCase_ == 23) && (approvedSpendingLimitMicrosBuilder_ != null)) {
+        return approvedSpendingLimitMicrosBuilder_.getMessageOrBuilder();
+      } else {
+        if (approvedSpendingLimitCase_ == 23) {
+          return (com.google.protobuf.Int64Value) approvedSpendingLimit_;
+        }
+        return com.google.protobuf.Int64Value.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The approved spending limit in micros.  One million is equivalent to
+     * one unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getApprovedSpendingLimitMicrosFieldBuilder() {
+      if (approvedSpendingLimitMicrosBuilder_ == null) {
+        if (!(approvedSpendingLimitCase_ == 23)) {
+          approvedSpendingLimit_ = com.google.protobuf.Int64Value.getDefaultInstance();
+        }
+        approvedSpendingLimitMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                (com.google.protobuf.Int64Value) approvedSpendingLimit_,
+                getParentForChildren(),
+                isClean());
+        approvedSpendingLimit_ = null;
+      }
+      approvedSpendingLimitCase_ = 23;
+      onChanged();;
+      return approvedSpendingLimitMicrosBuilder_;
+    }
+
+    /**
+     * <pre>
+     * The approved spending limit as a well-defined type, e.g. INFINITE.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24;</code>
+     */
+    public int getApprovedSpendingLimitTypeValue() {
+      if (approvedSpendingLimitCase_ == 24) {
+        return ((java.lang.Integer) approvedSpendingLimit_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The approved spending limit as a well-defined type, e.g. INFINITE.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24;</code>
+     */
+    public Builder setApprovedSpendingLimitTypeValue(int value) {
+      approvedSpendingLimitCase_ = 24;
+      approvedSpendingLimit_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved spending limit as a well-defined type, e.g. INFINITE.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24;</code>
+     */
+    public com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType getApprovedSpendingLimitType() {
+      if (approvedSpendingLimitCase_ == 24) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType.valueOf(
+            (java.lang.Integer) approvedSpendingLimit_);
+        return result == null ? com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The approved spending limit as a well-defined type, e.g. INFINITE.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24;</code>
+     */
+    public Builder setApprovedSpendingLimitType(com.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      approvedSpendingLimitCase_ = 24;
+      approvedSpendingLimit_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The approved spending limit as a well-defined type, e.g. INFINITE.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24;</code>
+     */
+    public Builder clearApprovedSpendingLimitType() {
+      if (approvedSpendingLimitCase_ == 24) {
+        approvedSpendingLimitCase_ = 0;
+        approvedSpendingLimit_ = null;
         onChanged();
       }
       return this;

@@ -17,6 +17,8 @@ package com.google.ads.googleads.v0.services.stub;
 
 import com.google.ads.googleads.v0.resources.GeoTargetConstant;
 import com.google.ads.googleads.v0.services.GetGeoTargetConstantRequest;
+import com.google.ads.googleads.v0.services.SuggestGeoTargetConstantsRequest;
+import com.google.ads.googleads.v0.services.SuggestGeoTargetConstantsResponse;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
@@ -50,11 +52,26 @@ public class GrpcGeoTargetConstantServiceStub extends GeoTargetConstantServiceSt
                   ProtoUtils.marshaller(GetGeoTargetConstantRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(GeoTargetConstant.getDefaultInstance()))
               .build();
+  private static final MethodDescriptor<
+          SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>
+      suggestGeoTargetConstantsMethodDescriptor =
+          MethodDescriptor
+              .<SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v0.services.GeoTargetConstantService/SuggestGeoTargetConstants")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(SuggestGeoTargetConstantsRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(SuggestGeoTargetConstantsResponse.getDefaultInstance()))
+              .build();
 
   private final BackgroundResource backgroundResources;
 
   private final UnaryCallable<GetGeoTargetConstantRequest, GeoTargetConstant>
       getGeoTargetConstantCallable;
+  private final UnaryCallable<SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>
+      suggestGeoTargetConstantsCallable;
 
   private final GrpcStubCallableFactory callableFactory;
 
@@ -103,11 +120,22 @@ public class GrpcGeoTargetConstantServiceStub extends GeoTargetConstantServiceSt
             GrpcCallSettings.<GetGeoTargetConstantRequest, GeoTargetConstant>newBuilder()
                 .setMethodDescriptor(getGeoTargetConstantMethodDescriptor)
                 .build();
+    GrpcCallSettings<SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>
+        suggestGeoTargetConstantsTransportSettings =
+            GrpcCallSettings
+                .<SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>newBuilder()
+                .setMethodDescriptor(suggestGeoTargetConstantsMethodDescriptor)
+                .build();
 
     this.getGeoTargetConstantCallable =
         callableFactory.createUnaryCallable(
             getGeoTargetConstantTransportSettings,
             settings.getGeoTargetConstantSettings(),
+            clientContext);
+    this.suggestGeoTargetConstantsCallable =
+        callableFactory.createUnaryCallable(
+            suggestGeoTargetConstantsTransportSettings,
+            settings.suggestGeoTargetConstantsSettings(),
             clientContext);
 
     backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
@@ -116,6 +144,11 @@ public class GrpcGeoTargetConstantServiceStub extends GeoTargetConstantServiceSt
   public UnaryCallable<GetGeoTargetConstantRequest, GeoTargetConstant>
       getGeoTargetConstantCallable() {
     return getGeoTargetConstantCallable;
+  }
+
+  public UnaryCallable<SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>
+      suggestGeoTargetConstantsCallable() {
+    return suggestGeoTargetConstantsCallable;
   }
 
   @Override

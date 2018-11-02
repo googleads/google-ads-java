@@ -153,6 +153,38 @@ private static final long serialVersionUID = 0L;
      * <code>VIDEO_BUMPER = 8;</code>
      */
     VIDEO_BUMPER(8),
+    /**
+     * <pre>
+     * TrueView (skippable) in-stream video ads.
+     * </pre>
+     *
+     * <code>VIDEO_TRUE_VIEW_IN_STREAM = 9;</code>
+     */
+    VIDEO_TRUE_VIEW_IN_STREAM(9),
+    /**
+     * <pre>
+     * TrueView in-display video ads.
+     * </pre>
+     *
+     * <code>VIDEO_TRUE_VIEW_IN_DISPLAY = 10;</code>
+     */
+    VIDEO_TRUE_VIEW_IN_DISPLAY(10),
+    /**
+     * <pre>
+     * Unskippable in-stream video ads.
+     * </pre>
+     *
+     * <code>VIDEO_NON_SKIPPABLE_IN_STREAM = 11;</code>
+     */
+    VIDEO_NON_SKIPPABLE_IN_STREAM(11),
+    /**
+     * <pre>
+     * Outstream video ads.
+     * </pre>
+     *
+     * <code>VIDEO_OUTSTREAM = 12;</code>
+     */
+    VIDEO_OUTSTREAM(12),
     UNRECOGNIZED(-1),
     ;
 
@@ -221,6 +253,38 @@ private static final long serialVersionUID = 0L;
      * <code>VIDEO_BUMPER = 8;</code>
      */
     public static final int VIDEO_BUMPER_VALUE = 8;
+    /**
+     * <pre>
+     * TrueView (skippable) in-stream video ads.
+     * </pre>
+     *
+     * <code>VIDEO_TRUE_VIEW_IN_STREAM = 9;</code>
+     */
+    public static final int VIDEO_TRUE_VIEW_IN_STREAM_VALUE = 9;
+    /**
+     * <pre>
+     * TrueView in-display video ads.
+     * </pre>
+     *
+     * <code>VIDEO_TRUE_VIEW_IN_DISPLAY = 10;</code>
+     */
+    public static final int VIDEO_TRUE_VIEW_IN_DISPLAY_VALUE = 10;
+    /**
+     * <pre>
+     * Unskippable in-stream video ads.
+     * </pre>
+     *
+     * <code>VIDEO_NON_SKIPPABLE_IN_STREAM = 11;</code>
+     */
+    public static final int VIDEO_NON_SKIPPABLE_IN_STREAM_VALUE = 11;
+    /**
+     * <pre>
+     * Outstream video ads.
+     * </pre>
+     *
+     * <code>VIDEO_OUTSTREAM = 12;</code>
+     */
+    public static final int VIDEO_OUTSTREAM_VALUE = 12;
 
 
     public final int getNumber() {
@@ -249,6 +313,10 @@ private static final long serialVersionUID = 0L;
         case 6: return HOTEL_ADS;
         case 7: return SHOPPING_SMART_ADS;
         case 8: return VIDEO_BUMPER;
+        case 9: return VIDEO_TRUE_VIEW_IN_STREAM;
+        case 10: return VIDEO_TRUE_VIEW_IN_DISPLAY;
+        case 11: return VIDEO_NON_SKIPPABLE_IN_STREAM;
+        case 12: return VIDEO_OUTSTREAM;
         default: return null;
       }
     }

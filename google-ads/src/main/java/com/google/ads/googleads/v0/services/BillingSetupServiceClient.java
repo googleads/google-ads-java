@@ -34,8 +34,8 @@ import javax.annotation.Generated;
  * billing setups associated with a particular Payments account will appear on a single invoice
  * generated monthly.
  *
- * <p>Mutates: The REMOVE operation cancels a pending billing setup. Functionality for creating new
- * billing setups will be supported in a future version.
+ * <p>Mutates: The REMOVE operation cancels a pending billing setup. The CREATE operation creates a
+ * new billing setup.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
@@ -250,7 +250,7 @@ public class BillingSetupServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Cancels a pending billing setup.
+   * Creates a billing setup, or cancels an existing billing setup.
    *
    * <p>Sample code:
    *
@@ -279,7 +279,7 @@ public class BillingSetupServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Cancels a pending billing setup.
+   * Creates a billing setup, or cancels an existing billing setup.
    *
    * <p>Sample code:
    *
@@ -304,7 +304,7 @@ public class BillingSetupServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Cancels a pending billing setup.
+   * Creates a billing setup, or cancels an existing billing setup.
    *
    * <p>Sample code:
    *

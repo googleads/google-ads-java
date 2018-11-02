@@ -53,6 +53,20 @@ private static final long serialVersionUID = 0L;
             operation_ = s;
             break;
           }
+          case 18: {
+            com.google.ads.googleads.v0.resources.BillingSetup.Builder subBuilder = null;
+            if (operationCase_ == 2) {
+              subBuilder = ((com.google.ads.googleads.v0.resources.BillingSetup) operation_).toBuilder();
+            }
+            operation_ =
+                input.readMessage(com.google.ads.googleads.v0.resources.BillingSetup.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.resources.BillingSetup) operation_);
+              operation_ = subBuilder.buildPartial();
+            }
+            operationCase_ = 2;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -89,6 +103,7 @@ private static final long serialVersionUID = 0L;
   private java.lang.Object operation_;
   public enum OperationCase
       implements com.google.protobuf.Internal.EnumLite {
+    CREATE(2),
     REMOVE(1),
     OPERATION_NOT_SET(0);
     private final int value;
@@ -105,6 +120,7 @@ private static final long serialVersionUID = 0L;
 
     public static OperationCase forNumber(int value) {
       switch (value) {
+        case 2: return CREATE;
         case 1: return REMOVE;
         case 0: return OPERATION_NOT_SET;
         default: return null;
@@ -121,13 +137,54 @@ private static final long serialVersionUID = 0L;
         operationCase_);
   }
 
+  public static final int CREATE_FIELD_NUMBER = 2;
+  /**
+   * <pre>
+   * Creates a billing setup. No resource name is expected for the new billing
+   * setup.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+   */
+  public boolean hasCreate() {
+    return operationCase_ == 2;
+  }
+  /**
+   * <pre>
+   * Creates a billing setup. No resource name is expected for the new billing
+   * setup.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+   */
+  public com.google.ads.googleads.v0.resources.BillingSetup getCreate() {
+    if (operationCase_ == 2) {
+       return (com.google.ads.googleads.v0.resources.BillingSetup) operation_;
+    }
+    return com.google.ads.googleads.v0.resources.BillingSetup.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Creates a billing setup. No resource name is expected for the new billing
+   * setup.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+   */
+  public com.google.ads.googleads.v0.resources.BillingSetupOrBuilder getCreateOrBuilder() {
+    if (operationCase_ == 2) {
+       return (com.google.ads.googleads.v0.resources.BillingSetup) operation_;
+    }
+    return com.google.ads.googleads.v0.resources.BillingSetup.getDefaultInstance();
+  }
+
   public static final int REMOVE_FIELD_NUMBER = 1;
   /**
    * <pre>
-   * Resource name of the billing setup to remove.  A setup cannot be
+   * Resource name of the billing setup to remove. A setup cannot be
    * removed unless it is in a pending state or its scheduled start time is in
    * the future. The resource name looks like
-   * “customers/{customer_id}/billingSetups/{billing_id}”.
+   * `customers/{customer_id}/billingSetups/{billing_id}`.
    * </pre>
    *
    * <code>string remove = 1;</code>
@@ -151,10 +208,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Resource name of the billing setup to remove.  A setup cannot be
+   * Resource name of the billing setup to remove. A setup cannot be
    * removed unless it is in a pending state or its scheduled start time is in
    * the future. The resource name looks like
-   * “customers/{customer_id}/billingSetups/{billing_id}”.
+   * `customers/{customer_id}/billingSetups/{billing_id}`.
    * </pre>
    *
    * <code>string remove = 1;</code>
@@ -195,6 +252,9 @@ private static final long serialVersionUID = 0L;
     if (operationCase_ == 1) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, operation_);
     }
+    if (operationCase_ == 2) {
+      output.writeMessage(2, (com.google.ads.googleads.v0.resources.BillingSetup) operation_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -206,6 +266,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (operationCase_ == 1) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, operation_);
+    }
+    if (operationCase_ == 2) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (com.google.ads.googleads.v0.resources.BillingSetup) operation_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -227,6 +291,10 @@ private static final long serialVersionUID = 0L;
         other.getOperationCase());
     if (!result) return false;
     switch (operationCase_) {
+      case 2:
+        result = result && getCreate()
+            .equals(other.getCreate());
+        break;
       case 1:
         result = result && getRemove()
             .equals(other.getRemove());
@@ -246,6 +314,10 @@ private static final long serialVersionUID = 0L;
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     switch (operationCase_) {
+      case 2:
+        hash = (37 * hash) + CREATE_FIELD_NUMBER;
+        hash = (53 * hash) + getCreate().hashCode();
+        break;
       case 1:
         hash = (37 * hash) + REMOVE_FIELD_NUMBER;
         hash = (53 * hash) + getRemove().hashCode();
@@ -419,6 +491,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v0.services.BillingSetupOperation buildPartial() {
       com.google.ads.googleads.v0.services.BillingSetupOperation result = new com.google.ads.googleads.v0.services.BillingSetupOperation(this);
+      if (operationCase_ == 2) {
+        if (createBuilder_ == null) {
+          result.operation_ = operation_;
+        } else {
+          result.operation_ = createBuilder_.build();
+        }
+      }
       if (operationCase_ == 1) {
         result.operation_ = operation_;
       }
@@ -472,6 +551,10 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v0.services.BillingSetupOperation other) {
       if (other == com.google.ads.googleads.v0.services.BillingSetupOperation.getDefaultInstance()) return this;
       switch (other.getOperationCase()) {
+        case CREATE: {
+          mergeCreate(other.getCreate());
+          break;
+        }
         case REMOVE: {
           operationCase_ = 1;
           operation_ = other.operation_;
@@ -526,12 +609,193 @@ private static final long serialVersionUID = 0L;
     }
 
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.BillingSetup, com.google.ads.googleads.v0.resources.BillingSetup.Builder, com.google.ads.googleads.v0.resources.BillingSetupOrBuilder> createBuilder_;
     /**
      * <pre>
-     * Resource name of the billing setup to remove.  A setup cannot be
+     * Creates a billing setup. No resource name is expected for the new billing
+     * setup.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+     */
+    public boolean hasCreate() {
+      return operationCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Creates a billing setup. No resource name is expected for the new billing
+     * setup.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+     */
+    public com.google.ads.googleads.v0.resources.BillingSetup getCreate() {
+      if (createBuilder_ == null) {
+        if (operationCase_ == 2) {
+          return (com.google.ads.googleads.v0.resources.BillingSetup) operation_;
+        }
+        return com.google.ads.googleads.v0.resources.BillingSetup.getDefaultInstance();
+      } else {
+        if (operationCase_ == 2) {
+          return createBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.resources.BillingSetup.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Creates a billing setup. No resource name is expected for the new billing
+     * setup.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+     */
+    public Builder setCreate(com.google.ads.googleads.v0.resources.BillingSetup value) {
+      if (createBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        operation_ = value;
+        onChanged();
+      } else {
+        createBuilder_.setMessage(value);
+      }
+      operationCase_ = 2;
+      return this;
+    }
+    /**
+     * <pre>
+     * Creates a billing setup. No resource name is expected for the new billing
+     * setup.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+     */
+    public Builder setCreate(
+        com.google.ads.googleads.v0.resources.BillingSetup.Builder builderForValue) {
+      if (createBuilder_ == null) {
+        operation_ = builderForValue.build();
+        onChanged();
+      } else {
+        createBuilder_.setMessage(builderForValue.build());
+      }
+      operationCase_ = 2;
+      return this;
+    }
+    /**
+     * <pre>
+     * Creates a billing setup. No resource name is expected for the new billing
+     * setup.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+     */
+    public Builder mergeCreate(com.google.ads.googleads.v0.resources.BillingSetup value) {
+      if (createBuilder_ == null) {
+        if (operationCase_ == 2 &&
+            operation_ != com.google.ads.googleads.v0.resources.BillingSetup.getDefaultInstance()) {
+          operation_ = com.google.ads.googleads.v0.resources.BillingSetup.newBuilder((com.google.ads.googleads.v0.resources.BillingSetup) operation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          operation_ = value;
+        }
+        onChanged();
+      } else {
+        if (operationCase_ == 2) {
+          createBuilder_.mergeFrom(value);
+        }
+        createBuilder_.setMessage(value);
+      }
+      operationCase_ = 2;
+      return this;
+    }
+    /**
+     * <pre>
+     * Creates a billing setup. No resource name is expected for the new billing
+     * setup.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+     */
+    public Builder clearCreate() {
+      if (createBuilder_ == null) {
+        if (operationCase_ == 2) {
+          operationCase_ = 0;
+          operation_ = null;
+          onChanged();
+        }
+      } else {
+        if (operationCase_ == 2) {
+          operationCase_ = 0;
+          operation_ = null;
+        }
+        createBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Creates a billing setup. No resource name is expected for the new billing
+     * setup.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+     */
+    public com.google.ads.googleads.v0.resources.BillingSetup.Builder getCreateBuilder() {
+      return getCreateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Creates a billing setup. No resource name is expected for the new billing
+     * setup.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+     */
+    public com.google.ads.googleads.v0.resources.BillingSetupOrBuilder getCreateOrBuilder() {
+      if ((operationCase_ == 2) && (createBuilder_ != null)) {
+        return createBuilder_.getMessageOrBuilder();
+      } else {
+        if (operationCase_ == 2) {
+          return (com.google.ads.googleads.v0.resources.BillingSetup) operation_;
+        }
+        return com.google.ads.googleads.v0.resources.BillingSetup.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Creates a billing setup. No resource name is expected for the new billing
+     * setup.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.BillingSetup create = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.BillingSetup, com.google.ads.googleads.v0.resources.BillingSetup.Builder, com.google.ads.googleads.v0.resources.BillingSetupOrBuilder> 
+        getCreateFieldBuilder() {
+      if (createBuilder_ == null) {
+        if (!(operationCase_ == 2)) {
+          operation_ = com.google.ads.googleads.v0.resources.BillingSetup.getDefaultInstance();
+        }
+        createBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.BillingSetup, com.google.ads.googleads.v0.resources.BillingSetup.Builder, com.google.ads.googleads.v0.resources.BillingSetupOrBuilder>(
+                (com.google.ads.googleads.v0.resources.BillingSetup) operation_,
+                getParentForChildren(),
+                isClean());
+        operation_ = null;
+      }
+      operationCase_ = 2;
+      onChanged();;
+      return createBuilder_;
+    }
+
+    /**
+     * <pre>
+     * Resource name of the billing setup to remove. A setup cannot be
      * removed unless it is in a pending state or its scheduled start time is in
      * the future. The resource name looks like
-     * “customers/{customer_id}/billingSetups/{billing_id}”.
+     * `customers/{customer_id}/billingSetups/{billing_id}`.
      * </pre>
      *
      * <code>string remove = 1;</code>
@@ -555,10 +819,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the billing setup to remove.  A setup cannot be
+     * Resource name of the billing setup to remove. A setup cannot be
      * removed unless it is in a pending state or its scheduled start time is in
      * the future. The resource name looks like
-     * “customers/{customer_id}/billingSetups/{billing_id}”.
+     * `customers/{customer_id}/billingSetups/{billing_id}`.
      * </pre>
      *
      * <code>string remove = 1;</code>
@@ -583,10 +847,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the billing setup to remove.  A setup cannot be
+     * Resource name of the billing setup to remove. A setup cannot be
      * removed unless it is in a pending state or its scheduled start time is in
      * the future. The resource name looks like
-     * “customers/{customer_id}/billingSetups/{billing_id}”.
+     * `customers/{customer_id}/billingSetups/{billing_id}`.
      * </pre>
      *
      * <code>string remove = 1;</code>
@@ -603,10 +867,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the billing setup to remove.  A setup cannot be
+     * Resource name of the billing setup to remove. A setup cannot be
      * removed unless it is in a pending state or its scheduled start time is in
      * the future. The resource name looks like
-     * “customers/{customer_id}/billingSetups/{billing_id}”.
+     * `customers/{customer_id}/billingSetups/{billing_id}`.
      * </pre>
      *
      * <code>string remove = 1;</code>
@@ -621,10 +885,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the billing setup to remove.  A setup cannot be
+     * Resource name of the billing setup to remove. A setup cannot be
      * removed unless it is in a pending state or its scheduled start time is in
      * the future. The resource name looks like
-     * “customers/{customer_id}/billingSetups/{billing_id}”.
+     * `customers/{customer_id}/billingSetups/{billing_id}`.
      * </pre>
      *
      * <code>string remove = 1;</code>

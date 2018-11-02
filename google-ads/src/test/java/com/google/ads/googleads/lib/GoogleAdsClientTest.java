@@ -47,14 +47,12 @@ import org.mockito.MockitoAnnotations;
 @RunWith(JUnit4.class)
 public class GoogleAdsClientTest {
 
-  @Rule public TemporaryFolder folder = new TemporaryFolder();
-  @Rule public ExpectedException thrown = ExpectedException.none();
-
   private static final String CLIENT_ID = "xyz.apps.googleusercontent.com";
   private static final String CLIENT_SECRET = "abcdefghijklmnop";
   private static final String REFRESH_TOKEN = "QRSTUVWXYZ";
   private static final String DEVELOPER_TOKEN = "developer_token";
-
+  @Rule public TemporaryFolder folder = new TemporaryFolder();
+  @Rule public ExpectedException thrown = ExpectedException.none();
   @Mock private ScheduledExecutorService executor;
   private Properties testProperties;
 
@@ -82,8 +80,18 @@ public class GoogleAdsClientTest {
   }
 
   @Test
+  public void testGetAccountBudgetServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getAccountBudgetServiceClient());
+  }
+
+  @Test
   public void testGetAdGroupAdServiceClient() throws Exception {
     assertNotNullAndClose(createTestGoogleAdsClient().getAdGroupAdServiceClient());
+  }
+
+  @Test
+  public void testGetAdGroupAudienceViewServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getAdGroupAudienceViewServiceClient());
   }
 
   @Test
@@ -99,6 +107,11 @@ public class GoogleAdsClientTest {
   @Test
   public void testGetAdGroupServiceClient() throws Exception {
     assertNotNullAndClose(createTestGoogleAdsClient().getAdGroupServiceClient());
+  }
+
+  @Test
+  public void testGetAgeRangeViewServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getAgeRangeViewServiceClient());
   }
 
   @Test
@@ -152,8 +165,28 @@ public class GoogleAdsClientTest {
   }
 
   @Test
+  public void testGetCustomerClientLinkServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getCustomerClientLinkServiceClient());
+  }
+
+  @Test
+  public void testGetCustomerManagerLinkServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getCustomerManagerLinkServiceClient());
+  }
+
+  @Test
   public void testGetCustomerServiceClient() throws Exception {
     assertNotNullAndClose(createTestGoogleAdsClient().getCustomerServiceClient());
+  }
+
+  @Test
+  public void testGetDisplayKeywordViewServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getDisplayKeywordViewServiceClient());
+  }
+
+  @Test
+  public void testGetGenderViewServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getGenderViewServiceClient());
   }
 
   @Test
@@ -172,8 +205,33 @@ public class GoogleAdsClientTest {
   }
 
   @Test
+  public void testGetHotelGroupViewServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getHotelGroupViewServiceClient());
+  }
+
+  @Test
   public void testGetKeywordViewServiceClient() throws Exception {
     assertNotNullAndClose(createTestGoogleAdsClient().getKeywordViewServiceClient());
+  }
+
+  @Test
+  public void testGetManagedPlacementViewServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getManagedPlacementViewServiceClient());
+  }
+
+  @Test
+  public void testGetMediaFileServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getMediaFileServiceClient());
+  }
+
+  @Test
+  public void testGetParentalStatusViewServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getParentalStatusViewServiceClient());
+  }
+
+  @Test
+  public void testGetProductGroupViewServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getProductGroupViewServiceClient());
   }
 
   @Test
@@ -189,6 +247,16 @@ public class GoogleAdsClientTest {
   @Test
   public void testGetSharedSetServiceClient() throws Exception {
     assertNotNullAndClose(createTestGoogleAdsClient().getSharedSetServiceClient());
+  }
+
+  @Test
+  public void testGetTopicConstantServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getTopicConstantServiceClient());
+  }
+
+  @Test
+  public void testGetTopicViewServiceClient() throws Exception {
+    assertNotNullAndClose(createTestGoogleAdsClient().getTopicViewServiceClient());
   }
 
   @Test

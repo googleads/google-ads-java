@@ -68,6 +68,13 @@ public class GeoTargetConstantServiceSettings
         .getGeoTargetConstantSettings();
   }
 
+  /** Returns the object with the settings used for calls to suggestGeoTargetConstants. */
+  public UnaryCallSettings<SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>
+      suggestGeoTargetConstantsSettings() {
+    return ((GeoTargetConstantServiceStubSettings) getStubSettings())
+        .suggestGeoTargetConstantsSettings();
+  }
+
   public static final GeoTargetConstantServiceSettings create(
       GeoTargetConstantServiceStubSettings stub) throws IOException {
     return new GeoTargetConstantServiceSettings.Builder(stub.toBuilder()).build();
@@ -170,6 +177,13 @@ public class GeoTargetConstantServiceSettings
     public UnaryCallSettings.Builder<GetGeoTargetConstantRequest, GeoTargetConstant>
         getGeoTargetConstantSettings() {
       return getStubSettingsBuilder().getGeoTargetConstantSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to suggestGeoTargetConstants. */
+    public UnaryCallSettings.Builder<
+            SuggestGeoTargetConstantsRequest, SuggestGeoTargetConstantsResponse>
+        suggestGeoTargetConstantsSettings() {
+      return getStubSettingsBuilder().suggestGeoTargetConstantsSettings();
     }
 
     @Override

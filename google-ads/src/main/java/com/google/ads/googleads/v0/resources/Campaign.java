@@ -388,6 +388,19 @@ private static final long serialVersionUID = 0L;
             campaignBiddingStrategyCase_ = 37;
             break;
           }
+          case 306: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (finalUrlSuffix_ != null) {
+              subBuilder = finalUrlSuffix_.toBuilder();
+            }
+            finalUrlSuffix_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(finalUrlSuffix_);
+              finalUrlSuffix_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4373,7 +4386,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Enable local inventory ads.
+     * Enable local inventory ads. This field is ignored for Smart Shopping
+     * campaigns.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -4381,7 +4395,8 @@ private static final long serialVersionUID = 0L;
     boolean hasEnableLocal();
     /**
      * <pre>
-     * Enable local inventory ads.
+     * Enable local inventory ads. This field is ignored for Smart Shopping
+     * campaigns.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -4389,7 +4404,8 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.BoolValue getEnableLocal();
     /**
      * <pre>
-     * Enable local inventory ads.
+     * Enable local inventory ads. This field is ignored for Smart Shopping
+     * campaigns.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -4658,7 +4674,8 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.BoolValue enableLocal_;
     /**
      * <pre>
-     * Enable local inventory ads.
+     * Enable local inventory ads. This field is ignored for Smart Shopping
+     * campaigns.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -4668,7 +4685,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Enable local inventory ads.
+     * Enable local inventory ads. This field is ignored for Smart Shopping
+     * campaigns.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -4678,7 +4696,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Enable local inventory ads.
+     * Enable local inventory ads. This field is ignored for Smart Shopping
+     * campaigns.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -5653,7 +5672,8 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableLocalBuilder_;
       /**
        * <pre>
-       * Enable local inventory ads.
+       * Enable local inventory ads. This field is ignored for Smart Shopping
+       * campaigns.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -5663,7 +5683,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Enable local inventory ads.
+       * Enable local inventory ads. This field is ignored for Smart Shopping
+       * campaigns.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -5677,7 +5698,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Enable local inventory ads.
+       * Enable local inventory ads. This field is ignored for Smart Shopping
+       * campaigns.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -5697,7 +5719,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Enable local inventory ads.
+       * Enable local inventory ads. This field is ignored for Smart Shopping
+       * campaigns.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -5715,7 +5738,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Enable local inventory ads.
+       * Enable local inventory ads. This field is ignored for Smart Shopping
+       * campaigns.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -5737,7 +5761,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Enable local inventory ads.
+       * Enable local inventory ads. This field is ignored for Smart Shopping
+       * campaigns.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -5755,7 +5780,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Enable local inventory ads.
+       * Enable local inventory ads. This field is ignored for Smart Shopping
+       * campaigns.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -5767,7 +5793,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Enable local inventory ads.
+       * Enable local inventory ads. This field is ignored for Smart Shopping
+       * campaigns.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -5782,7 +5809,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Enable local inventory ads.
+       * Enable local inventory ads. This field is ignored for Smart Shopping
+       * campaigns.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_local = 4;</code>
@@ -6405,7 +6433,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The budget of the campaign.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -6416,7 +6443,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The budget of the campaign.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -6427,7 +6453,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The budget of the campaign.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -6572,6 +6597,42 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.StringValueOrBuilder getEndDateOrBuilder() {
     return getEndDate();
+  }
+
+  public static final int FINAL_URL_SUFFIX_FIELD_NUMBER = 38;
+  private com.google.protobuf.StringValue finalUrlSuffix_;
+  /**
+   * <pre>
+   * Suffix used to append query parameters to landing pages that are served
+   * with parallel tracking.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   */
+  public boolean hasFinalUrlSuffix() {
+    return finalUrlSuffix_ != null;
+  }
+  /**
+   * <pre>
+   * Suffix used to append query parameters to landing pages that are served
+   * with parallel tracking.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   */
+  public com.google.protobuf.StringValue getFinalUrlSuffix() {
+    return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
+  }
+  /**
+   * <pre>
+   * Suffix used to append query parameters to landing pages that are served
+   * with parallel tracking.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
+    return getFinalUrlSuffix();
   }
 
   public static final int BIDDING_STRATEGY_FIELD_NUMBER = 23;
@@ -7088,6 +7149,9 @@ private static final long serialVersionUID = 0L;
     if (campaignBiddingStrategyCase_ == 37) {
       output.writeMessage(37, (com.google.ads.googleads.v0.common.ManualCpv) campaignBiddingStrategy_);
     }
+    if (finalUrlSuffix_ != null) {
+      output.writeMessage(38, getFinalUrlSuffix());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -7212,6 +7276,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(37, (com.google.ads.googleads.v0.common.ManualCpv) campaignBiddingStrategy_);
     }
+    if (finalUrlSuffix_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(38, getFinalUrlSuffix());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -7292,6 +7360,11 @@ private static final long serialVersionUID = 0L;
     if (hasEndDate()) {
       result = result && getEndDate()
           .equals(other.getEndDate());
+    }
+    result = result && (hasFinalUrlSuffix() == other.hasFinalUrlSuffix());
+    if (hasFinalUrlSuffix()) {
+      result = result && getFinalUrlSuffix()
+          .equals(other.getFinalUrlSuffix());
     }
     result = result && getCampaignBiddingStrategyCase().equals(
         other.getCampaignBiddingStrategyCase());
@@ -7412,6 +7485,10 @@ private static final long serialVersionUID = 0L;
     if (hasEndDate()) {
       hash = (37 * hash) + END_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getEndDate().hashCode();
+    }
+    if (hasFinalUrlSuffix()) {
+      hash = (37 * hash) + FINAL_URL_SUFFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getFinalUrlSuffix().hashCode();
     }
     switch (campaignBiddingStrategyCase_) {
       case 23:
@@ -7681,6 +7758,12 @@ private static final long serialVersionUID = 0L;
         endDate_ = null;
         endDateBuilder_ = null;
       }
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffix_ = null;
+      } else {
+        finalUrlSuffix_ = null;
+        finalUrlSuffixBuilder_ = null;
+      }
       campaignBiddingStrategyCase_ = 0;
       campaignBiddingStrategy_ = null;
       return this;
@@ -7781,6 +7864,11 @@ private static final long serialVersionUID = 0L;
         result.endDate_ = endDate_;
       } else {
         result.endDate_ = endDateBuilder_.build();
+      }
+      if (finalUrlSuffixBuilder_ == null) {
+        result.finalUrlSuffix_ = finalUrlSuffix_;
+      } else {
+        result.finalUrlSuffix_ = finalUrlSuffixBuilder_.build();
       }
       if (campaignBiddingStrategyCase_ == 23) {
         if (biddingStrategyBuilder_ == null) {
@@ -7982,6 +8070,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasEndDate()) {
         mergeEndDate(other.getEndDate());
+      }
+      if (other.hasFinalUrlSuffix()) {
+        mergeFinalUrlSuffix(other.getFinalUrlSuffix());
       }
       switch (other.getCampaignBiddingStrategyCase()) {
         case BIDDING_STRATEGY: {
@@ -9985,7 +10076,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The budget of the campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -9996,7 +10086,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The budget of the campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -10011,7 +10100,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The budget of the campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -10032,7 +10120,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The budget of the campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -10051,7 +10138,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The budget of the campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -10074,7 +10160,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The budget of the campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -10093,7 +10178,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The budget of the campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -10106,7 +10190,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The budget of the campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -10122,7 +10205,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The budget of the campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
@@ -10701,6 +10783,168 @@ private static final long serialVersionUID = 0L;
         endDate_ = null;
       }
       return endDateBuilder_;
+    }
+
+    private com.google.protobuf.StringValue finalUrlSuffix_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> finalUrlSuffixBuilder_;
+    /**
+     * <pre>
+     * Suffix used to append query parameters to landing pages that are served
+     * with parallel tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public boolean hasFinalUrlSuffix() {
+      return finalUrlSuffixBuilder_ != null || finalUrlSuffix_ != null;
+    }
+    /**
+     * <pre>
+     * Suffix used to append query parameters to landing pages that are served
+     * with parallel tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public com.google.protobuf.StringValue getFinalUrlSuffix() {
+      if (finalUrlSuffixBuilder_ == null) {
+        return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
+      } else {
+        return finalUrlSuffixBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Suffix used to append query parameters to landing pages that are served
+     * with parallel tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public Builder setFinalUrlSuffix(com.google.protobuf.StringValue value) {
+      if (finalUrlSuffixBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        finalUrlSuffix_ = value;
+        onChanged();
+      } else {
+        finalUrlSuffixBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Suffix used to append query parameters to landing pages that are served
+     * with parallel tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public Builder setFinalUrlSuffix(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffix_ = builderForValue.build();
+        onChanged();
+      } else {
+        finalUrlSuffixBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Suffix used to append query parameters to landing pages that are served
+     * with parallel tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public Builder mergeFinalUrlSuffix(com.google.protobuf.StringValue value) {
+      if (finalUrlSuffixBuilder_ == null) {
+        if (finalUrlSuffix_ != null) {
+          finalUrlSuffix_ =
+            com.google.protobuf.StringValue.newBuilder(finalUrlSuffix_).mergeFrom(value).buildPartial();
+        } else {
+          finalUrlSuffix_ = value;
+        }
+        onChanged();
+      } else {
+        finalUrlSuffixBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Suffix used to append query parameters to landing pages that are served
+     * with parallel tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public Builder clearFinalUrlSuffix() {
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffix_ = null;
+        onChanged();
+      } else {
+        finalUrlSuffix_ = null;
+        finalUrlSuffixBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Suffix used to append query parameters to landing pages that are served
+     * with parallel tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getFinalUrlSuffixBuilder() {
+      
+      onChanged();
+      return getFinalUrlSuffixFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Suffix used to append query parameters to landing pages that are served
+     * with parallel tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
+      if (finalUrlSuffixBuilder_ != null) {
+        return finalUrlSuffixBuilder_.getMessageOrBuilder();
+      } else {
+        return finalUrlSuffix_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
+      }
+    }
+    /**
+     * <pre>
+     * Suffix used to append query parameters to landing pages that are served
+     * with parallel tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getFinalUrlSuffixFieldBuilder() {
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffixBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getFinalUrlSuffix(),
+                getParentForChildren(),
+                isClean());
+        finalUrlSuffix_ = null;
+      }
+      return finalUrlSuffixBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

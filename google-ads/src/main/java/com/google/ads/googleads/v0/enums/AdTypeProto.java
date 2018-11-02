@@ -29,19 +29,19 @@ public final class AdTypeProto {
   static {
     java.lang.String[] descriptorData = {
       "\n+google/ads/googleads/v0/enums/ad_type." +
-      "proto\022\035google.ads.googleads.v0.enums\"\372\001\n" +
-      "\nAdTypeEnum\"\353\001\n\006AdType\022\017\n\013UNSPECIFIED\020\000\022" +
+      "proto\022\035google.ads.googleads.v0.enums\"\217\002\n" +
+      "\nAdTypeEnum\"\200\002\n\006AdType\022\017\n\013UNSPECIFIED\020\000\022" +
       "\013\n\007UNKNOWN\020\001\022\013\n\007TEXT_AD\020\002\022\024\n\020EXPANDED_TE" +
       "XT_AD\020\003\022\025\n\021DYNAMIC_SEARCH_AD\020\004\022\031\n\025RESPON" +
       "SIVE_DISPLAY_AD\020\005\022\020\n\014CALL_ONLY_AD\020\006\022\036\n\032E" +
       "XPANDED_DYNAMIC_SEARCH_AD\020\007\022\014\n\010HOTEL_AD\020" +
       "\010\022\025\n\021SHOPPING_SMART_AD\020\t\022\027\n\023SHOPPING_PRO" +
-      "DUCT_AD\020\nB\274\001\n!com.google.ads.googleads.v" +
-      "0.enumsB\013AdTypeProtoP\001ZBgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v0/e" +
-      "nums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds." +
-      "V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums" +
-      "b\006proto3"
+      "DUCT_AD\020\n\022\023\n\017VIDEO_OUTSTREAM\020\013B\274\001\n!com.g" +
+      "oogle.ads.googleads.v0.enumsB\013AdTypeProt" +
+      "oP\001ZBgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035" +
+      "Google.Ads.GoogleAds.V0.Enums\312\002\035Google\\A" +
+      "ds\\GoogleAds\\V0\\Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

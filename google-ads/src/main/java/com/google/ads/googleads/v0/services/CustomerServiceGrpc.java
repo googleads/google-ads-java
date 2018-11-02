@@ -67,6 +67,43 @@ public final class CustomerServiceGrpc {
      }
      return getGetCustomerMethod;
   }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getListAccessibleCustomersMethod()} instead. 
+  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest,
+      com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse> METHOD_LIST_ACCESSIBLE_CUSTOMERS = getListAccessibleCustomersMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest,
+      com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse> getListAccessibleCustomersMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest,
+      com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse> getListAccessibleCustomersMethod() {
+    return getListAccessibleCustomersMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest,
+      com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse> getListAccessibleCustomersMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest, com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse> getListAccessibleCustomersMethod;
+    if ((getListAccessibleCustomersMethod = CustomerServiceGrpc.getListAccessibleCustomersMethod) == null) {
+      synchronized (CustomerServiceGrpc.class) {
+        if ((getListAccessibleCustomersMethod = CustomerServiceGrpc.getListAccessibleCustomersMethod) == null) {
+          CustomerServiceGrpc.getListAccessibleCustomersMethod = getListAccessibleCustomersMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest, com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.CustomerService", "ListAccessibleCustomers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("ListAccessibleCustomers"))
+                  .build();
+          }
+        }
+     }
+     return getListAccessibleCustomersMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -108,6 +145,17 @@ public final class CustomerServiceGrpc {
       asyncUnimplementedUnaryCall(getGetCustomerMethodHelper(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Returns resource names of customers directly accessible by the
+     * user authenticating the call.
+     * </pre>
+     */
+    public void listAccessibleCustomers(com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListAccessibleCustomersMethodHelper(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -117,6 +165,13 @@ public final class CustomerServiceGrpc {
                 com.google.ads.googleads.v0.services.GetCustomerRequest,
                 com.google.ads.googleads.v0.resources.Customer>(
                   this, METHODID_GET_CUSTOMER)))
+          .addMethod(
+            getListAccessibleCustomersMethodHelper(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest,
+                com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse>(
+                  this, METHODID_LIST_ACCESSIBLE_CUSTOMERS)))
           .build();
     }
   }
@@ -152,6 +207,18 @@ public final class CustomerServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetCustomerMethodHelper(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns resource names of customers directly accessible by the
+     * user authenticating the call.
+     * </pre>
+     */
+    public void listAccessibleCustomers(com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListAccessibleCustomersMethodHelper(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -183,6 +250,17 @@ public final class CustomerServiceGrpc {
     public com.google.ads.googleads.v0.resources.Customer getCustomer(com.google.ads.googleads.v0.services.GetCustomerRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetCustomerMethodHelper(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns resource names of customers directly accessible by the
+     * user authenticating the call.
+     * </pre>
+     */
+    public com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse listAccessibleCustomers(com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListAccessibleCustomersMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -217,9 +295,22 @@ public final class CustomerServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetCustomerMethodHelper(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns resource names of customers directly accessible by the
+     * user authenticating the call.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse> listAccessibleCustomers(
+        com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListAccessibleCustomersMethodHelper(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CUSTOMER = 0;
+  private static final int METHODID_LIST_ACCESSIBLE_CUSTOMERS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -241,6 +332,10 @@ public final class CustomerServiceGrpc {
         case METHODID_GET_CUSTOMER:
           serviceImpl.getCustomer((com.google.ads.googleads.v0.services.GetCustomerRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.resources.Customer>) responseObserver);
+          break;
+        case METHODID_LIST_ACCESSIBLE_CUSTOMERS:
+          serviceImpl.listAccessibleCustomers((com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -304,6 +399,7 @@ public final class CustomerServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CustomerServiceFileDescriptorSupplier())
               .addMethod(getGetCustomerMethodHelper())
+              .addMethod(getListAccessibleCustomersMethodHelper())
               .build();
         }
       }

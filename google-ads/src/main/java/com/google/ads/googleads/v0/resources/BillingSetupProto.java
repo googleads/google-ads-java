@@ -19,6 +19,11 @@ public final class BillingSetupProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_resources_BillingSetup_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_resources_BillingSetup_PaymentsAccountInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_resources_BillingSetup_PaymentsAccountInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -31,26 +36,35 @@ public final class BillingSetupProto {
       "\n5google/ads/googleads/v0/resources/bill" +
       "ing_setup.proto\022!google.ads.googleads.v0" +
       ".resources\0328google/ads/googleads/v0/enum" +
-      "s/billing_setup_status.proto\032\036google/pro" +
-      "tobuf/wrappers.proto\"\335\003\n\014BillingSetup\022\025\n" +
-      "\rresource_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022X\n\006status\030\003 \001(\0162H." +
-      "google.ads.googleads.v0.enums.BillingSet" +
-      "upStatusEnum.BillingSetupStatus\0229\n\023payme" +
-      "nts_account_id\030\004 \001(\0132\034.google.protobuf.S" +
-      "tringValue\022;\n\025payments_account_name\030\005 \001(" +
-      "\0132\034.google.protobuf.StringValue\0229\n\023payme" +
-      "nts_profile_id\030\006 \001(\0132\034.google.protobuf.S" +
-      "tringValue\022;\n\025payments_profile_name\030\007 \001(" +
-      "\0132\034.google.protobuf.StringValue\022C\n\035secon" +
-      "dary_payments_profile_id\030\010 \001(\0132\034.google." +
-      "protobuf.StringValueB\326\001\n%com.google.ads." +
-      "googleads.v0.resourcesB\021BillingSetupProt" +
-      "oP\001ZJgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v0/resources;resources\242" +
-      "\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Resource" +
-      "s\312\002!Google\\Ads\\GoogleAds\\V0\\Resourcesb\006p" +
-      "roto3"
+      "s/billing_setup_status.proto\032-google/ads" +
+      "/googleads/v0/enums/time_type.proto\032\036goo" +
+      "gle/protobuf/wrappers.proto\"\251\006\n\014BillingS" +
+      "etup\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022X\n\006status\030\003" +
+      " \001(\0162H.google.ads.googleads.v0.enums.Bil" +
+      "lingSetupStatusEnum.BillingSetupStatus\0226" +
+      "\n\020payments_account\030\013 \001(\0132\034.google.protob" +
+      "uf.StringValue\022b\n\025payments_account_info\030" +
+      "\014 \001(\0132C.google.ads.googleads.v0.resource" +
+      "s.BillingSetup.PaymentsAccountInfo\0227\n\017st" +
+      "art_date_time\030\t \001(\0132\034.google.protobuf.St" +
+      "ringValueH\000\022O\n\017start_time_type\030\n \001(\01624.g" +
+      "oogle.ads.googleads.v0.enums.TimeTypeEnu" +
+      "m.TimeTypeH\000\032\312\002\n\023PaymentsAccountInfo\0229\n\023" +
+      "payments_account_id\030\001 \001(\0132\034.google.proto" +
+      "buf.StringValue\022;\n\025payments_account_name" +
+      "\030\002 \001(\0132\034.google.protobuf.StringValue\0229\n\023" +
+      "payments_profile_id\030\003 \001(\0132\034.google.proto" +
+      "buf.StringValue\022;\n\025payments_profile_name" +
+      "\030\004 \001(\0132\034.google.protobuf.StringValue\022C\n\035" +
+      "secondary_payments_profile_id\030\005 \001(\0132\034.go" +
+      "ogle.protobuf.StringValueB\014\n\nstart_timeB" +
+      "\326\001\n%com.google.ads.googleads.v0.resource" +
+      "sB\021BillingSetupProtoP\001ZJgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v0/r" +
+      "esources;resources\242\002\003GAA\252\002!Google.Ads.Go" +
+      "ogleAds.V0.Resources\312\002!Google\\Ads\\Google" +
+      "Ads\\V0\\Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -64,6 +78,7 @@ public final class BillingSetupProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v0.enums.BillingSetupStatusProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.TimeTypeProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_resources_BillingSetup_descriptor =
@@ -71,8 +86,15 @@ public final class BillingSetupProto {
     internal_static_google_ads_googleads_v0_resources_BillingSetup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_BillingSetup_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Status", "PaymentsAccountId", "PaymentsAccountName", "PaymentsProfileId", "PaymentsProfileName", "SecondaryPaymentsProfileId", });
+        new java.lang.String[] { "ResourceName", "Id", "Status", "PaymentsAccount", "PaymentsAccountInfo", "StartDateTime", "StartTimeType", "StartTime", });
+    internal_static_google_ads_googleads_v0_resources_BillingSetup_PaymentsAccountInfo_descriptor =
+      internal_static_google_ads_googleads_v0_resources_BillingSetup_descriptor.getNestedTypes().get(0);
+    internal_static_google_ads_googleads_v0_resources_BillingSetup_PaymentsAccountInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_resources_BillingSetup_PaymentsAccountInfo_descriptor,
+        new java.lang.String[] { "PaymentsAccountId", "PaymentsAccountName", "PaymentsProfileId", "PaymentsProfileName", "SecondaryPaymentsProfileId", });
     com.google.ads.googleads.v0.enums.BillingSetupStatusProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.TimeTypeProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

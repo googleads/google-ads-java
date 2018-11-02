@@ -31,29 +31,30 @@ public final class ChangeStatusProto {
       "\n5google/ads/googleads/v0/resources/chan" +
       "ge_status.proto\022!google.ads.googleads.v0" +
       ".resources\032;google/ads/googleads/v0/enum" +
-      "s/change_status_operation.proto\0321google/" +
-      "ads/googleads/v0/enums/resource_type.pro" +
-      "to\032\036google/protobuf/wrappers.proto\"\247\004\n\014C" +
-      "hangeStatus\022\025\n\rresource_name\030\001 \001(\t\022;\n\025la" +
-      "st_change_date_time\030\003 \001(\0132\034.google.proto" +
-      "buf.StringValue\022S\n\rresource_type\030\004 \001(\0162<" +
-      ".google.ads.googleads.v0.enums.ResourceT" +
-      "ypeEnum.ResourceType\022.\n\010campaign\030\005 \001(\0132\034" +
-      ".google.protobuf.StringValue\022.\n\010ad_group" +
-      "\030\006 \001(\0132\034.google.protobuf.StringValue\022g\n\017" +
-      "resource_status\030\010 \001(\0162N.google.ads.googl" +
-      "eads.v0.enums.ChangeStatusOperationEnum." +
-      "ChangeStatusOperation\0221\n\013ad_group_ad\030\t \001" +
-      "(\0132\034.google.protobuf.StringValue\0228\n\022ad_g" +
-      "roup_criterion\030\n \001(\0132\034.google.protobuf.S" +
-      "tringValue\0228\n\022campaign_criterion\030\013 \001(\0132\034" +
-      ".google.protobuf.StringValueB\326\001\n%com.goo" +
-      "gle.ads.googleads.v0.resourcesB\021ChangeSt" +
-      "atusProtoP\001ZJgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v0/resources;re" +
-      "sources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0." +
-      "Resources\312\002!Google\\Ads\\GoogleAds\\V0\\Reso" +
-      "urcesb\006proto3"
+      "s/change_status_operation.proto\032?google/" +
+      "ads/googleads/v0/enums/change_status_res" +
+      "ource_type.proto\032\036google/protobuf/wrappe" +
+      "rs.proto\"\277\004\n\014ChangeStatus\022\025\n\rresource_na" +
+      "me\030\001 \001(\t\022;\n\025last_change_date_time\030\003 \001(\0132" +
+      "\034.google.protobuf.StringValue\022k\n\rresourc" +
+      "e_type\030\004 \001(\0162T.google.ads.googleads.v0.e" +
+      "nums.ChangeStatusResourceTypeEnum.Change" +
+      "StatusResourceType\022.\n\010campaign\030\005 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\022.\n\010ad_group\030\006" +
+      " \001(\0132\034.google.protobuf.StringValue\022g\n\017re" +
+      "source_status\030\010 \001(\0162N.google.ads.googlea" +
+      "ds.v0.enums.ChangeStatusOperationEnum.Ch" +
+      "angeStatusOperation\0221\n\013ad_group_ad\030\t \001(\013" +
+      "2\034.google.protobuf.StringValue\0228\n\022ad_gro" +
+      "up_criterion\030\n \001(\0132\034.google.protobuf.Str" +
+      "ingValue\0228\n\022campaign_criterion\030\013 \001(\0132\034.g" +
+      "oogle.protobuf.StringValueB\326\001\n%com.googl" +
+      "e.ads.googleads.v0.resourcesB\021ChangeStat" +
+      "usProtoP\001ZJgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v0/resources;reso" +
+      "urces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Re" +
+      "sources\312\002!Google\\Ads\\GoogleAds\\V0\\Resour" +
+      "cesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -67,7 +68,7 @@ public final class ChangeStatusProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v0.enums.ChangeStatusOperationProto.getDescriptor(),
-          com.google.ads.googleads.v0.enums.ResourceTypeProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_resources_ChangeStatus_descriptor =
@@ -77,7 +78,7 @@ public final class ChangeStatusProto {
         internal_static_google_ads_googleads_v0_resources_ChangeStatus_descriptor,
         new java.lang.String[] { "ResourceName", "LastChangeDateTime", "ResourceType", "Campaign", "AdGroup", "ResourceStatus", "AdGroupAd", "AdGroupCriterion", "CampaignCriterion", });
     com.google.ads.googleads.v0.enums.ChangeStatusOperationProto.getDescriptor();
-    com.google.ads.googleads.v0.enums.ResourceTypeProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

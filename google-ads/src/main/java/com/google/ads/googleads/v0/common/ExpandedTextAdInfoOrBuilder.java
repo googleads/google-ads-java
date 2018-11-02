@@ -59,6 +59,31 @@ public interface ExpandedTextAdInfoOrBuilder extends
 
   /**
    * <pre>
+   * The third part of the ad's headline.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+   */
+  boolean hasHeadlinePart3();
+  /**
+   * <pre>
+   * The third part of the ad's headline.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+   */
+  com.google.protobuf.StringValue getHeadlinePart3();
+  /**
+   * <pre>
+   * The third part of the ad's headline.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue headline_part3 = 6;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getHeadlinePart3OrBuilder();
+
+  /**
+   * <pre>
    * The description of the ad.
    * </pre>
    *
@@ -81,6 +106,31 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * <code>.google.protobuf.StringValue description = 3;</code>
    */
   com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder();
+
+  /**
+   * <pre>
+   * The second description of the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue description2 = 7;</code>
+   */
+  boolean hasDescription2();
+  /**
+   * <pre>
+   * The second description of the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue description2 = 7;</code>
+   */
+  com.google.protobuf.StringValue getDescription2();
+  /**
+   * <pre>
+   * The second description of the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue description2 = 7;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getDescription2OrBuilder();
 
   /**
    * <pre>

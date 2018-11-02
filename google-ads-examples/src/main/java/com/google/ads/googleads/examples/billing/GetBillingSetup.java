@@ -88,11 +88,12 @@ public class GetBillingSetup {
     // Define a GAQL query to retrieve all billing setup information.
     String searchQuery = "SELECT billing_setup.id, "
         + "  billing_setup.status, "
-        + "  billing_setup.payments_account_id, "
-        + "  billing_setup.payments_account_name, "
-        + "  billing_setup.payments_profile_id, "
-        + "  billing_setup.payments_profile_name, "
-        + "  billing_setup.secondary_payments_profile_id "
+        + "  billing_setup.payments_account, "
+        + "  billing_setup.payments_account_info.payments_account_id, "
+        + "  billing_setup.payments_account_info.payments_account_name, "
+        + "  billing_setup.payments_account_info.payments_profile_id, "
+        + "  billing_setup.payments_account_info.payments_profile_name, "
+        + "  billing_setup.payments_account_info.secondary_payments_profile_id "
         + "FROM billing_setup";
 
     // Creates a request that will retrieve all billing setups using pages of the specified
@@ -113,6 +114,7 @@ public class GetBillingSetup {
         System.out.printf(
             "Billing setup with ID '%d', "
                 + "status '%s', "
+                + "payments_account '%s', "
                 + "payments_account_id '%s', "
                 + "payments_account_name '%s', "
                 + "payments_profile_id '%s', "
@@ -120,11 +122,12 @@ public class GetBillingSetup {
                 + "secondary_payments_profile_id '%s'.%n",
             billingSetup.getId().getValue(),
             billingSetup.getStatus(),
-            billingSetup.getPaymentsAccountId().getValue(),
-            billingSetup.getPaymentsAccountName().getValue(),
-            billingSetup.getPaymentsProfileId().getValue(),
-            billingSetup.getPaymentsProfileName().getValue(),
-            billingSetup.getSecondaryPaymentsProfileId().getValue());
+            billingSetup.getPaymentsAccount().getValue(),
+            billingSetup.getPaymentsAccountInfo().getPaymentsAccountId().getValue(),
+            billingSetup.getPaymentsAccountInfo().getPaymentsAccountName().getValue(),
+            billingSetup.getPaymentsAccountInfo().getPaymentsProfileId().getValue(),
+            billingSetup.getPaymentsAccountInfo().getPaymentsProfileName().getValue(),
+            billingSetup.getPaymentsAccountInfo().getSecondaryPaymentsProfileId().getValue());
       }
     }
   }
