@@ -1,3 +1,12 @@
+0.5.0 - 2018-11-02
+------------------
+Added support and examples for Google Ads API v0_5.
+
+- Added example showing how to get account budgets.
+- Added example showing how to get location criteria IDs for an address.
+- Updated campaign targeting criteria example to use location criteria IDs.
+- Updated GetBillingSetup example to use PaymentAccountInfo object.
+
 0.4.0 - 2018-09-25
 ------------------
 Added support and examples for Google Ads API v0_4.
