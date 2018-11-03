@@ -29,6 +29,7 @@
   <url>https://github.com/googleads/google-ads-java</url>
   <description>
     Parent POM of the Google Ads API client library for Java.
+    ##TEST KOKORO -- after removing kokoro-team as collaborator##
   </description>
 
   <issueManagement>
