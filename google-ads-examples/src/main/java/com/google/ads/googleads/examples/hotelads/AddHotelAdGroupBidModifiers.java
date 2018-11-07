@@ -25,7 +25,6 @@ import com.google.ads.googleads.v0.common.HotelLengthOfStayInfo;
 import com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.AdGroupBidModifier;
-import com.google.ads.googleads.v0.resources.AdGroupName;
 import com.google.ads.googleads.v0.services.AdGroupBidModifierOperation;
 import com.google.ads.googleads.v0.services.AdGroupBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.MutateAdGroupBidModifierResult;

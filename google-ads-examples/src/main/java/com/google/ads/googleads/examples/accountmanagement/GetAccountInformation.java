@@ -22,7 +22,6 @@ import com.google.ads.googleads.lib.GoogleAdsException;
 import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.Customer;
-import com.google.ads.googleads.v0.resources.CustomerName;
 import com.google.ads.googleads.v0.services.CustomerServiceClient;
 import java.io.FileNotFoundException;
 import java.io.IOException;

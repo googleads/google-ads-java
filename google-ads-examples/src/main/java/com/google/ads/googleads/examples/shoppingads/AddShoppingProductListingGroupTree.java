@@ -30,7 +30,6 @@ import com.google.ads.googleads.v0.enums.ProductConditionEnum.ProductCondition;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.AdGroupCriteriaName;
 import com.google.ads.googleads.v0.resources.AdGroupCriterion;
-import com.google.ads.googleads.v0.resources.AdGroupName;
 import com.google.ads.googleads.v0.services.AdGroupCriterionOperation;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v0.services.GoogleAdsRow;

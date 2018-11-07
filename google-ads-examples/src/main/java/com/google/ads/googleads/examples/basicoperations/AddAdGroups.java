@@ -24,7 +24,6 @@ import com.google.ads.googleads.v0.enums.AdGroupStatusEnum.AdGroupStatus;
 import com.google.ads.googleads.v0.enums.AdGroupTypeEnum.AdGroupType;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.AdGroup;
-import com.google.ads.googleads.v0.resources.CampaignName;
 import com.google.ads.googleads.v0.services.AdGroupOperation;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
 import com.google.ads.googleads.v0.services.MutateAdGroupResult;
