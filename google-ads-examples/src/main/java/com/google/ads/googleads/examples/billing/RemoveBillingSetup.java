@@ -91,11 +91,11 @@ public class RemoveBillingSetup {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long billingSetupId) {
     // Format the customerId and billingSetupId into a resource name.
-    String billingSetupResource = ResourceNames.billingSetup(customerId, billingSetupId);
+    String billingSetupResourceName = ResourceNames.billingSetup(customerId, billingSetupId);
 
     // Construct an operation that will remove the billing setup.
     BillingSetupOperation operation = BillingSetupOperation.newBuilder()
-        .setRemove(billingSetupResource)
+        .setRemove(billingSetupResourceName)
         .build();
 
     try (BillingSetupServiceClient billingSetupServiceClient = googleAdsClient
