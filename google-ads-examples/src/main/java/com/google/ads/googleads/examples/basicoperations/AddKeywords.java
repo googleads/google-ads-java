@@ -25,7 +25,6 @@ import com.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCrite
 import com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.AdGroupCriterion;
-import com.google.ads.googleads.v0.resources.AdGroupName;
 import com.google.ads.googleads.v0.services.AdGroupCriterionOperation;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v0.services.MutateAdGroupCriteriaResponse;

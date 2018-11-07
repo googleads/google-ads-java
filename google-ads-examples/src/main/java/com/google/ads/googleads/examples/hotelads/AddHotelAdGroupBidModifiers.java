@@ -19,6 +19,7 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.common.HotelCheckInDayInfo;
 import com.google.ads.googleads.v0.common.HotelLengthOfStayInfo;
 import com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek;
@@ -107,8 +108,7 @@ public class AddHotelAdGroupBidModifiers {
     List<AdGroupBidModifierOperation> operations = new ArrayList<>();
 
     // Constructs the ad group resource name to use for each bid modifier.
-    String adGroupResourceName =
-        AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId));
+    String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
     // 1) Creates an ad group bid modifier based on the hotel check-in day.
     AdGroupBidModifier checkInDayAdGroupBidModifier =

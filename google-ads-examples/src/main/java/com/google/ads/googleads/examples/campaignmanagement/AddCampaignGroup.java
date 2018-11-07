@@ -20,10 +20,10 @@ import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
 import com.google.ads.googleads.lib.utils.FieldMasks;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.Campaign;
 import com.google.ads.googleads.v0.resources.CampaignGroup;
-import com.google.ads.googleads.v0.resources.CampaignName;
 import com.google.ads.googleads.v0.services.CampaignGroupOperation;
 import com.google.ads.googleads.v0.services.CampaignGroupServiceClient;
 import com.google.ads.googleads.v0.services.CampaignOperation;
@@ -140,8 +140,7 @@ public class AddCampaignGroup {
     for (Long campaignId : campaignIds) {
       Campaign campaign =
           Campaign.newBuilder()
-              .setResourceName(
-                  CampaignName.format(Long.toString(customerId), Long.toString(campaignId)))
+              .setResourceName(ResourceNames.campaign(customerId, campaignId))
               .setCampaignGroup(StringValue.of(campaignGroupResourceName))
               .build();
 

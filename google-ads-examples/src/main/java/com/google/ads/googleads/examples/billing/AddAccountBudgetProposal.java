@@ -18,11 +18,11 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType;
 import com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.AccountBudgetProposal;
-import com.google.ads.googleads.v0.resources.BillingSetupName;
 import com.google.ads.googleads.v0.services.AccountBudgetProposalOperation;
 import com.google.ads.googleads.v0.services.AccountBudgetProposalServiceClient;
 import com.google.ads.googleads.v0.services.MutateAccountBudgetProposalResponse;
@@ -89,35 +89,36 @@ public class AddAccountBudgetProposal {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long billingSetupId) {
     // Create an AccountBudgetProposal, this will be reviewed offline by Google Ads, and if approved
     // will become an AccountBudget.
-    AccountBudgetProposal proposal = AccountBudgetProposal.newBuilder()
-        .setBillingSetup(StringValue.of(BillingSetupName
-            .format(String.valueOf(customerId), String.valueOf(billingSetupId))))
-        .setProposalType(AccountBudgetProposalType.CREATE)
-        .setProposedName(StringValue.of("Account Budget (example)"))
+    AccountBudgetProposal proposal =
+        AccountBudgetProposal.newBuilder()
+            .setBillingSetup(StringValue.of(ResourceNames.billingSetup(customerId, billingSetupId)))
+            .setProposalType(AccountBudgetProposalType.CREATE)
+            .setProposedName(StringValue.of("Account Budget (example)"))
 
-        // Specify the account budget starts immediately
-        .setProposedStartTimeType(TimeType.NOW)
-        // Alternatively you can specify a specific start time. Refer to the AccountBudgetProposal
-        // resource documentation for allowed formats.
-        //
-        //.setProposedStartDateTime(StringValue.of("2020-01-02 03:04:05"))
+            // Specify the account budget starts immediately
+            .setProposedStartTimeType(TimeType.NOW)
+            // Alternatively you can specify a specific start time. Refer to the
+            // AccountBudgetProposal
+            // resource documentation for allowed formats.
+            //
+            // .setProposedStartDateTime(StringValue.of("2020-01-02 03:04:05"))
 
-        // Specify that the budget runs forever.
-        .setProposedEndTimeType(TimeType.FOREVER)
-        // Alternatively you can specify a specific end time. Allowed formats are as above.
-        //.setProposedEndDateTime(StringValue.of("2021-02-03 04:05:06"))
+            // Specify that the budget runs forever.
+            .setProposedEndTimeType(TimeType.FOREVER)
+            // Alternatively you can specify a specific end time. Allowed formats are as above.
+            // .setProposedEndDateTime(StringValue.of("2021-02-03 04:05:06"))
 
-        // Optional: set notes for the budget. These are free text and do not effect budget
-        // delivery.
-        //.setProposedNotes(StringValue.of("Received prepayment of $0.01"))
+            // Optional: set notes for the budget. These are free text and do not effect budget
+            // delivery.
+            // .setProposedNotes(StringValue.of("Received prepayment of $0.01"))
 
-        // Set the spending limit to 0.01, measured in the Google Ads account currency.
-        .setProposedSpendingLimitMicros(Int64Value.of(10_000))
+            // Set the spending limit to 0.01, measured in the Google Ads account currency.
+            .setProposedSpendingLimitMicros(Int64Value.of(10_000))
 
-        // Optional: set PO number for record keeping. This value is at the user's
-        // discretion, and has no effect on Google Billing & Payments.
-        //.setProposedPurchaseOrderNumber(StringValue.of("PO number 12345"))
-        .build();
+            // Optional: set PO number for record keeping. This value is at the user's
+            // discretion, and has no effect on Google Billing & Payments.
+            // .setProposedPurchaseOrderNumber(StringValue.of("PO number 12345"))
+            .build();
 
     // Create an operation which will add the new AccountBudgetProposal.
     AccountBudgetProposalOperation operation = AccountBudgetProposalOperation.newBuilder()

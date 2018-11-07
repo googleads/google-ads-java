@@ -19,6 +19,7 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.common.CustomParameter;
 import com.google.ads.googleads.v0.common.ExpandedTextAdInfo;
 import com.google.ads.googleads.v0.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
@@ -98,8 +99,7 @@ public class AddExpandedTextAdWithUpgradedUrls {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
-    String adGroupResourceName =
-        AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId));
+    String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
     // Create an expanded text ad.
     Ad ad =

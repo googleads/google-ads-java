@@ -19,6 +19,7 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.common.ExpandedTextAdInfo;
 import com.google.ads.googleads.v0.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
@@ -99,8 +100,7 @@ public class AddExpandedTextAds {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
 
-    String adGroupResourceName =
-        AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId));
+    String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
     List<AdGroupAdOperation> operations = new ArrayList<>();
 

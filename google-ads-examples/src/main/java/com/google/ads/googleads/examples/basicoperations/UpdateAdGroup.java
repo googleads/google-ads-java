@@ -20,10 +20,10 @@ import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
 import com.google.ads.googleads.lib.utils.FieldMasks;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.enums.AdGroupStatusEnum.AdGroupStatus;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.AdGroup;
-import com.google.ads.googleads.v0.resources.AdGroupName;
 import com.google.ads.googleads.v0.services.AdGroupOperation;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
 import com.google.ads.googleads.v0.services.MutateAdGroupResult;
@@ -108,8 +108,7 @@ public class UpdateAdGroup {
       // Create an ad group object with the proper resource name and any other changes.
       AdGroup adGroup =
           AdGroup.newBuilder()
-              .setResourceName(
-                  AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId)))
+              .setResourceName(ResourceNames.adGroup(customerId, adGroupId))
               .setCpcBidMicros(Int64Value.of(bidMicroAmount))
               .setStatus(AdGroupStatus.PAUSED)
               .build();
