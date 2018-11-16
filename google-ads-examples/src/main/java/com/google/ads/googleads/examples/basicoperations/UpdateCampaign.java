@@ -20,10 +20,10 @@ import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
 import com.google.ads.googleads.lib.utils.FieldMasks;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.Campaign;
-import com.google.ads.googleads.v0.resources.CampaignName;
 import com.google.ads.googleads.v0.services.CampaignOperation;
 import com.google.ads.googleads.v0.services.CampaignServiceClient;
 import com.google.ads.googleads.v0.services.MutateCampaignResult;
@@ -99,7 +99,7 @@ public class UpdateCampaign {
       // Create a Campaign object with the proper resource name and any other changes.
       Campaign campaign =
           Campaign.newBuilder()
-              .setResourceName(CampaignName.format(customerId.toString(), campaignId.toString()))
+              .setResourceName(ResourceNames.campaign(customerId, campaignId))
               .setStatus(CampaignStatus.PAUSED)
               .build();
       // Construct an operation that will update the campaign, using the FieldMasks utility to

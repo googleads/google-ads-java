@@ -19,11 +19,11 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.common.InteractionTypeInfo;
 import com.google.ads.googleads.v0.enums.InteractionTypeEnum;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.CampaignBidModifier;
-import com.google.ads.googleads.v0.resources.CampaignName;
 import com.google.ads.googleads.v0.services.CampaignBidModifierOperation;
 import com.google.ads.googleads.v0.services.CampaignBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.MutateCampaignBidModifierResult;
@@ -102,8 +102,7 @@ public class AddCampaignBidModifier {
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId, double bidModifier) {
 
-    String campaignResourceName =
-        CampaignName.format(Long.toString(customerId), Long.toString(campaignId));
+    String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
 
     // Construct a campaign bid modifier.
     CampaignBidModifier campaignBidModifier =

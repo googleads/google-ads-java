@@ -19,8 +19,8 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.AdGroupName;
 import com.google.ads.googleads.v0.services.AdGroupOperation;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
 import com.google.ads.googleads.v0.services.MutateAdGroupResult;
@@ -94,8 +94,7 @@ public class RemoveAdGroup {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
 
     try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getAdGroupServiceClient()) {
-      String adGroupResourceName =
-          AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId));
+      String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
       // Construct an operation that will remove the ad group with the specified resource name.
       AdGroupOperation operation =
           AdGroupOperation.newBuilder().setRemove(adGroupResourceName).build();

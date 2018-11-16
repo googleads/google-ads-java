@@ -20,9 +20,9 @@ import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
 import com.google.ads.googleads.lib.utils.FieldMasks;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.AdGroupCriteriaName;
 import com.google.ads.googleads.v0.resources.AdGroupCriterion;
 import com.google.ads.googleads.v0.services.AdGroupCriterionOperation;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
@@ -108,10 +108,7 @@ public class UpdateKeyword {
       // Create an ad group criterion object with the proper resource name and any other changes.
       AdGroupCriterion adGroupCriterion =
           AdGroupCriterion.newBuilder()
-              .setResourceName(
-                  AdGroupCriteriaName.format(
-                      Long.toString(customerId),
-                      String.format("%s_%s", Long.toString(adGroupId), Long.toString(criterionId))))
+              .setResourceName(ResourceNames.adGroupCriterion(customerId, adGroupId, criterionId))
               .setStatus(AdGroupCriterionStatus.ENABLED)
               .addFinalUrls(StringValue.of("https://www.example.com"))
               .build();

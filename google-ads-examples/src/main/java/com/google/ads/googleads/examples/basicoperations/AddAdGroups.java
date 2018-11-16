@@ -19,11 +19,11 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.enums.AdGroupStatusEnum.AdGroupStatus;
 import com.google.ads.googleads.v0.enums.AdGroupTypeEnum.AdGroupType;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.AdGroup;
-import com.google.ads.googleads.v0.resources.CampaignName;
 import com.google.ads.googleads.v0.services.AdGroupOperation;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
 import com.google.ads.googleads.v0.services.MutateAdGroupResult;
@@ -95,8 +95,7 @@ public class AddAdGroups {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
-    String campaignResourceName =
-        CampaignName.format(Long.toString(customerId), Long.toString(campaignId));
+    String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
 
     // Create ad group, setting an optional CPC value.
     AdGroup adGroup1 =

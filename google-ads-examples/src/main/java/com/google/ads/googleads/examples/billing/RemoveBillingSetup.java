@@ -18,8 +18,8 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.BillingSetupName;
 import com.google.ads.googleads.v0.services.BillingSetupOperation;
 import com.google.ads.googleads.v0.services.BillingSetupServiceClient;
 import com.google.ads.googleads.v0.services.MutateBillingSetupResponse;
@@ -91,12 +91,11 @@ public class RemoveBillingSetup {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long billingSetupId) {
     // Format the customerId and billingSetupId into a resource name.
-    String billingSetupResource = BillingSetupName
-        .format(String.valueOf(customerId), String.valueOf(billingSetupId));
+    String billingSetupResourceName = ResourceNames.billingSetup(customerId, billingSetupId);
 
     // Construct an operation that will remove the billing setup.
     BillingSetupOperation operation = BillingSetupOperation.newBuilder()
-        .setRemove(billingSetupResource)
+        .setRemove(billingSetupResourceName)
         .build();
 
     try (BillingSetupServiceClient billingSetupServiceClient = googleAdsClient

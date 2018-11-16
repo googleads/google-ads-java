@@ -20,10 +20,10 @@ import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
 import com.google.ads.googleads.lib.utils.FieldMasks;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.AdGroupAd;
-import com.google.ads.googleads.v0.resources.AdGroupAdName;
 import com.google.ads.googleads.v0.services.AdGroupAdOperation;
 import com.google.ads.googleads.v0.services.AdGroupAdServiceClient;
 import com.google.ads.googleads.v0.services.MutateAdGroupAdResult;
@@ -99,8 +99,7 @@ public class PauseAd {
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long adGroupId, long adId) {
 
-    String adGroupAdResourceName =
-        AdGroupAdName.format(Long.toString(customerId), String.format("%d_%d", adGroupId, adId));
+    String adGroupAdResourceName = ResourceNames.adGroupAd(customerId, adGroupId, adId);
 
     // Create an ad representation with its status set to PAUSED.
     AdGroupAd adGroupAd =

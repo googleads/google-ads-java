@@ -19,8 +19,8 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.CampaignName;
 import com.google.ads.googleads.v0.services.CampaignOperation;
 import com.google.ads.googleads.v0.services.CampaignServiceClient;
 import com.google.ads.googleads.v0.services.MutateCampaignResult;
@@ -93,8 +93,7 @@ public class RemoveCampaign {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     try (CampaignServiceClient campaignServiceClient = googleAdsClient.getCampaignServiceClient()) {
-      String campaignResourceName =
-          CampaignName.format(Long.toString(customerId), Long.toString(campaignId));
+      String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
       // Construct an operation that will remove the campaign with the specified resource name.
       CampaignOperation operation =
           CampaignOperation.newBuilder().setRemove(campaignResourceName).build();

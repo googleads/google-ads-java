@@ -21,7 +21,6 @@ import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
 import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.RecommendationName;
 import com.google.ads.googleads.v0.services.ApplyRecommendationOperation;
 import com.google.ads.googleads.v0.services.ApplyRecommendationResponse;
 import com.google.ads.googleads.v0.services.ApplyRecommendationResult;

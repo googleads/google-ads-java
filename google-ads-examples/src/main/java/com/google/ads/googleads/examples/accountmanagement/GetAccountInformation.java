@@ -19,9 +19,9 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.Customer;
-import com.google.ads.googleads.v0.resources.CustomerName;
 import com.google.ads.googleads.v0.services.CustomerServiceClient;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -85,7 +85,7 @@ public class GetAccountInformation {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     try (CustomerServiceClient customerServiceClient = googleAdsClient.getCustomerServiceClient()) {
-      String customerResourceName = CustomerName.format(Long.toString(customerId));
+      String customerResourceName = ResourceNames.customer(customerId);
       Customer customer = customerServiceClient.getCustomer(customerResourceName);
       // Print account information.
       System.out.printf(

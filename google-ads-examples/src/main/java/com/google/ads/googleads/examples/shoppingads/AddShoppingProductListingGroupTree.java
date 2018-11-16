@@ -19,6 +19,7 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.lib.utils.ResourceNames;
 import com.google.ads.googleads.v0.common.ListingBrandInfo;
 import com.google.ads.googleads.v0.common.ListingDimensionInfo;
 import com.google.ads.googleads.v0.common.ListingGroupInfo;
@@ -29,7 +30,6 @@ import com.google.ads.googleads.v0.enums.ProductConditionEnum.ProductCondition;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.AdGroupCriteriaName;
 import com.google.ads.googleads.v0.resources.AdGroupCriterion;
-import com.google.ads.googleads.v0.resources.AdGroupName;
 import com.google.ads.googleads.v0.services.AdGroupCriterionOperation;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v0.services.GoogleAdsRow;
@@ -346,8 +346,7 @@ public class AddShoppingProductListingGroupTree {
       ListingDimensionInfo listingDimensionInfo,
       long cpcBidMicros) {
 
-    String adGroupResourceName =
-        AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId));
+    String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
     // Note: There are two approaches for creating new unit nodes:
     // (1) Set the ad group resource name on the criterion (no temporary ID required).
     // (2) Use a temporary ID to construct the criterion resource name and set it using
