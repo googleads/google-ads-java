@@ -172,7 +172,7 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+   * The approved start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
    * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
@@ -180,7 +180,7 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasApprovedStartDateTime();
   /**
    * <pre>
-   * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+   * The approved start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
    * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
@@ -188,7 +188,7 @@ public interface AccountBudgetProposalOrBuilder extends
   com.google.protobuf.StringValue getApprovedStartDateTime();
   /**
    * <pre>
-   * The approved start date time in yyyy-MM-dd HH:mm:ss format.
+   * The approved start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
    * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
@@ -303,7 +303,7 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * The proposed start date time in yyyy-MM-dd HH:mm:ss format.
+   * The proposed start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
    * <code>.google.protobuf.StringValue proposed_start_date_time = 18;</code>
@@ -311,7 +311,7 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasProposedStartDateTime();
   /**
    * <pre>
-   * The proposed start date time in yyyy-MM-dd HH:mm:ss format.
+   * The proposed start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
    * <code>.google.protobuf.StringValue proposed_start_date_time = 18;</code>
@@ -319,7 +319,7 @@ public interface AccountBudgetProposalOrBuilder extends
   com.google.protobuf.StringValue getProposedStartDateTime();
   /**
    * <pre>
-   * The proposed start date time in yyyy-MM-dd HH:mm:ss format.
+   * The proposed start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
    * <code>.google.protobuf.StringValue proposed_start_date_time = 18;</code>
@@ -345,7 +345,7 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * The proposed end date time in yyyy-MM-dd HH:mm:ss format.
+   * The proposed end date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
    * <code>.google.protobuf.StringValue proposed_end_date_time = 19;</code>
@@ -353,7 +353,7 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasProposedEndDateTime();
   /**
    * <pre>
-   * The proposed end date time in yyyy-MM-dd HH:mm:ss format.
+   * The proposed end date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
    * <code>.google.protobuf.StringValue proposed_end_date_time = 19;</code>
@@ -361,7 +361,7 @@ public interface AccountBudgetProposalOrBuilder extends
   com.google.protobuf.StringValue getProposedEndDateTime();
   /**
    * <pre>
-   * The proposed end date time in yyyy-MM-dd HH:mm:ss format.
+   * The proposed end date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
    * <code>.google.protobuf.StringValue proposed_end_date_time = 19;</code>
@@ -387,7 +387,7 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+   * The approved end date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
    * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
@@ -395,7 +395,7 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasApprovedEndDateTime();
   /**
    * <pre>
-   * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+   * The approved end date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
    * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
@@ -403,7 +403,7 @@ public interface AccountBudgetProposalOrBuilder extends
   com.google.protobuf.StringValue getApprovedEndDateTime();
   /**
    * <pre>
-   * The approved end date time in yyyy-MM-dd HH:mm:ss format.
+   * The approved end date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
    * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>

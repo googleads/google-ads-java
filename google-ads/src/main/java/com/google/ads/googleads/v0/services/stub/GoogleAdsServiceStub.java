@@ -17,6 +17,8 @@ package com.google.ads.googleads.v0.services.stub;
 
 import static com.google.ads.googleads.v0.services.GoogleAdsServiceClient.SearchPagedResponse;
 
+import com.google.ads.googleads.v0.services.MutateGoogleAdsRequest;
+import com.google.ads.googleads.v0.services.MutateGoogleAdsResponse;
 import com.google.ads.googleads.v0.services.SearchGoogleAdsRequest;
 import com.google.ads.googleads.v0.services.SearchGoogleAdsResponse;
 import com.google.api.core.BetaApi;
@@ -40,6 +42,10 @@ public abstract class GoogleAdsServiceStub implements BackgroundResource {
 
   public UnaryCallable<SearchGoogleAdsRequest, SearchGoogleAdsResponse> searchCallable() {
     throw new UnsupportedOperationException("Not implemented: searchCallable()");
+  }
+
+  public UnaryCallable<MutateGoogleAdsRequest, MutateGoogleAdsResponse> mutateCallable() {
+    throw new UnsupportedOperationException("Not implemented: mutateCallable()");
   }
 
   @Override

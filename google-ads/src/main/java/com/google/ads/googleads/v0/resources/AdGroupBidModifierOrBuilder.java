@@ -32,7 +32,6 @@ public interface AdGroupBidModifierOrBuilder extends
   /**
    * <pre>
    * The ad group to which this criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -41,7 +40,6 @@ public interface AdGroupBidModifierOrBuilder extends
   /**
    * <pre>
    * The ad group to which this criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -50,7 +48,6 @@ public interface AdGroupBidModifierOrBuilder extends
   /**
    * <pre>
    * The ad group to which this criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -294,6 +291,31 @@ public interface AdGroupBidModifierOrBuilder extends
    * <code>.google.ads.googleads.v0.common.DeviceInfo device = 11;</code>
    */
   com.google.ads.googleads.v0.common.DeviceInfoOrBuilder getDeviceOrBuilder();
+
+  /**
+   * <pre>
+   * A preferred content criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+   */
+  boolean hasPreferredContent();
+  /**
+   * <pre>
+   * A preferred content criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+   */
+  com.google.ads.googleads.v0.common.PreferredContentInfo getPreferredContent();
+  /**
+   * <pre>
+   * A preferred content criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+   */
+  com.google.ads.googleads.v0.common.PreferredContentInfoOrBuilder getPreferredContentOrBuilder();
 
   public com.google.ads.googleads.v0.resources.AdGroupBidModifier.CriterionCase getCriterionCase();
 }

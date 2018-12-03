@@ -132,6 +132,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 82: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (totalAmountMicros_ != null) {
+              subBuilder = totalAmountMicros_.toBuilder();
+            }
+            totalAmountMicros_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(totalAmountMicros_);
+              totalAmountMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -345,6 +358,45 @@ private static final long serialVersionUID = 0L;
     return getAmountMicros();
   }
 
+  public static final int TOTAL_AMOUNT_MICROS_FIELD_NUMBER = 10;
+  private com.google.protobuf.Int64Value totalAmountMicros_;
+  /**
+   * <pre>
+   * The lifetime amount of the budget, in the local currency for the account.
+   * Amount is specified in micros, where one million is equivalent to one
+   * currency unit.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+   */
+  public boolean hasTotalAmountMicros() {
+    return totalAmountMicros_ != null;
+  }
+  /**
+   * <pre>
+   * The lifetime amount of the budget, in the local currency for the account.
+   * Amount is specified in micros, where one million is equivalent to one
+   * currency unit.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+   */
+  public com.google.protobuf.Int64Value getTotalAmountMicros() {
+    return totalAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalAmountMicros_;
+  }
+  /**
+   * <pre>
+   * The lifetime amount of the budget, in the local currency for the account.
+   * Amount is specified in micros, where one million is equivalent to one
+   * currency unit.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getTotalAmountMicrosOrBuilder() {
+    return getTotalAmountMicros();
+  }
+
   public static final int STATUS_FIELD_NUMBER = 6;
   private int status_;
   /**
@@ -539,6 +591,9 @@ private static final long serialVersionUID = 0L;
     if (referenceCount_ != null) {
       output.writeMessage(9, getReferenceCount());
     }
+    if (totalAmountMicros_ != null) {
+      output.writeMessage(10, getTotalAmountMicros());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -579,6 +634,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getReferenceCount());
     }
+    if (totalAmountMicros_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getTotalAmountMicros());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -611,6 +670,11 @@ private static final long serialVersionUID = 0L;
     if (hasAmountMicros()) {
       result = result && getAmountMicros()
           .equals(other.getAmountMicros());
+    }
+    result = result && (hasTotalAmountMicros() == other.hasTotalAmountMicros());
+    if (hasTotalAmountMicros()) {
+      result = result && getTotalAmountMicros()
+          .equals(other.getTotalAmountMicros());
     }
     result = result && status_ == other.status_;
     result = result && deliveryMethod_ == other.deliveryMethod_;
@@ -648,6 +712,10 @@ private static final long serialVersionUID = 0L;
     if (hasAmountMicros()) {
       hash = (37 * hash) + AMOUNT_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + getAmountMicros().hashCode();
+    }
+    if (hasTotalAmountMicros()) {
+      hash = (37 * hash) + TOTAL_AMOUNT_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalAmountMicros().hashCode();
     }
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
@@ -818,6 +886,12 @@ private static final long serialVersionUID = 0L;
         amountMicros_ = null;
         amountMicrosBuilder_ = null;
       }
+      if (totalAmountMicrosBuilder_ == null) {
+        totalAmountMicros_ = null;
+      } else {
+        totalAmountMicros_ = null;
+        totalAmountMicrosBuilder_ = null;
+      }
       status_ = 0;
 
       deliveryMethod_ = 0;
@@ -875,6 +949,11 @@ private static final long serialVersionUID = 0L;
         result.amountMicros_ = amountMicros_;
       } else {
         result.amountMicros_ = amountMicrosBuilder_.build();
+      }
+      if (totalAmountMicrosBuilder_ == null) {
+        result.totalAmountMicros_ = totalAmountMicros_;
+      } else {
+        result.totalAmountMicros_ = totalAmountMicrosBuilder_.build();
       }
       result.status_ = status_;
       result.deliveryMethod_ = deliveryMethod_;
@@ -948,6 +1027,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAmountMicros()) {
         mergeAmountMicros(other.getAmountMicros());
+      }
+      if (other.hasTotalAmountMicros()) {
+        mergeTotalAmountMicros(other.getTotalAmountMicros());
       }
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
@@ -1654,6 +1736,177 @@ private static final long serialVersionUID = 0L;
         amountMicros_ = null;
       }
       return amountMicrosBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value totalAmountMicros_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> totalAmountMicrosBuilder_;
+    /**
+     * <pre>
+     * The lifetime amount of the budget, in the local currency for the account.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+     */
+    public boolean hasTotalAmountMicros() {
+      return totalAmountMicrosBuilder_ != null || totalAmountMicros_ != null;
+    }
+    /**
+     * <pre>
+     * The lifetime amount of the budget, in the local currency for the account.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+     */
+    public com.google.protobuf.Int64Value getTotalAmountMicros() {
+      if (totalAmountMicrosBuilder_ == null) {
+        return totalAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalAmountMicros_;
+      } else {
+        return totalAmountMicrosBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The lifetime amount of the budget, in the local currency for the account.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+     */
+    public Builder setTotalAmountMicros(com.google.protobuf.Int64Value value) {
+      if (totalAmountMicrosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        totalAmountMicros_ = value;
+        onChanged();
+      } else {
+        totalAmountMicrosBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The lifetime amount of the budget, in the local currency for the account.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+     */
+    public Builder setTotalAmountMicros(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (totalAmountMicrosBuilder_ == null) {
+        totalAmountMicros_ = builderForValue.build();
+        onChanged();
+      } else {
+        totalAmountMicrosBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The lifetime amount of the budget, in the local currency for the account.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+     */
+    public Builder mergeTotalAmountMicros(com.google.protobuf.Int64Value value) {
+      if (totalAmountMicrosBuilder_ == null) {
+        if (totalAmountMicros_ != null) {
+          totalAmountMicros_ =
+            com.google.protobuf.Int64Value.newBuilder(totalAmountMicros_).mergeFrom(value).buildPartial();
+        } else {
+          totalAmountMicros_ = value;
+        }
+        onChanged();
+      } else {
+        totalAmountMicrosBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The lifetime amount of the budget, in the local currency for the account.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+     */
+    public Builder clearTotalAmountMicros() {
+      if (totalAmountMicrosBuilder_ == null) {
+        totalAmountMicros_ = null;
+        onChanged();
+      } else {
+        totalAmountMicros_ = null;
+        totalAmountMicrosBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The lifetime amount of the budget, in the local currency for the account.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getTotalAmountMicrosBuilder() {
+      
+      onChanged();
+      return getTotalAmountMicrosFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The lifetime amount of the budget, in the local currency for the account.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getTotalAmountMicrosOrBuilder() {
+      if (totalAmountMicrosBuilder_ != null) {
+        return totalAmountMicrosBuilder_.getMessageOrBuilder();
+      } else {
+        return totalAmountMicros_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : totalAmountMicros_;
+      }
+    }
+    /**
+     * <pre>
+     * The lifetime amount of the budget, in the local currency for the account.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getTotalAmountMicrosFieldBuilder() {
+      if (totalAmountMicrosBuilder_ == null) {
+        totalAmountMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getTotalAmountMicros(),
+                getParentForChildren(),
+                isClean());
+        totalAmountMicros_ = null;
+      }
+      return totalAmountMicrosBuilder_;
     }
 
     private int status_ = 0;

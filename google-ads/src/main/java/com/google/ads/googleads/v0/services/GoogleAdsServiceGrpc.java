@@ -67,6 +67,43 @@ public final class GoogleAdsServiceGrpc {
      }
      return getSearchMethod;
   }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getMutateMethod()} instead. 
+  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateGoogleAdsRequest,
+      com.google.ads.googleads.v0.services.MutateGoogleAdsResponse> METHOD_MUTATE = getMutateMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateGoogleAdsRequest,
+      com.google.ads.googleads.v0.services.MutateGoogleAdsResponse> getMutateMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateGoogleAdsRequest,
+      com.google.ads.googleads.v0.services.MutateGoogleAdsResponse> getMutateMethod() {
+    return getMutateMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateGoogleAdsRequest,
+      com.google.ads.googleads.v0.services.MutateGoogleAdsResponse> getMutateMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateGoogleAdsRequest, com.google.ads.googleads.v0.services.MutateGoogleAdsResponse> getMutateMethod;
+    if ((getMutateMethod = GoogleAdsServiceGrpc.getMutateMethod) == null) {
+      synchronized (GoogleAdsServiceGrpc.class) {
+        if ((getMutateMethod = GoogleAdsServiceGrpc.getMutateMethod) == null) {
+          GoogleAdsServiceGrpc.getMutateMethod = getMutateMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.MutateGoogleAdsRequest, com.google.ads.googleads.v0.services.MutateGoogleAdsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.GoogleAdsService", "Mutate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateGoogleAdsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateGoogleAdsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new GoogleAdsServiceMethodDescriptorSupplier("Mutate"))
+                  .build();
+          }
+        }
+     }
+     return getMutateMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -108,6 +145,16 @@ public final class GoogleAdsServiceGrpc {
       asyncUnimplementedUnaryCall(getSearchMethodHelper(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Creates, updates, or removes resources. Operation statuses are returned.
+     * </pre>
+     */
+    public void mutate(com.google.ads.googleads.v0.services.MutateGoogleAdsRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateGoogleAdsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getMutateMethodHelper(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -117,6 +164,13 @@ public final class GoogleAdsServiceGrpc {
                 com.google.ads.googleads.v0.services.SearchGoogleAdsRequest,
                 com.google.ads.googleads.v0.services.SearchGoogleAdsResponse>(
                   this, METHODID_SEARCH)))
+          .addMethod(
+            getMutateMethodHelper(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v0.services.MutateGoogleAdsRequest,
+                com.google.ads.googleads.v0.services.MutateGoogleAdsResponse>(
+                  this, METHODID_MUTATE)))
           .build();
     }
   }
@@ -152,6 +206,17 @@ public final class GoogleAdsServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getSearchMethodHelper(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes resources. Operation statuses are returned.
+     * </pre>
+     */
+    public void mutate(com.google.ads.googleads.v0.services.MutateGoogleAdsRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateGoogleAdsResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getMutateMethodHelper(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -183,6 +248,16 @@ public final class GoogleAdsServiceGrpc {
     public com.google.ads.googleads.v0.services.SearchGoogleAdsResponse search(com.google.ads.googleads.v0.services.SearchGoogleAdsRequest request) {
       return blockingUnaryCall(
           getChannel(), getSearchMethodHelper(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes resources. Operation statuses are returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v0.services.MutateGoogleAdsResponse mutate(com.google.ads.googleads.v0.services.MutateGoogleAdsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getMutateMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -217,9 +292,21 @@ public final class GoogleAdsServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getSearchMethodHelper(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Creates, updates, or removes resources. Operation statuses are returned.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.services.MutateGoogleAdsResponse> mutate(
+        com.google.ads.googleads.v0.services.MutateGoogleAdsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getMutateMethodHelper(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEARCH = 0;
+  private static final int METHODID_MUTATE = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -241,6 +328,10 @@ public final class GoogleAdsServiceGrpc {
         case METHODID_SEARCH:
           serviceImpl.search((com.google.ads.googleads.v0.services.SearchGoogleAdsRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.SearchGoogleAdsResponse>) responseObserver);
+          break;
+        case METHODID_MUTATE:
+          serviceImpl.mutate((com.google.ads.googleads.v0.services.MutateGoogleAdsRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateGoogleAdsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -304,6 +395,7 @@ public final class GoogleAdsServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GoogleAdsServiceFileDescriptorSupplier())
               .addMethod(getSearchMethodHelper())
+              .addMethod(getMutateMethodHelper())
               .build();
         }
       }

@@ -33,7 +33,7 @@ public final class CampaignCriterionProto {
       "ds.v0.resources\032-google/ads/googleads/v0" +
       "/common/criteria.proto\0322google/ads/googl" +
       "eads/v0/enums/criterion_type.proto\032\036goog" +
-      "le/protobuf/wrappers.proto\"\307\t\n\021CampaignC" +
+      "le/protobuf/wrappers.proto\"\256\r\n\021CampaignC" +
       "riterion\022\025\n\rresource_name\030\001 \001(\t\022.\n\010campa" +
       "ign\030\004 \001(\0132\034.google.protobuf.StringValue\022" +
       "1\n\014criterion_id\030\005 \001(\0132\033.google.protobuf." +
@@ -56,21 +56,33 @@ public final class CampaignCriterionProto {
       "nfoH\000\022G\n\014income_range\030\022 \001(\0132/.google.ads" +
       ".googleads.v0.common.IncomeRangeInfoH\000\022M" +
       "\n\017parental_status\030\023 \001(\01322.google.ads.goo" +
-      "gleads.v0.common.ParentalStatusInfoH\000\022I\n" +
-      "\ryoutube_video\030\024 \001(\01320.google.ads.google" +
-      "ads.v0.common.YouTubeVideoInfoH\000\022M\n\017yout" +
-      "ube_channel\030\025 \001(\01322.google.ads.googleads" +
-      ".v0.common.YouTubeChannelInfoH\000\022B\n\tproxi" +
-      "mity\030\027 \001(\0132-.google.ads.googleads.v0.com" +
-      "mon.ProximityInfoH\000\022:\n\005topic\030\030 \001(\0132).goo" +
-      "gle.ads.googleads.v0.common.TopicInfoH\000B" +
-      "\013\n\tcriterionB\333\001\n%com.google.ads.googlead" +
-      "s.v0.resourcesB\026CampaignCriterionProtoP\001" +
-      "ZJgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v0/resources;resources\242\002\003G" +
-      "AA\252\002!Google.Ads.GoogleAds.V0.Resources\312\002" +
-      "!Google\\Ads\\GoogleAds\\V0\\Resourcesb\006prot" +
-      "o3"
+      "gleads.v0.common.ParentalStatusInfoH\000\022A\n" +
+      "\tuser_list\030\026 \001(\0132,.google.ads.googleads." +
+      "v0.common.UserListInfoH\000\022I\n\ryoutube_vide" +
+      "o\030\024 \001(\01320.google.ads.googleads.v0.common" +
+      ".YouTubeVideoInfoH\000\022M\n\017youtube_channel\030\025" +
+      " \001(\01322.google.ads.googleads.v0.common.Yo" +
+      "uTubeChannelInfoH\000\022B\n\tproximity\030\027 \001(\0132-." +
+      "google.ads.googleads.v0.common.Proximity" +
+      "InfoH\000\022:\n\005topic\030\030 \001(\0132).google.ads.googl" +
+      "eads.v0.common.TopicInfoH\000\022I\n\rlisting_sc" +
+      "ope\030\031 \001(\01320.google.ads.googleads.v0.comm" +
+      "on.ListingScopeInfoH\000\022@\n\010language\030\032 \001(\0132" +
+      ",.google.ads.googleads.v0.common.Languag" +
+      "eInfoH\000\022?\n\010ip_block\030\033 \001(\0132+.google.ads.g" +
+      "oogleads.v0.common.IpBlockInfoH\000\022I\n\rcont" +
+      "ent_label\030\034 \001(\01320.google.ads.googleads.v" +
+      "0.common.ContentLabelInfoH\000\022>\n\007carrier\030\035" +
+      " \001(\0132+.google.ads.googleads.v0.common.Ca" +
+      "rrierInfoH\000\022I\n\ruser_interest\030\036 \001(\01320.goo" +
+      "gle.ads.googleads.v0.common.UserInterest" +
+      "InfoH\000B\013\n\tcriterionB\333\001\n%com.google.ads.g" +
+      "oogleads.v0.resourcesB\026CampaignCriterion" +
+      "ProtoP\001ZJgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v0/resources;resour" +
+      "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Reso" +
+      "urces\312\002!Google\\Ads\\GoogleAds\\V0\\Resource" +
+      "sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -92,7 +104,7 @@ public final class CampaignCriterionProto {
     internal_static_google_ads_googleads_v0_resources_CampaignCriterion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_CampaignCriterion_descriptor,
-        new java.lang.String[] { "ResourceName", "Campaign", "CriterionId", "BidModifier", "Negative", "Type", "Keyword", "Placement", "Location", "Device", "AdSchedule", "AgeRange", "Gender", "IncomeRange", "ParentalStatus", "YoutubeVideo", "YoutubeChannel", "Proximity", "Topic", "Criterion", });
+        new java.lang.String[] { "ResourceName", "Campaign", "CriterionId", "BidModifier", "Negative", "Type", "Keyword", "Placement", "Location", "Device", "AdSchedule", "AgeRange", "Gender", "IncomeRange", "ParentalStatus", "UserList", "YoutubeVideo", "YoutubeChannel", "Proximity", "Topic", "ListingScope", "Language", "IpBlock", "ContentLabel", "Carrier", "UserInterest", "Criterion", });
     com.google.ads.googleads.v0.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v0.enums.CriterionTypeProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();

@@ -33,7 +33,7 @@ public final class AdGroupBidModifierProto {
       "leads.v0.resources\032-google/ads/googleads" +
       "/v0/common/criteria.proto\0327google/ads/go" +
       "ogleads/v0/enums/bid_modifier_source.pro" +
-      "to\032\036google/protobuf/wrappers.proto\"\231\006\n\022A" +
+      "to\032\036google/protobuf/wrappers.proto\"\354\006\n\022A" +
       "dGroupBidModifier\022\025\n\rresource_name\030\001 \001(\t" +
       "\022.\n\010ad_group\030\002 \001(\0132\034.google.protobuf.Str" +
       "ingValue\0221\n\014criterion_id\030\003 \001(\0132\033.google." +
@@ -53,13 +53,15 @@ public final class AdGroupBidModifierProto {
       "l_check_in_day\030\010 \001(\01323.google.ads.google" +
       "ads.v0.common.HotelCheckInDayInfoH\000\022<\n\006d" +
       "evice\030\013 \001(\0132*.google.ads.googleads.v0.co" +
-      "mmon.DeviceInfoH\000B\013\n\tcriterionB\334\001\n%com.g" +
-      "oogle.ads.googleads.v0.resourcesB\027AdGrou" +
-      "pBidModifierProtoP\001ZJgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v0/reso" +
-      "urces;resources\242\002\003GAA\252\002!Google.Ads.Googl" +
-      "eAds.V0.Resources\312\002!Google\\Ads\\GoogleAds" +
-      "\\V0\\Resourcesb\006proto3"
+      "mmon.DeviceInfoH\000\022Q\n\021preferred_content\030\014" +
+      " \001(\01324.google.ads.googleads.v0.common.Pr" +
+      "eferredContentInfoH\000B\013\n\tcriterionB\334\001\n%co" +
+      "m.google.ads.googleads.v0.resourcesB\027AdG" +
+      "roupBidModifierProtoP\001ZJgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v0/r" +
+      "esources;resources\242\002\003GAA\252\002!Google.Ads.Go" +
+      "ogleAds.V0.Resources\312\002!Google\\Ads\\Google" +
+      "Ads\\V0\\Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -81,7 +83,7 @@ public final class AdGroupBidModifierProto {
     internal_static_google_ads_googleads_v0_resources_AdGroupBidModifier_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_AdGroupBidModifier_descriptor,
-        new java.lang.String[] { "ResourceName", "AdGroup", "CriterionId", "BidModifier", "BaseAdGroup", "BidModifierSource", "HotelDateSelectionType", "HotelAdvanceBookingWindow", "HotelLengthOfStay", "HotelCheckInDay", "Device", "Criterion", });
+        new java.lang.String[] { "ResourceName", "AdGroup", "CriterionId", "BidModifier", "BaseAdGroup", "BidModifierSource", "HotelDateSelectionType", "HotelAdvanceBookingWindow", "HotelLengthOfStay", "HotelCheckInDay", "Device", "PreferredContent", "Criterion", });
     com.google.ads.googleads.v0.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v0.enums.BidModifierSourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();

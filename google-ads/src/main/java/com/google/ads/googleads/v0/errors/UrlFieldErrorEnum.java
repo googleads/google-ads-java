@@ -420,6 +420,14 @@ private static final long serialVersionUID = 0L;
     MISSING_PROTOCOL(43),
     /**
      * <pre>
+     * Unsupported protocol in URL. Only http and https are supported.
+     * </pre>
+     *
+     * <code>INVALID_PROTOCOL = 52;</code>
+     */
+    INVALID_PROTOCOL(52),
+    /**
+     * <pre>
      * The url is invalid.
      * </pre>
      *
@@ -484,6 +492,39 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_TAG_IN_FINAL_URL_SUFFIX = 51;</code>
      */
     INVALID_TAG_IN_FINAL_URL_SUFFIX(51),
+    /**
+     * <pre>
+     * The top level domain is invalid, e.g, not a public top level domain
+     * listed in publicsuffix.org.
+     * </pre>
+     *
+     * <code>INVALID_TOP_LEVEL_DOMAIN = 53;</code>
+     */
+    INVALID_TOP_LEVEL_DOMAIN(53),
+    /**
+     * <pre>
+     * Malformed top level domain in URL.
+     * </pre>
+     *
+     * <code>MALFORMED_TOP_LEVEL_DOMAIN = 54;</code>
+     */
+    MALFORMED_TOP_LEVEL_DOMAIN(54),
+    /**
+     * <pre>
+     * Malformed URL.
+     * </pre>
+     *
+     * <code>MALFORMED_URL = 55;</code>
+     */
+    MALFORMED_URL(55),
+    /**
+     * <pre>
+     * No host found in URL.
+     * </pre>
+     *
+     * <code>MISSING_HOST = 56;</code>
+     */
+    MISSING_HOST(56),
     UNRECOGNIZED(-1),
     ;
 
@@ -821,6 +862,14 @@ private static final long serialVersionUID = 0L;
     public static final int MISSING_PROTOCOL_VALUE = 43;
     /**
      * <pre>
+     * Unsupported protocol in URL. Only http and https are supported.
+     * </pre>
+     *
+     * <code>INVALID_PROTOCOL = 52;</code>
+     */
+    public static final int INVALID_PROTOCOL_VALUE = 52;
+    /**
+     * <pre>
      * The url is invalid.
      * </pre>
      *
@@ -885,6 +934,39 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_TAG_IN_FINAL_URL_SUFFIX = 51;</code>
      */
     public static final int INVALID_TAG_IN_FINAL_URL_SUFFIX_VALUE = 51;
+    /**
+     * <pre>
+     * The top level domain is invalid, e.g, not a public top level domain
+     * listed in publicsuffix.org.
+     * </pre>
+     *
+     * <code>INVALID_TOP_LEVEL_DOMAIN = 53;</code>
+     */
+    public static final int INVALID_TOP_LEVEL_DOMAIN_VALUE = 53;
+    /**
+     * <pre>
+     * Malformed top level domain in URL.
+     * </pre>
+     *
+     * <code>MALFORMED_TOP_LEVEL_DOMAIN = 54;</code>
+     */
+    public static final int MALFORMED_TOP_LEVEL_DOMAIN_VALUE = 54;
+    /**
+     * <pre>
+     * Malformed URL.
+     * </pre>
+     *
+     * <code>MALFORMED_URL = 55;</code>
+     */
+    public static final int MALFORMED_URL_VALUE = 55;
+    /**
+     * <pre>
+     * No host found in URL.
+     * </pre>
+     *
+     * <code>MISSING_HOST = 56;</code>
+     */
+    public static final int MISSING_HOST_VALUE = 56;
 
 
     public final int getNumber() {
@@ -945,6 +1027,7 @@ private static final long serialVersionUID = 0L;
         case 41: return INVALID_TAG_IN_URL_CUSTOM_PARAMETER_VALUE;
         case 42: return REDUNDANT_NESTED_URL_CUSTOM_PARAMETER_TAG;
         case 43: return MISSING_PROTOCOL;
+        case 52: return INVALID_PROTOCOL;
         case 44: return INVALID_URL;
         case 45: return DESTINATION_URL_DEPRECATED;
         case 46: return INVALID_TAG_IN_URL;
@@ -953,6 +1036,10 @@ private static final long serialVersionUID = 0L;
         case 49: return INVALID_URL_ID;
         case 50: return FINAL_URL_SUFFIX_MALFORMED;
         case 51: return INVALID_TAG_IN_FINAL_URL_SUFFIX;
+        case 53: return INVALID_TOP_LEVEL_DOMAIN;
+        case 54: return MALFORMED_TOP_LEVEL_DOMAIN;
+        case 55: return MALFORMED_URL;
+        case 56: return MISSING_HOST;
         default: return null;
       }
     }

@@ -16,9 +16,13 @@
 package com.google.ads.googleads.v0.services.stub;
 
 import com.google.ads.googleads.v0.resources.Customer;
+import com.google.ads.googleads.v0.services.CreateCustomerClientRequest;
+import com.google.ads.googleads.v0.services.CreateCustomerClientResponse;
 import com.google.ads.googleads.v0.services.GetCustomerRequest;
 import com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest;
 import com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse;
+import com.google.ads.googleads.v0.services.MutateCustomerRequest;
+import com.google.ads.googleads.v0.services.MutateCustomerResponse;
 import com.google.api.core.ApiFunction;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.GaxProperties;
@@ -77,18 +81,33 @@ public class CustomerServiceStubSettings extends StubSettings<CustomerServiceStu
       ImmutableList.<String>builder().build();
 
   private final UnaryCallSettings<GetCustomerRequest, Customer> getCustomerSettings;
+  private final UnaryCallSettings<MutateCustomerRequest, MutateCustomerResponse>
+      mutateCustomerSettings;
   private final UnaryCallSettings<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
       listAccessibleCustomersSettings;
+  private final UnaryCallSettings<CreateCustomerClientRequest, CreateCustomerClientResponse>
+      createCustomerClientSettings;
 
   /** Returns the object with the settings used for calls to getCustomer. */
   public UnaryCallSettings<GetCustomerRequest, Customer> getCustomerSettings() {
     return getCustomerSettings;
   }
 
+  /** Returns the object with the settings used for calls to mutateCustomer. */
+  public UnaryCallSettings<MutateCustomerRequest, MutateCustomerResponse> mutateCustomerSettings() {
+    return mutateCustomerSettings;
+  }
+
   /** Returns the object with the settings used for calls to listAccessibleCustomers. */
   public UnaryCallSettings<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
       listAccessibleCustomersSettings() {
     return listAccessibleCustomersSettings;
+  }
+
+  /** Returns the object with the settings used for calls to createCustomerClient. */
+  public UnaryCallSettings<CreateCustomerClientRequest, CreateCustomerClientResponse>
+      createCustomerClientSettings() {
+    return createCustomerClientSettings;
   }
 
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
@@ -160,7 +179,9 @@ public class CustomerServiceStubSettings extends StubSettings<CustomerServiceStu
     super(settingsBuilder);
 
     getCustomerSettings = settingsBuilder.getCustomerSettings().build();
+    mutateCustomerSettings = settingsBuilder.mutateCustomerSettings().build();
     listAccessibleCustomersSettings = settingsBuilder.listAccessibleCustomersSettings().build();
+    createCustomerClientSettings = settingsBuilder.createCustomerClientSettings().build();
   }
 
   /** Builder for CustomerServiceStubSettings. */
@@ -168,9 +189,14 @@ public class CustomerServiceStubSettings extends StubSettings<CustomerServiceStu
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
 
     private final UnaryCallSettings.Builder<GetCustomerRequest, Customer> getCustomerSettings;
+    private final UnaryCallSettings.Builder<MutateCustomerRequest, MutateCustomerResponse>
+        mutateCustomerSettings;
     private final UnaryCallSettings.Builder<
             ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
         listAccessibleCustomersSettings;
+    private final UnaryCallSettings.Builder<
+            CreateCustomerClientRequest, CreateCustomerClientResponse>
+        createCustomerClientSettings;
 
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
@@ -215,11 +241,18 @@ public class CustomerServiceStubSettings extends StubSettings<CustomerServiceStu
 
       getCustomerSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
+      mutateCustomerSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+
       listAccessibleCustomersSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+
+      createCustomerClientSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              getCustomerSettings, listAccessibleCustomersSettings);
+              getCustomerSettings,
+              mutateCustomerSettings,
+              listAccessibleCustomersSettings,
+              createCustomerClientSettings);
 
       initDefaults(this);
     }
@@ -241,8 +274,18 @@ public class CustomerServiceStubSettings extends StubSettings<CustomerServiceStu
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
       builder
+          .mutateCustomerSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
+
+      builder
           .listAccessibleCustomersSettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
+
+      builder
+          .createCustomerClientSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
       return builder;
@@ -252,11 +295,16 @@ public class CustomerServiceStubSettings extends StubSettings<CustomerServiceStu
       super(settings);
 
       getCustomerSettings = settings.getCustomerSettings.toBuilder();
+      mutateCustomerSettings = settings.mutateCustomerSettings.toBuilder();
       listAccessibleCustomersSettings = settings.listAccessibleCustomersSettings.toBuilder();
+      createCustomerClientSettings = settings.createCustomerClientSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              getCustomerSettings, listAccessibleCustomersSettings);
+              getCustomerSettings,
+              mutateCustomerSettings,
+              listAccessibleCustomersSettings,
+              createCustomerClientSettings);
     }
 
     // NEXT_MAJOR_VER: remove 'throws Exception'
@@ -280,11 +328,23 @@ public class CustomerServiceStubSettings extends StubSettings<CustomerServiceStu
       return getCustomerSettings;
     }
 
+    /** Returns the builder for the settings used for calls to mutateCustomer. */
+    public UnaryCallSettings.Builder<MutateCustomerRequest, MutateCustomerResponse>
+        mutateCustomerSettings() {
+      return mutateCustomerSettings;
+    }
+
     /** Returns the builder for the settings used for calls to listAccessibleCustomers. */
     public UnaryCallSettings.Builder<
             ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
         listAccessibleCustomersSettings() {
       return listAccessibleCustomersSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to createCustomerClient. */
+    public UnaryCallSettings.Builder<CreateCustomerClientRequest, CreateCustomerClientResponse>
+        createCustomerClientSettings() {
+      return createCustomerClientSettings;
     }
 
     @Override

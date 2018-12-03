@@ -68,6 +68,43 @@ public final class CustomerServiceGrpc {
      return getGetCustomerMethod;
   }
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getMutateCustomerMethod()} instead. 
+  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerRequest,
+      com.google.ads.googleads.v0.services.MutateCustomerResponse> METHOD_MUTATE_CUSTOMER = getMutateCustomerMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerRequest,
+      com.google.ads.googleads.v0.services.MutateCustomerResponse> getMutateCustomerMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerRequest,
+      com.google.ads.googleads.v0.services.MutateCustomerResponse> getMutateCustomerMethod() {
+    return getMutateCustomerMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerRequest,
+      com.google.ads.googleads.v0.services.MutateCustomerResponse> getMutateCustomerMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerRequest, com.google.ads.googleads.v0.services.MutateCustomerResponse> getMutateCustomerMethod;
+    if ((getMutateCustomerMethod = CustomerServiceGrpc.getMutateCustomerMethod) == null) {
+      synchronized (CustomerServiceGrpc.class) {
+        if ((getMutateCustomerMethod = CustomerServiceGrpc.getMutateCustomerMethod) == null) {
+          CustomerServiceGrpc.getMutateCustomerMethod = getMutateCustomerMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.MutateCustomerRequest, com.google.ads.googleads.v0.services.MutateCustomerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.CustomerService", "MutateCustomer"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateCustomerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateCustomerResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("MutateCustomer"))
+                  .build();
+          }
+        }
+     }
+     return getMutateCustomerMethod;
+  }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   @java.lang.Deprecated // Use {@link #getListAccessibleCustomersMethod()} instead. 
   public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest,
       com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse> METHOD_LIST_ACCESSIBLE_CUSTOMERS = getListAccessibleCustomersMethodHelper();
@@ -103,6 +140,43 @@ public final class CustomerServiceGrpc {
         }
      }
      return getListAccessibleCustomersMethod;
+  }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getCreateCustomerClientMethod()} instead. 
+  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.CreateCustomerClientRequest,
+      com.google.ads.googleads.v0.services.CreateCustomerClientResponse> METHOD_CREATE_CUSTOMER_CLIENT = getCreateCustomerClientMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.CreateCustomerClientRequest,
+      com.google.ads.googleads.v0.services.CreateCustomerClientResponse> getCreateCustomerClientMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.CreateCustomerClientRequest,
+      com.google.ads.googleads.v0.services.CreateCustomerClientResponse> getCreateCustomerClientMethod() {
+    return getCreateCustomerClientMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.CreateCustomerClientRequest,
+      com.google.ads.googleads.v0.services.CreateCustomerClientResponse> getCreateCustomerClientMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.CreateCustomerClientRequest, com.google.ads.googleads.v0.services.CreateCustomerClientResponse> getCreateCustomerClientMethod;
+    if ((getCreateCustomerClientMethod = CustomerServiceGrpc.getCreateCustomerClientMethod) == null) {
+      synchronized (CustomerServiceGrpc.class) {
+        if ((getCreateCustomerClientMethod = CustomerServiceGrpc.getCreateCustomerClientMethod) == null) {
+          CustomerServiceGrpc.getCreateCustomerClientMethod = getCreateCustomerClientMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.CreateCustomerClientRequest, com.google.ads.googleads.v0.services.CreateCustomerClientResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.CustomerService", "CreateCustomerClient"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.CreateCustomerClientRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.CreateCustomerClientResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("CreateCustomerClient"))
+                  .build();
+          }
+        }
+     }
+     return getCreateCustomerClientMethod;
   }
 
   /**
@@ -147,6 +221,16 @@ public final class CustomerServiceGrpc {
 
     /**
      * <pre>
+     * Updates a customer. Operation statuses are returned.
+     * </pre>
+     */
+    public void mutateCustomer(com.google.ads.googleads.v0.services.MutateCustomerRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCustomerResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getMutateCustomerMethodHelper(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns resource names of customers directly accessible by the
      * user authenticating the call.
      * </pre>
@@ -154,6 +238,16 @@ public final class CustomerServiceGrpc {
     public void listAccessibleCustomers(com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListAccessibleCustomersMethodHelper(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a new client under manager. The new client customer is returned.
+     * </pre>
+     */
+    public void createCustomerClient(com.google.ads.googleads.v0.services.CreateCustomerClientRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.CreateCustomerClientResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateCustomerClientMethodHelper(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -166,12 +260,26 @@ public final class CustomerServiceGrpc {
                 com.google.ads.googleads.v0.resources.Customer>(
                   this, METHODID_GET_CUSTOMER)))
           .addMethod(
+            getMutateCustomerMethodHelper(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v0.services.MutateCustomerRequest,
+                com.google.ads.googleads.v0.services.MutateCustomerResponse>(
+                  this, METHODID_MUTATE_CUSTOMER)))
+          .addMethod(
             getListAccessibleCustomersMethodHelper(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest,
                 com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse>(
                   this, METHODID_LIST_ACCESSIBLE_CUSTOMERS)))
+          .addMethod(
+            getCreateCustomerClientMethodHelper(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v0.services.CreateCustomerClientRequest,
+                com.google.ads.googleads.v0.services.CreateCustomerClientResponse>(
+                  this, METHODID_CREATE_CUSTOMER_CLIENT)))
           .build();
     }
   }
@@ -210,6 +318,17 @@ public final class CustomerServiceGrpc {
 
     /**
      * <pre>
+     * Updates a customer. Operation statuses are returned.
+     * </pre>
+     */
+    public void mutateCustomer(com.google.ads.googleads.v0.services.MutateCustomerRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCustomerResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getMutateCustomerMethodHelper(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns resource names of customers directly accessible by the
      * user authenticating the call.
      * </pre>
@@ -218,6 +337,17 @@ public final class CustomerServiceGrpc {
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListAccessibleCustomersMethodHelper(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a new client under manager. The new client customer is returned.
+     * </pre>
+     */
+    public void createCustomerClient(com.google.ads.googleads.v0.services.CreateCustomerClientRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.CreateCustomerClientResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateCustomerClientMethodHelper(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -254,6 +384,16 @@ public final class CustomerServiceGrpc {
 
     /**
      * <pre>
+     * Updates a customer. Operation statuses are returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v0.services.MutateCustomerResponse mutateCustomer(com.google.ads.googleads.v0.services.MutateCustomerRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getMutateCustomerMethodHelper(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Returns resource names of customers directly accessible by the
      * user authenticating the call.
      * </pre>
@@ -261,6 +401,16 @@ public final class CustomerServiceGrpc {
     public com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse listAccessibleCustomers(com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest request) {
       return blockingUnaryCall(
           getChannel(), getListAccessibleCustomersMethodHelper(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a new client under manager. The new client customer is returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v0.services.CreateCustomerClientResponse createCustomerClient(com.google.ads.googleads.v0.services.CreateCustomerClientRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateCustomerClientMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -298,6 +448,17 @@ public final class CustomerServiceGrpc {
 
     /**
      * <pre>
+     * Updates a customer. Operation statuses are returned.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.services.MutateCustomerResponse> mutateCustomer(
+        com.google.ads.googleads.v0.services.MutateCustomerRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getMutateCustomerMethodHelper(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Returns resource names of customers directly accessible by the
      * user authenticating the call.
      * </pre>
@@ -307,10 +468,23 @@ public final class CustomerServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getListAccessibleCustomersMethodHelper(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Creates a new client under manager. The new client customer is returned.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.services.CreateCustomerClientResponse> createCustomerClient(
+        com.google.ads.googleads.v0.services.CreateCustomerClientRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateCustomerClientMethodHelper(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CUSTOMER = 0;
-  private static final int METHODID_LIST_ACCESSIBLE_CUSTOMERS = 1;
+  private static final int METHODID_MUTATE_CUSTOMER = 1;
+  private static final int METHODID_LIST_ACCESSIBLE_CUSTOMERS = 2;
+  private static final int METHODID_CREATE_CUSTOMER_CLIENT = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -333,9 +507,17 @@ public final class CustomerServiceGrpc {
           serviceImpl.getCustomer((com.google.ads.googleads.v0.services.GetCustomerRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.resources.Customer>) responseObserver);
           break;
+        case METHODID_MUTATE_CUSTOMER:
+          serviceImpl.mutateCustomer((com.google.ads.googleads.v0.services.MutateCustomerRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCustomerResponse>) responseObserver);
+          break;
         case METHODID_LIST_ACCESSIBLE_CUSTOMERS:
           serviceImpl.listAccessibleCustomers((com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_CUSTOMER_CLIENT:
+          serviceImpl.createCustomerClient((com.google.ads.googleads.v0.services.CreateCustomerClientRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.CreateCustomerClientResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -399,7 +581,9 @@ public final class CustomerServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CustomerServiceFileDescriptorSupplier())
               .addMethod(getGetCustomerMethodHelper())
+              .addMethod(getMutateCustomerMethodHelper())
               .addMethod(getListAccessibleCustomersMethodHelper())
+              .addMethod(getCreateCustomerClientMethodHelper())
               .build();
         }
       }

@@ -102,7 +102,6 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * The ad group to which the criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -111,7 +110,6 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * The ad group to which the criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -120,7 +118,6 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * The ad group to which the criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -802,6 +799,31 @@ public interface AdGroupCriterionOrBuilder extends
 
   /**
    * <pre>
+   * User List.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+   */
+  boolean hasUserList();
+  /**
+   * <pre>
+   * User List.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+   */
+  com.google.ads.googleads.v0.common.UserListInfo getUserList();
+  /**
+   * <pre>
+   * User List.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+   */
+  com.google.ads.googleads.v0.common.UserListInfoOrBuilder getUserListOrBuilder();
+
+  /**
+   * <pre>
    * YouTube Video.
    * </pre>
    *
@@ -874,6 +896,31 @@ public interface AdGroupCriterionOrBuilder extends
    * <code>.google.ads.googleads.v0.common.TopicInfo topic = 43;</code>
    */
   com.google.ads.googleads.v0.common.TopicInfoOrBuilder getTopicOrBuilder();
+
+  /**
+   * <pre>
+   * User Interest.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+   */
+  boolean hasUserInterest();
+  /**
+   * <pre>
+   * User Interest.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+   */
+  com.google.ads.googleads.v0.common.UserInterestInfo getUserInterest();
+  /**
+   * <pre>
+   * User Interest.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+   */
+  com.google.ads.googleads.v0.common.UserInterestInfoOrBuilder getUserInterestOrBuilder();
 
   public com.google.ads.googleads.v0.resources.AdGroupCriterion.CriterionCase getCriterionCase();
 }

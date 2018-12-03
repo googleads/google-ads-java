@@ -110,6 +110,14 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_LOGIN_CUSTOMER_ID = 3;</code>
      */
     INVALID_LOGIN_CUSTOMER_ID(3),
+    /**
+     * <pre>
+     * One or more task headers could not be parsed.
+     * </pre>
+     *
+     * <code>MALFORMED_TASK_INFO = 4;</code>
+     */
+    MALFORMED_TASK_INFO(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -137,6 +145,14 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_LOGIN_CUSTOMER_ID = 3;</code>
      */
     public static final int INVALID_LOGIN_CUSTOMER_ID_VALUE = 3;
+    /**
+     * <pre>
+     * One or more task headers could not be parsed.
+     * </pre>
+     *
+     * <code>MALFORMED_TASK_INFO = 4;</code>
+     */
+    public static final int MALFORMED_TASK_INFO_VALUE = 4;
 
 
     public final int getNumber() {
@@ -160,6 +176,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 3: return INVALID_LOGIN_CUSTOMER_ID;
+        case 4: return MALFORMED_TASK_INFO;
         default: return null;
       }
     }

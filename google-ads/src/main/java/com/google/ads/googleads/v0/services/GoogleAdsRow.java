@@ -23,7 +23,11 @@ private static final long serialVersionUID = 0L;
     adNetworkType_ = 0;
     dayOfWeek_ = 0;
     device_ = 0;
+    hotelCheckInDayOfWeek_ = 0;
+    hotelDateSelectionType_ = 0;
     monthOfYear_ = 0;
+    placeholderType_ = 0;
+    searchTermMatchType_ = 0;
     slot_ = 0;
   }
 
@@ -42,6 +46,7 @@ private static final long serialVersionUID = 0L;
     }
     int mutable_bitField0_ = 0;
     int mutable_bitField1_ = 0;
+    int mutable_bitField2_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -407,6 +412,71 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 258: {
+            com.google.ads.googleads.v0.resources.KeywordPlan.Builder subBuilder = null;
+            if (keywordPlan_ != null) {
+              subBuilder = keywordPlan_.toBuilder();
+            }
+            keywordPlan_ = input.readMessage(com.google.ads.googleads.v0.resources.KeywordPlan.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(keywordPlan_);
+              keywordPlan_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 266: {
+            com.google.ads.googleads.v0.resources.KeywordPlanCampaign.Builder subBuilder = null;
+            if (keywordPlanCampaign_ != null) {
+              subBuilder = keywordPlanCampaign_.toBuilder();
+            }
+            keywordPlanCampaign_ = input.readMessage(com.google.ads.googleads.v0.resources.KeywordPlanCampaign.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(keywordPlanCampaign_);
+              keywordPlanCampaign_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 274: {
+            com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword.Builder subBuilder = null;
+            if (keywordPlanNegativeKeyword_ != null) {
+              subBuilder = keywordPlanNegativeKeyword_.toBuilder();
+            }
+            keywordPlanNegativeKeyword_ = input.readMessage(com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(keywordPlanNegativeKeyword_);
+              keywordPlanNegativeKeyword_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 282: {
+            com.google.ads.googleads.v0.resources.KeywordPlanAdGroup.Builder subBuilder = null;
+            if (keywordPlanAdGroup_ != null) {
+              subBuilder = keywordPlanAdGroup_.toBuilder();
+            }
+            keywordPlanAdGroup_ = input.readMessage(com.google.ads.googleads.v0.resources.KeywordPlanAdGroup.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(keywordPlanAdGroup_);
+              keywordPlanAdGroup_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 290: {
+            com.google.ads.googleads.v0.resources.KeywordPlanKeyword.Builder subBuilder = null;
+            if (keywordPlanKeyword_ != null) {
+              subBuilder = keywordPlanKeyword_.toBuilder();
+            }
+            keywordPlanKeyword_ = input.readMessage(com.google.ads.googleads.v0.resources.KeywordPlanKeyword.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(keywordPlanKeyword_);
+              keywordPlanKeyword_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 298: {
             com.google.ads.googleads.v0.resources.ChangeStatus.Builder subBuilder = null;
             if (changeStatus_ != null) {
@@ -416,6 +486,19 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(changeStatus_);
               changeStatus_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 306: {
+            com.google.ads.googleads.v0.resources.UserList.Builder subBuilder = null;
+            if (userList_ != null) {
+              subBuilder = userList_.toBuilder();
+            }
+            userList_ = input.readMessage(com.google.ads.googleads.v0.resources.UserList.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(userList_);
+              userList_ = subBuilder.buildPartial();
             }
 
             break;
@@ -511,6 +594,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 370: {
+            com.google.ads.googleads.v0.resources.Feed.Builder subBuilder = null;
+            if (feed_ != null) {
+              subBuilder = feed_.toBuilder();
+            }
+            feed_ = input.readMessage(com.google.ads.googleads.v0.resources.Feed.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(feed_);
+              feed_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 378: {
             com.google.ads.googleads.v0.resources.DisplayKeywordView.Builder subBuilder = null;
             if (displayKeywordView_ != null) {
@@ -533,6 +629,19 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(ageRangeView_);
               ageRangeView_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 402: {
+            com.google.ads.googleads.v0.resources.FeedItem.Builder subBuilder = null;
+            if (feedItem_ != null) {
+              subBuilder = feedItem_.toBuilder();
+            }
+            feedItem_ = input.readMessage(com.google.ads.googleads.v0.resources.FeedItem.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(feedItem_);
+              feedItem_ = subBuilder.buildPartial();
             }
 
             break;
@@ -576,6 +685,25 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 442: {
+            com.google.ads.googleads.v0.resources.LanguageConstant.Builder subBuilder = null;
+            if (languageConstant_ != null) {
+              subBuilder = languageConstant_.toBuilder();
+            }
+            languageConstant_ = input.readMessage(com.google.ads.googleads.v0.resources.LanguageConstant.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(languageConstant_);
+              languageConstant_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 448: {
+            int rawValue = input.readEnum();
+
+            searchTermMatchType_ = rawValue;
+            break;
+          }
           case 458: {
             com.google.ads.googleads.v0.resources.AdGroupAudienceView.Builder subBuilder = null;
             if (adGroupAudienceView_ != null) {
@@ -585,6 +713,32 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(adGroupAudienceView_);
               adGroupAudienceView_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 466: {
+            com.google.ads.googleads.v0.resources.FeedMapping.Builder subBuilder = null;
+            if (feedMapping_ != null) {
+              subBuilder = feedMapping_.toBuilder();
+            }
+            feedMapping_ = input.readMessage(com.google.ads.googleads.v0.resources.FeedMapping.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(feedMapping_);
+              feedMapping_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 474: {
+            com.google.ads.googleads.v0.resources.UserInterest.Builder subBuilder = null;
+            if (userInterest_ != null) {
+              subBuilder = userInterest_.toBuilder();
+            }
+            userInterest_ = input.readMessage(com.google.ads.googleads.v0.resources.UserInterest.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(userInterest_);
+              userInterest_ = subBuilder.buildPartial();
             }
 
             break;
@@ -611,6 +765,245 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(customerClientLink_);
               customerClientLink_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 506: {
+            com.google.ads.googleads.v0.resources.CampaignFeed.Builder subBuilder = null;
+            if (campaignFeed_ != null) {
+              subBuilder = campaignFeed_.toBuilder();
+            }
+            campaignFeed_ = input.readMessage(com.google.ads.googleads.v0.resources.CampaignFeed.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(campaignFeed_);
+              campaignFeed_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 514: {
+            com.google.ads.googleads.v0.resources.CustomerFeed.Builder subBuilder = null;
+            if (customerFeed_ != null) {
+              subBuilder = customerFeed_.toBuilder();
+            }
+            customerFeed_ = input.readMessage(com.google.ads.googleads.v0.resources.CustomerFeed.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(customerFeed_);
+              customerFeed_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 520: {
+            int rawValue = input.readEnum();
+
+            placeholderType_ = rawValue;
+            break;
+          }
+          case 530: {
+            com.google.ads.googleads.v0.resources.CarrierConstant.Builder subBuilder = null;
+            if (carrierConstant_ != null) {
+              subBuilder = carrierConstant_.toBuilder();
+            }
+            carrierConstant_ = input.readMessage(com.google.ads.googleads.v0.resources.CarrierConstant.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(carrierConstant_);
+              carrierConstant_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 538: {
+            com.google.ads.googleads.v0.resources.AdGroupFeed.Builder subBuilder = null;
+            if (adGroupFeed_ != null) {
+              subBuilder = adGroupFeed_.toBuilder();
+            }
+            adGroupFeed_ = input.readMessage(com.google.ads.googleads.v0.resources.AdGroupFeed.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(adGroupFeed_);
+              adGroupFeed_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 546: {
+            com.google.ads.googleads.v0.resources.SearchTermView.Builder subBuilder = null;
+            if (searchTermView_ != null) {
+              subBuilder = searchTermView_.toBuilder();
+            }
+            searchTermView_ = input.readMessage(com.google.ads.googleads.v0.resources.SearchTermView.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(searchTermView_);
+              searchTermView_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 554: {
+            com.google.ads.googleads.v0.resources.CampaignAudienceView.Builder subBuilder = null;
+            if (campaignAudienceView_ != null) {
+              subBuilder = campaignAudienceView_.toBuilder();
+            }
+            campaignAudienceView_ = input.readMessage(com.google.ads.googleads.v0.resources.CampaignAudienceView.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(campaignAudienceView_);
+              campaignAudienceView_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 562: {
+            com.google.ads.googleads.v0.resources.CustomerClient.Builder subBuilder = null;
+            if (customerClient_ != null) {
+              subBuilder = customerClient_.toBuilder();
+            }
+            customerClient_ = input.readMessage(com.google.ads.googleads.v0.resources.CustomerClient.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(customerClient_);
+              customerClient_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 570: {
+            com.google.ads.googleads.v0.resources.HotelPerformanceView.Builder subBuilder = null;
+            if (hotelPerformanceView_ != null) {
+              subBuilder = hotelPerformanceView_.toBuilder();
+            }
+            hotelPerformanceView_ = input.readMessage(com.google.ads.googleads.v0.resources.HotelPerformanceView.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelPerformanceView_);
+              hotelPerformanceView_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 578: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (hotelCenterId_ != null) {
+              subBuilder = hotelCenterId_.toBuilder();
+            }
+            hotelCenterId_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelCenterId_);
+              hotelCenterId_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 586: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (hotelCheckInDate_ != null) {
+              subBuilder = hotelCheckInDate_.toBuilder();
+            }
+            hotelCheckInDate_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelCheckInDate_);
+              hotelCheckInDate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 592: {
+            int rawValue = input.readEnum();
+
+            hotelCheckInDayOfWeek_ = rawValue;
+            break;
+          }
+          case 602: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (hotelCity_ != null) {
+              subBuilder = hotelCity_.toBuilder();
+            }
+            hotelCity_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelCity_);
+              hotelCity_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 610: {
+            com.google.protobuf.Int32Value.Builder subBuilder = null;
+            if (hotelClass_ != null) {
+              subBuilder = hotelClass_.toBuilder();
+            }
+            hotelClass_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelClass_);
+              hotelClass_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 618: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (hotelCountry_ != null) {
+              subBuilder = hotelCountry_.toBuilder();
+            }
+            hotelCountry_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelCountry_);
+              hotelCountry_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 624: {
+            int rawValue = input.readEnum();
+
+            hotelDateSelectionType_ = rawValue;
+            break;
+          }
+          case 634: {
+            com.google.protobuf.Int32Value.Builder subBuilder = null;
+            if (hotelLengthOfStay_ != null) {
+              subBuilder = hotelLengthOfStay_.toBuilder();
+            }
+            hotelLengthOfStay_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelLengthOfStay_);
+              hotelLengthOfStay_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 650: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (hotelState_ != null) {
+              subBuilder = hotelState_.toBuilder();
+            }
+            hotelState_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelState_);
+              hotelState_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 658: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (partnerHotelId_ != null) {
+              subBuilder = partnerHotelId_.toBuilder();
+            }
+            partnerHotelId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(partnerHotelId_);
+              partnerHotelId_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 666: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (hotelBookingWindowDays_ != null) {
+              subBuilder = hotelBookingWindowDays_.toBuilder();
+            }
+            hotelBookingWindowDays_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelBookingWindowDays_);
+              hotelBookingWindowDays_ = subBuilder.buildPartial();
             }
 
             break;
@@ -878,6 +1271,39 @@ private static final long serialVersionUID = 0L;
     return getAdGroupCriterion();
   }
 
+  public static final int AD_GROUP_FEED_FIELD_NUMBER = 67;
+  private com.google.ads.googleads.v0.resources.AdGroupFeed adGroupFeed_;
+  /**
+   * <pre>
+   * The ad group feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+   */
+  public boolean hasAdGroupFeed() {
+    return adGroupFeed_ != null;
+  }
+  /**
+   * <pre>
+   * The ad group feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+   */
+  public com.google.ads.googleads.v0.resources.AdGroupFeed getAdGroupFeed() {
+    return adGroupFeed_ == null ? com.google.ads.googleads.v0.resources.AdGroupFeed.getDefaultInstance() : adGroupFeed_;
+  }
+  /**
+   * <pre>
+   * The ad group feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+   */
+  public com.google.ads.googleads.v0.resources.AdGroupFeedOrBuilder getAdGroupFeedOrBuilder() {
+    return getAdGroupFeed();
+  }
+
   public static final int AGE_RANGE_VIEW_FIELD_NUMBER = 48;
   private com.google.ads.googleads.v0.resources.AgeRangeView ageRangeView_;
   /**
@@ -1043,6 +1469,39 @@ private static final long serialVersionUID = 0L;
     return getCampaign();
   }
 
+  public static final int CAMPAIGN_AUDIENCE_VIEW_FIELD_NUMBER = 69;
+  private com.google.ads.googleads.v0.resources.CampaignAudienceView campaignAudienceView_;
+  /**
+   * <pre>
+   * The campaign audience view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+   */
+  public boolean hasCampaignAudienceView() {
+    return campaignAudienceView_ != null;
+  }
+  /**
+   * <pre>
+   * The campaign audience view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CampaignAudienceView getCampaignAudienceView() {
+    return campaignAudienceView_ == null ? com.google.ads.googleads.v0.resources.CampaignAudienceView.getDefaultInstance() : campaignAudienceView_;
+  }
+  /**
+   * <pre>
+   * The campaign audience view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CampaignAudienceViewOrBuilder getCampaignAudienceViewOrBuilder() {
+    return getCampaignAudienceView();
+  }
+
   public static final int CAMPAIGN_BID_MODIFIER_FIELD_NUMBER = 26;
   private com.google.ads.googleads.v0.resources.CampaignBidModifier campaignBidModifier_;
   /**
@@ -1109,6 +1568,39 @@ private static final long serialVersionUID = 0L;
     return getCampaignCriterion();
   }
 
+  public static final int CAMPAIGN_FEED_FIELD_NUMBER = 63;
+  private com.google.ads.googleads.v0.resources.CampaignFeed campaignFeed_;
+  /**
+   * <pre>
+   * The campaign feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+   */
+  public boolean hasCampaignFeed() {
+    return campaignFeed_ != null;
+  }
+  /**
+   * <pre>
+   * The campaign feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CampaignFeed getCampaignFeed() {
+    return campaignFeed_ == null ? com.google.ads.googleads.v0.resources.CampaignFeed.getDefaultInstance() : campaignFeed_;
+  }
+  /**
+   * <pre>
+   * The campaign feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CampaignFeedOrBuilder getCampaignFeedOrBuilder() {
+    return getCampaignFeed();
+  }
+
   public static final int CAMPAIGN_GROUP_FIELD_NUMBER = 25;
   private com.google.ads.googleads.v0.resources.CampaignGroup campaignGroup_;
   /**
@@ -1173,6 +1665,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.resources.CampaignSharedSetOrBuilder getCampaignSharedSetOrBuilder() {
     return getCampaignSharedSet();
+  }
+
+  public static final int CARRIER_CONSTANT_FIELD_NUMBER = 66;
+  private com.google.ads.googleads.v0.resources.CarrierConstant carrierConstant_;
+  /**
+   * <pre>
+   * The carrier constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+   */
+  public boolean hasCarrierConstant() {
+    return carrierConstant_ != null;
+  }
+  /**
+   * <pre>
+   * The carrier constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CarrierConstant getCarrierConstant() {
+    return carrierConstant_ == null ? com.google.ads.googleads.v0.resources.CarrierConstant.getDefaultInstance() : carrierConstant_;
+  }
+  /**
+   * <pre>
+   * The carrier constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CarrierConstantOrBuilder getCarrierConstantOrBuilder() {
+    return getCarrierConstant();
   }
 
   public static final int CHANGE_STATUS_FIELD_NUMBER = 37;
@@ -1307,6 +1832,72 @@ private static final long serialVersionUID = 0L;
     return getCustomerClientLink();
   }
 
+  public static final int CUSTOMER_CLIENT_FIELD_NUMBER = 70;
+  private com.google.ads.googleads.v0.resources.CustomerClient customerClient_;
+  /**
+   * <pre>
+   * The CustomerClient referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+   */
+  public boolean hasCustomerClient() {
+    return customerClient_ != null;
+  }
+  /**
+   * <pre>
+   * The CustomerClient referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CustomerClient getCustomerClient() {
+    return customerClient_ == null ? com.google.ads.googleads.v0.resources.CustomerClient.getDefaultInstance() : customerClient_;
+  }
+  /**
+   * <pre>
+   * The CustomerClient referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CustomerClientOrBuilder getCustomerClientOrBuilder() {
+    return getCustomerClient();
+  }
+
+  public static final int CUSTOMER_FEED_FIELD_NUMBER = 64;
+  private com.google.ads.googleads.v0.resources.CustomerFeed customerFeed_;
+  /**
+   * <pre>
+   * The customer feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+   */
+  public boolean hasCustomerFeed() {
+    return customerFeed_ != null;
+  }
+  /**
+   * <pre>
+   * The customer feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CustomerFeed getCustomerFeed() {
+    return customerFeed_ == null ? com.google.ads.googleads.v0.resources.CustomerFeed.getDefaultInstance() : customerFeed_;
+  }
+  /**
+   * <pre>
+   * The customer feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+   */
+  public com.google.ads.googleads.v0.resources.CustomerFeedOrBuilder getCustomerFeedOrBuilder() {
+    return getCustomerFeed();
+  }
+
   public static final int DISPLAY_KEYWORD_VIEW_FIELD_NUMBER = 47;
   private com.google.ads.googleads.v0.resources.DisplayKeywordView displayKeywordView_;
   /**
@@ -1338,6 +1929,105 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.resources.DisplayKeywordViewOrBuilder getDisplayKeywordViewOrBuilder() {
     return getDisplayKeywordView();
+  }
+
+  public static final int FEED_FIELD_NUMBER = 46;
+  private com.google.ads.googleads.v0.resources.Feed feed_;
+  /**
+   * <pre>
+   * The feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+   */
+  public boolean hasFeed() {
+    return feed_ != null;
+  }
+  /**
+   * <pre>
+   * The feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+   */
+  public com.google.ads.googleads.v0.resources.Feed getFeed() {
+    return feed_ == null ? com.google.ads.googleads.v0.resources.Feed.getDefaultInstance() : feed_;
+  }
+  /**
+   * <pre>
+   * The feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+   */
+  public com.google.ads.googleads.v0.resources.FeedOrBuilder getFeedOrBuilder() {
+    return getFeed();
+  }
+
+  public static final int FEED_ITEM_FIELD_NUMBER = 50;
+  private com.google.ads.googleads.v0.resources.FeedItem feedItem_;
+  /**
+   * <pre>
+   * The feed item referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+   */
+  public boolean hasFeedItem() {
+    return feedItem_ != null;
+  }
+  /**
+   * <pre>
+   * The feed item referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+   */
+  public com.google.ads.googleads.v0.resources.FeedItem getFeedItem() {
+    return feedItem_ == null ? com.google.ads.googleads.v0.resources.FeedItem.getDefaultInstance() : feedItem_;
+  }
+  /**
+   * <pre>
+   * The feed item referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+   */
+  public com.google.ads.googleads.v0.resources.FeedItemOrBuilder getFeedItemOrBuilder() {
+    return getFeedItem();
+  }
+
+  public static final int FEED_MAPPING_FIELD_NUMBER = 58;
+  private com.google.ads.googleads.v0.resources.FeedMapping feedMapping_;
+  /**
+   * <pre>
+   * The feed mapping referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+   */
+  public boolean hasFeedMapping() {
+    return feedMapping_ != null;
+  }
+  /**
+   * <pre>
+   * The feed mapping referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+   */
+  public com.google.ads.googleads.v0.resources.FeedMapping getFeedMapping() {
+    return feedMapping_ == null ? com.google.ads.googleads.v0.resources.FeedMapping.getDefaultInstance() : feedMapping_;
+  }
+  /**
+   * <pre>
+   * The feed mapping referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+   */
+  public com.google.ads.googleads.v0.resources.FeedMappingOrBuilder getFeedMappingOrBuilder() {
+    return getFeedMapping();
   }
 
   public static final int GENDER_VIEW_FIELD_NUMBER = 40;
@@ -1439,6 +2129,39 @@ private static final long serialVersionUID = 0L;
     return getHotelGroupView();
   }
 
+  public static final int HOTEL_PERFORMANCE_VIEW_FIELD_NUMBER = 71;
+  private com.google.ads.googleads.v0.resources.HotelPerformanceView hotelPerformanceView_;
+  /**
+   * <pre>
+   * The hotel performance view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+   */
+  public boolean hasHotelPerformanceView() {
+    return hotelPerformanceView_ != null;
+  }
+  /**
+   * <pre>
+   * The hotel performance view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+   */
+  public com.google.ads.googleads.v0.resources.HotelPerformanceView getHotelPerformanceView() {
+    return hotelPerformanceView_ == null ? com.google.ads.googleads.v0.resources.HotelPerformanceView.getDefaultInstance() : hotelPerformanceView_;
+  }
+  /**
+   * <pre>
+   * The hotel performance view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+   */
+  public com.google.ads.googleads.v0.resources.HotelPerformanceViewOrBuilder getHotelPerformanceViewOrBuilder() {
+    return getHotelPerformanceView();
+  }
+
   public static final int KEYWORD_VIEW_FIELD_NUMBER = 21;
   private com.google.ads.googleads.v0.resources.KeywordView keywordView_;
   /**
@@ -1470,6 +2193,204 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.resources.KeywordViewOrBuilder getKeywordViewOrBuilder() {
     return getKeywordView();
+  }
+
+  public static final int KEYWORD_PLAN_FIELD_NUMBER = 32;
+  private com.google.ads.googleads.v0.resources.KeywordPlan keywordPlan_;
+  /**
+   * <pre>
+   * The keyword plan referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+   */
+  public boolean hasKeywordPlan() {
+    return keywordPlan_ != null;
+  }
+  /**
+   * <pre>
+   * The keyword plan referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+   */
+  public com.google.ads.googleads.v0.resources.KeywordPlan getKeywordPlan() {
+    return keywordPlan_ == null ? com.google.ads.googleads.v0.resources.KeywordPlan.getDefaultInstance() : keywordPlan_;
+  }
+  /**
+   * <pre>
+   * The keyword plan referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+   */
+  public com.google.ads.googleads.v0.resources.KeywordPlanOrBuilder getKeywordPlanOrBuilder() {
+    return getKeywordPlan();
+  }
+
+  public static final int KEYWORD_PLAN_CAMPAIGN_FIELD_NUMBER = 33;
+  private com.google.ads.googleads.v0.resources.KeywordPlanCampaign keywordPlanCampaign_;
+  /**
+   * <pre>
+   * The keyword plan campaign referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+   */
+  public boolean hasKeywordPlanCampaign() {
+    return keywordPlanCampaign_ != null;
+  }
+  /**
+   * <pre>
+   * The keyword plan campaign referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+   */
+  public com.google.ads.googleads.v0.resources.KeywordPlanCampaign getKeywordPlanCampaign() {
+    return keywordPlanCampaign_ == null ? com.google.ads.googleads.v0.resources.KeywordPlanCampaign.getDefaultInstance() : keywordPlanCampaign_;
+  }
+  /**
+   * <pre>
+   * The keyword plan campaign referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+   */
+  public com.google.ads.googleads.v0.resources.KeywordPlanCampaignOrBuilder getKeywordPlanCampaignOrBuilder() {
+    return getKeywordPlanCampaign();
+  }
+
+  public static final int KEYWORD_PLAN_NEGATIVE_KEYWORD_FIELD_NUMBER = 34;
+  private com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keywordPlanNegativeKeyword_;
+  /**
+   * <pre>
+   * The keyword plan negative keyword referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+   */
+  public boolean hasKeywordPlanNegativeKeyword() {
+    return keywordPlanNegativeKeyword_ != null;
+  }
+  /**
+   * <pre>
+   * The keyword plan negative keyword referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+   */
+  public com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword getKeywordPlanNegativeKeyword() {
+    return keywordPlanNegativeKeyword_ == null ? com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword.getDefaultInstance() : keywordPlanNegativeKeyword_;
+  }
+  /**
+   * <pre>
+   * The keyword plan negative keyword referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+   */
+  public com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeywordOrBuilder getKeywordPlanNegativeKeywordOrBuilder() {
+    return getKeywordPlanNegativeKeyword();
+  }
+
+  public static final int KEYWORD_PLAN_AD_GROUP_FIELD_NUMBER = 35;
+  private com.google.ads.googleads.v0.resources.KeywordPlanAdGroup keywordPlanAdGroup_;
+  /**
+   * <pre>
+   * The keyword plan ad group referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+   */
+  public boolean hasKeywordPlanAdGroup() {
+    return keywordPlanAdGroup_ != null;
+  }
+  /**
+   * <pre>
+   * The keyword plan ad group referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+   */
+  public com.google.ads.googleads.v0.resources.KeywordPlanAdGroup getKeywordPlanAdGroup() {
+    return keywordPlanAdGroup_ == null ? com.google.ads.googleads.v0.resources.KeywordPlanAdGroup.getDefaultInstance() : keywordPlanAdGroup_;
+  }
+  /**
+   * <pre>
+   * The keyword plan ad group referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+   */
+  public com.google.ads.googleads.v0.resources.KeywordPlanAdGroupOrBuilder getKeywordPlanAdGroupOrBuilder() {
+    return getKeywordPlanAdGroup();
+  }
+
+  public static final int KEYWORD_PLAN_KEYWORD_FIELD_NUMBER = 36;
+  private com.google.ads.googleads.v0.resources.KeywordPlanKeyword keywordPlanKeyword_;
+  /**
+   * <pre>
+   * The keyword plan keyword referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+   */
+  public boolean hasKeywordPlanKeyword() {
+    return keywordPlanKeyword_ != null;
+  }
+  /**
+   * <pre>
+   * The keyword plan keyword referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+   */
+  public com.google.ads.googleads.v0.resources.KeywordPlanKeyword getKeywordPlanKeyword() {
+    return keywordPlanKeyword_ == null ? com.google.ads.googleads.v0.resources.KeywordPlanKeyword.getDefaultInstance() : keywordPlanKeyword_;
+  }
+  /**
+   * <pre>
+   * The keyword plan keyword referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+   */
+  public com.google.ads.googleads.v0.resources.KeywordPlanKeywordOrBuilder getKeywordPlanKeywordOrBuilder() {
+    return getKeywordPlanKeyword();
+  }
+
+  public static final int LANGUAGE_CONSTANT_FIELD_NUMBER = 55;
+  private com.google.ads.googleads.v0.resources.LanguageConstant languageConstant_;
+  /**
+   * <pre>
+   * The language constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+   */
+  public boolean hasLanguageConstant() {
+    return languageConstant_ != null;
+  }
+  /**
+   * <pre>
+   * The language constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+   */
+  public com.google.ads.googleads.v0.resources.LanguageConstant getLanguageConstant() {
+    return languageConstant_ == null ? com.google.ads.googleads.v0.resources.LanguageConstant.getDefaultInstance() : languageConstant_;
+  }
+  /**
+   * <pre>
+   * The language constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+   */
+  public com.google.ads.googleads.v0.resources.LanguageConstantOrBuilder getLanguageConstantOrBuilder() {
+    return getLanguageConstant();
   }
 
   public static final int MANAGED_PLACEMENT_VIEW_FIELD_NUMBER = 53;
@@ -1604,6 +2525,39 @@ private static final long serialVersionUID = 0L;
     return getRecommendation();
   }
 
+  public static final int SEARCH_TERM_VIEW_FIELD_NUMBER = 68;
+  private com.google.ads.googleads.v0.resources.SearchTermView searchTermView_;
+  /**
+   * <pre>
+   * The search term view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+   */
+  public boolean hasSearchTermView() {
+    return searchTermView_ != null;
+  }
+  /**
+   * <pre>
+   * The search term view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+   */
+  public com.google.ads.googleads.v0.resources.SearchTermView getSearchTermView() {
+    return searchTermView_ == null ? com.google.ads.googleads.v0.resources.SearchTermView.getDefaultInstance() : searchTermView_;
+  }
+  /**
+   * <pre>
+   * The search term view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+   */
+  public com.google.ads.googleads.v0.resources.SearchTermViewOrBuilder getSearchTermViewOrBuilder() {
+    return getSearchTermView();
+  }
+
   public static final int SHARED_CRITERION_FIELD_NUMBER = 29;
   private com.google.ads.googleads.v0.resources.SharedCriterion sharedCriterion_;
   /**
@@ -1701,6 +2655,72 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.resources.TopicViewOrBuilder getTopicViewOrBuilder() {
     return getTopicView();
+  }
+
+  public static final int USER_INTEREST_FIELD_NUMBER = 59;
+  private com.google.ads.googleads.v0.resources.UserInterest userInterest_;
+  /**
+   * <pre>
+   * The user interest referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+   */
+  public boolean hasUserInterest() {
+    return userInterest_ != null;
+  }
+  /**
+   * <pre>
+   * The user interest referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+   */
+  public com.google.ads.googleads.v0.resources.UserInterest getUserInterest() {
+    return userInterest_ == null ? com.google.ads.googleads.v0.resources.UserInterest.getDefaultInstance() : userInterest_;
+  }
+  /**
+   * <pre>
+   * The user interest referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+   */
+  public com.google.ads.googleads.v0.resources.UserInterestOrBuilder getUserInterestOrBuilder() {
+    return getUserInterest();
+  }
+
+  public static final int USER_LIST_FIELD_NUMBER = 38;
+  private com.google.ads.googleads.v0.resources.UserList userList_;
+  /**
+   * <pre>
+   * The user list referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+   */
+  public boolean hasUserList() {
+    return userList_ != null;
+  }
+  /**
+   * <pre>
+   * The user list referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+   */
+  public com.google.ads.googleads.v0.resources.UserList getUserList() {
+    return userList_ == null ? com.google.ads.googleads.v0.resources.UserList.getDefaultInstance() : userList_;
+  }
+  /**
+   * <pre>
+   * The user list referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+   */
+  public com.google.ads.googleads.v0.resources.UserListOrBuilder getUserListOrBuilder() {
+    return getUserList();
   }
 
   public static final int TOPIC_CONSTANT_FIELD_NUMBER = 31;
@@ -1913,6 +2933,320 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNRECOGNIZED : result;
   }
 
+  public static final int HOTEL_BOOKING_WINDOW_DAYS_FIELD_NUMBER = 83;
+  private com.google.protobuf.Int64Value hotelBookingWindowDays_;
+  /**
+   * <pre>
+   * Hotel booking window in days.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+   */
+  public boolean hasHotelBookingWindowDays() {
+    return hotelBookingWindowDays_ != null;
+  }
+  /**
+   * <pre>
+   * Hotel booking window in days.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+   */
+  public com.google.protobuf.Int64Value getHotelBookingWindowDays() {
+    return hotelBookingWindowDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelBookingWindowDays_;
+  }
+  /**
+   * <pre>
+   * Hotel booking window in days.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getHotelBookingWindowDaysOrBuilder() {
+    return getHotelBookingWindowDays();
+  }
+
+  public static final int HOTEL_CENTER_ID_FIELD_NUMBER = 72;
+  private com.google.protobuf.Int64Value hotelCenterId_;
+  /**
+   * <pre>
+   * Hotel center ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+   */
+  public boolean hasHotelCenterId() {
+    return hotelCenterId_ != null;
+  }
+  /**
+   * <pre>
+   * Hotel center ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+   */
+  public com.google.protobuf.Int64Value getHotelCenterId() {
+    return hotelCenterId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelCenterId_;
+  }
+  /**
+   * <pre>
+   * Hotel center ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder() {
+    return getHotelCenterId();
+  }
+
+  public static final int HOTEL_CHECK_IN_DATE_FIELD_NUMBER = 73;
+  private com.google.protobuf.StringValue hotelCheckInDate_;
+  /**
+   * <pre>
+   * Hotel check-in date. Formatted as yyyy-MM-dd.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+   */
+  public boolean hasHotelCheckInDate() {
+    return hotelCheckInDate_ != null;
+  }
+  /**
+   * <pre>
+   * Hotel check-in date. Formatted as yyyy-MM-dd.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+   */
+  public com.google.protobuf.StringValue getHotelCheckInDate() {
+    return hotelCheckInDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCheckInDate_;
+  }
+  /**
+   * <pre>
+   * Hotel check-in date. Formatted as yyyy-MM-dd.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getHotelCheckInDateOrBuilder() {
+    return getHotelCheckInDate();
+  }
+
+  public static final int HOTEL_CHECK_IN_DAY_OF_WEEK_FIELD_NUMBER = 74;
+  private int hotelCheckInDayOfWeek_;
+  /**
+   * <pre>
+   * Hotel check-in day of week.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
+   */
+  public int getHotelCheckInDayOfWeekValue() {
+    return hotelCheckInDayOfWeek_;
+  }
+  /**
+   * <pre>
+   * Hotel check-in day of week.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
+   */
+  public com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getHotelCheckInDayOfWeek() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.valueOf(hotelCheckInDayOfWeek_);
+    return result == null ? com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
+  }
+
+  public static final int HOTEL_CITY_FIELD_NUMBER = 75;
+  private com.google.protobuf.StringValue hotelCity_;
+  /**
+   * <pre>
+   * Hotel city.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+   */
+  public boolean hasHotelCity() {
+    return hotelCity_ != null;
+  }
+  /**
+   * <pre>
+   * Hotel city.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+   */
+  public com.google.protobuf.StringValue getHotelCity() {
+    return hotelCity_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCity_;
+  }
+  /**
+   * <pre>
+   * Hotel city.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getHotelCityOrBuilder() {
+    return getHotelCity();
+  }
+
+  public static final int HOTEL_CLASS_FIELD_NUMBER = 76;
+  private com.google.protobuf.Int32Value hotelClass_;
+  /**
+   * <pre>
+   * Hotel class.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+   */
+  public boolean hasHotelClass() {
+    return hotelClass_ != null;
+  }
+  /**
+   * <pre>
+   * Hotel class.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+   */
+  public com.google.protobuf.Int32Value getHotelClass() {
+    return hotelClass_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hotelClass_;
+  }
+  /**
+   * <pre>
+   * Hotel class.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+   */
+  public com.google.protobuf.Int32ValueOrBuilder getHotelClassOrBuilder() {
+    return getHotelClass();
+  }
+
+  public static final int HOTEL_COUNTRY_FIELD_NUMBER = 77;
+  private com.google.protobuf.StringValue hotelCountry_;
+  /**
+   * <pre>
+   * Hotel country.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+   */
+  public boolean hasHotelCountry() {
+    return hotelCountry_ != null;
+  }
+  /**
+   * <pre>
+   * Hotel country.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+   */
+  public com.google.protobuf.StringValue getHotelCountry() {
+    return hotelCountry_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCountry_;
+  }
+  /**
+   * <pre>
+   * Hotel country.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getHotelCountryOrBuilder() {
+    return getHotelCountry();
+  }
+
+  public static final int HOTEL_DATE_SELECTION_TYPE_FIELD_NUMBER = 78;
+  private int hotelDateSelectionType_;
+  /**
+   * <pre>
+   * Hotel date selection type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
+   */
+  public int getHotelDateSelectionTypeValue() {
+    return hotelDateSelectionType_;
+  }
+  /**
+   * <pre>
+   * Hotel date selection type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
+   */
+  public com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getHotelDateSelectionType() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType result = com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.valueOf(hotelDateSelectionType_);
+    return result == null ? com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.UNRECOGNIZED : result;
+  }
+
+  public static final int HOTEL_LENGTH_OF_STAY_FIELD_NUMBER = 79;
+  private com.google.protobuf.Int32Value hotelLengthOfStay_;
+  /**
+   * <pre>
+   * Hotel length of stay.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+   */
+  public boolean hasHotelLengthOfStay() {
+    return hotelLengthOfStay_ != null;
+  }
+  /**
+   * <pre>
+   * Hotel length of stay.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+   */
+  public com.google.protobuf.Int32Value getHotelLengthOfStay() {
+    return hotelLengthOfStay_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hotelLengthOfStay_;
+  }
+  /**
+   * <pre>
+   * Hotel length of stay.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+   */
+  public com.google.protobuf.Int32ValueOrBuilder getHotelLengthOfStayOrBuilder() {
+    return getHotelLengthOfStay();
+  }
+
+  public static final int HOTEL_STATE_FIELD_NUMBER = 81;
+  private com.google.protobuf.StringValue hotelState_;
+  /**
+   * <pre>
+   * Hotel state.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+   */
+  public boolean hasHotelState() {
+    return hotelState_ != null;
+  }
+  /**
+   * <pre>
+   * Hotel state.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+   */
+  public com.google.protobuf.StringValue getHotelState() {
+    return hotelState_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelState_;
+  }
+  /**
+   * <pre>
+   * Hotel state.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getHotelStateOrBuilder() {
+    return getHotelState();
+  }
+
   public static final int HOUR_FIELD_NUMBER = 9;
   private com.google.protobuf.Int32Value hour_;
   /**
@@ -2007,6 +3341,64 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.UNRECOGNIZED : result;
   }
 
+  public static final int PARTNER_HOTEL_ID_FIELD_NUMBER = 82;
+  private com.google.protobuf.StringValue partnerHotelId_;
+  /**
+   * <pre>
+   * Partner hotel ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+   */
+  public boolean hasPartnerHotelId() {
+    return partnerHotelId_ != null;
+  }
+  /**
+   * <pre>
+   * Partner hotel ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+   */
+  public com.google.protobuf.StringValue getPartnerHotelId() {
+    return partnerHotelId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : partnerHotelId_;
+  }
+  /**
+   * <pre>
+   * Partner hotel ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getPartnerHotelIdOrBuilder() {
+    return getPartnerHotelId();
+  }
+
+  public static final int PLACEHOLDER_TYPE_FIELD_NUMBER = 65;
+  private int placeholderType_;
+  /**
+   * <pre>
+   * Placeholder type. This is only used with feed item metrics.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
+   */
+  public int getPlaceholderTypeValue() {
+    return placeholderType_;
+  }
+  /**
+   * <pre>
+   * Placeholder type. This is only used with feed item metrics.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
+   */
+  public com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType.valueOf(placeholderType_);
+    return result == null ? com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType.UNRECOGNIZED : result;
+  }
+
   public static final int QUARTER_FIELD_NUMBER = 12;
   private com.google.protobuf.StringValue quarter_;
   /**
@@ -2044,6 +3436,31 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.StringValueOrBuilder getQuarterOrBuilder() {
     return getQuarter();
+  }
+
+  public static final int SEARCH_TERM_MATCH_TYPE_FIELD_NUMBER = 56;
+  private int searchTermMatchType_;
+  /**
+   * <pre>
+   * Match type of the keyword that triggered the ad, including variants.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
+   */
+  public int getSearchTermMatchTypeValue() {
+    return searchTermMatchType_;
+  }
+  /**
+   * <pre>
+   * Match type of the keyword that triggered the ad, including variants.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
+   */
+  public com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType getSearchTermMatchType() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType result = com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType.valueOf(searchTermMatchType_);
+    return result == null ? com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType.UNRECOGNIZED : result;
   }
 
   public static final int SLOT_FIELD_NUMBER = 13;
@@ -2244,8 +3661,26 @@ private static final long serialVersionUID = 0L;
     if (topicConstant_ != null) {
       output.writeMessage(31, getTopicConstant());
     }
+    if (keywordPlan_ != null) {
+      output.writeMessage(32, getKeywordPlan());
+    }
+    if (keywordPlanCampaign_ != null) {
+      output.writeMessage(33, getKeywordPlanCampaign());
+    }
+    if (keywordPlanNegativeKeyword_ != null) {
+      output.writeMessage(34, getKeywordPlanNegativeKeyword());
+    }
+    if (keywordPlanAdGroup_ != null) {
+      output.writeMessage(35, getKeywordPlanAdGroup());
+    }
+    if (keywordPlanKeyword_ != null) {
+      output.writeMessage(36, getKeywordPlanKeyword());
+    }
     if (changeStatus_ != null) {
       output.writeMessage(37, getChangeStatus());
+    }
+    if (userList_ != null) {
+      output.writeMessage(38, getUserList());
     }
     if (video_ != null) {
       output.writeMessage(39, getVideo());
@@ -2268,11 +3703,17 @@ private static final long serialVersionUID = 0L;
     if (parentalStatusView_ != null) {
       output.writeMessage(45, getParentalStatusView());
     }
+    if (feed_ != null) {
+      output.writeMessage(46, getFeed());
+    }
     if (displayKeywordView_ != null) {
       output.writeMessage(47, getDisplayKeywordView());
     }
     if (ageRangeView_ != null) {
       output.writeMessage(48, getAgeRangeView());
+    }
+    if (feedItem_ != null) {
+      output.writeMessage(50, getFeedItem());
     }
     if (hotelGroupView_ != null) {
       output.writeMessage(51, getHotelGroupView());
@@ -2283,14 +3724,86 @@ private static final long serialVersionUID = 0L;
     if (productGroupView_ != null) {
       output.writeMessage(54, getProductGroupView());
     }
+    if (languageConstant_ != null) {
+      output.writeMessage(55, getLanguageConstant());
+    }
+    if (searchTermMatchType_ != com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType.UNSPECIFIED.getNumber()) {
+      output.writeEnum(56, searchTermMatchType_);
+    }
     if (adGroupAudienceView_ != null) {
       output.writeMessage(57, getAdGroupAudienceView());
+    }
+    if (feedMapping_ != null) {
+      output.writeMessage(58, getFeedMapping());
+    }
+    if (userInterest_ != null) {
+      output.writeMessage(59, getUserInterest());
     }
     if (customerManagerLink_ != null) {
       output.writeMessage(61, getCustomerManagerLink());
     }
     if (customerClientLink_ != null) {
       output.writeMessage(62, getCustomerClientLink());
+    }
+    if (campaignFeed_ != null) {
+      output.writeMessage(63, getCampaignFeed());
+    }
+    if (customerFeed_ != null) {
+      output.writeMessage(64, getCustomerFeed());
+    }
+    if (placeholderType_ != com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType.UNSPECIFIED.getNumber()) {
+      output.writeEnum(65, placeholderType_);
+    }
+    if (carrierConstant_ != null) {
+      output.writeMessage(66, getCarrierConstant());
+    }
+    if (adGroupFeed_ != null) {
+      output.writeMessage(67, getAdGroupFeed());
+    }
+    if (searchTermView_ != null) {
+      output.writeMessage(68, getSearchTermView());
+    }
+    if (campaignAudienceView_ != null) {
+      output.writeMessage(69, getCampaignAudienceView());
+    }
+    if (customerClient_ != null) {
+      output.writeMessage(70, getCustomerClient());
+    }
+    if (hotelPerformanceView_ != null) {
+      output.writeMessage(71, getHotelPerformanceView());
+    }
+    if (hotelCenterId_ != null) {
+      output.writeMessage(72, getHotelCenterId());
+    }
+    if (hotelCheckInDate_ != null) {
+      output.writeMessage(73, getHotelCheckInDate());
+    }
+    if (hotelCheckInDayOfWeek_ != com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNSPECIFIED.getNumber()) {
+      output.writeEnum(74, hotelCheckInDayOfWeek_);
+    }
+    if (hotelCity_ != null) {
+      output.writeMessage(75, getHotelCity());
+    }
+    if (hotelClass_ != null) {
+      output.writeMessage(76, getHotelClass());
+    }
+    if (hotelCountry_ != null) {
+      output.writeMessage(77, getHotelCountry());
+    }
+    if (hotelDateSelectionType_ != com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.UNSPECIFIED.getNumber()) {
+      output.writeEnum(78, hotelDateSelectionType_);
+    }
+    if (hotelLengthOfStay_ != null) {
+      output.writeMessage(79, getHotelLengthOfStay());
+    }
+    if (hotelState_ != null) {
+      output.writeMessage(81, getHotelState());
+    }
+    if (partnerHotelId_ != null) {
+      output.writeMessage(82, getPartnerHotelId());
+    }
+    if (hotelBookingWindowDays_ != null) {
+      output.writeMessage(83, getHotelBookingWindowDays());
     }
     unknownFields.writeTo(output);
   }
@@ -2421,9 +3934,33 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(31, getTopicConstant());
     }
+    if (keywordPlan_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(32, getKeywordPlan());
+    }
+    if (keywordPlanCampaign_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(33, getKeywordPlanCampaign());
+    }
+    if (keywordPlanNegativeKeyword_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(34, getKeywordPlanNegativeKeyword());
+    }
+    if (keywordPlanAdGroup_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(35, getKeywordPlanAdGroup());
+    }
+    if (keywordPlanKeyword_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(36, getKeywordPlanKeyword());
+    }
     if (changeStatus_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(37, getChangeStatus());
+    }
+    if (userList_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(38, getUserList());
     }
     if (video_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -2453,6 +3990,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(45, getParentalStatusView());
     }
+    if (feed_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(46, getFeed());
+    }
     if (displayKeywordView_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(47, getDisplayKeywordView());
@@ -2460,6 +4001,10 @@ private static final long serialVersionUID = 0L;
     if (ageRangeView_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(48, getAgeRangeView());
+    }
+    if (feedItem_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(50, getFeedItem());
     }
     if (hotelGroupView_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -2473,9 +4018,25 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(54, getProductGroupView());
     }
+    if (languageConstant_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(55, getLanguageConstant());
+    }
+    if (searchTermMatchType_ != com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(56, searchTermMatchType_);
+    }
     if (adGroupAudienceView_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(57, getAdGroupAudienceView());
+    }
+    if (feedMapping_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(58, getFeedMapping());
+    }
+    if (userInterest_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(59, getUserInterest());
     }
     if (customerManagerLink_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -2484,6 +4045,86 @@ private static final long serialVersionUID = 0L;
     if (customerClientLink_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(62, getCustomerClientLink());
+    }
+    if (campaignFeed_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(63, getCampaignFeed());
+    }
+    if (customerFeed_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(64, getCustomerFeed());
+    }
+    if (placeholderType_ != com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(65, placeholderType_);
+    }
+    if (carrierConstant_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(66, getCarrierConstant());
+    }
+    if (adGroupFeed_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(67, getAdGroupFeed());
+    }
+    if (searchTermView_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(68, getSearchTermView());
+    }
+    if (campaignAudienceView_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(69, getCampaignAudienceView());
+    }
+    if (customerClient_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(70, getCustomerClient());
+    }
+    if (hotelPerformanceView_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(71, getHotelPerformanceView());
+    }
+    if (hotelCenterId_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(72, getHotelCenterId());
+    }
+    if (hotelCheckInDate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(73, getHotelCheckInDate());
+    }
+    if (hotelCheckInDayOfWeek_ != com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(74, hotelCheckInDayOfWeek_);
+    }
+    if (hotelCity_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(75, getHotelCity());
+    }
+    if (hotelClass_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(76, getHotelClass());
+    }
+    if (hotelCountry_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(77, getHotelCountry());
+    }
+    if (hotelDateSelectionType_ != com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(78, hotelDateSelectionType_);
+    }
+    if (hotelLengthOfStay_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(79, getHotelLengthOfStay());
+    }
+    if (hotelState_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(81, getHotelState());
+    }
+    if (partnerHotelId_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(82, getPartnerHotelId());
+    }
+    if (hotelBookingWindowDays_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(83, getHotelBookingWindowDays());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2536,6 +4177,11 @@ private static final long serialVersionUID = 0L;
       result = result && getAdGroupCriterion()
           .equals(other.getAdGroupCriterion());
     }
+    result = result && (hasAdGroupFeed() == other.hasAdGroupFeed());
+    if (hasAdGroupFeed()) {
+      result = result && getAdGroupFeed()
+          .equals(other.getAdGroupFeed());
+    }
     result = result && (hasAgeRangeView() == other.hasAgeRangeView());
     if (hasAgeRangeView()) {
       result = result && getAgeRangeView()
@@ -2561,6 +4207,11 @@ private static final long serialVersionUID = 0L;
       result = result && getCampaign()
           .equals(other.getCampaign());
     }
+    result = result && (hasCampaignAudienceView() == other.hasCampaignAudienceView());
+    if (hasCampaignAudienceView()) {
+      result = result && getCampaignAudienceView()
+          .equals(other.getCampaignAudienceView());
+    }
     result = result && (hasCampaignBidModifier() == other.hasCampaignBidModifier());
     if (hasCampaignBidModifier()) {
       result = result && getCampaignBidModifier()
@@ -2571,6 +4222,11 @@ private static final long serialVersionUID = 0L;
       result = result && getCampaignCriterion()
           .equals(other.getCampaignCriterion());
     }
+    result = result && (hasCampaignFeed() == other.hasCampaignFeed());
+    if (hasCampaignFeed()) {
+      result = result && getCampaignFeed()
+          .equals(other.getCampaignFeed());
+    }
     result = result && (hasCampaignGroup() == other.hasCampaignGroup());
     if (hasCampaignGroup()) {
       result = result && getCampaignGroup()
@@ -2580,6 +4236,11 @@ private static final long serialVersionUID = 0L;
     if (hasCampaignSharedSet()) {
       result = result && getCampaignSharedSet()
           .equals(other.getCampaignSharedSet());
+    }
+    result = result && (hasCarrierConstant() == other.hasCarrierConstant());
+    if (hasCarrierConstant()) {
+      result = result && getCarrierConstant()
+          .equals(other.getCarrierConstant());
     }
     result = result && (hasChangeStatus() == other.hasChangeStatus());
     if (hasChangeStatus()) {
@@ -2601,10 +4262,35 @@ private static final long serialVersionUID = 0L;
       result = result && getCustomerClientLink()
           .equals(other.getCustomerClientLink());
     }
+    result = result && (hasCustomerClient() == other.hasCustomerClient());
+    if (hasCustomerClient()) {
+      result = result && getCustomerClient()
+          .equals(other.getCustomerClient());
+    }
+    result = result && (hasCustomerFeed() == other.hasCustomerFeed());
+    if (hasCustomerFeed()) {
+      result = result && getCustomerFeed()
+          .equals(other.getCustomerFeed());
+    }
     result = result && (hasDisplayKeywordView() == other.hasDisplayKeywordView());
     if (hasDisplayKeywordView()) {
       result = result && getDisplayKeywordView()
           .equals(other.getDisplayKeywordView());
+    }
+    result = result && (hasFeed() == other.hasFeed());
+    if (hasFeed()) {
+      result = result && getFeed()
+          .equals(other.getFeed());
+    }
+    result = result && (hasFeedItem() == other.hasFeedItem());
+    if (hasFeedItem()) {
+      result = result && getFeedItem()
+          .equals(other.getFeedItem());
+    }
+    result = result && (hasFeedMapping() == other.hasFeedMapping());
+    if (hasFeedMapping()) {
+      result = result && getFeedMapping()
+          .equals(other.getFeedMapping());
     }
     result = result && (hasGenderView() == other.hasGenderView());
     if (hasGenderView()) {
@@ -2621,10 +4307,45 @@ private static final long serialVersionUID = 0L;
       result = result && getHotelGroupView()
           .equals(other.getHotelGroupView());
     }
+    result = result && (hasHotelPerformanceView() == other.hasHotelPerformanceView());
+    if (hasHotelPerformanceView()) {
+      result = result && getHotelPerformanceView()
+          .equals(other.getHotelPerformanceView());
+    }
     result = result && (hasKeywordView() == other.hasKeywordView());
     if (hasKeywordView()) {
       result = result && getKeywordView()
           .equals(other.getKeywordView());
+    }
+    result = result && (hasKeywordPlan() == other.hasKeywordPlan());
+    if (hasKeywordPlan()) {
+      result = result && getKeywordPlan()
+          .equals(other.getKeywordPlan());
+    }
+    result = result && (hasKeywordPlanCampaign() == other.hasKeywordPlanCampaign());
+    if (hasKeywordPlanCampaign()) {
+      result = result && getKeywordPlanCampaign()
+          .equals(other.getKeywordPlanCampaign());
+    }
+    result = result && (hasKeywordPlanNegativeKeyword() == other.hasKeywordPlanNegativeKeyword());
+    if (hasKeywordPlanNegativeKeyword()) {
+      result = result && getKeywordPlanNegativeKeyword()
+          .equals(other.getKeywordPlanNegativeKeyword());
+    }
+    result = result && (hasKeywordPlanAdGroup() == other.hasKeywordPlanAdGroup());
+    if (hasKeywordPlanAdGroup()) {
+      result = result && getKeywordPlanAdGroup()
+          .equals(other.getKeywordPlanAdGroup());
+    }
+    result = result && (hasKeywordPlanKeyword() == other.hasKeywordPlanKeyword());
+    if (hasKeywordPlanKeyword()) {
+      result = result && getKeywordPlanKeyword()
+          .equals(other.getKeywordPlanKeyword());
+    }
+    result = result && (hasLanguageConstant() == other.hasLanguageConstant());
+    if (hasLanguageConstant()) {
+      result = result && getLanguageConstant()
+          .equals(other.getLanguageConstant());
     }
     result = result && (hasManagedPlacementView() == other.hasManagedPlacementView());
     if (hasManagedPlacementView()) {
@@ -2646,6 +4367,11 @@ private static final long serialVersionUID = 0L;
       result = result && getRecommendation()
           .equals(other.getRecommendation());
     }
+    result = result && (hasSearchTermView() == other.hasSearchTermView());
+    if (hasSearchTermView()) {
+      result = result && getSearchTermView()
+          .equals(other.getSearchTermView());
+    }
     result = result && (hasSharedCriterion() == other.hasSharedCriterion());
     if (hasSharedCriterion()) {
       result = result && getSharedCriterion()
@@ -2660,6 +4386,16 @@ private static final long serialVersionUID = 0L;
     if (hasTopicView()) {
       result = result && getTopicView()
           .equals(other.getTopicView());
+    }
+    result = result && (hasUserInterest() == other.hasUserInterest());
+    if (hasUserInterest()) {
+      result = result && getUserInterest()
+          .equals(other.getUserInterest());
+    }
+    result = result && (hasUserList() == other.hasUserList());
+    if (hasUserList()) {
+      result = result && getUserList()
+          .equals(other.getUserList());
     }
     result = result && (hasTopicConstant() == other.hasTopicConstant());
     if (hasTopicConstant()) {
@@ -2684,6 +4420,48 @@ private static final long serialVersionUID = 0L;
     }
     result = result && dayOfWeek_ == other.dayOfWeek_;
     result = result && device_ == other.device_;
+    result = result && (hasHotelBookingWindowDays() == other.hasHotelBookingWindowDays());
+    if (hasHotelBookingWindowDays()) {
+      result = result && getHotelBookingWindowDays()
+          .equals(other.getHotelBookingWindowDays());
+    }
+    result = result && (hasHotelCenterId() == other.hasHotelCenterId());
+    if (hasHotelCenterId()) {
+      result = result && getHotelCenterId()
+          .equals(other.getHotelCenterId());
+    }
+    result = result && (hasHotelCheckInDate() == other.hasHotelCheckInDate());
+    if (hasHotelCheckInDate()) {
+      result = result && getHotelCheckInDate()
+          .equals(other.getHotelCheckInDate());
+    }
+    result = result && hotelCheckInDayOfWeek_ == other.hotelCheckInDayOfWeek_;
+    result = result && (hasHotelCity() == other.hasHotelCity());
+    if (hasHotelCity()) {
+      result = result && getHotelCity()
+          .equals(other.getHotelCity());
+    }
+    result = result && (hasHotelClass() == other.hasHotelClass());
+    if (hasHotelClass()) {
+      result = result && getHotelClass()
+          .equals(other.getHotelClass());
+    }
+    result = result && (hasHotelCountry() == other.hasHotelCountry());
+    if (hasHotelCountry()) {
+      result = result && getHotelCountry()
+          .equals(other.getHotelCountry());
+    }
+    result = result && hotelDateSelectionType_ == other.hotelDateSelectionType_;
+    result = result && (hasHotelLengthOfStay() == other.hasHotelLengthOfStay());
+    if (hasHotelLengthOfStay()) {
+      result = result && getHotelLengthOfStay()
+          .equals(other.getHotelLengthOfStay());
+    }
+    result = result && (hasHotelState() == other.hasHotelState());
+    if (hasHotelState()) {
+      result = result && getHotelState()
+          .equals(other.getHotelState());
+    }
     result = result && (hasHour() == other.hasHour());
     if (hasHour()) {
       result = result && getHour()
@@ -2695,11 +4473,18 @@ private static final long serialVersionUID = 0L;
           .equals(other.getMonth());
     }
     result = result && monthOfYear_ == other.monthOfYear_;
+    result = result && (hasPartnerHotelId() == other.hasPartnerHotelId());
+    if (hasPartnerHotelId()) {
+      result = result && getPartnerHotelId()
+          .equals(other.getPartnerHotelId());
+    }
+    result = result && placeholderType_ == other.placeholderType_;
     result = result && (hasQuarter() == other.hasQuarter());
     if (hasQuarter()) {
       result = result && getQuarter()
           .equals(other.getQuarter());
     }
+    result = result && searchTermMatchType_ == other.searchTermMatchType_;
     result = result && slot_ == other.slot_;
     result = result && (hasWeek() == other.hasWeek());
     if (hasWeek()) {
@@ -2750,6 +4535,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AD_GROUP_CRITERION_FIELD_NUMBER;
       hash = (53 * hash) + getAdGroupCriterion().hashCode();
     }
+    if (hasAdGroupFeed()) {
+      hash = (37 * hash) + AD_GROUP_FEED_FIELD_NUMBER;
+      hash = (53 * hash) + getAdGroupFeed().hashCode();
+    }
     if (hasAgeRangeView()) {
       hash = (37 * hash) + AGE_RANGE_VIEW_FIELD_NUMBER;
       hash = (53 * hash) + getAgeRangeView().hashCode();
@@ -2770,6 +4559,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CAMPAIGN_FIELD_NUMBER;
       hash = (53 * hash) + getCampaign().hashCode();
     }
+    if (hasCampaignAudienceView()) {
+      hash = (37 * hash) + CAMPAIGN_AUDIENCE_VIEW_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignAudienceView().hashCode();
+    }
     if (hasCampaignBidModifier()) {
       hash = (37 * hash) + CAMPAIGN_BID_MODIFIER_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignBidModifier().hashCode();
@@ -2778,6 +4571,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CAMPAIGN_CRITERION_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignCriterion().hashCode();
     }
+    if (hasCampaignFeed()) {
+      hash = (37 * hash) + CAMPAIGN_FEED_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignFeed().hashCode();
+    }
     if (hasCampaignGroup()) {
       hash = (37 * hash) + CAMPAIGN_GROUP_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignGroup().hashCode();
@@ -2785,6 +4582,10 @@ private static final long serialVersionUID = 0L;
     if (hasCampaignSharedSet()) {
       hash = (37 * hash) + CAMPAIGN_SHARED_SET_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignSharedSet().hashCode();
+    }
+    if (hasCarrierConstant()) {
+      hash = (37 * hash) + CARRIER_CONSTANT_FIELD_NUMBER;
+      hash = (53 * hash) + getCarrierConstant().hashCode();
     }
     if (hasChangeStatus()) {
       hash = (37 * hash) + CHANGE_STATUS_FIELD_NUMBER;
@@ -2802,9 +4603,29 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CUSTOMER_CLIENT_LINK_FIELD_NUMBER;
       hash = (53 * hash) + getCustomerClientLink().hashCode();
     }
+    if (hasCustomerClient()) {
+      hash = (37 * hash) + CUSTOMER_CLIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerClient().hashCode();
+    }
+    if (hasCustomerFeed()) {
+      hash = (37 * hash) + CUSTOMER_FEED_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerFeed().hashCode();
+    }
     if (hasDisplayKeywordView()) {
       hash = (37 * hash) + DISPLAY_KEYWORD_VIEW_FIELD_NUMBER;
       hash = (53 * hash) + getDisplayKeywordView().hashCode();
+    }
+    if (hasFeed()) {
+      hash = (37 * hash) + FEED_FIELD_NUMBER;
+      hash = (53 * hash) + getFeed().hashCode();
+    }
+    if (hasFeedItem()) {
+      hash = (37 * hash) + FEED_ITEM_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedItem().hashCode();
+    }
+    if (hasFeedMapping()) {
+      hash = (37 * hash) + FEED_MAPPING_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedMapping().hashCode();
     }
     if (hasGenderView()) {
       hash = (37 * hash) + GENDER_VIEW_FIELD_NUMBER;
@@ -2818,9 +4639,37 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HOTEL_GROUP_VIEW_FIELD_NUMBER;
       hash = (53 * hash) + getHotelGroupView().hashCode();
     }
+    if (hasHotelPerformanceView()) {
+      hash = (37 * hash) + HOTEL_PERFORMANCE_VIEW_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelPerformanceView().hashCode();
+    }
     if (hasKeywordView()) {
       hash = (37 * hash) + KEYWORD_VIEW_FIELD_NUMBER;
       hash = (53 * hash) + getKeywordView().hashCode();
+    }
+    if (hasKeywordPlan()) {
+      hash = (37 * hash) + KEYWORD_PLAN_FIELD_NUMBER;
+      hash = (53 * hash) + getKeywordPlan().hashCode();
+    }
+    if (hasKeywordPlanCampaign()) {
+      hash = (37 * hash) + KEYWORD_PLAN_CAMPAIGN_FIELD_NUMBER;
+      hash = (53 * hash) + getKeywordPlanCampaign().hashCode();
+    }
+    if (hasKeywordPlanNegativeKeyword()) {
+      hash = (37 * hash) + KEYWORD_PLAN_NEGATIVE_KEYWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getKeywordPlanNegativeKeyword().hashCode();
+    }
+    if (hasKeywordPlanAdGroup()) {
+      hash = (37 * hash) + KEYWORD_PLAN_AD_GROUP_FIELD_NUMBER;
+      hash = (53 * hash) + getKeywordPlanAdGroup().hashCode();
+    }
+    if (hasKeywordPlanKeyword()) {
+      hash = (37 * hash) + KEYWORD_PLAN_KEYWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getKeywordPlanKeyword().hashCode();
+    }
+    if (hasLanguageConstant()) {
+      hash = (37 * hash) + LANGUAGE_CONSTANT_FIELD_NUMBER;
+      hash = (53 * hash) + getLanguageConstant().hashCode();
     }
     if (hasManagedPlacementView()) {
       hash = (37 * hash) + MANAGED_PLACEMENT_VIEW_FIELD_NUMBER;
@@ -2838,6 +4687,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RECOMMENDATION_FIELD_NUMBER;
       hash = (53 * hash) + getRecommendation().hashCode();
     }
+    if (hasSearchTermView()) {
+      hash = (37 * hash) + SEARCH_TERM_VIEW_FIELD_NUMBER;
+      hash = (53 * hash) + getSearchTermView().hashCode();
+    }
     if (hasSharedCriterion()) {
       hash = (37 * hash) + SHARED_CRITERION_FIELD_NUMBER;
       hash = (53 * hash) + getSharedCriterion().hashCode();
@@ -2849,6 +4702,14 @@ private static final long serialVersionUID = 0L;
     if (hasTopicView()) {
       hash = (37 * hash) + TOPIC_VIEW_FIELD_NUMBER;
       hash = (53 * hash) + getTopicView().hashCode();
+    }
+    if (hasUserInterest()) {
+      hash = (37 * hash) + USER_INTEREST_FIELD_NUMBER;
+      hash = (53 * hash) + getUserInterest().hashCode();
+    }
+    if (hasUserList()) {
+      hash = (37 * hash) + USER_LIST_FIELD_NUMBER;
+      hash = (53 * hash) + getUserList().hashCode();
     }
     if (hasTopicConstant()) {
       hash = (37 * hash) + TOPIC_CONSTANT_FIELD_NUMBER;
@@ -2872,6 +4733,42 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + dayOfWeek_;
     hash = (37 * hash) + DEVICE_FIELD_NUMBER;
     hash = (53 * hash) + device_;
+    if (hasHotelBookingWindowDays()) {
+      hash = (37 * hash) + HOTEL_BOOKING_WINDOW_DAYS_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelBookingWindowDays().hashCode();
+    }
+    if (hasHotelCenterId()) {
+      hash = (37 * hash) + HOTEL_CENTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelCenterId().hashCode();
+    }
+    if (hasHotelCheckInDate()) {
+      hash = (37 * hash) + HOTEL_CHECK_IN_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelCheckInDate().hashCode();
+    }
+    hash = (37 * hash) + HOTEL_CHECK_IN_DAY_OF_WEEK_FIELD_NUMBER;
+    hash = (53 * hash) + hotelCheckInDayOfWeek_;
+    if (hasHotelCity()) {
+      hash = (37 * hash) + HOTEL_CITY_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelCity().hashCode();
+    }
+    if (hasHotelClass()) {
+      hash = (37 * hash) + HOTEL_CLASS_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelClass().hashCode();
+    }
+    if (hasHotelCountry()) {
+      hash = (37 * hash) + HOTEL_COUNTRY_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelCountry().hashCode();
+    }
+    hash = (37 * hash) + HOTEL_DATE_SELECTION_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + hotelDateSelectionType_;
+    if (hasHotelLengthOfStay()) {
+      hash = (37 * hash) + HOTEL_LENGTH_OF_STAY_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelLengthOfStay().hashCode();
+    }
+    if (hasHotelState()) {
+      hash = (37 * hash) + HOTEL_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelState().hashCode();
+    }
     if (hasHour()) {
       hash = (37 * hash) + HOUR_FIELD_NUMBER;
       hash = (53 * hash) + getHour().hashCode();
@@ -2882,10 +4779,18 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + MONTH_OF_YEAR_FIELD_NUMBER;
     hash = (53 * hash) + monthOfYear_;
+    if (hasPartnerHotelId()) {
+      hash = (37 * hash) + PARTNER_HOTEL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPartnerHotelId().hashCode();
+    }
+    hash = (37 * hash) + PLACEHOLDER_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + placeholderType_;
     if (hasQuarter()) {
       hash = (37 * hash) + QUARTER_FIELD_NUMBER;
       hash = (53 * hash) + getQuarter().hashCode();
     }
+    hash = (37 * hash) + SEARCH_TERM_MATCH_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + searchTermMatchType_;
     hash = (37 * hash) + SLOT_FIELD_NUMBER;
     hash = (53 * hash) + slot_;
     if (hasWeek()) {
@@ -3075,6 +4980,12 @@ private static final long serialVersionUID = 0L;
         adGroupCriterion_ = null;
         adGroupCriterionBuilder_ = null;
       }
+      if (adGroupFeedBuilder_ == null) {
+        adGroupFeed_ = null;
+      } else {
+        adGroupFeed_ = null;
+        adGroupFeedBuilder_ = null;
+      }
       if (ageRangeViewBuilder_ == null) {
         ageRangeView_ = null;
       } else {
@@ -3105,6 +5016,12 @@ private static final long serialVersionUID = 0L;
         campaign_ = null;
         campaignBuilder_ = null;
       }
+      if (campaignAudienceViewBuilder_ == null) {
+        campaignAudienceView_ = null;
+      } else {
+        campaignAudienceView_ = null;
+        campaignAudienceViewBuilder_ = null;
+      }
       if (campaignBidModifierBuilder_ == null) {
         campaignBidModifier_ = null;
       } else {
@@ -3117,6 +5034,12 @@ private static final long serialVersionUID = 0L;
         campaignCriterion_ = null;
         campaignCriterionBuilder_ = null;
       }
+      if (campaignFeedBuilder_ == null) {
+        campaignFeed_ = null;
+      } else {
+        campaignFeed_ = null;
+        campaignFeedBuilder_ = null;
+      }
       if (campaignGroupBuilder_ == null) {
         campaignGroup_ = null;
       } else {
@@ -3128,6 +5051,12 @@ private static final long serialVersionUID = 0L;
       } else {
         campaignSharedSet_ = null;
         campaignSharedSetBuilder_ = null;
+      }
+      if (carrierConstantBuilder_ == null) {
+        carrierConstant_ = null;
+      } else {
+        carrierConstant_ = null;
+        carrierConstantBuilder_ = null;
       }
       if (changeStatusBuilder_ == null) {
         changeStatus_ = null;
@@ -3153,11 +5082,41 @@ private static final long serialVersionUID = 0L;
         customerClientLink_ = null;
         customerClientLinkBuilder_ = null;
       }
+      if (customerClientBuilder_ == null) {
+        customerClient_ = null;
+      } else {
+        customerClient_ = null;
+        customerClientBuilder_ = null;
+      }
+      if (customerFeedBuilder_ == null) {
+        customerFeed_ = null;
+      } else {
+        customerFeed_ = null;
+        customerFeedBuilder_ = null;
+      }
       if (displayKeywordViewBuilder_ == null) {
         displayKeywordView_ = null;
       } else {
         displayKeywordView_ = null;
         displayKeywordViewBuilder_ = null;
+      }
+      if (feedBuilder_ == null) {
+        feed_ = null;
+      } else {
+        feed_ = null;
+        feedBuilder_ = null;
+      }
+      if (feedItemBuilder_ == null) {
+        feedItem_ = null;
+      } else {
+        feedItem_ = null;
+        feedItemBuilder_ = null;
+      }
+      if (feedMappingBuilder_ == null) {
+        feedMapping_ = null;
+      } else {
+        feedMapping_ = null;
+        feedMappingBuilder_ = null;
       }
       if (genderViewBuilder_ == null) {
         genderView_ = null;
@@ -3177,11 +5136,53 @@ private static final long serialVersionUID = 0L;
         hotelGroupView_ = null;
         hotelGroupViewBuilder_ = null;
       }
+      if (hotelPerformanceViewBuilder_ == null) {
+        hotelPerformanceView_ = null;
+      } else {
+        hotelPerformanceView_ = null;
+        hotelPerformanceViewBuilder_ = null;
+      }
       if (keywordViewBuilder_ == null) {
         keywordView_ = null;
       } else {
         keywordView_ = null;
         keywordViewBuilder_ = null;
+      }
+      if (keywordPlanBuilder_ == null) {
+        keywordPlan_ = null;
+      } else {
+        keywordPlan_ = null;
+        keywordPlanBuilder_ = null;
+      }
+      if (keywordPlanCampaignBuilder_ == null) {
+        keywordPlanCampaign_ = null;
+      } else {
+        keywordPlanCampaign_ = null;
+        keywordPlanCampaignBuilder_ = null;
+      }
+      if (keywordPlanNegativeKeywordBuilder_ == null) {
+        keywordPlanNegativeKeyword_ = null;
+      } else {
+        keywordPlanNegativeKeyword_ = null;
+        keywordPlanNegativeKeywordBuilder_ = null;
+      }
+      if (keywordPlanAdGroupBuilder_ == null) {
+        keywordPlanAdGroup_ = null;
+      } else {
+        keywordPlanAdGroup_ = null;
+        keywordPlanAdGroupBuilder_ = null;
+      }
+      if (keywordPlanKeywordBuilder_ == null) {
+        keywordPlanKeyword_ = null;
+      } else {
+        keywordPlanKeyword_ = null;
+        keywordPlanKeywordBuilder_ = null;
+      }
+      if (languageConstantBuilder_ == null) {
+        languageConstant_ = null;
+      } else {
+        languageConstant_ = null;
+        languageConstantBuilder_ = null;
       }
       if (managedPlacementViewBuilder_ == null) {
         managedPlacementView_ = null;
@@ -3207,6 +5208,12 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
         recommendationBuilder_ = null;
       }
+      if (searchTermViewBuilder_ == null) {
+        searchTermView_ = null;
+      } else {
+        searchTermView_ = null;
+        searchTermViewBuilder_ = null;
+      }
       if (sharedCriterionBuilder_ == null) {
         sharedCriterion_ = null;
       } else {
@@ -3224,6 +5231,18 @@ private static final long serialVersionUID = 0L;
       } else {
         topicView_ = null;
         topicViewBuilder_ = null;
+      }
+      if (userInterestBuilder_ == null) {
+        userInterest_ = null;
+      } else {
+        userInterest_ = null;
+        userInterestBuilder_ = null;
+      }
+      if (userListBuilder_ == null) {
+        userList_ = null;
+      } else {
+        userList_ = null;
+        userListBuilder_ = null;
       }
       if (topicConstantBuilder_ == null) {
         topicConstant_ = null;
@@ -3255,6 +5274,58 @@ private static final long serialVersionUID = 0L;
 
       device_ = 0;
 
+      if (hotelBookingWindowDaysBuilder_ == null) {
+        hotelBookingWindowDays_ = null;
+      } else {
+        hotelBookingWindowDays_ = null;
+        hotelBookingWindowDaysBuilder_ = null;
+      }
+      if (hotelCenterIdBuilder_ == null) {
+        hotelCenterId_ = null;
+      } else {
+        hotelCenterId_ = null;
+        hotelCenterIdBuilder_ = null;
+      }
+      if (hotelCheckInDateBuilder_ == null) {
+        hotelCheckInDate_ = null;
+      } else {
+        hotelCheckInDate_ = null;
+        hotelCheckInDateBuilder_ = null;
+      }
+      hotelCheckInDayOfWeek_ = 0;
+
+      if (hotelCityBuilder_ == null) {
+        hotelCity_ = null;
+      } else {
+        hotelCity_ = null;
+        hotelCityBuilder_ = null;
+      }
+      if (hotelClassBuilder_ == null) {
+        hotelClass_ = null;
+      } else {
+        hotelClass_ = null;
+        hotelClassBuilder_ = null;
+      }
+      if (hotelCountryBuilder_ == null) {
+        hotelCountry_ = null;
+      } else {
+        hotelCountry_ = null;
+        hotelCountryBuilder_ = null;
+      }
+      hotelDateSelectionType_ = 0;
+
+      if (hotelLengthOfStayBuilder_ == null) {
+        hotelLengthOfStay_ = null;
+      } else {
+        hotelLengthOfStay_ = null;
+        hotelLengthOfStayBuilder_ = null;
+      }
+      if (hotelStateBuilder_ == null) {
+        hotelState_ = null;
+      } else {
+        hotelState_ = null;
+        hotelStateBuilder_ = null;
+      }
       if (hourBuilder_ == null) {
         hour_ = null;
       } else {
@@ -3269,12 +5340,22 @@ private static final long serialVersionUID = 0L;
       }
       monthOfYear_ = 0;
 
+      if (partnerHotelIdBuilder_ == null) {
+        partnerHotelId_ = null;
+      } else {
+        partnerHotelId_ = null;
+        partnerHotelIdBuilder_ = null;
+      }
+      placeholderType_ = 0;
+
       if (quarterBuilder_ == null) {
         quarter_ = null;
       } else {
         quarter_ = null;
         quarterBuilder_ = null;
       }
+      searchTermMatchType_ = 0;
+
       slot_ = 0;
 
       if (weekBuilder_ == null) {
@@ -3350,6 +5431,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.adGroupCriterion_ = adGroupCriterionBuilder_.build();
       }
+      if (adGroupFeedBuilder_ == null) {
+        result.adGroupFeed_ = adGroupFeed_;
+      } else {
+        result.adGroupFeed_ = adGroupFeedBuilder_.build();
+      }
       if (ageRangeViewBuilder_ == null) {
         result.ageRangeView_ = ageRangeView_;
       } else {
@@ -3375,6 +5461,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.campaign_ = campaignBuilder_.build();
       }
+      if (campaignAudienceViewBuilder_ == null) {
+        result.campaignAudienceView_ = campaignAudienceView_;
+      } else {
+        result.campaignAudienceView_ = campaignAudienceViewBuilder_.build();
+      }
       if (campaignBidModifierBuilder_ == null) {
         result.campaignBidModifier_ = campaignBidModifier_;
       } else {
@@ -3385,6 +5476,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.campaignCriterion_ = campaignCriterionBuilder_.build();
       }
+      if (campaignFeedBuilder_ == null) {
+        result.campaignFeed_ = campaignFeed_;
+      } else {
+        result.campaignFeed_ = campaignFeedBuilder_.build();
+      }
       if (campaignGroupBuilder_ == null) {
         result.campaignGroup_ = campaignGroup_;
       } else {
@@ -3394,6 +5490,11 @@ private static final long serialVersionUID = 0L;
         result.campaignSharedSet_ = campaignSharedSet_;
       } else {
         result.campaignSharedSet_ = campaignSharedSetBuilder_.build();
+      }
+      if (carrierConstantBuilder_ == null) {
+        result.carrierConstant_ = carrierConstant_;
+      } else {
+        result.carrierConstant_ = carrierConstantBuilder_.build();
       }
       if (changeStatusBuilder_ == null) {
         result.changeStatus_ = changeStatus_;
@@ -3415,10 +5516,35 @@ private static final long serialVersionUID = 0L;
       } else {
         result.customerClientLink_ = customerClientLinkBuilder_.build();
       }
+      if (customerClientBuilder_ == null) {
+        result.customerClient_ = customerClient_;
+      } else {
+        result.customerClient_ = customerClientBuilder_.build();
+      }
+      if (customerFeedBuilder_ == null) {
+        result.customerFeed_ = customerFeed_;
+      } else {
+        result.customerFeed_ = customerFeedBuilder_.build();
+      }
       if (displayKeywordViewBuilder_ == null) {
         result.displayKeywordView_ = displayKeywordView_;
       } else {
         result.displayKeywordView_ = displayKeywordViewBuilder_.build();
+      }
+      if (feedBuilder_ == null) {
+        result.feed_ = feed_;
+      } else {
+        result.feed_ = feedBuilder_.build();
+      }
+      if (feedItemBuilder_ == null) {
+        result.feedItem_ = feedItem_;
+      } else {
+        result.feedItem_ = feedItemBuilder_.build();
+      }
+      if (feedMappingBuilder_ == null) {
+        result.feedMapping_ = feedMapping_;
+      } else {
+        result.feedMapping_ = feedMappingBuilder_.build();
       }
       if (genderViewBuilder_ == null) {
         result.genderView_ = genderView_;
@@ -3435,10 +5561,45 @@ private static final long serialVersionUID = 0L;
       } else {
         result.hotelGroupView_ = hotelGroupViewBuilder_.build();
       }
+      if (hotelPerformanceViewBuilder_ == null) {
+        result.hotelPerformanceView_ = hotelPerformanceView_;
+      } else {
+        result.hotelPerformanceView_ = hotelPerformanceViewBuilder_.build();
+      }
       if (keywordViewBuilder_ == null) {
         result.keywordView_ = keywordView_;
       } else {
         result.keywordView_ = keywordViewBuilder_.build();
+      }
+      if (keywordPlanBuilder_ == null) {
+        result.keywordPlan_ = keywordPlan_;
+      } else {
+        result.keywordPlan_ = keywordPlanBuilder_.build();
+      }
+      if (keywordPlanCampaignBuilder_ == null) {
+        result.keywordPlanCampaign_ = keywordPlanCampaign_;
+      } else {
+        result.keywordPlanCampaign_ = keywordPlanCampaignBuilder_.build();
+      }
+      if (keywordPlanNegativeKeywordBuilder_ == null) {
+        result.keywordPlanNegativeKeyword_ = keywordPlanNegativeKeyword_;
+      } else {
+        result.keywordPlanNegativeKeyword_ = keywordPlanNegativeKeywordBuilder_.build();
+      }
+      if (keywordPlanAdGroupBuilder_ == null) {
+        result.keywordPlanAdGroup_ = keywordPlanAdGroup_;
+      } else {
+        result.keywordPlanAdGroup_ = keywordPlanAdGroupBuilder_.build();
+      }
+      if (keywordPlanKeywordBuilder_ == null) {
+        result.keywordPlanKeyword_ = keywordPlanKeyword_;
+      } else {
+        result.keywordPlanKeyword_ = keywordPlanKeywordBuilder_.build();
+      }
+      if (languageConstantBuilder_ == null) {
+        result.languageConstant_ = languageConstant_;
+      } else {
+        result.languageConstant_ = languageConstantBuilder_.build();
       }
       if (managedPlacementViewBuilder_ == null) {
         result.managedPlacementView_ = managedPlacementView_;
@@ -3460,6 +5621,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.recommendation_ = recommendationBuilder_.build();
       }
+      if (searchTermViewBuilder_ == null) {
+        result.searchTermView_ = searchTermView_;
+      } else {
+        result.searchTermView_ = searchTermViewBuilder_.build();
+      }
       if (sharedCriterionBuilder_ == null) {
         result.sharedCriterion_ = sharedCriterion_;
       } else {
@@ -3474,6 +5640,16 @@ private static final long serialVersionUID = 0L;
         result.topicView_ = topicView_;
       } else {
         result.topicView_ = topicViewBuilder_.build();
+      }
+      if (userInterestBuilder_ == null) {
+        result.userInterest_ = userInterest_;
+      } else {
+        result.userInterest_ = userInterestBuilder_.build();
+      }
+      if (userListBuilder_ == null) {
+        result.userList_ = userList_;
+      } else {
+        result.userList_ = userListBuilder_.build();
       }
       if (topicConstantBuilder_ == null) {
         result.topicConstant_ = topicConstant_;
@@ -3498,6 +5674,48 @@ private static final long serialVersionUID = 0L;
       }
       result.dayOfWeek_ = dayOfWeek_;
       result.device_ = device_;
+      if (hotelBookingWindowDaysBuilder_ == null) {
+        result.hotelBookingWindowDays_ = hotelBookingWindowDays_;
+      } else {
+        result.hotelBookingWindowDays_ = hotelBookingWindowDaysBuilder_.build();
+      }
+      if (hotelCenterIdBuilder_ == null) {
+        result.hotelCenterId_ = hotelCenterId_;
+      } else {
+        result.hotelCenterId_ = hotelCenterIdBuilder_.build();
+      }
+      if (hotelCheckInDateBuilder_ == null) {
+        result.hotelCheckInDate_ = hotelCheckInDate_;
+      } else {
+        result.hotelCheckInDate_ = hotelCheckInDateBuilder_.build();
+      }
+      result.hotelCheckInDayOfWeek_ = hotelCheckInDayOfWeek_;
+      if (hotelCityBuilder_ == null) {
+        result.hotelCity_ = hotelCity_;
+      } else {
+        result.hotelCity_ = hotelCityBuilder_.build();
+      }
+      if (hotelClassBuilder_ == null) {
+        result.hotelClass_ = hotelClass_;
+      } else {
+        result.hotelClass_ = hotelClassBuilder_.build();
+      }
+      if (hotelCountryBuilder_ == null) {
+        result.hotelCountry_ = hotelCountry_;
+      } else {
+        result.hotelCountry_ = hotelCountryBuilder_.build();
+      }
+      result.hotelDateSelectionType_ = hotelDateSelectionType_;
+      if (hotelLengthOfStayBuilder_ == null) {
+        result.hotelLengthOfStay_ = hotelLengthOfStay_;
+      } else {
+        result.hotelLengthOfStay_ = hotelLengthOfStayBuilder_.build();
+      }
+      if (hotelStateBuilder_ == null) {
+        result.hotelState_ = hotelState_;
+      } else {
+        result.hotelState_ = hotelStateBuilder_.build();
+      }
       if (hourBuilder_ == null) {
         result.hour_ = hour_;
       } else {
@@ -3509,11 +5727,18 @@ private static final long serialVersionUID = 0L;
         result.month_ = monthBuilder_.build();
       }
       result.monthOfYear_ = monthOfYear_;
+      if (partnerHotelIdBuilder_ == null) {
+        result.partnerHotelId_ = partnerHotelId_;
+      } else {
+        result.partnerHotelId_ = partnerHotelIdBuilder_.build();
+      }
+      result.placeholderType_ = placeholderType_;
       if (quarterBuilder_ == null) {
         result.quarter_ = quarter_;
       } else {
         result.quarter_ = quarterBuilder_.build();
       }
+      result.searchTermMatchType_ = searchTermMatchType_;
       result.slot_ = slot_;
       if (weekBuilder_ == null) {
         result.week_ = week_;
@@ -3594,6 +5819,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasAdGroupCriterion()) {
         mergeAdGroupCriterion(other.getAdGroupCriterion());
       }
+      if (other.hasAdGroupFeed()) {
+        mergeAdGroupFeed(other.getAdGroupFeed());
+      }
       if (other.hasAgeRangeView()) {
         mergeAgeRangeView(other.getAgeRangeView());
       }
@@ -3609,17 +5837,26 @@ private static final long serialVersionUID = 0L;
       if (other.hasCampaign()) {
         mergeCampaign(other.getCampaign());
       }
+      if (other.hasCampaignAudienceView()) {
+        mergeCampaignAudienceView(other.getCampaignAudienceView());
+      }
       if (other.hasCampaignBidModifier()) {
         mergeCampaignBidModifier(other.getCampaignBidModifier());
       }
       if (other.hasCampaignCriterion()) {
         mergeCampaignCriterion(other.getCampaignCriterion());
       }
+      if (other.hasCampaignFeed()) {
+        mergeCampaignFeed(other.getCampaignFeed());
+      }
       if (other.hasCampaignGroup()) {
         mergeCampaignGroup(other.getCampaignGroup());
       }
       if (other.hasCampaignSharedSet()) {
         mergeCampaignSharedSet(other.getCampaignSharedSet());
+      }
+      if (other.hasCarrierConstant()) {
+        mergeCarrierConstant(other.getCarrierConstant());
       }
       if (other.hasChangeStatus()) {
         mergeChangeStatus(other.getChangeStatus());
@@ -3633,8 +5870,23 @@ private static final long serialVersionUID = 0L;
       if (other.hasCustomerClientLink()) {
         mergeCustomerClientLink(other.getCustomerClientLink());
       }
+      if (other.hasCustomerClient()) {
+        mergeCustomerClient(other.getCustomerClient());
+      }
+      if (other.hasCustomerFeed()) {
+        mergeCustomerFeed(other.getCustomerFeed());
+      }
       if (other.hasDisplayKeywordView()) {
         mergeDisplayKeywordView(other.getDisplayKeywordView());
+      }
+      if (other.hasFeed()) {
+        mergeFeed(other.getFeed());
+      }
+      if (other.hasFeedItem()) {
+        mergeFeedItem(other.getFeedItem());
+      }
+      if (other.hasFeedMapping()) {
+        mergeFeedMapping(other.getFeedMapping());
       }
       if (other.hasGenderView()) {
         mergeGenderView(other.getGenderView());
@@ -3645,8 +5897,29 @@ private static final long serialVersionUID = 0L;
       if (other.hasHotelGroupView()) {
         mergeHotelGroupView(other.getHotelGroupView());
       }
+      if (other.hasHotelPerformanceView()) {
+        mergeHotelPerformanceView(other.getHotelPerformanceView());
+      }
       if (other.hasKeywordView()) {
         mergeKeywordView(other.getKeywordView());
+      }
+      if (other.hasKeywordPlan()) {
+        mergeKeywordPlan(other.getKeywordPlan());
+      }
+      if (other.hasKeywordPlanCampaign()) {
+        mergeKeywordPlanCampaign(other.getKeywordPlanCampaign());
+      }
+      if (other.hasKeywordPlanNegativeKeyword()) {
+        mergeKeywordPlanNegativeKeyword(other.getKeywordPlanNegativeKeyword());
+      }
+      if (other.hasKeywordPlanAdGroup()) {
+        mergeKeywordPlanAdGroup(other.getKeywordPlanAdGroup());
+      }
+      if (other.hasKeywordPlanKeyword()) {
+        mergeKeywordPlanKeyword(other.getKeywordPlanKeyword());
+      }
+      if (other.hasLanguageConstant()) {
+        mergeLanguageConstant(other.getLanguageConstant());
       }
       if (other.hasManagedPlacementView()) {
         mergeManagedPlacementView(other.getManagedPlacementView());
@@ -3660,6 +5933,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasRecommendation()) {
         mergeRecommendation(other.getRecommendation());
       }
+      if (other.hasSearchTermView()) {
+        mergeSearchTermView(other.getSearchTermView());
+      }
       if (other.hasSharedCriterion()) {
         mergeSharedCriterion(other.getSharedCriterion());
       }
@@ -3668,6 +5944,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasTopicView()) {
         mergeTopicView(other.getTopicView());
+      }
+      if (other.hasUserInterest()) {
+        mergeUserInterest(other.getUserInterest());
+      }
+      if (other.hasUserList()) {
+        mergeUserList(other.getUserList());
       }
       if (other.hasTopicConstant()) {
         mergeTopicConstant(other.getTopicConstant());
@@ -3690,6 +5972,36 @@ private static final long serialVersionUID = 0L;
       if (other.device_ != 0) {
         setDeviceValue(other.getDeviceValue());
       }
+      if (other.hasHotelBookingWindowDays()) {
+        mergeHotelBookingWindowDays(other.getHotelBookingWindowDays());
+      }
+      if (other.hasHotelCenterId()) {
+        mergeHotelCenterId(other.getHotelCenterId());
+      }
+      if (other.hasHotelCheckInDate()) {
+        mergeHotelCheckInDate(other.getHotelCheckInDate());
+      }
+      if (other.hotelCheckInDayOfWeek_ != 0) {
+        setHotelCheckInDayOfWeekValue(other.getHotelCheckInDayOfWeekValue());
+      }
+      if (other.hasHotelCity()) {
+        mergeHotelCity(other.getHotelCity());
+      }
+      if (other.hasHotelClass()) {
+        mergeHotelClass(other.getHotelClass());
+      }
+      if (other.hasHotelCountry()) {
+        mergeHotelCountry(other.getHotelCountry());
+      }
+      if (other.hotelDateSelectionType_ != 0) {
+        setHotelDateSelectionTypeValue(other.getHotelDateSelectionTypeValue());
+      }
+      if (other.hasHotelLengthOfStay()) {
+        mergeHotelLengthOfStay(other.getHotelLengthOfStay());
+      }
+      if (other.hasHotelState()) {
+        mergeHotelState(other.getHotelState());
+      }
       if (other.hasHour()) {
         mergeHour(other.getHour());
       }
@@ -3699,8 +6011,17 @@ private static final long serialVersionUID = 0L;
       if (other.monthOfYear_ != 0) {
         setMonthOfYearValue(other.getMonthOfYearValue());
       }
+      if (other.hasPartnerHotelId()) {
+        mergePartnerHotelId(other.getPartnerHotelId());
+      }
+      if (other.placeholderType_ != 0) {
+        setPlaceholderTypeValue(other.getPlaceholderTypeValue());
+      }
       if (other.hasQuarter()) {
         mergeQuarter(other.getQuarter());
+      }
+      if (other.searchTermMatchType_ != 0) {
+        setSearchTermMatchTypeValue(other.getSearchTermMatchTypeValue());
       }
       if (other.slot_ != 0) {
         setSlotValue(other.getSlotValue());
@@ -4811,6 +7132,159 @@ private static final long serialVersionUID = 0L;
       return adGroupCriterionBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.AdGroupFeed adGroupFeed_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.AdGroupFeed, com.google.ads.googleads.v0.resources.AdGroupFeed.Builder, com.google.ads.googleads.v0.resources.AdGroupFeedOrBuilder> adGroupFeedBuilder_;
+    /**
+     * <pre>
+     * The ad group feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+     */
+    public boolean hasAdGroupFeed() {
+      return adGroupFeedBuilder_ != null || adGroupFeed_ != null;
+    }
+    /**
+     * <pre>
+     * The ad group feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AdGroupFeed getAdGroupFeed() {
+      if (adGroupFeedBuilder_ == null) {
+        return adGroupFeed_ == null ? com.google.ads.googleads.v0.resources.AdGroupFeed.getDefaultInstance() : adGroupFeed_;
+      } else {
+        return adGroupFeedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The ad group feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+     */
+    public Builder setAdGroupFeed(com.google.ads.googleads.v0.resources.AdGroupFeed value) {
+      if (adGroupFeedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adGroupFeed_ = value;
+        onChanged();
+      } else {
+        adGroupFeedBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad group feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+     */
+    public Builder setAdGroupFeed(
+        com.google.ads.googleads.v0.resources.AdGroupFeed.Builder builderForValue) {
+      if (adGroupFeedBuilder_ == null) {
+        adGroupFeed_ = builderForValue.build();
+        onChanged();
+      } else {
+        adGroupFeedBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad group feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+     */
+    public Builder mergeAdGroupFeed(com.google.ads.googleads.v0.resources.AdGroupFeed value) {
+      if (adGroupFeedBuilder_ == null) {
+        if (adGroupFeed_ != null) {
+          adGroupFeed_ =
+            com.google.ads.googleads.v0.resources.AdGroupFeed.newBuilder(adGroupFeed_).mergeFrom(value).buildPartial();
+        } else {
+          adGroupFeed_ = value;
+        }
+        onChanged();
+      } else {
+        adGroupFeedBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad group feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+     */
+    public Builder clearAdGroupFeed() {
+      if (adGroupFeedBuilder_ == null) {
+        adGroupFeed_ = null;
+        onChanged();
+      } else {
+        adGroupFeed_ = null;
+        adGroupFeedBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad group feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AdGroupFeed.Builder getAdGroupFeedBuilder() {
+      
+      onChanged();
+      return getAdGroupFeedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The ad group feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AdGroupFeedOrBuilder getAdGroupFeedOrBuilder() {
+      if (adGroupFeedBuilder_ != null) {
+        return adGroupFeedBuilder_.getMessageOrBuilder();
+      } else {
+        return adGroupFeed_ == null ?
+            com.google.ads.googleads.v0.resources.AdGroupFeed.getDefaultInstance() : adGroupFeed_;
+      }
+    }
+    /**
+     * <pre>
+     * The ad group feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.AdGroupFeed, com.google.ads.googleads.v0.resources.AdGroupFeed.Builder, com.google.ads.googleads.v0.resources.AdGroupFeedOrBuilder> 
+        getAdGroupFeedFieldBuilder() {
+      if (adGroupFeedBuilder_ == null) {
+        adGroupFeedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.AdGroupFeed, com.google.ads.googleads.v0.resources.AdGroupFeed.Builder, com.google.ads.googleads.v0.resources.AdGroupFeedOrBuilder>(
+                getAdGroupFeed(),
+                getParentForChildren(),
+                isClean());
+        adGroupFeed_ = null;
+      }
+      return adGroupFeedBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.AgeRangeView ageRangeView_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.AgeRangeView, com.google.ads.googleads.v0.resources.AgeRangeView.Builder, com.google.ads.googleads.v0.resources.AgeRangeViewOrBuilder> ageRangeViewBuilder_;
@@ -5576,6 +8050,159 @@ private static final long serialVersionUID = 0L;
       return campaignBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.CampaignAudienceView campaignAudienceView_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CampaignAudienceView, com.google.ads.googleads.v0.resources.CampaignAudienceView.Builder, com.google.ads.googleads.v0.resources.CampaignAudienceViewOrBuilder> campaignAudienceViewBuilder_;
+    /**
+     * <pre>
+     * The campaign audience view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+     */
+    public boolean hasCampaignAudienceView() {
+      return campaignAudienceViewBuilder_ != null || campaignAudienceView_ != null;
+    }
+    /**
+     * <pre>
+     * The campaign audience view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignAudienceView getCampaignAudienceView() {
+      if (campaignAudienceViewBuilder_ == null) {
+        return campaignAudienceView_ == null ? com.google.ads.googleads.v0.resources.CampaignAudienceView.getDefaultInstance() : campaignAudienceView_;
+      } else {
+        return campaignAudienceViewBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The campaign audience view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+     */
+    public Builder setCampaignAudienceView(com.google.ads.googleads.v0.resources.CampaignAudienceView value) {
+      if (campaignAudienceViewBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignAudienceView_ = value;
+        onChanged();
+      } else {
+        campaignAudienceViewBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign audience view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+     */
+    public Builder setCampaignAudienceView(
+        com.google.ads.googleads.v0.resources.CampaignAudienceView.Builder builderForValue) {
+      if (campaignAudienceViewBuilder_ == null) {
+        campaignAudienceView_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignAudienceViewBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign audience view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+     */
+    public Builder mergeCampaignAudienceView(com.google.ads.googleads.v0.resources.CampaignAudienceView value) {
+      if (campaignAudienceViewBuilder_ == null) {
+        if (campaignAudienceView_ != null) {
+          campaignAudienceView_ =
+            com.google.ads.googleads.v0.resources.CampaignAudienceView.newBuilder(campaignAudienceView_).mergeFrom(value).buildPartial();
+        } else {
+          campaignAudienceView_ = value;
+        }
+        onChanged();
+      } else {
+        campaignAudienceViewBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign audience view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+     */
+    public Builder clearCampaignAudienceView() {
+      if (campaignAudienceViewBuilder_ == null) {
+        campaignAudienceView_ = null;
+        onChanged();
+      } else {
+        campaignAudienceView_ = null;
+        campaignAudienceViewBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign audience view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignAudienceView.Builder getCampaignAudienceViewBuilder() {
+      
+      onChanged();
+      return getCampaignAudienceViewFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The campaign audience view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignAudienceViewOrBuilder getCampaignAudienceViewOrBuilder() {
+      if (campaignAudienceViewBuilder_ != null) {
+        return campaignAudienceViewBuilder_.getMessageOrBuilder();
+      } else {
+        return campaignAudienceView_ == null ?
+            com.google.ads.googleads.v0.resources.CampaignAudienceView.getDefaultInstance() : campaignAudienceView_;
+      }
+    }
+    /**
+     * <pre>
+     * The campaign audience view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CampaignAudienceView, com.google.ads.googleads.v0.resources.CampaignAudienceView.Builder, com.google.ads.googleads.v0.resources.CampaignAudienceViewOrBuilder> 
+        getCampaignAudienceViewFieldBuilder() {
+      if (campaignAudienceViewBuilder_ == null) {
+        campaignAudienceViewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.CampaignAudienceView, com.google.ads.googleads.v0.resources.CampaignAudienceView.Builder, com.google.ads.googleads.v0.resources.CampaignAudienceViewOrBuilder>(
+                getCampaignAudienceView(),
+                getParentForChildren(),
+                isClean());
+        campaignAudienceView_ = null;
+      }
+      return campaignAudienceViewBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.CampaignBidModifier campaignBidModifier_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.CampaignBidModifier, com.google.ads.googleads.v0.resources.CampaignBidModifier.Builder, com.google.ads.googleads.v0.resources.CampaignBidModifierOrBuilder> campaignBidModifierBuilder_;
@@ -5882,6 +8509,159 @@ private static final long serialVersionUID = 0L;
       return campaignCriterionBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.CampaignFeed campaignFeed_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CampaignFeed, com.google.ads.googleads.v0.resources.CampaignFeed.Builder, com.google.ads.googleads.v0.resources.CampaignFeedOrBuilder> campaignFeedBuilder_;
+    /**
+     * <pre>
+     * The campaign feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+     */
+    public boolean hasCampaignFeed() {
+      return campaignFeedBuilder_ != null || campaignFeed_ != null;
+    }
+    /**
+     * <pre>
+     * The campaign feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignFeed getCampaignFeed() {
+      if (campaignFeedBuilder_ == null) {
+        return campaignFeed_ == null ? com.google.ads.googleads.v0.resources.CampaignFeed.getDefaultInstance() : campaignFeed_;
+      } else {
+        return campaignFeedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The campaign feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+     */
+    public Builder setCampaignFeed(com.google.ads.googleads.v0.resources.CampaignFeed value) {
+      if (campaignFeedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignFeed_ = value;
+        onChanged();
+      } else {
+        campaignFeedBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+     */
+    public Builder setCampaignFeed(
+        com.google.ads.googleads.v0.resources.CampaignFeed.Builder builderForValue) {
+      if (campaignFeedBuilder_ == null) {
+        campaignFeed_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignFeedBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+     */
+    public Builder mergeCampaignFeed(com.google.ads.googleads.v0.resources.CampaignFeed value) {
+      if (campaignFeedBuilder_ == null) {
+        if (campaignFeed_ != null) {
+          campaignFeed_ =
+            com.google.ads.googleads.v0.resources.CampaignFeed.newBuilder(campaignFeed_).mergeFrom(value).buildPartial();
+        } else {
+          campaignFeed_ = value;
+        }
+        onChanged();
+      } else {
+        campaignFeedBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+     */
+    public Builder clearCampaignFeed() {
+      if (campaignFeedBuilder_ == null) {
+        campaignFeed_ = null;
+        onChanged();
+      } else {
+        campaignFeed_ = null;
+        campaignFeedBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignFeed.Builder getCampaignFeedBuilder() {
+      
+      onChanged();
+      return getCampaignFeedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The campaign feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CampaignFeedOrBuilder getCampaignFeedOrBuilder() {
+      if (campaignFeedBuilder_ != null) {
+        return campaignFeedBuilder_.getMessageOrBuilder();
+      } else {
+        return campaignFeed_ == null ?
+            com.google.ads.googleads.v0.resources.CampaignFeed.getDefaultInstance() : campaignFeed_;
+      }
+    }
+    /**
+     * <pre>
+     * The campaign feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CampaignFeed, com.google.ads.googleads.v0.resources.CampaignFeed.Builder, com.google.ads.googleads.v0.resources.CampaignFeedOrBuilder> 
+        getCampaignFeedFieldBuilder() {
+      if (campaignFeedBuilder_ == null) {
+        campaignFeedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.CampaignFeed, com.google.ads.googleads.v0.resources.CampaignFeed.Builder, com.google.ads.googleads.v0.resources.CampaignFeedOrBuilder>(
+                getCampaignFeed(),
+                getParentForChildren(),
+                isClean());
+        campaignFeed_ = null;
+      }
+      return campaignFeedBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.CampaignGroup campaignGroup_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.CampaignGroup, com.google.ads.googleads.v0.resources.CampaignGroup.Builder, com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder> campaignGroupBuilder_;
@@ -6186,6 +8966,159 @@ private static final long serialVersionUID = 0L;
         campaignSharedSet_ = null;
       }
       return campaignSharedSetBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.CarrierConstant carrierConstant_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CarrierConstant, com.google.ads.googleads.v0.resources.CarrierConstant.Builder, com.google.ads.googleads.v0.resources.CarrierConstantOrBuilder> carrierConstantBuilder_;
+    /**
+     * <pre>
+     * The carrier constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+     */
+    public boolean hasCarrierConstant() {
+      return carrierConstantBuilder_ != null || carrierConstant_ != null;
+    }
+    /**
+     * <pre>
+     * The carrier constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CarrierConstant getCarrierConstant() {
+      if (carrierConstantBuilder_ == null) {
+        return carrierConstant_ == null ? com.google.ads.googleads.v0.resources.CarrierConstant.getDefaultInstance() : carrierConstant_;
+      } else {
+        return carrierConstantBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The carrier constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+     */
+    public Builder setCarrierConstant(com.google.ads.googleads.v0.resources.CarrierConstant value) {
+      if (carrierConstantBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        carrierConstant_ = value;
+        onChanged();
+      } else {
+        carrierConstantBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The carrier constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+     */
+    public Builder setCarrierConstant(
+        com.google.ads.googleads.v0.resources.CarrierConstant.Builder builderForValue) {
+      if (carrierConstantBuilder_ == null) {
+        carrierConstant_ = builderForValue.build();
+        onChanged();
+      } else {
+        carrierConstantBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The carrier constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+     */
+    public Builder mergeCarrierConstant(com.google.ads.googleads.v0.resources.CarrierConstant value) {
+      if (carrierConstantBuilder_ == null) {
+        if (carrierConstant_ != null) {
+          carrierConstant_ =
+            com.google.ads.googleads.v0.resources.CarrierConstant.newBuilder(carrierConstant_).mergeFrom(value).buildPartial();
+        } else {
+          carrierConstant_ = value;
+        }
+        onChanged();
+      } else {
+        carrierConstantBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The carrier constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+     */
+    public Builder clearCarrierConstant() {
+      if (carrierConstantBuilder_ == null) {
+        carrierConstant_ = null;
+        onChanged();
+      } else {
+        carrierConstant_ = null;
+        carrierConstantBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The carrier constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CarrierConstant.Builder getCarrierConstantBuilder() {
+      
+      onChanged();
+      return getCarrierConstantFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The carrier constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CarrierConstantOrBuilder getCarrierConstantOrBuilder() {
+      if (carrierConstantBuilder_ != null) {
+        return carrierConstantBuilder_.getMessageOrBuilder();
+      } else {
+        return carrierConstant_ == null ?
+            com.google.ads.googleads.v0.resources.CarrierConstant.getDefaultInstance() : carrierConstant_;
+      }
+    }
+    /**
+     * <pre>
+     * The carrier constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CarrierConstant, com.google.ads.googleads.v0.resources.CarrierConstant.Builder, com.google.ads.googleads.v0.resources.CarrierConstantOrBuilder> 
+        getCarrierConstantFieldBuilder() {
+      if (carrierConstantBuilder_ == null) {
+        carrierConstantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.CarrierConstant, com.google.ads.googleads.v0.resources.CarrierConstant.Builder, com.google.ads.googleads.v0.resources.CarrierConstantOrBuilder>(
+                getCarrierConstant(),
+                getParentForChildren(),
+                isClean());
+        carrierConstant_ = null;
+      }
+      return carrierConstantBuilder_;
     }
 
     private com.google.ads.googleads.v0.resources.ChangeStatus changeStatus_ = null;
@@ -6800,6 +9733,312 @@ private static final long serialVersionUID = 0L;
       return customerClientLinkBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.CustomerClient customerClient_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CustomerClient, com.google.ads.googleads.v0.resources.CustomerClient.Builder, com.google.ads.googleads.v0.resources.CustomerClientOrBuilder> customerClientBuilder_;
+    /**
+     * <pre>
+     * The CustomerClient referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+     */
+    public boolean hasCustomerClient() {
+      return customerClientBuilder_ != null || customerClient_ != null;
+    }
+    /**
+     * <pre>
+     * The CustomerClient referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CustomerClient getCustomerClient() {
+      if (customerClientBuilder_ == null) {
+        return customerClient_ == null ? com.google.ads.googleads.v0.resources.CustomerClient.getDefaultInstance() : customerClient_;
+      } else {
+        return customerClientBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The CustomerClient referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+     */
+    public Builder setCustomerClient(com.google.ads.googleads.v0.resources.CustomerClient value) {
+      if (customerClientBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        customerClient_ = value;
+        onChanged();
+      } else {
+        customerClientBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The CustomerClient referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+     */
+    public Builder setCustomerClient(
+        com.google.ads.googleads.v0.resources.CustomerClient.Builder builderForValue) {
+      if (customerClientBuilder_ == null) {
+        customerClient_ = builderForValue.build();
+        onChanged();
+      } else {
+        customerClientBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The CustomerClient referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+     */
+    public Builder mergeCustomerClient(com.google.ads.googleads.v0.resources.CustomerClient value) {
+      if (customerClientBuilder_ == null) {
+        if (customerClient_ != null) {
+          customerClient_ =
+            com.google.ads.googleads.v0.resources.CustomerClient.newBuilder(customerClient_).mergeFrom(value).buildPartial();
+        } else {
+          customerClient_ = value;
+        }
+        onChanged();
+      } else {
+        customerClientBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The CustomerClient referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+     */
+    public Builder clearCustomerClient() {
+      if (customerClientBuilder_ == null) {
+        customerClient_ = null;
+        onChanged();
+      } else {
+        customerClient_ = null;
+        customerClientBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The CustomerClient referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CustomerClient.Builder getCustomerClientBuilder() {
+      
+      onChanged();
+      return getCustomerClientFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The CustomerClient referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CustomerClientOrBuilder getCustomerClientOrBuilder() {
+      if (customerClientBuilder_ != null) {
+        return customerClientBuilder_.getMessageOrBuilder();
+      } else {
+        return customerClient_ == null ?
+            com.google.ads.googleads.v0.resources.CustomerClient.getDefaultInstance() : customerClient_;
+      }
+    }
+    /**
+     * <pre>
+     * The CustomerClient referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CustomerClient, com.google.ads.googleads.v0.resources.CustomerClient.Builder, com.google.ads.googleads.v0.resources.CustomerClientOrBuilder> 
+        getCustomerClientFieldBuilder() {
+      if (customerClientBuilder_ == null) {
+        customerClientBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.CustomerClient, com.google.ads.googleads.v0.resources.CustomerClient.Builder, com.google.ads.googleads.v0.resources.CustomerClientOrBuilder>(
+                getCustomerClient(),
+                getParentForChildren(),
+                isClean());
+        customerClient_ = null;
+      }
+      return customerClientBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.CustomerFeed customerFeed_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CustomerFeed, com.google.ads.googleads.v0.resources.CustomerFeed.Builder, com.google.ads.googleads.v0.resources.CustomerFeedOrBuilder> customerFeedBuilder_;
+    /**
+     * <pre>
+     * The customer feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+     */
+    public boolean hasCustomerFeed() {
+      return customerFeedBuilder_ != null || customerFeed_ != null;
+    }
+    /**
+     * <pre>
+     * The customer feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CustomerFeed getCustomerFeed() {
+      if (customerFeedBuilder_ == null) {
+        return customerFeed_ == null ? com.google.ads.googleads.v0.resources.CustomerFeed.getDefaultInstance() : customerFeed_;
+      } else {
+        return customerFeedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The customer feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+     */
+    public Builder setCustomerFeed(com.google.ads.googleads.v0.resources.CustomerFeed value) {
+      if (customerFeedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        customerFeed_ = value;
+        onChanged();
+      } else {
+        customerFeedBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The customer feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+     */
+    public Builder setCustomerFeed(
+        com.google.ads.googleads.v0.resources.CustomerFeed.Builder builderForValue) {
+      if (customerFeedBuilder_ == null) {
+        customerFeed_ = builderForValue.build();
+        onChanged();
+      } else {
+        customerFeedBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The customer feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+     */
+    public Builder mergeCustomerFeed(com.google.ads.googleads.v0.resources.CustomerFeed value) {
+      if (customerFeedBuilder_ == null) {
+        if (customerFeed_ != null) {
+          customerFeed_ =
+            com.google.ads.googleads.v0.resources.CustomerFeed.newBuilder(customerFeed_).mergeFrom(value).buildPartial();
+        } else {
+          customerFeed_ = value;
+        }
+        onChanged();
+      } else {
+        customerFeedBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The customer feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+     */
+    public Builder clearCustomerFeed() {
+      if (customerFeedBuilder_ == null) {
+        customerFeed_ = null;
+        onChanged();
+      } else {
+        customerFeed_ = null;
+        customerFeedBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The customer feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CustomerFeed.Builder getCustomerFeedBuilder() {
+      
+      onChanged();
+      return getCustomerFeedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The customer feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+     */
+    public com.google.ads.googleads.v0.resources.CustomerFeedOrBuilder getCustomerFeedOrBuilder() {
+      if (customerFeedBuilder_ != null) {
+        return customerFeedBuilder_.getMessageOrBuilder();
+      } else {
+        return customerFeed_ == null ?
+            com.google.ads.googleads.v0.resources.CustomerFeed.getDefaultInstance() : customerFeed_;
+      }
+    }
+    /**
+     * <pre>
+     * The customer feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.CustomerFeed, com.google.ads.googleads.v0.resources.CustomerFeed.Builder, com.google.ads.googleads.v0.resources.CustomerFeedOrBuilder> 
+        getCustomerFeedFieldBuilder() {
+      if (customerFeedBuilder_ == null) {
+        customerFeedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.CustomerFeed, com.google.ads.googleads.v0.resources.CustomerFeed.Builder, com.google.ads.googleads.v0.resources.CustomerFeedOrBuilder>(
+                getCustomerFeed(),
+                getParentForChildren(),
+                isClean());
+        customerFeed_ = null;
+      }
+      return customerFeedBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.DisplayKeywordView displayKeywordView_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.DisplayKeywordView, com.google.ads.googleads.v0.resources.DisplayKeywordView.Builder, com.google.ads.googleads.v0.resources.DisplayKeywordViewOrBuilder> displayKeywordViewBuilder_;
@@ -6951,6 +10190,465 @@ private static final long serialVersionUID = 0L;
         displayKeywordView_ = null;
       }
       return displayKeywordViewBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.Feed feed_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.Feed, com.google.ads.googleads.v0.resources.Feed.Builder, com.google.ads.googleads.v0.resources.FeedOrBuilder> feedBuilder_;
+    /**
+     * <pre>
+     * The feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+     */
+    public boolean hasFeed() {
+      return feedBuilder_ != null || feed_ != null;
+    }
+    /**
+     * <pre>
+     * The feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+     */
+    public com.google.ads.googleads.v0.resources.Feed getFeed() {
+      if (feedBuilder_ == null) {
+        return feed_ == null ? com.google.ads.googleads.v0.resources.Feed.getDefaultInstance() : feed_;
+      } else {
+        return feedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+     */
+    public Builder setFeed(com.google.ads.googleads.v0.resources.Feed value) {
+      if (feedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        feed_ = value;
+        onChanged();
+      } else {
+        feedBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+     */
+    public Builder setFeed(
+        com.google.ads.googleads.v0.resources.Feed.Builder builderForValue) {
+      if (feedBuilder_ == null) {
+        feed_ = builderForValue.build();
+        onChanged();
+      } else {
+        feedBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+     */
+    public Builder mergeFeed(com.google.ads.googleads.v0.resources.Feed value) {
+      if (feedBuilder_ == null) {
+        if (feed_ != null) {
+          feed_ =
+            com.google.ads.googleads.v0.resources.Feed.newBuilder(feed_).mergeFrom(value).buildPartial();
+        } else {
+          feed_ = value;
+        }
+        onChanged();
+      } else {
+        feedBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+     */
+    public Builder clearFeed() {
+      if (feedBuilder_ == null) {
+        feed_ = null;
+        onChanged();
+      } else {
+        feed_ = null;
+        feedBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+     */
+    public com.google.ads.googleads.v0.resources.Feed.Builder getFeedBuilder() {
+      
+      onChanged();
+      return getFeedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+     */
+    public com.google.ads.googleads.v0.resources.FeedOrBuilder getFeedOrBuilder() {
+      if (feedBuilder_ != null) {
+        return feedBuilder_.getMessageOrBuilder();
+      } else {
+        return feed_ == null ?
+            com.google.ads.googleads.v0.resources.Feed.getDefaultInstance() : feed_;
+      }
+    }
+    /**
+     * <pre>
+     * The feed referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.Feed, com.google.ads.googleads.v0.resources.Feed.Builder, com.google.ads.googleads.v0.resources.FeedOrBuilder> 
+        getFeedFieldBuilder() {
+      if (feedBuilder_ == null) {
+        feedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.Feed, com.google.ads.googleads.v0.resources.Feed.Builder, com.google.ads.googleads.v0.resources.FeedOrBuilder>(
+                getFeed(),
+                getParentForChildren(),
+                isClean());
+        feed_ = null;
+      }
+      return feedBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.FeedItem feedItem_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.FeedItem, com.google.ads.googleads.v0.resources.FeedItem.Builder, com.google.ads.googleads.v0.resources.FeedItemOrBuilder> feedItemBuilder_;
+    /**
+     * <pre>
+     * The feed item referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+     */
+    public boolean hasFeedItem() {
+      return feedItemBuilder_ != null || feedItem_ != null;
+    }
+    /**
+     * <pre>
+     * The feed item referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+     */
+    public com.google.ads.googleads.v0.resources.FeedItem getFeedItem() {
+      if (feedItemBuilder_ == null) {
+        return feedItem_ == null ? com.google.ads.googleads.v0.resources.FeedItem.getDefaultInstance() : feedItem_;
+      } else {
+        return feedItemBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The feed item referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+     */
+    public Builder setFeedItem(com.google.ads.googleads.v0.resources.FeedItem value) {
+      if (feedItemBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        feedItem_ = value;
+        onChanged();
+      } else {
+        feedItemBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The feed item referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+     */
+    public Builder setFeedItem(
+        com.google.ads.googleads.v0.resources.FeedItem.Builder builderForValue) {
+      if (feedItemBuilder_ == null) {
+        feedItem_ = builderForValue.build();
+        onChanged();
+      } else {
+        feedItemBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The feed item referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+     */
+    public Builder mergeFeedItem(com.google.ads.googleads.v0.resources.FeedItem value) {
+      if (feedItemBuilder_ == null) {
+        if (feedItem_ != null) {
+          feedItem_ =
+            com.google.ads.googleads.v0.resources.FeedItem.newBuilder(feedItem_).mergeFrom(value).buildPartial();
+        } else {
+          feedItem_ = value;
+        }
+        onChanged();
+      } else {
+        feedItemBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The feed item referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+     */
+    public Builder clearFeedItem() {
+      if (feedItemBuilder_ == null) {
+        feedItem_ = null;
+        onChanged();
+      } else {
+        feedItem_ = null;
+        feedItemBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The feed item referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+     */
+    public com.google.ads.googleads.v0.resources.FeedItem.Builder getFeedItemBuilder() {
+      
+      onChanged();
+      return getFeedItemFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The feed item referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+     */
+    public com.google.ads.googleads.v0.resources.FeedItemOrBuilder getFeedItemOrBuilder() {
+      if (feedItemBuilder_ != null) {
+        return feedItemBuilder_.getMessageOrBuilder();
+      } else {
+        return feedItem_ == null ?
+            com.google.ads.googleads.v0.resources.FeedItem.getDefaultInstance() : feedItem_;
+      }
+    }
+    /**
+     * <pre>
+     * The feed item referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.FeedItem, com.google.ads.googleads.v0.resources.FeedItem.Builder, com.google.ads.googleads.v0.resources.FeedItemOrBuilder> 
+        getFeedItemFieldBuilder() {
+      if (feedItemBuilder_ == null) {
+        feedItemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.FeedItem, com.google.ads.googleads.v0.resources.FeedItem.Builder, com.google.ads.googleads.v0.resources.FeedItemOrBuilder>(
+                getFeedItem(),
+                getParentForChildren(),
+                isClean());
+        feedItem_ = null;
+      }
+      return feedItemBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.FeedMapping feedMapping_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.FeedMapping, com.google.ads.googleads.v0.resources.FeedMapping.Builder, com.google.ads.googleads.v0.resources.FeedMappingOrBuilder> feedMappingBuilder_;
+    /**
+     * <pre>
+     * The feed mapping referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+     */
+    public boolean hasFeedMapping() {
+      return feedMappingBuilder_ != null || feedMapping_ != null;
+    }
+    /**
+     * <pre>
+     * The feed mapping referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+     */
+    public com.google.ads.googleads.v0.resources.FeedMapping getFeedMapping() {
+      if (feedMappingBuilder_ == null) {
+        return feedMapping_ == null ? com.google.ads.googleads.v0.resources.FeedMapping.getDefaultInstance() : feedMapping_;
+      } else {
+        return feedMappingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The feed mapping referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+     */
+    public Builder setFeedMapping(com.google.ads.googleads.v0.resources.FeedMapping value) {
+      if (feedMappingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        feedMapping_ = value;
+        onChanged();
+      } else {
+        feedMappingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The feed mapping referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+     */
+    public Builder setFeedMapping(
+        com.google.ads.googleads.v0.resources.FeedMapping.Builder builderForValue) {
+      if (feedMappingBuilder_ == null) {
+        feedMapping_ = builderForValue.build();
+        onChanged();
+      } else {
+        feedMappingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The feed mapping referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+     */
+    public Builder mergeFeedMapping(com.google.ads.googleads.v0.resources.FeedMapping value) {
+      if (feedMappingBuilder_ == null) {
+        if (feedMapping_ != null) {
+          feedMapping_ =
+            com.google.ads.googleads.v0.resources.FeedMapping.newBuilder(feedMapping_).mergeFrom(value).buildPartial();
+        } else {
+          feedMapping_ = value;
+        }
+        onChanged();
+      } else {
+        feedMappingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The feed mapping referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+     */
+    public Builder clearFeedMapping() {
+      if (feedMappingBuilder_ == null) {
+        feedMapping_ = null;
+        onChanged();
+      } else {
+        feedMapping_ = null;
+        feedMappingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The feed mapping referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+     */
+    public com.google.ads.googleads.v0.resources.FeedMapping.Builder getFeedMappingBuilder() {
+      
+      onChanged();
+      return getFeedMappingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The feed mapping referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+     */
+    public com.google.ads.googleads.v0.resources.FeedMappingOrBuilder getFeedMappingOrBuilder() {
+      if (feedMappingBuilder_ != null) {
+        return feedMappingBuilder_.getMessageOrBuilder();
+      } else {
+        return feedMapping_ == null ?
+            com.google.ads.googleads.v0.resources.FeedMapping.getDefaultInstance() : feedMapping_;
+      }
+    }
+    /**
+     * <pre>
+     * The feed mapping referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.FeedMapping, com.google.ads.googleads.v0.resources.FeedMapping.Builder, com.google.ads.googleads.v0.resources.FeedMappingOrBuilder> 
+        getFeedMappingFieldBuilder() {
+      if (feedMappingBuilder_ == null) {
+        feedMappingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.FeedMapping, com.google.ads.googleads.v0.resources.FeedMapping.Builder, com.google.ads.googleads.v0.resources.FeedMappingOrBuilder>(
+                getFeedMapping(),
+                getParentForChildren(),
+                isClean());
+        feedMapping_ = null;
+      }
+      return feedMappingBuilder_;
     }
 
     private com.google.ads.googleads.v0.resources.GenderView genderView_ = null;
@@ -7412,6 +11110,159 @@ private static final long serialVersionUID = 0L;
       return hotelGroupViewBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.HotelPerformanceView hotelPerformanceView_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.HotelPerformanceView, com.google.ads.googleads.v0.resources.HotelPerformanceView.Builder, com.google.ads.googleads.v0.resources.HotelPerformanceViewOrBuilder> hotelPerformanceViewBuilder_;
+    /**
+     * <pre>
+     * The hotel performance view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+     */
+    public boolean hasHotelPerformanceView() {
+      return hotelPerformanceViewBuilder_ != null || hotelPerformanceView_ != null;
+    }
+    /**
+     * <pre>
+     * The hotel performance view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+     */
+    public com.google.ads.googleads.v0.resources.HotelPerformanceView getHotelPerformanceView() {
+      if (hotelPerformanceViewBuilder_ == null) {
+        return hotelPerformanceView_ == null ? com.google.ads.googleads.v0.resources.HotelPerformanceView.getDefaultInstance() : hotelPerformanceView_;
+      } else {
+        return hotelPerformanceViewBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The hotel performance view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+     */
+    public Builder setHotelPerformanceView(com.google.ads.googleads.v0.resources.HotelPerformanceView value) {
+      if (hotelPerformanceViewBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelPerformanceView_ = value;
+        onChanged();
+      } else {
+        hotelPerformanceViewBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The hotel performance view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+     */
+    public Builder setHotelPerformanceView(
+        com.google.ads.googleads.v0.resources.HotelPerformanceView.Builder builderForValue) {
+      if (hotelPerformanceViewBuilder_ == null) {
+        hotelPerformanceView_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelPerformanceViewBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The hotel performance view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+     */
+    public Builder mergeHotelPerformanceView(com.google.ads.googleads.v0.resources.HotelPerformanceView value) {
+      if (hotelPerformanceViewBuilder_ == null) {
+        if (hotelPerformanceView_ != null) {
+          hotelPerformanceView_ =
+            com.google.ads.googleads.v0.resources.HotelPerformanceView.newBuilder(hotelPerformanceView_).mergeFrom(value).buildPartial();
+        } else {
+          hotelPerformanceView_ = value;
+        }
+        onChanged();
+      } else {
+        hotelPerformanceViewBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The hotel performance view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+     */
+    public Builder clearHotelPerformanceView() {
+      if (hotelPerformanceViewBuilder_ == null) {
+        hotelPerformanceView_ = null;
+        onChanged();
+      } else {
+        hotelPerformanceView_ = null;
+        hotelPerformanceViewBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The hotel performance view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+     */
+    public com.google.ads.googleads.v0.resources.HotelPerformanceView.Builder getHotelPerformanceViewBuilder() {
+      
+      onChanged();
+      return getHotelPerformanceViewFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The hotel performance view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+     */
+    public com.google.ads.googleads.v0.resources.HotelPerformanceViewOrBuilder getHotelPerformanceViewOrBuilder() {
+      if (hotelPerformanceViewBuilder_ != null) {
+        return hotelPerformanceViewBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelPerformanceView_ == null ?
+            com.google.ads.googleads.v0.resources.HotelPerformanceView.getDefaultInstance() : hotelPerformanceView_;
+      }
+    }
+    /**
+     * <pre>
+     * The hotel performance view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.HotelPerformanceView, com.google.ads.googleads.v0.resources.HotelPerformanceView.Builder, com.google.ads.googleads.v0.resources.HotelPerformanceViewOrBuilder> 
+        getHotelPerformanceViewFieldBuilder() {
+      if (hotelPerformanceViewBuilder_ == null) {
+        hotelPerformanceViewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.HotelPerformanceView, com.google.ads.googleads.v0.resources.HotelPerformanceView.Builder, com.google.ads.googleads.v0.resources.HotelPerformanceViewOrBuilder>(
+                getHotelPerformanceView(),
+                getParentForChildren(),
+                isClean());
+        hotelPerformanceView_ = null;
+      }
+      return hotelPerformanceViewBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.KeywordView keywordView_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.KeywordView, com.google.ads.googleads.v0.resources.KeywordView.Builder, com.google.ads.googleads.v0.resources.KeywordViewOrBuilder> keywordViewBuilder_;
@@ -7563,6 +11414,924 @@ private static final long serialVersionUID = 0L;
         keywordView_ = null;
       }
       return keywordViewBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.KeywordPlan keywordPlan_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.KeywordPlan, com.google.ads.googleads.v0.resources.KeywordPlan.Builder, com.google.ads.googleads.v0.resources.KeywordPlanOrBuilder> keywordPlanBuilder_;
+    /**
+     * <pre>
+     * The keyword plan referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+     */
+    public boolean hasKeywordPlan() {
+      return keywordPlanBuilder_ != null || keywordPlan_ != null;
+    }
+    /**
+     * <pre>
+     * The keyword plan referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlan getKeywordPlan() {
+      if (keywordPlanBuilder_ == null) {
+        return keywordPlan_ == null ? com.google.ads.googleads.v0.resources.KeywordPlan.getDefaultInstance() : keywordPlan_;
+      } else {
+        return keywordPlanBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The keyword plan referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+     */
+    public Builder setKeywordPlan(com.google.ads.googleads.v0.resources.KeywordPlan value) {
+      if (keywordPlanBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        keywordPlan_ = value;
+        onChanged();
+      } else {
+        keywordPlanBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+     */
+    public Builder setKeywordPlan(
+        com.google.ads.googleads.v0.resources.KeywordPlan.Builder builderForValue) {
+      if (keywordPlanBuilder_ == null) {
+        keywordPlan_ = builderForValue.build();
+        onChanged();
+      } else {
+        keywordPlanBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+     */
+    public Builder mergeKeywordPlan(com.google.ads.googleads.v0.resources.KeywordPlan value) {
+      if (keywordPlanBuilder_ == null) {
+        if (keywordPlan_ != null) {
+          keywordPlan_ =
+            com.google.ads.googleads.v0.resources.KeywordPlan.newBuilder(keywordPlan_).mergeFrom(value).buildPartial();
+        } else {
+          keywordPlan_ = value;
+        }
+        onChanged();
+      } else {
+        keywordPlanBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+     */
+    public Builder clearKeywordPlan() {
+      if (keywordPlanBuilder_ == null) {
+        keywordPlan_ = null;
+        onChanged();
+      } else {
+        keywordPlan_ = null;
+        keywordPlanBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlan.Builder getKeywordPlanBuilder() {
+      
+      onChanged();
+      return getKeywordPlanFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The keyword plan referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanOrBuilder getKeywordPlanOrBuilder() {
+      if (keywordPlanBuilder_ != null) {
+        return keywordPlanBuilder_.getMessageOrBuilder();
+      } else {
+        return keywordPlan_ == null ?
+            com.google.ads.googleads.v0.resources.KeywordPlan.getDefaultInstance() : keywordPlan_;
+      }
+    }
+    /**
+     * <pre>
+     * The keyword plan referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.KeywordPlan, com.google.ads.googleads.v0.resources.KeywordPlan.Builder, com.google.ads.googleads.v0.resources.KeywordPlanOrBuilder> 
+        getKeywordPlanFieldBuilder() {
+      if (keywordPlanBuilder_ == null) {
+        keywordPlanBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.KeywordPlan, com.google.ads.googleads.v0.resources.KeywordPlan.Builder, com.google.ads.googleads.v0.resources.KeywordPlanOrBuilder>(
+                getKeywordPlan(),
+                getParentForChildren(),
+                isClean());
+        keywordPlan_ = null;
+      }
+      return keywordPlanBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.KeywordPlanCampaign keywordPlanCampaign_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.KeywordPlanCampaign, com.google.ads.googleads.v0.resources.KeywordPlanCampaign.Builder, com.google.ads.googleads.v0.resources.KeywordPlanCampaignOrBuilder> keywordPlanCampaignBuilder_;
+    /**
+     * <pre>
+     * The keyword plan campaign referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+     */
+    public boolean hasKeywordPlanCampaign() {
+      return keywordPlanCampaignBuilder_ != null || keywordPlanCampaign_ != null;
+    }
+    /**
+     * <pre>
+     * The keyword plan campaign referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanCampaign getKeywordPlanCampaign() {
+      if (keywordPlanCampaignBuilder_ == null) {
+        return keywordPlanCampaign_ == null ? com.google.ads.googleads.v0.resources.KeywordPlanCampaign.getDefaultInstance() : keywordPlanCampaign_;
+      } else {
+        return keywordPlanCampaignBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The keyword plan campaign referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+     */
+    public Builder setKeywordPlanCampaign(com.google.ads.googleads.v0.resources.KeywordPlanCampaign value) {
+      if (keywordPlanCampaignBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        keywordPlanCampaign_ = value;
+        onChanged();
+      } else {
+        keywordPlanCampaignBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan campaign referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+     */
+    public Builder setKeywordPlanCampaign(
+        com.google.ads.googleads.v0.resources.KeywordPlanCampaign.Builder builderForValue) {
+      if (keywordPlanCampaignBuilder_ == null) {
+        keywordPlanCampaign_ = builderForValue.build();
+        onChanged();
+      } else {
+        keywordPlanCampaignBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan campaign referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+     */
+    public Builder mergeKeywordPlanCampaign(com.google.ads.googleads.v0.resources.KeywordPlanCampaign value) {
+      if (keywordPlanCampaignBuilder_ == null) {
+        if (keywordPlanCampaign_ != null) {
+          keywordPlanCampaign_ =
+            com.google.ads.googleads.v0.resources.KeywordPlanCampaign.newBuilder(keywordPlanCampaign_).mergeFrom(value).buildPartial();
+        } else {
+          keywordPlanCampaign_ = value;
+        }
+        onChanged();
+      } else {
+        keywordPlanCampaignBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan campaign referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+     */
+    public Builder clearKeywordPlanCampaign() {
+      if (keywordPlanCampaignBuilder_ == null) {
+        keywordPlanCampaign_ = null;
+        onChanged();
+      } else {
+        keywordPlanCampaign_ = null;
+        keywordPlanCampaignBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan campaign referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanCampaign.Builder getKeywordPlanCampaignBuilder() {
+      
+      onChanged();
+      return getKeywordPlanCampaignFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The keyword plan campaign referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanCampaignOrBuilder getKeywordPlanCampaignOrBuilder() {
+      if (keywordPlanCampaignBuilder_ != null) {
+        return keywordPlanCampaignBuilder_.getMessageOrBuilder();
+      } else {
+        return keywordPlanCampaign_ == null ?
+            com.google.ads.googleads.v0.resources.KeywordPlanCampaign.getDefaultInstance() : keywordPlanCampaign_;
+      }
+    }
+    /**
+     * <pre>
+     * The keyword plan campaign referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.KeywordPlanCampaign, com.google.ads.googleads.v0.resources.KeywordPlanCampaign.Builder, com.google.ads.googleads.v0.resources.KeywordPlanCampaignOrBuilder> 
+        getKeywordPlanCampaignFieldBuilder() {
+      if (keywordPlanCampaignBuilder_ == null) {
+        keywordPlanCampaignBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.KeywordPlanCampaign, com.google.ads.googleads.v0.resources.KeywordPlanCampaign.Builder, com.google.ads.googleads.v0.resources.KeywordPlanCampaignOrBuilder>(
+                getKeywordPlanCampaign(),
+                getParentForChildren(),
+                isClean());
+        keywordPlanCampaign_ = null;
+      }
+      return keywordPlanCampaignBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keywordPlanNegativeKeyword_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword, com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword.Builder, com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeywordOrBuilder> keywordPlanNegativeKeywordBuilder_;
+    /**
+     * <pre>
+     * The keyword plan negative keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+     */
+    public boolean hasKeywordPlanNegativeKeyword() {
+      return keywordPlanNegativeKeywordBuilder_ != null || keywordPlanNegativeKeyword_ != null;
+    }
+    /**
+     * <pre>
+     * The keyword plan negative keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword getKeywordPlanNegativeKeyword() {
+      if (keywordPlanNegativeKeywordBuilder_ == null) {
+        return keywordPlanNegativeKeyword_ == null ? com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword.getDefaultInstance() : keywordPlanNegativeKeyword_;
+      } else {
+        return keywordPlanNegativeKeywordBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The keyword plan negative keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+     */
+    public Builder setKeywordPlanNegativeKeyword(com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword value) {
+      if (keywordPlanNegativeKeywordBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        keywordPlanNegativeKeyword_ = value;
+        onChanged();
+      } else {
+        keywordPlanNegativeKeywordBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan negative keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+     */
+    public Builder setKeywordPlanNegativeKeyword(
+        com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword.Builder builderForValue) {
+      if (keywordPlanNegativeKeywordBuilder_ == null) {
+        keywordPlanNegativeKeyword_ = builderForValue.build();
+        onChanged();
+      } else {
+        keywordPlanNegativeKeywordBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan negative keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+     */
+    public Builder mergeKeywordPlanNegativeKeyword(com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword value) {
+      if (keywordPlanNegativeKeywordBuilder_ == null) {
+        if (keywordPlanNegativeKeyword_ != null) {
+          keywordPlanNegativeKeyword_ =
+            com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword.newBuilder(keywordPlanNegativeKeyword_).mergeFrom(value).buildPartial();
+        } else {
+          keywordPlanNegativeKeyword_ = value;
+        }
+        onChanged();
+      } else {
+        keywordPlanNegativeKeywordBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan negative keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+     */
+    public Builder clearKeywordPlanNegativeKeyword() {
+      if (keywordPlanNegativeKeywordBuilder_ == null) {
+        keywordPlanNegativeKeyword_ = null;
+        onChanged();
+      } else {
+        keywordPlanNegativeKeyword_ = null;
+        keywordPlanNegativeKeywordBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan negative keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword.Builder getKeywordPlanNegativeKeywordBuilder() {
+      
+      onChanged();
+      return getKeywordPlanNegativeKeywordFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The keyword plan negative keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeywordOrBuilder getKeywordPlanNegativeKeywordOrBuilder() {
+      if (keywordPlanNegativeKeywordBuilder_ != null) {
+        return keywordPlanNegativeKeywordBuilder_.getMessageOrBuilder();
+      } else {
+        return keywordPlanNegativeKeyword_ == null ?
+            com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword.getDefaultInstance() : keywordPlanNegativeKeyword_;
+      }
+    }
+    /**
+     * <pre>
+     * The keyword plan negative keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword, com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword.Builder, com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeywordOrBuilder> 
+        getKeywordPlanNegativeKeywordFieldBuilder() {
+      if (keywordPlanNegativeKeywordBuilder_ == null) {
+        keywordPlanNegativeKeywordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword, com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword.Builder, com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeywordOrBuilder>(
+                getKeywordPlanNegativeKeyword(),
+                getParentForChildren(),
+                isClean());
+        keywordPlanNegativeKeyword_ = null;
+      }
+      return keywordPlanNegativeKeywordBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.KeywordPlanAdGroup keywordPlanAdGroup_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.KeywordPlanAdGroup, com.google.ads.googleads.v0.resources.KeywordPlanAdGroup.Builder, com.google.ads.googleads.v0.resources.KeywordPlanAdGroupOrBuilder> keywordPlanAdGroupBuilder_;
+    /**
+     * <pre>
+     * The keyword plan ad group referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+     */
+    public boolean hasKeywordPlanAdGroup() {
+      return keywordPlanAdGroupBuilder_ != null || keywordPlanAdGroup_ != null;
+    }
+    /**
+     * <pre>
+     * The keyword plan ad group referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanAdGroup getKeywordPlanAdGroup() {
+      if (keywordPlanAdGroupBuilder_ == null) {
+        return keywordPlanAdGroup_ == null ? com.google.ads.googleads.v0.resources.KeywordPlanAdGroup.getDefaultInstance() : keywordPlanAdGroup_;
+      } else {
+        return keywordPlanAdGroupBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The keyword plan ad group referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+     */
+    public Builder setKeywordPlanAdGroup(com.google.ads.googleads.v0.resources.KeywordPlanAdGroup value) {
+      if (keywordPlanAdGroupBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        keywordPlanAdGroup_ = value;
+        onChanged();
+      } else {
+        keywordPlanAdGroupBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan ad group referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+     */
+    public Builder setKeywordPlanAdGroup(
+        com.google.ads.googleads.v0.resources.KeywordPlanAdGroup.Builder builderForValue) {
+      if (keywordPlanAdGroupBuilder_ == null) {
+        keywordPlanAdGroup_ = builderForValue.build();
+        onChanged();
+      } else {
+        keywordPlanAdGroupBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan ad group referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+     */
+    public Builder mergeKeywordPlanAdGroup(com.google.ads.googleads.v0.resources.KeywordPlanAdGroup value) {
+      if (keywordPlanAdGroupBuilder_ == null) {
+        if (keywordPlanAdGroup_ != null) {
+          keywordPlanAdGroup_ =
+            com.google.ads.googleads.v0.resources.KeywordPlanAdGroup.newBuilder(keywordPlanAdGroup_).mergeFrom(value).buildPartial();
+        } else {
+          keywordPlanAdGroup_ = value;
+        }
+        onChanged();
+      } else {
+        keywordPlanAdGroupBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan ad group referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+     */
+    public Builder clearKeywordPlanAdGroup() {
+      if (keywordPlanAdGroupBuilder_ == null) {
+        keywordPlanAdGroup_ = null;
+        onChanged();
+      } else {
+        keywordPlanAdGroup_ = null;
+        keywordPlanAdGroupBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan ad group referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanAdGroup.Builder getKeywordPlanAdGroupBuilder() {
+      
+      onChanged();
+      return getKeywordPlanAdGroupFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The keyword plan ad group referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanAdGroupOrBuilder getKeywordPlanAdGroupOrBuilder() {
+      if (keywordPlanAdGroupBuilder_ != null) {
+        return keywordPlanAdGroupBuilder_.getMessageOrBuilder();
+      } else {
+        return keywordPlanAdGroup_ == null ?
+            com.google.ads.googleads.v0.resources.KeywordPlanAdGroup.getDefaultInstance() : keywordPlanAdGroup_;
+      }
+    }
+    /**
+     * <pre>
+     * The keyword plan ad group referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.KeywordPlanAdGroup, com.google.ads.googleads.v0.resources.KeywordPlanAdGroup.Builder, com.google.ads.googleads.v0.resources.KeywordPlanAdGroupOrBuilder> 
+        getKeywordPlanAdGroupFieldBuilder() {
+      if (keywordPlanAdGroupBuilder_ == null) {
+        keywordPlanAdGroupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.KeywordPlanAdGroup, com.google.ads.googleads.v0.resources.KeywordPlanAdGroup.Builder, com.google.ads.googleads.v0.resources.KeywordPlanAdGroupOrBuilder>(
+                getKeywordPlanAdGroup(),
+                getParentForChildren(),
+                isClean());
+        keywordPlanAdGroup_ = null;
+      }
+      return keywordPlanAdGroupBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.KeywordPlanKeyword keywordPlanKeyword_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.KeywordPlanKeyword, com.google.ads.googleads.v0.resources.KeywordPlanKeyword.Builder, com.google.ads.googleads.v0.resources.KeywordPlanKeywordOrBuilder> keywordPlanKeywordBuilder_;
+    /**
+     * <pre>
+     * The keyword plan keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+     */
+    public boolean hasKeywordPlanKeyword() {
+      return keywordPlanKeywordBuilder_ != null || keywordPlanKeyword_ != null;
+    }
+    /**
+     * <pre>
+     * The keyword plan keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanKeyword getKeywordPlanKeyword() {
+      if (keywordPlanKeywordBuilder_ == null) {
+        return keywordPlanKeyword_ == null ? com.google.ads.googleads.v0.resources.KeywordPlanKeyword.getDefaultInstance() : keywordPlanKeyword_;
+      } else {
+        return keywordPlanKeywordBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The keyword plan keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+     */
+    public Builder setKeywordPlanKeyword(com.google.ads.googleads.v0.resources.KeywordPlanKeyword value) {
+      if (keywordPlanKeywordBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        keywordPlanKeyword_ = value;
+        onChanged();
+      } else {
+        keywordPlanKeywordBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+     */
+    public Builder setKeywordPlanKeyword(
+        com.google.ads.googleads.v0.resources.KeywordPlanKeyword.Builder builderForValue) {
+      if (keywordPlanKeywordBuilder_ == null) {
+        keywordPlanKeyword_ = builderForValue.build();
+        onChanged();
+      } else {
+        keywordPlanKeywordBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+     */
+    public Builder mergeKeywordPlanKeyword(com.google.ads.googleads.v0.resources.KeywordPlanKeyword value) {
+      if (keywordPlanKeywordBuilder_ == null) {
+        if (keywordPlanKeyword_ != null) {
+          keywordPlanKeyword_ =
+            com.google.ads.googleads.v0.resources.KeywordPlanKeyword.newBuilder(keywordPlanKeyword_).mergeFrom(value).buildPartial();
+        } else {
+          keywordPlanKeyword_ = value;
+        }
+        onChanged();
+      } else {
+        keywordPlanKeywordBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+     */
+    public Builder clearKeywordPlanKeyword() {
+      if (keywordPlanKeywordBuilder_ == null) {
+        keywordPlanKeyword_ = null;
+        onChanged();
+      } else {
+        keywordPlanKeyword_ = null;
+        keywordPlanKeywordBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The keyword plan keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanKeyword.Builder getKeywordPlanKeywordBuilder() {
+      
+      onChanged();
+      return getKeywordPlanKeywordFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The keyword plan keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+     */
+    public com.google.ads.googleads.v0.resources.KeywordPlanKeywordOrBuilder getKeywordPlanKeywordOrBuilder() {
+      if (keywordPlanKeywordBuilder_ != null) {
+        return keywordPlanKeywordBuilder_.getMessageOrBuilder();
+      } else {
+        return keywordPlanKeyword_ == null ?
+            com.google.ads.googleads.v0.resources.KeywordPlanKeyword.getDefaultInstance() : keywordPlanKeyword_;
+      }
+    }
+    /**
+     * <pre>
+     * The keyword plan keyword referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.KeywordPlanKeyword, com.google.ads.googleads.v0.resources.KeywordPlanKeyword.Builder, com.google.ads.googleads.v0.resources.KeywordPlanKeywordOrBuilder> 
+        getKeywordPlanKeywordFieldBuilder() {
+      if (keywordPlanKeywordBuilder_ == null) {
+        keywordPlanKeywordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.KeywordPlanKeyword, com.google.ads.googleads.v0.resources.KeywordPlanKeyword.Builder, com.google.ads.googleads.v0.resources.KeywordPlanKeywordOrBuilder>(
+                getKeywordPlanKeyword(),
+                getParentForChildren(),
+                isClean());
+        keywordPlanKeyword_ = null;
+      }
+      return keywordPlanKeywordBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.LanguageConstant languageConstant_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.LanguageConstant, com.google.ads.googleads.v0.resources.LanguageConstant.Builder, com.google.ads.googleads.v0.resources.LanguageConstantOrBuilder> languageConstantBuilder_;
+    /**
+     * <pre>
+     * The language constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+     */
+    public boolean hasLanguageConstant() {
+      return languageConstantBuilder_ != null || languageConstant_ != null;
+    }
+    /**
+     * <pre>
+     * The language constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+     */
+    public com.google.ads.googleads.v0.resources.LanguageConstant getLanguageConstant() {
+      if (languageConstantBuilder_ == null) {
+        return languageConstant_ == null ? com.google.ads.googleads.v0.resources.LanguageConstant.getDefaultInstance() : languageConstant_;
+      } else {
+        return languageConstantBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The language constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+     */
+    public Builder setLanguageConstant(com.google.ads.googleads.v0.resources.LanguageConstant value) {
+      if (languageConstantBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        languageConstant_ = value;
+        onChanged();
+      } else {
+        languageConstantBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The language constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+     */
+    public Builder setLanguageConstant(
+        com.google.ads.googleads.v0.resources.LanguageConstant.Builder builderForValue) {
+      if (languageConstantBuilder_ == null) {
+        languageConstant_ = builderForValue.build();
+        onChanged();
+      } else {
+        languageConstantBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The language constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+     */
+    public Builder mergeLanguageConstant(com.google.ads.googleads.v0.resources.LanguageConstant value) {
+      if (languageConstantBuilder_ == null) {
+        if (languageConstant_ != null) {
+          languageConstant_ =
+            com.google.ads.googleads.v0.resources.LanguageConstant.newBuilder(languageConstant_).mergeFrom(value).buildPartial();
+        } else {
+          languageConstant_ = value;
+        }
+        onChanged();
+      } else {
+        languageConstantBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The language constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+     */
+    public Builder clearLanguageConstant() {
+      if (languageConstantBuilder_ == null) {
+        languageConstant_ = null;
+        onChanged();
+      } else {
+        languageConstant_ = null;
+        languageConstantBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The language constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+     */
+    public com.google.ads.googleads.v0.resources.LanguageConstant.Builder getLanguageConstantBuilder() {
+      
+      onChanged();
+      return getLanguageConstantFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The language constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+     */
+    public com.google.ads.googleads.v0.resources.LanguageConstantOrBuilder getLanguageConstantOrBuilder() {
+      if (languageConstantBuilder_ != null) {
+        return languageConstantBuilder_.getMessageOrBuilder();
+      } else {
+        return languageConstant_ == null ?
+            com.google.ads.googleads.v0.resources.LanguageConstant.getDefaultInstance() : languageConstant_;
+      }
+    }
+    /**
+     * <pre>
+     * The language constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.LanguageConstant, com.google.ads.googleads.v0.resources.LanguageConstant.Builder, com.google.ads.googleads.v0.resources.LanguageConstantOrBuilder> 
+        getLanguageConstantFieldBuilder() {
+      if (languageConstantBuilder_ == null) {
+        languageConstantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.LanguageConstant, com.google.ads.googleads.v0.resources.LanguageConstant.Builder, com.google.ads.googleads.v0.resources.LanguageConstantOrBuilder>(
+                getLanguageConstant(),
+                getParentForChildren(),
+                isClean());
+        languageConstant_ = null;
+      }
+      return languageConstantBuilder_;
     }
 
     private com.google.ads.googleads.v0.resources.ManagedPlacementView managedPlacementView_ = null;
@@ -8177,6 +12946,159 @@ private static final long serialVersionUID = 0L;
       return recommendationBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.SearchTermView searchTermView_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.SearchTermView, com.google.ads.googleads.v0.resources.SearchTermView.Builder, com.google.ads.googleads.v0.resources.SearchTermViewOrBuilder> searchTermViewBuilder_;
+    /**
+     * <pre>
+     * The search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+     */
+    public boolean hasSearchTermView() {
+      return searchTermViewBuilder_ != null || searchTermView_ != null;
+    }
+    /**
+     * <pre>
+     * The search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+     */
+    public com.google.ads.googleads.v0.resources.SearchTermView getSearchTermView() {
+      if (searchTermViewBuilder_ == null) {
+        return searchTermView_ == null ? com.google.ads.googleads.v0.resources.SearchTermView.getDefaultInstance() : searchTermView_;
+      } else {
+        return searchTermViewBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+     */
+    public Builder setSearchTermView(com.google.ads.googleads.v0.resources.SearchTermView value) {
+      if (searchTermViewBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        searchTermView_ = value;
+        onChanged();
+      } else {
+        searchTermViewBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+     */
+    public Builder setSearchTermView(
+        com.google.ads.googleads.v0.resources.SearchTermView.Builder builderForValue) {
+      if (searchTermViewBuilder_ == null) {
+        searchTermView_ = builderForValue.build();
+        onChanged();
+      } else {
+        searchTermViewBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+     */
+    public Builder mergeSearchTermView(com.google.ads.googleads.v0.resources.SearchTermView value) {
+      if (searchTermViewBuilder_ == null) {
+        if (searchTermView_ != null) {
+          searchTermView_ =
+            com.google.ads.googleads.v0.resources.SearchTermView.newBuilder(searchTermView_).mergeFrom(value).buildPartial();
+        } else {
+          searchTermView_ = value;
+        }
+        onChanged();
+      } else {
+        searchTermViewBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+     */
+    public Builder clearSearchTermView() {
+      if (searchTermViewBuilder_ == null) {
+        searchTermView_ = null;
+        onChanged();
+      } else {
+        searchTermView_ = null;
+        searchTermViewBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+     */
+    public com.google.ads.googleads.v0.resources.SearchTermView.Builder getSearchTermViewBuilder() {
+      
+      onChanged();
+      return getSearchTermViewFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+     */
+    public com.google.ads.googleads.v0.resources.SearchTermViewOrBuilder getSearchTermViewOrBuilder() {
+      if (searchTermViewBuilder_ != null) {
+        return searchTermViewBuilder_.getMessageOrBuilder();
+      } else {
+        return searchTermView_ == null ?
+            com.google.ads.googleads.v0.resources.SearchTermView.getDefaultInstance() : searchTermView_;
+      }
+    }
+    /**
+     * <pre>
+     * The search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.SearchTermView, com.google.ads.googleads.v0.resources.SearchTermView.Builder, com.google.ads.googleads.v0.resources.SearchTermViewOrBuilder> 
+        getSearchTermViewFieldBuilder() {
+      if (searchTermViewBuilder_ == null) {
+        searchTermViewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.SearchTermView, com.google.ads.googleads.v0.resources.SearchTermView.Builder, com.google.ads.googleads.v0.resources.SearchTermViewOrBuilder>(
+                getSearchTermView(),
+                getParentForChildren(),
+                isClean());
+        searchTermView_ = null;
+      }
+      return searchTermViewBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.SharedCriterion sharedCriterion_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.SharedCriterion, com.google.ads.googleads.v0.resources.SharedCriterion.Builder, com.google.ads.googleads.v0.resources.SharedCriterionOrBuilder> sharedCriterionBuilder_;
@@ -8634,6 +13556,312 @@ private static final long serialVersionUID = 0L;
         topicView_ = null;
       }
       return topicViewBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.UserInterest userInterest_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.UserInterest, com.google.ads.googleads.v0.resources.UserInterest.Builder, com.google.ads.googleads.v0.resources.UserInterestOrBuilder> userInterestBuilder_;
+    /**
+     * <pre>
+     * The user interest referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+     */
+    public boolean hasUserInterest() {
+      return userInterestBuilder_ != null || userInterest_ != null;
+    }
+    /**
+     * <pre>
+     * The user interest referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+     */
+    public com.google.ads.googleads.v0.resources.UserInterest getUserInterest() {
+      if (userInterestBuilder_ == null) {
+        return userInterest_ == null ? com.google.ads.googleads.v0.resources.UserInterest.getDefaultInstance() : userInterest_;
+      } else {
+        return userInterestBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The user interest referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+     */
+    public Builder setUserInterest(com.google.ads.googleads.v0.resources.UserInterest value) {
+      if (userInterestBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        userInterest_ = value;
+        onChanged();
+      } else {
+        userInterestBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The user interest referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+     */
+    public Builder setUserInterest(
+        com.google.ads.googleads.v0.resources.UserInterest.Builder builderForValue) {
+      if (userInterestBuilder_ == null) {
+        userInterest_ = builderForValue.build();
+        onChanged();
+      } else {
+        userInterestBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The user interest referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+     */
+    public Builder mergeUserInterest(com.google.ads.googleads.v0.resources.UserInterest value) {
+      if (userInterestBuilder_ == null) {
+        if (userInterest_ != null) {
+          userInterest_ =
+            com.google.ads.googleads.v0.resources.UserInterest.newBuilder(userInterest_).mergeFrom(value).buildPartial();
+        } else {
+          userInterest_ = value;
+        }
+        onChanged();
+      } else {
+        userInterestBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The user interest referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+     */
+    public Builder clearUserInterest() {
+      if (userInterestBuilder_ == null) {
+        userInterest_ = null;
+        onChanged();
+      } else {
+        userInterest_ = null;
+        userInterestBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The user interest referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+     */
+    public com.google.ads.googleads.v0.resources.UserInterest.Builder getUserInterestBuilder() {
+      
+      onChanged();
+      return getUserInterestFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The user interest referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+     */
+    public com.google.ads.googleads.v0.resources.UserInterestOrBuilder getUserInterestOrBuilder() {
+      if (userInterestBuilder_ != null) {
+        return userInterestBuilder_.getMessageOrBuilder();
+      } else {
+        return userInterest_ == null ?
+            com.google.ads.googleads.v0.resources.UserInterest.getDefaultInstance() : userInterest_;
+      }
+    }
+    /**
+     * <pre>
+     * The user interest referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.UserInterest, com.google.ads.googleads.v0.resources.UserInterest.Builder, com.google.ads.googleads.v0.resources.UserInterestOrBuilder> 
+        getUserInterestFieldBuilder() {
+      if (userInterestBuilder_ == null) {
+        userInterestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.UserInterest, com.google.ads.googleads.v0.resources.UserInterest.Builder, com.google.ads.googleads.v0.resources.UserInterestOrBuilder>(
+                getUserInterest(),
+                getParentForChildren(),
+                isClean());
+        userInterest_ = null;
+      }
+      return userInterestBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.UserList userList_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.UserList, com.google.ads.googleads.v0.resources.UserList.Builder, com.google.ads.googleads.v0.resources.UserListOrBuilder> userListBuilder_;
+    /**
+     * <pre>
+     * The user list referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+     */
+    public boolean hasUserList() {
+      return userListBuilder_ != null || userList_ != null;
+    }
+    /**
+     * <pre>
+     * The user list referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+     */
+    public com.google.ads.googleads.v0.resources.UserList getUserList() {
+      if (userListBuilder_ == null) {
+        return userList_ == null ? com.google.ads.googleads.v0.resources.UserList.getDefaultInstance() : userList_;
+      } else {
+        return userListBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The user list referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+     */
+    public Builder setUserList(com.google.ads.googleads.v0.resources.UserList value) {
+      if (userListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        userList_ = value;
+        onChanged();
+      } else {
+        userListBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The user list referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+     */
+    public Builder setUserList(
+        com.google.ads.googleads.v0.resources.UserList.Builder builderForValue) {
+      if (userListBuilder_ == null) {
+        userList_ = builderForValue.build();
+        onChanged();
+      } else {
+        userListBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The user list referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+     */
+    public Builder mergeUserList(com.google.ads.googleads.v0.resources.UserList value) {
+      if (userListBuilder_ == null) {
+        if (userList_ != null) {
+          userList_ =
+            com.google.ads.googleads.v0.resources.UserList.newBuilder(userList_).mergeFrom(value).buildPartial();
+        } else {
+          userList_ = value;
+        }
+        onChanged();
+      } else {
+        userListBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The user list referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+     */
+    public Builder clearUserList() {
+      if (userListBuilder_ == null) {
+        userList_ = null;
+        onChanged();
+      } else {
+        userList_ = null;
+        userListBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The user list referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+     */
+    public com.google.ads.googleads.v0.resources.UserList.Builder getUserListBuilder() {
+      
+      onChanged();
+      return getUserListFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The user list referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+     */
+    public com.google.ads.googleads.v0.resources.UserListOrBuilder getUserListOrBuilder() {
+      if (userListBuilder_ != null) {
+        return userListBuilder_.getMessageOrBuilder();
+      } else {
+        return userList_ == null ?
+            com.google.ads.googleads.v0.resources.UserList.getDefaultInstance() : userList_;
+      }
+    }
+    /**
+     * <pre>
+     * The user list referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.UserList, com.google.ads.googleads.v0.resources.UserList.Builder, com.google.ads.googleads.v0.resources.UserListOrBuilder> 
+        getUserListFieldBuilder() {
+      if (userListBuilder_ == null) {
+        userListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.UserList, com.google.ads.googleads.v0.resources.UserList.Builder, com.google.ads.googleads.v0.resources.UserListOrBuilder>(
+                getUserList(),
+                getParentForChildren(),
+                isClean());
+        userList_ = null;
+      }
+      return userListBuilder_;
     }
 
     private com.google.ads.googleads.v0.resources.TopicConstant topicConstant_ = null;
@@ -9452,6 +14680,1360 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.Int64Value hotelBookingWindowDays_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> hotelBookingWindowDaysBuilder_;
+    /**
+     * <pre>
+     * Hotel booking window in days.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+     */
+    public boolean hasHotelBookingWindowDays() {
+      return hotelBookingWindowDaysBuilder_ != null || hotelBookingWindowDays_ != null;
+    }
+    /**
+     * <pre>
+     * Hotel booking window in days.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+     */
+    public com.google.protobuf.Int64Value getHotelBookingWindowDays() {
+      if (hotelBookingWindowDaysBuilder_ == null) {
+        return hotelBookingWindowDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelBookingWindowDays_;
+      } else {
+        return hotelBookingWindowDaysBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Hotel booking window in days.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+     */
+    public Builder setHotelBookingWindowDays(com.google.protobuf.Int64Value value) {
+      if (hotelBookingWindowDaysBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelBookingWindowDays_ = value;
+        onChanged();
+      } else {
+        hotelBookingWindowDaysBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel booking window in days.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+     */
+    public Builder setHotelBookingWindowDays(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (hotelBookingWindowDaysBuilder_ == null) {
+        hotelBookingWindowDays_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelBookingWindowDaysBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel booking window in days.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+     */
+    public Builder mergeHotelBookingWindowDays(com.google.protobuf.Int64Value value) {
+      if (hotelBookingWindowDaysBuilder_ == null) {
+        if (hotelBookingWindowDays_ != null) {
+          hotelBookingWindowDays_ =
+            com.google.protobuf.Int64Value.newBuilder(hotelBookingWindowDays_).mergeFrom(value).buildPartial();
+        } else {
+          hotelBookingWindowDays_ = value;
+        }
+        onChanged();
+      } else {
+        hotelBookingWindowDaysBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel booking window in days.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+     */
+    public Builder clearHotelBookingWindowDays() {
+      if (hotelBookingWindowDaysBuilder_ == null) {
+        hotelBookingWindowDays_ = null;
+        onChanged();
+      } else {
+        hotelBookingWindowDays_ = null;
+        hotelBookingWindowDaysBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel booking window in days.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getHotelBookingWindowDaysBuilder() {
+      
+      onChanged();
+      return getHotelBookingWindowDaysFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Hotel booking window in days.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getHotelBookingWindowDaysOrBuilder() {
+      if (hotelBookingWindowDaysBuilder_ != null) {
+        return hotelBookingWindowDaysBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelBookingWindowDays_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : hotelBookingWindowDays_;
+      }
+    }
+    /**
+     * <pre>
+     * Hotel booking window in days.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getHotelBookingWindowDaysFieldBuilder() {
+      if (hotelBookingWindowDaysBuilder_ == null) {
+        hotelBookingWindowDaysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getHotelBookingWindowDays(),
+                getParentForChildren(),
+                isClean());
+        hotelBookingWindowDays_ = null;
+      }
+      return hotelBookingWindowDaysBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value hotelCenterId_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> hotelCenterIdBuilder_;
+    /**
+     * <pre>
+     * Hotel center ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+     */
+    public boolean hasHotelCenterId() {
+      return hotelCenterIdBuilder_ != null || hotelCenterId_ != null;
+    }
+    /**
+     * <pre>
+     * Hotel center ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+     */
+    public com.google.protobuf.Int64Value getHotelCenterId() {
+      if (hotelCenterIdBuilder_ == null) {
+        return hotelCenterId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelCenterId_;
+      } else {
+        return hotelCenterIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Hotel center ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+     */
+    public Builder setHotelCenterId(com.google.protobuf.Int64Value value) {
+      if (hotelCenterIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelCenterId_ = value;
+        onChanged();
+      } else {
+        hotelCenterIdBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel center ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+     */
+    public Builder setHotelCenterId(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (hotelCenterIdBuilder_ == null) {
+        hotelCenterId_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelCenterIdBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel center ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+     */
+    public Builder mergeHotelCenterId(com.google.protobuf.Int64Value value) {
+      if (hotelCenterIdBuilder_ == null) {
+        if (hotelCenterId_ != null) {
+          hotelCenterId_ =
+            com.google.protobuf.Int64Value.newBuilder(hotelCenterId_).mergeFrom(value).buildPartial();
+        } else {
+          hotelCenterId_ = value;
+        }
+        onChanged();
+      } else {
+        hotelCenterIdBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel center ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+     */
+    public Builder clearHotelCenterId() {
+      if (hotelCenterIdBuilder_ == null) {
+        hotelCenterId_ = null;
+        onChanged();
+      } else {
+        hotelCenterId_ = null;
+        hotelCenterIdBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel center ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getHotelCenterIdBuilder() {
+      
+      onChanged();
+      return getHotelCenterIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Hotel center ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder() {
+      if (hotelCenterIdBuilder_ != null) {
+        return hotelCenterIdBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelCenterId_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : hotelCenterId_;
+      }
+    }
+    /**
+     * <pre>
+     * Hotel center ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getHotelCenterIdFieldBuilder() {
+      if (hotelCenterIdBuilder_ == null) {
+        hotelCenterIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getHotelCenterId(),
+                getParentForChildren(),
+                isClean());
+        hotelCenterId_ = null;
+      }
+      return hotelCenterIdBuilder_;
+    }
+
+    private com.google.protobuf.StringValue hotelCheckInDate_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelCheckInDateBuilder_;
+    /**
+     * <pre>
+     * Hotel check-in date. Formatted as yyyy-MM-dd.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+     */
+    public boolean hasHotelCheckInDate() {
+      return hotelCheckInDateBuilder_ != null || hotelCheckInDate_ != null;
+    }
+    /**
+     * <pre>
+     * Hotel check-in date. Formatted as yyyy-MM-dd.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+     */
+    public com.google.protobuf.StringValue getHotelCheckInDate() {
+      if (hotelCheckInDateBuilder_ == null) {
+        return hotelCheckInDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCheckInDate_;
+      } else {
+        return hotelCheckInDateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Hotel check-in date. Formatted as yyyy-MM-dd.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+     */
+    public Builder setHotelCheckInDate(com.google.protobuf.StringValue value) {
+      if (hotelCheckInDateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelCheckInDate_ = value;
+        onChanged();
+      } else {
+        hotelCheckInDateBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel check-in date. Formatted as yyyy-MM-dd.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+     */
+    public Builder setHotelCheckInDate(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (hotelCheckInDateBuilder_ == null) {
+        hotelCheckInDate_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelCheckInDateBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel check-in date. Formatted as yyyy-MM-dd.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+     */
+    public Builder mergeHotelCheckInDate(com.google.protobuf.StringValue value) {
+      if (hotelCheckInDateBuilder_ == null) {
+        if (hotelCheckInDate_ != null) {
+          hotelCheckInDate_ =
+            com.google.protobuf.StringValue.newBuilder(hotelCheckInDate_).mergeFrom(value).buildPartial();
+        } else {
+          hotelCheckInDate_ = value;
+        }
+        onChanged();
+      } else {
+        hotelCheckInDateBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel check-in date. Formatted as yyyy-MM-dd.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+     */
+    public Builder clearHotelCheckInDate() {
+      if (hotelCheckInDateBuilder_ == null) {
+        hotelCheckInDate_ = null;
+        onChanged();
+      } else {
+        hotelCheckInDate_ = null;
+        hotelCheckInDateBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel check-in date. Formatted as yyyy-MM-dd.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getHotelCheckInDateBuilder() {
+      
+      onChanged();
+      return getHotelCheckInDateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Hotel check-in date. Formatted as yyyy-MM-dd.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getHotelCheckInDateOrBuilder() {
+      if (hotelCheckInDateBuilder_ != null) {
+        return hotelCheckInDateBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelCheckInDate_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : hotelCheckInDate_;
+      }
+    }
+    /**
+     * <pre>
+     * Hotel check-in date. Formatted as yyyy-MM-dd.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getHotelCheckInDateFieldBuilder() {
+      if (hotelCheckInDateBuilder_ == null) {
+        hotelCheckInDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getHotelCheckInDate(),
+                getParentForChildren(),
+                isClean());
+        hotelCheckInDate_ = null;
+      }
+      return hotelCheckInDateBuilder_;
+    }
+
+    private int hotelCheckInDayOfWeek_ = 0;
+    /**
+     * <pre>
+     * Hotel check-in day of week.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
+     */
+    public int getHotelCheckInDayOfWeekValue() {
+      return hotelCheckInDayOfWeek_;
+    }
+    /**
+     * <pre>
+     * Hotel check-in day of week.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
+     */
+    public Builder setHotelCheckInDayOfWeekValue(int value) {
+      hotelCheckInDayOfWeek_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel check-in day of week.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
+     */
+    public com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getHotelCheckInDayOfWeek() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.valueOf(hotelCheckInDayOfWeek_);
+      return result == null ? com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Hotel check-in day of week.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
+     */
+    public Builder setHotelCheckInDayOfWeek(com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      hotelCheckInDayOfWeek_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel check-in day of week.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
+     */
+    public Builder clearHotelCheckInDayOfWeek() {
+      
+      hotelCheckInDayOfWeek_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.StringValue hotelCity_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelCityBuilder_;
+    /**
+     * <pre>
+     * Hotel city.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+     */
+    public boolean hasHotelCity() {
+      return hotelCityBuilder_ != null || hotelCity_ != null;
+    }
+    /**
+     * <pre>
+     * Hotel city.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+     */
+    public com.google.protobuf.StringValue getHotelCity() {
+      if (hotelCityBuilder_ == null) {
+        return hotelCity_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCity_;
+      } else {
+        return hotelCityBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Hotel city.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+     */
+    public Builder setHotelCity(com.google.protobuf.StringValue value) {
+      if (hotelCityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelCity_ = value;
+        onChanged();
+      } else {
+        hotelCityBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel city.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+     */
+    public Builder setHotelCity(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (hotelCityBuilder_ == null) {
+        hotelCity_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelCityBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel city.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+     */
+    public Builder mergeHotelCity(com.google.protobuf.StringValue value) {
+      if (hotelCityBuilder_ == null) {
+        if (hotelCity_ != null) {
+          hotelCity_ =
+            com.google.protobuf.StringValue.newBuilder(hotelCity_).mergeFrom(value).buildPartial();
+        } else {
+          hotelCity_ = value;
+        }
+        onChanged();
+      } else {
+        hotelCityBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel city.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+     */
+    public Builder clearHotelCity() {
+      if (hotelCityBuilder_ == null) {
+        hotelCity_ = null;
+        onChanged();
+      } else {
+        hotelCity_ = null;
+        hotelCityBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel city.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getHotelCityBuilder() {
+      
+      onChanged();
+      return getHotelCityFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Hotel city.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getHotelCityOrBuilder() {
+      if (hotelCityBuilder_ != null) {
+        return hotelCityBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelCity_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : hotelCity_;
+      }
+    }
+    /**
+     * <pre>
+     * Hotel city.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getHotelCityFieldBuilder() {
+      if (hotelCityBuilder_ == null) {
+        hotelCityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getHotelCity(),
+                getParentForChildren(),
+                isClean());
+        hotelCity_ = null;
+      }
+      return hotelCityBuilder_;
+    }
+
+    private com.google.protobuf.Int32Value hotelClass_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> hotelClassBuilder_;
+    /**
+     * <pre>
+     * Hotel class.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+     */
+    public boolean hasHotelClass() {
+      return hotelClassBuilder_ != null || hotelClass_ != null;
+    }
+    /**
+     * <pre>
+     * Hotel class.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+     */
+    public com.google.protobuf.Int32Value getHotelClass() {
+      if (hotelClassBuilder_ == null) {
+        return hotelClass_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hotelClass_;
+      } else {
+        return hotelClassBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Hotel class.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+     */
+    public Builder setHotelClass(com.google.protobuf.Int32Value value) {
+      if (hotelClassBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelClass_ = value;
+        onChanged();
+      } else {
+        hotelClassBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel class.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+     */
+    public Builder setHotelClass(
+        com.google.protobuf.Int32Value.Builder builderForValue) {
+      if (hotelClassBuilder_ == null) {
+        hotelClass_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelClassBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel class.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+     */
+    public Builder mergeHotelClass(com.google.protobuf.Int32Value value) {
+      if (hotelClassBuilder_ == null) {
+        if (hotelClass_ != null) {
+          hotelClass_ =
+            com.google.protobuf.Int32Value.newBuilder(hotelClass_).mergeFrom(value).buildPartial();
+        } else {
+          hotelClass_ = value;
+        }
+        onChanged();
+      } else {
+        hotelClassBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel class.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+     */
+    public Builder clearHotelClass() {
+      if (hotelClassBuilder_ == null) {
+        hotelClass_ = null;
+        onChanged();
+      } else {
+        hotelClass_ = null;
+        hotelClassBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel class.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+     */
+    public com.google.protobuf.Int32Value.Builder getHotelClassBuilder() {
+      
+      onChanged();
+      return getHotelClassFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Hotel class.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+     */
+    public com.google.protobuf.Int32ValueOrBuilder getHotelClassOrBuilder() {
+      if (hotelClassBuilder_ != null) {
+        return hotelClassBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelClass_ == null ?
+            com.google.protobuf.Int32Value.getDefaultInstance() : hotelClass_;
+      }
+    }
+    /**
+     * <pre>
+     * Hotel class.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+        getHotelClassFieldBuilder() {
+      if (hotelClassBuilder_ == null) {
+        hotelClassBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                getHotelClass(),
+                getParentForChildren(),
+                isClean());
+        hotelClass_ = null;
+      }
+      return hotelClassBuilder_;
+    }
+
+    private com.google.protobuf.StringValue hotelCountry_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelCountryBuilder_;
+    /**
+     * <pre>
+     * Hotel country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+     */
+    public boolean hasHotelCountry() {
+      return hotelCountryBuilder_ != null || hotelCountry_ != null;
+    }
+    /**
+     * <pre>
+     * Hotel country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+     */
+    public com.google.protobuf.StringValue getHotelCountry() {
+      if (hotelCountryBuilder_ == null) {
+        return hotelCountry_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCountry_;
+      } else {
+        return hotelCountryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Hotel country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+     */
+    public Builder setHotelCountry(com.google.protobuf.StringValue value) {
+      if (hotelCountryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelCountry_ = value;
+        onChanged();
+      } else {
+        hotelCountryBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+     */
+    public Builder setHotelCountry(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (hotelCountryBuilder_ == null) {
+        hotelCountry_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelCountryBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+     */
+    public Builder mergeHotelCountry(com.google.protobuf.StringValue value) {
+      if (hotelCountryBuilder_ == null) {
+        if (hotelCountry_ != null) {
+          hotelCountry_ =
+            com.google.protobuf.StringValue.newBuilder(hotelCountry_).mergeFrom(value).buildPartial();
+        } else {
+          hotelCountry_ = value;
+        }
+        onChanged();
+      } else {
+        hotelCountryBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+     */
+    public Builder clearHotelCountry() {
+      if (hotelCountryBuilder_ == null) {
+        hotelCountry_ = null;
+        onChanged();
+      } else {
+        hotelCountry_ = null;
+        hotelCountryBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getHotelCountryBuilder() {
+      
+      onChanged();
+      return getHotelCountryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Hotel country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getHotelCountryOrBuilder() {
+      if (hotelCountryBuilder_ != null) {
+        return hotelCountryBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelCountry_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : hotelCountry_;
+      }
+    }
+    /**
+     * <pre>
+     * Hotel country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getHotelCountryFieldBuilder() {
+      if (hotelCountryBuilder_ == null) {
+        hotelCountryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getHotelCountry(),
+                getParentForChildren(),
+                isClean());
+        hotelCountry_ = null;
+      }
+      return hotelCountryBuilder_;
+    }
+
+    private int hotelDateSelectionType_ = 0;
+    /**
+     * <pre>
+     * Hotel date selection type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
+     */
+    public int getHotelDateSelectionTypeValue() {
+      return hotelDateSelectionType_;
+    }
+    /**
+     * <pre>
+     * Hotel date selection type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
+     */
+    public Builder setHotelDateSelectionTypeValue(int value) {
+      hotelDateSelectionType_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel date selection type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
+     */
+    public com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getHotelDateSelectionType() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType result = com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.valueOf(hotelDateSelectionType_);
+      return result == null ? com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Hotel date selection type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
+     */
+    public Builder setHotelDateSelectionType(com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      hotelDateSelectionType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel date selection type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
+     */
+    public Builder clearHotelDateSelectionType() {
+      
+      hotelDateSelectionType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Int32Value hotelLengthOfStay_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> hotelLengthOfStayBuilder_;
+    /**
+     * <pre>
+     * Hotel length of stay.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+     */
+    public boolean hasHotelLengthOfStay() {
+      return hotelLengthOfStayBuilder_ != null || hotelLengthOfStay_ != null;
+    }
+    /**
+     * <pre>
+     * Hotel length of stay.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+     */
+    public com.google.protobuf.Int32Value getHotelLengthOfStay() {
+      if (hotelLengthOfStayBuilder_ == null) {
+        return hotelLengthOfStay_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hotelLengthOfStay_;
+      } else {
+        return hotelLengthOfStayBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Hotel length of stay.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+     */
+    public Builder setHotelLengthOfStay(com.google.protobuf.Int32Value value) {
+      if (hotelLengthOfStayBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelLengthOfStay_ = value;
+        onChanged();
+      } else {
+        hotelLengthOfStayBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel length of stay.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+     */
+    public Builder setHotelLengthOfStay(
+        com.google.protobuf.Int32Value.Builder builderForValue) {
+      if (hotelLengthOfStayBuilder_ == null) {
+        hotelLengthOfStay_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelLengthOfStayBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel length of stay.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+     */
+    public Builder mergeHotelLengthOfStay(com.google.protobuf.Int32Value value) {
+      if (hotelLengthOfStayBuilder_ == null) {
+        if (hotelLengthOfStay_ != null) {
+          hotelLengthOfStay_ =
+            com.google.protobuf.Int32Value.newBuilder(hotelLengthOfStay_).mergeFrom(value).buildPartial();
+        } else {
+          hotelLengthOfStay_ = value;
+        }
+        onChanged();
+      } else {
+        hotelLengthOfStayBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel length of stay.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+     */
+    public Builder clearHotelLengthOfStay() {
+      if (hotelLengthOfStayBuilder_ == null) {
+        hotelLengthOfStay_ = null;
+        onChanged();
+      } else {
+        hotelLengthOfStay_ = null;
+        hotelLengthOfStayBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel length of stay.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+     */
+    public com.google.protobuf.Int32Value.Builder getHotelLengthOfStayBuilder() {
+      
+      onChanged();
+      return getHotelLengthOfStayFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Hotel length of stay.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+     */
+    public com.google.protobuf.Int32ValueOrBuilder getHotelLengthOfStayOrBuilder() {
+      if (hotelLengthOfStayBuilder_ != null) {
+        return hotelLengthOfStayBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelLengthOfStay_ == null ?
+            com.google.protobuf.Int32Value.getDefaultInstance() : hotelLengthOfStay_;
+      }
+    }
+    /**
+     * <pre>
+     * Hotel length of stay.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+        getHotelLengthOfStayFieldBuilder() {
+      if (hotelLengthOfStayBuilder_ == null) {
+        hotelLengthOfStayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                getHotelLengthOfStay(),
+                getParentForChildren(),
+                isClean());
+        hotelLengthOfStay_ = null;
+      }
+      return hotelLengthOfStayBuilder_;
+    }
+
+    private com.google.protobuf.StringValue hotelState_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelStateBuilder_;
+    /**
+     * <pre>
+     * Hotel state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+     */
+    public boolean hasHotelState() {
+      return hotelStateBuilder_ != null || hotelState_ != null;
+    }
+    /**
+     * <pre>
+     * Hotel state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+     */
+    public com.google.protobuf.StringValue getHotelState() {
+      if (hotelStateBuilder_ == null) {
+        return hotelState_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelState_;
+      } else {
+        return hotelStateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Hotel state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+     */
+    public Builder setHotelState(com.google.protobuf.StringValue value) {
+      if (hotelStateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelState_ = value;
+        onChanged();
+      } else {
+        hotelStateBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+     */
+    public Builder setHotelState(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (hotelStateBuilder_ == null) {
+        hotelState_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelStateBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+     */
+    public Builder mergeHotelState(com.google.protobuf.StringValue value) {
+      if (hotelStateBuilder_ == null) {
+        if (hotelState_ != null) {
+          hotelState_ =
+            com.google.protobuf.StringValue.newBuilder(hotelState_).mergeFrom(value).buildPartial();
+        } else {
+          hotelState_ = value;
+        }
+        onChanged();
+      } else {
+        hotelStateBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+     */
+    public Builder clearHotelState() {
+      if (hotelStateBuilder_ == null) {
+        hotelState_ = null;
+        onChanged();
+      } else {
+        hotelState_ = null;
+        hotelStateBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getHotelStateBuilder() {
+      
+      onChanged();
+      return getHotelStateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Hotel state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getHotelStateOrBuilder() {
+      if (hotelStateBuilder_ != null) {
+        return hotelStateBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelState_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : hotelState_;
+      }
+    }
+    /**
+     * <pre>
+     * Hotel state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getHotelStateFieldBuilder() {
+      if (hotelStateBuilder_ == null) {
+        hotelStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getHotelState(),
+                getParentForChildren(),
+                isClean());
+        hotelState_ = null;
+      }
+      return hotelStateBuilder_;
+    }
+
     private com.google.protobuf.Int32Value hour_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> hourBuilder_;
@@ -9832,6 +16414,224 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.StringValue partnerHotelId_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> partnerHotelIdBuilder_;
+    /**
+     * <pre>
+     * Partner hotel ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+     */
+    public boolean hasPartnerHotelId() {
+      return partnerHotelIdBuilder_ != null || partnerHotelId_ != null;
+    }
+    /**
+     * <pre>
+     * Partner hotel ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+     */
+    public com.google.protobuf.StringValue getPartnerHotelId() {
+      if (partnerHotelIdBuilder_ == null) {
+        return partnerHotelId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : partnerHotelId_;
+      } else {
+        return partnerHotelIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Partner hotel ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+     */
+    public Builder setPartnerHotelId(com.google.protobuf.StringValue value) {
+      if (partnerHotelIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        partnerHotelId_ = value;
+        onChanged();
+      } else {
+        partnerHotelIdBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Partner hotel ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+     */
+    public Builder setPartnerHotelId(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (partnerHotelIdBuilder_ == null) {
+        partnerHotelId_ = builderForValue.build();
+        onChanged();
+      } else {
+        partnerHotelIdBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Partner hotel ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+     */
+    public Builder mergePartnerHotelId(com.google.protobuf.StringValue value) {
+      if (partnerHotelIdBuilder_ == null) {
+        if (partnerHotelId_ != null) {
+          partnerHotelId_ =
+            com.google.protobuf.StringValue.newBuilder(partnerHotelId_).mergeFrom(value).buildPartial();
+        } else {
+          partnerHotelId_ = value;
+        }
+        onChanged();
+      } else {
+        partnerHotelIdBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Partner hotel ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+     */
+    public Builder clearPartnerHotelId() {
+      if (partnerHotelIdBuilder_ == null) {
+        partnerHotelId_ = null;
+        onChanged();
+      } else {
+        partnerHotelId_ = null;
+        partnerHotelIdBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Partner hotel ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getPartnerHotelIdBuilder() {
+      
+      onChanged();
+      return getPartnerHotelIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Partner hotel ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getPartnerHotelIdOrBuilder() {
+      if (partnerHotelIdBuilder_ != null) {
+        return partnerHotelIdBuilder_.getMessageOrBuilder();
+      } else {
+        return partnerHotelId_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : partnerHotelId_;
+      }
+    }
+    /**
+     * <pre>
+     * Partner hotel ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getPartnerHotelIdFieldBuilder() {
+      if (partnerHotelIdBuilder_ == null) {
+        partnerHotelIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getPartnerHotelId(),
+                getParentForChildren(),
+                isClean());
+        partnerHotelId_ = null;
+      }
+      return partnerHotelIdBuilder_;
+    }
+
+    private int placeholderType_ = 0;
+    /**
+     * <pre>
+     * Placeholder type. This is only used with feed item metrics.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
+     */
+    public int getPlaceholderTypeValue() {
+      return placeholderType_;
+    }
+    /**
+     * <pre>
+     * Placeholder type. This is only used with feed item metrics.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
+     */
+    public Builder setPlaceholderTypeValue(int value) {
+      placeholderType_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Placeholder type. This is only used with feed item metrics.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
+     */
+    public com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType.valueOf(placeholderType_);
+      return result == null ? com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Placeholder type. This is only used with feed item metrics.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
+     */
+    public Builder setPlaceholderType(com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      placeholderType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Placeholder type. This is only used with feed item metrics.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
+     */
+    public Builder clearPlaceholderType() {
+      
+      placeholderType_ = 0;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.StringValue quarter_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> quarterBuilder_;
@@ -10001,6 +16801,71 @@ private static final long serialVersionUID = 0L;
         quarter_ = null;
       }
       return quarterBuilder_;
+    }
+
+    private int searchTermMatchType_ = 0;
+    /**
+     * <pre>
+     * Match type of the keyword that triggered the ad, including variants.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
+     */
+    public int getSearchTermMatchTypeValue() {
+      return searchTermMatchType_;
+    }
+    /**
+     * <pre>
+     * Match type of the keyword that triggered the ad, including variants.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
+     */
+    public Builder setSearchTermMatchTypeValue(int value) {
+      searchTermMatchType_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Match type of the keyword that triggered the ad, including variants.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
+     */
+    public com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType getSearchTermMatchType() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType result = com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType.valueOf(searchTermMatchType_);
+      return result == null ? com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Match type of the keyword that triggered the ad, including variants.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
+     */
+    public Builder setSearchTermMatchType(com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      searchTermMatchType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Match type of the keyword that triggered the ad, including variants.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
+     */
+    public Builder clearSearchTermMatchType() {
+      
+      searchTermMatchType_ = 0;
+      onChanged();
+      return this;
     }
 
     private int slot_ = 0;

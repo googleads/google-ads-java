@@ -177,12 +177,28 @@ private static final long serialVersionUID = 0L;
     SHOPPING_PRODUCT_AD(10),
     /**
      * <pre>
-     * Video outstream ad.
+     * The ad is a video ad.
      * </pre>
      *
-     * <code>VIDEO_OUTSTREAM = 11;</code>
+     * <code>VIDEO_AD = 12;</code>
      */
-    VIDEO_OUTSTREAM(11),
+    VIDEO_AD(12),
+    /**
+     * <pre>
+     * This ad is a Gmail ad.
+     * </pre>
+     *
+     * <code>GMAIL_AD = 13;</code>
+     */
+    GMAIL_AD(13),
+    /**
+     * <pre>
+     * This ad is an Image ad.
+     * </pre>
+     *
+     * <code>IMAGE_AD = 14;</code>
+     */
+    IMAGE_AD(14),
     UNRECOGNIZED(-1),
     ;
 
@@ -277,12 +293,28 @@ private static final long serialVersionUID = 0L;
     public static final int SHOPPING_PRODUCT_AD_VALUE = 10;
     /**
      * <pre>
-     * Video outstream ad.
+     * The ad is a video ad.
      * </pre>
      *
-     * <code>VIDEO_OUTSTREAM = 11;</code>
+     * <code>VIDEO_AD = 12;</code>
      */
-    public static final int VIDEO_OUTSTREAM_VALUE = 11;
+    public static final int VIDEO_AD_VALUE = 12;
+    /**
+     * <pre>
+     * This ad is a Gmail ad.
+     * </pre>
+     *
+     * <code>GMAIL_AD = 13;</code>
+     */
+    public static final int GMAIL_AD_VALUE = 13;
+    /**
+     * <pre>
+     * This ad is an Image ad.
+     * </pre>
+     *
+     * <code>IMAGE_AD = 14;</code>
+     */
+    public static final int IMAGE_AD_VALUE = 14;
 
 
     public final int getNumber() {
@@ -314,7 +346,9 @@ private static final long serialVersionUID = 0L;
         case 8: return HOTEL_AD;
         case 9: return SHOPPING_SMART_AD;
         case 10: return SHOPPING_PRODUCT_AD;
-        case 11: return VIDEO_OUTSTREAM;
+        case 12: return VIDEO_AD;
+        case 13: return GMAIL_AD;
+        case 14: return IMAGE_AD;
         default: return null;
       }
     }

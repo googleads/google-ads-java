@@ -184,6 +184,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The ad group feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+   */
+  boolean hasAdGroupFeed();
+  /**
+   * <pre>
+   * The ad group feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+   */
+  com.google.ads.googleads.v0.resources.AdGroupFeed getAdGroupFeed();
+  /**
+   * <pre>
+   * The ad group feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdGroupFeed ad_group_feed = 67;</code>
+   */
+  com.google.ads.googleads.v0.resources.AdGroupFeedOrBuilder getAdGroupFeedOrBuilder();
+
+  /**
+   * <pre>
    * The age range view referenced in the query.
    * </pre>
    *
@@ -309,6 +334,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The campaign audience view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+   */
+  boolean hasCampaignAudienceView();
+  /**
+   * <pre>
+   * The campaign audience view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+   */
+  com.google.ads.googleads.v0.resources.CampaignAudienceView getCampaignAudienceView();
+  /**
+   * <pre>
+   * The campaign audience view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignAudienceView campaign_audience_view = 69;</code>
+   */
+  com.google.ads.googleads.v0.resources.CampaignAudienceViewOrBuilder getCampaignAudienceViewOrBuilder();
+
+  /**
+   * <pre>
    * The campaign bid modifier referenced in the query.
    * </pre>
    *
@@ -359,6 +409,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The campaign feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+   */
+  boolean hasCampaignFeed();
+  /**
+   * <pre>
+   * The campaign feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+   */
+  com.google.ads.googleads.v0.resources.CampaignFeed getCampaignFeed();
+  /**
+   * <pre>
+   * The campaign feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CampaignFeed campaign_feed = 63;</code>
+   */
+  com.google.ads.googleads.v0.resources.CampaignFeedOrBuilder getCampaignFeedOrBuilder();
+
+  /**
+   * <pre>
    * Campaign Group referenced in AWQL query.
    * </pre>
    *
@@ -406,6 +481,31 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.CampaignSharedSet campaign_shared_set = 30;</code>
    */
   com.google.ads.googleads.v0.resources.CampaignSharedSetOrBuilder getCampaignSharedSetOrBuilder();
+
+  /**
+   * <pre>
+   * The carrier constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+   */
+  boolean hasCarrierConstant();
+  /**
+   * <pre>
+   * The carrier constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+   */
+  com.google.ads.googleads.v0.resources.CarrierConstant getCarrierConstant();
+  /**
+   * <pre>
+   * The carrier constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CarrierConstant carrier_constant = 66;</code>
+   */
+  com.google.ads.googleads.v0.resources.CarrierConstantOrBuilder getCarrierConstantOrBuilder();
 
   /**
    * <pre>
@@ -509,6 +609,56 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The CustomerClient referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+   */
+  boolean hasCustomerClient();
+  /**
+   * <pre>
+   * The CustomerClient referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+   */
+  com.google.ads.googleads.v0.resources.CustomerClient getCustomerClient();
+  /**
+   * <pre>
+   * The CustomerClient referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerClient customer_client = 70;</code>
+   */
+  com.google.ads.googleads.v0.resources.CustomerClientOrBuilder getCustomerClientOrBuilder();
+
+  /**
+   * <pre>
+   * The customer feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+   */
+  boolean hasCustomerFeed();
+  /**
+   * <pre>
+   * The customer feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+   */
+  com.google.ads.googleads.v0.resources.CustomerFeed getCustomerFeed();
+  /**
+   * <pre>
+   * The customer feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.CustomerFeed customer_feed = 64;</code>
+   */
+  com.google.ads.googleads.v0.resources.CustomerFeedOrBuilder getCustomerFeedOrBuilder();
+
+  /**
+   * <pre>
    * The display keyword view referenced in the query.
    * </pre>
    *
@@ -531,6 +681,81 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.DisplayKeywordView display_keyword_view = 47;</code>
    */
   com.google.ads.googleads.v0.resources.DisplayKeywordViewOrBuilder getDisplayKeywordViewOrBuilder();
+
+  /**
+   * <pre>
+   * The feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+   */
+  boolean hasFeed();
+  /**
+   * <pre>
+   * The feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+   */
+  com.google.ads.googleads.v0.resources.Feed getFeed();
+  /**
+   * <pre>
+   * The feed referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Feed feed = 46;</code>
+   */
+  com.google.ads.googleads.v0.resources.FeedOrBuilder getFeedOrBuilder();
+
+  /**
+   * <pre>
+   * The feed item referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+   */
+  boolean hasFeedItem();
+  /**
+   * <pre>
+   * The feed item referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+   */
+  com.google.ads.googleads.v0.resources.FeedItem getFeedItem();
+  /**
+   * <pre>
+   * The feed item referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.FeedItem feed_item = 50;</code>
+   */
+  com.google.ads.googleads.v0.resources.FeedItemOrBuilder getFeedItemOrBuilder();
+
+  /**
+   * <pre>
+   * The feed mapping referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+   */
+  boolean hasFeedMapping();
+  /**
+   * <pre>
+   * The feed mapping referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+   */
+  com.google.ads.googleads.v0.resources.FeedMapping getFeedMapping();
+  /**
+   * <pre>
+   * The feed mapping referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.FeedMapping feed_mapping = 58;</code>
+   */
+  com.google.ads.googleads.v0.resources.FeedMappingOrBuilder getFeedMappingOrBuilder();
 
   /**
    * <pre>
@@ -609,6 +834,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The hotel performance view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+   */
+  boolean hasHotelPerformanceView();
+  /**
+   * <pre>
+   * The hotel performance view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+   */
+  com.google.ads.googleads.v0.resources.HotelPerformanceView getHotelPerformanceView();
+  /**
+   * <pre>
+   * The hotel performance view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.HotelPerformanceView hotel_performance_view = 71;</code>
+   */
+  com.google.ads.googleads.v0.resources.HotelPerformanceViewOrBuilder getHotelPerformanceViewOrBuilder();
+
+  /**
+   * <pre>
    * The keyword view referenced in the query.
    * </pre>
    *
@@ -631,6 +881,156 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.KeywordView keyword_view = 21;</code>
    */
   com.google.ads.googleads.v0.resources.KeywordViewOrBuilder getKeywordViewOrBuilder();
+
+  /**
+   * <pre>
+   * The keyword plan referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+   */
+  boolean hasKeywordPlan();
+  /**
+   * <pre>
+   * The keyword plan referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+   */
+  com.google.ads.googleads.v0.resources.KeywordPlan getKeywordPlan();
+  /**
+   * <pre>
+   * The keyword plan referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlan keyword_plan = 32;</code>
+   */
+  com.google.ads.googleads.v0.resources.KeywordPlanOrBuilder getKeywordPlanOrBuilder();
+
+  /**
+   * <pre>
+   * The keyword plan campaign referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+   */
+  boolean hasKeywordPlanCampaign();
+  /**
+   * <pre>
+   * The keyword plan campaign referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+   */
+  com.google.ads.googleads.v0.resources.KeywordPlanCampaign getKeywordPlanCampaign();
+  /**
+   * <pre>
+   * The keyword plan campaign referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
+   */
+  com.google.ads.googleads.v0.resources.KeywordPlanCampaignOrBuilder getKeywordPlanCampaignOrBuilder();
+
+  /**
+   * <pre>
+   * The keyword plan negative keyword referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+   */
+  boolean hasKeywordPlanNegativeKeyword();
+  /**
+   * <pre>
+   * The keyword plan negative keyword referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+   */
+  com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword getKeywordPlanNegativeKeyword();
+  /**
+   * <pre>
+   * The keyword plan negative keyword referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword keyword_plan_negative_keyword = 34;</code>
+   */
+  com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeywordOrBuilder getKeywordPlanNegativeKeywordOrBuilder();
+
+  /**
+   * <pre>
+   * The keyword plan ad group referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+   */
+  boolean hasKeywordPlanAdGroup();
+  /**
+   * <pre>
+   * The keyword plan ad group referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+   */
+  com.google.ads.googleads.v0.resources.KeywordPlanAdGroup getKeywordPlanAdGroup();
+  /**
+   * <pre>
+   * The keyword plan ad group referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
+   */
+  com.google.ads.googleads.v0.resources.KeywordPlanAdGroupOrBuilder getKeywordPlanAdGroupOrBuilder();
+
+  /**
+   * <pre>
+   * The keyword plan keyword referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+   */
+  boolean hasKeywordPlanKeyword();
+  /**
+   * <pre>
+   * The keyword plan keyword referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+   */
+  com.google.ads.googleads.v0.resources.KeywordPlanKeyword getKeywordPlanKeyword();
+  /**
+   * <pre>
+   * The keyword plan keyword referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.KeywordPlanKeyword keyword_plan_keyword = 36;</code>
+   */
+  com.google.ads.googleads.v0.resources.KeywordPlanKeywordOrBuilder getKeywordPlanKeywordOrBuilder();
+
+  /**
+   * <pre>
+   * The language constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+   */
+  boolean hasLanguageConstant();
+  /**
+   * <pre>
+   * The language constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+   */
+  com.google.ads.googleads.v0.resources.LanguageConstant getLanguageConstant();
+  /**
+   * <pre>
+   * The language constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.LanguageConstant language_constant = 55;</code>
+   */
+  com.google.ads.googleads.v0.resources.LanguageConstantOrBuilder getLanguageConstantOrBuilder();
 
   /**
    * <pre>
@@ -734,6 +1134,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The search term view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+   */
+  boolean hasSearchTermView();
+  /**
+   * <pre>
+   * The search term view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+   */
+  com.google.ads.googleads.v0.resources.SearchTermView getSearchTermView();
+  /**
+   * <pre>
+   * The search term view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.SearchTermView search_term_view = 68;</code>
+   */
+  com.google.ads.googleads.v0.resources.SearchTermViewOrBuilder getSearchTermViewOrBuilder();
+
+  /**
+   * <pre>
    * The shared set referenced in the query.
    * </pre>
    *
@@ -806,6 +1231,56 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.TopicView topic_view = 44;</code>
    */
   com.google.ads.googleads.v0.resources.TopicViewOrBuilder getTopicViewOrBuilder();
+
+  /**
+   * <pre>
+   * The user interest referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+   */
+  boolean hasUserInterest();
+  /**
+   * <pre>
+   * The user interest referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+   */
+  com.google.ads.googleads.v0.resources.UserInterest getUserInterest();
+  /**
+   * <pre>
+   * The user interest referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.UserInterest user_interest = 59;</code>
+   */
+  com.google.ads.googleads.v0.resources.UserInterestOrBuilder getUserInterestOrBuilder();
+
+  /**
+   * <pre>
+   * The user list referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+   */
+  boolean hasUserList();
+  /**
+   * <pre>
+   * The user list referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+   */
+  com.google.ads.googleads.v0.resources.UserList getUserList();
+  /**
+   * <pre>
+   * The user list referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.UserList user_list = 38;</code>
+   */
+  com.google.ads.googleads.v0.resources.UserListOrBuilder getUserListOrBuilder();
 
   /**
    * <pre>
@@ -963,6 +1438,240 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * Hotel booking window in days.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+   */
+  boolean hasHotelBookingWindowDays();
+  /**
+   * <pre>
+   * Hotel booking window in days.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+   */
+  com.google.protobuf.Int64Value getHotelBookingWindowDays();
+  /**
+   * <pre>
+   * Hotel booking window in days.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getHotelBookingWindowDaysOrBuilder();
+
+  /**
+   * <pre>
+   * Hotel center ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+   */
+  boolean hasHotelCenterId();
+  /**
+   * <pre>
+   * Hotel center ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+   */
+  com.google.protobuf.Int64Value getHotelCenterId();
+  /**
+   * <pre>
+   * Hotel center ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder();
+
+  /**
+   * <pre>
+   * Hotel check-in date. Formatted as yyyy-MM-dd.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+   */
+  boolean hasHotelCheckInDate();
+  /**
+   * <pre>
+   * Hotel check-in date. Formatted as yyyy-MM-dd.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+   */
+  com.google.protobuf.StringValue getHotelCheckInDate();
+  /**
+   * <pre>
+   * Hotel check-in date. Formatted as yyyy-MM-dd.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getHotelCheckInDateOrBuilder();
+
+  /**
+   * <pre>
+   * Hotel check-in day of week.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
+   */
+  int getHotelCheckInDayOfWeekValue();
+  /**
+   * <pre>
+   * Hotel check-in day of week.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
+   */
+  com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getHotelCheckInDayOfWeek();
+
+  /**
+   * <pre>
+   * Hotel city.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+   */
+  boolean hasHotelCity();
+  /**
+   * <pre>
+   * Hotel city.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+   */
+  com.google.protobuf.StringValue getHotelCity();
+  /**
+   * <pre>
+   * Hotel city.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_city = 75;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getHotelCityOrBuilder();
+
+  /**
+   * <pre>
+   * Hotel class.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+   */
+  boolean hasHotelClass();
+  /**
+   * <pre>
+   * Hotel class.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+   */
+  com.google.protobuf.Int32Value getHotelClass();
+  /**
+   * <pre>
+   * Hotel class.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
+   */
+  com.google.protobuf.Int32ValueOrBuilder getHotelClassOrBuilder();
+
+  /**
+   * <pre>
+   * Hotel country.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+   */
+  boolean hasHotelCountry();
+  /**
+   * <pre>
+   * Hotel country.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+   */
+  com.google.protobuf.StringValue getHotelCountry();
+  /**
+   * <pre>
+   * Hotel country.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_country = 77;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getHotelCountryOrBuilder();
+
+  /**
+   * <pre>
+   * Hotel date selection type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
+   */
+  int getHotelDateSelectionTypeValue();
+  /**
+   * <pre>
+   * Hotel date selection type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
+   */
+  com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getHotelDateSelectionType();
+
+  /**
+   * <pre>
+   * Hotel length of stay.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+   */
+  boolean hasHotelLengthOfStay();
+  /**
+   * <pre>
+   * Hotel length of stay.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+   */
+  com.google.protobuf.Int32Value getHotelLengthOfStay();
+  /**
+   * <pre>
+   * Hotel length of stay.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
+   */
+  com.google.protobuf.Int32ValueOrBuilder getHotelLengthOfStayOrBuilder();
+
+  /**
+   * <pre>
+   * Hotel state.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+   */
+  boolean hasHotelState();
+  /**
+   * <pre>
+   * Hotel state.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+   */
+  com.google.protobuf.StringValue getHotelState();
+  /**
+   * <pre>
+   * Hotel state.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_state = 81;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getHotelStateOrBuilder();
+
+  /**
+   * <pre>
    * Hour of day as a number between 0 and 23, inclusive.
    * </pre>
    *
@@ -1033,6 +1742,48 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * Partner hotel ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+   */
+  boolean hasPartnerHotelId();
+  /**
+   * <pre>
+   * Partner hotel ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+   */
+  com.google.protobuf.StringValue getPartnerHotelId();
+  /**
+   * <pre>
+   * Partner hotel ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getPartnerHotelIdOrBuilder();
+
+  /**
+   * <pre>
+   * Placeholder type. This is only used with feed item metrics.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
+   */
+  int getPlaceholderTypeValue();
+  /**
+   * <pre>
+   * Placeholder type. This is only used with feed item metrics.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
+   */
+  com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType();
+
+  /**
+   * <pre>
    * Quarter as represented by the date of the first day of a quarter.
    * Uses the calendar year for quarters, e.g., the second quarter of 2018
    * starts on 2018-04-01. Formatted as yyyy-MM-dd.
@@ -1061,6 +1812,23 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.protobuf.StringValue quarter = 12;</code>
    */
   com.google.protobuf.StringValueOrBuilder getQuarterOrBuilder();
+
+  /**
+   * <pre>
+   * Match type of the keyword that triggered the ad, including variants.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
+   */
+  int getSearchTermMatchTypeValue();
+  /**
+   * <pre>
+   * Match type of the keyword that triggered the ad, including variants.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
+   */
+  com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType getSearchTermMatchType();
 
   /**
    * <pre>

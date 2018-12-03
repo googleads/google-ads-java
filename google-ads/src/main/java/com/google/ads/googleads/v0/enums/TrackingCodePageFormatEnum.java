@@ -112,6 +112,14 @@ private static final long serialVersionUID = 0L;
      * <code>HTML = 2;</code>
      */
     HTML(2),
+    /**
+     * <pre>
+     * Google AMP page format.
+     * </pre>
+     *
+     * <code>AMP = 3;</code>
+     */
+    AMP(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -139,6 +147,14 @@ private static final long serialVersionUID = 0L;
      * <code>HTML = 2;</code>
      */
     public static final int HTML_VALUE = 2;
+    /**
+     * <pre>
+     * Google AMP page format.
+     * </pre>
+     *
+     * <code>AMP = 3;</code>
+     */
+    public static final int AMP_VALUE = 3;
 
 
     public final int getNumber() {
@@ -162,6 +178,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return HTML;
+        case 3: return AMP;
         default: return null;
       }
     }

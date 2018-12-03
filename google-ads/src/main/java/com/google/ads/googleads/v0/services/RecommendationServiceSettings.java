@@ -71,6 +71,12 @@ public class RecommendationServiceSettings extends ClientSettings<Recommendation
     return ((RecommendationServiceStubSettings) getStubSettings()).applyRecommendationSettings();
   }
 
+  /** Returns the object with the settings used for calls to dismissRecommendation. */
+  public UnaryCallSettings<DismissRecommendationRequest, DismissRecommendationResponse>
+      dismissRecommendationSettings() {
+    return ((RecommendationServiceStubSettings) getStubSettings()).dismissRecommendationSettings();
+  }
+
   public static final RecommendationServiceSettings create(RecommendationServiceStubSettings stub)
       throws IOException {
     return new RecommendationServiceSettings.Builder(stub.toBuilder()).build();
@@ -179,6 +185,12 @@ public class RecommendationServiceSettings extends ClientSettings<Recommendation
     public UnaryCallSettings.Builder<ApplyRecommendationRequest, ApplyRecommendationResponse>
         applyRecommendationSettings() {
       return getStubSettingsBuilder().applyRecommendationSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to dismissRecommendation. */
+    public UnaryCallSettings.Builder<DismissRecommendationRequest, DismissRecommendationResponse>
+        dismissRecommendationSettings() {
+      return getStubSettingsBuilder().dismissRecommendationSettings();
     }
 
     @Override

@@ -104,12 +104,12 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Do not set the id field while creating new entities.
+     * Do not set the id field while creating new resources.
      * </pre>
      *
-     * <code>CANNOT_SET_ID_FOR_ADD = 2;</code>
+     * <code>CANNOT_SET_ID_FOR_CREATE = 2;</code>
      */
-    CANNOT_SET_ID_FOR_ADD(2),
+    CANNOT_SET_ID_FOR_CREATE(2),
     /**
      * <pre>
      * Creating more than one resource with the same temp ID is not allowed.
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
     DUPLICATE_TEMP_IDS(3),
     /**
      * <pre>
-     * Parent object with specified temp id failed validation, so no deep
+     * Parent resource with specified temp ID failed validation, so no
      * validation will be done for this child resource.
      * </pre>
      *
@@ -148,12 +148,12 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Do not set the id field while creating new entities.
+     * Do not set the id field while creating new resources.
      * </pre>
      *
-     * <code>CANNOT_SET_ID_FOR_ADD = 2;</code>
+     * <code>CANNOT_SET_ID_FOR_CREATE = 2;</code>
      */
-    public static final int CANNOT_SET_ID_FOR_ADD_VALUE = 2;
+    public static final int CANNOT_SET_ID_FOR_CREATE_VALUE = 2;
     /**
      * <pre>
      * Creating more than one resource with the same temp ID is not allowed.
@@ -164,7 +164,7 @@ private static final long serialVersionUID = 0L;
     public static final int DUPLICATE_TEMP_IDS_VALUE = 3;
     /**
      * <pre>
-     * Parent object with specified temp id failed validation, so no deep
+     * Parent resource with specified temp ID failed validation, so no
      * validation will be done for this child resource.
      * </pre>
      *
@@ -193,7 +193,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
-        case 2: return CANNOT_SET_ID_FOR_ADD;
+        case 2: return CANNOT_SET_ID_FOR_CREATE;
         case 3: return DUPLICATE_TEMP_IDS;
         case 4: return TEMP_ID_RESOURCE_HAD_ERRORS;
         default: return null;

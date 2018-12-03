@@ -207,7 +207,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The ad group to which the ad belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 4;</code>
@@ -218,7 +217,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The ad group to which the ad belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 4;</code>
@@ -229,7 +227,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The ad group to which the ad belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 4;</code>
@@ -887,7 +884,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the ad belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 4;</code>
@@ -898,7 +894,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the ad belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 4;</code>
@@ -913,7 +908,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the ad belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 4;</code>
@@ -934,7 +928,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the ad belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 4;</code>
@@ -953,7 +946,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the ad belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 4;</code>
@@ -976,7 +968,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the ad belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 4;</code>
@@ -995,7 +986,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the ad belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 4;</code>
@@ -1008,7 +998,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the ad belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 4;</code>
@@ -1024,7 +1013,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the ad belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 4;</code>

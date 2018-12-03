@@ -222,7 +222,6 @@ public interface AdGroupOrBuilder extends
   /**
    * <pre>
    * The campaign to which the ad group belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -231,7 +230,6 @@ public interface AdGroupOrBuilder extends
   /**
    * <pre>
    * The campaign to which the ad group belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -240,7 +238,6 @@ public interface AdGroupOrBuilder extends
   /**
    * <pre>
    * The campaign to which the ad group belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -411,4 +408,75 @@ public interface AdGroupOrBuilder extends
    * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getPercentCpcBidMicrosOrBuilder();
+
+  /**
+   * <pre>
+   * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+   */
+  boolean hasExplorerAutoOptimizerSetting();
+  /**
+   * <pre>
+   * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+   */
+  com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting getExplorerAutoOptimizerSetting();
+  /**
+   * <pre>
+   * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+   */
+  com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSettingOrBuilder getExplorerAutoOptimizerSettingOrBuilder();
+
+  /**
+   * <pre>
+   * Allows advertisers to specify a targeting dimension on which to place
+   * absolute bids. This is only applicable for campaigns that target only the
+   * display network and not search.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+   */
+  int getDisplayCustomBidDimensionValue();
+  /**
+   * <pre>
+   * Allows advertisers to specify a targeting dimension on which to place
+   * absolute bids. This is only applicable for campaigns that target only the
+   * display network and not search.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+   */
+  com.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension getDisplayCustomBidDimension();
+
+  /**
+   * <pre>
+   * URL template for appending params to Final URL.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+   */
+  boolean hasFinalUrlSuffix();
+  /**
+   * <pre>
+   * URL template for appending params to Final URL.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+   */
+  com.google.protobuf.StringValue getFinalUrlSuffix();
+  /**
+   * <pre>
+   * URL template for appending params to Final URL.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder();
 }

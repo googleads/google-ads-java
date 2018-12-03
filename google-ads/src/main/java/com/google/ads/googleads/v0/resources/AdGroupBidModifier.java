@@ -182,6 +182,20 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 11;
             break;
           }
+          case 98: {
+            com.google.ads.googleads.v0.common.PreferredContentInfo.Builder subBuilder = null;
+            if (criterionCase_ == 12) {
+              subBuilder = ((com.google.ads.googleads.v0.common.PreferredContentInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.PreferredContentInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.PreferredContentInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 12;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -223,6 +237,7 @@ private static final long serialVersionUID = 0L;
     HOTEL_LENGTH_OF_STAY(7),
     HOTEL_CHECK_IN_DAY(8),
     DEVICE(11),
+    PREFERRED_CONTENT(12),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -243,6 +258,7 @@ private static final long serialVersionUID = 0L;
         case 7: return HOTEL_LENGTH_OF_STAY;
         case 8: return HOTEL_CHECK_IN_DAY;
         case 11: return DEVICE;
+        case 12: return PREFERRED_CONTENT;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -309,7 +325,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The ad group to which this criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -320,7 +335,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The ad group to which this criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -331,7 +345,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The ad group to which this criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -675,6 +688,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.DeviceInfo.getDefaultInstance();
   }
 
+  public static final int PREFERRED_CONTENT_FIELD_NUMBER = 12;
+  /**
+   * <pre>
+   * A preferred content criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+   */
+  public boolean hasPreferredContent() {
+    return criterionCase_ == 12;
+  }
+  /**
+   * <pre>
+   * A preferred content criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+   */
+  public com.google.ads.googleads.v0.common.PreferredContentInfo getPreferredContent() {
+    if (criterionCase_ == 12) {
+       return (com.google.ads.googleads.v0.common.PreferredContentInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.PreferredContentInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A preferred content criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+   */
+  public com.google.ads.googleads.v0.common.PreferredContentInfoOrBuilder getPreferredContentOrBuilder() {
+    if (criterionCase_ == 12) {
+       return (com.google.ads.googleads.v0.common.PreferredContentInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.PreferredContentInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -721,6 +772,9 @@ private static final long serialVersionUID = 0L;
     }
     if (criterionCase_ == 11) {
       output.writeMessage(11, (com.google.ads.googleads.v0.common.DeviceInfo) criterion_);
+    }
+    if (criterionCase_ == 12) {
+      output.writeMessage(12, (com.google.ads.googleads.v0.common.PreferredContentInfo) criterion_);
     }
     unknownFields.writeTo(output);
   }
@@ -773,6 +827,10 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 11) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, (com.google.ads.googleads.v0.common.DeviceInfo) criterion_);
+    }
+    if (criterionCase_ == 12) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, (com.google.ads.googleads.v0.common.PreferredContentInfo) criterion_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -837,6 +895,10 @@ private static final long serialVersionUID = 0L;
         result = result && getDevice()
             .equals(other.getDevice());
         break;
+      case 12:
+        result = result && getPreferredContent()
+            .equals(other.getPreferredContent());
+        break;
       case 0:
       default:
     }
@@ -891,6 +953,10 @@ private static final long serialVersionUID = 0L;
       case 11:
         hash = (37 * hash) + DEVICE_FIELD_NUMBER;
         hash = (53 * hash) + getDevice().hashCode();
+        break;
+      case 12:
+        hash = (37 * hash) + PREFERRED_CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPreferredContent().hashCode();
         break;
       case 0:
       default:
@@ -1145,6 +1211,13 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = deviceBuilder_.build();
         }
       }
+      if (criterionCase_ == 12) {
+        if (preferredContentBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = preferredContentBuilder_.build();
+        }
+      }
       result.criterionCase_ = criterionCase_;
       onBuilt();
       return result;
@@ -1232,6 +1305,10 @@ private static final long serialVersionUID = 0L;
         }
         case DEVICE: {
           mergeDevice(other.getDevice());
+          break;
+        }
+        case PREFERRED_CONTENT: {
+          mergePreferredContent(other.getPreferredContent());
           break;
         }
         case CRITERION_NOT_SET: {
@@ -1387,7 +1464,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which this criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -1398,7 +1474,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which this criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -1413,7 +1488,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which this criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -1434,7 +1508,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which this criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -1453,7 +1526,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which this criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -1476,7 +1548,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which this criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -1495,7 +1566,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which this criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -1508,7 +1578,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which this criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -1524,7 +1593,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which this criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 2;</code>
@@ -2988,6 +3056,178 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 11;
       onChanged();;
       return deviceBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.PreferredContentInfo, com.google.ads.googleads.v0.common.PreferredContentInfo.Builder, com.google.ads.googleads.v0.common.PreferredContentInfoOrBuilder> preferredContentBuilder_;
+    /**
+     * <pre>
+     * A preferred content criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+     */
+    public boolean hasPreferredContent() {
+      return criterionCase_ == 12;
+    }
+    /**
+     * <pre>
+     * A preferred content criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+     */
+    public com.google.ads.googleads.v0.common.PreferredContentInfo getPreferredContent() {
+      if (preferredContentBuilder_ == null) {
+        if (criterionCase_ == 12) {
+          return (com.google.ads.googleads.v0.common.PreferredContentInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.PreferredContentInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 12) {
+          return preferredContentBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.PreferredContentInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A preferred content criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+     */
+    public Builder setPreferredContent(com.google.ads.googleads.v0.common.PreferredContentInfo value) {
+      if (preferredContentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        preferredContentBuilder_.setMessage(value);
+      }
+      criterionCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * A preferred content criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+     */
+    public Builder setPreferredContent(
+        com.google.ads.googleads.v0.common.PreferredContentInfo.Builder builderForValue) {
+      if (preferredContentBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        preferredContentBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * A preferred content criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+     */
+    public Builder mergePreferredContent(com.google.ads.googleads.v0.common.PreferredContentInfo value) {
+      if (preferredContentBuilder_ == null) {
+        if (criterionCase_ == 12 &&
+            criterion_ != com.google.ads.googleads.v0.common.PreferredContentInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.PreferredContentInfo.newBuilder((com.google.ads.googleads.v0.common.PreferredContentInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 12) {
+          preferredContentBuilder_.mergeFrom(value);
+        }
+        preferredContentBuilder_.setMessage(value);
+      }
+      criterionCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * A preferred content criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+     */
+    public Builder clearPreferredContent() {
+      if (preferredContentBuilder_ == null) {
+        if (criterionCase_ == 12) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 12) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        preferredContentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A preferred content criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+     */
+    public com.google.ads.googleads.v0.common.PreferredContentInfo.Builder getPreferredContentBuilder() {
+      return getPreferredContentFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A preferred content criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+     */
+    public com.google.ads.googleads.v0.common.PreferredContentInfoOrBuilder getPreferredContentOrBuilder() {
+      if ((criterionCase_ == 12) && (preferredContentBuilder_ != null)) {
+        return preferredContentBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 12) {
+          return (com.google.ads.googleads.v0.common.PreferredContentInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.PreferredContentInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A preferred content criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.PreferredContentInfo preferred_content = 12;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.PreferredContentInfo, com.google.ads.googleads.v0.common.PreferredContentInfo.Builder, com.google.ads.googleads.v0.common.PreferredContentInfoOrBuilder> 
+        getPreferredContentFieldBuilder() {
+      if (preferredContentBuilder_ == null) {
+        if (!(criterionCase_ == 12)) {
+          criterion_ = com.google.ads.googleads.v0.common.PreferredContentInfo.getDefaultInstance();
+        }
+        preferredContentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.PreferredContentInfo, com.google.ads.googleads.v0.common.PreferredContentInfo.Builder, com.google.ads.googleads.v0.common.PreferredContentInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.PreferredContentInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 12;
+      onChanged();;
+      return preferredContentBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

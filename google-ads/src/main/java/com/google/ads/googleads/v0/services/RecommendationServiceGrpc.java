@@ -104,6 +104,43 @@ public final class RecommendationServiceGrpc {
      }
      return getApplyRecommendationMethod;
   }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getDismissRecommendationMethod()} instead. 
+  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.DismissRecommendationRequest,
+      com.google.ads.googleads.v0.services.DismissRecommendationResponse> METHOD_DISMISS_RECOMMENDATION = getDismissRecommendationMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.DismissRecommendationRequest,
+      com.google.ads.googleads.v0.services.DismissRecommendationResponse> getDismissRecommendationMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.DismissRecommendationRequest,
+      com.google.ads.googleads.v0.services.DismissRecommendationResponse> getDismissRecommendationMethod() {
+    return getDismissRecommendationMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.DismissRecommendationRequest,
+      com.google.ads.googleads.v0.services.DismissRecommendationResponse> getDismissRecommendationMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.DismissRecommendationRequest, com.google.ads.googleads.v0.services.DismissRecommendationResponse> getDismissRecommendationMethod;
+    if ((getDismissRecommendationMethod = RecommendationServiceGrpc.getDismissRecommendationMethod) == null) {
+      synchronized (RecommendationServiceGrpc.class) {
+        if ((getDismissRecommendationMethod = RecommendationServiceGrpc.getDismissRecommendationMethod) == null) {
+          RecommendationServiceGrpc.getDismissRecommendationMethod = getDismissRecommendationMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.DismissRecommendationRequest, com.google.ads.googleads.v0.services.DismissRecommendationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.RecommendationService", "DismissRecommendation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.DismissRecommendationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.DismissRecommendationResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new RecommendationServiceMethodDescriptorSupplier("DismissRecommendation"))
+                  .build();
+          }
+        }
+     }
+     return getDismissRecommendationMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -155,6 +192,16 @@ public final class RecommendationServiceGrpc {
       asyncUnimplementedUnaryCall(getApplyRecommendationMethodHelper(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Dismisses given recommendations.
+     * </pre>
+     */
+    public void dismissRecommendation(com.google.ads.googleads.v0.services.DismissRecommendationRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.DismissRecommendationResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getDismissRecommendationMethodHelper(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -171,6 +218,13 @@ public final class RecommendationServiceGrpc {
                 com.google.ads.googleads.v0.services.ApplyRecommendationRequest,
                 com.google.ads.googleads.v0.services.ApplyRecommendationResponse>(
                   this, METHODID_APPLY_RECOMMENDATION)))
+          .addMethod(
+            getDismissRecommendationMethodHelper(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v0.services.DismissRecommendationRequest,
+                com.google.ads.googleads.v0.services.DismissRecommendationResponse>(
+                  this, METHODID_DISMISS_RECOMMENDATION)))
           .build();
     }
   }
@@ -217,6 +271,17 @@ public final class RecommendationServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getApplyRecommendationMethodHelper(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Dismisses given recommendations.
+     * </pre>
+     */
+    public void dismissRecommendation(com.google.ads.googleads.v0.services.DismissRecommendationRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.DismissRecommendationResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getDismissRecommendationMethodHelper(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -258,6 +323,16 @@ public final class RecommendationServiceGrpc {
     public com.google.ads.googleads.v0.services.ApplyRecommendationResponse applyRecommendation(com.google.ads.googleads.v0.services.ApplyRecommendationRequest request) {
       return blockingUnaryCall(
           getChannel(), getApplyRecommendationMethodHelper(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Dismisses given recommendations.
+     * </pre>
+     */
+    public com.google.ads.googleads.v0.services.DismissRecommendationResponse dismissRecommendation(com.google.ads.googleads.v0.services.DismissRecommendationRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getDismissRecommendationMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -303,10 +378,22 @@ public final class RecommendationServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getApplyRecommendationMethodHelper(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Dismisses given recommendations.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.services.DismissRecommendationResponse> dismissRecommendation(
+        com.google.ads.googleads.v0.services.DismissRecommendationRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDismissRecommendationMethodHelper(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_RECOMMENDATION = 0;
   private static final int METHODID_APPLY_RECOMMENDATION = 1;
+  private static final int METHODID_DISMISS_RECOMMENDATION = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -332,6 +419,10 @@ public final class RecommendationServiceGrpc {
         case METHODID_APPLY_RECOMMENDATION:
           serviceImpl.applyRecommendation((com.google.ads.googleads.v0.services.ApplyRecommendationRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.ApplyRecommendationResponse>) responseObserver);
+          break;
+        case METHODID_DISMISS_RECOMMENDATION:
+          serviceImpl.dismissRecommendation((com.google.ads.googleads.v0.services.DismissRecommendationRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.DismissRecommendationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -396,6 +487,7 @@ public final class RecommendationServiceGrpc {
               .setSchemaDescriptor(new RecommendationServiceFileDescriptorSupplier())
               .addMethod(getGetRecommendationMethodHelper())
               .addMethod(getApplyRecommendationMethodHelper())
+              .addMethod(getDismissRecommendationMethodHelper())
               .build();
         }
       }

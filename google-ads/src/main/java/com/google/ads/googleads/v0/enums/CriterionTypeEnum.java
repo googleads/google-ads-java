@@ -200,6 +200,14 @@ private static final long serialVersionUID = 0L;
     YOUTUBE_CHANNEL(15),
     /**
      * <pre>
+     * User list.
+     * </pre>
+     *
+     * <code>USER_LIST = 16;</code>
+     */
+    USER_LIST(16),
+    /**
+     * <pre>
      * Proximity.
      * </pre>
      *
@@ -208,12 +216,60 @@ private static final long serialVersionUID = 0L;
     PROXIMITY(17),
     /**
      * <pre>
-     * A topic target on the content network (e.g. "Pets &amp; Animals").
+     * A topic target on the display network (e.g. "Pets &amp; Animals").
      * </pre>
      *
      * <code>TOPIC = 18;</code>
      */
     TOPIC(18),
+    /**
+     * <pre>
+     * Listing scope to target.
+     * </pre>
+     *
+     * <code>LISTING_SCOPE = 19;</code>
+     */
+    LISTING_SCOPE(19),
+    /**
+     * <pre>
+     * Language.
+     * </pre>
+     *
+     * <code>LANGUAGE = 20;</code>
+     */
+    LANGUAGE(20),
+    /**
+     * <pre>
+     * IpBlock.
+     * </pre>
+     *
+     * <code>IP_BLOCK = 21;</code>
+     */
+    IP_BLOCK(21),
+    /**
+     * <pre>
+     * Content Label for category exclusion.
+     * </pre>
+     *
+     * <code>CONTENT_LABEL = 22;</code>
+     */
+    CONTENT_LABEL(22),
+    /**
+     * <pre>
+     * Carrier.
+     * </pre>
+     *
+     * <code>CARRIER = 23;</code>
+     */
+    CARRIER(23),
+    /**
+     * <pre>
+     * A category the user is interested in.
+     * </pre>
+     *
+     * <code>USER_INTEREST = 24;</code>
+     */
+    USER_INTEREST(24),
     UNRECOGNIZED(-1),
     ;
 
@@ -331,6 +387,14 @@ private static final long serialVersionUID = 0L;
     public static final int YOUTUBE_CHANNEL_VALUE = 15;
     /**
      * <pre>
+     * User list.
+     * </pre>
+     *
+     * <code>USER_LIST = 16;</code>
+     */
+    public static final int USER_LIST_VALUE = 16;
+    /**
+     * <pre>
      * Proximity.
      * </pre>
      *
@@ -339,12 +403,60 @@ private static final long serialVersionUID = 0L;
     public static final int PROXIMITY_VALUE = 17;
     /**
      * <pre>
-     * A topic target on the content network (e.g. "Pets &amp; Animals").
+     * A topic target on the display network (e.g. "Pets &amp; Animals").
      * </pre>
      *
      * <code>TOPIC = 18;</code>
      */
     public static final int TOPIC_VALUE = 18;
+    /**
+     * <pre>
+     * Listing scope to target.
+     * </pre>
+     *
+     * <code>LISTING_SCOPE = 19;</code>
+     */
+    public static final int LISTING_SCOPE_VALUE = 19;
+    /**
+     * <pre>
+     * Language.
+     * </pre>
+     *
+     * <code>LANGUAGE = 20;</code>
+     */
+    public static final int LANGUAGE_VALUE = 20;
+    /**
+     * <pre>
+     * IpBlock.
+     * </pre>
+     *
+     * <code>IP_BLOCK = 21;</code>
+     */
+    public static final int IP_BLOCK_VALUE = 21;
+    /**
+     * <pre>
+     * Content Label for category exclusion.
+     * </pre>
+     *
+     * <code>CONTENT_LABEL = 22;</code>
+     */
+    public static final int CONTENT_LABEL_VALUE = 22;
+    /**
+     * <pre>
+     * Carrier.
+     * </pre>
+     *
+     * <code>CARRIER = 23;</code>
+     */
+    public static final int CARRIER_VALUE = 23;
+    /**
+     * <pre>
+     * A category the user is interested in.
+     * </pre>
+     *
+     * <code>USER_INTEREST = 24;</code>
+     */
+    public static final int USER_INTEREST_VALUE = 24;
 
 
     public final int getNumber() {
@@ -379,8 +491,15 @@ private static final long serialVersionUID = 0L;
         case 13: return PARENTAL_STATUS;
         case 14: return YOUTUBE_VIDEO;
         case 15: return YOUTUBE_CHANNEL;
+        case 16: return USER_LIST;
         case 17: return PROXIMITY;
         case 18: return TOPIC;
+        case 19: return LISTING_SCOPE;
+        case 20: return LANGUAGE;
+        case 21: return IP_BLOCK;
+        case 22: return CONTENT_LABEL;
+        case 23: return CARRIER;
+        case 24: return USER_INTEREST;
         default: return null;
       }
     }

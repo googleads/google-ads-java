@@ -1046,6 +1046,108 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reason for keyword plan error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+   */
+  int getKeywordPlanErrorValue();
+  /**
+   * <pre>
+   * The reason for keyword plan error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+   */
+  com.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError getKeywordPlanError();
+
+  /**
+   * <pre>
+   * The reason for keyword plan campaign error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+   */
+  int getKeywordPlanCampaignErrorValue();
+  /**
+   * <pre>
+   * The reason for keyword plan campaign error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+   */
+  com.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError getKeywordPlanCampaignError();
+
+  /**
+   * <pre>
+   * The reason for keyword plan negative keyword error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+   */
+  int getKeywordPlanNegativeKeywordErrorValue();
+  /**
+   * <pre>
+   * The reason for keyword plan negative keyword error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+   */
+  com.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError getKeywordPlanNegativeKeywordError();
+
+  /**
+   * <pre>
+   * The reason for keyword plan ad group error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+   */
+  int getKeywordPlanAdGroupErrorValue();
+  /**
+   * <pre>
+   * The reason for keyword plan ad group error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+   */
+  com.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError getKeywordPlanAdGroupError();
+
+  /**
+   * <pre>
+   * The reason for keyword plan keyword error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+   */
+  int getKeywordPlanKeywordErrorValue();
+  /**
+   * <pre>
+   * The reason for keyword plan keyword error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+   */
+  com.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError getKeywordPlanKeywordError();
+
+  /**
+   * <pre>
+   * The reason for keyword idea error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+   */
+  int getKeywordPlanIdeaErrorValue();
+  /**
+   * <pre>
+   * The reason for keyword idea error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+   */
+  com.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError getKeywordPlanIdeaError();
+
+  /**
+   * <pre>
    * The reasons for account budget proposal errors.
    * </pre>
    *
@@ -1060,6 +1162,23 @@ public interface ErrorCodeOrBuilder extends
    * <code>.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError account_budget_proposal_error = 77;</code>
    */
   com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError getAccountBudgetProposalError();
+
+  /**
+   * <pre>
+   * The reasons for the user list error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+   */
+  int getUserListErrorValue();
+  /**
+   * <pre>
+   * The reasons for the user list error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+   */
+  com.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError getUserListError();
 
   /**
    * <pre>
@@ -1080,6 +1199,23 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for the feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+   */
+  int getFeedErrorValue();
+  /**
+   * <pre>
+   * The reasons for the feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+   */
+  com.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError getFeedError();
+
+  /**
+   * <pre>
    * The reasons for the geo target constant suggestion error.
    * </pre>
    *
@@ -1094,6 +1230,23 @@ public interface ErrorCodeOrBuilder extends
    * <code>.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError geo_target_constant_suggestion_error = 81;</code>
    */
   com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError getGeoTargetConstantSuggestionError();
+
+  /**
+   * <pre>
+   * The reasons for the feed item error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+   */
+  int getFeedItemErrorValue();
+  /**
+   * <pre>
+   * The reasons for the feed item error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+   */
+  com.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError getFeedItemError();
 
   /**
    * <pre>
@@ -1145,6 +1298,74 @@ public interface ErrorCodeOrBuilder extends
    * <code>.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError customer_manager_link_error = 91;</code>
    */
   com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError getCustomerManagerLinkError();
+
+  /**
+   * <pre>
+   * The reasons for the feed mapping error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+   */
+  int getFeedMappingErrorValue();
+  /**
+   * <pre>
+   * The reasons for the feed mapping error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+   */
+  com.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError getFeedMappingError();
+
+  /**
+   * <pre>
+   * The reasons for the customer feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+   */
+  int getCustomerFeedErrorValue();
+  /**
+   * <pre>
+   * The reasons for the customer feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+   */
+  com.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError getCustomerFeedError();
+
+  /**
+   * <pre>
+   * The reasons for the ad group feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+   */
+  int getAdGroupFeedErrorValue();
+  /**
+   * <pre>
+   * The reasons for the ad group feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+   */
+  com.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError getAdGroupFeedError();
+
+  /**
+   * <pre>
+   * The reasons for the campaign feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+   */
+  int getCampaignFeedErrorValue();
+  /**
+   * <pre>
+   * The reasons for the campaign feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+   */
+  com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError getCampaignFeedError();
 
   public com.google.ads.googleads.v0.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

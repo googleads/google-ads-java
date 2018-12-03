@@ -19,8 +19,11 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.v0.common.AddressInfo;
 import com.google.ads.googleads.v0.common.KeywordInfo;
+import com.google.ads.googleads.v0.common.ProximityInfo;
 import com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v0.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits;
 import com.google.ads.googleads.v0.errors.GoogleAdsError;
 import com.google.ads.googleads.v0.resources.CampaignCriterion;
 import com.google.ads.googleads.v0.resources.CampaignCriterion.Builder;
@@ -32,6 +35,7 @@ import com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse;
 import com.google.ads.googleads.v0.services.MutateCampaignCriterionResult;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.BoolValue;
+import com.google.protobuf.DoubleValue;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -136,8 +140,10 @@ public class AddCampaignTargetingCriteria {
                 .setCreate(buildNegativeKeywordCriterion(keywordText, campaignResourceName))
                 .build(),
             CampaignCriterionOperation.newBuilder()
-                .setCreate(buildLocationCriterion(locationId, campaignResourceName))
-                .build());
+                .setCreate(buildLocationIdCriterion(locationId, campaignResourceName))
+                .build(),
+            CampaignCriterionOperation.newBuilder()
+                .setCreate(buildProximityLocation(campaignResourceName)).build());
 
     try (CampaignCriterionServiceClient campaignCriterionServiceClient =
         googleAdsClient.getCampaignCriterionServiceClient()) {
@@ -180,14 +186,39 @@ public class AddCampaignTargetingCriteria {
    * @param campaignResourceName the campaign resource name to target.
    * @return a campaign criterion object with the specified locationId and resource name.
    */
-  private static CampaignCriterion buildLocationCriterion(
+  private static CampaignCriterion buildLocationIdCriterion(
       long locationId, String campaignResourceName) {
     Builder criterionBuilder =
         CampaignCriterion.newBuilder().setCampaign(StringValue.of(campaignResourceName));
+
     criterionBuilder
         .getLocationBuilder()
         .setGeoTargetConstant(
             StringValue.of(GeoTargetConstantName.format(String.valueOf(locationId))));
+
     return criterionBuilder.build();
+  }
+
+  /**
+   * Creates a campaign criterion from an address and proximity radius.
+   *
+   * @param campaignResourceName the campaign resource name to target.
+   * @return a campaign criterion object with the specified address and targeting radius.
+   */
+  private static CampaignCriterion buildProximityLocation(String campaignResourceName) {
+    Builder builder =
+        CampaignCriterion.newBuilder().setCampaign(StringValue.of(campaignResourceName));
+
+    ProximityInfo.Builder proximityBuilder = builder.getProximityBuilder();
+    proximityBuilder.setRadius(DoubleValue.of(10.0)).setRadiusUnits(ProximityRadiusUnits.MILES);
+
+    AddressInfo.Builder addressBuilder = proximityBuilder.getAddressBuilder();
+    addressBuilder
+        .setStreetAddress(StringValue.of("38 avenue de l'Opéra"))
+        .setCityName(StringValue.of("Paris"))
+        .setPostalCode(StringValue.of("75002"))
+        .setCountryCode(StringValue.of("FR"));
+
+    return builder.build();
   }
 }

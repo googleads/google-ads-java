@@ -24,31 +24,4 @@ public interface ApplyRecommendationResultOrBuilder extends
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
-
-  /**
-   * <pre>
-   * Returned for failed operations.
-   * </pre>
-   *
-   * <code>.google.rpc.Status status = 2;</code>
-   */
-  boolean hasStatus();
-  /**
-   * <pre>
-   * Returned for failed operations.
-   * </pre>
-   *
-   * <code>.google.rpc.Status status = 2;</code>
-   */
-  com.google.rpc.Status getStatus();
-  /**
-   * <pre>
-   * Returned for failed operations.
-   * </pre>
-   *
-   * <code>.google.rpc.Status status = 2;</code>
-   */
-  com.google.rpc.StatusOrBuilder getStatusOrBuilder();
-
-  public com.google.ads.googleads.v0.services.ApplyRecommendationResult.ResultCase getResultCase();
 }

@@ -30,21 +30,22 @@ public final class DateErrorProto {
     java.lang.String[] descriptorData = {
       "\n/google/ads/googleads/v0/errors/date_er" +
       "ror.proto\022\036google.ads.googleads.v0.error" +
-      "s\"\340\002\n\rDateErrorEnum\"\316\002\n\tDateError\022\017\n\013UNS" +
+      "s\"\215\003\n\rDateErrorEnum\"\373\002\n\tDateError\022\017\n\013UNS" +
       "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022 \n\034INVALID_FIELD" +
       "_VALUES_IN_DATE\020\002\022%\n!INVALID_FIELD_VALUE" +
       "S_IN_DATE_TIME\020\003\022\027\n\023INVALID_STRING_DATE\020" +
-      "\004\022\034\n\030INVALID_STRING_DATE_TIME\020\006\022\035\n\031EARLI" +
-      "ER_THAN_MINIMUM_DATE\020\007\022\033\n\027LATER_THAN_MAX" +
-      "IMUM_DATE\020\010\0223\n/DATE_RANGE_MINIMUM_DATE_L" +
-      "ATER_THAN_MAXIMUM_DATE\020\t\0222\n.DATE_RANGE_M" +
-      "INIMUM_AND_MAXIMUM_DATES_BOTH_NULL\020\nB\304\001\n" +
-      "\"com.google.ads.googleads.v0.errorsB\016Dat" +
-      "eErrorProtoP\001ZDgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v0/errors;err" +
-      "ors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Erro" +
-      "rs\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006pro" +
-      "to3"
+      "\004\022#\n\037INVALID_STRING_DATE_TIME_MICROS\020\006\022$" +
+      "\n INVALID_STRING_DATE_TIME_SECONDS\020\013\022\035\n\031" +
+      "EARLIER_THAN_MINIMUM_DATE\020\007\022\033\n\027LATER_THA" +
+      "N_MAXIMUM_DATE\020\010\0223\n/DATE_RANGE_MINIMUM_D" +
+      "ATE_LATER_THAN_MAXIMUM_DATE\020\t\0222\n.DATE_RA" +
+      "NGE_MINIMUM_AND_MAXIMUM_DATES_BOTH_NULL\020" +
+      "\nB\304\001\n\"com.google.ads.googleads.v0.errors" +
+      "B\016DateErrorProtoP\001ZDgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v0/error" +
+      "s;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0" +
+      ".Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

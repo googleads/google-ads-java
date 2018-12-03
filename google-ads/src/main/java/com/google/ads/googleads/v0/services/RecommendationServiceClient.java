@@ -16,6 +16,7 @@
 package com.google.ads.googleads.v0.services;
 
 import com.google.ads.googleads.v0.resources.Recommendation;
+import com.google.ads.googleads.v0.services.DismissRecommendationRequest.DismissRecommendationOperation;
 import com.google.ads.googleads.v0.services.stub.RecommendationServiceStub;
 import com.google.ads.googleads.v0.services.stub.RecommendationServiceStubSettings;
 import com.google.api.core.BetaApi;
@@ -254,21 +255,27 @@ public class RecommendationServiceClient implements BackgroundResource {
    * <pre><code>
    * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
    *   String customerId = "";
+   *   boolean partialFailure = false;
    *   List&lt;ApplyRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   ApplyRecommendationResponse response = recommendationServiceClient.applyRecommendation(customerId, operations);
+   *   ApplyRecommendationResponse response = recommendationServiceClient.applyRecommendation(customerId, partialFailure, operations);
    * }
    * </code></pre>
    *
    * @param customerId The ID of the customer with the recommendation.
-   * @param operations The list of operations to apply recommendations.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, operations will be carried out as a transaction if and only
+   *     if they are all valid. Default is false.
+   * @param operations The list of operations to apply recommendations. If partial_failure=false all
+   *     recommendations should be of the same type There is a limit of 100 operations per request.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ApplyRecommendationResponse applyRecommendation(
-      String customerId, List<ApplyRecommendationOperation> operations) {
+      String customerId, boolean partialFailure, List<ApplyRecommendationOperation> operations) {
 
     ApplyRecommendationRequest request =
         ApplyRecommendationRequest.newBuilder()
             .setCustomerId(customerId)
+            .setPartialFailure(partialFailure)
             .addAllOperations(operations)
             .build();
     return applyRecommendation(request);
@@ -283,9 +290,11 @@ public class RecommendationServiceClient implements BackgroundResource {
    * <pre><code>
    * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
    *   String customerId = "";
+   *   boolean partialFailure = false;
    *   List&lt;ApplyRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
    *   ApplyRecommendationRequest request = ApplyRecommendationRequest.newBuilder()
    *     .setCustomerId(customerId)
+   *     .setPartialFailure(partialFailure)
    *     .addAllOperations(operations)
    *     .build();
    *   ApplyRecommendationResponse response = recommendationServiceClient.applyRecommendation(request);
@@ -308,9 +317,11 @@ public class RecommendationServiceClient implements BackgroundResource {
    * <pre><code>
    * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
    *   String customerId = "";
+   *   boolean partialFailure = false;
    *   List&lt;ApplyRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
    *   ApplyRecommendationRequest request = ApplyRecommendationRequest.newBuilder()
    *     .setCustomerId(customerId)
+   *     .setPartialFailure(partialFailure)
    *     .addAllOperations(operations)
    *     .build();
    *   ApiFuture&lt;ApplyRecommendationResponse&gt; future = recommendationServiceClient.applyRecommendationCallable().futureCall(request);
@@ -322,6 +333,99 @@ public class RecommendationServiceClient implements BackgroundResource {
   public final UnaryCallable<ApplyRecommendationRequest, ApplyRecommendationResponse>
       applyRecommendationCallable() {
     return stub.applyRecommendationCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Dismisses given recommendations.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
+   *   String customerId = "";
+   *   boolean partialFailure = false;
+   *   List&lt;DismissRecommendationRequest.DismissRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   DismissRecommendationResponse response = recommendationServiceClient.dismissRecommendation(customerId, partialFailure, operations);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer with the recommendation.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, operations will be carried in a single transaction if and
+   *     only if they are all valid. Default is false.
+   * @param operations The list of operations to dismiss recommendations. If partial_failure=false
+   *     all recommendations should be of the same type There is a limit of 100 operations per
+   *     request.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final DismissRecommendationResponse dismissRecommendation(
+      String customerId,
+      boolean partialFailure,
+      List<DismissRecommendationRequest.DismissRecommendationOperation> operations) {
+
+    DismissRecommendationRequest request =
+        DismissRecommendationRequest.newBuilder()
+            .setCustomerId(customerId)
+            .setPartialFailure(partialFailure)
+            .addAllOperations(operations)
+            .build();
+    return dismissRecommendation(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Dismisses given recommendations.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
+   *   String customerId = "";
+   *   boolean partialFailure = false;
+   *   List&lt;DismissRecommendationRequest.DismissRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   DismissRecommendationRequest request = DismissRecommendationRequest.newBuilder()
+   *     .setCustomerId(customerId)
+   *     .setPartialFailure(partialFailure)
+   *     .addAllOperations(operations)
+   *     .build();
+   *   DismissRecommendationResponse response = recommendationServiceClient.dismissRecommendation(request);
+   * }
+   * </code></pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final DismissRecommendationResponse dismissRecommendation(
+      DismissRecommendationRequest request) {
+    return dismissRecommendationCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Dismisses given recommendations.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
+   *   String customerId = "";
+   *   boolean partialFailure = false;
+   *   List&lt;DismissRecommendationRequest.DismissRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   DismissRecommendationRequest request = DismissRecommendationRequest.newBuilder()
+   *     .setCustomerId(customerId)
+   *     .setPartialFailure(partialFailure)
+   *     .addAllOperations(operations)
+   *     .build();
+   *   ApiFuture&lt;DismissRecommendationResponse&gt; future = recommendationServiceClient.dismissRecommendationCallable().futureCall(request);
+   *   // Do something
+   *   DismissRecommendationResponse response = future.get();
+   * }
+   * </code></pre>
+   */
+  public final UnaryCallable<DismissRecommendationRequest, DismissRecommendationResponse>
+      dismissRecommendationCallable() {
+    return stub.dismissRecommendationCallable();
   }
 
   @Override
