@@ -227,6 +227,37 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The average amount you pay each time someone views your ad.
+   * The average CPV is defined by the total cost of all ad views divided by
+   * the number of views.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+   */
+  boolean hasAverageCpv();
+  /**
+   * <pre>
+   * The average amount you pay each time someone views your ad.
+   * The average CPV is defined by the total cost of all ad views divided by
+   * the number of views.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+   */
+  com.google.protobuf.DoubleValue getAverageCpv();
+  /**
+   * <pre>
+   * The average amount you pay each time someone views your ad.
+   * The average CPV is defined by the total cost of all ad views divided by
+   * the number of views.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAverageCpvOrBuilder();
+
+  /**
+   * <pre>
    * Your ad's position relative to those of other advertisers.
    * </pre>
    *
@@ -249,6 +280,34 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.DoubleValue average_position = 13;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getAveragePositionOrBuilder();
+
+  /**
+   * <pre>
+   * An indication on how other advertisers' Shopping ads for similar products
+   * are performing based on how often people who see their ad click on it.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+   */
+  boolean hasBenchmarkCtr();
+  /**
+   * <pre>
+   * An indication on how other advertisers' Shopping ads for similar products
+   * are performing based on how often people who see their ad click on it.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+   */
+  com.google.protobuf.DoubleValue getBenchmarkCtr();
+  /**
+   * <pre>
+   * An indication on how other advertisers' Shopping ads for similar products
+   * are performing based on how often people who see their ad click on it.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getBenchmarkCtrOrBuilder();
 
   /**
    * <pre>
@@ -1104,6 +1163,40 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.DoubleValue relative_ctr = 46;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getRelativeCtrOrBuilder();
+
+  /**
+   * <pre>
+   * The percentage of the customer's Shopping ad impressions that are shown in
+   * the most prominent Shopping position. See
+   * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+   * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+   */
+  boolean hasSearchAbsoluteTopImpressionShare();
+  /**
+   * <pre>
+   * The percentage of the customer's Shopping ad impressions that are shown in
+   * the most prominent Shopping position. See
+   * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+   * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+   */
+  com.google.protobuf.DoubleValue getSearchAbsoluteTopImpressionShare();
+  /**
+   * <pre>
+   * The percentage of the customer's Shopping ad impressions that are shown in
+   * the most prominent Shopping position. See
+   * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+   * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getSearchAbsoluteTopImpressionShareOrBuilder();
 
   /**
    * <pre>

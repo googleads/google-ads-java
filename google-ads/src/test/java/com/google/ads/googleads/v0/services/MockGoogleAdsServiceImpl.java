@@ -70,4 +70,19 @@ public class MockGoogleAdsServiceImpl extends GoogleAdsServiceImplBase {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
   }
+
+  @Override
+  public void mutate(
+      MutateGoogleAdsRequest request, StreamObserver<MutateGoogleAdsResponse> responseObserver) {
+    Object response = responses.remove();
+    if (response instanceof MutateGoogleAdsResponse) {
+      requests.add(request);
+      responseObserver.onNext((MutateGoogleAdsResponse) response);
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError((Exception) response);
+    } else {
+      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+    }
+  }
 }

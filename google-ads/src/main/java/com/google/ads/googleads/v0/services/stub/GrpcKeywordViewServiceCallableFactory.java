@@ -44,4 +44,3 @@ import javax.annotation.Generated;
 @Generated("by gapic-generator")
 @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
 public class GrpcKeywordViewServiceCallableFactory extends GrpcGoogleAdsCallableFactory {}
-

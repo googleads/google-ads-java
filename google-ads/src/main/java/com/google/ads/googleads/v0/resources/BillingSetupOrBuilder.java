@@ -199,5 +199,49 @@ public interface BillingSetupOrBuilder extends
    */
   com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType getStartTimeType();
 
+  /**
+   * <pre>
+   * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+   */
+  boolean hasEndDateTime();
+  /**
+   * <pre>
+   * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+   */
+  com.google.protobuf.StringValue getEndDateTime();
+  /**
+   * <pre>
+   * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder();
+
+  /**
+   * <pre>
+   * The end time as a type.  The only possible value is FOREVER.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+   */
+  int getEndTimeTypeValue();
+  /**
+   * <pre>
+   * The end time as a type.  The only possible value is FOREVER.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+   */
+  com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType getEndTimeType();
+
   public com.google.ads.googleads.v0.resources.BillingSetup.StartTimeCase getStartTimeCase();
+
+  public com.google.ads.googleads.v0.resources.BillingSetup.EndTimeCase getEndTimeCase();
 }

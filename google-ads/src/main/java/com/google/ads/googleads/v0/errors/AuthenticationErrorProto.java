@@ -30,29 +30,28 @@ public final class AuthenticationErrorProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v0/errors/authent" +
       "ication_error.proto\022\036google.ads.googlead" +
-      "s.v0.errors\"\216\005\n\027AuthenticationErrorEnum\"" +
-      "\362\004\n\023AuthenticationError\022\017\n\013UNSPECIFIED\020\000" +
+      "s.v0.errors\"\350\004\n\027AuthenticationErrorEnum\"" +
+      "\314\004\n\023AuthenticationError\022\017\n\013UNSPECIFIED\020\000" +
       "\022\013\n\007UNKNOWN\020\001\022\030\n\024AUTHENTICATION_ERROR\020\002\022" +
       "\036\n\032CLIENT_CUSTOMER_ID_INVALID\020\005\022\026\n\022CUSTO" +
       "MER_NOT_FOUND\020\010\022\032\n\026GOOGLE_ACCOUNT_DELETE" +
-      "D\020\t\022!\n\035GOOGLE_ACCOUNT_COOKIE_INVALID\020\n\022)" +
-      "\n%FAILED_TO_AUTHENTICATE_GOOGLE_ACCOUNT\020" +
-      "\013\022-\n)GOOGLE_ACCOUNT_USER_AND_ADS_USER_MI" +
-      "SMATCH\020\014\022\031\n\025LOGIN_COOKIE_REQUIRED\020\r\022\020\n\014N" +
-      "OT_ADS_USER\020\016\022\027\n\023OAUTH_TOKEN_INVALID\020\017\022\027" +
-      "\n\023OAUTH_TOKEN_EXPIRED\020\020\022\030\n\024OAUTH_TOKEN_D" +
-      "ISABLED\020\021\022\027\n\023OAUTH_TOKEN_REVOKED\020\022\022\036\n\032OA" +
-      "UTH_TOKEN_HEADER_INVALID\020\023\022\030\n\024LOGIN_COOK" +
-      "IE_INVALID\020\024\022#\n\037FAILED_TO_RETRIEVE_LOGIN" +
-      "_COOKIE\020\025\022\023\n\017USER_ID_INVALID\020\026\022&\n\"TWO_ST" +
-      "EP_VERIFICATION_NOT_ENROLLED\020\027\022$\n ADVANC" +
-      "ED_PROTECTION_NOT_ENROLLED\020\030B\316\001\n\"com.goo" +
-      "gle.ads.googleads.v0.errorsB\030Authenticat" +
-      "ionErrorProtoP\001ZDgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v0/errors;e" +
-      "rrors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Er" +
-      "rors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006p" +
-      "roto3"
+      "D\020\t\022!\n\035GOOGLE_ACCOUNT_COOKIE_INVALID\020\n\022(" +
+      "\n$GOOGLE_ACCOUNT_AUTHENTICATION_FAILED\020\031" +
+      "\022-\n)GOOGLE_ACCOUNT_USER_AND_ADS_USER_MIS" +
+      "MATCH\020\014\022\031\n\025LOGIN_COOKIE_REQUIRED\020\r\022\020\n\014NO" +
+      "T_ADS_USER\020\016\022\027\n\023OAUTH_TOKEN_INVALID\020\017\022\027\n" +
+      "\023OAUTH_TOKEN_EXPIRED\020\020\022\030\n\024OAUTH_TOKEN_DI" +
+      "SABLED\020\021\022\027\n\023OAUTH_TOKEN_REVOKED\020\022\022\036\n\032OAU" +
+      "TH_TOKEN_HEADER_INVALID\020\023\022\030\n\024LOGIN_COOKI" +
+      "E_INVALID\020\024\022\023\n\017USER_ID_INVALID\020\026\022&\n\"TWO_" +
+      "STEP_VERIFICATION_NOT_ENROLLED\020\027\022$\n ADVA" +
+      "NCED_PROTECTION_NOT_ENROLLED\020\030B\316\001\n\"com.g" +
+      "oogle.ads.googleads.v0.errorsB\030Authentic" +
+      "ationErrorProtoP\001ZDgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v0/errors" +
+      ";errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0." +
+      "Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

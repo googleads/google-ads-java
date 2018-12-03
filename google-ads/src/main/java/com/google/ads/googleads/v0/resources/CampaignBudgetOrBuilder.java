@@ -142,6 +142,37 @@ public interface CampaignBudgetOrBuilder extends
 
   /**
    * <pre>
+   * The lifetime amount of the budget, in the local currency for the account.
+   * Amount is specified in micros, where one million is equivalent to one
+   * currency unit.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+   */
+  boolean hasTotalAmountMicros();
+  /**
+   * <pre>
+   * The lifetime amount of the budget, in the local currency for the account.
+   * Amount is specified in micros, where one million is equivalent to one
+   * currency unit.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+   */
+  com.google.protobuf.Int64Value getTotalAmountMicros();
+  /**
+   * <pre>
+   * The lifetime amount of the budget, in the local currency for the account.
+   * Amount is specified in micros, where one million is equivalent to one
+   * currency unit.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value total_amount_micros = 10;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getTotalAmountMicrosOrBuilder();
+
+  /**
+   * <pre>
    * The status of this campaign budget. This field is read-only.
    * </pre>
    *

@@ -250,18 +250,24 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
    * <pre><code>
    * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
    *   StringValue locale = StringValue.newBuilder().build();
-   *   SuggestGeoTargetConstantsResponse response = geoTargetConstantServiceClient.suggestGeoTargetConstants(locale);
+   *   StringValue countryCode = StringValue.newBuilder().build();
+   *   SuggestGeoTargetConstantsResponse response = geoTargetConstantServiceClient.suggestGeoTargetConstants(locale, countryCode);
    * }
    * </code></pre>
    *
    * @param locale If possible, returned geo targets are translated using this locale. If not, en is
    *     used by default. This is also used as a hint for returned geo targets.
+   * @param countryCode Returned geo targets are restricted to this country code.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final SuggestGeoTargetConstantsResponse suggestGeoTargetConstants(StringValue locale) {
+  public final SuggestGeoTargetConstantsResponse suggestGeoTargetConstants(
+      StringValue locale, StringValue countryCode) {
 
     SuggestGeoTargetConstantsRequest request =
-        SuggestGeoTargetConstantsRequest.newBuilder().setLocale(locale).build();
+        SuggestGeoTargetConstantsRequest.newBuilder()
+            .setLocale(locale)
+            .setCountryCode(countryCode)
+            .build();
     return suggestGeoTargetConstants(request);
   }
 
@@ -274,8 +280,10 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
    * <pre><code>
    * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
    *   StringValue locale = StringValue.newBuilder().build();
+   *   StringValue countryCode = StringValue.newBuilder().build();
    *   SuggestGeoTargetConstantsRequest request = SuggestGeoTargetConstantsRequest.newBuilder()
    *     .setLocale(locale)
+   *     .setCountryCode(countryCode)
    *     .build();
    *   SuggestGeoTargetConstantsResponse response = geoTargetConstantServiceClient.suggestGeoTargetConstants(request);
    * }
@@ -298,8 +306,10 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
    * <pre><code>
    * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
    *   StringValue locale = StringValue.newBuilder().build();
+   *   StringValue countryCode = StringValue.newBuilder().build();
    *   SuggestGeoTargetConstantsRequest request = SuggestGeoTargetConstantsRequest.newBuilder()
    *     .setLocale(locale)
+   *     .setCountryCode(countryCode)
    *     .build();
    *   ApiFuture&lt;SuggestGeoTargetConstantsResponse&gt; future = geoTargetConstantServiceClient.suggestGeoTargetConstantsCallable().futureCall(request);
    *   // Do something

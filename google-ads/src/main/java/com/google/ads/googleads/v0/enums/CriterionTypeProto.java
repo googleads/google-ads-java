@@ -30,19 +30,22 @@ public final class CriterionTypeProto {
     java.lang.String[] descriptorData = {
       "\n2google/ads/googleads/v0/enums/criterio" +
       "n_type.proto\022\035google.ads.googleads.v0.en" +
-      "ums\"\241\002\n\021CriterionTypeEnum\"\213\002\n\rCriterionT" +
+      "ums\"\222\003\n\021CriterionTypeEnum\"\374\002\n\rCriterionT" +
       "ype\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007KEY" +
       "WORD\020\002\022\r\n\tPLACEMENT\020\003\022\n\n\006DEVICE\020\006\022\014\n\010LOC" +
       "ATION\020\007\022\021\n\rLISTING_GROUP\020\010\022\017\n\013AD_SCHEDUL" +
       "E\020\t\022\r\n\tAGE_RANGE\020\n\022\n\n\006GENDER\020\013\022\020\n\014INCOME" +
       "_RANGE\020\014\022\023\n\017PARENTAL_STATUS\020\r\022\021\n\rYOUTUBE" +
-      "_VIDEO\020\016\022\023\n\017YOUTUBE_CHANNEL\020\017\022\r\n\tPROXIMI" +
-      "TY\020\021\022\t\n\005TOPIC\020\022B\303\001\n!com.google.ads.googl" +
-      "eads.v0.enumsB\022CriterionTypeProtoP\001ZBgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v0/enums;enums\242\002\003GAA\252\002\035Google.A" +
-      "ds.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Googl" +
-      "eAds\\V0\\Enumsb\006proto3"
+      "_VIDEO\020\016\022\023\n\017YOUTUBE_CHANNEL\020\017\022\r\n\tUSER_LI" +
+      "ST\020\020\022\r\n\tPROXIMITY\020\021\022\t\n\005TOPIC\020\022\022\021\n\rLISTIN" +
+      "G_SCOPE\020\023\022\014\n\010LANGUAGE\020\024\022\014\n\010IP_BLOCK\020\025\022\021\n" +
+      "\rCONTENT_LABEL\020\026\022\013\n\007CARRIER\020\027\022\021\n\rUSER_IN" +
+      "TEREST\020\030B\303\001\n!com.google.ads.googleads.v0" +
+      ".enumsB\022CriterionTypeProtoP\001ZBgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.Goog" +
+      "leAds.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0" +
+      "\\Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -18,6 +18,8 @@ package com.google.ads.googleads.v0.services.stub;
 import com.google.ads.googleads.v0.resources.Recommendation;
 import com.google.ads.googleads.v0.services.ApplyRecommendationRequest;
 import com.google.ads.googleads.v0.services.ApplyRecommendationResponse;
+import com.google.ads.googleads.v0.services.DismissRecommendationRequest;
+import com.google.ads.googleads.v0.services.DismissRecommendationResponse;
 import com.google.ads.googleads.v0.services.GetRecommendationRequest;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
@@ -63,12 +65,25 @@ public class GrpcRecommendationServiceStub extends RecommendationServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ApplyRecommendationResponse.getDefaultInstance()))
               .build();
+  private static final MethodDescriptor<DismissRecommendationRequest, DismissRecommendationResponse>
+      dismissRecommendationMethodDescriptor =
+          MethodDescriptor.<DismissRecommendationRequest, DismissRecommendationResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v0.services.RecommendationService/DismissRecommendation")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(DismissRecommendationRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(DismissRecommendationResponse.getDefaultInstance()))
+              .build();
 
   private final BackgroundResource backgroundResources;
 
   private final UnaryCallable<GetRecommendationRequest, Recommendation> getRecommendationCallable;
   private final UnaryCallable<ApplyRecommendationRequest, ApplyRecommendationResponse>
       applyRecommendationCallable;
+  private final UnaryCallable<DismissRecommendationRequest, DismissRecommendationResponse>
+      dismissRecommendationCallable;
 
   private final GrpcStubCallableFactory callableFactory;
 
@@ -120,6 +135,12 @@ public class GrpcRecommendationServiceStub extends RecommendationServiceStub {
             GrpcCallSettings.<ApplyRecommendationRequest, ApplyRecommendationResponse>newBuilder()
                 .setMethodDescriptor(applyRecommendationMethodDescriptor)
                 .build();
+    GrpcCallSettings<DismissRecommendationRequest, DismissRecommendationResponse>
+        dismissRecommendationTransportSettings =
+            GrpcCallSettings
+                .<DismissRecommendationRequest, DismissRecommendationResponse>newBuilder()
+                .setMethodDescriptor(dismissRecommendationMethodDescriptor)
+                .build();
 
     this.getRecommendationCallable =
         callableFactory.createUnaryCallable(
@@ -130,6 +151,11 @@ public class GrpcRecommendationServiceStub extends RecommendationServiceStub {
         callableFactory.createUnaryCallable(
             applyRecommendationTransportSettings,
             settings.applyRecommendationSettings(),
+            clientContext);
+    this.dismissRecommendationCallable =
+        callableFactory.createUnaryCallable(
+            dismissRecommendationTransportSettings,
+            settings.dismissRecommendationSettings(),
             clientContext);
 
     backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
@@ -142,6 +168,11 @@ public class GrpcRecommendationServiceStub extends RecommendationServiceStub {
   public UnaryCallable<ApplyRecommendationRequest, ApplyRecommendationResponse>
       applyRecommendationCallable() {
     return applyRecommendationCallable;
+  }
+
+  public UnaryCallable<DismissRecommendationRequest, DismissRecommendationResponse>
+      dismissRecommendationCallable() {
+    return dismissRecommendationCallable;
   }
 
   @Override

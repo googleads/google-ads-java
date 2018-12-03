@@ -35,7 +35,7 @@ public final class AdProto {
       "mon/custom_parameter.proto\032+google/ads/g" +
       "oogleads/v0/enums/ad_type.proto\032*google/" +
       "ads/googleads/v0/enums/device.proto\032\036goo" +
-      "gle/protobuf/wrappers.proto\"\370\t\n\002Ad\022\'\n\002id" +
+      "gle/protobuf/wrappers.proto\"\246\013\n\002Ad\022\'\n\002id" +
       "\030\001 \001(\0132\033.google.protobuf.Int64Value\0220\n\nf" +
       "inal_urls\030\002 \003(\0132\034.google.protobuf.String" +
       "Value\0227\n\021final_mobile_urls\030\020 \003(\0132\034.googl" +
@@ -49,30 +49,35 @@ public final class AdProto {
       "\n\023added_by_google_ads\030\023 \001(\0132\032.google.pro" +
       "tobuf.BoolValue\022K\n\021device_preference\030\024 \001" +
       "(\01620.google.ads.googleads.v0.enums.Devic" +
-      "eEnum.Device\022=\n\007text_ad\030\006 \001(\0132*.google.a" +
-      "ds.googleads.v0.common.TextAdInfoH\000\022N\n\020e" +
-      "xpanded_text_ad\030\007 \001(\01322.google.ads.googl" +
-      "eads.v0.common.ExpandedTextAdInfoH\000\022P\n\021d" +
-      "ynamic_search_ad\030\010 \001(\01323.google.ads.goog" +
-      "leads.v0.common.DynamicSearchAdInfoH\000\022X\n" +
-      "\025responsive_display_ad\030\t \001(\01327.google.ad" +
-      "s.googleads.v0.common.ResponsiveDisplayA" +
-      "dInfoH\000\022F\n\014call_only_ad\030\r \001(\0132..google.a" +
-      "ds.googleads.v0.common.CallOnlyAdInfoH\000\022" +
-      "a\n\032expanded_dynamic_search_ad\030\016 \001(\0132;.go" +
-      "ogle.ads.googleads.v0.common.ExpandedDyn" +
-      "amicSearchAdInfoH\000\022?\n\010hotel_ad\030\017 \001(\0132+.g" +
-      "oogle.ads.googleads.v0.common.HotelAdInf" +
-      "oH\000\022P\n\021shopping_smart_ad\030\021 \001(\01323.google." +
-      "ads.googleads.v0.common.ShoppingSmartAdI" +
-      "nfoH\000\022T\n\023shopping_product_ad\030\022 \001(\01325.goo" +
-      "gle.ads.googleads.v0.common.ShoppingProd" +
-      "uctAdInfoH\000B\t\n\007ad_dataB\314\001\n%com.google.ad" +
-      "s.googleads.v0.resourcesB\007AdProtoP\001ZJgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v0/resources;resources\242\002\003GAA\252\002!" +
-      "Google.Ads.GoogleAds.V0.Resources\312\002!Goog" +
-      "le\\Ads\\GoogleAds\\V0\\Resourcesb\006proto3"
+      "eEnum.Device\022*\n\004name\030\027 \001(\0132\034.google.prot" +
+      "obuf.StringValue\022=\n\007text_ad\030\006 \001(\0132*.goog" +
+      "le.ads.googleads.v0.common.TextAdInfoH\000\022" +
+      "N\n\020expanded_text_ad\030\007 \001(\01322.google.ads.g" +
+      "oogleads.v0.common.ExpandedTextAdInfoH\000\022" +
+      "P\n\021dynamic_search_ad\030\010 \001(\01323.google.ads." +
+      "googleads.v0.common.DynamicSearchAdInfoH" +
+      "\000\022X\n\025responsive_display_ad\030\t \001(\01327.googl" +
+      "e.ads.googleads.v0.common.ResponsiveDisp" +
+      "layAdInfoH\000\022F\n\014call_only_ad\030\r \001(\0132..goog" +
+      "le.ads.googleads.v0.common.CallOnlyAdInf" +
+      "oH\000\022a\n\032expanded_dynamic_search_ad\030\016 \001(\0132" +
+      ";.google.ads.googleads.v0.common.Expande" +
+      "dDynamicSearchAdInfoH\000\022?\n\010hotel_ad\030\017 \001(\013" +
+      "2+.google.ads.googleads.v0.common.HotelA" +
+      "dInfoH\000\022P\n\021shopping_smart_ad\030\021 \001(\01323.goo" +
+      "gle.ads.googleads.v0.common.ShoppingSmar" +
+      "tAdInfoH\000\022T\n\023shopping_product_ad\030\022 \001(\01325" +
+      ".google.ads.googleads.v0.common.Shopping" +
+      "ProductAdInfoH\000\022?\n\010gmail_ad\030\025 \001(\0132+.goog" +
+      "le.ads.googleads.v0.common.GmailAdInfoH\000" +
+      "\022?\n\010image_ad\030\026 \001(\0132+.google.ads.googlead" +
+      "s.v0.common.ImageAdInfoH\000B\t\n\007ad_dataB\314\001\n" +
+      "%com.google.ads.googleads.v0.resourcesB\007" +
+      "AdProtoP\001ZJgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v0/resources;reso" +
+      "urces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Re" +
+      "sources\312\002!Google\\Ads\\GoogleAds\\V0\\Resour" +
+      "cesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -96,7 +101,7 @@ public final class AdProto {
     internal_static_google_ads_googleads_v0_resources_Ad_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_Ad_descriptor,
-        new java.lang.String[] { "Id", "FinalUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "TextAd", "ExpandedTextAd", "DynamicSearchAd", "ResponsiveDisplayAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "AdData", });
+        new java.lang.String[] { "Id", "FinalUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "Name", "TextAd", "ExpandedTextAd", "DynamicSearchAd", "ResponsiveDisplayAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "GmailAd", "ImageAd", "AdData", });
     com.google.ads.googleads.v0.common.AdTypeInfosProto.getDescriptor();
     com.google.ads.googleads.v0.common.CustomParameterProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdTypeProto.getDescriptor();

@@ -30,8 +30,8 @@ public final class OperationAccessDeniedErrorProto {
     java.lang.String[] descriptorData = {
       "\nBgoogle/ads/googleads/v0/errors/operati" +
       "on_access_denied_error.proto\022\036google.ads" +
-      ".googleads.v0.errors\"\304\003\n\036OperationAccess" +
-      "DeniedErrorEnum\"\241\003\n\032OperationAccessDenie" +
+      ".googleads.v0.errors\"\353\003\n\036OperationAccess" +
+      "DeniedErrorEnum\"\310\003\n\032OperationAccessDenie" +
       "dError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\030\n\024" +
       "ACTION_NOT_PERMITTED\020\002\022\"\n\036CREATE_OPERATI" +
       "ON_NOT_PERMITTED\020\003\022\"\n\036REMOVE_OPERATION_N" +
@@ -41,13 +41,14 @@ public final class OperationAccessDeniedErrorProto {
       "D_FOR_CAMPAIGN_TYPE\020\007\022#\n\037CREATE_AS_REMOV" +
       "ED_NOT_PERMITTED\020\010\0220\n,OPERATION_NOT_PERM" +
       "ITTED_FOR_REMOVED_RESOURCE\020\t\022-\n)OPERATIO" +
-      "N_NOT_PERMITTED_FOR_AD_GROUP_TYPE\020\nB\325\001\n\"" +
-      "com.google.ads.googleads.v0.errorsB\037Oper" +
-      "ationAccessDeniedErrorProtoP\001ZDgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.G" +
-      "oogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAd" +
-      "s\\V0\\Errorsb\006proto3"
+      "N_NOT_PERMITTED_FOR_AD_GROUP_TYPE\020\n\022%\n!M" +
+      "UTATE_NOT_PERMITTED_FOR_CUSTOMER\020\013B\325\001\n\"c" +
+      "om.google.ads.googleads.v0.errorsB\037Opera" +
+      "tionAccessDeniedErrorProtoP\001ZDgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.Go" +
+      "ogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAds" +
+      "\\V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The name of a field
+     * The name of a field or a oneof
      * </pre>
      *
      * <code>string field_name = 1;</code>
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
     java.lang.String getFieldName();
     /**
      * <pre>
-     * The name of a field
+     * The name of a field or a oneof
      * </pre>
      *
      * <code>string field_name = 1;</code>
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * If field_name is a list, this is the element that failed
+     * If field_name is a repeated field, this is the element that failed
      * </pre>
      *
      * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
     boolean hasIndex();
     /**
      * <pre>
-     * If field_name is a list, this is the element that failed
+     * If field_name is a repeated field, this is the element that failed
      * </pre>
      *
      * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.Int64Value getIndex();
     /**
      * <pre>
-     * If field_name is a list, this is the element that failed
+     * If field_name is a repeated field, this is the element that failed
      * </pre>
      *
      * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -250,7 +250,7 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object fieldName_;
     /**
      * <pre>
-     * The name of a field
+     * The name of a field or a oneof
      * </pre>
      *
      * <code>string field_name = 1;</code>
@@ -269,7 +269,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of a field
+     * The name of a field or a oneof
      * </pre>
      *
      * <code>string field_name = 1;</code>
@@ -292,7 +292,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.Int64Value index_;
     /**
      * <pre>
-     * If field_name is a list, this is the element that failed
+     * If field_name is a repeated field, this is the element that failed
      * </pre>
      *
      * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -302,7 +302,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If field_name is a list, this is the element that failed
+     * If field_name is a repeated field, this is the element that failed
      * </pre>
      *
      * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -312,7 +312,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If field_name is a list, this is the element that failed
+     * If field_name is a repeated field, this is the element that failed
      * </pre>
      *
      * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -661,7 +661,7 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object fieldName_ = "";
       /**
        * <pre>
-       * The name of a field
+       * The name of a field or a oneof
        * </pre>
        *
        * <code>string field_name = 1;</code>
@@ -680,7 +680,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of a field
+       * The name of a field or a oneof
        * </pre>
        *
        * <code>string field_name = 1;</code>
@@ -700,7 +700,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of a field
+       * The name of a field or a oneof
        * </pre>
        *
        * <code>string field_name = 1;</code>
@@ -717,7 +717,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of a field
+       * The name of a field or a oneof
        * </pre>
        *
        * <code>string field_name = 1;</code>
@@ -730,7 +730,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of a field
+       * The name of a field or a oneof
        * </pre>
        *
        * <code>string field_name = 1;</code>
@@ -752,7 +752,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> indexBuilder_;
       /**
        * <pre>
-       * If field_name is a list, this is the element that failed
+       * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
        * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -762,7 +762,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * If field_name is a list, this is the element that failed
+       * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
        * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -776,7 +776,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * If field_name is a list, this is the element that failed
+       * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
        * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -796,7 +796,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * If field_name is a list, this is the element that failed
+       * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
        * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -814,7 +814,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * If field_name is a list, this is the element that failed
+       * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
        * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -836,7 +836,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * If field_name is a list, this is the element that failed
+       * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
        * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -854,7 +854,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * If field_name is a list, this is the element that failed
+       * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
        * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -866,7 +866,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * If field_name is a list, this is the element that failed
+       * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
        * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -881,7 +881,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * If field_name is a list, this is the element that failed
+       * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
        * <code>.google.protobuf.Int64Value index = 2;</code>
@@ -990,8 +990,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement> fieldPathElements_;
   /**
    * <pre>
-   * A field path that indicates which field was invalid in the resource being
-   * mutated.
+   * A field path that indicates which field was invalid in the request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1001,8 +1000,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A field path that indicates which field was invalid in the resource being
-   * mutated.
+   * A field path that indicates which field was invalid in the request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1013,8 +1011,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A field path that indicates which field was invalid in the resource being
-   * mutated.
+   * A field path that indicates which field was invalid in the request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1024,8 +1021,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A field path that indicates which field was invalid in the resource being
-   * mutated.
+   * A field path that indicates which field was invalid in the request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1035,8 +1031,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A field path that indicates which field was invalid in the resource being
-   * mutated.
+   * A field path that indicates which field was invalid in the request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1592,8 +1587,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1607,8 +1601,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1622,8 +1615,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1637,8 +1629,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1659,8 +1650,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1678,8 +1668,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1699,8 +1688,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1721,8 +1709,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1740,8 +1727,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1759,8 +1745,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1779,8 +1764,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1797,8 +1781,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1815,8 +1798,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1827,8 +1809,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1842,8 +1823,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1858,8 +1838,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1870,8 +1849,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -1883,8 +1861,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A field path that indicates which field was invalid in the resource being
-     * mutated.
+     * A field path that indicates which field was invalid in the request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>

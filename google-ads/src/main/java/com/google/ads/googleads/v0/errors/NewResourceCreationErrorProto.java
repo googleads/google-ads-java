@@ -30,17 +30,17 @@ public final class NewResourceCreationErrorProto {
     java.lang.String[] descriptorData = {
       "\n@google/ads/googleads/v0/errors/new_res" +
       "ource_creation_error.proto\022\036google.ads.g" +
-      "oogleads.v0.errors\"\255\001\n\034NewResourceCreati" +
-      "onErrorEnum\"\214\001\n\030NewResourceCreationError" +
-      "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\031\n\025CANNOT" +
-      "_SET_ID_FOR_ADD\020\002\022\026\n\022DUPLICATE_TEMP_IDS\020" +
-      "\003\022\037\n\033TEMP_ID_RESOURCE_HAD_ERRORS\020\004B\323\001\n\"c" +
-      "om.google.ads.googleads.v0.errorsB\035NewRe" +
-      "sourceCreationErrorProtoP\001ZDgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.Goog" +
-      "leAds.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V" +
-      "0\\Errorsb\006proto3"
+      "oogleads.v0.errors\"\260\001\n\034NewResourceCreati" +
+      "onErrorEnum\"\217\001\n\030NewResourceCreationError" +
+      "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\034\n\030CANNOT" +
+      "_SET_ID_FOR_CREATE\020\002\022\026\n\022DUPLICATE_TEMP_I" +
+      "DS\020\003\022\037\n\033TEMP_ID_RESOURCE_HAD_ERRORS\020\004B\323\001" +
+      "\n\"com.google.ads.googleads.v0.errorsB\035Ne" +
+      "wResourceCreationErrorProtoP\001ZDgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.G" +
+      "oogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAd" +
+      "s\\V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

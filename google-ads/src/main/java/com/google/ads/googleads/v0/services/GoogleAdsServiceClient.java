@@ -43,10 +43,8 @@ import javax.annotation.Generated;
  * <code>
  * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
  *   String customerId = "";
- *   String query = "";
- *   for (GoogleAdsRow element : googleAdsServiceClient.search(customerId, query).iterateAll()) {
- *     // doThingsWith(element);
- *   }
+ *   List&lt;MutateOperation&gt; mutateOperations = new ArrayList&lt;&gt;();
+ *   MutateGoogleAdsResponse response = googleAdsServiceClient.mutate(customerId, mutateOperations);
  * }
  * </code>
  * </pre>
@@ -266,6 +264,84 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<SearchGoogleAdsRequest, SearchGoogleAdsResponse> searchCallable() {
     return stub.searchCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates, updates, or removes resources. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;MutateOperation&gt; mutateOperations = new ArrayList&lt;&gt;();
+   *   MutateGoogleAdsResponse response = googleAdsServiceClient.mutate(customerId, mutateOperations);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer whose resources are being modified.
+   * @param mutateOperations The list of operations to perform on individual resources.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateGoogleAdsResponse mutate(
+      String customerId, List<MutateOperation> mutateOperations) {
+
+    MutateGoogleAdsRequest request =
+        MutateGoogleAdsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllMutateOperations(mutateOperations)
+            .build();
+    return mutate(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates, updates, or removes resources. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;MutateOperation&gt; mutateOperations = new ArrayList&lt;&gt;();
+   *   MutateGoogleAdsRequest request = MutateGoogleAdsRequest.newBuilder()
+   *     .setCustomerId(customerId)
+   *     .addAllMutateOperations(mutateOperations)
+   *     .build();
+   *   MutateGoogleAdsResponse response = googleAdsServiceClient.mutate(request);
+   * }
+   * </code></pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateGoogleAdsResponse mutate(MutateGoogleAdsRequest request) {
+    return mutateCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates, updates, or removes resources. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;MutateOperation&gt; mutateOperations = new ArrayList&lt;&gt;();
+   *   MutateGoogleAdsRequest request = MutateGoogleAdsRequest.newBuilder()
+   *     .setCustomerId(customerId)
+   *     .addAllMutateOperations(mutateOperations)
+   *     .build();
+   *   ApiFuture&lt;MutateGoogleAdsResponse&gt; future = googleAdsServiceClient.mutateCallable().futureCall(request);
+   *   // Do something
+   *   MutateGoogleAdsResponse response = future.get();
+   * }
+   * </code></pre>
+   */
+  public final UnaryCallable<MutateGoogleAdsRequest, MutateGoogleAdsResponse> mutateCallable() {
+    return stub.mutateCallable();
   }
 
   @Override

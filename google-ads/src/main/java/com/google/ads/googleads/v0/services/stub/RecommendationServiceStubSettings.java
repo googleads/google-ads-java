@@ -18,6 +18,8 @@ package com.google.ads.googleads.v0.services.stub;
 import com.google.ads.googleads.v0.resources.Recommendation;
 import com.google.ads.googleads.v0.services.ApplyRecommendationRequest;
 import com.google.ads.googleads.v0.services.ApplyRecommendationResponse;
+import com.google.ads.googleads.v0.services.DismissRecommendationRequest;
+import com.google.ads.googleads.v0.services.DismissRecommendationResponse;
 import com.google.ads.googleads.v0.services.GetRecommendationRequest;
 import com.google.api.core.ApiFunction;
 import com.google.api.core.BetaApi;
@@ -81,6 +83,8 @@ public class RecommendationServiceStubSettings
       getRecommendationSettings;
   private final UnaryCallSettings<ApplyRecommendationRequest, ApplyRecommendationResponse>
       applyRecommendationSettings;
+  private final UnaryCallSettings<DismissRecommendationRequest, DismissRecommendationResponse>
+      dismissRecommendationSettings;
 
   /** Returns the object with the settings used for calls to getRecommendation. */
   public UnaryCallSettings<GetRecommendationRequest, Recommendation> getRecommendationSettings() {
@@ -91,6 +95,12 @@ public class RecommendationServiceStubSettings
   public UnaryCallSettings<ApplyRecommendationRequest, ApplyRecommendationResponse>
       applyRecommendationSettings() {
     return applyRecommendationSettings;
+  }
+
+  /** Returns the object with the settings used for calls to dismissRecommendation. */
+  public UnaryCallSettings<DismissRecommendationRequest, DismissRecommendationResponse>
+      dismissRecommendationSettings() {
+    return dismissRecommendationSettings;
   }
 
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
@@ -163,6 +173,7 @@ public class RecommendationServiceStubSettings
 
     getRecommendationSettings = settingsBuilder.getRecommendationSettings().build();
     applyRecommendationSettings = settingsBuilder.applyRecommendationSettings().build();
+    dismissRecommendationSettings = settingsBuilder.dismissRecommendationSettings().build();
   }
 
   /** Builder for RecommendationServiceStubSettings. */
@@ -174,6 +185,9 @@ public class RecommendationServiceStubSettings
         getRecommendationSettings;
     private final UnaryCallSettings.Builder<ApplyRecommendationRequest, ApplyRecommendationResponse>
         applyRecommendationSettings;
+    private final UnaryCallSettings.Builder<
+            DismissRecommendationRequest, DismissRecommendationResponse>
+        dismissRecommendationSettings;
 
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
@@ -220,9 +234,13 @@ public class RecommendationServiceStubSettings
 
       applyRecommendationSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
+      dismissRecommendationSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              getRecommendationSettings, applyRecommendationSettings);
+              getRecommendationSettings,
+              applyRecommendationSettings,
+              dismissRecommendationSettings);
 
       initDefaults(this);
     }
@@ -248,6 +266,11 @@ public class RecommendationServiceStubSettings
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
+      builder
+          .dismissRecommendationSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
+
       return builder;
     }
 
@@ -256,10 +279,13 @@ public class RecommendationServiceStubSettings
 
       getRecommendationSettings = settings.getRecommendationSettings.toBuilder();
       applyRecommendationSettings = settings.applyRecommendationSettings.toBuilder();
+      dismissRecommendationSettings = settings.dismissRecommendationSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              getRecommendationSettings, applyRecommendationSettings);
+              getRecommendationSettings,
+              applyRecommendationSettings,
+              dismissRecommendationSettings);
     }
 
     // NEXT_MAJOR_VER: remove 'throws Exception'
@@ -288,6 +314,12 @@ public class RecommendationServiceStubSettings
     public UnaryCallSettings.Builder<ApplyRecommendationRequest, ApplyRecommendationResponse>
         applyRecommendationSettings() {
       return applyRecommendationSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to dismissRecommendation. */
+    public UnaryCallSettings.Builder<DismissRecommendationRequest, DismissRecommendationResponse>
+        dismissRecommendationSettings() {
+      return dismissRecommendationSettings;
     }
 
     @Override

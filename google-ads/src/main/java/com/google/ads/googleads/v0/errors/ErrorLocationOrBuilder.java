@@ -34,8 +34,7 @@ public interface ErrorLocationOrBuilder extends
 
   /**
    * <pre>
-   * A field path that indicates which field was invalid in the resource being
-   * mutated.
+   * A field path that indicates which field was invalid in the request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -44,8 +43,7 @@ public interface ErrorLocationOrBuilder extends
       getFieldPathElementsList();
   /**
    * <pre>
-   * A field path that indicates which field was invalid in the resource being
-   * mutated.
+   * A field path that indicates which field was invalid in the request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -53,8 +51,7 @@ public interface ErrorLocationOrBuilder extends
   com.google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement getFieldPathElements(int index);
   /**
    * <pre>
-   * A field path that indicates which field was invalid in the resource being
-   * mutated.
+   * A field path that indicates which field was invalid in the request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -62,8 +59,7 @@ public interface ErrorLocationOrBuilder extends
   int getFieldPathElementsCount();
   /**
    * <pre>
-   * A field path that indicates which field was invalid in the resource being
-   * mutated.
+   * A field path that indicates which field was invalid in the request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>
@@ -72,8 +68,7 @@ public interface ErrorLocationOrBuilder extends
       getFieldPathElementsOrBuilderList();
   /**
    * <pre>
-   * A field path that indicates which field was invalid in the resource being
-   * mutated.
+   * A field path that indicates which field was invalid in the request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement field_path_elements = 2;</code>

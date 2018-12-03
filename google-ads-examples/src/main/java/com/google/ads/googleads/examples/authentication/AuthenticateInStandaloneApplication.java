@@ -30,8 +30,8 @@ import java.net.URL;
 import java.util.Properties;
 
 /**
- * This example will create an OAuth2 refresh token for the Google Ads API using the Native/Installed
- * application flow.
+ * This example will create an OAuth2 refresh token for the Google Ads API using the
+ * Native/Installed application flow.
  *
  * <p>This example is meant to be run from the command line and requires user input.
  */
@@ -105,10 +105,26 @@ public class AuthenticateInStandaloneApplication {
     adsProperties.put(
         ConfigPropertyKey.DEVELOPER_TOKEN.getPropertyKey(), "INSERT_DEVELOPER_TOKEN_HERE");
 
+    showConfigurationFile(adsProperties);
+  }
+
+  private void showConfigurationFile(Properties adsProperties) throws IOException {
     System.out.printf(
         "Copy the text below into a file named %s in your home directory, and replace "
-            + "INSERT_DEVELOPER_TOKEN_HERE with your developer token:%n",
+            + "INSERT_XXX_HERE with your configuration:%n",
         GoogleAdsClient.Builder.DEFAULT_PROPERTIES_CONFIG_FILE_NAME);
+    System.out.println(
+        "######################## Configuration file start ########################");
     adsProperties.store(System.out, null);
+    System.out.printf(
+        "# Required for manager accounts only: Specify the login customer ID used to%n"
+            + "# authenticate API calls. This will be the customer ID of the authenticated%n"
+            + "# manager account. You can also specify this later in code if your application%n"
+            + "# uses multiple manager account + OAuth pairs.%n"
+            + "#%n");
+    System.out.println(
+        "# " + ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyKey() + "=INSERT_LOGIN_CUSTOMER_ID");
+    System.out.println(
+        "######################## Configuration file end ##########################");
   }
 }

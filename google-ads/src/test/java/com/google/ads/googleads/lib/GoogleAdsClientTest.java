@@ -15,8 +15,11 @@
 package com.google.ads.googleads.lib;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.fail;
 
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.ConfigPropertyKey;
@@ -26,11 +29,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.stream.Stream;
+import javax.annotation.Nullable;
 import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Rule;
@@ -51,6 +58,7 @@ public class GoogleAdsClientTest {
   private static final String CLIENT_SECRET = "abcdefghijklmnop";
   private static final String REFRESH_TOKEN = "QRSTUVWXYZ";
   private static final String DEVELOPER_TOKEN = "developer_token";
+  private static final long LOGIN_CUSTOMER_ID = 123456789L;
   @Rule public TemporaryFolder folder = new TemporaryFolder();
   @Rule public ExpectedException thrown = ExpectedException.none();
   @Mock private ScheduledExecutorService executor;
@@ -64,204 +72,37 @@ public class GoogleAdsClientTest {
     testProperties.setProperty(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey(), CLIENT_SECRET);
     testProperties.setProperty(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey(), REFRESH_TOKEN);
     testProperties.setProperty(ConfigPropertyKey.DEVELOPER_TOKEN.getPropertyKey(), DEVELOPER_TOKEN);
+    testProperties.setProperty(
+        ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyKey(), String.valueOf(LOGIN_CUSTOMER_ID));
   }
 
   /** Creates an GoogleAdsClient using mock credentials. */
   private GoogleAdsClient createTestGoogleAdsClient() {
     return GoogleAdsClient.newBuilder()
         .setCredentials(Mockito.mock(Credentials.class))
-        .setDeveloperToken("my-dev-token")
+        .setDeveloperToken(DEVELOPER_TOKEN)
+        .setLoginCustomerId(LOGIN_CUSTOMER_ID)
         .build();
   }
 
+  /**
+   * Verifies that all ServiceClientFactory methods are implemented and operational in
+   * GoogleAdsClient.
+   */
   @Test
-  public void testGetAccountBudgetProposalServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getAccountBudgetProposalServiceClient());
-  }
-
-  @Test
-  public void testGetAccountBudgetServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getAccountBudgetServiceClient());
-  }
-
-  @Test
-  public void testGetAdGroupAdServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getAdGroupAdServiceClient());
-  }
-
-  @Test
-  public void testGetAdGroupAudienceViewServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getAdGroupAudienceViewServiceClient());
-  }
-
-  @Test
-  public void testGetAdGroupBidModifierServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getAdGroupBidModifierServiceClient());
-  }
-
-  @Test
-  public void testGetAdGroupCriterionServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getAdGroupCriterionServiceClient());
-  }
-
-  @Test
-  public void testGetAdGroupServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getAdGroupServiceClient());
-  }
-
-  @Test
-  public void testGetAgeRangeViewServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getAgeRangeViewServiceClient());
-  }
-
-  @Test
-  public void testGetBiddingStrategyServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getBiddingStrategyServiceClient());
-  }
-
-  @Test
-  public void testGetBillingSetupServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getBillingSetupServiceClient());
-  }
-
-  @Test
-  public void testGetCampaignBidModifierServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getCampaignBidModifierServiceClient());
-  }
-
-  @Test
-  public void testGetCampaignBudgetServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getCampaignBudgetServiceClient());
-  }
-
-  @Test
-  public void testGetCampaignCriterionServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getCampaignCriterionServiceClient());
-  }
-
-  @Test
-  public void testGetCampaignGroupServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getCampaignGroupServiceClient());
-  }
-
-  @Test
-  public void testGetCampaignServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getCampaignServiceClient());
-  }
-
-  @Test
-  public void testGetCampaignSharedSetServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getCampaignSharedSetServiceClient());
-  }
-
-  @Test
-  public void testGetChangeStatusServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getChangeStatusServiceClient());
-  }
-
-  @Test
-  public void testGetConversionActionServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getConversionActionServiceClient());
-  }
-
-  @Test
-  public void testGetCustomerClientLinkServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getCustomerClientLinkServiceClient());
-  }
-
-  @Test
-  public void testGetCustomerManagerLinkServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getCustomerManagerLinkServiceClient());
-  }
-
-  @Test
-  public void testGetCustomerServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getCustomerServiceClient());
-  }
-
-  @Test
-  public void testGetDisplayKeywordViewServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getDisplayKeywordViewServiceClient());
-  }
-
-  @Test
-  public void testGetGenderViewServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getGenderViewServiceClient());
-  }
-
-  @Test
-  public void testGetGeoTargetConstantServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getGeoTargetConstantServiceClient());
-  }
-
-  @Test
-  public void testGetGoogleAdsFieldServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getGoogleAdsFieldServiceClient());
-  }
-
-  @Test
-  public void testGetGoogleAdsServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getGoogleAdsServiceClient());
-  }
-
-  @Test
-  public void testGetHotelGroupViewServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getHotelGroupViewServiceClient());
-  }
-
-  @Test
-  public void testGetKeywordViewServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getKeywordViewServiceClient());
-  }
-
-  @Test
-  public void testGetManagedPlacementViewServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getManagedPlacementViewServiceClient());
-  }
-
-  @Test
-  public void testGetMediaFileServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getMediaFileServiceClient());
-  }
-
-  @Test
-  public void testGetParentalStatusViewServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getParentalStatusViewServiceClient());
-  }
-
-  @Test
-  public void testGetProductGroupViewServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getProductGroupViewServiceClient());
-  }
-
-  @Test
-  public void testGetRecommendationServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getRecommendationServiceClient());
-  }
-
-  @Test
-  public void testGetSharedCriterionServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getSharedCriterionServiceClient());
-  }
-
-  @Test
-  public void testGetSharedSetServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getSharedSetServiceClient());
-  }
-
-  @Test
-  public void testGetTopicConstantServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getTopicConstantServiceClient());
-  }
-
-  @Test
-  public void testGetTopicViewServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getTopicViewServiceClient());
-  }
-
-  @Test
-  public void testGetVideoServiceClient() throws Exception {
-    assertNotNullAndClose(createTestGoogleAdsClient().getVideoServiceClient());
+  public void getServiceClient_creationSucceeds() {
+    Stream.of(ServiceClientFactory.class.getMethods())
+        .forEach(
+            method -> {
+              try (AutoCloseable client =
+                  (AutoCloseable) method.invoke(createTestGoogleAdsClient())) {
+                assertNotNull(client);
+              } catch (IllegalAccessException | InvocationTargetException e) {
+                fail("Unable to open client for " + method.getName());
+              } catch (Exception e) {
+                fail("Unable to close client for " + method.getName());
+              }
+            });
   }
 
   /**
@@ -270,7 +111,7 @@ public class GoogleAdsClientTest {
    * as services are added or removed.
    */
   @Test
-  public void testGetterExistsForAllSupportedServiceClients() throws SecurityException {
+  public void getServiceClient_exists_forAllGrpcServiceDescriptors() {
     Set<Class<?>> clientsMissingGetter = new HashSet<>();
     for (Class<?> clientClass : GrpcServiceDescriptor.getAllServiceClientClasses()) {
       String clientClassName = clientClass.getSimpleName();
@@ -291,31 +132,22 @@ public class GoogleAdsClientTest {
         clientsMissingGetter);
   }
 
-  /**
-   * Verifies that a test exists for each getXServiceClient. This ensures that this test class stays
-   * up to date as services are added.
-   */
+  /** Verifies reading config from a Java properties file */
   @Test
-  public void testTestExistsForAllServiceClientGetters() throws SecurityException {
-    Set<String> missingGetterTests = new HashSet<>();
-    for (Class<?> clientClass : GrpcServiceDescriptor.getAllServiceClientClasses()) {
-      String expectedGetterTestName = "testGet" + clientClass.getSimpleName();
-      try {
-        getClass().getMethod(expectedGetterTestName);
-      } catch (NoSuchMethodException e) {
-        missingGetterTests.add(expectedGetterTestName);
-      }
+  public void buildFromPropertiesFile_readsFromPropertiesFile() throws IOException {
+    File propertiesFile = folder.newFile("ads.properties");
+    try (FileWriter propertiesFileWriter = new FileWriter(propertiesFile)) {
+      testProperties.store(propertiesFileWriter, null);
     }
-    assertEquals(
-        "testGetXServiceClient is not present on GoogleAdsClientTest for at least one supported "
-            + "service client class",
-        Collections.<String>emptySet(),
-        missingGetterTests);
+    Builder builder = GoogleAdsClient.newBuilder();
+    builder.setConfigurationFileSupplier(() -> propertiesFile);
+    GoogleAdsClient client = builder.fromPropertiesFile().build();
+    assertGoogleAdsClient(client);
   }
 
   /** Tests building a client from a properties file. */
   @Test
-  public void testBuildFromPropertiesFile() throws IOException {
+  public void buildFromPropertiesFile_readsAllProperties() throws IOException {
     // Create a properties file in the temporary folder.
     File propertiesFile = folder.newFile("ads.properties");
     try (FileWriter propertiesFileWriter = new FileWriter(propertiesFile)) {
@@ -329,40 +161,78 @@ public class GoogleAdsClientTest {
   }
 
   /**
-   * Tests building a client from a properties file, where the file path and name is specified via
-   * the {@link
-   * com.google.ads.googleads.lib.GoogleAdsClient.Builder#PROPERTIES_CONFIG_FILE_PROPERTY} system
-   * property.
+   * Tests building a client from a properties file that does not contain an entry for the login
+   * customer ID property.
    */
   @Test
-  public void testBuildFromPropertiesFileViaSystemProperty() throws IOException {
-    // Create a clientProperties file in the temporary folder.
-    File propertiesFile = folder.newFile("ads.clientProperties");
+  public void testBuildFromPropertiesFile_withoutLoginCustomerId() throws IOException {
+    // Create a properties file in the temporary folder.
+    File propertiesFile = folder.newFile("ads.properties");
+    // Remove the login customer ID property.
+    testProperties.remove(ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyKey());
     try (FileWriter propertiesFileWriter = new FileWriter(propertiesFile)) {
       testProperties.store(propertiesFileWriter, null);
     }
 
-    Properties properties = new Properties();
-    properties.setProperty(Builder.PROPERTIES_CONFIG_FILE_PROPERTY, propertiesFile.getPath());
     // Build a new client from the file.
-    GoogleAdsClient client = GoogleAdsClient.newBuilder().fromPropertiesFile(properties).build();
-    assertGoogleAdsClient(client);
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder().fromPropertiesFile(propertiesFile).build();
+    assertGoogleAdsClient(client, null);
   }
 
+  /** Tests that an exception is thrown for a nonexistant properties file. */
   @Test
-  public void testBuildFromPropertiesFile_invalidFilePath_throwsException() throws IOException {
+  public void buildFromPropertiesFile_invalidFilePath_throwsException() throws IOException {
     File nonExistentFile = new File(folder.getRoot(), "I_dont_exist.properties");
-    Properties properties = new Properties();
-    properties.setProperty(Builder.PROPERTIES_CONFIG_FILE_PROPERTY, nonExistentFile.getPath());
     // Invokes the fromPropertiesFile method on the builder, which should fail.
     thrown.expect(FileNotFoundException.class);
     thrown.expectMessage(nonExistentFile.getName());
-    GoogleAdsClient.newBuilder().fromPropertiesFile(properties);
+    GoogleAdsClient.newBuilder().fromPropertiesFile(nonExistentFile);
+  }
+
+  /**
+   * Tests that the loginCustomerId can be unset when cloning the client via builder methods. This
+   * is important so that users can easily change the login customer ID.
+   */
+  @Test
+  public void setLoginCustomerId_canClearOnceSet() {
+    Credentials credentials =
+        UserCredentials.newBuilder()
+            .setClientId(CLIENT_ID)
+            .setClientSecret(CLIENT_SECRET)
+            .setRefreshToken(REFRESH_TOKEN)
+            .build();
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(credentials)
+            .setDeveloperToken(DEVELOPER_TOKEN)
+            .setLoginCustomerId(1L)
+            .build();
+    client = client.toBuilder().setLoginCustomerId(null).build();
+    assertNull("Unable to clear loginCustomerId", client.getLoginCustomerId());
   }
 
   /** Tests building a client without the use of a properties file. */
   @Test
-  public void testBuildWithoutPropertiesFile() throws IOException {
+  public void buildWithoutPropertiesFile_supportsAllFields() throws IOException {
+    Credentials credentials =
+        UserCredentials.newBuilder()
+            .setClientId(CLIENT_ID)
+            .setClientSecret(CLIENT_SECRET)
+            .setRefreshToken(REFRESH_TOKEN)
+            .build();
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(credentials)
+            .setDeveloperToken(DEVELOPER_TOKEN)
+            .setLoginCustomerId(LOGIN_CUSTOMER_ID)
+            .build();
+    assertGoogleAdsClient(client);
+  }
+
+  /** Verifies that builder supports nullable loginCustomerId. */
+  @Test
+  public void build_loginCustomerId_allowsNullable() {
     Credentials credentials =
         UserCredentials.newBuilder()
             .setClientId(CLIENT_ID)
@@ -374,23 +244,71 @@ public class GoogleAdsClientTest {
             .setCredentials(credentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .build();
-    assertGoogleAdsClient(client);
+    assertNull("invalid login-customer-id", client.getLoginCustomerId());
+  }
+
+  /** Verifies that loginCustomerId is not required. */
+  @Test
+  public void buildFromProperties_loginCustomerId_isOptional() {
+    testProperties.remove(ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyKey());
+    GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
+    assertNull(client.getLoginCustomerId());
+  }
+
+  /** Verifies that headers include loginCustomerId if present. */
+  @Test
+  public void getHeaders_loginCustomerId_includedIfSpecified() {
+    Credentials credentials =
+        UserCredentials.newBuilder()
+            .setClientId(CLIENT_ID)
+            .setClientSecret(CLIENT_SECRET)
+            .setRefreshToken(REFRESH_TOKEN)
+            .build();
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(credentials)
+            .setDeveloperToken(DEVELOPER_TOKEN)
+            .setLoginCustomerId(LOGIN_CUSTOMER_ID)
+            .build();
+    Map<String, String> headers = client.getHeaders();
+    assertEquals(
+        "invalid login-customer-id",
+        String.valueOf(LOGIN_CUSTOMER_ID),
+        headers.get("login-customer-id"));
+  }
+
+  /** Verifies that headers does not include loginCustomerId if not specified. */
+  @Test
+  public void getHeaders_loginCustomerId_excludedIfNotSpecified() {
+    Credentials credentials =
+        UserCredentials.newBuilder()
+            .setClientId(CLIENT_ID)
+            .setClientSecret(CLIENT_SECRET)
+            .setRefreshToken(REFRESH_TOKEN)
+            .build();
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(credentials)
+            .setDeveloperToken(DEVELOPER_TOKEN)
+            .build();
+    Map<String, String> headers = client.getHeaders();
+    assertFalse("invalid login-customer-id", headers.containsKey("login-customer-id"));
   }
 
   /**
-   * Asserts the argument is not null and closes it in a {@code finally} block to clean up
-   * resources. Useful for tests that instantiate closeable objects such as service clients.
+   * Asserts that the provided client matches expectations. Expects a login customer ID of {@link
+   * #LOGIN_CUSTOMER_ID} on the client.
    */
-  private void assertNotNullAndClose(AutoCloseable closeable) throws Exception {
-    try {
-      assertNotNull(closeable);
-    } finally {
-      closeable.close();
-    }
+  private void assertGoogleAdsClient(GoogleAdsClient client) throws IOException {
+    assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID);
   }
 
-  /** Asserts that the provided client matches expectations. */
-  private void assertGoogleAdsClient(GoogleAdsClient client) throws IOException {
+  /**
+   * Asserts that the provided client matches expectations. Expects a login customer ID that matches
+   * the provided value.
+   */
+  private void assertGoogleAdsClient(GoogleAdsClient client, @Nullable Long loginCustomerId)
+      throws IOException {
     assertNotNull("Null client", client);
     assertNotNull("Null channel", client.withExecutor(executor).getTransportChannel());
 
@@ -401,5 +319,8 @@ public class GoogleAdsClientTest {
     assertEquals("Client ID", CLIENT_ID, userCredentials.getClientId());
     assertEquals("Client secret", CLIENT_SECRET, userCredentials.getClientSecret());
     assertEquals("Refresh token", REFRESH_TOKEN, userCredentials.getRefreshToken());
+
+    assertEquals("Developer token", DEVELOPER_TOKEN, client.getDeveloperToken());
+    assertEquals("Login customer id", loginCustomerId, client.getLoginCustomerId());
   }
 }

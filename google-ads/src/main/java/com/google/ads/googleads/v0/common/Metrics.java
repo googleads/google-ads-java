@@ -99,6 +99,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 90: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (averageCpv_ != null) {
+              subBuilder = averageCpv_.toBuilder();
+            }
+            averageCpv_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(averageCpv_);
+              averageCpv_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 106: {
             com.google.protobuf.DoubleValue.Builder subBuilder = null;
             if (averagePosition_ != null) {
@@ -723,6 +736,32 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 618: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (benchmarkCtr_ != null) {
+              subBuilder = benchmarkCtr_.toBuilder();
+            }
+            benchmarkCtr_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(benchmarkCtr_);
+              benchmarkCtr_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 626: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (searchAbsoluteTopImpressionShare_ != null) {
+              subBuilder = searchAbsoluteTopImpressionShare_.toBuilder();
+            }
+            searchAbsoluteTopImpressionShare_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(searchAbsoluteTopImpressionShare_);
+              searchAbsoluteTopImpressionShare_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1037,6 +1076,45 @@ private static final long serialVersionUID = 0L;
     return getAverageCpm();
   }
 
+  public static final int AVERAGE_CPV_FIELD_NUMBER = 11;
+  private com.google.protobuf.DoubleValue averageCpv_;
+  /**
+   * <pre>
+   * The average amount you pay each time someone views your ad.
+   * The average CPV is defined by the total cost of all ad views divided by
+   * the number of views.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+   */
+  public boolean hasAverageCpv() {
+    return averageCpv_ != null;
+  }
+  /**
+   * <pre>
+   * The average amount you pay each time someone views your ad.
+   * The average CPV is defined by the total cost of all ad views divided by
+   * the number of views.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+   */
+  public com.google.protobuf.DoubleValue getAverageCpv() {
+    return averageCpv_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageCpv_;
+  }
+  /**
+   * <pre>
+   * The average amount you pay each time someone views your ad.
+   * The average CPV is defined by the total cost of all ad views divided by
+   * the number of views.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAverageCpvOrBuilder() {
+    return getAverageCpv();
+  }
+
   public static final int AVERAGE_POSITION_FIELD_NUMBER = 13;
   private com.google.protobuf.DoubleValue averagePosition_;
   /**
@@ -1068,6 +1146,42 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.DoubleValueOrBuilder getAveragePositionOrBuilder() {
     return getAveragePosition();
+  }
+
+  public static final int BENCHMARK_CTR_FIELD_NUMBER = 77;
+  private com.google.protobuf.DoubleValue benchmarkCtr_;
+  /**
+   * <pre>
+   * An indication on how other advertisers' Shopping ads for similar products
+   * are performing based on how often people who see their ad click on it.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+   */
+  public boolean hasBenchmarkCtr() {
+    return benchmarkCtr_ != null;
+  }
+  /**
+   * <pre>
+   * An indication on how other advertisers' Shopping ads for similar products
+   * are performing based on how often people who see their ad click on it.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+   */
+  public com.google.protobuf.DoubleValue getBenchmarkCtr() {
+    return benchmarkCtr_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : benchmarkCtr_;
+  }
+  /**
+   * <pre>
+   * An indication on how other advertisers' Shopping ads for similar products
+   * are performing based on how often people who see their ad click on it.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getBenchmarkCtrOrBuilder() {
+    return getBenchmarkCtr();
   }
 
   public static final int BOUNCE_RATE_FIELD_NUMBER = 15;
@@ -2165,6 +2279,48 @@ private static final long serialVersionUID = 0L;
     return getRelativeCtr();
   }
 
+  public static final int SEARCH_ABSOLUTE_TOP_IMPRESSION_SHARE_FIELD_NUMBER = 78;
+  private com.google.protobuf.DoubleValue searchAbsoluteTopImpressionShare_;
+  /**
+   * <pre>
+   * The percentage of the customer's Shopping ad impressions that are shown in
+   * the most prominent Shopping position. See
+   * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+   * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+   */
+  public boolean hasSearchAbsoluteTopImpressionShare() {
+    return searchAbsoluteTopImpressionShare_ != null;
+  }
+  /**
+   * <pre>
+   * The percentage of the customer's Shopping ad impressions that are shown in
+   * the most prominent Shopping position. See
+   * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+   * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+   */
+  public com.google.protobuf.DoubleValue getSearchAbsoluteTopImpressionShare() {
+    return searchAbsoluteTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchAbsoluteTopImpressionShare_;
+  }
+  /**
+   * <pre>
+   * The percentage of the customer's Shopping ad impressions that are shown in
+   * the most prominent Shopping position. See
+   * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+   * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getSearchAbsoluteTopImpressionShareOrBuilder() {
+    return getSearchAbsoluteTopImpressionShare();
+  }
+
   public static final int SEARCH_BUDGET_LOST_IMPRESSION_SHARE_FIELD_NUMBER = 47;
   private com.google.protobuf.DoubleValue searchBudgetLostImpressionShare_;
   /**
@@ -2677,6 +2833,9 @@ private static final long serialVersionUID = 0L;
     if (averageCpm_ != null) {
       output.writeMessage(10, getAverageCpm());
     }
+    if (averageCpv_ != null) {
+      output.writeMessage(11, getAverageCpv());
+    }
     if (averagePosition_ != null) {
       output.writeMessage(13, getAveragePosition());
     }
@@ -2821,6 +2980,12 @@ private static final long serialVersionUID = 0L;
     if (hotelAverageLeadValueMicros_ != null) {
       output.writeMessage(75, getHotelAverageLeadValueMicros());
     }
+    if (benchmarkCtr_ != null) {
+      output.writeMessage(77, getBenchmarkCtr());
+    }
+    if (searchAbsoluteTopImpressionShare_ != null) {
+      output.writeMessage(78, getSearchAbsoluteTopImpressionShare());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2845,6 +3010,10 @@ private static final long serialVersionUID = 0L;
     if (averageCpm_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getAverageCpm());
+    }
+    if (averageCpv_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getAverageCpv());
     }
     if (averagePosition_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -3038,6 +3207,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(75, getHotelAverageLeadValueMicros());
     }
+    if (benchmarkCtr_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(77, getBenchmarkCtr());
+    }
+    if (searchAbsoluteTopImpressionShare_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(78, getSearchAbsoluteTopImpressionShare());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3094,10 +3271,20 @@ private static final long serialVersionUID = 0L;
       result = result && getAverageCpm()
           .equals(other.getAverageCpm());
     }
+    result = result && (hasAverageCpv() == other.hasAverageCpv());
+    if (hasAverageCpv()) {
+      result = result && getAverageCpv()
+          .equals(other.getAverageCpv());
+    }
     result = result && (hasAveragePosition() == other.hasAveragePosition());
     if (hasAveragePosition()) {
       result = result && getAveragePosition()
           .equals(other.getAveragePosition());
+    }
+    result = result && (hasBenchmarkCtr() == other.hasBenchmarkCtr());
+    if (hasBenchmarkCtr()) {
+      result = result && getBenchmarkCtr()
+          .equals(other.getBenchmarkCtr());
     }
     result = result && (hasBounceRate() == other.hasBounceRate());
     if (hasBounceRate()) {
@@ -3249,6 +3436,11 @@ private static final long serialVersionUID = 0L;
       result = result && getRelativeCtr()
           .equals(other.getRelativeCtr());
     }
+    result = result && (hasSearchAbsoluteTopImpressionShare() == other.hasSearchAbsoluteTopImpressionShare());
+    if (hasSearchAbsoluteTopImpressionShare()) {
+      result = result && getSearchAbsoluteTopImpressionShare()
+          .equals(other.getSearchAbsoluteTopImpressionShare());
+    }
     result = result && (hasSearchBudgetLostImpressionShare() == other.hasSearchBudgetLostImpressionShare());
     if (hasSearchBudgetLostImpressionShare()) {
       result = result && getSearchBudgetLostImpressionShare()
@@ -3357,9 +3549,17 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AVERAGE_CPM_FIELD_NUMBER;
       hash = (53 * hash) + getAverageCpm().hashCode();
     }
+    if (hasAverageCpv()) {
+      hash = (37 * hash) + AVERAGE_CPV_FIELD_NUMBER;
+      hash = (53 * hash) + getAverageCpv().hashCode();
+    }
     if (hasAveragePosition()) {
       hash = (37 * hash) + AVERAGE_POSITION_FIELD_NUMBER;
       hash = (53 * hash) + getAveragePosition().hashCode();
+    }
+    if (hasBenchmarkCtr()) {
+      hash = (37 * hash) + BENCHMARK_CTR_FIELD_NUMBER;
+      hash = (53 * hash) + getBenchmarkCtr().hashCode();
     }
     if (hasBounceRate()) {
       hash = (37 * hash) + BOUNCE_RATE_FIELD_NUMBER;
@@ -3480,6 +3680,10 @@ private static final long serialVersionUID = 0L;
     if (hasRelativeCtr()) {
       hash = (37 * hash) + RELATIVE_CTR_FIELD_NUMBER;
       hash = (53 * hash) + getRelativeCtr().hashCode();
+    }
+    if (hasSearchAbsoluteTopImpressionShare()) {
+      hash = (37 * hash) + SEARCH_ABSOLUTE_TOP_IMPRESSION_SHARE_FIELD_NUMBER;
+      hash = (53 * hash) + getSearchAbsoluteTopImpressionShare().hashCode();
     }
     if (hasSearchBudgetLostImpressionShare()) {
       hash = (37 * hash) + SEARCH_BUDGET_LOST_IMPRESSION_SHARE_FIELD_NUMBER;
@@ -3718,11 +3922,23 @@ private static final long serialVersionUID = 0L;
         averageCpm_ = null;
         averageCpmBuilder_ = null;
       }
+      if (averageCpvBuilder_ == null) {
+        averageCpv_ = null;
+      } else {
+        averageCpv_ = null;
+        averageCpvBuilder_ = null;
+      }
       if (averagePositionBuilder_ == null) {
         averagePosition_ = null;
       } else {
         averagePosition_ = null;
         averagePositionBuilder_ = null;
+      }
+      if (benchmarkCtrBuilder_ == null) {
+        benchmarkCtr_ = null;
+      } else {
+        benchmarkCtr_ = null;
+        benchmarkCtrBuilder_ = null;
       }
       if (bounceRateBuilder_ == null) {
         bounceRate_ = null;
@@ -3904,6 +4120,12 @@ private static final long serialVersionUID = 0L;
         relativeCtr_ = null;
         relativeCtrBuilder_ = null;
       }
+      if (searchAbsoluteTopImpressionShareBuilder_ == null) {
+        searchAbsoluteTopImpressionShare_ = null;
+      } else {
+        searchAbsoluteTopImpressionShare_ = null;
+        searchAbsoluteTopImpressionShareBuilder_ = null;
+      }
       if (searchBudgetLostImpressionShareBuilder_ == null) {
         searchBudgetLostImpressionShare_ = null;
       } else {
@@ -4048,10 +4270,20 @@ private static final long serialVersionUID = 0L;
       } else {
         result.averageCpm_ = averageCpmBuilder_.build();
       }
+      if (averageCpvBuilder_ == null) {
+        result.averageCpv_ = averageCpv_;
+      } else {
+        result.averageCpv_ = averageCpvBuilder_.build();
+      }
       if (averagePositionBuilder_ == null) {
         result.averagePosition_ = averagePosition_;
       } else {
         result.averagePosition_ = averagePositionBuilder_.build();
+      }
+      if (benchmarkCtrBuilder_ == null) {
+        result.benchmarkCtr_ = benchmarkCtr_;
+      } else {
+        result.benchmarkCtr_ = benchmarkCtrBuilder_.build();
       }
       if (bounceRateBuilder_ == null) {
         result.bounceRate_ = bounceRate_;
@@ -4203,6 +4435,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.relativeCtr_ = relativeCtrBuilder_.build();
       }
+      if (searchAbsoluteTopImpressionShareBuilder_ == null) {
+        result.searchAbsoluteTopImpressionShare_ = searchAbsoluteTopImpressionShare_;
+      } else {
+        result.searchAbsoluteTopImpressionShare_ = searchAbsoluteTopImpressionShareBuilder_.build();
+      }
       if (searchBudgetLostImpressionShareBuilder_ == null) {
         result.searchBudgetLostImpressionShare_ = searchBudgetLostImpressionShare_;
       } else {
@@ -4340,8 +4577,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasAverageCpm()) {
         mergeAverageCpm(other.getAverageCpm());
       }
+      if (other.hasAverageCpv()) {
+        mergeAverageCpv(other.getAverageCpv());
+      }
       if (other.hasAveragePosition()) {
         mergeAveragePosition(other.getAveragePosition());
+      }
+      if (other.hasBenchmarkCtr()) {
+        mergeBenchmarkCtr(other.getBenchmarkCtr());
       }
       if (other.hasBounceRate()) {
         mergeBounceRate(other.getBounceRate());
@@ -4432,6 +4675,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasRelativeCtr()) {
         mergeRelativeCtr(other.getRelativeCtr());
+      }
+      if (other.hasSearchAbsoluteTopImpressionShare()) {
+        mergeSearchAbsoluteTopImpressionShare(other.getSearchAbsoluteTopImpressionShare());
       }
       if (other.hasSearchBudgetLostImpressionShare()) {
         mergeSearchBudgetLostImpressionShare(other.getSearchBudgetLostImpressionShare());
@@ -5779,6 +6025,177 @@ private static final long serialVersionUID = 0L;
       return averageCpmBuilder_;
     }
 
+    private com.google.protobuf.DoubleValue averageCpv_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averageCpvBuilder_;
+    /**
+     * <pre>
+     * The average amount you pay each time someone views your ad.
+     * The average CPV is defined by the total cost of all ad views divided by
+     * the number of views.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+     */
+    public boolean hasAverageCpv() {
+      return averageCpvBuilder_ != null || averageCpv_ != null;
+    }
+    /**
+     * <pre>
+     * The average amount you pay each time someone views your ad.
+     * The average CPV is defined by the total cost of all ad views divided by
+     * the number of views.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+     */
+    public com.google.protobuf.DoubleValue getAverageCpv() {
+      if (averageCpvBuilder_ == null) {
+        return averageCpv_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageCpv_;
+      } else {
+        return averageCpvBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The average amount you pay each time someone views your ad.
+     * The average CPV is defined by the total cost of all ad views divided by
+     * the number of views.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+     */
+    public Builder setAverageCpv(com.google.protobuf.DoubleValue value) {
+      if (averageCpvBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        averageCpv_ = value;
+        onChanged();
+      } else {
+        averageCpvBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The average amount you pay each time someone views your ad.
+     * The average CPV is defined by the total cost of all ad views divided by
+     * the number of views.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+     */
+    public Builder setAverageCpv(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (averageCpvBuilder_ == null) {
+        averageCpv_ = builderForValue.build();
+        onChanged();
+      } else {
+        averageCpvBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The average amount you pay each time someone views your ad.
+     * The average CPV is defined by the total cost of all ad views divided by
+     * the number of views.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+     */
+    public Builder mergeAverageCpv(com.google.protobuf.DoubleValue value) {
+      if (averageCpvBuilder_ == null) {
+        if (averageCpv_ != null) {
+          averageCpv_ =
+            com.google.protobuf.DoubleValue.newBuilder(averageCpv_).mergeFrom(value).buildPartial();
+        } else {
+          averageCpv_ = value;
+        }
+        onChanged();
+      } else {
+        averageCpvBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The average amount you pay each time someone views your ad.
+     * The average CPV is defined by the total cost of all ad views divided by
+     * the number of views.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+     */
+    public Builder clearAverageCpv() {
+      if (averageCpvBuilder_ == null) {
+        averageCpv_ = null;
+        onChanged();
+      } else {
+        averageCpv_ = null;
+        averageCpvBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The average amount you pay each time someone views your ad.
+     * The average CPV is defined by the total cost of all ad views divided by
+     * the number of views.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAverageCpvBuilder() {
+      
+      onChanged();
+      return getAverageCpvFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The average amount you pay each time someone views your ad.
+     * The average CPV is defined by the total cost of all ad views divided by
+     * the number of views.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAverageCpvOrBuilder() {
+      if (averageCpvBuilder_ != null) {
+        return averageCpvBuilder_.getMessageOrBuilder();
+      } else {
+        return averageCpv_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : averageCpv_;
+      }
+    }
+    /**
+     * <pre>
+     * The average amount you pay each time someone views your ad.
+     * The average CPV is defined by the total cost of all ad views divided by
+     * the number of views.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAverageCpvFieldBuilder() {
+      if (averageCpvBuilder_ == null) {
+        averageCpvBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAverageCpv(),
+                getParentForChildren(),
+                isClean());
+        averageCpv_ = null;
+      }
+      return averageCpvBuilder_;
+    }
+
     private com.google.protobuf.DoubleValue averagePosition_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averagePositionBuilder_;
@@ -5930,6 +6347,168 @@ private static final long serialVersionUID = 0L;
         averagePosition_ = null;
       }
       return averagePositionBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue benchmarkCtr_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> benchmarkCtrBuilder_;
+    /**
+     * <pre>
+     * An indication on how other advertisers' Shopping ads for similar products
+     * are performing based on how often people who see their ad click on it.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+     */
+    public boolean hasBenchmarkCtr() {
+      return benchmarkCtrBuilder_ != null || benchmarkCtr_ != null;
+    }
+    /**
+     * <pre>
+     * An indication on how other advertisers' Shopping ads for similar products
+     * are performing based on how often people who see their ad click on it.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+     */
+    public com.google.protobuf.DoubleValue getBenchmarkCtr() {
+      if (benchmarkCtrBuilder_ == null) {
+        return benchmarkCtr_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : benchmarkCtr_;
+      } else {
+        return benchmarkCtrBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * An indication on how other advertisers' Shopping ads for similar products
+     * are performing based on how often people who see their ad click on it.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+     */
+    public Builder setBenchmarkCtr(com.google.protobuf.DoubleValue value) {
+      if (benchmarkCtrBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        benchmarkCtr_ = value;
+        onChanged();
+      } else {
+        benchmarkCtrBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * An indication on how other advertisers' Shopping ads for similar products
+     * are performing based on how often people who see their ad click on it.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+     */
+    public Builder setBenchmarkCtr(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (benchmarkCtrBuilder_ == null) {
+        benchmarkCtr_ = builderForValue.build();
+        onChanged();
+      } else {
+        benchmarkCtrBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * An indication on how other advertisers' Shopping ads for similar products
+     * are performing based on how often people who see their ad click on it.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+     */
+    public Builder mergeBenchmarkCtr(com.google.protobuf.DoubleValue value) {
+      if (benchmarkCtrBuilder_ == null) {
+        if (benchmarkCtr_ != null) {
+          benchmarkCtr_ =
+            com.google.protobuf.DoubleValue.newBuilder(benchmarkCtr_).mergeFrom(value).buildPartial();
+        } else {
+          benchmarkCtr_ = value;
+        }
+        onChanged();
+      } else {
+        benchmarkCtrBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * An indication on how other advertisers' Shopping ads for similar products
+     * are performing based on how often people who see their ad click on it.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+     */
+    public Builder clearBenchmarkCtr() {
+      if (benchmarkCtrBuilder_ == null) {
+        benchmarkCtr_ = null;
+        onChanged();
+      } else {
+        benchmarkCtr_ = null;
+        benchmarkCtrBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * An indication on how other advertisers' Shopping ads for similar products
+     * are performing based on how often people who see their ad click on it.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getBenchmarkCtrBuilder() {
+      
+      onChanged();
+      return getBenchmarkCtrFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * An indication on how other advertisers' Shopping ads for similar products
+     * are performing based on how often people who see their ad click on it.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getBenchmarkCtrOrBuilder() {
+      if (benchmarkCtrBuilder_ != null) {
+        return benchmarkCtrBuilder_.getMessageOrBuilder();
+      } else {
+        return benchmarkCtr_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : benchmarkCtr_;
+      }
+    }
+    /**
+     * <pre>
+     * An indication on how other advertisers' Shopping ads for similar products
+     * are performing based on how often people who see their ad click on it.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getBenchmarkCtrFieldBuilder() {
+      if (benchmarkCtrBuilder_ == null) {
+        benchmarkCtrBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getBenchmarkCtr(),
+                getParentForChildren(),
+                isClean());
+        benchmarkCtr_ = null;
+      }
+      return benchmarkCtrBuilder_;
     }
 
     private com.google.protobuf.DoubleValue bounceRate_ = null;
@@ -10835,6 +11414,186 @@ private static final long serialVersionUID = 0L;
         relativeCtr_ = null;
       }
       return relativeCtrBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue searchAbsoluteTopImpressionShare_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchAbsoluteTopImpressionShareBuilder_;
+    /**
+     * <pre>
+     * The percentage of the customer's Shopping ad impressions that are shown in
+     * the most prominent Shopping position. See
+     * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+     * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+     */
+    public boolean hasSearchAbsoluteTopImpressionShare() {
+      return searchAbsoluteTopImpressionShareBuilder_ != null || searchAbsoluteTopImpressionShare_ != null;
+    }
+    /**
+     * <pre>
+     * The percentage of the customer's Shopping ad impressions that are shown in
+     * the most prominent Shopping position. See
+     * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+     * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+     */
+    public com.google.protobuf.DoubleValue getSearchAbsoluteTopImpressionShare() {
+      if (searchAbsoluteTopImpressionShareBuilder_ == null) {
+        return searchAbsoluteTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchAbsoluteTopImpressionShare_;
+      } else {
+        return searchAbsoluteTopImpressionShareBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The percentage of the customer's Shopping ad impressions that are shown in
+     * the most prominent Shopping position. See
+     * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+     * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+     */
+    public Builder setSearchAbsoluteTopImpressionShare(com.google.protobuf.DoubleValue value) {
+      if (searchAbsoluteTopImpressionShareBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        searchAbsoluteTopImpressionShare_ = value;
+        onChanged();
+      } else {
+        searchAbsoluteTopImpressionShareBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of the customer's Shopping ad impressions that are shown in
+     * the most prominent Shopping position. See
+     * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+     * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+     */
+    public Builder setSearchAbsoluteTopImpressionShare(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (searchAbsoluteTopImpressionShareBuilder_ == null) {
+        searchAbsoluteTopImpressionShare_ = builderForValue.build();
+        onChanged();
+      } else {
+        searchAbsoluteTopImpressionShareBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of the customer's Shopping ad impressions that are shown in
+     * the most prominent Shopping position. See
+     * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+     * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+     */
+    public Builder mergeSearchAbsoluteTopImpressionShare(com.google.protobuf.DoubleValue value) {
+      if (searchAbsoluteTopImpressionShareBuilder_ == null) {
+        if (searchAbsoluteTopImpressionShare_ != null) {
+          searchAbsoluteTopImpressionShare_ =
+            com.google.protobuf.DoubleValue.newBuilder(searchAbsoluteTopImpressionShare_).mergeFrom(value).buildPartial();
+        } else {
+          searchAbsoluteTopImpressionShare_ = value;
+        }
+        onChanged();
+      } else {
+        searchAbsoluteTopImpressionShareBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of the customer's Shopping ad impressions that are shown in
+     * the most prominent Shopping position. See
+     * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+     * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+     */
+    public Builder clearSearchAbsoluteTopImpressionShare() {
+      if (searchAbsoluteTopImpressionShareBuilder_ == null) {
+        searchAbsoluteTopImpressionShare_ = null;
+        onChanged();
+      } else {
+        searchAbsoluteTopImpressionShare_ = null;
+        searchAbsoluteTopImpressionShareBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of the customer's Shopping ad impressions that are shown in
+     * the most prominent Shopping position. See
+     * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+     * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getSearchAbsoluteTopImpressionShareBuilder() {
+      
+      onChanged();
+      return getSearchAbsoluteTopImpressionShareFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The percentage of the customer's Shopping ad impressions that are shown in
+     * the most prominent Shopping position. See
+     * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+     * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getSearchAbsoluteTopImpressionShareOrBuilder() {
+      if (searchAbsoluteTopImpressionShareBuilder_ != null) {
+        return searchAbsoluteTopImpressionShareBuilder_.getMessageOrBuilder();
+      } else {
+        return searchAbsoluteTopImpressionShare_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : searchAbsoluteTopImpressionShare_;
+      }
+    }
+    /**
+     * <pre>
+     * The percentage of the customer's Shopping ad impressions that are shown in
+     * the most prominent Shopping position. See
+     * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
+     * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getSearchAbsoluteTopImpressionShareFieldBuilder() {
+      if (searchAbsoluteTopImpressionShareBuilder_ == null) {
+        searchAbsoluteTopImpressionShareBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getSearchAbsoluteTopImpressionShare(),
+                getParentForChildren(),
+                isClean());
+        searchAbsoluteTopImpressionShare_ = null;
+      }
+      return searchAbsoluteTopImpressionShareBuilder_;
     }
 
     private com.google.protobuf.DoubleValue searchBudgetLostImpressionShare_ = null;

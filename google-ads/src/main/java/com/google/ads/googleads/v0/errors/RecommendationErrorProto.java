@@ -30,20 +30,23 @@ public final class RecommendationErrorProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v0/errors/recomme" +
       "ndation_error.proto\022\036google.ads.googlead" +
-      "s.v0.errors\"\255\002\n\027RecommendationErrorEnum\"" +
-      "\221\002\n\023RecommendationError\022\017\n\013UNSPECIFIED\020\000" +
+      "s.v0.errors\"\277\003\n\027RecommendationErrorEnum\"" +
+      "\243\003\n\023RecommendationError\022\017\n\013UNSPECIFIED\020\000" +
       "\022\013\n\007UNKNOWN\020\001\022\033\n\027BUDGET_AMOUNT_TOO_SMALL" +
       "\020\002\022\033\n\027BUDGET_AMOUNT_TOO_LARGE\020\003\022\031\n\025INVAL" +
       "ID_BUDGET_AMOUNT\020\004\022\020\n\014POLICY_ERROR\020\005\022\026\n\022" +
       "INVALID_BID_AMOUNT\020\006\022\031\n\025ADGROUP_KEYWORD_" +
       "LIMIT\020\007\022\"\n\036RECOMMENDATION_ALREADY_APPLIE" +
-      "D\020\010\022\036\n\032RECOMMENDATION_INVALIDATED\020\tB\316\001\n\"" +
-      "com.google.ads.googleads.v0.errorsB\030Reco" +
-      "mmendationErrorProtoP\001ZDgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v0/e" +
-      "rrors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAd" +
-      "s.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Er" +
-      "rorsb\006proto3"
+      "D\020\010\022\036\n\032RECOMMENDATION_INVALIDATED\020\t\022\027\n\023T" +
+      "OO_MANY_OPERATIONS\020\n\022\021\n\rNO_OPERATIONS\020\013\022" +
+      "!\n\035DIFFERENT_TYPES_NOT_SUPPORTED\020\014\022\033\n\027DU" +
+      "PLICATE_RESOURCE_NAME\020\r\022$\n RECOMMENDATIO" +
+      "N_ALREADY_DISMISSED\020\016B\316\001\n\"com.google.ads" +
+      ".googleads.v0.errorsB\030RecommendationErro" +
+      "rProtoP\001ZDgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v0/errors;errors\242\002" +
+      "\003GAA\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036" +
+      "Google\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -47,13 +47,13 @@ import javax.annotation.Generated;
  *
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
  * build() is called, the tree of builders is called to create the complete settings object. For
- * example, to set the total timeout of search to 30 seconds:
+ * example, to set the total timeout of mutate to 30 seconds:
  *
  * <pre>
  * <code>
  * GoogleAdsServiceSettings.Builder googleAdsServiceSettingsBuilder =
  *     GoogleAdsServiceSettings.newBuilder();
- * googleAdsServiceSettingsBuilder.searchSettings().getRetrySettings().toBuilder()
+ * googleAdsServiceSettingsBuilder.mutateSettings().getRetrySettings().toBuilder()
  *     .setTotalTimeout(Duration.ofSeconds(30));
  * GoogleAdsServiceSettings googleAdsServiceSettings = googleAdsServiceSettingsBuilder.build();
  * </code>
@@ -66,6 +66,11 @@ public class GoogleAdsServiceSettings extends ClientSettings<GoogleAdsServiceSet
   public PagedCallSettings<SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>
       searchSettings() {
     return ((GoogleAdsServiceStubSettings) getStubSettings()).searchSettings();
+  }
+
+  /** Returns the object with the settings used for calls to mutate. */
+  public UnaryCallSettings<MutateGoogleAdsRequest, MutateGoogleAdsResponse> mutateSettings() {
+    return ((GoogleAdsServiceStubSettings) getStubSettings()).mutateSettings();
   }
 
   public static final GoogleAdsServiceSettings create(GoogleAdsServiceStubSettings stub)
@@ -170,6 +175,12 @@ public class GoogleAdsServiceSettings extends ClientSettings<GoogleAdsServiceSet
             SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>
         searchSettings() {
       return getStubSettingsBuilder().searchSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to mutate. */
+    public UnaryCallSettings.Builder<MutateGoogleAdsRequest, MutateGoogleAdsResponse>
+        mutateSettings() {
+      return getStubSettingsBuilder().mutateSettings();
     }
 
     @Override

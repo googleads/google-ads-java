@@ -88,6 +88,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 42: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (countryCode_ != null) {
+              subBuilder = countryCode_.toBuilder();
+            }
+            countryCode_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(countryCode_);
+              countryCode_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -2001,6 +2014,39 @@ private static final long serialVersionUID = 0L;
     return getLocale();
   }
 
+  public static final int COUNTRY_CODE_FIELD_NUMBER = 5;
+  private com.google.protobuf.StringValue countryCode_;
+  /**
+   * <pre>
+   * Returned geo targets are restricted to this country code.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue country_code = 5;</code>
+   */
+  public boolean hasCountryCode() {
+    return countryCode_ != null;
+  }
+  /**
+   * <pre>
+   * Returned geo targets are restricted to this country code.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue country_code = 5;</code>
+   */
+  public com.google.protobuf.StringValue getCountryCode() {
+    return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
+  }
+  /**
+   * <pre>
+   * Returned geo targets are restricted to this country code.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue country_code = 5;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
+    return getCountryCode();
+  }
+
   public static final int LOCATION_NAMES_FIELD_NUMBER = 1;
   /**
    * <pre>
@@ -2100,6 +2146,9 @@ private static final long serialVersionUID = 0L;
     if (locale_ != null) {
       output.writeMessage(3, getLocale());
     }
+    if (countryCode_ != null) {
+      output.writeMessage(5, getCountryCode());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2121,6 +2170,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getLocale());
     }
+    if (countryCode_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getCountryCode());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2141,6 +2194,11 @@ private static final long serialVersionUID = 0L;
     if (hasLocale()) {
       result = result && getLocale()
           .equals(other.getLocale());
+    }
+    result = result && (hasCountryCode() == other.hasCountryCode());
+    if (hasCountryCode()) {
+      result = result && getCountryCode()
+          .equals(other.getCountryCode());
     }
     result = result && getQueryCase().equals(
         other.getQueryCase());
@@ -2171,6 +2229,10 @@ private static final long serialVersionUID = 0L;
     if (hasLocale()) {
       hash = (37 * hash) + LOCALE_FIELD_NUMBER;
       hash = (53 * hash) + getLocale().hashCode();
+    }
+    if (hasCountryCode()) {
+      hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCountryCode().hashCode();
     }
     switch (queryCase_) {
       case 1:
@@ -2328,6 +2390,12 @@ private static final long serialVersionUID = 0L;
         locale_ = null;
         localeBuilder_ = null;
       }
+      if (countryCodeBuilder_ == null) {
+        countryCode_ = null;
+      } else {
+        countryCode_ = null;
+        countryCodeBuilder_ = null;
+      }
       queryCase_ = 0;
       query_ = null;
       return this;
@@ -2360,6 +2428,11 @@ private static final long serialVersionUID = 0L;
         result.locale_ = locale_;
       } else {
         result.locale_ = localeBuilder_.build();
+      }
+      if (countryCodeBuilder_ == null) {
+        result.countryCode_ = countryCode_;
+      } else {
+        result.countryCode_ = countryCodeBuilder_.build();
       }
       if (queryCase_ == 1) {
         if (locationNamesBuilder_ == null) {
@@ -2426,6 +2499,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v0.services.SuggestGeoTargetConstantsRequest.getDefaultInstance()) return this;
       if (other.hasLocale()) {
         mergeLocale(other.getLocale());
+      }
+      if (other.hasCountryCode()) {
+        mergeCountryCode(other.getCountryCode());
       }
       switch (other.getQueryCase()) {
         case LOCATION_NAMES: {
@@ -2653,6 +2729,159 @@ private static final long serialVersionUID = 0L;
         locale_ = null;
       }
       return localeBuilder_;
+    }
+
+    private com.google.protobuf.StringValue countryCode_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> countryCodeBuilder_;
+    /**
+     * <pre>
+     * Returned geo targets are restricted to this country code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     */
+    public boolean hasCountryCode() {
+      return countryCodeBuilder_ != null || countryCode_ != null;
+    }
+    /**
+     * <pre>
+     * Returned geo targets are restricted to this country code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     */
+    public com.google.protobuf.StringValue getCountryCode() {
+      if (countryCodeBuilder_ == null) {
+        return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
+      } else {
+        return countryCodeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Returned geo targets are restricted to this country code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     */
+    public Builder setCountryCode(com.google.protobuf.StringValue value) {
+      if (countryCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        countryCode_ = value;
+        onChanged();
+      } else {
+        countryCodeBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Returned geo targets are restricted to this country code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     */
+    public Builder setCountryCode(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (countryCodeBuilder_ == null) {
+        countryCode_ = builderForValue.build();
+        onChanged();
+      } else {
+        countryCodeBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Returned geo targets are restricted to this country code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     */
+    public Builder mergeCountryCode(com.google.protobuf.StringValue value) {
+      if (countryCodeBuilder_ == null) {
+        if (countryCode_ != null) {
+          countryCode_ =
+            com.google.protobuf.StringValue.newBuilder(countryCode_).mergeFrom(value).buildPartial();
+        } else {
+          countryCode_ = value;
+        }
+        onChanged();
+      } else {
+        countryCodeBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Returned geo targets are restricted to this country code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     */
+    public Builder clearCountryCode() {
+      if (countryCodeBuilder_ == null) {
+        countryCode_ = null;
+        onChanged();
+      } else {
+        countryCode_ = null;
+        countryCodeBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Returned geo targets are restricted to this country code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getCountryCodeBuilder() {
+      
+      onChanged();
+      return getCountryCodeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Returned geo targets are restricted to this country code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
+      if (countryCodeBuilder_ != null) {
+        return countryCodeBuilder_.getMessageOrBuilder();
+      } else {
+        return countryCode_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
+      }
+    }
+    /**
+     * <pre>
+     * Returned geo targets are restricted to this country code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getCountryCodeFieldBuilder() {
+      if (countryCodeBuilder_ == null) {
+        countryCodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getCountryCode(),
+                getParentForChildren(),
+                isClean());
+        countryCode_ = null;
+      }
+      return countryCodeBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

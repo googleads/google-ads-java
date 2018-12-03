@@ -76,7 +76,6 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * The budget targeted by this recommendation. This will be set only when
    * the recommendation affects a single campaign budget.
-   * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET
    * </pre>
@@ -88,7 +87,6 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * The budget targeted by this recommendation. This will be set only when
    * the recommendation affects a single campaign budget.
-   * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET
    * </pre>
@@ -100,7 +98,6 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * The budget targeted by this recommendation. This will be set only when
    * the recommendation affects a single campaign budget.
-   * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET
    * </pre>
@@ -113,7 +110,6 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * The campaign targeted by this recommendation. This will be set only when
    * the recommendation affects a single campaign.
-   * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
    * ENHANCED_CPC_OPT_IN, KEYWORD, MAXIMIZE_CLICKS_OPT_IN,
    * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION, SEARCH_PARTNERS_OPT_IN,
@@ -127,7 +123,6 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * The campaign targeted by this recommendation. This will be set only when
    * the recommendation affects a single campaign.
-   * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
    * ENHANCED_CPC_OPT_IN, KEYWORD, MAXIMIZE_CLICKS_OPT_IN,
    * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION, SEARCH_PARTNERS_OPT_IN,
@@ -141,7 +136,6 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * The campaign targeted by this recommendation. This will be set only when
    * the recommendation affects a single campaign.
-   * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
    * ENHANCED_CPC_OPT_IN, KEYWORD, MAXIMIZE_CLICKS_OPT_IN,
    * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION, SEARCH_PARTNERS_OPT_IN,
@@ -156,7 +150,6 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * The ad group targeted by this recommendation. This will be set only when
    * the recommendation affects a single ad group.
-   * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, TEXT_AD
    * </pre>
@@ -168,7 +161,6 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * The ad group targeted by this recommendation. This will be set only when
    * the recommendation affects a single ad group.
-   * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, TEXT_AD
    * </pre>
@@ -180,7 +172,6 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * The ad group targeted by this recommendation. This will be set only when
    * the recommendation affects a single ad group.
-   * This field must not be used in WHERE clauses.
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, TEXT_AD
    * </pre>

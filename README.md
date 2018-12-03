@@ -79,6 +79,10 @@ This project hosts the Java client library for the Google Ads API.
             api.adwords.refreshToken   --> api.googleads.refreshToken
             api.adwords.developerToken --> api.googleads.developerToken
 
+        If you are authenticating as a manager account, additionally you must specify:
+
+            api.googleads.loginCustomerId --> Manager account ID (with hyphens removed).
+
     **If you're accessing the Google Ads API using your own credentials...**
 
     *   Follow the instructions at
@@ -175,10 +179,27 @@ To issue requests via the Google Ads API, you first need to create a
 For convenience, you can store the required settings in a properties file with
 the following format:
 
+    # Credential for accessing Google's OAuth servers.
+    # Provided by https://console.developers.google.com.
     api.googleads.clientId=INSERT_CLIENT_ID_HERE
+
+    # Credential for accessing Google's OAuth servers.
+    # Provided by https://console.developers.google.com.
     api.googleads.clientSecret=INSERT_CLIENT_SECRET_HERE
+
+    # Renewable OAuth credential associated with 1 or more Google Ads accounts.
     api.googleads.refreshToken=INSERT_REFRESH_TOKEN_HERE
+
+    # Token which provides access to the Google Ads API in general. It does not grant access to any
+    # particular ad account (OAuth is used for this purpose).
     api.googleads.developerToken=INSERT_DEVELOPER_TOKEN_HERE
+
+    # Required for manager accounts only: Specify the login customer ID used to
+    # authenticate API calls. This will be the customer ID of the authenticated
+    # manager account. You can also specify this later in code if your application
+    # uses multiple manager account + OAuth pairs.
+    #
+    # api.googleads.loginCustomerId=INSERT_LOGIN_CUSTOEMR_ID_HERE
 
 This configuration file format is similar to the format used in the AdWords
 API's
@@ -221,6 +242,7 @@ GoogleAdsClient googleAdsClient =
     GoogleAdsClient.newBuilder()
         .setCredentials(credentials)
         .setDeveloperToken("INSERT_DEVELOPER_TOKEN_HERE")
+        .setLoginCustomerId("INSERT_LOGIN_CUSTOMER_ID_HERE") // Manager accounts only.
         .build();
 ```
 

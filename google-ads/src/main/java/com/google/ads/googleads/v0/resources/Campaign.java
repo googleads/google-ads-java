@@ -28,6 +28,7 @@ private static final long serialVersionUID = 0L;
     advertisingChannelSubType_ = 0;
     urlCustomParameters_ = java.util.Collections.emptyList();
     biddingStrategyType_ = 0;
+    frequencyCaps_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -401,6 +402,28 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 314: {
+            com.google.ads.googleads.v0.common.RealTimeBiddingSetting.Builder subBuilder = null;
+            if (realTimeBiddingSetting_ != null) {
+              subBuilder = realTimeBiddingSetting_.toBuilder();
+            }
+            realTimeBiddingSetting_ = input.readMessage(com.google.ads.googleads.v0.common.RealTimeBiddingSetting.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(realTimeBiddingSetting_);
+              realTimeBiddingSetting_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 322: {
+            if (!((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+              frequencyCaps_ = new java.util.ArrayList<com.google.ads.googleads.v0.common.FrequencyCapEntry>();
+              mutable_bitField0_ |= 0x00200000;
+            }
+            frequencyCaps_.add(
+                input.readMessage(com.google.ads.googleads.v0.common.FrequencyCapEntry.parser(), extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -418,6 +441,9 @@ private static final long serialVersionUID = 0L;
     } finally {
       if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
+      }
+      if (((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+        frequencyCaps_ = java.util.Collections.unmodifiableList(frequencyCaps_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -6296,6 +6322,42 @@ private static final long serialVersionUID = 0L;
     return urlCustomParameters_.get(index);
   }
 
+  public static final int REAL_TIME_BIDDING_SETTING_FIELD_NUMBER = 39;
+  private com.google.ads.googleads.v0.common.RealTimeBiddingSetting realTimeBiddingSetting_;
+  /**
+   * <pre>
+   * Settings for Real-Time Bidding, a feature only available for campaigns
+   * targeting the Ad Exchange network.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+   */
+  public boolean hasRealTimeBiddingSetting() {
+    return realTimeBiddingSetting_ != null;
+  }
+  /**
+   * <pre>
+   * Settings for Real-Time Bidding, a feature only available for campaigns
+   * targeting the Ad Exchange network.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+   */
+  public com.google.ads.googleads.v0.common.RealTimeBiddingSetting getRealTimeBiddingSetting() {
+    return realTimeBiddingSetting_ == null ? com.google.ads.googleads.v0.common.RealTimeBiddingSetting.getDefaultInstance() : realTimeBiddingSetting_;
+  }
+  /**
+   * <pre>
+   * Settings for Real-Time Bidding, a feature only available for campaigns
+   * targeting the Ad Exchange network.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+   */
+  public com.google.ads.googleads.v0.common.RealTimeBiddingSettingOrBuilder getRealTimeBiddingSettingOrBuilder() {
+    return getRealTimeBiddingSetting();
+  }
+
   public static final int NETWORK_SETTINGS_FIELD_NUMBER = 14;
   private com.google.ads.googleads.v0.resources.Campaign.NetworkSettings networkSettings_;
   /**
@@ -6635,11 +6697,65 @@ private static final long serialVersionUID = 0L;
     return getFinalUrlSuffix();
   }
 
+  public static final int FREQUENCY_CAPS_FIELD_NUMBER = 40;
+  private java.util.List<com.google.ads.googleads.v0.common.FrequencyCapEntry> frequencyCaps_;
+  /**
+   * <pre>
+   * A list that limits how often each user will see this campaign's ads.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+   */
+  public java.util.List<com.google.ads.googleads.v0.common.FrequencyCapEntry> getFrequencyCapsList() {
+    return frequencyCaps_;
+  }
+  /**
+   * <pre>
+   * A list that limits how often each user will see this campaign's ads.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+   */
+  public java.util.List<? extends com.google.ads.googleads.v0.common.FrequencyCapEntryOrBuilder> 
+      getFrequencyCapsOrBuilderList() {
+    return frequencyCaps_;
+  }
+  /**
+   * <pre>
+   * A list that limits how often each user will see this campaign's ads.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+   */
+  public int getFrequencyCapsCount() {
+    return frequencyCaps_.size();
+  }
+  /**
+   * <pre>
+   * A list that limits how often each user will see this campaign's ads.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+   */
+  public com.google.ads.googleads.v0.common.FrequencyCapEntry getFrequencyCaps(int index) {
+    return frequencyCaps_.get(index);
+  }
+  /**
+   * <pre>
+   * A list that limits how often each user will see this campaign's ads.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+   */
+  public com.google.ads.googleads.v0.common.FrequencyCapEntryOrBuilder getFrequencyCapsOrBuilder(
+      int index) {
+    return frequencyCaps_.get(index);
+  }
+
   public static final int BIDDING_STRATEGY_FIELD_NUMBER = 23;
   /**
    * <pre>
    * Portfolio bidding strategy used by campaign.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -6650,7 +6766,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Portfolio bidding strategy used by campaign.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -6664,7 +6779,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Portfolio bidding strategy used by campaign.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -7152,6 +7266,12 @@ private static final long serialVersionUID = 0L;
     if (finalUrlSuffix_ != null) {
       output.writeMessage(38, getFinalUrlSuffix());
     }
+    if (realTimeBiddingSetting_ != null) {
+      output.writeMessage(39, getRealTimeBiddingSetting());
+    }
+    for (int i = 0; i < frequencyCaps_.size(); i++) {
+      output.writeMessage(40, frequencyCaps_.get(i));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -7280,6 +7400,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(38, getFinalUrlSuffix());
     }
+    if (realTimeBiddingSetting_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(39, getRealTimeBiddingSetting());
+    }
+    for (int i = 0; i < frequencyCaps_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(40, frequencyCaps_.get(i));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -7320,6 +7448,11 @@ private static final long serialVersionUID = 0L;
     }
     result = result && getUrlCustomParametersList()
         .equals(other.getUrlCustomParametersList());
+    result = result && (hasRealTimeBiddingSetting() == other.hasRealTimeBiddingSetting());
+    if (hasRealTimeBiddingSetting()) {
+      result = result && getRealTimeBiddingSetting()
+          .equals(other.getRealTimeBiddingSetting());
+    }
     result = result && (hasNetworkSettings() == other.hasNetworkSettings());
     if (hasNetworkSettings()) {
       result = result && getNetworkSettings()
@@ -7366,6 +7499,8 @@ private static final long serialVersionUID = 0L;
       result = result && getFinalUrlSuffix()
           .equals(other.getFinalUrlSuffix());
     }
+    result = result && getFrequencyCapsList()
+        .equals(other.getFrequencyCapsList());
     result = result && getCampaignBiddingStrategyCase().equals(
         other.getCampaignBiddingStrategyCase());
     if (!result) return false;
@@ -7452,6 +7587,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + URL_CUSTOM_PARAMETERS_FIELD_NUMBER;
       hash = (53 * hash) + getUrlCustomParametersList().hashCode();
     }
+    if (hasRealTimeBiddingSetting()) {
+      hash = (37 * hash) + REAL_TIME_BIDDING_SETTING_FIELD_NUMBER;
+      hash = (53 * hash) + getRealTimeBiddingSetting().hashCode();
+    }
     if (hasNetworkSettings()) {
       hash = (37 * hash) + NETWORK_SETTINGS_FIELD_NUMBER;
       hash = (53 * hash) + getNetworkSettings().hashCode();
@@ -7489,6 +7628,10 @@ private static final long serialVersionUID = 0L;
     if (hasFinalUrlSuffix()) {
       hash = (37 * hash) + FINAL_URL_SUFFIX_FIELD_NUMBER;
       hash = (53 * hash) + getFinalUrlSuffix().hashCode();
+    }
+    if (getFrequencyCapsCount() > 0) {
+      hash = (37 * hash) + FREQUENCY_CAPS_FIELD_NUMBER;
+      hash = (53 * hash) + getFrequencyCapsList().hashCode();
     }
     switch (campaignBiddingStrategyCase_) {
       case 23:
@@ -7667,6 +7810,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getUrlCustomParametersFieldBuilder();
+        getFrequencyCapsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -7707,6 +7851,12 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000200);
       } else {
         urlCustomParametersBuilder_.clear();
+      }
+      if (realTimeBiddingSettingBuilder_ == null) {
+        realTimeBiddingSetting_ = null;
+      } else {
+        realTimeBiddingSetting_ = null;
+        realTimeBiddingSettingBuilder_ = null;
       }
       if (networkSettingsBuilder_ == null) {
         networkSettings_ = null;
@@ -7763,6 +7913,12 @@ private static final long serialVersionUID = 0L;
       } else {
         finalUrlSuffix_ = null;
         finalUrlSuffixBuilder_ = null;
+      }
+      if (frequencyCapsBuilder_ == null) {
+        frequencyCaps_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00200000);
+      } else {
+        frequencyCapsBuilder_.clear();
       }
       campaignBiddingStrategyCase_ = 0;
       campaignBiddingStrategy_ = null;
@@ -7824,6 +7980,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.urlCustomParameters_ = urlCustomParametersBuilder_.build();
       }
+      if (realTimeBiddingSettingBuilder_ == null) {
+        result.realTimeBiddingSetting_ = realTimeBiddingSetting_;
+      } else {
+        result.realTimeBiddingSetting_ = realTimeBiddingSettingBuilder_.build();
+      }
       if (networkSettingsBuilder_ == null) {
         result.networkSettings_ = networkSettings_;
       } else {
@@ -7869,6 +8030,15 @@ private static final long serialVersionUID = 0L;
         result.finalUrlSuffix_ = finalUrlSuffix_;
       } else {
         result.finalUrlSuffix_ = finalUrlSuffixBuilder_.build();
+      }
+      if (frequencyCapsBuilder_ == null) {
+        if (((bitField0_ & 0x00200000) == 0x00200000)) {
+          frequencyCaps_ = java.util.Collections.unmodifiableList(frequencyCaps_);
+          bitField0_ = (bitField0_ & ~0x00200000);
+        }
+        result.frequencyCaps_ = frequencyCaps_;
+      } else {
+        result.frequencyCaps_ = frequencyCapsBuilder_.build();
       }
       if (campaignBiddingStrategyCase_ == 23) {
         if (biddingStrategyBuilder_ == null) {
@@ -8044,6 +8214,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasRealTimeBiddingSetting()) {
+        mergeRealTimeBiddingSetting(other.getRealTimeBiddingSetting());
+      }
       if (other.hasNetworkSettings()) {
         mergeNetworkSettings(other.getNetworkSettings());
       }
@@ -8073,6 +8246,32 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasFinalUrlSuffix()) {
         mergeFinalUrlSuffix(other.getFinalUrlSuffix());
+      }
+      if (frequencyCapsBuilder_ == null) {
+        if (!other.frequencyCaps_.isEmpty()) {
+          if (frequencyCaps_.isEmpty()) {
+            frequencyCaps_ = other.frequencyCaps_;
+            bitField0_ = (bitField0_ & ~0x00200000);
+          } else {
+            ensureFrequencyCapsIsMutable();
+            frequencyCaps_.addAll(other.frequencyCaps_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.frequencyCaps_.isEmpty()) {
+          if (frequencyCapsBuilder_.isEmpty()) {
+            frequencyCapsBuilder_.dispose();
+            frequencyCapsBuilder_ = null;
+            frequencyCaps_ = other.frequencyCaps_;
+            bitField0_ = (bitField0_ & ~0x00200000);
+            frequencyCapsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFrequencyCapsFieldBuilder() : null;
+          } else {
+            frequencyCapsBuilder_.addAllMessages(other.frequencyCaps_);
+          }
+        }
       }
       switch (other.getCampaignBiddingStrategyCase()) {
         case BIDDING_STRATEGY: {
@@ -9456,6 +9655,168 @@ private static final long serialVersionUID = 0L;
         urlCustomParameters_ = null;
       }
       return urlCustomParametersBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.common.RealTimeBiddingSetting realTimeBiddingSetting_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.RealTimeBiddingSetting, com.google.ads.googleads.v0.common.RealTimeBiddingSetting.Builder, com.google.ads.googleads.v0.common.RealTimeBiddingSettingOrBuilder> realTimeBiddingSettingBuilder_;
+    /**
+     * <pre>
+     * Settings for Real-Time Bidding, a feature only available for campaigns
+     * targeting the Ad Exchange network.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+     */
+    public boolean hasRealTimeBiddingSetting() {
+      return realTimeBiddingSettingBuilder_ != null || realTimeBiddingSetting_ != null;
+    }
+    /**
+     * <pre>
+     * Settings for Real-Time Bidding, a feature only available for campaigns
+     * targeting the Ad Exchange network.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+     */
+    public com.google.ads.googleads.v0.common.RealTimeBiddingSetting getRealTimeBiddingSetting() {
+      if (realTimeBiddingSettingBuilder_ == null) {
+        return realTimeBiddingSetting_ == null ? com.google.ads.googleads.v0.common.RealTimeBiddingSetting.getDefaultInstance() : realTimeBiddingSetting_;
+      } else {
+        return realTimeBiddingSettingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Settings for Real-Time Bidding, a feature only available for campaigns
+     * targeting the Ad Exchange network.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+     */
+    public Builder setRealTimeBiddingSetting(com.google.ads.googleads.v0.common.RealTimeBiddingSetting value) {
+      if (realTimeBiddingSettingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        realTimeBiddingSetting_ = value;
+        onChanged();
+      } else {
+        realTimeBiddingSettingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for Real-Time Bidding, a feature only available for campaigns
+     * targeting the Ad Exchange network.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+     */
+    public Builder setRealTimeBiddingSetting(
+        com.google.ads.googleads.v0.common.RealTimeBiddingSetting.Builder builderForValue) {
+      if (realTimeBiddingSettingBuilder_ == null) {
+        realTimeBiddingSetting_ = builderForValue.build();
+        onChanged();
+      } else {
+        realTimeBiddingSettingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for Real-Time Bidding, a feature only available for campaigns
+     * targeting the Ad Exchange network.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+     */
+    public Builder mergeRealTimeBiddingSetting(com.google.ads.googleads.v0.common.RealTimeBiddingSetting value) {
+      if (realTimeBiddingSettingBuilder_ == null) {
+        if (realTimeBiddingSetting_ != null) {
+          realTimeBiddingSetting_ =
+            com.google.ads.googleads.v0.common.RealTimeBiddingSetting.newBuilder(realTimeBiddingSetting_).mergeFrom(value).buildPartial();
+        } else {
+          realTimeBiddingSetting_ = value;
+        }
+        onChanged();
+      } else {
+        realTimeBiddingSettingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for Real-Time Bidding, a feature only available for campaigns
+     * targeting the Ad Exchange network.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+     */
+    public Builder clearRealTimeBiddingSetting() {
+      if (realTimeBiddingSettingBuilder_ == null) {
+        realTimeBiddingSetting_ = null;
+        onChanged();
+      } else {
+        realTimeBiddingSetting_ = null;
+        realTimeBiddingSettingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for Real-Time Bidding, a feature only available for campaigns
+     * targeting the Ad Exchange network.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+     */
+    public com.google.ads.googleads.v0.common.RealTimeBiddingSetting.Builder getRealTimeBiddingSettingBuilder() {
+      
+      onChanged();
+      return getRealTimeBiddingSettingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Settings for Real-Time Bidding, a feature only available for campaigns
+     * targeting the Ad Exchange network.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+     */
+    public com.google.ads.googleads.v0.common.RealTimeBiddingSettingOrBuilder getRealTimeBiddingSettingOrBuilder() {
+      if (realTimeBiddingSettingBuilder_ != null) {
+        return realTimeBiddingSettingBuilder_.getMessageOrBuilder();
+      } else {
+        return realTimeBiddingSetting_ == null ?
+            com.google.ads.googleads.v0.common.RealTimeBiddingSetting.getDefaultInstance() : realTimeBiddingSetting_;
+      }
+    }
+    /**
+     * <pre>
+     * Settings for Real-Time Bidding, a feature only available for campaigns
+     * targeting the Ad Exchange network.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.RealTimeBiddingSetting, com.google.ads.googleads.v0.common.RealTimeBiddingSetting.Builder, com.google.ads.googleads.v0.common.RealTimeBiddingSettingOrBuilder> 
+        getRealTimeBiddingSettingFieldBuilder() {
+      if (realTimeBiddingSettingBuilder_ == null) {
+        realTimeBiddingSettingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.RealTimeBiddingSetting, com.google.ads.googleads.v0.common.RealTimeBiddingSetting.Builder, com.google.ads.googleads.v0.common.RealTimeBiddingSettingOrBuilder>(
+                getRealTimeBiddingSetting(),
+                getParentForChildren(),
+                isClean());
+        realTimeBiddingSetting_ = null;
+      }
+      return realTimeBiddingSettingBuilder_;
     }
 
     private com.google.ads.googleads.v0.resources.Campaign.NetworkSettings networkSettings_ = null;
@@ -10947,12 +11308,323 @@ private static final long serialVersionUID = 0L;
       return finalUrlSuffixBuilder_;
     }
 
+    private java.util.List<com.google.ads.googleads.v0.common.FrequencyCapEntry> frequencyCaps_ =
+      java.util.Collections.emptyList();
+    private void ensureFrequencyCapsIsMutable() {
+      if (!((bitField0_ & 0x00200000) == 0x00200000)) {
+        frequencyCaps_ = new java.util.ArrayList<com.google.ads.googleads.v0.common.FrequencyCapEntry>(frequencyCaps_);
+        bitField0_ |= 0x00200000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v0.common.FrequencyCapEntry, com.google.ads.googleads.v0.common.FrequencyCapEntry.Builder, com.google.ads.googleads.v0.common.FrequencyCapEntryOrBuilder> frequencyCapsBuilder_;
+
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v0.common.FrequencyCapEntry> getFrequencyCapsList() {
+      if (frequencyCapsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(frequencyCaps_);
+      } else {
+        return frequencyCapsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public int getFrequencyCapsCount() {
+      if (frequencyCapsBuilder_ == null) {
+        return frequencyCaps_.size();
+      } else {
+        return frequencyCapsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public com.google.ads.googleads.v0.common.FrequencyCapEntry getFrequencyCaps(int index) {
+      if (frequencyCapsBuilder_ == null) {
+        return frequencyCaps_.get(index);
+      } else {
+        return frequencyCapsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public Builder setFrequencyCaps(
+        int index, com.google.ads.googleads.v0.common.FrequencyCapEntry value) {
+      if (frequencyCapsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFrequencyCapsIsMutable();
+        frequencyCaps_.set(index, value);
+        onChanged();
+      } else {
+        frequencyCapsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public Builder setFrequencyCaps(
+        int index, com.google.ads.googleads.v0.common.FrequencyCapEntry.Builder builderForValue) {
+      if (frequencyCapsBuilder_ == null) {
+        ensureFrequencyCapsIsMutable();
+        frequencyCaps_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        frequencyCapsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public Builder addFrequencyCaps(com.google.ads.googleads.v0.common.FrequencyCapEntry value) {
+      if (frequencyCapsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFrequencyCapsIsMutable();
+        frequencyCaps_.add(value);
+        onChanged();
+      } else {
+        frequencyCapsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public Builder addFrequencyCaps(
+        int index, com.google.ads.googleads.v0.common.FrequencyCapEntry value) {
+      if (frequencyCapsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFrequencyCapsIsMutable();
+        frequencyCaps_.add(index, value);
+        onChanged();
+      } else {
+        frequencyCapsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public Builder addFrequencyCaps(
+        com.google.ads.googleads.v0.common.FrequencyCapEntry.Builder builderForValue) {
+      if (frequencyCapsBuilder_ == null) {
+        ensureFrequencyCapsIsMutable();
+        frequencyCaps_.add(builderForValue.build());
+        onChanged();
+      } else {
+        frequencyCapsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public Builder addFrequencyCaps(
+        int index, com.google.ads.googleads.v0.common.FrequencyCapEntry.Builder builderForValue) {
+      if (frequencyCapsBuilder_ == null) {
+        ensureFrequencyCapsIsMutable();
+        frequencyCaps_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        frequencyCapsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public Builder addAllFrequencyCaps(
+        java.lang.Iterable<? extends com.google.ads.googleads.v0.common.FrequencyCapEntry> values) {
+      if (frequencyCapsBuilder_ == null) {
+        ensureFrequencyCapsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, frequencyCaps_);
+        onChanged();
+      } else {
+        frequencyCapsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public Builder clearFrequencyCaps() {
+      if (frequencyCapsBuilder_ == null) {
+        frequencyCaps_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00200000);
+        onChanged();
+      } else {
+        frequencyCapsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public Builder removeFrequencyCaps(int index) {
+      if (frequencyCapsBuilder_ == null) {
+        ensureFrequencyCapsIsMutable();
+        frequencyCaps_.remove(index);
+        onChanged();
+      } else {
+        frequencyCapsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public com.google.ads.googleads.v0.common.FrequencyCapEntry.Builder getFrequencyCapsBuilder(
+        int index) {
+      return getFrequencyCapsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public com.google.ads.googleads.v0.common.FrequencyCapEntryOrBuilder getFrequencyCapsOrBuilder(
+        int index) {
+      if (frequencyCapsBuilder_ == null) {
+        return frequencyCaps_.get(index);  } else {
+        return frequencyCapsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v0.common.FrequencyCapEntryOrBuilder> 
+         getFrequencyCapsOrBuilderList() {
+      if (frequencyCapsBuilder_ != null) {
+        return frequencyCapsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(frequencyCaps_);
+      }
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public com.google.ads.googleads.v0.common.FrequencyCapEntry.Builder addFrequencyCapsBuilder() {
+      return getFrequencyCapsFieldBuilder().addBuilder(
+          com.google.ads.googleads.v0.common.FrequencyCapEntry.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public com.google.ads.googleads.v0.common.FrequencyCapEntry.Builder addFrequencyCapsBuilder(
+        int index) {
+      return getFrequencyCapsFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v0.common.FrequencyCapEntry.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * A list that limits how often each user will see this campaign's ads.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v0.common.FrequencyCapEntry.Builder> 
+         getFrequencyCapsBuilderList() {
+      return getFrequencyCapsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v0.common.FrequencyCapEntry, com.google.ads.googleads.v0.common.FrequencyCapEntry.Builder, com.google.ads.googleads.v0.common.FrequencyCapEntryOrBuilder> 
+        getFrequencyCapsFieldBuilder() {
+      if (frequencyCapsBuilder_ == null) {
+        frequencyCapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v0.common.FrequencyCapEntry, com.google.ads.googleads.v0.common.FrequencyCapEntry.Builder, com.google.ads.googleads.v0.common.FrequencyCapEntryOrBuilder>(
+                frequencyCaps_,
+                ((bitField0_ & 0x00200000) == 0x00200000),
+                getParentForChildren(),
+                isClean());
+        frequencyCaps_ = null;
+      }
+      return frequencyCapsBuilder_;
+    }
+
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> biddingStrategyBuilder_;
     /**
      * <pre>
      * Portfolio bidding strategy used by campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -10963,7 +11635,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Portfolio bidding strategy used by campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -10984,7 +11655,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Portfolio bidding strategy used by campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -11005,7 +11675,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Portfolio bidding strategy used by campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -11024,7 +11693,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Portfolio bidding strategy used by campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -11051,7 +11719,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Portfolio bidding strategy used by campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -11075,7 +11742,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Portfolio bidding strategy used by campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -11086,7 +11752,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Portfolio bidding strategy used by campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -11104,7 +11769,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Portfolio bidding strategy used by campaign.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>

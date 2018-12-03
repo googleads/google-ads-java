@@ -113,6 +113,14 @@ private static final long serialVersionUID = 0L;
      * <code>STATUS_CHANGE_DISALLOWED = 2;</code>
      */
     STATUS_CHANGE_DISALLOWED(2),
+    /**
+     * <pre>
+     * CustomerService cannot get a customer that has not been fully set up.
+     * </pre>
+     *
+     * <code>ACCOUNT_NOT_SET_UP = 3;</code>
+     */
+    ACCOUNT_NOT_SET_UP(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -142,6 +150,14 @@ private static final long serialVersionUID = 0L;
      * <code>STATUS_CHANGE_DISALLOWED = 2;</code>
      */
     public static final int STATUS_CHANGE_DISALLOWED_VALUE = 2;
+    /**
+     * <pre>
+     * CustomerService cannot get a customer that has not been fully set up.
+     * </pre>
+     *
+     * <code>ACCOUNT_NOT_SET_UP = 3;</code>
+     */
+    public static final int ACCOUNT_NOT_SET_UP_VALUE = 3;
 
 
     public final int getNumber() {
@@ -165,6 +181,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return STATUS_CHANGE_DISALLOWED;
+        case 3: return ACCOUNT_NOT_SET_UP;
         default: return null;
       }
     }

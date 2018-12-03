@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private ApplyRecommendationRequest() {
     customerId_ = "";
+    partialFailure_ = false;
     operations_ = java.util.Collections.emptyList();
   }
 
@@ -55,12 +56,17 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
               operations_ = new java.util.ArrayList<com.google.ads.googleads.v0.services.ApplyRecommendationOperation>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000004;
             }
             operations_.add(
                 input.readMessage(com.google.ads.googleads.v0.services.ApplyRecommendationOperation.parser(), extensionRegistry));
+            break;
+          }
+          case 24: {
+
+            partialFailure_ = input.readBool();
             break;
           }
           default: {
@@ -78,7 +84,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
         operations_ = java.util.Collections.unmodifiableList(operations_);
       }
       this.unknownFields = unknownFields.build();
@@ -141,11 +147,29 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PARTIAL_FAILURE_FIELD_NUMBER = 3;
+  private boolean partialFailure_;
+  /**
+   * <pre>
+   * If true, successful operations will be carried out and invalid
+   * operations will return errors. If false, operations will be carried
+   * out as a transaction if and only if they are all valid.
+   * Default is false.
+   * </pre>
+   *
+   * <code>bool partial_failure = 3;</code>
+   */
+  public boolean getPartialFailure() {
+    return partialFailure_;
+  }
+
   public static final int OPERATIONS_FIELD_NUMBER = 2;
   private java.util.List<com.google.ads.googleads.v0.services.ApplyRecommendationOperation> operations_;
   /**
    * <pre>
    * The list of operations to apply recommendations.
+   * If partial_failure=false all recommendations should be of the same type
+   * There is a limit of 100 operations per request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -156,6 +180,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The list of operations to apply recommendations.
+   * If partial_failure=false all recommendations should be of the same type
+   * There is a limit of 100 operations per request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -167,6 +193,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The list of operations to apply recommendations.
+   * If partial_failure=false all recommendations should be of the same type
+   * There is a limit of 100 operations per request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -177,6 +205,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The list of operations to apply recommendations.
+   * If partial_failure=false all recommendations should be of the same type
+   * There is a limit of 100 operations per request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -187,6 +217,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The list of operations to apply recommendations.
+   * If partial_failure=false all recommendations should be of the same type
+   * There is a limit of 100 operations per request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -216,6 +248,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < operations_.size(); i++) {
       output.writeMessage(2, operations_.get(i));
     }
+    if (partialFailure_ != false) {
+      output.writeBool(3, partialFailure_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -231,6 +266,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < operations_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, operations_.get(i));
+    }
+    if (partialFailure_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, partialFailure_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -250,6 +289,8 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && getCustomerId()
         .equals(other.getCustomerId());
+    result = result && (getPartialFailure()
+        == other.getPartialFailure());
     result = result && getOperationsList()
         .equals(other.getOperationsList());
     result = result && unknownFields.equals(other.unknownFields);
@@ -265,6 +306,9 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + CUSTOMER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCustomerId().hashCode();
+    hash = (37 * hash) + PARTIAL_FAILURE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPartialFailure());
     if (getOperationsCount() > 0) {
       hash = (37 * hash) + OPERATIONS_FIELD_NUMBER;
       hash = (53 * hash) + getOperationsList().hashCode();
@@ -409,9 +453,11 @@ private static final long serialVersionUID = 0L;
       super.clear();
       customerId_ = "";
 
+      partialFailure_ = false;
+
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
         operationsBuilder_.clear();
       }
@@ -444,10 +490,11 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       result.customerId_ = customerId_;
+      result.partialFailure_ = partialFailure_;
       if (operationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.operations_ = operations_;
       } else {
@@ -506,11 +553,14 @@ private static final long serialVersionUID = 0L;
         customerId_ = other.customerId_;
         onChanged();
       }
+      if (other.getPartialFailure() != false) {
+        setPartialFailure(other.getPartialFailure());
+      }
       if (operationsBuilder_ == null) {
         if (!other.operations_.isEmpty()) {
           if (operations_.isEmpty()) {
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureOperationsIsMutable();
             operations_.addAll(other.operations_);
@@ -523,7 +573,7 @@ private static final long serialVersionUID = 0L;
             operationsBuilder_.dispose();
             operationsBuilder_ = null;
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
             operationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getOperationsFieldBuilder() : null;
@@ -651,12 +701,59 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private boolean partialFailure_ ;
+    /**
+     * <pre>
+     * If true, successful operations will be carried out and invalid
+     * operations will return errors. If false, operations will be carried
+     * out as a transaction if and only if they are all valid.
+     * Default is false.
+     * </pre>
+     *
+     * <code>bool partial_failure = 3;</code>
+     */
+    public boolean getPartialFailure() {
+      return partialFailure_;
+    }
+    /**
+     * <pre>
+     * If true, successful operations will be carried out and invalid
+     * operations will return errors. If false, operations will be carried
+     * out as a transaction if and only if they are all valid.
+     * Default is false.
+     * </pre>
+     *
+     * <code>bool partial_failure = 3;</code>
+     */
+    public Builder setPartialFailure(boolean value) {
+      
+      partialFailure_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If true, successful operations will be carried out and invalid
+     * operations will return errors. If false, operations will be carried
+     * out as a transaction if and only if they are all valid.
+     * Default is false.
+     * </pre>
+     *
+     * <code>bool partial_failure = 3;</code>
+     */
+    public Builder clearPartialFailure() {
+      
+      partialFailure_ = false;
+      onChanged();
+      return this;
+    }
+
     private java.util.List<com.google.ads.googleads.v0.services.ApplyRecommendationOperation> operations_ =
       java.util.Collections.emptyList();
     private void ensureOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
         operations_ = new java.util.ArrayList<com.google.ads.googleads.v0.services.ApplyRecommendationOperation>(operations_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -666,6 +763,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -680,6 +779,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -694,6 +795,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -708,6 +811,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -729,6 +834,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -747,6 +854,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -767,6 +876,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -788,6 +899,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -806,6 +919,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -824,6 +939,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -843,6 +960,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -850,7 +969,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearOperations() {
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         operationsBuilder_.clear();
@@ -860,6 +979,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -877,6 +998,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -888,6 +1011,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -902,6 +1027,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -917,6 +1044,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -928,6 +1057,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -940,6 +1071,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The list of operations to apply recommendations.
+     * If partial_failure=false all recommendations should be of the same type
+     * There is a limit of 100 operations per request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -955,7 +1088,7 @@ private static final long serialVersionUID = 0L;
         operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v0.services.ApplyRecommendationOperation, com.google.ads.googleads.v0.services.ApplyRecommendationOperation.Builder, com.google.ads.googleads.v0.services.ApplyRecommendationOperationOrBuilder>(
                 operations_,
-                ((bitField0_ & 0x00000002) == 0x00000002),
+                ((bitField0_ & 0x00000004) == 0x00000004),
                 getParentForChildren(),
                 isClean());
         operations_ = null;

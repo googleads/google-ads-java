@@ -157,6 +157,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 90: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (finalUrlSuffix_ != null) {
+              subBuilder = finalUrlSuffix_.toBuilder();
+            }
+            finalUrlSuffix_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(finalUrlSuffix_);
+              finalUrlSuffix_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -406,6 +419,39 @@ private static final long serialVersionUID = 0L;
     return getTrackingUrlTemplate();
   }
 
+  public static final int FINAL_URL_SUFFIX_FIELD_NUMBER = 11;
+  private com.google.protobuf.StringValue finalUrlSuffix_;
+  /**
+   * <pre>
+   * The URL template for appending params to the final URL
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+   */
+  public boolean hasFinalUrlSuffix() {
+    return finalUrlSuffix_ != null;
+  }
+  /**
+   * <pre>
+   * The URL template for appending params to the final URL
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+   */
+  public com.google.protobuf.StringValue getFinalUrlSuffix() {
+    return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
+  }
+  /**
+   * <pre>
+   * The URL template for appending params to the final URL
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
+    return getFinalUrlSuffix();
+  }
+
   public static final int AUTO_TAGGING_ENABLED_FIELD_NUMBER = 8;
   private com.google.protobuf.BoolValue autoTaggingEnabled_;
   /**
@@ -552,6 +598,9 @@ private static final long serialVersionUID = 0L;
     if (callReportingSetting_ != null) {
       output.writeMessage(10, getCallReportingSetting());
     }
+    if (finalUrlSuffix_ != null) {
+      output.writeMessage(11, getFinalUrlSuffix());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -596,6 +645,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getCallReportingSetting());
     }
+    if (finalUrlSuffix_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getFinalUrlSuffix());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -638,6 +691,11 @@ private static final long serialVersionUID = 0L;
     if (hasTrackingUrlTemplate()) {
       result = result && getTrackingUrlTemplate()
           .equals(other.getTrackingUrlTemplate());
+    }
+    result = result && (hasFinalUrlSuffix() == other.hasFinalUrlSuffix());
+    if (hasFinalUrlSuffix()) {
+      result = result && getFinalUrlSuffix()
+          .equals(other.getFinalUrlSuffix());
     }
     result = result && (hasAutoTaggingEnabled() == other.hasAutoTaggingEnabled());
     if (hasAutoTaggingEnabled()) {
@@ -686,6 +744,10 @@ private static final long serialVersionUID = 0L;
     if (hasTrackingUrlTemplate()) {
       hash = (37 * hash) + TRACKING_URL_TEMPLATE_FIELD_NUMBER;
       hash = (53 * hash) + getTrackingUrlTemplate().hashCode();
+    }
+    if (hasFinalUrlSuffix()) {
+      hash = (37 * hash) + FINAL_URL_SUFFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getFinalUrlSuffix().hashCode();
     }
     if (hasAutoTaggingEnabled()) {
       hash = (37 * hash) + AUTO_TAGGING_ENABLED_FIELD_NUMBER;
@@ -868,6 +930,12 @@ private static final long serialVersionUID = 0L;
         trackingUrlTemplate_ = null;
         trackingUrlTemplateBuilder_ = null;
       }
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffix_ = null;
+      } else {
+        finalUrlSuffix_ = null;
+        finalUrlSuffixBuilder_ = null;
+      }
       if (autoTaggingEnabledBuilder_ == null) {
         autoTaggingEnabled_ = null;
       } else {
@@ -937,6 +1005,11 @@ private static final long serialVersionUID = 0L;
         result.trackingUrlTemplate_ = trackingUrlTemplate_;
       } else {
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
+      }
+      if (finalUrlSuffixBuilder_ == null) {
+        result.finalUrlSuffix_ = finalUrlSuffix_;
+      } else {
+        result.finalUrlSuffix_ = finalUrlSuffixBuilder_.build();
       }
       if (autoTaggingEnabledBuilder_ == null) {
         result.autoTaggingEnabled_ = autoTaggingEnabled_;
@@ -1019,6 +1092,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasTrackingUrlTemplate()) {
         mergeTrackingUrlTemplate(other.getTrackingUrlTemplate());
+      }
+      if (other.hasFinalUrlSuffix()) {
+        mergeFinalUrlSuffix(other.getFinalUrlSuffix());
       }
       if (other.hasAutoTaggingEnabled()) {
         mergeAutoTaggingEnabled(other.getAutoTaggingEnabled());
@@ -1938,6 +2014,159 @@ private static final long serialVersionUID = 0L;
         trackingUrlTemplate_ = null;
       }
       return trackingUrlTemplateBuilder_;
+    }
+
+    private com.google.protobuf.StringValue finalUrlSuffix_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> finalUrlSuffixBuilder_;
+    /**
+     * <pre>
+     * The URL template for appending params to the final URL
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+     */
+    public boolean hasFinalUrlSuffix() {
+      return finalUrlSuffixBuilder_ != null || finalUrlSuffix_ != null;
+    }
+    /**
+     * <pre>
+     * The URL template for appending params to the final URL
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+     */
+    public com.google.protobuf.StringValue getFinalUrlSuffix() {
+      if (finalUrlSuffixBuilder_ == null) {
+        return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
+      } else {
+        return finalUrlSuffixBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The URL template for appending params to the final URL
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+     */
+    public Builder setFinalUrlSuffix(com.google.protobuf.StringValue value) {
+      if (finalUrlSuffixBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        finalUrlSuffix_ = value;
+        onChanged();
+      } else {
+        finalUrlSuffixBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The URL template for appending params to the final URL
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+     */
+    public Builder setFinalUrlSuffix(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffix_ = builderForValue.build();
+        onChanged();
+      } else {
+        finalUrlSuffixBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The URL template for appending params to the final URL
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+     */
+    public Builder mergeFinalUrlSuffix(com.google.protobuf.StringValue value) {
+      if (finalUrlSuffixBuilder_ == null) {
+        if (finalUrlSuffix_ != null) {
+          finalUrlSuffix_ =
+            com.google.protobuf.StringValue.newBuilder(finalUrlSuffix_).mergeFrom(value).buildPartial();
+        } else {
+          finalUrlSuffix_ = value;
+        }
+        onChanged();
+      } else {
+        finalUrlSuffixBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The URL template for appending params to the final URL
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+     */
+    public Builder clearFinalUrlSuffix() {
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffix_ = null;
+        onChanged();
+      } else {
+        finalUrlSuffix_ = null;
+        finalUrlSuffixBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The URL template for appending params to the final URL
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getFinalUrlSuffixBuilder() {
+      
+      onChanged();
+      return getFinalUrlSuffixFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The URL template for appending params to the final URL
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
+      if (finalUrlSuffixBuilder_ != null) {
+        return finalUrlSuffixBuilder_.getMessageOrBuilder();
+      } else {
+        return finalUrlSuffix_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
+      }
+    }
+    /**
+     * <pre>
+     * The URL template for appending params to the final URL
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getFinalUrlSuffixFieldBuilder() {
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffixBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getFinalUrlSuffix(),
+                getParentForChildren(),
+                isClean());
+        finalUrlSuffix_ = null;
+      }
+      return finalUrlSuffixBuilder_;
     }
 
     private com.google.protobuf.BoolValue autoTaggingEnabled_ = null;

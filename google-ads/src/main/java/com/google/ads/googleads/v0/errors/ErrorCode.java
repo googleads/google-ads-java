@@ -402,9 +402,51 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 568: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 71;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 576: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 72;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 584: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 73;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 592: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 74;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 600: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 75;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 608: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 76;
+            errorCode_ = rawValue;
+            break;
+          }
           case 616: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 77;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 624: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 78;
             errorCode_ = rawValue;
             break;
           }
@@ -414,9 +456,21 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 640: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 80;
+            errorCode_ = rawValue;
+            break;
+          }
           case 648: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 81;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 664: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 83;
             errorCode_ = rawValue;
             break;
           }
@@ -447,6 +501,30 @@ private static final long serialVersionUID = 0L;
           case 728: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 91;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 736: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 92;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 744: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 93;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 752: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 94;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 768: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 96;
             errorCode_ = rawValue;
             break;
           }
@@ -547,12 +625,25 @@ private static final long serialVersionUID = 0L;
     POLICY_FINDING_ERROR(68),
     CAMPAIGN_GROUP_ERROR(69),
     ENUM_ERROR(70),
+    KEYWORD_PLAN_ERROR(71),
+    KEYWORD_PLAN_CAMPAIGN_ERROR(72),
+    KEYWORD_PLAN_NEGATIVE_KEYWORD_ERROR(73),
+    KEYWORD_PLAN_AD_GROUP_ERROR(74),
+    KEYWORD_PLAN_KEYWORD_ERROR(75),
+    KEYWORD_PLAN_IDEA_ERROR(76),
     ACCOUNT_BUDGET_PROPOSAL_ERROR(77),
+    USER_LIST_ERROR(78),
     CHANGE_STATUS_ERROR(79),
+    FEED_ERROR(80),
     GEO_TARGET_CONSTANT_SUGGESTION_ERROR(81),
+    FEED_ITEM_ERROR(83),
     BILLING_SETUP_ERROR(87),
     CUSTOMER_CLIENT_LINK_ERROR(88),
     CUSTOMER_MANAGER_LINK_ERROR(91),
+    FEED_MAPPING_ERROR(92),
+    CUSTOMER_FEED_ERROR(93),
+    AD_GROUP_FEED_ERROR(94),
+    CAMPAIGN_FEED_ERROR(96),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -629,12 +720,25 @@ private static final long serialVersionUID = 0L;
         case 68: return POLICY_FINDING_ERROR;
         case 69: return CAMPAIGN_GROUP_ERROR;
         case 70: return ENUM_ERROR;
+        case 71: return KEYWORD_PLAN_ERROR;
+        case 72: return KEYWORD_PLAN_CAMPAIGN_ERROR;
+        case 73: return KEYWORD_PLAN_NEGATIVE_KEYWORD_ERROR;
+        case 74: return KEYWORD_PLAN_AD_GROUP_ERROR;
+        case 75: return KEYWORD_PLAN_KEYWORD_ERROR;
+        case 76: return KEYWORD_PLAN_IDEA_ERROR;
         case 77: return ACCOUNT_BUDGET_PROPOSAL_ERROR;
+        case 78: return USER_LIST_ERROR;
         case 79: return CHANGE_STATUS_ERROR;
+        case 80: return FEED_ERROR;
         case 81: return GEO_TARGET_CONSTANT_SUGGESTION_ERROR;
+        case 83: return FEED_ITEM_ERROR;
         case 87: return BILLING_SETUP_ERROR;
         case 88: return CUSTOMER_CLIENT_LINK_ERROR;
         case 91: return CUSTOMER_MANAGER_LINK_ERROR;
+        case 92: return FEED_MAPPING_ERROR;
+        case 93: return CUSTOMER_FEED_ERROR;
+        case 94: return AD_GROUP_FEED_ERROR;
+        case 96: return CAMPAIGN_FEED_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -2541,6 +2645,192 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.EnumErrorEnum.EnumError.UNSPECIFIED;
   }
 
+  public static final int KEYWORD_PLAN_ERROR_FIELD_NUMBER = 71;
+  /**
+   * <pre>
+   * The reason for keyword plan error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+   */
+  public int getKeywordPlanErrorValue() {
+    if (errorCodeCase_ == 71) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reason for keyword plan error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+   */
+  public com.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError getKeywordPlanError() {
+    if (errorCodeCase_ == 71) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError result = com.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError.UNSPECIFIED;
+  }
+
+  public static final int KEYWORD_PLAN_CAMPAIGN_ERROR_FIELD_NUMBER = 72;
+  /**
+   * <pre>
+   * The reason for keyword plan campaign error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+   */
+  public int getKeywordPlanCampaignErrorValue() {
+    if (errorCodeCase_ == 72) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reason for keyword plan campaign error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+   */
+  public com.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError getKeywordPlanCampaignError() {
+    if (errorCodeCase_ == 72) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError result = com.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError.UNSPECIFIED;
+  }
+
+  public static final int KEYWORD_PLAN_NEGATIVE_KEYWORD_ERROR_FIELD_NUMBER = 73;
+  /**
+   * <pre>
+   * The reason for keyword plan negative keyword error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+   */
+  public int getKeywordPlanNegativeKeywordErrorValue() {
+    if (errorCodeCase_ == 73) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reason for keyword plan negative keyword error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+   */
+  public com.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError getKeywordPlanNegativeKeywordError() {
+    if (errorCodeCase_ == 73) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError result = com.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError.UNSPECIFIED;
+  }
+
+  public static final int KEYWORD_PLAN_AD_GROUP_ERROR_FIELD_NUMBER = 74;
+  /**
+   * <pre>
+   * The reason for keyword plan ad group error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+   */
+  public int getKeywordPlanAdGroupErrorValue() {
+    if (errorCodeCase_ == 74) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reason for keyword plan ad group error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+   */
+  public com.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError getKeywordPlanAdGroupError() {
+    if (errorCodeCase_ == 74) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError result = com.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError.UNSPECIFIED;
+  }
+
+  public static final int KEYWORD_PLAN_KEYWORD_ERROR_FIELD_NUMBER = 75;
+  /**
+   * <pre>
+   * The reason for keyword plan keyword error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+   */
+  public int getKeywordPlanKeywordErrorValue() {
+    if (errorCodeCase_ == 75) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reason for keyword plan keyword error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+   */
+  public com.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError getKeywordPlanKeywordError() {
+    if (errorCodeCase_ == 75) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError result = com.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError.UNSPECIFIED;
+  }
+
+  public static final int KEYWORD_PLAN_IDEA_ERROR_FIELD_NUMBER = 76;
+  /**
+   * <pre>
+   * The reason for keyword idea error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+   */
+  public int getKeywordPlanIdeaErrorValue() {
+    if (errorCodeCase_ == 76) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reason for keyword idea error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+   */
+  public com.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError getKeywordPlanIdeaError() {
+    if (errorCodeCase_ == 76) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError result = com.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError.UNSPECIFIED;
+  }
+
   public static final int ACCOUNT_BUDGET_PROPOSAL_ERROR_FIELD_NUMBER = 77;
   /**
    * <pre>
@@ -2570,6 +2860,37 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError.UNRECOGNIZED : result;
     }
     return com.google.ads.googleads.v0.errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError.UNSPECIFIED;
+  }
+
+  public static final int USER_LIST_ERROR_FIELD_NUMBER = 78;
+  /**
+   * <pre>
+   * The reasons for the user list error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+   */
+  public int getUserListErrorValue() {
+    if (errorCodeCase_ == 78) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the user list error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+   */
+  public com.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError getUserListError() {
+    if (errorCodeCase_ == 78) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError result = com.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError.UNSPECIFIED;
   }
 
   public static final int CHANGE_STATUS_ERROR_FIELD_NUMBER = 79;
@@ -2603,6 +2924,37 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.ChangeStatusErrorEnum.ChangeStatusError.UNSPECIFIED;
   }
 
+  public static final int FEED_ERROR_FIELD_NUMBER = 80;
+  /**
+   * <pre>
+   * The reasons for the feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+   */
+  public int getFeedErrorValue() {
+    if (errorCodeCase_ == 80) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+   */
+  public com.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError getFeedError() {
+    if (errorCodeCase_ == 80) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError result = com.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError.UNSPECIFIED;
+  }
+
   public static final int GEO_TARGET_CONSTANT_SUGGESTION_ERROR_FIELD_NUMBER = 81;
   /**
    * <pre>
@@ -2632,6 +2984,37 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError.UNRECOGNIZED : result;
     }
     return com.google.ads.googleads.v0.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError.UNSPECIFIED;
+  }
+
+  public static final int FEED_ITEM_ERROR_FIELD_NUMBER = 83;
+  /**
+   * <pre>
+   * The reasons for the feed item error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+   */
+  public int getFeedItemErrorValue() {
+    if (errorCodeCase_ == 83) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the feed item error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+   */
+  public com.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError getFeedItemError() {
+    if (errorCodeCase_ == 83) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError result = com.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError.UNSPECIFIED;
   }
 
   public static final int BILLING_SETUP_ERROR_FIELD_NUMBER = 87;
@@ -2725,6 +3108,130 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError.UNRECOGNIZED : result;
     }
     return com.google.ads.googleads.v0.errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError.UNSPECIFIED;
+  }
+
+  public static final int FEED_MAPPING_ERROR_FIELD_NUMBER = 92;
+  /**
+   * <pre>
+   * The reasons for the feed mapping error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+   */
+  public int getFeedMappingErrorValue() {
+    if (errorCodeCase_ == 92) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the feed mapping error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+   */
+  public com.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError getFeedMappingError() {
+    if (errorCodeCase_ == 92) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError result = com.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError.UNSPECIFIED;
+  }
+
+  public static final int CUSTOMER_FEED_ERROR_FIELD_NUMBER = 93;
+  /**
+   * <pre>
+   * The reasons for the customer feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+   */
+  public int getCustomerFeedErrorValue() {
+    if (errorCodeCase_ == 93) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the customer feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+   */
+  public com.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError getCustomerFeedError() {
+    if (errorCodeCase_ == 93) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError result = com.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError.UNSPECIFIED;
+  }
+
+  public static final int AD_GROUP_FEED_ERROR_FIELD_NUMBER = 94;
+  /**
+   * <pre>
+   * The reasons for the ad group feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+   */
+  public int getAdGroupFeedErrorValue() {
+    if (errorCodeCase_ == 94) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the ad group feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+   */
+  public com.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError getAdGroupFeedError() {
+    if (errorCodeCase_ == 94) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError result = com.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError.UNSPECIFIED;
+  }
+
+  public static final int CAMPAIGN_FEED_ERROR_FIELD_NUMBER = 96;
+  /**
+   * <pre>
+   * The reasons for the campaign feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+   */
+  public int getCampaignFeedErrorValue() {
+    if (errorCodeCase_ == 96) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the campaign feed error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+   */
+  public com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError getCampaignFeedError() {
+    if (errorCodeCase_ == 96) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError result = com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError.UNSPECIFIED;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -2918,14 +3425,41 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 70) {
       output.writeEnum(70, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 71) {
+      output.writeEnum(71, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 72) {
+      output.writeEnum(72, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 73) {
+      output.writeEnum(73, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 74) {
+      output.writeEnum(74, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 75) {
+      output.writeEnum(75, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 76) {
+      output.writeEnum(76, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 77) {
       output.writeEnum(77, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 78) {
+      output.writeEnum(78, ((java.lang.Integer) errorCode_));
     }
     if (errorCodeCase_ == 79) {
       output.writeEnum(79, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 80) {
+      output.writeEnum(80, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 81) {
       output.writeEnum(81, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 83) {
+      output.writeEnum(83, ((java.lang.Integer) errorCode_));
     }
     if (errorCodeCase_ == 86) {
       output.writeEnum(86, ((java.lang.Integer) errorCode_));
@@ -2941,6 +3475,18 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 91) {
       output.writeEnum(91, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 92) {
+      output.writeEnum(92, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 93) {
+      output.writeEnum(93, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 94) {
+      output.writeEnum(94, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 96) {
+      output.writeEnum(96, ((java.lang.Integer) errorCode_));
     }
     unknownFields.writeTo(output);
   }
@@ -3187,17 +3733,53 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(70, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 71) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(71, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 72) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(72, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 73) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(73, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 74) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(74, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 75) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(75, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 76) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(76, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 77) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(77, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 78) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(78, ((java.lang.Integer) errorCode_));
     }
     if (errorCodeCase_ == 79) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(79, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 80) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(80, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 81) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(81, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 83) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(83, ((java.lang.Integer) errorCode_));
     }
     if (errorCodeCase_ == 86) {
       size += com.google.protobuf.CodedOutputStream
@@ -3218,6 +3800,22 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 91) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(91, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 92) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(92, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 93) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(93, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 94) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(94, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 96) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(96, ((java.lang.Integer) errorCode_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -3483,17 +4081,53 @@ private static final long serialVersionUID = 0L;
         result = result && getEnumErrorValue()
             == other.getEnumErrorValue();
         break;
+      case 71:
+        result = result && getKeywordPlanErrorValue()
+            == other.getKeywordPlanErrorValue();
+        break;
+      case 72:
+        result = result && getKeywordPlanCampaignErrorValue()
+            == other.getKeywordPlanCampaignErrorValue();
+        break;
+      case 73:
+        result = result && getKeywordPlanNegativeKeywordErrorValue()
+            == other.getKeywordPlanNegativeKeywordErrorValue();
+        break;
+      case 74:
+        result = result && getKeywordPlanAdGroupErrorValue()
+            == other.getKeywordPlanAdGroupErrorValue();
+        break;
+      case 75:
+        result = result && getKeywordPlanKeywordErrorValue()
+            == other.getKeywordPlanKeywordErrorValue();
+        break;
+      case 76:
+        result = result && getKeywordPlanIdeaErrorValue()
+            == other.getKeywordPlanIdeaErrorValue();
+        break;
       case 77:
         result = result && getAccountBudgetProposalErrorValue()
             == other.getAccountBudgetProposalErrorValue();
+        break;
+      case 78:
+        result = result && getUserListErrorValue()
+            == other.getUserListErrorValue();
         break;
       case 79:
         result = result && getChangeStatusErrorValue()
             == other.getChangeStatusErrorValue();
         break;
+      case 80:
+        result = result && getFeedErrorValue()
+            == other.getFeedErrorValue();
+        break;
       case 81:
         result = result && getGeoTargetConstantSuggestionErrorValue()
             == other.getGeoTargetConstantSuggestionErrorValue();
+        break;
+      case 83:
+        result = result && getFeedItemErrorValue()
+            == other.getFeedItemErrorValue();
         break;
       case 87:
         result = result && getBillingSetupErrorValue()
@@ -3506,6 +4140,22 @@ private static final long serialVersionUID = 0L;
       case 91:
         result = result && getCustomerManagerLinkErrorValue()
             == other.getCustomerManagerLinkErrorValue();
+        break;
+      case 92:
+        result = result && getFeedMappingErrorValue()
+            == other.getFeedMappingErrorValue();
+        break;
+      case 93:
+        result = result && getCustomerFeedErrorValue()
+            == other.getCustomerFeedErrorValue();
+        break;
+      case 94:
+        result = result && getAdGroupFeedErrorValue()
+            == other.getAdGroupFeedErrorValue();
+        break;
+      case 96:
+        result = result && getCampaignFeedErrorValue()
+            == other.getCampaignFeedErrorValue();
         break;
       case 0:
       default:
@@ -3766,17 +4416,53 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + ENUM_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getEnumErrorValue();
         break;
+      case 71:
+        hash = (37 * hash) + KEYWORD_PLAN_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getKeywordPlanErrorValue();
+        break;
+      case 72:
+        hash = (37 * hash) + KEYWORD_PLAN_CAMPAIGN_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getKeywordPlanCampaignErrorValue();
+        break;
+      case 73:
+        hash = (37 * hash) + KEYWORD_PLAN_NEGATIVE_KEYWORD_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getKeywordPlanNegativeKeywordErrorValue();
+        break;
+      case 74:
+        hash = (37 * hash) + KEYWORD_PLAN_AD_GROUP_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getKeywordPlanAdGroupErrorValue();
+        break;
+      case 75:
+        hash = (37 * hash) + KEYWORD_PLAN_KEYWORD_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getKeywordPlanKeywordErrorValue();
+        break;
+      case 76:
+        hash = (37 * hash) + KEYWORD_PLAN_IDEA_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getKeywordPlanIdeaErrorValue();
+        break;
       case 77:
         hash = (37 * hash) + ACCOUNT_BUDGET_PROPOSAL_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getAccountBudgetProposalErrorValue();
+        break;
+      case 78:
+        hash = (37 * hash) + USER_LIST_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getUserListErrorValue();
         break;
       case 79:
         hash = (37 * hash) + CHANGE_STATUS_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getChangeStatusErrorValue();
         break;
+      case 80:
+        hash = (37 * hash) + FEED_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getFeedErrorValue();
+        break;
       case 81:
         hash = (37 * hash) + GEO_TARGET_CONSTANT_SUGGESTION_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getGeoTargetConstantSuggestionErrorValue();
+        break;
+      case 83:
+        hash = (37 * hash) + FEED_ITEM_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getFeedItemErrorValue();
         break;
       case 87:
         hash = (37 * hash) + BILLING_SETUP_ERROR_FIELD_NUMBER;
@@ -3789,6 +4475,22 @@ private static final long serialVersionUID = 0L;
       case 91:
         hash = (37 * hash) + CUSTOMER_MANAGER_LINK_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerManagerLinkErrorValue();
+        break;
+      case 92:
+        hash = (37 * hash) + FEED_MAPPING_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getFeedMappingErrorValue();
+        break;
+      case 93:
+        hash = (37 * hash) + CUSTOMER_FEED_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerFeedErrorValue();
+        break;
+      case 94:
+        hash = (37 * hash) + AD_GROUP_FEED_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getAdGroupFeedErrorValue();
+        break;
+      case 96:
+        hash = (37 * hash) + CAMPAIGN_FEED_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignFeedErrorValue();
         break;
       case 0:
       default:
@@ -4141,13 +4843,40 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 70) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 71) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 72) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 73) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 74) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 75) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 76) {
+        result.errorCode_ = errorCode_;
+      }
       if (errorCodeCase_ == 77) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 78) {
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 79) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 80) {
+        result.errorCode_ = errorCode_;
+      }
       if (errorCodeCase_ == 81) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 83) {
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 87) {
@@ -4157,6 +4886,18 @@ private static final long serialVersionUID = 0L;
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 91) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 92) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 93) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 94) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 96) {
         result.errorCode_ = errorCode_;
       }
       result.errorCodeCase_ = errorCodeCase_;
@@ -4453,16 +5194,52 @@ private static final long serialVersionUID = 0L;
           setEnumErrorValue(other.getEnumErrorValue());
           break;
         }
+        case KEYWORD_PLAN_ERROR: {
+          setKeywordPlanErrorValue(other.getKeywordPlanErrorValue());
+          break;
+        }
+        case KEYWORD_PLAN_CAMPAIGN_ERROR: {
+          setKeywordPlanCampaignErrorValue(other.getKeywordPlanCampaignErrorValue());
+          break;
+        }
+        case KEYWORD_PLAN_NEGATIVE_KEYWORD_ERROR: {
+          setKeywordPlanNegativeKeywordErrorValue(other.getKeywordPlanNegativeKeywordErrorValue());
+          break;
+        }
+        case KEYWORD_PLAN_AD_GROUP_ERROR: {
+          setKeywordPlanAdGroupErrorValue(other.getKeywordPlanAdGroupErrorValue());
+          break;
+        }
+        case KEYWORD_PLAN_KEYWORD_ERROR: {
+          setKeywordPlanKeywordErrorValue(other.getKeywordPlanKeywordErrorValue());
+          break;
+        }
+        case KEYWORD_PLAN_IDEA_ERROR: {
+          setKeywordPlanIdeaErrorValue(other.getKeywordPlanIdeaErrorValue());
+          break;
+        }
         case ACCOUNT_BUDGET_PROPOSAL_ERROR: {
           setAccountBudgetProposalErrorValue(other.getAccountBudgetProposalErrorValue());
+          break;
+        }
+        case USER_LIST_ERROR: {
+          setUserListErrorValue(other.getUserListErrorValue());
           break;
         }
         case CHANGE_STATUS_ERROR: {
           setChangeStatusErrorValue(other.getChangeStatusErrorValue());
           break;
         }
+        case FEED_ERROR: {
+          setFeedErrorValue(other.getFeedErrorValue());
+          break;
+        }
         case GEO_TARGET_CONSTANT_SUGGESTION_ERROR: {
           setGeoTargetConstantSuggestionErrorValue(other.getGeoTargetConstantSuggestionErrorValue());
+          break;
+        }
+        case FEED_ITEM_ERROR: {
+          setFeedItemErrorValue(other.getFeedItemErrorValue());
           break;
         }
         case BILLING_SETUP_ERROR: {
@@ -4475,6 +5252,22 @@ private static final long serialVersionUID = 0L;
         }
         case CUSTOMER_MANAGER_LINK_ERROR: {
           setCustomerManagerLinkErrorValue(other.getCustomerManagerLinkErrorValue());
+          break;
+        }
+        case FEED_MAPPING_ERROR: {
+          setFeedMappingErrorValue(other.getFeedMappingErrorValue());
+          break;
+        }
+        case CUSTOMER_FEED_ERROR: {
+          setCustomerFeedErrorValue(other.getCustomerFeedErrorValue());
+          break;
+        }
+        case AD_GROUP_FEED_ERROR: {
+          setAdGroupFeedErrorValue(other.getAdGroupFeedErrorValue());
+          break;
+        }
+        case CAMPAIGN_FEED_ERROR: {
+          setCampaignFeedErrorValue(other.getCampaignFeedErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -9041,6 +9834,450 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * The reason for keyword plan error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+     */
+    public int getKeywordPlanErrorValue() {
+      if (errorCodeCase_ == 71) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+     */
+    public Builder setKeywordPlanErrorValue(int value) {
+      errorCodeCase_ = 71;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+     */
+    public com.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError getKeywordPlanError() {
+      if (errorCodeCase_ == 71) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError result = com.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+     */
+    public Builder setKeywordPlanError(com.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 71;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanErrorEnum.KeywordPlanError keyword_plan_error = 71;</code>
+     */
+    public Builder clearKeywordPlanError() {
+      if (errorCodeCase_ == 71) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reason for keyword plan campaign error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+     */
+    public int getKeywordPlanCampaignErrorValue() {
+      if (errorCodeCase_ == 72) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan campaign error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+     */
+    public Builder setKeywordPlanCampaignErrorValue(int value) {
+      errorCodeCase_ = 72;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan campaign error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+     */
+    public com.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError getKeywordPlanCampaignError() {
+      if (errorCodeCase_ == 72) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError result = com.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan campaign error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+     */
+    public Builder setKeywordPlanCampaignError(com.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 72;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan campaign error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError keyword_plan_campaign_error = 72;</code>
+     */
+    public Builder clearKeywordPlanCampaignError() {
+      if (errorCodeCase_ == 72) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reason for keyword plan negative keyword error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+     */
+    public int getKeywordPlanNegativeKeywordErrorValue() {
+      if (errorCodeCase_ == 73) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan negative keyword error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+     */
+    public Builder setKeywordPlanNegativeKeywordErrorValue(int value) {
+      errorCodeCase_ = 73;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan negative keyword error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+     */
+    public com.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError getKeywordPlanNegativeKeywordError() {
+      if (errorCodeCase_ == 73) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError result = com.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan negative keyword error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+     */
+    public Builder setKeywordPlanNegativeKeywordError(com.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 73;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan negative keyword error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanNegativeKeywordErrorEnum.KeywordPlanNegativeKeywordError keyword_plan_negative_keyword_error = 73;</code>
+     */
+    public Builder clearKeywordPlanNegativeKeywordError() {
+      if (errorCodeCase_ == 73) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reason for keyword plan ad group error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+     */
+    public int getKeywordPlanAdGroupErrorValue() {
+      if (errorCodeCase_ == 74) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan ad group error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+     */
+    public Builder setKeywordPlanAdGroupErrorValue(int value) {
+      errorCodeCase_ = 74;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan ad group error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+     */
+    public com.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError getKeywordPlanAdGroupError() {
+      if (errorCodeCase_ == 74) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError result = com.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan ad group error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+     */
+    public Builder setKeywordPlanAdGroupError(com.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 74;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan ad group error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError keyword_plan_ad_group_error = 74;</code>
+     */
+    public Builder clearKeywordPlanAdGroupError() {
+      if (errorCodeCase_ == 74) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reason for keyword plan keyword error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+     */
+    public int getKeywordPlanKeywordErrorValue() {
+      if (errorCodeCase_ == 75) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan keyword error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+     */
+    public Builder setKeywordPlanKeywordErrorValue(int value) {
+      errorCodeCase_ = 75;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan keyword error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+     */
+    public com.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError getKeywordPlanKeywordError() {
+      if (errorCodeCase_ == 75) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError result = com.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan keyword error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+     */
+    public Builder setKeywordPlanKeywordError(com.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 75;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for keyword plan keyword error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanKeywordErrorEnum.KeywordPlanKeywordError keyword_plan_keyword_error = 75;</code>
+     */
+    public Builder clearKeywordPlanKeywordError() {
+      if (errorCodeCase_ == 75) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reason for keyword idea error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+     */
+    public int getKeywordPlanIdeaErrorValue() {
+      if (errorCodeCase_ == 76) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reason for keyword idea error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+     */
+    public Builder setKeywordPlanIdeaErrorValue(int value) {
+      errorCodeCase_ = 76;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for keyword idea error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+     */
+    public com.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError getKeywordPlanIdeaError() {
+      if (errorCodeCase_ == 76) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError result = com.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reason for keyword idea error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+     */
+    public Builder setKeywordPlanIdeaError(com.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 76;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reason for keyword idea error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError keyword_plan_idea_error = 76;</code>
+     */
+    public Builder clearKeywordPlanIdeaError() {
+      if (errorCodeCase_ == 76) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
      * The reasons for account budget proposal errors.
      * </pre>
      *
@@ -9106,6 +10343,80 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAccountBudgetProposalError() {
       if (errorCodeCase_ == 77) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the user list error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+     */
+    public int getUserListErrorValue() {
+      if (errorCodeCase_ == 78) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the user list error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+     */
+    public Builder setUserListErrorValue(int value) {
+      errorCodeCase_ = 78;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the user list error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+     */
+    public com.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError getUserListError() {
+      if (errorCodeCase_ == 78) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError result = com.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the user list error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+     */
+    public Builder setUserListError(com.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 78;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the user list error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.UserListErrorEnum.UserListError user_list_error = 78;</code>
+     */
+    public Builder clearUserListError() {
+      if (errorCodeCase_ == 78) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();
@@ -9189,6 +10500,80 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * The reasons for the feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+     */
+    public int getFeedErrorValue() {
+      if (errorCodeCase_ == 80) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+     */
+    public Builder setFeedErrorValue(int value) {
+      errorCodeCase_ = 80;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+     */
+    public com.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError getFeedError() {
+      if (errorCodeCase_ == 80) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError result = com.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+     */
+    public Builder setFeedError(com.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 80;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedErrorEnum.FeedError feed_error = 80;</code>
+     */
+    public Builder clearFeedError() {
+      if (errorCodeCase_ == 80) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
      * The reasons for the geo target constant suggestion error.
      * </pre>
      *
@@ -9254,6 +10639,80 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearGeoTargetConstantSuggestionError() {
       if (errorCodeCase_ == 81) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the feed item error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+     */
+    public int getFeedItemErrorValue() {
+      if (errorCodeCase_ == 83) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed item error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+     */
+    public Builder setFeedItemErrorValue(int value) {
+      errorCodeCase_ = 83;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed item error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+     */
+    public com.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError getFeedItemError() {
+      if (errorCodeCase_ == 83) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError result = com.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed item error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+     */
+    public Builder setFeedItemError(com.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 83;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed item error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedItemErrorEnum.FeedItemError feed_item_error = 83;</code>
+     */
+    public Builder clearFeedItemError() {
+      if (errorCodeCase_ == 83) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();
@@ -9476,6 +10935,302 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCustomerManagerLinkError() {
       if (errorCodeCase_ == 91) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the feed mapping error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+     */
+    public int getFeedMappingErrorValue() {
+      if (errorCodeCase_ == 92) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed mapping error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+     */
+    public Builder setFeedMappingErrorValue(int value) {
+      errorCodeCase_ = 92;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed mapping error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+     */
+    public com.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError getFeedMappingError() {
+      if (errorCodeCase_ == 92) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError result = com.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed mapping error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+     */
+    public Builder setFeedMappingError(com.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 92;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed mapping error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedMappingErrorEnum.FeedMappingError feed_mapping_error = 92;</code>
+     */
+    public Builder clearFeedMappingError() {
+      if (errorCodeCase_ == 92) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the customer feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+     */
+    public int getCustomerFeedErrorValue() {
+      if (errorCodeCase_ == 93) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+     */
+    public Builder setCustomerFeedErrorValue(int value) {
+      errorCodeCase_ = 93;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+     */
+    public com.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError getCustomerFeedError() {
+      if (errorCodeCase_ == 93) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError result = com.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+     */
+    public Builder setCustomerFeedError(com.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 93;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CustomerFeedErrorEnum.CustomerFeedError customer_feed_error = 93;</code>
+     */
+    public Builder clearCustomerFeedError() {
+      if (errorCodeCase_ == 93) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the ad group feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+     */
+    public int getAdGroupFeedErrorValue() {
+      if (errorCodeCase_ == 94) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the ad group feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+     */
+    public Builder setAdGroupFeedErrorValue(int value) {
+      errorCodeCase_ = 94;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the ad group feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+     */
+    public com.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError getAdGroupFeedError() {
+      if (errorCodeCase_ == 94) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError result = com.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the ad group feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+     */
+    public Builder setAdGroupFeedError(com.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 94;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the ad group feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdGroupFeedErrorEnum.AdGroupFeedError ad_group_feed_error = 94;</code>
+     */
+    public Builder clearAdGroupFeedError() {
+      if (errorCodeCase_ == 94) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the campaign feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+     */
+    public int getCampaignFeedErrorValue() {
+      if (errorCodeCase_ == 96) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+     */
+    public Builder setCampaignFeedErrorValue(int value) {
+      errorCodeCase_ = 96;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+     */
+    public com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError getCampaignFeedError() {
+      if (errorCodeCase_ == 96) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError result = com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+     */
+    public Builder setCampaignFeedError(com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 96;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign feed error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
+     */
+    public Builder clearCampaignFeedError() {
+      if (errorCodeCase_ == 96) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

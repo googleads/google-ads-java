@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ApplyRecommendationResult() {
+    resourceName_ = "";
   }
 
   @java.lang.Override
@@ -48,22 +49,8 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
-            resultCase_ = 1;
-            result_ = s;
-            break;
-          }
-          case 18: {
-            com.google.rpc.Status.Builder subBuilder = null;
-            if (resultCase_ == 2) {
-              subBuilder = ((com.google.rpc.Status) result_).toBuilder();
-            }
-            result_ =
-                input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.rpc.Status) result_);
-              result_ = subBuilder.buildPartial();
-            }
-            resultCase_ = 2;
+
+            resourceName_ = s;
             break;
           }
           default: {
@@ -98,45 +85,8 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v0.services.ApplyRecommendationResult.class, com.google.ads.googleads.v0.services.ApplyRecommendationResult.Builder.class);
   }
 
-  private int resultCase_ = 0;
-  private java.lang.Object result_;
-  public enum ResultCase
-      implements com.google.protobuf.Internal.EnumLite {
-    RESOURCE_NAME(1),
-    STATUS(2),
-    RESULT_NOT_SET(0);
-    private final int value;
-    private ResultCase(int value) {
-      this.value = value;
-    }
-    /**
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static ResultCase valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static ResultCase forNumber(int value) {
-      switch (value) {
-        case 1: return RESOURCE_NAME;
-        case 2: return STATUS;
-        case 0: return RESULT_NOT_SET;
-        default: return null;
-      }
-    }
-    public int getNumber() {
-      return this.value;
-    }
-  };
-
-  public ResultCase
-  getResultCase() {
-    return ResultCase.forNumber(
-        resultCase_);
-  }
-
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
+  private volatile java.lang.Object resourceName_;
   /**
    * <pre>
    * Returned for successful applies.
@@ -145,19 +95,14 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1;</code>
    */
   public java.lang.String getResourceName() {
-    java.lang.Object ref = "";
-    if (resultCase_ == 1) {
-      ref = result_;
-    }
+    java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      if (resultCase_ == 1) {
-        result_ = s;
-      }
+      resourceName_ = s;
       return s;
     }
   }
@@ -170,59 +115,16 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
-    java.lang.Object ref = "";
-    if (resultCase_ == 1) {
-      ref = result_;
-    }
+    java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      if (resultCase_ == 1) {
-        result_ = b;
-      }
+      resourceName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
-  }
-
-  public static final int STATUS_FIELD_NUMBER = 2;
-  /**
-   * <pre>
-   * Returned for failed operations.
-   * </pre>
-   *
-   * <code>.google.rpc.Status status = 2;</code>
-   */
-  public boolean hasStatus() {
-    return resultCase_ == 2;
-  }
-  /**
-   * <pre>
-   * Returned for failed operations.
-   * </pre>
-   *
-   * <code>.google.rpc.Status status = 2;</code>
-   */
-  public com.google.rpc.Status getStatus() {
-    if (resultCase_ == 2) {
-       return (com.google.rpc.Status) result_;
-    }
-    return com.google.rpc.Status.getDefaultInstance();
-  }
-  /**
-   * <pre>
-   * Returned for failed operations.
-   * </pre>
-   *
-   * <code>.google.rpc.Status status = 2;</code>
-   */
-  public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
-    if (resultCase_ == 2) {
-       return (com.google.rpc.Status) result_;
-    }
-    return com.google.rpc.Status.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -239,11 +141,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (resultCase_ == 1) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_);
-    }
-    if (resultCase_ == 2) {
-      output.writeMessage(2, (com.google.rpc.Status) result_);
+    if (!getResourceNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     unknownFields.writeTo(output);
   }
@@ -254,12 +153,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (resultCase_ == 1) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, result_);
-    }
-    if (resultCase_ == 2) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, (com.google.rpc.Status) result_);
+    if (!getResourceNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -277,21 +172,8 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v0.services.ApplyRecommendationResult other = (com.google.ads.googleads.v0.services.ApplyRecommendationResult) obj;
 
     boolean result = true;
-    result = result && getResultCase().equals(
-        other.getResultCase());
-    if (!result) return false;
-    switch (resultCase_) {
-      case 1:
-        result = result && getResourceName()
-            .equals(other.getResourceName());
-        break;
-      case 2:
-        result = result && getStatus()
-            .equals(other.getStatus());
-        break;
-      case 0:
-      default:
-    }
+    result = result && getResourceName()
+        .equals(other.getResourceName());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -303,18 +185,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    switch (resultCase_) {
-      case 1:
-        hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getResourceName().hashCode();
-        break;
-      case 2:
-        hash = (37 * hash) + STATUS_FIELD_NUMBER;
-        hash = (53 * hash) + getStatus().hashCode();
-        break;
-      case 0:
-      default:
-    }
+    hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getResourceName().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -452,8 +324,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      resultCase_ = 0;
-      result_ = null;
+      resourceName_ = "";
+
       return this;
     }
 
@@ -480,17 +352,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v0.services.ApplyRecommendationResult buildPartial() {
       com.google.ads.googleads.v0.services.ApplyRecommendationResult result = new com.google.ads.googleads.v0.services.ApplyRecommendationResult(this);
-      if (resultCase_ == 1) {
-        result.result_ = result_;
-      }
-      if (resultCase_ == 2) {
-        if (statusBuilder_ == null) {
-          result.result_ = result_;
-        } else {
-          result.result_ = statusBuilder_.build();
-        }
-      }
-      result.resultCase_ = resultCase_;
+      result.resourceName_ = resourceName_;
       onBuilt();
       return result;
     }
@@ -539,20 +401,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v0.services.ApplyRecommendationResult other) {
       if (other == com.google.ads.googleads.v0.services.ApplyRecommendationResult.getDefaultInstance()) return this;
-      switch (other.getResultCase()) {
-        case RESOURCE_NAME: {
-          resultCase_ = 1;
-          result_ = other.result_;
-          onChanged();
-          break;
-        }
-        case STATUS: {
-          mergeStatus(other.getStatus());
-          break;
-        }
-        case RESULT_NOT_SET: {
-          break;
-        }
+      if (!other.getResourceName().isEmpty()) {
+        resourceName_ = other.resourceName_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -582,22 +433,8 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
-    private int resultCase_ = 0;
-    private java.lang.Object result_;
-    public ResultCase
-        getResultCase() {
-      return ResultCase.forNumber(
-          resultCase_);
-    }
 
-    public Builder clearResult() {
-      resultCase_ = 0;
-      result_ = null;
-      onChanged();
-      return this;
-    }
-
-
+    private java.lang.Object resourceName_ = "";
     /**
      * <pre>
      * Returned for successful applies.
@@ -606,17 +443,12 @@ private static final long serialVersionUID = 0L;
      * <code>string resource_name = 1;</code>
      */
     public java.lang.String getResourceName() {
-      java.lang.Object ref = "";
-      if (resultCase_ == 1) {
-        ref = result_;
-      }
+      java.lang.Object ref = resourceName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (resultCase_ == 1) {
-          result_ = s;
-        }
+        resourceName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -631,17 +463,12 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
-      java.lang.Object ref = "";
-      if (resultCase_ == 1) {
-        ref = result_;
-      }
+      java.lang.Object ref = resourceName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        if (resultCase_ == 1) {
-          result_ = b;
-        }
+        resourceName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -659,8 +486,8 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  resultCase_ = 1;
-      result_ = value;
+  
+      resourceName_ = value;
       onChanged();
       return this;
     }
@@ -672,11 +499,9 @@ private static final long serialVersionUID = 0L;
      * <code>string resource_name = 1;</code>
      */
     public Builder clearResourceName() {
-      if (resultCase_ == 1) {
-        resultCase_ = 0;
-        result_ = null;
-        onChanged();
-      }
+      
+      resourceName_ = getDefaultInstance().getResourceName();
+      onChanged();
       return this;
     }
     /**
@@ -692,182 +517,10 @@ private static final long serialVersionUID = 0L;
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-      resultCase_ = 1;
-      result_ = value;
+      
+      resourceName_ = value;
       onChanged();
       return this;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
-    /**
-     * <pre>
-     * Returned for failed operations.
-     * </pre>
-     *
-     * <code>.google.rpc.Status status = 2;</code>
-     */
-    public boolean hasStatus() {
-      return resultCase_ == 2;
-    }
-    /**
-     * <pre>
-     * Returned for failed operations.
-     * </pre>
-     *
-     * <code>.google.rpc.Status status = 2;</code>
-     */
-    public com.google.rpc.Status getStatus() {
-      if (statusBuilder_ == null) {
-        if (resultCase_ == 2) {
-          return (com.google.rpc.Status) result_;
-        }
-        return com.google.rpc.Status.getDefaultInstance();
-      } else {
-        if (resultCase_ == 2) {
-          return statusBuilder_.getMessage();
-        }
-        return com.google.rpc.Status.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * Returned for failed operations.
-     * </pre>
-     *
-     * <code>.google.rpc.Status status = 2;</code>
-     */
-    public Builder setStatus(com.google.rpc.Status value) {
-      if (statusBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        result_ = value;
-        onChanged();
-      } else {
-        statusBuilder_.setMessage(value);
-      }
-      resultCase_ = 2;
-      return this;
-    }
-    /**
-     * <pre>
-     * Returned for failed operations.
-     * </pre>
-     *
-     * <code>.google.rpc.Status status = 2;</code>
-     */
-    public Builder setStatus(
-        com.google.rpc.Status.Builder builderForValue) {
-      if (statusBuilder_ == null) {
-        result_ = builderForValue.build();
-        onChanged();
-      } else {
-        statusBuilder_.setMessage(builderForValue.build());
-      }
-      resultCase_ = 2;
-      return this;
-    }
-    /**
-     * <pre>
-     * Returned for failed operations.
-     * </pre>
-     *
-     * <code>.google.rpc.Status status = 2;</code>
-     */
-    public Builder mergeStatus(com.google.rpc.Status value) {
-      if (statusBuilder_ == null) {
-        if (resultCase_ == 2 &&
-            result_ != com.google.rpc.Status.getDefaultInstance()) {
-          result_ = com.google.rpc.Status.newBuilder((com.google.rpc.Status) result_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          result_ = value;
-        }
-        onChanged();
-      } else {
-        if (resultCase_ == 2) {
-          statusBuilder_.mergeFrom(value);
-        }
-        statusBuilder_.setMessage(value);
-      }
-      resultCase_ = 2;
-      return this;
-    }
-    /**
-     * <pre>
-     * Returned for failed operations.
-     * </pre>
-     *
-     * <code>.google.rpc.Status status = 2;</code>
-     */
-    public Builder clearStatus() {
-      if (statusBuilder_ == null) {
-        if (resultCase_ == 2) {
-          resultCase_ = 0;
-          result_ = null;
-          onChanged();
-        }
-      } else {
-        if (resultCase_ == 2) {
-          resultCase_ = 0;
-          result_ = null;
-        }
-        statusBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Returned for failed operations.
-     * </pre>
-     *
-     * <code>.google.rpc.Status status = 2;</code>
-     */
-    public com.google.rpc.Status.Builder getStatusBuilder() {
-      return getStatusFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Returned for failed operations.
-     * </pre>
-     *
-     * <code>.google.rpc.Status status = 2;</code>
-     */
-    public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
-      if ((resultCase_ == 2) && (statusBuilder_ != null)) {
-        return statusBuilder_.getMessageOrBuilder();
-      } else {
-        if (resultCase_ == 2) {
-          return (com.google.rpc.Status) result_;
-        }
-        return com.google.rpc.Status.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * Returned for failed operations.
-     * </pre>
-     *
-     * <code>.google.rpc.Status status = 2;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
-        getStatusFieldBuilder() {
-      if (statusBuilder_ == null) {
-        if (!(resultCase_ == 2)) {
-          result_ = com.google.rpc.Status.getDefaultInstance();
-        }
-        statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
-                (com.google.rpc.Status) result_,
-                getParentForChildren(),
-                isClean());
-        result_ = null;
-      }
-      resultCase_ = 2;
-      onChanged();;
-      return statusBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
