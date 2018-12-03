@@ -10,7 +10,7 @@ This project hosts the Java client library for the Google Ads API.
 
 ## Requirements
 
-  * Java 1.7+
+  * Java 1.8+
   * Maven 3.0+
 
 ## Maven artifacts
@@ -18,7 +18,7 @@ This project hosts the Java client library for the Google Ads API.
     <dependency>
       <groupId>com.google.api-ads</groupId>
       <artifactId>google-ads</artifactId>
-      <version>0.1.0</version>
+      <version>0.6.0</version>
     </dependency>
 
 ## Getting started
