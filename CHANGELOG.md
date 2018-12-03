@@ -1,3 +1,15 @@
+0.6.0 - 2018-12-03
+------------------
+Added support and examples for Google Ads API v0_6.
+
+- Added support for loginCustomerId header. This must be specified when
+  authenticating as a manager account.
+- Added example showing how to create a Smart Shopping Campaign.
+- Updated example showing how to apply recommendations with partial failure.
+- Updated example showing how to add proximity criteria to campaigns.
+- Updated example showing how to retrieve geo target constants for a country
+  code.
+
 0.5.0 - 2018-11-02
 ------------------
 Added support and examples for Google Ads API v0_5.
