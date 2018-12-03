@@ -169,6 +169,47 @@ private static final long serialVersionUID = 0L;
      * <code>RECOMMENDATION_INVALIDATED = 9;</code>
      */
     RECOMMENDATION_INVALIDATED(9),
+    /**
+     * <pre>
+     * The number of operations in a single request exceeds the maximum allowed.
+     * </pre>
+     *
+     * <code>TOO_MANY_OPERATIONS = 10;</code>
+     */
+    TOO_MANY_OPERATIONS(10),
+    /**
+     * <pre>
+     * There are no operations in the request.
+     * </pre>
+     *
+     * <code>NO_OPERATIONS = 11;</code>
+     */
+    NO_OPERATIONS(11),
+    /**
+     * <pre>
+     * Operations with multiple recommendation types are not supported when
+     * partial failure mode is not enabled.
+     * </pre>
+     *
+     * <code>DIFFERENT_TYPES_NOT_SUPPORTED = 12;</code>
+     */
+    DIFFERENT_TYPES_NOT_SUPPORTED(12),
+    /**
+     * <pre>
+     * Request contains multiple operations with the same resource_name.
+     * </pre>
+     *
+     * <code>DUPLICATE_RESOURCE_NAME = 13;</code>
+     */
+    DUPLICATE_RESOURCE_NAME(13),
+    /**
+     * <pre>
+     * The recommendation requested to dismiss has already been dismissed.
+     * </pre>
+     *
+     * <code>RECOMMENDATION_ALREADY_DISMISSED = 14;</code>
+     */
+    RECOMMENDATION_ALREADY_DISMISSED(14),
     UNRECOGNIZED(-1),
     ;
 
@@ -255,6 +296,47 @@ private static final long serialVersionUID = 0L;
      * <code>RECOMMENDATION_INVALIDATED = 9;</code>
      */
     public static final int RECOMMENDATION_INVALIDATED_VALUE = 9;
+    /**
+     * <pre>
+     * The number of operations in a single request exceeds the maximum allowed.
+     * </pre>
+     *
+     * <code>TOO_MANY_OPERATIONS = 10;</code>
+     */
+    public static final int TOO_MANY_OPERATIONS_VALUE = 10;
+    /**
+     * <pre>
+     * There are no operations in the request.
+     * </pre>
+     *
+     * <code>NO_OPERATIONS = 11;</code>
+     */
+    public static final int NO_OPERATIONS_VALUE = 11;
+    /**
+     * <pre>
+     * Operations with multiple recommendation types are not supported when
+     * partial failure mode is not enabled.
+     * </pre>
+     *
+     * <code>DIFFERENT_TYPES_NOT_SUPPORTED = 12;</code>
+     */
+    public static final int DIFFERENT_TYPES_NOT_SUPPORTED_VALUE = 12;
+    /**
+     * <pre>
+     * Request contains multiple operations with the same resource_name.
+     * </pre>
+     *
+     * <code>DUPLICATE_RESOURCE_NAME = 13;</code>
+     */
+    public static final int DUPLICATE_RESOURCE_NAME_VALUE = 13;
+    /**
+     * <pre>
+     * The recommendation requested to dismiss has already been dismissed.
+     * </pre>
+     *
+     * <code>RECOMMENDATION_ALREADY_DISMISSED = 14;</code>
+     */
+    public static final int RECOMMENDATION_ALREADY_DISMISSED_VALUE = 14;
 
 
     public final int getNumber() {
@@ -285,6 +367,11 @@ private static final long serialVersionUID = 0L;
         case 7: return ADGROUP_KEYWORD_LIMIT;
         case 8: return RECOMMENDATION_ALREADY_APPLIED;
         case 9: return RECOMMENDATION_INVALIDATED;
+        case 10: return TOO_MANY_OPERATIONS;
+        case 11: return NO_OPERATIONS;
+        case 12: return DIFFERENT_TYPES_NOT_SUPPORTED;
+        case 13: return DUPLICATE_RESOURCE_NAME;
+        case 14: return RECOMMENDATION_ALREADY_DISMISSED;
         default: return null;
       }
     }

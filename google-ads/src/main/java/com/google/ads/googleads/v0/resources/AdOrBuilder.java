@@ -314,6 +314,34 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
+   * The name of the ad. This is only used to be able to identify the ad. It
+   * does not need to be unique and does not affect the served ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue name = 23;</code>
+   */
+  boolean hasName();
+  /**
+   * <pre>
+   * The name of the ad. This is only used to be able to identify the ad. It
+   * does not need to be unique and does not affect the served ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue name = 23;</code>
+   */
+  com.google.protobuf.StringValue getName();
+  /**
+   * <pre>
+   * The name of the ad. This is only used to be able to identify the ad. It
+   * does not need to be unique and does not affect the served ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue name = 23;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
+
+  /**
+   * <pre>
    * Details pertaining to a text ad.
    * </pre>
    *
@@ -548,6 +576,56 @@ public interface AdOrBuilder extends
    * <code>.google.ads.googleads.v0.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
    */
   com.google.ads.googleads.v0.common.ShoppingProductAdInfoOrBuilder getShoppingProductAdOrBuilder();
+
+  /**
+   * <pre>
+   * Details pertaining to a Gmail ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+   */
+  boolean hasGmailAd();
+  /**
+   * <pre>
+   * Details pertaining to a Gmail ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+   */
+  com.google.ads.googleads.v0.common.GmailAdInfo getGmailAd();
+  /**
+   * <pre>
+   * Details pertaining to a Gmail ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+   */
+  com.google.ads.googleads.v0.common.GmailAdInfoOrBuilder getGmailAdOrBuilder();
+
+  /**
+   * <pre>
+   * Details pertaining to an Image ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+   */
+  boolean hasImageAd();
+  /**
+   * <pre>
+   * Details pertaining to an Image ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+   */
+  com.google.ads.googleads.v0.common.ImageAdInfo getImageAd();
+  /**
+   * <pre>
+   * Details pertaining to an Image ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+   */
+  com.google.ads.googleads.v0.common.ImageAdInfoOrBuilder getImageAdOrBuilder();
 
   public com.google.ads.googleads.v0.resources.Ad.AdDataCase getAdDataCase();
 }

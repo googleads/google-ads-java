@@ -40,6 +40,31 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
 
   /**
    * <pre>
+   * Returned geo targets are restricted to this country code.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue country_code = 5;</code>
+   */
+  boolean hasCountryCode();
+  /**
+   * <pre>
+   * Returned geo targets are restricted to this country code.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue country_code = 5;</code>
+   */
+  com.google.protobuf.StringValue getCountryCode();
+  /**
+   * <pre>
+   * Returned geo targets are restricted to this country code.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue country_code = 5;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder();
+
+  /**
+   * <pre>
    * The location names to search by. At most 25 names can be set.
    * </pre>
    *

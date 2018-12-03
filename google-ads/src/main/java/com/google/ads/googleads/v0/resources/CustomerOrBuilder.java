@@ -162,6 +162,31 @@ public interface CustomerOrBuilder extends
 
   /**
    * <pre>
+   * The URL template for appending params to the final URL
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+   */
+  boolean hasFinalUrlSuffix();
+  /**
+   * <pre>
+   * The URL template for appending params to the final URL
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+   */
+  com.google.protobuf.StringValue getFinalUrlSuffix();
+  /**
+   * <pre>
+   * The URL template for appending params to the final URL
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 11;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder();
+
+  /**
+   * <pre>
    * Whether auto-tagging is enabled for the customer.
    * </pre>
    *

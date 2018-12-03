@@ -32,7 +32,6 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * The campaign to which the criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 4;</code>
@@ -41,7 +40,6 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * The campaign to which the criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 4;</code>
@@ -50,7 +48,6 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * The campaign to which the criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 4;</code>
@@ -385,6 +382,31 @@ public interface CampaignCriterionOrBuilder extends
 
   /**
    * <pre>
+   * User List.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 22;</code>
+   */
+  boolean hasUserList();
+  /**
+   * <pre>
+   * User List.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 22;</code>
+   */
+  com.google.ads.googleads.v0.common.UserListInfo getUserList();
+  /**
+   * <pre>
+   * User List.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 22;</code>
+   */
+  com.google.ads.googleads.v0.common.UserListInfoOrBuilder getUserListOrBuilder();
+
+  /**
+   * <pre>
    * YouTube Video.
    * </pre>
    *
@@ -482,6 +504,156 @@ public interface CampaignCriterionOrBuilder extends
    * <code>.google.ads.googleads.v0.common.TopicInfo topic = 24;</code>
    */
   com.google.ads.googleads.v0.common.TopicInfoOrBuilder getTopicOrBuilder();
+
+  /**
+   * <pre>
+   * Listing scope.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ListingScopeInfo listing_scope = 25;</code>
+   */
+  boolean hasListingScope();
+  /**
+   * <pre>
+   * Listing scope.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ListingScopeInfo listing_scope = 25;</code>
+   */
+  com.google.ads.googleads.v0.common.ListingScopeInfo getListingScope();
+  /**
+   * <pre>
+   * Listing scope.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ListingScopeInfo listing_scope = 25;</code>
+   */
+  com.google.ads.googleads.v0.common.ListingScopeInfoOrBuilder getListingScopeOrBuilder();
+
+  /**
+   * <pre>
+   * Language.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.LanguageInfo language = 26;</code>
+   */
+  boolean hasLanguage();
+  /**
+   * <pre>
+   * Language.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.LanguageInfo language = 26;</code>
+   */
+  com.google.ads.googleads.v0.common.LanguageInfo getLanguage();
+  /**
+   * <pre>
+   * Language.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.LanguageInfo language = 26;</code>
+   */
+  com.google.ads.googleads.v0.common.LanguageInfoOrBuilder getLanguageOrBuilder();
+
+  /**
+   * <pre>
+   * IpBlock.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.IpBlockInfo ip_block = 27;</code>
+   */
+  boolean hasIpBlock();
+  /**
+   * <pre>
+   * IpBlock.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.IpBlockInfo ip_block = 27;</code>
+   */
+  com.google.ads.googleads.v0.common.IpBlockInfo getIpBlock();
+  /**
+   * <pre>
+   * IpBlock.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.IpBlockInfo ip_block = 27;</code>
+   */
+  com.google.ads.googleads.v0.common.IpBlockInfoOrBuilder getIpBlockOrBuilder();
+
+  /**
+   * <pre>
+   * ContentLabel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ContentLabelInfo content_label = 28;</code>
+   */
+  boolean hasContentLabel();
+  /**
+   * <pre>
+   * ContentLabel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ContentLabelInfo content_label = 28;</code>
+   */
+  com.google.ads.googleads.v0.common.ContentLabelInfo getContentLabel();
+  /**
+   * <pre>
+   * ContentLabel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ContentLabelInfo content_label = 28;</code>
+   */
+  com.google.ads.googleads.v0.common.ContentLabelInfoOrBuilder getContentLabelOrBuilder();
+
+  /**
+   * <pre>
+   * Carrier.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.CarrierInfo carrier = 29;</code>
+   */
+  boolean hasCarrier();
+  /**
+   * <pre>
+   * Carrier.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.CarrierInfo carrier = 29;</code>
+   */
+  com.google.ads.googleads.v0.common.CarrierInfo getCarrier();
+  /**
+   * <pre>
+   * Carrier.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.CarrierInfo carrier = 29;</code>
+   */
+  com.google.ads.googleads.v0.common.CarrierInfoOrBuilder getCarrierOrBuilder();
+
+  /**
+   * <pre>
+   * User Interest.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 30;</code>
+   */
+  boolean hasUserInterest();
+  /**
+   * <pre>
+   * User Interest.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 30;</code>
+   */
+  com.google.ads.googleads.v0.common.UserInterestInfo getUserInterest();
+  /**
+   * <pre>
+   * User Interest.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 30;</code>
+   */
+  com.google.ads.googleads.v0.common.UserInterestInfoOrBuilder getUserInterestOrBuilder();
 
   public com.google.ads.googleads.v0.resources.CampaignCriterion.CriterionCase getCriterionCase();
 }

@@ -17,6 +17,8 @@ package com.google.ads.googleads.v0.services.stub;
 
 import static com.google.ads.googleads.v0.services.GoogleAdsServiceClient.SearchPagedResponse;
 
+import com.google.ads.googleads.v0.services.MutateGoogleAdsRequest;
+import com.google.ads.googleads.v0.services.MutateGoogleAdsResponse;
 import com.google.ads.googleads.v0.services.SearchGoogleAdsRequest;
 import com.google.ads.googleads.v0.services.SearchGoogleAdsResponse;
 import com.google.api.core.BetaApi;
@@ -52,11 +54,22 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(SearchGoogleAdsResponse.getDefaultInstance()))
               .build();
+  private static final MethodDescriptor<MutateGoogleAdsRequest, MutateGoogleAdsResponse>
+      mutateMethodDescriptor =
+          MethodDescriptor.<MutateGoogleAdsRequest, MutateGoogleAdsResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName("google.ads.googleads.v0.services.GoogleAdsService/Mutate")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(MutateGoogleAdsRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(MutateGoogleAdsResponse.getDefaultInstance()))
+              .build();
 
   private final BackgroundResource backgroundResources;
 
   private final UnaryCallable<SearchGoogleAdsRequest, SearchGoogleAdsResponse> searchCallable;
   private final UnaryCallable<SearchGoogleAdsRequest, SearchPagedResponse> searchPagedCallable;
+  private final UnaryCallable<MutateGoogleAdsRequest, MutateGoogleAdsResponse> mutateCallable;
 
   private final GrpcStubCallableFactory callableFactory;
 
@@ -103,6 +116,10 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
         GrpcCallSettings.<SearchGoogleAdsRequest, SearchGoogleAdsResponse>newBuilder()
             .setMethodDescriptor(searchMethodDescriptor)
             .build();
+    GrpcCallSettings<MutateGoogleAdsRequest, MutateGoogleAdsResponse> mutateTransportSettings =
+        GrpcCallSettings.<MutateGoogleAdsRequest, MutateGoogleAdsResponse>newBuilder()
+            .setMethodDescriptor(mutateMethodDescriptor)
+            .build();
 
     this.searchCallable =
         callableFactory.createUnaryCallable(
@@ -110,6 +127,9 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
     this.searchPagedCallable =
         callableFactory.createPagedCallable(
             searchTransportSettings, settings.searchSettings(), clientContext);
+    this.mutateCallable =
+        callableFactory.createUnaryCallable(
+            mutateTransportSettings, settings.mutateSettings(), clientContext);
 
     backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
   }
@@ -120,6 +140,10 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
 
   public UnaryCallable<SearchGoogleAdsRequest, SearchGoogleAdsResponse> searchCallable() {
     return searchCallable;
+  }
+
+  public UnaryCallable<MutateGoogleAdsRequest, MutateGoogleAdsResponse> mutateCallable() {
+    return mutateCallable;
   }
 
   @Override

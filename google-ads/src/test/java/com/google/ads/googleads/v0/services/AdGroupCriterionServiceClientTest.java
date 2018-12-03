@@ -45,37 +45,58 @@ public class AdGroupCriterionServiceClientTest {
   private static MockAdGroupAudienceViewService mockAdGroupAudienceViewService;
   private static MockAdGroupBidModifierService mockAdGroupBidModifierService;
   private static MockAdGroupCriterionService mockAdGroupCriterionService;
+  private static MockAdGroupFeedService mockAdGroupFeedService;
   private static MockAdGroupService mockAdGroupService;
   private static MockAgeRangeViewService mockAgeRangeViewService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
   private static MockBillingSetupService mockBillingSetupService;
+  private static MockCampaignAudienceViewService mockCampaignAudienceViewService;
   private static MockCampaignBidModifierService mockCampaignBidModifierService;
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
+  private static MockCampaignFeedService mockCampaignFeedService;
   private static MockCampaignGroupService mockCampaignGroupService;
   private static MockCampaignService mockCampaignService;
   private static MockCampaignSharedSetService mockCampaignSharedSetService;
+  private static MockCarrierConstantService mockCarrierConstantService;
   private static MockChangeStatusService mockChangeStatusService;
   private static MockConversionActionService mockConversionActionService;
   private static MockCustomerClientLinkService mockCustomerClientLinkService;
+  private static MockCustomerClientService mockCustomerClientService;
+  private static MockCustomerFeedService mockCustomerFeedService;
   private static MockCustomerManagerLinkService mockCustomerManagerLinkService;
   private static MockCustomerService mockCustomerService;
   private static MockDisplayKeywordViewService mockDisplayKeywordViewService;
+  private static MockFeedItemService mockFeedItemService;
+  private static MockFeedMappingService mockFeedMappingService;
+  private static MockFeedService mockFeedService;
   private static MockGenderViewService mockGenderViewService;
   private static MockGeoTargetConstantService mockGeoTargetConstantService;
   private static MockGoogleAdsFieldService mockGoogleAdsFieldService;
+  private static MockSharedCriterionService mockSharedCriterionService;
+  private static MockSharedSetService mockSharedSetService;
+  private static MockUserListService mockUserListService;
   private static MockGoogleAdsService mockGoogleAdsService;
   private static MockHotelGroupViewService mockHotelGroupViewService;
+  private static MockHotelPerformanceViewService mockHotelPerformanceViewService;
+  private static MockKeywordPlanAdGroupService mockKeywordPlanAdGroupService;
+  private static MockKeywordPlanCampaignService mockKeywordPlanCampaignService;
+  private static MockKeywordPlanIdeaService mockKeywordPlanIdeaService;
+  private static MockKeywordPlanKeywordService mockKeywordPlanKeywordService;
+  private static MockKeywordPlanNegativeKeywordService mockKeywordPlanNegativeKeywordService;
+  private static MockKeywordPlanService mockKeywordPlanService;
   private static MockKeywordViewService mockKeywordViewService;
+  private static MockLanguageConstantService mockLanguageConstantService;
   private static MockManagedPlacementViewService mockManagedPlacementViewService;
   private static MockMediaFileService mockMediaFileService;
   private static MockParentalStatusViewService mockParentalStatusViewService;
+  private static MockPaymentsAccountService mockPaymentsAccountService;
   private static MockProductGroupViewService mockProductGroupViewService;
   private static MockRecommendationService mockRecommendationService;
-  private static MockSharedCriterionService mockSharedCriterionService;
-  private static MockSharedSetService mockSharedSetService;
+  private static MockSearchTermViewService mockSearchTermViewService;
   private static MockTopicConstantService mockTopicConstantService;
   private static MockTopicViewService mockTopicViewService;
+  private static MockUserInterestService mockUserInterestService;
   private static MockVideoService mockVideoService;
   private static MockServiceHelper serviceHelper;
   private AdGroupCriterionServiceClient client;
@@ -89,37 +110,58 @@ public class AdGroupCriterionServiceClientTest {
     mockAdGroupAudienceViewService = new MockAdGroupAudienceViewService();
     mockAdGroupBidModifierService = new MockAdGroupBidModifierService();
     mockAdGroupCriterionService = new MockAdGroupCriterionService();
+    mockAdGroupFeedService = new MockAdGroupFeedService();
     mockAdGroupService = new MockAdGroupService();
     mockAgeRangeViewService = new MockAgeRangeViewService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
     mockBillingSetupService = new MockBillingSetupService();
+    mockCampaignAudienceViewService = new MockCampaignAudienceViewService();
     mockCampaignBidModifierService = new MockCampaignBidModifierService();
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
+    mockCampaignFeedService = new MockCampaignFeedService();
     mockCampaignGroupService = new MockCampaignGroupService();
     mockCampaignService = new MockCampaignService();
     mockCampaignSharedSetService = new MockCampaignSharedSetService();
+    mockCarrierConstantService = new MockCarrierConstantService();
     mockChangeStatusService = new MockChangeStatusService();
     mockConversionActionService = new MockConversionActionService();
     mockCustomerClientLinkService = new MockCustomerClientLinkService();
+    mockCustomerClientService = new MockCustomerClientService();
+    mockCustomerFeedService = new MockCustomerFeedService();
     mockCustomerManagerLinkService = new MockCustomerManagerLinkService();
     mockCustomerService = new MockCustomerService();
     mockDisplayKeywordViewService = new MockDisplayKeywordViewService();
+    mockFeedItemService = new MockFeedItemService();
+    mockFeedMappingService = new MockFeedMappingService();
+    mockFeedService = new MockFeedService();
     mockGenderViewService = new MockGenderViewService();
     mockGeoTargetConstantService = new MockGeoTargetConstantService();
     mockGoogleAdsFieldService = new MockGoogleAdsFieldService();
+    mockSharedCriterionService = new MockSharedCriterionService();
+    mockSharedSetService = new MockSharedSetService();
+    mockUserListService = new MockUserListService();
     mockGoogleAdsService = new MockGoogleAdsService();
     mockHotelGroupViewService = new MockHotelGroupViewService();
+    mockHotelPerformanceViewService = new MockHotelPerformanceViewService();
+    mockKeywordPlanAdGroupService = new MockKeywordPlanAdGroupService();
+    mockKeywordPlanCampaignService = new MockKeywordPlanCampaignService();
+    mockKeywordPlanIdeaService = new MockKeywordPlanIdeaService();
+    mockKeywordPlanKeywordService = new MockKeywordPlanKeywordService();
+    mockKeywordPlanNegativeKeywordService = new MockKeywordPlanNegativeKeywordService();
+    mockKeywordPlanService = new MockKeywordPlanService();
     mockKeywordViewService = new MockKeywordViewService();
+    mockLanguageConstantService = new MockLanguageConstantService();
     mockManagedPlacementViewService = new MockManagedPlacementViewService();
     mockMediaFileService = new MockMediaFileService();
     mockParentalStatusViewService = new MockParentalStatusViewService();
+    mockPaymentsAccountService = new MockPaymentsAccountService();
     mockProductGroupViewService = new MockProductGroupViewService();
     mockRecommendationService = new MockRecommendationService();
-    mockSharedCriterionService = new MockSharedCriterionService();
-    mockSharedSetService = new MockSharedSetService();
+    mockSearchTermViewService = new MockSearchTermViewService();
     mockTopicConstantService = new MockTopicConstantService();
     mockTopicViewService = new MockTopicViewService();
+    mockUserInterestService = new MockUserInterestService();
     mockVideoService = new MockVideoService();
     serviceHelper =
         new MockServiceHelper(
@@ -131,37 +173,58 @@ public class AdGroupCriterionServiceClientTest {
                 mockAdGroupAudienceViewService,
                 mockAdGroupBidModifierService,
                 mockAdGroupCriterionService,
+                mockAdGroupFeedService,
                 mockAdGroupService,
                 mockAgeRangeViewService,
                 mockBiddingStrategyService,
                 mockBillingSetupService,
+                mockCampaignAudienceViewService,
                 mockCampaignBidModifierService,
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
+                mockCampaignFeedService,
                 mockCampaignGroupService,
                 mockCampaignService,
                 mockCampaignSharedSetService,
+                mockCarrierConstantService,
                 mockChangeStatusService,
                 mockConversionActionService,
                 mockCustomerClientLinkService,
+                mockCustomerClientService,
+                mockCustomerFeedService,
                 mockCustomerManagerLinkService,
                 mockCustomerService,
                 mockDisplayKeywordViewService,
+                mockFeedItemService,
+                mockFeedMappingService,
+                mockFeedService,
                 mockGenderViewService,
                 mockGeoTargetConstantService,
                 mockGoogleAdsFieldService,
+                mockSharedCriterionService,
+                mockSharedSetService,
+                mockUserListService,
                 mockGoogleAdsService,
                 mockHotelGroupViewService,
+                mockHotelPerformanceViewService,
+                mockKeywordPlanAdGroupService,
+                mockKeywordPlanCampaignService,
+                mockKeywordPlanIdeaService,
+                mockKeywordPlanKeywordService,
+                mockKeywordPlanNegativeKeywordService,
+                mockKeywordPlanService,
                 mockKeywordViewService,
+                mockLanguageConstantService,
                 mockManagedPlacementViewService,
                 mockMediaFileService,
                 mockParentalStatusViewService,
+                mockPaymentsAccountService,
                 mockProductGroupViewService,
                 mockRecommendationService,
-                mockSharedCriterionService,
-                mockSharedSetService,
+                mockSearchTermViewService,
                 mockTopicConstantService,
                 mockTopicViewService,
+                mockUserInterestService,
                 mockVideoService));
     serviceHelper.start();
   }

@@ -104,14 +104,6 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * The product condition is old.
-     * </pre>
-     *
-     * <code>OLD = 2;</code>
-     */
-    OLD(2),
-    /**
-     * <pre>
      * The product condition is new.
      * </pre>
      *
@@ -153,14 +145,6 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN = 1;</code>
      */
     public static final int UNKNOWN_VALUE = 1;
-    /**
-     * <pre>
-     * The product condition is old.
-     * </pre>
-     *
-     * <code>OLD = 2;</code>
-     */
-    public static final int OLD_VALUE = 2;
     /**
      * <pre>
      * The product condition is new.
@@ -207,7 +191,6 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
-        case 2: return OLD;
         case 3: return NEW;
         case 4: return REFURBISHED;
         case 5: return USED;

@@ -121,6 +121,26 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 106: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (endTimeCase_ == 13) {
+              subBuilder = ((com.google.protobuf.StringValue) endTime_).toBuilder();
+            }
+            endTime_ =
+                input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.protobuf.StringValue) endTime_);
+              endTime_ = subBuilder.buildPartial();
+            }
+            endTimeCase_ = 13;
+            break;
+          }
+          case 112: {
+            int rawValue = input.readEnum();
+            endTimeCase_ = 14;
+            endTime_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -2002,6 +2022,44 @@ private static final long serialVersionUID = 0L;
         startTimeCase_);
   }
 
+  private int endTimeCase_ = 0;
+  private java.lang.Object endTime_;
+  public enum EndTimeCase
+      implements com.google.protobuf.Internal.EnumLite {
+    END_DATE_TIME(13),
+    END_TIME_TYPE(14),
+    ENDTIME_NOT_SET(0);
+    private final int value;
+    private EndTimeCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EndTimeCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static EndTimeCase forNumber(int value) {
+      switch (value) {
+        case 13: return END_DATE_TIME;
+        case 14: return END_TIME_TYPE;
+        case 0: return ENDTIME_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public EndTimeCase
+  getEndTimeCase() {
+    return EndTimeCase.forNumber(
+        endTimeCase_);
+  }
+
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -2277,6 +2335,75 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNSPECIFIED;
   }
 
+  public static final int END_DATE_TIME_FIELD_NUMBER = 13;
+  /**
+   * <pre>
+   * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+   */
+  public boolean hasEndDateTime() {
+    return endTimeCase_ == 13;
+  }
+  /**
+   * <pre>
+   * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+   */
+  public com.google.protobuf.StringValue getEndDateTime() {
+    if (endTimeCase_ == 13) {
+       return (com.google.protobuf.StringValue) endTime_;
+    }
+    return com.google.protobuf.StringValue.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder() {
+    if (endTimeCase_ == 13) {
+       return (com.google.protobuf.StringValue) endTime_;
+    }
+    return com.google.protobuf.StringValue.getDefaultInstance();
+  }
+
+  public static final int END_TIME_TYPE_FIELD_NUMBER = 14;
+  /**
+   * <pre>
+   * The end time as a type.  The only possible value is FOREVER.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+   */
+  public int getEndTimeTypeValue() {
+    if (endTimeCase_ == 14) {
+      return (java.lang.Integer) endTime_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The end time as a type.  The only possible value is FOREVER.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+   */
+  public com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType getEndTimeType() {
+    if (endTimeCase_ == 14) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.valueOf(
+          (java.lang.Integer) endTime_);
+      return result == null ? com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2311,6 +2438,12 @@ private static final long serialVersionUID = 0L;
     }
     if (paymentsAccountInfo_ != null) {
       output.writeMessage(12, getPaymentsAccountInfo());
+    }
+    if (endTimeCase_ == 13) {
+      output.writeMessage(13, (com.google.protobuf.StringValue) endTime_);
+    }
+    if (endTimeCase_ == 14) {
+      output.writeEnum(14, ((java.lang.Integer) endTime_));
     }
     unknownFields.writeTo(output);
   }
@@ -2347,6 +2480,14 @@ private static final long serialVersionUID = 0L;
     if (paymentsAccountInfo_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getPaymentsAccountInfo());
+    }
+    if (endTimeCase_ == 13) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, (com.google.protobuf.StringValue) endTime_);
+    }
+    if (endTimeCase_ == 14) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(14, ((java.lang.Integer) endTime_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2397,6 +2538,21 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
+    result = result && getEndTimeCase().equals(
+        other.getEndTimeCase());
+    if (!result) return false;
+    switch (endTimeCase_) {
+      case 13:
+        result = result && getEndDateTime()
+            .equals(other.getEndDateTime());
+        break;
+      case 14:
+        result = result && getEndTimeTypeValue()
+            == other.getEndTimeTypeValue();
+        break;
+      case 0:
+      default:
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -2432,6 +2588,18 @@ private static final long serialVersionUID = 0L;
       case 10:
         hash = (37 * hash) + START_TIME_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + getStartTimeTypeValue();
+        break;
+      case 0:
+      default:
+    }
+    switch (endTimeCase_) {
+      case 13:
+        hash = (37 * hash) + END_DATE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndDateTime().hashCode();
+        break;
+      case 14:
+        hash = (37 * hash) + END_TIME_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTimeTypeValue();
         break;
       case 0:
       default:
@@ -2599,6 +2767,8 @@ private static final long serialVersionUID = 0L;
       }
       startTimeCase_ = 0;
       startTime_ = null;
+      endTimeCase_ = 0;
+      endTime_ = null;
       return this;
     }
 
@@ -2652,7 +2822,18 @@ private static final long serialVersionUID = 0L;
       if (startTimeCase_ == 10) {
         result.startTime_ = startTime_;
       }
+      if (endTimeCase_ == 13) {
+        if (endDateTimeBuilder_ == null) {
+          result.endTime_ = endTime_;
+        } else {
+          result.endTime_ = endDateTimeBuilder_.build();
+        }
+      }
+      if (endTimeCase_ == 14) {
+        result.endTime_ = endTime_;
+      }
       result.startTimeCase_ = startTimeCase_;
+      result.endTimeCase_ = endTimeCase_;
       onBuilt();
       return result;
     }
@@ -2730,6 +2911,19 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
+      switch (other.getEndTimeCase()) {
+        case END_DATE_TIME: {
+          mergeEndDateTime(other.getEndDateTime());
+          break;
+        }
+        case END_TIME_TYPE: {
+          setEndTimeTypeValue(other.getEndTimeTypeValue());
+          break;
+        }
+        case ENDTIME_NOT_SET: {
+          break;
+        }
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -2769,6 +2963,21 @@ private static final long serialVersionUID = 0L;
     public Builder clearStartTime() {
       startTimeCase_ = 0;
       startTime_ = null;
+      onChanged();
+      return this;
+    }
+
+    private int endTimeCase_ = 0;
+    private java.lang.Object endTime_;
+    public EndTimeCase
+        getEndTimeCase() {
+      return EndTimeCase.forNumber(
+          endTimeCase_);
+    }
+
+    public Builder clearEndTime() {
+      endTimeCase_ = 0;
+      endTime_ = null;
       onChanged();
       return this;
     }
@@ -3746,6 +3955,252 @@ private static final long serialVersionUID = 0L;
       if (startTimeCase_ == 10) {
         startTimeCase_ = 0;
         startTime_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> endDateTimeBuilder_;
+    /**
+     * <pre>
+     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     */
+    public boolean hasEndDateTime() {
+      return endTimeCase_ == 13;
+    }
+    /**
+     * <pre>
+     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     */
+    public com.google.protobuf.StringValue getEndDateTime() {
+      if (endDateTimeBuilder_ == null) {
+        if (endTimeCase_ == 13) {
+          return (com.google.protobuf.StringValue) endTime_;
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
+      } else {
+        if (endTimeCase_ == 13) {
+          return endDateTimeBuilder_.getMessage();
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     */
+    public Builder setEndDateTime(com.google.protobuf.StringValue value) {
+      if (endDateTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        endTime_ = value;
+        onChanged();
+      } else {
+        endDateTimeBuilder_.setMessage(value);
+      }
+      endTimeCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     */
+    public Builder setEndDateTime(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (endDateTimeBuilder_ == null) {
+        endTime_ = builderForValue.build();
+        onChanged();
+      } else {
+        endDateTimeBuilder_.setMessage(builderForValue.build());
+      }
+      endTimeCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     */
+    public Builder mergeEndDateTime(com.google.protobuf.StringValue value) {
+      if (endDateTimeBuilder_ == null) {
+        if (endTimeCase_ == 13 &&
+            endTime_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          endTime_ = com.google.protobuf.StringValue.newBuilder((com.google.protobuf.StringValue) endTime_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          endTime_ = value;
+        }
+        onChanged();
+      } else {
+        if (endTimeCase_ == 13) {
+          endDateTimeBuilder_.mergeFrom(value);
+        }
+        endDateTimeBuilder_.setMessage(value);
+      }
+      endTimeCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     */
+    public Builder clearEndDateTime() {
+      if (endDateTimeBuilder_ == null) {
+        if (endTimeCase_ == 13) {
+          endTimeCase_ = 0;
+          endTime_ = null;
+          onChanged();
+        }
+      } else {
+        if (endTimeCase_ == 13) {
+          endTimeCase_ = 0;
+          endTime_ = null;
+        }
+        endDateTimeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getEndDateTimeBuilder() {
+      return getEndDateTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder() {
+      if ((endTimeCase_ == 13) && (endDateTimeBuilder_ != null)) {
+        return endDateTimeBuilder_.getMessageOrBuilder();
+      } else {
+        if (endTimeCase_ == 13) {
+          return (com.google.protobuf.StringValue) endTime_;
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getEndDateTimeFieldBuilder() {
+      if (endDateTimeBuilder_ == null) {
+        if (!(endTimeCase_ == 13)) {
+          endTime_ = com.google.protobuf.StringValue.getDefaultInstance();
+        }
+        endDateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                (com.google.protobuf.StringValue) endTime_,
+                getParentForChildren(),
+                isClean());
+        endTime_ = null;
+      }
+      endTimeCase_ = 13;
+      onChanged();;
+      return endDateTimeBuilder_;
+    }
+
+    /**
+     * <pre>
+     * The end time as a type.  The only possible value is FOREVER.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+     */
+    public int getEndTimeTypeValue() {
+      if (endTimeCase_ == 14) {
+        return ((java.lang.Integer) endTime_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The end time as a type.  The only possible value is FOREVER.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+     */
+    public Builder setEndTimeTypeValue(int value) {
+      endTimeCase_ = 14;
+      endTime_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The end time as a type.  The only possible value is FOREVER.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+     */
+    public com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType getEndTimeType() {
+      if (endTimeCase_ == 14) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.valueOf(
+            (java.lang.Integer) endTime_);
+        return result == null ? com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The end time as a type.  The only possible value is FOREVER.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+     */
+    public Builder setEndTimeType(com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      endTimeCase_ = 14;
+      endTime_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The end time as a type.  The only possible value is FOREVER.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+     */
+    public Builder clearEndTimeType() {
+      if (endTimeCase_ == 14) {
+        endTimeCase_ = 0;
+        endTime_ = null;
         onChanged();
       }
       return this;

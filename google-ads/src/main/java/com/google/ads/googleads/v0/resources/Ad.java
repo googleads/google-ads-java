@@ -268,6 +268,47 @@ private static final long serialVersionUID = 0L;
             devicePreference_ = rawValue;
             break;
           }
+          case 170: {
+            com.google.ads.googleads.v0.common.GmailAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 21) {
+              subBuilder = ((com.google.ads.googleads.v0.common.GmailAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v0.common.GmailAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.GmailAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 21;
+            break;
+          }
+          case 178: {
+            com.google.ads.googleads.v0.common.ImageAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 22) {
+              subBuilder = ((com.google.ads.googleads.v0.common.ImageAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v0.common.ImageAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.ImageAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 22;
+            break;
+          }
+          case 186: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (name_ != null) {
+              subBuilder = name_.toBuilder();
+            }
+            name_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(name_);
+              name_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -323,6 +364,8 @@ private static final long serialVersionUID = 0L;
     HOTEL_AD(15),
     SHOPPING_SMART_AD(17),
     SHOPPING_PRODUCT_AD(18),
+    GMAIL_AD(21),
+    IMAGE_AD(22),
     ADDATA_NOT_SET(0);
     private final int value;
     private AdDataCase(int value) {
@@ -347,6 +390,8 @@ private static final long serialVersionUID = 0L;
         case 15: return HOTEL_AD;
         case 17: return SHOPPING_SMART_AD;
         case 18: return SHOPPING_PRODUCT_AD;
+        case 21: return GMAIL_AD;
+        case 22: return IMAGE_AD;
         case 0: return ADDATA_NOT_SET;
         default: return null;
       }
@@ -748,6 +793,42 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNRECOGNIZED : result;
   }
 
+  public static final int NAME_FIELD_NUMBER = 23;
+  private com.google.protobuf.StringValue name_;
+  /**
+   * <pre>
+   * The name of the ad. This is only used to be able to identify the ad. It
+   * does not need to be unique and does not affect the served ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue name = 23;</code>
+   */
+  public boolean hasName() {
+    return name_ != null;
+  }
+  /**
+   * <pre>
+   * The name of the ad. This is only used to be able to identify the ad. It
+   * does not need to be unique and does not affect the served ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue name = 23;</code>
+   */
+  public com.google.protobuf.StringValue getName() {
+    return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
+  }
+  /**
+   * <pre>
+   * The name of the ad. This is only used to be able to identify the ad. It
+   * does not need to be unique and does not affect the served ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue name = 23;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
+    return getName();
+  }
+
   public static final int TEXT_AD_FIELD_NUMBER = 6;
   /**
    * <pre>
@@ -1102,6 +1183,82 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.ShoppingProductAdInfo.getDefaultInstance();
   }
 
+  public static final int GMAIL_AD_FIELD_NUMBER = 21;
+  /**
+   * <pre>
+   * Details pertaining to a Gmail ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+   */
+  public boolean hasGmailAd() {
+    return adDataCase_ == 21;
+  }
+  /**
+   * <pre>
+   * Details pertaining to a Gmail ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+   */
+  public com.google.ads.googleads.v0.common.GmailAdInfo getGmailAd() {
+    if (adDataCase_ == 21) {
+       return (com.google.ads.googleads.v0.common.GmailAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v0.common.GmailAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to a Gmail ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+   */
+  public com.google.ads.googleads.v0.common.GmailAdInfoOrBuilder getGmailAdOrBuilder() {
+    if (adDataCase_ == 21) {
+       return (com.google.ads.googleads.v0.common.GmailAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v0.common.GmailAdInfo.getDefaultInstance();
+  }
+
+  public static final int IMAGE_AD_FIELD_NUMBER = 22;
+  /**
+   * <pre>
+   * Details pertaining to an Image ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+   */
+  public boolean hasImageAd() {
+    return adDataCase_ == 22;
+  }
+  /**
+   * <pre>
+   * Details pertaining to an Image ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+   */
+  public com.google.ads.googleads.v0.common.ImageAdInfo getImageAd() {
+    if (adDataCase_ == 22) {
+       return (com.google.ads.googleads.v0.common.ImageAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v0.common.ImageAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to an Image ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+   */
+  public com.google.ads.googleads.v0.common.ImageAdInfoOrBuilder getImageAdOrBuilder() {
+    if (adDataCase_ == 22) {
+       return (com.google.ads.googleads.v0.common.ImageAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v0.common.ImageAdInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1169,6 +1326,15 @@ private static final long serialVersionUID = 0L;
     }
     if (devicePreference_ != com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNSPECIFIED.getNumber()) {
       output.writeEnum(20, devicePreference_);
+    }
+    if (adDataCase_ == 21) {
+      output.writeMessage(21, (com.google.ads.googleads.v0.common.GmailAdInfo) adData_);
+    }
+    if (adDataCase_ == 22) {
+      output.writeMessage(22, (com.google.ads.googleads.v0.common.ImageAdInfo) adData_);
+    }
+    if (name_ != null) {
+      output.writeMessage(23, getName());
     }
     unknownFields.writeTo(output);
   }
@@ -1251,6 +1417,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(20, devicePreference_);
     }
+    if (adDataCase_ == 21) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, (com.google.ads.googleads.v0.common.GmailAdInfo) adData_);
+    }
+    if (adDataCase_ == 22) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(22, (com.google.ads.googleads.v0.common.ImageAdInfo) adData_);
+    }
+    if (name_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(23, getName());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1295,6 +1473,11 @@ private static final long serialVersionUID = 0L;
           .equals(other.getAddedByGoogleAds());
     }
     result = result && devicePreference_ == other.devicePreference_;
+    result = result && (hasName() == other.hasName());
+    if (hasName()) {
+      result = result && getName()
+          .equals(other.getName());
+    }
     result = result && getAdDataCase().equals(
         other.getAdDataCase());
     if (!result) return false;
@@ -1334,6 +1517,14 @@ private static final long serialVersionUID = 0L;
       case 18:
         result = result && getShoppingProductAd()
             .equals(other.getShoppingProductAd());
+        break;
+      case 21:
+        result = result && getGmailAd()
+            .equals(other.getGmailAd());
+        break;
+      case 22:
+        result = result && getImageAd()
+            .equals(other.getImageAd());
         break;
       case 0:
       default:
@@ -1381,6 +1572,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + DEVICE_PREFERENCE_FIELD_NUMBER;
     hash = (53 * hash) + devicePreference_;
+    if (hasName()) {
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+    }
     switch (adDataCase_) {
       case 6:
         hash = (37 * hash) + TEXT_AD_FIELD_NUMBER;
@@ -1417,6 +1612,14 @@ private static final long serialVersionUID = 0L;
       case 18:
         hash = (37 * hash) + SHOPPING_PRODUCT_AD_FIELD_NUMBER;
         hash = (53 * hash) + getShoppingProductAd().hashCode();
+        break;
+      case 21:
+        hash = (37 * hash) + GMAIL_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getGmailAd().hashCode();
+        break;
+      case 22:
+        hash = (37 * hash) + IMAGE_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getImageAd().hashCode();
         break;
       case 0:
       default:
@@ -1607,6 +1810,12 @@ private static final long serialVersionUID = 0L;
       }
       devicePreference_ = 0;
 
+      if (nameBuilder_ == null) {
+        name_ = null;
+      } else {
+        name_ = null;
+        nameBuilder_ = null;
+      }
       adDataCase_ = 0;
       adData_ = null;
       return this;
@@ -1686,6 +1895,11 @@ private static final long serialVersionUID = 0L;
         result.addedByGoogleAds_ = addedByGoogleAdsBuilder_.build();
       }
       result.devicePreference_ = devicePreference_;
+      if (nameBuilder_ == null) {
+        result.name_ = name_;
+      } else {
+        result.name_ = nameBuilder_.build();
+      }
       if (adDataCase_ == 6) {
         if (textAdBuilder_ == null) {
           result.adData_ = adData_;
@@ -1747,6 +1961,20 @@ private static final long serialVersionUID = 0L;
           result.adData_ = adData_;
         } else {
           result.adData_ = shoppingProductAdBuilder_.build();
+        }
+      }
+      if (adDataCase_ == 21) {
+        if (gmailAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = gmailAdBuilder_.build();
+        }
+      }
+      if (adDataCase_ == 22) {
+        if (imageAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = imageAdBuilder_.build();
         }
       }
       result.bitField0_ = to_bitField0_;
@@ -1895,6 +2123,9 @@ private static final long serialVersionUID = 0L;
       if (other.devicePreference_ != 0) {
         setDevicePreferenceValue(other.getDevicePreferenceValue());
       }
+      if (other.hasName()) {
+        mergeName(other.getName());
+      }
       switch (other.getAdDataCase()) {
         case TEXT_AD: {
           mergeTextAd(other.getTextAd());
@@ -1930,6 +2161,14 @@ private static final long serialVersionUID = 0L;
         }
         case SHOPPING_PRODUCT_AD: {
           mergeShoppingProductAd(other.getShoppingProductAd());
+          break;
+        }
+        case GMAIL_AD: {
+          mergeGmailAd(other.getGmailAd());
+          break;
+        }
+        case IMAGE_AD: {
+          mergeImageAd(other.getImageAd());
           break;
         }
         case ADDATA_NOT_SET: {
@@ -3783,6 +4022,168 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.StringValue name_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
+    /**
+     * <pre>
+     * The name of the ad. This is only used to be able to identify the ad. It
+     * does not need to be unique and does not affect the served ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 23;</code>
+     */
+    public boolean hasName() {
+      return nameBuilder_ != null || name_ != null;
+    }
+    /**
+     * <pre>
+     * The name of the ad. This is only used to be able to identify the ad. It
+     * does not need to be unique and does not affect the served ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 23;</code>
+     */
+    public com.google.protobuf.StringValue getName() {
+      if (nameBuilder_ == null) {
+        return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
+      } else {
+        return nameBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The name of the ad. This is only used to be able to identify the ad. It
+     * does not need to be unique and does not affect the served ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 23;</code>
+     */
+    public Builder setName(com.google.protobuf.StringValue value) {
+      if (nameBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        name_ = value;
+        onChanged();
+      } else {
+        nameBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The name of the ad. This is only used to be able to identify the ad. It
+     * does not need to be unique and does not affect the served ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 23;</code>
+     */
+    public Builder setName(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (nameBuilder_ == null) {
+        name_ = builderForValue.build();
+        onChanged();
+      } else {
+        nameBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The name of the ad. This is only used to be able to identify the ad. It
+     * does not need to be unique and does not affect the served ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 23;</code>
+     */
+    public Builder mergeName(com.google.protobuf.StringValue value) {
+      if (nameBuilder_ == null) {
+        if (name_ != null) {
+          name_ =
+            com.google.protobuf.StringValue.newBuilder(name_).mergeFrom(value).buildPartial();
+        } else {
+          name_ = value;
+        }
+        onChanged();
+      } else {
+        nameBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The name of the ad. This is only used to be able to identify the ad. It
+     * does not need to be unique and does not affect the served ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 23;</code>
+     */
+    public Builder clearName() {
+      if (nameBuilder_ == null) {
+        name_ = null;
+        onChanged();
+      } else {
+        name_ = null;
+        nameBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The name of the ad. This is only used to be able to identify the ad. It
+     * does not need to be unique and does not affect the served ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 23;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getNameBuilder() {
+      
+      onChanged();
+      return getNameFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The name of the ad. This is only used to be able to identify the ad. It
+     * does not need to be unique and does not affect the served ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 23;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
+      if (nameBuilder_ != null) {
+        return nameBuilder_.getMessageOrBuilder();
+      } else {
+        return name_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : name_;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the ad. This is only used to be able to identify the ad. It
+     * does not need to be unique and does not affect the served ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 23;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getNameFieldBuilder() {
+      if (nameBuilder_ == null) {
+        nameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getName(),
+                getParentForChildren(),
+                isClean());
+        name_ = null;
+      }
+      return nameBuilder_;
+    }
+
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.common.TextAdInfo, com.google.ads.googleads.v0.common.TextAdInfo.Builder, com.google.ads.googleads.v0.common.TextAdInfoOrBuilder> textAdBuilder_;
     /**
@@ -5365,6 +5766,350 @@ private static final long serialVersionUID = 0L;
       adDataCase_ = 18;
       onChanged();;
       return shoppingProductAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.GmailAdInfo, com.google.ads.googleads.v0.common.GmailAdInfo.Builder, com.google.ads.googleads.v0.common.GmailAdInfoOrBuilder> gmailAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to a Gmail ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+     */
+    public boolean hasGmailAd() {
+      return adDataCase_ == 21;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Gmail ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+     */
+    public com.google.ads.googleads.v0.common.GmailAdInfo getGmailAd() {
+      if (gmailAdBuilder_ == null) {
+        if (adDataCase_ == 21) {
+          return (com.google.ads.googleads.v0.common.GmailAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v0.common.GmailAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 21) {
+          return gmailAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.GmailAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Gmail ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+     */
+    public Builder setGmailAd(com.google.ads.googleads.v0.common.GmailAdInfo value) {
+      if (gmailAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        gmailAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Gmail ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+     */
+    public Builder setGmailAd(
+        com.google.ads.googleads.v0.common.GmailAdInfo.Builder builderForValue) {
+      if (gmailAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        gmailAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Gmail ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+     */
+    public Builder mergeGmailAd(com.google.ads.googleads.v0.common.GmailAdInfo value) {
+      if (gmailAdBuilder_ == null) {
+        if (adDataCase_ == 21 &&
+            adData_ != com.google.ads.googleads.v0.common.GmailAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v0.common.GmailAdInfo.newBuilder((com.google.ads.googleads.v0.common.GmailAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 21) {
+          gmailAdBuilder_.mergeFrom(value);
+        }
+        gmailAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Gmail ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+     */
+    public Builder clearGmailAd() {
+      if (gmailAdBuilder_ == null) {
+        if (adDataCase_ == 21) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 21) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        gmailAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Gmail ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+     */
+    public com.google.ads.googleads.v0.common.GmailAdInfo.Builder getGmailAdBuilder() {
+      return getGmailAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Gmail ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+     */
+    public com.google.ads.googleads.v0.common.GmailAdInfoOrBuilder getGmailAdOrBuilder() {
+      if ((adDataCase_ == 21) && (gmailAdBuilder_ != null)) {
+        return gmailAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 21) {
+          return (com.google.ads.googleads.v0.common.GmailAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v0.common.GmailAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Gmail ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.GmailAdInfo gmail_ad = 21;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.GmailAdInfo, com.google.ads.googleads.v0.common.GmailAdInfo.Builder, com.google.ads.googleads.v0.common.GmailAdInfoOrBuilder> 
+        getGmailAdFieldBuilder() {
+      if (gmailAdBuilder_ == null) {
+        if (!(adDataCase_ == 21)) {
+          adData_ = com.google.ads.googleads.v0.common.GmailAdInfo.getDefaultInstance();
+        }
+        gmailAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.GmailAdInfo, com.google.ads.googleads.v0.common.GmailAdInfo.Builder, com.google.ads.googleads.v0.common.GmailAdInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.GmailAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 21;
+      onChanged();;
+      return gmailAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ImageAdInfo, com.google.ads.googleads.v0.common.ImageAdInfo.Builder, com.google.ads.googleads.v0.common.ImageAdInfoOrBuilder> imageAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to an Image ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+     */
+    public boolean hasImageAd() {
+      return adDataCase_ == 22;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an Image ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+     */
+    public com.google.ads.googleads.v0.common.ImageAdInfo getImageAd() {
+      if (imageAdBuilder_ == null) {
+        if (adDataCase_ == 22) {
+          return (com.google.ads.googleads.v0.common.ImageAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v0.common.ImageAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 22) {
+          return imageAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.ImageAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to an Image ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+     */
+    public Builder setImageAd(com.google.ads.googleads.v0.common.ImageAdInfo value) {
+      if (imageAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        imageAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 22;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an Image ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+     */
+    public Builder setImageAd(
+        com.google.ads.googleads.v0.common.ImageAdInfo.Builder builderForValue) {
+      if (imageAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        imageAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 22;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an Image ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+     */
+    public Builder mergeImageAd(com.google.ads.googleads.v0.common.ImageAdInfo value) {
+      if (imageAdBuilder_ == null) {
+        if (adDataCase_ == 22 &&
+            adData_ != com.google.ads.googleads.v0.common.ImageAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v0.common.ImageAdInfo.newBuilder((com.google.ads.googleads.v0.common.ImageAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 22) {
+          imageAdBuilder_.mergeFrom(value);
+        }
+        imageAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 22;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an Image ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+     */
+    public Builder clearImageAd() {
+      if (imageAdBuilder_ == null) {
+        if (adDataCase_ == 22) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 22) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        imageAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an Image ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+     */
+    public com.google.ads.googleads.v0.common.ImageAdInfo.Builder getImageAdBuilder() {
+      return getImageAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to an Image ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+     */
+    public com.google.ads.googleads.v0.common.ImageAdInfoOrBuilder getImageAdOrBuilder() {
+      if ((adDataCase_ == 22) && (imageAdBuilder_ != null)) {
+        return imageAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 22) {
+          return (com.google.ads.googleads.v0.common.ImageAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v0.common.ImageAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to an Image ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ImageAdInfo image_ad = 22;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ImageAdInfo, com.google.ads.googleads.v0.common.ImageAdInfo.Builder, com.google.ads.googleads.v0.common.ImageAdInfoOrBuilder> 
+        getImageAdFieldBuilder() {
+      if (imageAdBuilder_ == null) {
+        if (!(adDataCase_ == 22)) {
+          adData_ = com.google.ads.googleads.v0.common.ImageAdInfo.getDefaultInstance();
+        }
+        imageAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.ImageAdInfo, com.google.ads.googleads.v0.common.ImageAdInfo.Builder, com.google.ads.googleads.v0.common.ImageAdInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.ImageAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 22;
+      onChanged();;
+      return imageAdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

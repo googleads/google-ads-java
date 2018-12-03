@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
     INVALID_FIELD_VALUES_IN_DATE_TIME(3),
     /**
      * <pre>
-     * The string date's format should be yyyymmdd.
+     * The string date's format should be yyyy-mm-dd.
      * </pre>
      *
      * <code>INVALID_STRING_DATE = 4;</code>
@@ -128,12 +128,20 @@ private static final long serialVersionUID = 0L;
     INVALID_STRING_DATE(4),
     /**
      * <pre>
-     * The string date time's format should be yyyymmdd hhmmss [tz].
+     * The string date time's format should be yyyy-mm-dd hh:mm:ss.ssssss.
      * </pre>
      *
-     * <code>INVALID_STRING_DATE_TIME = 6;</code>
+     * <code>INVALID_STRING_DATE_TIME_MICROS = 6;</code>
      */
-    INVALID_STRING_DATE_TIME(6),
+    INVALID_STRING_DATE_TIME_MICROS(6),
+    /**
+     * <pre>
+     * The string date time's format should be yyyy-mm-dd hh:mm:ss.
+     * </pre>
+     *
+     * <code>INVALID_STRING_DATE_TIME_SECONDS = 11;</code>
+     */
+    INVALID_STRING_DATE_TIME_SECONDS(11),
     /**
      * <pre>
      * Date is before allowed minimum.
@@ -203,7 +211,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_FIELD_VALUES_IN_DATE_TIME_VALUE = 3;
     /**
      * <pre>
-     * The string date's format should be yyyymmdd.
+     * The string date's format should be yyyy-mm-dd.
      * </pre>
      *
      * <code>INVALID_STRING_DATE = 4;</code>
@@ -211,12 +219,20 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_STRING_DATE_VALUE = 4;
     /**
      * <pre>
-     * The string date time's format should be yyyymmdd hhmmss [tz].
+     * The string date time's format should be yyyy-mm-dd hh:mm:ss.ssssss.
      * </pre>
      *
-     * <code>INVALID_STRING_DATE_TIME = 6;</code>
+     * <code>INVALID_STRING_DATE_TIME_MICROS = 6;</code>
      */
-    public static final int INVALID_STRING_DATE_TIME_VALUE = 6;
+    public static final int INVALID_STRING_DATE_TIME_MICROS_VALUE = 6;
+    /**
+     * <pre>
+     * The string date time's format should be yyyy-mm-dd hh:mm:ss.
+     * </pre>
+     *
+     * <code>INVALID_STRING_DATE_TIME_SECONDS = 11;</code>
+     */
+    public static final int INVALID_STRING_DATE_TIME_SECONDS_VALUE = 11;
     /**
      * <pre>
      * Date is before allowed minimum.
@@ -274,7 +290,8 @@ private static final long serialVersionUID = 0L;
         case 2: return INVALID_FIELD_VALUES_IN_DATE;
         case 3: return INVALID_FIELD_VALUES_IN_DATE_TIME;
         case 4: return INVALID_STRING_DATE;
-        case 6: return INVALID_STRING_DATE_TIME;
+        case 6: return INVALID_STRING_DATE_TIME_MICROS;
+        case 11: return INVALID_STRING_DATE_TIME_SECONDS;
         case 7: return EARLIER_THAN_MINIMUM_DATE;
         case 8: return LATER_THAN_MAXIMUM_DATE;
         case 9: return DATE_RANGE_MINIMUM_DATE_LATER_THAN_MAXIMUM_DATE;

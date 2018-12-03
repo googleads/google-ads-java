@@ -70,6 +70,10 @@ public class GetGeoTargetConstantByName {
     // Locale is using ISO 639-1 format. If an invalid locale is given, 'en' is used by default.
     requestBuilder.setLocale(StringValue.of("en"));
 
+    // A list of country codes can be referenced here:
+    // https://developers.google.com/adwords/api/docs/appendix/geotargeting
+    requestBuilder.setCountryCode(StringValue.of("FR"));
+
     requestBuilder
         .getLocationNamesBuilder()
         .addAllNames(

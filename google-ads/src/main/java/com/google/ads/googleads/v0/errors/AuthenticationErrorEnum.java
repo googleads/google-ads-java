@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
     AUTHENTICATION_ERROR(2),
     /**
      * <pre>
-     * Client customer Id is not a number.
+     * Client Customer Id is not a number.
      * </pre>
      *
      * <code>CLIENT_CUSTOMER_ID_INVALID = 5;</code>
@@ -147,9 +147,9 @@ private static final long serialVersionUID = 0L;
      * A problem occurred during Google account authentication.
      * </pre>
      *
-     * <code>FAILED_TO_AUTHENTICATE_GOOGLE_ACCOUNT = 11;</code>
+     * <code>GOOGLE_ACCOUNT_AUTHENTICATION_FAILED = 25;</code>
      */
-    FAILED_TO_AUTHENTICATE_GOOGLE_ACCOUNT(11),
+    GOOGLE_ACCOUNT_AUTHENTICATION_FAILED(25),
     /**
      * <pre>
      * The user in the google account login token does not match the UserId in
@@ -225,14 +225,6 @@ private static final long serialVersionUID = 0L;
     LOGIN_COOKIE_INVALID(20),
     /**
      * <pre>
-     * Failed to decrypt the login cookie.
-     * </pre>
-     *
-     * <code>FAILED_TO_RETRIEVE_LOGIN_COOKIE = 21;</code>
-     */
-    FAILED_TO_RETRIEVE_LOGIN_COOKIE(21),
-    /**
-     * <pre>
      * User Id in the header is not a valid id.
      * </pre>
      *
@@ -288,7 +280,7 @@ private static final long serialVersionUID = 0L;
     public static final int AUTHENTICATION_ERROR_VALUE = 2;
     /**
      * <pre>
-     * Client customer Id is not a number.
+     * Client Customer Id is not a number.
      * </pre>
      *
      * <code>CLIENT_CUSTOMER_ID_INVALID = 5;</code>
@@ -323,9 +315,9 @@ private static final long serialVersionUID = 0L;
      * A problem occurred during Google account authentication.
      * </pre>
      *
-     * <code>FAILED_TO_AUTHENTICATE_GOOGLE_ACCOUNT = 11;</code>
+     * <code>GOOGLE_ACCOUNT_AUTHENTICATION_FAILED = 25;</code>
      */
-    public static final int FAILED_TO_AUTHENTICATE_GOOGLE_ACCOUNT_VALUE = 11;
+    public static final int GOOGLE_ACCOUNT_AUTHENTICATION_FAILED_VALUE = 25;
     /**
      * <pre>
      * The user in the google account login token does not match the UserId in
@@ -401,14 +393,6 @@ private static final long serialVersionUID = 0L;
     public static final int LOGIN_COOKIE_INVALID_VALUE = 20;
     /**
      * <pre>
-     * Failed to decrypt the login cookie.
-     * </pre>
-     *
-     * <code>FAILED_TO_RETRIEVE_LOGIN_COOKIE = 21;</code>
-     */
-    public static final int FAILED_TO_RETRIEVE_LOGIN_COOKIE_VALUE = 21;
-    /**
-     * <pre>
      * User Id in the header is not a valid id.
      * </pre>
      *
@@ -462,7 +446,7 @@ private static final long serialVersionUID = 0L;
         case 8: return CUSTOMER_NOT_FOUND;
         case 9: return GOOGLE_ACCOUNT_DELETED;
         case 10: return GOOGLE_ACCOUNT_COOKIE_INVALID;
-        case 11: return FAILED_TO_AUTHENTICATE_GOOGLE_ACCOUNT;
+        case 25: return GOOGLE_ACCOUNT_AUTHENTICATION_FAILED;
         case 12: return GOOGLE_ACCOUNT_USER_AND_ADS_USER_MISMATCH;
         case 13: return LOGIN_COOKIE_REQUIRED;
         case 14: return NOT_ADS_USER;
@@ -472,7 +456,6 @@ private static final long serialVersionUID = 0L;
         case 18: return OAUTH_TOKEN_REVOKED;
         case 19: return OAUTH_TOKEN_HEADER_INVALID;
         case 20: return LOGIN_COOKIE_INVALID;
-        case 21: return FAILED_TO_RETRIEVE_LOGIN_COOKIE;
         case 22: return USER_ID_INVALID;
         case 23: return TWO_STEP_VERIFICATION_NOT_ENROLLED;
         case 24: return ADVANCED_PROTECTION_NOT_ENROLLED;

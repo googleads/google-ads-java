@@ -38,7 +38,7 @@ public final class BillingSetupProto {
       ".resources\0328google/ads/googleads/v0/enum" +
       "s/billing_setup_status.proto\032-google/ads" +
       "/googleads/v0/enums/time_type.proto\032\036goo" +
-      "gle/protobuf/wrappers.proto\"\251\006\n\014BillingS" +
+      "gle/protobuf/wrappers.proto\"\273\007\n\014BillingS" +
       "etup\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132" +
       "\033.google.protobuf.Int64Value\022X\n\006status\030\003" +
       " \001(\0162H.google.ads.googleads.v0.enums.Bil" +
@@ -50,21 +50,25 @@ public final class BillingSetupProto {
       "art_date_time\030\t \001(\0132\034.google.protobuf.St" +
       "ringValueH\000\022O\n\017start_time_type\030\n \001(\01624.g" +
       "oogle.ads.googleads.v0.enums.TimeTypeEnu" +
-      "m.TimeTypeH\000\032\312\002\n\023PaymentsAccountInfo\0229\n\023" +
-      "payments_account_id\030\001 \001(\0132\034.google.proto" +
-      "buf.StringValue\022;\n\025payments_account_name" +
-      "\030\002 \001(\0132\034.google.protobuf.StringValue\0229\n\023" +
-      "payments_profile_id\030\003 \001(\0132\034.google.proto" +
-      "buf.StringValue\022;\n\025payments_profile_name" +
-      "\030\004 \001(\0132\034.google.protobuf.StringValue\022C\n\035" +
-      "secondary_payments_profile_id\030\005 \001(\0132\034.go" +
-      "ogle.protobuf.StringValueB\014\n\nstart_timeB" +
-      "\326\001\n%com.google.ads.googleads.v0.resource" +
-      "sB\021BillingSetupProtoP\001ZJgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v0/r" +
-      "esources;resources\242\002\003GAA\252\002!Google.Ads.Go" +
-      "ogleAds.V0.Resources\312\002!Google\\Ads\\Google" +
-      "Ads\\V0\\Resourcesb\006proto3"
+      "m.TimeTypeH\000\0225\n\rend_date_time\030\r \001(\0132\034.go" +
+      "ogle.protobuf.StringValueH\001\022M\n\rend_time_" +
+      "type\030\016 \001(\01624.google.ads.googleads.v0.enu" +
+      "ms.TimeTypeEnum.TimeTypeH\001\032\312\002\n\023PaymentsA" +
+      "ccountInfo\0229\n\023payments_account_id\030\001 \001(\0132" +
+      "\034.google.protobuf.StringValue\022;\n\025payment" +
+      "s_account_name\030\002 \001(\0132\034.google.protobuf.S" +
+      "tringValue\0229\n\023payments_profile_id\030\003 \001(\0132" +
+      "\034.google.protobuf.StringValue\022;\n\025payment" +
+      "s_profile_name\030\004 \001(\0132\034.google.protobuf.S" +
+      "tringValue\022C\n\035secondary_payments_profile" +
+      "_id\030\005 \001(\0132\034.google.protobuf.StringValueB" +
+      "\014\n\nstart_timeB\n\n\010end_timeB\326\001\n%com.google" +
+      ".ads.googleads.v0.resourcesB\021BillingSetu" +
+      "pProtoP\001ZJgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v0/resources;resou" +
+      "rces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Res" +
+      "ources\312\002!Google\\Ads\\GoogleAds\\V0\\Resourc" +
+      "esb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -86,7 +90,7 @@ public final class BillingSetupProto {
     internal_static_google_ads_googleads_v0_resources_BillingSetup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_BillingSetup_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Status", "PaymentsAccount", "PaymentsAccountInfo", "StartDateTime", "StartTimeType", "StartTime", });
+        new java.lang.String[] { "ResourceName", "Id", "Status", "PaymentsAccount", "PaymentsAccountInfo", "StartDateTime", "StartTimeType", "EndDateTime", "EndTimeType", "StartTime", "EndTime", });
     internal_static_google_ads_googleads_v0_resources_BillingSetup_PaymentsAccountInfo_descriptor =
       internal_static_google_ads_googleads_v0_resources_BillingSetup_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v0_resources_BillingSetup_PaymentsAccountInfo_fieldAccessorTable = new

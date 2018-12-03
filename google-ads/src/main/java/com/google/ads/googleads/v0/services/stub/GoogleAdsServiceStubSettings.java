@@ -18,6 +18,8 @@ package com.google.ads.googleads.v0.services.stub;
 import static com.google.ads.googleads.v0.services.GoogleAdsServiceClient.SearchPagedResponse;
 
 import com.google.ads.googleads.v0.services.GoogleAdsRow;
+import com.google.ads.googleads.v0.services.MutateGoogleAdsRequest;
+import com.google.ads.googleads.v0.services.MutateGoogleAdsResponse;
 import com.google.ads.googleads.v0.services.SearchGoogleAdsRequest;
 import com.google.ads.googleads.v0.services.SearchGoogleAdsResponse;
 import com.google.api.core.ApiFunction;
@@ -65,13 +67,13 @@ import org.threeten.bp.Duration;
  *
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
  * build() is called, the tree of builders is called to create the complete settings object. For
- * example, to set the total timeout of search to 30 seconds:
+ * example, to set the total timeout of mutate to 30 seconds:
  *
  * <pre>
  * <code>
  * GoogleAdsServiceStubSettings.Builder googleAdsServiceSettingsBuilder =
  *     GoogleAdsServiceStubSettings.newBuilder();
- * googleAdsServiceSettingsBuilder.searchSettings().getRetrySettings().toBuilder()
+ * googleAdsServiceSettingsBuilder.mutateSettings().getRetrySettings().toBuilder()
  *     .setTotalTimeout(Duration.ofSeconds(30));
  * GoogleAdsServiceStubSettings googleAdsServiceSettings = googleAdsServiceSettingsBuilder.build();
  * </code>
@@ -87,11 +89,17 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
   private final PagedCallSettings<
           SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>
       searchSettings;
+  private final UnaryCallSettings<MutateGoogleAdsRequest, MutateGoogleAdsResponse> mutateSettings;
 
   /** Returns the object with the settings used for calls to search. */
   public PagedCallSettings<SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>
       searchSettings() {
     return searchSettings;
+  }
+
+  /** Returns the object with the settings used for calls to mutate. */
+  public UnaryCallSettings<MutateGoogleAdsRequest, MutateGoogleAdsResponse> mutateSettings() {
+    return mutateSettings;
   }
 
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
@@ -163,6 +171,7 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
     super(settingsBuilder);
 
     searchSettings = settingsBuilder.searchSettings().build();
+    mutateSettings = settingsBuilder.mutateSettings().build();
   }
 
   private static final PagedListDescriptor<
@@ -227,6 +236,8 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
     private final PagedCallSettings.Builder<
             SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>
         searchSettings;
+    private final UnaryCallSettings.Builder<MutateGoogleAdsRequest, MutateGoogleAdsResponse>
+        mutateSettings;
 
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
@@ -271,8 +282,10 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
 
       searchSettings = PagedCallSettings.newBuilder(SEARCH_PAGE_STR_FACT);
 
+      mutateSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(searchSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(searchSettings, mutateSettings);
 
       initDefaults(this);
     }
@@ -293,6 +306,11 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
+      builder
+          .mutateSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
+
       return builder;
     }
 
@@ -300,9 +318,10 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
       super(settings);
 
       searchSettings = settings.searchSettings.toBuilder();
+      mutateSettings = settings.mutateSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(searchSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(searchSettings, mutateSettings);
     }
 
     // NEXT_MAJOR_VER: remove 'throws Exception'
@@ -326,6 +345,12 @@ public class GoogleAdsServiceStubSettings extends StubSettings<GoogleAdsServiceS
             SearchGoogleAdsRequest, SearchGoogleAdsResponse, SearchPagedResponse>
         searchSettings() {
       return searchSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to mutate. */
+    public UnaryCallSettings.Builder<MutateGoogleAdsRequest, MutateGoogleAdsResponse>
+        mutateSettings() {
+      return mutateSettings;
     }
 
     @Override

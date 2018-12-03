@@ -424,6 +424,20 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 41;
             break;
           }
+          case 338: {
+            com.google.ads.googleads.v0.common.UserListInfo.Builder subBuilder = null;
+            if (criterionCase_ == 42) {
+              subBuilder = ((com.google.ads.googleads.v0.common.UserListInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.UserListInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.UserListInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 42;
+            break;
+          }
           case 346: {
             com.google.ads.googleads.v0.common.TopicInfo.Builder subBuilder = null;
             if (criterionCase_ == 43) {
@@ -449,6 +463,20 @@ private static final long serialVersionUID = 0L;
               bidModifier_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 362: {
+            com.google.ads.googleads.v0.common.UserInterestInfo.Builder subBuilder = null;
+            if (criterionCase_ == 45) {
+              subBuilder = ((com.google.ads.googleads.v0.common.UserInterestInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.UserInterestInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.UserInterestInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 45;
             break;
           }
           default: {
@@ -2813,6 +2841,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
+  private int bitField1_;
   private int criterionCase_ = 0;
   private java.lang.Object criterion_;
   public enum CriterionCase
@@ -2824,9 +2853,11 @@ private static final long serialVersionUID = 0L;
     GENDER(37),
     INCOME_RANGE(38),
     PARENTAL_STATUS(39),
+    USER_LIST(42),
     YOUTUBE_VIDEO(40),
     YOUTUBE_CHANNEL(41),
     TOPIC(43),
+    USER_INTEREST(45),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -2849,9 +2880,11 @@ private static final long serialVersionUID = 0L;
         case 37: return GENDER;
         case 38: return INCOME_RANGE;
         case 39: return PARENTAL_STATUS;
+        case 42: return USER_LIST;
         case 40: return YOUTUBE_VIDEO;
         case 41: return YOUTUBE_CHANNEL;
         case 43: return TOPIC;
+        case 45: return USER_INTEREST;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -3012,7 +3045,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The ad group to which the criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -3023,7 +3055,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The ad group to which the criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -3034,7 +3065,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The ad group to which the criterion belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -3965,6 +3995,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.ParentalStatusInfo.getDefaultInstance();
   }
 
+  public static final int USER_LIST_FIELD_NUMBER = 42;
+  /**
+   * <pre>
+   * User List.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+   */
+  public boolean hasUserList() {
+    return criterionCase_ == 42;
+  }
+  /**
+   * <pre>
+   * User List.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+   */
+  public com.google.ads.googleads.v0.common.UserListInfo getUserList() {
+    if (criterionCase_ == 42) {
+       return (com.google.ads.googleads.v0.common.UserListInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.UserListInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * User List.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+   */
+  public com.google.ads.googleads.v0.common.UserListInfoOrBuilder getUserListOrBuilder() {
+    if (criterionCase_ == 42) {
+       return (com.google.ads.googleads.v0.common.UserListInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.UserListInfo.getDefaultInstance();
+  }
+
   public static final int YOUTUBE_VIDEO_FIELD_NUMBER = 40;
   /**
    * <pre>
@@ -4079,6 +4147,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.TopicInfo.getDefaultInstance();
   }
 
+  public static final int USER_INTEREST_FIELD_NUMBER = 45;
+  /**
+   * <pre>
+   * User Interest.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+   */
+  public boolean hasUserInterest() {
+    return criterionCase_ == 45;
+  }
+  /**
+   * <pre>
+   * User Interest.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+   */
+  public com.google.ads.googleads.v0.common.UserInterestInfo getUserInterest() {
+    if (criterionCase_ == 45) {
+       return (com.google.ads.googleads.v0.common.UserInterestInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.UserInterestInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * User Interest.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+   */
+  public com.google.ads.googleads.v0.common.UserInterestInfoOrBuilder getUserInterestOrBuilder() {
+    if (criterionCase_ == 45) {
+       return (com.google.ads.googleads.v0.common.UserInterestInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.UserInterestInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4189,11 +4295,17 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 41) {
       output.writeMessage(41, (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_);
     }
+    if (criterionCase_ == 42) {
+      output.writeMessage(42, (com.google.ads.googleads.v0.common.UserListInfo) criterion_);
+    }
     if (criterionCase_ == 43) {
       output.writeMessage(43, (com.google.ads.googleads.v0.common.TopicInfo) criterion_);
     }
     if (bidModifier_ != null) {
       output.writeMessage(44, getBidModifier());
+    }
+    if (criterionCase_ == 45) {
+      output.writeMessage(45, (com.google.ads.googleads.v0.common.UserInterestInfo) criterion_);
     }
     unknownFields.writeTo(output);
   }
@@ -4331,6 +4443,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(41, (com.google.ads.googleads.v0.common.YouTubeChannelInfo) criterion_);
     }
+    if (criterionCase_ == 42) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(42, (com.google.ads.googleads.v0.common.UserListInfo) criterion_);
+    }
     if (criterionCase_ == 43) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(43, (com.google.ads.googleads.v0.common.TopicInfo) criterion_);
@@ -4338,6 +4454,10 @@ private static final long serialVersionUID = 0L;
     if (bidModifier_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(44, getBidModifier());
+    }
+    if (criterionCase_ == 45) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(45, (com.google.ads.googleads.v0.common.UserInterestInfo) criterion_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -4474,6 +4594,10 @@ private static final long serialVersionUID = 0L;
         result = result && getParentalStatus()
             .equals(other.getParentalStatus());
         break;
+      case 42:
+        result = result && getUserList()
+            .equals(other.getUserList());
+        break;
       case 40:
         result = result && getYoutubeVideo()
             .equals(other.getYoutubeVideo());
@@ -4485,6 +4609,10 @@ private static final long serialVersionUID = 0L;
       case 43:
         result = result && getTopic()
             .equals(other.getTopic());
+        break;
+      case 45:
+        result = result && getUserInterest()
+            .equals(other.getUserInterest());
         break;
       case 0:
       default:
@@ -4611,6 +4739,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + PARENTAL_STATUS_FIELD_NUMBER;
         hash = (53 * hash) + getParentalStatus().hashCode();
         break;
+      case 42:
+        hash = (37 * hash) + USER_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getUserList().hashCode();
+        break;
       case 40:
         hash = (37 * hash) + YOUTUBE_VIDEO_FIELD_NUMBER;
         hash = (53 * hash) + getYoutubeVideo().hashCode();
@@ -4622,6 +4754,10 @@ private static final long serialVersionUID = 0L;
       case 43:
         hash = (37 * hash) + TOPIC_FIELD_NUMBER;
         hash = (53 * hash) + getTopic().hashCode();
+        break;
+      case 45:
+        hash = (37 * hash) + USER_INTEREST_FIELD_NUMBER;
+        hash = (53 * hash) + getUserInterest().hashCode();
         break;
       case 0:
       default:
@@ -4912,6 +5048,7 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       int from_bitField1_ = bitField1_;
       int to_bitField0_ = 0;
+      int to_bitField1_ = 0;
       result.resourceName_ = resourceName_;
       if (criterionIdBuilder_ == null) {
         result.criterionId_ = criterionId_;
@@ -5061,6 +5198,13 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = parentalStatusBuilder_.build();
         }
       }
+      if (criterionCase_ == 42) {
+        if (userListBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = userListBuilder_.build();
+        }
+      }
       if (criterionCase_ == 40) {
         if (youtubeVideoBuilder_ == null) {
           result.criterion_ = criterion_;
@@ -5082,7 +5226,15 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = topicBuilder_.build();
         }
       }
+      if (criterionCase_ == 45) {
+        if (userInterestBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = userInterestBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
+      result.bitField1_ = to_bitField1_;
       result.criterionCase_ = criterionCase_;
       onBuilt();
       return result;
@@ -5280,6 +5432,10 @@ private static final long serialVersionUID = 0L;
           mergeParentalStatus(other.getParentalStatus());
           break;
         }
+        case USER_LIST: {
+          mergeUserList(other.getUserList());
+          break;
+        }
         case YOUTUBE_VIDEO: {
           mergeYoutubeVideo(other.getYoutubeVideo());
           break;
@@ -5290,6 +5446,10 @@ private static final long serialVersionUID = 0L;
         }
         case TOPIC: {
           mergeTopic(other.getTopic());
+          break;
+        }
+        case USER_INTEREST: {
+          mergeUserInterest(other.getUserInterest());
           break;
         }
         case CRITERION_NOT_SET: {
@@ -5827,7 +5987,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -5838,7 +5997,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -5853,7 +6011,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -5874,7 +6031,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -5893,7 +6049,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -5916,7 +6071,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -5935,7 +6089,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -5948,7 +6101,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -5964,7 +6116,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ad group to which the criterion belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 5;</code>
@@ -10054,6 +10205,178 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.UserListInfo, com.google.ads.googleads.v0.common.UserListInfo.Builder, com.google.ads.googleads.v0.common.UserListInfoOrBuilder> userListBuilder_;
+    /**
+     * <pre>
+     * User List.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+     */
+    public boolean hasUserList() {
+      return criterionCase_ == 42;
+    }
+    /**
+     * <pre>
+     * User List.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+     */
+    public com.google.ads.googleads.v0.common.UserListInfo getUserList() {
+      if (userListBuilder_ == null) {
+        if (criterionCase_ == 42) {
+          return (com.google.ads.googleads.v0.common.UserListInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.UserListInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 42) {
+          return userListBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.UserListInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * User List.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+     */
+    public Builder setUserList(com.google.ads.googleads.v0.common.UserListInfo value) {
+      if (userListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        userListBuilder_.setMessage(value);
+      }
+      criterionCase_ = 42;
+      return this;
+    }
+    /**
+     * <pre>
+     * User List.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+     */
+    public Builder setUserList(
+        com.google.ads.googleads.v0.common.UserListInfo.Builder builderForValue) {
+      if (userListBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        userListBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 42;
+      return this;
+    }
+    /**
+     * <pre>
+     * User List.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+     */
+    public Builder mergeUserList(com.google.ads.googleads.v0.common.UserListInfo value) {
+      if (userListBuilder_ == null) {
+        if (criterionCase_ == 42 &&
+            criterion_ != com.google.ads.googleads.v0.common.UserListInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.UserListInfo.newBuilder((com.google.ads.googleads.v0.common.UserListInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 42) {
+          userListBuilder_.mergeFrom(value);
+        }
+        userListBuilder_.setMessage(value);
+      }
+      criterionCase_ = 42;
+      return this;
+    }
+    /**
+     * <pre>
+     * User List.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+     */
+    public Builder clearUserList() {
+      if (userListBuilder_ == null) {
+        if (criterionCase_ == 42) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 42) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        userListBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * User List.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+     */
+    public com.google.ads.googleads.v0.common.UserListInfo.Builder getUserListBuilder() {
+      return getUserListFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * User List.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+     */
+    public com.google.ads.googleads.v0.common.UserListInfoOrBuilder getUserListOrBuilder() {
+      if ((criterionCase_ == 42) && (userListBuilder_ != null)) {
+        return userListBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 42) {
+          return (com.google.ads.googleads.v0.common.UserListInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.UserListInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * User List.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserListInfo user_list = 42;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.UserListInfo, com.google.ads.googleads.v0.common.UserListInfo.Builder, com.google.ads.googleads.v0.common.UserListInfoOrBuilder> 
+        getUserListFieldBuilder() {
+      if (userListBuilder_ == null) {
+        if (!(criterionCase_ == 42)) {
+          criterion_ = com.google.ads.googleads.v0.common.UserListInfo.getDefaultInstance();
+        }
+        userListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.UserListInfo, com.google.ads.googleads.v0.common.UserListInfo.Builder, com.google.ads.googleads.v0.common.UserListInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.UserListInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 42;
+      onChanged();;
+      return userListBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.common.YouTubeVideoInfo, com.google.ads.googleads.v0.common.YouTubeVideoInfo.Builder, com.google.ads.googleads.v0.common.YouTubeVideoInfoOrBuilder> youtubeVideoBuilder_;
     /**
      * <pre>
@@ -10567,6 +10890,178 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 43;
       onChanged();;
       return topicBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.UserInterestInfo, com.google.ads.googleads.v0.common.UserInterestInfo.Builder, com.google.ads.googleads.v0.common.UserInterestInfoOrBuilder> userInterestBuilder_;
+    /**
+     * <pre>
+     * User Interest.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+     */
+    public boolean hasUserInterest() {
+      return criterionCase_ == 45;
+    }
+    /**
+     * <pre>
+     * User Interest.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+     */
+    public com.google.ads.googleads.v0.common.UserInterestInfo getUserInterest() {
+      if (userInterestBuilder_ == null) {
+        if (criterionCase_ == 45) {
+          return (com.google.ads.googleads.v0.common.UserInterestInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.UserInterestInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 45) {
+          return userInterestBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.UserInterestInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * User Interest.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+     */
+    public Builder setUserInterest(com.google.ads.googleads.v0.common.UserInterestInfo value) {
+      if (userInterestBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        userInterestBuilder_.setMessage(value);
+      }
+      criterionCase_ = 45;
+      return this;
+    }
+    /**
+     * <pre>
+     * User Interest.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+     */
+    public Builder setUserInterest(
+        com.google.ads.googleads.v0.common.UserInterestInfo.Builder builderForValue) {
+      if (userInterestBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        userInterestBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 45;
+      return this;
+    }
+    /**
+     * <pre>
+     * User Interest.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+     */
+    public Builder mergeUserInterest(com.google.ads.googleads.v0.common.UserInterestInfo value) {
+      if (userInterestBuilder_ == null) {
+        if (criterionCase_ == 45 &&
+            criterion_ != com.google.ads.googleads.v0.common.UserInterestInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.UserInterestInfo.newBuilder((com.google.ads.googleads.v0.common.UserInterestInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 45) {
+          userInterestBuilder_.mergeFrom(value);
+        }
+        userInterestBuilder_.setMessage(value);
+      }
+      criterionCase_ = 45;
+      return this;
+    }
+    /**
+     * <pre>
+     * User Interest.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+     */
+    public Builder clearUserInterest() {
+      if (userInterestBuilder_ == null) {
+        if (criterionCase_ == 45) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 45) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        userInterestBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * User Interest.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+     */
+    public com.google.ads.googleads.v0.common.UserInterestInfo.Builder getUserInterestBuilder() {
+      return getUserInterestFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * User Interest.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+     */
+    public com.google.ads.googleads.v0.common.UserInterestInfoOrBuilder getUserInterestOrBuilder() {
+      if ((criterionCase_ == 45) && (userInterestBuilder_ != null)) {
+        return userInterestBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 45) {
+          return (com.google.ads.googleads.v0.common.UserInterestInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.UserInterestInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * User Interest.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.UserInterestInfo, com.google.ads.googleads.v0.common.UserInterestInfo.Builder, com.google.ads.googleads.v0.common.UserInterestInfoOrBuilder> 
+        getUserInterestFieldBuilder() {
+      if (userInterestBuilder_ == null) {
+        if (!(criterionCase_ == 45)) {
+          criterion_ = com.google.ads.googleads.v0.common.UserInterestInfo.getDefaultInstance();
+        }
+        userInterestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.UserInterestInfo, com.google.ads.googleads.v0.common.UserInterestInfo.Builder, com.google.ads.googleads.v0.common.UserInterestInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.UserInterestInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 45;
+      onChanged();;
+      return userInterestBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -87,4 +87,20 @@ public class MockRecommendationServiceImpl extends RecommendationServiceImplBase
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
   }
+
+  @Override
+  public void dismissRecommendation(
+      DismissRecommendationRequest request,
+      StreamObserver<DismissRecommendationResponse> responseObserver) {
+    Object response = responses.remove();
+    if (response instanceof DismissRecommendationResponse) {
+      requests.add(request);
+      responseObserver.onNext((DismissRecommendationResponse) response);
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError((Exception) response);
+    } else {
+      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+    }
+  }
 }

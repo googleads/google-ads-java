@@ -65,10 +65,21 @@ public class CustomerServiceSettings extends ClientSettings<CustomerServiceSetti
     return ((CustomerServiceStubSettings) getStubSettings()).getCustomerSettings();
   }
 
+  /** Returns the object with the settings used for calls to mutateCustomer. */
+  public UnaryCallSettings<MutateCustomerRequest, MutateCustomerResponse> mutateCustomerSettings() {
+    return ((CustomerServiceStubSettings) getStubSettings()).mutateCustomerSettings();
+  }
+
   /** Returns the object with the settings used for calls to listAccessibleCustomers. */
   public UnaryCallSettings<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
       listAccessibleCustomersSettings() {
     return ((CustomerServiceStubSettings) getStubSettings()).listAccessibleCustomersSettings();
+  }
+
+  /** Returns the object with the settings used for calls to createCustomerClient. */
+  public UnaryCallSettings<CreateCustomerClientRequest, CreateCustomerClientResponse>
+      createCustomerClientSettings() {
+    return ((CustomerServiceStubSettings) getStubSettings()).createCustomerClientSettings();
   }
 
   public static final CustomerServiceSettings create(CustomerServiceStubSettings stub)
@@ -173,11 +184,23 @@ public class CustomerServiceSettings extends ClientSettings<CustomerServiceSetti
       return getStubSettingsBuilder().getCustomerSettings();
     }
 
+    /** Returns the builder for the settings used for calls to mutateCustomer. */
+    public UnaryCallSettings.Builder<MutateCustomerRequest, MutateCustomerResponse>
+        mutateCustomerSettings() {
+      return getStubSettingsBuilder().mutateCustomerSettings();
+    }
+
     /** Returns the builder for the settings used for calls to listAccessibleCustomers. */
     public UnaryCallSettings.Builder<
             ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
         listAccessibleCustomersSettings() {
       return getStubSettingsBuilder().listAccessibleCustomersSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to createCustomerClient. */
+    public UnaryCallSettings.Builder<CreateCustomerClientRequest, CreateCustomerClientResponse>
+        createCustomerClientSettings() {
+      return getStubSettingsBuilder().createCustomerClientSettings();
     }
 
     @Override

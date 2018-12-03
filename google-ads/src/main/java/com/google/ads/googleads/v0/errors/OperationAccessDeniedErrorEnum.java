@@ -174,6 +174,14 @@ private static final long serialVersionUID = 0L;
      * <code>OPERATION_NOT_PERMITTED_FOR_AD_GROUP_TYPE = 10;</code>
      */
     OPERATION_NOT_PERMITTED_FOR_AD_GROUP_TYPE(10),
+    /**
+     * <pre>
+     * The mutate is not allowed for this customer.
+     * </pre>
+     *
+     * <code>MUTATE_NOT_PERMITTED_FOR_CUSTOMER = 11;</code>
+     */
+    MUTATE_NOT_PERMITTED_FOR_CUSTOMER(11),
     UNRECOGNIZED(-1),
     ;
 
@@ -265,6 +273,14 @@ private static final long serialVersionUID = 0L;
      * <code>OPERATION_NOT_PERMITTED_FOR_AD_GROUP_TYPE = 10;</code>
      */
     public static final int OPERATION_NOT_PERMITTED_FOR_AD_GROUP_TYPE_VALUE = 10;
+    /**
+     * <pre>
+     * The mutate is not allowed for this customer.
+     * </pre>
+     *
+     * <code>MUTATE_NOT_PERMITTED_FOR_CUSTOMER = 11;</code>
+     */
+    public static final int MUTATE_NOT_PERMITTED_FOR_CUSTOMER_VALUE = 11;
 
 
     public final int getNumber() {
@@ -296,6 +312,7 @@ private static final long serialVersionUID = 0L;
         case 8: return CREATE_AS_REMOVED_NOT_PERMITTED;
         case 9: return OPERATION_NOT_PERMITTED_FOR_REMOVED_RESOURCE;
         case 10: return OPERATION_NOT_PERMITTED_FOR_AD_GROUP_TYPE;
+        case 11: return MUTATE_NOT_PERMITTED_FOR_CUSTOMER;
         default: return null;
       }
     }

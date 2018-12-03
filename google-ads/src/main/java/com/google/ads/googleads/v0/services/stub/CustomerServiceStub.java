@@ -16,9 +16,13 @@
 package com.google.ads.googleads.v0.services.stub;
 
 import com.google.ads.googleads.v0.resources.Customer;
+import com.google.ads.googleads.v0.services.CreateCustomerClientRequest;
+import com.google.ads.googleads.v0.services.CreateCustomerClientResponse;
 import com.google.ads.googleads.v0.services.GetCustomerRequest;
 import com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest;
 import com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse;
+import com.google.ads.googleads.v0.services.MutateCustomerRequest;
+import com.google.ads.googleads.v0.services.MutateCustomerResponse;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
@@ -38,9 +42,18 @@ public abstract class CustomerServiceStub implements BackgroundResource {
     throw new UnsupportedOperationException("Not implemented: getCustomerCallable()");
   }
 
+  public UnaryCallable<MutateCustomerRequest, MutateCustomerResponse> mutateCustomerCallable() {
+    throw new UnsupportedOperationException("Not implemented: mutateCustomerCallable()");
+  }
+
   public UnaryCallable<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
       listAccessibleCustomersCallable() {
     throw new UnsupportedOperationException("Not implemented: listAccessibleCustomersCallable()");
+  }
+
+  public UnaryCallable<CreateCustomerClientRequest, CreateCustomerClientResponse>
+      createCustomerClientCallable() {
+    throw new UnsupportedOperationException("Not implemented: createCustomerClientCallable()");
   }
 
   @Override

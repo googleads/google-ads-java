@@ -50,4 +50,38 @@ public interface ApplyRecommendationResponseOrBuilder extends
    */
   com.google.ads.googleads.v0.services.ApplyRecommendationResultOrBuilder getResultsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Errors that pertain to operation failures in the partial failure mode.
+   * Returned only when partial_failure = true and all errors occur inside the
+   * operations. If any errors occur outside the operations (e.g. auth errors)
+   * we return the RPC level error.
+   * </pre>
+   *
+   * <code>.google.rpc.Status partial_failure_error = 2;</code>
+   */
+  boolean hasPartialFailureError();
+  /**
+   * <pre>
+   * Errors that pertain to operation failures in the partial failure mode.
+   * Returned only when partial_failure = true and all errors occur inside the
+   * operations. If any errors occur outside the operations (e.g. auth errors)
+   * we return the RPC level error.
+   * </pre>
+   *
+   * <code>.google.rpc.Status partial_failure_error = 2;</code>
+   */
+  com.google.rpc.Status getPartialFailureError();
+  /**
+   * <pre>
+   * Errors that pertain to operation failures in the partial failure mode.
+   * Returned only when partial_failure = true and all errors occur inside the
+   * operations. If any errors occur outside the operations (e.g. auth errors)
+   * we return the RPC level error.
+   * </pre>
+   *
+   * <code>.google.rpc.Status partial_failure_error = 2;</code>
+   */
+  com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder();
 }

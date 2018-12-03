@@ -72,6 +72,21 @@ public class MockCustomerServiceImpl extends CustomerServiceImplBase {
   }
 
   @Override
+  public void mutateCustomer(
+      MutateCustomerRequest request, StreamObserver<MutateCustomerResponse> responseObserver) {
+    Object response = responses.remove();
+    if (response instanceof MutateCustomerResponse) {
+      requests.add(request);
+      responseObserver.onNext((MutateCustomerResponse) response);
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError((Exception) response);
+    } else {
+      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+    }
+  }
+
+  @Override
   public void listAccessibleCustomers(
       ListAccessibleCustomersRequest request,
       StreamObserver<ListAccessibleCustomersResponse> responseObserver) {
@@ -79,6 +94,22 @@ public class MockCustomerServiceImpl extends CustomerServiceImplBase {
     if (response instanceof ListAccessibleCustomersResponse) {
       requests.add(request);
       responseObserver.onNext((ListAccessibleCustomersResponse) response);
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError((Exception) response);
+    } else {
+      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+    }
+  }
+
+  @Override
+  public void createCustomerClient(
+      CreateCustomerClientRequest request,
+      StreamObserver<CreateCustomerClientResponse> responseObserver) {
+    Object response = responses.remove();
+    if (response instanceof CreateCustomerClientResponse) {
+      requests.add(request);
+      responseObserver.onNext((CreateCustomerClientResponse) response);
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
       responseObserver.onError((Exception) response);

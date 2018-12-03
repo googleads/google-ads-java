@@ -270,6 +270,34 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * Settings for Real-Time Bidding, a feature only available for campaigns
+   * targeting the Ad Exchange network.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+   */
+  boolean hasRealTimeBiddingSetting();
+  /**
+   * <pre>
+   * Settings for Real-Time Bidding, a feature only available for campaigns
+   * targeting the Ad Exchange network.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+   */
+  com.google.ads.googleads.v0.common.RealTimeBiddingSetting getRealTimeBiddingSetting();
+  /**
+   * <pre>
+   * Settings for Real-Time Bidding, a feature only available for campaigns
+   * targeting the Ad Exchange network.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+   */
+  com.google.ads.googleads.v0.common.RealTimeBiddingSettingOrBuilder getRealTimeBiddingSettingOrBuilder();
+
+  /**
+   * <pre>
    * The network settings for the campaign.
    * </pre>
    *
@@ -529,8 +557,51 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * A list that limits how often each user will see this campaign's ads.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+   */
+  java.util.List<com.google.ads.googleads.v0.common.FrequencyCapEntry> 
+      getFrequencyCapsList();
+  /**
+   * <pre>
+   * A list that limits how often each user will see this campaign's ads.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+   */
+  com.google.ads.googleads.v0.common.FrequencyCapEntry getFrequencyCaps(int index);
+  /**
+   * <pre>
+   * A list that limits how often each user will see this campaign's ads.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+   */
+  int getFrequencyCapsCount();
+  /**
+   * <pre>
+   * A list that limits how often each user will see this campaign's ads.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v0.common.FrequencyCapEntryOrBuilder> 
+      getFrequencyCapsOrBuilderList();
+  /**
+   * <pre>
+   * A list that limits how often each user will see this campaign's ads.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.common.FrequencyCapEntry frequency_caps = 40;</code>
+   */
+  com.google.ads.googleads.v0.common.FrequencyCapEntryOrBuilder getFrequencyCapsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    * Portfolio bidding strategy used by campaign.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -539,7 +610,6 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Portfolio bidding strategy used by campaign.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
@@ -548,7 +618,6 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Portfolio bidding strategy used by campaign.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>

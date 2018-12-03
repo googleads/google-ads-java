@@ -18,6 +18,8 @@ package com.google.ads.googleads.v0.services.stub;
 import com.google.ads.googleads.v0.resources.Recommendation;
 import com.google.ads.googleads.v0.services.ApplyRecommendationRequest;
 import com.google.ads.googleads.v0.services.ApplyRecommendationResponse;
+import com.google.ads.googleads.v0.services.DismissRecommendationRequest;
+import com.google.ads.googleads.v0.services.DismissRecommendationResponse;
 import com.google.ads.googleads.v0.services.GetRecommendationRequest;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
@@ -41,6 +43,11 @@ public abstract class RecommendationServiceStub implements BackgroundResource {
   public UnaryCallable<ApplyRecommendationRequest, ApplyRecommendationResponse>
       applyRecommendationCallable() {
     throw new UnsupportedOperationException("Not implemented: applyRecommendationCallable()");
+  }
+
+  public UnaryCallable<DismissRecommendationRequest, DismissRecommendationResponse>
+      dismissRecommendationCallable() {
+    throw new UnsupportedOperationException("Not implemented: dismissRecommendationCallable()");
   }
 
   @Override

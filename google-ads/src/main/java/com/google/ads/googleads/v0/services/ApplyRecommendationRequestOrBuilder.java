@@ -27,7 +27,21 @@ public interface ApplyRecommendationRequestOrBuilder extends
 
   /**
    * <pre>
+   * If true, successful operations will be carried out and invalid
+   * operations will return errors. If false, operations will be carried
+   * out as a transaction if and only if they are all valid.
+   * Default is false.
+   * </pre>
+   *
+   * <code>bool partial_failure = 3;</code>
+   */
+  boolean getPartialFailure();
+
+  /**
+   * <pre>
    * The list of operations to apply recommendations.
+   * If partial_failure=false all recommendations should be of the same type
+   * There is a limit of 100 operations per request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -37,6 +51,8 @@ public interface ApplyRecommendationRequestOrBuilder extends
   /**
    * <pre>
    * The list of operations to apply recommendations.
+   * If partial_failure=false all recommendations should be of the same type
+   * There is a limit of 100 operations per request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -45,6 +61,8 @@ public interface ApplyRecommendationRequestOrBuilder extends
   /**
    * <pre>
    * The list of operations to apply recommendations.
+   * If partial_failure=false all recommendations should be of the same type
+   * There is a limit of 100 operations per request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -53,6 +71,8 @@ public interface ApplyRecommendationRequestOrBuilder extends
   /**
    * <pre>
    * The list of operations to apply recommendations.
+   * If partial_failure=false all recommendations should be of the same type
+   * There is a limit of 100 operations per request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>
@@ -62,6 +82,8 @@ public interface ApplyRecommendationRequestOrBuilder extends
   /**
    * <pre>
    * The list of operations to apply recommendations.
+   * If partial_failure=false all recommendations should be of the same type
+   * There is a limit of 100 operations per request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.services.ApplyRecommendationOperation operations = 2;</code>

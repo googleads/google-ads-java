@@ -25,6 +25,7 @@ private static final long serialVersionUID = 0L;
     type_ = 0;
     adRotationMode_ = 0;
     urlCustomParameters_ = java.util.Collections.emptyList();
+    displayCustomBidDimension_ = 0;
   }
 
   @java.lang.Override
@@ -208,10 +209,42 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 170: {
+            com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting.Builder subBuilder = null;
+            if (explorerAutoOptimizerSetting_ != null) {
+              subBuilder = explorerAutoOptimizerSetting_.toBuilder();
+            }
+            explorerAutoOptimizerSetting_ = input.readMessage(com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(explorerAutoOptimizerSetting_);
+              explorerAutoOptimizerSetting_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 176: {
             int rawValue = input.readEnum();
 
             adRotationMode_ = rawValue;
+            break;
+          }
+          case 184: {
+            int rawValue = input.readEnum();
+
+            displayCustomBidDimension_ = rawValue;
+            break;
+          }
+          case 194: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (finalUrlSuffix_ != null) {
+              subBuilder = finalUrlSuffix_.toBuilder();
+            }
+            finalUrlSuffix_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(finalUrlSuffix_);
+              finalUrlSuffix_ = subBuilder.buildPartial();
+            }
+
             break;
           }
           default: {
@@ -550,7 +583,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The campaign to which the ad group belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -561,7 +593,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The campaign to which the ad group belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -572,7 +603,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The campaign to which the ad group belongs.
-   * This field must not be used in WHERE clauses.
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -794,6 +824,101 @@ private static final long serialVersionUID = 0L;
     return getPercentCpcBidMicros();
   }
 
+  public static final int EXPLORER_AUTO_OPTIMIZER_SETTING_FIELD_NUMBER = 21;
+  private com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorerAutoOptimizerSetting_;
+  /**
+   * <pre>
+   * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+   */
+  public boolean hasExplorerAutoOptimizerSetting() {
+    return explorerAutoOptimizerSetting_ != null;
+  }
+  /**
+   * <pre>
+   * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+   */
+  public com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting getExplorerAutoOptimizerSetting() {
+    return explorerAutoOptimizerSetting_ == null ? com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting.getDefaultInstance() : explorerAutoOptimizerSetting_;
+  }
+  /**
+   * <pre>
+   * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+   */
+  public com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSettingOrBuilder getExplorerAutoOptimizerSettingOrBuilder() {
+    return getExplorerAutoOptimizerSetting();
+  }
+
+  public static final int DISPLAY_CUSTOM_BID_DIMENSION_FIELD_NUMBER = 23;
+  private int displayCustomBidDimension_;
+  /**
+   * <pre>
+   * Allows advertisers to specify a targeting dimension on which to place
+   * absolute bids. This is only applicable for campaigns that target only the
+   * display network and not search.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+   */
+  public int getDisplayCustomBidDimensionValue() {
+    return displayCustomBidDimension_;
+  }
+  /**
+   * <pre>
+   * Allows advertisers to specify a targeting dimension on which to place
+   * absolute bids. This is only applicable for campaigns that target only the
+   * display network and not search.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+   */
+  public com.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension getDisplayCustomBidDimension() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension result = com.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension.valueOf(displayCustomBidDimension_);
+    return result == null ? com.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension.UNRECOGNIZED : result;
+  }
+
+  public static final int FINAL_URL_SUFFIX_FIELD_NUMBER = 24;
+  private com.google.protobuf.StringValue finalUrlSuffix_;
+  /**
+   * <pre>
+   * URL template for appending params to Final URL.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+   */
+  public boolean hasFinalUrlSuffix() {
+    return finalUrlSuffix_ != null;
+  }
+  /**
+   * <pre>
+   * URL template for appending params to Final URL.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+   */
+  public com.google.protobuf.StringValue getFinalUrlSuffix() {
+    return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
+  }
+  /**
+   * <pre>
+   * URL template for appending params to Final URL.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
+    return getFinalUrlSuffix();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -850,8 +975,17 @@ private static final long serialVersionUID = 0L;
     if (percentCpcBidMicros_ != null) {
       output.writeMessage(20, getPercentCpcBidMicros());
     }
+    if (explorerAutoOptimizerSetting_ != null) {
+      output.writeMessage(21, getExplorerAutoOptimizerSetting());
+    }
     if (adRotationMode_ != com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.UNSPECIFIED.getNumber()) {
       output.writeEnum(22, adRotationMode_);
+    }
+    if (displayCustomBidDimension_ != com.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension.UNSPECIFIED.getNumber()) {
+      output.writeEnum(23, displayCustomBidDimension_);
+    }
+    if (finalUrlSuffix_ != null) {
+      output.writeMessage(24, getFinalUrlSuffix());
     }
     unknownFields.writeTo(output);
   }
@@ -917,9 +1051,21 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getPercentCpcBidMicros());
     }
+    if (explorerAutoOptimizerSetting_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, getExplorerAutoOptimizerSetting());
+    }
     if (adRotationMode_ != com.google.ads.googleads.v0.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(22, adRotationMode_);
+    }
+    if (displayCustomBidDimension_ != com.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(23, displayCustomBidDimension_);
+    }
+    if (finalUrlSuffix_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(24, getFinalUrlSuffix());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -994,6 +1140,17 @@ private static final long serialVersionUID = 0L;
       result = result && getPercentCpcBidMicros()
           .equals(other.getPercentCpcBidMicros());
     }
+    result = result && (hasExplorerAutoOptimizerSetting() == other.hasExplorerAutoOptimizerSetting());
+    if (hasExplorerAutoOptimizerSetting()) {
+      result = result && getExplorerAutoOptimizerSetting()
+          .equals(other.getExplorerAutoOptimizerSetting());
+    }
+    result = result && displayCustomBidDimension_ == other.displayCustomBidDimension_;
+    result = result && (hasFinalUrlSuffix() == other.hasFinalUrlSuffix());
+    if (hasFinalUrlSuffix()) {
+      result = result && getFinalUrlSuffix()
+          .equals(other.getFinalUrlSuffix());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -1056,6 +1213,16 @@ private static final long serialVersionUID = 0L;
     if (hasPercentCpcBidMicros()) {
       hash = (37 * hash) + PERCENT_CPC_BID_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + getPercentCpcBidMicros().hashCode();
+    }
+    if (hasExplorerAutoOptimizerSetting()) {
+      hash = (37 * hash) + EXPLORER_AUTO_OPTIMIZER_SETTING_FIELD_NUMBER;
+      hash = (53 * hash) + getExplorerAutoOptimizerSetting().hashCode();
+    }
+    hash = (37 * hash) + DISPLAY_CUSTOM_BID_DIMENSION_FIELD_NUMBER;
+    hash = (53 * hash) + displayCustomBidDimension_;
+    if (hasFinalUrlSuffix()) {
+      hash = (37 * hash) + FINAL_URL_SUFFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getFinalUrlSuffix().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -1269,6 +1436,20 @@ private static final long serialVersionUID = 0L;
         percentCpcBidMicros_ = null;
         percentCpcBidMicrosBuilder_ = null;
       }
+      if (explorerAutoOptimizerSettingBuilder_ == null) {
+        explorerAutoOptimizerSetting_ = null;
+      } else {
+        explorerAutoOptimizerSetting_ = null;
+        explorerAutoOptimizerSettingBuilder_ = null;
+      }
+      displayCustomBidDimension_ = 0;
+
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffix_ = null;
+      } else {
+        finalUrlSuffix_ = null;
+        finalUrlSuffixBuilder_ = null;
+      }
       return this;
     }
 
@@ -1359,6 +1540,17 @@ private static final long serialVersionUID = 0L;
         result.percentCpcBidMicros_ = percentCpcBidMicros_;
       } else {
         result.percentCpcBidMicros_ = percentCpcBidMicrosBuilder_.build();
+      }
+      if (explorerAutoOptimizerSettingBuilder_ == null) {
+        result.explorerAutoOptimizerSetting_ = explorerAutoOptimizerSetting_;
+      } else {
+        result.explorerAutoOptimizerSetting_ = explorerAutoOptimizerSettingBuilder_.build();
+      }
+      result.displayCustomBidDimension_ = displayCustomBidDimension_;
+      if (finalUrlSuffixBuilder_ == null) {
+        result.finalUrlSuffix_ = finalUrlSuffix_;
+      } else {
+        result.finalUrlSuffix_ = finalUrlSuffixBuilder_.build();
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -1477,6 +1669,15 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPercentCpcBidMicros()) {
         mergePercentCpcBidMicros(other.getPercentCpcBidMicros());
+      }
+      if (other.hasExplorerAutoOptimizerSetting()) {
+        mergeExplorerAutoOptimizerSetting(other.getExplorerAutoOptimizerSetting());
+      }
+      if (other.displayCustomBidDimension_ != 0) {
+        setDisplayCustomBidDimensionValue(other.getDisplayCustomBidDimensionValue());
+      }
+      if (other.hasFinalUrlSuffix()) {
+        mergeFinalUrlSuffix(other.getFinalUrlSuffix());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -2642,7 +2843,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The campaign to which the ad group belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -2653,7 +2853,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The campaign to which the ad group belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -2668,7 +2867,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The campaign to which the ad group belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -2689,7 +2887,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The campaign to which the ad group belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -2708,7 +2905,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The campaign to which the ad group belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -2731,7 +2927,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The campaign to which the ad group belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -2750,7 +2945,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The campaign to which the ad group belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -2763,7 +2957,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The campaign to which the ad group belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -2779,7 +2972,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The campaign to which the ad group belongs.
-     * This field must not be used in WHERE clauses.
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 10;</code>
@@ -3759,6 +3951,387 @@ private static final long serialVersionUID = 0L;
         percentCpcBidMicros_ = null;
       }
       return percentCpcBidMicrosBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorerAutoOptimizerSetting_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting, com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting.Builder, com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSettingOrBuilder> explorerAutoOptimizerSettingBuilder_;
+    /**
+     * <pre>
+     * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+     */
+    public boolean hasExplorerAutoOptimizerSetting() {
+      return explorerAutoOptimizerSettingBuilder_ != null || explorerAutoOptimizerSetting_ != null;
+    }
+    /**
+     * <pre>
+     * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+     */
+    public com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting getExplorerAutoOptimizerSetting() {
+      if (explorerAutoOptimizerSettingBuilder_ == null) {
+        return explorerAutoOptimizerSetting_ == null ? com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting.getDefaultInstance() : explorerAutoOptimizerSetting_;
+      } else {
+        return explorerAutoOptimizerSettingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+     */
+    public Builder setExplorerAutoOptimizerSetting(com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting value) {
+      if (explorerAutoOptimizerSettingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        explorerAutoOptimizerSetting_ = value;
+        onChanged();
+      } else {
+        explorerAutoOptimizerSettingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+     */
+    public Builder setExplorerAutoOptimizerSetting(
+        com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting.Builder builderForValue) {
+      if (explorerAutoOptimizerSettingBuilder_ == null) {
+        explorerAutoOptimizerSetting_ = builderForValue.build();
+        onChanged();
+      } else {
+        explorerAutoOptimizerSettingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+     */
+    public Builder mergeExplorerAutoOptimizerSetting(com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting value) {
+      if (explorerAutoOptimizerSettingBuilder_ == null) {
+        if (explorerAutoOptimizerSetting_ != null) {
+          explorerAutoOptimizerSetting_ =
+            com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting.newBuilder(explorerAutoOptimizerSetting_).mergeFrom(value).buildPartial();
+        } else {
+          explorerAutoOptimizerSetting_ = value;
+        }
+        onChanged();
+      } else {
+        explorerAutoOptimizerSettingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+     */
+    public Builder clearExplorerAutoOptimizerSetting() {
+      if (explorerAutoOptimizerSettingBuilder_ == null) {
+        explorerAutoOptimizerSetting_ = null;
+        onChanged();
+      } else {
+        explorerAutoOptimizerSetting_ = null;
+        explorerAutoOptimizerSettingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+     */
+    public com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting.Builder getExplorerAutoOptimizerSettingBuilder() {
+      
+      onChanged();
+      return getExplorerAutoOptimizerSettingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+     */
+    public com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSettingOrBuilder getExplorerAutoOptimizerSettingOrBuilder() {
+      if (explorerAutoOptimizerSettingBuilder_ != null) {
+        return explorerAutoOptimizerSettingBuilder_.getMessageOrBuilder();
+      } else {
+        return explorerAutoOptimizerSetting_ == null ?
+            com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting.getDefaultInstance() : explorerAutoOptimizerSetting_;
+      }
+    }
+    /**
+     * <pre>
+     * Settings for the Display Campaign Optimizer, initially termed "Explorer".
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting, com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting.Builder, com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSettingOrBuilder> 
+        getExplorerAutoOptimizerSettingFieldBuilder() {
+      if (explorerAutoOptimizerSettingBuilder_ == null) {
+        explorerAutoOptimizerSettingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting, com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSetting.Builder, com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSettingOrBuilder>(
+                getExplorerAutoOptimizerSetting(),
+                getParentForChildren(),
+                isClean());
+        explorerAutoOptimizerSetting_ = null;
+      }
+      return explorerAutoOptimizerSettingBuilder_;
+    }
+
+    private int displayCustomBidDimension_ = 0;
+    /**
+     * <pre>
+     * Allows advertisers to specify a targeting dimension on which to place
+     * absolute bids. This is only applicable for campaigns that target only the
+     * display network and not search.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+     */
+    public int getDisplayCustomBidDimensionValue() {
+      return displayCustomBidDimension_;
+    }
+    /**
+     * <pre>
+     * Allows advertisers to specify a targeting dimension on which to place
+     * absolute bids. This is only applicable for campaigns that target only the
+     * display network and not search.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+     */
+    public Builder setDisplayCustomBidDimensionValue(int value) {
+      displayCustomBidDimension_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Allows advertisers to specify a targeting dimension on which to place
+     * absolute bids. This is only applicable for campaigns that target only the
+     * display network and not search.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+     */
+    public com.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension getDisplayCustomBidDimension() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension result = com.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension.valueOf(displayCustomBidDimension_);
+      return result == null ? com.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Allows advertisers to specify a targeting dimension on which to place
+     * absolute bids. This is only applicable for campaigns that target only the
+     * display network and not search.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+     */
+    public Builder setDisplayCustomBidDimension(com.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      displayCustomBidDimension_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Allows advertisers to specify a targeting dimension on which to place
+     * absolute bids. This is only applicable for campaigns that target only the
+     * display network and not search.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+     */
+    public Builder clearDisplayCustomBidDimension() {
+      
+      displayCustomBidDimension_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.StringValue finalUrlSuffix_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> finalUrlSuffixBuilder_;
+    /**
+     * <pre>
+     * URL template for appending params to Final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+     */
+    public boolean hasFinalUrlSuffix() {
+      return finalUrlSuffixBuilder_ != null || finalUrlSuffix_ != null;
+    }
+    /**
+     * <pre>
+     * URL template for appending params to Final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+     */
+    public com.google.protobuf.StringValue getFinalUrlSuffix() {
+      if (finalUrlSuffixBuilder_ == null) {
+        return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
+      } else {
+        return finalUrlSuffixBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * URL template for appending params to Final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+     */
+    public Builder setFinalUrlSuffix(com.google.protobuf.StringValue value) {
+      if (finalUrlSuffixBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        finalUrlSuffix_ = value;
+        onChanged();
+      } else {
+        finalUrlSuffixBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * URL template for appending params to Final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+     */
+    public Builder setFinalUrlSuffix(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffix_ = builderForValue.build();
+        onChanged();
+      } else {
+        finalUrlSuffixBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * URL template for appending params to Final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+     */
+    public Builder mergeFinalUrlSuffix(com.google.protobuf.StringValue value) {
+      if (finalUrlSuffixBuilder_ == null) {
+        if (finalUrlSuffix_ != null) {
+          finalUrlSuffix_ =
+            com.google.protobuf.StringValue.newBuilder(finalUrlSuffix_).mergeFrom(value).buildPartial();
+        } else {
+          finalUrlSuffix_ = value;
+        }
+        onChanged();
+      } else {
+        finalUrlSuffixBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * URL template for appending params to Final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+     */
+    public Builder clearFinalUrlSuffix() {
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffix_ = null;
+        onChanged();
+      } else {
+        finalUrlSuffix_ = null;
+        finalUrlSuffixBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * URL template for appending params to Final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getFinalUrlSuffixBuilder() {
+      
+      onChanged();
+      return getFinalUrlSuffixFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * URL template for appending params to Final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
+      if (finalUrlSuffixBuilder_ != null) {
+        return finalUrlSuffixBuilder_.getMessageOrBuilder();
+      } else {
+        return finalUrlSuffix_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
+      }
+    }
+    /**
+     * <pre>
+     * URL template for appending params to Final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getFinalUrlSuffixFieldBuilder() {
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffixBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getFinalUrlSuffix(),
+                getParentForChildren(),
+                isClean());
+        finalUrlSuffix_ = null;
+      }
+      return finalUrlSuffixBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

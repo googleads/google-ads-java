@@ -16,9 +16,13 @@
 package com.google.ads.googleads.v0.services.stub;
 
 import com.google.ads.googleads.v0.resources.Customer;
+import com.google.ads.googleads.v0.services.CreateCustomerClientRequest;
+import com.google.ads.googleads.v0.services.CreateCustomerClientResponse;
 import com.google.ads.googleads.v0.services.GetCustomerRequest;
 import com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest;
 import com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse;
+import com.google.ads.googleads.v0.services.MutateCustomerRequest;
+import com.google.ads.googleads.v0.services.MutateCustomerResponse;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
@@ -49,6 +53,16 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
           .setRequestMarshaller(ProtoUtils.marshaller(GetCustomerRequest.getDefaultInstance()))
           .setResponseMarshaller(ProtoUtils.marshaller(Customer.getDefaultInstance()))
           .build();
+  private static final MethodDescriptor<MutateCustomerRequest, MutateCustomerResponse>
+      mutateCustomerMethodDescriptor =
+          MethodDescriptor.<MutateCustomerRequest, MutateCustomerResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName("google.ads.googleads.v0.services.CustomerService/MutateCustomer")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(MutateCustomerRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(MutateCustomerResponse.getDefaultInstance()))
+              .build();
   private static final MethodDescriptor<
           ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
       listAccessibleCustomersMethodDescriptor =
@@ -62,12 +76,26 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListAccessibleCustomersResponse.getDefaultInstance()))
               .build();
+  private static final MethodDescriptor<CreateCustomerClientRequest, CreateCustomerClientResponse>
+      createCustomerClientMethodDescriptor =
+          MethodDescriptor.<CreateCustomerClientRequest, CreateCustomerClientResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v0.services.CustomerService/CreateCustomerClient")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(CreateCustomerClientRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(CreateCustomerClientResponse.getDefaultInstance()))
+              .build();
 
   private final BackgroundResource backgroundResources;
 
   private final UnaryCallable<GetCustomerRequest, Customer> getCustomerCallable;
+  private final UnaryCallable<MutateCustomerRequest, MutateCustomerResponse> mutateCustomerCallable;
   private final UnaryCallable<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
       listAccessibleCustomersCallable;
+  private final UnaryCallable<CreateCustomerClientRequest, CreateCustomerClientResponse>
+      createCustomerClientCallable;
 
   private final GrpcStubCallableFactory callableFactory;
 
@@ -114,20 +142,38 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
         GrpcCallSettings.<GetCustomerRequest, Customer>newBuilder()
             .setMethodDescriptor(getCustomerMethodDescriptor)
             .build();
+    GrpcCallSettings<MutateCustomerRequest, MutateCustomerResponse>
+        mutateCustomerTransportSettings =
+            GrpcCallSettings.<MutateCustomerRequest, MutateCustomerResponse>newBuilder()
+                .setMethodDescriptor(mutateCustomerMethodDescriptor)
+                .build();
     GrpcCallSettings<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
         listAccessibleCustomersTransportSettings =
             GrpcCallSettings
                 .<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>newBuilder()
                 .setMethodDescriptor(listAccessibleCustomersMethodDescriptor)
                 .build();
+    GrpcCallSettings<CreateCustomerClientRequest, CreateCustomerClientResponse>
+        createCustomerClientTransportSettings =
+            GrpcCallSettings.<CreateCustomerClientRequest, CreateCustomerClientResponse>newBuilder()
+                .setMethodDescriptor(createCustomerClientMethodDescriptor)
+                .build();
 
     this.getCustomerCallable =
         callableFactory.createUnaryCallable(
             getCustomerTransportSettings, settings.getCustomerSettings(), clientContext);
+    this.mutateCustomerCallable =
+        callableFactory.createUnaryCallable(
+            mutateCustomerTransportSettings, settings.mutateCustomerSettings(), clientContext);
     this.listAccessibleCustomersCallable =
         callableFactory.createUnaryCallable(
             listAccessibleCustomersTransportSettings,
             settings.listAccessibleCustomersSettings(),
+            clientContext);
+    this.createCustomerClientCallable =
+        callableFactory.createUnaryCallable(
+            createCustomerClientTransportSettings,
+            settings.createCustomerClientSettings(),
             clientContext);
 
     backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
@@ -137,9 +183,18 @@ public class GrpcCustomerServiceStub extends CustomerServiceStub {
     return getCustomerCallable;
   }
 
+  public UnaryCallable<MutateCustomerRequest, MutateCustomerResponse> mutateCustomerCallable() {
+    return mutateCustomerCallable;
+  }
+
   public UnaryCallable<ListAccessibleCustomersRequest, ListAccessibleCustomersResponse>
       listAccessibleCustomersCallable() {
     return listAccessibleCustomersCallable;
+  }
+
+  public UnaryCallable<CreateCustomerClientRequest, CreateCustomerClientResponse>
+      createCustomerClientCallable() {
+    return createCustomerClientCallable;
   }
 
   @Override

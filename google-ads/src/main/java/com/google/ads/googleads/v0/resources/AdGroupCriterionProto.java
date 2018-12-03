@@ -49,7 +49,7 @@ public final class AdGroupCriterionProto {
       "/ads/googleads/v0/enums/criterion_type.p" +
       "roto\0328google/ads/googleads/v0/enums/qual" +
       "ity_score_bucket.proto\032\036google/protobuf/" +
-      "wrappers.proto\"\243\027\n\020AdGroupCriterion\022\025\n\rr" +
+      "wrappers.proto\"\261\030\n\020AdGroupCriterion\022\025\n\rr" +
       "esource_name\030\001 \001(\t\0221\n\014criterion_id\030\032 \001(\013" +
       "2\033.google.protobuf.Int64Value\022`\n\006status\030" +
       "\003 \001(\0162P.google.ads.googleads.v0.enums.Ad" +
@@ -103,33 +103,37 @@ public final class AdGroupCriterionProto {
       "\030& \001(\0132/.google.ads.googleads.v0.common." +
       "IncomeRangeInfoH\000\022M\n\017parental_status\030\' \001" +
       "(\01322.google.ads.googleads.v0.common.Pare" +
-      "ntalStatusInfoH\000\022I\n\ryoutube_video\030( \001(\0132" +
-      "0.google.ads.googleads.v0.common.YouTube" +
-      "VideoInfoH\000\022M\n\017youtube_channel\030) \001(\01322.g" +
-      "oogle.ads.googleads.v0.common.YouTubeCha" +
-      "nnelInfoH\000\022:\n\005topic\030+ \001(\0132).google.ads.g" +
-      "oogleads.v0.common.TopicInfoH\000\032\377\002\n\013Quali" +
-      "tyInfo\0222\n\rquality_score\030\001 \001(\0132\033.google.p" +
-      "rotobuf.Int32Value\022h\n\026creative_quality_s" +
-      "core\030\002 \001(\0162H.google.ads.googleads.v0.enu" +
-      "ms.QualityScoreBucketEnum.QualityScoreBu" +
-      "cket\022j\n\030post_click_quality_score\030\003 \001(\0162H" +
-      ".google.ads.googleads.v0.enums.QualitySc" +
-      "oreBucketEnum.QualityScoreBucket\022f\n\024sear" +
-      "ch_predicted_ctr\030\004 \001(\0162H.google.ads.goog" +
-      "leads.v0.enums.QualityScoreBucketEnum.Qu" +
-      "alityScoreBucket\032\314\001\n\021PositionEstimates\022:" +
-      "\n\025first_page_cpc_micros\030\001 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022>\n\031first_position_cpc" +
-      "_micros\030\002 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022;\n\026top_of_page_cpc_micros\030\003 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\013\n\tcriterionB\332\001\n" +
-      "%com.google.ads.googleads.v0.resourcesB\025" +
-      "AdGroupCriterionProtoP\001ZJgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v0/" +
-      "resources;resources\242\002\003GAA\252\002!Google.Ads.G" +
-      "oogleAds.V0.Resources\312\002!Google\\Ads\\Googl" +
-      "eAds\\V0\\Resourcesb\006proto3"
+      "ntalStatusInfoH\000\022A\n\tuser_list\030* \001(\0132,.go" +
+      "ogle.ads.googleads.v0.common.UserListInf" +
+      "oH\000\022I\n\ryoutube_video\030( \001(\01320.google.ads." +
+      "googleads.v0.common.YouTubeVideoInfoH\000\022M" +
+      "\n\017youtube_channel\030) \001(\01322.google.ads.goo" +
+      "gleads.v0.common.YouTubeChannelInfoH\000\022:\n" +
+      "\005topic\030+ \001(\0132).google.ads.googleads.v0.c" +
+      "ommon.TopicInfoH\000\022I\n\ruser_interest\030- \001(\013" +
+      "20.google.ads.googleads.v0.common.UserIn" +
+      "terestInfoH\000\032\377\002\n\013QualityInfo\0222\n\rquality_" +
+      "score\030\001 \001(\0132\033.google.protobuf.Int32Value" +
+      "\022h\n\026creative_quality_score\030\002 \001(\0162H.googl" +
+      "e.ads.googleads.v0.enums.QualityScoreBuc" +
+      "ketEnum.QualityScoreBucket\022j\n\030post_click" +
+      "_quality_score\030\003 \001(\0162H.google.ads.google" +
+      "ads.v0.enums.QualityScoreBucketEnum.Qual" +
+      "ityScoreBucket\022f\n\024search_predicted_ctr\030\004" +
+      " \001(\0162H.google.ads.googleads.v0.enums.Qua" +
+      "lityScoreBucketEnum.QualityScoreBucket\032\314" +
+      "\001\n\021PositionEstimates\022:\n\025first_page_cpc_m" +
+      "icros\030\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022>\n\031first_position_cpc_micros\030\002 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022;\n\026top_of_page_" +
+      "cpc_micros\030\003 \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\013\n\tcriterionB\332\001\n%com.google.ads.go" +
+      "ogleads.v0.resourcesB\025AdGroupCriterionPr" +
+      "otoP\001ZJgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v0/resources;resource" +
+      "s\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Resour" +
+      "ces\312\002!Google\\Ads\\GoogleAds\\V0\\Resourcesb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -155,7 +159,7 @@ public final class AdGroupCriterionProto {
     internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_descriptor,
-        new java.lang.String[] { "ResourceName", "CriterionId", "Status", "QualityInfo", "AdGroup", "Type", "Negative", "BidModifier", "CpcBidMicros", "CpmBidMicros", "CpvBidMicros", "PercentCpcBidMicros", "EffectiveCpcBidMicros", "EffectiveCpmBidMicros", "EffectiveCpvBidMicros", "EffectivePercentCpcBidMicros", "EffectiveCpcBidSource", "EffectiveCpmBidSource", "EffectiveCpvBidSource", "EffectivePercentCpcBidSource", "PositionEstimates", "FinalUrls", "TrackingUrlTemplate", "UrlCustomParameters", "Keyword", "Placement", "ListingGroup", "AgeRange", "Gender", "IncomeRange", "ParentalStatus", "YoutubeVideo", "YoutubeChannel", "Topic", "Criterion", });
+        new java.lang.String[] { "ResourceName", "CriterionId", "Status", "QualityInfo", "AdGroup", "Type", "Negative", "BidModifier", "CpcBidMicros", "CpmBidMicros", "CpvBidMicros", "PercentCpcBidMicros", "EffectiveCpcBidMicros", "EffectiveCpmBidMicros", "EffectiveCpvBidMicros", "EffectivePercentCpcBidMicros", "EffectiveCpcBidSource", "EffectiveCpmBidSource", "EffectiveCpvBidSource", "EffectivePercentCpcBidSource", "PositionEstimates", "FinalUrls", "TrackingUrlTemplate", "UrlCustomParameters", "Keyword", "Placement", "ListingGroup", "AgeRange", "Gender", "IncomeRange", "ParentalStatus", "UserList", "YoutubeVideo", "YoutubeChannel", "Topic", "UserInterest", "Criterion", });
     internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_QualityInfo_descriptor =
       internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v0_resources_AdGroupCriterion_QualityInfo_fieldAccessorTable = new

@@ -14,11 +14,67 @@
 
 package com.google.ads.googleads.lib.utils;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.matchesPattern;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
+import com.google.common.collect.ImmutableMap;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import org.junit.Test;
 
 public class ResourceNamesTest {
+
+  /**
+   * Check a broad match on the generated resource name. This method checks that all IDs are in
+   * order and composite IDs are properly joined. It does not test the actual format of the resource
+   * name (e.g. the customer or entity parts are as expected). That is assumed to be correct from
+   * the code generation.
+   *
+   * @param method the ResourceName.java method to check.
+   */
+  private static void testAllMethodsBroadMatch(Method method) {
+    // Create a map to hold test data, specifically values of the resource name parameters for each
+    // parameter type.
+    ImmutableMap<Class, Object> testData =
+        ImmutableMap.<Class, Object>builder()
+            .put(long.class, 1234L)
+            .put(String.class, "abc123")
+            .build();
+    // Build an array of the resource name method parameters.
+    Object[] invokeParams =
+        Stream.of(method.getParameters()).map(param -> testData.get(param.getType())).toArray();
+    Stream.of(invokeParams).forEach(param -> assertNotNull(param));
+    // Construct a regex which ensures that the parameters appear in sequence.
+    String paramOrderRegex =
+        ".*"
+            + Stream.of(invokeParams).map(Object::toString).collect(Collectors.joining(".*"))
+            + ".*";
+    // Call the ResourceNames formatter method with the generated params.
+    String result = null;
+    try {
+      result = (String) method.invoke(null, invokeParams);
+    } catch (IllegalAccessException | InvocationTargetException e) {
+      fail();
+    }
+    // Verify the parameters appear in the correct order.
+    assertThat(result, matchesPattern(paramOrderRegex));
+    // Check if we have compound keys.
+    if (invokeParams.length > 2) {
+      // Extract the last part of the resource, this will contain the compound keys.
+      // Here we are only concerned that the format is correct, since we know the params are already
+      // in the correct order.
+      String possibleChainedIds = result.replaceFirst(".*/", "");
+      assertTrue(possibleChainedIds.contains("_"));
+      assertThat(result, possibleChainedIds, matchesPattern("(1234|abc123)((_1234|_abc123)+)"));
+    }
+  }
 
   @Test
   public void testAccountBudgetProposal() {
@@ -94,14 +150,14 @@ public class ResourceNamesTest {
 
   @Test
   public void testCampaignSharedSet() {
-    String expected = "customers/1234/campaignSharedSets/5678";
-    assertEquals(expected, ResourceNames.campaignSharedSet(1234L, 5678L));
+    String expected = "customers/1234/campaignSharedSets/5678_91011";
+    assertEquals(expected, ResourceNames.campaignSharedSet(1234L, 5678L, 91011L));
   }
 
   @Test
   public void testChangeStatus() {
-    String expected = "customers/1234/changeStatus/5678";
-    assertEquals(expected, ResourceNames.changeStatus(1234L, 5678L));
+    String expected = "customers/1234/changeStatus/5678asd";
+    assertEquals(expected, ResourceNames.changeStatus(1234L, "5678asd"));
   }
 
   @Test
@@ -143,13 +199,30 @@ public class ResourceNamesTest {
 
   @Test
   public void testSharedCriterion() {
-    String expected = "customers/1234/sharedCriteria/5678";
-    assertEquals(expected, ResourceNames.sharedCriterion(1234L, 5678L));
+    String expected = "customers/1234/sharedCriteria/5678_91011";
+    assertEquals(expected, ResourceNames.sharedCriterion(1234L, 5678L, 91011L));
   }
 
   @Test
   public void testVideo() {
-    String expected = "customers/1234/videos/5678";
-    assertEquals(expected, ResourceNames.video(1234L, 5678L));
+    String expected = "customers/1234/videos/5678asd";
+    assertEquals(expected, ResourceNames.video(1234L, "5678asd"));
+  }
+
+  /**
+   * Tests all resource names contain the test data in the correct order, and that any chained IDs
+   * are properly formatted.
+   *
+   * <p>Does not test that the resource name is a legal pattern. This could be handled later with
+   * codegen.
+   */
+  @Test
+  public void testAllResourceNamesBroadMatch() {
+    Stream.of(ResourceNames.class.getMethods())
+        .filter(
+            method ->
+                Modifier.isStatic(method.getModifiers())
+                    && Modifier.isPublic(method.getModifiers()))
+        .forEach(method -> testAllMethodsBroadMatch(method));
   }
 }
