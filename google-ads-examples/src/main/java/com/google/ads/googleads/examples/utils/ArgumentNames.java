@@ -35,4 +35,5 @@ public final class ArgumentNames {
   public static final String MERCHANT_CENTER_ACCOUNT_ID = "--merchantCenterAccountId";
   public static final String CREATE_DEFAULT_LISTING_GROUP = "--createDefaultListingGroup";
   public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
+  public static final String PAGE_URL = "--pageUrl";
 }

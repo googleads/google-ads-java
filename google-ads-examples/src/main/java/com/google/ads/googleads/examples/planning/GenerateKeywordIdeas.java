@@ -26,12 +26,14 @@ import com.google.ads.googleads.v0.services.GenerateKeywordIdeaResponse;
 import com.google.ads.googleads.v0.services.GenerateKeywordIdeaResult;
 import com.google.ads.googleads.v0.services.GenerateKeywordIdeasRequest;
 import com.google.ads.googleads.v0.services.KeywordPlanIdeaServiceClient;
-import com.google.ads.googleads.v0.services.KeywordSeed;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import javax.annotation.Nullable;
 
 /** This example generates keyword ideas from a list of seed keywords. */
 public class GenerateKeywordIdeas {
@@ -59,8 +61,13 @@ public class GenerateKeywordIdeas {
                 + " https://developers.google.com/adwords/api/docs/appendix/codes-formats#languages")
     private Long languageId;
 
-    @Parameter(names = ArgumentNames.KEYWORD_TEXT, required = true)
-    private List<String> keywords;
+    @Parameter(names = ArgumentNames.KEYWORD_TEXT)
+    private List<String> keywords = new ArrayList<>();
+
+    @Parameter(
+        names = ArgumentNames.PAGE_URL,
+        description = "URL of a page related to your business")
+    private String pageUrl;
   }
 
   public static void main(String[] args) throws IOException {
@@ -75,6 +82,8 @@ public class GenerateKeywordIdeas {
               Long.parseLong("INSERT_LOCATION_ID_2_HERE"));
       params.languageId = Long.parseLong("INSERT_LANGUAGE_ID_HERE");
       params.keywords = Arrays.asList("INSERT_KEYWORD_1_HERE", "INSERT_KEYWORD_2_HERE");
+      // Optional: Use a URL related to your business to generate ideas.
+      params.pageUrl = null;
     }
 
     GoogleAdsClient googleAdsClient;
@@ -96,7 +105,8 @@ public class GenerateKeywordIdeas {
               params.customerId,
               params.languageId,
               params.locationIds,
-              params.keywords);
+              params.keywords,
+              params.pageUrl);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -120,7 +130,9 @@ public class GenerateKeywordIdeas {
    * @param languageId the language ID.
    * @param locationIds the location IDs.
    * @param keywords the list of keywords to use as a seed for ideas.
+   * @param pageUrl optional URL related to your business to use as a seed for ideas.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
+   * @throws IllegalArgumentException if {@code keywords} is empty and {@code pageUrl} is null.
    * @throws Exception if the example failed due to other errors.
    */
   private void runExample(
@@ -128,7 +140,8 @@ public class GenerateKeywordIdeas {
       long customerId,
       long languageId,
       List<Long> locationIds,
-      List<String> keywords) {
+      List<String> keywords,
+      @Nullable String pageUrl) {
     try (KeywordPlanIdeaServiceClient keywordPlanServiceClient =
         googleAdsClient.getKeywordPlanIdeaServiceClient()) {
       GenerateKeywordIdeasRequest.Builder requestBuilder =
@@ -136,7 +149,9 @@ public class GenerateKeywordIdeas {
               .setCustomerId(Long.toString(customerId))
               // Set the language resource using the provided language ID.
               .setLanguage(StringValue.of(ResourceNames.languageConstant(languageId)))
-              .setKeywordPlanNetwork(KeywordPlanNetwork.GOOGLE_SEARCH);
+              // Set the network. To restrict to only Google Search, change the parameter below to
+              // KeywordPlanNetwork.GOOGLE_SEARCH.
+              .setKeywordPlanNetwork(KeywordPlanNetwork.GOOGLE_SEARCH_AND_PARTNERS);
 
       // Add the resource name of each location ID to the request.
       for (Long locationId : locationIds) {
@@ -144,10 +159,31 @@ public class GenerateKeywordIdeas {
             StringValue.of(ResourceNames.geoTargetConstant(locationId)));
       }
 
-      // Add each keyword seed to the request's keyword seed list.
-      KeywordSeed.Builder keywordSeedBuilder = requestBuilder.getKeywordSeedBuilder();
-      for (String keyword : keywords) {
-        keywordSeedBuilder.addKeywords(StringValue.of(keyword));
+      // Make sure that keywords and/or page URL were specified. Otherwise, there are no seed values
+      // for the request.
+      if (keywords.isEmpty() && pageUrl == null) {
+        throw new IllegalArgumentException(
+            "At least one of keywords or page URL is required, but neither was specified.");
+      }
+
+      if (keywords.isEmpty()) {
+        // Only page URL was specified, so use a UrlSeed.
+        requestBuilder.getUrlSeedBuilder().setUrl(StringValue.of(pageUrl));
+      } else {
+        // Convert the list of keywords into a list of StringValues.
+        List<StringValue> keywordStringValues =
+            keywords.stream().map(keyword -> StringValue.of(keyword)).collect(Collectors.toList());
+
+        if (pageUrl == null) {
+          // Only keywords were specified, so use a KeywordSeed.
+          requestBuilder.getKeywordSeedBuilder().addAllKeywords(keywordStringValues);
+        } else {
+          // Both page URL and keywords were specified, so use a KeywordAndUrlSeed.
+          requestBuilder
+              .getKeywordAndUrlSeedBuilder()
+              .setUrl(StringValue.of(pageUrl))
+              .addAllKeywords(keywordStringValues);
+        }
       }
 
       // Send the keyword ideas request.
