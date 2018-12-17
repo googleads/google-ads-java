@@ -66,7 +66,6 @@ public class GenerateKeywordIdeas {
   public static void main(String[] args) throws IOException {
     GenerateKeywordIdeasParams params = new GenerateKeywordIdeasParams();
     if (!params.parseArguments(args)) {
-
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
@@ -146,11 +145,10 @@ public class GenerateKeywordIdeas {
       }
 
       // Add each keyword seed to the request's keyword seed list.
-      KeywordSeed.Builder keywordSeedBuilder = KeywordSeed.newBuilder();
+      KeywordSeed.Builder keywordSeedBuilder = requestBuilder.getKeywordSeedBuilder();
       for (String keyword : keywords) {
         keywordSeedBuilder.addKeywords(StringValue.of(keyword));
       }
-      requestBuilder.setKeywordSeed(keywordSeedBuilder);
 
       // Send the keyword ideas request.
       GenerateKeywordIdeaResponse response =
