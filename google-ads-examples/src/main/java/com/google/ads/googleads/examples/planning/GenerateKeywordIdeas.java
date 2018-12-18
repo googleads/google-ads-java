@@ -159,8 +159,8 @@ public class GenerateKeywordIdeas {
             StringValue.of(ResourceNames.geoTargetConstant(locationId)));
       }
 
-      // Make sure that keywords and/or page URL were specified. Otherwise, there are no seed values
-      // for the request.
+      // Make sure that keywords and/or page URL were specified. The request must have exactly one
+      // of urlSeed, keywordSeed, or keywordAndUrlSeed set.
       if (keywords.isEmpty() && pageUrl == null) {
         throw new IllegalArgumentException(
             "At least one of keywords or page URL is required, but neither was specified.");
@@ -169,21 +169,17 @@ public class GenerateKeywordIdeas {
       if (keywords.isEmpty()) {
         // Only page URL was specified, so use a UrlSeed.
         requestBuilder.getUrlSeedBuilder().setUrl(StringValue.of(pageUrl));
+      } else if (pageUrl == null) {
+        // Only keywords were specified, so use a KeywordSeed.
+        requestBuilder
+            .getKeywordSeedBuilder()
+            .addAllKeywords(keywords.stream().map(StringValue::of).collect(Collectors.toList()));
       } else {
-        // Convert the list of keywords into a list of StringValues.
-        List<StringValue> keywordStringValues =
-            keywords.stream().map(keyword -> StringValue.of(keyword)).collect(Collectors.toList());
-
-        if (pageUrl == null) {
-          // Only keywords were specified, so use a KeywordSeed.
-          requestBuilder.getKeywordSeedBuilder().addAllKeywords(keywordStringValues);
-        } else {
-          // Both page URL and keywords were specified, so use a KeywordAndUrlSeed.
-          requestBuilder
-              .getKeywordAndUrlSeedBuilder()
-              .setUrl(StringValue.of(pageUrl))
-              .addAllKeywords(keywordStringValues);
-        }
+        // Both page URL and keywords were specified, so use a KeywordAndUrlSeed.
+        requestBuilder
+            .getKeywordAndUrlSeedBuilder()
+            .setUrl(StringValue.of(pageUrl))
+            .addAllKeywords(keywords.stream().map(StringValue::of).collect(Collectors.toList()));
       }
 
       // Send the keyword ideas request.
