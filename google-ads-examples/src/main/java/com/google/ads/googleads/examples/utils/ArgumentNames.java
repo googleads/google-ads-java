@@ -28,10 +28,12 @@ public final class ArgumentNames {
   public static final String CPC_BID_CEILING_MICRO_AMOUNT = "--cpcBidCeilingMicroAmount";
   public static final String ARTIFACT_NAME = "--artifactName";
   public static final String KEYWORD_TEXT = "--keywordText";
+  public static final String LANGUAGE_ID = "--languageId";
   public static final String LOCATION_ID = "--locationId";
   public static final String RECOMMENDATION_ID = "--recommendationId";
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
   public static final String MERCHANT_CENTER_ACCOUNT_ID = "--merchantCenterAccountId";
   public static final String CREATE_DEFAULT_LISTING_GROUP = "--createDefaultListingGroup";
   public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
+  public static final String PAGE_URL = "--pageUrl";
 }
