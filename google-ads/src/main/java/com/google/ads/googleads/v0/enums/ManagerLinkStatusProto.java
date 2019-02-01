@@ -33,13 +33,13 @@ public final class ManagerLinkStatusProto {
       "v0.enums\"\214\001\n\025ManagerLinkStatusEnum\"s\n\021Ma" +
       "nagerLinkStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKN" +
       "OWN\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010INACTIVE\020\003\022\013\n\007PENDI" +
-      "NG\020\004\022\013\n\007REFUSED\020\005\022\014\n\010CANCELED\020\006B\307\001\n!com." +
+      "NG\020\004\022\013\n\007REFUSED\020\005\022\014\n\010CANCELED\020\006B\353\001\n!com." +
       "google.ads.googleads.v0.enumsB\026ManagerLi" +
       "nkStatusProtoP\001ZBgoogle.golang.org/genpr" +
       "oto/googleapis/ads/googleads/v0/enums;en" +
       "ums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enum" +
-      "s\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto" +
-      "3"
+      "s\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Goog" +
+      "le::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

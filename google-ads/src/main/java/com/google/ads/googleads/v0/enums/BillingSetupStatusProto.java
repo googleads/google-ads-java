@@ -33,12 +33,13 @@ public final class BillingSetupStatusProto {
       ".v0.enums\"\211\001\n\026BillingSetupStatusEnum\"o\n\022" +
       "BillingSetupStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007U" +
       "NKNOWN\020\001\022\013\n\007PENDING\020\002\022\021\n\rAPPROVED_HELD\020\003" +
-      "\022\014\n\010APPROVED\020\004\022\r\n\tCANCELLED\020\005B\310\001\n!com.go" +
+      "\022\014\n\010APPROVED\020\004\022\r\n\tCANCELLED\020\005B\354\001\n!com.go" +
       "ogle.ads.googleads.v0.enumsB\027BillingSetu" +
       "pStatusProtoP\001ZBgoogle.golang.org/genpro" +
       "to/googleapis/ads/googleads/v0/enums;enu" +
       "ms\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums" +
-      "\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Googl" +
+      "e::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -32,12 +32,13 @@ public final class FeedLinkStatusProto {
       "k_status.proto\022\035google.ads.googleads.v0." +
       "enums\"^\n\022FeedLinkStatusEnum\"H\n\016FeedLinkS" +
       "tatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007E" +
-      "NABLED\020\002\022\013\n\007REMOVED\020\003B\304\001\n!com.google.ads" +
+      "NABLED\020\002\022\013\n\007REMOVED\020\003B\350\001\n!com.google.ads" +
       ".googleads.v0.enumsB\023FeedLinkStatusProto" +
       "P\001ZBgoogle.golang.org/genproto/googleapi" +
       "s/ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035G" +
       "oogle.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ad" +
-      "s\\GoogleAds\\V0\\Enumsb\006proto3"
+      "s\\GoogleAds\\V0\\Enums\352\002!Google::Ads::Goog" +
+      "leAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -38,13 +38,14 @@ public final class ChangeStatusServiceProto {
       "gle.ads.googleads.v0.services.GetChangeS" +
       "tatusRequest\032/.google.ads.googleads.v0.r" +
       "esources.ChangeStatus\"6\202\323\344\223\0020\022./v0/{reso" +
-      "urce_name=customers/*/changeStatus/*}B\330\001" +
+      "urce_name=customers/*/changeStatus/*}B\377\001" +
       "\n$com.google.ads.googleads.v0.servicesB\030" +
       "ChangeStatusServiceProtoP\001ZHgoogle.golan" +
       "g.org/genproto/googleapis/ads/googleads/" +
       "v0/services;services\242\002\003GAA\252\002 Google.Ads." +
       "GoogleAds.V0.Services\312\002 Google\\Ads\\Googl" +
-      "eAds\\V0\\Servicesb\006proto3"
+      "eAds\\V0\\Services\352\002$Google::Ads::GoogleAd" +
+      "s::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

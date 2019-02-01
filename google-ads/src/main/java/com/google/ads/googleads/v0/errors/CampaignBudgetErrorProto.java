@@ -48,13 +48,14 @@ public final class CampaignBudgetErrorProto {
       "CY\020\014\022/\n+MONEY_AMOUNT_LESS_THAN_CURRENCY_" +
       "MINIMUM_CPC\020\r\022\032\n\026MONEY_AMOUNT_TOO_LARGE\020" +
       "\016\022\031\n\025NEGATIVE_MONEY_AMOUNT\020\017\022)\n%NON_MULT" +
-      "IPLE_OF_MINIMUM_CURRENCY_UNIT\020\020B\316\001\n\"com." +
+      "IPLE_OF_MINIMUM_CURRENCY_UNIT\020\020B\363\001\n\"com." +
       "google.ads.googleads.v0.errorsB\030Campaign" +
       "BudgetErrorProtoP\001ZDgoogle.golang.org/ge" +
       "nproto/googleapis/ads/googleads/v0/error" +
       "s;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0" +
       ".Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors" +
-      "b\006proto3"
+      "\352\002\"Google::Ads::GoogleAds::V0::Errorsb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

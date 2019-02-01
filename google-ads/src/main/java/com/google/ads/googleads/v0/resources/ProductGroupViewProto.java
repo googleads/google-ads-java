@@ -31,12 +31,13 @@ public final class ProductGroupViewProto {
       "\n:google/ads/googleads/v0/resources/prod" +
       "uct_group_view.proto\022!google.ads.googlea" +
       "ds.v0.resources\")\n\020ProductGroupView\022\025\n\rr" +
-      "esource_name\030\001 \001(\tB\332\001\n%com.google.ads.go" +
+      "esource_name\030\001 \001(\tB\202\002\n%com.google.ads.go" +
       "ogleads.v0.resourcesB\025ProductGroupViewPr" +
       "otoP\001ZJgoogle.golang.org/genproto/google" +
       "apis/ads/googleads/v0/resources;resource" +
       "s\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Resour" +
-      "ces\312\002!Google\\Ads\\GoogleAds\\V0\\Resourcesb" +
+      "ces\312\002!Google\\Ads\\GoogleAds\\V0\\Resources\352" +
+      "\002%Google::Ads::GoogleAds::V0::Resourcesb" +
       "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

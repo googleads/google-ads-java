@@ -41,12 +41,13 @@ public final class TagSnippetProto {
       "geFormatEnum.TrackingCodePageFormat\0225\n\017g" +
       "lobal_site_tag\030\003 \001(\0132\034.google.protobuf.S" +
       "tringValue\0223\n\revent_snippet\030\004 \001(\0132\034.goog" +
-      "le.protobuf.StringValueB\305\001\n\"com.google.a" +
+      "le.protobuf.StringValueB\352\001\n\"com.google.a" +
       "ds.googleads.v0.commonB\017TagSnippetProtoP" +
       "\001ZDgoogle.golang.org/genproto/googleapis" +
       "/ads/googleads/v0/common;common\242\002\003GAA\252\002\036" +
       "Google.Ads.GoogleAds.V0.Common\312\002\036Google\\" +
-      "Ads\\GoogleAds\\V0\\Commonb\006proto3"
+      "Ads\\GoogleAds\\V0\\Common\352\002\"Google::Ads::G" +
+      "oogleAds::V0::Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

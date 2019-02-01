@@ -39,13 +39,14 @@ public final class CampaignBidModifierProto {
       "lue\0222\n\014bid_modifier\030\004 \001(\0132\034.google.proto" +
       "buf.DoubleValue\022O\n\020interaction_type\030\005 \001(" +
       "\01323.google.ads.googleads.v0.common.Inter" +
-      "actionTypeInfoH\000B\013\n\tcriterionB\335\001\n%com.go" +
+      "actionTypeInfoH\000B\013\n\tcriterionB\205\002\n%com.go" +
       "ogle.ads.googleads.v0.resourcesB\030Campaig" +
       "nBidModifierProtoP\001ZJgoogle.golang.org/g" +
       "enproto/googleapis/ads/googleads/v0/reso" +
       "urces;resources\242\002\003GAA\252\002!Google.Ads.Googl" +
       "eAds.V0.Resources\312\002!Google\\Ads\\GoogleAds" +
-      "\\V0\\Resourcesb\006proto3"
+      "\\V0\\Resources\352\002%Google::Ads::GoogleAds::" +
+      "V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

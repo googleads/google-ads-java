@@ -243,6 +243,56 @@ public interface CustomerOrBuilder extends
 
   /**
    * <pre>
+   * Whether the customer is a manager.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue manager = 12;</code>
+   */
+  boolean hasManager();
+  /**
+   * <pre>
+   * Whether the customer is a manager.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue manager = 12;</code>
+   */
+  com.google.protobuf.BoolValue getManager();
+  /**
+   * <pre>
+   * Whether the customer is a manager.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue manager = 12;</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getManagerOrBuilder();
+
+  /**
+   * <pre>
+   * Whether the customer is a test account.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue test_account = 13;</code>
+   */
+  boolean hasTestAccount();
+  /**
+   * <pre>
+   * Whether the customer is a test account.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue test_account = 13;</code>
+   */
+  com.google.protobuf.BoolValue getTestAccount();
+  /**
+   * <pre>
+   * Whether the customer is a test account.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue test_account = 13;</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getTestAccountOrBuilder();
+
+  /**
+   * <pre>
    * Call reporting setting for a customer.
    * </pre>
    *
@@ -265,4 +315,29 @@ public interface CustomerOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.CallReportingSetting call_reporting_setting = 10;</code>
    */
   com.google.ads.googleads.v0.resources.CallReportingSettingOrBuilder getCallReportingSettingOrBuilder();
+
+  /**
+   * <pre>
+   * Conversion tracking setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+   */
+  boolean hasConversionTrackingSetting();
+  /**
+   * <pre>
+   * Conversion tracking setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+   */
+  com.google.ads.googleads.v0.resources.ConversionTrackingSetting getConversionTrackingSetting();
+  /**
+   * <pre>
+   * Conversion tracking setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+   */
+  com.google.ads.googleads.v0.resources.ConversionTrackingSettingOrBuilder getConversionTrackingSettingOrBuilder();
 }

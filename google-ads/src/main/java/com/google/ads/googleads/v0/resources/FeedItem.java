@@ -25,6 +25,7 @@ private static final long serialVersionUID = 0L;
     geoTargetingRestriction_ = 0;
     urlCustomParameters_ = java.util.Collections.emptyList();
     status_ = 0;
+    policyInfos_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -139,6 +140,15 @@ private static final long serialVersionUID = 0L;
             status_ = rawValue;
             break;
           }
+          case 82: {
+            if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              policyInfos_ = new java.util.ArrayList<com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo>();
+              mutable_bitField0_ |= 0x00000200;
+            }
+            policyInfos_.add(
+                input.readMessage(com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.parser(), extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -159,6 +169,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
+      }
+      if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        policyInfos_ = java.util.Collections.unmodifiableList(policyInfos_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -334,6 +347,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * End time in which this feed item is no longer effective and will stop
+   * serving.
    * The format is "YYYY-MM-DD HH:MM:SS".
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
@@ -346,6 +360,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * End time in which this feed item is no longer effective and will stop
+   * serving.
    * The format is "YYYY-MM-DD HH:MM:SS".
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
@@ -358,6 +373,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * End time in which this feed item is no longer effective and will stop
+   * serving.
    * The format is "YYYY-MM-DD HH:MM:SS".
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
@@ -537,6 +553,86 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v0.enums.FeedItemStatusEnum.FeedItemStatus.UNRECOGNIZED : result;
   }
 
+  public static final int POLICY_INFOS_FIELD_NUMBER = 10;
+  private java.util.List<com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo> policyInfos_;
+  /**
+   * <pre>
+   * List of info about a feed item's validation and approval state for active
+   * feed mappings. There will be an entry in the list for each type of feed
+   * mapping associated with the feed, e.g. a feed with a sitelink and a call
+   * feed mapping would cause every feed item associated with that feed to have
+   * an entry in this list for both sitelink and call.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   */
+  public java.util.List<com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo> getPolicyInfosList() {
+    return policyInfos_;
+  }
+  /**
+   * <pre>
+   * List of info about a feed item's validation and approval state for active
+   * feed mappings. There will be an entry in the list for each type of feed
+   * mapping associated with the feed, e.g. a feed with a sitelink and a call
+   * feed mapping would cause every feed item associated with that feed to have
+   * an entry in this list for both sitelink and call.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   */
+  public java.util.List<? extends com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfoOrBuilder> 
+      getPolicyInfosOrBuilderList() {
+    return policyInfos_;
+  }
+  /**
+   * <pre>
+   * List of info about a feed item's validation and approval state for active
+   * feed mappings. There will be an entry in the list for each type of feed
+   * mapping associated with the feed, e.g. a feed with a sitelink and a call
+   * feed mapping would cause every feed item associated with that feed to have
+   * an entry in this list for both sitelink and call.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   */
+  public int getPolicyInfosCount() {
+    return policyInfos_.size();
+  }
+  /**
+   * <pre>
+   * List of info about a feed item's validation and approval state for active
+   * feed mappings. There will be an entry in the list for each type of feed
+   * mapping associated with the feed, e.g. a feed with a sitelink and a call
+   * feed mapping would cause every feed item associated with that feed to have
+   * an entry in this list for both sitelink and call.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   */
+  public com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo getPolicyInfos(int index) {
+    return policyInfos_.get(index);
+  }
+  /**
+   * <pre>
+   * List of info about a feed item's validation and approval state for active
+   * feed mappings. There will be an entry in the list for each type of feed
+   * mapping associated with the feed, e.g. a feed with a sitelink and a call
+   * feed mapping would cause every feed item associated with that feed to have
+   * an entry in this list for both sitelink and call.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   */
+  public com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfoOrBuilder getPolicyInfosOrBuilder(
+      int index) {
+    return policyInfos_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -577,6 +673,9 @@ private static final long serialVersionUID = 0L;
     }
     if (status_ != com.google.ads.googleads.v0.enums.FeedItemStatusEnum.FeedItemStatus.UNSPECIFIED.getNumber()) {
       output.writeEnum(9, status_);
+    }
+    for (int i = 0; i < policyInfos_.size(); i++) {
+      output.writeMessage(10, policyInfos_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -622,6 +721,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(9, status_);
     }
+    for (int i = 0; i < policyInfos_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, policyInfos_.get(i));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -666,6 +769,8 @@ private static final long serialVersionUID = 0L;
     result = result && getUrlCustomParametersList()
         .equals(other.getUrlCustomParametersList());
     result = result && status_ == other.status_;
+    result = result && getPolicyInfosList()
+        .equals(other.getPolicyInfosList());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -707,6 +812,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
+    if (getPolicyInfosCount() > 0) {
+      hash = (37 * hash) + POLICY_INFOS_FIELD_NUMBER;
+      hash = (53 * hash) + getPolicyInfosList().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -841,6 +950,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getAttributeValuesFieldBuilder();
         getUrlCustomParametersFieldBuilder();
+        getPolicyInfosFieldBuilder();
       }
     }
     @java.lang.Override
@@ -888,6 +998,12 @@ private static final long serialVersionUID = 0L;
       }
       status_ = 0;
 
+      if (policyInfosBuilder_ == null) {
+        policyInfos_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000200);
+      } else {
+        policyInfosBuilder_.clear();
+      }
       return this;
     }
 
@@ -957,6 +1073,15 @@ private static final long serialVersionUID = 0L;
         result.urlCustomParameters_ = urlCustomParametersBuilder_.build();
       }
       result.status_ = status_;
+      if (policyInfosBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          policyInfos_ = java.util.Collections.unmodifiableList(policyInfos_);
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.policyInfos_ = policyInfos_;
+      } else {
+        result.policyInfos_ = policyInfosBuilder_.build();
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1079,6 +1204,32 @@ private static final long serialVersionUID = 0L;
       }
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
+      }
+      if (policyInfosBuilder_ == null) {
+        if (!other.policyInfos_.isEmpty()) {
+          if (policyInfos_.isEmpty()) {
+            policyInfos_ = other.policyInfos_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensurePolicyInfosIsMutable();
+            policyInfos_.addAll(other.policyInfos_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.policyInfos_.isEmpty()) {
+          if (policyInfosBuilder_.isEmpty()) {
+            policyInfosBuilder_.dispose();
+            policyInfosBuilder_ = null;
+            policyInfos_ = other.policyInfos_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+            policyInfosBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getPolicyInfosFieldBuilder() : null;
+          } else {
+            policyInfosBuilder_.addAllMessages(other.policyInfos_);
+          }
+        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1692,6 +1843,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End time in which this feed item is no longer effective and will stop
+     * serving.
      * The format is "YYYY-MM-DD HH:MM:SS".
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
@@ -1704,6 +1856,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End time in which this feed item is no longer effective and will stop
+     * serving.
      * The format is "YYYY-MM-DD HH:MM:SS".
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
@@ -1720,6 +1873,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End time in which this feed item is no longer effective and will stop
+     * serving.
      * The format is "YYYY-MM-DD HH:MM:SS".
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
@@ -1742,6 +1896,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End time in which this feed item is no longer effective and will stop
+     * serving.
      * The format is "YYYY-MM-DD HH:MM:SS".
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
@@ -1762,6 +1917,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End time in which this feed item is no longer effective and will stop
+     * serving.
      * The format is "YYYY-MM-DD HH:MM:SS".
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
@@ -1786,6 +1942,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End time in which this feed item is no longer effective and will stop
+     * serving.
      * The format is "YYYY-MM-DD HH:MM:SS".
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
@@ -1806,6 +1963,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End time in which this feed item is no longer effective and will stop
+     * serving.
      * The format is "YYYY-MM-DD HH:MM:SS".
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
@@ -1820,6 +1978,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End time in which this feed item is no longer effective and will stop
+     * serving.
      * The format is "YYYY-MM-DD HH:MM:SS".
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
@@ -1837,6 +1996,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End time in which this feed item is no longer effective and will stop
+     * serving.
      * The format is "YYYY-MM-DD HH:MM:SS".
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
@@ -2637,6 +2797,408 @@ private static final long serialVersionUID = 0L;
       status_ = 0;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo> policyInfos_ =
+      java.util.Collections.emptyList();
+    private void ensurePolicyInfosIsMutable() {
+      if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        policyInfos_ = new java.util.ArrayList<com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo>(policyInfos_);
+        bitField0_ |= 0x00000200;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo, com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.Builder, com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfoOrBuilder> policyInfosBuilder_;
+
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo> getPolicyInfosList() {
+      if (policyInfosBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(policyInfos_);
+      } else {
+        return policyInfosBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public int getPolicyInfosCount() {
+      if (policyInfosBuilder_ == null) {
+        return policyInfos_.size();
+      } else {
+        return policyInfosBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo getPolicyInfos(int index) {
+      if (policyInfosBuilder_ == null) {
+        return policyInfos_.get(index);
+      } else {
+        return policyInfosBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public Builder setPolicyInfos(
+        int index, com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo value) {
+      if (policyInfosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePolicyInfosIsMutable();
+        policyInfos_.set(index, value);
+        onChanged();
+      } else {
+        policyInfosBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public Builder setPolicyInfos(
+        int index, com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.Builder builderForValue) {
+      if (policyInfosBuilder_ == null) {
+        ensurePolicyInfosIsMutable();
+        policyInfos_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        policyInfosBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public Builder addPolicyInfos(com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo value) {
+      if (policyInfosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePolicyInfosIsMutable();
+        policyInfos_.add(value);
+        onChanged();
+      } else {
+        policyInfosBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public Builder addPolicyInfos(
+        int index, com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo value) {
+      if (policyInfosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePolicyInfosIsMutable();
+        policyInfos_.add(index, value);
+        onChanged();
+      } else {
+        policyInfosBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public Builder addPolicyInfos(
+        com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.Builder builderForValue) {
+      if (policyInfosBuilder_ == null) {
+        ensurePolicyInfosIsMutable();
+        policyInfos_.add(builderForValue.build());
+        onChanged();
+      } else {
+        policyInfosBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public Builder addPolicyInfos(
+        int index, com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.Builder builderForValue) {
+      if (policyInfosBuilder_ == null) {
+        ensurePolicyInfosIsMutable();
+        policyInfos_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        policyInfosBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public Builder addAllPolicyInfos(
+        java.lang.Iterable<? extends com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo> values) {
+      if (policyInfosBuilder_ == null) {
+        ensurePolicyInfosIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, policyInfos_);
+        onChanged();
+      } else {
+        policyInfosBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public Builder clearPolicyInfos() {
+      if (policyInfosBuilder_ == null) {
+        policyInfos_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+      } else {
+        policyInfosBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public Builder removePolicyInfos(int index) {
+      if (policyInfosBuilder_ == null) {
+        ensurePolicyInfosIsMutable();
+        policyInfos_.remove(index);
+        onChanged();
+      } else {
+        policyInfosBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.Builder getPolicyInfosBuilder(
+        int index) {
+      return getPolicyInfosFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfoOrBuilder getPolicyInfosOrBuilder(
+        int index) {
+      if (policyInfosBuilder_ == null) {
+        return policyInfos_.get(index);  } else {
+        return policyInfosBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfoOrBuilder> 
+         getPolicyInfosOrBuilderList() {
+      if (policyInfosBuilder_ != null) {
+        return policyInfosBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(policyInfos_);
+      }
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.Builder addPolicyInfosBuilder() {
+      return getPolicyInfosFieldBuilder().addBuilder(
+          com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.Builder addPolicyInfosBuilder(
+        int index) {
+      return getPolicyInfosFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * List of info about a feed item's validation and approval state for active
+     * feed mappings. There will be an entry in the list for each type of feed
+     * mapping associated with the feed, e.g. a feed with a sitelink and a call
+     * feed mapping would cause every feed item associated with that feed to have
+     * an entry in this list for both sitelink and call.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.Builder> 
+         getPolicyInfosBuilderList() {
+      return getPolicyInfosFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo, com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.Builder, com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfoOrBuilder> 
+        getPolicyInfosFieldBuilder() {
+      if (policyInfosBuilder_ == null) {
+        policyInfosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo, com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo.Builder, com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfoOrBuilder>(
+                policyInfos_,
+                ((bitField0_ & 0x00000200) == 0x00000200),
+                getParentForChildren(),
+                isClean());
+        policyInfos_ = null;
+      }
+      return policyInfosBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

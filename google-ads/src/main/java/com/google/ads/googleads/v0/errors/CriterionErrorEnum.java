@@ -798,6 +798,96 @@ private static final long serialVersionUID = 0L;
      * <code>FIELD_INCOMPATIBLE_WITH_NEGATIVE_TARGETING = 84;</code>
      */
     FIELD_INCOMPATIBLE_WITH_NEGATIVE_TARGETING(84),
+    /**
+     * <pre>
+     * The combination of operand and operator in webpage condition is invalid.
+     * </pre>
+     *
+     * <code>INVALID_WEBPAGE_CONDITION = 85;</code>
+     */
+    INVALID_WEBPAGE_CONDITION(85),
+    /**
+     * <pre>
+     * The URL of webpage condition is invalid.
+     * </pre>
+     *
+     * <code>INVALID_WEBPAGE_CONDITION_URL = 86;</code>
+     */
+    INVALID_WEBPAGE_CONDITION_URL(86),
+    /**
+     * <pre>
+     * The URL of webpage condition cannot be empty or contain white space.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_CANNOT_BE_EMPTY = 87;</code>
+     */
+    WEBPAGE_CONDITION_URL_CANNOT_BE_EMPTY(87),
+    /**
+     * <pre>
+     * The URL of webpage condition contains an unsupported protocol.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_UNSUPPORTED_PROTOCOL = 88;</code>
+     */
+    WEBPAGE_CONDITION_URL_UNSUPPORTED_PROTOCOL(88),
+    /**
+     * <pre>
+     * The URL of webpage condition cannot be an IP address.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_CANNOT_BE_IP_ADDRESS = 89;</code>
+     */
+    WEBPAGE_CONDITION_URL_CANNOT_BE_IP_ADDRESS(89),
+    /**
+     * <pre>
+     * The domain of the URL is not consistent with the domain in campaign
+     * setting.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_DOMAIN_NOT_CONSISTENT_WITH_CAMPAIGN_SETTING = 90;</code>
+     */
+    WEBPAGE_CONDITION_URL_DOMAIN_NOT_CONSISTENT_WITH_CAMPAIGN_SETTING(90),
+    /**
+     * <pre>
+     * The URL of webpage condition cannot be a public suffix itself.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_CANNOT_BE_PUBLIC_SUFFIX = 91;</code>
+     */
+    WEBPAGE_CONDITION_URL_CANNOT_BE_PUBLIC_SUFFIX(91),
+    /**
+     * <pre>
+     * The URL of webpage condition has an invalid public suffix.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_INVALID_PUBLIC_SUFFIX = 92;</code>
+     */
+    WEBPAGE_CONDITION_URL_INVALID_PUBLIC_SUFFIX(92),
+    /**
+     * <pre>
+     * Value track parameter is not supported in webpage condition URL.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_VALUE_TRACK_VALUE_NOT_SUPPORTED = 93;</code>
+     */
+    WEBPAGE_CONDITION_URL_VALUE_TRACK_VALUE_NOT_SUPPORTED(93),
+    /**
+     * <pre>
+     * Only one URL-EQUALS webpage condition is allowed in a webpage
+     * criterion and it cannot be combined with other conditions.
+     * </pre>
+     *
+     * <code>WEBPAGE_CRITERION_URL_EQUALS_CAN_HAVE_ONLY_ONE_CONDITION = 94;</code>
+     */
+    WEBPAGE_CRITERION_URL_EQUALS_CAN_HAVE_ONLY_ONE_CONDITION(94),
+    /**
+     * <pre>
+     * A webpage criterion cannot be added to a non-DSA ad group.
+     * </pre>
+     *
+     * <code>WEBPAGE_CRITERION_NOT_SUPPORTED_ON_NON_DSA_AD_GROUP = 95;</code>
+     */
+    WEBPAGE_CRITERION_NOT_SUPPORTED_ON_NON_DSA_AD_GROUP(95),
     UNRECOGNIZED(-1),
     ;
 
@@ -1513,6 +1603,96 @@ private static final long serialVersionUID = 0L;
      * <code>FIELD_INCOMPATIBLE_WITH_NEGATIVE_TARGETING = 84;</code>
      */
     public static final int FIELD_INCOMPATIBLE_WITH_NEGATIVE_TARGETING_VALUE = 84;
+    /**
+     * <pre>
+     * The combination of operand and operator in webpage condition is invalid.
+     * </pre>
+     *
+     * <code>INVALID_WEBPAGE_CONDITION = 85;</code>
+     */
+    public static final int INVALID_WEBPAGE_CONDITION_VALUE = 85;
+    /**
+     * <pre>
+     * The URL of webpage condition is invalid.
+     * </pre>
+     *
+     * <code>INVALID_WEBPAGE_CONDITION_URL = 86;</code>
+     */
+    public static final int INVALID_WEBPAGE_CONDITION_URL_VALUE = 86;
+    /**
+     * <pre>
+     * The URL of webpage condition cannot be empty or contain white space.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_CANNOT_BE_EMPTY = 87;</code>
+     */
+    public static final int WEBPAGE_CONDITION_URL_CANNOT_BE_EMPTY_VALUE = 87;
+    /**
+     * <pre>
+     * The URL of webpage condition contains an unsupported protocol.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_UNSUPPORTED_PROTOCOL = 88;</code>
+     */
+    public static final int WEBPAGE_CONDITION_URL_UNSUPPORTED_PROTOCOL_VALUE = 88;
+    /**
+     * <pre>
+     * The URL of webpage condition cannot be an IP address.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_CANNOT_BE_IP_ADDRESS = 89;</code>
+     */
+    public static final int WEBPAGE_CONDITION_URL_CANNOT_BE_IP_ADDRESS_VALUE = 89;
+    /**
+     * <pre>
+     * The domain of the URL is not consistent with the domain in campaign
+     * setting.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_DOMAIN_NOT_CONSISTENT_WITH_CAMPAIGN_SETTING = 90;</code>
+     */
+    public static final int WEBPAGE_CONDITION_URL_DOMAIN_NOT_CONSISTENT_WITH_CAMPAIGN_SETTING_VALUE = 90;
+    /**
+     * <pre>
+     * The URL of webpage condition cannot be a public suffix itself.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_CANNOT_BE_PUBLIC_SUFFIX = 91;</code>
+     */
+    public static final int WEBPAGE_CONDITION_URL_CANNOT_BE_PUBLIC_SUFFIX_VALUE = 91;
+    /**
+     * <pre>
+     * The URL of webpage condition has an invalid public suffix.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_INVALID_PUBLIC_SUFFIX = 92;</code>
+     */
+    public static final int WEBPAGE_CONDITION_URL_INVALID_PUBLIC_SUFFIX_VALUE = 92;
+    /**
+     * <pre>
+     * Value track parameter is not supported in webpage condition URL.
+     * </pre>
+     *
+     * <code>WEBPAGE_CONDITION_URL_VALUE_TRACK_VALUE_NOT_SUPPORTED = 93;</code>
+     */
+    public static final int WEBPAGE_CONDITION_URL_VALUE_TRACK_VALUE_NOT_SUPPORTED_VALUE = 93;
+    /**
+     * <pre>
+     * Only one URL-EQUALS webpage condition is allowed in a webpage
+     * criterion and it cannot be combined with other conditions.
+     * </pre>
+     *
+     * <code>WEBPAGE_CRITERION_URL_EQUALS_CAN_HAVE_ONLY_ONE_CONDITION = 94;</code>
+     */
+    public static final int WEBPAGE_CRITERION_URL_EQUALS_CAN_HAVE_ONLY_ONE_CONDITION_VALUE = 94;
+    /**
+     * <pre>
+     * A webpage criterion cannot be added to a non-DSA ad group.
+     * </pre>
+     *
+     * <code>WEBPAGE_CRITERION_NOT_SUPPORTED_ON_NON_DSA_AD_GROUP = 95;</code>
+     */
+    public static final int WEBPAGE_CRITERION_NOT_SUPPORTED_ON_NON_DSA_AD_GROUP_VALUE = 95;
 
 
     public final int getNumber() {
@@ -1618,6 +1798,17 @@ private static final long serialVersionUID = 0L;
         case 82: return HOTEL_LENGTH_OF_STAY_OVERLAPS_WITH_EXISTING_CRITERION;
         case 83: return HOTEL_ADVANCE_BOOKING_WINDOW_OVERLAPS_WITH_EXISTING_CRITERION;
         case 84: return FIELD_INCOMPATIBLE_WITH_NEGATIVE_TARGETING;
+        case 85: return INVALID_WEBPAGE_CONDITION;
+        case 86: return INVALID_WEBPAGE_CONDITION_URL;
+        case 87: return WEBPAGE_CONDITION_URL_CANNOT_BE_EMPTY;
+        case 88: return WEBPAGE_CONDITION_URL_UNSUPPORTED_PROTOCOL;
+        case 89: return WEBPAGE_CONDITION_URL_CANNOT_BE_IP_ADDRESS;
+        case 90: return WEBPAGE_CONDITION_URL_DOMAIN_NOT_CONSISTENT_WITH_CAMPAIGN_SETTING;
+        case 91: return WEBPAGE_CONDITION_URL_CANNOT_BE_PUBLIC_SUFFIX;
+        case 92: return WEBPAGE_CONDITION_URL_INVALID_PUBLIC_SUFFIX;
+        case 93: return WEBPAGE_CONDITION_URL_VALUE_TRACK_VALUE_NOT_SUPPORTED;
+        case 94: return WEBPAGE_CRITERION_URL_EQUALS_CAN_HAVE_ONLY_ONE_CONDITION;
+        case 95: return WEBPAGE_CRITERION_NOT_SUPPORTED_ON_NON_DSA_AD_GROUP;
         default: return null;
       }
     }

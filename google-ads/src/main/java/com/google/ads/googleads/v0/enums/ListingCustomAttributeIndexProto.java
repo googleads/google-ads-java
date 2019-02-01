@@ -35,13 +35,14 @@ public final class ListingCustomAttributeIndexProto {
       "teIndex\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n" +
       "\022CUSTOM_ATTRIBUTE_0\020\002\022\026\n\022CUSTOM_ATTRIBUT" +
       "E_1\020\003\022\026\n\022CUSTOM_ATTRIBUTE_2\020\004\022\026\n\022CUSTOM_" +
-      "ATTRIBUTE_3\020\005\022\026\n\022CUSTOM_ATTRIBUTE_4\020\006B\321\001" +
+      "ATTRIBUTE_3\020\005\022\026\n\022CUSTOM_ATTRIBUTE_4\020\006B\365\001" +
       "\n!com.google.ads.googleads.v0.enumsB Lis" +
       "tingCustomAttributeIndexProtoP\001ZBgoogle." +
       "golang.org/genproto/googleapis/ads/googl" +
       "eads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.G" +
       "oogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleAds" +
-      "\\V0\\Enumsb\006proto3"
+      "\\V0\\Enums\352\002!Google::Ads::GoogleAds::V0::" +
+      "Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

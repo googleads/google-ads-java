@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue managerCustomer_;
   /**
    * <pre>
-   * The manager customer linked to the customer. This field is read only.
+   * The manager customer linked to the customer.
    * </pre>
    *
    * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The manager customer linked to the customer. This field is read only.
+   * The manager customer linked to the customer.
    * </pre>
    *
    * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -188,7 +188,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The manager customer linked to the customer. This field is read only.
+   * The manager customer linked to the customer.
    * </pre>
    *
    * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -742,7 +742,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> managerCustomerBuilder_;
     /**
      * <pre>
-     * The manager customer linked to the customer. This field is read only.
+     * The manager customer linked to the customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -752,7 +752,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer. This field is read only.
+     * The manager customer linked to the customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -766,7 +766,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer. This field is read only.
+     * The manager customer linked to the customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -786,7 +786,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer. This field is read only.
+     * The manager customer linked to the customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -804,7 +804,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer. This field is read only.
+     * The manager customer linked to the customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -826,7 +826,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer. This field is read only.
+     * The manager customer linked to the customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -844,7 +844,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer. This field is read only.
+     * The manager customer linked to the customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -856,7 +856,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer. This field is read only.
+     * The manager customer linked to the customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -871,7 +871,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer. This field is read only.
+     * The manager customer linked to the customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue manager_customer = 3;</code>

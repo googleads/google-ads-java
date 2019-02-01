@@ -37,12 +37,13 @@ public final class KeywordPlanAdGroupProto {
       "\002id\030\003 \001(\0132\033.google.protobuf.Int64Value\022*" +
       "\n\004name\030\004 \001(\0132\034.google.protobuf.StringVal" +
       "ue\0223\n\016cpc_bid_micros\030\005 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\334\001\n%com.google.ads.googl" +
+      "obuf.Int64ValueB\204\002\n%com.google.ads.googl" +
       "eads.v0.resourcesB\027KeywordPlanAdGroupPro" +
       "toP\001ZJgoogle.golang.org/genproto/googlea" +
       "pis/ads/googleads/v0/resources;resources" +
       "\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Resourc" +
-      "es\312\002!Google\\Ads\\GoogleAds\\V0\\Resourcesb\006" +
+      "es\312\002!Google\\Ads\\GoogleAds\\V0\\Resources\352\002" +
+      "%Google::Ads::GoogleAds::V0::Resourcesb\006" +
       "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

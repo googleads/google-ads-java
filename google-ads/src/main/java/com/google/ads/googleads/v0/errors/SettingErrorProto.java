@@ -57,12 +57,13 @@ public final class SettingErrorProto {
       "O_MANY_IMAGE_MEDIA_IDS_IN_UNIVERSAL_APP_" +
       "CAMPAIGN\020\021\0221\n-MEDIA_INCOMPATIBLE_FOR_UNI" +
       "VERSAL_APP_CAMPAIGN\020\022\022\036\n\032TOO_MANY_EXCLAM" +
-      "ATION_MARKS\020\023B\307\001\n\"com.google.ads.googlea" +
+      "ATION_MARKS\020\023B\354\001\n\"com.google.ads.googlea" +
       "ds.v0.errorsB\021SettingErrorProtoP\001ZDgoogl" +
       "e.golang.org/genproto/googleapis/ads/goo" +
       "gleads/v0/errors;errors\242\002\003GAA\252\002\036Google.A" +
       "ds.GoogleAds.V0.Errors\312\002\036Google\\Ads\\Goog" +
-      "leAds\\V0\\Errorsb\006proto3"
+      "leAds\\V0\\Errors\352\002\"Google::Ads::GoogleAds" +
+      "::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

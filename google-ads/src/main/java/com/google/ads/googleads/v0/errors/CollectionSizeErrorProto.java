@@ -33,12 +33,13 @@ public final class CollectionSizeErrorProto {
       "ds.v0.errors\"i\n\027CollectionSizeErrorEnum\"" +
       "N\n\023CollectionSizeError\022\017\n\013UNSPECIFIED\020\000\022" +
       "\013\n\007UNKNOWN\020\001\022\013\n\007TOO_FEW\020\002\022\014\n\010TOO_MANY\020\003B" +
-      "\316\001\n\"com.google.ads.googleads.v0.errorsB\030" +
+      "\363\001\n\"com.google.ads.googleads.v0.errorsB\030" +
       "CollectionSizeErrorProtoP\001ZDgoogle.golan" +
       "g.org/genproto/googleapis/ads/googleads/" +
       "v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.Goog" +
       "leAds.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V" +
-      "0\\Errorsb\006proto3"
+      "0\\Errors\352\002\"Google::Ads::GoogleAds::V0::E" +
+      "rrorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

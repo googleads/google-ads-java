@@ -33,12 +33,13 @@ public final class FrequencyCapTimeUnitProto {
       "ads.v0.enums\"n\n\030FrequencyCapTimeUnitEnum" +
       "\"R\n\024FrequencyCapTimeUnit\022\017\n\013UNSPECIFIED\020" +
       "\000\022\013\n\007UNKNOWN\020\001\022\007\n\003DAY\020\002\022\010\n\004WEEK\020\003\022\t\n\005MON" +
-      "TH\020\004B\312\001\n!com.google.ads.googleads.v0.enu" +
+      "TH\020\004B\356\001\n!com.google.ads.googleads.v0.enu" +
       "msB\031FrequencyCapTimeUnitProtoP\001ZBgoogle." +
       "golang.org/genproto/googleapis/ads/googl" +
       "eads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.G" +
       "oogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleAds" +
-      "\\V0\\Enumsb\006proto3"
+      "\\V0\\Enums\352\002!Google::Ads::GoogleAds::V0::" +
+      "Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

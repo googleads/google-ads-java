@@ -37,13 +37,14 @@ public final class KeywordPlanCommonProto {
       "earches\030\001 \001(\0132\033.google.protobuf.Int64Val" +
       "ue\022o\n\013competition\030\002 \001(\0162Z.google.ads.goo" +
       "gleads.v0.enums.KeywordPlanCompetitionLe" +
-      "velEnum.KeywordPlanCompetitionLevelB\314\001\n\"" +
+      "velEnum.KeywordPlanCompetitionLevelB\361\001\n\"" +
       "com.google.ads.googleads.v0.commonB\026Keyw" +
       "ordPlanCommonProtoP\001ZDgoogle.golang.org/" +
       "genproto/googleapis/ads/googleads/v0/com" +
       "mon;common\242\002\003GAA\252\002\036Google.Ads.GoogleAds." +
       "V0.Common\312\002\036Google\\Ads\\GoogleAds\\V0\\Comm" +
-      "onb\006proto3"
+      "on\352\002\"Google::Ads::GoogleAds::V0::Commonb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

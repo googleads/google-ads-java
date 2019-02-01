@@ -51,13 +51,14 @@ public final class KeywordPlanCampaignProto {
       "ts\030\010 \003(\01327.google.ads.googleads.v0.resou" +
       "rces.KeywordPlanGeoTarget\"Q\n\024KeywordPlan" +
       "GeoTarget\0229\n\023geo_target_constant\030\001 \001(\0132\034" +
-      ".google.protobuf.StringValueB\335\001\n%com.goo" +
+      ".google.protobuf.StringValueB\205\002\n%com.goo" +
       "gle.ads.googleads.v0.resourcesB\030KeywordP" +
       "lanCampaignProtoP\001ZJgoogle.golang.org/ge" +
       "nproto/googleapis/ads/googleads/v0/resou" +
       "rces;resources\242\002\003GAA\252\002!Google.Ads.Google" +
       "Ads.V0.Resources\312\002!Google\\Ads\\GoogleAds\\" +
-      "V0\\Resourcesb\006proto3"
+      "V0\\Resources\352\002%Google::Ads::GoogleAds::V" +
+      "0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

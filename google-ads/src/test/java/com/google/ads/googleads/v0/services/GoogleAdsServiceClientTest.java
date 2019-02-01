@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,6 +49,8 @@ public class GoogleAdsServiceClientTest {
   private static MockAdGroupCriterionService mockAdGroupCriterionService;
   private static MockAdGroupFeedService mockAdGroupFeedService;
   private static MockAdGroupService mockAdGroupService;
+  private static MockAdParameterService mockAdParameterService;
+  private static MockAdScheduleViewService mockAdScheduleViewService;
   private static MockAgeRangeViewService mockAgeRangeViewService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
   private static MockBillingSetupService mockBillingSetupService;
@@ -57,7 +59,6 @@ public class GoogleAdsServiceClientTest {
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
   private static MockCampaignFeedService mockCampaignFeedService;
-  private static MockCampaignGroupService mockCampaignGroupService;
   private static MockCampaignService mockCampaignService;
   private static MockCampaignSharedSetService mockCampaignSharedSetService;
   private static MockCarrierConstantService mockCarrierConstantService;
@@ -91,10 +92,15 @@ public class GoogleAdsServiceClientTest {
   private static MockLanguageConstantService mockLanguageConstantService;
   private static MockManagedPlacementViewService mockManagedPlacementViewService;
   private static MockMediaFileService mockMediaFileService;
+  private static MockMobileAppCategoryConstantService mockMobileAppCategoryConstantService;
+  private static MockMobileDeviceConstantService mockMobileDeviceConstantService;
+  private static MockOperatingSystemVersionConstantService
+      mockOperatingSystemVersionConstantService;
   private static MockParentalStatusViewService mockParentalStatusViewService;
   private static MockPaymentsAccountService mockPaymentsAccountService;
   private static MockProductGroupViewService mockProductGroupViewService;
   private static MockRecommendationService mockRecommendationService;
+  private static MockRemarketingActionService mockRemarketingActionService;
   private static MockSearchTermViewService mockSearchTermViewService;
   private static MockTopicConstantService mockTopicConstantService;
   private static MockTopicViewService mockTopicViewService;
@@ -114,6 +120,8 @@ public class GoogleAdsServiceClientTest {
     mockAdGroupCriterionService = new MockAdGroupCriterionService();
     mockAdGroupFeedService = new MockAdGroupFeedService();
     mockAdGroupService = new MockAdGroupService();
+    mockAdParameterService = new MockAdParameterService();
+    mockAdScheduleViewService = new MockAdScheduleViewService();
     mockAgeRangeViewService = new MockAgeRangeViewService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
     mockBillingSetupService = new MockBillingSetupService();
@@ -122,7 +130,6 @@ public class GoogleAdsServiceClientTest {
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
     mockCampaignFeedService = new MockCampaignFeedService();
-    mockCampaignGroupService = new MockCampaignGroupService();
     mockCampaignService = new MockCampaignService();
     mockCampaignSharedSetService = new MockCampaignSharedSetService();
     mockCarrierConstantService = new MockCarrierConstantService();
@@ -156,10 +163,14 @@ public class GoogleAdsServiceClientTest {
     mockLanguageConstantService = new MockLanguageConstantService();
     mockManagedPlacementViewService = new MockManagedPlacementViewService();
     mockMediaFileService = new MockMediaFileService();
+    mockMobileAppCategoryConstantService = new MockMobileAppCategoryConstantService();
+    mockMobileDeviceConstantService = new MockMobileDeviceConstantService();
+    mockOperatingSystemVersionConstantService = new MockOperatingSystemVersionConstantService();
     mockParentalStatusViewService = new MockParentalStatusViewService();
     mockPaymentsAccountService = new MockPaymentsAccountService();
     mockProductGroupViewService = new MockProductGroupViewService();
     mockRecommendationService = new MockRecommendationService();
+    mockRemarketingActionService = new MockRemarketingActionService();
     mockSearchTermViewService = new MockSearchTermViewService();
     mockTopicConstantService = new MockTopicConstantService();
     mockTopicViewService = new MockTopicViewService();
@@ -177,6 +188,8 @@ public class GoogleAdsServiceClientTest {
                 mockAdGroupCriterionService,
                 mockAdGroupFeedService,
                 mockAdGroupService,
+                mockAdParameterService,
+                mockAdScheduleViewService,
                 mockAgeRangeViewService,
                 mockBiddingStrategyService,
                 mockBillingSetupService,
@@ -185,7 +198,6 @@ public class GoogleAdsServiceClientTest {
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
                 mockCampaignFeedService,
-                mockCampaignGroupService,
                 mockCampaignService,
                 mockCampaignSharedSetService,
                 mockCarrierConstantService,
@@ -219,10 +231,14 @@ public class GoogleAdsServiceClientTest {
                 mockLanguageConstantService,
                 mockManagedPlacementViewService,
                 mockMediaFileService,
+                mockMobileAppCategoryConstantService,
+                mockMobileDeviceConstantService,
+                mockOperatingSystemVersionConstantService,
                 mockParentalStatusViewService,
                 mockPaymentsAccountService,
                 mockProductGroupViewService,
                 mockRecommendationService,
+                mockRemarketingActionService,
                 mockSearchTermViewService,
                 mockTopicConstantService,
                 mockTopicViewService,
@@ -270,6 +286,62 @@ public class GoogleAdsServiceClientTest {
 
     String customerId = "customerId-1772061412";
     String query = "query107944136";
+    boolean validateOnly = false;
+
+    SearchPagedResponse pagedListResponse = client.search(customerId, query, validateOnly);
+
+    List<GoogleAdsRow> resources = Lists.newArrayList(pagedListResponse.iterateAll());
+    Assert.assertEquals(1, resources.size());
+    Assert.assertEquals(expectedResponse.getResultsList().get(0), resources.get(0));
+
+    List<GeneratedMessageV3> actualRequests = mockGoogleAdsService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    SearchGoogleAdsRequest actualRequest = (SearchGoogleAdsRequest) actualRequests.get(0);
+
+    Assert.assertEquals(customerId, actualRequest.getCustomerId());
+    Assert.assertEquals(query, actualRequest.getQuery());
+    Assert.assertEquals(validateOnly, actualRequest.getValidateOnly());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void searchExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    mockGoogleAdsService.addException(exception);
+
+    try {
+      String customerId = "customerId-1772061412";
+      String query = "query107944136";
+      boolean validateOnly = false;
+
+      client.search(customerId, query, validateOnly);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception
+    }
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void searchTest2() {
+    String nextPageToken = "";
+    long totalResultsCount = 43694645L;
+    GoogleAdsRow resultsElement = GoogleAdsRow.newBuilder().build();
+    List<GoogleAdsRow> results = Arrays.asList(resultsElement);
+    SearchGoogleAdsResponse expectedResponse =
+        SearchGoogleAdsResponse.newBuilder()
+            .setNextPageToken(nextPageToken)
+            .setTotalResultsCount(totalResultsCount)
+            .addAllResults(results)
+            .build();
+    mockGoogleAdsService.addResponse(expectedResponse);
+
+    String customerId = "customerId-1772061412";
+    String query = "query107944136";
 
     SearchPagedResponse pagedListResponse = client.search(customerId, query);
 
@@ -291,7 +363,7 @@ public class GoogleAdsServiceClientTest {
 
   @Test
   @SuppressWarnings("all")
-  public void searchExceptionTest() throws Exception {
+  public void searchExceptionTest2() throws Exception {
     StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
     mockGoogleAdsService.addException(exception);
 
@@ -309,6 +381,54 @@ public class GoogleAdsServiceClientTest {
   @Test
   @SuppressWarnings("all")
   public void mutateTest() {
+    MutateGoogleAdsResponse expectedResponse = MutateGoogleAdsResponse.newBuilder().build();
+    mockGoogleAdsService.addResponse(expectedResponse);
+
+    String customerId = "customerId-1772061412";
+    List<MutateOperation> mutateOperations = new ArrayList<>();
+    boolean partialFailure = true;
+    boolean validateOnly = false;
+
+    MutateGoogleAdsResponse actualResponse =
+        client.mutate(customerId, mutateOperations, partialFailure, validateOnly);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<GeneratedMessageV3> actualRequests = mockGoogleAdsService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    MutateGoogleAdsRequest actualRequest = (MutateGoogleAdsRequest) actualRequests.get(0);
+
+    Assert.assertEquals(customerId, actualRequest.getCustomerId());
+    Assert.assertEquals(mutateOperations, actualRequest.getMutateOperationsList());
+    Assert.assertEquals(partialFailure, actualRequest.getPartialFailure());
+    Assert.assertEquals(validateOnly, actualRequest.getValidateOnly());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void mutateExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    mockGoogleAdsService.addException(exception);
+
+    try {
+      String customerId = "customerId-1772061412";
+      List<MutateOperation> mutateOperations = new ArrayList<>();
+      boolean partialFailure = true;
+      boolean validateOnly = false;
+
+      client.mutate(customerId, mutateOperations, partialFailure, validateOnly);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception
+    }
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void mutateTest2() {
     MutateGoogleAdsResponse expectedResponse = MutateGoogleAdsResponse.newBuilder().build();
     mockGoogleAdsService.addResponse(expectedResponse);
 
@@ -332,7 +452,7 @@ public class GoogleAdsServiceClientTest {
 
   @Test
   @SuppressWarnings("all")
-  public void mutateExceptionTest() throws Exception {
+  public void mutateExceptionTest2() throws Exception {
     StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
     mockGoogleAdsService.addException(exception);
 

@@ -37,12 +37,13 @@ public final class RecommendationTypeProto {
       "\n\033MAXIMIZE_CONVERSIONS_OPT_IN\020\006\022\027\n\023ENHAN" +
       "CED_CPC_OPT_IN\020\007\022\032\n\026SEARCH_PARTNERS_OPT_" +
       "IN\020\010\022\032\n\026MAXIMIZE_CLICKS_OPT_IN\020\t\022\030\n\024OPTI" +
-      "MIZE_AD_ROTATION\020\nB\310\001\n!com.google.ads.go" +
+      "MIZE_AD_ROTATION\020\nB\354\001\n!com.google.ads.go" +
       "ogleads.v0.enumsB\027RecommendationTypeProt" +
       "oP\001ZBgoogle.golang.org/genproto/googleap" +
       "is/ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035" +
       "Google.Ads.GoogleAds.V0.Enums\312\002\035Google\\A" +
-      "ds\\GoogleAds\\V0\\Enumsb\006proto3"
+      "ds\\GoogleAds\\V0\\Enums\352\002!Google::Ads::Goo" +
+      "gleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

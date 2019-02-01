@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -214,7 +214,7 @@ public class UserListServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final UserList getUserList(GetUserListRequest request) {
+  public final UserList getUserList(GetUserListRequest request) {
     return getUserListCallable().call(request);
   }
 
@@ -238,6 +238,47 @@ public class UserListServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetUserListRequest, UserList> getUserListCallable() {
     return stub.getUserListCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates or updates user lists. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;UserListOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   boolean partialFailure = false;
+   *   boolean validateOnly = false;
+   *   MutateUserListsResponse response = userListServiceClient.mutateUserLists(customerId, operations, partialFailure, validateOnly);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer whose user lists are being modified.
+   * @param operations The list of operations to perform on individual user lists.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, all operations will be carried out in one transaction if and
+   *     only if they are all valid. Default is false.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateUserListsResponse mutateUserLists(
+      String customerId,
+      List<UserListOperation> operations,
+      boolean partialFailure,
+      boolean validateOnly) {
+
+    MutateUserListsRequest request =
+        MutateUserListsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllOperations(operations)
+            .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
+            .build();
+    return mutateUserLists(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

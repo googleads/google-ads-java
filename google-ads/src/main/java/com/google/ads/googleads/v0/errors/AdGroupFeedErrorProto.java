@@ -39,12 +39,13 @@ public final class AdGroupFeedErrorProto {
       "EED\020\005\022\034\n\030INVALID_PLACEHOLDER_TYPE\020\006\022,\n(M" +
       "ISSING_FEEDMAPPING_FOR_PLACEHOLDER_TYPE\020" +
       "\007\022&\n\"NO_EXISTING_LOCATION_CUSTOMER_FEED\020" +
-      "\010B\313\001\n\"com.google.ads.googleads.v0.errors" +
+      "\010B\360\001\n\"com.google.ads.googleads.v0.errors" +
       "B\025AdGroupFeedErrorProtoP\001ZDgoogle.golang" +
       ".org/genproto/googleapis/ads/googleads/v" +
       "0/errors;errors\242\002\003GAA\252\002\036Google.Ads.Googl" +
       "eAds.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0" +
-      "\\Errorsb\006proto3"
+      "\\Errors\352\002\"Google::Ads::GoogleAds::V0::Er" +
+      "rorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

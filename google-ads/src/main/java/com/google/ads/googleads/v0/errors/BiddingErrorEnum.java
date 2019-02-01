@@ -267,6 +267,14 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_DOMAIN_NAME = 33;</code>
      */
     INVALID_DOMAIN_NAME(33),
+    /**
+     * <pre>
+     * The field is not compatible with payment mode.
+     * </pre>
+     *
+     * <code>NOT_COMPATIBLE_WITH_PAYMENT_MODE = 34;</code>
+     */
+    NOT_COMPATIBLE_WITH_PAYMENT_MODE(34),
     UNRECOGNIZED(-1),
     ;
 
@@ -451,6 +459,14 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_DOMAIN_NAME = 33;</code>
      */
     public static final int INVALID_DOMAIN_NAME_VALUE = 33;
+    /**
+     * <pre>
+     * The field is not compatible with payment mode.
+     * </pre>
+     *
+     * <code>NOT_COMPATIBLE_WITH_PAYMENT_MODE = 34;</code>
+     */
+    public static final int NOT_COMPATIBLE_WITH_PAYMENT_MODE_VALUE = 34;
 
 
     public final int getNumber() {
@@ -493,6 +509,7 @@ private static final long serialVersionUID = 0L;
         case 31: return BID_TOO_BIG;
         case 32: return BID_TOO_MANY_FRACTIONAL_DIGITS;
         case 33: return INVALID_DOMAIN_NAME;
+        case 34: return NOT_COMPATIBLE_WITH_PAYMENT_MODE;
         default: return null;
       }
     }

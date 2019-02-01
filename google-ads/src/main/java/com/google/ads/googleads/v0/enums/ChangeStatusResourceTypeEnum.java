@@ -144,6 +144,22 @@ private static final long serialVersionUID = 0L;
      * <code>CAMPAIGN_CRITERION = 7;</code>
      */
     CAMPAIGN_CRITERION(7),
+    /**
+     * <pre>
+     * A Feed resource change.
+     * </pre>
+     *
+     * <code>FEED = 9;</code>
+     */
+    FEED(9),
+    /**
+     * <pre>
+     * A FeedItem resource change.
+     * </pre>
+     *
+     * <code>FEED_ITEM = 10;</code>
+     */
+    FEED_ITEM(10),
     UNRECOGNIZED(-1),
     ;
 
@@ -204,6 +220,22 @@ private static final long serialVersionUID = 0L;
      * <code>CAMPAIGN_CRITERION = 7;</code>
      */
     public static final int CAMPAIGN_CRITERION_VALUE = 7;
+    /**
+     * <pre>
+     * A Feed resource change.
+     * </pre>
+     *
+     * <code>FEED = 9;</code>
+     */
+    public static final int FEED_VALUE = 9;
+    /**
+     * <pre>
+     * A FeedItem resource change.
+     * </pre>
+     *
+     * <code>FEED_ITEM = 10;</code>
+     */
+    public static final int FEED_ITEM_VALUE = 10;
 
 
     public final int getNumber() {
@@ -231,6 +263,8 @@ private static final long serialVersionUID = 0L;
         case 5: return AD_GROUP_CRITERION;
         case 6: return CAMPAIGN;
         case 7: return CAMPAIGN_CRITERION;
+        case 9: return FEED;
+        case 10: return FEED_ITEM;
         default: return null;
       }
     }

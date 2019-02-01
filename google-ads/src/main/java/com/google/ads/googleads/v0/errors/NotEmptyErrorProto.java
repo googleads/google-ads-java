@@ -32,12 +32,13 @@ public final class NotEmptyErrorProto {
       "ty_error.proto\022\036google.ads.googleads.v0." +
       "errors\"R\n\021NotEmptyErrorEnum\"=\n\rNotEmptyE" +
       "rror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\nEM" +
-      "PTY_LIST\020\002B\310\001\n\"com.google.ads.googleads." +
+      "PTY_LIST\020\002B\355\001\n\"com.google.ads.googleads." +
       "v0.errorsB\022NotEmptyErrorProtoP\001ZDgoogle." +
       "golang.org/genproto/googleapis/ads/googl" +
       "eads/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads" +
       ".GoogleAds.V0.Errors\312\002\036Google\\Ads\\Google" +
-      "Ads\\V0\\Errorsb\006proto3"
+      "Ads\\V0\\Errors\352\002\"Google::Ads::GoogleAds::" +
+      "V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

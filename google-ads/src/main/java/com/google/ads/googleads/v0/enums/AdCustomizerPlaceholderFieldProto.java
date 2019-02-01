@@ -34,12 +34,13 @@ public final class AdCustomizerPlaceholderFieldProto {
       "ceholderFieldEnum\"j\n\034AdCustomizerPlaceho" +
       "lderField\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
       "\013\n\007INTEGER\020\002\022\t\n\005PRICE\020\003\022\010\n\004DATE\020\004\022\n\n\006STR" +
-      "ING\020\005B\322\001\n!com.google.ads.googleads.v0.en" +
+      "ING\020\005B\366\001\n!com.google.ads.googleads.v0.en" +
       "umsB!AdCustomizerPlaceholderFieldProtoP\001" +
       "ZBgoogle.golang.org/genproto/googleapis/" +
       "ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035Goo" +
       "gle.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\" +
-      "GoogleAds\\V0\\Enumsb\006proto3"
+      "GoogleAds\\V0\\Enums\352\002!Google::Ads::Google" +
+      "Ads::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

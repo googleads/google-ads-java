@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -215,7 +215,7 @@ public class SharedSetServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final SharedSet getSharedSet(GetSharedSetRequest request) {
+  public final SharedSet getSharedSet(GetSharedSetRequest request) {
     return getSharedSetCallable().call(request);
   }
 
@@ -239,6 +239,47 @@ public class SharedSetServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetSharedSetRequest, SharedSet> getSharedSetCallable() {
     return stub.getSharedSetCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates, updates, or removes shared sets. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;SharedSetOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   boolean partialFailure = false;
+   *   boolean validateOnly = false;
+   *   MutateSharedSetsResponse response = sharedSetServiceClient.mutateSharedSets(customerId, operations, partialFailure, validateOnly);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer whose shared sets are being modified.
+   * @param operations The list of operations to perform on individual shared sets.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, all operations will be carried out in one transaction if and
+   *     only if they are all valid. Default is false.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateSharedSetsResponse mutateSharedSets(
+      String customerId,
+      List<SharedSetOperation> operations,
+      boolean partialFailure,
+      boolean validateOnly) {
+
+    MutateSharedSetsRequest request =
+        MutateSharedSetsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllOperations(operations)
+            .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
+            .build();
+    return mutateSharedSets(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

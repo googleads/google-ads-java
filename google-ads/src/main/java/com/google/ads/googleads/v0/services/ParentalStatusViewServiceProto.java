@@ -40,13 +40,13 @@ public final class ParentalStatusViewServiceProto {
       "iewRequest\0325.google.ads.googleads.v0.res" +
       "ources.ParentalStatusView\"=\202\323\344\223\0027\0225/v0/{" +
       "resource_name=customers/*/parentalStatus" +
-      "Views/*}B\336\001\n$com.google.ads.googleads.v0" +
+      "Views/*}B\205\002\n$com.google.ads.googleads.v0" +
       ".servicesB\036ParentalStatusViewServiceProt" +
       "oP\001ZHgoogle.golang.org/genproto/googleap" +
       "is/ads/googleads/v0/services;services\242\002\003" +
       "GAA\252\002 Google.Ads.GoogleAds.V0.Services\312\002" +
-      " Google\\Ads\\GoogleAds\\V0\\Servicesb\006proto" +
-      "3"
+      " Google\\Ads\\GoogleAds\\V0\\Services\352\002$Goog" +
+      "le::Ads::GoogleAds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

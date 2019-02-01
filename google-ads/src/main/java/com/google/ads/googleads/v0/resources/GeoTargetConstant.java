@@ -112,6 +112,19 @@ private static final long serialVersionUID = 0L;
             status_ = rawValue;
             break;
           }
+          case 66: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (canonicalName_ != null) {
+              subBuilder = canonicalName_.toBuilder();
+            }
+            canonicalName_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(canonicalName_);
+              canonicalName_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -347,6 +360,42 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNRECOGNIZED : result;
   }
 
+  public static final int CANONICAL_NAME_FIELD_NUMBER = 8;
+  private com.google.protobuf.StringValue canonicalName_;
+  /**
+   * <pre>
+   * The fully qualified English name, consisting of the target's name and that
+   * of its parent and country.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+   */
+  public boolean hasCanonicalName() {
+    return canonicalName_ != null;
+  }
+  /**
+   * <pre>
+   * The fully qualified English name, consisting of the target's name and that
+   * of its parent and country.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+   */
+  public com.google.protobuf.StringValue getCanonicalName() {
+    return canonicalName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : canonicalName_;
+  }
+  /**
+   * <pre>
+   * The fully qualified English name, consisting of the target's name and that
+   * of its parent and country.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getCanonicalNameOrBuilder() {
+    return getCanonicalName();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -379,6 +428,9 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNSPECIFIED.getNumber()) {
       output.writeEnum(7, status_);
     }
+    if (canonicalName_ != null) {
+      output.writeMessage(8, getCanonicalName());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -410,6 +462,10 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, status_);
+    }
+    if (canonicalName_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getCanonicalName());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -450,6 +506,11 @@ private static final long serialVersionUID = 0L;
           .equals(other.getTargetType());
     }
     result = result && status_ == other.status_;
+    result = result && (hasCanonicalName() == other.hasCanonicalName());
+    if (hasCanonicalName()) {
+      result = result && getCanonicalName()
+          .equals(other.getCanonicalName());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -481,6 +542,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
+    if (hasCanonicalName()) {
+      hash = (37 * hash) + CANONICAL_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCanonicalName().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -646,6 +711,12 @@ private static final long serialVersionUID = 0L;
       }
       status_ = 0;
 
+      if (canonicalNameBuilder_ == null) {
+        canonicalName_ = null;
+      } else {
+        canonicalName_ = null;
+        canonicalNameBuilder_ = null;
+      }
       return this;
     }
 
@@ -694,6 +765,11 @@ private static final long serialVersionUID = 0L;
         result.targetType_ = targetTypeBuilder_.build();
       }
       result.status_ = status_;
+      if (canonicalNameBuilder_ == null) {
+        result.canonicalName_ = canonicalName_;
+      } else {
+        result.canonicalName_ = canonicalNameBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -760,6 +836,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
+      }
+      if (other.hasCanonicalName()) {
+        mergeCanonicalName(other.getCanonicalName());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1564,6 +1643,168 @@ private static final long serialVersionUID = 0L;
       status_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.StringValue canonicalName_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> canonicalNameBuilder_;
+    /**
+     * <pre>
+     * The fully qualified English name, consisting of the target's name and that
+     * of its parent and country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     */
+    public boolean hasCanonicalName() {
+      return canonicalNameBuilder_ != null || canonicalName_ != null;
+    }
+    /**
+     * <pre>
+     * The fully qualified English name, consisting of the target's name and that
+     * of its parent and country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     */
+    public com.google.protobuf.StringValue getCanonicalName() {
+      if (canonicalNameBuilder_ == null) {
+        return canonicalName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : canonicalName_;
+      } else {
+        return canonicalNameBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The fully qualified English name, consisting of the target's name and that
+     * of its parent and country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     */
+    public Builder setCanonicalName(com.google.protobuf.StringValue value) {
+      if (canonicalNameBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        canonicalName_ = value;
+        onChanged();
+      } else {
+        canonicalNameBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The fully qualified English name, consisting of the target's name and that
+     * of its parent and country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     */
+    public Builder setCanonicalName(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (canonicalNameBuilder_ == null) {
+        canonicalName_ = builderForValue.build();
+        onChanged();
+      } else {
+        canonicalNameBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The fully qualified English name, consisting of the target's name and that
+     * of its parent and country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     */
+    public Builder mergeCanonicalName(com.google.protobuf.StringValue value) {
+      if (canonicalNameBuilder_ == null) {
+        if (canonicalName_ != null) {
+          canonicalName_ =
+            com.google.protobuf.StringValue.newBuilder(canonicalName_).mergeFrom(value).buildPartial();
+        } else {
+          canonicalName_ = value;
+        }
+        onChanged();
+      } else {
+        canonicalNameBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The fully qualified English name, consisting of the target's name and that
+     * of its parent and country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     */
+    public Builder clearCanonicalName() {
+      if (canonicalNameBuilder_ == null) {
+        canonicalName_ = null;
+        onChanged();
+      } else {
+        canonicalName_ = null;
+        canonicalNameBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The fully qualified English name, consisting of the target's name and that
+     * of its parent and country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getCanonicalNameBuilder() {
+      
+      onChanged();
+      return getCanonicalNameFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The fully qualified English name, consisting of the target's name and that
+     * of its parent and country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getCanonicalNameOrBuilder() {
+      if (canonicalNameBuilder_ != null) {
+        return canonicalNameBuilder_.getMessageOrBuilder();
+      } else {
+        return canonicalName_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : canonicalName_;
+      }
+    }
+    /**
+     * <pre>
+     * The fully qualified English name, consisting of the target's name and that
+     * of its parent and country.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getCanonicalNameFieldBuilder() {
+      if (canonicalNameBuilder_ == null) {
+        canonicalNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getCanonicalName(),
+                getParentForChildren(),
+                isClean());
+        canonicalName_ = null;
+      }
+      return canonicalNameBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

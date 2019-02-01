@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import javax.annotation.Generated;
 
 // AUTO-GENERATED DOCUMENTATION AND SERVICE
 /**
- * Service Description: Service to manage customer clients in a manager hierarchy.
+ * Service Description: Service to get clients in a customer's hierarchy.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
@@ -178,7 +178,7 @@ public class CustomerClientServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns the requested customer client in full detail.
+   * Returns the requested client in full detail.
    *
    * <p>Sample code:
    *
@@ -189,7 +189,7 @@ public class CustomerClientServiceClient implements BackgroundResource {
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the customer client to fetch.
+   * @param resourceName The resource name of the client to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerClient getCustomerClient(String resourceName) {
@@ -201,7 +201,7 @@ public class CustomerClientServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns the requested customer client in full detail.
+   * Returns the requested client in full detail.
    *
    * <p>Sample code:
    *
@@ -218,13 +218,13 @@ public class CustomerClientServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final CustomerClient getCustomerClient(GetCustomerClientRequest request) {
+  public final CustomerClient getCustomerClient(GetCustomerClientRequest request) {
     return getCustomerClientCallable().call(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns the requested customer client in full detail.
+   * Returns the requested client in full detail.
    *
    * <p>Sample code:
    *

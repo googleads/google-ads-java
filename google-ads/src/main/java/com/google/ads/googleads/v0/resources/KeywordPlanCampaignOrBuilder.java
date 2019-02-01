@@ -113,6 +113,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The languages targeted for the Keyword Plan campaign.
+   * Max allowed: 1.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -122,6 +123,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The languages targeted for the Keyword Plan campaign.
+   * Max allowed: 1.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -130,6 +132,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The languages targeted for the Keyword Plan campaign.
+   * Max allowed: 1.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -138,6 +141,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The languages targeted for the Keyword Plan campaign.
+   * Max allowed: 1.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -147,6 +151,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The languages targeted for the Keyword Plan campaign.
+   * Max allowed: 1.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -212,6 +217,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The geo targets.
+   * Max number allowed: 20.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -221,6 +227,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The geo targets.
+   * Max number allowed: 20.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -229,6 +236,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The geo targets.
+   * Max number allowed: 20.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -237,6 +245,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The geo targets.
+   * Max number allowed: 20.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -246,6 +255,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The geo targets.
+   * Max number allowed: 20.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>

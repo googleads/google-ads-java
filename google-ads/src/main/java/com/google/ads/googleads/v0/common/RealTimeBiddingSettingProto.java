@@ -32,13 +32,14 @@ public final class RealTimeBiddingSettingProto {
       "me_bidding_setting.proto\022\036google.ads.goo" +
       "gleads.v0.common\032\036google/protobuf/wrappe" +
       "rs.proto\"D\n\026RealTimeBiddingSetting\022*\n\006op" +
-      "t_in\030\001 \001(\0132\032.google.protobuf.BoolValueB\321" +
+      "t_in\030\001 \001(\0132\032.google.protobuf.BoolValueB\366" +
       "\001\n\"com.google.ads.googleads.v0.commonB\033R" +
       "ealTimeBiddingSettingProtoP\001ZDgoogle.gol" +
       "ang.org/genproto/googleapis/ads/googlead" +
       "s/v0/common;common\242\002\003GAA\252\002\036Google.Ads.Go" +
       "ogleAds.V0.Common\312\002\036Google\\Ads\\GoogleAds" +
-      "\\V0\\Commonb\006proto3"
+      "\\V0\\Common\352\002\"Google::Ads::GoogleAds::V0:" +
+      ":Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

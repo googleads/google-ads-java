@@ -38,13 +38,14 @@ public final class TopicConstantServiceProto {
       "9.google.ads.googleads.v0.services.GetTo" +
       "picConstantRequest\0320.google.ads.googlead" +
       "s.v0.resources.TopicConstant\",\202\323\344\223\002&\022$/v" +
-      "0/{resource_name=topicConstants/*}B\331\001\n$c" +
+      "0/{resource_name=topicConstants/*}B\200\002\n$c" +
       "om.google.ads.googleads.v0.servicesB\031Top" +
       "icConstantServiceProtoP\001ZHgoogle.golang." +
       "org/genproto/googleapis/ads/googleads/v0" +
       "/services;services\242\002\003GAA\252\002 Google.Ads.Go" +
       "ogleAds.V0.Services\312\002 Google\\Ads\\GoogleA" +
-      "ds\\V0\\Servicesb\006proto3"
+      "ds\\V0\\Services\352\002$Google::Ads::GoogleAds:" +
+      ":V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

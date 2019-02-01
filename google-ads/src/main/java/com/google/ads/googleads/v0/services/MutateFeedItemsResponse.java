@@ -48,12 +48,25 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               results_ = new java.util.ArrayList<com.google.ads.googleads.v0.services.MutateFeedItemResult>();
-              mutable_bitField0_ |= 0x00000001;
+              mutable_bitField0_ |= 0x00000002;
             }
             results_.add(
                 input.readMessage(com.google.ads.googleads.v0.services.MutateFeedItemResult.parser(), extensionRegistry));
+            break;
+          }
+          case 26: {
+            com.google.rpc.Status.Builder subBuilder = null;
+            if (partialFailureError_ != null) {
+              subBuilder = partialFailureError_.toBuilder();
+            }
+            partialFailureError_ = input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(partialFailureError_);
+              partialFailureError_ = subBuilder.buildPartial();
+            }
+
             break;
           }
           default: {
@@ -71,7 +84,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         results_ = java.util.Collections.unmodifiableList(results_);
       }
       this.unknownFields = unknownFields.build();
@@ -89,6 +102,49 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.services.FeedItemServiceProto.internal_static_google_ads_googleads_v0_services_MutateFeedItemsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.ads.googleads.v0.services.MutateFeedItemsResponse.class, com.google.ads.googleads.v0.services.MutateFeedItemsResponse.Builder.class);
+  }
+
+  private int bitField0_;
+  public static final int PARTIAL_FAILURE_ERROR_FIELD_NUMBER = 3;
+  private com.google.rpc.Status partialFailureError_;
+  /**
+   * <pre>
+   * Errors that pertain to operation failures in the partial failure mode.
+   * Returned only when partial_failure = true and all errors occur inside the
+   * operations. If any errors occur outside the operations (e.g. auth errors),
+   * we return an RPC level error.
+   * </pre>
+   *
+   * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   */
+  public boolean hasPartialFailureError() {
+    return partialFailureError_ != null;
+  }
+  /**
+   * <pre>
+   * Errors that pertain to operation failures in the partial failure mode.
+   * Returned only when partial_failure = true and all errors occur inside the
+   * operations. If any errors occur outside the operations (e.g. auth errors),
+   * we return an RPC level error.
+   * </pre>
+   *
+   * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   */
+  public com.google.rpc.Status getPartialFailureError() {
+    return partialFailureError_ == null ? com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
+  }
+  /**
+   * <pre>
+   * Errors that pertain to operation failures in the partial failure mode.
+   * Returned only when partial_failure = true and all errors occur inside the
+   * operations. If any errors occur outside the operations (e.g. auth errors),
+   * we return an RPC level error.
+   * </pre>
+   *
+   * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   */
+  public com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder() {
+    return getPartialFailureError();
   }
 
   public static final int RESULTS_FIELD_NUMBER = 2;
@@ -163,6 +219,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < results_.size(); i++) {
       output.writeMessage(2, results_.get(i));
     }
+    if (partialFailureError_ != null) {
+      output.writeMessage(3, getPartialFailureError());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -175,6 +234,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < results_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, results_.get(i));
+    }
+    if (partialFailureError_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getPartialFailureError());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -192,6 +255,11 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v0.services.MutateFeedItemsResponse other = (com.google.ads.googleads.v0.services.MutateFeedItemsResponse) obj;
 
     boolean result = true;
+    result = result && (hasPartialFailureError() == other.hasPartialFailureError());
+    if (hasPartialFailureError()) {
+      result = result && getPartialFailureError()
+          .equals(other.getPartialFailureError());
+    }
     result = result && getResultsList()
         .equals(other.getResultsList());
     result = result && unknownFields.equals(other.unknownFields);
@@ -205,6 +273,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasPartialFailureError()) {
+      hash = (37 * hash) + PARTIAL_FAILURE_ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getPartialFailureError().hashCode();
+    }
     if (getResultsCount() > 0) {
       hash = (37 * hash) + RESULTS_FIELD_NUMBER;
       hash = (53 * hash) + getResultsList().hashCode();
@@ -347,9 +419,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      if (partialFailureErrorBuilder_ == null) {
+        partialFailureError_ = null;
+      } else {
+        partialFailureError_ = null;
+        partialFailureErrorBuilder_ = null;
+      }
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         resultsBuilder_.clear();
       }
@@ -380,15 +458,22 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v0.services.MutateFeedItemsResponse buildPartial() {
       com.google.ads.googleads.v0.services.MutateFeedItemsResponse result = new com.google.ads.googleads.v0.services.MutateFeedItemsResponse(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (partialFailureErrorBuilder_ == null) {
+        result.partialFailureError_ = partialFailureError_;
+      } else {
+        result.partialFailureError_ = partialFailureErrorBuilder_.build();
+      }
       if (resultsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
           results_ = java.util.Collections.unmodifiableList(results_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.results_ = results_;
       } else {
         result.results_ = resultsBuilder_.build();
       }
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -437,11 +522,14 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v0.services.MutateFeedItemsResponse other) {
       if (other == com.google.ads.googleads.v0.services.MutateFeedItemsResponse.getDefaultInstance()) return this;
+      if (other.hasPartialFailureError()) {
+        mergePartialFailureError(other.getPartialFailureError());
+      }
       if (resultsBuilder_ == null) {
         if (!other.results_.isEmpty()) {
           if (results_.isEmpty()) {
             results_ = other.results_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureResultsIsMutable();
             results_.addAll(other.results_);
@@ -454,7 +542,7 @@ private static final long serialVersionUID = 0L;
             resultsBuilder_.dispose();
             resultsBuilder_ = null;
             results_ = other.results_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             resultsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getResultsFieldBuilder() : null;
@@ -493,12 +581,192 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private com.google.rpc.Status partialFailureError_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> partialFailureErrorBuilder_;
+    /**
+     * <pre>
+     * Errors that pertain to operation failures in the partial failure mode.
+     * Returned only when partial_failure = true and all errors occur inside the
+     * operations. If any errors occur outside the operations (e.g. auth errors),
+     * we return an RPC level error.
+     * </pre>
+     *
+     * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     */
+    public boolean hasPartialFailureError() {
+      return partialFailureErrorBuilder_ != null || partialFailureError_ != null;
+    }
+    /**
+     * <pre>
+     * Errors that pertain to operation failures in the partial failure mode.
+     * Returned only when partial_failure = true and all errors occur inside the
+     * operations. If any errors occur outside the operations (e.g. auth errors),
+     * we return an RPC level error.
+     * </pre>
+     *
+     * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     */
+    public com.google.rpc.Status getPartialFailureError() {
+      if (partialFailureErrorBuilder_ == null) {
+        return partialFailureError_ == null ? com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
+      } else {
+        return partialFailureErrorBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Errors that pertain to operation failures in the partial failure mode.
+     * Returned only when partial_failure = true and all errors occur inside the
+     * operations. If any errors occur outside the operations (e.g. auth errors),
+     * we return an RPC level error.
+     * </pre>
+     *
+     * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     */
+    public Builder setPartialFailureError(com.google.rpc.Status value) {
+      if (partialFailureErrorBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        partialFailureError_ = value;
+        onChanged();
+      } else {
+        partialFailureErrorBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Errors that pertain to operation failures in the partial failure mode.
+     * Returned only when partial_failure = true and all errors occur inside the
+     * operations. If any errors occur outside the operations (e.g. auth errors),
+     * we return an RPC level error.
+     * </pre>
+     *
+     * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     */
+    public Builder setPartialFailureError(
+        com.google.rpc.Status.Builder builderForValue) {
+      if (partialFailureErrorBuilder_ == null) {
+        partialFailureError_ = builderForValue.build();
+        onChanged();
+      } else {
+        partialFailureErrorBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Errors that pertain to operation failures in the partial failure mode.
+     * Returned only when partial_failure = true and all errors occur inside the
+     * operations. If any errors occur outside the operations (e.g. auth errors),
+     * we return an RPC level error.
+     * </pre>
+     *
+     * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     */
+    public Builder mergePartialFailureError(com.google.rpc.Status value) {
+      if (partialFailureErrorBuilder_ == null) {
+        if (partialFailureError_ != null) {
+          partialFailureError_ =
+            com.google.rpc.Status.newBuilder(partialFailureError_).mergeFrom(value).buildPartial();
+        } else {
+          partialFailureError_ = value;
+        }
+        onChanged();
+      } else {
+        partialFailureErrorBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Errors that pertain to operation failures in the partial failure mode.
+     * Returned only when partial_failure = true and all errors occur inside the
+     * operations. If any errors occur outside the operations (e.g. auth errors),
+     * we return an RPC level error.
+     * </pre>
+     *
+     * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     */
+    public Builder clearPartialFailureError() {
+      if (partialFailureErrorBuilder_ == null) {
+        partialFailureError_ = null;
+        onChanged();
+      } else {
+        partialFailureError_ = null;
+        partialFailureErrorBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Errors that pertain to operation failures in the partial failure mode.
+     * Returned only when partial_failure = true and all errors occur inside the
+     * operations. If any errors occur outside the operations (e.g. auth errors),
+     * we return an RPC level error.
+     * </pre>
+     *
+     * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     */
+    public com.google.rpc.Status.Builder getPartialFailureErrorBuilder() {
+      
+      onChanged();
+      return getPartialFailureErrorFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Errors that pertain to operation failures in the partial failure mode.
+     * Returned only when partial_failure = true and all errors occur inside the
+     * operations. If any errors occur outside the operations (e.g. auth errors),
+     * we return an RPC level error.
+     * </pre>
+     *
+     * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     */
+    public com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder() {
+      if (partialFailureErrorBuilder_ != null) {
+        return partialFailureErrorBuilder_.getMessageOrBuilder();
+      } else {
+        return partialFailureError_ == null ?
+            com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
+      }
+    }
+    /**
+     * <pre>
+     * Errors that pertain to operation failures in the partial failure mode.
+     * Returned only when partial_failure = true and all errors occur inside the
+     * operations. If any errors occur outside the operations (e.g. auth errors),
+     * we return an RPC level error.
+     * </pre>
+     *
+     * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
+        getPartialFailureErrorFieldBuilder() {
+      if (partialFailureErrorBuilder_ == null) {
+        partialFailureErrorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
+                getPartialFailureError(),
+                getParentForChildren(),
+                isClean());
+        partialFailureError_ = null;
+      }
+      return partialFailureErrorBuilder_;
+    }
+
     private java.util.List<com.google.ads.googleads.v0.services.MutateFeedItemResult> results_ =
       java.util.Collections.emptyList();
     private void ensureResultsIsMutable() {
-      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
         results_ = new java.util.ArrayList<com.google.ads.googleads.v0.services.MutateFeedItemResult>(results_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -692,7 +960,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearResults() {
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         resultsBuilder_.clear();
@@ -797,7 +1065,7 @@ private static final long serialVersionUID = 0L;
         resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v0.services.MutateFeedItemResult, com.google.ads.googleads.v0.services.MutateFeedItemResult.Builder, com.google.ads.googleads.v0.services.MutateFeedItemResultOrBuilder>(
                 results_,
-                ((bitField0_ & 0x00000001) == 0x00000001),
+                ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
                 isClean());
         results_ = null;

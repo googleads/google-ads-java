@@ -31,7 +31,7 @@ public interface CustomerManagerLinkOrBuilder extends
 
   /**
    * <pre>
-   * The manager customer linked to the customer. This field is read only.
+   * The manager customer linked to the customer.
    * </pre>
    *
    * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -39,7 +39,7 @@ public interface CustomerManagerLinkOrBuilder extends
   boolean hasManagerCustomer();
   /**
    * <pre>
-   * The manager customer linked to the customer. This field is read only.
+   * The manager customer linked to the customer.
    * </pre>
    *
    * <code>.google.protobuf.StringValue manager_customer = 3;</code>
@@ -47,7 +47,7 @@ public interface CustomerManagerLinkOrBuilder extends
   com.google.protobuf.StringValue getManagerCustomer();
   /**
    * <pre>
-   * The manager customer linked to the customer. This field is read only.
+   * The manager customer linked to the customer.
    * </pre>
    *
    * <code>.google.protobuf.StringValue manager_customer = 3;</code>

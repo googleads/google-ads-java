@@ -260,6 +260,87 @@ try (CampaignServiceClient reportingServiceClient = googleAdsClient.getCampaignS
 }
 ```
 
+### Request/Response Logging
+
+Logging is configured with SLF4J a generic logging library for Java, which allows logs to be
+directed to many different logging implementations. We provide configuration files for log4j 1.2/2.0
+and Java Util Logging (JUL).
+
+#### Logging layout and functionality
+
+Requests are logged with a one line summary and the full request/response body and
+headers.
+
+| Log type | Log name                                     | Success level | Failure level |
+| -------- | -------------------------------------------- | ------------- | ------------- |
+| SUMMARY  | com.google.ads.googleads.lib.request.summary | INFO          | WARN          |
+| DETAIL   | com.google.ads.googleads.lib.request.detail  | DEBUG         | INFO          |
+
+#### Detail Log Truncation
+
+The detailed logs are truncated by default to avoid creating large logs. To change the length at
+which logs are truncated, set `-Dapi.googleads.maxLogMessageLength=<number>`. Setting -1 disables
+log truncation.
+
+#### Log4j 2.0
+
+1. Add a dependency on the `log4j-slf4j-impl` library.
+
+```
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
+      <version>2.11.1</version>
+    </dependency>
+```
+
+2. (Optional) Create a configuration file in your resources directory, e.g. in Maven
+`src/main/resources`. Log4j 2.0 loads its configuration file from the classpath, not the working
+directory, so ensure you create in a resources directory.
+
+3. Run your application, specifying `-Dlog4j.configurationFile=<CONFIG_FILE_PATH>`. You can specify
+`CONFIG_FILE_PATH=googleads-logging/log4j2.xml` to use the default configuration file included
+with the client libraries.
+
+#### Log4j 1.2 (legacy)
+
+1. Add a dependency on the `slf4j-log4j12` library.
+
+```
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.25</version>
+    </dependency>
+```
+
+2. (Optional) Create a configuration file in your projects resources directory, e.g. in Maven
+path is `src/main/resources`. Log4j 1.2 loads its configuration file from the classpath, not the
+working directory, so ensure you copy to a resources directory.
+
+3. Run your application, specifying `-Dlog4j.configuration=<CONFIG_FILE_PATH>`. You can specify
+`CONFIG_FILE_PATH=googleads-logging/log4j.properties` to use the default configuration file included
+with the client libraries.
+
+#### Java Util Logging
+
+1. Add a dependency on the `slf4j-jdk14` library.
+
+```
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-jdk14</artifactId>
+      <version>1.7.25</version>
+    </dependency>
+```
+
+2. Create a JUL configuration file on the file system in a path readable from your application. For
+instance `./jdk-logger.properties`. A template is provided at
+`google-ads/src/main/resources/googleads-logging/jdk-logger.properties`. JUL reads from the
+filesystem only, so do not copy to the resources directory.
+
+3. Run your application specifying `-Djava.util.logging.config.file=./jdk-logger.properties`.
+
 ## Miscellaneous
 
 ### Wiki

@@ -234,6 +234,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The ad schedule view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+   */
+  boolean hasAdScheduleView();
+  /**
+   * <pre>
+   * The ad schedule view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+   */
+  com.google.ads.googleads.v0.resources.AdScheduleView getAdScheduleView();
+  /**
+   * <pre>
+   * The ad schedule view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+   */
+  com.google.ads.googleads.v0.resources.AdScheduleViewOrBuilder getAdScheduleViewOrBuilder();
+
+  /**
+   * <pre>
    * The bidding strategy referenced in the query.
    * </pre>
    *
@@ -434,31 +459,6 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
-   * Campaign Group referenced in AWQL query.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-   */
-  boolean hasCampaignGroup();
-  /**
-   * <pre>
-   * Campaign Group referenced in AWQL query.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-   */
-  com.google.ads.googleads.v0.resources.CampaignGroup getCampaignGroup();
-  /**
-   * <pre>
-   * Campaign Group referenced in AWQL query.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-   */
-  com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder getCampaignGroupOrBuilder();
-
-  /**
-   * <pre>
    * Campaign Shared Set referenced in AWQL query.
    * </pre>
    *
@@ -531,6 +531,31 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v0.resources.ChangeStatus change_status = 37;</code>
    */
   com.google.ads.googleads.v0.resources.ChangeStatusOrBuilder getChangeStatusOrBuilder();
+
+  /**
+   * <pre>
+   * The conversion action referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+   */
+  boolean hasConversionAction();
+  /**
+   * <pre>
+   * The conversion action referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+   */
+  com.google.ads.googleads.v0.resources.ConversionAction getConversionAction();
+  /**
+   * <pre>
+   * The conversion action referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+   */
+  com.google.ads.googleads.v0.resources.ConversionActionOrBuilder getConversionActionOrBuilder();
 
   /**
    * <pre>
@@ -1059,6 +1084,106 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The media file referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+   */
+  boolean hasMediaFile();
+  /**
+   * <pre>
+   * The media file referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+   */
+  com.google.ads.googleads.v0.resources.MediaFile getMediaFile();
+  /**
+   * <pre>
+   * The media file referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+   */
+  com.google.ads.googleads.v0.resources.MediaFileOrBuilder getMediaFileOrBuilder();
+
+  /**
+   * <pre>
+   * The mobile app category constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+   */
+  boolean hasMobileAppCategoryConstant();
+  /**
+   * <pre>
+   * The mobile app category constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+   */
+  com.google.ads.googleads.v0.resources.MobileAppCategoryConstant getMobileAppCategoryConstant();
+  /**
+   * <pre>
+   * The mobile app category constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+   */
+  com.google.ads.googleads.v0.resources.MobileAppCategoryConstantOrBuilder getMobileAppCategoryConstantOrBuilder();
+
+  /**
+   * <pre>
+   * The mobile device constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+   */
+  boolean hasMobileDeviceConstant();
+  /**
+   * <pre>
+   * The mobile device constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+   */
+  com.google.ads.googleads.v0.resources.MobileDeviceConstant getMobileDeviceConstant();
+  /**
+   * <pre>
+   * The mobile device constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+   */
+  com.google.ads.googleads.v0.resources.MobileDeviceConstantOrBuilder getMobileDeviceConstantOrBuilder();
+
+  /**
+   * <pre>
+   * The operating system version constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+   */
+  boolean hasOperatingSystemVersionConstant();
+  /**
+   * <pre>
+   * The operating system version constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+   */
+  com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant getOperatingSystemVersionConstant();
+  /**
+   * <pre>
+   * The operating system version constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+   */
+  com.google.ads.googleads.v0.resources.OperatingSystemVersionConstantOrBuilder getOperatingSystemVersionConstantOrBuilder();
+
+  /**
+   * <pre>
    * The parental status view referenced in the query.
    * </pre>
    *
@@ -1284,6 +1409,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The remarketing action referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+   */
+  boolean hasRemarketingAction();
+  /**
+   * <pre>
+   * The remarketing action referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+   */
+  com.google.ads.googleads.v0.resources.RemarketingAction getRemarketingAction();
+  /**
+   * <pre>
+   * The remarketing action referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+   */
+  com.google.ads.googleads.v0.resources.RemarketingActionOrBuilder getRemarketingActionOrBuilder();
+
+  /**
+   * <pre>
    * The topic constant referenced in the query.
    * </pre>
    *
@@ -1359,544 +1509,26 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
-   * Ad network type.
+   * The segments.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 5;</code>
+   * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
    */
-  int getAdNetworkTypeValue();
+  boolean hasSegments();
   /**
    * <pre>
-   * Ad network type.
+   * The segments.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 5;</code>
+   * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
    */
-  com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType getAdNetworkType();
-
+  com.google.ads.googleads.v0.common.Segments getSegments();
   /**
    * <pre>
-   * Date to which metrics apply.
-   * yyyy-MM-dd format, e.g., 2018-04-17.
+   * The segments.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue date = 6;</code>
+   * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
    */
-  boolean hasDate();
-  /**
-   * <pre>
-   * Date to which metrics apply.
-   * yyyy-MM-dd format, e.g., 2018-04-17.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue date = 6;</code>
-   */
-  com.google.protobuf.StringValue getDate();
-  /**
-   * <pre>
-   * Date to which metrics apply.
-   * yyyy-MM-dd format, e.g., 2018-04-17.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue date = 6;</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getDateOrBuilder();
-
-  /**
-   * <pre>
-   * Day of the week, e.g., MONDAY.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 7;</code>
-   */
-  int getDayOfWeekValue();
-  /**
-   * <pre>
-   * Day of the week, e.g., MONDAY.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 7;</code>
-   */
-  com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek();
-
-  /**
-   * <pre>
-   * Device to which metrics apply.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
-   */
-  int getDeviceValue();
-  /**
-   * <pre>
-   * Device to which metrics apply.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
-   */
-  com.google.ads.googleads.v0.enums.DeviceEnum.Device getDevice();
-
-  /**
-   * <pre>
-   * Hotel booking window in days.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-   */
-  boolean hasHotelBookingWindowDays();
-  /**
-   * <pre>
-   * Hotel booking window in days.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-   */
-  com.google.protobuf.Int64Value getHotelBookingWindowDays();
-  /**
-   * <pre>
-   * Hotel booking window in days.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-   */
-  com.google.protobuf.Int64ValueOrBuilder getHotelBookingWindowDaysOrBuilder();
-
-  /**
-   * <pre>
-   * Hotel center ID.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-   */
-  boolean hasHotelCenterId();
-  /**
-   * <pre>
-   * Hotel center ID.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-   */
-  com.google.protobuf.Int64Value getHotelCenterId();
-  /**
-   * <pre>
-   * Hotel center ID.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-   */
-  com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder();
-
-  /**
-   * <pre>
-   * Hotel check-in date. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-   */
-  boolean hasHotelCheckInDate();
-  /**
-   * <pre>
-   * Hotel check-in date. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-   */
-  com.google.protobuf.StringValue getHotelCheckInDate();
-  /**
-   * <pre>
-   * Hotel check-in date. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getHotelCheckInDateOrBuilder();
-
-  /**
-   * <pre>
-   * Hotel check-in day of week.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
-   */
-  int getHotelCheckInDayOfWeekValue();
-  /**
-   * <pre>
-   * Hotel check-in day of week.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
-   */
-  com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getHotelCheckInDayOfWeek();
-
-  /**
-   * <pre>
-   * Hotel city.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-   */
-  boolean hasHotelCity();
-  /**
-   * <pre>
-   * Hotel city.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-   */
-  com.google.protobuf.StringValue getHotelCity();
-  /**
-   * <pre>
-   * Hotel city.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getHotelCityOrBuilder();
-
-  /**
-   * <pre>
-   * Hotel class.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-   */
-  boolean hasHotelClass();
-  /**
-   * <pre>
-   * Hotel class.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-   */
-  com.google.protobuf.Int32Value getHotelClass();
-  /**
-   * <pre>
-   * Hotel class.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-   */
-  com.google.protobuf.Int32ValueOrBuilder getHotelClassOrBuilder();
-
-  /**
-   * <pre>
-   * Hotel country.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-   */
-  boolean hasHotelCountry();
-  /**
-   * <pre>
-   * Hotel country.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-   */
-  com.google.protobuf.StringValue getHotelCountry();
-  /**
-   * <pre>
-   * Hotel country.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getHotelCountryOrBuilder();
-
-  /**
-   * <pre>
-   * Hotel date selection type.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
-   */
-  int getHotelDateSelectionTypeValue();
-  /**
-   * <pre>
-   * Hotel date selection type.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
-   */
-  com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getHotelDateSelectionType();
-
-  /**
-   * <pre>
-   * Hotel length of stay.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-   */
-  boolean hasHotelLengthOfStay();
-  /**
-   * <pre>
-   * Hotel length of stay.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-   */
-  com.google.protobuf.Int32Value getHotelLengthOfStay();
-  /**
-   * <pre>
-   * Hotel length of stay.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-   */
-  com.google.protobuf.Int32ValueOrBuilder getHotelLengthOfStayOrBuilder();
-
-  /**
-   * <pre>
-   * Hotel state.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-   */
-  boolean hasHotelState();
-  /**
-   * <pre>
-   * Hotel state.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-   */
-  com.google.protobuf.StringValue getHotelState();
-  /**
-   * <pre>
-   * Hotel state.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getHotelStateOrBuilder();
-
-  /**
-   * <pre>
-   * Hour of day as a number between 0 and 23, inclusive.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hour = 9;</code>
-   */
-  boolean hasHour();
-  /**
-   * <pre>
-   * Hour of day as a number between 0 and 23, inclusive.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hour = 9;</code>
-   */
-  com.google.protobuf.Int32Value getHour();
-  /**
-   * <pre>
-   * Hour of day as a number between 0 and 23, inclusive.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hour = 9;</code>
-   */
-  com.google.protobuf.Int32ValueOrBuilder getHourOrBuilder();
-
-  /**
-   * <pre>
-   * Month as represented by the date of the first day of a month. Formatted as
-   * yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue month = 10;</code>
-   */
-  boolean hasMonth();
-  /**
-   * <pre>
-   * Month as represented by the date of the first day of a month. Formatted as
-   * yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue month = 10;</code>
-   */
-  com.google.protobuf.StringValue getMonth();
-  /**
-   * <pre>
-   * Month as represented by the date of the first day of a month. Formatted as
-   * yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue month = 10;</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getMonthOrBuilder();
-
-  /**
-   * <pre>
-   * Month of the year, e.g., January.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
-   */
-  int getMonthOfYearValue();
-  /**
-   * <pre>
-   * Month of the year, e.g., January.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
-   */
-  com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear getMonthOfYear();
-
-  /**
-   * <pre>
-   * Partner hotel ID.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-   */
-  boolean hasPartnerHotelId();
-  /**
-   * <pre>
-   * Partner hotel ID.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-   */
-  com.google.protobuf.StringValue getPartnerHotelId();
-  /**
-   * <pre>
-   * Partner hotel ID.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getPartnerHotelIdOrBuilder();
-
-  /**
-   * <pre>
-   * Placeholder type. This is only used with feed item metrics.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
-   */
-  int getPlaceholderTypeValue();
-  /**
-   * <pre>
-   * Placeholder type. This is only used with feed item metrics.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
-   */
-  com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType();
-
-  /**
-   * <pre>
-   * Quarter as represented by the date of the first day of a quarter.
-   * Uses the calendar year for quarters, e.g., the second quarter of 2018
-   * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue quarter = 12;</code>
-   */
-  boolean hasQuarter();
-  /**
-   * <pre>
-   * Quarter as represented by the date of the first day of a quarter.
-   * Uses the calendar year for quarters, e.g., the second quarter of 2018
-   * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue quarter = 12;</code>
-   */
-  com.google.protobuf.StringValue getQuarter();
-  /**
-   * <pre>
-   * Quarter as represented by the date of the first day of a quarter.
-   * Uses the calendar year for quarters, e.g., the second quarter of 2018
-   * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue quarter = 12;</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getQuarterOrBuilder();
-
-  /**
-   * <pre>
-   * Match type of the keyword that triggered the ad, including variants.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
-   */
-  int getSearchTermMatchTypeValue();
-  /**
-   * <pre>
-   * Match type of the keyword that triggered the ad, including variants.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
-   */
-  com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType getSearchTermMatchType();
-
-  /**
-   * <pre>
-   * Position of the ad.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.SlotEnum.Slot slot = 13;</code>
-   */
-  int getSlotValue();
-  /**
-   * <pre>
-   * Position of the ad.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.SlotEnum.Slot slot = 13;</code>
-   */
-  com.google.ads.googleads.v0.enums.SlotEnum.Slot getSlot();
-
-  /**
-   * <pre>
-   * Week as defined as Monday through Sunday, and represented by the date of
-   * Monday. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue week = 14;</code>
-   */
-  boolean hasWeek();
-  /**
-   * <pre>
-   * Week as defined as Monday through Sunday, and represented by the date of
-   * Monday. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue week = 14;</code>
-   */
-  com.google.protobuf.StringValue getWeek();
-  /**
-   * <pre>
-   * Week as defined as Monday through Sunday, and represented by the date of
-   * Monday. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue week = 14;</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getWeekOrBuilder();
-
-  /**
-   * <pre>
-   * Year, formatted as yyyy.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value year = 15;</code>
-   */
-  boolean hasYear();
-  /**
-   * <pre>
-   * Year, formatted as yyyy.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value year = 15;</code>
-   */
-  com.google.protobuf.Int32Value getYear();
-  /**
-   * <pre>
-   * Year, formatted as yyyy.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value year = 15;</code>
-   */
-  com.google.protobuf.Int32ValueOrBuilder getYearOrBuilder();
+  com.google.ads.googleads.v0.common.SegmentsOrBuilder getSegmentsOrBuilder();
 }

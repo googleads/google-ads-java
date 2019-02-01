@@ -144,12 +144,13 @@ public final class PolicyProto {
       "olicyTopicConstraint.CountryConstraint\032\024" +
       "\n\022ResellerConstraint\032L\n\021CountryConstrain" +
       "t\0227\n\021country_criterion\030\001 \001(\0132\034.google.pr" +
-      "otobuf.StringValueB\007\n\005valueB\301\001\n\"com.goog" +
+      "otobuf.StringValueB\007\n\005valueB\346\001\n\"com.goog" +
       "le.ads.googleads.v0.commonB\013PolicyProtoP" +
       "\001ZDgoogle.golang.org/genproto/googleapis" +
       "/ads/googleads/v0/common;common\242\002\003GAA\252\002\036" +
       "Google.Ads.GoogleAds.V0.Common\312\002\036Google\\" +
-      "Ads\\GoogleAds\\V0\\Commonb\006proto3"
+      "Ads\\GoogleAds\\V0\\Common\352\002\"Google::Ads::G" +
+      "oogleAds::V0::Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

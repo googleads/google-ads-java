@@ -33,12 +33,13 @@ public final class FrequencyCapLevelProto {
       "v0.enums\"w\n\025FrequencyCapLevelEnum\"^\n\021Fre" +
       "quencyCapLevel\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
       "WN\020\001\022\017\n\013AD_GROUP_AD\020\002\022\014\n\010AD_GROUP\020\003\022\014\n\010C" +
-      "AMPAIGN\020\004B\307\001\n!com.google.ads.googleads.v" +
+      "AMPAIGN\020\004B\353\001\n!com.google.ads.googleads.v" +
       "0.enumsB\026FrequencyCapLevelProtoP\001ZBgoogl" +
       "e.golang.org/genproto/googleapis/ads/goo" +
       "gleads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads" +
       ".GoogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleA" +
-      "ds\\V0\\Enumsb\006proto3"
+      "ds\\V0\\Enums\352\002!Google::Ads::GoogleAds::V0" +
+      "::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

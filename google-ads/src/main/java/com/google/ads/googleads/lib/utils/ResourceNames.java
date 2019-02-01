@@ -21,6 +21,8 @@ import com.google.ads.googleads.v0.resources.AdGroupBidModifierName;
 import com.google.ads.googleads.v0.resources.AdGroupCriteriaName;
 import com.google.ads.googleads.v0.resources.AdGroupFeedName;
 import com.google.ads.googleads.v0.resources.AdGroupName;
+import com.google.ads.googleads.v0.resources.AdParameterName;
+import com.google.ads.googleads.v0.resources.AdScheduleViewName;
 import com.google.ads.googleads.v0.resources.AgeRangeViewName;
 import com.google.ads.googleads.v0.resources.BiddingStrategyName;
 import com.google.ads.googleads.v0.resources.BillingSetupName;
@@ -29,7 +31,6 @@ import com.google.ads.googleads.v0.resources.CampaignBidModifierName;
 import com.google.ads.googleads.v0.resources.CampaignBudgetName;
 import com.google.ads.googleads.v0.resources.CampaignCriteriaName;
 import com.google.ads.googleads.v0.resources.CampaignFeedName;
-import com.google.ads.googleads.v0.resources.CampaignGroupName;
 import com.google.ads.googleads.v0.resources.CampaignName;
 import com.google.ads.googleads.v0.resources.CampaignSharedSetName;
 import com.google.ads.googleads.v0.resources.CarrierConstantName;
@@ -58,9 +59,13 @@ import com.google.ads.googleads.v0.resources.KeywordViewName;
 import com.google.ads.googleads.v0.resources.LanguageConstantName;
 import com.google.ads.googleads.v0.resources.ManagedPlacementViewName;
 import com.google.ads.googleads.v0.resources.MediaFileName;
+import com.google.ads.googleads.v0.resources.MobileAppCategoryConstantName;
+import com.google.ads.googleads.v0.resources.MobileDeviceConstantName;
+import com.google.ads.googleads.v0.resources.OperatingSystemVersionConstantName;
 import com.google.ads.googleads.v0.resources.ParentalStatusViewName;
 import com.google.ads.googleads.v0.resources.ProductGroupViewName;
 import com.google.ads.googleads.v0.resources.RecommendationName;
+import com.google.ads.googleads.v0.resources.RemarketingActionName;
 import com.google.ads.googleads.v0.resources.SearchTermViewName;
 import com.google.ads.googleads.v0.resources.SharedCriteriaName;
 import com.google.ads.googleads.v0.resources.SharedSetName;
@@ -132,6 +137,19 @@ public class ResourceNames {
     return AdGroupFeedName.format(String.valueOf(customerId), concatIdentifiers(adGroupId, feedId));
   }
 
+  /** Returns the ad parameter resource name for the specified components. */
+  public static String adParameter(
+      long customerId, long adGroupId, long criterionId, long parameterIndex) {
+    return AdParameterName.format(
+        String.valueOf(customerId), concatIdentifiers(adGroupId, criterionId, parameterIndex));
+  }
+
+  /** Returns the ad schedule view resource name for the specified components. */
+  public static String adScheduleView(long customerId, long campaignId, long criterionId) {
+    return AdScheduleViewName.format(
+        String.valueOf(customerId), concatIdentifiers(campaignId, criterionId));
+  }
+
   /** Returns the age range view resource name for the specified components. */
   public static String ageRangeView(long customerId, long adGroupId, long criterionId) {
     return AgeRangeViewName.format(
@@ -181,11 +199,6 @@ public class ResourceNames {
   public static String campaignFeed(long customerId, long campaignId, long feedId) {
     return CampaignFeedName.format(
         String.valueOf(customerId), concatIdentifiers(campaignId, feedId));
-  }
-
-  /** Returns the campaign group resource name for the specified components. */
-  public static String campaignGroup(long customerId, long campaignGroupId) {
-    return CampaignGroupName.format(String.valueOf(customerId), String.valueOf(campaignGroupId));
   }
 
   /** Returns the campaign shared set resource name for the specified components. */
@@ -337,6 +350,21 @@ public class ResourceNames {
     return MediaFileName.format(String.valueOf(customerId), String.valueOf(mediaId));
   }
 
+  /** Returns the mobile app category constant resource name for the specified components. */
+  public static String mobileAppCategoryConstant(long mobileAppCategoryId) {
+    return MobileAppCategoryConstantName.format(String.valueOf(mobileAppCategoryId));
+  }
+
+  /** Returns the mobile device constant resource name for the specified components. */
+  public static String mobileDeviceConstant(long criterionId) {
+    return MobileDeviceConstantName.format(String.valueOf(criterionId));
+  }
+
+  /** Returns the operation system version constant resource name for the specified components. */
+  public static String operatingSystemVersionConstant(long criterionId) {
+    return OperatingSystemVersionConstantName.format(String.valueOf(criterionId));
+  }
+
   /** Returns the parental status view resource name for the specified components. */
   public static String parentalStatusView(long customerId, long adGroupId, long criterionId) {
     return ParentalStatusViewName.format(
@@ -360,6 +388,12 @@ public class ResourceNames {
   /** Returns the recommendation resource name for the specified components. */
   public static String recommendation(long customerId, String recommendationId) {
     return RecommendationName.format(String.valueOf(customerId), recommendationId);
+  }
+
+  /** Returns the remarketing action resource name for the specified components. */
+  public static String remarketingAction(long customerId, long remarketingActionId) {
+    return RemarketingActionName.format(
+        String.valueOf(customerId), String.valueOf(remarketingActionId));
   }
 
   /** Returns the search term view resource name for the specified components. */

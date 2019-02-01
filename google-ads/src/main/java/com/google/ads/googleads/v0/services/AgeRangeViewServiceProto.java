@@ -39,12 +39,13 @@ public final class AgeRangeViewServiceProto {
       "ngeViewRequest\032/.google.ads.googleads.v0" +
       ".resources.AgeRangeView\"7\202\323\344\223\0021\022//v0/{re" +
       "source_name=customers/*/ageRangeViews/*}" +
-      "B\330\001\n$com.google.ads.googleads.v0.service" +
+      "B\377\001\n$com.google.ads.googleads.v0.service" +
       "sB\030AgeRangeViewServiceProtoP\001ZHgoogle.go" +
       "lang.org/genproto/googleapis/ads/googlea" +
       "ds/v0/services;services\242\002\003GAA\252\002 Google.A" +
       "ds.GoogleAds.V0.Services\312\002 Google\\Ads\\Go" +
-      "ogleAds\\V0\\Servicesb\006proto3"
+      "ogleAds\\V0\\Services\352\002$Google::Ads::Googl" +
+      "eAds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

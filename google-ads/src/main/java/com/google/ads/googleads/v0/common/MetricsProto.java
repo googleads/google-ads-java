@@ -29,98 +29,170 @@ public final class MetricsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n,google/ads/googleads/v0/common/metrics" +
-      ".proto\022\036google.ads.googleads.v0.common\032\036" +
-      "google/protobuf/wrappers.proto\"\274\032\n\007Metri" +
-      "cs\022L\n&all_conversions_from_interactions_" +
-      "rate\030A \001(\0132\034.google.protobuf.DoubleValue" +
-      "\022;\n\025all_conversions_value\030B \001(\0132\034.google" +
-      ".protobuf.DoubleValue\0225\n\017all_conversions" +
-      "\030\007 \001(\0132\034.google.protobuf.DoubleValue\022D\n\036" +
-      "all_conversions_value_per_cost\030> \001(\0132\034.g" +
-      "oogle.protobuf.DoubleValue\022]\n7all_conver" +
-      "sions_from_interactions_value_per_intera" +
-      "ction\030C \001(\0132\034.google.protobuf.DoubleValu" +
-      "e\0222\n\014average_cost\030\010 \001(\0132\034.google.protobu" +
-      "f.DoubleValue\0221\n\013average_cpc\030\t \001(\0132\034.goo" +
-      "gle.protobuf.DoubleValue\0221\n\013average_cpm\030" +
-      "\n \001(\0132\034.google.protobuf.DoubleValue\0221\n\013a" +
-      "verage_cpv\030\013 \001(\0132\034.google.protobuf.Doubl" +
-      "eValue\0226\n\020average_position\030\r \001(\0132\034.googl" +
-      "e.protobuf.DoubleValue\0223\n\rbenchmark_ctr\030" +
-      "M \001(\0132\034.google.protobuf.DoubleValue\0221\n\013b" +
-      "ounce_rate\030\017 \001(\0132\034.google.protobuf.Doubl" +
-      "eValue\022+\n\006clicks\030\023 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022J\n$content_budget_lost_impre" +
-      "ssion_share\030\024 \001(\0132\034.google.protobuf.Doub" +
-      "leValue\022>\n\030content_impression_share\030\025 \001(" +
-      "\0132\034.google.protobuf.DoubleValue\022P\n*conve" +
-      "rsion_last_received_request_date_time\030I " +
-      "\001(\0132\034.google.protobuf.StringValue\022E\n\037con" +
-      "version_last_conversion_date\030J \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022H\n\"content_rank" +
-      "_lost_impression_share\030\026 \001(\0132\034.google.pr" +
-      "otobuf.DoubleValue\022H\n\"conversions_from_i" +
-      "nteractions_rate\030E \001(\0132\034.google.protobuf" +
-      ".DoubleValue\0227\n\021conversions_value\030F \001(\0132" +
-      "\034.google.protobuf.DoubleValue\022@\n\032convers" +
-      "ions_value_per_cost\030G \001(\0132\034.google.proto" +
-      "buf.DoubleValue\022Y\n3conversions_from_inte" +
-      "ractions_value_per_interaction\030H \001(\0132\034.g" +
-      "oogle.protobuf.DoubleValue\0221\n\013conversion" +
-      "s\030\031 \001(\0132\034.google.protobuf.DoubleValue\0220\n" +
-      "\013cost_micros\030\032 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022>\n\030cost_per_all_conversions\030D \001(" +
-      "\0132\034.google.protobuf.DoubleValue\0229\n\023cost_" +
-      "per_conversion\030\034 \001(\0132\034.google.protobuf.D" +
-      "oubleValue\022>\n\030cross_device_conversions\030\035" +
-      " \001(\0132\034.google.protobuf.DoubleValue\022)\n\003ct" +
-      "r\030\036 \001(\0132\034.google.protobuf.DoubleValue\0225\n" +
-      "\017engagement_rate\030\037 \001(\0132\034.google.protobuf" +
-      ".DoubleValue\0220\n\013engagements\030  \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022E\n\037hotel_average_" +
-      "lead_value_micros\030K \001(\0132\034.google.protobu" +
-      "f.DoubleValue\0220\n\013impressions\030% \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0226\n\020interaction_r" +
-      "ate\030& \001(\0132\034.google.protobuf.DoubleValue\022" +
-      "1\n\014interactions\030\' \001(\0132\033.google.protobuf." +
-      "Int64Value\0228\n\022invalid_click_rate\030( \001(\0132\034" +
-      ".google.protobuf.DoubleValue\0223\n\016invalid_" +
-      "clicks\030) \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022:\n\024percent_new_visitors\030* \001(\0132\034.google" +
-      ".protobuf.DoubleValue\0220\n\013phone_calls\030+ \001" +
-      "(\0132\033.google.protobuf.Int64Value\0226\n\021phone" +
-      "_impressions\030, \001(\0132\033.google.protobuf.Int" +
-      "64Value\0228\n\022phone_through_rate\030- \001(\0132\034.go" +
-      "ogle.protobuf.DoubleValue\0222\n\014relative_ct" +
-      "r\030. \001(\0132\034.google.protobuf.DoubleValue\022J\n" +
-      "$search_absolute_top_impression_share\030N " +
-      "\001(\0132\034.google.protobuf.DoubleValue\022I\n#sea" +
-      "rch_budget_lost_impression_share\030/ \001(\0132\034" +
-      ".google.protobuf.DoubleValue\022I\n#search_e" +
-      "xact_match_impression_share\0301 \001(\0132\034.goog" +
-      "le.protobuf.DoubleValue\022=\n\027search_impres" +
-      "sion_share\0302 \001(\0132\034.google.protobuf.Doubl" +
-      "eValue\022G\n!search_rank_lost_impression_sh" +
-      "are\0303 \001(\0132\034.google.protobuf.DoubleValue\022" +
-      "?\n\031value_per_all_conversions\0304 \001(\0132\034.goo" +
-      "gle.protobuf.DoubleValue\022:\n\024value_per_co" +
-      "nversion\0305 \001(\0132\034.google.protobuf.DoubleV" +
-      "alue\022=\n\027video_quartile_100_rate\0306 \001(\0132\034." +
-      "google.protobuf.DoubleValue\022<\n\026video_qua" +
-      "rtile_25_rate\0307 \001(\0132\034.google.protobuf.Do" +
-      "ubleValue\022<\n\026video_quartile_50_rate\0308 \001(" +
-      "\0132\034.google.protobuf.DoubleValue\022<\n\026video" +
-      "_quartile_75_rate\0309 \001(\0132\034.google.protobu" +
-      "f.DoubleValue\0225\n\017video_view_rate\030: \001(\0132\034" +
-      ".google.protobuf.DoubleValue\0220\n\013video_vi" +
-      "ews\030; \001(\0132\033.google.protobuf.Int64Value\022=" +
-      "\n\030view_through_conversions\030< \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\302\001\n\"com.google.ads" +
-      ".googleads.v0.commonB\014MetricsProtoP\001ZDgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v0/common;common\242\002\003GAA\252\002\036Googl" +
-      "e.Ads.GoogleAds.V0.Common\312\002\036Google\\Ads\\G" +
-      "oogleAds\\V0\\Commonb\006proto3"
+      ".proto\022\036google.ads.googleads.v0.common\032:" +
+      "google/ads/googleads/v0/enums/interactio" +
+      "n_event_type.proto\0328google/ads/googleads" +
+      "/v0/enums/quality_score_bucket.proto\032\036go" +
+      "ogle/protobuf/wrappers.proto\"\322/\n\007Metrics" +
+      "\022H\n\"absolute_top_impression_percentage\030_" +
+      " \001(\0132\034.google.protobuf.DoubleValue\0225\n\017ac" +
+      "tive_view_cpm\030\001 \001(\0132\034.google.protobuf.Do" +
+      "ubleValue\0225\n\017active_view_ctr\030O \001(\0132\034.goo" +
+      "gle.protobuf.DoubleValue\022<\n\027active_view_" +
+      "impressions\030\002 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022?\n\031active_view_measurability\030` \001(" +
+      "\0132\034.google.protobuf.DoubleValue\022G\n\"activ" +
+      "e_view_measurable_cost_micros\030\003 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022G\n\"active_view_" +
+      "measurable_impressions\030\004 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022=\n\027active_view_viewabi" +
+      "lity\030a \001(\0132\034.google.protobuf.DoubleValue" +
+      "\022L\n&all_conversions_from_interactions_ra" +
+      "te\030A \001(\0132\034.google.protobuf.DoubleValue\022;" +
+      "\n\025all_conversions_value\030B \001(\0132\034.google.p" +
+      "rotobuf.DoubleValue\0225\n\017all_conversions\030\007" +
+      " \001(\0132\034.google.protobuf.DoubleValue\022D\n\036al" +
+      "l_conversions_value_per_cost\030> \001(\0132\034.goo" +
+      "gle.protobuf.DoubleValue\022]\n7all_conversi" +
+      "ons_from_interactions_value_per_interact" +
+      "ion\030C \001(\0132\034.google.protobuf.DoubleValue\022" +
+      "2\n\014average_cost\030\010 \001(\0132\034.google.protobuf." +
+      "DoubleValue\0221\n\013average_cpc\030\t \001(\0132\034.googl" +
+      "e.protobuf.DoubleValue\0221\n\013average_cpe\030b " +
+      "\001(\0132\034.google.protobuf.DoubleValue\0221\n\013ave" +
+      "rage_cpm\030\n \001(\0132\034.google.protobuf.DoubleV" +
+      "alue\0221\n\013average_cpv\030\013 \001(\0132\034.google.proto" +
+      "buf.DoubleValue\0227\n\021average_frequency\030\014 \001" +
+      "(\0132\034.google.protobuf.DoubleValue\0228\n\022aver" +
+      "age_page_views\030c \001(\0132\034.google.protobuf.D" +
+      "oubleValue\0226\n\020average_position\030\r \001(\0132\034.g" +
+      "oogle.protobuf.DoubleValue\022:\n\024average_ti" +
+      "me_on_site\030T \001(\0132\034.google.protobuf.Doubl" +
+      "eValue\022?\n\031benchmark_average_max_cpc\030\016 \001(" +
+      "\0132\034.google.protobuf.DoubleValue\0223\n\rbench" +
+      "mark_ctr\030M \001(\0132\034.google.protobuf.DoubleV" +
+      "alue\0221\n\013bounce_rate\030\017 \001(\0132\034.google.proto" +
+      "buf.DoubleValue\022+\n\006clicks\030\023 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022J\n$content_budget_l" +
+      "ost_impression_share\030\024 \001(\0132\034.google.prot" +
+      "obuf.DoubleValue\022>\n\030content_impression_s" +
+      "hare\030\025 \001(\0132\034.google.protobuf.DoubleValue" +
+      "\022P\n*conversion_last_received_request_dat" +
+      "e_time\030I \001(\0132\034.google.protobuf.StringVal" +
+      "ue\022E\n\037conversion_last_conversion_date\030J " +
+      "\001(\0132\034.google.protobuf.StringValue\022H\n\"con" +
+      "tent_rank_lost_impression_share\030\026 \001(\0132\034." +
+      "google.protobuf.DoubleValue\022H\n\"conversio" +
+      "ns_from_interactions_rate\030E \001(\0132\034.google" +
+      ".protobuf.DoubleValue\0227\n\021conversions_val" +
+      "ue\030F \001(\0132\034.google.protobuf.DoubleValue\022@" +
+      "\n\032conversions_value_per_cost\030G \001(\0132\034.goo" +
+      "gle.protobuf.DoubleValue\022Y\n3conversions_" +
+      "from_interactions_value_per_interaction\030" +
+      "H \001(\0132\034.google.protobuf.DoubleValue\0221\n\013c" +
+      "onversions\030\031 \001(\0132\034.google.protobuf.Doubl" +
+      "eValue\0220\n\013cost_micros\030\032 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022>\n\030cost_per_all_convers" +
+      "ions\030D \001(\0132\034.google.protobuf.DoubleValue" +
+      "\0229\n\023cost_per_conversion\030\034 \001(\0132\034.google.p" +
+      "rotobuf.DoubleValue\022R\n,cost_per_current_" +
+      "model_attributed_conversion\030j \001(\0132\034.goog" +
+      "le.protobuf.DoubleValue\022>\n\030cross_device_" +
+      "conversions\030\035 \001(\0132\034.google.protobuf.Doub" +
+      "leValue\022)\n\003ctr\030\036 \001(\0132\034.google.protobuf.D" +
+      "oubleValue\022J\n$current_model_attributed_c" +
+      "onversions\030e \001(\0132\034.google.protobuf.Doubl" +
+      "eValue\022a\n;current_model_attributed_conve" +
+      "rsions_from_interactions_rate\030f \001(\0132\034.go" +
+      "ogle.protobuf.DoubleValue\022r\nLcurrent_mod" +
+      "el_attributed_conversions_from_interacti" +
+      "ons_value_per_interaction\030g \001(\0132\034.google" +
+      ".protobuf.DoubleValue\022P\n*current_model_a" +
+      "ttributed_conversions_value\030h \001(\0132\034.goog" +
+      "le.protobuf.DoubleValue\022Y\n3current_model" +
+      "_attributed_conversions_value_per_cost\030i" +
+      " \001(\0132\034.google.protobuf.DoubleValue\0225\n\017en" +
+      "gagement_rate\030\037 \001(\0132\034.google.protobuf.Do" +
+      "ubleValue\0220\n\013engagements\030  \001(\0132\033.google." +
+      "protobuf.Int64Value\022E\n\037hotel_average_lea" +
+      "d_value_micros\030K \001(\0132\034.google.protobuf.D" +
+      "oubleValue\022s\n!historical_creative_qualit" +
+      "y_score\030P \001(\0162H.google.ads.googleads.v0." +
+      "enums.QualityScoreBucketEnum.QualityScor" +
+      "eBucket\022w\n%historical_landing_page_quali" +
+      "ty_score\030Q \001(\0162H.google.ads.googleads.v0" +
+      ".enums.QualityScoreBucketEnum.QualitySco" +
+      "reBucket\022=\n\030historical_quality_score\030R \001" +
+      "(\0132\033.google.protobuf.Int64Value\022q\n\037histo" +
+      "rical_search_predicted_ctr\030S \001(\0162H.googl" +
+      "e.ads.googleads.v0.enums.QualityScoreBuc" +
+      "ketEnum.QualityScoreBucket\0223\n\016gmail_forw" +
+      "ards\030U \001(\0132\033.google.protobuf.Int64Value\022" +
+      "0\n\013gmail_saves\030V \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022;\n\026gmail_secondary_clicks\030W \001(" +
+      "\0132\033.google.protobuf.Int64Value\0225\n\020impres" +
+      "sion_reach\030$ \001(\0132\033.google.protobuf.Int64" +
+      "Value\0220\n\013impressions\030% \001(\0132\033.google.prot" +
+      "obuf.Int64Value\0226\n\020interaction_rate\030& \001(" +
+      "\0132\034.google.protobuf.DoubleValue\0221\n\014inter" +
+      "actions\030\' \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022m\n\027interaction_event_types\030d \003(\0162L.go" +
+      "ogle.ads.googleads.v0.enums.InteractionE" +
+      "ventTypeEnum.InteractionEventType\0228\n\022inv" +
+      "alid_click_rate\030( \001(\0132\034.google.protobuf." +
+      "DoubleValue\0223\n\016invalid_clicks\030) \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022:\n\024percent_new_" +
+      "visitors\030* \001(\0132\034.google.protobuf.DoubleV" +
+      "alue\0220\n\013phone_calls\030+ \001(\0132\033.google.proto" +
+      "buf.Int64Value\0226\n\021phone_impressions\030, \001(" +
+      "\0132\033.google.protobuf.Int64Value\0228\n\022phone_" +
+      "through_rate\030- \001(\0132\034.google.protobuf.Dou" +
+      "bleValue\0222\n\014relative_ctr\030. \001(\0132\034.google." +
+      "protobuf.DoubleValue\022J\n$search_absolute_" +
+      "top_impression_share\030N \001(\0132\034.google.prot" +
+      "obuf.DoubleValue\022V\n0search_budget_lost_a" +
+      "bsolute_top_impression_share\030X \001(\0132\034.goo" +
+      "gle.protobuf.DoubleValue\022I\n#search_budge" +
+      "t_lost_impression_share\030/ \001(\0132\034.google.p" +
+      "rotobuf.DoubleValue\022M\n\'search_budget_los" +
+      "t_top_impression_share\030Y \001(\0132\034.google.pr" +
+      "otobuf.DoubleValue\0228\n\022search_click_share" +
+      "\0300 \001(\0132\034.google.protobuf.DoubleValue\022I\n#" +
+      "search_exact_match_impression_share\0301 \001(" +
+      "\0132\034.google.protobuf.DoubleValue\022=\n\027searc" +
+      "h_impression_share\0302 \001(\0132\034.google.protob" +
+      "uf.DoubleValue\022T\n.search_rank_lost_absol" +
+      "ute_top_impression_share\030Z \001(\0132\034.google." +
+      "protobuf.DoubleValue\022G\n!search_rank_lost" +
+      "_impression_share\0303 \001(\0132\034.google.protobu" +
+      "f.DoubleValue\022K\n%search_rank_lost_top_im" +
+      "pression_share\030[ \001(\0132\034.google.protobuf.D" +
+      "oubleValue\022A\n\033search_top_impression_shar" +
+      "e\030\\ \001(\0132\034.google.protobuf.DoubleValue\022?\n" +
+      "\031top_impression_percentage\030] \001(\0132\034.googl" +
+      "e.protobuf.DoubleValue\022?\n\031value_per_all_" +
+      "conversions\0304 \001(\0132\034.google.protobuf.Doub" +
+      "leValue\022:\n\024value_per_conversion\0305 \001(\0132\034." +
+      "google.protobuf.DoubleValue\022S\n-value_per" +
+      "_current_model_attributed_conversion\030^ \001" +
+      "(\0132\034.google.protobuf.DoubleValue\022=\n\027vide" +
+      "o_quartile_100_rate\0306 \001(\0132\034.google.proto" +
+      "buf.DoubleValue\022<\n\026video_quartile_25_rat" +
+      "e\0307 \001(\0132\034.google.protobuf.DoubleValue\022<\n" +
+      "\026video_quartile_50_rate\0308 \001(\0132\034.google.p" +
+      "rotobuf.DoubleValue\022<\n\026video_quartile_75" +
+      "_rate\0309 \001(\0132\034.google.protobuf.DoubleValu" +
+      "e\0225\n\017video_view_rate\030: \001(\0132\034.google.prot" +
+      "obuf.DoubleValue\0220\n\013video_views\030; \001(\0132\033." +
+      "google.protobuf.Int64Value\022=\n\030view_throu" +
+      "gh_conversions\030< \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\347\001\n\"com.google.ads.googleads.v" +
+      "0.commonB\014MetricsProtoP\001ZDgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v0" +
+      "/common;common\242\002\003GAA\252\002\036Google.Ads.Google" +
+      "Ads.V0.Common\312\002\036Google\\Ads\\GoogleAds\\V0\\" +
+      "Common\352\002\"Google::Ads::GoogleAds::V0::Com" +
+      "monb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -133,6 +205,8 @@ public final class MetricsProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v0.enums.InteractionEventTypeProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.QualityScoreBucketProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_common_Metrics_descriptor =
@@ -140,7 +214,9 @@ public final class MetricsProto {
     internal_static_google_ads_googleads_v0_common_Metrics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_Metrics_descriptor,
-        new java.lang.String[] { "AllConversionsFromInteractionsRate", "AllConversionsValue", "AllConversions", "AllConversionsValuePerCost", "AllConversionsFromInteractionsValuePerInteraction", "AverageCost", "AverageCpc", "AverageCpm", "AverageCpv", "AveragePosition", "BenchmarkCtr", "BounceRate", "Clicks", "ContentBudgetLostImpressionShare", "ContentImpressionShare", "ConversionLastReceivedRequestDateTime", "ConversionLastConversionDate", "ContentRankLostImpressionShare", "ConversionsFromInteractionsRate", "ConversionsValue", "ConversionsValuePerCost", "ConversionsFromInteractionsValuePerInteraction", "Conversions", "CostMicros", "CostPerAllConversions", "CostPerConversion", "CrossDeviceConversions", "Ctr", "EngagementRate", "Engagements", "HotelAverageLeadValueMicros", "Impressions", "InteractionRate", "Interactions", "InvalidClickRate", "InvalidClicks", "PercentNewVisitors", "PhoneCalls", "PhoneImpressions", "PhoneThroughRate", "RelativeCtr", "SearchAbsoluteTopImpressionShare", "SearchBudgetLostImpressionShare", "SearchExactMatchImpressionShare", "SearchImpressionShare", "SearchRankLostImpressionShare", "ValuePerAllConversions", "ValuePerConversion", "VideoQuartile100Rate", "VideoQuartile25Rate", "VideoQuartile50Rate", "VideoQuartile75Rate", "VideoViewRate", "VideoViews", "ViewThroughConversions", });
+        new java.lang.String[] { "AbsoluteTopImpressionPercentage", "ActiveViewCpm", "ActiveViewCtr", "ActiveViewImpressions", "ActiveViewMeasurability", "ActiveViewMeasurableCostMicros", "ActiveViewMeasurableImpressions", "ActiveViewViewability", "AllConversionsFromInteractionsRate", "AllConversionsValue", "AllConversions", "AllConversionsValuePerCost", "AllConversionsFromInteractionsValuePerInteraction", "AverageCost", "AverageCpc", "AverageCpe", "AverageCpm", "AverageCpv", "AverageFrequency", "AveragePageViews", "AveragePosition", "AverageTimeOnSite", "BenchmarkAverageMaxCpc", "BenchmarkCtr", "BounceRate", "Clicks", "ContentBudgetLostImpressionShare", "ContentImpressionShare", "ConversionLastReceivedRequestDateTime", "ConversionLastConversionDate", "ContentRankLostImpressionShare", "ConversionsFromInteractionsRate", "ConversionsValue", "ConversionsValuePerCost", "ConversionsFromInteractionsValuePerInteraction", "Conversions", "CostMicros", "CostPerAllConversions", "CostPerConversion", "CostPerCurrentModelAttributedConversion", "CrossDeviceConversions", "Ctr", "CurrentModelAttributedConversions", "CurrentModelAttributedConversionsFromInteractionsRate", "CurrentModelAttributedConversionsFromInteractionsValuePerInteraction", "CurrentModelAttributedConversionsValue", "CurrentModelAttributedConversionsValuePerCost", "EngagementRate", "Engagements", "HotelAverageLeadValueMicros", "HistoricalCreativeQualityScore", "HistoricalLandingPageQualityScore", "HistoricalQualityScore", "HistoricalSearchPredictedCtr", "GmailForwards", "GmailSaves", "GmailSecondaryClicks", "ImpressionReach", "Impressions", "InteractionRate", "Interactions", "InteractionEventTypes", "InvalidClickRate", "InvalidClicks", "PercentNewVisitors", "PhoneCalls", "PhoneImpressions", "PhoneThroughRate", "RelativeCtr", "SearchAbsoluteTopImpressionShare", "SearchBudgetLostAbsoluteTopImpressionShare", "SearchBudgetLostImpressionShare", "SearchBudgetLostTopImpressionShare", "SearchClickShare", "SearchExactMatchImpressionShare", "SearchImpressionShare", "SearchRankLostAbsoluteTopImpressionShare", "SearchRankLostImpressionShare", "SearchRankLostTopImpressionShare", "SearchTopImpressionShare", "TopImpressionPercentage", "ValuePerAllConversions", "ValuePerConversion", "ValuePerCurrentModelAttributedConversion", "VideoQuartile100Rate", "VideoQuartile25Rate", "VideoQuartile50Rate", "VideoQuartile75Rate", "VideoViewRate", "VideoViews", "ViewThroughConversions", });
+    com.google.ads.googleads.v0.enums.InteractionEventTypeProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.QualityScoreBucketProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

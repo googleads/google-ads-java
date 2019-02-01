@@ -144,20 +144,6 @@ private static final long serialVersionUID = 0L;
             operationCase_ = 8;
             break;
           }
-          case 74: {
-            com.google.ads.googleads.v0.services.CampaignGroupOperation.Builder subBuilder = null;
-            if (operationCase_ == 9) {
-              subBuilder = ((com.google.ads.googleads.v0.services.CampaignGroupOperation) operation_).toBuilder();
-            }
-            operation_ =
-                input.readMessage(com.google.ads.googleads.v0.services.CampaignGroupOperation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v0.services.CampaignGroupOperation) operation_);
-              operation_ = subBuilder.buildPartial();
-            }
-            operationCase_ = 9;
-            break;
-          }
           case 82: {
             com.google.ads.googleads.v0.services.CampaignOperation.Builder subBuilder = null;
             if (operationCase_ == 10) {
@@ -299,7 +285,6 @@ private static final long serialVersionUID = 0L;
     BIDDING_STRATEGY_OPERATION(6),
     CAMPAIGN_BID_MODIFIER_OPERATION(7),
     CAMPAIGN_BUDGET_OPERATION(8),
-    CAMPAIGN_GROUP_OPERATION(9),
     CAMPAIGN_OPERATION(10),
     CAMPAIGN_SHARED_SET_OPERATION(11),
     CONVERSION_ACTION_OPERATION(12),
@@ -329,7 +314,6 @@ private static final long serialVersionUID = 0L;
         case 6: return BIDDING_STRATEGY_OPERATION;
         case 7: return CAMPAIGN_BID_MODIFIER_OPERATION;
         case 8: return CAMPAIGN_BUDGET_OPERATION;
-        case 9: return CAMPAIGN_GROUP_OPERATION;
         case 10: return CAMPAIGN_OPERATION;
         case 11: return CAMPAIGN_SHARED_SET_OPERATION;
         case 12: return CONVERSION_ACTION_OPERATION;
@@ -616,44 +600,6 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v0.services.CampaignBudgetOperation) operation_;
     }
     return com.google.ads.googleads.v0.services.CampaignBudgetOperation.getDefaultInstance();
-  }
-
-  public static final int CAMPAIGN_GROUP_OPERATION_FIELD_NUMBER = 9;
-  /**
-   * <pre>
-   * A campaign group mutate operation.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-   */
-  public boolean hasCampaignGroupOperation() {
-    return operationCase_ == 9;
-  }
-  /**
-   * <pre>
-   * A campaign group mutate operation.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-   */
-  public com.google.ads.googleads.v0.services.CampaignGroupOperation getCampaignGroupOperation() {
-    if (operationCase_ == 9) {
-       return (com.google.ads.googleads.v0.services.CampaignGroupOperation) operation_;
-    }
-    return com.google.ads.googleads.v0.services.CampaignGroupOperation.getDefaultInstance();
-  }
-  /**
-   * <pre>
-   * A campaign group mutate operation.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-   */
-  public com.google.ads.googleads.v0.services.CampaignGroupOperationOrBuilder getCampaignGroupOperationOrBuilder() {
-    if (operationCase_ == 9) {
-       return (com.google.ads.googleads.v0.services.CampaignGroupOperation) operation_;
-    }
-    return com.google.ads.googleads.v0.services.CampaignGroupOperation.getDefaultInstance();
   }
 
   public static final int CAMPAIGN_OPERATION_FIELD_NUMBER = 10;
@@ -957,9 +903,6 @@ private static final long serialVersionUID = 0L;
     if (operationCase_ == 8) {
       output.writeMessage(8, (com.google.ads.googleads.v0.services.CampaignBudgetOperation) operation_);
     }
-    if (operationCase_ == 9) {
-      output.writeMessage(9, (com.google.ads.googleads.v0.services.CampaignGroupOperation) operation_);
-    }
     if (operationCase_ == 10) {
       output.writeMessage(10, (com.google.ads.googleads.v0.services.CampaignOperation) operation_);
     }
@@ -1017,10 +960,6 @@ private static final long serialVersionUID = 0L;
     if (operationCase_ == 8) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, (com.google.ads.googleads.v0.services.CampaignBudgetOperation) operation_);
-    }
-    if (operationCase_ == 9) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, (com.google.ads.googleads.v0.services.CampaignGroupOperation) operation_);
     }
     if (operationCase_ == 10) {
       size += com.google.protobuf.CodedOutputStream
@@ -1098,10 +1037,6 @@ private static final long serialVersionUID = 0L;
         result = result && getCampaignBudgetOperation()
             .equals(other.getCampaignBudgetOperation());
         break;
-      case 9:
-        result = result && getCampaignGroupOperation()
-            .equals(other.getCampaignGroupOperation());
-        break;
       case 10:
         result = result && getCampaignOperation()
             .equals(other.getCampaignOperation());
@@ -1172,10 +1107,6 @@ private static final long serialVersionUID = 0L;
       case 8:
         hash = (37 * hash) + CAMPAIGN_BUDGET_OPERATION_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignBudgetOperation().hashCode();
-        break;
-      case 9:
-        hash = (37 * hash) + CAMPAIGN_GROUP_OPERATION_FIELD_NUMBER;
-        hash = (53 * hash) + getCampaignGroupOperation().hashCode();
         break;
       case 10:
         hash = (37 * hash) + CAMPAIGN_OPERATION_FIELD_NUMBER;
@@ -1422,13 +1353,6 @@ private static final long serialVersionUID = 0L;
           result.operation_ = campaignBudgetOperationBuilder_.build();
         }
       }
-      if (operationCase_ == 9) {
-        if (campaignGroupOperationBuilder_ == null) {
-          result.operation_ = operation_;
-        } else {
-          result.operation_ = campaignGroupOperationBuilder_.build();
-        }
-      }
       if (operationCase_ == 10) {
         if (campaignOperationBuilder_ == null) {
           result.operation_ = operation_;
@@ -1554,10 +1478,6 @@ private static final long serialVersionUID = 0L;
         }
         case CAMPAIGN_BUDGET_OPERATION: {
           mergeCampaignBudgetOperation(other.getCampaignBudgetOperation());
-          break;
-        }
-        case CAMPAIGN_GROUP_OPERATION: {
-          mergeCampaignGroupOperation(other.getCampaignGroupOperation());
           break;
         }
         case CAMPAIGN_OPERATION: {
@@ -2838,178 +2758,6 @@ private static final long serialVersionUID = 0L;
       operationCase_ = 8;
       onChanged();;
       return campaignBudgetOperationBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.ads.googleads.v0.services.CampaignGroupOperation, com.google.ads.googleads.v0.services.CampaignGroupOperation.Builder, com.google.ads.googleads.v0.services.CampaignGroupOperationOrBuilder> campaignGroupOperationBuilder_;
-    /**
-     * <pre>
-     * A campaign group mutate operation.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-     */
-    public boolean hasCampaignGroupOperation() {
-      return operationCase_ == 9;
-    }
-    /**
-     * <pre>
-     * A campaign group mutate operation.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-     */
-    public com.google.ads.googleads.v0.services.CampaignGroupOperation getCampaignGroupOperation() {
-      if (campaignGroupOperationBuilder_ == null) {
-        if (operationCase_ == 9) {
-          return (com.google.ads.googleads.v0.services.CampaignGroupOperation) operation_;
-        }
-        return com.google.ads.googleads.v0.services.CampaignGroupOperation.getDefaultInstance();
-      } else {
-        if (operationCase_ == 9) {
-          return campaignGroupOperationBuilder_.getMessage();
-        }
-        return com.google.ads.googleads.v0.services.CampaignGroupOperation.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * A campaign group mutate operation.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-     */
-    public Builder setCampaignGroupOperation(com.google.ads.googleads.v0.services.CampaignGroupOperation value) {
-      if (campaignGroupOperationBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        operation_ = value;
-        onChanged();
-      } else {
-        campaignGroupOperationBuilder_.setMessage(value);
-      }
-      operationCase_ = 9;
-      return this;
-    }
-    /**
-     * <pre>
-     * A campaign group mutate operation.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-     */
-    public Builder setCampaignGroupOperation(
-        com.google.ads.googleads.v0.services.CampaignGroupOperation.Builder builderForValue) {
-      if (campaignGroupOperationBuilder_ == null) {
-        operation_ = builderForValue.build();
-        onChanged();
-      } else {
-        campaignGroupOperationBuilder_.setMessage(builderForValue.build());
-      }
-      operationCase_ = 9;
-      return this;
-    }
-    /**
-     * <pre>
-     * A campaign group mutate operation.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-     */
-    public Builder mergeCampaignGroupOperation(com.google.ads.googleads.v0.services.CampaignGroupOperation value) {
-      if (campaignGroupOperationBuilder_ == null) {
-        if (operationCase_ == 9 &&
-            operation_ != com.google.ads.googleads.v0.services.CampaignGroupOperation.getDefaultInstance()) {
-          operation_ = com.google.ads.googleads.v0.services.CampaignGroupOperation.newBuilder((com.google.ads.googleads.v0.services.CampaignGroupOperation) operation_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          operation_ = value;
-        }
-        onChanged();
-      } else {
-        if (operationCase_ == 9) {
-          campaignGroupOperationBuilder_.mergeFrom(value);
-        }
-        campaignGroupOperationBuilder_.setMessage(value);
-      }
-      operationCase_ = 9;
-      return this;
-    }
-    /**
-     * <pre>
-     * A campaign group mutate operation.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-     */
-    public Builder clearCampaignGroupOperation() {
-      if (campaignGroupOperationBuilder_ == null) {
-        if (operationCase_ == 9) {
-          operationCase_ = 0;
-          operation_ = null;
-          onChanged();
-        }
-      } else {
-        if (operationCase_ == 9) {
-          operationCase_ = 0;
-          operation_ = null;
-        }
-        campaignGroupOperationBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * A campaign group mutate operation.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-     */
-    public com.google.ads.googleads.v0.services.CampaignGroupOperation.Builder getCampaignGroupOperationBuilder() {
-      return getCampaignGroupOperationFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * A campaign group mutate operation.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-     */
-    public com.google.ads.googleads.v0.services.CampaignGroupOperationOrBuilder getCampaignGroupOperationOrBuilder() {
-      if ((operationCase_ == 9) && (campaignGroupOperationBuilder_ != null)) {
-        return campaignGroupOperationBuilder_.getMessageOrBuilder();
-      } else {
-        if (operationCase_ == 9) {
-          return (com.google.ads.googleads.v0.services.CampaignGroupOperation) operation_;
-        }
-        return com.google.ads.googleads.v0.services.CampaignGroupOperation.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * A campaign group mutate operation.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.ads.googleads.v0.services.CampaignGroupOperation, com.google.ads.googleads.v0.services.CampaignGroupOperation.Builder, com.google.ads.googleads.v0.services.CampaignGroupOperationOrBuilder> 
-        getCampaignGroupOperationFieldBuilder() {
-      if (campaignGroupOperationBuilder_ == null) {
-        if (!(operationCase_ == 9)) {
-          operation_ = com.google.ads.googleads.v0.services.CampaignGroupOperation.getDefaultInstance();
-        }
-        campaignGroupOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.ads.googleads.v0.services.CampaignGroupOperation, com.google.ads.googleads.v0.services.CampaignGroupOperation.Builder, com.google.ads.googleads.v0.services.CampaignGroupOperationOrBuilder>(
-                (com.google.ads.googleads.v0.services.CampaignGroupOperation) operation_,
-                getParentForChildren(),
-                isClean());
-        operation_ = null;
-      }
-      operationCase_ = 9;
-      onChanged();;
-      return campaignGroupOperationBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

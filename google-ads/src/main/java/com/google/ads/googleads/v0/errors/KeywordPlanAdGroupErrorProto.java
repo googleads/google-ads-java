@@ -33,13 +33,14 @@ public final class KeywordPlanAdGroupErrorProto {
       "oogleads.v0.errors\"|\n\033KeywordPlanAdGroup" +
       "ErrorEnum\"]\n\027KeywordPlanAdGroupError\022\017\n\013" +
       "UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014INVALID_NA" +
-      "ME\020\002\022\022\n\016DUPLICATE_NAME\020\003B\322\001\n\"com.google." +
+      "ME\020\002\022\022\n\016DUPLICATE_NAME\020\003B\367\001\n\"com.google." +
       "ads.googleads.v0.errorsB\034KeywordPlanAdGr" +
       "oupErrorProtoP\001ZDgoogle.golang.org/genpr" +
       "oto/googleapis/ads/googleads/v0/errors;e" +
       "rrors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Er" +
-      "rors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006p" +
-      "roto3"
+      "rors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors\352\002\"" +
+      "Google::Ads::GoogleAds::V0::Errorsb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

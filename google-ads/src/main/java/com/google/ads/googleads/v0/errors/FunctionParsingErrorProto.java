@@ -40,12 +40,13 @@ public final class FunctionParsingErrorProto {
       "RAND\020\010\022\031\n\025INVALID_OPERATOR_NAME\020\t\022/\n+FEE" +
       "D_ATTRIBUTE_OPERAND_ARGUMENT_NOT_INTEGER" +
       "\020\n\022\017\n\013NO_OPERANDS\020\013\022\025\n\021TOO_MANY_OPERANDS" +
-      "\020\014B\317\001\n\"com.google.ads.googleads.v0.error" +
+      "\020\014B\364\001\n\"com.google.ads.googleads.v0.error" +
       "sB\031FunctionParsingErrorProtoP\001ZDgoogle.g" +
       "olang.org/genproto/googleapis/ads/google" +
       "ads/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads." +
       "GoogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleA" +
-      "ds\\V0\\Errorsb\006proto3"
+      "ds\\V0\\Errors\352\002\"Google::Ads::GoogleAds::V" +
+      "0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

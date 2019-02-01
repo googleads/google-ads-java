@@ -39,6 +39,21 @@ public final class CampaignProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_resources_Campaign_ShoppingSetting_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_resources_Campaign_TrackingSetting_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_resources_Campaign_TrackingSetting_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_resources_Campaign_VanityPharma_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_resources_Campaign_VanityPharma_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_resources_Campaign_SelectiveOptimization_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_resources_Campaign_SelectiveOptimization_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -55,104 +70,133 @@ public final class CampaignProto {
       "mon/custom_parameter.proto\0322google/ads/g" +
       "oogleads/v0/common/frequency_cap.proto\032>" +
       "google/ads/googleads/v0/common/real_time" +
-      "_bidding_setting.proto\032Bgoogle/ads/googl" +
-      "eads/v0/enums/ad_serving_optimization_st" +
-      "atus.proto\032@google/ads/googleads/v0/enum" +
-      "s/advertising_channel_sub_type.proto\032<go" +
-      "ogle/ads/googleads/v0/enums/advertising_" +
-      "channel_type.proto\0329google/ads/googleads" +
-      "/v0/enums/bidding_strategy_type.proto\032;g" +
-      "oogle/ads/googleads/v0/enums/campaign_se" +
-      "rving_status.proto\0323google/ads/googleads" +
-      "/v0/enums/campaign_status.proto\032\036google/" +
-      "protobuf/wrappers.proto\"\267\031\n\010Campaign\022\025\n\r" +
-      "resource_name\030\001 \001(\t\022\'\n\002id\030\003 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022*\n\004name\030\004 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022P\n\006status\030\005 \001(\016" +
-      "2@.google.ads.googleads.v0.enums.Campaig" +
-      "nStatusEnum.CampaignStatus\022f\n\016serving_st" +
-      "atus\030\025 \001(\0162N.google.ads.googleads.v0.enu" +
-      "ms.CampaignServingStatusEnum.CampaignSer" +
-      "vingStatus\022\202\001\n\036ad_serving_optimization_s" +
-      "tatus\030\010 \001(\0162Z.google.ads.googleads.v0.en" +
-      "ums.AdServingOptimizationStatusEnum.AdSe" +
-      "rvingOptimizationStatus\022r\n\030advertising_c" +
-      "hannel_type\030\t \001(\0162P.google.ads.googleads" +
-      ".v0.enums.AdvertisingChannelTypeEnum.Adv" +
-      "ertisingChannelType\022|\n\034advertising_chann" +
-      "el_sub_type\030\n \001(\0162V.google.ads.googleads" +
-      ".v0.enums.AdvertisingChannelSubTypeEnum." +
-      "AdvertisingChannelSubType\022;\n\025tracking_ur" +
-      "l_template\030\013 \001(\0132\034.google.protobuf.Strin" +
-      "gValue\022N\n\025url_custom_parameters\030\014 \003(\0132/." +
-      "google.ads.googleads.v0.common.CustomPar" +
-      "ameter\022Y\n\031real_time_bidding_setting\030\' \001(" +
-      "\01326.google.ads.googleads.v0.common.RealT" +
-      "imeBiddingSetting\022U\n\020network_settings\030\016 " +
-      "\001(\0132;.google.ads.googleads.v0.resources." +
-      "Campaign.NetworkSettings\022S\n\rhotel_settin" +
-      "g\030  \001(\0132<.google.ads.googleads.v0.resour" +
-      "ces.Campaign.HotelSettingInfo\022g\n\032dynamic" +
-      "_search_ads_setting\030! \001(\0132C.google.ads.g" +
-      "oogleads.v0.resources.Campaign.DynamicSe" +
-      "archAdsSetting\022U\n\020shopping_setting\030$ \001(\013" +
-      "2;.google.ads.googleads.v0.resources.Cam" +
-      "paign.ShoppingSetting\0225\n\017campaign_budget" +
-      "\030\006 \001(\0132\034.google.protobuf.StringValue\022i\n\025" +
-      "bidding_strategy_type\030\026 \001(\0162J.google.ads" +
-      ".googleads.v0.enums.BiddingStrategyTypeE" +
-      "num.BiddingStrategyType\0220\n\nstart_date\030\023 " +
-      "\001(\0132\034.google.protobuf.StringValue\0224\n\016cam" +
-      "paign_group\030# \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022.\n\010end_date\030\024 \001(\0132\034.google.proto" +
-      "buf.StringValue\0226\n\020final_url_suffix\030& \001(" +
-      "\0132\034.google.protobuf.StringValue\022I\n\016frequ" +
-      "ency_caps\030( \003(\01321.google.ads.googleads.v" +
-      "0.common.FrequencyCapEntry\0228\n\020bidding_st" +
-      "rategy\030\027 \001(\0132\034.google.protobuf.StringVal" +
-      "ueH\000\022?\n\nmanual_cpc\030\030 \001(\0132).google.ads.go" +
-      "ogleads.v0.common.ManualCpcH\000\022?\n\nmanual_" +
-      "cpm\030\031 \001(\0132).google.ads.googleads.v0.comm" +
-      "on.ManualCpmH\000\022?\n\nmanual_cpv\030% \001(\0132).goo" +
-      "gle.ads.googleads.v0.common.ManualCpvH\000\022" +
-      "S\n\024maximize_conversions\030\036 \001(\01323.google.a" +
-      "ds.googleads.v0.common.MaximizeConversio" +
-      "nsH\000\022\\\n\031maximize_conversion_value\030\037 \001(\0132" +
-      "7.google.ads.googleads.v0.common.Maximiz" +
-      "eConversionValueH\000\022?\n\ntarget_cpa\030\032 \001(\0132)" +
-      ".google.ads.googleads.v0.common.TargetCp" +
-      "aH\000\022A\n\013target_roas\030\035 \001(\0132*.google.ads.go" +
-      "ogleads.v0.common.TargetRoasH\000\022C\n\014target" +
-      "_spend\030\033 \001(\0132+.google.ads.googleads.v0.c" +
-      "ommon.TargetSpendH\000\022A\n\013percent_cpc\030\" \001(\013" +
-      "2*.google.ads.googleads.v0.common.Percen" +
-      "tCpcH\000\032\205\002\n\017NetworkSettings\0228\n\024target_goo" +
-      "gle_search\030\001 \001(\0132\032.google.protobuf.BoolV" +
-      "alue\0229\n\025target_search_network\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\022:\n\026target_conten" +
-      "t_network\030\003 \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\022A\n\035target_partner_search_network\030\004 \001" +
-      "(\0132\032.google.protobuf.BoolValue\032H\n\020HotelS" +
-      "ettingInfo\0224\n\017hotel_center_id\030\001 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\032\354\001\n\027DynamicSear" +
-      "chAdsSetting\0221\n\013domain_name\030\001 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\0223\n\rlanguage_code" +
-      "\030\002 \001(\0132\034.google.protobuf.StringValue\022:\n\026" +
-      "use_supplied_urls_only\030\003 \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\022-\n\010feed_ids\030\004 \003(\0132\033.goo" +
-      "gle.protobuf.Int64Value\032\342\001\n\017ShoppingSett" +
-      "ing\0220\n\013merchant_id\030\001 \001(\0132\033.google.protob" +
-      "uf.Int64Value\0223\n\rsales_country\030\002 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\0226\n\021campaign_p" +
-      "riority\030\003 \001(\0132\033.google.protobuf.Int32Val" +
-      "ue\0220\n\014enable_local\030\004 \001(\0132\032.google.protob" +
-      "uf.BoolValueB\033\n\031campaign_bidding_strateg" +
-      "yB\322\001\n%com.google.ads.googleads.v0.resour" +
-      "cesB\rCampaignProtoP\001ZJgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v0/res" +
-      "ources;resources\242\002\003GAA\252\002!Google.Ads.Goog" +
-      "leAds.V0.Resources\312\002!Google\\Ads\\GoogleAd" +
-      "s\\V0\\Resourcesb\006proto3"
+      "_bidding_setting.proto\0326google/ads/googl" +
+      "eads/v0/common/targeting_setting.proto\032B" +
+      "google/ads/googleads/v0/enums/ad_serving" +
+      "_optimization_status.proto\032@google/ads/g" +
+      "oogleads/v0/enums/advertising_channel_su" +
+      "b_type.proto\032<google/ads/googleads/v0/en" +
+      "ums/advertising_channel_type.proto\0329goog" +
+      "le/ads/googleads/v0/enums/bidding_strate" +
+      "gy_type.proto\032<google/ads/googleads/v0/e" +
+      "nums/brand_safety_suitability.proto\032;goo" +
+      "gle/ads/googleads/v0/enums/campaign_serv" +
+      "ing_status.proto\0323google/ads/googleads/v" +
+      "0/enums/campaign_status.proto\032Bgoogle/ad" +
+      "s/googleads/v0/enums/vanity_pharma_displ" +
+      "ay_url_mode.proto\0326google/ads/googleads/" +
+      "v0/enums/vanity_pharma_text.proto\032\036googl" +
+      "e/protobuf/wrappers.proto\"\244 \n\010Campaign\022\025" +
+      "\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\003 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022*\n\004name\030\004 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\022P\n\006status\030\005 \001" +
+      "(\0162@.google.ads.googleads.v0.enums.Campa" +
+      "ignStatusEnum.CampaignStatus\022f\n\016serving_" +
+      "status\030\025 \001(\0162N.google.ads.googleads.v0.e" +
+      "nums.CampaignServingStatusEnum.CampaignS" +
+      "ervingStatus\022\202\001\n\036ad_serving_optimization" +
+      "_status\030\010 \001(\0162Z.google.ads.googleads.v0." +
+      "enums.AdServingOptimizationStatusEnum.Ad" +
+      "ServingOptimizationStatus\022r\n\030advertising" +
+      "_channel_type\030\t \001(\0162P.google.ads.googlea" +
+      "ds.v0.enums.AdvertisingChannelTypeEnum.A" +
+      "dvertisingChannelType\022|\n\034advertising_cha" +
+      "nnel_sub_type\030\n \001(\0162V.google.ads.googlea" +
+      "ds.v0.enums.AdvertisingChannelSubTypeEnu" +
+      "m.AdvertisingChannelSubType\022;\n\025tracking_" +
+      "url_template\030\013 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022N\n\025url_custom_parameters\030\014 \003(\0132" +
+      "/.google.ads.googleads.v0.common.CustomP" +
+      "arameter\022Y\n\031real_time_bidding_setting\030\' " +
+      "\001(\01326.google.ads.googleads.v0.common.Rea" +
+      "lTimeBiddingSetting\022U\n\020network_settings\030" +
+      "\016 \001(\0132;.google.ads.googleads.v0.resource" +
+      "s.Campaign.NetworkSettings\022S\n\rhotel_sett" +
+      "ing\030  \001(\0132<.google.ads.googleads.v0.reso" +
+      "urces.Campaign.HotelSettingInfo\022g\n\032dynam" +
+      "ic_search_ads_setting\030! \001(\0132C.google.ads" +
+      ".googleads.v0.resources.Campaign.Dynamic" +
+      "SearchAdsSetting\022U\n\020shopping_setting\030$ \001" +
+      "(\0132;.google.ads.googleads.v0.resources.C" +
+      "ampaign.ShoppingSetting\022K\n\021targeting_set" +
+      "ting\030+ \001(\01320.google.ads.googleads.v0.com" +
+      "mon.TargetingSetting\0225\n\017campaign_budget\030" +
+      "\006 \001(\0132\034.google.protobuf.StringValue\022i\n\025b" +
+      "idding_strategy_type\030\026 \001(\0162J.google.ads." +
+      "googleads.v0.enums.BiddingStrategyTypeEn" +
+      "um.BiddingStrategyType\0220\n\nstart_date\030\023 \001" +
+      "(\0132\034.google.protobuf.StringValue\022.\n\010end_" +
+      "date\030\024 \001(\0132\034.google.protobuf.StringValue" +
+      "\0226\n\020final_url_suffix\030& \001(\0132\034.google.prot" +
+      "obuf.StringValue\022I\n\016frequency_caps\030( \003(\013" +
+      "21.google.ads.googleads.v0.common.Freque" +
+      "ncyCapEntry\022x\n\036video_brand_safety_suitab" +
+      "ility\030* \001(\0162P.google.ads.googleads.v0.en" +
+      "ums.BrandSafetySuitabilityEnum.BrandSafe" +
+      "tySuitability\022O\n\rvanity_pharma\030, \001(\01328.g" +
+      "oogle.ads.googleads.v0.resources.Campaig" +
+      "n.VanityPharma\022a\n\026selective_optimization" +
+      "\030- \001(\0132A.google.ads.googleads.v0.resourc" +
+      "es.Campaign.SelectiveOptimization\022U\n\020tra" +
+      "cking_setting\030. \001(\0132;.google.ads.googlea" +
+      "ds.v0.resources.Campaign.TrackingSetting" +
+      "\0228\n\020bidding_strategy\030\027 \001(\0132\034.google.prot" +
+      "obuf.StringValueH\000\022?\n\nmanual_cpc\030\030 \001(\0132)" +
+      ".google.ads.googleads.v0.common.ManualCp" +
+      "cH\000\022?\n\nmanual_cpm\030\031 \001(\0132).google.ads.goo" +
+      "gleads.v0.common.ManualCpmH\000\022?\n\nmanual_c" +
+      "pv\030% \001(\0132).google.ads.googleads.v0.commo" +
+      "n.ManualCpvH\000\022S\n\024maximize_conversions\030\036 " +
+      "\001(\01323.google.ads.googleads.v0.common.Max" +
+      "imizeConversionsH\000\022\\\n\031maximize_conversio" +
+      "n_value\030\037 \001(\01327.google.ads.googleads.v0." +
+      "common.MaximizeConversionValueH\000\022?\n\ntarg" +
+      "et_cpa\030\032 \001(\0132).google.ads.googleads.v0.c" +
+      "ommon.TargetCpaH\000\022A\n\013target_roas\030\035 \001(\0132*" +
+      ".google.ads.googleads.v0.common.TargetRo" +
+      "asH\000\022C\n\014target_spend\030\033 \001(\0132+.google.ads." +
+      "googleads.v0.common.TargetSpendH\000\022A\n\013per" +
+      "cent_cpc\030\" \001(\0132*.google.ads.googleads.v0" +
+      ".common.PercentCpcH\000\022?\n\ntarget_cpm\030) \001(\013" +
+      "2).google.ads.googleads.v0.common.Target" +
+      "CpmH\000\032\205\002\n\017NetworkSettings\0228\n\024target_goog" +
+      "le_search\030\001 \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\0229\n\025target_search_network\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022:\n\026target_content" +
+      "_network\030\003 \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\022A\n\035target_partner_search_network\030\004 \001(" +
+      "\0132\032.google.protobuf.BoolValue\032H\n\020HotelSe" +
+      "ttingInfo\0224\n\017hotel_center_id\030\001 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\032\354\001\n\027DynamicSearc" +
+      "hAdsSetting\0221\n\013domain_name\030\001 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\0223\n\rlanguage_code\030" +
+      "\002 \001(\0132\034.google.protobuf.StringValue\022:\n\026u" +
+      "se_supplied_urls_only\030\003 \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\022-\n\010feed_ids\030\004 \003(\0132\033.goog" +
+      "le.protobuf.Int64Value\032\342\001\n\017ShoppingSetti" +
+      "ng\0220\n\013merchant_id\030\001 \001(\0132\033.google.protobu" +
+      "f.Int64Value\0223\n\rsales_country\030\002 \001(\0132\034.go" +
+      "ogle.protobuf.StringValue\0226\n\021campaign_pr" +
+      "iority\030\003 \001(\0132\033.google.protobuf.Int32Valu" +
+      "e\0220\n\014enable_local\030\004 \001(\0132\032.google.protobu" +
+      "f.BoolValue\032E\n\017TrackingSetting\0222\n\014tracki" +
+      "ng_url\030\001 \001(\0132\034.google.protobuf.StringVal" +
+      "ue\032\363\001\n\014VanityPharma\022\200\001\n\036vanity_pharma_di" +
+      "splay_url_mode\030\001 \001(\0162X.google.ads.google" +
+      "ads.v0.enums.VanityPharmaDisplayUrlModeE" +
+      "num.VanityPharmaDisplayUrlMode\022`\n\022vanity" +
+      "_pharma_text\030\002 \001(\0162D.google.ads.googlead" +
+      "s.v0.enums.VanityPharmaTextEnum.VanityPh" +
+      "armaText\032Q\n\025SelectiveOptimization\0228\n\022con" +
+      "version_actions\030\001 \003(\0132\034.google.protobuf." +
+      "StringValueB\033\n\031campaign_bidding_strategy" +
+      "B\372\001\n%com.google.ads.googleads.v0.resourc" +
+      "esB\rCampaignProtoP\001ZJgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v0/reso" +
+      "urces;resources\242\002\003GAA\252\002!Google.Ads.Googl" +
+      "eAds.V0.Resources\312\002!Google\\Ads\\GoogleAds" +
+      "\\V0\\Resources\352\002%Google::Ads::GoogleAds::" +
+      "V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -169,12 +213,16 @@ public final class CampaignProto {
           com.google.ads.googleads.v0.common.CustomParameterProto.getDescriptor(),
           com.google.ads.googleads.v0.common.FrequencyCapProto.getDescriptor(),
           com.google.ads.googleads.v0.common.RealTimeBiddingSettingProto.getDescriptor(),
+          com.google.ads.googleads.v0.common.TargetingSettingProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.AdServingOptimizationStatusProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.AdvertisingChannelTypeProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.BiddingStrategyTypeProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.BrandSafetySuitabilityProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.CampaignServingStatusProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.CampaignStatusProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.VanityPharmaDisplayUrlModeProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.VanityPharmaTextProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_resources_Campaign_descriptor =
@@ -182,7 +230,7 @@ public final class CampaignProto {
     internal_static_google_ads_googleads_v0_resources_Campaign_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_Campaign_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "ServingStatus", "AdServingOptimizationStatus", "AdvertisingChannelType", "AdvertisingChannelSubType", "TrackingUrlTemplate", "UrlCustomParameters", "RealTimeBiddingSetting", "NetworkSettings", "HotelSetting", "DynamicSearchAdsSetting", "ShoppingSetting", "CampaignBudget", "BiddingStrategyType", "StartDate", "CampaignGroup", "EndDate", "FinalUrlSuffix", "FrequencyCaps", "BiddingStrategy", "ManualCpc", "ManualCpm", "ManualCpv", "MaximizeConversions", "MaximizeConversionValue", "TargetCpa", "TargetRoas", "TargetSpend", "PercentCpc", "CampaignBiddingStrategy", });
+        new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "ServingStatus", "AdServingOptimizationStatus", "AdvertisingChannelType", "AdvertisingChannelSubType", "TrackingUrlTemplate", "UrlCustomParameters", "RealTimeBiddingSetting", "NetworkSettings", "HotelSetting", "DynamicSearchAdsSetting", "ShoppingSetting", "TargetingSetting", "CampaignBudget", "BiddingStrategyType", "StartDate", "EndDate", "FinalUrlSuffix", "FrequencyCaps", "VideoBrandSafetySuitability", "VanityPharma", "SelectiveOptimization", "TrackingSetting", "BiddingStrategy", "ManualCpc", "ManualCpm", "ManualCpv", "MaximizeConversions", "MaximizeConversionValue", "TargetCpa", "TargetRoas", "TargetSpend", "PercentCpc", "TargetCpm", "CampaignBiddingStrategy", });
     internal_static_google_ads_googleads_v0_resources_Campaign_NetworkSettings_descriptor =
       internal_static_google_ads_googleads_v0_resources_Campaign_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v0_resources_Campaign_NetworkSettings_fieldAccessorTable = new
@@ -207,16 +255,38 @@ public final class CampaignProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_Campaign_ShoppingSetting_descriptor,
         new java.lang.String[] { "MerchantId", "SalesCountry", "CampaignPriority", "EnableLocal", });
+    internal_static_google_ads_googleads_v0_resources_Campaign_TrackingSetting_descriptor =
+      internal_static_google_ads_googleads_v0_resources_Campaign_descriptor.getNestedTypes().get(4);
+    internal_static_google_ads_googleads_v0_resources_Campaign_TrackingSetting_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_resources_Campaign_TrackingSetting_descriptor,
+        new java.lang.String[] { "TrackingUrl", });
+    internal_static_google_ads_googleads_v0_resources_Campaign_VanityPharma_descriptor =
+      internal_static_google_ads_googleads_v0_resources_Campaign_descriptor.getNestedTypes().get(5);
+    internal_static_google_ads_googleads_v0_resources_Campaign_VanityPharma_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_resources_Campaign_VanityPharma_descriptor,
+        new java.lang.String[] { "VanityPharmaDisplayUrlMode", "VanityPharmaText", });
+    internal_static_google_ads_googleads_v0_resources_Campaign_SelectiveOptimization_descriptor =
+      internal_static_google_ads_googleads_v0_resources_Campaign_descriptor.getNestedTypes().get(6);
+    internal_static_google_ads_googleads_v0_resources_Campaign_SelectiveOptimization_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_resources_Campaign_SelectiveOptimization_descriptor,
+        new java.lang.String[] { "ConversionActions", });
     com.google.ads.googleads.v0.common.BiddingProto.getDescriptor();
     com.google.ads.googleads.v0.common.CustomParameterProto.getDescriptor();
     com.google.ads.googleads.v0.common.FrequencyCapProto.getDescriptor();
     com.google.ads.googleads.v0.common.RealTimeBiddingSettingProto.getDescriptor();
+    com.google.ads.googleads.v0.common.TargetingSettingProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdServingOptimizationStatusProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdvertisingChannelSubTypeProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdvertisingChannelTypeProto.getDescriptor();
     com.google.ads.googleads.v0.enums.BiddingStrategyTypeProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.BrandSafetySuitabilityProto.getDescriptor();
     com.google.ads.googleads.v0.enums.CampaignServingStatusProto.getDescriptor();
     com.google.ads.googleads.v0.enums.CampaignStatusProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.VanityPharmaDisplayUrlModeProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.VanityPharmaTextProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

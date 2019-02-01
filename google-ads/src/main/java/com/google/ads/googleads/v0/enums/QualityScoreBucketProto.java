@@ -33,12 +33,13 @@ public final class QualityScoreBucketProto {
       ".v0.enums\"\177\n\026QualityScoreBucketEnum\"e\n\022Q" +
       "ualityScoreBucket\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
       "KNOWN\020\001\022\021\n\rBELOW_AVERAGE\020\002\022\013\n\007AVERAGE\020\003\022" +
-      "\021\n\rABOVE_AVERAGE\020\004B\310\001\n!com.google.ads.go" +
+      "\021\n\rABOVE_AVERAGE\020\004B\354\001\n!com.google.ads.go" +
       "ogleads.v0.enumsB\027QualityScoreBucketProt" +
       "oP\001ZBgoogle.golang.org/genproto/googleap" +
       "is/ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035" +
       "Google.Ads.GoogleAds.V0.Enums\312\002\035Google\\A" +
-      "ds\\GoogleAds\\V0\\Enumsb\006proto3"
+      "ds\\GoogleAds\\V0\\Enums\352\002!Google::Ads::Goo" +
+      "gleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

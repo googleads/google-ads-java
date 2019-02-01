@@ -34,13 +34,13 @@ public final class ConversionActionCategoryProto {
       "goryEnum\"\206\001\n\030ConversionActionCategory\022\017\n" +
       "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007DEFAULT\020\002" +
       "\022\r\n\tPAGE_VIEW\020\003\022\014\n\010PURCHASE\020\004\022\n\n\006SIGNUP\020" +
-      "\005\022\010\n\004LEAD\020\006\022\014\n\010DOWNLOAD\020\007B\316\001\n!com.google" +
+      "\005\022\010\n\004LEAD\020\006\022\014\n\010DOWNLOAD\020\007B\362\001\n!com.google" +
       ".ads.googleads.v0.enumsB\035ConversionActio" +
       "nCategoryProtoP\001ZBgoogle.golang.org/genp" +
       "roto/googleapis/ads/googleads/v0/enums;e" +
       "nums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enu" +
-      "ms\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006prot" +
-      "o3"
+      "ms\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Goo" +
+      "gle::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

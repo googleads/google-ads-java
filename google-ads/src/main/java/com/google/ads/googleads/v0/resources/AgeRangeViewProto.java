@@ -31,12 +31,13 @@ public final class AgeRangeViewProto {
       "\n6google/ads/googleads/v0/resources/age_" +
       "range_view.proto\022!google.ads.googleads.v" +
       "0.resources\"%\n\014AgeRangeView\022\025\n\rresource_" +
-      "name\030\001 \001(\tB\326\001\n%com.google.ads.googleads." +
+      "name\030\001 \001(\tB\376\001\n%com.google.ads.googleads." +
       "v0.resourcesB\021AgeRangeViewProtoP\001ZJgoogl" +
       "e.golang.org/genproto/googleapis/ads/goo" +
       "gleads/v0/resources;resources\242\002\003GAA\252\002!Go" +
       "ogle.Ads.GoogleAds.V0.Resources\312\002!Google" +
-      "\\Ads\\GoogleAds\\V0\\Resourcesb\006proto3"
+      "\\Ads\\GoogleAds\\V0\\Resources\352\002%Google::Ad" +
+      "s::GoogleAds::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

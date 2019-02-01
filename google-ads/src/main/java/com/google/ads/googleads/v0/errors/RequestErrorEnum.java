@@ -233,6 +233,14 @@ private static final long serialVersionUID = 0L;
      * <code>LOGIN_CUSTOMER_ID_PARAMETER_MISSING = 20;</code>
      */
     LOGIN_CUSTOMER_ID_PARAMETER_MISSING(20),
+    /**
+     * <pre>
+     * page_token is set in the validate only request
+     * </pre>
+     *
+     * <code>VALIDATE_ONLY_REQUEST_HAS_PAGE_TOKEN = 21;</code>
+     */
+    VALIDATE_ONLY_REQUEST_HAS_PAGE_TOKEN(21),
     UNRECOGNIZED(-1),
     ;
 
@@ -383,6 +391,14 @@ private static final long serialVersionUID = 0L;
      * <code>LOGIN_CUSTOMER_ID_PARAMETER_MISSING = 20;</code>
      */
     public static final int LOGIN_CUSTOMER_ID_PARAMETER_MISSING_VALUE = 20;
+    /**
+     * <pre>
+     * page_token is set in the validate only request
+     * </pre>
+     *
+     * <code>VALIDATE_ONLY_REQUEST_HAS_PAGE_TOKEN = 21;</code>
+     */
+    public static final int VALIDATE_ONLY_REQUEST_HAS_PAGE_TOKEN_VALUE = 21;
 
 
     public final int getNumber() {
@@ -421,6 +437,7 @@ private static final long serialVersionUID = 0L;
         case 18: return INVALID_ENUM_VALUE;
         case 19: return DEVELOPER_TOKEN_PARAMETER_MISSING;
         case 20: return LOGIN_CUSTOMER_ID_PARAMETER_MISSING;
+        case 21: return VALIDATE_ONLY_REQUEST_HAS_PAGE_TOKEN;
         default: return null;
       }
     }

@@ -33,12 +33,13 @@ public final class ValueProto {
       "\005Value\022\027\n\rboolean_value\030\001 \001(\010H\000\022\025\n\013int64" +
       "_value\030\002 \001(\003H\000\022\025\n\013float_value\030\003 \001(\002H\000\022\026\n" +
       "\014double_value\030\004 \001(\001H\000\022\026\n\014string_value\030\005 " +
-      "\001(\tH\000B\007\n\005valueB\300\001\n\"com.google.ads.google" +
+      "\001(\tH\000B\007\n\005valueB\345\001\n\"com.google.ads.google" +
       "ads.v0.commonB\nValueProtoP\001ZDgoogle.gola" +
       "ng.org/genproto/googleapis/ads/googleads" +
       "/v0/common;common\242\002\003GAA\252\002\036Google.Ads.Goo" +
       "gleAds.V0.Common\312\002\036Google\\Ads\\GoogleAds\\" +
-      "V0\\Commonb\006proto3"
+      "V0\\Common\352\002\"Google::Ads::GoogleAds::V0::" +
+      "Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

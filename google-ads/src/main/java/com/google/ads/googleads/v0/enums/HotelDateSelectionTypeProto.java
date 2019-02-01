@@ -33,12 +33,13 @@ public final class HotelDateSelectionTypeProto {
       "leads.v0.enums\"~\n\032HotelDateSelectionType" +
       "Enum\"`\n\026HotelDateSelectionType\022\017\n\013UNSPEC" +
       "IFIED\020\000\022\013\n\007UNKNOWN\020\001\022\025\n\021DEFAULT_SELECTIO" +
-      "N\0202\022\021\n\rUSER_SELECTED\0203B\314\001\n!com.google.ad" +
+      "N\0202\022\021\n\rUSER_SELECTED\0203B\360\001\n!com.google.ad" +
       "s.googleads.v0.enumsB\033HotelDateSelection" +
       "TypeProtoP\001ZBgoogle.golang.org/genproto/" +
       "googleapis/ads/googleads/v0/enums;enums\242" +
       "\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312\002\035" +
-      "Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Google::" +
+      "Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

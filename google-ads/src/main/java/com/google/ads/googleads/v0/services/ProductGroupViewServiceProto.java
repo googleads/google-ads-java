@@ -39,13 +39,14 @@ public final class ProductGroupViewServiceProto {
       "v0.services.GetProductGroupViewRequest\0323" +
       ".google.ads.googleads.v0.resources.Produ" +
       "ctGroupView\";\202\323\344\223\0025\0223/v0/{resource_name=" +
-      "customers/*/productGroupViews/*}B\334\001\n$com" +
+      "customers/*/productGroupViews/*}B\203\002\n$com" +
       ".google.ads.googleads.v0.servicesB\034Produ" +
       "ctGroupViewServiceProtoP\001ZHgoogle.golang" +
       ".org/genproto/googleapis/ads/googleads/v" +
       "0/services;services\242\002\003GAA\252\002 Google.Ads.G" +
       "oogleAds.V0.Services\312\002 Google\\Ads\\Google" +
-      "Ads\\V0\\Servicesb\006proto3"
+      "Ads\\V0\\Services\352\002$Google::Ads::GoogleAds" +
+      "::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

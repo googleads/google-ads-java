@@ -33,12 +33,13 @@ public final class CustomParameterProto {
       ".common\032\036google/protobuf/wrappers.proto\"" +
       "i\n\017CustomParameter\022)\n\003key\030\001 \001(\0132\034.google" +
       ".protobuf.StringValue\022+\n\005value\030\002 \001(\0132\034.g" +
-      "oogle.protobuf.StringValueB\312\001\n\"com.googl" +
+      "oogle.protobuf.StringValueB\357\001\n\"com.googl" +
       "e.ads.googleads.v0.commonB\024CustomParamet" +
       "erProtoP\001ZDgoogle.golang.org/genproto/go" +
       "ogleapis/ads/googleads/v0/common;common\242" +
       "\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Common\312\002" +
-      "\036Google\\Ads\\GoogleAds\\V0\\Commonb\006proto3"
+      "\036Google\\Ads\\GoogleAds\\V0\\Common\352\002\"Google" +
+      "::Ads::GoogleAds::V0::Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -35,12 +35,13 @@ public final class LanguageConstantProto {
       "name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.google.protobuf" +
       ".Int64Value\022*\n\004code\030\003 \001(\0132\034.google.proto" +
       "buf.StringValue\022*\n\004name\030\004 \001(\0132\034.google.p" +
-      "rotobuf.StringValueB\332\001\n%com.google.ads.g" +
+      "rotobuf.StringValueB\202\002\n%com.google.ads.g" +
       "oogleads.v0.resourcesB\025LanguageConstantP" +
       "rotoP\001ZJgoogle.golang.org/genproto/googl" +
       "eapis/ads/googleads/v0/resources;resourc" +
       "es\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Resou" +
       "rces\312\002!Google\\Ads\\GoogleAds\\V0\\Resources" +
+      "\352\002%Google::Ads::GoogleAds::V0::Resources" +
       "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

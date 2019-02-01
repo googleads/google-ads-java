@@ -33,12 +33,13 @@ public final class KeywordPlanIdeaErrorProto {
       "eads.v0.errors\"x\n\030KeywordPlanIdeaErrorEn" +
       "um\"\\\n\024KeywordPlanIdeaError\022\017\n\013UNSPECIFIE" +
       "D\020\000\022\013\n\007UNKNOWN\020\001\022\023\n\017URL_CRAWL_ERROR\020\002\022\021\n" +
-      "\rINVALID_VALUE\020\003B\317\001\n\"com.google.ads.goog" +
+      "\rINVALID_VALUE\020\003B\364\001\n\"com.google.ads.goog" +
       "leads.v0.errorsB\031KeywordPlanIdeaErrorPro" +
       "toP\001ZDgoogle.golang.org/genproto/googlea" +
       "pis/ads/googleads/v0/errors;errors\242\002\003GAA" +
       "\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Goog" +
-      "le\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "le\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::Ads" +
+      "::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

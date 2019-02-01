@@ -21,8 +21,8 @@ private static final long serialVersionUID = 0L;
   }
   private DismissRecommendationRequest() {
     customerId_ = "";
-    partialFailure_ = false;
     operations_ = java.util.Collections.emptyList();
+    partialFailure_ = false;
   }
 
   @java.lang.Override
@@ -61,9 +61,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               operations_ = new java.util.ArrayList<com.google.ads.googleads.v0.services.DismissRecommendationRequest.DismissRecommendationOperation>();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000002;
             }
             operations_.add(
                 input.readMessage(com.google.ads.googleads.v0.services.DismissRecommendationRequest.DismissRecommendationOperation.parser(), extensionRegistry));
@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         operations_ = java.util.Collections.unmodifiableList(operations_);
       }
       this.unknownFields = unknownFields.build();
@@ -741,22 +741,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PARTIAL_FAILURE_FIELD_NUMBER = 2;
-  private boolean partialFailure_;
-  /**
-   * <pre>
-   * If true, successful operations will be carried out and invalid
-   * operations will return errors. If false, operations will be carried in a
-   * single transaction if and only if they are all valid.
-   * Default is false.
-   * </pre>
-   *
-   * <code>bool partial_failure = 2;</code>
-   */
-  public boolean getPartialFailure() {
-    return partialFailure_;
-  }
-
   public static final int OPERATIONS_FIELD_NUMBER = 3;
   private java.util.List<com.google.ads.googleads.v0.services.DismissRecommendationRequest.DismissRecommendationOperation> operations_;
   /**
@@ -822,6 +806,22 @@ private static final long serialVersionUID = 0L;
     return operations_.get(index);
   }
 
+  public static final int PARTIAL_FAILURE_FIELD_NUMBER = 2;
+  private boolean partialFailure_;
+  /**
+   * <pre>
+   * If true, successful operations will be carried out and invalid
+   * operations will return errors. If false, operations will be carried in a
+   * single transaction if and only if they are all valid.
+   * Default is false.
+   * </pre>
+   *
+   * <code>bool partial_failure = 2;</code>
+   */
+  public boolean getPartialFailure() {
+    return partialFailure_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -883,10 +883,10 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && getCustomerId()
         .equals(other.getCustomerId());
-    result = result && (getPartialFailure()
-        == other.getPartialFailure());
     result = result && getOperationsList()
         .equals(other.getOperationsList());
+    result = result && (getPartialFailure()
+        == other.getPartialFailure());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -900,13 +900,13 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + CUSTOMER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCustomerId().hashCode();
-    hash = (37 * hash) + PARTIAL_FAILURE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getPartialFailure());
     if (getOperationsCount() > 0) {
       hash = (37 * hash) + OPERATIONS_FIELD_NUMBER;
       hash = (53 * hash) + getOperationsList().hashCode();
     }
+    hash = (37 * hash) + PARTIAL_FAILURE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPartialFailure());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1047,14 +1047,14 @@ private static final long serialVersionUID = 0L;
       super.clear();
       customerId_ = "";
 
-      partialFailure_ = false;
-
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         operationsBuilder_.clear();
       }
+      partialFailure_ = false;
+
       return this;
     }
 
@@ -1084,16 +1084,16 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       result.customerId_ = customerId_;
-      result.partialFailure_ = partialFailure_;
       if (operationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.operations_ = operations_;
       } else {
         result.operations_ = operationsBuilder_.build();
       }
+      result.partialFailure_ = partialFailure_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1147,14 +1147,11 @@ private static final long serialVersionUID = 0L;
         customerId_ = other.customerId_;
         onChanged();
       }
-      if (other.getPartialFailure() != false) {
-        setPartialFailure(other.getPartialFailure());
-      }
       if (operationsBuilder_ == null) {
         if (!other.operations_.isEmpty()) {
           if (operations_.isEmpty()) {
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureOperationsIsMutable();
             operations_.addAll(other.operations_);
@@ -1167,7 +1164,7 @@ private static final long serialVersionUID = 0L;
             operationsBuilder_.dispose();
             operationsBuilder_ = null;
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
             operationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getOperationsFieldBuilder() : null;
@@ -1175,6 +1172,9 @@ private static final long serialVersionUID = 0L;
             operationsBuilder_.addAllMessages(other.operations_);
           }
         }
+      }
+      if (other.getPartialFailure() != false) {
+        setPartialFailure(other.getPartialFailure());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1295,59 +1295,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean partialFailure_ ;
-    /**
-     * <pre>
-     * If true, successful operations will be carried out and invalid
-     * operations will return errors. If false, operations will be carried in a
-     * single transaction if and only if they are all valid.
-     * Default is false.
-     * </pre>
-     *
-     * <code>bool partial_failure = 2;</code>
-     */
-    public boolean getPartialFailure() {
-      return partialFailure_;
-    }
-    /**
-     * <pre>
-     * If true, successful operations will be carried out and invalid
-     * operations will return errors. If false, operations will be carried in a
-     * single transaction if and only if they are all valid.
-     * Default is false.
-     * </pre>
-     *
-     * <code>bool partial_failure = 2;</code>
-     */
-    public Builder setPartialFailure(boolean value) {
-      
-      partialFailure_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * If true, successful operations will be carried out and invalid
-     * operations will return errors. If false, operations will be carried in a
-     * single transaction if and only if they are all valid.
-     * Default is false.
-     * </pre>
-     *
-     * <code>bool partial_failure = 2;</code>
-     */
-    public Builder clearPartialFailure() {
-      
-      partialFailure_ = false;
-      onChanged();
-      return this;
-    }
-
     private java.util.List<com.google.ads.googleads.v0.services.DismissRecommendationRequest.DismissRecommendationOperation> operations_ =
       java.util.Collections.emptyList();
     private void ensureOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
         operations_ = new java.util.ArrayList<com.google.ads.googleads.v0.services.DismissRecommendationRequest.DismissRecommendationOperation>(operations_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1563,7 +1516,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearOperations() {
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         operationsBuilder_.clear();
@@ -1682,12 +1635,59 @@ private static final long serialVersionUID = 0L;
         operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v0.services.DismissRecommendationRequest.DismissRecommendationOperation, com.google.ads.googleads.v0.services.DismissRecommendationRequest.DismissRecommendationOperation.Builder, com.google.ads.googleads.v0.services.DismissRecommendationRequest.DismissRecommendationOperationOrBuilder>(
                 operations_,
-                ((bitField0_ & 0x00000004) == 0x00000004),
+                ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
                 isClean());
         operations_ = null;
       }
       return operationsBuilder_;
+    }
+
+    private boolean partialFailure_ ;
+    /**
+     * <pre>
+     * If true, successful operations will be carried out and invalid
+     * operations will return errors. If false, operations will be carried in a
+     * single transaction if and only if they are all valid.
+     * Default is false.
+     * </pre>
+     *
+     * <code>bool partial_failure = 2;</code>
+     */
+    public boolean getPartialFailure() {
+      return partialFailure_;
+    }
+    /**
+     * <pre>
+     * If true, successful operations will be carried out and invalid
+     * operations will return errors. If false, operations will be carried in a
+     * single transaction if and only if they are all valid.
+     * Default is false.
+     * </pre>
+     *
+     * <code>bool partial_failure = 2;</code>
+     */
+    public Builder setPartialFailure(boolean value) {
+      
+      partialFailure_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If true, successful operations will be carried out and invalid
+     * operations will return errors. If false, operations will be carried in a
+     * single transaction if and only if they are all valid.
+     * Default is false.
+     * </pre>
+     *
+     * <code>bool partial_failure = 2;</code>
+     */
+    public Builder clearPartialFailure() {
+      
+      partialFailure_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

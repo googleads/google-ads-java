@@ -36,13 +36,14 @@ public final class KeywordPlanKeywordErrorProto {
       "EYWORD_MATCH_TYPE\020\002\022\025\n\021DUPLICATE_KEYWORD" +
       "\020\003\022\031\n\025KEYWORD_TEXT_TOO_LONG\020\004\022\035\n\031KEYWORD" +
       "_HAS_INVALID_CHARS\020\005\022\036\n\032KEYWORD_HAS_TOO_" +
-      "MANY_WORDS\020\006\022\030\n\024INVALID_KEYWORD_TEXT\020\007B\322" +
+      "MANY_WORDS\020\006\022\030\n\024INVALID_KEYWORD_TEXT\020\007B\367" +
       "\001\n\"com.google.ads.googleads.v0.errorsB\034K" +
       "eywordPlanKeywordErrorProtoP\001ZDgoogle.go" +
       "lang.org/genproto/googleapis/ads/googlea" +
       "ds/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.G" +
       "oogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAd" +
-      "s\\V0\\Errorsb\006proto3"
+      "s\\V0\\Errors\352\002\"Google::Ads::GoogleAds::V0" +
+      "::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

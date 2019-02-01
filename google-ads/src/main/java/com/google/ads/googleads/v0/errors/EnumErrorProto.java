@@ -32,12 +32,13 @@ public final class EnumErrorProto {
       "ror.proto\022\036google.ads.googleads.v0.error" +
       "s\"X\n\rEnumErrorEnum\"G\n\tEnumError\022\017\n\013UNSPE" +
       "CIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\034\n\030ENUM_VALUE_NOT_" +
-      "PERMITTED\020\003B\304\001\n\"com.google.ads.googleads" +
+      "PERMITTED\020\003B\351\001\n\"com.google.ads.googleads" +
       ".v0.errorsB\016EnumErrorProtoP\001ZDgoogle.gol" +
       "ang.org/genproto/googleapis/ads/googlead" +
       "s/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.Go" +
       "ogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAds" +
-      "\\V0\\Errorsb\006proto3"
+      "\\V0\\Errors\352\002\"Google::Ads::GoogleAds::V0:" +
+      ":Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

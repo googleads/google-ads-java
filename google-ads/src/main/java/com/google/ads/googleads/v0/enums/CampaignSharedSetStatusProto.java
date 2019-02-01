@@ -33,12 +33,13 @@ public final class CampaignSharedSetStatusProto {
       "gleads.v0.enums\"p\n\033CampaignSharedSetStat" +
       "usEnum\"Q\n\027CampaignSharedSetStatus\022\017\n\013UNS" +
       "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007ENABLED\020\002\022\013\n\007" +
-      "REMOVED\020\003B\315\001\n!com.google.ads.googleads.v" +
+      "REMOVED\020\003B\361\001\n!com.google.ads.googleads.v" +
       "0.enumsB\034CampaignSharedSetStatusProtoP\001Z" +
       "Bgoogle.golang.org/genproto/googleapis/a" +
       "ds/googleads/v0/enums;enums\242\002\003GAA\252\002\035Goog" +
       "le.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\G" +
-      "oogleAds\\V0\\Enumsb\006proto3"
+      "oogleAds\\V0\\Enums\352\002!Google::Ads::GoogleA" +
+      "ds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

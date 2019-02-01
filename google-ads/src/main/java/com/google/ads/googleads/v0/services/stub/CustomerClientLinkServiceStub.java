@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,8 @@ package com.google.ads.googleads.v0.services.stub;
 
 import com.google.ads.googleads.v0.resources.CustomerClientLink;
 import com.google.ads.googleads.v0.services.GetCustomerClientLinkRequest;
+import com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest;
+import com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
@@ -35,6 +37,11 @@ public abstract class CustomerClientLinkServiceStub implements BackgroundResourc
   public UnaryCallable<GetCustomerClientLinkRequest, CustomerClientLink>
       getCustomerClientLinkCallable() {
     throw new UnsupportedOperationException("Not implemented: getCustomerClientLinkCallable()");
+  }
+
+  public UnaryCallable<MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>
+      mutateCustomerClientLinkCallable() {
+    throw new UnsupportedOperationException("Not implemented: mutateCustomerClientLinkCallable()");
   }
 
   @Override

@@ -35,12 +35,13 @@ public final class CustomerClientProto {
       "\030\001 \001(\t\0225\n\017client_customer\030\003 \001(\0132\034.google" +
       ".protobuf.StringValue\022*\n\006hidden\030\004 \001(\0132\032." +
       "google.protobuf.BoolValue\022*\n\005level\030\005 \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\330\001\n%com.go" +
+      "2\033.google.protobuf.Int64ValueB\200\002\n%com.go" +
       "ogle.ads.googleads.v0.resourcesB\023Custome" +
       "rClientProtoP\001ZJgoogle.golang.org/genpro" +
       "to/googleapis/ads/googleads/v0/resources" +
       ";resources\242\002\003GAA\252\002!Google.Ads.GoogleAds." +
       "V0.Resources\312\002!Google\\Ads\\GoogleAds\\V0\\R" +
+      "esources\352\002%Google::Ads::GoogleAds::V0::R" +
       "esourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

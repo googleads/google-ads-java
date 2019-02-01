@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue clientCustomer_;
   /**
    * <pre>
-   * The client customer linked to this customer. Read only.
+   * The client customer linked to this customer.
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -191,7 +191,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The client customer linked to this customer. Read only.
+   * The client customer linked to this customer.
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -201,7 +201,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The client customer linked to this customer. Read only.
+   * The client customer linked to this customer.
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -824,7 +824,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> clientCustomerBuilder_;
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The client customer linked to this customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -834,7 +834,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The client customer linked to this customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -848,7 +848,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The client customer linked to this customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -868,7 +868,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The client customer linked to this customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -886,7 +886,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The client customer linked to this customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -908,7 +908,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The client customer linked to this customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -926,7 +926,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The client customer linked to this customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -938,7 +938,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The client customer linked to this customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -953,7 +953,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The client customer linked to this customer.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>

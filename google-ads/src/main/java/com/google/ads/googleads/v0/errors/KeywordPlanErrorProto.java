@@ -41,13 +41,13 @@ public final class KeywordPlanErrorProto {
       "WORD_PLAN_NOT_ENABLED\020\n\022\032\n\026KEYWORD_PLAN_" +
       "NOT_FOUND\020\013\022\017\n\013MISSING_BID\020\r\022\033\n\027MISSING_" +
       "FORECAST_PERIOD\020\016\022\037\n\033INVALID_FORECAST_DA" +
-      "TE_RANGE\020\017\022\020\n\014INVALID_NAME\020\020B\313\001\n\"com.goo" +
+      "TE_RANGE\020\017\022\020\n\014INVALID_NAME\020\020B\360\001\n\"com.goo" +
       "gle.ads.googleads.v0.errorsB\025KeywordPlan" +
       "ErrorProtoP\001ZDgoogle.golang.org/genproto" +
       "/googleapis/ads/googleads/v0/errors;erro" +
       "rs\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Error" +
-      "s\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006prot" +
-      "o3"
+      "s\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors\352\002\"Goo" +
+      "gle::Ads::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

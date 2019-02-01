@@ -40,13 +40,14 @@ public final class HotelPerformanceViewServiceProto {
       "PerformanceViewRequest\0327.google.ads.goog" +
       "leads.v0.resources.HotelPerformanceView\"" +
       "<\202\323\344\223\0026\0224/v0/{resource_name=customers/*/" +
-      "hotelPerformanceView}B\340\001\n$com.google.ads" +
+      "hotelPerformanceView}B\207\002\n$com.google.ads" +
       ".googleads.v0.servicesB HotelPerformance" +
       "ViewServiceProtoP\001ZHgoogle.golang.org/ge" +
       "nproto/googleapis/ads/googleads/v0/servi" +
       "ces;services\242\002\003GAA\252\002 Google.Ads.GoogleAd" +
       "s.V0.Services\312\002 Google\\Ads\\GoogleAds\\V0\\" +
-      "Servicesb\006proto3"
+      "Services\352\002$Google::Ads::GoogleAds::V0::S" +
+      "ervicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

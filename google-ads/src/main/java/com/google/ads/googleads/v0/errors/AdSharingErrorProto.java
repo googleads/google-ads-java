@@ -34,12 +34,13 @@ public final class AdSharingErrorProto {
       "ringError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
       " \n\034AD_GROUP_ALREADY_CONTAINS_AD\020\002\022\"\n\036INC" +
       "OMPATIBLE_AD_UNDER_AD_GROUP\020\003\022\034\n\030CANNOT_" +
-      "SHARE_INACTIVE_AD\020\004B\311\001\n\"com.google.ads.g" +
+      "SHARE_INACTIVE_AD\020\004B\356\001\n\"com.google.ads.g" +
       "oogleads.v0.errorsB\023AdSharingErrorProtoP" +
       "\001ZDgoogle.golang.org/genproto/googleapis" +
       "/ads/googleads/v0/errors;errors\242\002\003GAA\252\002\036" +
       "Google.Ads.GoogleAds.V0.Errors\312\002\036Google\\" +
-      "Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "Ads\\GoogleAds\\V0\\Errors\352\002\"Google::Ads::G" +
+      "oogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

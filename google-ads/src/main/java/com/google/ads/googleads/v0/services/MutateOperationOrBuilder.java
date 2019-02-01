@@ -184,31 +184,6 @@ public interface MutateOperationOrBuilder extends
 
   /**
    * <pre>
-   * A campaign group mutate operation.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-   */
-  boolean hasCampaignGroupOperation();
-  /**
-   * <pre>
-   * A campaign group mutate operation.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-   */
-  com.google.ads.googleads.v0.services.CampaignGroupOperation getCampaignGroupOperation();
-  /**
-   * <pre>
-   * A campaign group mutate operation.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.services.CampaignGroupOperation campaign_group_operation = 9;</code>
-   */
-  com.google.ads.googleads.v0.services.CampaignGroupOperationOrBuilder getCampaignGroupOperationOrBuilder();
-
-  /**
-   * <pre>
    * A campaign mutate operation.
    * </pre>
    *

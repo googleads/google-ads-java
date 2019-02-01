@@ -34,13 +34,14 @@ public final class UserListCrmDataSourceTypeProto {
       "ourceTypeEnum\"\205\001\n\031UserListCrmDataSourceT" +
       "ype\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013FIR" +
       "ST_PARTY\020\002\022\035\n\031THIRD_PARTY_CREDIT_BUREAU\020" +
-      "\003\022\032\n\026THIRD_PARTY_VOTER_FILE\020\004B\317\001\n!com.go" +
+      "\003\022\032\n\026THIRD_PARTY_VOTER_FILE\020\004B\363\001\n!com.go" +
       "ogle.ads.googleads.v0.enumsB\036UserListCrm" +
       "DataSourceTypeProtoP\001ZBgoogle.golang.org" +
       "/genproto/googleapis/ads/googleads/v0/en" +
       "ums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V" +
-      "0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb" +
-      "\006proto3"
+      "0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352" +
+      "\002!Google::Ads::GoogleAds::V0::Enumsb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -77,4 +77,13 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * <code>int32 page_size = 4;</code>
    */
   int getPageSize();
+
+  /**
+   * <pre>
+   * If true, the request is validated but not executed.
+   * </pre>
+   *
+   * <code>bool validate_only = 5;</code>
+   */
+  boolean getValidateOnly();
 }

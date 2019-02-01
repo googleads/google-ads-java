@@ -31,12 +31,13 @@ public final class HotelGroupViewProto {
       "\n8google/ads/googleads/v0/resources/hote" +
       "l_group_view.proto\022!google.ads.googleads" +
       ".v0.resources\"\'\n\016HotelGroupView\022\025\n\rresou" +
-      "rce_name\030\001 \001(\tB\330\001\n%com.google.ads.google" +
+      "rce_name\030\001 \001(\tB\200\002\n%com.google.ads.google" +
       "ads.v0.resourcesB\023HotelGroupViewProtoP\001Z" +
       "Jgoogle.golang.org/genproto/googleapis/a" +
       "ds/googleads/v0/resources;resources\242\002\003GA" +
       "A\252\002!Google.Ads.GoogleAds.V0.Resources\312\002!" +
-      "Google\\Ads\\GoogleAds\\V0\\Resourcesb\006proto" +
+      "Google\\Ads\\GoogleAds\\V0\\Resources\352\002%Goog" +
+      "le::Ads::GoogleAds::V0::Resourcesb\006proto" +
       "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

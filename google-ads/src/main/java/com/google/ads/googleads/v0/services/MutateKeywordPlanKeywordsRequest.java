@@ -22,6 +22,8 @@ private static final long serialVersionUID = 0L;
   private MutateKeywordPlanKeywordsRequest() {
     customerId_ = "";
     operations_ = java.util.Collections.emptyList();
+    partialFailure_ = false;
+    validateOnly_ = false;
   }
 
   @java.lang.Override
@@ -61,6 +63,16 @@ private static final long serialVersionUID = 0L;
             }
             operations_.add(
                 input.readMessage(com.google.ads.googleads.v0.services.KeywordPlanKeywordOperation.parser(), extensionRegistry));
+            break;
+          }
+          case 24: {
+
+            partialFailure_ = input.readBool();
+            break;
+          }
+          case 32: {
+
+            validateOnly_ = input.readBool();
             break;
           }
           default: {
@@ -196,6 +208,36 @@ private static final long serialVersionUID = 0L;
     return operations_.get(index);
   }
 
+  public static final int PARTIAL_FAILURE_FIELD_NUMBER = 3;
+  private boolean partialFailure_;
+  /**
+   * <pre>
+   * If true, successful operations will be carried out and invalid
+   * operations will return errors. If false, all operations will be carried
+   * out in one transaction if and only if they are all valid.
+   * Default is false.
+   * </pre>
+   *
+   * <code>bool partial_failure = 3;</code>
+   */
+  public boolean getPartialFailure() {
+    return partialFailure_;
+  }
+
+  public static final int VALIDATE_ONLY_FIELD_NUMBER = 4;
+  private boolean validateOnly_;
+  /**
+   * <pre>
+   * If true, the request is validated but not executed. Only errors are
+   * returned, not results.
+   * </pre>
+   *
+   * <code>bool validate_only = 4;</code>
+   */
+  public boolean getValidateOnly() {
+    return validateOnly_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -216,6 +258,12 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < operations_.size(); i++) {
       output.writeMessage(2, operations_.get(i));
     }
+    if (partialFailure_ != false) {
+      output.writeBool(3, partialFailure_);
+    }
+    if (validateOnly_ != false) {
+      output.writeBool(4, validateOnly_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -231,6 +279,14 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < operations_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, operations_.get(i));
+    }
+    if (partialFailure_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, partialFailure_);
+    }
+    if (validateOnly_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, validateOnly_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -252,6 +308,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCustomerId());
     result = result && getOperationsList()
         .equals(other.getOperationsList());
+    result = result && (getPartialFailure()
+        == other.getPartialFailure());
+    result = result && (getValidateOnly()
+        == other.getValidateOnly());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -269,6 +329,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + OPERATIONS_FIELD_NUMBER;
       hash = (53 * hash) + getOperationsList().hashCode();
     }
+    hash = (37 * hash) + PARTIAL_FAILURE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPartialFailure());
+    hash = (37 * hash) + VALIDATE_ONLY_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getValidateOnly());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -415,6 +481,10 @@ private static final long serialVersionUID = 0L;
       } else {
         operationsBuilder_.clear();
       }
+      partialFailure_ = false;
+
+      validateOnly_ = false;
+
       return this;
     }
 
@@ -453,6 +523,8 @@ private static final long serialVersionUID = 0L;
       } else {
         result.operations_ = operationsBuilder_.build();
       }
+      result.partialFailure_ = partialFailure_;
+      result.validateOnly_ = validateOnly_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -531,6 +603,12 @@ private static final long serialVersionUID = 0L;
             operationsBuilder_.addAllMessages(other.operations_);
           }
         }
+      }
+      if (other.getPartialFailure() != false) {
+        setPartialFailure(other.getPartialFailure());
+      }
+      if (other.getValidateOnly() != false) {
+        setValidateOnly(other.getValidateOnly());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -961,6 +1039,94 @@ private static final long serialVersionUID = 0L;
         operations_ = null;
       }
       return operationsBuilder_;
+    }
+
+    private boolean partialFailure_ ;
+    /**
+     * <pre>
+     * If true, successful operations will be carried out and invalid
+     * operations will return errors. If false, all operations will be carried
+     * out in one transaction if and only if they are all valid.
+     * Default is false.
+     * </pre>
+     *
+     * <code>bool partial_failure = 3;</code>
+     */
+    public boolean getPartialFailure() {
+      return partialFailure_;
+    }
+    /**
+     * <pre>
+     * If true, successful operations will be carried out and invalid
+     * operations will return errors. If false, all operations will be carried
+     * out in one transaction if and only if they are all valid.
+     * Default is false.
+     * </pre>
+     *
+     * <code>bool partial_failure = 3;</code>
+     */
+    public Builder setPartialFailure(boolean value) {
+      
+      partialFailure_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If true, successful operations will be carried out and invalid
+     * operations will return errors. If false, all operations will be carried
+     * out in one transaction if and only if they are all valid.
+     * Default is false.
+     * </pre>
+     *
+     * <code>bool partial_failure = 3;</code>
+     */
+    public Builder clearPartialFailure() {
+      
+      partialFailure_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean validateOnly_ ;
+    /**
+     * <pre>
+     * If true, the request is validated but not executed. Only errors are
+     * returned, not results.
+     * </pre>
+     *
+     * <code>bool validate_only = 4;</code>
+     */
+    public boolean getValidateOnly() {
+      return validateOnly_;
+    }
+    /**
+     * <pre>
+     * If true, the request is validated but not executed. Only errors are
+     * returned, not results.
+     * </pre>
+     *
+     * <code>bool validate_only = 4;</code>
+     */
+    public Builder setValidateOnly(boolean value) {
+      
+      validateOnly_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If true, the request is validated but not executed. Only errors are
+     * returned, not results.
+     * </pre>
+     *
+     * <code>bool validate_only = 4;</code>
+     */
+    public Builder clearValidateOnly() {
+      
+      validateOnly_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

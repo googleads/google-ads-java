@@ -34,12 +34,13 @@ public final class KeywordPlanForecastIntervalProto {
       "astIntervalEnum\"l\n\033KeywordPlanForecastIn" +
       "terval\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\r\n\t" +
       "NEXT_WEEK\020\003\022\016\n\nNEXT_MONTH\020\004\022\020\n\014NEXT_QUAR" +
-      "TER\020\005B\321\001\n!com.google.ads.googleads.v0.en" +
+      "TER\020\005B\365\001\n!com.google.ads.googleads.v0.en" +
       "umsB KeywordPlanForecastIntervalProtoP\001Z" +
       "Bgoogle.golang.org/genproto/googleapis/a" +
       "ds/googleads/v0/enums;enums\242\002\003GAA\252\002\035Goog" +
       "le.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\G" +
-      "oogleAds\\V0\\Enumsb\006proto3"
+      "oogleAds\\V0\\Enums\352\002!Google::Ads::GoogleA" +
+      "ds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

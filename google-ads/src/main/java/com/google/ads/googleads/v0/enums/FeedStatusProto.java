@@ -32,12 +32,13 @@ public final class FeedStatusProto {
       "tus.proto\022\035google.ads.googleads.v0.enums" +
       "\"V\n\016FeedStatusEnum\"D\n\nFeedStatus\022\017\n\013UNSP" +
       "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007ENABLED\020\002\022\013\n\007R" +
-      "EMOVED\020\003B\300\001\n!com.google.ads.googleads.v0" +
+      "EMOVED\020\003B\344\001\n!com.google.ads.googleads.v0" +
       ".enumsB\017FeedStatusProtoP\001ZBgoogle.golang" +
       ".org/genproto/googleapis/ads/googleads/v" +
       "0/enums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleA" +
       "ds.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\En" +
-      "umsb\006proto3"
+      "ums\352\002!Google::Ads::GoogleAds::V0::Enumsb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

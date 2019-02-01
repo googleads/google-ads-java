@@ -147,6 +147,34 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 82: {
+            com.google.ads.googleads.v0.resources.MediaAudio.Builder subBuilder = null;
+            if (mediatypeCase_ == 10) {
+              subBuilder = ((com.google.ads.googleads.v0.resources.MediaAudio) mediatype_).toBuilder();
+            }
+            mediatype_ =
+                input.readMessage(com.google.ads.googleads.v0.resources.MediaAudio.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.resources.MediaAudio) mediatype_);
+              mediatype_ = subBuilder.buildPartial();
+            }
+            mediatypeCase_ = 10;
+            break;
+          }
+          case 90: {
+            com.google.ads.googleads.v0.resources.MediaVideo.Builder subBuilder = null;
+            if (mediatypeCase_ == 11) {
+              subBuilder = ((com.google.ads.googleads.v0.resources.MediaVideo) mediatype_).toBuilder();
+            }
+            mediatype_ =
+                input.readMessage(com.google.ads.googleads.v0.resources.MediaVideo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.resources.MediaVideo) mediatype_);
+              mediatype_ = subBuilder.buildPartial();
+            }
+            mediatypeCase_ = 11;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -185,6 +213,8 @@ private static final long serialVersionUID = 0L;
       implements com.google.protobuf.Internal.EnumLite {
     IMAGE(3),
     MEDIA_BUNDLE(4),
+    AUDIO(10),
+    VIDEO(11),
     MEDIATYPE_NOT_SET(0);
     private final int value;
     private MediatypeCase(int value) {
@@ -202,6 +232,8 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 3: return IMAGE;
         case 4: return MEDIA_BUNDLE;
+        case 10: return AUDIO;
+        case 11: return VIDEO;
         case 0: return MEDIATYPE_NOT_SET;
         default: return null;
       }
@@ -527,6 +559,82 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.resources.MediaBundle.getDefaultInstance();
   }
 
+  public static final int AUDIO_FIELD_NUMBER = 10;
+  /**
+   * <pre>
+   * Encapsulates an Audio.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+   */
+  public boolean hasAudio() {
+    return mediatypeCase_ == 10;
+  }
+  /**
+   * <pre>
+   * Encapsulates an Audio.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+   */
+  public com.google.ads.googleads.v0.resources.MediaAudio getAudio() {
+    if (mediatypeCase_ == 10) {
+       return (com.google.ads.googleads.v0.resources.MediaAudio) mediatype_;
+    }
+    return com.google.ads.googleads.v0.resources.MediaAudio.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Encapsulates an Audio.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+   */
+  public com.google.ads.googleads.v0.resources.MediaAudioOrBuilder getAudioOrBuilder() {
+    if (mediatypeCase_ == 10) {
+       return (com.google.ads.googleads.v0.resources.MediaAudio) mediatype_;
+    }
+    return com.google.ads.googleads.v0.resources.MediaAudio.getDefaultInstance();
+  }
+
+  public static final int VIDEO_FIELD_NUMBER = 11;
+  /**
+   * <pre>
+   * Encapsulates a Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+   */
+  public boolean hasVideo() {
+    return mediatypeCase_ == 11;
+  }
+  /**
+   * <pre>
+   * Encapsulates a Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+   */
+  public com.google.ads.googleads.v0.resources.MediaVideo getVideo() {
+    if (mediatypeCase_ == 11) {
+       return (com.google.ads.googleads.v0.resources.MediaVideo) mediatype_;
+    }
+    return com.google.ads.googleads.v0.resources.MediaVideo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Encapsulates a Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+   */
+  public com.google.ads.googleads.v0.resources.MediaVideoOrBuilder getVideoOrBuilder() {
+    if (mediatypeCase_ == 11) {
+       return (com.google.ads.googleads.v0.resources.MediaVideo) mediatype_;
+    }
+    return com.google.ads.googleads.v0.resources.MediaVideo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -567,6 +675,12 @@ private static final long serialVersionUID = 0L;
     }
     if (fileSize_ != null) {
       output.writeMessage(9, getFileSize());
+    }
+    if (mediatypeCase_ == 10) {
+      output.writeMessage(10, (com.google.ads.googleads.v0.resources.MediaAudio) mediatype_);
+    }
+    if (mediatypeCase_ == 11) {
+      output.writeMessage(11, (com.google.ads.googleads.v0.resources.MediaVideo) mediatype_);
     }
     unknownFields.writeTo(output);
   }
@@ -611,6 +725,14 @@ private static final long serialVersionUID = 0L;
     if (fileSize_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getFileSize());
+    }
+    if (mediatypeCase_ == 10) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, (com.google.ads.googleads.v0.resources.MediaAudio) mediatype_);
+    }
+    if (mediatypeCase_ == 11) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, (com.google.ads.googleads.v0.resources.MediaVideo) mediatype_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -664,6 +786,14 @@ private static final long serialVersionUID = 0L;
         result = result && getMediaBundle()
             .equals(other.getMediaBundle());
         break;
+      case 10:
+        result = result && getAudio()
+            .equals(other.getAudio());
+        break;
+      case 11:
+        result = result && getVideo()
+            .equals(other.getVideo());
+        break;
       case 0:
       default:
     }
@@ -708,6 +838,14 @@ private static final long serialVersionUID = 0L;
       case 4:
         hash = (37 * hash) + MEDIA_BUNDLE_FIELD_NUMBER;
         hash = (53 * hash) + getMediaBundle().hashCode();
+        break;
+      case 10:
+        hash = (37 * hash) + AUDIO_FIELD_NUMBER;
+        hash = (53 * hash) + getAudio().hashCode();
+        break;
+      case 11:
+        hash = (37 * hash) + VIDEO_FIELD_NUMBER;
+        hash = (53 * hash) + getVideo().hashCode();
         break;
       case 0:
       default:
@@ -944,6 +1082,20 @@ private static final long serialVersionUID = 0L;
           result.mediatype_ = mediaBundleBuilder_.build();
         }
       }
+      if (mediatypeCase_ == 10) {
+        if (audioBuilder_ == null) {
+          result.mediatype_ = mediatype_;
+        } else {
+          result.mediatype_ = audioBuilder_.build();
+        }
+      }
+      if (mediatypeCase_ == 11) {
+        if (videoBuilder_ == null) {
+          result.mediatype_ = mediatype_;
+        } else {
+          result.mediatype_ = videoBuilder_.build();
+        }
+      }
       result.mediatypeCase_ = mediatypeCase_;
       onBuilt();
       return result;
@@ -1022,6 +1174,14 @@ private static final long serialVersionUID = 0L;
         }
         case MEDIA_BUNDLE: {
           mergeMediaBundle(other.getMediaBundle());
+          break;
+        }
+        case AUDIO: {
+          mergeAudio(other.getAudio());
+          break;
+        }
+        case VIDEO: {
+          mergeVideo(other.getVideo());
           break;
         }
         case MEDIATYPE_NOT_SET: {
@@ -2273,6 +2433,350 @@ private static final long serialVersionUID = 0L;
       mediatypeCase_ = 4;
       onChanged();;
       return mediaBundleBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.MediaAudio, com.google.ads.googleads.v0.resources.MediaAudio.Builder, com.google.ads.googleads.v0.resources.MediaAudioOrBuilder> audioBuilder_;
+    /**
+     * <pre>
+     * Encapsulates an Audio.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+     */
+    public boolean hasAudio() {
+      return mediatypeCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Encapsulates an Audio.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MediaAudio getAudio() {
+      if (audioBuilder_ == null) {
+        if (mediatypeCase_ == 10) {
+          return (com.google.ads.googleads.v0.resources.MediaAudio) mediatype_;
+        }
+        return com.google.ads.googleads.v0.resources.MediaAudio.getDefaultInstance();
+      } else {
+        if (mediatypeCase_ == 10) {
+          return audioBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.resources.MediaAudio.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Encapsulates an Audio.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+     */
+    public Builder setAudio(com.google.ads.googleads.v0.resources.MediaAudio value) {
+      if (audioBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        mediatype_ = value;
+        onChanged();
+      } else {
+        audioBuilder_.setMessage(value);
+      }
+      mediatypeCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * Encapsulates an Audio.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+     */
+    public Builder setAudio(
+        com.google.ads.googleads.v0.resources.MediaAudio.Builder builderForValue) {
+      if (audioBuilder_ == null) {
+        mediatype_ = builderForValue.build();
+        onChanged();
+      } else {
+        audioBuilder_.setMessage(builderForValue.build());
+      }
+      mediatypeCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * Encapsulates an Audio.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+     */
+    public Builder mergeAudio(com.google.ads.googleads.v0.resources.MediaAudio value) {
+      if (audioBuilder_ == null) {
+        if (mediatypeCase_ == 10 &&
+            mediatype_ != com.google.ads.googleads.v0.resources.MediaAudio.getDefaultInstance()) {
+          mediatype_ = com.google.ads.googleads.v0.resources.MediaAudio.newBuilder((com.google.ads.googleads.v0.resources.MediaAudio) mediatype_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          mediatype_ = value;
+        }
+        onChanged();
+      } else {
+        if (mediatypeCase_ == 10) {
+          audioBuilder_.mergeFrom(value);
+        }
+        audioBuilder_.setMessage(value);
+      }
+      mediatypeCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * Encapsulates an Audio.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+     */
+    public Builder clearAudio() {
+      if (audioBuilder_ == null) {
+        if (mediatypeCase_ == 10) {
+          mediatypeCase_ = 0;
+          mediatype_ = null;
+          onChanged();
+        }
+      } else {
+        if (mediatypeCase_ == 10) {
+          mediatypeCase_ = 0;
+          mediatype_ = null;
+        }
+        audioBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Encapsulates an Audio.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MediaAudio.Builder getAudioBuilder() {
+      return getAudioFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Encapsulates an Audio.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MediaAudioOrBuilder getAudioOrBuilder() {
+      if ((mediatypeCase_ == 10) && (audioBuilder_ != null)) {
+        return audioBuilder_.getMessageOrBuilder();
+      } else {
+        if (mediatypeCase_ == 10) {
+          return (com.google.ads.googleads.v0.resources.MediaAudio) mediatype_;
+        }
+        return com.google.ads.googleads.v0.resources.MediaAudio.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Encapsulates an Audio.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.MediaAudio, com.google.ads.googleads.v0.resources.MediaAudio.Builder, com.google.ads.googleads.v0.resources.MediaAudioOrBuilder> 
+        getAudioFieldBuilder() {
+      if (audioBuilder_ == null) {
+        if (!(mediatypeCase_ == 10)) {
+          mediatype_ = com.google.ads.googleads.v0.resources.MediaAudio.getDefaultInstance();
+        }
+        audioBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.MediaAudio, com.google.ads.googleads.v0.resources.MediaAudio.Builder, com.google.ads.googleads.v0.resources.MediaAudioOrBuilder>(
+                (com.google.ads.googleads.v0.resources.MediaAudio) mediatype_,
+                getParentForChildren(),
+                isClean());
+        mediatype_ = null;
+      }
+      mediatypeCase_ = 10;
+      onChanged();;
+      return audioBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.MediaVideo, com.google.ads.googleads.v0.resources.MediaVideo.Builder, com.google.ads.googleads.v0.resources.MediaVideoOrBuilder> videoBuilder_;
+    /**
+     * <pre>
+     * Encapsulates a Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+     */
+    public boolean hasVideo() {
+      return mediatypeCase_ == 11;
+    }
+    /**
+     * <pre>
+     * Encapsulates a Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MediaVideo getVideo() {
+      if (videoBuilder_ == null) {
+        if (mediatypeCase_ == 11) {
+          return (com.google.ads.googleads.v0.resources.MediaVideo) mediatype_;
+        }
+        return com.google.ads.googleads.v0.resources.MediaVideo.getDefaultInstance();
+      } else {
+        if (mediatypeCase_ == 11) {
+          return videoBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.resources.MediaVideo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Encapsulates a Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+     */
+    public Builder setVideo(com.google.ads.googleads.v0.resources.MediaVideo value) {
+      if (videoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        mediatype_ = value;
+        onChanged();
+      } else {
+        videoBuilder_.setMessage(value);
+      }
+      mediatypeCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * Encapsulates a Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+     */
+    public Builder setVideo(
+        com.google.ads.googleads.v0.resources.MediaVideo.Builder builderForValue) {
+      if (videoBuilder_ == null) {
+        mediatype_ = builderForValue.build();
+        onChanged();
+      } else {
+        videoBuilder_.setMessage(builderForValue.build());
+      }
+      mediatypeCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * Encapsulates a Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+     */
+    public Builder mergeVideo(com.google.ads.googleads.v0.resources.MediaVideo value) {
+      if (videoBuilder_ == null) {
+        if (mediatypeCase_ == 11 &&
+            mediatype_ != com.google.ads.googleads.v0.resources.MediaVideo.getDefaultInstance()) {
+          mediatype_ = com.google.ads.googleads.v0.resources.MediaVideo.newBuilder((com.google.ads.googleads.v0.resources.MediaVideo) mediatype_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          mediatype_ = value;
+        }
+        onChanged();
+      } else {
+        if (mediatypeCase_ == 11) {
+          videoBuilder_.mergeFrom(value);
+        }
+        videoBuilder_.setMessage(value);
+      }
+      mediatypeCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * Encapsulates a Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+     */
+    public Builder clearVideo() {
+      if (videoBuilder_ == null) {
+        if (mediatypeCase_ == 11) {
+          mediatypeCase_ = 0;
+          mediatype_ = null;
+          onChanged();
+        }
+      } else {
+        if (mediatypeCase_ == 11) {
+          mediatypeCase_ = 0;
+          mediatype_ = null;
+        }
+        videoBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Encapsulates a Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MediaVideo.Builder getVideoBuilder() {
+      return getVideoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Encapsulates a Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MediaVideoOrBuilder getVideoOrBuilder() {
+      if ((mediatypeCase_ == 11) && (videoBuilder_ != null)) {
+        return videoBuilder_.getMessageOrBuilder();
+      } else {
+        if (mediatypeCase_ == 11) {
+          return (com.google.ads.googleads.v0.resources.MediaVideo) mediatype_;
+        }
+        return com.google.ads.googleads.v0.resources.MediaVideo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Encapsulates a Video.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.MediaVideo, com.google.ads.googleads.v0.resources.MediaVideo.Builder, com.google.ads.googleads.v0.resources.MediaVideoOrBuilder> 
+        getVideoFieldBuilder() {
+      if (videoBuilder_ == null) {
+        if (!(mediatypeCase_ == 11)) {
+          mediatype_ = com.google.ads.googleads.v0.resources.MediaVideo.getDefaultInstance();
+        }
+        videoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.MediaVideo, com.google.ads.googleads.v0.resources.MediaVideo.Builder, com.google.ads.googleads.v0.resources.MediaVideoOrBuilder>(
+                (com.google.ads.googleads.v0.resources.MediaVideo) mediatype_,
+                getParentForChildren(),
+                isClean());
+        mediatype_ = null;
+      }
+      mediatypeCase_ = 11;
+      onChanged();;
+      return videoBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

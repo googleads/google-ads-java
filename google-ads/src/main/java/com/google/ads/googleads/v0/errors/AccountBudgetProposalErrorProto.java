@@ -51,13 +51,14 @@ public final class AccountBudgetProposalErrorProto {
       "PDATE_IS_NO_OP\020\023\022#\n\037END_TIME_MUST_FOLLOW" +
       "_START_TIME\020\024\0225\n1BUDGET_DATE_RANGE_INCOM" +
       "PATIBLE_WITH_BILLING_SETUP\020\025\022\022\n\016NOT_AUTH" +
-      "ORIZED\020\026\022\031\n\025INVALID_BILLING_SETUP\020\027B\325\001\n\"" +
+      "ORIZED\020\026\022\031\n\025INVALID_BILLING_SETUP\020\027B\372\001\n\"" +
       "com.google.ads.googleads.v0.errorsB\037Acco" +
       "untBudgetProposalErrorProtoP\001ZDgoogle.go" +
       "lang.org/genproto/googleapis/ads/googlea" +
       "ds/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.G" +
       "oogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAd" +
-      "s\\V0\\Errorsb\006proto3"
+      "s\\V0\\Errors\352\002\"Google::Ads::GoogleAds::V0" +
+      "::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

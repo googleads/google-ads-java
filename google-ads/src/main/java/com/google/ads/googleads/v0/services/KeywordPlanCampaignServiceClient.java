@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -227,7 +227,7 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final KeywordPlanCampaign getKeywordPlanCampaign(GetKeywordPlanCampaignRequest request) {
+  public final KeywordPlanCampaign getKeywordPlanCampaign(GetKeywordPlanCampaignRequest request) {
     return getKeywordPlanCampaignCallable().call(request);
   }
 
@@ -252,6 +252,47 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
   public final UnaryCallable<GetKeywordPlanCampaignRequest, KeywordPlanCampaign>
       getKeywordPlanCampaignCallable() {
     return stub.getKeywordPlanCampaignCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates, updates, or removes Keyword Plan campaigns. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;KeywordPlanCampaignOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   boolean partialFailure = false;
+   *   boolean validateOnly = false;
+   *   MutateKeywordPlanCampaignsResponse response = keywordPlanCampaignServiceClient.mutateKeywordPlanCampaigns(customerId, operations, partialFailure, validateOnly);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer whose Keyword Plan campaigns are being modified.
+   * @param operations The list of operations to perform on individual Keyword Plan campaigns.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, all operations will be carried out in one transaction if and
+   *     only if they are all valid. Default is false.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateKeywordPlanCampaignsResponse mutateKeywordPlanCampaigns(
+      String customerId,
+      List<KeywordPlanCampaignOperation> operations,
+      boolean partialFailure,
+      boolean validateOnly) {
+
+    MutateKeywordPlanCampaignsRequest request =
+        MutateKeywordPlanCampaignsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllOperations(operations)
+            .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
+            .build();
+    return mutateKeywordPlanCampaigns(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

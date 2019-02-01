@@ -79,6 +79,16 @@ public final class AdTypeInfosProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_common_ImageAdInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_VideoTrueViewInStreamAdInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_VideoTrueViewInStreamAdInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_VideoAdInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_VideoAdInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -187,12 +197,20 @@ public final class AdTypeInfosProto {
       "otobuf.StringValue\0222\n\nmedia_file\030\001 \001(\0132\034" +
       ".google.protobuf.StringValueH\000\022+\n\004data\030\002" +
       " \001(\0132\033.google.protobuf.BytesValueH\000B\007\n\005i" +
-      "mageB\306\001\n\"com.google.ads.googleads.v0.com" +
-      "monB\020AdTypeInfosProtoP\001ZDgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v0/" +
-      "common;common\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
-      "ds.V0.Common\312\002\036Google\\Ads\\GoogleAds\\V0\\C" +
-      "ommonb\006proto3"
+      "mage\"\217\001\n\033VideoTrueViewInStreamAdInfo\0229\n\023" +
+      "action_button_label\030\001 \001(\0132\034.google.proto" +
+      "buf.StringValue\0225\n\017action_headline\030\002 \001(\013" +
+      "2\034.google.protobuf.StringValue\"\233\001\n\013Video" +
+      "AdInfo\0220\n\nmedia_file\030\001 \001(\0132\034.google.prot" +
+      "obuf.StringValue\022P\n\tin_stream\030\002 \001(\0132;.go" +
+      "ogle.ads.googleads.v0.common.VideoTrueVi" +
+      "ewInStreamAdInfoH\000B\010\n\006formatB\353\001\n\"com.goo" +
+      "gle.ads.googleads.v0.commonB\020AdTypeInfos" +
+      "ProtoP\001ZDgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v0/common;common\242\002\003" +
+      "GAA\252\002\036Google.Ads.GoogleAds.V0.Common\312\002\036G" +
+      "oogle\\Ads\\GoogleAds\\V0\\Common\352\002\"Google::" +
+      "Ads::GoogleAds::V0::Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -288,6 +306,18 @@ public final class AdTypeInfosProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_ImageAdInfo_descriptor,
         new java.lang.String[] { "PixelWidth", "PixelHeight", "ImageUrl", "PreviewPixelWidth", "PreviewPixelHeight", "PreviewImageUrl", "MimeType", "Name", "MediaFile", "Data", "Image", });
+    internal_static_google_ads_googleads_v0_common_VideoTrueViewInStreamAdInfo_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_google_ads_googleads_v0_common_VideoTrueViewInStreamAdInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_VideoTrueViewInStreamAdInfo_descriptor,
+        new java.lang.String[] { "ActionButtonLabel", "ActionHeadline", });
+    internal_static_google_ads_googleads_v0_common_VideoAdInfo_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_google_ads_googleads_v0_common_VideoAdInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_VideoAdInfo_descriptor,
+        new java.lang.String[] { "MediaFile", "InStream", "Format", });
     com.google.ads.googleads.v0.enums.CallConversionReportingStateProto.getDescriptor();
     com.google.ads.googleads.v0.enums.DisplayAdFormatSettingProto.getDescriptor();
     com.google.ads.googleads.v0.enums.MimeTypeProto.getDescriptor();

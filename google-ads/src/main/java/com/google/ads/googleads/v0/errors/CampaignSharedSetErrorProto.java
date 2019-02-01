@@ -33,12 +33,13 @@ public final class CampaignSharedSetErrorProto {
       "gleads.v0.errors\"r\n\032CampaignSharedSetErr" +
       "orEnum\"T\n\026CampaignSharedSetError\022\017\n\013UNSP" +
       "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\034\n\030SHARED_SET_ACC" +
-      "ESS_DENIED\020\002B\321\001\n\"com.google.ads.googlead" +
+      "ESS_DENIED\020\002B\366\001\n\"com.google.ads.googlead" +
       "s.v0.errorsB\033CampaignSharedSetErrorProto" +
       "P\001ZDgoogle.golang.org/genproto/googleapi" +
       "s/ads/googleads/v0/errors;errors\242\002\003GAA\252\002" +
       "\036Google.Ads.GoogleAds.V0.Errors\312\002\036Google" +
-      "\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::Ads::" +
+      "GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -33,13 +33,14 @@ public final class GoogleAdsFieldCategoryProto {
       "leads.v0.enums\"\212\001\n\032GoogleAdsFieldCategor" +
       "yEnum\"l\n\026GoogleAdsFieldCategory\022\017\n\013UNSPE" +
       "CIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010RESOURCE\020\002\022\r\n\tA" +
-      "TTRIBUTE\020\003\022\013\n\007SEGMENT\020\005\022\n\n\006METRIC\020\006B\314\001\n!" +
+      "TTRIBUTE\020\003\022\013\n\007SEGMENT\020\005\022\n\n\006METRIC\020\006B\360\001\n!" +
       "com.google.ads.googleads.v0.enumsB\033Googl" +
       "eAdsFieldCategoryProtoP\001ZBgoogle.golang." +
       "org/genproto/googleapis/ads/googleads/v0" +
       "/enums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAd" +
       "s.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enu" +
-      "msb\006proto3"
+      "ms\352\002!Google::Ads::GoogleAds::V0::Enumsb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -33,12 +33,13 @@ public final class BiddingSourceProto {
       "ums\"}\n\021BiddingSourceEnum\"h\n\rBiddingSourc" +
       "e\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007ADGRO" +
       "UP\020\002\022\r\n\tCRITERION\020\003\022\035\n\031CAMPAIGN_BIDDING_" +
-      "STRATEGY\020\005B\303\001\n!com.google.ads.googleads." +
+      "STRATEGY\020\005B\347\001\n!com.google.ads.googleads." +
       "v0.enumsB\022BiddingSourceProtoP\001ZBgoogle.g" +
       "olang.org/genproto/googleapis/ads/google" +
       "ads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.Go" +
       "ogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\" +
-      "V0\\Enumsb\006proto3"
+      "V0\\Enums\352\002!Google::Ads::GoogleAds::V0::E" +
+      "numsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

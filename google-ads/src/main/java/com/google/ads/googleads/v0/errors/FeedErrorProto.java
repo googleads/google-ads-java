@@ -48,12 +48,13 @@ public final class FeedErrorProto {
       "\n\023TOO_MANY_ATTRIBUTES\020\021\022\034\n\030INVALID_BUSIN" +
       "ESS_ACCOUNT\020\022\0223\n/BUSINESS_ACCOUNT_CANNOT" +
       "_ACCESS_LOCATION_ACCOUNT\020\023\022\036\n\032INVALID_AF" +
-      "FILIATE_CHAIN_ID\020\024B\304\001\n\"com.google.ads.go" +
+      "FILIATE_CHAIN_ID\020\024B\351\001\n\"com.google.ads.go" +
       "ogleads.v0.errorsB\016FeedErrorProtoP\001ZDgoo" +
       "gle.golang.org/genproto/googleapis/ads/g" +
       "oogleads/v0/errors;errors\242\002\003GAA\252\002\036Google" +
       ".Ads.GoogleAds.V0.Errors\312\002\036Google\\Ads\\Go" +
-      "ogleAds\\V0\\Errorsb\006proto3"
+      "ogleAds\\V0\\Errors\352\002\"Google::Ads::GoogleA" +
+      "ds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

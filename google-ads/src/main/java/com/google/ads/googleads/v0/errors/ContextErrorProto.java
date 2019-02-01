@@ -34,12 +34,13 @@ public final class ContextErrorProto {
       "or\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\'\n#OPER" +
       "ATION_NOT_PERMITTED_FOR_CONTEXT\020\002\0220\n,OPE" +
       "RATION_NOT_PERMITTED_FOR_REMOVED_RESOURC" +
-      "E\020\003B\307\001\n\"com.google.ads.googleads.v0.erro" +
+      "E\020\003B\354\001\n\"com.google.ads.googleads.v0.erro" +
       "rsB\021ContextErrorProtoP\001ZDgoogle.golang.o" +
       "rg/genproto/googleapis/ads/googleads/v0/" +
       "errors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
       "ds.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\E" +
-      "rrorsb\006proto3"
+      "rrors\352\002\"Google::Ads::GoogleAds::V0::Erro" +
+      "rsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

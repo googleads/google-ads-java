@@ -38,13 +38,14 @@ public final class GenderViewServiceProto {
       "ogleads.v0.services.GetGenderViewRequest" +
       "\032-.google.ads.googleads.v0.resources.Gen" +
       "derView\"5\202\323\344\223\002/\022-/v0/{resource_name=cust" +
-      "omers/*/genderViews/*}B\326\001\n$com.google.ad" +
+      "omers/*/genderViews/*}B\375\001\n$com.google.ad" +
       "s.googleads.v0.servicesB\026GenderViewServi" +
       "ceProtoP\001ZHgoogle.golang.org/genproto/go" +
       "ogleapis/ads/googleads/v0/services;servi" +
       "ces\242\002\003GAA\252\002 Google.Ads.GoogleAds.V0.Serv" +
-      "ices\312\002 Google\\Ads\\GoogleAds\\V0\\Servicesb" +
-      "\006proto3"
+      "ices\312\002 Google\\Ads\\GoogleAds\\V0\\Services\352" +
+      "\002$Google::Ads::GoogleAds::V0::Servicesb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

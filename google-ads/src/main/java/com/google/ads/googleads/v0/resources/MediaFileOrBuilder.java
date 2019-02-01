@@ -219,5 +219,55 @@ public interface MediaFileOrBuilder extends
    */
   com.google.ads.googleads.v0.resources.MediaBundleOrBuilder getMediaBundleOrBuilder();
 
+  /**
+   * <pre>
+   * Encapsulates an Audio.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+   */
+  boolean hasAudio();
+  /**
+   * <pre>
+   * Encapsulates an Audio.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+   */
+  com.google.ads.googleads.v0.resources.MediaAudio getAudio();
+  /**
+   * <pre>
+   * Encapsulates an Audio.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaAudio audio = 10;</code>
+   */
+  com.google.ads.googleads.v0.resources.MediaAudioOrBuilder getAudioOrBuilder();
+
+  /**
+   * <pre>
+   * Encapsulates a Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+   */
+  boolean hasVideo();
+  /**
+   * <pre>
+   * Encapsulates a Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+   */
+  com.google.ads.googleads.v0.resources.MediaVideo getVideo();
+  /**
+   * <pre>
+   * Encapsulates a Video.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaVideo video = 11;</code>
+   */
+  com.google.ads.googleads.v0.resources.MediaVideoOrBuilder getVideoOrBuilder();
+
   public com.google.ads.googleads.v0.resources.MediaFile.MediatypeCase getMediatypeCase();
 }

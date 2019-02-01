@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     resourceName_ = "";
     status_ = 0;
     deliveryMethod_ = 0;
+    period_ = 0;
   }
 
   @java.lang.Override
@@ -141,6 +142,90 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(totalAmountMicros_);
               totalAmountMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 90: {
+            com.google.protobuf.BoolValue.Builder subBuilder = null;
+            if (hasRecommendedBudget_ != null) {
+              subBuilder = hasRecommendedBudget_.toBuilder();
+            }
+            hasRecommendedBudget_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hasRecommendedBudget_);
+              hasRecommendedBudget_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 98: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (recommendedBudgetAmountMicros_ != null) {
+              subBuilder = recommendedBudgetAmountMicros_.toBuilder();
+            }
+            recommendedBudgetAmountMicros_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(recommendedBudgetAmountMicros_);
+              recommendedBudgetAmountMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 104: {
+            int rawValue = input.readEnum();
+
+            period_ = rawValue;
+            break;
+          }
+          case 114: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (recommendedBudgetEstimatedChangeWeeklyClicks_ != null) {
+              subBuilder = recommendedBudgetEstimatedChangeWeeklyClicks_.toBuilder();
+            }
+            recommendedBudgetEstimatedChangeWeeklyClicks_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(recommendedBudgetEstimatedChangeWeeklyClicks_);
+              recommendedBudgetEstimatedChangeWeeklyClicks_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 122: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (recommendedBudgetEstimatedChangeWeeklyCostMicros_ != null) {
+              subBuilder = recommendedBudgetEstimatedChangeWeeklyCostMicros_.toBuilder();
+            }
+            recommendedBudgetEstimatedChangeWeeklyCostMicros_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(recommendedBudgetEstimatedChangeWeeklyCostMicros_);
+              recommendedBudgetEstimatedChangeWeeklyCostMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 130: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (recommendedBudgetEstimatedChangeWeeklyInteractions_ != null) {
+              subBuilder = recommendedBudgetEstimatedChangeWeeklyInteractions_.toBuilder();
+            }
+            recommendedBudgetEstimatedChangeWeeklyInteractions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(recommendedBudgetEstimatedChangeWeeklyInteractions_);
+              recommendedBudgetEstimatedChangeWeeklyInteractions_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 138: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (recommendedBudgetEstimatedChangeWeeklyViews_ != null) {
+              subBuilder = recommendedBudgetEstimatedChangeWeeklyViews_.toBuilder();
+            }
+            recommendedBudgetEstimatedChangeWeeklyViews_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(recommendedBudgetEstimatedChangeWeeklyViews_);
+              recommendedBudgetEstimatedChangeWeeklyViews_ = subBuilder.buildPartial();
             }
 
             break;
@@ -455,8 +540,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue explicitlyShared_;
   /**
    * <pre>
-   * Whether the budget is explicitly shared. This field is set to false by
-   * default.
+   * Specifies whether the budget is explicitly shared. Defaults to true if
+   * unspecified in a create operation.
    * If true, the budget was created with the purpose of sharing
    * across one or more campaigns.
    * If false, the budget was created with the intention of only being used
@@ -476,8 +561,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Whether the budget is explicitly shared. This field is set to false by
-   * default.
+   * Specifies whether the budget is explicitly shared. Defaults to true if
+   * unspecified in a create operation.
    * If true, the budget was created with the purpose of sharing
    * across one or more campaigns.
    * If false, the budget was created with the intention of only being used
@@ -497,8 +582,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Whether the budget is explicitly shared. This field is set to false by
-   * default.
+   * Specifies whether the budget is explicitly shared. Defaults to true if
+   * unspecified in a create operation.
    * If true, the budget was created with the purpose of sharing
    * across one or more campaigns.
    * If false, the budget was created with the intention of only being used
@@ -553,6 +638,262 @@ private static final long serialVersionUID = 0L;
     return getReferenceCount();
   }
 
+  public static final int HAS_RECOMMENDED_BUDGET_FIELD_NUMBER = 11;
+  private com.google.protobuf.BoolValue hasRecommendedBudget_;
+  /**
+   * <pre>
+   * Indicates whether there is a recommended budget for this campaign budget.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+   */
+  public boolean hasHasRecommendedBudget() {
+    return hasRecommendedBudget_ != null;
+  }
+  /**
+   * <pre>
+   * Indicates whether there is a recommended budget for this campaign budget.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+   */
+  public com.google.protobuf.BoolValue getHasRecommendedBudget() {
+    return hasRecommendedBudget_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasRecommendedBudget_;
+  }
+  /**
+   * <pre>
+   * Indicates whether there is a recommended budget for this campaign budget.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+   */
+  public com.google.protobuf.BoolValueOrBuilder getHasRecommendedBudgetOrBuilder() {
+    return getHasRecommendedBudget();
+  }
+
+  public static final int RECOMMENDED_BUDGET_AMOUNT_MICROS_FIELD_NUMBER = 12;
+  private com.google.protobuf.Int64Value recommendedBudgetAmountMicros_;
+  /**
+   * <pre>
+   * The recommended budget amount. If no recommendation is available, this will
+   * be set to the budget amount.
+   * Amount is specified in micros, where one million is equivalent to one
+   * currency unit.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+   */
+  public boolean hasRecommendedBudgetAmountMicros() {
+    return recommendedBudgetAmountMicros_ != null;
+  }
+  /**
+   * <pre>
+   * The recommended budget amount. If no recommendation is available, this will
+   * be set to the budget amount.
+   * Amount is specified in micros, where one million is equivalent to one
+   * currency unit.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+   */
+  public com.google.protobuf.Int64Value getRecommendedBudgetAmountMicros() {
+    return recommendedBudgetAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetAmountMicros_;
+  }
+  /**
+   * <pre>
+   * The recommended budget amount. If no recommendation is available, this will
+   * be set to the budget amount.
+   * Amount is specified in micros, where one million is equivalent to one
+   * currency unit.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetAmountMicrosOrBuilder() {
+    return getRecommendedBudgetAmountMicros();
+  }
+
+  public static final int PERIOD_FIELD_NUMBER = 13;
+  private int period_;
+  /**
+   * <pre>
+   * Period over which to spend the budget. Defaults to DAILY if not specified.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+   */
+  public int getPeriodValue() {
+    return period_;
+  }
+  /**
+   * <pre>
+   * Period over which to spend the budget. Defaults to DAILY if not specified.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+   */
+  public com.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod getPeriod() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod result = com.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod.valueOf(period_);
+    return result == null ? com.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod.UNRECOGNIZED : result;
+  }
+
+  public static final int RECOMMENDED_BUDGET_ESTIMATED_CHANGE_WEEKLY_CLICKS_FIELD_NUMBER = 14;
+  private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyClicks_;
+  /**
+   * <pre>
+   * The estimated change in weekly clicks if the recommended budget is applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+   */
+  public boolean hasRecommendedBudgetEstimatedChangeWeeklyClicks() {
+    return recommendedBudgetEstimatedChangeWeeklyClicks_ != null;
+  }
+  /**
+   * <pre>
+   * The estimated change in weekly clicks if the recommended budget is applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+   */
+  public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyClicks() {
+    return recommendedBudgetEstimatedChangeWeeklyClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyClicks_;
+  }
+  /**
+   * <pre>
+   * The estimated change in weekly clicks if the recommended budget is applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyClicksOrBuilder() {
+    return getRecommendedBudgetEstimatedChangeWeeklyClicks();
+  }
+
+  public static final int RECOMMENDED_BUDGET_ESTIMATED_CHANGE_WEEKLY_COST_MICROS_FIELD_NUMBER = 15;
+  private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyCostMicros_;
+  /**
+   * <pre>
+   * The estimated change in weekly cost in micros if the recommended budget is
+   * applied. One million is equivalent to one currency unit.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+   */
+  public boolean hasRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
+    return recommendedBudgetEstimatedChangeWeeklyCostMicros_ != null;
+  }
+  /**
+   * <pre>
+   * The estimated change in weekly cost in micros if the recommended budget is
+   * applied. One million is equivalent to one currency unit.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+   */
+  public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
+    return recommendedBudgetEstimatedChangeWeeklyCostMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyCostMicros_;
+  }
+  /**
+   * <pre>
+   * The estimated change in weekly cost in micros if the recommended budget is
+   * applied. One million is equivalent to one currency unit.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyCostMicrosOrBuilder() {
+    return getRecommendedBudgetEstimatedChangeWeeklyCostMicros();
+  }
+
+  public static final int RECOMMENDED_BUDGET_ESTIMATED_CHANGE_WEEKLY_INTERACTIONS_FIELD_NUMBER = 16;
+  private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyInteractions_;
+  /**
+   * <pre>
+   * The estimated change in weekly interactions if the recommended budget is
+   * applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+   */
+  public boolean hasRecommendedBudgetEstimatedChangeWeeklyInteractions() {
+    return recommendedBudgetEstimatedChangeWeeklyInteractions_ != null;
+  }
+  /**
+   * <pre>
+   * The estimated change in weekly interactions if the recommended budget is
+   * applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+   */
+  public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyInteractions() {
+    return recommendedBudgetEstimatedChangeWeeklyInteractions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyInteractions_;
+  }
+  /**
+   * <pre>
+   * The estimated change in weekly interactions if the recommended budget is
+   * applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyInteractionsOrBuilder() {
+    return getRecommendedBudgetEstimatedChangeWeeklyInteractions();
+  }
+
+  public static final int RECOMMENDED_BUDGET_ESTIMATED_CHANGE_WEEKLY_VIEWS_FIELD_NUMBER = 17;
+  private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyViews_;
+  /**
+   * <pre>
+   * The estimated change in weekly views if the recommended budget is applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+   */
+  public boolean hasRecommendedBudgetEstimatedChangeWeeklyViews() {
+    return recommendedBudgetEstimatedChangeWeeklyViews_ != null;
+  }
+  /**
+   * <pre>
+   * The estimated change in weekly views if the recommended budget is applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+   */
+  public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyViews() {
+    return recommendedBudgetEstimatedChangeWeeklyViews_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyViews_;
+  }
+  /**
+   * <pre>
+   * The estimated change in weekly views if the recommended budget is applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyViewsOrBuilder() {
+    return getRecommendedBudgetEstimatedChangeWeeklyViews();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -593,6 +934,27 @@ private static final long serialVersionUID = 0L;
     }
     if (totalAmountMicros_ != null) {
       output.writeMessage(10, getTotalAmountMicros());
+    }
+    if (hasRecommendedBudget_ != null) {
+      output.writeMessage(11, getHasRecommendedBudget());
+    }
+    if (recommendedBudgetAmountMicros_ != null) {
+      output.writeMessage(12, getRecommendedBudgetAmountMicros());
+    }
+    if (period_ != com.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod.UNSPECIFIED.getNumber()) {
+      output.writeEnum(13, period_);
+    }
+    if (recommendedBudgetEstimatedChangeWeeklyClicks_ != null) {
+      output.writeMessage(14, getRecommendedBudgetEstimatedChangeWeeklyClicks());
+    }
+    if (recommendedBudgetEstimatedChangeWeeklyCostMicros_ != null) {
+      output.writeMessage(15, getRecommendedBudgetEstimatedChangeWeeklyCostMicros());
+    }
+    if (recommendedBudgetEstimatedChangeWeeklyInteractions_ != null) {
+      output.writeMessage(16, getRecommendedBudgetEstimatedChangeWeeklyInteractions());
+    }
+    if (recommendedBudgetEstimatedChangeWeeklyViews_ != null) {
+      output.writeMessage(17, getRecommendedBudgetEstimatedChangeWeeklyViews());
     }
     unknownFields.writeTo(output);
   }
@@ -637,6 +999,34 @@ private static final long serialVersionUID = 0L;
     if (totalAmountMicros_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getTotalAmountMicros());
+    }
+    if (hasRecommendedBudget_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getHasRecommendedBudget());
+    }
+    if (recommendedBudgetAmountMicros_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, getRecommendedBudgetAmountMicros());
+    }
+    if (period_ != com.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(13, period_);
+    }
+    if (recommendedBudgetEstimatedChangeWeeklyClicks_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getRecommendedBudgetEstimatedChangeWeeklyClicks());
+    }
+    if (recommendedBudgetEstimatedChangeWeeklyCostMicros_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getRecommendedBudgetEstimatedChangeWeeklyCostMicros());
+    }
+    if (recommendedBudgetEstimatedChangeWeeklyInteractions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(16, getRecommendedBudgetEstimatedChangeWeeklyInteractions());
+    }
+    if (recommendedBudgetEstimatedChangeWeeklyViews_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(17, getRecommendedBudgetEstimatedChangeWeeklyViews());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -688,6 +1078,37 @@ private static final long serialVersionUID = 0L;
       result = result && getReferenceCount()
           .equals(other.getReferenceCount());
     }
+    result = result && (hasHasRecommendedBudget() == other.hasHasRecommendedBudget());
+    if (hasHasRecommendedBudget()) {
+      result = result && getHasRecommendedBudget()
+          .equals(other.getHasRecommendedBudget());
+    }
+    result = result && (hasRecommendedBudgetAmountMicros() == other.hasRecommendedBudgetAmountMicros());
+    if (hasRecommendedBudgetAmountMicros()) {
+      result = result && getRecommendedBudgetAmountMicros()
+          .equals(other.getRecommendedBudgetAmountMicros());
+    }
+    result = result && period_ == other.period_;
+    result = result && (hasRecommendedBudgetEstimatedChangeWeeklyClicks() == other.hasRecommendedBudgetEstimatedChangeWeeklyClicks());
+    if (hasRecommendedBudgetEstimatedChangeWeeklyClicks()) {
+      result = result && getRecommendedBudgetEstimatedChangeWeeklyClicks()
+          .equals(other.getRecommendedBudgetEstimatedChangeWeeklyClicks());
+    }
+    result = result && (hasRecommendedBudgetEstimatedChangeWeeklyCostMicros() == other.hasRecommendedBudgetEstimatedChangeWeeklyCostMicros());
+    if (hasRecommendedBudgetEstimatedChangeWeeklyCostMicros()) {
+      result = result && getRecommendedBudgetEstimatedChangeWeeklyCostMicros()
+          .equals(other.getRecommendedBudgetEstimatedChangeWeeklyCostMicros());
+    }
+    result = result && (hasRecommendedBudgetEstimatedChangeWeeklyInteractions() == other.hasRecommendedBudgetEstimatedChangeWeeklyInteractions());
+    if (hasRecommendedBudgetEstimatedChangeWeeklyInteractions()) {
+      result = result && getRecommendedBudgetEstimatedChangeWeeklyInteractions()
+          .equals(other.getRecommendedBudgetEstimatedChangeWeeklyInteractions());
+    }
+    result = result && (hasRecommendedBudgetEstimatedChangeWeeklyViews() == other.hasRecommendedBudgetEstimatedChangeWeeklyViews());
+    if (hasRecommendedBudgetEstimatedChangeWeeklyViews()) {
+      result = result && getRecommendedBudgetEstimatedChangeWeeklyViews()
+          .equals(other.getRecommendedBudgetEstimatedChangeWeeklyViews());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -728,6 +1149,32 @@ private static final long serialVersionUID = 0L;
     if (hasReferenceCount()) {
       hash = (37 * hash) + REFERENCE_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + getReferenceCount().hashCode();
+    }
+    if (hasHasRecommendedBudget()) {
+      hash = (37 * hash) + HAS_RECOMMENDED_BUDGET_FIELD_NUMBER;
+      hash = (53 * hash) + getHasRecommendedBudget().hashCode();
+    }
+    if (hasRecommendedBudgetAmountMicros()) {
+      hash = (37 * hash) + RECOMMENDED_BUDGET_AMOUNT_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + getRecommendedBudgetAmountMicros().hashCode();
+    }
+    hash = (37 * hash) + PERIOD_FIELD_NUMBER;
+    hash = (53 * hash) + period_;
+    if (hasRecommendedBudgetEstimatedChangeWeeklyClicks()) {
+      hash = (37 * hash) + RECOMMENDED_BUDGET_ESTIMATED_CHANGE_WEEKLY_CLICKS_FIELD_NUMBER;
+      hash = (53 * hash) + getRecommendedBudgetEstimatedChangeWeeklyClicks().hashCode();
+    }
+    if (hasRecommendedBudgetEstimatedChangeWeeklyCostMicros()) {
+      hash = (37 * hash) + RECOMMENDED_BUDGET_ESTIMATED_CHANGE_WEEKLY_COST_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + getRecommendedBudgetEstimatedChangeWeeklyCostMicros().hashCode();
+    }
+    if (hasRecommendedBudgetEstimatedChangeWeeklyInteractions()) {
+      hash = (37 * hash) + RECOMMENDED_BUDGET_ESTIMATED_CHANGE_WEEKLY_INTERACTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getRecommendedBudgetEstimatedChangeWeeklyInteractions().hashCode();
+    }
+    if (hasRecommendedBudgetEstimatedChangeWeeklyViews()) {
+      hash = (37 * hash) + RECOMMENDED_BUDGET_ESTIMATED_CHANGE_WEEKLY_VIEWS_FIELD_NUMBER;
+      hash = (53 * hash) + getRecommendedBudgetEstimatedChangeWeeklyViews().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -908,6 +1355,44 @@ private static final long serialVersionUID = 0L;
         referenceCount_ = null;
         referenceCountBuilder_ = null;
       }
+      if (hasRecommendedBudgetBuilder_ == null) {
+        hasRecommendedBudget_ = null;
+      } else {
+        hasRecommendedBudget_ = null;
+        hasRecommendedBudgetBuilder_ = null;
+      }
+      if (recommendedBudgetAmountMicrosBuilder_ == null) {
+        recommendedBudgetAmountMicros_ = null;
+      } else {
+        recommendedBudgetAmountMicros_ = null;
+        recommendedBudgetAmountMicrosBuilder_ = null;
+      }
+      period_ = 0;
+
+      if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyClicks_ = null;
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyClicks_ = null;
+        recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ = null;
+      }
+      if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyCostMicros_ = null;
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyCostMicros_ = null;
+        recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ = null;
+      }
+      if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyInteractions_ = null;
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyInteractions_ = null;
+        recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ = null;
+      }
+      if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyViews_ = null;
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyViews_ = null;
+        recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ = null;
+      }
       return this;
     }
 
@@ -966,6 +1451,37 @@ private static final long serialVersionUID = 0L;
         result.referenceCount_ = referenceCount_;
       } else {
         result.referenceCount_ = referenceCountBuilder_.build();
+      }
+      if (hasRecommendedBudgetBuilder_ == null) {
+        result.hasRecommendedBudget_ = hasRecommendedBudget_;
+      } else {
+        result.hasRecommendedBudget_ = hasRecommendedBudgetBuilder_.build();
+      }
+      if (recommendedBudgetAmountMicrosBuilder_ == null) {
+        result.recommendedBudgetAmountMicros_ = recommendedBudgetAmountMicros_;
+      } else {
+        result.recommendedBudgetAmountMicros_ = recommendedBudgetAmountMicrosBuilder_.build();
+      }
+      result.period_ = period_;
+      if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ == null) {
+        result.recommendedBudgetEstimatedChangeWeeklyClicks_ = recommendedBudgetEstimatedChangeWeeklyClicks_;
+      } else {
+        result.recommendedBudgetEstimatedChangeWeeklyClicks_ = recommendedBudgetEstimatedChangeWeeklyClicksBuilder_.build();
+      }
+      if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ == null) {
+        result.recommendedBudgetEstimatedChangeWeeklyCostMicros_ = recommendedBudgetEstimatedChangeWeeklyCostMicros_;
+      } else {
+        result.recommendedBudgetEstimatedChangeWeeklyCostMicros_ = recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_.build();
+      }
+      if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ == null) {
+        result.recommendedBudgetEstimatedChangeWeeklyInteractions_ = recommendedBudgetEstimatedChangeWeeklyInteractions_;
+      } else {
+        result.recommendedBudgetEstimatedChangeWeeklyInteractions_ = recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_.build();
+      }
+      if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ == null) {
+        result.recommendedBudgetEstimatedChangeWeeklyViews_ = recommendedBudgetEstimatedChangeWeeklyViews_;
+      } else {
+        result.recommendedBudgetEstimatedChangeWeeklyViews_ = recommendedBudgetEstimatedChangeWeeklyViewsBuilder_.build();
       }
       onBuilt();
       return result;
@@ -1042,6 +1558,27 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasReferenceCount()) {
         mergeReferenceCount(other.getReferenceCount());
+      }
+      if (other.hasHasRecommendedBudget()) {
+        mergeHasRecommendedBudget(other.getHasRecommendedBudget());
+      }
+      if (other.hasRecommendedBudgetAmountMicros()) {
+        mergeRecommendedBudgetAmountMicros(other.getRecommendedBudgetAmountMicros());
+      }
+      if (other.period_ != 0) {
+        setPeriodValue(other.getPeriodValue());
+      }
+      if (other.hasRecommendedBudgetEstimatedChangeWeeklyClicks()) {
+        mergeRecommendedBudgetEstimatedChangeWeeklyClicks(other.getRecommendedBudgetEstimatedChangeWeeklyClicks());
+      }
+      if (other.hasRecommendedBudgetEstimatedChangeWeeklyCostMicros()) {
+        mergeRecommendedBudgetEstimatedChangeWeeklyCostMicros(other.getRecommendedBudgetEstimatedChangeWeeklyCostMicros());
+      }
+      if (other.hasRecommendedBudgetEstimatedChangeWeeklyInteractions()) {
+        mergeRecommendedBudgetEstimatedChangeWeeklyInteractions(other.getRecommendedBudgetEstimatedChangeWeeklyInteractions());
+      }
+      if (other.hasRecommendedBudgetEstimatedChangeWeeklyViews()) {
+        mergeRecommendedBudgetEstimatedChangeWeeklyViews(other.getRecommendedBudgetEstimatedChangeWeeklyViews());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -2054,8 +2591,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> explicitlySharedBuilder_;
     /**
      * <pre>
-     * Whether the budget is explicitly shared. This field is set to false by
-     * default.
+     * Specifies whether the budget is explicitly shared. Defaults to true if
+     * unspecified in a create operation.
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
      * If false, the budget was created with the intention of only being used
@@ -2075,8 +2612,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the budget is explicitly shared. This field is set to false by
-     * default.
+     * Specifies whether the budget is explicitly shared. Defaults to true if
+     * unspecified in a create operation.
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
      * If false, the budget was created with the intention of only being used
@@ -2100,8 +2637,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the budget is explicitly shared. This field is set to false by
-     * default.
+     * Specifies whether the budget is explicitly shared. Defaults to true if
+     * unspecified in a create operation.
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
      * If false, the budget was created with the intention of only being used
@@ -2131,8 +2668,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the budget is explicitly shared. This field is set to false by
-     * default.
+     * Specifies whether the budget is explicitly shared. Defaults to true if
+     * unspecified in a create operation.
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
      * If false, the budget was created with the intention of only being used
@@ -2160,8 +2697,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the budget is explicitly shared. This field is set to false by
-     * default.
+     * Specifies whether the budget is explicitly shared. Defaults to true if
+     * unspecified in a create operation.
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
      * If false, the budget was created with the intention of only being used
@@ -2193,8 +2730,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the budget is explicitly shared. This field is set to false by
-     * default.
+     * Specifies whether the budget is explicitly shared. Defaults to true if
+     * unspecified in a create operation.
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
      * If false, the budget was created with the intention of only being used
@@ -2222,8 +2759,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the budget is explicitly shared. This field is set to false by
-     * default.
+     * Specifies whether the budget is explicitly shared. Defaults to true if
+     * unspecified in a create operation.
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
      * If false, the budget was created with the intention of only being used
@@ -2245,8 +2782,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the budget is explicitly shared. This field is set to false by
-     * default.
+     * Specifies whether the budget is explicitly shared. Defaults to true if
+     * unspecified in a create operation.
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
      * If false, the budget was created with the intention of only being used
@@ -2271,8 +2808,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the budget is explicitly shared. This field is set to false by
-     * default.
+     * Specifies whether the budget is explicitly shared. Defaults to true if
+     * unspecified in a create operation.
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
      * If false, the budget was created with the intention of only being used
@@ -2461,6 +2998,1088 @@ private static final long serialVersionUID = 0L;
         referenceCount_ = null;
       }
       return referenceCountBuilder_;
+    }
+
+    private com.google.protobuf.BoolValue hasRecommendedBudget_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> hasRecommendedBudgetBuilder_;
+    /**
+     * <pre>
+     * Indicates whether there is a recommended budget for this campaign budget.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     */
+    public boolean hasHasRecommendedBudget() {
+      return hasRecommendedBudgetBuilder_ != null || hasRecommendedBudget_ != null;
+    }
+    /**
+     * <pre>
+     * Indicates whether there is a recommended budget for this campaign budget.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     */
+    public com.google.protobuf.BoolValue getHasRecommendedBudget() {
+      if (hasRecommendedBudgetBuilder_ == null) {
+        return hasRecommendedBudget_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasRecommendedBudget_;
+      } else {
+        return hasRecommendedBudgetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Indicates whether there is a recommended budget for this campaign budget.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     */
+    public Builder setHasRecommendedBudget(com.google.protobuf.BoolValue value) {
+      if (hasRecommendedBudgetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hasRecommendedBudget_ = value;
+        onChanged();
+      } else {
+        hasRecommendedBudgetBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates whether there is a recommended budget for this campaign budget.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     */
+    public Builder setHasRecommendedBudget(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (hasRecommendedBudgetBuilder_ == null) {
+        hasRecommendedBudget_ = builderForValue.build();
+        onChanged();
+      } else {
+        hasRecommendedBudgetBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates whether there is a recommended budget for this campaign budget.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     */
+    public Builder mergeHasRecommendedBudget(com.google.protobuf.BoolValue value) {
+      if (hasRecommendedBudgetBuilder_ == null) {
+        if (hasRecommendedBudget_ != null) {
+          hasRecommendedBudget_ =
+            com.google.protobuf.BoolValue.newBuilder(hasRecommendedBudget_).mergeFrom(value).buildPartial();
+        } else {
+          hasRecommendedBudget_ = value;
+        }
+        onChanged();
+      } else {
+        hasRecommendedBudgetBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates whether there is a recommended budget for this campaign budget.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     */
+    public Builder clearHasRecommendedBudget() {
+      if (hasRecommendedBudgetBuilder_ == null) {
+        hasRecommendedBudget_ = null;
+        onChanged();
+      } else {
+        hasRecommendedBudget_ = null;
+        hasRecommendedBudgetBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates whether there is a recommended budget for this campaign budget.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getHasRecommendedBudgetBuilder() {
+      
+      onChanged();
+      return getHasRecommendedBudgetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Indicates whether there is a recommended budget for this campaign budget.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getHasRecommendedBudgetOrBuilder() {
+      if (hasRecommendedBudgetBuilder_ != null) {
+        return hasRecommendedBudgetBuilder_.getMessageOrBuilder();
+      } else {
+        return hasRecommendedBudget_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : hasRecommendedBudget_;
+      }
+    }
+    /**
+     * <pre>
+     * Indicates whether there is a recommended budget for this campaign budget.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getHasRecommendedBudgetFieldBuilder() {
+      if (hasRecommendedBudgetBuilder_ == null) {
+        hasRecommendedBudgetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getHasRecommendedBudget(),
+                getParentForChildren(),
+                isClean());
+        hasRecommendedBudget_ = null;
+      }
+      return hasRecommendedBudgetBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value recommendedBudgetAmountMicros_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetAmountMicrosBuilder_;
+    /**
+     * <pre>
+     * The recommended budget amount. If no recommendation is available, this will
+     * be set to the budget amount.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     */
+    public boolean hasRecommendedBudgetAmountMicros() {
+      return recommendedBudgetAmountMicrosBuilder_ != null || recommendedBudgetAmountMicros_ != null;
+    }
+    /**
+     * <pre>
+     * The recommended budget amount. If no recommendation is available, this will
+     * be set to the budget amount.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     */
+    public com.google.protobuf.Int64Value getRecommendedBudgetAmountMicros() {
+      if (recommendedBudgetAmountMicrosBuilder_ == null) {
+        return recommendedBudgetAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetAmountMicros_;
+      } else {
+        return recommendedBudgetAmountMicrosBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The recommended budget amount. If no recommendation is available, this will
+     * be set to the budget amount.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     */
+    public Builder setRecommendedBudgetAmountMicros(com.google.protobuf.Int64Value value) {
+      if (recommendedBudgetAmountMicrosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendedBudgetAmountMicros_ = value;
+        onChanged();
+      } else {
+        recommendedBudgetAmountMicrosBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The recommended budget amount. If no recommendation is available, this will
+     * be set to the budget amount.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     */
+    public Builder setRecommendedBudgetAmountMicros(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (recommendedBudgetAmountMicrosBuilder_ == null) {
+        recommendedBudgetAmountMicros_ = builderForValue.build();
+        onChanged();
+      } else {
+        recommendedBudgetAmountMicrosBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The recommended budget amount. If no recommendation is available, this will
+     * be set to the budget amount.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     */
+    public Builder mergeRecommendedBudgetAmountMicros(com.google.protobuf.Int64Value value) {
+      if (recommendedBudgetAmountMicrosBuilder_ == null) {
+        if (recommendedBudgetAmountMicros_ != null) {
+          recommendedBudgetAmountMicros_ =
+            com.google.protobuf.Int64Value.newBuilder(recommendedBudgetAmountMicros_).mergeFrom(value).buildPartial();
+        } else {
+          recommendedBudgetAmountMicros_ = value;
+        }
+        onChanged();
+      } else {
+        recommendedBudgetAmountMicrosBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The recommended budget amount. If no recommendation is available, this will
+     * be set to the budget amount.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     */
+    public Builder clearRecommendedBudgetAmountMicros() {
+      if (recommendedBudgetAmountMicrosBuilder_ == null) {
+        recommendedBudgetAmountMicros_ = null;
+        onChanged();
+      } else {
+        recommendedBudgetAmountMicros_ = null;
+        recommendedBudgetAmountMicrosBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The recommended budget amount. If no recommendation is available, this will
+     * be set to the budget amount.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getRecommendedBudgetAmountMicrosBuilder() {
+      
+      onChanged();
+      return getRecommendedBudgetAmountMicrosFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The recommended budget amount. If no recommendation is available, this will
+     * be set to the budget amount.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetAmountMicrosOrBuilder() {
+      if (recommendedBudgetAmountMicrosBuilder_ != null) {
+        return recommendedBudgetAmountMicrosBuilder_.getMessageOrBuilder();
+      } else {
+        return recommendedBudgetAmountMicros_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetAmountMicros_;
+      }
+    }
+    /**
+     * <pre>
+     * The recommended budget amount. If no recommendation is available, this will
+     * be set to the budget amount.
+     * Amount is specified in micros, where one million is equivalent to one
+     * currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getRecommendedBudgetAmountMicrosFieldBuilder() {
+      if (recommendedBudgetAmountMicrosBuilder_ == null) {
+        recommendedBudgetAmountMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getRecommendedBudgetAmountMicros(),
+                getParentForChildren(),
+                isClean());
+        recommendedBudgetAmountMicros_ = null;
+      }
+      return recommendedBudgetAmountMicrosBuilder_;
+    }
+
+    private int period_ = 0;
+    /**
+     * <pre>
+     * Period over which to spend the budget. Defaults to DAILY if not specified.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+     */
+    public int getPeriodValue() {
+      return period_;
+    }
+    /**
+     * <pre>
+     * Period over which to spend the budget. Defaults to DAILY if not specified.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+     */
+    public Builder setPeriodValue(int value) {
+      period_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Period over which to spend the budget. Defaults to DAILY if not specified.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+     */
+    public com.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod getPeriod() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod result = com.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod.valueOf(period_);
+      return result == null ? com.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Period over which to spend the budget. Defaults to DAILY if not specified.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+     */
+    public Builder setPeriod(com.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      period_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Period over which to spend the budget. Defaults to DAILY if not specified.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+     */
+    public Builder clearPeriod() {
+      
+      period_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyClicks_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetEstimatedChangeWeeklyClicksBuilder_;
+    /**
+     * <pre>
+     * The estimated change in weekly clicks if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     */
+    public boolean hasRecommendedBudgetEstimatedChangeWeeklyClicks() {
+      return recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ != null || recommendedBudgetEstimatedChangeWeeklyClicks_ != null;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly clicks if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     */
+    public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyClicks() {
+      if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ == null) {
+        return recommendedBudgetEstimatedChangeWeeklyClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyClicks_;
+      } else {
+        return recommendedBudgetEstimatedChangeWeeklyClicksBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly clicks if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     */
+    public Builder setRecommendedBudgetEstimatedChangeWeeklyClicks(com.google.protobuf.Int64Value value) {
+      if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendedBudgetEstimatedChangeWeeklyClicks_ = value;
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyClicksBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly clicks if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     */
+    public Builder setRecommendedBudgetEstimatedChangeWeeklyClicks(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyClicks_ = builderForValue.build();
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyClicksBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly clicks if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     */
+    public Builder mergeRecommendedBudgetEstimatedChangeWeeklyClicks(com.google.protobuf.Int64Value value) {
+      if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ == null) {
+        if (recommendedBudgetEstimatedChangeWeeklyClicks_ != null) {
+          recommendedBudgetEstimatedChangeWeeklyClicks_ =
+            com.google.protobuf.Int64Value.newBuilder(recommendedBudgetEstimatedChangeWeeklyClicks_).mergeFrom(value).buildPartial();
+        } else {
+          recommendedBudgetEstimatedChangeWeeklyClicks_ = value;
+        }
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyClicksBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly clicks if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     */
+    public Builder clearRecommendedBudgetEstimatedChangeWeeklyClicks() {
+      if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyClicks_ = null;
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyClicks_ = null;
+        recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly clicks if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getRecommendedBudgetEstimatedChangeWeeklyClicksBuilder() {
+      
+      onChanged();
+      return getRecommendedBudgetEstimatedChangeWeeklyClicksFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly clicks if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyClicksOrBuilder() {
+      if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ != null) {
+        return recommendedBudgetEstimatedChangeWeeklyClicksBuilder_.getMessageOrBuilder();
+      } else {
+        return recommendedBudgetEstimatedChangeWeeklyClicks_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyClicks_;
+      }
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly clicks if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getRecommendedBudgetEstimatedChangeWeeklyClicksFieldBuilder() {
+      if (recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyClicksBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getRecommendedBudgetEstimatedChangeWeeklyClicks(),
+                getParentForChildren(),
+                isClean());
+        recommendedBudgetEstimatedChangeWeeklyClicks_ = null;
+      }
+      return recommendedBudgetEstimatedChangeWeeklyClicksBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyCostMicros_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_;
+    /**
+     * <pre>
+     * The estimated change in weekly cost in micros if the recommended budget is
+     * applied. One million is equivalent to one currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     */
+    public boolean hasRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
+      return recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ != null || recommendedBudgetEstimatedChangeWeeklyCostMicros_ != null;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly cost in micros if the recommended budget is
+     * applied. One million is equivalent to one currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     */
+    public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
+      if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ == null) {
+        return recommendedBudgetEstimatedChangeWeeklyCostMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyCostMicros_;
+      } else {
+        return recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly cost in micros if the recommended budget is
+     * applied. One million is equivalent to one currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     */
+    public Builder setRecommendedBudgetEstimatedChangeWeeklyCostMicros(com.google.protobuf.Int64Value value) {
+      if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendedBudgetEstimatedChangeWeeklyCostMicros_ = value;
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly cost in micros if the recommended budget is
+     * applied. One million is equivalent to one currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     */
+    public Builder setRecommendedBudgetEstimatedChangeWeeklyCostMicros(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyCostMicros_ = builderForValue.build();
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly cost in micros if the recommended budget is
+     * applied. One million is equivalent to one currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     */
+    public Builder mergeRecommendedBudgetEstimatedChangeWeeklyCostMicros(com.google.protobuf.Int64Value value) {
+      if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ == null) {
+        if (recommendedBudgetEstimatedChangeWeeklyCostMicros_ != null) {
+          recommendedBudgetEstimatedChangeWeeklyCostMicros_ =
+            com.google.protobuf.Int64Value.newBuilder(recommendedBudgetEstimatedChangeWeeklyCostMicros_).mergeFrom(value).buildPartial();
+        } else {
+          recommendedBudgetEstimatedChangeWeeklyCostMicros_ = value;
+        }
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly cost in micros if the recommended budget is
+     * applied. One million is equivalent to one currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     */
+    public Builder clearRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
+      if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyCostMicros_ = null;
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyCostMicros_ = null;
+        recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly cost in micros if the recommended budget is
+     * applied. One million is equivalent to one currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getRecommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder() {
+      
+      onChanged();
+      return getRecommendedBudgetEstimatedChangeWeeklyCostMicrosFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly cost in micros if the recommended budget is
+     * applied. One million is equivalent to one currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyCostMicrosOrBuilder() {
+      if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ != null) {
+        return recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_.getMessageOrBuilder();
+      } else {
+        return recommendedBudgetEstimatedChangeWeeklyCostMicros_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyCostMicros_;
+      }
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly cost in micros if the recommended budget is
+     * applied. One million is equivalent to one currency unit.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getRecommendedBudgetEstimatedChangeWeeklyCostMicrosFieldBuilder() {
+      if (recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getRecommendedBudgetEstimatedChangeWeeklyCostMicros(),
+                getParentForChildren(),
+                isClean());
+        recommendedBudgetEstimatedChangeWeeklyCostMicros_ = null;
+      }
+      return recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyInteractions_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_;
+    /**
+     * <pre>
+     * The estimated change in weekly interactions if the recommended budget is
+     * applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     */
+    public boolean hasRecommendedBudgetEstimatedChangeWeeklyInteractions() {
+      return recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ != null || recommendedBudgetEstimatedChangeWeeklyInteractions_ != null;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly interactions if the recommended budget is
+     * applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     */
+    public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyInteractions() {
+      if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ == null) {
+        return recommendedBudgetEstimatedChangeWeeklyInteractions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyInteractions_;
+      } else {
+        return recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly interactions if the recommended budget is
+     * applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     */
+    public Builder setRecommendedBudgetEstimatedChangeWeeklyInteractions(com.google.protobuf.Int64Value value) {
+      if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendedBudgetEstimatedChangeWeeklyInteractions_ = value;
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly interactions if the recommended budget is
+     * applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     */
+    public Builder setRecommendedBudgetEstimatedChangeWeeklyInteractions(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyInteractions_ = builderForValue.build();
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly interactions if the recommended budget is
+     * applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     */
+    public Builder mergeRecommendedBudgetEstimatedChangeWeeklyInteractions(com.google.protobuf.Int64Value value) {
+      if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ == null) {
+        if (recommendedBudgetEstimatedChangeWeeklyInteractions_ != null) {
+          recommendedBudgetEstimatedChangeWeeklyInteractions_ =
+            com.google.protobuf.Int64Value.newBuilder(recommendedBudgetEstimatedChangeWeeklyInteractions_).mergeFrom(value).buildPartial();
+        } else {
+          recommendedBudgetEstimatedChangeWeeklyInteractions_ = value;
+        }
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly interactions if the recommended budget is
+     * applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     */
+    public Builder clearRecommendedBudgetEstimatedChangeWeeklyInteractions() {
+      if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyInteractions_ = null;
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyInteractions_ = null;
+        recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly interactions if the recommended budget is
+     * applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getRecommendedBudgetEstimatedChangeWeeklyInteractionsBuilder() {
+      
+      onChanged();
+      return getRecommendedBudgetEstimatedChangeWeeklyInteractionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly interactions if the recommended budget is
+     * applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyInteractionsOrBuilder() {
+      if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ != null) {
+        return recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_.getMessageOrBuilder();
+      } else {
+        return recommendedBudgetEstimatedChangeWeeklyInteractions_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyInteractions_;
+      }
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly interactions if the recommended budget is
+     * applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getRecommendedBudgetEstimatedChangeWeeklyInteractionsFieldBuilder() {
+      if (recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getRecommendedBudgetEstimatedChangeWeeklyInteractions(),
+                getParentForChildren(),
+                isClean());
+        recommendedBudgetEstimatedChangeWeeklyInteractions_ = null;
+      }
+      return recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyViews_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetEstimatedChangeWeeklyViewsBuilder_;
+    /**
+     * <pre>
+     * The estimated change in weekly views if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     */
+    public boolean hasRecommendedBudgetEstimatedChangeWeeklyViews() {
+      return recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ != null || recommendedBudgetEstimatedChangeWeeklyViews_ != null;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly views if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     */
+    public com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyViews() {
+      if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ == null) {
+        return recommendedBudgetEstimatedChangeWeeklyViews_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyViews_;
+      } else {
+        return recommendedBudgetEstimatedChangeWeeklyViewsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly views if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     */
+    public Builder setRecommendedBudgetEstimatedChangeWeeklyViews(com.google.protobuf.Int64Value value) {
+      if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendedBudgetEstimatedChangeWeeklyViews_ = value;
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyViewsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly views if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     */
+    public Builder setRecommendedBudgetEstimatedChangeWeeklyViews(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyViews_ = builderForValue.build();
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyViewsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly views if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     */
+    public Builder mergeRecommendedBudgetEstimatedChangeWeeklyViews(com.google.protobuf.Int64Value value) {
+      if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ == null) {
+        if (recommendedBudgetEstimatedChangeWeeklyViews_ != null) {
+          recommendedBudgetEstimatedChangeWeeklyViews_ =
+            com.google.protobuf.Int64Value.newBuilder(recommendedBudgetEstimatedChangeWeeklyViews_).mergeFrom(value).buildPartial();
+        } else {
+          recommendedBudgetEstimatedChangeWeeklyViews_ = value;
+        }
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyViewsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly views if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     */
+    public Builder clearRecommendedBudgetEstimatedChangeWeeklyViews() {
+      if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyViews_ = null;
+        onChanged();
+      } else {
+        recommendedBudgetEstimatedChangeWeeklyViews_ = null;
+        recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly views if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getRecommendedBudgetEstimatedChangeWeeklyViewsBuilder() {
+      
+      onChanged();
+      return getRecommendedBudgetEstimatedChangeWeeklyViewsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly views if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyViewsOrBuilder() {
+      if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ != null) {
+        return recommendedBudgetEstimatedChangeWeeklyViewsBuilder_.getMessageOrBuilder();
+      } else {
+        return recommendedBudgetEstimatedChangeWeeklyViews_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : recommendedBudgetEstimatedChangeWeeklyViews_;
+      }
+    }
+    /**
+     * <pre>
+     * The estimated change in weekly views if the recommended budget is applied.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getRecommendedBudgetEstimatedChangeWeeklyViewsFieldBuilder() {
+      if (recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ == null) {
+        recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getRecommendedBudgetEstimatedChangeWeeklyViews(),
+                getParentForChildren(),
+                isClean());
+        recommendedBudgetEstimatedChangeWeeklyViews_ = null;
+      }
+      return recommendedBudgetEstimatedChangeWeeklyViewsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

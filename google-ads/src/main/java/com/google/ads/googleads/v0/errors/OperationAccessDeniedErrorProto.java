@@ -42,13 +42,14 @@ public final class OperationAccessDeniedErrorProto {
       "ED_NOT_PERMITTED\020\010\0220\n,OPERATION_NOT_PERM" +
       "ITTED_FOR_REMOVED_RESOURCE\020\t\022-\n)OPERATIO" +
       "N_NOT_PERMITTED_FOR_AD_GROUP_TYPE\020\n\022%\n!M" +
-      "UTATE_NOT_PERMITTED_FOR_CUSTOMER\020\013B\325\001\n\"c" +
+      "UTATE_NOT_PERMITTED_FOR_CUSTOMER\020\013B\372\001\n\"c" +
       "om.google.ads.googleads.v0.errorsB\037Opera" +
       "tionAccessDeniedErrorProtoP\001ZDgoogle.gol" +
       "ang.org/genproto/googleapis/ads/googlead" +
       "s/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.Go" +
       "ogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAds" +
-      "\\V0\\Errorsb\006proto3"
+      "\\V0\\Errors\352\002\"Google::Ads::GoogleAds::V0:" +
+      ":Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

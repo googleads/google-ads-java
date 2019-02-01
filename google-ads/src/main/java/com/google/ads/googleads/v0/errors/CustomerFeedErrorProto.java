@@ -39,13 +39,13 @@ public final class CustomerFeedErrorProto {
       "MOVED_CUSTOMER_FEED\020\005\022\034\n\030INVALID_PLACEHO" +
       "LDER_TYPE\020\006\022,\n(MISSING_FEEDMAPPING_FOR_P" +
       "LACEHOLDER_TYPE\020\007\0221\n-PLACEHOLDER_TYPE_NO" +
-      "T_ALLOWED_ON_CUSTOMER_FEED\020\010B\314\001\n\"com.goo" +
+      "T_ALLOWED_ON_CUSTOMER_FEED\020\010B\361\001\n\"com.goo" +
       "gle.ads.googleads.v0.errorsB\026CustomerFee" +
       "dErrorProtoP\001ZDgoogle.golang.org/genprot" +
       "o/googleapis/ads/googleads/v0/errors;err" +
       "ors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Erro" +
-      "rs\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006pro" +
-      "to3"
+      "rs\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors\352\002\"Go" +
+      "ogle::Ads::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

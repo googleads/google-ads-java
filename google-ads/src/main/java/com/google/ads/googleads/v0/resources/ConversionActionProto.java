@@ -92,12 +92,13 @@ public final class ConversionActionProto {
       "bleValue\022;\n\025default_currency_code\030\002 \001(\0132" +
       "\034.google.protobuf.StringValue\022<\n\030always_" +
       "use_default_value\030\003 \001(\0132\032.google.protobu" +
-      "f.BoolValueB\332\001\n%com.google.ads.googleads" +
+      "f.BoolValueB\202\002\n%com.google.ads.googleads" +
       ".v0.resourcesB\025ConversionActionProtoP\001ZJ" +
       "google.golang.org/genproto/googleapis/ad" +
       "s/googleads/v0/resources;resources\242\002\003GAA" +
       "\252\002!Google.Ads.GoogleAds.V0.Resources\312\002!G" +
-      "oogle\\Ads\\GoogleAds\\V0\\Resourcesb\006proto3"
+      "oogle\\Ads\\GoogleAds\\V0\\Resources\352\002%Googl" +
+      "e::Ads::GoogleAds::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

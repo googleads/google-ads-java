@@ -36,13 +36,13 @@ public final class CriterionCategoryChannelAvailabilityModeProto {
       "ityMode\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n" +
       "\014ALL_CHANNELS\020\002\022!\n\035CHANNEL_TYPE_AND_ALL_" +
       "SUBTYPES\020\003\022$\n CHANNEL_TYPE_AND_SUBSET_SU" +
-      "BTYPES\020\004B\336\001\n!com.google.ads.googleads.v0" +
+      "BTYPES\020\004B\202\002\n!com.google.ads.googleads.v0" +
       ".enumsB-CriterionCategoryChannelAvailabi" +
       "lityModeProtoP\001ZBgoogle.golang.org/genpr" +
       "oto/googleapis/ads/googleads/v0/enums;en" +
       "ums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enum" +
-      "s\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto" +
-      "3"
+      "s\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Goog" +
+      "le::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

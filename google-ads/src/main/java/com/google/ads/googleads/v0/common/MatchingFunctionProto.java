@@ -32,13 +32,14 @@ public final class MatchingFunctionProto {
       "g_function.proto\022\036google.ads.googleads.v" +
       "0.common\032\036google/protobuf/wrappers.proto" +
       "\"I\n\020MatchingFunction\0225\n\017function_string\030" +
-      "\001 \001(\0132\034.google.protobuf.StringValueB\313\001\n\"" +
+      "\001 \001(\0132\034.google.protobuf.StringValueB\360\001\n\"" +
       "com.google.ads.googleads.v0.commonB\025Matc" +
       "hingFunctionProtoP\001ZDgoogle.golang.org/g" +
       "enproto/googleapis/ads/googleads/v0/comm" +
       "on;common\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
       "0.Common\312\002\036Google\\Ads\\GoogleAds\\V0\\Commo" +
-      "nb\006proto3"
+      "n\352\002\"Google::Ads::GoogleAds::V0::Commonb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

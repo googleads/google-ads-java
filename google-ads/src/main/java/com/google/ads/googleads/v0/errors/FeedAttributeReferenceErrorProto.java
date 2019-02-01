@@ -35,12 +35,13 @@ public final class FeedAttributeReferenceErrorProto {
       "enceError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
       "!\n\035CANNOT_REFERENCE_DELETED_FEED\020\002\022\025\n\021IN" +
       "VALID_FEED_NAME\020\003\022\037\n\033INVALID_FEED_ATTRIB" +
-      "UTE_NAME\020\004B\326\001\n\"com.google.ads.googleads." +
+      "UTE_NAME\020\004B\373\001\n\"com.google.ads.googleads." +
       "v0.errorsB FeedAttributeReferenceErrorPr" +
       "otoP\001ZDgoogle.golang.org/genproto/google" +
       "apis/ads/googleads/v0/errors;errors\242\002\003GA" +
       "A\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Goo" +
-      "gle\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "gle\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::Ad" +
+      "s::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

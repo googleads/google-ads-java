@@ -50,12 +50,13 @@ public final class BiddingStrategyProto {
       "\013 \001(\0132*.google.ads.googleads.v0.common.T" +
       "argetRoasH\000\022C\n\014target_spend\030\014 \001(\0132+.goog" +
       "le.ads.googleads.v0.common.TargetSpendH\000" +
-      "B\010\n\006schemeB\331\001\n%com.google.ads.googleads." +
+      "B\010\n\006schemeB\201\002\n%com.google.ads.googleads." +
       "v0.resourcesB\024BiddingStrategyProtoP\001ZJgo" +
       "ogle.golang.org/genproto/googleapis/ads/" +
       "googleads/v0/resources;resources\242\002\003GAA\252\002" +
       "!Google.Ads.GoogleAds.V0.Resources\312\002!Goo" +
-      "gle\\Ads\\GoogleAds\\V0\\Resourcesb\006proto3"
+      "gle\\Ads\\GoogleAds\\V0\\Resources\352\002%Google:" +
+      ":Ads::GoogleAds::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

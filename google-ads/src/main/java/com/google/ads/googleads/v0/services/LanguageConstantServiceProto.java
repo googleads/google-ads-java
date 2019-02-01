@@ -39,13 +39,14 @@ public final class LanguageConstantServiceProto {
       ".services.GetLanguageConstantRequest\0323.g" +
       "oogle.ads.googleads.v0.resources.Languag" +
       "eConstant\"/\202\323\344\223\002)\022\'/v0/{resource_name=la" +
-      "nguageConstants/*}B\334\001\n$com.google.ads.go" +
+      "nguageConstants/*}B\203\002\n$com.google.ads.go" +
       "ogleads.v0.servicesB\034LanguageConstantSer" +
       "viceProtoP\001ZHgoogle.golang.org/genproto/" +
       "googleapis/ads/googleads/v0/services;ser" +
       "vices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V0.Se" +
       "rvices\312\002 Google\\Ads\\GoogleAds\\V0\\Service" +
-      "sb\006proto3"
+      "s\352\002$Google::Ads::GoogleAds::V0::Services" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

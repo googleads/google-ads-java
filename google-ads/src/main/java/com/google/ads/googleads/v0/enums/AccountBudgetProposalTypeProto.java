@@ -33,13 +33,14 @@ public final class AccountBudgetProposalTypeProto {
       "oogleads.v0.enums\"\207\001\n\035AccountBudgetPropo" +
       "salTypeEnum\"f\n\031AccountBudgetProposalType" +
       "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006CREATE" +
-      "\020\002\022\n\n\006UPDATE\020\003\022\007\n\003END\020\004\022\n\n\006REMOVE\020\005B\317\001\n!" +
+      "\020\002\022\n\n\006UPDATE\020\003\022\007\n\003END\020\004\022\n\n\006REMOVE\020\005B\363\001\n!" +
       "com.google.ads.googleads.v0.enumsB\036Accou" +
       "ntBudgetProposalTypeProtoP\001ZBgoogle.gola" +
       "ng.org/genproto/googleapis/ads/googleads" +
       "/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.Googl" +
       "eAds.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\" +
-      "Enumsb\006proto3"
+      "Enums\352\002!Google::Ads::GoogleAds::V0::Enum" +
+      "sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

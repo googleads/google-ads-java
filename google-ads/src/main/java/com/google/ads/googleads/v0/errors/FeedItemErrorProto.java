@@ -40,12 +40,13 @@ public final class FeedItemErrorProto {
       "ES\020\007\022\035\n\031KEY_ATTRIBUTES_NOT_UNIQUE\020\010\022%\n!C" +
       "ANNOT_MODIFY_KEY_ATTRIBUTE_VALUE\020\t\022,\n(SI" +
       "ZE_TOO_LARGE_FOR_MULTI_VALUE_ATTRIBUTE\020\n" +
-      "B\310\001\n\"com.google.ads.googleads.v0.errorsB" +
+      "B\355\001\n\"com.google.ads.googleads.v0.errorsB" +
       "\022FeedItemErrorProtoP\001ZDgoogle.golang.org" +
       "/genproto/googleapis/ads/googleads/v0/er" +
       "rors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds" +
       ".V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Err" +
-      "orsb\006proto3"
+      "ors\352\002\"Google::Ads::GoogleAds::V0::Errors" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

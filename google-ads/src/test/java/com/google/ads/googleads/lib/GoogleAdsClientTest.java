@@ -19,10 +19,18 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.ConfigPropertyKey;
+import com.google.ads.googleads.v0.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v0.services.MockGoogleAdsService;
+import com.google.ads.googleads.v0.services.SearchGoogleAdsResponse;
+import com.google.api.gax.grpc.GaxGrpcProperties;
+import com.google.api.gax.grpc.testing.LocalChannelProvider;
+import com.google.api.gax.grpc.testing.MockServiceHelper;
+import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.auth.Credentials;
 import com.google.auth.oauth2.UserCredentials;
 import java.io.File;
@@ -32,14 +40,16 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.regex.Pattern;
 import java.util.stream.Stream;
 import javax.annotation.Nullable;
 import org.hamcrest.Matchers;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -47,7 +57,6 @@ import org.junit.rules.TemporaryFolder;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 /** Tests for {@link GoogleAdsClient}. */
@@ -59,10 +68,25 @@ public class GoogleAdsClientTest {
   private static final String REFRESH_TOKEN = "QRSTUVWXYZ";
   private static final String DEVELOPER_TOKEN = "developer_token";
   private static final long LOGIN_CUSTOMER_ID = 123456789L;
+  private static final MockGoogleAdsService mockService = new MockGoogleAdsService();
+  private static final MockServiceHelper mockServiceHelper =
+      new MockServiceHelper("fake-address", mockService);
   @Rule public TemporaryFolder folder = new TemporaryFolder();
   @Rule public ExpectedException thrown = ExpectedException.none();
   @Mock private ScheduledExecutorService executor;
+  private Credentials fakeCredentials = new FakeCredential();
+  private LocalChannelProvider localChannelProvider;
   private Properties testProperties;
+
+  @BeforeClass
+  public static void startLocalServer() {
+    mockServiceHelper.start();
+  }
+
+  @AfterClass
+  public static void stopLocalServer() {
+    mockServiceHelper.stop();
+  }
 
   @Before
   public void setUp() {
@@ -74,15 +98,8 @@ public class GoogleAdsClientTest {
     testProperties.setProperty(ConfigPropertyKey.DEVELOPER_TOKEN.getPropertyKey(), DEVELOPER_TOKEN);
     testProperties.setProperty(
         ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyKey(), String.valueOf(LOGIN_CUSTOMER_ID));
-  }
-
-  /** Creates an GoogleAdsClient using mock credentials. */
-  private GoogleAdsClient createTestGoogleAdsClient() {
-    return GoogleAdsClient.newBuilder()
-        .setCredentials(Mockito.mock(Credentials.class))
-        .setDeveloperToken(DEVELOPER_TOKEN)
-        .setLoginCustomerId(LOGIN_CUSTOMER_ID)
-        .build();
+    mockServiceHelper.reset();
+    localChannelProvider = mockServiceHelper.createChannelProvider();
   }
 
   /**
@@ -176,7 +193,10 @@ public class GoogleAdsClientTest {
 
     // Build a new client from the file.
     GoogleAdsClient client =
-        GoogleAdsClient.newBuilder().fromPropertiesFile(propertiesFile).build();
+        GoogleAdsClient.newBuilder()
+            .fromPropertiesFile(propertiesFile)
+            .setTransportChannelProvider(localChannelProvider)
+            .build();
     assertGoogleAdsClient(client, null);
   }
 
@@ -226,6 +246,7 @@ public class GoogleAdsClientTest {
             .setCredentials(credentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setLoginCustomerId(LOGIN_CUSTOMER_ID)
+            .setTransportChannelProvider(localChannelProvider)
             .build();
     assertGoogleAdsClient(client);
   }
@@ -255,44 +276,80 @@ public class GoogleAdsClientTest {
     assertNull(client.getLoginCustomerId());
   }
 
-  /** Verifies that headers include loginCustomerId if present. */
+  /**
+   * Verifies that the internal headers for the API client versions (gax, grpc, java) etc. are sent.
+   */
   @Test
-  public void getHeaders_loginCustomerId_includedIfSpecified() {
-    Credentials credentials =
-        UserCredentials.newBuilder()
-            .setClientId(CLIENT_ID)
-            .setClientSecret(CLIENT_SECRET)
-            .setRefreshToken(REFRESH_TOKEN)
-            .build();
+  public void x_goog_api_client_header_isSent() {
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder()
-            .setCredentials(credentials)
+            .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setLoginCustomerId(LOGIN_CUSTOMER_ID)
+            .setTransportChannelProvider(localChannelProvider)
+            .setEndpoint("fake-address")
             .build();
-    Map<String, String> headers = client.getHeaders();
-    assertEquals(
-        "invalid login-customer-id",
-        String.valueOf(LOGIN_CUSTOMER_ID),
-        headers.get("login-customer-id"));
+    mockService.addResponse(SearchGoogleAdsResponse.newBuilder().build());
+    try (GoogleAdsServiceClient googleAdsClient = client.getGoogleAdsServiceClient()) {
+      googleAdsClient.search("123", "select blah");
+    }
+    assertTrue(
+        "GAX/GRPC/Java platform headers missing",
+        localChannelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  /** Verifies that headers include loginCustomerId if present. */
+  @Test
+  public void loginCustomerId_sentIfSpecified() {
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(fakeCredentials)
+            .setDeveloperToken(DEVELOPER_TOKEN)
+            .setLoginCustomerId(LOGIN_CUSTOMER_ID)
+            .setTransportChannelProvider(localChannelProvider)
+            .setEndpoint("fake-address")
+            .build();
+    mockService.addResponse(SearchGoogleAdsResponse.newBuilder().build());
+    client.getGoogleAdsServiceClient().search("123", "select blah");
+    assertTrue(
+        "login customer ID not found",
+        localChannelProvider.isHeaderSent(
+            "login-customer-id", Pattern.compile(String.valueOf(LOGIN_CUSTOMER_ID))));
   }
 
   /** Verifies that headers does not include loginCustomerId if not specified. */
   @Test
-  public void getHeaders_loginCustomerId_excludedIfNotSpecified() {
-    Credentials credentials =
-        UserCredentials.newBuilder()
-            .setClientId(CLIENT_ID)
-            .setClientSecret(CLIENT_SECRET)
-            .setRefreshToken(REFRESH_TOKEN)
-            .build();
+  public void loginCustomerId_notSentIfExcluded() {
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder()
-            .setCredentials(credentials)
+            .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
+            .setTransportChannelProvider(localChannelProvider)
             .build();
-    Map<String, String> headers = client.getHeaders();
-    assertFalse("invalid login-customer-id", headers.containsKey("login-customer-id"));
+    mockService.addResponse(SearchGoogleAdsResponse.newBuilder().build());
+    client.getGoogleAdsServiceClient().search("123", "select blah");
+    assertFalse(
+        "login customer ID header should be excluded if not configured",
+        localChannelProvider.isHeaderSent("login-customer-id", Pattern.compile(".*")));
+  }
+
+  @Test
+  public void transportChannelProvider_defaultRequiresEndpoint() {
+    assertTrue(
+        "Default TransportChannelProvider must accept endpoint.",
+        GoogleAdsClient.newBuilder().getTransportChannelProvider().needsEndpoint());
+  }
+
+  /** Creates an GoogleAdsClient using mock credentials. */
+  private GoogleAdsClient createTestGoogleAdsClient() {
+    return GoogleAdsClient.newBuilder()
+        .setCredentials(fakeCredentials)
+        .setDeveloperToken(DEVELOPER_TOKEN)
+        .setLoginCustomerId(LOGIN_CUSTOMER_ID)
+        .setTransportChannelProvider(localChannelProvider)
+        .build();
   }
 
   /**
@@ -310,7 +367,9 @@ public class GoogleAdsClientTest {
   private void assertGoogleAdsClient(GoogleAdsClient client, @Nullable Long loginCustomerId)
       throws IOException {
     assertNotNull("Null client", client);
-    assertNotNull("Null channel", client.withExecutor(executor).getTransportChannel());
+    if (client.needsExecutor()) {
+      assertNotNull("Null channel", client.withExecutor(executor).getTransportChannel());
+    }
 
     Credentials credentials = client.getCredentials();
     assertNotNull("Null credentials", credentials);

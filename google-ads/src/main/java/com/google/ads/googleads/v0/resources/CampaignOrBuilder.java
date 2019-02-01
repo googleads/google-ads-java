@@ -398,6 +398,31 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * Setting for targeting related features.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 43;</code>
+   */
+  boolean hasTargetingSetting();
+  /**
+   * <pre>
+   * Setting for targeting related features.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 43;</code>
+   */
+  com.google.ads.googleads.v0.common.TargetingSetting getTargetingSetting();
+  /**
+   * <pre>
+   * Setting for targeting related features.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 43;</code>
+   */
+  com.google.ads.googleads.v0.common.TargetingSettingOrBuilder getTargetingSettingOrBuilder();
+
+  /**
+   * <pre>
    * The budget of the campaign.
    * </pre>
    *
@@ -473,31 +498,6 @@ public interface CampaignOrBuilder extends
    * <code>.google.protobuf.StringValue start_date = 19;</code>
    */
   com.google.protobuf.StringValueOrBuilder getStartDateOrBuilder();
-
-  /**
-   * <pre>
-   * The campaign group this campaign belongs to.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue campaign_group = 35;</code>
-   */
-  boolean hasCampaignGroup();
-  /**
-   * <pre>
-   * The campaign group this campaign belongs to.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue campaign_group = 35;</code>
-   */
-  com.google.protobuf.StringValue getCampaignGroup();
-  /**
-   * <pre>
-   * The campaign group this campaign belongs to.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue campaign_group = 35;</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getCampaignGroupOrBuilder();
 
   /**
    * <pre>
@@ -598,6 +598,101 @@ public interface CampaignOrBuilder extends
    */
   com.google.ads.googleads.v0.common.FrequencyCapEntryOrBuilder getFrequencyCapsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * 3-Tier Brand Safety setting for the campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42;</code>
+   */
+  int getVideoBrandSafetySuitabilityValue();
+  /**
+   * <pre>
+   * 3-Tier Brand Safety setting for the campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42;</code>
+   */
+  com.google.ads.googleads.v0.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability getVideoBrandSafetySuitability();
+
+  /**
+   * <pre>
+   * Describes how unbranded pharma ads will be displayed.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.VanityPharma vanity_pharma = 44;</code>
+   */
+  boolean hasVanityPharma();
+  /**
+   * <pre>
+   * Describes how unbranded pharma ads will be displayed.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.VanityPharma vanity_pharma = 44;</code>
+   */
+  com.google.ads.googleads.v0.resources.Campaign.VanityPharma getVanityPharma();
+  /**
+   * <pre>
+   * Describes how unbranded pharma ads will be displayed.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.VanityPharma vanity_pharma = 44;</code>
+   */
+  com.google.ads.googleads.v0.resources.Campaign.VanityPharmaOrBuilder getVanityPharmaOrBuilder();
+
+  /**
+   * <pre>
+   * Selective optimization setting for this campaign, which includes a set of
+   * conversion actions to optimize this campaign towards.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
+   */
+  boolean hasSelectiveOptimization();
+  /**
+   * <pre>
+   * Selective optimization setting for this campaign, which includes a set of
+   * conversion actions to optimize this campaign towards.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
+   */
+  com.google.ads.googleads.v0.resources.Campaign.SelectiveOptimization getSelectiveOptimization();
+  /**
+   * <pre>
+   * Selective optimization setting for this campaign, which includes a set of
+   * conversion actions to optimize this campaign towards.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
+   */
+  com.google.ads.googleads.v0.resources.Campaign.SelectiveOptimizationOrBuilder getSelectiveOptimizationOrBuilder();
+
+  /**
+   * <pre>
+   * Campaign level settings for tracking information.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+   */
+  boolean hasTrackingSetting();
+  /**
+   * <pre>
+   * Campaign level settings for tracking information.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+   */
+  com.google.ads.googleads.v0.resources.Campaign.TrackingSetting getTrackingSetting();
+  /**
+   * <pre>
+   * Campaign level settings for tracking information.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+   */
+  com.google.ads.googleads.v0.resources.Campaign.TrackingSettingOrBuilder getTrackingSettingOrBuilder();
 
   /**
    * <pre>
@@ -878,6 +973,34 @@ public interface CampaignOrBuilder extends
    * <code>.google.ads.googleads.v0.common.PercentCpc percent_cpc = 34;</code>
    */
   com.google.ads.googleads.v0.common.PercentCpcOrBuilder getPercentCpcOrBuilder();
+
+  /**
+   * <pre>
+   * A bidding strategy that automatically optimizes cost per thousand
+   * impressions.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TargetCpm target_cpm = 41;</code>
+   */
+  boolean hasTargetCpm();
+  /**
+   * <pre>
+   * A bidding strategy that automatically optimizes cost per thousand
+   * impressions.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TargetCpm target_cpm = 41;</code>
+   */
+  com.google.ads.googleads.v0.common.TargetCpm getTargetCpm();
+  /**
+   * <pre>
+   * A bidding strategy that automatically optimizes cost per thousand
+   * impressions.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TargetCpm target_cpm = 41;</code>
+   */
+  com.google.ads.googleads.v0.common.TargetCpmOrBuilder getTargetCpmOrBuilder();
 
   public com.google.ads.googleads.v0.resources.Campaign.CampaignBiddingStrategyCase getCampaignBiddingStrategyCase();
 }

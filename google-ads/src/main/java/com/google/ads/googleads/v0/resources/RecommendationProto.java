@@ -197,12 +197,13 @@ public final class RecommendationProto {
       "InRecommendation\022E\n recommended_budget_a" +
       "mount_micros\030\001 \001(\0132\033.google.protobuf.Int" +
       "64Value\032\"\n OptimizeAdRotationRecommendat" +
-      "ionB\020\n\016recommendationB\330\001\n%com.google.ads" +
+      "ionB\020\n\016recommendationB\200\002\n%com.google.ads" +
       ".googleads.v0.resourcesB\023RecommendationP" +
       "rotoP\001ZJgoogle.golang.org/genproto/googl" +
       "eapis/ads/googleads/v0/resources;resourc" +
       "es\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Resou" +
       "rces\312\002!Google\\Ads\\GoogleAds\\V0\\Resources" +
+      "\352\002%Google::Ads::GoogleAds::V0::Resources" +
       "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

@@ -31,12 +31,13 @@ public final class GenderViewProto {
       "\n3google/ads/googleads/v0/resources/gend" +
       "er_view.proto\022!google.ads.googleads.v0.r" +
       "esources\"#\n\nGenderView\022\025\n\rresource_name\030" +
-      "\001 \001(\tB\324\001\n%com.google.ads.googleads.v0.re" +
+      "\001 \001(\tB\374\001\n%com.google.ads.googleads.v0.re" +
       "sourcesB\017GenderViewProtoP\001ZJgoogle.golan" +
       "g.org/genproto/googleapis/ads/googleads/" +
       "v0/resources;resources\242\002\003GAA\252\002!Google.Ad" +
       "s.GoogleAds.V0.Resources\312\002!Google\\Ads\\Go" +
-      "ogleAds\\V0\\Resourcesb\006proto3"
+      "ogleAds\\V0\\Resources\352\002%Google::Ads::Goog" +
+      "leAds::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -47,23 +47,10 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            com.google.protobuf.Int64Value.Builder subBuilder = null;
-            if (operationIndex_ != null) {
-              subBuilder = operationIndex_.toBuilder();
-            }
-            operationIndex_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(operationIndex_);
-              operationIndex_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
               fieldPathElements_ = new java.util.ArrayList<com.google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             fieldPathElements_.add(
                 input.readMessage(com.google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement.parser(), extensionRegistry));
@@ -84,7 +71,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
         fieldPathElements_ = java.util.Collections.unmodifiableList(fieldPathElements_);
       }
       this.unknownFields = unknownFields.build();
@@ -952,40 +939,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
-  public static final int OPERATION_INDEX_FIELD_NUMBER = 1;
-  private com.google.protobuf.Int64Value operationIndex_;
-  /**
-   * <pre>
-   * The mutate operation that failed
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-   */
-  public boolean hasOperationIndex() {
-    return operationIndex_ != null;
-  }
-  /**
-   * <pre>
-   * The mutate operation that failed
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-   */
-  public com.google.protobuf.Int64Value getOperationIndex() {
-    return operationIndex_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : operationIndex_;
-  }
-  /**
-   * <pre>
-   * The mutate operation that failed
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-   */
-  public com.google.protobuf.Int64ValueOrBuilder getOperationIndexOrBuilder() {
-    return getOperationIndex();
-  }
-
   public static final int FIELD_PATH_ELEMENTS_FIELD_NUMBER = 2;
   private java.util.List<com.google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement> fieldPathElements_;
   /**
@@ -1055,9 +1008,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (operationIndex_ != null) {
-      output.writeMessage(1, getOperationIndex());
-    }
     for (int i = 0; i < fieldPathElements_.size(); i++) {
       output.writeMessage(2, fieldPathElements_.get(i));
     }
@@ -1070,10 +1020,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (operationIndex_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getOperationIndex());
-    }
     for (int i = 0; i < fieldPathElements_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, fieldPathElements_.get(i));
@@ -1094,11 +1040,6 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v0.errors.ErrorLocation other = (com.google.ads.googleads.v0.errors.ErrorLocation) obj;
 
     boolean result = true;
-    result = result && (hasOperationIndex() == other.hasOperationIndex());
-    if (hasOperationIndex()) {
-      result = result && getOperationIndex()
-          .equals(other.getOperationIndex());
-    }
     result = result && getFieldPathElementsList()
         .equals(other.getFieldPathElementsList());
     result = result && unknownFields.equals(other.unknownFields);
@@ -1112,10 +1053,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasOperationIndex()) {
-      hash = (37 * hash) + OPERATION_INDEX_FIELD_NUMBER;
-      hash = (53 * hash) + getOperationIndex().hashCode();
-    }
     if (getFieldPathElementsCount() > 0) {
       hash = (37 * hash) + FIELD_PATH_ELEMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getFieldPathElementsList().hashCode();
@@ -1258,15 +1195,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (operationIndexBuilder_ == null) {
-        operationIndex_ = null;
-      } else {
-        operationIndex_ = null;
-        operationIndexBuilder_ = null;
-      }
       if (fieldPathElementsBuilder_ == null) {
         fieldPathElements_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         fieldPathElementsBuilder_.clear();
       }
@@ -1297,22 +1228,15 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v0.errors.ErrorLocation buildPartial() {
       com.google.ads.googleads.v0.errors.ErrorLocation result = new com.google.ads.googleads.v0.errors.ErrorLocation(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (operationIndexBuilder_ == null) {
-        result.operationIndex_ = operationIndex_;
-      } else {
-        result.operationIndex_ = operationIndexBuilder_.build();
-      }
       if (fieldPathElementsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
           fieldPathElements_ = java.util.Collections.unmodifiableList(fieldPathElements_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.fieldPathElements_ = fieldPathElements_;
       } else {
         result.fieldPathElements_ = fieldPathElementsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -1361,14 +1285,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v0.errors.ErrorLocation other) {
       if (other == com.google.ads.googleads.v0.errors.ErrorLocation.getDefaultInstance()) return this;
-      if (other.hasOperationIndex()) {
-        mergeOperationIndex(other.getOperationIndex());
-      }
       if (fieldPathElementsBuilder_ == null) {
         if (!other.fieldPathElements_.isEmpty()) {
           if (fieldPathElements_.isEmpty()) {
             fieldPathElements_ = other.fieldPathElements_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureFieldPathElementsIsMutable();
             fieldPathElements_.addAll(other.fieldPathElements_);
@@ -1381,7 +1302,7 @@ private static final long serialVersionUID = 0L;
             fieldPathElementsBuilder_.dispose();
             fieldPathElementsBuilder_ = null;
             fieldPathElements_ = other.fieldPathElements_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             fieldPathElementsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFieldPathElementsFieldBuilder() : null;
@@ -1420,165 +1341,12 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.Int64Value operationIndex_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> operationIndexBuilder_;
-    /**
-     * <pre>
-     * The mutate operation that failed
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-     */
-    public boolean hasOperationIndex() {
-      return operationIndexBuilder_ != null || operationIndex_ != null;
-    }
-    /**
-     * <pre>
-     * The mutate operation that failed
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-     */
-    public com.google.protobuf.Int64Value getOperationIndex() {
-      if (operationIndexBuilder_ == null) {
-        return operationIndex_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : operationIndex_;
-      } else {
-        return operationIndexBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * The mutate operation that failed
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-     */
-    public Builder setOperationIndex(com.google.protobuf.Int64Value value) {
-      if (operationIndexBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        operationIndex_ = value;
-        onChanged();
-      } else {
-        operationIndexBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * The mutate operation that failed
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-     */
-    public Builder setOperationIndex(
-        com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (operationIndexBuilder_ == null) {
-        operationIndex_ = builderForValue.build();
-        onChanged();
-      } else {
-        operationIndexBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * The mutate operation that failed
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-     */
-    public Builder mergeOperationIndex(com.google.protobuf.Int64Value value) {
-      if (operationIndexBuilder_ == null) {
-        if (operationIndex_ != null) {
-          operationIndex_ =
-            com.google.protobuf.Int64Value.newBuilder(operationIndex_).mergeFrom(value).buildPartial();
-        } else {
-          operationIndex_ = value;
-        }
-        onChanged();
-      } else {
-        operationIndexBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * The mutate operation that failed
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-     */
-    public Builder clearOperationIndex() {
-      if (operationIndexBuilder_ == null) {
-        operationIndex_ = null;
-        onChanged();
-      } else {
-        operationIndex_ = null;
-        operationIndexBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * The mutate operation that failed
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-     */
-    public com.google.protobuf.Int64Value.Builder getOperationIndexBuilder() {
-      
-      onChanged();
-      return getOperationIndexFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * The mutate operation that failed
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-     */
-    public com.google.protobuf.Int64ValueOrBuilder getOperationIndexOrBuilder() {
-      if (operationIndexBuilder_ != null) {
-        return operationIndexBuilder_.getMessageOrBuilder();
-      } else {
-        return operationIndex_ == null ?
-            com.google.protobuf.Int64Value.getDefaultInstance() : operationIndex_;
-      }
-    }
-    /**
-     * <pre>
-     * The mutate operation that failed
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-        getOperationIndexFieldBuilder() {
-      if (operationIndexBuilder_ == null) {
-        operationIndexBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                getOperationIndex(),
-                getParentForChildren(),
-                isClean());
-        operationIndex_ = null;
-      }
-      return operationIndexBuilder_;
-    }
-
     private java.util.List<com.google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement> fieldPathElements_ =
       java.util.Collections.emptyList();
     private void ensureFieldPathElementsIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
         fieldPathElements_ = new java.util.ArrayList<com.google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement>(fieldPathElements_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1772,7 +1540,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFieldPathElements() {
       if (fieldPathElementsBuilder_ == null) {
         fieldPathElements_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         fieldPathElementsBuilder_.clear();
@@ -1877,7 +1645,7 @@ private static final long serialVersionUID = 0L;
         fieldPathElementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement, com.google.ads.googleads.v0.errors.ErrorLocation.FieldPathElement.Builder, com.google.ads.googleads.v0.errors.ErrorLocation.FieldPathElementOrBuilder>(
                 fieldPathElements_,
-                ((bitField0_ & 0x00000002) == 0x00000002),
+                ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),
                 isClean());
         fieldPathElements_ = null;

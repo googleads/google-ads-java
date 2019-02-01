@@ -6,6 +6,7 @@ package com.google.ads.googleads.v0.resources;
 /**
  * <pre>
  * A Keyword Plan ad group keyword.
+ * Max number of keyword plan keywords per plan: 2500.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v0.resources.KeywordPlanKeyword}
@@ -582,6 +583,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A Keyword Plan ad group keyword.
+   * Max number of keyword plan keywords per plan: 2500.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v0.resources.KeywordPlanKeyword}

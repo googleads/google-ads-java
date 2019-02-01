@@ -32,12 +32,13 @@ public final class ListingGroupTypeProto {
       "group_type.proto\022\035google.ads.googleads.v" +
       "0.enums\"c\n\024ListingGroupTypeEnum\"K\n\020Listi" +
       "ngGroupType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020" +
-      "\001\022\017\n\013SUBDIVISION\020\002\022\010\n\004UNIT\020\003B\306\001\n!com.goo" +
+      "\001\022\017\n\013SUBDIVISION\020\002\022\010\n\004UNIT\020\003B\352\001\n!com.goo" +
       "gle.ads.googleads.v0.enumsB\025ListingGroup" +
       "TypeProtoP\001ZBgoogle.golang.org/genproto/" +
       "googleapis/ads/googleads/v0/enums;enums\242" +
       "\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312\002\035" +
-      "Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Google::" +
+      "Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

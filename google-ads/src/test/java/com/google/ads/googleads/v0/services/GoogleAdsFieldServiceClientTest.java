@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,6 +49,8 @@ public class GoogleAdsFieldServiceClientTest {
   private static MockAdGroupCriterionService mockAdGroupCriterionService;
   private static MockAdGroupFeedService mockAdGroupFeedService;
   private static MockAdGroupService mockAdGroupService;
+  private static MockAdParameterService mockAdParameterService;
+  private static MockAdScheduleViewService mockAdScheduleViewService;
   private static MockAgeRangeViewService mockAgeRangeViewService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
   private static MockBillingSetupService mockBillingSetupService;
@@ -57,7 +59,6 @@ public class GoogleAdsFieldServiceClientTest {
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
   private static MockCampaignFeedService mockCampaignFeedService;
-  private static MockCampaignGroupService mockCampaignGroupService;
   private static MockCampaignService mockCampaignService;
   private static MockCampaignSharedSetService mockCampaignSharedSetService;
   private static MockCarrierConstantService mockCarrierConstantService;
@@ -91,10 +92,15 @@ public class GoogleAdsFieldServiceClientTest {
   private static MockLanguageConstantService mockLanguageConstantService;
   private static MockManagedPlacementViewService mockManagedPlacementViewService;
   private static MockMediaFileService mockMediaFileService;
+  private static MockMobileAppCategoryConstantService mockMobileAppCategoryConstantService;
+  private static MockMobileDeviceConstantService mockMobileDeviceConstantService;
+  private static MockOperatingSystemVersionConstantService
+      mockOperatingSystemVersionConstantService;
   private static MockParentalStatusViewService mockParentalStatusViewService;
   private static MockPaymentsAccountService mockPaymentsAccountService;
   private static MockProductGroupViewService mockProductGroupViewService;
   private static MockRecommendationService mockRecommendationService;
+  private static MockRemarketingActionService mockRemarketingActionService;
   private static MockSearchTermViewService mockSearchTermViewService;
   private static MockTopicConstantService mockTopicConstantService;
   private static MockTopicViewService mockTopicViewService;
@@ -114,6 +120,8 @@ public class GoogleAdsFieldServiceClientTest {
     mockAdGroupCriterionService = new MockAdGroupCriterionService();
     mockAdGroupFeedService = new MockAdGroupFeedService();
     mockAdGroupService = new MockAdGroupService();
+    mockAdParameterService = new MockAdParameterService();
+    mockAdScheduleViewService = new MockAdScheduleViewService();
     mockAgeRangeViewService = new MockAgeRangeViewService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
     mockBillingSetupService = new MockBillingSetupService();
@@ -122,7 +130,6 @@ public class GoogleAdsFieldServiceClientTest {
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
     mockCampaignFeedService = new MockCampaignFeedService();
-    mockCampaignGroupService = new MockCampaignGroupService();
     mockCampaignService = new MockCampaignService();
     mockCampaignSharedSetService = new MockCampaignSharedSetService();
     mockCarrierConstantService = new MockCarrierConstantService();
@@ -156,10 +163,14 @@ public class GoogleAdsFieldServiceClientTest {
     mockLanguageConstantService = new MockLanguageConstantService();
     mockManagedPlacementViewService = new MockManagedPlacementViewService();
     mockMediaFileService = new MockMediaFileService();
+    mockMobileAppCategoryConstantService = new MockMobileAppCategoryConstantService();
+    mockMobileDeviceConstantService = new MockMobileDeviceConstantService();
+    mockOperatingSystemVersionConstantService = new MockOperatingSystemVersionConstantService();
     mockParentalStatusViewService = new MockParentalStatusViewService();
     mockPaymentsAccountService = new MockPaymentsAccountService();
     mockProductGroupViewService = new MockProductGroupViewService();
     mockRecommendationService = new MockRecommendationService();
+    mockRemarketingActionService = new MockRemarketingActionService();
     mockSearchTermViewService = new MockSearchTermViewService();
     mockTopicConstantService = new MockTopicConstantService();
     mockTopicViewService = new MockTopicViewService();
@@ -177,6 +188,8 @@ public class GoogleAdsFieldServiceClientTest {
                 mockAdGroupCriterionService,
                 mockAdGroupFeedService,
                 mockAdGroupService,
+                mockAdParameterService,
+                mockAdScheduleViewService,
                 mockAgeRangeViewService,
                 mockBiddingStrategyService,
                 mockBillingSetupService,
@@ -185,7 +198,6 @@ public class GoogleAdsFieldServiceClientTest {
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
                 mockCampaignFeedService,
-                mockCampaignGroupService,
                 mockCampaignService,
                 mockCampaignSharedSetService,
                 mockCarrierConstantService,
@@ -219,10 +231,14 @@ public class GoogleAdsFieldServiceClientTest {
                 mockLanguageConstantService,
                 mockManagedPlacementViewService,
                 mockMediaFileService,
+                mockMobileAppCategoryConstantService,
+                mockMobileDeviceConstantService,
+                mockOperatingSystemVersionConstantService,
                 mockParentalStatusViewService,
                 mockPaymentsAccountService,
                 mockProductGroupViewService,
                 mockRecommendationService,
+                mockRemarketingActionService,
                 mockSearchTermViewService,
                 mockTopicConstantService,
                 mockTopicViewService,

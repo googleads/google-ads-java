@@ -38,12 +38,13 @@ public final class CampaignFeedErrorProto {
       "TING_CAMPAIGN_FEED\020\005\022\'\n#CANNOT_MODIFY_RE" +
       "MOVED_CAMPAIGN_FEED\020\006\022\034\n\030INVALID_PLACEHO" +
       "LDER_TYPE\020\007\022,\n(MISSING_FEEDMAPPING_FOR_P" +
-      "LACEHOLDER_TYPE\020\010B\314\001\n\"com.google.ads.goo" +
+      "LACEHOLDER_TYPE\020\010B\361\001\n\"com.google.ads.goo" +
       "gleads.v0.errorsB\026CampaignFeedErrorProto" +
       "P\001ZDgoogle.golang.org/genproto/googleapi" +
       "s/ads/googleads/v0/errors;errors\242\002\003GAA\252\002" +
       "\036Google.Ads.GoogleAds.V0.Errors\312\002\036Google" +
-      "\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::Ads::" +
+      "GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

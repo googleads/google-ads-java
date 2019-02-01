@@ -80,12 +80,13 @@ public final class AccountBudgetProposalProto {
       "mitTypeH\004B\025\n\023proposed_start_timeB\023\n\021prop" +
       "osed_end_timeB\023\n\021approved_end_timeB\031\n\027pr" +
       "oposed_spending_limitB\031\n\027approved_spendi" +
-      "ng_limitB\337\001\n%com.google.ads.googleads.v0" +
+      "ng_limitB\207\002\n%com.google.ads.googleads.v0" +
       ".resourcesB\032AccountBudgetProposalProtoP\001" +
       "ZJgoogle.golang.org/genproto/googleapis/" +
       "ads/googleads/v0/resources;resources\242\002\003G" +
       "AA\252\002!Google.Ads.GoogleAds.V0.Resources\312\002" +
-      "!Google\\Ads\\GoogleAds\\V0\\Resourcesb\006prot" +
+      "!Google\\Ads\\GoogleAds\\V0\\Resources\352\002%Goo" +
+      "gle::Ads::GoogleAds::V0::Resourcesb\006prot" +
       "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

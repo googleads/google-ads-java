@@ -30,7 +30,7 @@ public final class UserListErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v0/errors/user_li" +
       "st_error.proto\022\036google.ads.googleads.v0." +
-      "errors\"\324\006\n\021UserListErrorEnum\"\276\006\n\rUserLis" +
+      "errors\"\354\007\n\021UserListErrorEnum\"\326\007\n\rUserLis" +
       "tError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\0227\n3" +
       "EXTERNAL_REMARKETING_USER_LIST_MUTATE_NO" +
       "T_SUPPORTED\020\002\022\032\n\026CONCRETE_TYPE_REQUIRED\020" +
@@ -51,12 +51,17 @@ public final class UserListErrorProto {
       "BLE_RECORD_COUNT\020\036\022\022\n\016APP_ID_NOT_SET\020\037\022-" +
       "\n)USERLIST_NAME_IS_RESERVED_FOR_SYSTEM_L" +
       "IST\020 \0226\n2ADVERTISER_NOT_WHITELISTED_FOR_" +
-      "USING_UPLOADED_DATA\020!B\310\001\n\"com.google.ads" +
-      ".googleads.v0.errorsB\022UserListErrorProto" +
-      "P\001ZDgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v0/errors;errors\242\002\003GAA\252\002" +
-      "\036Google.Ads.GoogleAds.V0.Errors\312\002\036Google" +
-      "\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "USING_UPLOADED_DATA\020!\022\036\n\032RULE_TYPE_IS_NO" +
+      "T_SUPPORTED\020\"\022:\n6CAN_NOT_ADD_A_SIMILAR_U" +
+      "SERLIST_AS_LOGICAL_LIST_OPERAND\020#\022:\n6CAN" +
+      "_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_" +
+      "OTHER_LISTS\020$B\355\001\n\"com.google.ads.googlea" +
+      "ds.v0.errorsB\022UserListErrorProtoP\001ZDgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v0/errors;errors\242\002\003GAA\252\002\036Google." +
+      "Ads.GoogleAds.V0.Errors\312\002\036Google\\Ads\\Goo" +
+      "gleAds\\V0\\Errors\352\002\"Google::Ads::GoogleAd" +
+      "s::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -113,6 +113,7 @@ public interface FeedItemOrBuilder extends
   /**
    * <pre>
    * End time in which this feed item is no longer effective and will stop
+   * serving.
    * The format is "YYYY-MM-DD HH:MM:SS".
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
@@ -123,6 +124,7 @@ public interface FeedItemOrBuilder extends
   /**
    * <pre>
    * End time in which this feed item is no longer effective and will stop
+   * serving.
    * The format is "YYYY-MM-DD HH:MM:SS".
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
@@ -133,6 +135,7 @@ public interface FeedItemOrBuilder extends
   /**
    * <pre>
    * End time in which this feed item is no longer effective and will stop
+   * serving.
    * The format is "YYYY-MM-DD HH:MM:SS".
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
@@ -271,4 +274,73 @@ public interface FeedItemOrBuilder extends
    * <code>.google.ads.googleads.v0.enums.FeedItemStatusEnum.FeedItemStatus status = 9;</code>
    */
   com.google.ads.googleads.v0.enums.FeedItemStatusEnum.FeedItemStatus getStatus();
+
+  /**
+   * <pre>
+   * List of info about a feed item's validation and approval state for active
+   * feed mappings. There will be an entry in the list for each type of feed
+   * mapping associated with the feed, e.g. a feed with a sitelink and a call
+   * feed mapping would cause every feed item associated with that feed to have
+   * an entry in this list for both sitelink and call.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   */
+  java.util.List<com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo> 
+      getPolicyInfosList();
+  /**
+   * <pre>
+   * List of info about a feed item's validation and approval state for active
+   * feed mappings. There will be an entry in the list for each type of feed
+   * mapping associated with the feed, e.g. a feed with a sitelink and a call
+   * feed mapping would cause every feed item associated with that feed to have
+   * an entry in this list for both sitelink and call.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   */
+  com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo getPolicyInfos(int index);
+  /**
+   * <pre>
+   * List of info about a feed item's validation and approval state for active
+   * feed mappings. There will be an entry in the list for each type of feed
+   * mapping associated with the feed, e.g. a feed with a sitelink and a call
+   * feed mapping would cause every feed item associated with that feed to have
+   * an entry in this list for both sitelink and call.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   */
+  int getPolicyInfosCount();
+  /**
+   * <pre>
+   * List of info about a feed item's validation and approval state for active
+   * feed mappings. There will be an entry in the list for each type of feed
+   * mapping associated with the feed, e.g. a feed with a sitelink and a call
+   * feed mapping would cause every feed item associated with that feed to have
+   * an entry in this list for both sitelink and call.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfoOrBuilder> 
+      getPolicyInfosOrBuilderList();
+  /**
+   * <pre>
+   * List of info about a feed item's validation and approval state for active
+   * feed mappings. There will be an entry in the list for each type of feed
+   * mapping associated with the feed, e.g. a feed with a sitelink and a call
+   * feed mapping would cause every feed item associated with that feed to have
+   * an entry in this list for both sitelink and call.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   */
+  com.google.ads.googleads.v0.resources.FeedItemPlaceholderPolicyInfoOrBuilder getPolicyInfosOrBuilder(
+      int index);
 }

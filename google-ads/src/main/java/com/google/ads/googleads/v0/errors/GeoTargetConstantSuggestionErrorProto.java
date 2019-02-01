@@ -36,12 +36,13 @@ public final class GeoTargetConstantSuggestionErrorProto {
       "\020\000\022\013\n\007UNKNOWN\020\001\022\034\n\030LOCATION_NAME_SIZE_LI" +
       "MIT\020\002\022\027\n\023LOCATION_NAME_LIMIT\020\003\022\030\n\024INVALI" +
       "D_COUNTRY_CODE\020\004\022\034\n\030REQUEST_PARAMETERS_U" +
-      "NSET\020\005B\333\001\n\"com.google.ads.googleads.v0.e" +
+      "NSET\020\005B\200\002\n\"com.google.ads.googleads.v0.e" +
       "rrorsB%GeoTargetConstantSuggestionErrorP" +
       "rotoP\001ZDgoogle.golang.org/genproto/googl" +
       "eapis/ads/googleads/v0/errors;errors\242\002\003G" +
       "AA\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Go" +
-      "ogle\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "ogle\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::A" +
+      "ds::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

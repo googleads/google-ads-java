@@ -30,7 +30,7 @@ public final class CriterionErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v0/errors/criteri" +
       "on_error.proto\022\036google.ads.googleads.v0." +
-      "errors\"\240\030\n\022CriterionErrorEnum\"\211\030\n\016Criter" +
+      "errors\"\312\034\n\022CriterionErrorEnum\"\263\034\n\016Criter" +
       "ionError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\032" +
       "\n\026CONCRETE_TYPE_REQUIRED\020\002\022\035\n\031INVALID_EX" +
       "CLUDED_CATEGORY\020\003\022\030\n\024INVALID_KEYWORD_TEX" +
@@ -107,13 +107,27 @@ public final class CriterionErrorProto {
       "TAY_OVERLAPS_WITH_EXISTING_CRITERION\020R\022A" +
       "\n=HOTEL_ADVANCE_BOOKING_WINDOW_OVERLAPS_" +
       "WITH_EXISTING_CRITERION\020S\022.\n*FIELD_INCOM" +
-      "PATIBLE_WITH_NEGATIVE_TARGETING\020TB\311\001\n\"co" +
-      "m.google.ads.googleads.v0.errorsB\023Criter" +
-      "ionErrorProtoP\001ZDgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v0/errors;e" +
-      "rrors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Er" +
-      "rors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006p" +
-      "roto3"
+      "PATIBLE_WITH_NEGATIVE_TARGETING\020T\022\035\n\031INV" +
+      "ALID_WEBPAGE_CONDITION\020U\022!\n\035INVALID_WEBP" +
+      "AGE_CONDITION_URL\020V\022)\n%WEBPAGE_CONDITION" +
+      "_URL_CANNOT_BE_EMPTY\020W\022.\n*WEBPAGE_CONDIT" +
+      "ION_URL_UNSUPPORTED_PROTOCOL\020X\022.\n*WEBPAG" +
+      "E_CONDITION_URL_CANNOT_BE_IP_ADDRESS\020Y\022E" +
+      "\nAWEBPAGE_CONDITION_URL_DOMAIN_NOT_CONSI" +
+      "STENT_WITH_CAMPAIGN_SETTING\020Z\0221\n-WEBPAGE" +
+      "_CONDITION_URL_CANNOT_BE_PUBLIC_SUFFIX\020[" +
+      "\022/\n+WEBPAGE_CONDITION_URL_INVALID_PUBLIC" +
+      "_SUFFIX\020\\\0229\n5WEBPAGE_CONDITION_URL_VALUE" +
+      "_TRACK_VALUE_NOT_SUPPORTED\020]\022<\n8WEBPAGE_" +
+      "CRITERION_URL_EQUALS_CAN_HAVE_ONLY_ONE_C" +
+      "ONDITION\020^\0227\n3WEBPAGE_CRITERION_NOT_SUPP" +
+      "ORTED_ON_NON_DSA_AD_GROUP\020_B\356\001\n\"com.goog" +
+      "le.ads.googleads.v0.errorsB\023CriterionErr" +
+      "orProtoP\001ZDgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v0/errors;errors\242" +
+      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002" +
+      "\036Google\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google" +
+      "::Ads::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

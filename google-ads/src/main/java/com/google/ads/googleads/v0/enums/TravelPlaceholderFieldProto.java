@@ -42,12 +42,13 @@ public final class TravelPlaceholderFieldProto {
       "NAL_MOBILE_URLS\020\020\022\020\n\014TRACKING_URL\020\021\022\024\n\020A" +
       "NDROID_APP_LINK\020\022\022\033\n\027SIMILAR_DESTINATION" +
       "_IDS\020\023\022\020\n\014IOS_APP_LINK\020\024\022\024\n\020IOS_APP_STOR" +
-      "E_ID\020\025B\314\001\n!com.google.ads.googleads.v0.e" +
+      "E_ID\020\025B\360\001\n!com.google.ads.googleads.v0.e" +
       "numsB\033TravelPlaceholderFieldProtoP\001ZBgoo" +
       "gle.golang.org/genproto/googleapis/ads/g" +
       "oogleads/v0/enums;enums\242\002\003GAA\252\002\035Google.A" +
       "ds.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Googl" +
-      "eAds\\V0\\Enumsb\006proto3"
+      "eAds\\V0\\Enums\352\002!Google::Ads::GoogleAds::" +
+      "V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -207,7 +207,7 @@ public class FeedServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final Feed getFeed(GetFeedRequest request) {
+  public final Feed getFeed(GetFeedRequest request) {
     return getFeedCallable().call(request);
   }
 
@@ -231,6 +231,47 @@ public class FeedServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetFeedRequest, Feed> getFeedCallable() {
     return stub.getFeedCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates, updates, or removes feeds. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (FeedServiceClient feedServiceClient = FeedServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;FeedOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   boolean partialFailure = false;
+   *   boolean validateOnly = false;
+   *   MutateFeedsResponse response = feedServiceClient.mutateFeeds(customerId, operations, partialFailure, validateOnly);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer whose feeds are being modified.
+   * @param operations The list of operations to perform on individual feeds.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, all operations will be carried out in one transaction if and
+   *     only if they are all valid. Default is false.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateFeedsResponse mutateFeeds(
+      String customerId,
+      List<FeedOperation> operations,
+      boolean partialFailure,
+      boolean validateOnly) {
+
+    MutateFeedsRequest request =
+        MutateFeedsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllOperations(operations)
+            .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
+            .build();
+    return mutateFeeds(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

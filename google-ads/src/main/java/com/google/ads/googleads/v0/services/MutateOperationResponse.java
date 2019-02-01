@@ -144,20 +144,6 @@ private static final long serialVersionUID = 0L;
             responseCase_ = 8;
             break;
           }
-          case 74: {
-            com.google.ads.googleads.v0.services.MutateCampaignGroupResult.Builder subBuilder = null;
-            if (responseCase_ == 9) {
-              subBuilder = ((com.google.ads.googleads.v0.services.MutateCampaignGroupResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v0.services.MutateCampaignGroupResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v0.services.MutateCampaignGroupResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 9;
-            break;
-          }
           case 82: {
             com.google.ads.googleads.v0.services.MutateCampaignResult.Builder subBuilder = null;
             if (responseCase_ == 10) {
@@ -299,7 +285,6 @@ private static final long serialVersionUID = 0L;
     BIDDING_STRATEGY_RESULT(6),
     CAMPAIGN_BID_MODIFIER_RESULT(7),
     CAMPAIGN_BUDGET_RESULT(8),
-    CAMPAIGN_GROUP_RESULT(9),
     CAMPAIGN_RESULT(10),
     CAMPAIGN_SHARED_SET_RESULT(11),
     CONVERSION_ACTION_RESULT(12),
@@ -329,7 +314,6 @@ private static final long serialVersionUID = 0L;
         case 6: return BIDDING_STRATEGY_RESULT;
         case 7: return CAMPAIGN_BID_MODIFIER_RESULT;
         case 8: return CAMPAIGN_BUDGET_RESULT;
-        case 9: return CAMPAIGN_GROUP_RESULT;
         case 10: return CAMPAIGN_RESULT;
         case 11: return CAMPAIGN_SHARED_SET_RESULT;
         case 12: return CONVERSION_ACTION_RESULT;
@@ -616,44 +600,6 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v0.services.MutateCampaignBudgetResult) response_;
     }
     return com.google.ads.googleads.v0.services.MutateCampaignBudgetResult.getDefaultInstance();
-  }
-
-  public static final int CAMPAIGN_GROUP_RESULT_FIELD_NUMBER = 9;
-  /**
-   * <pre>
-   * The result for the campaign group mutate.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
-   */
-  public boolean hasCampaignGroupResult() {
-    return responseCase_ == 9;
-  }
-  /**
-   * <pre>
-   * The result for the campaign group mutate.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
-   */
-  public com.google.ads.googleads.v0.services.MutateCampaignGroupResult getCampaignGroupResult() {
-    if (responseCase_ == 9) {
-       return (com.google.ads.googleads.v0.services.MutateCampaignGroupResult) response_;
-    }
-    return com.google.ads.googleads.v0.services.MutateCampaignGroupResult.getDefaultInstance();
-  }
-  /**
-   * <pre>
-   * The result for the campaign group mutate.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
-   */
-  public com.google.ads.googleads.v0.services.MutateCampaignGroupResultOrBuilder getCampaignGroupResultOrBuilder() {
-    if (responseCase_ == 9) {
-       return (com.google.ads.googleads.v0.services.MutateCampaignGroupResult) response_;
-    }
-    return com.google.ads.googleads.v0.services.MutateCampaignGroupResult.getDefaultInstance();
   }
 
   public static final int CAMPAIGN_RESULT_FIELD_NUMBER = 10;
@@ -957,9 +903,6 @@ private static final long serialVersionUID = 0L;
     if (responseCase_ == 8) {
       output.writeMessage(8, (com.google.ads.googleads.v0.services.MutateCampaignBudgetResult) response_);
     }
-    if (responseCase_ == 9) {
-      output.writeMessage(9, (com.google.ads.googleads.v0.services.MutateCampaignGroupResult) response_);
-    }
     if (responseCase_ == 10) {
       output.writeMessage(10, (com.google.ads.googleads.v0.services.MutateCampaignResult) response_);
     }
@@ -1017,10 +960,6 @@ private static final long serialVersionUID = 0L;
     if (responseCase_ == 8) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, (com.google.ads.googleads.v0.services.MutateCampaignBudgetResult) response_);
-    }
-    if (responseCase_ == 9) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, (com.google.ads.googleads.v0.services.MutateCampaignGroupResult) response_);
     }
     if (responseCase_ == 10) {
       size += com.google.protobuf.CodedOutputStream
@@ -1098,10 +1037,6 @@ private static final long serialVersionUID = 0L;
         result = result && getCampaignBudgetResult()
             .equals(other.getCampaignBudgetResult());
         break;
-      case 9:
-        result = result && getCampaignGroupResult()
-            .equals(other.getCampaignGroupResult());
-        break;
       case 10:
         result = result && getCampaignResult()
             .equals(other.getCampaignResult());
@@ -1172,10 +1107,6 @@ private static final long serialVersionUID = 0L;
       case 8:
         hash = (37 * hash) + CAMPAIGN_BUDGET_RESULT_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignBudgetResult().hashCode();
-        break;
-      case 9:
-        hash = (37 * hash) + CAMPAIGN_GROUP_RESULT_FIELD_NUMBER;
-        hash = (53 * hash) + getCampaignGroupResult().hashCode();
         break;
       case 10:
         hash = (37 * hash) + CAMPAIGN_RESULT_FIELD_NUMBER;
@@ -1422,13 +1353,6 @@ private static final long serialVersionUID = 0L;
           result.response_ = campaignBudgetResultBuilder_.build();
         }
       }
-      if (responseCase_ == 9) {
-        if (campaignGroupResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignGroupResultBuilder_.build();
-        }
-      }
       if (responseCase_ == 10) {
         if (campaignResultBuilder_ == null) {
           result.response_ = response_;
@@ -1554,10 +1478,6 @@ private static final long serialVersionUID = 0L;
         }
         case CAMPAIGN_BUDGET_RESULT: {
           mergeCampaignBudgetResult(other.getCampaignBudgetResult());
-          break;
-        }
-        case CAMPAIGN_GROUP_RESULT: {
-          mergeCampaignGroupResult(other.getCampaignGroupResult());
           break;
         }
         case CAMPAIGN_RESULT: {
@@ -2838,178 +2758,6 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 8;
       onChanged();;
       return campaignBudgetResultBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.ads.googleads.v0.services.MutateCampaignGroupResult, com.google.ads.googleads.v0.services.MutateCampaignGroupResult.Builder, com.google.ads.googleads.v0.services.MutateCampaignGroupResultOrBuilder> campaignGroupResultBuilder_;
-    /**
-     * <pre>
-     * The result for the campaign group mutate.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
-     */
-    public boolean hasCampaignGroupResult() {
-      return responseCase_ == 9;
-    }
-    /**
-     * <pre>
-     * The result for the campaign group mutate.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
-     */
-    public com.google.ads.googleads.v0.services.MutateCampaignGroupResult getCampaignGroupResult() {
-      if (campaignGroupResultBuilder_ == null) {
-        if (responseCase_ == 9) {
-          return (com.google.ads.googleads.v0.services.MutateCampaignGroupResult) response_;
-        }
-        return com.google.ads.googleads.v0.services.MutateCampaignGroupResult.getDefaultInstance();
-      } else {
-        if (responseCase_ == 9) {
-          return campaignGroupResultBuilder_.getMessage();
-        }
-        return com.google.ads.googleads.v0.services.MutateCampaignGroupResult.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * The result for the campaign group mutate.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
-     */
-    public Builder setCampaignGroupResult(com.google.ads.googleads.v0.services.MutateCampaignGroupResult value) {
-      if (campaignGroupResultBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        response_ = value;
-        onChanged();
-      } else {
-        campaignGroupResultBuilder_.setMessage(value);
-      }
-      responseCase_ = 9;
-      return this;
-    }
-    /**
-     * <pre>
-     * The result for the campaign group mutate.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
-     */
-    public Builder setCampaignGroupResult(
-        com.google.ads.googleads.v0.services.MutateCampaignGroupResult.Builder builderForValue) {
-      if (campaignGroupResultBuilder_ == null) {
-        response_ = builderForValue.build();
-        onChanged();
-      } else {
-        campaignGroupResultBuilder_.setMessage(builderForValue.build());
-      }
-      responseCase_ = 9;
-      return this;
-    }
-    /**
-     * <pre>
-     * The result for the campaign group mutate.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
-     */
-    public Builder mergeCampaignGroupResult(com.google.ads.googleads.v0.services.MutateCampaignGroupResult value) {
-      if (campaignGroupResultBuilder_ == null) {
-        if (responseCase_ == 9 &&
-            response_ != com.google.ads.googleads.v0.services.MutateCampaignGroupResult.getDefaultInstance()) {
-          response_ = com.google.ads.googleads.v0.services.MutateCampaignGroupResult.newBuilder((com.google.ads.googleads.v0.services.MutateCampaignGroupResult) response_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          response_ = value;
-        }
-        onChanged();
-      } else {
-        if (responseCase_ == 9) {
-          campaignGroupResultBuilder_.mergeFrom(value);
-        }
-        campaignGroupResultBuilder_.setMessage(value);
-      }
-      responseCase_ = 9;
-      return this;
-    }
-    /**
-     * <pre>
-     * The result for the campaign group mutate.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
-     */
-    public Builder clearCampaignGroupResult() {
-      if (campaignGroupResultBuilder_ == null) {
-        if (responseCase_ == 9) {
-          responseCase_ = 0;
-          response_ = null;
-          onChanged();
-        }
-      } else {
-        if (responseCase_ == 9) {
-          responseCase_ = 0;
-          response_ = null;
-        }
-        campaignGroupResultBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The result for the campaign group mutate.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
-     */
-    public com.google.ads.googleads.v0.services.MutateCampaignGroupResult.Builder getCampaignGroupResultBuilder() {
-      return getCampaignGroupResultFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * The result for the campaign group mutate.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
-     */
-    public com.google.ads.googleads.v0.services.MutateCampaignGroupResultOrBuilder getCampaignGroupResultOrBuilder() {
-      if ((responseCase_ == 9) && (campaignGroupResultBuilder_ != null)) {
-        return campaignGroupResultBuilder_.getMessageOrBuilder();
-      } else {
-        if (responseCase_ == 9) {
-          return (com.google.ads.googleads.v0.services.MutateCampaignGroupResult) response_;
-        }
-        return com.google.ads.googleads.v0.services.MutateCampaignGroupResult.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * The result for the campaign group mutate.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.ads.googleads.v0.services.MutateCampaignGroupResult, com.google.ads.googleads.v0.services.MutateCampaignGroupResult.Builder, com.google.ads.googleads.v0.services.MutateCampaignGroupResultOrBuilder> 
-        getCampaignGroupResultFieldBuilder() {
-      if (campaignGroupResultBuilder_ == null) {
-        if (!(responseCase_ == 9)) {
-          response_ = com.google.ads.googleads.v0.services.MutateCampaignGroupResult.getDefaultInstance();
-        }
-        campaignGroupResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.ads.googleads.v0.services.MutateCampaignGroupResult, com.google.ads.googleads.v0.services.MutateCampaignGroupResult.Builder, com.google.ads.googleads.v0.services.MutateCampaignGroupResultOrBuilder>(
-                (com.google.ads.googleads.v0.services.MutateCampaignGroupResult) response_,
-                getParentForChildren(),
-                isClean());
-        response_ = null;
-      }
-      responseCase_ = 9;
-      onChanged();;
-      return campaignGroupResultBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

@@ -46,13 +46,13 @@ public final class UserListSizeRangeProto {
       "N_TO_TEN_MILLION\020\r\022!\n\035TEN_MILLION_TO_TWE" +
       "NTY_MILLION\020\016\022$\n TWENTY_MILLION_TO_THIRT" +
       "Y_MILLION\020\017\022#\n\037THIRTY_MILLION_TO_FIFTY_M" +
-      "ILLION\020\020\022\026\n\022OVER_FIFTY_MILLION\020\021B\307\001\n!com" +
+      "ILLION\020\020\022\026\n\022OVER_FIFTY_MILLION\020\021B\353\001\n!com" +
       ".google.ads.googleads.v0.enumsB\026UserList" +
       "SizeRangeProtoP\001ZBgoogle.golang.org/genp" +
       "roto/googleapis/ads/googleads/v0/enums;e" +
       "nums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enu" +
-      "ms\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006prot" +
-      "o3"
+      "ms\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Goo" +
+      "gle::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

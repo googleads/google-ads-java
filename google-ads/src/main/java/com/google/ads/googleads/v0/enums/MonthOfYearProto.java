@@ -35,12 +35,13 @@ public final class MonthOfYearProto {
       "\002\022\014\n\010FEBRUARY\020\003\022\t\n\005MARCH\020\004\022\t\n\005APRIL\020\005\022\007\n" +
       "\003MAY\020\006\022\010\n\004JUNE\020\007\022\010\n\004JULY\020\010\022\n\n\006AUGUST\020\t\022\r" +
       "\n\tSEPTEMBER\020\n\022\013\n\007OCTOBER\020\013\022\014\n\010NOVEMBER\020\014" +
-      "\022\014\n\010DECEMBER\020\rB\301\001\n!com.google.ads.google" +
+      "\022\014\n\010DECEMBER\020\rB\345\001\n!com.google.ads.google" +
       "ads.v0.enumsB\020MonthOfYearProtoP\001ZBgoogle" +
       ".golang.org/genproto/googleapis/ads/goog" +
       "leads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads." +
       "GoogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleAd" +
-      "s\\V0\\Enumsb\006proto3"
+      "s\\V0\\Enums\352\002!Google::Ads::GoogleAds::V0:" +
+      ":Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

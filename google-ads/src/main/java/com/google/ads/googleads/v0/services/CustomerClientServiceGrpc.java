@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Service to manage customer clients in a manager hierarchy.
+ * Service to get clients in a customer's hierarchy.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -93,14 +93,14 @@ public final class CustomerClientServiceGrpc {
 
   /**
    * <pre>
-   * Service to manage customer clients in a manager hierarchy.
+   * Service to get clients in a customer's hierarchy.
    * </pre>
    */
   public static abstract class CustomerClientServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the requested customer client in full detail.
+     * Returns the requested client in full detail.
      * </pre>
      */
     public void getCustomerClient(com.google.ads.googleads.v0.services.GetCustomerClientRequest request,
@@ -123,7 +123,7 @@ public final class CustomerClientServiceGrpc {
 
   /**
    * <pre>
-   * Service to manage customer clients in a manager hierarchy.
+   * Service to get clients in a customer's hierarchy.
    * </pre>
    */
   public static final class CustomerClientServiceStub extends io.grpc.stub.AbstractStub<CustomerClientServiceStub> {
@@ -144,7 +144,7 @@ public final class CustomerClientServiceGrpc {
 
     /**
      * <pre>
-     * Returns the requested customer client in full detail.
+     * Returns the requested client in full detail.
      * </pre>
      */
     public void getCustomerClient(com.google.ads.googleads.v0.services.GetCustomerClientRequest request,
@@ -156,7 +156,7 @@ public final class CustomerClientServiceGrpc {
 
   /**
    * <pre>
-   * Service to manage customer clients in a manager hierarchy.
+   * Service to get clients in a customer's hierarchy.
    * </pre>
    */
   public static final class CustomerClientServiceBlockingStub extends io.grpc.stub.AbstractStub<CustomerClientServiceBlockingStub> {
@@ -177,7 +177,7 @@ public final class CustomerClientServiceGrpc {
 
     /**
      * <pre>
-     * Returns the requested customer client in full detail.
+     * Returns the requested client in full detail.
      * </pre>
      */
     public com.google.ads.googleads.v0.resources.CustomerClient getCustomerClient(com.google.ads.googleads.v0.services.GetCustomerClientRequest request) {
@@ -188,7 +188,7 @@ public final class CustomerClientServiceGrpc {
 
   /**
    * <pre>
-   * Service to manage customer clients in a manager hierarchy.
+   * Service to get clients in a customer's hierarchy.
    * </pre>
    */
   public static final class CustomerClientServiceFutureStub extends io.grpc.stub.AbstractStub<CustomerClientServiceFutureStub> {
@@ -209,7 +209,7 @@ public final class CustomerClientServiceGrpc {
 
     /**
      * <pre>
-     * Returns the requested customer client in full detail.
+     * Returns the requested client in full detail.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.resources.CustomerClient> getCustomerClient(

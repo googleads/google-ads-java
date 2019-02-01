@@ -30,7 +30,7 @@ public final class BiddingErrorProto {
     java.lang.String[] descriptorData = {
       "\n2google/ads/googleads/v0/errors/bidding" +
       "_error.proto\022\036google.ads.googleads.v0.er" +
-      "rors\"\271\007\n\020BiddingErrorEnum\"\244\007\n\014BiddingErr" +
+      "rors\"\337\007\n\020BiddingErrorEnum\"\312\007\n\014BiddingErr" +
       "or\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022+\n\'BIDD" +
       "ING_STRATEGY_TRANSITION_NOT_ALLOWED\020\002\022.\n" +
       "*CANNOT_ATTACH_BIDDING_STRATEGY_TO_CAMPA" +
@@ -54,12 +54,14 @@ public final class BiddingErrorProto {
       "YPE_ADGROUP_CRITERION\020\035\022\021\n\rBID_TOO_SMALL" +
       "\020\036\022\017\n\013BID_TOO_BIG\020\037\022\"\n\036BID_TOO_MANY_FRAC" +
       "TIONAL_DIGITS\020 \022\027\n\023INVALID_DOMAIN_NAME\020!" +
-      "B\307\001\n\"com.google.ads.googleads.v0.errorsB" +
-      "\021BiddingErrorProtoP\001ZDgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v0/err" +
-      "ors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds." +
-      "V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Erro" +
-      "rsb\006proto3"
+      "\022$\n NOT_COMPATIBLE_WITH_PAYMENT_MODE\020\"B\354" +
+      "\001\n\"com.google.ads.googleads.v0.errorsB\021B" +
+      "iddingErrorProtoP\001ZDgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v0/error" +
+      "s;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0" +
+      ".Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors" +
+      "\352\002\"Google::Ads::GoogleAds::V0::Errorsb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

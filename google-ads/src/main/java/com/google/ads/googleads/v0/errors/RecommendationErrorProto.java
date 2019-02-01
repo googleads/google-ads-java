@@ -41,12 +41,13 @@ public final class RecommendationErrorProto {
       "OO_MANY_OPERATIONS\020\n\022\021\n\rNO_OPERATIONS\020\013\022" +
       "!\n\035DIFFERENT_TYPES_NOT_SUPPORTED\020\014\022\033\n\027DU" +
       "PLICATE_RESOURCE_NAME\020\r\022$\n RECOMMENDATIO" +
-      "N_ALREADY_DISMISSED\020\016B\316\001\n\"com.google.ads" +
+      "N_ALREADY_DISMISSED\020\016B\363\001\n\"com.google.ads" +
       ".googleads.v0.errorsB\030RecommendationErro" +
       "rProtoP\001ZDgoogle.golang.org/genproto/goo" +
       "gleapis/ads/googleads/v0/errors;errors\242\002" +
       "\003GAA\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036" +
-      "Google\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "Google\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google:" +
+      ":Ads::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -71,12 +71,13 @@ public final class AdGroupCriterionErrorProto {
       "_EXIST\020,\022#\n\037LISTING_GROUP_CANNOT_BE_REMO" +
       "VED\020-\022\036\n\032INVALID_LISTING_GROUP_TYPE\020.\022*\n" +
       "&LISTING_GROUP_ADD_MAY_ONLY_USE_TEMP_ID\020" +
-      "/B\320\001\n\"com.google.ads.googleads.v0.errors" +
+      "/B\365\001\n\"com.google.ads.googleads.v0.errors" +
       "B\032AdGroupCriterionErrorProtoP\001ZDgoogle.g" +
       "olang.org/genproto/googleapis/ads/google" +
       "ads/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads." +
       "GoogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleA" +
-      "ds\\V0\\Errorsb\006proto3"
+      "ds\\V0\\Errors\352\002\"Google::Ads::GoogleAds::V" +
+      "0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

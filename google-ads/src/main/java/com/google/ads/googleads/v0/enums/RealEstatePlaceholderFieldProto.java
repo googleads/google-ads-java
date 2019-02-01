@@ -41,12 +41,13 @@ public final class RealEstatePlaceholderFieldProto {
       "\n\021FINAL_MOBILE_URLS\020\016\022\020\n\014TRACKING_URL\020\017\022" +
       "\024\n\020ANDROID_APP_LINK\020\020\022\027\n\023SIMILAR_LISTING" +
       "_IDS\020\021\022\020\n\014IOS_APP_LINK\020\022\022\024\n\020IOS_APP_STOR" +
-      "E_ID\020\023B\320\001\n!com.google.ads.googleads.v0.e" +
+      "E_ID\020\023B\364\001\n!com.google.ads.googleads.v0.e" +
       "numsB\037RealEstatePlaceholderFieldProtoP\001Z" +
       "Bgoogle.golang.org/genproto/googleapis/a" +
       "ds/googleads/v0/enums;enums\242\002\003GAA\252\002\035Goog" +
       "le.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\G" +
-      "oogleAds\\V0\\Enumsb\006proto3"
+      "oogleAds\\V0\\Enums\352\002!Google::Ads::GoogleA" +
+      "ds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

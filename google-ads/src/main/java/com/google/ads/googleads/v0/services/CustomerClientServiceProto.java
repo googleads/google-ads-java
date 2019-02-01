@@ -39,13 +39,14 @@ public final class CustomerClientServiceProto {
       "GetCustomerClientRequest\0321.google.ads.go" +
       "ogleads.v0.resources.CustomerClient\"9\202\323\344" +
       "\223\0023\0221/v0/{resource_name=customers/*/cust" +
-      "omerClients/*}B\332\001\n$com.google.ads.google" +
+      "omerClients/*}B\201\002\n$com.google.ads.google" +
       "ads.v0.servicesB\032CustomerClientServicePr" +
       "otoP\001ZHgoogle.golang.org/genproto/google" +
       "apis/ads/googleads/v0/services;services\242" +
       "\002\003GAA\252\002 Google.Ads.GoogleAds.V0.Services" +
-      "\312\002 Google\\Ads\\GoogleAds\\V0\\Servicesb\006pro" +
-      "to3"
+      "\312\002 Google\\Ads\\GoogleAds\\V0\\Services\352\002$Go" +
+      "ogle::Ads::GoogleAds::V0::Servicesb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

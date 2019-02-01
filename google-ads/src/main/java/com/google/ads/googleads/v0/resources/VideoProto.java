@@ -36,12 +36,13 @@ public final class VideoProto {
       "_id\030\003 \001(\0132\034.google.protobuf.StringValue\022" +
       "4\n\017duration_millis\030\004 \001(\0132\033.google.protob" +
       "uf.Int64Value\022+\n\005title\030\005 \001(\0132\034.google.pr" +
-      "otobuf.StringValueB\317\001\n%com.google.ads.go" +
+      "otobuf.StringValueB\367\001\n%com.google.ads.go" +
       "ogleads.v0.resourcesB\nVideoProtoP\001ZJgoog" +
       "le.golang.org/genproto/googleapis/ads/go" +
       "ogleads/v0/resources;resources\242\002\003GAA\252\002!G" +
       "oogle.Ads.GoogleAds.V0.Resources\312\002!Googl" +
-      "e\\Ads\\GoogleAds\\V0\\Resourcesb\006proto3"
+      "e\\Ads\\GoogleAds\\V0\\Resources\352\002%Google::A" +
+      "ds::GoogleAds::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

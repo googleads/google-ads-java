@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,6 +64,22 @@ public class MockCustomerClientLinkServiceImpl extends CustomerClientLinkService
     if (response instanceof CustomerClientLink) {
       requests.add(request);
       responseObserver.onNext((CustomerClientLink) response);
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError((Exception) response);
+    } else {
+      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+    }
+  }
+
+  @Override
+  public void mutateCustomerClientLink(
+      MutateCustomerClientLinkRequest request,
+      StreamObserver<MutateCustomerClientLinkResponse> responseObserver) {
+    Object response = responses.remove();
+    if (response instanceof MutateCustomerClientLinkResponse) {
+      requests.add(request);
+      responseObserver.onNext((MutateCustomerClientLinkResponse) response);
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
       responseObserver.onError((Exception) response);

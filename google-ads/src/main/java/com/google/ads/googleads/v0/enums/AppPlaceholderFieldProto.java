@@ -35,12 +35,13 @@ public final class AppPlaceholderFieldProto {
       "\013\n\007UNKNOWN\020\001\022\t\n\005STORE\020\002\022\006\n\002ID\020\003\022\r\n\tLINK_" +
       "TEXT\020\004\022\007\n\003URL\020\005\022\016\n\nFINAL_URLS\020\006\022\025\n\021FINAL" +
       "_MOBILE_URLS\020\007\022\020\n\014TRACKING_URL\020\010\022\024\n\020FINA" +
-      "L_URL_SUFFIX\020\tB\311\001\n!com.google.ads.google" +
+      "L_URL_SUFFIX\020\tB\355\001\n!com.google.ads.google" +
       "ads.v0.enumsB\030AppPlaceholderFieldProtoP\001" +
       "ZBgoogle.golang.org/genproto/googleapis/" +
       "ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035Goo" +
       "gle.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\" +
-      "GoogleAds\\V0\\Enumsb\006proto3"
+      "GoogleAds\\V0\\Enums\352\002!Google::Ads::Google" +
+      "Ads::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

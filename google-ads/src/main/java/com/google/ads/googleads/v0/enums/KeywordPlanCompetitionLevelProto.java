@@ -33,13 +33,14 @@ public final class KeywordPlanCompetitionLevelProto {
       ".googleads.v0.enums\"}\n\037KeywordPlanCompet" +
       "itionLevelEnum\"Z\n\033KeywordPlanCompetition" +
       "Level\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\007\n\003L" +
-      "OW\020\002\022\n\n\006MEDIUM\020\003\022\010\n\004HIGH\020\004B\321\001\n!com.googl" +
+      "OW\020\002\022\n\n\006MEDIUM\020\003\022\010\n\004HIGH\020\004B\365\001\n!com.googl" +
       "e.ads.googleads.v0.enumsB KeywordPlanCom" +
       "petitionLevelProtoP\001ZBgoogle.golang.org/" +
       "genproto/googleapis/ads/googleads/v0/enu" +
       "ms;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0" +
-      ".Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006" +
-      "proto3"
+      ".Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002" +
+      "!Google::Ads::GoogleAds::V0::Enumsb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

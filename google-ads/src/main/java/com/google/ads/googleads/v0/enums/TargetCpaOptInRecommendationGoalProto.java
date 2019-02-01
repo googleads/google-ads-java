@@ -35,12 +35,13 @@ public final class TargetCpaOptInRecommendationGoalProto {
       "aOptInRecommendationGoal\022\017\n\013UNSPECIFIED\020" +
       "\000\022\013\n\007UNKNOWN\020\001\022\r\n\tSAME_COST\020\002\022\024\n\020SAME_CO" +
       "NVERSIONS\020\003\022\014\n\010SAME_CPA\020\004\022\017\n\013CLOSEST_CPA" +
-      "\020\005B\326\001\n!com.google.ads.googleads.v0.enums" +
+      "\020\005B\372\001\n!com.google.ads.googleads.v0.enums" +
       "B%TargetCpaOptInRecommendationGoalProtoP" +
       "\001ZBgoogle.golang.org/genproto/googleapis" +
       "/ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035Go" +
       "ogle.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads" +
-      "\\GoogleAds\\V0\\Enumsb\006proto3"
+      "\\GoogleAds\\V0\\Enums\352\002!Google::Ads::Googl" +
+      "eAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

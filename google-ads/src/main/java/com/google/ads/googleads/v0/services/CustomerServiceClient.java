@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -204,7 +204,7 @@ public class CustomerServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final Customer getCustomer(GetCustomerRequest request) {
+  public final Customer getCustomer(GetCustomerRequest request) {
     return getCustomerCallable().call(request);
   }
 
@@ -228,6 +228,39 @@ public class CustomerServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetCustomerRequest, Customer> getCustomerCallable() {
     return stub.getCustomerCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Updates a customer. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
+   *   String customerId = "";
+   *   CustomerOperation operation = CustomerOperation.newBuilder().build();
+   *   boolean validateOnly = false;
+   *   MutateCustomerResponse response = customerServiceClient.mutateCustomer(customerId, operation, validateOnly);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer being modified.
+   * @param operation The operation to perform on the customer
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateCustomerResponse mutateCustomer(
+      String customerId, CustomerOperation operation, boolean validateOnly) {
+
+    MutateCustomerRequest request =
+        MutateCustomerRequest.newBuilder()
+            .setCustomerId(customerId)
+            .setOperation(operation)
+            .setValidateOnly(validateOnly)
+            .build();
+    return mutateCustomer(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

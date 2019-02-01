@@ -22,6 +22,8 @@ import com.google.ads.googleads.v0.services.AdGroupBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupFeedServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
+import com.google.ads.googleads.v0.services.AdParameterServiceClient;
+import com.google.ads.googleads.v0.services.AdScheduleViewServiceClient;
 import com.google.ads.googleads.v0.services.AgeRangeViewServiceClient;
 import com.google.ads.googleads.v0.services.BiddingStrategyServiceClient;
 import com.google.ads.googleads.v0.services.BillingSetupServiceClient;
@@ -30,7 +32,6 @@ import com.google.ads.googleads.v0.services.CampaignBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.CampaignBudgetServiceClient;
 import com.google.ads.googleads.v0.services.CampaignCriterionServiceClient;
 import com.google.ads.googleads.v0.services.CampaignFeedServiceClient;
-import com.google.ads.googleads.v0.services.CampaignGroupServiceClient;
 import com.google.ads.googleads.v0.services.CampaignServiceClient;
 import com.google.ads.googleads.v0.services.CampaignSharedSetServiceClient;
 import com.google.ads.googleads.v0.services.CarrierConstantServiceClient;
@@ -61,10 +62,14 @@ import com.google.ads.googleads.v0.services.KeywordViewServiceClient;
 import com.google.ads.googleads.v0.services.LanguageConstantServiceClient;
 import com.google.ads.googleads.v0.services.ManagedPlacementViewServiceClient;
 import com.google.ads.googleads.v0.services.MediaFileServiceClient;
+import com.google.ads.googleads.v0.services.MobileAppCategoryConstantServiceClient;
+import com.google.ads.googleads.v0.services.MobileDeviceConstantServiceClient;
+import com.google.ads.googleads.v0.services.OperatingSystemVersionConstantServiceClient;
 import com.google.ads.googleads.v0.services.ParentalStatusViewServiceClient;
 import com.google.ads.googleads.v0.services.PaymentsAccountServiceClient;
 import com.google.ads.googleads.v0.services.ProductGroupViewServiceClient;
 import com.google.ads.googleads.v0.services.RecommendationServiceClient;
+import com.google.ads.googleads.v0.services.RemarketingActionServiceClient;
 import com.google.ads.googleads.v0.services.SearchTermViewServiceClient;
 import com.google.ads.googleads.v0.services.SharedCriterionServiceClient;
 import com.google.ads.googleads.v0.services.SharedSetServiceClient;
@@ -76,62 +81,130 @@ import com.google.ads.googleads.v0.services.VideoServiceClient;
 
 public interface ServiceClientFactory {
   AccountBudgetProposalServiceClient getAccountBudgetProposalServiceClient();
+
   AccountBudgetServiceClient getAccountBudgetServiceClient();
+
   AdGroupAdServiceClient getAdGroupAdServiceClient();
+
   AdGroupAudienceViewServiceClient getAdGroupAudienceViewServiceClient();
+
   AdGroupBidModifierServiceClient getAdGroupBidModifierServiceClient();
+
   AdGroupCriterionServiceClient getAdGroupCriterionServiceClient();
+
   AdGroupFeedServiceClient getAdGroupFeedServiceClient();
+
   AdGroupServiceClient getAdGroupServiceClient();
+
+  AdParameterServiceClient getAdParameterServiceClient();
+
+  AdScheduleViewServiceClient getAdScheduleViewServiceClient();
+
   AgeRangeViewServiceClient getAgeRangeViewServiceClient();
+
   BiddingStrategyServiceClient getBiddingStrategyServiceClient();
+
   BillingSetupServiceClient getBillingSetupServiceClient();
+
   CampaignAudienceViewServiceClient getCampaignAudienceViewServiceClient();
+
   CampaignBidModifierServiceClient getCampaignBidModifierServiceClient();
+
   CampaignBudgetServiceClient getCampaignBudgetServiceClient();
+
   CampaignCriterionServiceClient getCampaignCriterionServiceClient();
+
   CampaignFeedServiceClient getCampaignFeedServiceClient();
-  CampaignGroupServiceClient getCampaignGroupServiceClient();
+
   CampaignServiceClient getCampaignServiceClient();
+
   CampaignSharedSetServiceClient getCampaignSharedSetServiceClient();
+
   CarrierConstantServiceClient getCarrierConstantServiceClient();
+
   ChangeStatusServiceClient getChangeStatusServiceClient();
+
   ConversionActionServiceClient getConversionActionServiceClient();
+
   CustomerClientLinkServiceClient getCustomerClientLinkServiceClient();
+
   CustomerClientServiceClient getCustomerClientServiceClient();
+
   CustomerFeedServiceClient getCustomerFeedServiceClient();
+
   CustomerManagerLinkServiceClient getCustomerManagerLinkServiceClient();
+
   CustomerServiceClient getCustomerServiceClient();
+
   DisplayKeywordViewServiceClient getDisplayKeywordViewServiceClient();
+
   FeedItemServiceClient getFeedItemServiceClient();
+
   FeedMappingServiceClient getFeedMappingServiceClient();
+
   FeedServiceClient getFeedServiceClient();
+
   GenderViewServiceClient getGenderViewServiceClient();
+
   GeoTargetConstantServiceClient getGeoTargetConstantServiceClient();
+
   GoogleAdsFieldServiceClient getGoogleAdsFieldServiceClient();
+
   GoogleAdsServiceClient getGoogleAdsServiceClient();
+
   HotelGroupViewServiceClient getHotelGroupViewServiceClient();
+
   HotelPerformanceViewServiceClient getHotelPerformanceViewServiceClient();
+
   KeywordPlanAdGroupServiceClient getKeywordPlanAdGroupServiceClient();
+
   KeywordPlanCampaignServiceClient getKeywordPlanCampaignServiceClient();
+
   KeywordPlanIdeaServiceClient getKeywordPlanIdeaServiceClient();
+
   KeywordPlanKeywordServiceClient getKeywordPlanKeywordServiceClient();
+
   KeywordPlanNegativeKeywordServiceClient getKeywordPlanNegativeKeywordServiceClient();
+
   KeywordPlanServiceClient getKeywordPlanServiceClient();
+
   KeywordViewServiceClient getKeywordViewServiceClient();
+
   LanguageConstantServiceClient getLanguageConstantServiceClient();
+
   ManagedPlacementViewServiceClient getManagedPlacementViewServiceClient();
+
   MediaFileServiceClient getMediaFileServiceClient();
+
+  MobileAppCategoryConstantServiceClient getMobileAppCategoryConstantServiceClient();
+
+  MobileDeviceConstantServiceClient getMobileDeviceConstantServiceClient();
+
+  OperatingSystemVersionConstantServiceClient getOperatingSystemVersionConstantServiceClient();
+
   ParentalStatusViewServiceClient getParentalStatusViewServiceClient();
+
   PaymentsAccountServiceClient getPaymentsAccountServiceClient();
+
   ProductGroupViewServiceClient getProductGroupViewServiceClient();
+
   RecommendationServiceClient getRecommendationServiceClient();
+
+  RemarketingActionServiceClient getRemarketingActionServiceClient();
+
   SearchTermViewServiceClient getSearchTermViewServiceClient();
+
   SharedCriterionServiceClient getSharedCriterionServiceClient();
+
   SharedSetServiceClient getSharedSetServiceClient();
+
   TopicConstantServiceClient getTopicConstantServiceClient();
+
   TopicViewServiceClient getTopicViewServiceClient();
+
   UserInterestServiceClient getUserInterestServiceClient();
+
   UserListServiceClient getUserListServiceClient();
+
   VideoServiceClient getVideoServiceClient();
 }

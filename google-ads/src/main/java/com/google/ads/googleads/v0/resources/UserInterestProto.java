@@ -45,12 +45,13 @@ public final class UserInterestProto {
       "Value\0223\n\017launched_to_all\030\006 \001(\0132\032.google." +
       "protobuf.BoolValue\022U\n\016availabilities\030\007 \003" +
       "(\0132=.google.ads.googleads.v0.common.Crit" +
-      "erionCategoryAvailabilityB\326\001\n%com.google" +
+      "erionCategoryAvailabilityB\376\001\n%com.google" +
       ".ads.googleads.v0.resourcesB\021UserInteres" +
       "tProtoP\001ZJgoogle.golang.org/genproto/goo" +
       "gleapis/ads/googleads/v0/resources;resou" +
       "rces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Res" +
       "ources\312\002!Google\\Ads\\GoogleAds\\V0\\Resourc" +
+      "es\352\002%Google::Ads::GoogleAds::V0::Resourc" +
       "esb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

@@ -506,6 +506,16 @@ private static final long serialVersionUID = 0L;
      * <code>UNEXPECTED_INPUT = 11;</code>
      */
     UNEXPECTED_INPUT(11),
+    /**
+     * <pre>
+     * Metrics cannot be requested for a manager account. To retrieve metrics,
+     * issue separate requests against each client account under the manager
+     * account.
+     * </pre>
+     *
+     * <code>REQUESTED_METRICS_FOR_MANAGER = 59;</code>
+     */
+    REQUESTED_METRICS_FOR_MANAGER(59),
     UNRECOGNIZED(-1),
     ;
 
@@ -929,6 +939,16 @@ private static final long serialVersionUID = 0L;
      * <code>UNEXPECTED_INPUT = 11;</code>
      */
     public static final int UNEXPECTED_INPUT_VALUE = 11;
+    /**
+     * <pre>
+     * Metrics cannot be requested for a manager account. To retrieve metrics,
+     * issue separate requests against each client account under the manager
+     * account.
+     * </pre>
+     *
+     * <code>REQUESTED_METRICS_FOR_MANAGER = 59;</code>
+     */
+    public static final int REQUESTED_METRICS_FOR_MANAGER_VALUE = 59;
 
 
     public final int getNumber() {
@@ -1000,6 +1020,7 @@ private static final long serialVersionUID = 0L;
         case 47: return UNEXPECTED_FROM_CLAUSE;
         case 32: return UNRECOGNIZED_FIELD;
         case 11: return UNEXPECTED_INPUT;
+        case 59: return REQUESTED_METRICS_FOR_MANAGER;
         default: return null;
       }
     }

@@ -34,12 +34,13 @@ public final class PolicyApprovalStatusProto {
       "\"\204\001\n\024PolicyApprovalStatus\022\017\n\013UNSPECIFIED" +
       "\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013DISAPPROVED\020\002\022\024\n\020APPR" +
       "OVED_LIMITED\020\003\022\014\n\010APPROVED\020\004\022\031\n\025AREA_OF_" +
-      "INTEREST_ONLY\020\005B\312\001\n!com.google.ads.googl" +
+      "INTEREST_ONLY\020\005B\356\001\n!com.google.ads.googl" +
       "eads.v0.enumsB\031PolicyApprovalStatusProto" +
       "P\001ZBgoogle.golang.org/genproto/googleapi" +
       "s/ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035G" +
       "oogle.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ad" +
-      "s\\GoogleAds\\V0\\Enumsb\006proto3"
+      "s\\GoogleAds\\V0\\Enums\352\002!Google::Ads::Goog" +
+      "leAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

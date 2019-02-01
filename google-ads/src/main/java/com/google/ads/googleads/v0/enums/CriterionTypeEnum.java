@@ -120,6 +120,14 @@ private static final long serialVersionUID = 0L;
     PLACEMENT(3),
     /**
      * <pre>
+     * Mobile application categories to target.
+     * </pre>
+     *
+     * <code>MOBILE_APP_CATEGORY = 4;</code>
+     */
+    MOBILE_APP_CATEGORY(4),
+    /**
+     * <pre>
      * Devices to target.
      * </pre>
      *
@@ -270,6 +278,30 @@ private static final long serialVersionUID = 0L;
      * <code>USER_INTEREST = 24;</code>
      */
     USER_INTEREST(24),
+    /**
+     * <pre>
+     * Webpage criterion for dynamic search ads.
+     * </pre>
+     *
+     * <code>WEBPAGE = 25;</code>
+     */
+    WEBPAGE(25),
+    /**
+     * <pre>
+     * Operating system version.
+     * </pre>
+     *
+     * <code>OPERATING_SYSTEM_VERSION = 26;</code>
+     */
+    OPERATING_SYSTEM_VERSION(26),
+    /**
+     * <pre>
+     * App payment model.
+     * </pre>
+     *
+     * <code>APP_PAYMENT_MODEL = 27;</code>
+     */
+    APP_PAYMENT_MODEL(27),
     UNRECOGNIZED(-1),
     ;
 
@@ -305,6 +337,14 @@ private static final long serialVersionUID = 0L;
      * <code>PLACEMENT = 3;</code>
      */
     public static final int PLACEMENT_VALUE = 3;
+    /**
+     * <pre>
+     * Mobile application categories to target.
+     * </pre>
+     *
+     * <code>MOBILE_APP_CATEGORY = 4;</code>
+     */
+    public static final int MOBILE_APP_CATEGORY_VALUE = 4;
     /**
      * <pre>
      * Devices to target.
@@ -457,6 +497,30 @@ private static final long serialVersionUID = 0L;
      * <code>USER_INTEREST = 24;</code>
      */
     public static final int USER_INTEREST_VALUE = 24;
+    /**
+     * <pre>
+     * Webpage criterion for dynamic search ads.
+     * </pre>
+     *
+     * <code>WEBPAGE = 25;</code>
+     */
+    public static final int WEBPAGE_VALUE = 25;
+    /**
+     * <pre>
+     * Operating system version.
+     * </pre>
+     *
+     * <code>OPERATING_SYSTEM_VERSION = 26;</code>
+     */
+    public static final int OPERATING_SYSTEM_VERSION_VALUE = 26;
+    /**
+     * <pre>
+     * App payment model.
+     * </pre>
+     *
+     * <code>APP_PAYMENT_MODEL = 27;</code>
+     */
+    public static final int APP_PAYMENT_MODEL_VALUE = 27;
 
 
     public final int getNumber() {
@@ -481,6 +545,7 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 2: return KEYWORD;
         case 3: return PLACEMENT;
+        case 4: return MOBILE_APP_CATEGORY;
         case 6: return DEVICE;
         case 7: return LOCATION;
         case 8: return LISTING_GROUP;
@@ -500,6 +565,9 @@ private static final long serialVersionUID = 0L;
         case 22: return CONTENT_LABEL;
         case 23: return CARRIER;
         case 24: return USER_INTEREST;
+        case 25: return WEBPAGE;
+        case 26: return OPERATING_SYSTEM_VERSION;
+        case 27: return APP_PAYMENT_MODEL;
         default: return null;
       }
     }

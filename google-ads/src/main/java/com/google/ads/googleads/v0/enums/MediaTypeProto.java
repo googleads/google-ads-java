@@ -33,12 +33,13 @@ public final class MediaTypeProto {
       "\212\001\n\rMediaTypeEnum\"y\n\tMediaType\022\017\n\013UNSPEC" +
       "IFIED\020\000\022\013\n\007UNKNOWN\020\001\022\t\n\005IMAGE\020\002\022\010\n\004ICON\020" +
       "\003\022\020\n\014MEDIA_BUNDLE\020\004\022\t\n\005AUDIO\020\005\022\t\n\005VIDEO\020" +
-      "\006\022\021\n\rDYNAMIC_IMAGE\020\007B\277\001\n!com.google.ads." +
+      "\006\022\021\n\rDYNAMIC_IMAGE\020\007B\343\001\n!com.google.ads." +
       "googleads.v0.enumsB\016MediaTypeProtoP\001ZBgo" +
       "ogle.golang.org/genproto/googleapis/ads/" +
       "googleads/v0/enums;enums\242\002\003GAA\252\002\035Google." +
       "Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Goog" +
-      "leAds\\V0\\Enumsb\006proto3"
+      "leAds\\V0\\Enums\352\002!Google::Ads::GoogleAds:" +
+      ":V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -55,13 +55,14 @@ public final class AdGroupBidModifierProto {
       "evice\030\013 \001(\0132*.google.ads.googleads.v0.co" +
       "mmon.DeviceInfoH\000\022Q\n\021preferred_content\030\014" +
       " \001(\01324.google.ads.googleads.v0.common.Pr" +
-      "eferredContentInfoH\000B\013\n\tcriterionB\334\001\n%co" +
+      "eferredContentInfoH\000B\013\n\tcriterionB\204\002\n%co" +
       "m.google.ads.googleads.v0.resourcesB\027AdG" +
       "roupBidModifierProtoP\001ZJgoogle.golang.or" +
       "g/genproto/googleapis/ads/googleads/v0/r" +
       "esources;resources\242\002\003GAA\252\002!Google.Ads.Go" +
       "ogleAds.V0.Resources\312\002!Google\\Ads\\Google" +
-      "Ads\\V0\\Resourcesb\006proto3"
+      "Ads\\V0\\Resources\352\002%Google::Ads::GoogleAd" +
+      "s::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

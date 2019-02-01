@@ -30,17 +30,18 @@ public final class ChangeStatusResourceTypeProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v0/enums/change_s" +
       "tatus_resource_type.proto\022\035google.ads.go" +
-      "ogleads.v0.enums\"\266\001\n\034ChangeStatusResourc" +
-      "eTypeEnum\"\225\001\n\030ChangeStatusResourceType\022\017" +
+      "ogleads.v0.enums\"\317\001\n\034ChangeStatusResourc" +
+      "eTypeEnum\"\256\001\n\030ChangeStatusResourceType\022\017" +
       "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010AD_GROUP" +
       "\020\003\022\017\n\013AD_GROUP_AD\020\004\022\026\n\022AD_GROUP_CRITERIO" +
       "N\020\005\022\014\n\010CAMPAIGN\020\006\022\026\n\022CAMPAIGN_CRITERION\020" +
-      "\007B\316\001\n!com.google.ads.googleads.v0.enumsB" +
-      "\035ChangeStatusResourceTypeProtoP\001ZBgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads." +
-      "GoogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleAd" +
-      "s\\V0\\Enumsb\006proto3"
+      "\007\022\010\n\004FEED\020\t\022\r\n\tFEED_ITEM\020\nB\362\001\n!com.googl" +
+      "e.ads.googleads.v0.enumsB\035ChangeStatusRe" +
+      "sourceTypeProtoP\001ZBgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v0/enums;" +
+      "enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.En" +
+      "ums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Go" +
+      "ogle::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

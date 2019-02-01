@@ -216,4 +216,54 @@ public interface ChangeStatusOrBuilder extends
    * <code>.google.protobuf.StringValue campaign_criterion = 11;</code>
    */
   com.google.protobuf.StringValueOrBuilder getCampaignCriterionOrBuilder();
+
+  /**
+   * <pre>
+   * The Feed affected by this change.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue feed = 12;</code>
+   */
+  boolean hasFeed();
+  /**
+   * <pre>
+   * The Feed affected by this change.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue feed = 12;</code>
+   */
+  com.google.protobuf.StringValue getFeed();
+  /**
+   * <pre>
+   * The Feed affected by this change.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue feed = 12;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getFeedOrBuilder();
+
+  /**
+   * <pre>
+   * The FeedItem affected by this change.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue feed_item = 13;</code>
+   */
+  boolean hasFeedItem();
+  /**
+   * <pre>
+   * The FeedItem affected by this change.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue feed_item = 13;</code>
+   */
+  com.google.protobuf.StringValue getFeedItem();
+  /**
+   * <pre>
+   * The FeedItem affected by this change.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue feed_item = 13;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getFeedItemOrBuilder();
 }

@@ -32,12 +32,13 @@ public final class GenderTypeProto {
       "ype.proto\022\035google.ads.googleads.v0.enums" +
       "\"d\n\016GenderTypeEnum\"R\n\nGenderType\022\017\n\013UNSP" +
       "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\010\n\004MALE\020\n\022\n\n\006FEMA" +
-      "LE\020\013\022\020\n\014UNDETERMINED\020\024B\300\001\n!com.google.ad" +
+      "LE\020\013\022\020\n\014UNDETERMINED\020\024B\344\001\n!com.google.ad" +
       "s.googleads.v0.enumsB\017GenderTypeProtoP\001Z" +
       "Bgoogle.golang.org/genproto/googleapis/a" +
       "ds/googleads/v0/enums;enums\242\002\003GAA\252\002\035Goog" +
       "le.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\G" +
-      "oogleAds\\V0\\Enumsb\006proto3"
+      "oogleAds\\V0\\Enums\352\002!Google::Ads::GoogleA" +
+      "ds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -33,13 +33,14 @@ public final class FeedMappingCriterionTypeProto {
       "ogleads.v0.enums\"\212\001\n\034FeedMappingCriterio" +
       "nTypeEnum\"j\n\030FeedMappingCriterionType\022\017\n" +
       "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\035\n\031CAMPAIGN_" +
-      "LOCATION_TARGETS\020\002\022\021\n\rDSA_PAGE_FEED\020\003B\316\001" +
+      "LOCATION_TARGETS\020\002\022\021\n\rDSA_PAGE_FEED\020\003B\362\001" +
       "\n!com.google.ads.googleads.v0.enumsB\035Fee" +
       "dMappingCriterionTypeProtoP\001ZBgoogle.gol" +
       "ang.org/genproto/googleapis/ads/googlead" +
       "s/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.Goog" +
       "leAds.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0" +
-      "\\Enumsb\006proto3"
+      "\\Enums\352\002!Google::Ads::GoogleAds::V0::Enu" +
+      "msb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

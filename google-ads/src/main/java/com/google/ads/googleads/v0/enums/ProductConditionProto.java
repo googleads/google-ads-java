@@ -32,13 +32,14 @@ public final class ProductConditionProto {
       "condition.proto\022\035google.ads.googleads.v0" +
       ".enums\"l\n\024ProductConditionEnum\"T\n\020Produc" +
       "tCondition\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001" +
-      "\022\007\n\003NEW\020\003\022\017\n\013REFURBISHED\020\004\022\010\n\004USED\020\005B\306\001\n" +
+      "\022\007\n\003NEW\020\003\022\017\n\013REFURBISHED\020\004\022\010\n\004USED\020\005B\352\001\n" +
       "!com.google.ads.googleads.v0.enumsB\025Prod" +
       "uctConditionProtoP\001ZBgoogle.golang.org/g" +
       "enproto/googleapis/ads/googleads/v0/enum" +
       "s;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0." +
-      "Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006p" +
-      "roto3"
+      "Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!" +
+      "Google::Ads::GoogleAds::V0::Enumsb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

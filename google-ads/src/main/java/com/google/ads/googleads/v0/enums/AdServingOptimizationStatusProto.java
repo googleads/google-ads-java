@@ -35,12 +35,13 @@ public final class AdServingOptimizationStatusProto {
       "nStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n" +
       "\010OPTIMIZE\020\002\022\027\n\023CONVERSION_OPTIMIZE\020\003\022\n\n\006" +
       "ROTATE\020\004\022\027\n\023ROTATE_INDEFINITELY\020\005\022\017\n\013UNA" +
-      "VAILABLE\020\006B\321\001\n!com.google.ads.googleads." +
+      "VAILABLE\020\006B\365\001\n!com.google.ads.googleads." +
       "v0.enumsB AdServingOptimizationStatusPro" +
       "toP\001ZBgoogle.golang.org/genproto/googlea" +
       "pis/ads/googleads/v0/enums;enums\242\002\003GAA\252\002" +
       "\035Google.Ads.GoogleAds.V0.Enums\312\002\035Google\\" +
-      "Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "Ads\\GoogleAds\\V0\\Enums\352\002!Google::Ads::Go" +
+      "ogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

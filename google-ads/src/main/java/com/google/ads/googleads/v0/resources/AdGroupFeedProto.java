@@ -44,12 +44,13 @@ public final class AdGroupFeedProto {
       "hing_function\030\005 \001(\01320.google.ads.googlea" +
       "ds.v0.common.MatchingFunction\022P\n\006status\030" +
       "\006 \001(\0162@.google.ads.googleads.v0.enums.Fe" +
-      "edLinkStatusEnum.FeedLinkStatusB\325\001\n%com." +
+      "edLinkStatusEnum.FeedLinkStatusB\375\001\n%com." +
       "google.ads.googleads.v0.resourcesB\020AdGro" +
       "upFeedProtoP\001ZJgoogle.golang.org/genprot" +
       "o/googleapis/ads/googleads/v0/resources;" +
       "resources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
       "0.Resources\312\002!Google\\Ads\\GoogleAds\\V0\\Re" +
+      "sources\352\002%Google::Ads::GoogleAds::V0::Re" +
       "sourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

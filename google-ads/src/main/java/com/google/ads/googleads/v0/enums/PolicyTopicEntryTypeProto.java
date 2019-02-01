@@ -34,12 +34,13 @@ public final class PolicyTopicEntryTypeProto {
       "m\"\215\001\n\024PolicyTopicEntryType\022\017\n\013UNSPECIFIE" +
       "D\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\nPROHIBITED\020\002\022\013\n\007LIMI" +
       "TED\020\004\022\017\n\013DESCRIPTIVE\020\005\022\016\n\nBROADENING\020\006\022\031" +
-      "\n\025AREA_OF_INTEREST_ONLY\020\007B\312\001\n!com.google" +
+      "\n\025AREA_OF_INTEREST_ONLY\020\007B\356\001\n!com.google" +
       ".ads.googleads.v0.enumsB\031PolicyTopicEntr" +
       "yTypeProtoP\001ZBgoogle.golang.org/genproto" +
       "/googleapis/ads/googleads/v0/enums;enums" +
       "\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312\002" +
-      "\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Google:" +
+      ":Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

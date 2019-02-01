@@ -67,6 +67,43 @@ public final class CustomerManagerLinkServiceGrpc {
      }
      return getGetCustomerManagerLinkMethod;
   }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getMutateCustomerManagerLinkMethod()} instead. 
+  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest,
+      com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse> METHOD_MUTATE_CUSTOMER_MANAGER_LINK = getMutateCustomerManagerLinkMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest,
+      com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse> getMutateCustomerManagerLinkMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest,
+      com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse> getMutateCustomerManagerLinkMethod() {
+    return getMutateCustomerManagerLinkMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest,
+      com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse> getMutateCustomerManagerLinkMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest, com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse> getMutateCustomerManagerLinkMethod;
+    if ((getMutateCustomerManagerLinkMethod = CustomerManagerLinkServiceGrpc.getMutateCustomerManagerLinkMethod) == null) {
+      synchronized (CustomerManagerLinkServiceGrpc.class) {
+        if ((getMutateCustomerManagerLinkMethod = CustomerManagerLinkServiceGrpc.getMutateCustomerManagerLinkMethod) == null) {
+          CustomerManagerLinkServiceGrpc.getMutateCustomerManagerLinkMethod = getMutateCustomerManagerLinkMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest, com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.CustomerManagerLinkService", "MutateCustomerManagerLink"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CustomerManagerLinkServiceMethodDescriptorSupplier("MutateCustomerManagerLink"))
+                  .build();
+          }
+        }
+     }
+     return getMutateCustomerManagerLinkMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -108,6 +145,16 @@ public final class CustomerManagerLinkServiceGrpc {
       asyncUnimplementedUnaryCall(getGetCustomerManagerLinkMethodHelper(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Creates or updates customer manager links. Operation statuses are returned.
+     * </pre>
+     */
+    public void mutateCustomerManagerLink(com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getMutateCustomerManagerLinkMethodHelper(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -117,6 +164,13 @@ public final class CustomerManagerLinkServiceGrpc {
                 com.google.ads.googleads.v0.services.GetCustomerManagerLinkRequest,
                 com.google.ads.googleads.v0.resources.CustomerManagerLink>(
                   this, METHODID_GET_CUSTOMER_MANAGER_LINK)))
+          .addMethod(
+            getMutateCustomerManagerLinkMethodHelper(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest,
+                com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse>(
+                  this, METHODID_MUTATE_CUSTOMER_MANAGER_LINK)))
           .build();
     }
   }
@@ -152,6 +206,17 @@ public final class CustomerManagerLinkServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetCustomerManagerLinkMethodHelper(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Creates or updates customer manager links. Operation statuses are returned.
+     * </pre>
+     */
+    public void mutateCustomerManagerLink(com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getMutateCustomerManagerLinkMethodHelper(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -183,6 +248,16 @@ public final class CustomerManagerLinkServiceGrpc {
     public com.google.ads.googleads.v0.resources.CustomerManagerLink getCustomerManagerLink(com.google.ads.googleads.v0.services.GetCustomerManagerLinkRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetCustomerManagerLinkMethodHelper(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates or updates customer manager links. Operation statuses are returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse mutateCustomerManagerLink(com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getMutateCustomerManagerLinkMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -217,9 +292,21 @@ public final class CustomerManagerLinkServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetCustomerManagerLinkMethodHelper(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Creates or updates customer manager links. Operation statuses are returned.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse> mutateCustomerManagerLink(
+        com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getMutateCustomerManagerLinkMethodHelper(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CUSTOMER_MANAGER_LINK = 0;
+  private static final int METHODID_MUTATE_CUSTOMER_MANAGER_LINK = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -241,6 +328,10 @@ public final class CustomerManagerLinkServiceGrpc {
         case METHODID_GET_CUSTOMER_MANAGER_LINK:
           serviceImpl.getCustomerManagerLink((com.google.ads.googleads.v0.services.GetCustomerManagerLinkRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.resources.CustomerManagerLink>) responseObserver);
+          break;
+        case METHODID_MUTATE_CUSTOMER_MANAGER_LINK:
+          serviceImpl.mutateCustomerManagerLink((com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -304,6 +395,7 @@ public final class CustomerManagerLinkServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CustomerManagerLinkServiceFileDescriptorSupplier())
               .addMethod(getGetCustomerManagerLinkMethodHelper())
+              .addMethod(getMutateCustomerManagerLinkMethodHelper())
               .build();
         }
       }

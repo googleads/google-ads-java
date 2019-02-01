@@ -123,7 +123,7 @@ public class ApplyRecommendation {
         googleAdsClient.getRecommendationServiceClient()) {
       ApplyRecommendationResponse response =
           recommendationServiceClient.applyRecommendation(
-              Long.toString(customerId), false, operations);
+              Long.toString(customerId), operations);
       System.out.printf("Applied %d recommendation:%n", response.getResultsCount());
       for (ApplyRecommendationResult result : response.getResultsList()) {
         System.out.println(result.getResourceName());

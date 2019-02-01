@@ -32,13 +32,14 @@ public final class DistinctErrorProto {
       "t_error.proto\022\036google.ads.googleads.v0.e" +
       "rrors\"m\n\021DistinctErrorEnum\"X\n\rDistinctEr" +
       "ror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\025\n\021DUP" +
-      "LICATE_ELEMENT\020\002\022\022\n\016DUPLICATE_TYPE\020\003B\310\001\n" +
+      "LICATE_ELEMENT\020\002\022\022\n\016DUPLICATE_TYPE\020\003B\355\001\n" +
       "\"com.google.ads.googleads.v0.errorsB\022Dis" +
       "tinctErrorProtoP\001ZDgoogle.golang.org/gen" +
       "proto/googleapis/ads/googleads/v0/errors" +
       ";errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0." +
-      "Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb" +
-      "\006proto3"
+      "Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors\352" +
+      "\002\"Google::Ads::GoogleAds::V0::Errorsb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

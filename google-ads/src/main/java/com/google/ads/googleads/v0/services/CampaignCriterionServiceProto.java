@@ -53,40 +53,45 @@ public final class CampaignCriterionServiceProto {
       "googleads.v0.services\032:google/ads/google" +
       "ads/v0/resources/campaign_criterion.prot" +
       "o\032\034google/api/annotations.proto\032 google/" +
-      "protobuf/field_mask.proto\"4\n\033GetCampaign" +
-      "CriterionRequest\022\025\n\rresource_name\030\001 \001(\t\"" +
-      "\206\001\n\035MutateCampaignCriteriaRequest\022\023\n\013cus" +
-      "tomer_id\030\001 \001(\t\022P\n\noperations\030\002 \003(\0132<.goo" +
-      "gle.ads.googleads.v0.services.CampaignCr" +
-      "iterionOperation\"\374\001\n\032CampaignCriterionOp" +
-      "eration\022/\n\013update_mask\030\004 \001(\0132\032.google.pr" +
-      "otobuf.FieldMask\022F\n\006create\030\001 \001(\01324.googl" +
-      "e.ads.googleads.v0.resources.CampaignCri" +
-      "terionH\000\022F\n\006update\030\002 \001(\01324.google.ads.go" +
-      "ogleads.v0.resources.CampaignCriterionH\000" +
-      "\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"r\n\036Mutat" +
-      "eCampaignCriteriaResponse\022P\n\007results\030\002 \003" +
-      "(\0132?.google.ads.googleads.v0.services.Mu" +
-      "tateCampaignCriterionResult\"6\n\035MutateCam" +
-      "paignCriterionResult\022\025\n\rresource_name\030\001 " +
-      "\001(\t2\304\003\n\030CampaignCriterionService\022\307\001\n\024Get" +
-      "CampaignCriterion\022=.google.ads.googleads" +
-      ".v0.services.GetCampaignCriterionRequest" +
-      "\0324.google.ads.googleads.v0.resources.Cam" +
-      "paignCriterion\":\202\323\344\223\0024\0222/v0/{resource_na" +
-      "me=customers/*/campaignCriteria/*}\022\335\001\n\026M" +
-      "utateCampaignCriteria\022?.google.ads.googl" +
-      "eads.v0.services.MutateCampaignCriteriaR" +
-      "equest\032@.google.ads.googleads.v0.service" +
-      "s.MutateCampaignCriteriaResponse\"@\202\323\344\223\002:" +
-      "\"5/v0/customers/{customer_id=*}/campaign" +
-      "Criteria:mutate:\001*B\335\001\n$com.google.ads.go" +
-      "ogleads.v0.servicesB\035CampaignCriterionSe" +
-      "rviceProtoP\001ZHgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v0/services;se" +
-      "rvices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V0.S" +
-      "ervices\312\002 Google\\Ads\\GoogleAds\\V0\\Servic" +
-      "esb\006proto3"
+      "protobuf/field_mask.proto\032\036google/protob" +
+      "uf/wrappers.proto\032\027google/rpc/status.pro" +
+      "to\"4\n\033GetCampaignCriterionRequest\022\025\n\rres" +
+      "ource_name\030\001 \001(\t\"\266\001\n\035MutateCampaignCrite" +
+      "riaRequest\022\023\n\013customer_id\030\001 \001(\t\022P\n\nopera" +
+      "tions\030\002 \003(\0132<.google.ads.googleads.v0.se" +
+      "rvices.CampaignCriterionOperation\022\027\n\017par" +
+      "tial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(" +
+      "\010\"\374\001\n\032CampaignCriterionOperation\022/\n\013upda" +
+      "te_mask\030\004 \001(\0132\032.google.protobuf.FieldMas" +
+      "k\022F\n\006create\030\001 \001(\01324.google.ads.googleads" +
+      ".v0.resources.CampaignCriterionH\000\022F\n\006upd" +
+      "ate\030\002 \001(\01324.google.ads.googleads.v0.reso" +
+      "urces.CampaignCriterionH\000\022\020\n\006remove\030\003 \001(" +
+      "\tH\000B\013\n\toperation\"\245\001\n\036MutateCampaignCrite" +
+      "riaResponse\0221\n\025partial_failure_error\030\003 \001" +
+      "(\0132\022.google.rpc.Status\022P\n\007results\030\002 \003(\0132" +
+      "?.google.ads.googleads.v0.services.Mutat" +
+      "eCampaignCriterionResult\"6\n\035MutateCampai" +
+      "gnCriterionResult\022\025\n\rresource_name\030\001 \001(\t" +
+      "2\304\003\n\030CampaignCriterionService\022\307\001\n\024GetCam" +
+      "paignCriterion\022=.google.ads.googleads.v0" +
+      ".services.GetCampaignCriterionRequest\0324." +
+      "google.ads.googleads.v0.resources.Campai" +
+      "gnCriterion\":\202\323\344\223\0024\0222/v0/{resource_name=" +
+      "customers/*/campaignCriteria/*}\022\335\001\n\026Muta" +
+      "teCampaignCriteria\022?.google.ads.googlead" +
+      "s.v0.services.MutateCampaignCriteriaRequ" +
+      "est\032@.google.ads.googleads.v0.services.M" +
+      "utateCampaignCriteriaResponse\"@\202\323\344\223\002:\"5/" +
+      "v0/customers/{customer_id=*}/campaignCri" +
+      "teria:mutate:\001*B\204\002\n$com.google.ads.googl" +
+      "eads.v0.servicesB\035CampaignCriterionServi" +
+      "ceProtoP\001ZHgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v0/services;servi" +
+      "ces\242\002\003GAA\252\002 Google.Ads.GoogleAds.V0.Serv" +
+      "ices\312\002 Google\\Ads\\GoogleAds\\V0\\Services\352" +
+      "\002$Google::Ads::GoogleAds::V0::Servicesb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -102,6 +107,8 @@ public final class CampaignCriterionServiceProto {
           com.google.ads.googleads.v0.resources.CampaignCriterionProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_services_GetCampaignCriterionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -114,7 +121,7 @@ public final class CampaignCriterionServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateCampaignCriteriaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateCampaignCriteriaRequest_descriptor,
-        new java.lang.String[] { "CustomerId", "Operations", });
+        new java.lang.String[] { "CustomerId", "Operations", "PartialFailure", "ValidateOnly", });
     internal_static_google_ads_googleads_v0_services_CampaignCriterionOperation_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v0_services_CampaignCriterionOperation_fieldAccessorTable = new
@@ -126,7 +133,7 @@ public final class CampaignCriterionServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateCampaignCriteriaResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateCampaignCriteriaResponse_descriptor,
-        new java.lang.String[] { "Results", });
+        new java.lang.String[] { "PartialFailureError", "Results", });
     internal_static_google_ads_googleads_v0_services_MutateCampaignCriterionResult_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_google_ads_googleads_v0_services_MutateCampaignCriterionResult_fieldAccessorTable = new
@@ -141,6 +148,8 @@ public final class CampaignCriterionServiceProto {
     com.google.ads.googleads.v0.resources.CampaignCriterionProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -49,12 +49,13 @@ public final class KeywordPlanProto {
       ".v0.enums.KeywordPlanForecastIntervalEnu" +
       "m.KeywordPlanForecastIntervalH\000\022?\n\ndate_" +
       "range\030\002 \001(\0132).google.ads.googleads.v0.co" +
-      "mmon.DateRangeH\000B\n\n\010intervalB\325\001\n%com.goo" +
+      "mmon.DateRangeH\000B\n\n\010intervalB\375\001\n%com.goo" +
       "gle.ads.googleads.v0.resourcesB\020KeywordP" +
       "lanProtoP\001ZJgoogle.golang.org/genproto/g" +
       "oogleapis/ads/googleads/v0/resources;res" +
       "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.R" +
       "esources\312\002!Google\\Ads\\GoogleAds\\V0\\Resou" +
+      "rces\352\002%Google::Ads::GoogleAds::V0::Resou" +
       "rcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

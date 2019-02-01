@@ -40,12 +40,13 @@ public final class PlaceholderTypeProto {
       "FLIGHT\020\016\022\022\n\016DYNAMIC_CUSTOM\020\017\022\021\n\rDYNAMIC_" +
       "HOTEL\020\020\022\027\n\023DYNAMIC_REAL_ESTATE\020\021\022\022\n\016DYNA" +
       "MIC_TRAVEL\020\022\022\021\n\rDYNAMIC_LOCAL\020\023\022\017\n\013DYNAM" +
-      "IC_JOB\020\024B\305\001\n!com.google.ads.googleads.v0" +
+      "IC_JOB\020\024B\351\001\n!com.google.ads.googleads.v0" +
       ".enumsB\024PlaceholderTypeProtoP\001ZBgoogle.g" +
       "olang.org/genproto/googleapis/ads/google" +
       "ads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.Go" +
       "ogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\" +
-      "V0\\Enumsb\006proto3"
+      "V0\\Enums\352\002!Google::Ads::GoogleAds::V0::E" +
+      "numsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

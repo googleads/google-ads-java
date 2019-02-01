@@ -30,20 +30,21 @@ public final class BiddingStrategyTypeProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v0/enums/bidding_" +
       "strategy_type.proto\022\035google.ads.googlead" +
-      "s.v0.enums\"\277\002\n\027BiddingStrategyTypeEnum\"\243" +
+      "s.v0.enums\"\317\002\n\027BiddingStrategyTypeEnum\"\263" +
       "\002\n\023BiddingStrategyType\022\017\n\013UNSPECIFIED\020\000\022" +
       "\013\n\007UNKNOWN\020\001\022\020\n\014ENHANCED_CPC\020\002\022\016\n\nMANUAL" +
       "_CPC\020\003\022\016\n\nMANUAL_CPM\020\004\022\016\n\nMANUAL_CPV\020\r\022\030" +
       "\n\024MAXIMIZE_CONVERSIONS\020\n\022\035\n\031MAXIMIZE_CON" +
       "VERSION_VALUE\020\013\022\025\n\021PAGE_ONE_PROMOTED\020\005\022\017" +
-      "\n\013PERCENT_CPC\020\014\022\016\n\nTARGET_CPA\020\006\022\030\n\024TARGE" +
-      "T_OUTRANK_SHARE\020\007\022\017\n\013TARGET_ROAS\020\010\022\020\n\014TA" +
-      "RGET_SPEND\020\tB\311\001\n!com.google.ads.googlead" +
-      "s.v0.enumsB\030BiddingStrategyTypeProtoP\001ZB" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v0/enums;enums\242\002\003GAA\252\002\035Googl" +
-      "e.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Go" +
-      "ogleAds\\V0\\Enumsb\006proto3"
+      "\n\013PERCENT_CPC\020\014\022\016\n\nTARGET_CPA\020\006\022\016\n\nTARGE" +
+      "T_CPM\020\016\022\030\n\024TARGET_OUTRANK_SHARE\020\007\022\017\n\013TAR" +
+      "GET_ROAS\020\010\022\020\n\014TARGET_SPEND\020\tB\355\001\n!com.goo" +
+      "gle.ads.googleads.v0.enumsB\030BiddingStrat" +
+      "egyTypeProtoP\001ZBgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v0/enums;enu" +
+      "ms\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums" +
+      "\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Googl" +
+      "e::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

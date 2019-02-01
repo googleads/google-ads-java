@@ -35,12 +35,13 @@ public final class MimeTypeProto {
       "AGE_GIF\020\003\022\r\n\tIMAGE_PNG\020\004\022\t\n\005FLASH\020\005\022\r\n\tT" +
       "EXT_HTML\020\006\022\007\n\003PDF\020\007\022\n\n\006MSWORD\020\010\022\013\n\007MSEXC" +
       "EL\020\t\022\007\n\003RTF\020\n\022\r\n\tAUDIO_WAV\020\013\022\r\n\tAUDIO_MP" +
-      "3\020\014\022\020\n\014HTML5_AD_ZIP\020\rB\276\001\n!com.google.ads" +
+      "3\020\014\022\020\n\014HTML5_AD_ZIP\020\rB\342\001\n!com.google.ads" +
       ".googleads.v0.enumsB\rMimeTypeProtoP\001ZBgo" +
       "ogle.golang.org/genproto/googleapis/ads/" +
       "googleads/v0/enums;enums\242\002\003GAA\252\002\035Google." +
       "Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Goog" +
-      "leAds\\V0\\Enumsb\006proto3"
+      "leAds\\V0\\Enums\352\002!Google::Ads::GoogleAds:" +
+      ":V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

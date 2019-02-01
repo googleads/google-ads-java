@@ -44,12 +44,13 @@ public final class CampaignFeedProto {
       "ching_function\030\005 \001(\01320.google.ads.google" +
       "ads.v0.common.MatchingFunction\022P\n\006status" +
       "\030\006 \001(\0162@.google.ads.googleads.v0.enums.F" +
-      "eedLinkStatusEnum.FeedLinkStatusB\326\001\n%com" +
+      "eedLinkStatusEnum.FeedLinkStatusB\376\001\n%com" +
       ".google.ads.googleads.v0.resourcesB\021Camp" +
       "aignFeedProtoP\001ZJgoogle.golang.org/genpr" +
       "oto/googleapis/ads/googleads/v0/resource" +
       "s;resources\242\002\003GAA\252\002!Google.Ads.GoogleAds" +
       ".V0.Resources\312\002!Google\\Ads\\GoogleAds\\V0\\" +
+      "Resources\352\002%Google::Ads::GoogleAds::V0::" +
       "Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

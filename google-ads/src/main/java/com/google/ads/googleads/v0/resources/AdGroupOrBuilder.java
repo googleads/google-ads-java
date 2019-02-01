@@ -296,28 +296,28 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
-   * The target cost-per-acquisition (conversion) bid.
+   * The target CPA (cost-per-acquisition).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+   * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
    */
-  boolean hasCpaBidMicros();
+  boolean hasTargetCpaMicros();
   /**
    * <pre>
-   * The target cost-per-acquisition (conversion) bid.
+   * The target CPA (cost-per-acquisition).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+   * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
    */
-  com.google.protobuf.Int64Value getCpaBidMicros();
+  com.google.protobuf.Int64Value getTargetCpaMicros();
   /**
    * <pre>
-   * The target cost-per-acquisition (conversion) bid.
+   * The target CPA (cost-per-acquisition).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+   * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
    */
-  com.google.protobuf.Int64ValueOrBuilder getCpaBidMicrosOrBuilder();
+  com.google.protobuf.Int64ValueOrBuilder getTargetCpaMicrosOrBuilder();
 
   /**
    * <pre>
@@ -346,37 +346,65 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
-   * The target return on ad spend (ROAS) override. If the ad group's campaign
-   * bidding strategy is a standard Target ROAS strategy, then this field
-   * overrides the target ROAS specified in the campaign's bidding strategy.
-   * Otherwise, this value is ignored.
+   * Average amount in micros that the advertiser is willing to pay for every
+   * thousand times the ad is shown.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+   * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
    */
-  boolean hasTargetRoasOverride();
+  boolean hasTargetCpmMicros();
   /**
    * <pre>
-   * The target return on ad spend (ROAS) override. If the ad group's campaign
-   * bidding strategy is a standard Target ROAS strategy, then this field
-   * overrides the target ROAS specified in the campaign's bidding strategy.
-   * Otherwise, this value is ignored.
+   * Average amount in micros that the advertiser is willing to pay for every
+   * thousand times the ad is shown.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+   * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
    */
-  com.google.protobuf.DoubleValue getTargetRoasOverride();
+  com.google.protobuf.Int64Value getTargetCpmMicros();
   /**
    * <pre>
-   * The target return on ad spend (ROAS) override. If the ad group's campaign
+   * Average amount in micros that the advertiser is willing to pay for every
+   * thousand times the ad is shown.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getTargetCpmMicrosOrBuilder();
+
+  /**
+   * <pre>
+   * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
    * bidding strategy is a standard Target ROAS strategy, then this field
    * overrides the target ROAS specified in the campaign's bidding strategy.
    * Otherwise, this value is ignored.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+   * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
    */
-  com.google.protobuf.DoubleValueOrBuilder getTargetRoasOverrideOrBuilder();
+  boolean hasTargetRoas();
+  /**
+   * <pre>
+   * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
+   * bidding strategy is a standard Target ROAS strategy, then this field
+   * overrides the target ROAS specified in the campaign's bidding strategy.
+   * Otherwise, this value is ignored.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+   */
+  com.google.protobuf.DoubleValue getTargetRoas();
+  /**
+   * <pre>
+   * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
+   * bidding strategy is a standard Target ROAS strategy, then this field
+   * overrides the target ROAS specified in the campaign's bidding strategy.
+   * Otherwise, this value is ignored.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getTargetRoasOrBuilder();
 
   /**
    * <pre>
@@ -479,4 +507,123 @@ public interface AdGroupOrBuilder extends
    * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
    */
   com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder();
+
+  /**
+   * <pre>
+   * Setting for targeting related features.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+   */
+  boolean hasTargetingSetting();
+  /**
+   * <pre>
+   * Setting for targeting related features.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+   */
+  com.google.ads.googleads.v0.common.TargetingSetting getTargetingSetting();
+  /**
+   * <pre>
+   * Setting for targeting related features.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+   */
+  com.google.ads.googleads.v0.common.TargetingSettingOrBuilder getTargetingSettingOrBuilder();
+
+  /**
+   * <pre>
+   * The effective target CPA (cost-per-acquisition).
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+   */
+  boolean hasEffectiveTargetCpaMicros();
+  /**
+   * <pre>
+   * The effective target CPA (cost-per-acquisition).
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+   */
+  com.google.protobuf.Int64Value getEffectiveTargetCpaMicros();
+  /**
+   * <pre>
+   * The effective target CPA (cost-per-acquisition).
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getEffectiveTargetCpaMicrosOrBuilder();
+
+  /**
+   * <pre>
+   * Source of the effective target CPA.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+   */
+  int getEffectiveTargetCpaSourceValue();
+  /**
+   * <pre>
+   * Source of the effective target CPA.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+   */
+  com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetCpaSource();
+
+  /**
+   * <pre>
+   * The effective target ROAS (return-on-ad-spend).
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+   */
+  boolean hasEffectiveTargetRoas();
+  /**
+   * <pre>
+   * The effective target ROAS (return-on-ad-spend).
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+   */
+  com.google.protobuf.DoubleValue getEffectiveTargetRoas();
+  /**
+   * <pre>
+   * The effective target ROAS (return-on-ad-spend).
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getEffectiveTargetRoasOrBuilder();
+
+  /**
+   * <pre>
+   * Source of the effective target ROAS.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+   */
+  int getEffectiveTargetRoasSourceValue();
+  /**
+   * <pre>
+   * Source of the effective target ROAS.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+   */
+  com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetRoasSource();
 }

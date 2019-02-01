@@ -31,7 +31,8 @@ public interface CustomerClientOrBuilder extends
 
   /**
    * <pre>
-   * The client customer linked to this customer. Read only.
+   * The resource name of the client-customer which is linked to
+   * the given customer. Read only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -39,7 +40,8 @@ public interface CustomerClientOrBuilder extends
   boolean hasClientCustomer();
   /**
    * <pre>
-   * The client customer linked to this customer. Read only.
+   * The resource name of the client-customer which is linked to
+   * the given customer. Read only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -47,7 +49,8 @@ public interface CustomerClientOrBuilder extends
   com.google.protobuf.StringValue getClientCustomer();
   /**
    * <pre>
-   * The client customer linked to this customer. Read only.
+   * The resource name of the client-customer which is linked to
+   * the given customer. Read only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -56,7 +59,10 @@ public interface CustomerClientOrBuilder extends
 
   /**
    * <pre>
-   * Whether the client is hidden or not. Default value is false. Read only.
+   * Specifies whether this is a hidden account. Learn more about hidden
+   * accounts
+   * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+   * Read only.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -64,7 +70,10 @@ public interface CustomerClientOrBuilder extends
   boolean hasHidden();
   /**
    * <pre>
-   * Whether the client is hidden or not. Default value is false. Read only.
+   * Specifies whether this is a hidden account. Learn more about hidden
+   * accounts
+   * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+   * Read only.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -72,7 +81,10 @@ public interface CustomerClientOrBuilder extends
   com.google.protobuf.BoolValue getHidden();
   /**
    * <pre>
-   * Whether the client is hidden or not. Default value is false. Read only.
+   * Specifies whether this is a hidden account. Learn more about hidden
+   * accounts
+   * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+   * Read only.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -81,8 +93,8 @@ public interface CustomerClientOrBuilder extends
 
   /**
    * <pre>
-   * Distance between customer and client. For self link, the level value will
-   * be 0. Read only.
+   * Distance between given customer and client. For self link, the level value
+   * will be 0. Read only.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -90,8 +102,8 @@ public interface CustomerClientOrBuilder extends
   boolean hasLevel();
   /**
    * <pre>
-   * Distance between customer and client. For self link, the level value will
-   * be 0. Read only.
+   * Distance between given customer and client. For self link, the level value
+   * will be 0. Read only.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -99,8 +111,8 @@ public interface CustomerClientOrBuilder extends
   com.google.protobuf.Int64Value getLevel();
   /**
    * <pre>
-   * Distance between customer and client. For self link, the level value will
-   * be 0. Read only.
+   * Distance between given customer and client. For self link, the level value
+   * will be 0. Read only.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value level = 5;</code>

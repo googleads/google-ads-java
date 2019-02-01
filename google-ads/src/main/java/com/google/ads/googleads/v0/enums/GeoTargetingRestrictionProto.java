@@ -33,12 +33,13 @@ public final class GeoTargetingRestrictionProto {
       "leads.v0.enums\"p\n\033GeoTargetingRestrictio" +
       "nEnum\"Q\n\027GeoTargetingRestriction\022\017\n\013UNSP" +
       "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\030\n\024LOCATION_OF_PR" +
-      "ESENCE\020\002B\315\001\n!com.google.ads.googleads.v0" +
+      "ESENCE\020\002B\361\001\n!com.google.ads.googleads.v0" +
       ".enumsB\034GeoTargetingRestrictionProtoP\001ZB" +
       "google.golang.org/genproto/googleapis/ad" +
       "s/googleads/v0/enums;enums\242\002\003GAA\252\002\035Googl" +
       "e.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Go" +
-      "ogleAds\\V0\\Enumsb\006proto3"
+      "ogleAds\\V0\\Enums\352\002!Google::Ads::GoogleAd" +
+      "s::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

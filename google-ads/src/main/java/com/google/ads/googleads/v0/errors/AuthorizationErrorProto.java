@@ -37,12 +37,13 @@ public final class AuthorizationErrorProto {
       "EVELOPER_TOKEN_PROHIBITED\020\004\022\024\n\020PROJECT_D" +
       "ISABLED\020\005\022\027\n\023AUTHORIZATION_ERROR\020\006\022\030\n\024AC" +
       "TION_NOT_PERMITTED\020\007\022\025\n\021INCOMPLETE_SIGNU" +
-      "P\020\010B\315\001\n\"com.google.ads.googleads.v0.erro" +
+      "P\020\010B\362\001\n\"com.google.ads.googleads.v0.erro" +
       "rsB\027AuthorizationErrorProtoP\001ZDgoogle.go" +
       "lang.org/genproto/googleapis/ads/googlea" +
       "ds/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.G" +
       "oogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAd" +
-      "s\\V0\\Errorsb\006proto3"
+      "s\\V0\\Errors\352\002\"Google::Ads::GoogleAds::V0" +
+      "::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

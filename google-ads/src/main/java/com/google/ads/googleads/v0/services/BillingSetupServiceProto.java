@@ -74,12 +74,13 @@ public final class BillingSetupServiceProto {
       "pRequest\032<.google.ads.googleads.v0.servi" +
       "ces.MutateBillingSetupResponse\"=\202\323\344\223\0027\"2" +
       "/v0/customers/{customer_id=*}/billingSet" +
-      "ups:mutate:\001*B\330\001\n$com.google.ads.googlea" +
+      "ups:mutate:\001*B\377\001\n$com.google.ads.googlea" +
       "ds.v0.servicesB\030BillingSetupServiceProto" +
       "P\001ZHgoogle.golang.org/genproto/googleapi" +
       "s/ads/googleads/v0/services;services\242\002\003G" +
       "AA\252\002 Google.Ads.GoogleAds.V0.Services\312\002 " +
-      "Google\\Ads\\GoogleAds\\V0\\Servicesb\006proto3"
+      "Google\\Ads\\GoogleAds\\V0\\Services\352\002$Googl" +
+      "e::Ads::GoogleAds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

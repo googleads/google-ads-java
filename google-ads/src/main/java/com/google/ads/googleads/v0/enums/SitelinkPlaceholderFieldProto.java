@@ -35,12 +35,13 @@ public final class SitelinkPlaceholderFieldProto {
       "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\010\n\004TEXT\020\002\022\n\n" +
       "\006LINE_1\020\003\022\n\n\006LINE_2\020\004\022\016\n\nFINAL_URLS\020\005\022\025\n" +
       "\021FINAL_MOBILE_URLS\020\006\022\020\n\014TRACKING_URL\020\007\022\024" +
-      "\n\020FINAL_URL_SUFFIX\020\010B\316\001\n!com.google.ads." +
+      "\n\020FINAL_URL_SUFFIX\020\010B\362\001\n!com.google.ads." +
       "googleads.v0.enumsB\035SitelinkPlaceholderF" +
       "ieldProtoP\001ZBgoogle.golang.org/genproto/" +
       "googleapis/ads/googleads/v0/enums;enums\242" +
       "\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312\002\035" +
-      "Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Google::" +
+      "Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -49,4 +49,14 @@ public interface MutateCustomerRequestOrBuilder extends
    * <code>.google.ads.googleads.v0.services.CustomerOperation operation = 4;</code>
    */
   com.google.ads.googleads.v0.services.CustomerOperationOrBuilder getOperationOrBuilder();
+
+  /**
+   * <pre>
+   * If true, the request is validated but not executed. Only errors are
+   * returned, not results.
+   * </pre>
+   *
+   * <code>bool validate_only = 5;</code>
+   */
+  boolean getValidateOnly();
 }

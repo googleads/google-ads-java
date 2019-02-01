@@ -33,12 +33,13 @@ public final class SharedSetTypeProto {
       "nums\"r\n\021SharedSetTypeEnum\"]\n\rSharedSetTy" +
       "pe\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\025\n\021NEGA" +
       "TIVE_KEYWORDS\020\002\022\027\n\023NEGATIVE_PLACEMENTS\020\003" +
-      "B\303\001\n!com.google.ads.googleads.v0.enumsB\022" +
+      "B\347\001\n!com.google.ads.googleads.v0.enumsB\022" +
       "SharedSetTypeProtoP\001ZBgoogle.golang.org/" +
       "genproto/googleapis/ads/googleads/v0/enu" +
       "ms;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0" +
-      ".Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006" +
-      "proto3"
+      ".Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002" +
+      "!Google::Ads::GoogleAds::V0::Enumsb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

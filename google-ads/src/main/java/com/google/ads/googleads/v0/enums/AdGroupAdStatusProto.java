@@ -32,13 +32,14 @@ public final class AdGroupAdStatusProto {
       "_ad_status.proto\022\035google.ads.googleads.v" +
       "0.enums\"l\n\023AdGroupAdStatusEnum\"U\n\017AdGrou" +
       "pAdStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
-      "\013\n\007ENABLED\020\002\022\n\n\006PAUSED\020\003\022\013\n\007REMOVED\020\004B\305\001" +
+      "\013\n\007ENABLED\020\002\022\n\n\006PAUSED\020\003\022\013\n\007REMOVED\020\004B\351\001" +
       "\n!com.google.ads.googleads.v0.enumsB\024AdG" +
       "roupAdStatusProtoP\001ZBgoogle.golang.org/g" +
       "enproto/googleapis/ads/googleads/v0/enum" +
       "s;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0." +
-      "Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006p" +
-      "roto3"
+      "Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!" +
+      "Google::Ads::GoogleAds::V0::Enumsb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

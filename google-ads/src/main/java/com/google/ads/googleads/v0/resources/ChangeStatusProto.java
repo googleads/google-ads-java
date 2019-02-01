@@ -34,7 +34,7 @@ public final class ChangeStatusProto {
       "s/change_status_operation.proto\032?google/" +
       "ads/googleads/v0/enums/change_status_res" +
       "ource_type.proto\032\036google/protobuf/wrappe" +
-      "rs.proto\"\277\004\n\014ChangeStatus\022\025\n\rresource_na" +
+      "rs.proto\"\234\005\n\014ChangeStatus\022\025\n\rresource_na" +
       "me\030\001 \001(\t\022;\n\025last_change_date_time\030\003 \001(\0132" +
       "\034.google.protobuf.StringValue\022k\n\rresourc" +
       "e_type\030\004 \001(\0162T.google.ads.googleads.v0.e" +
@@ -48,13 +48,16 @@ public final class ChangeStatusProto {
       "2\034.google.protobuf.StringValue\0228\n\022ad_gro" +
       "up_criterion\030\n \001(\0132\034.google.protobuf.Str" +
       "ingValue\0228\n\022campaign_criterion\030\013 \001(\0132\034.g" +
-      "oogle.protobuf.StringValueB\326\001\n%com.googl" +
-      "e.ads.googleads.v0.resourcesB\021ChangeStat" +
-      "usProtoP\001ZJgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v0/resources;reso" +
-      "urces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Re" +
-      "sources\312\002!Google\\Ads\\GoogleAds\\V0\\Resour" +
-      "cesb\006proto3"
+      "oogle.protobuf.StringValue\022*\n\004feed\030\014 \001(\013" +
+      "2\034.google.protobuf.StringValue\022/\n\tfeed_i" +
+      "tem\030\r \001(\0132\034.google.protobuf.StringValueB" +
+      "\376\001\n%com.google.ads.googleads.v0.resource" +
+      "sB\021ChangeStatusProtoP\001ZJgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v0/r" +
+      "esources;resources\242\002\003GAA\252\002!Google.Ads.Go" +
+      "ogleAds.V0.Resources\312\002!Google\\Ads\\Google" +
+      "Ads\\V0\\Resources\352\002%Google::Ads::GoogleAd" +
+      "s::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -76,7 +79,7 @@ public final class ChangeStatusProto {
     internal_static_google_ads_googleads_v0_resources_ChangeStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_ChangeStatus_descriptor,
-        new java.lang.String[] { "ResourceName", "LastChangeDateTime", "ResourceType", "Campaign", "AdGroup", "ResourceStatus", "AdGroupAd", "AdGroupCriterion", "CampaignCriterion", });
+        new java.lang.String[] { "ResourceName", "LastChangeDateTime", "ResourceType", "Campaign", "AdGroup", "ResourceStatus", "AdGroupAd", "AdGroupCriterion", "CampaignCriterion", "Feed", "FeedItem", });
     com.google.ads.googleads.v0.enums.ChangeStatusOperationProto.getDescriptor();
     com.google.ads.googleads.v0.enums.ChangeStatusResourceTypeProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();

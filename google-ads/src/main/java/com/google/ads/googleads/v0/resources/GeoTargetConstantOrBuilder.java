@@ -145,4 +145,32 @@ public interface GeoTargetConstantOrBuilder extends
    * <code>.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
    */
   com.google.ads.googleads.v0.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus getStatus();
+
+  /**
+   * <pre>
+   * The fully qualified English name, consisting of the target's name and that
+   * of its parent and country.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+   */
+  boolean hasCanonicalName();
+  /**
+   * <pre>
+   * The fully qualified English name, consisting of the target's name and that
+   * of its parent and country.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+   */
+  com.google.protobuf.StringValue getCanonicalName();
+  /**
+   * <pre>
+   * The fully qualified English name, consisting of the target's name and that
+   * of its parent and country.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getCanonicalNameOrBuilder();
 }

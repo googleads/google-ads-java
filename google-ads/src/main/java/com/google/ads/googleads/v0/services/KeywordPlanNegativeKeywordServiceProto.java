@@ -54,44 +54,49 @@ public final class KeywordPlanNegativeKeywordServiceProto {
       "/ads/googleads/v0/resources/keyword_plan" +
       "_negative_keyword.proto\032\034google/api/anno" +
       "tations.proto\032 google/protobuf/field_mas" +
-      "k.proto\"=\n$GetKeywordPlanNegativeKeyword" +
-      "Request\022\025\n\rresource_name\030\001 \001(\t\"\232\001\n(Mutat" +
-      "eKeywordPlanNegativeKeywordsRequest\022\023\n\013c" +
-      "ustomer_id\030\001 \001(\t\022Y\n\noperations\030\002 \003(\0132E.g" +
-      "oogle.ads.googleads.v0.services.KeywordP" +
-      "lanNegativeKeywordOperation\"\227\002\n#KeywordP" +
-      "lanNegativeKeywordOperation\022/\n\013update_ma" +
-      "sk\030\004 \001(\0132\032.google.protobuf.FieldMask\022O\n\006" +
-      "create\030\001 \001(\0132=.google.ads.googleads.v0.r" +
-      "esources.KeywordPlanNegativeKeywordH\000\022O\n" +
-      "\006update\030\002 \001(\0132=.google.ads.googleads.v0." +
-      "resources.KeywordPlanNegativeKeywordH\000\022\020" +
-      "\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\206\001\n)Mutate" +
-      "KeywordPlanNegativeKeywordsResponse\022Y\n\007r" +
-      "esults\030\002 \003(\0132H.google.ads.googleads.v0.s" +
-      "ervices.MutateKeywordPlanNegativeKeyword" +
-      "Result\"?\n&MutateKeywordPlanNegativeKeywo" +
-      "rdResult\022\025\n\rresource_name\030\001 \001(\t2\237\004\n!Keyw" +
-      "ordPlanNegativeKeywordService\022\355\001\n\035GetKey" +
-      "wordPlanNegativeKeyword\022F.google.ads.goo" +
-      "gleads.v0.services.GetKeywordPlanNegativ" +
-      "eKeywordRequest\032=.google.ads.googleads.v" +
-      "0.resources.KeywordPlanNegativeKeyword\"E" +
-      "\202\323\344\223\002?\022=/v0/{resource_name=customers/*/k" +
-      "eywordPlanNegativeKeywords/*}\022\211\002\n!Mutate" +
-      "KeywordPlanNegativeKeywords\022J.google.ads" +
-      ".googleads.v0.services.MutateKeywordPlan" +
-      "NegativeKeywordsRequest\032K.google.ads.goo" +
+      "k.proto\032\036google/protobuf/wrappers.proto\032" +
+      "\027google/rpc/status.proto\"=\n$GetKeywordPl" +
+      "anNegativeKeywordRequest\022\025\n\rresource_nam" +
+      "e\030\001 \001(\t\"\312\001\n(MutateKeywordPlanNegativeKey" +
+      "wordsRequest\022\023\n\013customer_id\030\001 \001(\t\022Y\n\nope" +
+      "rations\030\002 \003(\0132E.google.ads.googleads.v0." +
+      "services.KeywordPlanNegativeKeywordOpera" +
+      "tion\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidat" +
+      "e_only\030\004 \001(\010\"\227\002\n#KeywordPlanNegativeKeyw" +
+      "ordOperation\022/\n\013update_mask\030\004 \001(\0132\032.goog" +
+      "le.protobuf.FieldMask\022O\n\006create\030\001 \001(\0132=." +
+      "google.ads.googleads.v0.resources.Keywor" +
+      "dPlanNegativeKeywordH\000\022O\n\006update\030\002 \001(\0132=" +
+      ".google.ads.googleads.v0.resources.Keywo" +
+      "rdPlanNegativeKeywordH\000\022\020\n\006remove\030\003 \001(\tH" +
+      "\000B\013\n\toperation\"\271\001\n)MutateKeywordPlanNega" +
+      "tiveKeywordsResponse\0221\n\025partial_failure_" +
+      "error\030\003 \001(\0132\022.google.rpc.Status\022Y\n\007resul" +
+      "ts\030\002 \003(\0132H.google.ads.googleads.v0.servi" +
+      "ces.MutateKeywordPlanNegativeKeywordResu" +
+      "lt\"?\n&MutateKeywordPlanNegativeKeywordRe" +
+      "sult\022\025\n\rresource_name\030\001 \001(\t2\237\004\n!KeywordP" +
+      "lanNegativeKeywordService\022\355\001\n\035GetKeyword" +
+      "PlanNegativeKeyword\022F.google.ads.googlea" +
+      "ds.v0.services.GetKeywordPlanNegativeKey" +
+      "wordRequest\032=.google.ads.googleads.v0.re" +
+      "sources.KeywordPlanNegativeKeyword\"E\202\323\344\223" +
+      "\002?\022=/v0/{resource_name=customers/*/keywo" +
+      "rdPlanNegativeKeywords/*}\022\211\002\n!MutateKeyw" +
+      "ordPlanNegativeKeywords\022J.google.ads.goo" +
       "gleads.v0.services.MutateKeywordPlanNega" +
-      "tiveKeywordsResponse\"K\202\323\344\223\002E\"@/v0/custom" +
-      "ers/{customer_id=*}/keywordPlanNegativeK" +
-      "eywords:mutate:\001*B\346\001\n$com.google.ads.goo" +
-      "gleads.v0.servicesB&KeywordPlanNegativeK" +
-      "eywordServiceProtoP\001ZHgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v0/ser" +
-      "vices;services\242\002\003GAA\252\002 Google.Ads.Google" +
-      "Ads.V0.Services\312\002 Google\\Ads\\GoogleAds\\V" +
-      "0\\Servicesb\006proto3"
+      "tiveKeywordsRequest\032K.google.ads.googlea" +
+      "ds.v0.services.MutateKeywordPlanNegative" +
+      "KeywordsResponse\"K\202\323\344\223\002E\"@/v0/customers/" +
+      "{customer_id=*}/keywordPlanNegativeKeywo" +
+      "rds:mutate:\001*B\215\002\n$com.google.ads.googlea" +
+      "ds.v0.servicesB&KeywordPlanNegativeKeywo" +
+      "rdServiceProtoP\001ZHgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v0/service" +
+      "s;services\242\002\003GAA\252\002 Google.Ads.GoogleAds." +
+      "V0.Services\312\002 Google\\Ads\\GoogleAds\\V0\\Se" +
+      "rvices\352\002$Google::Ads::GoogleAds::V0::Ser" +
+      "vicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -107,6 +112,8 @@ public final class KeywordPlanNegativeKeywordServiceProto {
           com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeywordProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_services_GetKeywordPlanNegativeKeywordRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -119,7 +126,7 @@ public final class KeywordPlanNegativeKeywordServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateKeywordPlanNegativeKeywordsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateKeywordPlanNegativeKeywordsRequest_descriptor,
-        new java.lang.String[] { "CustomerId", "Operations", });
+        new java.lang.String[] { "CustomerId", "Operations", "PartialFailure", "ValidateOnly", });
     internal_static_google_ads_googleads_v0_services_KeywordPlanNegativeKeywordOperation_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v0_services_KeywordPlanNegativeKeywordOperation_fieldAccessorTable = new
@@ -131,7 +138,7 @@ public final class KeywordPlanNegativeKeywordServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateKeywordPlanNegativeKeywordsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateKeywordPlanNegativeKeywordsResponse_descriptor,
-        new java.lang.String[] { "Results", });
+        new java.lang.String[] { "PartialFailureError", "Results", });
     internal_static_google_ads_googleads_v0_services_MutateKeywordPlanNegativeKeywordResult_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_google_ads_googleads_v0_services_MutateKeywordPlanNegativeKeywordResult_fieldAccessorTable = new
@@ -146,6 +153,8 @@ public final class KeywordPlanNegativeKeywordServiceProto {
     com.google.ads.googleads.v0.resources.KeywordPlanNegativeKeywordProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

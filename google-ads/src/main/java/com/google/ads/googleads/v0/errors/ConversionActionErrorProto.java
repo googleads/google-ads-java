@@ -39,13 +39,13 @@ public final class ConversionActionErrorProto {
       "L_ACTION\020\005\022)\n%DATA_DRIVEN_MODEL_WAS_NEVE" +
       "R_GENERATED\020\006\022\035\n\031DATA_DRIVEN_MODEL_EXPIR" +
       "ED\020\007\022\033\n\027DATA_DRIVEN_MODEL_STALE\020\010\022\035\n\031DAT" +
-      "A_DRIVEN_MODEL_UNKNOWN\020\tB\320\001\n\"com.google." +
+      "A_DRIVEN_MODEL_UNKNOWN\020\tB\365\001\n\"com.google." +
       "ads.googleads.v0.errorsB\032ConversionActio" +
       "nErrorProtoP\001ZDgoogle.golang.org/genprot" +
       "o/googleapis/ads/googleads/v0/errors;err" +
       "ors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Erro" +
-      "rs\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006pro" +
-      "to3"
+      "rs\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors\352\002\"Go" +
+      "ogle::Ads::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

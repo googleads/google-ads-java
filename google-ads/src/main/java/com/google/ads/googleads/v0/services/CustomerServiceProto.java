@@ -75,48 +75,50 @@ public final class CustomerServiceProto {
       "tions.proto\032 google/protobuf/field_mask." +
       "proto\032\036google/protobuf/wrappers.proto\"+\n" +
       "\022GetCustomerRequest\022\025\n\rresource_name\030\001 \001" +
-      "(\t\"t\n\025MutateCustomerRequest\022\023\n\013customer_" +
-      "id\030\001 \001(\t\022F\n\toperation\030\004 \001(\01323.google.ads" +
-      ".googleads.v0.services.CustomerOperation" +
-      "\"x\n\033CreateCustomerClientRequest\022\023\n\013custo" +
-      "mer_id\030\001 \001(\t\022D\n\017customer_client\030\002 \001(\0132+." +
-      "google.ads.googleads.v0.resources.Custom" +
-      "er\"\201\001\n\021CustomerOperation\022;\n\006update\030\001 \001(\013" +
-      "2+.google.ads.googleads.v0.resources.Cus" +
-      "tomer\022/\n\013update_mask\030\002 \001(\0132\032.google.prot" +
-      "obuf.FieldMask\"5\n\034CreateCustomerClientRe" +
-      "sponse\022\025\n\rresource_name\030\002 \001(\t\"`\n\026MutateC" +
-      "ustomerResponse\022F\n\006result\030\002 \001(\01326.google" +
-      ".ads.googleads.v0.services.MutateCustome" +
-      "rResult\"-\n\024MutateCustomerResult\022\025\n\rresou" +
-      "rce_name\030\001 \001(\t\" \n\036ListAccessibleCustomer" +
-      "sRequest\"9\n\037ListAccessibleCustomersRespo" +
-      "nse\022\026\n\016resource_names\030\001 \003(\t2\213\006\n\017Customer" +
-      "Service\022\231\001\n\013GetCustomer\0224.google.ads.goo" +
-      "gleads.v0.services.GetCustomerRequest\032+." +
-      "google.ads.googleads.v0.resources.Custom" +
-      "er\"\'\202\323\344\223\002!\022\037/v0/{resource_name=customers" +
-      "/*}\022\264\001\n\016MutateCustomer\0227.google.ads.goog" +
-      "leads.v0.services.MutateCustomerRequest\032" +
-      "8.google.ads.googleads.v0.services.Mutat" +
-      "eCustomerResponse\"/\202\323\344\223\002)\"$/v0/customers" +
-      "/{customer_id=*}:mutate:\001*\022\315\001\n\027ListAcces" +
-      "sibleCustomers\022@.google.ads.googleads.v0" +
-      ".services.ListAccessibleCustomersRequest" +
-      "\032A.google.ads.googleads.v0.services.List" +
-      "AccessibleCustomersResponse\"-\202\323\344\223\002\'\022%/v0" +
-      "/customers:listAccessibleCustomers\022\324\001\n\024C" +
-      "reateCustomerClient\022=.google.ads.googlea" +
-      "ds.v0.services.CreateCustomerClientReque" +
-      "st\032>.google.ads.googleads.v0.services.Cr" +
-      "eateCustomerClientResponse\"=\202\323\344\223\0027\"2/v0/" +
-      "customers/{customer_id=*}:createCustomer" +
-      "Client:\001*B\324\001\n$com.google.ads.googleads.v" +
-      "0.servicesB\024CustomerServiceProtoP\001ZHgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v0/services;services\242\002\003GAA\252\002 Goo" +
-      "gle.Ads.GoogleAds.V0.Services\312\002 Google\\A" +
-      "ds\\GoogleAds\\V0\\Servicesb\006proto3"
+      "(\t\"\213\001\n\025MutateCustomerRequest\022\023\n\013customer" +
+      "_id\030\001 \001(\t\022F\n\toperation\030\004 \001(\01323.google.ad" +
+      "s.googleads.v0.services.CustomerOperatio" +
+      "n\022\025\n\rvalidate_only\030\005 \001(\010\"x\n\033CreateCustom" +
+      "erClientRequest\022\023\n\013customer_id\030\001 \001(\t\022D\n\017" +
+      "customer_client\030\002 \001(\0132+.google.ads.googl" +
+      "eads.v0.resources.Customer\"\201\001\n\021CustomerO" +
+      "peration\022;\n\006update\030\001 \001(\0132+.google.ads.go" +
+      "ogleads.v0.resources.Customer\022/\n\013update_" +
+      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\"5" +
+      "\n\034CreateCustomerClientResponse\022\025\n\rresour" +
+      "ce_name\030\002 \001(\t\"`\n\026MutateCustomerResponse\022" +
+      "F\n\006result\030\002 \001(\01326.google.ads.googleads.v" +
+      "0.services.MutateCustomerResult\"-\n\024Mutat" +
+      "eCustomerResult\022\025\n\rresource_name\030\001 \001(\t\" " +
+      "\n\036ListAccessibleCustomersRequest\"9\n\037List" +
+      "AccessibleCustomersResponse\022\026\n\016resource_" +
+      "names\030\001 \003(\t2\213\006\n\017CustomerService\022\231\001\n\013GetC" +
+      "ustomer\0224.google.ads.googleads.v0.servic" +
+      "es.GetCustomerRequest\032+.google.ads.googl" +
+      "eads.v0.resources.Customer\"\'\202\323\344\223\002!\022\037/v0/" +
+      "{resource_name=customers/*}\022\264\001\n\016MutateCu" +
+      "stomer\0227.google.ads.googleads.v0.service" +
+      "s.MutateCustomerRequest\0328.google.ads.goo" +
+      "gleads.v0.services.MutateCustomerRespons" +
+      "e\"/\202\323\344\223\002)\"$/v0/customers/{customer_id=*}" +
+      ":mutate:\001*\022\315\001\n\027ListAccessibleCustomers\022@" +
+      ".google.ads.googleads.v0.services.ListAc" +
+      "cessibleCustomersRequest\032A.google.ads.go" +
+      "ogleads.v0.services.ListAccessibleCustom" +
+      "ersResponse\"-\202\323\344\223\002\'\022%/v0/customers:listA" +
+      "ccessibleCustomers\022\324\001\n\024CreateCustomerCli" +
+      "ent\022=.google.ads.googleads.v0.services.C" +
+      "reateCustomerClientRequest\032>.google.ads." +
+      "googleads.v0.services.CreateCustomerClie" +
+      "ntResponse\"=\202\323\344\223\0027\"2/v0/customers/{custo" +
+      "mer_id=*}:createCustomerClient:\001*B\373\001\n$co" +
+      "m.google.ads.googleads.v0.servicesB\024Cust" +
+      "omerServiceProtoP\001ZHgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v0/servi" +
+      "ces;services\242\002\003GAA\252\002 Google.Ads.GoogleAd" +
+      "s.V0.Services\312\002 Google\\Ads\\GoogleAds\\V0\\" +
+      "Services\352\002$Google::Ads::GoogleAds::V0::S" +
+      "ervicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -145,7 +147,7 @@ public final class CustomerServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateCustomerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateCustomerRequest_descriptor,
-        new java.lang.String[] { "CustomerId", "Operation", });
+        new java.lang.String[] { "CustomerId", "Operation", "ValidateOnly", });
     internal_static_google_ads_googleads_v0_services_CreateCustomerClientRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v0_services_CreateCustomerClientRequest_fieldAccessorTable = new

@@ -34,12 +34,13 @@ public final class ProductTypeLevelProto {
       "ductTypeLevel\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOW" +
       "N\020\001\022\023\n\017PRODUCT_TYPE_L1\020\002\022\023\n\017PRODUCT_TYPE" +
       "_L2\020\003\022\023\n\017PRODUCT_TYPE_L3\020\004\022\023\n\017PRODUCT_TY" +
-      "PE_L4\020\005\022\023\n\017PRODUCT_TYPE_L5\020\006B\306\001\n!com.goo" +
+      "PE_L4\020\005\022\023\n\017PRODUCT_TYPE_L5\020\006B\352\001\n!com.goo" +
       "gle.ads.googleads.v0.enumsB\025ProductTypeL" +
       "evelProtoP\001ZBgoogle.golang.org/genproto/" +
       "googleapis/ads/googleads/v0/enums;enums\242" +
       "\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312\002\035" +
-      "Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Google::" +
+      "Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

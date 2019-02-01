@@ -39,12 +39,13 @@ public final class ContentLabelTypeProto {
       "EO_RATING_DV_PG\020\013\022\025\n\021VIDEO_RATING_DV_T\020\014" +
       "\022\026\n\022VIDEO_RATING_DV_MA\020\r\022\027\n\023VIDEO_NOT_YE" +
       "T_RATED\020\016\022\022\n\016EMBEDDED_VIDEO\020\017\022\030\n\024LIVE_ST" +
-      "REAMING_VIDEO\020\020B\306\001\n!com.google.ads.googl" +
+      "REAMING_VIDEO\020\020B\352\001\n!com.google.ads.googl" +
       "eads.v0.enumsB\025ContentLabelTypeProtoP\001ZB" +
       "google.golang.org/genproto/googleapis/ad" +
       "s/googleads/v0/enums;enums\242\002\003GAA\252\002\035Googl" +
       "e.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Go" +
-      "ogleAds\\V0\\Enumsb\006proto3"
+      "ogleAds\\V0\\Enums\352\002!Google::Ads::GoogleAd" +
+      "s::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

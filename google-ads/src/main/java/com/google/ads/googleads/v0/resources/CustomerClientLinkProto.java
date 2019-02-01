@@ -39,13 +39,14 @@ public final class CustomerClientLinkProto {
       "e.protobuf.Int64Value\022V\n\006status\030\005 \001(\0162F." +
       "google.ads.googleads.v0.enums.ManagerLin" +
       "kStatusEnum.ManagerLinkStatus\022*\n\006hidden\030" +
-      "\006 \001(\0132\032.google.protobuf.BoolValueB\334\001\n%co" +
+      "\006 \001(\0132\032.google.protobuf.BoolValueB\204\002\n%co" +
       "m.google.ads.googleads.v0.resourcesB\027Cus" +
       "tomerClientLinkProtoP\001ZJgoogle.golang.or" +
       "g/genproto/googleapis/ads/googleads/v0/r" +
       "esources;resources\242\002\003GAA\252\002!Google.Ads.Go" +
       "ogleAds.V0.Resources\312\002!Google\\Ads\\Google" +
-      "Ads\\V0\\Resourcesb\006proto3"
+      "Ads\\V0\\Resources\352\002%Google::Ads::GoogleAd" +
+      "s::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

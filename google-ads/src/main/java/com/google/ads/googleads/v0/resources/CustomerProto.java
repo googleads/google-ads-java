@@ -24,6 +24,11 @@ public final class CustomerProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_resources_CallReportingSetting_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_resources_ConversionTrackingSetting_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_resources_ConversionTrackingSetting_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35,7 +40,7 @@ public final class CustomerProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v0/resources/cust" +
       "omer.proto\022!google.ads.googleads.v0.reso" +
-      "urces\032\036google/protobuf/wrappers.proto\"\250\004" +
+      "urces\032\036google/protobuf/wrappers.proto\"\352\005" +
       "\n\010Customer\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030" +
       "\003 \001(\0132\033.google.protobuf.Int64Value\0226\n\020de" +
       "scriptive_name\030\004 \001(\0132\034.google.protobuf.S" +
@@ -47,20 +52,30 @@ public final class CustomerProto {
       "\034.google.protobuf.StringValue\0228\n\024auto_ta" +
       "gging_enabled\030\010 \001(\0132\032.google.protobuf.Bo" +
       "olValue\0226\n\022has_partners_badge\030\t \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\022W\n\026call_reportin" +
-      "g_setting\030\n \001(\01327.google.ads.googleads.v" +
-      "0.resources.CallReportingSetting\"\327\001\n\024Cal" +
-      "lReportingSetting\022:\n\026call_reporting_enab" +
-      "led\030\001 \001(\0132\032.google.protobuf.BoolValue\022E\n" +
-      "!call_conversion_reporting_enabled\030\002 \001(\013" +
-      "2\032.google.protobuf.BoolValue\022<\n\026call_con" +
-      "version_action\030\t \001(\0132\034.google.protobuf.S" +
-      "tringValueB\322\001\n%com.google.ads.googleads." +
+      "ogle.protobuf.BoolValue\022+\n\007manager\030\014 \001(\013" +
+      "2\032.google.protobuf.BoolValue\0220\n\014test_acc" +
+      "ount\030\r \001(\0132\032.google.protobuf.BoolValue\022W" +
+      "\n\026call_reporting_setting\030\n \001(\01327.google." +
+      "ads.googleads.v0.resources.CallReporting" +
+      "Setting\022a\n\033conversion_tracking_setting\030\016" +
+      " \001(\0132<.google.ads.googleads.v0.resources" +
+      ".ConversionTrackingSetting\"\327\001\n\024CallRepor" +
+      "tingSetting\022:\n\026call_reporting_enabled\030\001 " +
+      "\001(\0132\032.google.protobuf.BoolValue\022E\n!call_" +
+      "conversion_reporting_enabled\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022<\n\026call_conversio" +
+      "n_action\030\t \001(\0132\034.google.protobuf.StringV" +
+      "alue\"\243\001\n\031ConversionTrackingSetting\022;\n\026co" +
+      "nversion_tracking_id\030\001 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022I\n$cross_account_convers" +
+      "ion_tracking_id\030\002 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\372\001\n%com.google.ads.googleads." +
       "v0.resourcesB\rCustomerProtoP\001ZJgoogle.go" +
       "lang.org/genproto/googleapis/ads/googlea" +
       "ds/v0/resources;resources\242\002\003GAA\252\002!Google" +
       ".Ads.GoogleAds.V0.Resources\312\002!Google\\Ads" +
-      "\\GoogleAds\\V0\\Resourcesb\006proto3"
+      "\\GoogleAds\\V0\\Resources\352\002%Google::Ads::G" +
+      "oogleAds::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -80,13 +95,19 @@ public final class CustomerProto {
     internal_static_google_ads_googleads_v0_resources_Customer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_Customer_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "DescriptiveName", "CurrencyCode", "TimeZone", "TrackingUrlTemplate", "FinalUrlSuffix", "AutoTaggingEnabled", "HasPartnersBadge", "CallReportingSetting", });
+        new java.lang.String[] { "ResourceName", "Id", "DescriptiveName", "CurrencyCode", "TimeZone", "TrackingUrlTemplate", "FinalUrlSuffix", "AutoTaggingEnabled", "HasPartnersBadge", "Manager", "TestAccount", "CallReportingSetting", "ConversionTrackingSetting", });
     internal_static_google_ads_googleads_v0_resources_CallReportingSetting_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v0_resources_CallReportingSetting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_CallReportingSetting_descriptor,
         new java.lang.String[] { "CallReportingEnabled", "CallConversionReportingEnabled", "CallConversionAction", });
+    internal_static_google_ads_googleads_v0_resources_ConversionTrackingSetting_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_google_ads_googleads_v0_resources_ConversionTrackingSetting_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_resources_ConversionTrackingSetting_descriptor,
+        new java.lang.String[] { "ConversionTrackingId", "CrossAccountConversionTrackingId", });
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

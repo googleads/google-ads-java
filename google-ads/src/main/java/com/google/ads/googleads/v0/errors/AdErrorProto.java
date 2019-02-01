@@ -134,12 +134,13 @@ public final class AdErrorProto {
       "\177\022#\n\036CANNOT_SET_PATH2_WITHOUT_PATH1\020\200\001\0223" +
       "\n.MISSING_DYNAMIC_SEARCH_ADS_SETTING_DOM" +
       "AIN_NAME\020\201\001\022\'\n\"INCOMPATIBLE_WITH_RESTRIC" +
-      "TION_TYPE\020\202\001B\302\001\n\"com.google.ads.googlead" +
+      "TION_TYPE\020\202\001B\347\001\n\"com.google.ads.googlead" +
       "s.v0.errorsB\014AdErrorProtoP\001ZDgoogle.gola" +
       "ng.org/genproto/googleapis/ads/googleads" +
       "/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.Goo" +
       "gleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\" +
-      "V0\\Errorsb\006proto3"
+      "V0\\Errors\352\002\"Google::Ads::GoogleAds::V0::" +
+      "Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

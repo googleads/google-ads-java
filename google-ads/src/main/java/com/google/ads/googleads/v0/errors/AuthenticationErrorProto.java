@@ -45,13 +45,14 @@ public final class AuthenticationErrorProto {
       "TH_TOKEN_HEADER_INVALID\020\023\022\030\n\024LOGIN_COOKI" +
       "E_INVALID\020\024\022\023\n\017USER_ID_INVALID\020\026\022&\n\"TWO_" +
       "STEP_VERIFICATION_NOT_ENROLLED\020\027\022$\n ADVA" +
-      "NCED_PROTECTION_NOT_ENROLLED\020\030B\316\001\n\"com.g" +
+      "NCED_PROTECTION_NOT_ENROLLED\020\030B\363\001\n\"com.g" +
       "oogle.ads.googleads.v0.errorsB\030Authentic" +
       "ationErrorProtoP\001ZDgoogle.golang.org/gen" +
       "proto/googleapis/ads/googleads/v0/errors" +
       ";errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0." +
-      "Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb" +
-      "\006proto3"
+      "Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors\352" +
+      "\002\"Google::Ads::GoogleAds::V0::Errorsb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

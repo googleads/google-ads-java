@@ -31,12 +31,13 @@ public final class ParentalStatusViewProto {
       "\n<google/ads/googleads/v0/resources/pare" +
       "ntal_status_view.proto\022!google.ads.googl" +
       "eads.v0.resources\"+\n\022ParentalStatusView\022" +
-      "\025\n\rresource_name\030\001 \001(\tB\334\001\n%com.google.ad" +
+      "\025\n\rresource_name\030\001 \001(\tB\204\002\n%com.google.ad" +
       "s.googleads.v0.resourcesB\027ParentalStatus" +
       "ViewProtoP\001ZJgoogle.golang.org/genproto/" +
       "googleapis/ads/googleads/v0/resources;re" +
       "sources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0." +
       "Resources\312\002!Google\\Ads\\GoogleAds\\V0\\Reso" +
+      "urces\352\002%Google::Ads::GoogleAds::V0::Reso" +
       "urcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

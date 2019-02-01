@@ -1,3 +1,11 @@
+0.7.0 - 2019-02-01
+------------------
+Added support and examples for Google Ads API v0_7.
+
+- Added support for request level logging.
+- Added GetHotelAdsPerformance example.
+- Updated GetKeywordStats example with segments prefix.
+
 0.6.0 - 2018-12-03
 ------------------
 Added support and examples for Google Ads API v0_6.

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +23,7 @@ import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -226,7 +227,7 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final CustomerManagerLink getCustomerManagerLink(GetCustomerManagerLinkRequest request) {
+  public final CustomerManagerLink getCustomerManagerLink(GetCustomerManagerLinkRequest request) {
     return getCustomerManagerLinkCallable().call(request);
   }
 
@@ -251,6 +252,86 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
   public final UnaryCallable<GetCustomerManagerLinkRequest, CustomerManagerLink>
       getCustomerManagerLinkCallable() {
     return stub.getCustomerManagerLinkCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates or updates customer manager links. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerManagerLinkServiceClient customerManagerLinkServiceClient = CustomerManagerLinkServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;CustomerManagerLinkOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   MutateCustomerManagerLinkResponse response = customerManagerLinkServiceClient.mutateCustomerManagerLink(customerId, operations);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer whose customer manager links are being modified.
+   * @param operations The list of operations to perform on individual customer manager links.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateCustomerManagerLinkResponse mutateCustomerManagerLink(
+      String customerId, List<CustomerManagerLinkOperation> operations) {
+
+    MutateCustomerManagerLinkRequest request =
+        MutateCustomerManagerLinkRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllOperations(operations)
+            .build();
+    return mutateCustomerManagerLink(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates or updates customer manager links. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerManagerLinkServiceClient customerManagerLinkServiceClient = CustomerManagerLinkServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;CustomerManagerLinkOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   MutateCustomerManagerLinkRequest request = MutateCustomerManagerLinkRequest.newBuilder()
+   *     .setCustomerId(customerId)
+   *     .addAllOperations(operations)
+   *     .build();
+   *   MutateCustomerManagerLinkResponse response = customerManagerLinkServiceClient.mutateCustomerManagerLink(request);
+   * }
+   * </code></pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateCustomerManagerLinkResponse mutateCustomerManagerLink(
+      MutateCustomerManagerLinkRequest request) {
+    return mutateCustomerManagerLinkCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates or updates customer manager links. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerManagerLinkServiceClient customerManagerLinkServiceClient = CustomerManagerLinkServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;CustomerManagerLinkOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   MutateCustomerManagerLinkRequest request = MutateCustomerManagerLinkRequest.newBuilder()
+   *     .setCustomerId(customerId)
+   *     .addAllOperations(operations)
+   *     .build();
+   *   ApiFuture&lt;MutateCustomerManagerLinkResponse&gt; future = customerManagerLinkServiceClient.mutateCustomerManagerLinkCallable().futureCall(request);
+   *   // Do something
+   *   MutateCustomerManagerLinkResponse response = future.get();
+   * }
+   * </code></pre>
+   */
+  public final UnaryCallable<MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>
+      mutateCustomerManagerLinkCallable() {
+    return stub.mutateCustomerManagerLinkCallable();
   }
 
   @Override

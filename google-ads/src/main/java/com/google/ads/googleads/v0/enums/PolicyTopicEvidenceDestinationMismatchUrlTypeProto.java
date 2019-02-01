@@ -36,13 +36,14 @@ public final class PolicyTopicEvidenceDestinationMismatchUrlTypeProto {
       "stinationMismatchUrlType\022\017\n\013UNSPECIFIED\020" +
       "\000\022\013\n\007UNKNOWN\020\001\022\017\n\013DISPLAY_URL\020\002\022\r\n\tFINAL" +
       "_URL\020\003\022\024\n\020FINAL_MOBILE_URL\020\004\022\020\n\014TRACKING" +
-      "_URL\020\005\022\027\n\023MOBILE_TRACKING_URL\020\006B\343\001\n!com." +
+      "_URL\020\005\022\027\n\023MOBILE_TRACKING_URL\020\006B\207\002\n!com." +
       "google.ads.googleads.v0.enumsB2PolicyTop" +
       "icEvidenceDestinationMismatchUrlTypeProt" +
       "oP\001ZBgoogle.golang.org/genproto/googleap" +
       "is/ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035" +
       "Google.Ads.GoogleAds.V0.Enums\312\002\035Google\\A" +
-      "ds\\GoogleAds\\V0\\Enumsb\006proto3"
+      "ds\\GoogleAds\\V0\\Enums\352\002!Google::Ads::Goo" +
+      "gleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
