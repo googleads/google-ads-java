@@ -35,7 +35,7 @@ public final class AdProto {
       "mon/custom_parameter.proto\032+google/ads/g" +
       "oogleads/v0/enums/ad_type.proto\032*google/" +
       "ads/googleads/v0/enums/device.proto\032\036goo" +
-      "gle/protobuf/wrappers.proto\"\246\013\n\002Ad\022\'\n\002id" +
+      "gle/protobuf/wrappers.proto\"\347\013\n\002Ad\022\'\n\002id" +
       "\030\001 \001(\0132\033.google.protobuf.Int64Value\0220\n\nf" +
       "inal_urls\030\002 \003(\0132\034.google.protobuf.String" +
       "Value\0227\n\021final_mobile_urls\030\020 \003(\0132\034.googl" +
@@ -71,13 +71,15 @@ public final class AdProto {
       "ProductAdInfoH\000\022?\n\010gmail_ad\030\025 \001(\0132+.goog" +
       "le.ads.googleads.v0.common.GmailAdInfoH\000" +
       "\022?\n\010image_ad\030\026 \001(\0132+.google.ads.googlead" +
-      "s.v0.common.ImageAdInfoH\000B\t\n\007ad_dataB\314\001\n" +
-      "%com.google.ads.googleads.v0.resourcesB\007" +
-      "AdProtoP\001ZJgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v0/resources;reso" +
-      "urces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Re" +
-      "sources\312\002!Google\\Ads\\GoogleAds\\V0\\Resour" +
-      "cesb\006proto3"
+      "s.v0.common.ImageAdInfoH\000\022?\n\010video_ad\030\030 " +
+      "\001(\0132+.google.ads.googleads.v0.common.Vid" +
+      "eoAdInfoH\000B\t\n\007ad_dataB\364\001\n%com.google.ads" +
+      ".googleads.v0.resourcesB\007AdProtoP\001ZJgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v0/resources;resources\242\002\003GAA\252\002!G" +
+      "oogle.Ads.GoogleAds.V0.Resources\312\002!Googl" +
+      "e\\Ads\\GoogleAds\\V0\\Resources\352\002%Google::A" +
+      "ds::GoogleAds::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -101,7 +103,7 @@ public final class AdProto {
     internal_static_google_ads_googleads_v0_resources_Ad_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_Ad_descriptor,
-        new java.lang.String[] { "Id", "FinalUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "Name", "TextAd", "ExpandedTextAd", "DynamicSearchAd", "ResponsiveDisplayAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "GmailAd", "ImageAd", "AdData", });
+        new java.lang.String[] { "Id", "FinalUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "Name", "TextAd", "ExpandedTextAd", "DynamicSearchAd", "ResponsiveDisplayAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "GmailAd", "ImageAd", "VideoAd", "AdData", });
     com.google.ads.googleads.v0.common.AdTypeInfosProto.getDescriptor();
     com.google.ads.googleads.v0.common.CustomParameterProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdTypeProto.getDescriptor();

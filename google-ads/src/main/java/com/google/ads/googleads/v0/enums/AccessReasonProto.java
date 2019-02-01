@@ -33,12 +33,13 @@ public final class AccessReasonProto {
       "ms\"\205\001\n\020AccessReasonEnum\"q\n\014AccessReason\022" +
       "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\t\n\005OWNED\020\002" +
       "\022\n\n\006SHARED\020\003\022\014\n\010LICENSED\020\004\022\016\n\nSUBSCRIBED" +
-      "\020\005\022\016\n\nAFFILIATED\020\006B\302\001\n!com.google.ads.go" +
+      "\020\005\022\016\n\nAFFILIATED\020\006B\346\001\n!com.google.ads.go" +
       "ogleads.v0.enumsB\021AccessReasonProtoP\001ZBg" +
       "oogle.golang.org/genproto/googleapis/ads" +
       "/googleads/v0/enums;enums\242\002\003GAA\252\002\035Google" +
       ".Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Goo" +
-      "gleAds\\V0\\Enumsb\006proto3"
+      "gleAds\\V0\\Enums\352\002!Google::Ads::GoogleAds" +
+      "::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

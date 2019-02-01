@@ -107,6 +107,18 @@ public class ResourceNamesTest {
   }
 
   @Test
+  public void testAdParameter() {
+    String expected = "customers/1234/adParameters/5678_1011_3";
+    assertEquals(expected, ResourceNames.adParameter(1234L, 5678L, 1011L, 3L));
+  }
+
+  @Test
+  public void testAdScheduleView() {
+    String expected = "customers/1234/adScheduleViews/5678_1011";
+    assertEquals(expected, ResourceNames.adScheduleView(1234L, 5678L, 1011L));
+  }
+
+  @Test
   public void testBiddingStrategy() {
     String expected = "customers/1234/biddingStrategies/5678";
     assertEquals(expected, ResourceNames.biddingStrategy(1234L, 5678L));
@@ -140,12 +152,6 @@ public class ResourceNamesTest {
   public void testCampaignCriteria() {
     String expected = "customers/1234/campaignCriteria/5678_1011";
     assertEquals(expected, ResourceNames.campaignCriterion(1234L, 5678L, 1011L));
-  }
-
-  @Test
-  public void testCampaignGroup() {
-    String expected = "customers/1234/campaignGroups/5678";
-    assertEquals(expected, ResourceNames.campaignGroup(1234L, 5678L));
   }
 
   @Test
@@ -189,6 +195,30 @@ public class ResourceNamesTest {
   public void testKeywordView() {
     String expected = "customers/1234/keywordViews/5678_1011";
     assertEquals(expected, ResourceNames.keywordView(1234L, 5678L, 1011L));
+  }
+
+  @Test
+  public void testMobileAppCategoryConstant() {
+    String expected = "mobileAppCategoryConstants/1234";
+    assertEquals(expected, ResourceNames.mobileAppCategoryConstant(1234L));
+  }
+
+  @Test
+  public void testMobileDeviceConstant() {
+    String expected = "mobileDeviceConstants/1234";
+    assertEquals(expected, ResourceNames.mobileDeviceConstant(1234L));
+  }
+
+  @Test
+  public void testOperationSystemVersionConstant() {
+    String expected = "operatingSystemVersionConstants/1234";
+    assertEquals(expected, ResourceNames.operatingSystemVersionConstant(1234L));
+  }
+
+  @Test
+  public void testRemarketingAction() {
+    String expected = "customers/1234/remarketingActions/5678";
+    assertEquals(expected, ResourceNames.remarketingAction(1234L, 5678L));
   }
 
   @Test

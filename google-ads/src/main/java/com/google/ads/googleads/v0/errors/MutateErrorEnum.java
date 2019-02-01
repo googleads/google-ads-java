@@ -135,6 +135,14 @@ private static final long serialVersionUID = 0L;
      * <code>MUTATE_NOT_ALLOWED = 9;</code>
      */
     MUTATE_NOT_ALLOWED(9),
+    /**
+     * <pre>
+     * The resource isn't in Google Ads. It belongs to another ads system.
+     * </pre>
+     *
+     * <code>RESOURCE_NOT_IN_GOOGLE_ADS = 10;</code>
+     */
+    RESOURCE_NOT_IN_GOOGLE_ADS(10),
     UNRECOGNIZED(-1),
     ;
 
@@ -187,6 +195,14 @@ private static final long serialVersionUID = 0L;
      * <code>MUTATE_NOT_ALLOWED = 9;</code>
      */
     public static final int MUTATE_NOT_ALLOWED_VALUE = 9;
+    /**
+     * <pre>
+     * The resource isn't in Google Ads. It belongs to another ads system.
+     * </pre>
+     *
+     * <code>RESOURCE_NOT_IN_GOOGLE_ADS = 10;</code>
+     */
+    public static final int RESOURCE_NOT_IN_GOOGLE_ADS_VALUE = 10;
 
 
     public final int getNumber() {
@@ -213,6 +229,7 @@ private static final long serialVersionUID = 0L;
         case 7: return ID_EXISTS_IN_MULTIPLE_MUTATES;
         case 8: return INCONSISTENT_FIELD_VALUES;
         case 9: return MUTATE_NOT_ALLOWED;
+        case 10: return RESOURCE_NOT_IN_GOOGLE_ADS;
         default: return null;
       }
     }

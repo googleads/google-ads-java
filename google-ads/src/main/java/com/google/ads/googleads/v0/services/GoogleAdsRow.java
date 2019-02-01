@@ -20,15 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GoogleAdsRow() {
-    adNetworkType_ = 0;
-    dayOfWeek_ = 0;
-    device_ = 0;
-    hotelCheckInDayOfWeek_ = 0;
-    hotelDateSelectionType_ = 0;
-    monthOfYear_ = 0;
-    placeholderType_ = 0;
-    searchTermMatchType_ = 0;
-    slot_ = 0;
   }
 
   @java.lang.Override
@@ -46,7 +37,6 @@ private static final long serialVersionUID = 0L;
     }
     int mutable_bitField0_ = 0;
     int mutable_bitField1_ = 0;
-    int mutable_bitField2_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -105,108 +95,6 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(metrics_);
               metrics_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-
-            adNetworkType_ = rawValue;
-            break;
-          }
-          case 50: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (date_ != null) {
-              subBuilder = date_.toBuilder();
-            }
-            date_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(date_);
-              date_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 56: {
-            int rawValue = input.readEnum();
-
-            dayOfWeek_ = rawValue;
-            break;
-          }
-          case 64: {
-            int rawValue = input.readEnum();
-
-            device_ = rawValue;
-            break;
-          }
-          case 74: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (hour_ != null) {
-              subBuilder = hour_.toBuilder();
-            }
-            hour_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(hour_);
-              hour_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 82: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (month_ != null) {
-              subBuilder = month_.toBuilder();
-            }
-            month_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(month_);
-              month_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 98: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (quarter_ != null) {
-              subBuilder = quarter_.toBuilder();
-            }
-            quarter_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(quarter_);
-              quarter_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 104: {
-            int rawValue = input.readEnum();
-
-            slot_ = rawValue;
-            break;
-          }
-          case 114: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (week_ != null) {
-              subBuilder = week_.toBuilder();
-            }
-            week_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(week_);
-              week_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 122: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (year_ != null) {
-              subBuilder = year_.toBuilder();
-            }
-            year_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(year_);
-              year_ = subBuilder.buildPartial();
             }
 
             break;
@@ -328,19 +216,6 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 202: {
-            com.google.ads.googleads.v0.resources.CampaignGroup.Builder subBuilder = null;
-            if (campaignGroup_ != null) {
-              subBuilder = campaignGroup_.toBuilder();
-            }
-            campaignGroup_ = input.readMessage(com.google.ads.googleads.v0.resources.CampaignGroup.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignGroup_);
-              campaignGroup_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
           case 210: {
             com.google.ads.googleads.v0.resources.CampaignBidModifier.Builder subBuilder = null;
             if (campaignBidModifier_ != null) {
@@ -365,12 +240,6 @@ private static final long serialVersionUID = 0L;
               sharedSet_ = subBuilder.buildPartial();
             }
 
-            break;
-          }
-          case 224: {
-            int rawValue = input.readEnum();
-
-            monthOfYear_ = rawValue;
             break;
           }
           case 234: {
@@ -698,12 +567,6 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 448: {
-            int rawValue = input.readEnum();
-
-            searchTermMatchType_ = rawValue;
-            break;
-          }
           case 458: {
             com.google.ads.googleads.v0.resources.AdGroupAudienceView.Builder subBuilder = null;
             if (adGroupAudienceView_ != null) {
@@ -739,6 +602,19 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(userInterest_);
               userInterest_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 482: {
+            com.google.ads.googleads.v0.resources.RemarketingAction.Builder subBuilder = null;
+            if (remarketingAction_ != null) {
+              subBuilder = remarketingAction_.toBuilder();
+            }
+            remarketingAction_ = input.readMessage(com.google.ads.googleads.v0.resources.RemarketingAction.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(remarketingAction_);
+              remarketingAction_ = subBuilder.buildPartial();
             }
 
             break;
@@ -793,12 +669,6 @@ private static final long serialVersionUID = 0L;
               customerFeed_ = subBuilder.buildPartial();
             }
 
-            break;
-          }
-          case 520: {
-            int rawValue = input.readEnum();
-
-            placeholderType_ = rawValue;
             break;
           }
           case 530: {
@@ -879,131 +749,93 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 578: {
-            com.google.protobuf.Int64Value.Builder subBuilder = null;
-            if (hotelCenterId_ != null) {
-              subBuilder = hotelCenterId_.toBuilder();
+          case 690: {
+            com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant.Builder subBuilder = null;
+            if (operatingSystemVersionConstant_ != null) {
+              subBuilder = operatingSystemVersionConstant_.toBuilder();
             }
-            hotelCenterId_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            operatingSystemVersionConstant_ = input.readMessage(com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(hotelCenterId_);
-              hotelCenterId_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(operatingSystemVersionConstant_);
+              operatingSystemVersionConstant_ = subBuilder.buildPartial();
             }
 
             break;
           }
-          case 586: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (hotelCheckInDate_ != null) {
-              subBuilder = hotelCheckInDate_.toBuilder();
+          case 698: {
+            com.google.ads.googleads.v0.resources.MobileAppCategoryConstant.Builder subBuilder = null;
+            if (mobileAppCategoryConstant_ != null) {
+              subBuilder = mobileAppCategoryConstant_.toBuilder();
             }
-            hotelCheckInDate_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            mobileAppCategoryConstant_ = input.readMessage(com.google.ads.googleads.v0.resources.MobileAppCategoryConstant.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(hotelCheckInDate_);
-              hotelCheckInDate_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(mobileAppCategoryConstant_);
+              mobileAppCategoryConstant_ = subBuilder.buildPartial();
             }
 
             break;
           }
-          case 592: {
-            int rawValue = input.readEnum();
-
-            hotelCheckInDayOfWeek_ = rawValue;
-            break;
-          }
-          case 602: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (hotelCity_ != null) {
-              subBuilder = hotelCity_.toBuilder();
+          case 714: {
+            com.google.ads.googleads.v0.resources.AdScheduleView.Builder subBuilder = null;
+            if (adScheduleView_ != null) {
+              subBuilder = adScheduleView_.toBuilder();
             }
-            hotelCity_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            adScheduleView_ = input.readMessage(com.google.ads.googleads.v0.resources.AdScheduleView.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(hotelCity_);
-              hotelCity_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(adScheduleView_);
+              adScheduleView_ = subBuilder.buildPartial();
             }
 
             break;
           }
-          case 610: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (hotelClass_ != null) {
-              subBuilder = hotelClass_.toBuilder();
+          case 722: {
+            com.google.ads.googleads.v0.resources.MediaFile.Builder subBuilder = null;
+            if (mediaFile_ != null) {
+              subBuilder = mediaFile_.toBuilder();
             }
-            hotelClass_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
+            mediaFile_ = input.readMessage(com.google.ads.googleads.v0.resources.MediaFile.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(hotelClass_);
-              hotelClass_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(mediaFile_);
+              mediaFile_ = subBuilder.buildPartial();
             }
 
             break;
           }
-          case 618: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (hotelCountry_ != null) {
-              subBuilder = hotelCountry_.toBuilder();
+          case 786: {
+            com.google.ads.googleads.v0.resources.MobileDeviceConstant.Builder subBuilder = null;
+            if (mobileDeviceConstant_ != null) {
+              subBuilder = mobileDeviceConstant_.toBuilder();
             }
-            hotelCountry_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            mobileDeviceConstant_ = input.readMessage(com.google.ads.googleads.v0.resources.MobileDeviceConstant.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(hotelCountry_);
-              hotelCountry_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(mobileDeviceConstant_);
+              mobileDeviceConstant_ = subBuilder.buildPartial();
             }
 
             break;
           }
-          case 624: {
-            int rawValue = input.readEnum();
-
-            hotelDateSelectionType_ = rawValue;
-            break;
-          }
-          case 634: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (hotelLengthOfStay_ != null) {
-              subBuilder = hotelLengthOfStay_.toBuilder();
+          case 818: {
+            com.google.ads.googleads.v0.common.Segments.Builder subBuilder = null;
+            if (segments_ != null) {
+              subBuilder = segments_.toBuilder();
             }
-            hotelLengthOfStay_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
+            segments_ = input.readMessage(com.google.ads.googleads.v0.common.Segments.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(hotelLengthOfStay_);
-              hotelLengthOfStay_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(segments_);
+              segments_ = subBuilder.buildPartial();
             }
 
             break;
           }
-          case 650: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (hotelState_ != null) {
-              subBuilder = hotelState_.toBuilder();
+          case 826: {
+            com.google.ads.googleads.v0.resources.ConversionAction.Builder subBuilder = null;
+            if (conversionAction_ != null) {
+              subBuilder = conversionAction_.toBuilder();
             }
-            hotelState_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            conversionAction_ = input.readMessage(com.google.ads.googleads.v0.resources.ConversionAction.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(hotelState_);
-              hotelState_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 658: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (partnerHotelId_ != null) {
-              subBuilder = partnerHotelId_.toBuilder();
-            }
-            partnerHotelId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(partnerHotelId_);
-              partnerHotelId_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 666: {
-            com.google.protobuf.Int64Value.Builder subBuilder = null;
-            if (hotelBookingWindowDays_ != null) {
-              subBuilder = hotelBookingWindowDays_.toBuilder();
-            }
-            hotelBookingWindowDays_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(hotelBookingWindowDays_);
-              hotelBookingWindowDays_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(conversionAction_);
+              conversionAction_ = subBuilder.buildPartial();
             }
 
             break;
@@ -1337,6 +1169,39 @@ private static final long serialVersionUID = 0L;
     return getAgeRangeView();
   }
 
+  public static final int AD_SCHEDULE_VIEW_FIELD_NUMBER = 89;
+  private com.google.ads.googleads.v0.resources.AdScheduleView adScheduleView_;
+  /**
+   * <pre>
+   * The ad schedule view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+   */
+  public boolean hasAdScheduleView() {
+    return adScheduleView_ != null;
+  }
+  /**
+   * <pre>
+   * The ad schedule view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+   */
+  public com.google.ads.googleads.v0.resources.AdScheduleView getAdScheduleView() {
+    return adScheduleView_ == null ? com.google.ads.googleads.v0.resources.AdScheduleView.getDefaultInstance() : adScheduleView_;
+  }
+  /**
+   * <pre>
+   * The ad schedule view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+   */
+  public com.google.ads.googleads.v0.resources.AdScheduleViewOrBuilder getAdScheduleViewOrBuilder() {
+    return getAdScheduleView();
+  }
+
   public static final int BIDDING_STRATEGY_FIELD_NUMBER = 18;
   private com.google.ads.googleads.v0.resources.BiddingStrategy biddingStrategy_;
   /**
@@ -1601,39 +1466,6 @@ private static final long serialVersionUID = 0L;
     return getCampaignFeed();
   }
 
-  public static final int CAMPAIGN_GROUP_FIELD_NUMBER = 25;
-  private com.google.ads.googleads.v0.resources.CampaignGroup campaignGroup_;
-  /**
-   * <pre>
-   * Campaign Group referenced in AWQL query.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-   */
-  public boolean hasCampaignGroup() {
-    return campaignGroup_ != null;
-  }
-  /**
-   * <pre>
-   * Campaign Group referenced in AWQL query.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-   */
-  public com.google.ads.googleads.v0.resources.CampaignGroup getCampaignGroup() {
-    return campaignGroup_ == null ? com.google.ads.googleads.v0.resources.CampaignGroup.getDefaultInstance() : campaignGroup_;
-  }
-  /**
-   * <pre>
-   * Campaign Group referenced in AWQL query.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-   */
-  public com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder getCampaignGroupOrBuilder() {
-    return getCampaignGroup();
-  }
-
   public static final int CAMPAIGN_SHARED_SET_FIELD_NUMBER = 30;
   private com.google.ads.googleads.v0.resources.CampaignSharedSet campaignSharedSet_;
   /**
@@ -1731,6 +1563,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.resources.ChangeStatusOrBuilder getChangeStatusOrBuilder() {
     return getChangeStatus();
+  }
+
+  public static final int CONVERSION_ACTION_FIELD_NUMBER = 103;
+  private com.google.ads.googleads.v0.resources.ConversionAction conversionAction_;
+  /**
+   * <pre>
+   * The conversion action referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+   */
+  public boolean hasConversionAction() {
+    return conversionAction_ != null;
+  }
+  /**
+   * <pre>
+   * The conversion action referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+   */
+  public com.google.ads.googleads.v0.resources.ConversionAction getConversionAction() {
+    return conversionAction_ == null ? com.google.ads.googleads.v0.resources.ConversionAction.getDefaultInstance() : conversionAction_;
+  }
+  /**
+   * <pre>
+   * The conversion action referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+   */
+  public com.google.ads.googleads.v0.resources.ConversionActionOrBuilder getConversionActionOrBuilder() {
+    return getConversionAction();
   }
 
   public static final int CUSTOMER_FIELD_NUMBER = 1;
@@ -2426,6 +2291,138 @@ private static final long serialVersionUID = 0L;
     return getManagedPlacementView();
   }
 
+  public static final int MEDIA_FILE_FIELD_NUMBER = 90;
+  private com.google.ads.googleads.v0.resources.MediaFile mediaFile_;
+  /**
+   * <pre>
+   * The media file referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+   */
+  public boolean hasMediaFile() {
+    return mediaFile_ != null;
+  }
+  /**
+   * <pre>
+   * The media file referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+   */
+  public com.google.ads.googleads.v0.resources.MediaFile getMediaFile() {
+    return mediaFile_ == null ? com.google.ads.googleads.v0.resources.MediaFile.getDefaultInstance() : mediaFile_;
+  }
+  /**
+   * <pre>
+   * The media file referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+   */
+  public com.google.ads.googleads.v0.resources.MediaFileOrBuilder getMediaFileOrBuilder() {
+    return getMediaFile();
+  }
+
+  public static final int MOBILE_APP_CATEGORY_CONSTANT_FIELD_NUMBER = 87;
+  private com.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobileAppCategoryConstant_;
+  /**
+   * <pre>
+   * The mobile app category constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+   */
+  public boolean hasMobileAppCategoryConstant() {
+    return mobileAppCategoryConstant_ != null;
+  }
+  /**
+   * <pre>
+   * The mobile app category constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+   */
+  public com.google.ads.googleads.v0.resources.MobileAppCategoryConstant getMobileAppCategoryConstant() {
+    return mobileAppCategoryConstant_ == null ? com.google.ads.googleads.v0.resources.MobileAppCategoryConstant.getDefaultInstance() : mobileAppCategoryConstant_;
+  }
+  /**
+   * <pre>
+   * The mobile app category constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+   */
+  public com.google.ads.googleads.v0.resources.MobileAppCategoryConstantOrBuilder getMobileAppCategoryConstantOrBuilder() {
+    return getMobileAppCategoryConstant();
+  }
+
+  public static final int MOBILE_DEVICE_CONSTANT_FIELD_NUMBER = 98;
+  private com.google.ads.googleads.v0.resources.MobileDeviceConstant mobileDeviceConstant_;
+  /**
+   * <pre>
+   * The mobile device constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+   */
+  public boolean hasMobileDeviceConstant() {
+    return mobileDeviceConstant_ != null;
+  }
+  /**
+   * <pre>
+   * The mobile device constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+   */
+  public com.google.ads.googleads.v0.resources.MobileDeviceConstant getMobileDeviceConstant() {
+    return mobileDeviceConstant_ == null ? com.google.ads.googleads.v0.resources.MobileDeviceConstant.getDefaultInstance() : mobileDeviceConstant_;
+  }
+  /**
+   * <pre>
+   * The mobile device constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+   */
+  public com.google.ads.googleads.v0.resources.MobileDeviceConstantOrBuilder getMobileDeviceConstantOrBuilder() {
+    return getMobileDeviceConstant();
+  }
+
+  public static final int OPERATING_SYSTEM_VERSION_CONSTANT_FIELD_NUMBER = 86;
+  private com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operatingSystemVersionConstant_;
+  /**
+   * <pre>
+   * The operating system version constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+   */
+  public boolean hasOperatingSystemVersionConstant() {
+    return operatingSystemVersionConstant_ != null;
+  }
+  /**
+   * <pre>
+   * The operating system version constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+   */
+  public com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant getOperatingSystemVersionConstant() {
+    return operatingSystemVersionConstant_ == null ? com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant.getDefaultInstance() : operatingSystemVersionConstant_;
+  }
+  /**
+   * <pre>
+   * The operating system version constant referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+   */
+  public com.google.ads.googleads.v0.resources.OperatingSystemVersionConstantOrBuilder getOperatingSystemVersionConstantOrBuilder() {
+    return getOperatingSystemVersionConstant();
+  }
+
   public static final int PARENTAL_STATUS_VIEW_FIELD_NUMBER = 45;
   private com.google.ads.googleads.v0.resources.ParentalStatusView parentalStatusView_;
   /**
@@ -2723,6 +2720,39 @@ private static final long serialVersionUID = 0L;
     return getUserList();
   }
 
+  public static final int REMARKETING_ACTION_FIELD_NUMBER = 60;
+  private com.google.ads.googleads.v0.resources.RemarketingAction remarketingAction_;
+  /**
+   * <pre>
+   * The remarketing action referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+   */
+  public boolean hasRemarketingAction() {
+    return remarketingAction_ != null;
+  }
+  /**
+   * <pre>
+   * The remarketing action referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+   */
+  public com.google.ads.googleads.v0.resources.RemarketingAction getRemarketingAction() {
+    return remarketingAction_ == null ? com.google.ads.googleads.v0.resources.RemarketingAction.getDefaultInstance() : remarketingAction_;
+  }
+  /**
+   * <pre>
+   * The remarketing action referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+   */
+  public com.google.ads.googleads.v0.resources.RemarketingActionOrBuilder getRemarketingActionOrBuilder() {
+    return getRemarketingAction();
+  }
+
   public static final int TOPIC_CONSTANT_FIELD_NUMBER = 31;
   private com.google.ads.googleads.v0.resources.TopicConstant topicConstant_;
   /**
@@ -2822,739 +2852,37 @@ private static final long serialVersionUID = 0L;
     return getMetrics();
   }
 
-  public static final int AD_NETWORK_TYPE_FIELD_NUMBER = 5;
-  private int adNetworkType_;
+  public static final int SEGMENTS_FIELD_NUMBER = 102;
+  private com.google.ads.googleads.v0.common.Segments segments_;
   /**
    * <pre>
-   * Ad network type.
+   * The segments.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 5;</code>
+   * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
    */
-  public int getAdNetworkTypeValue() {
-    return adNetworkType_;
+  public boolean hasSegments() {
+    return segments_ != null;
   }
   /**
    * <pre>
-   * Ad network type.
+   * The segments.
    * </pre>
    *
-   * <code>.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 5;</code>
+   * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
    */
-  public com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType getAdNetworkType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType result = com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType.valueOf(adNetworkType_);
-    return result == null ? com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType.UNRECOGNIZED : result;
-  }
-
-  public static final int DATE_FIELD_NUMBER = 6;
-  private com.google.protobuf.StringValue date_;
-  /**
-   * <pre>
-   * Date to which metrics apply.
-   * yyyy-MM-dd format, e.g., 2018-04-17.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue date = 6;</code>
-   */
-  public boolean hasDate() {
-    return date_ != null;
+  public com.google.ads.googleads.v0.common.Segments getSegments() {
+    return segments_ == null ? com.google.ads.googleads.v0.common.Segments.getDefaultInstance() : segments_;
   }
   /**
    * <pre>
-   * Date to which metrics apply.
-   * yyyy-MM-dd format, e.g., 2018-04-17.
+   * The segments.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue date = 6;</code>
+   * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
    */
-  public com.google.protobuf.StringValue getDate() {
-    return date_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : date_;
-  }
-  /**
-   * <pre>
-   * Date to which metrics apply.
-   * yyyy-MM-dd format, e.g., 2018-04-17.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue date = 6;</code>
-   */
-  public com.google.protobuf.StringValueOrBuilder getDateOrBuilder() {
-    return getDate();
-  }
-
-  public static final int DAY_OF_WEEK_FIELD_NUMBER = 7;
-  private int dayOfWeek_;
-  /**
-   * <pre>
-   * Day of the week, e.g., MONDAY.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 7;</code>
-   */
-  public int getDayOfWeekValue() {
-    return dayOfWeek_;
-  }
-  /**
-   * <pre>
-   * Day of the week, e.g., MONDAY.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 7;</code>
-   */
-  public com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
-    return result == null ? com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
-  }
-
-  public static final int DEVICE_FIELD_NUMBER = 8;
-  private int device_;
-  /**
-   * <pre>
-   * Device to which metrics apply.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
-   */
-  public int getDeviceValue() {
-    return device_;
-  }
-  /**
-   * <pre>
-   * Device to which metrics apply.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
-   */
-  public com.google.ads.googleads.v0.enums.DeviceEnum.Device getDevice() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v0.enums.DeviceEnum.Device result = com.google.ads.googleads.v0.enums.DeviceEnum.Device.valueOf(device_);
-    return result == null ? com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNRECOGNIZED : result;
-  }
-
-  public static final int HOTEL_BOOKING_WINDOW_DAYS_FIELD_NUMBER = 83;
-  private com.google.protobuf.Int64Value hotelBookingWindowDays_;
-  /**
-   * <pre>
-   * Hotel booking window in days.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-   */
-  public boolean hasHotelBookingWindowDays() {
-    return hotelBookingWindowDays_ != null;
-  }
-  /**
-   * <pre>
-   * Hotel booking window in days.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-   */
-  public com.google.protobuf.Int64Value getHotelBookingWindowDays() {
-    return hotelBookingWindowDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelBookingWindowDays_;
-  }
-  /**
-   * <pre>
-   * Hotel booking window in days.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-   */
-  public com.google.protobuf.Int64ValueOrBuilder getHotelBookingWindowDaysOrBuilder() {
-    return getHotelBookingWindowDays();
-  }
-
-  public static final int HOTEL_CENTER_ID_FIELD_NUMBER = 72;
-  private com.google.protobuf.Int64Value hotelCenterId_;
-  /**
-   * <pre>
-   * Hotel center ID.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-   */
-  public boolean hasHotelCenterId() {
-    return hotelCenterId_ != null;
-  }
-  /**
-   * <pre>
-   * Hotel center ID.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-   */
-  public com.google.protobuf.Int64Value getHotelCenterId() {
-    return hotelCenterId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelCenterId_;
-  }
-  /**
-   * <pre>
-   * Hotel center ID.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-   */
-  public com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder() {
-    return getHotelCenterId();
-  }
-
-  public static final int HOTEL_CHECK_IN_DATE_FIELD_NUMBER = 73;
-  private com.google.protobuf.StringValue hotelCheckInDate_;
-  /**
-   * <pre>
-   * Hotel check-in date. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-   */
-  public boolean hasHotelCheckInDate() {
-    return hotelCheckInDate_ != null;
-  }
-  /**
-   * <pre>
-   * Hotel check-in date. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-   */
-  public com.google.protobuf.StringValue getHotelCheckInDate() {
-    return hotelCheckInDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCheckInDate_;
-  }
-  /**
-   * <pre>
-   * Hotel check-in date. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-   */
-  public com.google.protobuf.StringValueOrBuilder getHotelCheckInDateOrBuilder() {
-    return getHotelCheckInDate();
-  }
-
-  public static final int HOTEL_CHECK_IN_DAY_OF_WEEK_FIELD_NUMBER = 74;
-  private int hotelCheckInDayOfWeek_;
-  /**
-   * <pre>
-   * Hotel check-in day of week.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
-   */
-  public int getHotelCheckInDayOfWeekValue() {
-    return hotelCheckInDayOfWeek_;
-  }
-  /**
-   * <pre>
-   * Hotel check-in day of week.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
-   */
-  public com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getHotelCheckInDayOfWeek() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.valueOf(hotelCheckInDayOfWeek_);
-    return result == null ? com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
-  }
-
-  public static final int HOTEL_CITY_FIELD_NUMBER = 75;
-  private com.google.protobuf.StringValue hotelCity_;
-  /**
-   * <pre>
-   * Hotel city.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-   */
-  public boolean hasHotelCity() {
-    return hotelCity_ != null;
-  }
-  /**
-   * <pre>
-   * Hotel city.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-   */
-  public com.google.protobuf.StringValue getHotelCity() {
-    return hotelCity_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCity_;
-  }
-  /**
-   * <pre>
-   * Hotel city.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-   */
-  public com.google.protobuf.StringValueOrBuilder getHotelCityOrBuilder() {
-    return getHotelCity();
-  }
-
-  public static final int HOTEL_CLASS_FIELD_NUMBER = 76;
-  private com.google.protobuf.Int32Value hotelClass_;
-  /**
-   * <pre>
-   * Hotel class.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-   */
-  public boolean hasHotelClass() {
-    return hotelClass_ != null;
-  }
-  /**
-   * <pre>
-   * Hotel class.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-   */
-  public com.google.protobuf.Int32Value getHotelClass() {
-    return hotelClass_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hotelClass_;
-  }
-  /**
-   * <pre>
-   * Hotel class.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-   */
-  public com.google.protobuf.Int32ValueOrBuilder getHotelClassOrBuilder() {
-    return getHotelClass();
-  }
-
-  public static final int HOTEL_COUNTRY_FIELD_NUMBER = 77;
-  private com.google.protobuf.StringValue hotelCountry_;
-  /**
-   * <pre>
-   * Hotel country.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-   */
-  public boolean hasHotelCountry() {
-    return hotelCountry_ != null;
-  }
-  /**
-   * <pre>
-   * Hotel country.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-   */
-  public com.google.protobuf.StringValue getHotelCountry() {
-    return hotelCountry_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCountry_;
-  }
-  /**
-   * <pre>
-   * Hotel country.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-   */
-  public com.google.protobuf.StringValueOrBuilder getHotelCountryOrBuilder() {
-    return getHotelCountry();
-  }
-
-  public static final int HOTEL_DATE_SELECTION_TYPE_FIELD_NUMBER = 78;
-  private int hotelDateSelectionType_;
-  /**
-   * <pre>
-   * Hotel date selection type.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
-   */
-  public int getHotelDateSelectionTypeValue() {
-    return hotelDateSelectionType_;
-  }
-  /**
-   * <pre>
-   * Hotel date selection type.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
-   */
-  public com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getHotelDateSelectionType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType result = com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.valueOf(hotelDateSelectionType_);
-    return result == null ? com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.UNRECOGNIZED : result;
-  }
-
-  public static final int HOTEL_LENGTH_OF_STAY_FIELD_NUMBER = 79;
-  private com.google.protobuf.Int32Value hotelLengthOfStay_;
-  /**
-   * <pre>
-   * Hotel length of stay.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-   */
-  public boolean hasHotelLengthOfStay() {
-    return hotelLengthOfStay_ != null;
-  }
-  /**
-   * <pre>
-   * Hotel length of stay.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-   */
-  public com.google.protobuf.Int32Value getHotelLengthOfStay() {
-    return hotelLengthOfStay_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hotelLengthOfStay_;
-  }
-  /**
-   * <pre>
-   * Hotel length of stay.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-   */
-  public com.google.protobuf.Int32ValueOrBuilder getHotelLengthOfStayOrBuilder() {
-    return getHotelLengthOfStay();
-  }
-
-  public static final int HOTEL_STATE_FIELD_NUMBER = 81;
-  private com.google.protobuf.StringValue hotelState_;
-  /**
-   * <pre>
-   * Hotel state.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-   */
-  public boolean hasHotelState() {
-    return hotelState_ != null;
-  }
-  /**
-   * <pre>
-   * Hotel state.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-   */
-  public com.google.protobuf.StringValue getHotelState() {
-    return hotelState_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelState_;
-  }
-  /**
-   * <pre>
-   * Hotel state.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-   */
-  public com.google.protobuf.StringValueOrBuilder getHotelStateOrBuilder() {
-    return getHotelState();
-  }
-
-  public static final int HOUR_FIELD_NUMBER = 9;
-  private com.google.protobuf.Int32Value hour_;
-  /**
-   * <pre>
-   * Hour of day as a number between 0 and 23, inclusive.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hour = 9;</code>
-   */
-  public boolean hasHour() {
-    return hour_ != null;
-  }
-  /**
-   * <pre>
-   * Hour of day as a number between 0 and 23, inclusive.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hour = 9;</code>
-   */
-  public com.google.protobuf.Int32Value getHour() {
-    return hour_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hour_;
-  }
-  /**
-   * <pre>
-   * Hour of day as a number between 0 and 23, inclusive.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value hour = 9;</code>
-   */
-  public com.google.protobuf.Int32ValueOrBuilder getHourOrBuilder() {
-    return getHour();
-  }
-
-  public static final int MONTH_FIELD_NUMBER = 10;
-  private com.google.protobuf.StringValue month_;
-  /**
-   * <pre>
-   * Month as represented by the date of the first day of a month. Formatted as
-   * yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue month = 10;</code>
-   */
-  public boolean hasMonth() {
-    return month_ != null;
-  }
-  /**
-   * <pre>
-   * Month as represented by the date of the first day of a month. Formatted as
-   * yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue month = 10;</code>
-   */
-  public com.google.protobuf.StringValue getMonth() {
-    return month_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : month_;
-  }
-  /**
-   * <pre>
-   * Month as represented by the date of the first day of a month. Formatted as
-   * yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue month = 10;</code>
-   */
-  public com.google.protobuf.StringValueOrBuilder getMonthOrBuilder() {
-    return getMonth();
-  }
-
-  public static final int MONTH_OF_YEAR_FIELD_NUMBER = 28;
-  private int monthOfYear_;
-  /**
-   * <pre>
-   * Month of the year, e.g., January.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
-   */
-  public int getMonthOfYearValue() {
-    return monthOfYear_;
-  }
-  /**
-   * <pre>
-   * Month of the year, e.g., January.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
-   */
-  public com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear getMonthOfYear() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.valueOf(monthOfYear_);
-    return result == null ? com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.UNRECOGNIZED : result;
-  }
-
-  public static final int PARTNER_HOTEL_ID_FIELD_NUMBER = 82;
-  private com.google.protobuf.StringValue partnerHotelId_;
-  /**
-   * <pre>
-   * Partner hotel ID.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-   */
-  public boolean hasPartnerHotelId() {
-    return partnerHotelId_ != null;
-  }
-  /**
-   * <pre>
-   * Partner hotel ID.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-   */
-  public com.google.protobuf.StringValue getPartnerHotelId() {
-    return partnerHotelId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : partnerHotelId_;
-  }
-  /**
-   * <pre>
-   * Partner hotel ID.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-   */
-  public com.google.protobuf.StringValueOrBuilder getPartnerHotelIdOrBuilder() {
-    return getPartnerHotelId();
-  }
-
-  public static final int PLACEHOLDER_TYPE_FIELD_NUMBER = 65;
-  private int placeholderType_;
-  /**
-   * <pre>
-   * Placeholder type. This is only used with feed item metrics.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
-   */
-  public int getPlaceholderTypeValue() {
-    return placeholderType_;
-  }
-  /**
-   * <pre>
-   * Placeholder type. This is only used with feed item metrics.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
-   */
-  public com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType.valueOf(placeholderType_);
-    return result == null ? com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType.UNRECOGNIZED : result;
-  }
-
-  public static final int QUARTER_FIELD_NUMBER = 12;
-  private com.google.protobuf.StringValue quarter_;
-  /**
-   * <pre>
-   * Quarter as represented by the date of the first day of a quarter.
-   * Uses the calendar year for quarters, e.g., the second quarter of 2018
-   * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue quarter = 12;</code>
-   */
-  public boolean hasQuarter() {
-    return quarter_ != null;
-  }
-  /**
-   * <pre>
-   * Quarter as represented by the date of the first day of a quarter.
-   * Uses the calendar year for quarters, e.g., the second quarter of 2018
-   * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue quarter = 12;</code>
-   */
-  public com.google.protobuf.StringValue getQuarter() {
-    return quarter_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : quarter_;
-  }
-  /**
-   * <pre>
-   * Quarter as represented by the date of the first day of a quarter.
-   * Uses the calendar year for quarters, e.g., the second quarter of 2018
-   * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue quarter = 12;</code>
-   */
-  public com.google.protobuf.StringValueOrBuilder getQuarterOrBuilder() {
-    return getQuarter();
-  }
-
-  public static final int SEARCH_TERM_MATCH_TYPE_FIELD_NUMBER = 56;
-  private int searchTermMatchType_;
-  /**
-   * <pre>
-   * Match type of the keyword that triggered the ad, including variants.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
-   */
-  public int getSearchTermMatchTypeValue() {
-    return searchTermMatchType_;
-  }
-  /**
-   * <pre>
-   * Match type of the keyword that triggered the ad, including variants.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
-   */
-  public com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType getSearchTermMatchType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType result = com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType.valueOf(searchTermMatchType_);
-    return result == null ? com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType.UNRECOGNIZED : result;
-  }
-
-  public static final int SLOT_FIELD_NUMBER = 13;
-  private int slot_;
-  /**
-   * <pre>
-   * Position of the ad.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.SlotEnum.Slot slot = 13;</code>
-   */
-  public int getSlotValue() {
-    return slot_;
-  }
-  /**
-   * <pre>
-   * Position of the ad.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.enums.SlotEnum.Slot slot = 13;</code>
-   */
-  public com.google.ads.googleads.v0.enums.SlotEnum.Slot getSlot() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v0.enums.SlotEnum.Slot result = com.google.ads.googleads.v0.enums.SlotEnum.Slot.valueOf(slot_);
-    return result == null ? com.google.ads.googleads.v0.enums.SlotEnum.Slot.UNRECOGNIZED : result;
-  }
-
-  public static final int WEEK_FIELD_NUMBER = 14;
-  private com.google.protobuf.StringValue week_;
-  /**
-   * <pre>
-   * Week as defined as Monday through Sunday, and represented by the date of
-   * Monday. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue week = 14;</code>
-   */
-  public boolean hasWeek() {
-    return week_ != null;
-  }
-  /**
-   * <pre>
-   * Week as defined as Monday through Sunday, and represented by the date of
-   * Monday. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue week = 14;</code>
-   */
-  public com.google.protobuf.StringValue getWeek() {
-    return week_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : week_;
-  }
-  /**
-   * <pre>
-   * Week as defined as Monday through Sunday, and represented by the date of
-   * Monday. Formatted as yyyy-MM-dd.
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue week = 14;</code>
-   */
-  public com.google.protobuf.StringValueOrBuilder getWeekOrBuilder() {
-    return getWeek();
-  }
-
-  public static final int YEAR_FIELD_NUMBER = 15;
-  private com.google.protobuf.Int32Value year_;
-  /**
-   * <pre>
-   * Year, formatted as yyyy.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value year = 15;</code>
-   */
-  public boolean hasYear() {
-    return year_ != null;
-  }
-  /**
-   * <pre>
-   * Year, formatted as yyyy.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value year = 15;</code>
-   */
-  public com.google.protobuf.Int32Value getYear() {
-    return year_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : year_;
-  }
-  /**
-   * <pre>
-   * Year, formatted as yyyy.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int32Value year = 15;</code>
-   */
-  public com.google.protobuf.Int32ValueOrBuilder getYearOrBuilder() {
-    return getYear();
+  public com.google.ads.googleads.v0.common.SegmentsOrBuilder getSegmentsOrBuilder() {
+    return getSegments();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -3583,36 +2911,6 @@ private static final long serialVersionUID = 0L;
     if (metrics_ != null) {
       output.writeMessage(4, getMetrics());
     }
-    if (adNetworkType_ != com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType.UNSPECIFIED.getNumber()) {
-      output.writeEnum(5, adNetworkType_);
-    }
-    if (date_ != null) {
-      output.writeMessage(6, getDate());
-    }
-    if (dayOfWeek_ != com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNSPECIFIED.getNumber()) {
-      output.writeEnum(7, dayOfWeek_);
-    }
-    if (device_ != com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNSPECIFIED.getNumber()) {
-      output.writeEnum(8, device_);
-    }
-    if (hour_ != null) {
-      output.writeMessage(9, getHour());
-    }
-    if (month_ != null) {
-      output.writeMessage(10, getMonth());
-    }
-    if (quarter_ != null) {
-      output.writeMessage(12, getQuarter());
-    }
-    if (slot_ != com.google.ads.googleads.v0.enums.SlotEnum.Slot.UNSPECIFIED.getNumber()) {
-      output.writeEnum(13, slot_);
-    }
-    if (week_ != null) {
-      output.writeMessage(14, getWeek());
-    }
-    if (year_ != null) {
-      output.writeMessage(15, getYear());
-    }
     if (adGroupAd_ != null) {
       output.writeMessage(16, getAdGroupAd());
     }
@@ -3640,17 +2938,11 @@ private static final long serialVersionUID = 0L;
     if (adGroupBidModifier_ != null) {
       output.writeMessage(24, getAdGroupBidModifier());
     }
-    if (campaignGroup_ != null) {
-      output.writeMessage(25, getCampaignGroup());
-    }
     if (campaignBidModifier_ != null) {
       output.writeMessage(26, getCampaignBidModifier());
     }
     if (sharedSet_ != null) {
       output.writeMessage(27, getSharedSet());
-    }
-    if (monthOfYear_ != com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.UNSPECIFIED.getNumber()) {
-      output.writeEnum(28, monthOfYear_);
     }
     if (sharedCriterion_ != null) {
       output.writeMessage(29, getSharedCriterion());
@@ -3727,9 +3019,6 @@ private static final long serialVersionUID = 0L;
     if (languageConstant_ != null) {
       output.writeMessage(55, getLanguageConstant());
     }
-    if (searchTermMatchType_ != com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType.UNSPECIFIED.getNumber()) {
-      output.writeEnum(56, searchTermMatchType_);
-    }
     if (adGroupAudienceView_ != null) {
       output.writeMessage(57, getAdGroupAudienceView());
     }
@@ -3738,6 +3027,9 @@ private static final long serialVersionUID = 0L;
     }
     if (userInterest_ != null) {
       output.writeMessage(59, getUserInterest());
+    }
+    if (remarketingAction_ != null) {
+      output.writeMessage(60, getRemarketingAction());
     }
     if (customerManagerLink_ != null) {
       output.writeMessage(61, getCustomerManagerLink());
@@ -3750,9 +3042,6 @@ private static final long serialVersionUID = 0L;
     }
     if (customerFeed_ != null) {
       output.writeMessage(64, getCustomerFeed());
-    }
-    if (placeholderType_ != com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType.UNSPECIFIED.getNumber()) {
-      output.writeEnum(65, placeholderType_);
     }
     if (carrierConstant_ != null) {
       output.writeMessage(66, getCarrierConstant());
@@ -3772,38 +3061,26 @@ private static final long serialVersionUID = 0L;
     if (hotelPerformanceView_ != null) {
       output.writeMessage(71, getHotelPerformanceView());
     }
-    if (hotelCenterId_ != null) {
-      output.writeMessage(72, getHotelCenterId());
+    if (operatingSystemVersionConstant_ != null) {
+      output.writeMessage(86, getOperatingSystemVersionConstant());
     }
-    if (hotelCheckInDate_ != null) {
-      output.writeMessage(73, getHotelCheckInDate());
+    if (mobileAppCategoryConstant_ != null) {
+      output.writeMessage(87, getMobileAppCategoryConstant());
     }
-    if (hotelCheckInDayOfWeek_ != com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNSPECIFIED.getNumber()) {
-      output.writeEnum(74, hotelCheckInDayOfWeek_);
+    if (adScheduleView_ != null) {
+      output.writeMessage(89, getAdScheduleView());
     }
-    if (hotelCity_ != null) {
-      output.writeMessage(75, getHotelCity());
+    if (mediaFile_ != null) {
+      output.writeMessage(90, getMediaFile());
     }
-    if (hotelClass_ != null) {
-      output.writeMessage(76, getHotelClass());
+    if (mobileDeviceConstant_ != null) {
+      output.writeMessage(98, getMobileDeviceConstant());
     }
-    if (hotelCountry_ != null) {
-      output.writeMessage(77, getHotelCountry());
+    if (segments_ != null) {
+      output.writeMessage(102, getSegments());
     }
-    if (hotelDateSelectionType_ != com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.UNSPECIFIED.getNumber()) {
-      output.writeEnum(78, hotelDateSelectionType_);
-    }
-    if (hotelLengthOfStay_ != null) {
-      output.writeMessage(79, getHotelLengthOfStay());
-    }
-    if (hotelState_ != null) {
-      output.writeMessage(81, getHotelState());
-    }
-    if (partnerHotelId_ != null) {
-      output.writeMessage(82, getPartnerHotelId());
-    }
-    if (hotelBookingWindowDays_ != null) {
-      output.writeMessage(83, getHotelBookingWindowDays());
+    if (conversionAction_ != null) {
+      output.writeMessage(103, getConversionAction());
     }
     unknownFields.writeTo(output);
   }
@@ -3829,46 +3106,6 @@ private static final long serialVersionUID = 0L;
     if (metrics_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getMetrics());
-    }
-    if (adNetworkType_ != com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType.UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(5, adNetworkType_);
-    }
-    if (date_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getDate());
-    }
-    if (dayOfWeek_ != com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(7, dayOfWeek_);
-    }
-    if (device_ != com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(8, device_);
-    }
-    if (hour_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, getHour());
-    }
-    if (month_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(10, getMonth());
-    }
-    if (quarter_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(12, getQuarter());
-    }
-    if (slot_ != com.google.ads.googleads.v0.enums.SlotEnum.Slot.UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(13, slot_);
-    }
-    if (week_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(14, getWeek());
-    }
-    if (year_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(15, getYear());
     }
     if (adGroupAd_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -3906,10 +3143,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(24, getAdGroupBidModifier());
     }
-    if (campaignGroup_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(25, getCampaignGroup());
-    }
     if (campaignBidModifier_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(26, getCampaignBidModifier());
@@ -3917,10 +3150,6 @@ private static final long serialVersionUID = 0L;
     if (sharedSet_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(27, getSharedSet());
-    }
-    if (monthOfYear_ != com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(28, monthOfYear_);
     }
     if (sharedCriterion_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -4022,10 +3251,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(55, getLanguageConstant());
     }
-    if (searchTermMatchType_ != com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType.UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(56, searchTermMatchType_);
-    }
     if (adGroupAudienceView_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(57, getAdGroupAudienceView());
@@ -4037,6 +3262,10 @@ private static final long serialVersionUID = 0L;
     if (userInterest_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(59, getUserInterest());
+    }
+    if (remarketingAction_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(60, getRemarketingAction());
     }
     if (customerManagerLink_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -4053,10 +3282,6 @@ private static final long serialVersionUID = 0L;
     if (customerFeed_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(64, getCustomerFeed());
-    }
-    if (placeholderType_ != com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType.UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(65, placeholderType_);
     }
     if (carrierConstant_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -4082,49 +3307,33 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(71, getHotelPerformanceView());
     }
-    if (hotelCenterId_ != null) {
+    if (operatingSystemVersionConstant_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(72, getHotelCenterId());
+        .computeMessageSize(86, getOperatingSystemVersionConstant());
     }
-    if (hotelCheckInDate_ != null) {
+    if (mobileAppCategoryConstant_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(73, getHotelCheckInDate());
+        .computeMessageSize(87, getMobileAppCategoryConstant());
     }
-    if (hotelCheckInDayOfWeek_ != com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNSPECIFIED.getNumber()) {
+    if (adScheduleView_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(74, hotelCheckInDayOfWeek_);
+        .computeMessageSize(89, getAdScheduleView());
     }
-    if (hotelCity_ != null) {
+    if (mediaFile_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(75, getHotelCity());
+        .computeMessageSize(90, getMediaFile());
     }
-    if (hotelClass_ != null) {
+    if (mobileDeviceConstant_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(76, getHotelClass());
+        .computeMessageSize(98, getMobileDeviceConstant());
     }
-    if (hotelCountry_ != null) {
+    if (segments_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(77, getHotelCountry());
+        .computeMessageSize(102, getSegments());
     }
-    if (hotelDateSelectionType_ != com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.UNSPECIFIED.getNumber()) {
+    if (conversionAction_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(78, hotelDateSelectionType_);
-    }
-    if (hotelLengthOfStay_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(79, getHotelLengthOfStay());
-    }
-    if (hotelState_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(81, getHotelState());
-    }
-    if (partnerHotelId_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(82, getPartnerHotelId());
-    }
-    if (hotelBookingWindowDays_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(83, getHotelBookingWindowDays());
+        .computeMessageSize(103, getConversionAction());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -4187,6 +3396,11 @@ private static final long serialVersionUID = 0L;
       result = result && getAgeRangeView()
           .equals(other.getAgeRangeView());
     }
+    result = result && (hasAdScheduleView() == other.hasAdScheduleView());
+    if (hasAdScheduleView()) {
+      result = result && getAdScheduleView()
+          .equals(other.getAdScheduleView());
+    }
     result = result && (hasBiddingStrategy() == other.hasBiddingStrategy());
     if (hasBiddingStrategy()) {
       result = result && getBiddingStrategy()
@@ -4227,11 +3441,6 @@ private static final long serialVersionUID = 0L;
       result = result && getCampaignFeed()
           .equals(other.getCampaignFeed());
     }
-    result = result && (hasCampaignGroup() == other.hasCampaignGroup());
-    if (hasCampaignGroup()) {
-      result = result && getCampaignGroup()
-          .equals(other.getCampaignGroup());
-    }
     result = result && (hasCampaignSharedSet() == other.hasCampaignSharedSet());
     if (hasCampaignSharedSet()) {
       result = result && getCampaignSharedSet()
@@ -4246,6 +3455,11 @@ private static final long serialVersionUID = 0L;
     if (hasChangeStatus()) {
       result = result && getChangeStatus()
           .equals(other.getChangeStatus());
+    }
+    result = result && (hasConversionAction() == other.hasConversionAction());
+    if (hasConversionAction()) {
+      result = result && getConversionAction()
+          .equals(other.getConversionAction());
     }
     result = result && (hasCustomer() == other.hasCustomer());
     if (hasCustomer()) {
@@ -4352,6 +3566,26 @@ private static final long serialVersionUID = 0L;
       result = result && getManagedPlacementView()
           .equals(other.getManagedPlacementView());
     }
+    result = result && (hasMediaFile() == other.hasMediaFile());
+    if (hasMediaFile()) {
+      result = result && getMediaFile()
+          .equals(other.getMediaFile());
+    }
+    result = result && (hasMobileAppCategoryConstant() == other.hasMobileAppCategoryConstant());
+    if (hasMobileAppCategoryConstant()) {
+      result = result && getMobileAppCategoryConstant()
+          .equals(other.getMobileAppCategoryConstant());
+    }
+    result = result && (hasMobileDeviceConstant() == other.hasMobileDeviceConstant());
+    if (hasMobileDeviceConstant()) {
+      result = result && getMobileDeviceConstant()
+          .equals(other.getMobileDeviceConstant());
+    }
+    result = result && (hasOperatingSystemVersionConstant() == other.hasOperatingSystemVersionConstant());
+    if (hasOperatingSystemVersionConstant()) {
+      result = result && getOperatingSystemVersionConstant()
+          .equals(other.getOperatingSystemVersionConstant());
+    }
     result = result && (hasParentalStatusView() == other.hasParentalStatusView());
     if (hasParentalStatusView()) {
       result = result && getParentalStatusView()
@@ -4397,6 +3631,11 @@ private static final long serialVersionUID = 0L;
       result = result && getUserList()
           .equals(other.getUserList());
     }
+    result = result && (hasRemarketingAction() == other.hasRemarketingAction());
+    if (hasRemarketingAction()) {
+      result = result && getRemarketingAction()
+          .equals(other.getRemarketingAction());
+    }
     result = result && (hasTopicConstant() == other.hasTopicConstant());
     if (hasTopicConstant()) {
       result = result && getTopicConstant()
@@ -4412,89 +3651,10 @@ private static final long serialVersionUID = 0L;
       result = result && getMetrics()
           .equals(other.getMetrics());
     }
-    result = result && adNetworkType_ == other.adNetworkType_;
-    result = result && (hasDate() == other.hasDate());
-    if (hasDate()) {
-      result = result && getDate()
-          .equals(other.getDate());
-    }
-    result = result && dayOfWeek_ == other.dayOfWeek_;
-    result = result && device_ == other.device_;
-    result = result && (hasHotelBookingWindowDays() == other.hasHotelBookingWindowDays());
-    if (hasHotelBookingWindowDays()) {
-      result = result && getHotelBookingWindowDays()
-          .equals(other.getHotelBookingWindowDays());
-    }
-    result = result && (hasHotelCenterId() == other.hasHotelCenterId());
-    if (hasHotelCenterId()) {
-      result = result && getHotelCenterId()
-          .equals(other.getHotelCenterId());
-    }
-    result = result && (hasHotelCheckInDate() == other.hasHotelCheckInDate());
-    if (hasHotelCheckInDate()) {
-      result = result && getHotelCheckInDate()
-          .equals(other.getHotelCheckInDate());
-    }
-    result = result && hotelCheckInDayOfWeek_ == other.hotelCheckInDayOfWeek_;
-    result = result && (hasHotelCity() == other.hasHotelCity());
-    if (hasHotelCity()) {
-      result = result && getHotelCity()
-          .equals(other.getHotelCity());
-    }
-    result = result && (hasHotelClass() == other.hasHotelClass());
-    if (hasHotelClass()) {
-      result = result && getHotelClass()
-          .equals(other.getHotelClass());
-    }
-    result = result && (hasHotelCountry() == other.hasHotelCountry());
-    if (hasHotelCountry()) {
-      result = result && getHotelCountry()
-          .equals(other.getHotelCountry());
-    }
-    result = result && hotelDateSelectionType_ == other.hotelDateSelectionType_;
-    result = result && (hasHotelLengthOfStay() == other.hasHotelLengthOfStay());
-    if (hasHotelLengthOfStay()) {
-      result = result && getHotelLengthOfStay()
-          .equals(other.getHotelLengthOfStay());
-    }
-    result = result && (hasHotelState() == other.hasHotelState());
-    if (hasHotelState()) {
-      result = result && getHotelState()
-          .equals(other.getHotelState());
-    }
-    result = result && (hasHour() == other.hasHour());
-    if (hasHour()) {
-      result = result && getHour()
-          .equals(other.getHour());
-    }
-    result = result && (hasMonth() == other.hasMonth());
-    if (hasMonth()) {
-      result = result && getMonth()
-          .equals(other.getMonth());
-    }
-    result = result && monthOfYear_ == other.monthOfYear_;
-    result = result && (hasPartnerHotelId() == other.hasPartnerHotelId());
-    if (hasPartnerHotelId()) {
-      result = result && getPartnerHotelId()
-          .equals(other.getPartnerHotelId());
-    }
-    result = result && placeholderType_ == other.placeholderType_;
-    result = result && (hasQuarter() == other.hasQuarter());
-    if (hasQuarter()) {
-      result = result && getQuarter()
-          .equals(other.getQuarter());
-    }
-    result = result && searchTermMatchType_ == other.searchTermMatchType_;
-    result = result && slot_ == other.slot_;
-    result = result && (hasWeek() == other.hasWeek());
-    if (hasWeek()) {
-      result = result && getWeek()
-          .equals(other.getWeek());
-    }
-    result = result && (hasYear() == other.hasYear());
-    if (hasYear()) {
-      result = result && getYear()
-          .equals(other.getYear());
+    result = result && (hasSegments() == other.hasSegments());
+    if (hasSegments()) {
+      result = result && getSegments()
+          .equals(other.getSegments());
     }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
@@ -4543,6 +3703,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AGE_RANGE_VIEW_FIELD_NUMBER;
       hash = (53 * hash) + getAgeRangeView().hashCode();
     }
+    if (hasAdScheduleView()) {
+      hash = (37 * hash) + AD_SCHEDULE_VIEW_FIELD_NUMBER;
+      hash = (53 * hash) + getAdScheduleView().hashCode();
+    }
     if (hasBiddingStrategy()) {
       hash = (37 * hash) + BIDDING_STRATEGY_FIELD_NUMBER;
       hash = (53 * hash) + getBiddingStrategy().hashCode();
@@ -4575,10 +3739,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CAMPAIGN_FEED_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignFeed().hashCode();
     }
-    if (hasCampaignGroup()) {
-      hash = (37 * hash) + CAMPAIGN_GROUP_FIELD_NUMBER;
-      hash = (53 * hash) + getCampaignGroup().hashCode();
-    }
     if (hasCampaignSharedSet()) {
       hash = (37 * hash) + CAMPAIGN_SHARED_SET_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignSharedSet().hashCode();
@@ -4590,6 +3750,10 @@ private static final long serialVersionUID = 0L;
     if (hasChangeStatus()) {
       hash = (37 * hash) + CHANGE_STATUS_FIELD_NUMBER;
       hash = (53 * hash) + getChangeStatus().hashCode();
+    }
+    if (hasConversionAction()) {
+      hash = (37 * hash) + CONVERSION_ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getConversionAction().hashCode();
     }
     if (hasCustomer()) {
       hash = (37 * hash) + CUSTOMER_FIELD_NUMBER;
@@ -4675,6 +3839,22 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MANAGED_PLACEMENT_VIEW_FIELD_NUMBER;
       hash = (53 * hash) + getManagedPlacementView().hashCode();
     }
+    if (hasMediaFile()) {
+      hash = (37 * hash) + MEDIA_FILE_FIELD_NUMBER;
+      hash = (53 * hash) + getMediaFile().hashCode();
+    }
+    if (hasMobileAppCategoryConstant()) {
+      hash = (37 * hash) + MOBILE_APP_CATEGORY_CONSTANT_FIELD_NUMBER;
+      hash = (53 * hash) + getMobileAppCategoryConstant().hashCode();
+    }
+    if (hasMobileDeviceConstant()) {
+      hash = (37 * hash) + MOBILE_DEVICE_CONSTANT_FIELD_NUMBER;
+      hash = (53 * hash) + getMobileDeviceConstant().hashCode();
+    }
+    if (hasOperatingSystemVersionConstant()) {
+      hash = (37 * hash) + OPERATING_SYSTEM_VERSION_CONSTANT_FIELD_NUMBER;
+      hash = (53 * hash) + getOperatingSystemVersionConstant().hashCode();
+    }
     if (hasParentalStatusView()) {
       hash = (37 * hash) + PARENTAL_STATUS_VIEW_FIELD_NUMBER;
       hash = (53 * hash) + getParentalStatusView().hashCode();
@@ -4711,6 +3891,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + USER_LIST_FIELD_NUMBER;
       hash = (53 * hash) + getUserList().hashCode();
     }
+    if (hasRemarketingAction()) {
+      hash = (37 * hash) + REMARKETING_ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getRemarketingAction().hashCode();
+    }
     if (hasTopicConstant()) {
       hash = (37 * hash) + TOPIC_CONSTANT_FIELD_NUMBER;
       hash = (53 * hash) + getTopicConstant().hashCode();
@@ -4723,83 +3907,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + METRICS_FIELD_NUMBER;
       hash = (53 * hash) + getMetrics().hashCode();
     }
-    hash = (37 * hash) + AD_NETWORK_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + adNetworkType_;
-    if (hasDate()) {
-      hash = (37 * hash) + DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getDate().hashCode();
-    }
-    hash = (37 * hash) + DAY_OF_WEEK_FIELD_NUMBER;
-    hash = (53 * hash) + dayOfWeek_;
-    hash = (37 * hash) + DEVICE_FIELD_NUMBER;
-    hash = (53 * hash) + device_;
-    if (hasHotelBookingWindowDays()) {
-      hash = (37 * hash) + HOTEL_BOOKING_WINDOW_DAYS_FIELD_NUMBER;
-      hash = (53 * hash) + getHotelBookingWindowDays().hashCode();
-    }
-    if (hasHotelCenterId()) {
-      hash = (37 * hash) + HOTEL_CENTER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getHotelCenterId().hashCode();
-    }
-    if (hasHotelCheckInDate()) {
-      hash = (37 * hash) + HOTEL_CHECK_IN_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getHotelCheckInDate().hashCode();
-    }
-    hash = (37 * hash) + HOTEL_CHECK_IN_DAY_OF_WEEK_FIELD_NUMBER;
-    hash = (53 * hash) + hotelCheckInDayOfWeek_;
-    if (hasHotelCity()) {
-      hash = (37 * hash) + HOTEL_CITY_FIELD_NUMBER;
-      hash = (53 * hash) + getHotelCity().hashCode();
-    }
-    if (hasHotelClass()) {
-      hash = (37 * hash) + HOTEL_CLASS_FIELD_NUMBER;
-      hash = (53 * hash) + getHotelClass().hashCode();
-    }
-    if (hasHotelCountry()) {
-      hash = (37 * hash) + HOTEL_COUNTRY_FIELD_NUMBER;
-      hash = (53 * hash) + getHotelCountry().hashCode();
-    }
-    hash = (37 * hash) + HOTEL_DATE_SELECTION_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + hotelDateSelectionType_;
-    if (hasHotelLengthOfStay()) {
-      hash = (37 * hash) + HOTEL_LENGTH_OF_STAY_FIELD_NUMBER;
-      hash = (53 * hash) + getHotelLengthOfStay().hashCode();
-    }
-    if (hasHotelState()) {
-      hash = (37 * hash) + HOTEL_STATE_FIELD_NUMBER;
-      hash = (53 * hash) + getHotelState().hashCode();
-    }
-    if (hasHour()) {
-      hash = (37 * hash) + HOUR_FIELD_NUMBER;
-      hash = (53 * hash) + getHour().hashCode();
-    }
-    if (hasMonth()) {
-      hash = (37 * hash) + MONTH_FIELD_NUMBER;
-      hash = (53 * hash) + getMonth().hashCode();
-    }
-    hash = (37 * hash) + MONTH_OF_YEAR_FIELD_NUMBER;
-    hash = (53 * hash) + monthOfYear_;
-    if (hasPartnerHotelId()) {
-      hash = (37 * hash) + PARTNER_HOTEL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPartnerHotelId().hashCode();
-    }
-    hash = (37 * hash) + PLACEHOLDER_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + placeholderType_;
-    if (hasQuarter()) {
-      hash = (37 * hash) + QUARTER_FIELD_NUMBER;
-      hash = (53 * hash) + getQuarter().hashCode();
-    }
-    hash = (37 * hash) + SEARCH_TERM_MATCH_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + searchTermMatchType_;
-    hash = (37 * hash) + SLOT_FIELD_NUMBER;
-    hash = (53 * hash) + slot_;
-    if (hasWeek()) {
-      hash = (37 * hash) + WEEK_FIELD_NUMBER;
-      hash = (53 * hash) + getWeek().hashCode();
-    }
-    if (hasYear()) {
-      hash = (37 * hash) + YEAR_FIELD_NUMBER;
-      hash = (53 * hash) + getYear().hashCode();
+    if (hasSegments()) {
+      hash = (37 * hash) + SEGMENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getSegments().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -4992,6 +4102,12 @@ private static final long serialVersionUID = 0L;
         ageRangeView_ = null;
         ageRangeViewBuilder_ = null;
       }
+      if (adScheduleViewBuilder_ == null) {
+        adScheduleView_ = null;
+      } else {
+        adScheduleView_ = null;
+        adScheduleViewBuilder_ = null;
+      }
       if (biddingStrategyBuilder_ == null) {
         biddingStrategy_ = null;
       } else {
@@ -5040,12 +4156,6 @@ private static final long serialVersionUID = 0L;
         campaignFeed_ = null;
         campaignFeedBuilder_ = null;
       }
-      if (campaignGroupBuilder_ == null) {
-        campaignGroup_ = null;
-      } else {
-        campaignGroup_ = null;
-        campaignGroupBuilder_ = null;
-      }
       if (campaignSharedSetBuilder_ == null) {
         campaignSharedSet_ = null;
       } else {
@@ -5063,6 +4173,12 @@ private static final long serialVersionUID = 0L;
       } else {
         changeStatus_ = null;
         changeStatusBuilder_ = null;
+      }
+      if (conversionActionBuilder_ == null) {
+        conversionAction_ = null;
+      } else {
+        conversionAction_ = null;
+        conversionActionBuilder_ = null;
       }
       if (customerBuilder_ == null) {
         customer_ = null;
@@ -5190,6 +4306,30 @@ private static final long serialVersionUID = 0L;
         managedPlacementView_ = null;
         managedPlacementViewBuilder_ = null;
       }
+      if (mediaFileBuilder_ == null) {
+        mediaFile_ = null;
+      } else {
+        mediaFile_ = null;
+        mediaFileBuilder_ = null;
+      }
+      if (mobileAppCategoryConstantBuilder_ == null) {
+        mobileAppCategoryConstant_ = null;
+      } else {
+        mobileAppCategoryConstant_ = null;
+        mobileAppCategoryConstantBuilder_ = null;
+      }
+      if (mobileDeviceConstantBuilder_ == null) {
+        mobileDeviceConstant_ = null;
+      } else {
+        mobileDeviceConstant_ = null;
+        mobileDeviceConstantBuilder_ = null;
+      }
+      if (operatingSystemVersionConstantBuilder_ == null) {
+        operatingSystemVersionConstant_ = null;
+      } else {
+        operatingSystemVersionConstant_ = null;
+        operatingSystemVersionConstantBuilder_ = null;
+      }
       if (parentalStatusViewBuilder_ == null) {
         parentalStatusView_ = null;
       } else {
@@ -5244,6 +4384,12 @@ private static final long serialVersionUID = 0L;
         userList_ = null;
         userListBuilder_ = null;
       }
+      if (remarketingActionBuilder_ == null) {
+        remarketingAction_ = null;
+      } else {
+        remarketingAction_ = null;
+        remarketingActionBuilder_ = null;
+      }
       if (topicConstantBuilder_ == null) {
         topicConstant_ = null;
       } else {
@@ -5262,113 +4408,11 @@ private static final long serialVersionUID = 0L;
         metrics_ = null;
         metricsBuilder_ = null;
       }
-      adNetworkType_ = 0;
-
-      if (dateBuilder_ == null) {
-        date_ = null;
+      if (segmentsBuilder_ == null) {
+        segments_ = null;
       } else {
-        date_ = null;
-        dateBuilder_ = null;
-      }
-      dayOfWeek_ = 0;
-
-      device_ = 0;
-
-      if (hotelBookingWindowDaysBuilder_ == null) {
-        hotelBookingWindowDays_ = null;
-      } else {
-        hotelBookingWindowDays_ = null;
-        hotelBookingWindowDaysBuilder_ = null;
-      }
-      if (hotelCenterIdBuilder_ == null) {
-        hotelCenterId_ = null;
-      } else {
-        hotelCenterId_ = null;
-        hotelCenterIdBuilder_ = null;
-      }
-      if (hotelCheckInDateBuilder_ == null) {
-        hotelCheckInDate_ = null;
-      } else {
-        hotelCheckInDate_ = null;
-        hotelCheckInDateBuilder_ = null;
-      }
-      hotelCheckInDayOfWeek_ = 0;
-
-      if (hotelCityBuilder_ == null) {
-        hotelCity_ = null;
-      } else {
-        hotelCity_ = null;
-        hotelCityBuilder_ = null;
-      }
-      if (hotelClassBuilder_ == null) {
-        hotelClass_ = null;
-      } else {
-        hotelClass_ = null;
-        hotelClassBuilder_ = null;
-      }
-      if (hotelCountryBuilder_ == null) {
-        hotelCountry_ = null;
-      } else {
-        hotelCountry_ = null;
-        hotelCountryBuilder_ = null;
-      }
-      hotelDateSelectionType_ = 0;
-
-      if (hotelLengthOfStayBuilder_ == null) {
-        hotelLengthOfStay_ = null;
-      } else {
-        hotelLengthOfStay_ = null;
-        hotelLengthOfStayBuilder_ = null;
-      }
-      if (hotelStateBuilder_ == null) {
-        hotelState_ = null;
-      } else {
-        hotelState_ = null;
-        hotelStateBuilder_ = null;
-      }
-      if (hourBuilder_ == null) {
-        hour_ = null;
-      } else {
-        hour_ = null;
-        hourBuilder_ = null;
-      }
-      if (monthBuilder_ == null) {
-        month_ = null;
-      } else {
-        month_ = null;
-        monthBuilder_ = null;
-      }
-      monthOfYear_ = 0;
-
-      if (partnerHotelIdBuilder_ == null) {
-        partnerHotelId_ = null;
-      } else {
-        partnerHotelId_ = null;
-        partnerHotelIdBuilder_ = null;
-      }
-      placeholderType_ = 0;
-
-      if (quarterBuilder_ == null) {
-        quarter_ = null;
-      } else {
-        quarter_ = null;
-        quarterBuilder_ = null;
-      }
-      searchTermMatchType_ = 0;
-
-      slot_ = 0;
-
-      if (weekBuilder_ == null) {
-        week_ = null;
-      } else {
-        week_ = null;
-        weekBuilder_ = null;
-      }
-      if (yearBuilder_ == null) {
-        year_ = null;
-      } else {
-        year_ = null;
-        yearBuilder_ = null;
+        segments_ = null;
+        segmentsBuilder_ = null;
       }
       return this;
     }
@@ -5441,6 +4485,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.ageRangeView_ = ageRangeViewBuilder_.build();
       }
+      if (adScheduleViewBuilder_ == null) {
+        result.adScheduleView_ = adScheduleView_;
+      } else {
+        result.adScheduleView_ = adScheduleViewBuilder_.build();
+      }
       if (biddingStrategyBuilder_ == null) {
         result.biddingStrategy_ = biddingStrategy_;
       } else {
@@ -5481,11 +4530,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.campaignFeed_ = campaignFeedBuilder_.build();
       }
-      if (campaignGroupBuilder_ == null) {
-        result.campaignGroup_ = campaignGroup_;
-      } else {
-        result.campaignGroup_ = campaignGroupBuilder_.build();
-      }
       if (campaignSharedSetBuilder_ == null) {
         result.campaignSharedSet_ = campaignSharedSet_;
       } else {
@@ -5500,6 +4544,11 @@ private static final long serialVersionUID = 0L;
         result.changeStatus_ = changeStatus_;
       } else {
         result.changeStatus_ = changeStatusBuilder_.build();
+      }
+      if (conversionActionBuilder_ == null) {
+        result.conversionAction_ = conversionAction_;
+      } else {
+        result.conversionAction_ = conversionActionBuilder_.build();
       }
       if (customerBuilder_ == null) {
         result.customer_ = customer_;
@@ -5606,6 +4655,26 @@ private static final long serialVersionUID = 0L;
       } else {
         result.managedPlacementView_ = managedPlacementViewBuilder_.build();
       }
+      if (mediaFileBuilder_ == null) {
+        result.mediaFile_ = mediaFile_;
+      } else {
+        result.mediaFile_ = mediaFileBuilder_.build();
+      }
+      if (mobileAppCategoryConstantBuilder_ == null) {
+        result.mobileAppCategoryConstant_ = mobileAppCategoryConstant_;
+      } else {
+        result.mobileAppCategoryConstant_ = mobileAppCategoryConstantBuilder_.build();
+      }
+      if (mobileDeviceConstantBuilder_ == null) {
+        result.mobileDeviceConstant_ = mobileDeviceConstant_;
+      } else {
+        result.mobileDeviceConstant_ = mobileDeviceConstantBuilder_.build();
+      }
+      if (operatingSystemVersionConstantBuilder_ == null) {
+        result.operatingSystemVersionConstant_ = operatingSystemVersionConstant_;
+      } else {
+        result.operatingSystemVersionConstant_ = operatingSystemVersionConstantBuilder_.build();
+      }
       if (parentalStatusViewBuilder_ == null) {
         result.parentalStatusView_ = parentalStatusView_;
       } else {
@@ -5651,6 +4720,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.userList_ = userListBuilder_.build();
       }
+      if (remarketingActionBuilder_ == null) {
+        result.remarketingAction_ = remarketingAction_;
+      } else {
+        result.remarketingAction_ = remarketingActionBuilder_.build();
+      }
       if (topicConstantBuilder_ == null) {
         result.topicConstant_ = topicConstant_;
       } else {
@@ -5666,89 +4740,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.metrics_ = metricsBuilder_.build();
       }
-      result.adNetworkType_ = adNetworkType_;
-      if (dateBuilder_ == null) {
-        result.date_ = date_;
+      if (segmentsBuilder_ == null) {
+        result.segments_ = segments_;
       } else {
-        result.date_ = dateBuilder_.build();
-      }
-      result.dayOfWeek_ = dayOfWeek_;
-      result.device_ = device_;
-      if (hotelBookingWindowDaysBuilder_ == null) {
-        result.hotelBookingWindowDays_ = hotelBookingWindowDays_;
-      } else {
-        result.hotelBookingWindowDays_ = hotelBookingWindowDaysBuilder_.build();
-      }
-      if (hotelCenterIdBuilder_ == null) {
-        result.hotelCenterId_ = hotelCenterId_;
-      } else {
-        result.hotelCenterId_ = hotelCenterIdBuilder_.build();
-      }
-      if (hotelCheckInDateBuilder_ == null) {
-        result.hotelCheckInDate_ = hotelCheckInDate_;
-      } else {
-        result.hotelCheckInDate_ = hotelCheckInDateBuilder_.build();
-      }
-      result.hotelCheckInDayOfWeek_ = hotelCheckInDayOfWeek_;
-      if (hotelCityBuilder_ == null) {
-        result.hotelCity_ = hotelCity_;
-      } else {
-        result.hotelCity_ = hotelCityBuilder_.build();
-      }
-      if (hotelClassBuilder_ == null) {
-        result.hotelClass_ = hotelClass_;
-      } else {
-        result.hotelClass_ = hotelClassBuilder_.build();
-      }
-      if (hotelCountryBuilder_ == null) {
-        result.hotelCountry_ = hotelCountry_;
-      } else {
-        result.hotelCountry_ = hotelCountryBuilder_.build();
-      }
-      result.hotelDateSelectionType_ = hotelDateSelectionType_;
-      if (hotelLengthOfStayBuilder_ == null) {
-        result.hotelLengthOfStay_ = hotelLengthOfStay_;
-      } else {
-        result.hotelLengthOfStay_ = hotelLengthOfStayBuilder_.build();
-      }
-      if (hotelStateBuilder_ == null) {
-        result.hotelState_ = hotelState_;
-      } else {
-        result.hotelState_ = hotelStateBuilder_.build();
-      }
-      if (hourBuilder_ == null) {
-        result.hour_ = hour_;
-      } else {
-        result.hour_ = hourBuilder_.build();
-      }
-      if (monthBuilder_ == null) {
-        result.month_ = month_;
-      } else {
-        result.month_ = monthBuilder_.build();
-      }
-      result.monthOfYear_ = monthOfYear_;
-      if (partnerHotelIdBuilder_ == null) {
-        result.partnerHotelId_ = partnerHotelId_;
-      } else {
-        result.partnerHotelId_ = partnerHotelIdBuilder_.build();
-      }
-      result.placeholderType_ = placeholderType_;
-      if (quarterBuilder_ == null) {
-        result.quarter_ = quarter_;
-      } else {
-        result.quarter_ = quarterBuilder_.build();
-      }
-      result.searchTermMatchType_ = searchTermMatchType_;
-      result.slot_ = slot_;
-      if (weekBuilder_ == null) {
-        result.week_ = week_;
-      } else {
-        result.week_ = weekBuilder_.build();
-      }
-      if (yearBuilder_ == null) {
-        result.year_ = year_;
-      } else {
-        result.year_ = yearBuilder_.build();
+        result.segments_ = segmentsBuilder_.build();
       }
       onBuilt();
       return result;
@@ -5825,6 +4820,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasAgeRangeView()) {
         mergeAgeRangeView(other.getAgeRangeView());
       }
+      if (other.hasAdScheduleView()) {
+        mergeAdScheduleView(other.getAdScheduleView());
+      }
       if (other.hasBiddingStrategy()) {
         mergeBiddingStrategy(other.getBiddingStrategy());
       }
@@ -5849,9 +4847,6 @@ private static final long serialVersionUID = 0L;
       if (other.hasCampaignFeed()) {
         mergeCampaignFeed(other.getCampaignFeed());
       }
-      if (other.hasCampaignGroup()) {
-        mergeCampaignGroup(other.getCampaignGroup());
-      }
       if (other.hasCampaignSharedSet()) {
         mergeCampaignSharedSet(other.getCampaignSharedSet());
       }
@@ -5860,6 +4855,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasChangeStatus()) {
         mergeChangeStatus(other.getChangeStatus());
+      }
+      if (other.hasConversionAction()) {
+        mergeConversionAction(other.getConversionAction());
       }
       if (other.hasCustomer()) {
         mergeCustomer(other.getCustomer());
@@ -5924,6 +4922,18 @@ private static final long serialVersionUID = 0L;
       if (other.hasManagedPlacementView()) {
         mergeManagedPlacementView(other.getManagedPlacementView());
       }
+      if (other.hasMediaFile()) {
+        mergeMediaFile(other.getMediaFile());
+      }
+      if (other.hasMobileAppCategoryConstant()) {
+        mergeMobileAppCategoryConstant(other.getMobileAppCategoryConstant());
+      }
+      if (other.hasMobileDeviceConstant()) {
+        mergeMobileDeviceConstant(other.getMobileDeviceConstant());
+      }
+      if (other.hasOperatingSystemVersionConstant()) {
+        mergeOperatingSystemVersionConstant(other.getOperatingSystemVersionConstant());
+      }
       if (other.hasParentalStatusView()) {
         mergeParentalStatusView(other.getParentalStatusView());
       }
@@ -5951,6 +4961,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasUserList()) {
         mergeUserList(other.getUserList());
       }
+      if (other.hasRemarketingAction()) {
+        mergeRemarketingAction(other.getRemarketingAction());
+      }
       if (other.hasTopicConstant()) {
         mergeTopicConstant(other.getTopicConstant());
       }
@@ -5960,77 +4973,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasMetrics()) {
         mergeMetrics(other.getMetrics());
       }
-      if (other.adNetworkType_ != 0) {
-        setAdNetworkTypeValue(other.getAdNetworkTypeValue());
-      }
-      if (other.hasDate()) {
-        mergeDate(other.getDate());
-      }
-      if (other.dayOfWeek_ != 0) {
-        setDayOfWeekValue(other.getDayOfWeekValue());
-      }
-      if (other.device_ != 0) {
-        setDeviceValue(other.getDeviceValue());
-      }
-      if (other.hasHotelBookingWindowDays()) {
-        mergeHotelBookingWindowDays(other.getHotelBookingWindowDays());
-      }
-      if (other.hasHotelCenterId()) {
-        mergeHotelCenterId(other.getHotelCenterId());
-      }
-      if (other.hasHotelCheckInDate()) {
-        mergeHotelCheckInDate(other.getHotelCheckInDate());
-      }
-      if (other.hotelCheckInDayOfWeek_ != 0) {
-        setHotelCheckInDayOfWeekValue(other.getHotelCheckInDayOfWeekValue());
-      }
-      if (other.hasHotelCity()) {
-        mergeHotelCity(other.getHotelCity());
-      }
-      if (other.hasHotelClass()) {
-        mergeHotelClass(other.getHotelClass());
-      }
-      if (other.hasHotelCountry()) {
-        mergeHotelCountry(other.getHotelCountry());
-      }
-      if (other.hotelDateSelectionType_ != 0) {
-        setHotelDateSelectionTypeValue(other.getHotelDateSelectionTypeValue());
-      }
-      if (other.hasHotelLengthOfStay()) {
-        mergeHotelLengthOfStay(other.getHotelLengthOfStay());
-      }
-      if (other.hasHotelState()) {
-        mergeHotelState(other.getHotelState());
-      }
-      if (other.hasHour()) {
-        mergeHour(other.getHour());
-      }
-      if (other.hasMonth()) {
-        mergeMonth(other.getMonth());
-      }
-      if (other.monthOfYear_ != 0) {
-        setMonthOfYearValue(other.getMonthOfYearValue());
-      }
-      if (other.hasPartnerHotelId()) {
-        mergePartnerHotelId(other.getPartnerHotelId());
-      }
-      if (other.placeholderType_ != 0) {
-        setPlaceholderTypeValue(other.getPlaceholderTypeValue());
-      }
-      if (other.hasQuarter()) {
-        mergeQuarter(other.getQuarter());
-      }
-      if (other.searchTermMatchType_ != 0) {
-        setSearchTermMatchTypeValue(other.getSearchTermMatchTypeValue());
-      }
-      if (other.slot_ != 0) {
-        setSlotValue(other.getSlotValue());
-      }
-      if (other.hasWeek()) {
-        mergeWeek(other.getWeek());
-      }
-      if (other.hasYear()) {
-        mergeYear(other.getYear());
+      if (other.hasSegments()) {
+        mergeSegments(other.getSegments());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -7438,6 +6382,159 @@ private static final long serialVersionUID = 0L;
       return ageRangeViewBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.AdScheduleView adScheduleView_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.AdScheduleView, com.google.ads.googleads.v0.resources.AdScheduleView.Builder, com.google.ads.googleads.v0.resources.AdScheduleViewOrBuilder> adScheduleViewBuilder_;
+    /**
+     * <pre>
+     * The ad schedule view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+     */
+    public boolean hasAdScheduleView() {
+      return adScheduleViewBuilder_ != null || adScheduleView_ != null;
+    }
+    /**
+     * <pre>
+     * The ad schedule view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AdScheduleView getAdScheduleView() {
+      if (adScheduleViewBuilder_ == null) {
+        return adScheduleView_ == null ? com.google.ads.googleads.v0.resources.AdScheduleView.getDefaultInstance() : adScheduleView_;
+      } else {
+        return adScheduleViewBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The ad schedule view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+     */
+    public Builder setAdScheduleView(com.google.ads.googleads.v0.resources.AdScheduleView value) {
+      if (adScheduleViewBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adScheduleView_ = value;
+        onChanged();
+      } else {
+        adScheduleViewBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad schedule view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+     */
+    public Builder setAdScheduleView(
+        com.google.ads.googleads.v0.resources.AdScheduleView.Builder builderForValue) {
+      if (adScheduleViewBuilder_ == null) {
+        adScheduleView_ = builderForValue.build();
+        onChanged();
+      } else {
+        adScheduleViewBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad schedule view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+     */
+    public Builder mergeAdScheduleView(com.google.ads.googleads.v0.resources.AdScheduleView value) {
+      if (adScheduleViewBuilder_ == null) {
+        if (adScheduleView_ != null) {
+          adScheduleView_ =
+            com.google.ads.googleads.v0.resources.AdScheduleView.newBuilder(adScheduleView_).mergeFrom(value).buildPartial();
+        } else {
+          adScheduleView_ = value;
+        }
+        onChanged();
+      } else {
+        adScheduleViewBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad schedule view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+     */
+    public Builder clearAdScheduleView() {
+      if (adScheduleViewBuilder_ == null) {
+        adScheduleView_ = null;
+        onChanged();
+      } else {
+        adScheduleView_ = null;
+        adScheduleViewBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad schedule view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AdScheduleView.Builder getAdScheduleViewBuilder() {
+      
+      onChanged();
+      return getAdScheduleViewFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The ad schedule view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+     */
+    public com.google.ads.googleads.v0.resources.AdScheduleViewOrBuilder getAdScheduleViewOrBuilder() {
+      if (adScheduleViewBuilder_ != null) {
+        return adScheduleViewBuilder_.getMessageOrBuilder();
+      } else {
+        return adScheduleView_ == null ?
+            com.google.ads.googleads.v0.resources.AdScheduleView.getDefaultInstance() : adScheduleView_;
+      }
+    }
+    /**
+     * <pre>
+     * The ad schedule view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.AdScheduleView ad_schedule_view = 89;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.AdScheduleView, com.google.ads.googleads.v0.resources.AdScheduleView.Builder, com.google.ads.googleads.v0.resources.AdScheduleViewOrBuilder> 
+        getAdScheduleViewFieldBuilder() {
+      if (adScheduleViewBuilder_ == null) {
+        adScheduleViewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.AdScheduleView, com.google.ads.googleads.v0.resources.AdScheduleView.Builder, com.google.ads.googleads.v0.resources.AdScheduleViewOrBuilder>(
+                getAdScheduleView(),
+                getParentForChildren(),
+                isClean());
+        adScheduleView_ = null;
+      }
+      return adScheduleViewBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.BiddingStrategy biddingStrategy_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.BiddingStrategy, com.google.ads.googleads.v0.resources.BiddingStrategy.Builder, com.google.ads.googleads.v0.resources.BiddingStrategyOrBuilder> biddingStrategyBuilder_;
@@ -8662,159 +7759,6 @@ private static final long serialVersionUID = 0L;
       return campaignFeedBuilder_;
     }
 
-    private com.google.ads.googleads.v0.resources.CampaignGroup campaignGroup_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.ads.googleads.v0.resources.CampaignGroup, com.google.ads.googleads.v0.resources.CampaignGroup.Builder, com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder> campaignGroupBuilder_;
-    /**
-     * <pre>
-     * Campaign Group referenced in AWQL query.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-     */
-    public boolean hasCampaignGroup() {
-      return campaignGroupBuilder_ != null || campaignGroup_ != null;
-    }
-    /**
-     * <pre>
-     * Campaign Group referenced in AWQL query.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-     */
-    public com.google.ads.googleads.v0.resources.CampaignGroup getCampaignGroup() {
-      if (campaignGroupBuilder_ == null) {
-        return campaignGroup_ == null ? com.google.ads.googleads.v0.resources.CampaignGroup.getDefaultInstance() : campaignGroup_;
-      } else {
-        return campaignGroupBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Campaign Group referenced in AWQL query.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-     */
-    public Builder setCampaignGroup(com.google.ads.googleads.v0.resources.CampaignGroup value) {
-      if (campaignGroupBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        campaignGroup_ = value;
-        onChanged();
-      } else {
-        campaignGroupBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Campaign Group referenced in AWQL query.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-     */
-    public Builder setCampaignGroup(
-        com.google.ads.googleads.v0.resources.CampaignGroup.Builder builderForValue) {
-      if (campaignGroupBuilder_ == null) {
-        campaignGroup_ = builderForValue.build();
-        onChanged();
-      } else {
-        campaignGroupBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Campaign Group referenced in AWQL query.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-     */
-    public Builder mergeCampaignGroup(com.google.ads.googleads.v0.resources.CampaignGroup value) {
-      if (campaignGroupBuilder_ == null) {
-        if (campaignGroup_ != null) {
-          campaignGroup_ =
-            com.google.ads.googleads.v0.resources.CampaignGroup.newBuilder(campaignGroup_).mergeFrom(value).buildPartial();
-        } else {
-          campaignGroup_ = value;
-        }
-        onChanged();
-      } else {
-        campaignGroupBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Campaign Group referenced in AWQL query.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-     */
-    public Builder clearCampaignGroup() {
-      if (campaignGroupBuilder_ == null) {
-        campaignGroup_ = null;
-        onChanged();
-      } else {
-        campaignGroup_ = null;
-        campaignGroupBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Campaign Group referenced in AWQL query.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-     */
-    public com.google.ads.googleads.v0.resources.CampaignGroup.Builder getCampaignGroupBuilder() {
-      
-      onChanged();
-      return getCampaignGroupFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Campaign Group referenced in AWQL query.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-     */
-    public com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder getCampaignGroupOrBuilder() {
-      if (campaignGroupBuilder_ != null) {
-        return campaignGroupBuilder_.getMessageOrBuilder();
-      } else {
-        return campaignGroup_ == null ?
-            com.google.ads.googleads.v0.resources.CampaignGroup.getDefaultInstance() : campaignGroup_;
-      }
-    }
-    /**
-     * <pre>
-     * Campaign Group referenced in AWQL query.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.resources.CampaignGroup campaign_group = 25;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.ads.googleads.v0.resources.CampaignGroup, com.google.ads.googleads.v0.resources.CampaignGroup.Builder, com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder> 
-        getCampaignGroupFieldBuilder() {
-      if (campaignGroupBuilder_ == null) {
-        campaignGroupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.ads.googleads.v0.resources.CampaignGroup, com.google.ads.googleads.v0.resources.CampaignGroup.Builder, com.google.ads.googleads.v0.resources.CampaignGroupOrBuilder>(
-                getCampaignGroup(),
-                getParentForChildren(),
-                isClean());
-        campaignGroup_ = null;
-      }
-      return campaignGroupBuilder_;
-    }
-
     private com.google.ads.googleads.v0.resources.CampaignSharedSet campaignSharedSet_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.CampaignSharedSet, com.google.ads.googleads.v0.resources.CampaignSharedSet.Builder, com.google.ads.googleads.v0.resources.CampaignSharedSetOrBuilder> campaignSharedSetBuilder_;
@@ -9272,6 +8216,159 @@ private static final long serialVersionUID = 0L;
         changeStatus_ = null;
       }
       return changeStatusBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.ConversionAction conversionAction_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.ConversionAction, com.google.ads.googleads.v0.resources.ConversionAction.Builder, com.google.ads.googleads.v0.resources.ConversionActionOrBuilder> conversionActionBuilder_;
+    /**
+     * <pre>
+     * The conversion action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+     */
+    public boolean hasConversionAction() {
+      return conversionActionBuilder_ != null || conversionAction_ != null;
+    }
+    /**
+     * <pre>
+     * The conversion action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+     */
+    public com.google.ads.googleads.v0.resources.ConversionAction getConversionAction() {
+      if (conversionActionBuilder_ == null) {
+        return conversionAction_ == null ? com.google.ads.googleads.v0.resources.ConversionAction.getDefaultInstance() : conversionAction_;
+      } else {
+        return conversionActionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The conversion action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+     */
+    public Builder setConversionAction(com.google.ads.googleads.v0.resources.ConversionAction value) {
+      if (conversionActionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        conversionAction_ = value;
+        onChanged();
+      } else {
+        conversionActionBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+     */
+    public Builder setConversionAction(
+        com.google.ads.googleads.v0.resources.ConversionAction.Builder builderForValue) {
+      if (conversionActionBuilder_ == null) {
+        conversionAction_ = builderForValue.build();
+        onChanged();
+      } else {
+        conversionActionBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+     */
+    public Builder mergeConversionAction(com.google.ads.googleads.v0.resources.ConversionAction value) {
+      if (conversionActionBuilder_ == null) {
+        if (conversionAction_ != null) {
+          conversionAction_ =
+            com.google.ads.googleads.v0.resources.ConversionAction.newBuilder(conversionAction_).mergeFrom(value).buildPartial();
+        } else {
+          conversionAction_ = value;
+        }
+        onChanged();
+      } else {
+        conversionActionBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+     */
+    public Builder clearConversionAction() {
+      if (conversionActionBuilder_ == null) {
+        conversionAction_ = null;
+        onChanged();
+      } else {
+        conversionAction_ = null;
+        conversionActionBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The conversion action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+     */
+    public com.google.ads.googleads.v0.resources.ConversionAction.Builder getConversionActionBuilder() {
+      
+      onChanged();
+      return getConversionActionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The conversion action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+     */
+    public com.google.ads.googleads.v0.resources.ConversionActionOrBuilder getConversionActionOrBuilder() {
+      if (conversionActionBuilder_ != null) {
+        return conversionActionBuilder_.getMessageOrBuilder();
+      } else {
+        return conversionAction_ == null ?
+            com.google.ads.googleads.v0.resources.ConversionAction.getDefaultInstance() : conversionAction_;
+      }
+    }
+    /**
+     * <pre>
+     * The conversion action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionAction conversion_action = 103;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.ConversionAction, com.google.ads.googleads.v0.resources.ConversionAction.Builder, com.google.ads.googleads.v0.resources.ConversionActionOrBuilder> 
+        getConversionActionFieldBuilder() {
+      if (conversionActionBuilder_ == null) {
+        conversionActionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.ConversionAction, com.google.ads.googleads.v0.resources.ConversionAction.Builder, com.google.ads.googleads.v0.resources.ConversionActionOrBuilder>(
+                getConversionAction(),
+                getParentForChildren(),
+                isClean());
+        conversionAction_ = null;
+      }
+      return conversionActionBuilder_;
     }
 
     private com.google.ads.googleads.v0.resources.Customer customer_ = null;
@@ -12487,6 +11584,618 @@ private static final long serialVersionUID = 0L;
       return managedPlacementViewBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.MediaFile mediaFile_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.MediaFile, com.google.ads.googleads.v0.resources.MediaFile.Builder, com.google.ads.googleads.v0.resources.MediaFileOrBuilder> mediaFileBuilder_;
+    /**
+     * <pre>
+     * The media file referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+     */
+    public boolean hasMediaFile() {
+      return mediaFileBuilder_ != null || mediaFile_ != null;
+    }
+    /**
+     * <pre>
+     * The media file referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MediaFile getMediaFile() {
+      if (mediaFileBuilder_ == null) {
+        return mediaFile_ == null ? com.google.ads.googleads.v0.resources.MediaFile.getDefaultInstance() : mediaFile_;
+      } else {
+        return mediaFileBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The media file referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+     */
+    public Builder setMediaFile(com.google.ads.googleads.v0.resources.MediaFile value) {
+      if (mediaFileBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        mediaFile_ = value;
+        onChanged();
+      } else {
+        mediaFileBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The media file referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+     */
+    public Builder setMediaFile(
+        com.google.ads.googleads.v0.resources.MediaFile.Builder builderForValue) {
+      if (mediaFileBuilder_ == null) {
+        mediaFile_ = builderForValue.build();
+        onChanged();
+      } else {
+        mediaFileBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The media file referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+     */
+    public Builder mergeMediaFile(com.google.ads.googleads.v0.resources.MediaFile value) {
+      if (mediaFileBuilder_ == null) {
+        if (mediaFile_ != null) {
+          mediaFile_ =
+            com.google.ads.googleads.v0.resources.MediaFile.newBuilder(mediaFile_).mergeFrom(value).buildPartial();
+        } else {
+          mediaFile_ = value;
+        }
+        onChanged();
+      } else {
+        mediaFileBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The media file referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+     */
+    public Builder clearMediaFile() {
+      if (mediaFileBuilder_ == null) {
+        mediaFile_ = null;
+        onChanged();
+      } else {
+        mediaFile_ = null;
+        mediaFileBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The media file referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MediaFile.Builder getMediaFileBuilder() {
+      
+      onChanged();
+      return getMediaFileFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The media file referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MediaFileOrBuilder getMediaFileOrBuilder() {
+      if (mediaFileBuilder_ != null) {
+        return mediaFileBuilder_.getMessageOrBuilder();
+      } else {
+        return mediaFile_ == null ?
+            com.google.ads.googleads.v0.resources.MediaFile.getDefaultInstance() : mediaFile_;
+      }
+    }
+    /**
+     * <pre>
+     * The media file referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MediaFile media_file = 90;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.MediaFile, com.google.ads.googleads.v0.resources.MediaFile.Builder, com.google.ads.googleads.v0.resources.MediaFileOrBuilder> 
+        getMediaFileFieldBuilder() {
+      if (mediaFileBuilder_ == null) {
+        mediaFileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.MediaFile, com.google.ads.googleads.v0.resources.MediaFile.Builder, com.google.ads.googleads.v0.resources.MediaFileOrBuilder>(
+                getMediaFile(),
+                getParentForChildren(),
+                isClean());
+        mediaFile_ = null;
+      }
+      return mediaFileBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobileAppCategoryConstant_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.MobileAppCategoryConstant, com.google.ads.googleads.v0.resources.MobileAppCategoryConstant.Builder, com.google.ads.googleads.v0.resources.MobileAppCategoryConstantOrBuilder> mobileAppCategoryConstantBuilder_;
+    /**
+     * <pre>
+     * The mobile app category constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+     */
+    public boolean hasMobileAppCategoryConstant() {
+      return mobileAppCategoryConstantBuilder_ != null || mobileAppCategoryConstant_ != null;
+    }
+    /**
+     * <pre>
+     * The mobile app category constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MobileAppCategoryConstant getMobileAppCategoryConstant() {
+      if (mobileAppCategoryConstantBuilder_ == null) {
+        return mobileAppCategoryConstant_ == null ? com.google.ads.googleads.v0.resources.MobileAppCategoryConstant.getDefaultInstance() : mobileAppCategoryConstant_;
+      } else {
+        return mobileAppCategoryConstantBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The mobile app category constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+     */
+    public Builder setMobileAppCategoryConstant(com.google.ads.googleads.v0.resources.MobileAppCategoryConstant value) {
+      if (mobileAppCategoryConstantBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        mobileAppCategoryConstant_ = value;
+        onChanged();
+      } else {
+        mobileAppCategoryConstantBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mobile app category constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+     */
+    public Builder setMobileAppCategoryConstant(
+        com.google.ads.googleads.v0.resources.MobileAppCategoryConstant.Builder builderForValue) {
+      if (mobileAppCategoryConstantBuilder_ == null) {
+        mobileAppCategoryConstant_ = builderForValue.build();
+        onChanged();
+      } else {
+        mobileAppCategoryConstantBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mobile app category constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+     */
+    public Builder mergeMobileAppCategoryConstant(com.google.ads.googleads.v0.resources.MobileAppCategoryConstant value) {
+      if (mobileAppCategoryConstantBuilder_ == null) {
+        if (mobileAppCategoryConstant_ != null) {
+          mobileAppCategoryConstant_ =
+            com.google.ads.googleads.v0.resources.MobileAppCategoryConstant.newBuilder(mobileAppCategoryConstant_).mergeFrom(value).buildPartial();
+        } else {
+          mobileAppCategoryConstant_ = value;
+        }
+        onChanged();
+      } else {
+        mobileAppCategoryConstantBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mobile app category constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+     */
+    public Builder clearMobileAppCategoryConstant() {
+      if (mobileAppCategoryConstantBuilder_ == null) {
+        mobileAppCategoryConstant_ = null;
+        onChanged();
+      } else {
+        mobileAppCategoryConstant_ = null;
+        mobileAppCategoryConstantBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mobile app category constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MobileAppCategoryConstant.Builder getMobileAppCategoryConstantBuilder() {
+      
+      onChanged();
+      return getMobileAppCategoryConstantFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The mobile app category constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MobileAppCategoryConstantOrBuilder getMobileAppCategoryConstantOrBuilder() {
+      if (mobileAppCategoryConstantBuilder_ != null) {
+        return mobileAppCategoryConstantBuilder_.getMessageOrBuilder();
+      } else {
+        return mobileAppCategoryConstant_ == null ?
+            com.google.ads.googleads.v0.resources.MobileAppCategoryConstant.getDefaultInstance() : mobileAppCategoryConstant_;
+      }
+    }
+    /**
+     * <pre>
+     * The mobile app category constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.MobileAppCategoryConstant, com.google.ads.googleads.v0.resources.MobileAppCategoryConstant.Builder, com.google.ads.googleads.v0.resources.MobileAppCategoryConstantOrBuilder> 
+        getMobileAppCategoryConstantFieldBuilder() {
+      if (mobileAppCategoryConstantBuilder_ == null) {
+        mobileAppCategoryConstantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.MobileAppCategoryConstant, com.google.ads.googleads.v0.resources.MobileAppCategoryConstant.Builder, com.google.ads.googleads.v0.resources.MobileAppCategoryConstantOrBuilder>(
+                getMobileAppCategoryConstant(),
+                getParentForChildren(),
+                isClean());
+        mobileAppCategoryConstant_ = null;
+      }
+      return mobileAppCategoryConstantBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.MobileDeviceConstant mobileDeviceConstant_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.MobileDeviceConstant, com.google.ads.googleads.v0.resources.MobileDeviceConstant.Builder, com.google.ads.googleads.v0.resources.MobileDeviceConstantOrBuilder> mobileDeviceConstantBuilder_;
+    /**
+     * <pre>
+     * The mobile device constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+     */
+    public boolean hasMobileDeviceConstant() {
+      return mobileDeviceConstantBuilder_ != null || mobileDeviceConstant_ != null;
+    }
+    /**
+     * <pre>
+     * The mobile device constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MobileDeviceConstant getMobileDeviceConstant() {
+      if (mobileDeviceConstantBuilder_ == null) {
+        return mobileDeviceConstant_ == null ? com.google.ads.googleads.v0.resources.MobileDeviceConstant.getDefaultInstance() : mobileDeviceConstant_;
+      } else {
+        return mobileDeviceConstantBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The mobile device constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+     */
+    public Builder setMobileDeviceConstant(com.google.ads.googleads.v0.resources.MobileDeviceConstant value) {
+      if (mobileDeviceConstantBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        mobileDeviceConstant_ = value;
+        onChanged();
+      } else {
+        mobileDeviceConstantBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mobile device constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+     */
+    public Builder setMobileDeviceConstant(
+        com.google.ads.googleads.v0.resources.MobileDeviceConstant.Builder builderForValue) {
+      if (mobileDeviceConstantBuilder_ == null) {
+        mobileDeviceConstant_ = builderForValue.build();
+        onChanged();
+      } else {
+        mobileDeviceConstantBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mobile device constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+     */
+    public Builder mergeMobileDeviceConstant(com.google.ads.googleads.v0.resources.MobileDeviceConstant value) {
+      if (mobileDeviceConstantBuilder_ == null) {
+        if (mobileDeviceConstant_ != null) {
+          mobileDeviceConstant_ =
+            com.google.ads.googleads.v0.resources.MobileDeviceConstant.newBuilder(mobileDeviceConstant_).mergeFrom(value).buildPartial();
+        } else {
+          mobileDeviceConstant_ = value;
+        }
+        onChanged();
+      } else {
+        mobileDeviceConstantBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mobile device constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+     */
+    public Builder clearMobileDeviceConstant() {
+      if (mobileDeviceConstantBuilder_ == null) {
+        mobileDeviceConstant_ = null;
+        onChanged();
+      } else {
+        mobileDeviceConstant_ = null;
+        mobileDeviceConstantBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mobile device constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MobileDeviceConstant.Builder getMobileDeviceConstantBuilder() {
+      
+      onChanged();
+      return getMobileDeviceConstantFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The mobile device constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+     */
+    public com.google.ads.googleads.v0.resources.MobileDeviceConstantOrBuilder getMobileDeviceConstantOrBuilder() {
+      if (mobileDeviceConstantBuilder_ != null) {
+        return mobileDeviceConstantBuilder_.getMessageOrBuilder();
+      } else {
+        return mobileDeviceConstant_ == null ?
+            com.google.ads.googleads.v0.resources.MobileDeviceConstant.getDefaultInstance() : mobileDeviceConstant_;
+      }
+    }
+    /**
+     * <pre>
+     * The mobile device constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.MobileDeviceConstant, com.google.ads.googleads.v0.resources.MobileDeviceConstant.Builder, com.google.ads.googleads.v0.resources.MobileDeviceConstantOrBuilder> 
+        getMobileDeviceConstantFieldBuilder() {
+      if (mobileDeviceConstantBuilder_ == null) {
+        mobileDeviceConstantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.MobileDeviceConstant, com.google.ads.googleads.v0.resources.MobileDeviceConstant.Builder, com.google.ads.googleads.v0.resources.MobileDeviceConstantOrBuilder>(
+                getMobileDeviceConstant(),
+                getParentForChildren(),
+                isClean());
+        mobileDeviceConstant_ = null;
+      }
+      return mobileDeviceConstantBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operatingSystemVersionConstant_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant, com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant.Builder, com.google.ads.googleads.v0.resources.OperatingSystemVersionConstantOrBuilder> operatingSystemVersionConstantBuilder_;
+    /**
+     * <pre>
+     * The operating system version constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+     */
+    public boolean hasOperatingSystemVersionConstant() {
+      return operatingSystemVersionConstantBuilder_ != null || operatingSystemVersionConstant_ != null;
+    }
+    /**
+     * <pre>
+     * The operating system version constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+     */
+    public com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant getOperatingSystemVersionConstant() {
+      if (operatingSystemVersionConstantBuilder_ == null) {
+        return operatingSystemVersionConstant_ == null ? com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant.getDefaultInstance() : operatingSystemVersionConstant_;
+      } else {
+        return operatingSystemVersionConstantBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The operating system version constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+     */
+    public Builder setOperatingSystemVersionConstant(com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant value) {
+      if (operatingSystemVersionConstantBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        operatingSystemVersionConstant_ = value;
+        onChanged();
+      } else {
+        operatingSystemVersionConstantBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The operating system version constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+     */
+    public Builder setOperatingSystemVersionConstant(
+        com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant.Builder builderForValue) {
+      if (operatingSystemVersionConstantBuilder_ == null) {
+        operatingSystemVersionConstant_ = builderForValue.build();
+        onChanged();
+      } else {
+        operatingSystemVersionConstantBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The operating system version constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+     */
+    public Builder mergeOperatingSystemVersionConstant(com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant value) {
+      if (operatingSystemVersionConstantBuilder_ == null) {
+        if (operatingSystemVersionConstant_ != null) {
+          operatingSystemVersionConstant_ =
+            com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant.newBuilder(operatingSystemVersionConstant_).mergeFrom(value).buildPartial();
+        } else {
+          operatingSystemVersionConstant_ = value;
+        }
+        onChanged();
+      } else {
+        operatingSystemVersionConstantBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The operating system version constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+     */
+    public Builder clearOperatingSystemVersionConstant() {
+      if (operatingSystemVersionConstantBuilder_ == null) {
+        operatingSystemVersionConstant_ = null;
+        onChanged();
+      } else {
+        operatingSystemVersionConstant_ = null;
+        operatingSystemVersionConstantBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The operating system version constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+     */
+    public com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant.Builder getOperatingSystemVersionConstantBuilder() {
+      
+      onChanged();
+      return getOperatingSystemVersionConstantFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The operating system version constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+     */
+    public com.google.ads.googleads.v0.resources.OperatingSystemVersionConstantOrBuilder getOperatingSystemVersionConstantOrBuilder() {
+      if (operatingSystemVersionConstantBuilder_ != null) {
+        return operatingSystemVersionConstantBuilder_.getMessageOrBuilder();
+      } else {
+        return operatingSystemVersionConstant_ == null ?
+            com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant.getDefaultInstance() : operatingSystemVersionConstant_;
+      }
+    }
+    /**
+     * <pre>
+     * The operating system version constant referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant, com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant.Builder, com.google.ads.googleads.v0.resources.OperatingSystemVersionConstantOrBuilder> 
+        getOperatingSystemVersionConstantFieldBuilder() {
+      if (operatingSystemVersionConstantBuilder_ == null) {
+        operatingSystemVersionConstantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant, com.google.ads.googleads.v0.resources.OperatingSystemVersionConstant.Builder, com.google.ads.googleads.v0.resources.OperatingSystemVersionConstantOrBuilder>(
+                getOperatingSystemVersionConstant(),
+                getParentForChildren(),
+                isClean());
+        operatingSystemVersionConstant_ = null;
+      }
+      return operatingSystemVersionConstantBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.ParentalStatusView parentalStatusView_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.ParentalStatusView, com.google.ads.googleads.v0.resources.ParentalStatusView.Builder, com.google.ads.googleads.v0.resources.ParentalStatusViewOrBuilder> parentalStatusViewBuilder_;
@@ -13864,6 +13573,159 @@ private static final long serialVersionUID = 0L;
       return userListBuilder_;
     }
 
+    private com.google.ads.googleads.v0.resources.RemarketingAction remarketingAction_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.RemarketingAction, com.google.ads.googleads.v0.resources.RemarketingAction.Builder, com.google.ads.googleads.v0.resources.RemarketingActionOrBuilder> remarketingActionBuilder_;
+    /**
+     * <pre>
+     * The remarketing action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+     */
+    public boolean hasRemarketingAction() {
+      return remarketingActionBuilder_ != null || remarketingAction_ != null;
+    }
+    /**
+     * <pre>
+     * The remarketing action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+     */
+    public com.google.ads.googleads.v0.resources.RemarketingAction getRemarketingAction() {
+      if (remarketingActionBuilder_ == null) {
+        return remarketingAction_ == null ? com.google.ads.googleads.v0.resources.RemarketingAction.getDefaultInstance() : remarketingAction_;
+      } else {
+        return remarketingActionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The remarketing action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+     */
+    public Builder setRemarketingAction(com.google.ads.googleads.v0.resources.RemarketingAction value) {
+      if (remarketingActionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        remarketingAction_ = value;
+        onChanged();
+      } else {
+        remarketingActionBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The remarketing action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+     */
+    public Builder setRemarketingAction(
+        com.google.ads.googleads.v0.resources.RemarketingAction.Builder builderForValue) {
+      if (remarketingActionBuilder_ == null) {
+        remarketingAction_ = builderForValue.build();
+        onChanged();
+      } else {
+        remarketingActionBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The remarketing action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+     */
+    public Builder mergeRemarketingAction(com.google.ads.googleads.v0.resources.RemarketingAction value) {
+      if (remarketingActionBuilder_ == null) {
+        if (remarketingAction_ != null) {
+          remarketingAction_ =
+            com.google.ads.googleads.v0.resources.RemarketingAction.newBuilder(remarketingAction_).mergeFrom(value).buildPartial();
+        } else {
+          remarketingAction_ = value;
+        }
+        onChanged();
+      } else {
+        remarketingActionBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The remarketing action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+     */
+    public Builder clearRemarketingAction() {
+      if (remarketingActionBuilder_ == null) {
+        remarketingAction_ = null;
+        onChanged();
+      } else {
+        remarketingAction_ = null;
+        remarketingActionBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The remarketing action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+     */
+    public com.google.ads.googleads.v0.resources.RemarketingAction.Builder getRemarketingActionBuilder() {
+      
+      onChanged();
+      return getRemarketingActionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The remarketing action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+     */
+    public com.google.ads.googleads.v0.resources.RemarketingActionOrBuilder getRemarketingActionOrBuilder() {
+      if (remarketingActionBuilder_ != null) {
+        return remarketingActionBuilder_.getMessageOrBuilder();
+      } else {
+        return remarketingAction_ == null ?
+            com.google.ads.googleads.v0.resources.RemarketingAction.getDefaultInstance() : remarketingAction_;
+      }
+    }
+    /**
+     * <pre>
+     * The remarketing action referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.RemarketingAction remarketing_action = 60;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.RemarketingAction, com.google.ads.googleads.v0.resources.RemarketingAction.Builder, com.google.ads.googleads.v0.resources.RemarketingActionOrBuilder> 
+        getRemarketingActionFieldBuilder() {
+      if (remarketingActionBuilder_ == null) {
+        remarketingActionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.RemarketingAction, com.google.ads.googleads.v0.resources.RemarketingAction.Builder, com.google.ads.googleads.v0.resources.RemarketingActionOrBuilder>(
+                getRemarketingAction(),
+                getParentForChildren(),
+                isClean());
+        remarketingAction_ = null;
+      }
+      return remarketingActionBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.TopicConstant topicConstant_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.TopicConstant, com.google.ads.googleads.v0.resources.TopicConstant.Builder, com.google.ads.googleads.v0.resources.TopicConstantOrBuilder> topicConstantBuilder_;
@@ -14323,2929 +14185,157 @@ private static final long serialVersionUID = 0L;
       return metricsBuilder_;
     }
 
-    private int adNetworkType_ = 0;
-    /**
-     * <pre>
-     * Ad network type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 5;</code>
-     */
-    public int getAdNetworkTypeValue() {
-      return adNetworkType_;
-    }
-    /**
-     * <pre>
-     * Ad network type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 5;</code>
-     */
-    public Builder setAdNetworkTypeValue(int value) {
-      adNetworkType_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Ad network type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 5;</code>
-     */
-    public com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType getAdNetworkType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType result = com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType.valueOf(adNetworkType_);
-      return result == null ? com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Ad network type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 5;</code>
-     */
-    public Builder setAdNetworkType(com.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      adNetworkType_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Ad network type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 5;</code>
-     */
-    public Builder clearAdNetworkType() {
-      
-      adNetworkType_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.StringValue date_ = null;
+    private com.google.ads.googleads.v0.common.Segments segments_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> dateBuilder_;
+        com.google.ads.googleads.v0.common.Segments, com.google.ads.googleads.v0.common.Segments.Builder, com.google.ads.googleads.v0.common.SegmentsOrBuilder> segmentsBuilder_;
     /**
      * <pre>
-     * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * The segments.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue date = 6;</code>
+     * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
      */
-    public boolean hasDate() {
-      return dateBuilder_ != null || date_ != null;
+    public boolean hasSegments() {
+      return segmentsBuilder_ != null || segments_ != null;
     }
     /**
      * <pre>
-     * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * The segments.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue date = 6;</code>
+     * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
      */
-    public com.google.protobuf.StringValue getDate() {
-      if (dateBuilder_ == null) {
-        return date_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : date_;
+    public com.google.ads.googleads.v0.common.Segments getSegments() {
+      if (segmentsBuilder_ == null) {
+        return segments_ == null ? com.google.ads.googleads.v0.common.Segments.getDefaultInstance() : segments_;
       } else {
-        return dateBuilder_.getMessage();
+        return segmentsBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * The segments.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue date = 6;</code>
+     * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
      */
-    public Builder setDate(com.google.protobuf.StringValue value) {
-      if (dateBuilder_ == null) {
+    public Builder setSegments(com.google.ads.googleads.v0.common.Segments value) {
+      if (segmentsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        date_ = value;
+        segments_ = value;
         onChanged();
       } else {
-        dateBuilder_.setMessage(value);
+        segmentsBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * The segments.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue date = 6;</code>
+     * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
      */
-    public Builder setDate(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (dateBuilder_ == null) {
-        date_ = builderForValue.build();
+    public Builder setSegments(
+        com.google.ads.googleads.v0.common.Segments.Builder builderForValue) {
+      if (segmentsBuilder_ == null) {
+        segments_ = builderForValue.build();
         onChanged();
       } else {
-        dateBuilder_.setMessage(builderForValue.build());
+        segmentsBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * The segments.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue date = 6;</code>
+     * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
      */
-    public Builder mergeDate(com.google.protobuf.StringValue value) {
-      if (dateBuilder_ == null) {
-        if (date_ != null) {
-          date_ =
-            com.google.protobuf.StringValue.newBuilder(date_).mergeFrom(value).buildPartial();
+    public Builder mergeSegments(com.google.ads.googleads.v0.common.Segments value) {
+      if (segmentsBuilder_ == null) {
+        if (segments_ != null) {
+          segments_ =
+            com.google.ads.googleads.v0.common.Segments.newBuilder(segments_).mergeFrom(value).buildPartial();
         } else {
-          date_ = value;
+          segments_ = value;
         }
         onChanged();
       } else {
-        dateBuilder_.mergeFrom(value);
+        segmentsBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * The segments.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue date = 6;</code>
+     * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
      */
-    public Builder clearDate() {
-      if (dateBuilder_ == null) {
-        date_ = null;
+    public Builder clearSegments() {
+      if (segmentsBuilder_ == null) {
+        segments_ = null;
         onChanged();
       } else {
-        date_ = null;
-        dateBuilder_ = null;
+        segments_ = null;
+        segmentsBuilder_ = null;
       }
 
       return this;
     }
     /**
      * <pre>
-     * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * The segments.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue date = 6;</code>
+     * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
      */
-    public com.google.protobuf.StringValue.Builder getDateBuilder() {
+    public com.google.ads.googleads.v0.common.Segments.Builder getSegmentsBuilder() {
       
       onChanged();
-      return getDateFieldBuilder().getBuilder();
+      return getSegmentsFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * The segments.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue date = 6;</code>
+     * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
      */
-    public com.google.protobuf.StringValueOrBuilder getDateOrBuilder() {
-      if (dateBuilder_ != null) {
-        return dateBuilder_.getMessageOrBuilder();
+    public com.google.ads.googleads.v0.common.SegmentsOrBuilder getSegmentsOrBuilder() {
+      if (segmentsBuilder_ != null) {
+        return segmentsBuilder_.getMessageOrBuilder();
       } else {
-        return date_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : date_;
+        return segments_ == null ?
+            com.google.ads.googleads.v0.common.Segments.getDefaultInstance() : segments_;
       }
     }
     /**
      * <pre>
-     * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * The segments.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue date = 6;</code>
+     * <code>.google.ads.googleads.v0.common.Segments segments = 102;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getDateFieldBuilder() {
-      if (dateBuilder_ == null) {
-        dateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getDate(),
+        com.google.ads.googleads.v0.common.Segments, com.google.ads.googleads.v0.common.Segments.Builder, com.google.ads.googleads.v0.common.SegmentsOrBuilder> 
+        getSegmentsFieldBuilder() {
+      if (segmentsBuilder_ == null) {
+        segmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.Segments, com.google.ads.googleads.v0.common.Segments.Builder, com.google.ads.googleads.v0.common.SegmentsOrBuilder>(
+                getSegments(),
                 getParentForChildren(),
                 isClean());
-        date_ = null;
+        segments_ = null;
       }
-      return dateBuilder_;
-    }
-
-    private int dayOfWeek_ = 0;
-    /**
-     * <pre>
-     * Day of the week, e.g., MONDAY.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 7;</code>
-     */
-    public int getDayOfWeekValue() {
-      return dayOfWeek_;
-    }
-    /**
-     * <pre>
-     * Day of the week, e.g., MONDAY.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 7;</code>
-     */
-    public Builder setDayOfWeekValue(int value) {
-      dayOfWeek_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Day of the week, e.g., MONDAY.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 7;</code>
-     */
-    public com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
-      return result == null ? com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Day of the week, e.g., MONDAY.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 7;</code>
-     */
-    public Builder setDayOfWeek(com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      dayOfWeek_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Day of the week, e.g., MONDAY.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek day_of_week = 7;</code>
-     */
-    public Builder clearDayOfWeek() {
-      
-      dayOfWeek_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int device_ = 0;
-    /**
-     * <pre>
-     * Device to which metrics apply.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
-     */
-    public int getDeviceValue() {
-      return device_;
-    }
-    /**
-     * <pre>
-     * Device to which metrics apply.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
-     */
-    public Builder setDeviceValue(int value) {
-      device_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Device to which metrics apply.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
-     */
-    public com.google.ads.googleads.v0.enums.DeviceEnum.Device getDevice() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v0.enums.DeviceEnum.Device result = com.google.ads.googleads.v0.enums.DeviceEnum.Device.valueOf(device_);
-      return result == null ? com.google.ads.googleads.v0.enums.DeviceEnum.Device.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Device to which metrics apply.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
-     */
-    public Builder setDevice(com.google.ads.googleads.v0.enums.DeviceEnum.Device value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      device_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Device to which metrics apply.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DeviceEnum.Device device = 8;</code>
-     */
-    public Builder clearDevice() {
-      
-      device_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.Int64Value hotelBookingWindowDays_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> hotelBookingWindowDaysBuilder_;
-    /**
-     * <pre>
-     * Hotel booking window in days.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-     */
-    public boolean hasHotelBookingWindowDays() {
-      return hotelBookingWindowDaysBuilder_ != null || hotelBookingWindowDays_ != null;
-    }
-    /**
-     * <pre>
-     * Hotel booking window in days.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-     */
-    public com.google.protobuf.Int64Value getHotelBookingWindowDays() {
-      if (hotelBookingWindowDaysBuilder_ == null) {
-        return hotelBookingWindowDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelBookingWindowDays_;
-      } else {
-        return hotelBookingWindowDaysBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Hotel booking window in days.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-     */
-    public Builder setHotelBookingWindowDays(com.google.protobuf.Int64Value value) {
-      if (hotelBookingWindowDaysBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        hotelBookingWindowDays_ = value;
-        onChanged();
-      } else {
-        hotelBookingWindowDaysBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel booking window in days.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-     */
-    public Builder setHotelBookingWindowDays(
-        com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (hotelBookingWindowDaysBuilder_ == null) {
-        hotelBookingWindowDays_ = builderForValue.build();
-        onChanged();
-      } else {
-        hotelBookingWindowDaysBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel booking window in days.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-     */
-    public Builder mergeHotelBookingWindowDays(com.google.protobuf.Int64Value value) {
-      if (hotelBookingWindowDaysBuilder_ == null) {
-        if (hotelBookingWindowDays_ != null) {
-          hotelBookingWindowDays_ =
-            com.google.protobuf.Int64Value.newBuilder(hotelBookingWindowDays_).mergeFrom(value).buildPartial();
-        } else {
-          hotelBookingWindowDays_ = value;
-        }
-        onChanged();
-      } else {
-        hotelBookingWindowDaysBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel booking window in days.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-     */
-    public Builder clearHotelBookingWindowDays() {
-      if (hotelBookingWindowDaysBuilder_ == null) {
-        hotelBookingWindowDays_ = null;
-        onChanged();
-      } else {
-        hotelBookingWindowDays_ = null;
-        hotelBookingWindowDaysBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel booking window in days.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-     */
-    public com.google.protobuf.Int64Value.Builder getHotelBookingWindowDaysBuilder() {
-      
-      onChanged();
-      return getHotelBookingWindowDaysFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Hotel booking window in days.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-     */
-    public com.google.protobuf.Int64ValueOrBuilder getHotelBookingWindowDaysOrBuilder() {
-      if (hotelBookingWindowDaysBuilder_ != null) {
-        return hotelBookingWindowDaysBuilder_.getMessageOrBuilder();
-      } else {
-        return hotelBookingWindowDays_ == null ?
-            com.google.protobuf.Int64Value.getDefaultInstance() : hotelBookingWindowDays_;
-      }
-    }
-    /**
-     * <pre>
-     * Hotel booking window in days.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_booking_window_days = 83;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-        getHotelBookingWindowDaysFieldBuilder() {
-      if (hotelBookingWindowDaysBuilder_ == null) {
-        hotelBookingWindowDaysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                getHotelBookingWindowDays(),
-                getParentForChildren(),
-                isClean());
-        hotelBookingWindowDays_ = null;
-      }
-      return hotelBookingWindowDaysBuilder_;
-    }
-
-    private com.google.protobuf.Int64Value hotelCenterId_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> hotelCenterIdBuilder_;
-    /**
-     * <pre>
-     * Hotel center ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-     */
-    public boolean hasHotelCenterId() {
-      return hotelCenterIdBuilder_ != null || hotelCenterId_ != null;
-    }
-    /**
-     * <pre>
-     * Hotel center ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-     */
-    public com.google.protobuf.Int64Value getHotelCenterId() {
-      if (hotelCenterIdBuilder_ == null) {
-        return hotelCenterId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelCenterId_;
-      } else {
-        return hotelCenterIdBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Hotel center ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-     */
-    public Builder setHotelCenterId(com.google.protobuf.Int64Value value) {
-      if (hotelCenterIdBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        hotelCenterId_ = value;
-        onChanged();
-      } else {
-        hotelCenterIdBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel center ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-     */
-    public Builder setHotelCenterId(
-        com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (hotelCenterIdBuilder_ == null) {
-        hotelCenterId_ = builderForValue.build();
-        onChanged();
-      } else {
-        hotelCenterIdBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel center ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-     */
-    public Builder mergeHotelCenterId(com.google.protobuf.Int64Value value) {
-      if (hotelCenterIdBuilder_ == null) {
-        if (hotelCenterId_ != null) {
-          hotelCenterId_ =
-            com.google.protobuf.Int64Value.newBuilder(hotelCenterId_).mergeFrom(value).buildPartial();
-        } else {
-          hotelCenterId_ = value;
-        }
-        onChanged();
-      } else {
-        hotelCenterIdBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel center ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-     */
-    public Builder clearHotelCenterId() {
-      if (hotelCenterIdBuilder_ == null) {
-        hotelCenterId_ = null;
-        onChanged();
-      } else {
-        hotelCenterId_ = null;
-        hotelCenterIdBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel center ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-     */
-    public com.google.protobuf.Int64Value.Builder getHotelCenterIdBuilder() {
-      
-      onChanged();
-      return getHotelCenterIdFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Hotel center ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-     */
-    public com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder() {
-      if (hotelCenterIdBuilder_ != null) {
-        return hotelCenterIdBuilder_.getMessageOrBuilder();
-      } else {
-        return hotelCenterId_ == null ?
-            com.google.protobuf.Int64Value.getDefaultInstance() : hotelCenterId_;
-      }
-    }
-    /**
-     * <pre>
-     * Hotel center ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 72;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-        getHotelCenterIdFieldBuilder() {
-      if (hotelCenterIdBuilder_ == null) {
-        hotelCenterIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                getHotelCenterId(),
-                getParentForChildren(),
-                isClean());
-        hotelCenterId_ = null;
-      }
-      return hotelCenterIdBuilder_;
-    }
-
-    private com.google.protobuf.StringValue hotelCheckInDate_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelCheckInDateBuilder_;
-    /**
-     * <pre>
-     * Hotel check-in date. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-     */
-    public boolean hasHotelCheckInDate() {
-      return hotelCheckInDateBuilder_ != null || hotelCheckInDate_ != null;
-    }
-    /**
-     * <pre>
-     * Hotel check-in date. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-     */
-    public com.google.protobuf.StringValue getHotelCheckInDate() {
-      if (hotelCheckInDateBuilder_ == null) {
-        return hotelCheckInDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCheckInDate_;
-      } else {
-        return hotelCheckInDateBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Hotel check-in date. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-     */
-    public Builder setHotelCheckInDate(com.google.protobuf.StringValue value) {
-      if (hotelCheckInDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        hotelCheckInDate_ = value;
-        onChanged();
-      } else {
-        hotelCheckInDateBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel check-in date. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-     */
-    public Builder setHotelCheckInDate(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (hotelCheckInDateBuilder_ == null) {
-        hotelCheckInDate_ = builderForValue.build();
-        onChanged();
-      } else {
-        hotelCheckInDateBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel check-in date. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-     */
-    public Builder mergeHotelCheckInDate(com.google.protobuf.StringValue value) {
-      if (hotelCheckInDateBuilder_ == null) {
-        if (hotelCheckInDate_ != null) {
-          hotelCheckInDate_ =
-            com.google.protobuf.StringValue.newBuilder(hotelCheckInDate_).mergeFrom(value).buildPartial();
-        } else {
-          hotelCheckInDate_ = value;
-        }
-        onChanged();
-      } else {
-        hotelCheckInDateBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel check-in date. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-     */
-    public Builder clearHotelCheckInDate() {
-      if (hotelCheckInDateBuilder_ == null) {
-        hotelCheckInDate_ = null;
-        onChanged();
-      } else {
-        hotelCheckInDate_ = null;
-        hotelCheckInDateBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel check-in date. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-     */
-    public com.google.protobuf.StringValue.Builder getHotelCheckInDateBuilder() {
-      
-      onChanged();
-      return getHotelCheckInDateFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Hotel check-in date. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getHotelCheckInDateOrBuilder() {
-      if (hotelCheckInDateBuilder_ != null) {
-        return hotelCheckInDateBuilder_.getMessageOrBuilder();
-      } else {
-        return hotelCheckInDate_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : hotelCheckInDate_;
-      }
-    }
-    /**
-     * <pre>
-     * Hotel check-in date. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_check_in_date = 73;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getHotelCheckInDateFieldBuilder() {
-      if (hotelCheckInDateBuilder_ == null) {
-        hotelCheckInDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getHotelCheckInDate(),
-                getParentForChildren(),
-                isClean());
-        hotelCheckInDate_ = null;
-      }
-      return hotelCheckInDateBuilder_;
-    }
-
-    private int hotelCheckInDayOfWeek_ = 0;
-    /**
-     * <pre>
-     * Hotel check-in day of week.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
-     */
-    public int getHotelCheckInDayOfWeekValue() {
-      return hotelCheckInDayOfWeek_;
-    }
-    /**
-     * <pre>
-     * Hotel check-in day of week.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
-     */
-    public Builder setHotelCheckInDayOfWeekValue(int value) {
-      hotelCheckInDayOfWeek_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel check-in day of week.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
-     */
-    public com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek getHotelCheckInDayOfWeek() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.valueOf(hotelCheckInDayOfWeek_);
-      return result == null ? com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Hotel check-in day of week.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
-     */
-    public Builder setHotelCheckInDayOfWeek(com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      hotelCheckInDayOfWeek_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel check-in day of week.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 74;</code>
-     */
-    public Builder clearHotelCheckInDayOfWeek() {
-      
-      hotelCheckInDayOfWeek_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.StringValue hotelCity_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelCityBuilder_;
-    /**
-     * <pre>
-     * Hotel city.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-     */
-    public boolean hasHotelCity() {
-      return hotelCityBuilder_ != null || hotelCity_ != null;
-    }
-    /**
-     * <pre>
-     * Hotel city.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-     */
-    public com.google.protobuf.StringValue getHotelCity() {
-      if (hotelCityBuilder_ == null) {
-        return hotelCity_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCity_;
-      } else {
-        return hotelCityBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Hotel city.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-     */
-    public Builder setHotelCity(com.google.protobuf.StringValue value) {
-      if (hotelCityBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        hotelCity_ = value;
-        onChanged();
-      } else {
-        hotelCityBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel city.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-     */
-    public Builder setHotelCity(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (hotelCityBuilder_ == null) {
-        hotelCity_ = builderForValue.build();
-        onChanged();
-      } else {
-        hotelCityBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel city.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-     */
-    public Builder mergeHotelCity(com.google.protobuf.StringValue value) {
-      if (hotelCityBuilder_ == null) {
-        if (hotelCity_ != null) {
-          hotelCity_ =
-            com.google.protobuf.StringValue.newBuilder(hotelCity_).mergeFrom(value).buildPartial();
-        } else {
-          hotelCity_ = value;
-        }
-        onChanged();
-      } else {
-        hotelCityBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel city.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-     */
-    public Builder clearHotelCity() {
-      if (hotelCityBuilder_ == null) {
-        hotelCity_ = null;
-        onChanged();
-      } else {
-        hotelCity_ = null;
-        hotelCityBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel city.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-     */
-    public com.google.protobuf.StringValue.Builder getHotelCityBuilder() {
-      
-      onChanged();
-      return getHotelCityFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Hotel city.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getHotelCityOrBuilder() {
-      if (hotelCityBuilder_ != null) {
-        return hotelCityBuilder_.getMessageOrBuilder();
-      } else {
-        return hotelCity_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : hotelCity_;
-      }
-    }
-    /**
-     * <pre>
-     * Hotel city.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_city = 75;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getHotelCityFieldBuilder() {
-      if (hotelCityBuilder_ == null) {
-        hotelCityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getHotelCity(),
-                getParentForChildren(),
-                isClean());
-        hotelCity_ = null;
-      }
-      return hotelCityBuilder_;
-    }
-
-    private com.google.protobuf.Int32Value hotelClass_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> hotelClassBuilder_;
-    /**
-     * <pre>
-     * Hotel class.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-     */
-    public boolean hasHotelClass() {
-      return hotelClassBuilder_ != null || hotelClass_ != null;
-    }
-    /**
-     * <pre>
-     * Hotel class.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-     */
-    public com.google.protobuf.Int32Value getHotelClass() {
-      if (hotelClassBuilder_ == null) {
-        return hotelClass_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hotelClass_;
-      } else {
-        return hotelClassBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Hotel class.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-     */
-    public Builder setHotelClass(com.google.protobuf.Int32Value value) {
-      if (hotelClassBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        hotelClass_ = value;
-        onChanged();
-      } else {
-        hotelClassBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel class.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-     */
-    public Builder setHotelClass(
-        com.google.protobuf.Int32Value.Builder builderForValue) {
-      if (hotelClassBuilder_ == null) {
-        hotelClass_ = builderForValue.build();
-        onChanged();
-      } else {
-        hotelClassBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel class.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-     */
-    public Builder mergeHotelClass(com.google.protobuf.Int32Value value) {
-      if (hotelClassBuilder_ == null) {
-        if (hotelClass_ != null) {
-          hotelClass_ =
-            com.google.protobuf.Int32Value.newBuilder(hotelClass_).mergeFrom(value).buildPartial();
-        } else {
-          hotelClass_ = value;
-        }
-        onChanged();
-      } else {
-        hotelClassBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel class.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-     */
-    public Builder clearHotelClass() {
-      if (hotelClassBuilder_ == null) {
-        hotelClass_ = null;
-        onChanged();
-      } else {
-        hotelClass_ = null;
-        hotelClassBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel class.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-     */
-    public com.google.protobuf.Int32Value.Builder getHotelClassBuilder() {
-      
-      onChanged();
-      return getHotelClassFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Hotel class.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-     */
-    public com.google.protobuf.Int32ValueOrBuilder getHotelClassOrBuilder() {
-      if (hotelClassBuilder_ != null) {
-        return hotelClassBuilder_.getMessageOrBuilder();
-      } else {
-        return hotelClass_ == null ?
-            com.google.protobuf.Int32Value.getDefaultInstance() : hotelClass_;
-      }
-    }
-    /**
-     * <pre>
-     * Hotel class.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_class = 76;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
-        getHotelClassFieldBuilder() {
-      if (hotelClassBuilder_ == null) {
-        hotelClassBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
-                getHotelClass(),
-                getParentForChildren(),
-                isClean());
-        hotelClass_ = null;
-      }
-      return hotelClassBuilder_;
-    }
-
-    private com.google.protobuf.StringValue hotelCountry_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelCountryBuilder_;
-    /**
-     * <pre>
-     * Hotel country.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-     */
-    public boolean hasHotelCountry() {
-      return hotelCountryBuilder_ != null || hotelCountry_ != null;
-    }
-    /**
-     * <pre>
-     * Hotel country.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-     */
-    public com.google.protobuf.StringValue getHotelCountry() {
-      if (hotelCountryBuilder_ == null) {
-        return hotelCountry_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCountry_;
-      } else {
-        return hotelCountryBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Hotel country.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-     */
-    public Builder setHotelCountry(com.google.protobuf.StringValue value) {
-      if (hotelCountryBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        hotelCountry_ = value;
-        onChanged();
-      } else {
-        hotelCountryBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel country.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-     */
-    public Builder setHotelCountry(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (hotelCountryBuilder_ == null) {
-        hotelCountry_ = builderForValue.build();
-        onChanged();
-      } else {
-        hotelCountryBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel country.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-     */
-    public Builder mergeHotelCountry(com.google.protobuf.StringValue value) {
-      if (hotelCountryBuilder_ == null) {
-        if (hotelCountry_ != null) {
-          hotelCountry_ =
-            com.google.protobuf.StringValue.newBuilder(hotelCountry_).mergeFrom(value).buildPartial();
-        } else {
-          hotelCountry_ = value;
-        }
-        onChanged();
-      } else {
-        hotelCountryBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel country.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-     */
-    public Builder clearHotelCountry() {
-      if (hotelCountryBuilder_ == null) {
-        hotelCountry_ = null;
-        onChanged();
-      } else {
-        hotelCountry_ = null;
-        hotelCountryBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel country.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-     */
-    public com.google.protobuf.StringValue.Builder getHotelCountryBuilder() {
-      
-      onChanged();
-      return getHotelCountryFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Hotel country.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getHotelCountryOrBuilder() {
-      if (hotelCountryBuilder_ != null) {
-        return hotelCountryBuilder_.getMessageOrBuilder();
-      } else {
-        return hotelCountry_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : hotelCountry_;
-      }
-    }
-    /**
-     * <pre>
-     * Hotel country.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_country = 77;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getHotelCountryFieldBuilder() {
-      if (hotelCountryBuilder_ == null) {
-        hotelCountryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getHotelCountry(),
-                getParentForChildren(),
-                isClean());
-        hotelCountry_ = null;
-      }
-      return hotelCountryBuilder_;
-    }
-
-    private int hotelDateSelectionType_ = 0;
-    /**
-     * <pre>
-     * Hotel date selection type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
-     */
-    public int getHotelDateSelectionTypeValue() {
-      return hotelDateSelectionType_;
-    }
-    /**
-     * <pre>
-     * Hotel date selection type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
-     */
-    public Builder setHotelDateSelectionTypeValue(int value) {
-      hotelDateSelectionType_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel date selection type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
-     */
-    public com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getHotelDateSelectionType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType result = com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.valueOf(hotelDateSelectionType_);
-      return result == null ? com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Hotel date selection type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
-     */
-    public Builder setHotelDateSelectionType(com.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      hotelDateSelectionType_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel date selection type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 78;</code>
-     */
-    public Builder clearHotelDateSelectionType() {
-      
-      hotelDateSelectionType_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.Int32Value hotelLengthOfStay_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> hotelLengthOfStayBuilder_;
-    /**
-     * <pre>
-     * Hotel length of stay.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-     */
-    public boolean hasHotelLengthOfStay() {
-      return hotelLengthOfStayBuilder_ != null || hotelLengthOfStay_ != null;
-    }
-    /**
-     * <pre>
-     * Hotel length of stay.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-     */
-    public com.google.protobuf.Int32Value getHotelLengthOfStay() {
-      if (hotelLengthOfStayBuilder_ == null) {
-        return hotelLengthOfStay_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hotelLengthOfStay_;
-      } else {
-        return hotelLengthOfStayBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Hotel length of stay.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-     */
-    public Builder setHotelLengthOfStay(com.google.protobuf.Int32Value value) {
-      if (hotelLengthOfStayBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        hotelLengthOfStay_ = value;
-        onChanged();
-      } else {
-        hotelLengthOfStayBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel length of stay.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-     */
-    public Builder setHotelLengthOfStay(
-        com.google.protobuf.Int32Value.Builder builderForValue) {
-      if (hotelLengthOfStayBuilder_ == null) {
-        hotelLengthOfStay_ = builderForValue.build();
-        onChanged();
-      } else {
-        hotelLengthOfStayBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel length of stay.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-     */
-    public Builder mergeHotelLengthOfStay(com.google.protobuf.Int32Value value) {
-      if (hotelLengthOfStayBuilder_ == null) {
-        if (hotelLengthOfStay_ != null) {
-          hotelLengthOfStay_ =
-            com.google.protobuf.Int32Value.newBuilder(hotelLengthOfStay_).mergeFrom(value).buildPartial();
-        } else {
-          hotelLengthOfStay_ = value;
-        }
-        onChanged();
-      } else {
-        hotelLengthOfStayBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel length of stay.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-     */
-    public Builder clearHotelLengthOfStay() {
-      if (hotelLengthOfStayBuilder_ == null) {
-        hotelLengthOfStay_ = null;
-        onChanged();
-      } else {
-        hotelLengthOfStay_ = null;
-        hotelLengthOfStayBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel length of stay.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-     */
-    public com.google.protobuf.Int32Value.Builder getHotelLengthOfStayBuilder() {
-      
-      onChanged();
-      return getHotelLengthOfStayFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Hotel length of stay.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-     */
-    public com.google.protobuf.Int32ValueOrBuilder getHotelLengthOfStayOrBuilder() {
-      if (hotelLengthOfStayBuilder_ != null) {
-        return hotelLengthOfStayBuilder_.getMessageOrBuilder();
-      } else {
-        return hotelLengthOfStay_ == null ?
-            com.google.protobuf.Int32Value.getDefaultInstance() : hotelLengthOfStay_;
-      }
-    }
-    /**
-     * <pre>
-     * Hotel length of stay.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hotel_length_of_stay = 79;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
-        getHotelLengthOfStayFieldBuilder() {
-      if (hotelLengthOfStayBuilder_ == null) {
-        hotelLengthOfStayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
-                getHotelLengthOfStay(),
-                getParentForChildren(),
-                isClean());
-        hotelLengthOfStay_ = null;
-      }
-      return hotelLengthOfStayBuilder_;
-    }
-
-    private com.google.protobuf.StringValue hotelState_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelStateBuilder_;
-    /**
-     * <pre>
-     * Hotel state.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-     */
-    public boolean hasHotelState() {
-      return hotelStateBuilder_ != null || hotelState_ != null;
-    }
-    /**
-     * <pre>
-     * Hotel state.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-     */
-    public com.google.protobuf.StringValue getHotelState() {
-      if (hotelStateBuilder_ == null) {
-        return hotelState_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelState_;
-      } else {
-        return hotelStateBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Hotel state.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-     */
-    public Builder setHotelState(com.google.protobuf.StringValue value) {
-      if (hotelStateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        hotelState_ = value;
-        onChanged();
-      } else {
-        hotelStateBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel state.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-     */
-    public Builder setHotelState(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (hotelStateBuilder_ == null) {
-        hotelState_ = builderForValue.build();
-        onChanged();
-      } else {
-        hotelStateBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel state.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-     */
-    public Builder mergeHotelState(com.google.protobuf.StringValue value) {
-      if (hotelStateBuilder_ == null) {
-        if (hotelState_ != null) {
-          hotelState_ =
-            com.google.protobuf.StringValue.newBuilder(hotelState_).mergeFrom(value).buildPartial();
-        } else {
-          hotelState_ = value;
-        }
-        onChanged();
-      } else {
-        hotelStateBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel state.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-     */
-    public Builder clearHotelState() {
-      if (hotelStateBuilder_ == null) {
-        hotelState_ = null;
-        onChanged();
-      } else {
-        hotelState_ = null;
-        hotelStateBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hotel state.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-     */
-    public com.google.protobuf.StringValue.Builder getHotelStateBuilder() {
-      
-      onChanged();
-      return getHotelStateFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Hotel state.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getHotelStateOrBuilder() {
-      if (hotelStateBuilder_ != null) {
-        return hotelStateBuilder_.getMessageOrBuilder();
-      } else {
-        return hotelState_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : hotelState_;
-      }
-    }
-    /**
-     * <pre>
-     * Hotel state.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue hotel_state = 81;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getHotelStateFieldBuilder() {
-      if (hotelStateBuilder_ == null) {
-        hotelStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getHotelState(),
-                getParentForChildren(),
-                isClean());
-        hotelState_ = null;
-      }
-      return hotelStateBuilder_;
-    }
-
-    private com.google.protobuf.Int32Value hour_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> hourBuilder_;
-    /**
-     * <pre>
-     * Hour of day as a number between 0 and 23, inclusive.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hour = 9;</code>
-     */
-    public boolean hasHour() {
-      return hourBuilder_ != null || hour_ != null;
-    }
-    /**
-     * <pre>
-     * Hour of day as a number between 0 and 23, inclusive.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hour = 9;</code>
-     */
-    public com.google.protobuf.Int32Value getHour() {
-      if (hourBuilder_ == null) {
-        return hour_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hour_;
-      } else {
-        return hourBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Hour of day as a number between 0 and 23, inclusive.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hour = 9;</code>
-     */
-    public Builder setHour(com.google.protobuf.Int32Value value) {
-      if (hourBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        hour_ = value;
-        onChanged();
-      } else {
-        hourBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hour of day as a number between 0 and 23, inclusive.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hour = 9;</code>
-     */
-    public Builder setHour(
-        com.google.protobuf.Int32Value.Builder builderForValue) {
-      if (hourBuilder_ == null) {
-        hour_ = builderForValue.build();
-        onChanged();
-      } else {
-        hourBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hour of day as a number between 0 and 23, inclusive.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hour = 9;</code>
-     */
-    public Builder mergeHour(com.google.protobuf.Int32Value value) {
-      if (hourBuilder_ == null) {
-        if (hour_ != null) {
-          hour_ =
-            com.google.protobuf.Int32Value.newBuilder(hour_).mergeFrom(value).buildPartial();
-        } else {
-          hour_ = value;
-        }
-        onChanged();
-      } else {
-        hourBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hour of day as a number between 0 and 23, inclusive.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hour = 9;</code>
-     */
-    public Builder clearHour() {
-      if (hourBuilder_ == null) {
-        hour_ = null;
-        onChanged();
-      } else {
-        hour_ = null;
-        hourBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Hour of day as a number between 0 and 23, inclusive.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hour = 9;</code>
-     */
-    public com.google.protobuf.Int32Value.Builder getHourBuilder() {
-      
-      onChanged();
-      return getHourFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Hour of day as a number between 0 and 23, inclusive.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hour = 9;</code>
-     */
-    public com.google.protobuf.Int32ValueOrBuilder getHourOrBuilder() {
-      if (hourBuilder_ != null) {
-        return hourBuilder_.getMessageOrBuilder();
-      } else {
-        return hour_ == null ?
-            com.google.protobuf.Int32Value.getDefaultInstance() : hour_;
-      }
-    }
-    /**
-     * <pre>
-     * Hour of day as a number between 0 and 23, inclusive.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value hour = 9;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
-        getHourFieldBuilder() {
-      if (hourBuilder_ == null) {
-        hourBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
-                getHour(),
-                getParentForChildren(),
-                isClean());
-        hour_ = null;
-      }
-      return hourBuilder_;
-    }
-
-    private com.google.protobuf.StringValue month_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> monthBuilder_;
-    /**
-     * <pre>
-     * Month as represented by the date of the first day of a month. Formatted as
-     * yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue month = 10;</code>
-     */
-    public boolean hasMonth() {
-      return monthBuilder_ != null || month_ != null;
-    }
-    /**
-     * <pre>
-     * Month as represented by the date of the first day of a month. Formatted as
-     * yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue month = 10;</code>
-     */
-    public com.google.protobuf.StringValue getMonth() {
-      if (monthBuilder_ == null) {
-        return month_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : month_;
-      } else {
-        return monthBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Month as represented by the date of the first day of a month. Formatted as
-     * yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue month = 10;</code>
-     */
-    public Builder setMonth(com.google.protobuf.StringValue value) {
-      if (monthBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        month_ = value;
-        onChanged();
-      } else {
-        monthBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Month as represented by the date of the first day of a month. Formatted as
-     * yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue month = 10;</code>
-     */
-    public Builder setMonth(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (monthBuilder_ == null) {
-        month_ = builderForValue.build();
-        onChanged();
-      } else {
-        monthBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Month as represented by the date of the first day of a month. Formatted as
-     * yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue month = 10;</code>
-     */
-    public Builder mergeMonth(com.google.protobuf.StringValue value) {
-      if (monthBuilder_ == null) {
-        if (month_ != null) {
-          month_ =
-            com.google.protobuf.StringValue.newBuilder(month_).mergeFrom(value).buildPartial();
-        } else {
-          month_ = value;
-        }
-        onChanged();
-      } else {
-        monthBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Month as represented by the date of the first day of a month. Formatted as
-     * yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue month = 10;</code>
-     */
-    public Builder clearMonth() {
-      if (monthBuilder_ == null) {
-        month_ = null;
-        onChanged();
-      } else {
-        month_ = null;
-        monthBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Month as represented by the date of the first day of a month. Formatted as
-     * yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue month = 10;</code>
-     */
-    public com.google.protobuf.StringValue.Builder getMonthBuilder() {
-      
-      onChanged();
-      return getMonthFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Month as represented by the date of the first day of a month. Formatted as
-     * yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue month = 10;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getMonthOrBuilder() {
-      if (monthBuilder_ != null) {
-        return monthBuilder_.getMessageOrBuilder();
-      } else {
-        return month_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : month_;
-      }
-    }
-    /**
-     * <pre>
-     * Month as represented by the date of the first day of a month. Formatted as
-     * yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue month = 10;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getMonthFieldBuilder() {
-      if (monthBuilder_ == null) {
-        monthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getMonth(),
-                getParentForChildren(),
-                isClean());
-        month_ = null;
-      }
-      return monthBuilder_;
-    }
-
-    private int monthOfYear_ = 0;
-    /**
-     * <pre>
-     * Month of the year, e.g., January.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
-     */
-    public int getMonthOfYearValue() {
-      return monthOfYear_;
-    }
-    /**
-     * <pre>
-     * Month of the year, e.g., January.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
-     */
-    public Builder setMonthOfYearValue(int value) {
-      monthOfYear_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Month of the year, e.g., January.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
-     */
-    public com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear getMonthOfYear() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.valueOf(monthOfYear_);
-      return result == null ? com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Month of the year, e.g., January.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
-     */
-    public Builder setMonthOfYear(com.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      monthOfYear_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Month of the year, e.g., January.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.MonthOfYearEnum.MonthOfYear month_of_year = 28;</code>
-     */
-    public Builder clearMonthOfYear() {
-      
-      monthOfYear_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.StringValue partnerHotelId_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> partnerHotelIdBuilder_;
-    /**
-     * <pre>
-     * Partner hotel ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-     */
-    public boolean hasPartnerHotelId() {
-      return partnerHotelIdBuilder_ != null || partnerHotelId_ != null;
-    }
-    /**
-     * <pre>
-     * Partner hotel ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-     */
-    public com.google.protobuf.StringValue getPartnerHotelId() {
-      if (partnerHotelIdBuilder_ == null) {
-        return partnerHotelId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : partnerHotelId_;
-      } else {
-        return partnerHotelIdBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Partner hotel ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-     */
-    public Builder setPartnerHotelId(com.google.protobuf.StringValue value) {
-      if (partnerHotelIdBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        partnerHotelId_ = value;
-        onChanged();
-      } else {
-        partnerHotelIdBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Partner hotel ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-     */
-    public Builder setPartnerHotelId(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (partnerHotelIdBuilder_ == null) {
-        partnerHotelId_ = builderForValue.build();
-        onChanged();
-      } else {
-        partnerHotelIdBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Partner hotel ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-     */
-    public Builder mergePartnerHotelId(com.google.protobuf.StringValue value) {
-      if (partnerHotelIdBuilder_ == null) {
-        if (partnerHotelId_ != null) {
-          partnerHotelId_ =
-            com.google.protobuf.StringValue.newBuilder(partnerHotelId_).mergeFrom(value).buildPartial();
-        } else {
-          partnerHotelId_ = value;
-        }
-        onChanged();
-      } else {
-        partnerHotelIdBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Partner hotel ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-     */
-    public Builder clearPartnerHotelId() {
-      if (partnerHotelIdBuilder_ == null) {
-        partnerHotelId_ = null;
-        onChanged();
-      } else {
-        partnerHotelId_ = null;
-        partnerHotelIdBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Partner hotel ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-     */
-    public com.google.protobuf.StringValue.Builder getPartnerHotelIdBuilder() {
-      
-      onChanged();
-      return getPartnerHotelIdFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Partner hotel ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getPartnerHotelIdOrBuilder() {
-      if (partnerHotelIdBuilder_ != null) {
-        return partnerHotelIdBuilder_.getMessageOrBuilder();
-      } else {
-        return partnerHotelId_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : partnerHotelId_;
-      }
-    }
-    /**
-     * <pre>
-     * Partner hotel ID.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue partner_hotel_id = 82;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getPartnerHotelIdFieldBuilder() {
-      if (partnerHotelIdBuilder_ == null) {
-        partnerHotelIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getPartnerHotelId(),
-                getParentForChildren(),
-                isClean());
-        partnerHotelId_ = null;
-      }
-      return partnerHotelIdBuilder_;
-    }
-
-    private int placeholderType_ = 0;
-    /**
-     * <pre>
-     * Placeholder type. This is only used with feed item metrics.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
-     */
-    public int getPlaceholderTypeValue() {
-      return placeholderType_;
-    }
-    /**
-     * <pre>
-     * Placeholder type. This is only used with feed item metrics.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
-     */
-    public Builder setPlaceholderTypeValue(int value) {
-      placeholderType_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Placeholder type. This is only used with feed item metrics.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
-     */
-    public com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType.valueOf(placeholderType_);
-      return result == null ? com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Placeholder type. This is only used with feed item metrics.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
-     */
-    public Builder setPlaceholderType(com.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      placeholderType_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Placeholder type. This is only used with feed item metrics.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 65;</code>
-     */
-    public Builder clearPlaceholderType() {
-      
-      placeholderType_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.StringValue quarter_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> quarterBuilder_;
-    /**
-     * <pre>
-     * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue quarter = 12;</code>
-     */
-    public boolean hasQuarter() {
-      return quarterBuilder_ != null || quarter_ != null;
-    }
-    /**
-     * <pre>
-     * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue quarter = 12;</code>
-     */
-    public com.google.protobuf.StringValue getQuarter() {
-      if (quarterBuilder_ == null) {
-        return quarter_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : quarter_;
-      } else {
-        return quarterBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue quarter = 12;</code>
-     */
-    public Builder setQuarter(com.google.protobuf.StringValue value) {
-      if (quarterBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        quarter_ = value;
-        onChanged();
-      } else {
-        quarterBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue quarter = 12;</code>
-     */
-    public Builder setQuarter(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (quarterBuilder_ == null) {
-        quarter_ = builderForValue.build();
-        onChanged();
-      } else {
-        quarterBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue quarter = 12;</code>
-     */
-    public Builder mergeQuarter(com.google.protobuf.StringValue value) {
-      if (quarterBuilder_ == null) {
-        if (quarter_ != null) {
-          quarter_ =
-            com.google.protobuf.StringValue.newBuilder(quarter_).mergeFrom(value).buildPartial();
-        } else {
-          quarter_ = value;
-        }
-        onChanged();
-      } else {
-        quarterBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue quarter = 12;</code>
-     */
-    public Builder clearQuarter() {
-      if (quarterBuilder_ == null) {
-        quarter_ = null;
-        onChanged();
-      } else {
-        quarter_ = null;
-        quarterBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue quarter = 12;</code>
-     */
-    public com.google.protobuf.StringValue.Builder getQuarterBuilder() {
-      
-      onChanged();
-      return getQuarterFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue quarter = 12;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getQuarterOrBuilder() {
-      if (quarterBuilder_ != null) {
-        return quarterBuilder_.getMessageOrBuilder();
-      } else {
-        return quarter_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : quarter_;
-      }
-    }
-    /**
-     * <pre>
-     * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue quarter = 12;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getQuarterFieldBuilder() {
-      if (quarterBuilder_ == null) {
-        quarterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getQuarter(),
-                getParentForChildren(),
-                isClean());
-        quarter_ = null;
-      }
-      return quarterBuilder_;
-    }
-
-    private int searchTermMatchType_ = 0;
-    /**
-     * <pre>
-     * Match type of the keyword that triggered the ad, including variants.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
-     */
-    public int getSearchTermMatchTypeValue() {
-      return searchTermMatchType_;
-    }
-    /**
-     * <pre>
-     * Match type of the keyword that triggered the ad, including variants.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
-     */
-    public Builder setSearchTermMatchTypeValue(int value) {
-      searchTermMatchType_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Match type of the keyword that triggered the ad, including variants.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
-     */
-    public com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType getSearchTermMatchType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType result = com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType.valueOf(searchTermMatchType_);
-      return result == null ? com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Match type of the keyword that triggered the ad, including variants.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
-     */
-    public Builder setSearchTermMatchType(com.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      searchTermMatchType_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Match type of the keyword that triggered the ad, including variants.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 56;</code>
-     */
-    public Builder clearSearchTermMatchType() {
-      
-      searchTermMatchType_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int slot_ = 0;
-    /**
-     * <pre>
-     * Position of the ad.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.SlotEnum.Slot slot = 13;</code>
-     */
-    public int getSlotValue() {
-      return slot_;
-    }
-    /**
-     * <pre>
-     * Position of the ad.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.SlotEnum.Slot slot = 13;</code>
-     */
-    public Builder setSlotValue(int value) {
-      slot_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Position of the ad.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.SlotEnum.Slot slot = 13;</code>
-     */
-    public com.google.ads.googleads.v0.enums.SlotEnum.Slot getSlot() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v0.enums.SlotEnum.Slot result = com.google.ads.googleads.v0.enums.SlotEnum.Slot.valueOf(slot_);
-      return result == null ? com.google.ads.googleads.v0.enums.SlotEnum.Slot.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Position of the ad.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.SlotEnum.Slot slot = 13;</code>
-     */
-    public Builder setSlot(com.google.ads.googleads.v0.enums.SlotEnum.Slot value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      slot_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Position of the ad.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.enums.SlotEnum.Slot slot = 13;</code>
-     */
-    public Builder clearSlot() {
-      
-      slot_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.StringValue week_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> weekBuilder_;
-    /**
-     * <pre>
-     * Week as defined as Monday through Sunday, and represented by the date of
-     * Monday. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue week = 14;</code>
-     */
-    public boolean hasWeek() {
-      return weekBuilder_ != null || week_ != null;
-    }
-    /**
-     * <pre>
-     * Week as defined as Monday through Sunday, and represented by the date of
-     * Monday. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue week = 14;</code>
-     */
-    public com.google.protobuf.StringValue getWeek() {
-      if (weekBuilder_ == null) {
-        return week_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : week_;
-      } else {
-        return weekBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Week as defined as Monday through Sunday, and represented by the date of
-     * Monday. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue week = 14;</code>
-     */
-    public Builder setWeek(com.google.protobuf.StringValue value) {
-      if (weekBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        week_ = value;
-        onChanged();
-      } else {
-        weekBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Week as defined as Monday through Sunday, and represented by the date of
-     * Monday. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue week = 14;</code>
-     */
-    public Builder setWeek(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (weekBuilder_ == null) {
-        week_ = builderForValue.build();
-        onChanged();
-      } else {
-        weekBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Week as defined as Monday through Sunday, and represented by the date of
-     * Monday. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue week = 14;</code>
-     */
-    public Builder mergeWeek(com.google.protobuf.StringValue value) {
-      if (weekBuilder_ == null) {
-        if (week_ != null) {
-          week_ =
-            com.google.protobuf.StringValue.newBuilder(week_).mergeFrom(value).buildPartial();
-        } else {
-          week_ = value;
-        }
-        onChanged();
-      } else {
-        weekBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Week as defined as Monday through Sunday, and represented by the date of
-     * Monday. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue week = 14;</code>
-     */
-    public Builder clearWeek() {
-      if (weekBuilder_ == null) {
-        week_ = null;
-        onChanged();
-      } else {
-        week_ = null;
-        weekBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Week as defined as Monday through Sunday, and represented by the date of
-     * Monday. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue week = 14;</code>
-     */
-    public com.google.protobuf.StringValue.Builder getWeekBuilder() {
-      
-      onChanged();
-      return getWeekFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Week as defined as Monday through Sunday, and represented by the date of
-     * Monday. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue week = 14;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getWeekOrBuilder() {
-      if (weekBuilder_ != null) {
-        return weekBuilder_.getMessageOrBuilder();
-      } else {
-        return week_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : week_;
-      }
-    }
-    /**
-     * <pre>
-     * Week as defined as Monday through Sunday, and represented by the date of
-     * Monday. Formatted as yyyy-MM-dd.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue week = 14;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getWeekFieldBuilder() {
-      if (weekBuilder_ == null) {
-        weekBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getWeek(),
-                getParentForChildren(),
-                isClean());
-        week_ = null;
-      }
-      return weekBuilder_;
-    }
-
-    private com.google.protobuf.Int32Value year_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> yearBuilder_;
-    /**
-     * <pre>
-     * Year, formatted as yyyy.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value year = 15;</code>
-     */
-    public boolean hasYear() {
-      return yearBuilder_ != null || year_ != null;
-    }
-    /**
-     * <pre>
-     * Year, formatted as yyyy.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value year = 15;</code>
-     */
-    public com.google.protobuf.Int32Value getYear() {
-      if (yearBuilder_ == null) {
-        return year_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : year_;
-      } else {
-        return yearBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Year, formatted as yyyy.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value year = 15;</code>
-     */
-    public Builder setYear(com.google.protobuf.Int32Value value) {
-      if (yearBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        year_ = value;
-        onChanged();
-      } else {
-        yearBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Year, formatted as yyyy.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value year = 15;</code>
-     */
-    public Builder setYear(
-        com.google.protobuf.Int32Value.Builder builderForValue) {
-      if (yearBuilder_ == null) {
-        year_ = builderForValue.build();
-        onChanged();
-      } else {
-        yearBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Year, formatted as yyyy.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value year = 15;</code>
-     */
-    public Builder mergeYear(com.google.protobuf.Int32Value value) {
-      if (yearBuilder_ == null) {
-        if (year_ != null) {
-          year_ =
-            com.google.protobuf.Int32Value.newBuilder(year_).mergeFrom(value).buildPartial();
-        } else {
-          year_ = value;
-        }
-        onChanged();
-      } else {
-        yearBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Year, formatted as yyyy.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value year = 15;</code>
-     */
-    public Builder clearYear() {
-      if (yearBuilder_ == null) {
-        year_ = null;
-        onChanged();
-      } else {
-        year_ = null;
-        yearBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Year, formatted as yyyy.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value year = 15;</code>
-     */
-    public com.google.protobuf.Int32Value.Builder getYearBuilder() {
-      
-      onChanged();
-      return getYearFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Year, formatted as yyyy.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value year = 15;</code>
-     */
-    public com.google.protobuf.Int32ValueOrBuilder getYearOrBuilder() {
-      if (yearBuilder_ != null) {
-        return yearBuilder_.getMessageOrBuilder();
-      } else {
-        return year_ == null ?
-            com.google.protobuf.Int32Value.getDefaultInstance() : year_;
-      }
-    }
-    /**
-     * <pre>
-     * Year, formatted as yyyy.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value year = 15;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
-        getYearFieldBuilder() {
-      if (yearBuilder_ == null) {
-        yearBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
-                getYear(),
-                getParentForChildren(),
-                isClean());
-        year_ = null;
-      }
-      return yearBuilder_;
+      return segmentsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

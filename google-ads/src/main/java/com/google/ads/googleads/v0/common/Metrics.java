@@ -20,6 +20,10 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Metrics() {
+    historicalCreativeQualityScore_ = 0;
+    historicalLandingPageQualityScore_ = 0;
+    historicalSearchPredictedCtr_ = 0;
+    interactionEventTypes_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -37,6 +41,7 @@ private static final long serialVersionUID = 0L;
     }
     int mutable_bitField0_ = 0;
     int mutable_bitField1_ = 0;
+    int mutable_bitField2_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -47,6 +52,58 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 10: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (activeViewCpm_ != null) {
+              subBuilder = activeViewCpm_.toBuilder();
+            }
+            activeViewCpm_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(activeViewCpm_);
+              activeViewCpm_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (activeViewImpressions_ != null) {
+              subBuilder = activeViewImpressions_.toBuilder();
+            }
+            activeViewImpressions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(activeViewImpressions_);
+              activeViewImpressions_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 26: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (activeViewMeasurableCostMicros_ != null) {
+              subBuilder = activeViewMeasurableCostMicros_.toBuilder();
+            }
+            activeViewMeasurableCostMicros_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(activeViewMeasurableCostMicros_);
+              activeViewMeasurableCostMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 34: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (activeViewMeasurableImpressions_ != null) {
+              subBuilder = activeViewMeasurableImpressions_.toBuilder();
+            }
+            activeViewMeasurableImpressions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(activeViewMeasurableImpressions_);
+              activeViewMeasurableImpressions_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 58: {
             com.google.protobuf.DoubleValue.Builder subBuilder = null;
             if (allConversions_ != null) {
@@ -112,6 +169,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 98: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (averageFrequency_ != null) {
+              subBuilder = averageFrequency_.toBuilder();
+            }
+            averageFrequency_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(averageFrequency_);
+              averageFrequency_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 106: {
             com.google.protobuf.DoubleValue.Builder subBuilder = null;
             if (averagePosition_ != null) {
@@ -121,6 +191,19 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(averagePosition_);
               averagePosition_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 114: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (benchmarkAverageMaxCpc_ != null) {
+              subBuilder = benchmarkAverageMaxCpc_.toBuilder();
+            }
+            benchmarkAverageMaxCpc_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(benchmarkAverageMaxCpc_);
+              benchmarkAverageMaxCpc_ = subBuilder.buildPartial();
             }
 
             break;
@@ -281,6 +364,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 290: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (impressionReach_ != null) {
+              subBuilder = impressionReach_.toBuilder();
+            }
+            impressionReach_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(impressionReach_);
+              impressionReach_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 298: {
             com.google.protobuf.Int64Value.Builder subBuilder = null;
             if (impressions_ != null) {
@@ -420,6 +516,19 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(searchBudgetLostImpressionShare_);
               searchBudgetLostImpressionShare_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 386: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (searchClickShare_ != null) {
+              subBuilder = searchClickShare_.toBuilder();
+            }
+            searchClickShare_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(searchClickShare_);
+              searchClickShare_ = subBuilder.buildPartial();
             }
 
             break;
@@ -762,6 +871,359 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 634: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (activeViewCtr_ != null) {
+              subBuilder = activeViewCtr_.toBuilder();
+            }
+            activeViewCtr_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(activeViewCtr_);
+              activeViewCtr_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 640: {
+            int rawValue = input.readEnum();
+
+            historicalCreativeQualityScore_ = rawValue;
+            break;
+          }
+          case 648: {
+            int rawValue = input.readEnum();
+
+            historicalLandingPageQualityScore_ = rawValue;
+            break;
+          }
+          case 658: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (historicalQualityScore_ != null) {
+              subBuilder = historicalQualityScore_.toBuilder();
+            }
+            historicalQualityScore_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(historicalQualityScore_);
+              historicalQualityScore_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 664: {
+            int rawValue = input.readEnum();
+
+            historicalSearchPredictedCtr_ = rawValue;
+            break;
+          }
+          case 674: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (averageTimeOnSite_ != null) {
+              subBuilder = averageTimeOnSite_.toBuilder();
+            }
+            averageTimeOnSite_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(averageTimeOnSite_);
+              averageTimeOnSite_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 682: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (gmailForwards_ != null) {
+              subBuilder = gmailForwards_.toBuilder();
+            }
+            gmailForwards_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(gmailForwards_);
+              gmailForwards_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 690: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (gmailSaves_ != null) {
+              subBuilder = gmailSaves_.toBuilder();
+            }
+            gmailSaves_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(gmailSaves_);
+              gmailSaves_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 698: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (gmailSecondaryClicks_ != null) {
+              subBuilder = gmailSecondaryClicks_.toBuilder();
+            }
+            gmailSecondaryClicks_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(gmailSecondaryClicks_);
+              gmailSecondaryClicks_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 706: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (searchBudgetLostAbsoluteTopImpressionShare_ != null) {
+              subBuilder = searchBudgetLostAbsoluteTopImpressionShare_.toBuilder();
+            }
+            searchBudgetLostAbsoluteTopImpressionShare_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(searchBudgetLostAbsoluteTopImpressionShare_);
+              searchBudgetLostAbsoluteTopImpressionShare_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 714: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (searchBudgetLostTopImpressionShare_ != null) {
+              subBuilder = searchBudgetLostTopImpressionShare_.toBuilder();
+            }
+            searchBudgetLostTopImpressionShare_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(searchBudgetLostTopImpressionShare_);
+              searchBudgetLostTopImpressionShare_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 722: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (searchRankLostAbsoluteTopImpressionShare_ != null) {
+              subBuilder = searchRankLostAbsoluteTopImpressionShare_.toBuilder();
+            }
+            searchRankLostAbsoluteTopImpressionShare_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(searchRankLostAbsoluteTopImpressionShare_);
+              searchRankLostAbsoluteTopImpressionShare_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 730: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (searchRankLostTopImpressionShare_ != null) {
+              subBuilder = searchRankLostTopImpressionShare_.toBuilder();
+            }
+            searchRankLostTopImpressionShare_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(searchRankLostTopImpressionShare_);
+              searchRankLostTopImpressionShare_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 738: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (searchTopImpressionShare_ != null) {
+              subBuilder = searchTopImpressionShare_.toBuilder();
+            }
+            searchTopImpressionShare_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(searchTopImpressionShare_);
+              searchTopImpressionShare_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 746: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (topImpressionPercentage_ != null) {
+              subBuilder = topImpressionPercentage_.toBuilder();
+            }
+            topImpressionPercentage_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(topImpressionPercentage_);
+              topImpressionPercentage_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 754: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (valuePerCurrentModelAttributedConversion_ != null) {
+              subBuilder = valuePerCurrentModelAttributedConversion_.toBuilder();
+            }
+            valuePerCurrentModelAttributedConversion_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(valuePerCurrentModelAttributedConversion_);
+              valuePerCurrentModelAttributedConversion_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 762: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (absoluteTopImpressionPercentage_ != null) {
+              subBuilder = absoluteTopImpressionPercentage_.toBuilder();
+            }
+            absoluteTopImpressionPercentage_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(absoluteTopImpressionPercentage_);
+              absoluteTopImpressionPercentage_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 770: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (activeViewMeasurability_ != null) {
+              subBuilder = activeViewMeasurability_.toBuilder();
+            }
+            activeViewMeasurability_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(activeViewMeasurability_);
+              activeViewMeasurability_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 778: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (activeViewViewability_ != null) {
+              subBuilder = activeViewViewability_.toBuilder();
+            }
+            activeViewViewability_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(activeViewViewability_);
+              activeViewViewability_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 786: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (averageCpe_ != null) {
+              subBuilder = averageCpe_.toBuilder();
+            }
+            averageCpe_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(averageCpe_);
+              averageCpe_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 794: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (averagePageViews_ != null) {
+              subBuilder = averagePageViews_.toBuilder();
+            }
+            averagePageViews_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(averagePageViews_);
+              averagePageViews_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 800: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField1_ & 0x20000000) == 0x20000000)) {
+              interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField1_ |= 0x20000000;
+            }
+            interactionEventTypes_.add(rawValue);
+            break;
+          }
+          case 802: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField1_ & 0x20000000) == 0x20000000)) {
+                interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField1_ |= 0x20000000;
+              }
+              interactionEventTypes_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          case 810: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (currentModelAttributedConversions_ != null) {
+              subBuilder = currentModelAttributedConversions_.toBuilder();
+            }
+            currentModelAttributedConversions_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(currentModelAttributedConversions_);
+              currentModelAttributedConversions_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 818: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (currentModelAttributedConversionsFromInteractionsRate_ != null) {
+              subBuilder = currentModelAttributedConversionsFromInteractionsRate_.toBuilder();
+            }
+            currentModelAttributedConversionsFromInteractionsRate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(currentModelAttributedConversionsFromInteractionsRate_);
+              currentModelAttributedConversionsFromInteractionsRate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 826: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (currentModelAttributedConversionsFromInteractionsValuePerInteraction_ != null) {
+              subBuilder = currentModelAttributedConversionsFromInteractionsValuePerInteraction_.toBuilder();
+            }
+            currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(currentModelAttributedConversionsFromInteractionsValuePerInteraction_);
+              currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 834: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (currentModelAttributedConversionsValue_ != null) {
+              subBuilder = currentModelAttributedConversionsValue_.toBuilder();
+            }
+            currentModelAttributedConversionsValue_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(currentModelAttributedConversionsValue_);
+              currentModelAttributedConversionsValue_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 842: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (currentModelAttributedConversionsValuePerCost_ != null) {
+              subBuilder = currentModelAttributedConversionsValuePerCost_.toBuilder();
+            }
+            currentModelAttributedConversionsValuePerCost_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(currentModelAttributedConversionsValuePerCost_);
+              currentModelAttributedConversionsValuePerCost_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 850: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (costPerCurrentModelAttributedConversion_ != null) {
+              subBuilder = costPerCurrentModelAttributedConversion_.toBuilder();
+            }
+            costPerCurrentModelAttributedConversion_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(costPerCurrentModelAttributedConversion_);
+              costPerCurrentModelAttributedConversion_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -777,6 +1239,9 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField1_ & 0x20000000) == 0x20000000)) {
+        interactionEventTypes_ = java.util.Collections.unmodifiableList(interactionEventTypes_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -792,6 +1257,294 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.MetricsProto.internal_static_google_ads_googleads_v0_common_Metrics_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.google.ads.googleads.v0.common.Metrics.class, com.google.ads.googleads.v0.common.Metrics.Builder.class);
+  }
+
+  private int bitField0_;
+  private int bitField1_;
+  private int bitField2_;
+  public static final int ABSOLUTE_TOP_IMPRESSION_PERCENTAGE_FIELD_NUMBER = 95;
+  private com.google.protobuf.DoubleValue absoluteTopImpressionPercentage_;
+  /**
+   * <pre>
+   * The percent of your ad impressions that are shown as the very first ad
+   * above the organic search results.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+   */
+  public boolean hasAbsoluteTopImpressionPercentage() {
+    return absoluteTopImpressionPercentage_ != null;
+  }
+  /**
+   * <pre>
+   * The percent of your ad impressions that are shown as the very first ad
+   * above the organic search results.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+   */
+  public com.google.protobuf.DoubleValue getAbsoluteTopImpressionPercentage() {
+    return absoluteTopImpressionPercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : absoluteTopImpressionPercentage_;
+  }
+  /**
+   * <pre>
+   * The percent of your ad impressions that are shown as the very first ad
+   * above the organic search results.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAbsoluteTopImpressionPercentageOrBuilder() {
+    return getAbsoluteTopImpressionPercentage();
+  }
+
+  public static final int ACTIVE_VIEW_CPM_FIELD_NUMBER = 1;
+  private com.google.protobuf.DoubleValue activeViewCpm_;
+  /**
+   * <pre>
+   * Average cost of viewable impressions (`active_view_impressions`).
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+   */
+  public boolean hasActiveViewCpm() {
+    return activeViewCpm_ != null;
+  }
+  /**
+   * <pre>
+   * Average cost of viewable impressions (`active_view_impressions`).
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+   */
+  public com.google.protobuf.DoubleValue getActiveViewCpm() {
+    return activeViewCpm_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewCpm_;
+  }
+  /**
+   * <pre>
+   * Average cost of viewable impressions (`active_view_impressions`).
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getActiveViewCpmOrBuilder() {
+    return getActiveViewCpm();
+  }
+
+  public static final int ACTIVE_VIEW_CTR_FIELD_NUMBER = 79;
+  private com.google.protobuf.DoubleValue activeViewCtr_;
+  /**
+   * <pre>
+   * Active view measurable clicks divided by active view viewable impressions.
+   * This metric is reported only for display network.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+   */
+  public boolean hasActiveViewCtr() {
+    return activeViewCtr_ != null;
+  }
+  /**
+   * <pre>
+   * Active view measurable clicks divided by active view viewable impressions.
+   * This metric is reported only for display network.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+   */
+  public com.google.protobuf.DoubleValue getActiveViewCtr() {
+    return activeViewCtr_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewCtr_;
+  }
+  /**
+   * <pre>
+   * Active view measurable clicks divided by active view viewable impressions.
+   * This metric is reported only for display network.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getActiveViewCtrOrBuilder() {
+    return getActiveViewCtr();
+  }
+
+  public static final int ACTIVE_VIEW_IMPRESSIONS_FIELD_NUMBER = 2;
+  private com.google.protobuf.Int64Value activeViewImpressions_;
+  /**
+   * <pre>
+   * A measurement of how often your ad has become viewable on a Display
+   * Network site.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+   */
+  public boolean hasActiveViewImpressions() {
+    return activeViewImpressions_ != null;
+  }
+  /**
+   * <pre>
+   * A measurement of how often your ad has become viewable on a Display
+   * Network site.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+   */
+  public com.google.protobuf.Int64Value getActiveViewImpressions() {
+    return activeViewImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : activeViewImpressions_;
+  }
+  /**
+   * <pre>
+   * A measurement of how often your ad has become viewable on a Display
+   * Network site.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getActiveViewImpressionsOrBuilder() {
+    return getActiveViewImpressions();
+  }
+
+  public static final int ACTIVE_VIEW_MEASURABILITY_FIELD_NUMBER = 96;
+  private com.google.protobuf.DoubleValue activeViewMeasurability_;
+  /**
+   * <pre>
+   * The ratio of impressions that could be measured by Active View over the
+   * number of served impressions.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+   */
+  public boolean hasActiveViewMeasurability() {
+    return activeViewMeasurability_ != null;
+  }
+  /**
+   * <pre>
+   * The ratio of impressions that could be measured by Active View over the
+   * number of served impressions.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+   */
+  public com.google.protobuf.DoubleValue getActiveViewMeasurability() {
+    return activeViewMeasurability_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewMeasurability_;
+  }
+  /**
+   * <pre>
+   * The ratio of impressions that could be measured by Active View over the
+   * number of served impressions.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getActiveViewMeasurabilityOrBuilder() {
+    return getActiveViewMeasurability();
+  }
+
+  public static final int ACTIVE_VIEW_MEASURABLE_COST_MICROS_FIELD_NUMBER = 3;
+  private com.google.protobuf.Int64Value activeViewMeasurableCostMicros_;
+  /**
+   * <pre>
+   * The cost of the impressions you received that were measurable by Active
+   * View.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+   */
+  public boolean hasActiveViewMeasurableCostMicros() {
+    return activeViewMeasurableCostMicros_ != null;
+  }
+  /**
+   * <pre>
+   * The cost of the impressions you received that were measurable by Active
+   * View.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+   */
+  public com.google.protobuf.Int64Value getActiveViewMeasurableCostMicros() {
+    return activeViewMeasurableCostMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : activeViewMeasurableCostMicros_;
+  }
+  /**
+   * <pre>
+   * The cost of the impressions you received that were measurable by Active
+   * View.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getActiveViewMeasurableCostMicrosOrBuilder() {
+    return getActiveViewMeasurableCostMicros();
+  }
+
+  public static final int ACTIVE_VIEW_MEASURABLE_IMPRESSIONS_FIELD_NUMBER = 4;
+  private com.google.protobuf.Int64Value activeViewMeasurableImpressions_;
+  /**
+   * <pre>
+   * The number of times your ads are appearing on placements in positions
+   * where they can be seen.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+   */
+  public boolean hasActiveViewMeasurableImpressions() {
+    return activeViewMeasurableImpressions_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times your ads are appearing on placements in positions
+   * where they can be seen.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+   */
+  public com.google.protobuf.Int64Value getActiveViewMeasurableImpressions() {
+    return activeViewMeasurableImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : activeViewMeasurableImpressions_;
+  }
+  /**
+   * <pre>
+   * The number of times your ads are appearing on placements in positions
+   * where they can be seen.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getActiveViewMeasurableImpressionsOrBuilder() {
+    return getActiveViewMeasurableImpressions();
+  }
+
+  public static final int ACTIVE_VIEW_VIEWABILITY_FIELD_NUMBER = 97;
+  private com.google.protobuf.DoubleValue activeViewViewability_;
+  /**
+   * <pre>
+   * The percentage of time when your ad appeared on an Active View enabled site
+   * (measurable impressions) and was viewable (viewable impressions).
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+   */
+  public boolean hasActiveViewViewability() {
+    return activeViewViewability_ != null;
+  }
+  /**
+   * <pre>
+   * The percentage of time when your ad appeared on an Active View enabled site
+   * (measurable impressions) and was viewable (viewable impressions).
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+   */
+  public com.google.protobuf.DoubleValue getActiveViewViewability() {
+    return activeViewViewability_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewViewability_;
+  }
+  /**
+   * <pre>
+   * The percentage of time when your ad appeared on an Active View enabled site
+   * (measurable impressions) and was viewable (viewable impressions).
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getActiveViewViewabilityOrBuilder() {
+    return getActiveViewViewability();
   }
 
   public static final int ALL_CONVERSIONS_FROM_INTERACTIONS_RATE_FIELD_NUMBER = 65;
@@ -867,8 +1620,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue allConversions_;
   /**
    * <pre>
-   * The total number of conversions. This includes "Conversions" plus
-   * conversions that have their "Include in Conversions" setting unchecked.
+   * The total number of conversions. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -878,8 +1631,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The total number of conversions. This includes "Conversions" plus
-   * conversions that have their "Include in Conversions" setting unchecked.
+   * The total number of conversions. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -889,8 +1642,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The total number of conversions. This includes "Conversions" plus
-   * conversions that have their "Include in Conversions" setting unchecked.
+   * The total number of conversions. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -1043,6 +1796,45 @@ private static final long serialVersionUID = 0L;
     return getAverageCpc();
   }
 
+  public static final int AVERAGE_CPE_FIELD_NUMBER = 98;
+  private com.google.protobuf.DoubleValue averageCpe_;
+  /**
+   * <pre>
+   * The average amount that you've been charged for an ad engagement. This
+   * amount is the total cost of all ad engagements divided by the total number
+   * of ad engagements.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+   */
+  public boolean hasAverageCpe() {
+    return averageCpe_ != null;
+  }
+  /**
+   * <pre>
+   * The average amount that you've been charged for an ad engagement. This
+   * amount is the total cost of all ad engagements divided by the total number
+   * of ad engagements.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+   */
+  public com.google.protobuf.DoubleValue getAverageCpe() {
+    return averageCpe_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageCpe_;
+  }
+  /**
+   * <pre>
+   * The average amount that you've been charged for an ad engagement. This
+   * amount is the total cost of all ad engagements divided by the total number
+   * of ad engagements.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAverageCpeOrBuilder() {
+    return getAverageCpe();
+  }
+
   public static final int AVERAGE_CPM_FIELD_NUMBER = 10;
   private com.google.protobuf.DoubleValue averageCpm_;
   /**
@@ -1115,6 +1907,75 @@ private static final long serialVersionUID = 0L;
     return getAverageCpv();
   }
 
+  public static final int AVERAGE_FREQUENCY_FIELD_NUMBER = 12;
+  private com.google.protobuf.DoubleValue averageFrequency_;
+  /**
+   * <pre>
+   * Average number of times a unique cookie was exposed to your ad
+   * over a given time period. Imported from Google Analytics.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+   */
+  public boolean hasAverageFrequency() {
+    return averageFrequency_ != null;
+  }
+  /**
+   * <pre>
+   * Average number of times a unique cookie was exposed to your ad
+   * over a given time period. Imported from Google Analytics.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+   */
+  public com.google.protobuf.DoubleValue getAverageFrequency() {
+    return averageFrequency_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageFrequency_;
+  }
+  /**
+   * <pre>
+   * Average number of times a unique cookie was exposed to your ad
+   * over a given time period. Imported from Google Analytics.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAverageFrequencyOrBuilder() {
+    return getAverageFrequency();
+  }
+
+  public static final int AVERAGE_PAGE_VIEWS_FIELD_NUMBER = 99;
+  private com.google.protobuf.DoubleValue averagePageViews_;
+  /**
+   * <pre>
+   * Average number of pages viewed per session.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+   */
+  public boolean hasAveragePageViews() {
+    return averagePageViews_ != null;
+  }
+  /**
+   * <pre>
+   * Average number of pages viewed per session.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+   */
+  public com.google.protobuf.DoubleValue getAveragePageViews() {
+    return averagePageViews_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averagePageViews_;
+  }
+  /**
+   * <pre>
+   * Average number of pages viewed per session.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAveragePageViewsOrBuilder() {
+    return getAveragePageViews();
+  }
+
   public static final int AVERAGE_POSITION_FIELD_NUMBER = 13;
   private com.google.protobuf.DoubleValue averagePosition_;
   /**
@@ -1146,6 +2007,75 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.DoubleValueOrBuilder getAveragePositionOrBuilder() {
     return getAveragePosition();
+  }
+
+  public static final int AVERAGE_TIME_ON_SITE_FIELD_NUMBER = 84;
+  private com.google.protobuf.DoubleValue averageTimeOnSite_;
+  /**
+   * <pre>
+   * Total duration of all sessions (in seconds) / number of sessions. Imported
+   * from Google Analytics.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+   */
+  public boolean hasAverageTimeOnSite() {
+    return averageTimeOnSite_ != null;
+  }
+  /**
+   * <pre>
+   * Total duration of all sessions (in seconds) / number of sessions. Imported
+   * from Google Analytics.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+   */
+  public com.google.protobuf.DoubleValue getAverageTimeOnSite() {
+    return averageTimeOnSite_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageTimeOnSite_;
+  }
+  /**
+   * <pre>
+   * Total duration of all sessions (in seconds) / number of sessions. Imported
+   * from Google Analytics.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAverageTimeOnSiteOrBuilder() {
+    return getAverageTimeOnSite();
+  }
+
+  public static final int BENCHMARK_AVERAGE_MAX_CPC_FIELD_NUMBER = 14;
+  private com.google.protobuf.DoubleValue benchmarkAverageMaxCpc_;
+  /**
+   * <pre>
+   * An indication of how other advertisers are bidding on similar products.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+   */
+  public boolean hasBenchmarkAverageMaxCpc() {
+    return benchmarkAverageMaxCpc_ != null;
+  }
+  /**
+   * <pre>
+   * An indication of how other advertisers are bidding on similar products.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+   */
+  public com.google.protobuf.DoubleValue getBenchmarkAverageMaxCpc() {
+    return benchmarkAverageMaxCpc_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : benchmarkAverageMaxCpc_;
+  }
+  /**
+   * <pre>
+   * An indication of how other advertisers are bidding on similar products.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getBenchmarkAverageMaxCpcOrBuilder() {
+    return getBenchmarkAverageMaxCpc();
   }
 
   public static final int BENCHMARK_CTR_FIELD_NUMBER = 77;
@@ -1465,7 +2395,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Conversions from interactions divided by the number of ad interactions
-   * (such as clicks for text ads or views for video ads).
+   * (such as clicks for text ads or views for video ads). This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -1476,7 +2408,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Conversions from interactions divided by the number of ad interactions
-   * (such as clicks for text ads or views for video ads).
+   * (such as clicks for text ads or views for video ads). This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -1487,7 +2421,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Conversions from interactions divided by the number of ad interactions
-   * (such as clicks for text ads or views for video ads).
+   * (such as clicks for text ads or views for video ads). This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -1500,7 +2436,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue conversionsValue_;
   /**
    * <pre>
-   * The total value of conversions.
+   * The total value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -1510,7 +2447,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The total value of conversions.
+   * The total value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -1520,7 +2458,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The total value of conversions.
+   * The total value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -1533,7 +2472,9 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue conversionsValuePerCost_;
   /**
    * <pre>
-   * The value of conversions divided by the cost of ad interactions.
+   * The value of conversions divided by the cost of ad interactions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -1543,7 +2484,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The value of conversions divided by the cost of ad interactions.
+   * The value of conversions divided by the cost of ad interactions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -1553,7 +2496,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The value of conversions divided by the cost of ad interactions.
+   * The value of conversions divided by the cost of ad interactions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -1567,7 +2512,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The value of conversions from interactions divided by the number of ad
-   * interactions.
+   * interactions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -1578,7 +2524,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The value of conversions from interactions divided by the number of ad
-   * interactions.
+   * interactions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -1589,7 +2536,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The value of conversions from interactions divided by the number of ad
-   * interactions.
+   * interactions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -1602,8 +2550,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue conversions_;
   /**
    * <pre>
-   * The number of conversions. This only includes conversion actions which have
-   * "Include in Conversions" checked.
+   * The number of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -1613,8 +2561,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of conversions. This only includes conversion actions which have
-   * "Include in Conversions" checked.
+   * The number of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -1624,8 +2572,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of conversions. This only includes conversion actions which have
-   * "Include in Conversions" checked.
+   * The number of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -1707,7 +2655,9 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue costPerConversion_;
   /**
    * <pre>
-   * The cost of ad interactions divided by conversions.
+   * The cost of ad interactions divided by conversions. This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -1717,7 +2667,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The cost of ad interactions divided by conversions.
+   * The cost of ad interactions divided by conversions. This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -1727,13 +2679,54 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The cost of ad interactions divided by conversions.
+   * The cost of ad interactions divided by conversions. This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
    */
   public com.google.protobuf.DoubleValueOrBuilder getCostPerConversionOrBuilder() {
     return getCostPerConversion();
+  }
+
+  public static final int COST_PER_CURRENT_MODEL_ATTRIBUTED_CONVERSION_FIELD_NUMBER = 106;
+  private com.google.protobuf.DoubleValue costPerCurrentModelAttributedConversion_;
+  /**
+   * <pre>
+   * The cost of ad interactions divided by current model attributed
+   * conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+   */
+  public boolean hasCostPerCurrentModelAttributedConversion() {
+    return costPerCurrentModelAttributedConversion_ != null;
+  }
+  /**
+   * <pre>
+   * The cost of ad interactions divided by current model attributed
+   * conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+   */
+  public com.google.protobuf.DoubleValue getCostPerCurrentModelAttributedConversion() {
+    return costPerCurrentModelAttributedConversion_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : costPerCurrentModelAttributedConversion_;
+  }
+  /**
+   * <pre>
+   * The cost of ad interactions divided by current model attributed
+   * conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getCostPerCurrentModelAttributedConversionOrBuilder() {
+    return getCostPerCurrentModelAttributedConversion();
   }
 
   public static final int CROSS_DEVICE_CONVERSIONS_FIELD_NUMBER = 29;
@@ -1809,6 +2802,204 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.DoubleValueOrBuilder getCtrOrBuilder() {
     return getCtr();
+  }
+
+  public static final int CURRENT_MODEL_ATTRIBUTED_CONVERSIONS_FIELD_NUMBER = 101;
+  private com.google.protobuf.DoubleValue currentModelAttributedConversions_;
+  /**
+   * <pre>
+   * Shows how your historic conversions data would look under the attribution
+   * model you've currently selected. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+   */
+  public boolean hasCurrentModelAttributedConversions() {
+    return currentModelAttributedConversions_ != null;
+  }
+  /**
+   * <pre>
+   * Shows how your historic conversions data would look under the attribution
+   * model you've currently selected. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+   */
+  public com.google.protobuf.DoubleValue getCurrentModelAttributedConversions() {
+    return currentModelAttributedConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversions_;
+  }
+  /**
+   * <pre>
+   * Shows how your historic conversions data would look under the attribution
+   * model you've currently selected. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsOrBuilder() {
+    return getCurrentModelAttributedConversions();
+  }
+
+  public static final int CURRENT_MODEL_ATTRIBUTED_CONVERSIONS_FROM_INTERACTIONS_RATE_FIELD_NUMBER = 102;
+  private com.google.protobuf.DoubleValue currentModelAttributedConversionsFromInteractionsRate_;
+  /**
+   * <pre>
+   * Current model attributed conversions from interactions divided by the
+   * number of ad interactions (such as clicks for text ads or views for video
+   * ads). This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+   */
+  public boolean hasCurrentModelAttributedConversionsFromInteractionsRate() {
+    return currentModelAttributedConversionsFromInteractionsRate_ != null;
+  }
+  /**
+   * <pre>
+   * Current model attributed conversions from interactions divided by the
+   * number of ad interactions (such as clicks for text ads or views for video
+   * ads). This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+   */
+  public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsFromInteractionsRate() {
+    return currentModelAttributedConversionsFromInteractionsRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsFromInteractionsRate_;
+  }
+  /**
+   * <pre>
+   * Current model attributed conversions from interactions divided by the
+   * number of ad interactions (such as clicks for text ads or views for video
+   * ads). This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsFromInteractionsRateOrBuilder() {
+    return getCurrentModelAttributedConversionsFromInteractionsRate();
+  }
+
+  public static final int CURRENT_MODEL_ATTRIBUTED_CONVERSIONS_FROM_INTERACTIONS_VALUE_PER_INTERACTION_FIELD_NUMBER = 103;
+  private com.google.protobuf.DoubleValue currentModelAttributedConversionsFromInteractionsValuePerInteraction_;
+  /**
+   * <pre>
+   * The value of current model attributed conversions from interactions divided
+   * by the number of ad interactions. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+   */
+  public boolean hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
+    return currentModelAttributedConversionsFromInteractionsValuePerInteraction_ != null;
+  }
+  /**
+   * <pre>
+   * The value of current model attributed conversions from interactions divided
+   * by the number of ad interactions. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+   */
+  public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
+    return currentModelAttributedConversionsFromInteractionsValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsFromInteractionsValuePerInteraction_;
+  }
+  /**
+   * <pre>
+   * The value of current model attributed conversions from interactions divided
+   * by the number of ad interactions. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsFromInteractionsValuePerInteractionOrBuilder() {
+    return getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction();
+  }
+
+  public static final int CURRENT_MODEL_ATTRIBUTED_CONVERSIONS_VALUE_FIELD_NUMBER = 104;
+  private com.google.protobuf.DoubleValue currentModelAttributedConversionsValue_;
+  /**
+   * <pre>
+   * The total value of current model attributed conversions. This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+   */
+  public boolean hasCurrentModelAttributedConversionsValue() {
+    return currentModelAttributedConversionsValue_ != null;
+  }
+  /**
+   * <pre>
+   * The total value of current model attributed conversions. This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+   */
+  public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsValue() {
+    return currentModelAttributedConversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsValue_;
+  }
+  /**
+   * <pre>
+   * The total value of current model attributed conversions. This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsValueOrBuilder() {
+    return getCurrentModelAttributedConversionsValue();
+  }
+
+  public static final int CURRENT_MODEL_ATTRIBUTED_CONVERSIONS_VALUE_PER_COST_FIELD_NUMBER = 105;
+  private com.google.protobuf.DoubleValue currentModelAttributedConversionsValuePerCost_;
+  /**
+   * <pre>
+   * The value of current model attributed conversions divided by the cost of ad
+   * interactions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+   */
+  public boolean hasCurrentModelAttributedConversionsValuePerCost() {
+    return currentModelAttributedConversionsValuePerCost_ != null;
+  }
+  /**
+   * <pre>
+   * The value of current model attributed conversions divided by the cost of ad
+   * interactions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+   */
+  public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsValuePerCost() {
+    return currentModelAttributedConversionsValuePerCost_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsValuePerCost_;
+  }
+  /**
+   * <pre>
+   * The value of current model attributed conversions divided by the cost of ad
+   * interactions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsValuePerCostOrBuilder() {
+    return getCurrentModelAttributedConversionsValuePerCost();
   }
 
   public static final int ENGAGEMENT_RATE_FIELD_NUMBER = 31;
@@ -1917,6 +3108,255 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.DoubleValueOrBuilder getHotelAverageLeadValueMicrosOrBuilder() {
     return getHotelAverageLeadValueMicros();
+  }
+
+  public static final int HISTORICAL_CREATIVE_QUALITY_SCORE_FIELD_NUMBER = 80;
+  private int historicalCreativeQualityScore_;
+  /**
+   * <pre>
+   * The creative historical quality score.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+   */
+  public int getHistoricalCreativeQualityScoreValue() {
+    return historicalCreativeQualityScore_;
+  }
+  /**
+   * <pre>
+   * The creative historical quality score.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+   */
+  public com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalCreativeQualityScore() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(historicalCreativeQualityScore_);
+    return result == null ? com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
+  }
+
+  public static final int HISTORICAL_LANDING_PAGE_QUALITY_SCORE_FIELD_NUMBER = 81;
+  private int historicalLandingPageQualityScore_;
+  /**
+   * <pre>
+   * The quality of historical landing page experience.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+   */
+  public int getHistoricalLandingPageQualityScoreValue() {
+    return historicalLandingPageQualityScore_;
+  }
+  /**
+   * <pre>
+   * The quality of historical landing page experience.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+   */
+  public com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalLandingPageQualityScore() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(historicalLandingPageQualityScore_);
+    return result == null ? com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
+  }
+
+  public static final int HISTORICAL_QUALITY_SCORE_FIELD_NUMBER = 82;
+  private com.google.protobuf.Int64Value historicalQualityScore_;
+  /**
+   * <pre>
+   * The historical quality score.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+   */
+  public boolean hasHistoricalQualityScore() {
+    return historicalQualityScore_ != null;
+  }
+  /**
+   * <pre>
+   * The historical quality score.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+   */
+  public com.google.protobuf.Int64Value getHistoricalQualityScore() {
+    return historicalQualityScore_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : historicalQualityScore_;
+  }
+  /**
+   * <pre>
+   * The historical quality score.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getHistoricalQualityScoreOrBuilder() {
+    return getHistoricalQualityScore();
+  }
+
+  public static final int HISTORICAL_SEARCH_PREDICTED_CTR_FIELD_NUMBER = 83;
+  private int historicalSearchPredictedCtr_;
+  /**
+   * <pre>
+   * The historical search predicted click through rate (CTR).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+   */
+  public int getHistoricalSearchPredictedCtrValue() {
+    return historicalSearchPredictedCtr_;
+  }
+  /**
+   * <pre>
+   * The historical search predicted click through rate (CTR).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+   */
+  public com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalSearchPredictedCtr() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(historicalSearchPredictedCtr_);
+    return result == null ? com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
+  }
+
+  public static final int GMAIL_FORWARDS_FIELD_NUMBER = 85;
+  private com.google.protobuf.Int64Value gmailForwards_;
+  /**
+   * <pre>
+   * The number of times the ad was forwarded to someone else as a message.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+   */
+  public boolean hasGmailForwards() {
+    return gmailForwards_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times the ad was forwarded to someone else as a message.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+   */
+  public com.google.protobuf.Int64Value getGmailForwards() {
+    return gmailForwards_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gmailForwards_;
+  }
+  /**
+   * <pre>
+   * The number of times the ad was forwarded to someone else as a message.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getGmailForwardsOrBuilder() {
+    return getGmailForwards();
+  }
+
+  public static final int GMAIL_SAVES_FIELD_NUMBER = 86;
+  private com.google.protobuf.Int64Value gmailSaves_;
+  /**
+   * <pre>
+   * The number of times someone has saved your Gmail ad to their inbox as a
+   * message.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+   */
+  public boolean hasGmailSaves() {
+    return gmailSaves_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times someone has saved your Gmail ad to their inbox as a
+   * message.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+   */
+  public com.google.protobuf.Int64Value getGmailSaves() {
+    return gmailSaves_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gmailSaves_;
+  }
+  /**
+   * <pre>
+   * The number of times someone has saved your Gmail ad to their inbox as a
+   * message.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getGmailSavesOrBuilder() {
+    return getGmailSaves();
+  }
+
+  public static final int GMAIL_SECONDARY_CLICKS_FIELD_NUMBER = 87;
+  private com.google.protobuf.Int64Value gmailSecondaryClicks_;
+  /**
+   * <pre>
+   * The number of clicks to the landing page on the expanded state of Gmail
+   * ads.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+   */
+  public boolean hasGmailSecondaryClicks() {
+    return gmailSecondaryClicks_ != null;
+  }
+  /**
+   * <pre>
+   * The number of clicks to the landing page on the expanded state of Gmail
+   * ads.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+   */
+  public com.google.protobuf.Int64Value getGmailSecondaryClicks() {
+    return gmailSecondaryClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gmailSecondaryClicks_;
+  }
+  /**
+   * <pre>
+   * The number of clicks to the landing page on the expanded state of Gmail
+   * ads.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getGmailSecondaryClicksOrBuilder() {
+    return getGmailSecondaryClicks();
+  }
+
+  public static final int IMPRESSION_REACH_FIELD_NUMBER = 36;
+  private com.google.protobuf.Int64Value impressionReach_;
+  /**
+   * <pre>
+   * Number of unique cookies that were exposed to your ad over a given time
+   * period.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+   */
+  public boolean hasImpressionReach() {
+    return impressionReach_ != null;
+  }
+  /**
+   * <pre>
+   * Number of unique cookies that were exposed to your ad over a given time
+   * period.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+   */
+  public com.google.protobuf.Int64Value getImpressionReach() {
+    return impressionReach_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : impressionReach_;
+  }
+  /**
+   * <pre>
+   * Number of unique cookies that were exposed to your ad over a given time
+   * period.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getImpressionReachOrBuilder() {
+    return getImpressionReach();
   }
 
   public static final int IMPRESSIONS_FIELD_NUMBER = 37;
@@ -2032,6 +3472,72 @@ private static final long serialVersionUID = 0L;
   public com.google.protobuf.Int64ValueOrBuilder getInteractionsOrBuilder() {
     return getInteractions();
   }
+
+  public static final int INTERACTION_EVENT_TYPES_FIELD_NUMBER = 100;
+  private java.util.List<java.lang.Integer> interactionEventTypes_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType> interactionEventTypes_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType>() {
+            public com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType convert(java.lang.Integer from) {
+              @SuppressWarnings("deprecation")
+              com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType result = com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType.valueOf(from);
+              return result == null ? com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * The types of payable and free interactions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   */
+  public java.util.List<com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType> getInteractionEventTypesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType>(interactionEventTypes_, interactionEventTypes_converter_);
+  }
+  /**
+   * <pre>
+   * The types of payable and free interactions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   */
+  public int getInteractionEventTypesCount() {
+    return interactionEventTypes_.size();
+  }
+  /**
+   * <pre>
+   * The types of payable and free interactions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   */
+  public com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType getInteractionEventTypes(int index) {
+    return interactionEventTypes_converter_.convert(interactionEventTypes_.get(index));
+  }
+  /**
+   * <pre>
+   * The types of payable and free interactions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   */
+  public java.util.List<java.lang.Integer>
+  getInteractionEventTypesValueList() {
+    return interactionEventTypes_;
+  }
+  /**
+   * <pre>
+   * The types of payable and free interactions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   */
+  public int getInteractionEventTypesValue(int index) {
+    return interactionEventTypes_.get(index);
+  }
+  private int interactionEventTypesMemoizedSerializedSize;
 
   public static final int INVALID_CLICK_RATE_FIELD_NUMBER = 40;
   private com.google.protobuf.DoubleValue invalidClickRate_;
@@ -2283,8 +3789,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue searchAbsoluteTopImpressionShare_;
   /**
    * <pre>
-   * The percentage of the customer's Shopping ad impressions that are shown in
-   * the most prominent Shopping position. See
+   * The percentage of the customer's Shopping or Search ad impressions that are
+   * shown in the most prominent Shopping position. See
    * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
    * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
@@ -2296,8 +3802,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The percentage of the customer's Shopping ad impressions that are shown in
-   * the most prominent Shopping position. See
+   * The percentage of the customer's Shopping or Search ad impressions that are
+   * shown in the most prominent Shopping position. See
    * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
    * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
@@ -2309,8 +3815,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The percentage of the customer's Shopping ad impressions that are shown in
-   * the most prominent Shopping position. See
+   * The percentage of the customer's Shopping or Search ad impressions that are
+   * shown in the most prominent Shopping position. See
    * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
    * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
@@ -2319,6 +3825,48 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.DoubleValueOrBuilder getSearchAbsoluteTopImpressionShareOrBuilder() {
     return getSearchAbsoluteTopImpressionShare();
+  }
+
+  public static final int SEARCH_BUDGET_LOST_ABSOLUTE_TOP_IMPRESSION_SHARE_FIELD_NUMBER = 88;
+  private com.google.protobuf.DoubleValue searchBudgetLostAbsoluteTopImpressionShare_;
+  /**
+   * <pre>
+   * The number estimating how often your ad wasn't the very first ad above the
+   * organic search results due to a low budget. Note: Search
+   * budget lost absolute top impression share is reported in the range of 0 to
+   * 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+   */
+  public boolean hasSearchBudgetLostAbsoluteTopImpressionShare() {
+    return searchBudgetLostAbsoluteTopImpressionShare_ != null;
+  }
+  /**
+   * <pre>
+   * The number estimating how often your ad wasn't the very first ad above the
+   * organic search results due to a low budget. Note: Search
+   * budget lost absolute top impression share is reported in the range of 0 to
+   * 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+   */
+  public com.google.protobuf.DoubleValue getSearchBudgetLostAbsoluteTopImpressionShare() {
+    return searchBudgetLostAbsoluteTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchBudgetLostAbsoluteTopImpressionShare_;
+  }
+  /**
+   * <pre>
+   * The number estimating how often your ad wasn't the very first ad above the
+   * organic search results due to a low budget. Note: Search
+   * budget lost absolute top impression share is reported in the range of 0 to
+   * 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getSearchBudgetLostAbsoluteTopImpressionShareOrBuilder() {
+    return getSearchBudgetLostAbsoluteTopImpressionShare();
   }
 
   public static final int SEARCH_BUDGET_LOST_IMPRESSION_SHARE_FIELD_NUMBER = 47;
@@ -2361,6 +3909,90 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.DoubleValueOrBuilder getSearchBudgetLostImpressionShareOrBuilder() {
     return getSearchBudgetLostImpressionShare();
+  }
+
+  public static final int SEARCH_BUDGET_LOST_TOP_IMPRESSION_SHARE_FIELD_NUMBER = 89;
+  private com.google.protobuf.DoubleValue searchBudgetLostTopImpressionShare_;
+  /**
+   * <pre>
+   * The number estimating how often your ad didn't show anywhere above the
+   * organic search results due to a low budget. Note: Search
+   * budget lost top impression share is reported in the range of 0 to 0.9. Any
+   * value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+   */
+  public boolean hasSearchBudgetLostTopImpressionShare() {
+    return searchBudgetLostTopImpressionShare_ != null;
+  }
+  /**
+   * <pre>
+   * The number estimating how often your ad didn't show anywhere above the
+   * organic search results due to a low budget. Note: Search
+   * budget lost top impression share is reported in the range of 0 to 0.9. Any
+   * value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+   */
+  public com.google.protobuf.DoubleValue getSearchBudgetLostTopImpressionShare() {
+    return searchBudgetLostTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchBudgetLostTopImpressionShare_;
+  }
+  /**
+   * <pre>
+   * The number estimating how often your ad didn't show anywhere above the
+   * organic search results due to a low budget. Note: Search
+   * budget lost top impression share is reported in the range of 0 to 0.9. Any
+   * value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getSearchBudgetLostTopImpressionShareOrBuilder() {
+    return getSearchBudgetLostTopImpressionShare();
+  }
+
+  public static final int SEARCH_CLICK_SHARE_FIELD_NUMBER = 48;
+  private com.google.protobuf.DoubleValue searchClickShare_;
+  /**
+   * <pre>
+   * The number of clicks you've received on the Search Network
+   * divided by the estimated number of clicks you were eligible to receive.
+   * Note: Search click share is reported in the range of 0.1 to 1. Any value
+   * below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+   */
+  public boolean hasSearchClickShare() {
+    return searchClickShare_ != null;
+  }
+  /**
+   * <pre>
+   * The number of clicks you've received on the Search Network
+   * divided by the estimated number of clicks you were eligible to receive.
+   * Note: Search click share is reported in the range of 0.1 to 1. Any value
+   * below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+   */
+  public com.google.protobuf.DoubleValue getSearchClickShare() {
+    return searchClickShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchClickShare_;
+  }
+  /**
+   * <pre>
+   * The number of clicks you've received on the Search Network
+   * divided by the estimated number of clicks you were eligible to receive.
+   * Note: Search click share is reported in the range of 0.1 to 1. Any value
+   * below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getSearchClickShareOrBuilder() {
+    return getSearchClickShare();
   }
 
   public static final int SEARCH_EXACT_MATCH_IMPRESSION_SHARE_FIELD_NUMBER = 49;
@@ -2453,6 +4085,48 @@ private static final long serialVersionUID = 0L;
     return getSearchImpressionShare();
   }
 
+  public static final int SEARCH_RANK_LOST_ABSOLUTE_TOP_IMPRESSION_SHARE_FIELD_NUMBER = 90;
+  private com.google.protobuf.DoubleValue searchRankLostAbsoluteTopImpressionShare_;
+  /**
+   * <pre>
+   * The number estimating how often your ad wasn't the very first ad above the
+   * organic search results due to poor Ad Rank.
+   * Note: Search rank lost absolute top impression share is reported in the
+   * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+   */
+  public boolean hasSearchRankLostAbsoluteTopImpressionShare() {
+    return searchRankLostAbsoluteTopImpressionShare_ != null;
+  }
+  /**
+   * <pre>
+   * The number estimating how often your ad wasn't the very first ad above the
+   * organic search results due to poor Ad Rank.
+   * Note: Search rank lost absolute top impression share is reported in the
+   * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+   */
+  public com.google.protobuf.DoubleValue getSearchRankLostAbsoluteTopImpressionShare() {
+    return searchRankLostAbsoluteTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchRankLostAbsoluteTopImpressionShare_;
+  }
+  /**
+   * <pre>
+   * The number estimating how often your ad wasn't the very first ad above the
+   * organic search results due to poor Ad Rank.
+   * Note: Search rank lost absolute top impression share is reported in the
+   * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getSearchRankLostAbsoluteTopImpressionShareOrBuilder() {
+    return getSearchRankLostAbsoluteTopImpressionShare();
+  }
+
   public static final int SEARCH_RANK_LOST_IMPRESSION_SHARE_FIELD_NUMBER = 51;
   private com.google.protobuf.DoubleValue searchRankLostImpressionShare_;
   /**
@@ -2495,6 +4169,129 @@ private static final long serialVersionUID = 0L;
     return getSearchRankLostImpressionShare();
   }
 
+  public static final int SEARCH_RANK_LOST_TOP_IMPRESSION_SHARE_FIELD_NUMBER = 91;
+  private com.google.protobuf.DoubleValue searchRankLostTopImpressionShare_;
+  /**
+   * <pre>
+   * The number estimating how often your ad didn't show anywhere above the
+   * organic search results due to poor Ad Rank.
+   * Note: Search rank lost top impression share is reported in the range of 0
+   * to 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+   */
+  public boolean hasSearchRankLostTopImpressionShare() {
+    return searchRankLostTopImpressionShare_ != null;
+  }
+  /**
+   * <pre>
+   * The number estimating how often your ad didn't show anywhere above the
+   * organic search results due to poor Ad Rank.
+   * Note: Search rank lost top impression share is reported in the range of 0
+   * to 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+   */
+  public com.google.protobuf.DoubleValue getSearchRankLostTopImpressionShare() {
+    return searchRankLostTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchRankLostTopImpressionShare_;
+  }
+  /**
+   * <pre>
+   * The number estimating how often your ad didn't show anywhere above the
+   * organic search results due to poor Ad Rank.
+   * Note: Search rank lost top impression share is reported in the range of 0
+   * to 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getSearchRankLostTopImpressionShareOrBuilder() {
+    return getSearchRankLostTopImpressionShare();
+  }
+
+  public static final int SEARCH_TOP_IMPRESSION_SHARE_FIELD_NUMBER = 92;
+  private com.google.protobuf.DoubleValue searchTopImpressionShare_;
+  /**
+   * <pre>
+   * The impressions you've received in the top location (anywhere above the
+   * organic search results) compared to the estimated number of impressions you
+   * were eligible to receive in the top location.
+   * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+   * value below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+   */
+  public boolean hasSearchTopImpressionShare() {
+    return searchTopImpressionShare_ != null;
+  }
+  /**
+   * <pre>
+   * The impressions you've received in the top location (anywhere above the
+   * organic search results) compared to the estimated number of impressions you
+   * were eligible to receive in the top location.
+   * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+   * value below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+   */
+  public com.google.protobuf.DoubleValue getSearchTopImpressionShare() {
+    return searchTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchTopImpressionShare_;
+  }
+  /**
+   * <pre>
+   * The impressions you've received in the top location (anywhere above the
+   * organic search results) compared to the estimated number of impressions you
+   * were eligible to receive in the top location.
+   * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+   * value below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getSearchTopImpressionShareOrBuilder() {
+    return getSearchTopImpressionShare();
+  }
+
+  public static final int TOP_IMPRESSION_PERCENTAGE_FIELD_NUMBER = 93;
+  private com.google.protobuf.DoubleValue topImpressionPercentage_;
+  /**
+   * <pre>
+   * The percent of your ad impressions that are shown anywhere above the
+   * organic search results.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+   */
+  public boolean hasTopImpressionPercentage() {
+    return topImpressionPercentage_ != null;
+  }
+  /**
+   * <pre>
+   * The percent of your ad impressions that are shown anywhere above the
+   * organic search results.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+   */
+  public com.google.protobuf.DoubleValue getTopImpressionPercentage() {
+    return topImpressionPercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : topImpressionPercentage_;
+  }
+  /**
+   * <pre>
+   * The percent of your ad impressions that are shown anywhere above the
+   * organic search results.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getTopImpressionPercentageOrBuilder() {
+    return getTopImpressionPercentage();
+  }
+
   public static final int VALUE_PER_ALL_CONVERSIONS_FIELD_NUMBER = 52;
   private com.google.protobuf.DoubleValue valuePerAllConversions_;
   /**
@@ -2532,7 +4329,9 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue valuePerConversion_;
   /**
    * <pre>
-   * The value of conversions divided by the number of conversions.
+   * The value of conversions divided by the number of conversions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -2542,7 +4341,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The value of conversions divided by the number of conversions.
+   * The value of conversions divided by the number of conversions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -2552,13 +4353,54 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The value of conversions divided by the number of conversions.
+   * The value of conversions divided by the number of conversions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
    */
   public com.google.protobuf.DoubleValueOrBuilder getValuePerConversionOrBuilder() {
     return getValuePerConversion();
+  }
+
+  public static final int VALUE_PER_CURRENT_MODEL_ATTRIBUTED_CONVERSION_FIELD_NUMBER = 94;
+  private com.google.protobuf.DoubleValue valuePerCurrentModelAttributedConversion_;
+  /**
+   * <pre>
+   * The value of current model attributed conversions divided by the number of
+   * the conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+   */
+  public boolean hasValuePerCurrentModelAttributedConversion() {
+    return valuePerCurrentModelAttributedConversion_ != null;
+  }
+  /**
+   * <pre>
+   * The value of current model attributed conversions divided by the number of
+   * the conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+   */
+  public com.google.protobuf.DoubleValue getValuePerCurrentModelAttributedConversion() {
+    return valuePerCurrentModelAttributedConversion_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : valuePerCurrentModelAttributedConversion_;
+  }
+  /**
+   * <pre>
+   * The value of current model attributed conversions divided by the number of
+   * the conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getValuePerCurrentModelAttributedConversionOrBuilder() {
+    return getValuePerCurrentModelAttributedConversion();
   }
 
   public static final int VIDEO_QUARTILE_100_RATE_FIELD_NUMBER = 54;
@@ -2821,6 +4663,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
+    if (activeViewCpm_ != null) {
+      output.writeMessage(1, getActiveViewCpm());
+    }
+    if (activeViewImpressions_ != null) {
+      output.writeMessage(2, getActiveViewImpressions());
+    }
+    if (activeViewMeasurableCostMicros_ != null) {
+      output.writeMessage(3, getActiveViewMeasurableCostMicros());
+    }
+    if (activeViewMeasurableImpressions_ != null) {
+      output.writeMessage(4, getActiveViewMeasurableImpressions());
+    }
     if (allConversions_ != null) {
       output.writeMessage(7, getAllConversions());
     }
@@ -2836,8 +4691,14 @@ private static final long serialVersionUID = 0L;
     if (averageCpv_ != null) {
       output.writeMessage(11, getAverageCpv());
     }
+    if (averageFrequency_ != null) {
+      output.writeMessage(12, getAverageFrequency());
+    }
     if (averagePosition_ != null) {
       output.writeMessage(13, getAveragePosition());
+    }
+    if (benchmarkAverageMaxCpc_ != null) {
+      output.writeMessage(14, getBenchmarkAverageMaxCpc());
     }
     if (bounceRate_ != null) {
       output.writeMessage(15, getBounceRate());
@@ -2875,6 +4736,9 @@ private static final long serialVersionUID = 0L;
     if (engagements_ != null) {
       output.writeMessage(32, getEngagements());
     }
+    if (impressionReach_ != null) {
+      output.writeMessage(36, getImpressionReach());
+    }
     if (impressions_ != null) {
       output.writeMessage(37, getImpressions());
     }
@@ -2907,6 +4771,9 @@ private static final long serialVersionUID = 0L;
     }
     if (searchBudgetLostImpressionShare_ != null) {
       output.writeMessage(47, getSearchBudgetLostImpressionShare());
+    }
+    if (searchClickShare_ != null) {
+      output.writeMessage(48, getSearchClickShare());
     }
     if (searchExactMatchImpressionShare_ != null) {
       output.writeMessage(49, getSearchExactMatchImpressionShare());
@@ -2986,6 +4853,94 @@ private static final long serialVersionUID = 0L;
     if (searchAbsoluteTopImpressionShare_ != null) {
       output.writeMessage(78, getSearchAbsoluteTopImpressionShare());
     }
+    if (activeViewCtr_ != null) {
+      output.writeMessage(79, getActiveViewCtr());
+    }
+    if (historicalCreativeQualityScore_ != com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNSPECIFIED.getNumber()) {
+      output.writeEnum(80, historicalCreativeQualityScore_);
+    }
+    if (historicalLandingPageQualityScore_ != com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNSPECIFIED.getNumber()) {
+      output.writeEnum(81, historicalLandingPageQualityScore_);
+    }
+    if (historicalQualityScore_ != null) {
+      output.writeMessage(82, getHistoricalQualityScore());
+    }
+    if (historicalSearchPredictedCtr_ != com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNSPECIFIED.getNumber()) {
+      output.writeEnum(83, historicalSearchPredictedCtr_);
+    }
+    if (averageTimeOnSite_ != null) {
+      output.writeMessage(84, getAverageTimeOnSite());
+    }
+    if (gmailForwards_ != null) {
+      output.writeMessage(85, getGmailForwards());
+    }
+    if (gmailSaves_ != null) {
+      output.writeMessage(86, getGmailSaves());
+    }
+    if (gmailSecondaryClicks_ != null) {
+      output.writeMessage(87, getGmailSecondaryClicks());
+    }
+    if (searchBudgetLostAbsoluteTopImpressionShare_ != null) {
+      output.writeMessage(88, getSearchBudgetLostAbsoluteTopImpressionShare());
+    }
+    if (searchBudgetLostTopImpressionShare_ != null) {
+      output.writeMessage(89, getSearchBudgetLostTopImpressionShare());
+    }
+    if (searchRankLostAbsoluteTopImpressionShare_ != null) {
+      output.writeMessage(90, getSearchRankLostAbsoluteTopImpressionShare());
+    }
+    if (searchRankLostTopImpressionShare_ != null) {
+      output.writeMessage(91, getSearchRankLostTopImpressionShare());
+    }
+    if (searchTopImpressionShare_ != null) {
+      output.writeMessage(92, getSearchTopImpressionShare());
+    }
+    if (topImpressionPercentage_ != null) {
+      output.writeMessage(93, getTopImpressionPercentage());
+    }
+    if (valuePerCurrentModelAttributedConversion_ != null) {
+      output.writeMessage(94, getValuePerCurrentModelAttributedConversion());
+    }
+    if (absoluteTopImpressionPercentage_ != null) {
+      output.writeMessage(95, getAbsoluteTopImpressionPercentage());
+    }
+    if (activeViewMeasurability_ != null) {
+      output.writeMessage(96, getActiveViewMeasurability());
+    }
+    if (activeViewViewability_ != null) {
+      output.writeMessage(97, getActiveViewViewability());
+    }
+    if (averageCpe_ != null) {
+      output.writeMessage(98, getAverageCpe());
+    }
+    if (averagePageViews_ != null) {
+      output.writeMessage(99, getAveragePageViews());
+    }
+    if (getInteractionEventTypesList().size() > 0) {
+      output.writeUInt32NoTag(802);
+      output.writeUInt32NoTag(interactionEventTypesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < interactionEventTypes_.size(); i++) {
+      output.writeEnumNoTag(interactionEventTypes_.get(i));
+    }
+    if (currentModelAttributedConversions_ != null) {
+      output.writeMessage(101, getCurrentModelAttributedConversions());
+    }
+    if (currentModelAttributedConversionsFromInteractionsRate_ != null) {
+      output.writeMessage(102, getCurrentModelAttributedConversionsFromInteractionsRate());
+    }
+    if (currentModelAttributedConversionsFromInteractionsValuePerInteraction_ != null) {
+      output.writeMessage(103, getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction());
+    }
+    if (currentModelAttributedConversionsValue_ != null) {
+      output.writeMessage(104, getCurrentModelAttributedConversionsValue());
+    }
+    if (currentModelAttributedConversionsValuePerCost_ != null) {
+      output.writeMessage(105, getCurrentModelAttributedConversionsValuePerCost());
+    }
+    if (costPerCurrentModelAttributedConversion_ != null) {
+      output.writeMessage(106, getCostPerCurrentModelAttributedConversion());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2995,6 +4950,22 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (activeViewCpm_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getActiveViewCpm());
+    }
+    if (activeViewImpressions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getActiveViewImpressions());
+    }
+    if (activeViewMeasurableCostMicros_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getActiveViewMeasurableCostMicros());
+    }
+    if (activeViewMeasurableImpressions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getActiveViewMeasurableImpressions());
+    }
     if (allConversions_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getAllConversions());
@@ -3015,9 +4986,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getAverageCpv());
     }
+    if (averageFrequency_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, getAverageFrequency());
+    }
     if (averagePosition_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getAveragePosition());
+    }
+    if (benchmarkAverageMaxCpc_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getBenchmarkAverageMaxCpc());
     }
     if (bounceRate_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -3067,6 +5046,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(32, getEngagements());
     }
+    if (impressionReach_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(36, getImpressionReach());
+    }
     if (impressions_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(37, getImpressions());
@@ -3110,6 +5093,10 @@ private static final long serialVersionUID = 0L;
     if (searchBudgetLostImpressionShare_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(47, getSearchBudgetLostImpressionShare());
+    }
+    if (searchClickShare_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(48, getSearchClickShare());
     }
     if (searchExactMatchImpressionShare_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -3215,6 +5202,126 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(78, getSearchAbsoluteTopImpressionShare());
     }
+    if (activeViewCtr_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(79, getActiveViewCtr());
+    }
+    if (historicalCreativeQualityScore_ != com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(80, historicalCreativeQualityScore_);
+    }
+    if (historicalLandingPageQualityScore_ != com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(81, historicalLandingPageQualityScore_);
+    }
+    if (historicalQualityScore_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(82, getHistoricalQualityScore());
+    }
+    if (historicalSearchPredictedCtr_ != com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(83, historicalSearchPredictedCtr_);
+    }
+    if (averageTimeOnSite_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(84, getAverageTimeOnSite());
+    }
+    if (gmailForwards_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(85, getGmailForwards());
+    }
+    if (gmailSaves_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(86, getGmailSaves());
+    }
+    if (gmailSecondaryClicks_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(87, getGmailSecondaryClicks());
+    }
+    if (searchBudgetLostAbsoluteTopImpressionShare_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(88, getSearchBudgetLostAbsoluteTopImpressionShare());
+    }
+    if (searchBudgetLostTopImpressionShare_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(89, getSearchBudgetLostTopImpressionShare());
+    }
+    if (searchRankLostAbsoluteTopImpressionShare_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(90, getSearchRankLostAbsoluteTopImpressionShare());
+    }
+    if (searchRankLostTopImpressionShare_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(91, getSearchRankLostTopImpressionShare());
+    }
+    if (searchTopImpressionShare_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(92, getSearchTopImpressionShare());
+    }
+    if (topImpressionPercentage_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(93, getTopImpressionPercentage());
+    }
+    if (valuePerCurrentModelAttributedConversion_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(94, getValuePerCurrentModelAttributedConversion());
+    }
+    if (absoluteTopImpressionPercentage_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(95, getAbsoluteTopImpressionPercentage());
+    }
+    if (activeViewMeasurability_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(96, getActiveViewMeasurability());
+    }
+    if (activeViewViewability_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(97, getActiveViewViewability());
+    }
+    if (averageCpe_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(98, getAverageCpe());
+    }
+    if (averagePageViews_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(99, getAveragePageViews());
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < interactionEventTypes_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(interactionEventTypes_.get(i));
+      }
+      size += dataSize;
+      if (!getInteractionEventTypesList().isEmpty()) {  size += 2;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }interactionEventTypesMemoizedSerializedSize = dataSize;
+    }
+    if (currentModelAttributedConversions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(101, getCurrentModelAttributedConversions());
+    }
+    if (currentModelAttributedConversionsFromInteractionsRate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(102, getCurrentModelAttributedConversionsFromInteractionsRate());
+    }
+    if (currentModelAttributedConversionsFromInteractionsValuePerInteraction_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(103, getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction());
+    }
+    if (currentModelAttributedConversionsValue_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(104, getCurrentModelAttributedConversionsValue());
+    }
+    if (currentModelAttributedConversionsValuePerCost_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(105, getCurrentModelAttributedConversionsValuePerCost());
+    }
+    if (costPerCurrentModelAttributedConversion_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(106, getCostPerCurrentModelAttributedConversion());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3231,6 +5338,46 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v0.common.Metrics other = (com.google.ads.googleads.v0.common.Metrics) obj;
 
     boolean result = true;
+    result = result && (hasAbsoluteTopImpressionPercentage() == other.hasAbsoluteTopImpressionPercentage());
+    if (hasAbsoluteTopImpressionPercentage()) {
+      result = result && getAbsoluteTopImpressionPercentage()
+          .equals(other.getAbsoluteTopImpressionPercentage());
+    }
+    result = result && (hasActiveViewCpm() == other.hasActiveViewCpm());
+    if (hasActiveViewCpm()) {
+      result = result && getActiveViewCpm()
+          .equals(other.getActiveViewCpm());
+    }
+    result = result && (hasActiveViewCtr() == other.hasActiveViewCtr());
+    if (hasActiveViewCtr()) {
+      result = result && getActiveViewCtr()
+          .equals(other.getActiveViewCtr());
+    }
+    result = result && (hasActiveViewImpressions() == other.hasActiveViewImpressions());
+    if (hasActiveViewImpressions()) {
+      result = result && getActiveViewImpressions()
+          .equals(other.getActiveViewImpressions());
+    }
+    result = result && (hasActiveViewMeasurability() == other.hasActiveViewMeasurability());
+    if (hasActiveViewMeasurability()) {
+      result = result && getActiveViewMeasurability()
+          .equals(other.getActiveViewMeasurability());
+    }
+    result = result && (hasActiveViewMeasurableCostMicros() == other.hasActiveViewMeasurableCostMicros());
+    if (hasActiveViewMeasurableCostMicros()) {
+      result = result && getActiveViewMeasurableCostMicros()
+          .equals(other.getActiveViewMeasurableCostMicros());
+    }
+    result = result && (hasActiveViewMeasurableImpressions() == other.hasActiveViewMeasurableImpressions());
+    if (hasActiveViewMeasurableImpressions()) {
+      result = result && getActiveViewMeasurableImpressions()
+          .equals(other.getActiveViewMeasurableImpressions());
+    }
+    result = result && (hasActiveViewViewability() == other.hasActiveViewViewability());
+    if (hasActiveViewViewability()) {
+      result = result && getActiveViewViewability()
+          .equals(other.getActiveViewViewability());
+    }
     result = result && (hasAllConversionsFromInteractionsRate() == other.hasAllConversionsFromInteractionsRate());
     if (hasAllConversionsFromInteractionsRate()) {
       result = result && getAllConversionsFromInteractionsRate()
@@ -3266,6 +5413,11 @@ private static final long serialVersionUID = 0L;
       result = result && getAverageCpc()
           .equals(other.getAverageCpc());
     }
+    result = result && (hasAverageCpe() == other.hasAverageCpe());
+    if (hasAverageCpe()) {
+      result = result && getAverageCpe()
+          .equals(other.getAverageCpe());
+    }
     result = result && (hasAverageCpm() == other.hasAverageCpm());
     if (hasAverageCpm()) {
       result = result && getAverageCpm()
@@ -3276,10 +5428,30 @@ private static final long serialVersionUID = 0L;
       result = result && getAverageCpv()
           .equals(other.getAverageCpv());
     }
+    result = result && (hasAverageFrequency() == other.hasAverageFrequency());
+    if (hasAverageFrequency()) {
+      result = result && getAverageFrequency()
+          .equals(other.getAverageFrequency());
+    }
+    result = result && (hasAveragePageViews() == other.hasAveragePageViews());
+    if (hasAveragePageViews()) {
+      result = result && getAveragePageViews()
+          .equals(other.getAveragePageViews());
+    }
     result = result && (hasAveragePosition() == other.hasAveragePosition());
     if (hasAveragePosition()) {
       result = result && getAveragePosition()
           .equals(other.getAveragePosition());
+    }
+    result = result && (hasAverageTimeOnSite() == other.hasAverageTimeOnSite());
+    if (hasAverageTimeOnSite()) {
+      result = result && getAverageTimeOnSite()
+          .equals(other.getAverageTimeOnSite());
+    }
+    result = result && (hasBenchmarkAverageMaxCpc() == other.hasBenchmarkAverageMaxCpc());
+    if (hasBenchmarkAverageMaxCpc()) {
+      result = result && getBenchmarkAverageMaxCpc()
+          .equals(other.getBenchmarkAverageMaxCpc());
     }
     result = result && (hasBenchmarkCtr() == other.hasBenchmarkCtr());
     if (hasBenchmarkCtr()) {
@@ -3361,6 +5533,11 @@ private static final long serialVersionUID = 0L;
       result = result && getCostPerConversion()
           .equals(other.getCostPerConversion());
     }
+    result = result && (hasCostPerCurrentModelAttributedConversion() == other.hasCostPerCurrentModelAttributedConversion());
+    if (hasCostPerCurrentModelAttributedConversion()) {
+      result = result && getCostPerCurrentModelAttributedConversion()
+          .equals(other.getCostPerCurrentModelAttributedConversion());
+    }
     result = result && (hasCrossDeviceConversions() == other.hasCrossDeviceConversions());
     if (hasCrossDeviceConversions()) {
       result = result && getCrossDeviceConversions()
@@ -3370,6 +5547,31 @@ private static final long serialVersionUID = 0L;
     if (hasCtr()) {
       result = result && getCtr()
           .equals(other.getCtr());
+    }
+    result = result && (hasCurrentModelAttributedConversions() == other.hasCurrentModelAttributedConversions());
+    if (hasCurrentModelAttributedConversions()) {
+      result = result && getCurrentModelAttributedConversions()
+          .equals(other.getCurrentModelAttributedConversions());
+    }
+    result = result && (hasCurrentModelAttributedConversionsFromInteractionsRate() == other.hasCurrentModelAttributedConversionsFromInteractionsRate());
+    if (hasCurrentModelAttributedConversionsFromInteractionsRate()) {
+      result = result && getCurrentModelAttributedConversionsFromInteractionsRate()
+          .equals(other.getCurrentModelAttributedConversionsFromInteractionsRate());
+    }
+    result = result && (hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() == other.hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction());
+    if (hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction()) {
+      result = result && getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction()
+          .equals(other.getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction());
+    }
+    result = result && (hasCurrentModelAttributedConversionsValue() == other.hasCurrentModelAttributedConversionsValue());
+    if (hasCurrentModelAttributedConversionsValue()) {
+      result = result && getCurrentModelAttributedConversionsValue()
+          .equals(other.getCurrentModelAttributedConversionsValue());
+    }
+    result = result && (hasCurrentModelAttributedConversionsValuePerCost() == other.hasCurrentModelAttributedConversionsValuePerCost());
+    if (hasCurrentModelAttributedConversionsValuePerCost()) {
+      result = result && getCurrentModelAttributedConversionsValuePerCost()
+          .equals(other.getCurrentModelAttributedConversionsValuePerCost());
     }
     result = result && (hasEngagementRate() == other.hasEngagementRate());
     if (hasEngagementRate()) {
@@ -3386,6 +5588,34 @@ private static final long serialVersionUID = 0L;
       result = result && getHotelAverageLeadValueMicros()
           .equals(other.getHotelAverageLeadValueMicros());
     }
+    result = result && historicalCreativeQualityScore_ == other.historicalCreativeQualityScore_;
+    result = result && historicalLandingPageQualityScore_ == other.historicalLandingPageQualityScore_;
+    result = result && (hasHistoricalQualityScore() == other.hasHistoricalQualityScore());
+    if (hasHistoricalQualityScore()) {
+      result = result && getHistoricalQualityScore()
+          .equals(other.getHistoricalQualityScore());
+    }
+    result = result && historicalSearchPredictedCtr_ == other.historicalSearchPredictedCtr_;
+    result = result && (hasGmailForwards() == other.hasGmailForwards());
+    if (hasGmailForwards()) {
+      result = result && getGmailForwards()
+          .equals(other.getGmailForwards());
+    }
+    result = result && (hasGmailSaves() == other.hasGmailSaves());
+    if (hasGmailSaves()) {
+      result = result && getGmailSaves()
+          .equals(other.getGmailSaves());
+    }
+    result = result && (hasGmailSecondaryClicks() == other.hasGmailSecondaryClicks());
+    if (hasGmailSecondaryClicks()) {
+      result = result && getGmailSecondaryClicks()
+          .equals(other.getGmailSecondaryClicks());
+    }
+    result = result && (hasImpressionReach() == other.hasImpressionReach());
+    if (hasImpressionReach()) {
+      result = result && getImpressionReach()
+          .equals(other.getImpressionReach());
+    }
     result = result && (hasImpressions() == other.hasImpressions());
     if (hasImpressions()) {
       result = result && getImpressions()
@@ -3401,6 +5631,7 @@ private static final long serialVersionUID = 0L;
       result = result && getInteractions()
           .equals(other.getInteractions());
     }
+    result = result && interactionEventTypes_.equals(other.interactionEventTypes_);
     result = result && (hasInvalidClickRate() == other.hasInvalidClickRate());
     if (hasInvalidClickRate()) {
       result = result && getInvalidClickRate()
@@ -3441,10 +5672,25 @@ private static final long serialVersionUID = 0L;
       result = result && getSearchAbsoluteTopImpressionShare()
           .equals(other.getSearchAbsoluteTopImpressionShare());
     }
+    result = result && (hasSearchBudgetLostAbsoluteTopImpressionShare() == other.hasSearchBudgetLostAbsoluteTopImpressionShare());
+    if (hasSearchBudgetLostAbsoluteTopImpressionShare()) {
+      result = result && getSearchBudgetLostAbsoluteTopImpressionShare()
+          .equals(other.getSearchBudgetLostAbsoluteTopImpressionShare());
+    }
     result = result && (hasSearchBudgetLostImpressionShare() == other.hasSearchBudgetLostImpressionShare());
     if (hasSearchBudgetLostImpressionShare()) {
       result = result && getSearchBudgetLostImpressionShare()
           .equals(other.getSearchBudgetLostImpressionShare());
+    }
+    result = result && (hasSearchBudgetLostTopImpressionShare() == other.hasSearchBudgetLostTopImpressionShare());
+    if (hasSearchBudgetLostTopImpressionShare()) {
+      result = result && getSearchBudgetLostTopImpressionShare()
+          .equals(other.getSearchBudgetLostTopImpressionShare());
+    }
+    result = result && (hasSearchClickShare() == other.hasSearchClickShare());
+    if (hasSearchClickShare()) {
+      result = result && getSearchClickShare()
+          .equals(other.getSearchClickShare());
     }
     result = result && (hasSearchExactMatchImpressionShare() == other.hasSearchExactMatchImpressionShare());
     if (hasSearchExactMatchImpressionShare()) {
@@ -3456,10 +5702,30 @@ private static final long serialVersionUID = 0L;
       result = result && getSearchImpressionShare()
           .equals(other.getSearchImpressionShare());
     }
+    result = result && (hasSearchRankLostAbsoluteTopImpressionShare() == other.hasSearchRankLostAbsoluteTopImpressionShare());
+    if (hasSearchRankLostAbsoluteTopImpressionShare()) {
+      result = result && getSearchRankLostAbsoluteTopImpressionShare()
+          .equals(other.getSearchRankLostAbsoluteTopImpressionShare());
+    }
     result = result && (hasSearchRankLostImpressionShare() == other.hasSearchRankLostImpressionShare());
     if (hasSearchRankLostImpressionShare()) {
       result = result && getSearchRankLostImpressionShare()
           .equals(other.getSearchRankLostImpressionShare());
+    }
+    result = result && (hasSearchRankLostTopImpressionShare() == other.hasSearchRankLostTopImpressionShare());
+    if (hasSearchRankLostTopImpressionShare()) {
+      result = result && getSearchRankLostTopImpressionShare()
+          .equals(other.getSearchRankLostTopImpressionShare());
+    }
+    result = result && (hasSearchTopImpressionShare() == other.hasSearchTopImpressionShare());
+    if (hasSearchTopImpressionShare()) {
+      result = result && getSearchTopImpressionShare()
+          .equals(other.getSearchTopImpressionShare());
+    }
+    result = result && (hasTopImpressionPercentage() == other.hasTopImpressionPercentage());
+    if (hasTopImpressionPercentage()) {
+      result = result && getTopImpressionPercentage()
+          .equals(other.getTopImpressionPercentage());
     }
     result = result && (hasValuePerAllConversions() == other.hasValuePerAllConversions());
     if (hasValuePerAllConversions()) {
@@ -3470,6 +5736,11 @@ private static final long serialVersionUID = 0L;
     if (hasValuePerConversion()) {
       result = result && getValuePerConversion()
           .equals(other.getValuePerConversion());
+    }
+    result = result && (hasValuePerCurrentModelAttributedConversion() == other.hasValuePerCurrentModelAttributedConversion());
+    if (hasValuePerCurrentModelAttributedConversion()) {
+      result = result && getValuePerCurrentModelAttributedConversion()
+          .equals(other.getValuePerCurrentModelAttributedConversion());
     }
     result = result && (hasVideoQuartile100Rate() == other.hasVideoQuartile100Rate());
     if (hasVideoQuartile100Rate()) {
@@ -3517,6 +5788,38 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasAbsoluteTopImpressionPercentage()) {
+      hash = (37 * hash) + ABSOLUTE_TOP_IMPRESSION_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getAbsoluteTopImpressionPercentage().hashCode();
+    }
+    if (hasActiveViewCpm()) {
+      hash = (37 * hash) + ACTIVE_VIEW_CPM_FIELD_NUMBER;
+      hash = (53 * hash) + getActiveViewCpm().hashCode();
+    }
+    if (hasActiveViewCtr()) {
+      hash = (37 * hash) + ACTIVE_VIEW_CTR_FIELD_NUMBER;
+      hash = (53 * hash) + getActiveViewCtr().hashCode();
+    }
+    if (hasActiveViewImpressions()) {
+      hash = (37 * hash) + ACTIVE_VIEW_IMPRESSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getActiveViewImpressions().hashCode();
+    }
+    if (hasActiveViewMeasurability()) {
+      hash = (37 * hash) + ACTIVE_VIEW_MEASURABILITY_FIELD_NUMBER;
+      hash = (53 * hash) + getActiveViewMeasurability().hashCode();
+    }
+    if (hasActiveViewMeasurableCostMicros()) {
+      hash = (37 * hash) + ACTIVE_VIEW_MEASURABLE_COST_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + getActiveViewMeasurableCostMicros().hashCode();
+    }
+    if (hasActiveViewMeasurableImpressions()) {
+      hash = (37 * hash) + ACTIVE_VIEW_MEASURABLE_IMPRESSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getActiveViewMeasurableImpressions().hashCode();
+    }
+    if (hasActiveViewViewability()) {
+      hash = (37 * hash) + ACTIVE_VIEW_VIEWABILITY_FIELD_NUMBER;
+      hash = (53 * hash) + getActiveViewViewability().hashCode();
+    }
     if (hasAllConversionsFromInteractionsRate()) {
       hash = (37 * hash) + ALL_CONVERSIONS_FROM_INTERACTIONS_RATE_FIELD_NUMBER;
       hash = (53 * hash) + getAllConversionsFromInteractionsRate().hashCode();
@@ -3545,6 +5848,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AVERAGE_CPC_FIELD_NUMBER;
       hash = (53 * hash) + getAverageCpc().hashCode();
     }
+    if (hasAverageCpe()) {
+      hash = (37 * hash) + AVERAGE_CPE_FIELD_NUMBER;
+      hash = (53 * hash) + getAverageCpe().hashCode();
+    }
     if (hasAverageCpm()) {
       hash = (37 * hash) + AVERAGE_CPM_FIELD_NUMBER;
       hash = (53 * hash) + getAverageCpm().hashCode();
@@ -3553,9 +5860,25 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AVERAGE_CPV_FIELD_NUMBER;
       hash = (53 * hash) + getAverageCpv().hashCode();
     }
+    if (hasAverageFrequency()) {
+      hash = (37 * hash) + AVERAGE_FREQUENCY_FIELD_NUMBER;
+      hash = (53 * hash) + getAverageFrequency().hashCode();
+    }
+    if (hasAveragePageViews()) {
+      hash = (37 * hash) + AVERAGE_PAGE_VIEWS_FIELD_NUMBER;
+      hash = (53 * hash) + getAveragePageViews().hashCode();
+    }
     if (hasAveragePosition()) {
       hash = (37 * hash) + AVERAGE_POSITION_FIELD_NUMBER;
       hash = (53 * hash) + getAveragePosition().hashCode();
+    }
+    if (hasAverageTimeOnSite()) {
+      hash = (37 * hash) + AVERAGE_TIME_ON_SITE_FIELD_NUMBER;
+      hash = (53 * hash) + getAverageTimeOnSite().hashCode();
+    }
+    if (hasBenchmarkAverageMaxCpc()) {
+      hash = (37 * hash) + BENCHMARK_AVERAGE_MAX_CPC_FIELD_NUMBER;
+      hash = (53 * hash) + getBenchmarkAverageMaxCpc().hashCode();
     }
     if (hasBenchmarkCtr()) {
       hash = (37 * hash) + BENCHMARK_CTR_FIELD_NUMBER;
@@ -3621,6 +5944,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + COST_PER_CONVERSION_FIELD_NUMBER;
       hash = (53 * hash) + getCostPerConversion().hashCode();
     }
+    if (hasCostPerCurrentModelAttributedConversion()) {
+      hash = (37 * hash) + COST_PER_CURRENT_MODEL_ATTRIBUTED_CONVERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getCostPerCurrentModelAttributedConversion().hashCode();
+    }
     if (hasCrossDeviceConversions()) {
       hash = (37 * hash) + CROSS_DEVICE_CONVERSIONS_FIELD_NUMBER;
       hash = (53 * hash) + getCrossDeviceConversions().hashCode();
@@ -3628,6 +5955,26 @@ private static final long serialVersionUID = 0L;
     if (hasCtr()) {
       hash = (37 * hash) + CTR_FIELD_NUMBER;
       hash = (53 * hash) + getCtr().hashCode();
+    }
+    if (hasCurrentModelAttributedConversions()) {
+      hash = (37 * hash) + CURRENT_MODEL_ATTRIBUTED_CONVERSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrentModelAttributedConversions().hashCode();
+    }
+    if (hasCurrentModelAttributedConversionsFromInteractionsRate()) {
+      hash = (37 * hash) + CURRENT_MODEL_ATTRIBUTED_CONVERSIONS_FROM_INTERACTIONS_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrentModelAttributedConversionsFromInteractionsRate().hashCode();
+    }
+    if (hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction()) {
+      hash = (37 * hash) + CURRENT_MODEL_ATTRIBUTED_CONVERSIONS_FROM_INTERACTIONS_VALUE_PER_INTERACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction().hashCode();
+    }
+    if (hasCurrentModelAttributedConversionsValue()) {
+      hash = (37 * hash) + CURRENT_MODEL_ATTRIBUTED_CONVERSIONS_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrentModelAttributedConversionsValue().hashCode();
+    }
+    if (hasCurrentModelAttributedConversionsValuePerCost()) {
+      hash = (37 * hash) + CURRENT_MODEL_ATTRIBUTED_CONVERSIONS_VALUE_PER_COST_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrentModelAttributedConversionsValuePerCost().hashCode();
     }
     if (hasEngagementRate()) {
       hash = (37 * hash) + ENGAGEMENT_RATE_FIELD_NUMBER;
@@ -3641,6 +5988,32 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HOTEL_AVERAGE_LEAD_VALUE_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + getHotelAverageLeadValueMicros().hashCode();
     }
+    hash = (37 * hash) + HISTORICAL_CREATIVE_QUALITY_SCORE_FIELD_NUMBER;
+    hash = (53 * hash) + historicalCreativeQualityScore_;
+    hash = (37 * hash) + HISTORICAL_LANDING_PAGE_QUALITY_SCORE_FIELD_NUMBER;
+    hash = (53 * hash) + historicalLandingPageQualityScore_;
+    if (hasHistoricalQualityScore()) {
+      hash = (37 * hash) + HISTORICAL_QUALITY_SCORE_FIELD_NUMBER;
+      hash = (53 * hash) + getHistoricalQualityScore().hashCode();
+    }
+    hash = (37 * hash) + HISTORICAL_SEARCH_PREDICTED_CTR_FIELD_NUMBER;
+    hash = (53 * hash) + historicalSearchPredictedCtr_;
+    if (hasGmailForwards()) {
+      hash = (37 * hash) + GMAIL_FORWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + getGmailForwards().hashCode();
+    }
+    if (hasGmailSaves()) {
+      hash = (37 * hash) + GMAIL_SAVES_FIELD_NUMBER;
+      hash = (53 * hash) + getGmailSaves().hashCode();
+    }
+    if (hasGmailSecondaryClicks()) {
+      hash = (37 * hash) + GMAIL_SECONDARY_CLICKS_FIELD_NUMBER;
+      hash = (53 * hash) + getGmailSecondaryClicks().hashCode();
+    }
+    if (hasImpressionReach()) {
+      hash = (37 * hash) + IMPRESSION_REACH_FIELD_NUMBER;
+      hash = (53 * hash) + getImpressionReach().hashCode();
+    }
     if (hasImpressions()) {
       hash = (37 * hash) + IMPRESSIONS_FIELD_NUMBER;
       hash = (53 * hash) + getImpressions().hashCode();
@@ -3652,6 +6025,10 @@ private static final long serialVersionUID = 0L;
     if (hasInteractions()) {
       hash = (37 * hash) + INTERACTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getInteractions().hashCode();
+    }
+    if (getInteractionEventTypesCount() > 0) {
+      hash = (37 * hash) + INTERACTION_EVENT_TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + interactionEventTypes_.hashCode();
     }
     if (hasInvalidClickRate()) {
       hash = (37 * hash) + INVALID_CLICK_RATE_FIELD_NUMBER;
@@ -3685,9 +6062,21 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SEARCH_ABSOLUTE_TOP_IMPRESSION_SHARE_FIELD_NUMBER;
       hash = (53 * hash) + getSearchAbsoluteTopImpressionShare().hashCode();
     }
+    if (hasSearchBudgetLostAbsoluteTopImpressionShare()) {
+      hash = (37 * hash) + SEARCH_BUDGET_LOST_ABSOLUTE_TOP_IMPRESSION_SHARE_FIELD_NUMBER;
+      hash = (53 * hash) + getSearchBudgetLostAbsoluteTopImpressionShare().hashCode();
+    }
     if (hasSearchBudgetLostImpressionShare()) {
       hash = (37 * hash) + SEARCH_BUDGET_LOST_IMPRESSION_SHARE_FIELD_NUMBER;
       hash = (53 * hash) + getSearchBudgetLostImpressionShare().hashCode();
+    }
+    if (hasSearchBudgetLostTopImpressionShare()) {
+      hash = (37 * hash) + SEARCH_BUDGET_LOST_TOP_IMPRESSION_SHARE_FIELD_NUMBER;
+      hash = (53 * hash) + getSearchBudgetLostTopImpressionShare().hashCode();
+    }
+    if (hasSearchClickShare()) {
+      hash = (37 * hash) + SEARCH_CLICK_SHARE_FIELD_NUMBER;
+      hash = (53 * hash) + getSearchClickShare().hashCode();
     }
     if (hasSearchExactMatchImpressionShare()) {
       hash = (37 * hash) + SEARCH_EXACT_MATCH_IMPRESSION_SHARE_FIELD_NUMBER;
@@ -3697,9 +6086,25 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SEARCH_IMPRESSION_SHARE_FIELD_NUMBER;
       hash = (53 * hash) + getSearchImpressionShare().hashCode();
     }
+    if (hasSearchRankLostAbsoluteTopImpressionShare()) {
+      hash = (37 * hash) + SEARCH_RANK_LOST_ABSOLUTE_TOP_IMPRESSION_SHARE_FIELD_NUMBER;
+      hash = (53 * hash) + getSearchRankLostAbsoluteTopImpressionShare().hashCode();
+    }
     if (hasSearchRankLostImpressionShare()) {
       hash = (37 * hash) + SEARCH_RANK_LOST_IMPRESSION_SHARE_FIELD_NUMBER;
       hash = (53 * hash) + getSearchRankLostImpressionShare().hashCode();
+    }
+    if (hasSearchRankLostTopImpressionShare()) {
+      hash = (37 * hash) + SEARCH_RANK_LOST_TOP_IMPRESSION_SHARE_FIELD_NUMBER;
+      hash = (53 * hash) + getSearchRankLostTopImpressionShare().hashCode();
+    }
+    if (hasSearchTopImpressionShare()) {
+      hash = (37 * hash) + SEARCH_TOP_IMPRESSION_SHARE_FIELD_NUMBER;
+      hash = (53 * hash) + getSearchTopImpressionShare().hashCode();
+    }
+    if (hasTopImpressionPercentage()) {
+      hash = (37 * hash) + TOP_IMPRESSION_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getTopImpressionPercentage().hashCode();
     }
     if (hasValuePerAllConversions()) {
       hash = (37 * hash) + VALUE_PER_ALL_CONVERSIONS_FIELD_NUMBER;
@@ -3708,6 +6113,10 @@ private static final long serialVersionUID = 0L;
     if (hasValuePerConversion()) {
       hash = (37 * hash) + VALUE_PER_CONVERSION_FIELD_NUMBER;
       hash = (53 * hash) + getValuePerConversion().hashCode();
+    }
+    if (hasValuePerCurrentModelAttributedConversion()) {
+      hash = (37 * hash) + VALUE_PER_CURRENT_MODEL_ATTRIBUTED_CONVERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getValuePerCurrentModelAttributedConversion().hashCode();
     }
     if (hasVideoQuartile100Rate()) {
       hash = (37 * hash) + VIDEO_QUARTILE_100_RATE_FIELD_NUMBER;
@@ -3874,6 +6283,54 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      if (absoluteTopImpressionPercentageBuilder_ == null) {
+        absoluteTopImpressionPercentage_ = null;
+      } else {
+        absoluteTopImpressionPercentage_ = null;
+        absoluteTopImpressionPercentageBuilder_ = null;
+      }
+      if (activeViewCpmBuilder_ == null) {
+        activeViewCpm_ = null;
+      } else {
+        activeViewCpm_ = null;
+        activeViewCpmBuilder_ = null;
+      }
+      if (activeViewCtrBuilder_ == null) {
+        activeViewCtr_ = null;
+      } else {
+        activeViewCtr_ = null;
+        activeViewCtrBuilder_ = null;
+      }
+      if (activeViewImpressionsBuilder_ == null) {
+        activeViewImpressions_ = null;
+      } else {
+        activeViewImpressions_ = null;
+        activeViewImpressionsBuilder_ = null;
+      }
+      if (activeViewMeasurabilityBuilder_ == null) {
+        activeViewMeasurability_ = null;
+      } else {
+        activeViewMeasurability_ = null;
+        activeViewMeasurabilityBuilder_ = null;
+      }
+      if (activeViewMeasurableCostMicrosBuilder_ == null) {
+        activeViewMeasurableCostMicros_ = null;
+      } else {
+        activeViewMeasurableCostMicros_ = null;
+        activeViewMeasurableCostMicrosBuilder_ = null;
+      }
+      if (activeViewMeasurableImpressionsBuilder_ == null) {
+        activeViewMeasurableImpressions_ = null;
+      } else {
+        activeViewMeasurableImpressions_ = null;
+        activeViewMeasurableImpressionsBuilder_ = null;
+      }
+      if (activeViewViewabilityBuilder_ == null) {
+        activeViewViewability_ = null;
+      } else {
+        activeViewViewability_ = null;
+        activeViewViewabilityBuilder_ = null;
+      }
       if (allConversionsFromInteractionsRateBuilder_ == null) {
         allConversionsFromInteractionsRate_ = null;
       } else {
@@ -3916,6 +6373,12 @@ private static final long serialVersionUID = 0L;
         averageCpc_ = null;
         averageCpcBuilder_ = null;
       }
+      if (averageCpeBuilder_ == null) {
+        averageCpe_ = null;
+      } else {
+        averageCpe_ = null;
+        averageCpeBuilder_ = null;
+      }
       if (averageCpmBuilder_ == null) {
         averageCpm_ = null;
       } else {
@@ -3928,11 +6391,35 @@ private static final long serialVersionUID = 0L;
         averageCpv_ = null;
         averageCpvBuilder_ = null;
       }
+      if (averageFrequencyBuilder_ == null) {
+        averageFrequency_ = null;
+      } else {
+        averageFrequency_ = null;
+        averageFrequencyBuilder_ = null;
+      }
+      if (averagePageViewsBuilder_ == null) {
+        averagePageViews_ = null;
+      } else {
+        averagePageViews_ = null;
+        averagePageViewsBuilder_ = null;
+      }
       if (averagePositionBuilder_ == null) {
         averagePosition_ = null;
       } else {
         averagePosition_ = null;
         averagePositionBuilder_ = null;
+      }
+      if (averageTimeOnSiteBuilder_ == null) {
+        averageTimeOnSite_ = null;
+      } else {
+        averageTimeOnSite_ = null;
+        averageTimeOnSiteBuilder_ = null;
+      }
+      if (benchmarkAverageMaxCpcBuilder_ == null) {
+        benchmarkAverageMaxCpc_ = null;
+      } else {
+        benchmarkAverageMaxCpc_ = null;
+        benchmarkAverageMaxCpcBuilder_ = null;
       }
       if (benchmarkCtrBuilder_ == null) {
         benchmarkCtr_ = null;
@@ -4030,6 +6517,12 @@ private static final long serialVersionUID = 0L;
         costPerConversion_ = null;
         costPerConversionBuilder_ = null;
       }
+      if (costPerCurrentModelAttributedConversionBuilder_ == null) {
+        costPerCurrentModelAttributedConversion_ = null;
+      } else {
+        costPerCurrentModelAttributedConversion_ = null;
+        costPerCurrentModelAttributedConversionBuilder_ = null;
+      }
       if (crossDeviceConversionsBuilder_ == null) {
         crossDeviceConversions_ = null;
       } else {
@@ -4041,6 +6534,36 @@ private static final long serialVersionUID = 0L;
       } else {
         ctr_ = null;
         ctrBuilder_ = null;
+      }
+      if (currentModelAttributedConversionsBuilder_ == null) {
+        currentModelAttributedConversions_ = null;
+      } else {
+        currentModelAttributedConversions_ = null;
+        currentModelAttributedConversionsBuilder_ = null;
+      }
+      if (currentModelAttributedConversionsFromInteractionsRateBuilder_ == null) {
+        currentModelAttributedConversionsFromInteractionsRate_ = null;
+      } else {
+        currentModelAttributedConversionsFromInteractionsRate_ = null;
+        currentModelAttributedConversionsFromInteractionsRateBuilder_ = null;
+      }
+      if (currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = null;
+      } else {
+        currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = null;
+        currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ = null;
+      }
+      if (currentModelAttributedConversionsValueBuilder_ == null) {
+        currentModelAttributedConversionsValue_ = null;
+      } else {
+        currentModelAttributedConversionsValue_ = null;
+        currentModelAttributedConversionsValueBuilder_ = null;
+      }
+      if (currentModelAttributedConversionsValuePerCostBuilder_ == null) {
+        currentModelAttributedConversionsValuePerCost_ = null;
+      } else {
+        currentModelAttributedConversionsValuePerCost_ = null;
+        currentModelAttributedConversionsValuePerCostBuilder_ = null;
       }
       if (engagementRateBuilder_ == null) {
         engagementRate_ = null;
@@ -4060,6 +6583,42 @@ private static final long serialVersionUID = 0L;
         hotelAverageLeadValueMicros_ = null;
         hotelAverageLeadValueMicrosBuilder_ = null;
       }
+      historicalCreativeQualityScore_ = 0;
+
+      historicalLandingPageQualityScore_ = 0;
+
+      if (historicalQualityScoreBuilder_ == null) {
+        historicalQualityScore_ = null;
+      } else {
+        historicalQualityScore_ = null;
+        historicalQualityScoreBuilder_ = null;
+      }
+      historicalSearchPredictedCtr_ = 0;
+
+      if (gmailForwardsBuilder_ == null) {
+        gmailForwards_ = null;
+      } else {
+        gmailForwards_ = null;
+        gmailForwardsBuilder_ = null;
+      }
+      if (gmailSavesBuilder_ == null) {
+        gmailSaves_ = null;
+      } else {
+        gmailSaves_ = null;
+        gmailSavesBuilder_ = null;
+      }
+      if (gmailSecondaryClicksBuilder_ == null) {
+        gmailSecondaryClicks_ = null;
+      } else {
+        gmailSecondaryClicks_ = null;
+        gmailSecondaryClicksBuilder_ = null;
+      }
+      if (impressionReachBuilder_ == null) {
+        impressionReach_ = null;
+      } else {
+        impressionReach_ = null;
+        impressionReachBuilder_ = null;
+      }
       if (impressionsBuilder_ == null) {
         impressions_ = null;
       } else {
@@ -4078,6 +6637,8 @@ private static final long serialVersionUID = 0L;
         interactions_ = null;
         interactionsBuilder_ = null;
       }
+      interactionEventTypes_ = java.util.Collections.emptyList();
+      bitField1_ = (bitField1_ & ~0x20000000);
       if (invalidClickRateBuilder_ == null) {
         invalidClickRate_ = null;
       } else {
@@ -4126,11 +6687,29 @@ private static final long serialVersionUID = 0L;
         searchAbsoluteTopImpressionShare_ = null;
         searchAbsoluteTopImpressionShareBuilder_ = null;
       }
+      if (searchBudgetLostAbsoluteTopImpressionShareBuilder_ == null) {
+        searchBudgetLostAbsoluteTopImpressionShare_ = null;
+      } else {
+        searchBudgetLostAbsoluteTopImpressionShare_ = null;
+        searchBudgetLostAbsoluteTopImpressionShareBuilder_ = null;
+      }
       if (searchBudgetLostImpressionShareBuilder_ == null) {
         searchBudgetLostImpressionShare_ = null;
       } else {
         searchBudgetLostImpressionShare_ = null;
         searchBudgetLostImpressionShareBuilder_ = null;
+      }
+      if (searchBudgetLostTopImpressionShareBuilder_ == null) {
+        searchBudgetLostTopImpressionShare_ = null;
+      } else {
+        searchBudgetLostTopImpressionShare_ = null;
+        searchBudgetLostTopImpressionShareBuilder_ = null;
+      }
+      if (searchClickShareBuilder_ == null) {
+        searchClickShare_ = null;
+      } else {
+        searchClickShare_ = null;
+        searchClickShareBuilder_ = null;
       }
       if (searchExactMatchImpressionShareBuilder_ == null) {
         searchExactMatchImpressionShare_ = null;
@@ -4144,11 +6723,35 @@ private static final long serialVersionUID = 0L;
         searchImpressionShare_ = null;
         searchImpressionShareBuilder_ = null;
       }
+      if (searchRankLostAbsoluteTopImpressionShareBuilder_ == null) {
+        searchRankLostAbsoluteTopImpressionShare_ = null;
+      } else {
+        searchRankLostAbsoluteTopImpressionShare_ = null;
+        searchRankLostAbsoluteTopImpressionShareBuilder_ = null;
+      }
       if (searchRankLostImpressionShareBuilder_ == null) {
         searchRankLostImpressionShare_ = null;
       } else {
         searchRankLostImpressionShare_ = null;
         searchRankLostImpressionShareBuilder_ = null;
+      }
+      if (searchRankLostTopImpressionShareBuilder_ == null) {
+        searchRankLostTopImpressionShare_ = null;
+      } else {
+        searchRankLostTopImpressionShare_ = null;
+        searchRankLostTopImpressionShareBuilder_ = null;
+      }
+      if (searchTopImpressionShareBuilder_ == null) {
+        searchTopImpressionShare_ = null;
+      } else {
+        searchTopImpressionShare_ = null;
+        searchTopImpressionShareBuilder_ = null;
+      }
+      if (topImpressionPercentageBuilder_ == null) {
+        topImpressionPercentage_ = null;
+      } else {
+        topImpressionPercentage_ = null;
+        topImpressionPercentageBuilder_ = null;
       }
       if (valuePerAllConversionsBuilder_ == null) {
         valuePerAllConversions_ = null;
@@ -4161,6 +6764,12 @@ private static final long serialVersionUID = 0L;
       } else {
         valuePerConversion_ = null;
         valuePerConversionBuilder_ = null;
+      }
+      if (valuePerCurrentModelAttributedConversionBuilder_ == null) {
+        valuePerCurrentModelAttributedConversion_ = null;
+      } else {
+        valuePerCurrentModelAttributedConversion_ = null;
+        valuePerCurrentModelAttributedConversionBuilder_ = null;
       }
       if (videoQuartile100RateBuilder_ == null) {
         videoQuartile100Rate_ = null;
@@ -4230,6 +6839,52 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v0.common.Metrics buildPartial() {
       com.google.ads.googleads.v0.common.Metrics result = new com.google.ads.googleads.v0.common.Metrics(this);
+      int from_bitField0_ = bitField0_;
+      int from_bitField1_ = bitField1_;
+      int from_bitField2_ = bitField2_;
+      int to_bitField0_ = 0;
+      int to_bitField1_ = 0;
+      int to_bitField2_ = 0;
+      if (absoluteTopImpressionPercentageBuilder_ == null) {
+        result.absoluteTopImpressionPercentage_ = absoluteTopImpressionPercentage_;
+      } else {
+        result.absoluteTopImpressionPercentage_ = absoluteTopImpressionPercentageBuilder_.build();
+      }
+      if (activeViewCpmBuilder_ == null) {
+        result.activeViewCpm_ = activeViewCpm_;
+      } else {
+        result.activeViewCpm_ = activeViewCpmBuilder_.build();
+      }
+      if (activeViewCtrBuilder_ == null) {
+        result.activeViewCtr_ = activeViewCtr_;
+      } else {
+        result.activeViewCtr_ = activeViewCtrBuilder_.build();
+      }
+      if (activeViewImpressionsBuilder_ == null) {
+        result.activeViewImpressions_ = activeViewImpressions_;
+      } else {
+        result.activeViewImpressions_ = activeViewImpressionsBuilder_.build();
+      }
+      if (activeViewMeasurabilityBuilder_ == null) {
+        result.activeViewMeasurability_ = activeViewMeasurability_;
+      } else {
+        result.activeViewMeasurability_ = activeViewMeasurabilityBuilder_.build();
+      }
+      if (activeViewMeasurableCostMicrosBuilder_ == null) {
+        result.activeViewMeasurableCostMicros_ = activeViewMeasurableCostMicros_;
+      } else {
+        result.activeViewMeasurableCostMicros_ = activeViewMeasurableCostMicrosBuilder_.build();
+      }
+      if (activeViewMeasurableImpressionsBuilder_ == null) {
+        result.activeViewMeasurableImpressions_ = activeViewMeasurableImpressions_;
+      } else {
+        result.activeViewMeasurableImpressions_ = activeViewMeasurableImpressionsBuilder_.build();
+      }
+      if (activeViewViewabilityBuilder_ == null) {
+        result.activeViewViewability_ = activeViewViewability_;
+      } else {
+        result.activeViewViewability_ = activeViewViewabilityBuilder_.build();
+      }
       if (allConversionsFromInteractionsRateBuilder_ == null) {
         result.allConversionsFromInteractionsRate_ = allConversionsFromInteractionsRate_;
       } else {
@@ -4265,6 +6920,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.averageCpc_ = averageCpcBuilder_.build();
       }
+      if (averageCpeBuilder_ == null) {
+        result.averageCpe_ = averageCpe_;
+      } else {
+        result.averageCpe_ = averageCpeBuilder_.build();
+      }
       if (averageCpmBuilder_ == null) {
         result.averageCpm_ = averageCpm_;
       } else {
@@ -4275,10 +6935,30 @@ private static final long serialVersionUID = 0L;
       } else {
         result.averageCpv_ = averageCpvBuilder_.build();
       }
+      if (averageFrequencyBuilder_ == null) {
+        result.averageFrequency_ = averageFrequency_;
+      } else {
+        result.averageFrequency_ = averageFrequencyBuilder_.build();
+      }
+      if (averagePageViewsBuilder_ == null) {
+        result.averagePageViews_ = averagePageViews_;
+      } else {
+        result.averagePageViews_ = averagePageViewsBuilder_.build();
+      }
       if (averagePositionBuilder_ == null) {
         result.averagePosition_ = averagePosition_;
       } else {
         result.averagePosition_ = averagePositionBuilder_.build();
+      }
+      if (averageTimeOnSiteBuilder_ == null) {
+        result.averageTimeOnSite_ = averageTimeOnSite_;
+      } else {
+        result.averageTimeOnSite_ = averageTimeOnSiteBuilder_.build();
+      }
+      if (benchmarkAverageMaxCpcBuilder_ == null) {
+        result.benchmarkAverageMaxCpc_ = benchmarkAverageMaxCpc_;
+      } else {
+        result.benchmarkAverageMaxCpc_ = benchmarkAverageMaxCpcBuilder_.build();
       }
       if (benchmarkCtrBuilder_ == null) {
         result.benchmarkCtr_ = benchmarkCtr_;
@@ -4360,6 +7040,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.costPerConversion_ = costPerConversionBuilder_.build();
       }
+      if (costPerCurrentModelAttributedConversionBuilder_ == null) {
+        result.costPerCurrentModelAttributedConversion_ = costPerCurrentModelAttributedConversion_;
+      } else {
+        result.costPerCurrentModelAttributedConversion_ = costPerCurrentModelAttributedConversionBuilder_.build();
+      }
       if (crossDeviceConversionsBuilder_ == null) {
         result.crossDeviceConversions_ = crossDeviceConversions_;
       } else {
@@ -4369,6 +7054,31 @@ private static final long serialVersionUID = 0L;
         result.ctr_ = ctr_;
       } else {
         result.ctr_ = ctrBuilder_.build();
+      }
+      if (currentModelAttributedConversionsBuilder_ == null) {
+        result.currentModelAttributedConversions_ = currentModelAttributedConversions_;
+      } else {
+        result.currentModelAttributedConversions_ = currentModelAttributedConversionsBuilder_.build();
+      }
+      if (currentModelAttributedConversionsFromInteractionsRateBuilder_ == null) {
+        result.currentModelAttributedConversionsFromInteractionsRate_ = currentModelAttributedConversionsFromInteractionsRate_;
+      } else {
+        result.currentModelAttributedConversionsFromInteractionsRate_ = currentModelAttributedConversionsFromInteractionsRateBuilder_.build();
+      }
+      if (currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        result.currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = currentModelAttributedConversionsFromInteractionsValuePerInteraction_;
+      } else {
+        result.currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_.build();
+      }
+      if (currentModelAttributedConversionsValueBuilder_ == null) {
+        result.currentModelAttributedConversionsValue_ = currentModelAttributedConversionsValue_;
+      } else {
+        result.currentModelAttributedConversionsValue_ = currentModelAttributedConversionsValueBuilder_.build();
+      }
+      if (currentModelAttributedConversionsValuePerCostBuilder_ == null) {
+        result.currentModelAttributedConversionsValuePerCost_ = currentModelAttributedConversionsValuePerCost_;
+      } else {
+        result.currentModelAttributedConversionsValuePerCost_ = currentModelAttributedConversionsValuePerCostBuilder_.build();
       }
       if (engagementRateBuilder_ == null) {
         result.engagementRate_ = engagementRate_;
@@ -4385,6 +7095,34 @@ private static final long serialVersionUID = 0L;
       } else {
         result.hotelAverageLeadValueMicros_ = hotelAverageLeadValueMicrosBuilder_.build();
       }
+      result.historicalCreativeQualityScore_ = historicalCreativeQualityScore_;
+      result.historicalLandingPageQualityScore_ = historicalLandingPageQualityScore_;
+      if (historicalQualityScoreBuilder_ == null) {
+        result.historicalQualityScore_ = historicalQualityScore_;
+      } else {
+        result.historicalQualityScore_ = historicalQualityScoreBuilder_.build();
+      }
+      result.historicalSearchPredictedCtr_ = historicalSearchPredictedCtr_;
+      if (gmailForwardsBuilder_ == null) {
+        result.gmailForwards_ = gmailForwards_;
+      } else {
+        result.gmailForwards_ = gmailForwardsBuilder_.build();
+      }
+      if (gmailSavesBuilder_ == null) {
+        result.gmailSaves_ = gmailSaves_;
+      } else {
+        result.gmailSaves_ = gmailSavesBuilder_.build();
+      }
+      if (gmailSecondaryClicksBuilder_ == null) {
+        result.gmailSecondaryClicks_ = gmailSecondaryClicks_;
+      } else {
+        result.gmailSecondaryClicks_ = gmailSecondaryClicksBuilder_.build();
+      }
+      if (impressionReachBuilder_ == null) {
+        result.impressionReach_ = impressionReach_;
+      } else {
+        result.impressionReach_ = impressionReachBuilder_.build();
+      }
       if (impressionsBuilder_ == null) {
         result.impressions_ = impressions_;
       } else {
@@ -4400,6 +7138,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.interactions_ = interactionsBuilder_.build();
       }
+      if (((bitField1_ & 0x20000000) == 0x20000000)) {
+        interactionEventTypes_ = java.util.Collections.unmodifiableList(interactionEventTypes_);
+        bitField1_ = (bitField1_ & ~0x20000000);
+      }
+      result.interactionEventTypes_ = interactionEventTypes_;
       if (invalidClickRateBuilder_ == null) {
         result.invalidClickRate_ = invalidClickRate_;
       } else {
@@ -4440,10 +7183,25 @@ private static final long serialVersionUID = 0L;
       } else {
         result.searchAbsoluteTopImpressionShare_ = searchAbsoluteTopImpressionShareBuilder_.build();
       }
+      if (searchBudgetLostAbsoluteTopImpressionShareBuilder_ == null) {
+        result.searchBudgetLostAbsoluteTopImpressionShare_ = searchBudgetLostAbsoluteTopImpressionShare_;
+      } else {
+        result.searchBudgetLostAbsoluteTopImpressionShare_ = searchBudgetLostAbsoluteTopImpressionShareBuilder_.build();
+      }
       if (searchBudgetLostImpressionShareBuilder_ == null) {
         result.searchBudgetLostImpressionShare_ = searchBudgetLostImpressionShare_;
       } else {
         result.searchBudgetLostImpressionShare_ = searchBudgetLostImpressionShareBuilder_.build();
+      }
+      if (searchBudgetLostTopImpressionShareBuilder_ == null) {
+        result.searchBudgetLostTopImpressionShare_ = searchBudgetLostTopImpressionShare_;
+      } else {
+        result.searchBudgetLostTopImpressionShare_ = searchBudgetLostTopImpressionShareBuilder_.build();
+      }
+      if (searchClickShareBuilder_ == null) {
+        result.searchClickShare_ = searchClickShare_;
+      } else {
+        result.searchClickShare_ = searchClickShareBuilder_.build();
       }
       if (searchExactMatchImpressionShareBuilder_ == null) {
         result.searchExactMatchImpressionShare_ = searchExactMatchImpressionShare_;
@@ -4455,10 +7213,30 @@ private static final long serialVersionUID = 0L;
       } else {
         result.searchImpressionShare_ = searchImpressionShareBuilder_.build();
       }
+      if (searchRankLostAbsoluteTopImpressionShareBuilder_ == null) {
+        result.searchRankLostAbsoluteTopImpressionShare_ = searchRankLostAbsoluteTopImpressionShare_;
+      } else {
+        result.searchRankLostAbsoluteTopImpressionShare_ = searchRankLostAbsoluteTopImpressionShareBuilder_.build();
+      }
       if (searchRankLostImpressionShareBuilder_ == null) {
         result.searchRankLostImpressionShare_ = searchRankLostImpressionShare_;
       } else {
         result.searchRankLostImpressionShare_ = searchRankLostImpressionShareBuilder_.build();
+      }
+      if (searchRankLostTopImpressionShareBuilder_ == null) {
+        result.searchRankLostTopImpressionShare_ = searchRankLostTopImpressionShare_;
+      } else {
+        result.searchRankLostTopImpressionShare_ = searchRankLostTopImpressionShareBuilder_.build();
+      }
+      if (searchTopImpressionShareBuilder_ == null) {
+        result.searchTopImpressionShare_ = searchTopImpressionShare_;
+      } else {
+        result.searchTopImpressionShare_ = searchTopImpressionShareBuilder_.build();
+      }
+      if (topImpressionPercentageBuilder_ == null) {
+        result.topImpressionPercentage_ = topImpressionPercentage_;
+      } else {
+        result.topImpressionPercentage_ = topImpressionPercentageBuilder_.build();
       }
       if (valuePerAllConversionsBuilder_ == null) {
         result.valuePerAllConversions_ = valuePerAllConversions_;
@@ -4469,6 +7247,11 @@ private static final long serialVersionUID = 0L;
         result.valuePerConversion_ = valuePerConversion_;
       } else {
         result.valuePerConversion_ = valuePerConversionBuilder_.build();
+      }
+      if (valuePerCurrentModelAttributedConversionBuilder_ == null) {
+        result.valuePerCurrentModelAttributedConversion_ = valuePerCurrentModelAttributedConversion_;
+      } else {
+        result.valuePerCurrentModelAttributedConversion_ = valuePerCurrentModelAttributedConversionBuilder_.build();
       }
       if (videoQuartile100RateBuilder_ == null) {
         result.videoQuartile100Rate_ = videoQuartile100Rate_;
@@ -4505,6 +7288,9 @@ private static final long serialVersionUID = 0L;
       } else {
         result.viewThroughConversions_ = viewThroughConversionsBuilder_.build();
       }
+      result.bitField0_ = to_bitField0_;
+      result.bitField1_ = to_bitField1_;
+      result.bitField2_ = to_bitField2_;
       onBuilt();
       return result;
     }
@@ -4553,6 +7339,30 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v0.common.Metrics other) {
       if (other == com.google.ads.googleads.v0.common.Metrics.getDefaultInstance()) return this;
+      if (other.hasAbsoluteTopImpressionPercentage()) {
+        mergeAbsoluteTopImpressionPercentage(other.getAbsoluteTopImpressionPercentage());
+      }
+      if (other.hasActiveViewCpm()) {
+        mergeActiveViewCpm(other.getActiveViewCpm());
+      }
+      if (other.hasActiveViewCtr()) {
+        mergeActiveViewCtr(other.getActiveViewCtr());
+      }
+      if (other.hasActiveViewImpressions()) {
+        mergeActiveViewImpressions(other.getActiveViewImpressions());
+      }
+      if (other.hasActiveViewMeasurability()) {
+        mergeActiveViewMeasurability(other.getActiveViewMeasurability());
+      }
+      if (other.hasActiveViewMeasurableCostMicros()) {
+        mergeActiveViewMeasurableCostMicros(other.getActiveViewMeasurableCostMicros());
+      }
+      if (other.hasActiveViewMeasurableImpressions()) {
+        mergeActiveViewMeasurableImpressions(other.getActiveViewMeasurableImpressions());
+      }
+      if (other.hasActiveViewViewability()) {
+        mergeActiveViewViewability(other.getActiveViewViewability());
+      }
       if (other.hasAllConversionsFromInteractionsRate()) {
         mergeAllConversionsFromInteractionsRate(other.getAllConversionsFromInteractionsRate());
       }
@@ -4574,14 +7384,29 @@ private static final long serialVersionUID = 0L;
       if (other.hasAverageCpc()) {
         mergeAverageCpc(other.getAverageCpc());
       }
+      if (other.hasAverageCpe()) {
+        mergeAverageCpe(other.getAverageCpe());
+      }
       if (other.hasAverageCpm()) {
         mergeAverageCpm(other.getAverageCpm());
       }
       if (other.hasAverageCpv()) {
         mergeAverageCpv(other.getAverageCpv());
       }
+      if (other.hasAverageFrequency()) {
+        mergeAverageFrequency(other.getAverageFrequency());
+      }
+      if (other.hasAveragePageViews()) {
+        mergeAveragePageViews(other.getAveragePageViews());
+      }
       if (other.hasAveragePosition()) {
         mergeAveragePosition(other.getAveragePosition());
+      }
+      if (other.hasAverageTimeOnSite()) {
+        mergeAverageTimeOnSite(other.getAverageTimeOnSite());
+      }
+      if (other.hasBenchmarkAverageMaxCpc()) {
+        mergeBenchmarkAverageMaxCpc(other.getBenchmarkAverageMaxCpc());
       }
       if (other.hasBenchmarkCtr()) {
         mergeBenchmarkCtr(other.getBenchmarkCtr());
@@ -4631,11 +7456,29 @@ private static final long serialVersionUID = 0L;
       if (other.hasCostPerConversion()) {
         mergeCostPerConversion(other.getCostPerConversion());
       }
+      if (other.hasCostPerCurrentModelAttributedConversion()) {
+        mergeCostPerCurrentModelAttributedConversion(other.getCostPerCurrentModelAttributedConversion());
+      }
       if (other.hasCrossDeviceConversions()) {
         mergeCrossDeviceConversions(other.getCrossDeviceConversions());
       }
       if (other.hasCtr()) {
         mergeCtr(other.getCtr());
+      }
+      if (other.hasCurrentModelAttributedConversions()) {
+        mergeCurrentModelAttributedConversions(other.getCurrentModelAttributedConversions());
+      }
+      if (other.hasCurrentModelAttributedConversionsFromInteractionsRate()) {
+        mergeCurrentModelAttributedConversionsFromInteractionsRate(other.getCurrentModelAttributedConversionsFromInteractionsRate());
+      }
+      if (other.hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction()) {
+        mergeCurrentModelAttributedConversionsFromInteractionsValuePerInteraction(other.getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction());
+      }
+      if (other.hasCurrentModelAttributedConversionsValue()) {
+        mergeCurrentModelAttributedConversionsValue(other.getCurrentModelAttributedConversionsValue());
+      }
+      if (other.hasCurrentModelAttributedConversionsValuePerCost()) {
+        mergeCurrentModelAttributedConversionsValuePerCost(other.getCurrentModelAttributedConversionsValuePerCost());
       }
       if (other.hasEngagementRate()) {
         mergeEngagementRate(other.getEngagementRate());
@@ -4646,6 +7489,30 @@ private static final long serialVersionUID = 0L;
       if (other.hasHotelAverageLeadValueMicros()) {
         mergeHotelAverageLeadValueMicros(other.getHotelAverageLeadValueMicros());
       }
+      if (other.historicalCreativeQualityScore_ != 0) {
+        setHistoricalCreativeQualityScoreValue(other.getHistoricalCreativeQualityScoreValue());
+      }
+      if (other.historicalLandingPageQualityScore_ != 0) {
+        setHistoricalLandingPageQualityScoreValue(other.getHistoricalLandingPageQualityScoreValue());
+      }
+      if (other.hasHistoricalQualityScore()) {
+        mergeHistoricalQualityScore(other.getHistoricalQualityScore());
+      }
+      if (other.historicalSearchPredictedCtr_ != 0) {
+        setHistoricalSearchPredictedCtrValue(other.getHistoricalSearchPredictedCtrValue());
+      }
+      if (other.hasGmailForwards()) {
+        mergeGmailForwards(other.getGmailForwards());
+      }
+      if (other.hasGmailSaves()) {
+        mergeGmailSaves(other.getGmailSaves());
+      }
+      if (other.hasGmailSecondaryClicks()) {
+        mergeGmailSecondaryClicks(other.getGmailSecondaryClicks());
+      }
+      if (other.hasImpressionReach()) {
+        mergeImpressionReach(other.getImpressionReach());
+      }
       if (other.hasImpressions()) {
         mergeImpressions(other.getImpressions());
       }
@@ -4654,6 +7521,16 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasInteractions()) {
         mergeInteractions(other.getInteractions());
+      }
+      if (!other.interactionEventTypes_.isEmpty()) {
+        if (interactionEventTypes_.isEmpty()) {
+          interactionEventTypes_ = other.interactionEventTypes_;
+          bitField1_ = (bitField1_ & ~0x20000000);
+        } else {
+          ensureInteractionEventTypesIsMutable();
+          interactionEventTypes_.addAll(other.interactionEventTypes_);
+        }
+        onChanged();
       }
       if (other.hasInvalidClickRate()) {
         mergeInvalidClickRate(other.getInvalidClickRate());
@@ -4679,8 +7556,17 @@ private static final long serialVersionUID = 0L;
       if (other.hasSearchAbsoluteTopImpressionShare()) {
         mergeSearchAbsoluteTopImpressionShare(other.getSearchAbsoluteTopImpressionShare());
       }
+      if (other.hasSearchBudgetLostAbsoluteTopImpressionShare()) {
+        mergeSearchBudgetLostAbsoluteTopImpressionShare(other.getSearchBudgetLostAbsoluteTopImpressionShare());
+      }
       if (other.hasSearchBudgetLostImpressionShare()) {
         mergeSearchBudgetLostImpressionShare(other.getSearchBudgetLostImpressionShare());
+      }
+      if (other.hasSearchBudgetLostTopImpressionShare()) {
+        mergeSearchBudgetLostTopImpressionShare(other.getSearchBudgetLostTopImpressionShare());
+      }
+      if (other.hasSearchClickShare()) {
+        mergeSearchClickShare(other.getSearchClickShare());
       }
       if (other.hasSearchExactMatchImpressionShare()) {
         mergeSearchExactMatchImpressionShare(other.getSearchExactMatchImpressionShare());
@@ -4688,14 +7574,29 @@ private static final long serialVersionUID = 0L;
       if (other.hasSearchImpressionShare()) {
         mergeSearchImpressionShare(other.getSearchImpressionShare());
       }
+      if (other.hasSearchRankLostAbsoluteTopImpressionShare()) {
+        mergeSearchRankLostAbsoluteTopImpressionShare(other.getSearchRankLostAbsoluteTopImpressionShare());
+      }
       if (other.hasSearchRankLostImpressionShare()) {
         mergeSearchRankLostImpressionShare(other.getSearchRankLostImpressionShare());
+      }
+      if (other.hasSearchRankLostTopImpressionShare()) {
+        mergeSearchRankLostTopImpressionShare(other.getSearchRankLostTopImpressionShare());
+      }
+      if (other.hasSearchTopImpressionShare()) {
+        mergeSearchTopImpressionShare(other.getSearchTopImpressionShare());
+      }
+      if (other.hasTopImpressionPercentage()) {
+        mergeTopImpressionPercentage(other.getTopImpressionPercentage());
       }
       if (other.hasValuePerAllConversions()) {
         mergeValuePerAllConversions(other.getValuePerAllConversions());
       }
       if (other.hasValuePerConversion()) {
         mergeValuePerConversion(other.getValuePerConversion());
+      }
+      if (other.hasValuePerCurrentModelAttributedConversion()) {
+        mergeValuePerCurrentModelAttributedConversion(other.getValuePerCurrentModelAttributedConversion());
       }
       if (other.hasVideoQuartile100Rate()) {
         mergeVideoQuartile100Rate(other.getVideoQuartile100Rate());
@@ -4745,6 +7646,1296 @@ private static final long serialVersionUID = 0L;
         }
       }
       return this;
+    }
+    private int bitField0_;
+    private int bitField1_;
+    private int bitField2_;
+
+    private com.google.protobuf.DoubleValue absoluteTopImpressionPercentage_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> absoluteTopImpressionPercentageBuilder_;
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown as the very first ad
+     * above the organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+     */
+    public boolean hasAbsoluteTopImpressionPercentage() {
+      return absoluteTopImpressionPercentageBuilder_ != null || absoluteTopImpressionPercentage_ != null;
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown as the very first ad
+     * above the organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+     */
+    public com.google.protobuf.DoubleValue getAbsoluteTopImpressionPercentage() {
+      if (absoluteTopImpressionPercentageBuilder_ == null) {
+        return absoluteTopImpressionPercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : absoluteTopImpressionPercentage_;
+      } else {
+        return absoluteTopImpressionPercentageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown as the very first ad
+     * above the organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+     */
+    public Builder setAbsoluteTopImpressionPercentage(com.google.protobuf.DoubleValue value) {
+      if (absoluteTopImpressionPercentageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        absoluteTopImpressionPercentage_ = value;
+        onChanged();
+      } else {
+        absoluteTopImpressionPercentageBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown as the very first ad
+     * above the organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+     */
+    public Builder setAbsoluteTopImpressionPercentage(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (absoluteTopImpressionPercentageBuilder_ == null) {
+        absoluteTopImpressionPercentage_ = builderForValue.build();
+        onChanged();
+      } else {
+        absoluteTopImpressionPercentageBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown as the very first ad
+     * above the organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+     */
+    public Builder mergeAbsoluteTopImpressionPercentage(com.google.protobuf.DoubleValue value) {
+      if (absoluteTopImpressionPercentageBuilder_ == null) {
+        if (absoluteTopImpressionPercentage_ != null) {
+          absoluteTopImpressionPercentage_ =
+            com.google.protobuf.DoubleValue.newBuilder(absoluteTopImpressionPercentage_).mergeFrom(value).buildPartial();
+        } else {
+          absoluteTopImpressionPercentage_ = value;
+        }
+        onChanged();
+      } else {
+        absoluteTopImpressionPercentageBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown as the very first ad
+     * above the organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+     */
+    public Builder clearAbsoluteTopImpressionPercentage() {
+      if (absoluteTopImpressionPercentageBuilder_ == null) {
+        absoluteTopImpressionPercentage_ = null;
+        onChanged();
+      } else {
+        absoluteTopImpressionPercentage_ = null;
+        absoluteTopImpressionPercentageBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown as the very first ad
+     * above the organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAbsoluteTopImpressionPercentageBuilder() {
+      
+      onChanged();
+      return getAbsoluteTopImpressionPercentageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown as the very first ad
+     * above the organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAbsoluteTopImpressionPercentageOrBuilder() {
+      if (absoluteTopImpressionPercentageBuilder_ != null) {
+        return absoluteTopImpressionPercentageBuilder_.getMessageOrBuilder();
+      } else {
+        return absoluteTopImpressionPercentage_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : absoluteTopImpressionPercentage_;
+      }
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown as the very first ad
+     * above the organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAbsoluteTopImpressionPercentageFieldBuilder() {
+      if (absoluteTopImpressionPercentageBuilder_ == null) {
+        absoluteTopImpressionPercentageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAbsoluteTopImpressionPercentage(),
+                getParentForChildren(),
+                isClean());
+        absoluteTopImpressionPercentage_ = null;
+      }
+      return absoluteTopImpressionPercentageBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue activeViewCpm_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> activeViewCpmBuilder_;
+    /**
+     * <pre>
+     * Average cost of viewable impressions (`active_view_impressions`).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+     */
+    public boolean hasActiveViewCpm() {
+      return activeViewCpmBuilder_ != null || activeViewCpm_ != null;
+    }
+    /**
+     * <pre>
+     * Average cost of viewable impressions (`active_view_impressions`).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+     */
+    public com.google.protobuf.DoubleValue getActiveViewCpm() {
+      if (activeViewCpmBuilder_ == null) {
+        return activeViewCpm_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewCpm_;
+      } else {
+        return activeViewCpmBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Average cost of viewable impressions (`active_view_impressions`).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+     */
+    public Builder setActiveViewCpm(com.google.protobuf.DoubleValue value) {
+      if (activeViewCpmBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        activeViewCpm_ = value;
+        onChanged();
+      } else {
+        activeViewCpmBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average cost of viewable impressions (`active_view_impressions`).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+     */
+    public Builder setActiveViewCpm(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (activeViewCpmBuilder_ == null) {
+        activeViewCpm_ = builderForValue.build();
+        onChanged();
+      } else {
+        activeViewCpmBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average cost of viewable impressions (`active_view_impressions`).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+     */
+    public Builder mergeActiveViewCpm(com.google.protobuf.DoubleValue value) {
+      if (activeViewCpmBuilder_ == null) {
+        if (activeViewCpm_ != null) {
+          activeViewCpm_ =
+            com.google.protobuf.DoubleValue.newBuilder(activeViewCpm_).mergeFrom(value).buildPartial();
+        } else {
+          activeViewCpm_ = value;
+        }
+        onChanged();
+      } else {
+        activeViewCpmBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average cost of viewable impressions (`active_view_impressions`).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+     */
+    public Builder clearActiveViewCpm() {
+      if (activeViewCpmBuilder_ == null) {
+        activeViewCpm_ = null;
+        onChanged();
+      } else {
+        activeViewCpm_ = null;
+        activeViewCpmBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average cost of viewable impressions (`active_view_impressions`).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getActiveViewCpmBuilder() {
+      
+      onChanged();
+      return getActiveViewCpmFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Average cost of viewable impressions (`active_view_impressions`).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getActiveViewCpmOrBuilder() {
+      if (activeViewCpmBuilder_ != null) {
+        return activeViewCpmBuilder_.getMessageOrBuilder();
+      } else {
+        return activeViewCpm_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewCpm_;
+      }
+    }
+    /**
+     * <pre>
+     * Average cost of viewable impressions (`active_view_impressions`).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getActiveViewCpmFieldBuilder() {
+      if (activeViewCpmBuilder_ == null) {
+        activeViewCpmBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getActiveViewCpm(),
+                getParentForChildren(),
+                isClean());
+        activeViewCpm_ = null;
+      }
+      return activeViewCpmBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue activeViewCtr_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> activeViewCtrBuilder_;
+    /**
+     * <pre>
+     * Active view measurable clicks divided by active view viewable impressions.
+     * This metric is reported only for display network.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+     */
+    public boolean hasActiveViewCtr() {
+      return activeViewCtrBuilder_ != null || activeViewCtr_ != null;
+    }
+    /**
+     * <pre>
+     * Active view measurable clicks divided by active view viewable impressions.
+     * This metric is reported only for display network.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+     */
+    public com.google.protobuf.DoubleValue getActiveViewCtr() {
+      if (activeViewCtrBuilder_ == null) {
+        return activeViewCtr_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewCtr_;
+      } else {
+        return activeViewCtrBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Active view measurable clicks divided by active view viewable impressions.
+     * This metric is reported only for display network.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+     */
+    public Builder setActiveViewCtr(com.google.protobuf.DoubleValue value) {
+      if (activeViewCtrBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        activeViewCtr_ = value;
+        onChanged();
+      } else {
+        activeViewCtrBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Active view measurable clicks divided by active view viewable impressions.
+     * This metric is reported only for display network.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+     */
+    public Builder setActiveViewCtr(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (activeViewCtrBuilder_ == null) {
+        activeViewCtr_ = builderForValue.build();
+        onChanged();
+      } else {
+        activeViewCtrBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Active view measurable clicks divided by active view viewable impressions.
+     * This metric is reported only for display network.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+     */
+    public Builder mergeActiveViewCtr(com.google.protobuf.DoubleValue value) {
+      if (activeViewCtrBuilder_ == null) {
+        if (activeViewCtr_ != null) {
+          activeViewCtr_ =
+            com.google.protobuf.DoubleValue.newBuilder(activeViewCtr_).mergeFrom(value).buildPartial();
+        } else {
+          activeViewCtr_ = value;
+        }
+        onChanged();
+      } else {
+        activeViewCtrBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Active view measurable clicks divided by active view viewable impressions.
+     * This metric is reported only for display network.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+     */
+    public Builder clearActiveViewCtr() {
+      if (activeViewCtrBuilder_ == null) {
+        activeViewCtr_ = null;
+        onChanged();
+      } else {
+        activeViewCtr_ = null;
+        activeViewCtrBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Active view measurable clicks divided by active view viewable impressions.
+     * This metric is reported only for display network.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getActiveViewCtrBuilder() {
+      
+      onChanged();
+      return getActiveViewCtrFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Active view measurable clicks divided by active view viewable impressions.
+     * This metric is reported only for display network.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getActiveViewCtrOrBuilder() {
+      if (activeViewCtrBuilder_ != null) {
+        return activeViewCtrBuilder_.getMessageOrBuilder();
+      } else {
+        return activeViewCtr_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewCtr_;
+      }
+    }
+    /**
+     * <pre>
+     * Active view measurable clicks divided by active view viewable impressions.
+     * This metric is reported only for display network.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getActiveViewCtrFieldBuilder() {
+      if (activeViewCtrBuilder_ == null) {
+        activeViewCtrBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getActiveViewCtr(),
+                getParentForChildren(),
+                isClean());
+        activeViewCtr_ = null;
+      }
+      return activeViewCtrBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value activeViewImpressions_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> activeViewImpressionsBuilder_;
+    /**
+     * <pre>
+     * A measurement of how often your ad has become viewable on a Display
+     * Network site.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+     */
+    public boolean hasActiveViewImpressions() {
+      return activeViewImpressionsBuilder_ != null || activeViewImpressions_ != null;
+    }
+    /**
+     * <pre>
+     * A measurement of how often your ad has become viewable on a Display
+     * Network site.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+     */
+    public com.google.protobuf.Int64Value getActiveViewImpressions() {
+      if (activeViewImpressionsBuilder_ == null) {
+        return activeViewImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : activeViewImpressions_;
+      } else {
+        return activeViewImpressionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * A measurement of how often your ad has become viewable on a Display
+     * Network site.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+     */
+    public Builder setActiveViewImpressions(com.google.protobuf.Int64Value value) {
+      if (activeViewImpressionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        activeViewImpressions_ = value;
+        onChanged();
+      } else {
+        activeViewImpressionsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * A measurement of how often your ad has become viewable on a Display
+     * Network site.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+     */
+    public Builder setActiveViewImpressions(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (activeViewImpressionsBuilder_ == null) {
+        activeViewImpressions_ = builderForValue.build();
+        onChanged();
+      } else {
+        activeViewImpressionsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * A measurement of how often your ad has become viewable on a Display
+     * Network site.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+     */
+    public Builder mergeActiveViewImpressions(com.google.protobuf.Int64Value value) {
+      if (activeViewImpressionsBuilder_ == null) {
+        if (activeViewImpressions_ != null) {
+          activeViewImpressions_ =
+            com.google.protobuf.Int64Value.newBuilder(activeViewImpressions_).mergeFrom(value).buildPartial();
+        } else {
+          activeViewImpressions_ = value;
+        }
+        onChanged();
+      } else {
+        activeViewImpressionsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * A measurement of how often your ad has become viewable on a Display
+     * Network site.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+     */
+    public Builder clearActiveViewImpressions() {
+      if (activeViewImpressionsBuilder_ == null) {
+        activeViewImpressions_ = null;
+        onChanged();
+      } else {
+        activeViewImpressions_ = null;
+        activeViewImpressionsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * A measurement of how often your ad has become viewable on a Display
+     * Network site.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getActiveViewImpressionsBuilder() {
+      
+      onChanged();
+      return getActiveViewImpressionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A measurement of how often your ad has become viewable on a Display
+     * Network site.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getActiveViewImpressionsOrBuilder() {
+      if (activeViewImpressionsBuilder_ != null) {
+        return activeViewImpressionsBuilder_.getMessageOrBuilder();
+      } else {
+        return activeViewImpressions_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : activeViewImpressions_;
+      }
+    }
+    /**
+     * <pre>
+     * A measurement of how often your ad has become viewable on a Display
+     * Network site.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getActiveViewImpressionsFieldBuilder() {
+      if (activeViewImpressionsBuilder_ == null) {
+        activeViewImpressionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getActiveViewImpressions(),
+                getParentForChildren(),
+                isClean());
+        activeViewImpressions_ = null;
+      }
+      return activeViewImpressionsBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue activeViewMeasurability_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> activeViewMeasurabilityBuilder_;
+    /**
+     * <pre>
+     * The ratio of impressions that could be measured by Active View over the
+     * number of served impressions.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+     */
+    public boolean hasActiveViewMeasurability() {
+      return activeViewMeasurabilityBuilder_ != null || activeViewMeasurability_ != null;
+    }
+    /**
+     * <pre>
+     * The ratio of impressions that could be measured by Active View over the
+     * number of served impressions.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+     */
+    public com.google.protobuf.DoubleValue getActiveViewMeasurability() {
+      if (activeViewMeasurabilityBuilder_ == null) {
+        return activeViewMeasurability_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewMeasurability_;
+      } else {
+        return activeViewMeasurabilityBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The ratio of impressions that could be measured by Active View over the
+     * number of served impressions.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+     */
+    public Builder setActiveViewMeasurability(com.google.protobuf.DoubleValue value) {
+      if (activeViewMeasurabilityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        activeViewMeasurability_ = value;
+        onChanged();
+      } else {
+        activeViewMeasurabilityBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ratio of impressions that could be measured by Active View over the
+     * number of served impressions.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+     */
+    public Builder setActiveViewMeasurability(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (activeViewMeasurabilityBuilder_ == null) {
+        activeViewMeasurability_ = builderForValue.build();
+        onChanged();
+      } else {
+        activeViewMeasurabilityBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ratio of impressions that could be measured by Active View over the
+     * number of served impressions.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+     */
+    public Builder mergeActiveViewMeasurability(com.google.protobuf.DoubleValue value) {
+      if (activeViewMeasurabilityBuilder_ == null) {
+        if (activeViewMeasurability_ != null) {
+          activeViewMeasurability_ =
+            com.google.protobuf.DoubleValue.newBuilder(activeViewMeasurability_).mergeFrom(value).buildPartial();
+        } else {
+          activeViewMeasurability_ = value;
+        }
+        onChanged();
+      } else {
+        activeViewMeasurabilityBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ratio of impressions that could be measured by Active View over the
+     * number of served impressions.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+     */
+    public Builder clearActiveViewMeasurability() {
+      if (activeViewMeasurabilityBuilder_ == null) {
+        activeViewMeasurability_ = null;
+        onChanged();
+      } else {
+        activeViewMeasurability_ = null;
+        activeViewMeasurabilityBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ratio of impressions that could be measured by Active View over the
+     * number of served impressions.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getActiveViewMeasurabilityBuilder() {
+      
+      onChanged();
+      return getActiveViewMeasurabilityFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The ratio of impressions that could be measured by Active View over the
+     * number of served impressions.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getActiveViewMeasurabilityOrBuilder() {
+      if (activeViewMeasurabilityBuilder_ != null) {
+        return activeViewMeasurabilityBuilder_.getMessageOrBuilder();
+      } else {
+        return activeViewMeasurability_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewMeasurability_;
+      }
+    }
+    /**
+     * <pre>
+     * The ratio of impressions that could be measured by Active View over the
+     * number of served impressions.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getActiveViewMeasurabilityFieldBuilder() {
+      if (activeViewMeasurabilityBuilder_ == null) {
+        activeViewMeasurabilityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getActiveViewMeasurability(),
+                getParentForChildren(),
+                isClean());
+        activeViewMeasurability_ = null;
+      }
+      return activeViewMeasurabilityBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value activeViewMeasurableCostMicros_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> activeViewMeasurableCostMicrosBuilder_;
+    /**
+     * <pre>
+     * The cost of the impressions you received that were measurable by Active
+     * View.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+     */
+    public boolean hasActiveViewMeasurableCostMicros() {
+      return activeViewMeasurableCostMicrosBuilder_ != null || activeViewMeasurableCostMicros_ != null;
+    }
+    /**
+     * <pre>
+     * The cost of the impressions you received that were measurable by Active
+     * View.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+     */
+    public com.google.protobuf.Int64Value getActiveViewMeasurableCostMicros() {
+      if (activeViewMeasurableCostMicrosBuilder_ == null) {
+        return activeViewMeasurableCostMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : activeViewMeasurableCostMicros_;
+      } else {
+        return activeViewMeasurableCostMicrosBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The cost of the impressions you received that were measurable by Active
+     * View.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+     */
+    public Builder setActiveViewMeasurableCostMicros(com.google.protobuf.Int64Value value) {
+      if (activeViewMeasurableCostMicrosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        activeViewMeasurableCostMicros_ = value;
+        onChanged();
+      } else {
+        activeViewMeasurableCostMicrosBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The cost of the impressions you received that were measurable by Active
+     * View.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+     */
+    public Builder setActiveViewMeasurableCostMicros(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (activeViewMeasurableCostMicrosBuilder_ == null) {
+        activeViewMeasurableCostMicros_ = builderForValue.build();
+        onChanged();
+      } else {
+        activeViewMeasurableCostMicrosBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The cost of the impressions you received that were measurable by Active
+     * View.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+     */
+    public Builder mergeActiveViewMeasurableCostMicros(com.google.protobuf.Int64Value value) {
+      if (activeViewMeasurableCostMicrosBuilder_ == null) {
+        if (activeViewMeasurableCostMicros_ != null) {
+          activeViewMeasurableCostMicros_ =
+            com.google.protobuf.Int64Value.newBuilder(activeViewMeasurableCostMicros_).mergeFrom(value).buildPartial();
+        } else {
+          activeViewMeasurableCostMicros_ = value;
+        }
+        onChanged();
+      } else {
+        activeViewMeasurableCostMicrosBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The cost of the impressions you received that were measurable by Active
+     * View.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+     */
+    public Builder clearActiveViewMeasurableCostMicros() {
+      if (activeViewMeasurableCostMicrosBuilder_ == null) {
+        activeViewMeasurableCostMicros_ = null;
+        onChanged();
+      } else {
+        activeViewMeasurableCostMicros_ = null;
+        activeViewMeasurableCostMicrosBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The cost of the impressions you received that were measurable by Active
+     * View.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getActiveViewMeasurableCostMicrosBuilder() {
+      
+      onChanged();
+      return getActiveViewMeasurableCostMicrosFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The cost of the impressions you received that were measurable by Active
+     * View.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getActiveViewMeasurableCostMicrosOrBuilder() {
+      if (activeViewMeasurableCostMicrosBuilder_ != null) {
+        return activeViewMeasurableCostMicrosBuilder_.getMessageOrBuilder();
+      } else {
+        return activeViewMeasurableCostMicros_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : activeViewMeasurableCostMicros_;
+      }
+    }
+    /**
+     * <pre>
+     * The cost of the impressions you received that were measurable by Active
+     * View.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getActiveViewMeasurableCostMicrosFieldBuilder() {
+      if (activeViewMeasurableCostMicrosBuilder_ == null) {
+        activeViewMeasurableCostMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getActiveViewMeasurableCostMicros(),
+                getParentForChildren(),
+                isClean());
+        activeViewMeasurableCostMicros_ = null;
+      }
+      return activeViewMeasurableCostMicrosBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value activeViewMeasurableImpressions_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> activeViewMeasurableImpressionsBuilder_;
+    /**
+     * <pre>
+     * The number of times your ads are appearing on placements in positions
+     * where they can be seen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+     */
+    public boolean hasActiveViewMeasurableImpressions() {
+      return activeViewMeasurableImpressionsBuilder_ != null || activeViewMeasurableImpressions_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times your ads are appearing on placements in positions
+     * where they can be seen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+     */
+    public com.google.protobuf.Int64Value getActiveViewMeasurableImpressions() {
+      if (activeViewMeasurableImpressionsBuilder_ == null) {
+        return activeViewMeasurableImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : activeViewMeasurableImpressions_;
+      } else {
+        return activeViewMeasurableImpressionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times your ads are appearing on placements in positions
+     * where they can be seen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+     */
+    public Builder setActiveViewMeasurableImpressions(com.google.protobuf.Int64Value value) {
+      if (activeViewMeasurableImpressionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        activeViewMeasurableImpressions_ = value;
+        onChanged();
+      } else {
+        activeViewMeasurableImpressionsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your ads are appearing on placements in positions
+     * where they can be seen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+     */
+    public Builder setActiveViewMeasurableImpressions(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (activeViewMeasurableImpressionsBuilder_ == null) {
+        activeViewMeasurableImpressions_ = builderForValue.build();
+        onChanged();
+      } else {
+        activeViewMeasurableImpressionsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your ads are appearing on placements in positions
+     * where they can be seen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+     */
+    public Builder mergeActiveViewMeasurableImpressions(com.google.protobuf.Int64Value value) {
+      if (activeViewMeasurableImpressionsBuilder_ == null) {
+        if (activeViewMeasurableImpressions_ != null) {
+          activeViewMeasurableImpressions_ =
+            com.google.protobuf.Int64Value.newBuilder(activeViewMeasurableImpressions_).mergeFrom(value).buildPartial();
+        } else {
+          activeViewMeasurableImpressions_ = value;
+        }
+        onChanged();
+      } else {
+        activeViewMeasurableImpressionsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your ads are appearing on placements in positions
+     * where they can be seen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+     */
+    public Builder clearActiveViewMeasurableImpressions() {
+      if (activeViewMeasurableImpressionsBuilder_ == null) {
+        activeViewMeasurableImpressions_ = null;
+        onChanged();
+      } else {
+        activeViewMeasurableImpressions_ = null;
+        activeViewMeasurableImpressionsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your ads are appearing on placements in positions
+     * where they can be seen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getActiveViewMeasurableImpressionsBuilder() {
+      
+      onChanged();
+      return getActiveViewMeasurableImpressionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times your ads are appearing on placements in positions
+     * where they can be seen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getActiveViewMeasurableImpressionsOrBuilder() {
+      if (activeViewMeasurableImpressionsBuilder_ != null) {
+        return activeViewMeasurableImpressionsBuilder_.getMessageOrBuilder();
+      } else {
+        return activeViewMeasurableImpressions_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : activeViewMeasurableImpressions_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times your ads are appearing on placements in positions
+     * where they can be seen.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getActiveViewMeasurableImpressionsFieldBuilder() {
+      if (activeViewMeasurableImpressionsBuilder_ == null) {
+        activeViewMeasurableImpressionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getActiveViewMeasurableImpressions(),
+                getParentForChildren(),
+                isClean());
+        activeViewMeasurableImpressions_ = null;
+      }
+      return activeViewMeasurableImpressionsBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue activeViewViewability_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> activeViewViewabilityBuilder_;
+    /**
+     * <pre>
+     * The percentage of time when your ad appeared on an Active View enabled site
+     * (measurable impressions) and was viewable (viewable impressions).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+     */
+    public boolean hasActiveViewViewability() {
+      return activeViewViewabilityBuilder_ != null || activeViewViewability_ != null;
+    }
+    /**
+     * <pre>
+     * The percentage of time when your ad appeared on an Active View enabled site
+     * (measurable impressions) and was viewable (viewable impressions).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+     */
+    public com.google.protobuf.DoubleValue getActiveViewViewability() {
+      if (activeViewViewabilityBuilder_ == null) {
+        return activeViewViewability_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewViewability_;
+      } else {
+        return activeViewViewabilityBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The percentage of time when your ad appeared on an Active View enabled site
+     * (measurable impressions) and was viewable (viewable impressions).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+     */
+    public Builder setActiveViewViewability(com.google.protobuf.DoubleValue value) {
+      if (activeViewViewabilityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        activeViewViewability_ = value;
+        onChanged();
+      } else {
+        activeViewViewabilityBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of time when your ad appeared on an Active View enabled site
+     * (measurable impressions) and was viewable (viewable impressions).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+     */
+    public Builder setActiveViewViewability(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (activeViewViewabilityBuilder_ == null) {
+        activeViewViewability_ = builderForValue.build();
+        onChanged();
+      } else {
+        activeViewViewabilityBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of time when your ad appeared on an Active View enabled site
+     * (measurable impressions) and was viewable (viewable impressions).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+     */
+    public Builder mergeActiveViewViewability(com.google.protobuf.DoubleValue value) {
+      if (activeViewViewabilityBuilder_ == null) {
+        if (activeViewViewability_ != null) {
+          activeViewViewability_ =
+            com.google.protobuf.DoubleValue.newBuilder(activeViewViewability_).mergeFrom(value).buildPartial();
+        } else {
+          activeViewViewability_ = value;
+        }
+        onChanged();
+      } else {
+        activeViewViewabilityBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of time when your ad appeared on an Active View enabled site
+     * (measurable impressions) and was viewable (viewable impressions).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+     */
+    public Builder clearActiveViewViewability() {
+      if (activeViewViewabilityBuilder_ == null) {
+        activeViewViewability_ = null;
+        onChanged();
+      } else {
+        activeViewViewability_ = null;
+        activeViewViewabilityBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of time when your ad appeared on an Active View enabled site
+     * (measurable impressions) and was viewable (viewable impressions).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getActiveViewViewabilityBuilder() {
+      
+      onChanged();
+      return getActiveViewViewabilityFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The percentage of time when your ad appeared on an Active View enabled site
+     * (measurable impressions) and was viewable (viewable impressions).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getActiveViewViewabilityOrBuilder() {
+      if (activeViewViewabilityBuilder_ != null) {
+        return activeViewViewabilityBuilder_.getMessageOrBuilder();
+      } else {
+        return activeViewViewability_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewViewability_;
+      }
+    }
+    /**
+     * <pre>
+     * The percentage of time when your ad appeared on an Active View enabled site
+     * (measurable impressions) and was viewable (viewable impressions).
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getActiveViewViewabilityFieldBuilder() {
+      if (activeViewViewabilityBuilder_ == null) {
+        activeViewViewabilityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getActiveViewViewability(),
+                getParentForChildren(),
+                isClean());
+        activeViewViewability_ = null;
+      }
+      return activeViewViewabilityBuilder_;
     }
 
     private com.google.protobuf.DoubleValue allConversionsFromInteractionsRate_ = null;
@@ -5067,8 +9258,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsBuilder_;
     /**
      * <pre>
-     * The total number of conversions. This includes "Conversions" plus
-     * conversions that have their "Include in Conversions" setting unchecked.
+     * The total number of conversions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -5078,8 +9269,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This includes "Conversions" plus
-     * conversions that have their "Include in Conversions" setting unchecked.
+     * The total number of conversions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -5093,8 +9284,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This includes "Conversions" plus
-     * conversions that have their "Include in Conversions" setting unchecked.
+     * The total number of conversions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -5114,8 +9305,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This includes "Conversions" plus
-     * conversions that have their "Include in Conversions" setting unchecked.
+     * The total number of conversions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -5133,8 +9324,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This includes "Conversions" plus
-     * conversions that have their "Include in Conversions" setting unchecked.
+     * The total number of conversions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -5156,8 +9347,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This includes "Conversions" plus
-     * conversions that have their "Include in Conversions" setting unchecked.
+     * The total number of conversions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -5175,8 +9366,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This includes "Conversions" plus
-     * conversions that have their "Include in Conversions" setting unchecked.
+     * The total number of conversions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -5188,8 +9379,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This includes "Conversions" plus
-     * conversions that have their "Include in Conversions" setting unchecked.
+     * The total number of conversions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -5204,8 +9395,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This includes "Conversions" plus
-     * conversions that have their "Include in Conversions" setting unchecked.
+     * The total number of conversions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -5872,6 +10063,177 @@ private static final long serialVersionUID = 0L;
       return averageCpcBuilder_;
     }
 
+    private com.google.protobuf.DoubleValue averageCpe_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averageCpeBuilder_;
+    /**
+     * <pre>
+     * The average amount that you've been charged for an ad engagement. This
+     * amount is the total cost of all ad engagements divided by the total number
+     * of ad engagements.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+     */
+    public boolean hasAverageCpe() {
+      return averageCpeBuilder_ != null || averageCpe_ != null;
+    }
+    /**
+     * <pre>
+     * The average amount that you've been charged for an ad engagement. This
+     * amount is the total cost of all ad engagements divided by the total number
+     * of ad engagements.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+     */
+    public com.google.protobuf.DoubleValue getAverageCpe() {
+      if (averageCpeBuilder_ == null) {
+        return averageCpe_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageCpe_;
+      } else {
+        return averageCpeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The average amount that you've been charged for an ad engagement. This
+     * amount is the total cost of all ad engagements divided by the total number
+     * of ad engagements.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+     */
+    public Builder setAverageCpe(com.google.protobuf.DoubleValue value) {
+      if (averageCpeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        averageCpe_ = value;
+        onChanged();
+      } else {
+        averageCpeBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The average amount that you've been charged for an ad engagement. This
+     * amount is the total cost of all ad engagements divided by the total number
+     * of ad engagements.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+     */
+    public Builder setAverageCpe(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (averageCpeBuilder_ == null) {
+        averageCpe_ = builderForValue.build();
+        onChanged();
+      } else {
+        averageCpeBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The average amount that you've been charged for an ad engagement. This
+     * amount is the total cost of all ad engagements divided by the total number
+     * of ad engagements.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+     */
+    public Builder mergeAverageCpe(com.google.protobuf.DoubleValue value) {
+      if (averageCpeBuilder_ == null) {
+        if (averageCpe_ != null) {
+          averageCpe_ =
+            com.google.protobuf.DoubleValue.newBuilder(averageCpe_).mergeFrom(value).buildPartial();
+        } else {
+          averageCpe_ = value;
+        }
+        onChanged();
+      } else {
+        averageCpeBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The average amount that you've been charged for an ad engagement. This
+     * amount is the total cost of all ad engagements divided by the total number
+     * of ad engagements.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+     */
+    public Builder clearAverageCpe() {
+      if (averageCpeBuilder_ == null) {
+        averageCpe_ = null;
+        onChanged();
+      } else {
+        averageCpe_ = null;
+        averageCpeBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The average amount that you've been charged for an ad engagement. This
+     * amount is the total cost of all ad engagements divided by the total number
+     * of ad engagements.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAverageCpeBuilder() {
+      
+      onChanged();
+      return getAverageCpeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The average amount that you've been charged for an ad engagement. This
+     * amount is the total cost of all ad engagements divided by the total number
+     * of ad engagements.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAverageCpeOrBuilder() {
+      if (averageCpeBuilder_ != null) {
+        return averageCpeBuilder_.getMessageOrBuilder();
+      } else {
+        return averageCpe_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : averageCpe_;
+      }
+    }
+    /**
+     * <pre>
+     * The average amount that you've been charged for an ad engagement. This
+     * amount is the total cost of all ad engagements divided by the total number
+     * of ad engagements.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAverageCpeFieldBuilder() {
+      if (averageCpeBuilder_ == null) {
+        averageCpeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAverageCpe(),
+                getParentForChildren(),
+                isClean());
+        averageCpe_ = null;
+      }
+      return averageCpeBuilder_;
+    }
+
     private com.google.protobuf.DoubleValue averageCpm_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averageCpmBuilder_;
@@ -6196,6 +10558,321 @@ private static final long serialVersionUID = 0L;
       return averageCpvBuilder_;
     }
 
+    private com.google.protobuf.DoubleValue averageFrequency_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averageFrequencyBuilder_;
+    /**
+     * <pre>
+     * Average number of times a unique cookie was exposed to your ad
+     * over a given time period. Imported from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+     */
+    public boolean hasAverageFrequency() {
+      return averageFrequencyBuilder_ != null || averageFrequency_ != null;
+    }
+    /**
+     * <pre>
+     * Average number of times a unique cookie was exposed to your ad
+     * over a given time period. Imported from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+     */
+    public com.google.protobuf.DoubleValue getAverageFrequency() {
+      if (averageFrequencyBuilder_ == null) {
+        return averageFrequency_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageFrequency_;
+      } else {
+        return averageFrequencyBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Average number of times a unique cookie was exposed to your ad
+     * over a given time period. Imported from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+     */
+    public Builder setAverageFrequency(com.google.protobuf.DoubleValue value) {
+      if (averageFrequencyBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        averageFrequency_ = value;
+        onChanged();
+      } else {
+        averageFrequencyBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average number of times a unique cookie was exposed to your ad
+     * over a given time period. Imported from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+     */
+    public Builder setAverageFrequency(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (averageFrequencyBuilder_ == null) {
+        averageFrequency_ = builderForValue.build();
+        onChanged();
+      } else {
+        averageFrequencyBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average number of times a unique cookie was exposed to your ad
+     * over a given time period. Imported from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+     */
+    public Builder mergeAverageFrequency(com.google.protobuf.DoubleValue value) {
+      if (averageFrequencyBuilder_ == null) {
+        if (averageFrequency_ != null) {
+          averageFrequency_ =
+            com.google.protobuf.DoubleValue.newBuilder(averageFrequency_).mergeFrom(value).buildPartial();
+        } else {
+          averageFrequency_ = value;
+        }
+        onChanged();
+      } else {
+        averageFrequencyBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average number of times a unique cookie was exposed to your ad
+     * over a given time period. Imported from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+     */
+    public Builder clearAverageFrequency() {
+      if (averageFrequencyBuilder_ == null) {
+        averageFrequency_ = null;
+        onChanged();
+      } else {
+        averageFrequency_ = null;
+        averageFrequencyBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average number of times a unique cookie was exposed to your ad
+     * over a given time period. Imported from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAverageFrequencyBuilder() {
+      
+      onChanged();
+      return getAverageFrequencyFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Average number of times a unique cookie was exposed to your ad
+     * over a given time period. Imported from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAverageFrequencyOrBuilder() {
+      if (averageFrequencyBuilder_ != null) {
+        return averageFrequencyBuilder_.getMessageOrBuilder();
+      } else {
+        return averageFrequency_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : averageFrequency_;
+      }
+    }
+    /**
+     * <pre>
+     * Average number of times a unique cookie was exposed to your ad
+     * over a given time period. Imported from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAverageFrequencyFieldBuilder() {
+      if (averageFrequencyBuilder_ == null) {
+        averageFrequencyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAverageFrequency(),
+                getParentForChildren(),
+                isClean());
+        averageFrequency_ = null;
+      }
+      return averageFrequencyBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue averagePageViews_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averagePageViewsBuilder_;
+    /**
+     * <pre>
+     * Average number of pages viewed per session.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+     */
+    public boolean hasAveragePageViews() {
+      return averagePageViewsBuilder_ != null || averagePageViews_ != null;
+    }
+    /**
+     * <pre>
+     * Average number of pages viewed per session.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+     */
+    public com.google.protobuf.DoubleValue getAveragePageViews() {
+      if (averagePageViewsBuilder_ == null) {
+        return averagePageViews_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averagePageViews_;
+      } else {
+        return averagePageViewsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Average number of pages viewed per session.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+     */
+    public Builder setAveragePageViews(com.google.protobuf.DoubleValue value) {
+      if (averagePageViewsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        averagePageViews_ = value;
+        onChanged();
+      } else {
+        averagePageViewsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average number of pages viewed per session.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+     */
+    public Builder setAveragePageViews(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (averagePageViewsBuilder_ == null) {
+        averagePageViews_ = builderForValue.build();
+        onChanged();
+      } else {
+        averagePageViewsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average number of pages viewed per session.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+     */
+    public Builder mergeAveragePageViews(com.google.protobuf.DoubleValue value) {
+      if (averagePageViewsBuilder_ == null) {
+        if (averagePageViews_ != null) {
+          averagePageViews_ =
+            com.google.protobuf.DoubleValue.newBuilder(averagePageViews_).mergeFrom(value).buildPartial();
+        } else {
+          averagePageViews_ = value;
+        }
+        onChanged();
+      } else {
+        averagePageViewsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average number of pages viewed per session.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+     */
+    public Builder clearAveragePageViews() {
+      if (averagePageViewsBuilder_ == null) {
+        averagePageViews_ = null;
+        onChanged();
+      } else {
+        averagePageViews_ = null;
+        averagePageViewsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Average number of pages viewed per session.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAveragePageViewsBuilder() {
+      
+      onChanged();
+      return getAveragePageViewsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Average number of pages viewed per session.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAveragePageViewsOrBuilder() {
+      if (averagePageViewsBuilder_ != null) {
+        return averagePageViewsBuilder_.getMessageOrBuilder();
+      } else {
+        return averagePageViews_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : averagePageViews_;
+      }
+    }
+    /**
+     * <pre>
+     * Average number of pages viewed per session.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAveragePageViewsFieldBuilder() {
+      if (averagePageViewsBuilder_ == null) {
+        averagePageViewsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAveragePageViews(),
+                getParentForChildren(),
+                isClean());
+        averagePageViews_ = null;
+      }
+      return averagePageViewsBuilder_;
+    }
+
     private com.google.protobuf.DoubleValue averagePosition_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averagePositionBuilder_;
@@ -6347,6 +11024,321 @@ private static final long serialVersionUID = 0L;
         averagePosition_ = null;
       }
       return averagePositionBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue averageTimeOnSite_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averageTimeOnSiteBuilder_;
+    /**
+     * <pre>
+     * Total duration of all sessions (in seconds) / number of sessions. Imported
+     * from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+     */
+    public boolean hasAverageTimeOnSite() {
+      return averageTimeOnSiteBuilder_ != null || averageTimeOnSite_ != null;
+    }
+    /**
+     * <pre>
+     * Total duration of all sessions (in seconds) / number of sessions. Imported
+     * from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+     */
+    public com.google.protobuf.DoubleValue getAverageTimeOnSite() {
+      if (averageTimeOnSiteBuilder_ == null) {
+        return averageTimeOnSite_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageTimeOnSite_;
+      } else {
+        return averageTimeOnSiteBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Total duration of all sessions (in seconds) / number of sessions. Imported
+     * from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+     */
+    public Builder setAverageTimeOnSite(com.google.protobuf.DoubleValue value) {
+      if (averageTimeOnSiteBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        averageTimeOnSite_ = value;
+        onChanged();
+      } else {
+        averageTimeOnSiteBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Total duration of all sessions (in seconds) / number of sessions. Imported
+     * from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+     */
+    public Builder setAverageTimeOnSite(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (averageTimeOnSiteBuilder_ == null) {
+        averageTimeOnSite_ = builderForValue.build();
+        onChanged();
+      } else {
+        averageTimeOnSiteBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Total duration of all sessions (in seconds) / number of sessions. Imported
+     * from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+     */
+    public Builder mergeAverageTimeOnSite(com.google.protobuf.DoubleValue value) {
+      if (averageTimeOnSiteBuilder_ == null) {
+        if (averageTimeOnSite_ != null) {
+          averageTimeOnSite_ =
+            com.google.protobuf.DoubleValue.newBuilder(averageTimeOnSite_).mergeFrom(value).buildPartial();
+        } else {
+          averageTimeOnSite_ = value;
+        }
+        onChanged();
+      } else {
+        averageTimeOnSiteBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Total duration of all sessions (in seconds) / number of sessions. Imported
+     * from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+     */
+    public Builder clearAverageTimeOnSite() {
+      if (averageTimeOnSiteBuilder_ == null) {
+        averageTimeOnSite_ = null;
+        onChanged();
+      } else {
+        averageTimeOnSite_ = null;
+        averageTimeOnSiteBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Total duration of all sessions (in seconds) / number of sessions. Imported
+     * from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAverageTimeOnSiteBuilder() {
+      
+      onChanged();
+      return getAverageTimeOnSiteFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Total duration of all sessions (in seconds) / number of sessions. Imported
+     * from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAverageTimeOnSiteOrBuilder() {
+      if (averageTimeOnSiteBuilder_ != null) {
+        return averageTimeOnSiteBuilder_.getMessageOrBuilder();
+      } else {
+        return averageTimeOnSite_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : averageTimeOnSite_;
+      }
+    }
+    /**
+     * <pre>
+     * Total duration of all sessions (in seconds) / number of sessions. Imported
+     * from Google Analytics.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAverageTimeOnSiteFieldBuilder() {
+      if (averageTimeOnSiteBuilder_ == null) {
+        averageTimeOnSiteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAverageTimeOnSite(),
+                getParentForChildren(),
+                isClean());
+        averageTimeOnSite_ = null;
+      }
+      return averageTimeOnSiteBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue benchmarkAverageMaxCpc_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> benchmarkAverageMaxCpcBuilder_;
+    /**
+     * <pre>
+     * An indication of how other advertisers are bidding on similar products.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+     */
+    public boolean hasBenchmarkAverageMaxCpc() {
+      return benchmarkAverageMaxCpcBuilder_ != null || benchmarkAverageMaxCpc_ != null;
+    }
+    /**
+     * <pre>
+     * An indication of how other advertisers are bidding on similar products.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+     */
+    public com.google.protobuf.DoubleValue getBenchmarkAverageMaxCpc() {
+      if (benchmarkAverageMaxCpcBuilder_ == null) {
+        return benchmarkAverageMaxCpc_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : benchmarkAverageMaxCpc_;
+      } else {
+        return benchmarkAverageMaxCpcBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * An indication of how other advertisers are bidding on similar products.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+     */
+    public Builder setBenchmarkAverageMaxCpc(com.google.protobuf.DoubleValue value) {
+      if (benchmarkAverageMaxCpcBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        benchmarkAverageMaxCpc_ = value;
+        onChanged();
+      } else {
+        benchmarkAverageMaxCpcBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * An indication of how other advertisers are bidding on similar products.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+     */
+    public Builder setBenchmarkAverageMaxCpc(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (benchmarkAverageMaxCpcBuilder_ == null) {
+        benchmarkAverageMaxCpc_ = builderForValue.build();
+        onChanged();
+      } else {
+        benchmarkAverageMaxCpcBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * An indication of how other advertisers are bidding on similar products.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+     */
+    public Builder mergeBenchmarkAverageMaxCpc(com.google.protobuf.DoubleValue value) {
+      if (benchmarkAverageMaxCpcBuilder_ == null) {
+        if (benchmarkAverageMaxCpc_ != null) {
+          benchmarkAverageMaxCpc_ =
+            com.google.protobuf.DoubleValue.newBuilder(benchmarkAverageMaxCpc_).mergeFrom(value).buildPartial();
+        } else {
+          benchmarkAverageMaxCpc_ = value;
+        }
+        onChanged();
+      } else {
+        benchmarkAverageMaxCpcBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * An indication of how other advertisers are bidding on similar products.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+     */
+    public Builder clearBenchmarkAverageMaxCpc() {
+      if (benchmarkAverageMaxCpcBuilder_ == null) {
+        benchmarkAverageMaxCpc_ = null;
+        onChanged();
+      } else {
+        benchmarkAverageMaxCpc_ = null;
+        benchmarkAverageMaxCpcBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * An indication of how other advertisers are bidding on similar products.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getBenchmarkAverageMaxCpcBuilder() {
+      
+      onChanged();
+      return getBenchmarkAverageMaxCpcFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * An indication of how other advertisers are bidding on similar products.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getBenchmarkAverageMaxCpcOrBuilder() {
+      if (benchmarkAverageMaxCpcBuilder_ != null) {
+        return benchmarkAverageMaxCpcBuilder_.getMessageOrBuilder();
+      } else {
+        return benchmarkAverageMaxCpc_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : benchmarkAverageMaxCpc_;
+      }
+    }
+    /**
+     * <pre>
+     * An indication of how other advertisers are bidding on similar products.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getBenchmarkAverageMaxCpcFieldBuilder() {
+      if (benchmarkAverageMaxCpcBuilder_ == null) {
+        benchmarkAverageMaxCpcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getBenchmarkAverageMaxCpc(),
+                getParentForChildren(),
+                isClean());
+        benchmarkAverageMaxCpc_ = null;
+      }
+      return benchmarkAverageMaxCpcBuilder_;
     }
 
     private com.google.protobuf.DoubleValue benchmarkCtr_ = null;
@@ -7723,7 +12715,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions from interactions divided by the number of ad interactions
-     * (such as clicks for text ads or views for video ads).
+     * (such as clicks for text ads or views for video ads). This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -7734,7 +12728,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions from interactions divided by the number of ad interactions
-     * (such as clicks for text ads or views for video ads).
+     * (such as clicks for text ads or views for video ads). This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -7749,7 +12745,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions from interactions divided by the number of ad interactions
-     * (such as clicks for text ads or views for video ads).
+     * (such as clicks for text ads or views for video ads). This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -7770,7 +12768,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions from interactions divided by the number of ad interactions
-     * (such as clicks for text ads or views for video ads).
+     * (such as clicks for text ads or views for video ads). This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -7789,7 +12789,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions from interactions divided by the number of ad interactions
-     * (such as clicks for text ads or views for video ads).
+     * (such as clicks for text ads or views for video ads). This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -7812,7 +12814,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions from interactions divided by the number of ad interactions
-     * (such as clicks for text ads or views for video ads).
+     * (such as clicks for text ads or views for video ads). This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -7831,7 +12835,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions from interactions divided by the number of ad interactions
-     * (such as clicks for text ads or views for video ads).
+     * (such as clicks for text ads or views for video ads). This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -7844,7 +12850,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions from interactions divided by the number of ad interactions
-     * (such as clicks for text ads or views for video ads).
+     * (such as clicks for text ads or views for video ads). This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -7860,7 +12868,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions from interactions divided by the number of ad interactions
-     * (such as clicks for text ads or views for video ads).
+     * (such as clicks for text ads or views for video ads). This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -7884,7 +12894,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsValueBuilder_;
     /**
      * <pre>
-     * The total value of conversions.
+     * The total value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -7894,7 +12905,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions.
+     * The total value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -7908,7 +12920,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions.
+     * The total value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -7928,7 +12941,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions.
+     * The total value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -7946,7 +12960,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions.
+     * The total value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -7968,7 +12983,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions.
+     * The total value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -7986,7 +13002,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions.
+     * The total value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -7998,7 +13015,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions.
+     * The total value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -8013,7 +13031,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions.
+     * The total value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -8037,7 +13056,9 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsValuePerCostBuilder_;
     /**
      * <pre>
-     * The value of conversions divided by the cost of ad interactions.
+     * The value of conversions divided by the cost of ad interactions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -8047,7 +13068,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the cost of ad interactions.
+     * The value of conversions divided by the cost of ad interactions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -8061,7 +13084,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the cost of ad interactions.
+     * The value of conversions divided by the cost of ad interactions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -8081,7 +13106,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the cost of ad interactions.
+     * The value of conversions divided by the cost of ad interactions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -8099,7 +13126,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the cost of ad interactions.
+     * The value of conversions divided by the cost of ad interactions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -8121,7 +13150,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the cost of ad interactions.
+     * The value of conversions divided by the cost of ad interactions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -8139,7 +13170,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the cost of ad interactions.
+     * The value of conversions divided by the cost of ad interactions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -8151,7 +13184,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the cost of ad interactions.
+     * The value of conversions divided by the cost of ad interactions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -8166,7 +13201,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the cost of ad interactions.
+     * The value of conversions divided by the cost of ad interactions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -8191,7 +13228,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The value of conversions from interactions divided by the number of ad
-     * interactions.
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -8202,7 +13240,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The value of conversions from interactions divided by the number of ad
-     * interactions.
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -8217,7 +13256,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The value of conversions from interactions divided by the number of ad
-     * interactions.
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -8238,7 +13278,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The value of conversions from interactions divided by the number of ad
-     * interactions.
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -8257,7 +13298,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The value of conversions from interactions divided by the number of ad
-     * interactions.
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -8280,7 +13322,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The value of conversions from interactions divided by the number of ad
-     * interactions.
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -8299,7 +13342,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The value of conversions from interactions divided by the number of ad
-     * interactions.
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -8312,7 +13356,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The value of conversions from interactions divided by the number of ad
-     * interactions.
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -8328,7 +13373,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The value of conversions from interactions divided by the number of ad
-     * interactions.
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -8352,8 +13398,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsBuilder_;
     /**
      * <pre>
-     * The number of conversions. This only includes conversion actions which have
-     * "Include in Conversions" checked.
+     * The number of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -8363,8 +13409,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of conversions. This only includes conversion actions which have
-     * "Include in Conversions" checked.
+     * The number of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -8378,8 +13424,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of conversions. This only includes conversion actions which have
-     * "Include in Conversions" checked.
+     * The number of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -8399,8 +13445,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of conversions. This only includes conversion actions which have
-     * "Include in Conversions" checked.
+     * The number of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -8418,8 +13464,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of conversions. This only includes conversion actions which have
-     * "Include in Conversions" checked.
+     * The number of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -8441,8 +13487,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of conversions. This only includes conversion actions which have
-     * "Include in Conversions" checked.
+     * The number of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -8460,8 +13506,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of conversions. This only includes conversion actions which have
-     * "Include in Conversions" checked.
+     * The number of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -8473,8 +13519,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of conversions. This only includes conversion actions which have
-     * "Include in Conversions" checked.
+     * The number of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -8489,8 +13535,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of conversions. This only includes conversion actions which have
-     * "Include in Conversions" checked.
+     * The number of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -8829,7 +13875,9 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> costPerConversionBuilder_;
     /**
      * <pre>
-     * The cost of ad interactions divided by conversions.
+     * The cost of ad interactions divided by conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -8839,7 +13887,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The cost of ad interactions divided by conversions.
+     * The cost of ad interactions divided by conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -8853,7 +13903,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The cost of ad interactions divided by conversions.
+     * The cost of ad interactions divided by conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -8873,7 +13925,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The cost of ad interactions divided by conversions.
+     * The cost of ad interactions divided by conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -8891,7 +13945,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The cost of ad interactions divided by conversions.
+     * The cost of ad interactions divided by conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -8913,7 +13969,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The cost of ad interactions divided by conversions.
+     * The cost of ad interactions divided by conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -8931,7 +13989,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The cost of ad interactions divided by conversions.
+     * The cost of ad interactions divided by conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -8943,7 +14003,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The cost of ad interactions divided by conversions.
+     * The cost of ad interactions divided by conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -8958,7 +14020,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The cost of ad interactions divided by conversions.
+     * The cost of ad interactions divided by conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -8975,6 +14039,177 @@ private static final long serialVersionUID = 0L;
         costPerConversion_ = null;
       }
       return costPerConversionBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue costPerCurrentModelAttributedConversion_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> costPerCurrentModelAttributedConversionBuilder_;
+    /**
+     * <pre>
+     * The cost of ad interactions divided by current model attributed
+     * conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+     */
+    public boolean hasCostPerCurrentModelAttributedConversion() {
+      return costPerCurrentModelAttributedConversionBuilder_ != null || costPerCurrentModelAttributedConversion_ != null;
+    }
+    /**
+     * <pre>
+     * The cost of ad interactions divided by current model attributed
+     * conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+     */
+    public com.google.protobuf.DoubleValue getCostPerCurrentModelAttributedConversion() {
+      if (costPerCurrentModelAttributedConversionBuilder_ == null) {
+        return costPerCurrentModelAttributedConversion_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : costPerCurrentModelAttributedConversion_;
+      } else {
+        return costPerCurrentModelAttributedConversionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The cost of ad interactions divided by current model attributed
+     * conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+     */
+    public Builder setCostPerCurrentModelAttributedConversion(com.google.protobuf.DoubleValue value) {
+      if (costPerCurrentModelAttributedConversionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        costPerCurrentModelAttributedConversion_ = value;
+        onChanged();
+      } else {
+        costPerCurrentModelAttributedConversionBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The cost of ad interactions divided by current model attributed
+     * conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+     */
+    public Builder setCostPerCurrentModelAttributedConversion(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (costPerCurrentModelAttributedConversionBuilder_ == null) {
+        costPerCurrentModelAttributedConversion_ = builderForValue.build();
+        onChanged();
+      } else {
+        costPerCurrentModelAttributedConversionBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The cost of ad interactions divided by current model attributed
+     * conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+     */
+    public Builder mergeCostPerCurrentModelAttributedConversion(com.google.protobuf.DoubleValue value) {
+      if (costPerCurrentModelAttributedConversionBuilder_ == null) {
+        if (costPerCurrentModelAttributedConversion_ != null) {
+          costPerCurrentModelAttributedConversion_ =
+            com.google.protobuf.DoubleValue.newBuilder(costPerCurrentModelAttributedConversion_).mergeFrom(value).buildPartial();
+        } else {
+          costPerCurrentModelAttributedConversion_ = value;
+        }
+        onChanged();
+      } else {
+        costPerCurrentModelAttributedConversionBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The cost of ad interactions divided by current model attributed
+     * conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+     */
+    public Builder clearCostPerCurrentModelAttributedConversion() {
+      if (costPerCurrentModelAttributedConversionBuilder_ == null) {
+        costPerCurrentModelAttributedConversion_ = null;
+        onChanged();
+      } else {
+        costPerCurrentModelAttributedConversion_ = null;
+        costPerCurrentModelAttributedConversionBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The cost of ad interactions divided by current model attributed
+     * conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getCostPerCurrentModelAttributedConversionBuilder() {
+      
+      onChanged();
+      return getCostPerCurrentModelAttributedConversionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The cost of ad interactions divided by current model attributed
+     * conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getCostPerCurrentModelAttributedConversionOrBuilder() {
+      if (costPerCurrentModelAttributedConversionBuilder_ != null) {
+        return costPerCurrentModelAttributedConversionBuilder_.getMessageOrBuilder();
+      } else {
+        return costPerCurrentModelAttributedConversion_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : costPerCurrentModelAttributedConversion_;
+      }
+    }
+    /**
+     * <pre>
+     * The cost of ad interactions divided by current model attributed
+     * conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getCostPerCurrentModelAttributedConversionFieldBuilder() {
+      if (costPerCurrentModelAttributedConversionBuilder_ == null) {
+        costPerCurrentModelAttributedConversionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getCostPerCurrentModelAttributedConversion(),
+                getParentForChildren(),
+                isClean());
+        costPerCurrentModelAttributedConversion_ = null;
+      }
+      return costPerCurrentModelAttributedConversionBuilder_;
     }
 
     private com.google.protobuf.DoubleValue crossDeviceConversions_ = null;
@@ -9308,6 +14543,870 @@ private static final long serialVersionUID = 0L;
         ctr_ = null;
       }
       return ctrBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue currentModelAttributedConversions_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> currentModelAttributedConversionsBuilder_;
+    /**
+     * <pre>
+     * Shows how your historic conversions data would look under the attribution
+     * model you've currently selected. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+     */
+    public boolean hasCurrentModelAttributedConversions() {
+      return currentModelAttributedConversionsBuilder_ != null || currentModelAttributedConversions_ != null;
+    }
+    /**
+     * <pre>
+     * Shows how your historic conversions data would look under the attribution
+     * model you've currently selected. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+     */
+    public com.google.protobuf.DoubleValue getCurrentModelAttributedConversions() {
+      if (currentModelAttributedConversionsBuilder_ == null) {
+        return currentModelAttributedConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversions_;
+      } else {
+        return currentModelAttributedConversionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Shows how your historic conversions data would look under the attribution
+     * model you've currently selected. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+     */
+    public Builder setCurrentModelAttributedConversions(com.google.protobuf.DoubleValue value) {
+      if (currentModelAttributedConversionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        currentModelAttributedConversions_ = value;
+        onChanged();
+      } else {
+        currentModelAttributedConversionsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Shows how your historic conversions data would look under the attribution
+     * model you've currently selected. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+     */
+    public Builder setCurrentModelAttributedConversions(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (currentModelAttributedConversionsBuilder_ == null) {
+        currentModelAttributedConversions_ = builderForValue.build();
+        onChanged();
+      } else {
+        currentModelAttributedConversionsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Shows how your historic conversions data would look under the attribution
+     * model you've currently selected. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+     */
+    public Builder mergeCurrentModelAttributedConversions(com.google.protobuf.DoubleValue value) {
+      if (currentModelAttributedConversionsBuilder_ == null) {
+        if (currentModelAttributedConversions_ != null) {
+          currentModelAttributedConversions_ =
+            com.google.protobuf.DoubleValue.newBuilder(currentModelAttributedConversions_).mergeFrom(value).buildPartial();
+        } else {
+          currentModelAttributedConversions_ = value;
+        }
+        onChanged();
+      } else {
+        currentModelAttributedConversionsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Shows how your historic conversions data would look under the attribution
+     * model you've currently selected. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+     */
+    public Builder clearCurrentModelAttributedConversions() {
+      if (currentModelAttributedConversionsBuilder_ == null) {
+        currentModelAttributedConversions_ = null;
+        onChanged();
+      } else {
+        currentModelAttributedConversions_ = null;
+        currentModelAttributedConversionsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Shows how your historic conversions data would look under the attribution
+     * model you've currently selected. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getCurrentModelAttributedConversionsBuilder() {
+      
+      onChanged();
+      return getCurrentModelAttributedConversionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Shows how your historic conversions data would look under the attribution
+     * model you've currently selected. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsOrBuilder() {
+      if (currentModelAttributedConversionsBuilder_ != null) {
+        return currentModelAttributedConversionsBuilder_.getMessageOrBuilder();
+      } else {
+        return currentModelAttributedConversions_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversions_;
+      }
+    }
+    /**
+     * <pre>
+     * Shows how your historic conversions data would look under the attribution
+     * model you've currently selected. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getCurrentModelAttributedConversionsFieldBuilder() {
+      if (currentModelAttributedConversionsBuilder_ == null) {
+        currentModelAttributedConversionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getCurrentModelAttributedConversions(),
+                getParentForChildren(),
+                isClean());
+        currentModelAttributedConversions_ = null;
+      }
+      return currentModelAttributedConversionsBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue currentModelAttributedConversionsFromInteractionsRate_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> currentModelAttributedConversionsFromInteractionsRateBuilder_;
+    /**
+     * <pre>
+     * Current model attributed conversions from interactions divided by the
+     * number of ad interactions (such as clicks for text ads or views for video
+     * ads). This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+     */
+    public boolean hasCurrentModelAttributedConversionsFromInteractionsRate() {
+      return currentModelAttributedConversionsFromInteractionsRateBuilder_ != null || currentModelAttributedConversionsFromInteractionsRate_ != null;
+    }
+    /**
+     * <pre>
+     * Current model attributed conversions from interactions divided by the
+     * number of ad interactions (such as clicks for text ads or views for video
+     * ads). This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+     */
+    public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsFromInteractionsRate() {
+      if (currentModelAttributedConversionsFromInteractionsRateBuilder_ == null) {
+        return currentModelAttributedConversionsFromInteractionsRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsFromInteractionsRate_;
+      } else {
+        return currentModelAttributedConversionsFromInteractionsRateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Current model attributed conversions from interactions divided by the
+     * number of ad interactions (such as clicks for text ads or views for video
+     * ads). This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+     */
+    public Builder setCurrentModelAttributedConversionsFromInteractionsRate(com.google.protobuf.DoubleValue value) {
+      if (currentModelAttributedConversionsFromInteractionsRateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        currentModelAttributedConversionsFromInteractionsRate_ = value;
+        onChanged();
+      } else {
+        currentModelAttributedConversionsFromInteractionsRateBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Current model attributed conversions from interactions divided by the
+     * number of ad interactions (such as clicks for text ads or views for video
+     * ads). This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+     */
+    public Builder setCurrentModelAttributedConversionsFromInteractionsRate(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (currentModelAttributedConversionsFromInteractionsRateBuilder_ == null) {
+        currentModelAttributedConversionsFromInteractionsRate_ = builderForValue.build();
+        onChanged();
+      } else {
+        currentModelAttributedConversionsFromInteractionsRateBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Current model attributed conversions from interactions divided by the
+     * number of ad interactions (such as clicks for text ads or views for video
+     * ads). This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+     */
+    public Builder mergeCurrentModelAttributedConversionsFromInteractionsRate(com.google.protobuf.DoubleValue value) {
+      if (currentModelAttributedConversionsFromInteractionsRateBuilder_ == null) {
+        if (currentModelAttributedConversionsFromInteractionsRate_ != null) {
+          currentModelAttributedConversionsFromInteractionsRate_ =
+            com.google.protobuf.DoubleValue.newBuilder(currentModelAttributedConversionsFromInteractionsRate_).mergeFrom(value).buildPartial();
+        } else {
+          currentModelAttributedConversionsFromInteractionsRate_ = value;
+        }
+        onChanged();
+      } else {
+        currentModelAttributedConversionsFromInteractionsRateBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Current model attributed conversions from interactions divided by the
+     * number of ad interactions (such as clicks for text ads or views for video
+     * ads). This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+     */
+    public Builder clearCurrentModelAttributedConversionsFromInteractionsRate() {
+      if (currentModelAttributedConversionsFromInteractionsRateBuilder_ == null) {
+        currentModelAttributedConversionsFromInteractionsRate_ = null;
+        onChanged();
+      } else {
+        currentModelAttributedConversionsFromInteractionsRate_ = null;
+        currentModelAttributedConversionsFromInteractionsRateBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Current model attributed conversions from interactions divided by the
+     * number of ad interactions (such as clicks for text ads or views for video
+     * ads). This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getCurrentModelAttributedConversionsFromInteractionsRateBuilder() {
+      
+      onChanged();
+      return getCurrentModelAttributedConversionsFromInteractionsRateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Current model attributed conversions from interactions divided by the
+     * number of ad interactions (such as clicks for text ads or views for video
+     * ads). This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsFromInteractionsRateOrBuilder() {
+      if (currentModelAttributedConversionsFromInteractionsRateBuilder_ != null) {
+        return currentModelAttributedConversionsFromInteractionsRateBuilder_.getMessageOrBuilder();
+      } else {
+        return currentModelAttributedConversionsFromInteractionsRate_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsFromInteractionsRate_;
+      }
+    }
+    /**
+     * <pre>
+     * Current model attributed conversions from interactions divided by the
+     * number of ad interactions (such as clicks for text ads or views for video
+     * ads). This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getCurrentModelAttributedConversionsFromInteractionsRateFieldBuilder() {
+      if (currentModelAttributedConversionsFromInteractionsRateBuilder_ == null) {
+        currentModelAttributedConversionsFromInteractionsRateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getCurrentModelAttributedConversionsFromInteractionsRate(),
+                getParentForChildren(),
+                isClean());
+        currentModelAttributedConversionsFromInteractionsRate_ = null;
+      }
+      return currentModelAttributedConversionsFromInteractionsRateBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_;
+    /**
+     * <pre>
+     * The value of current model attributed conversions from interactions divided
+     * by the number of ad interactions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+     */
+    public boolean hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
+      return currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ != null || currentModelAttributedConversionsFromInteractionsValuePerInteraction_ != null;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions from interactions divided
+     * by the number of ad interactions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+     */
+    public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
+      if (currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        return currentModelAttributedConversionsFromInteractionsValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsFromInteractionsValuePerInteraction_;
+      } else {
+        return currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions from interactions divided
+     * by the number of ad interactions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+     */
+    public Builder setCurrentModelAttributedConversionsFromInteractionsValuePerInteraction(com.google.protobuf.DoubleValue value) {
+      if (currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = value;
+        onChanged();
+      } else {
+        currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions from interactions divided
+     * by the number of ad interactions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+     */
+    public Builder setCurrentModelAttributedConversionsFromInteractionsValuePerInteraction(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = builderForValue.build();
+        onChanged();
+      } else {
+        currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions from interactions divided
+     * by the number of ad interactions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+     */
+    public Builder mergeCurrentModelAttributedConversionsFromInteractionsValuePerInteraction(com.google.protobuf.DoubleValue value) {
+      if (currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        if (currentModelAttributedConversionsFromInteractionsValuePerInteraction_ != null) {
+          currentModelAttributedConversionsFromInteractionsValuePerInteraction_ =
+            com.google.protobuf.DoubleValue.newBuilder(currentModelAttributedConversionsFromInteractionsValuePerInteraction_).mergeFrom(value).buildPartial();
+        } else {
+          currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = value;
+        }
+        onChanged();
+      } else {
+        currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions from interactions divided
+     * by the number of ad interactions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+     */
+    public Builder clearCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
+      if (currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = null;
+        onChanged();
+      } else {
+        currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = null;
+        currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions from interactions divided
+     * by the number of ad interactions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getCurrentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder() {
+      
+      onChanged();
+      return getCurrentModelAttributedConversionsFromInteractionsValuePerInteractionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions from interactions divided
+     * by the number of ad interactions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsFromInteractionsValuePerInteractionOrBuilder() {
+      if (currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ != null) {
+        return currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_.getMessageOrBuilder();
+      } else {
+        return currentModelAttributedConversionsFromInteractionsValuePerInteraction_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsFromInteractionsValuePerInteraction_;
+      }
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions from interactions divided
+     * by the number of ad interactions. This only includes conversion actions
+     * which include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getCurrentModelAttributedConversionsFromInteractionsValuePerInteractionFieldBuilder() {
+      if (currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
+        currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction(),
+                getParentForChildren(),
+                isClean());
+        currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = null;
+      }
+      return currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue currentModelAttributedConversionsValue_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> currentModelAttributedConversionsValueBuilder_;
+    /**
+     * <pre>
+     * The total value of current model attributed conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+     */
+    public boolean hasCurrentModelAttributedConversionsValue() {
+      return currentModelAttributedConversionsValueBuilder_ != null || currentModelAttributedConversionsValue_ != null;
+    }
+    /**
+     * <pre>
+     * The total value of current model attributed conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+     */
+    public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsValue() {
+      if (currentModelAttributedConversionsValueBuilder_ == null) {
+        return currentModelAttributedConversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsValue_;
+      } else {
+        return currentModelAttributedConversionsValueBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The total value of current model attributed conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+     */
+    public Builder setCurrentModelAttributedConversionsValue(com.google.protobuf.DoubleValue value) {
+      if (currentModelAttributedConversionsValueBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        currentModelAttributedConversionsValue_ = value;
+        onChanged();
+      } else {
+        currentModelAttributedConversionsValueBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The total value of current model attributed conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+     */
+    public Builder setCurrentModelAttributedConversionsValue(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (currentModelAttributedConversionsValueBuilder_ == null) {
+        currentModelAttributedConversionsValue_ = builderForValue.build();
+        onChanged();
+      } else {
+        currentModelAttributedConversionsValueBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The total value of current model attributed conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+     */
+    public Builder mergeCurrentModelAttributedConversionsValue(com.google.protobuf.DoubleValue value) {
+      if (currentModelAttributedConversionsValueBuilder_ == null) {
+        if (currentModelAttributedConversionsValue_ != null) {
+          currentModelAttributedConversionsValue_ =
+            com.google.protobuf.DoubleValue.newBuilder(currentModelAttributedConversionsValue_).mergeFrom(value).buildPartial();
+        } else {
+          currentModelAttributedConversionsValue_ = value;
+        }
+        onChanged();
+      } else {
+        currentModelAttributedConversionsValueBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The total value of current model attributed conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+     */
+    public Builder clearCurrentModelAttributedConversionsValue() {
+      if (currentModelAttributedConversionsValueBuilder_ == null) {
+        currentModelAttributedConversionsValue_ = null;
+        onChanged();
+      } else {
+        currentModelAttributedConversionsValue_ = null;
+        currentModelAttributedConversionsValueBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The total value of current model attributed conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getCurrentModelAttributedConversionsValueBuilder() {
+      
+      onChanged();
+      return getCurrentModelAttributedConversionsValueFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The total value of current model attributed conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsValueOrBuilder() {
+      if (currentModelAttributedConversionsValueBuilder_ != null) {
+        return currentModelAttributedConversionsValueBuilder_.getMessageOrBuilder();
+      } else {
+        return currentModelAttributedConversionsValue_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsValue_;
+      }
+    }
+    /**
+     * <pre>
+     * The total value of current model attributed conversions. This only includes
+     * conversion actions which include_in_conversions_metric attribute is set to
+     * true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getCurrentModelAttributedConversionsValueFieldBuilder() {
+      if (currentModelAttributedConversionsValueBuilder_ == null) {
+        currentModelAttributedConversionsValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getCurrentModelAttributedConversionsValue(),
+                getParentForChildren(),
+                isClean());
+        currentModelAttributedConversionsValue_ = null;
+      }
+      return currentModelAttributedConversionsValueBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue currentModelAttributedConversionsValuePerCost_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> currentModelAttributedConversionsValuePerCostBuilder_;
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the cost of ad
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+     */
+    public boolean hasCurrentModelAttributedConversionsValuePerCost() {
+      return currentModelAttributedConversionsValuePerCostBuilder_ != null || currentModelAttributedConversionsValuePerCost_ != null;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the cost of ad
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+     */
+    public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsValuePerCost() {
+      if (currentModelAttributedConversionsValuePerCostBuilder_ == null) {
+        return currentModelAttributedConversionsValuePerCost_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsValuePerCost_;
+      } else {
+        return currentModelAttributedConversionsValuePerCostBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the cost of ad
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+     */
+    public Builder setCurrentModelAttributedConversionsValuePerCost(com.google.protobuf.DoubleValue value) {
+      if (currentModelAttributedConversionsValuePerCostBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        currentModelAttributedConversionsValuePerCost_ = value;
+        onChanged();
+      } else {
+        currentModelAttributedConversionsValuePerCostBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the cost of ad
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+     */
+    public Builder setCurrentModelAttributedConversionsValuePerCost(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (currentModelAttributedConversionsValuePerCostBuilder_ == null) {
+        currentModelAttributedConversionsValuePerCost_ = builderForValue.build();
+        onChanged();
+      } else {
+        currentModelAttributedConversionsValuePerCostBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the cost of ad
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+     */
+    public Builder mergeCurrentModelAttributedConversionsValuePerCost(com.google.protobuf.DoubleValue value) {
+      if (currentModelAttributedConversionsValuePerCostBuilder_ == null) {
+        if (currentModelAttributedConversionsValuePerCost_ != null) {
+          currentModelAttributedConversionsValuePerCost_ =
+            com.google.protobuf.DoubleValue.newBuilder(currentModelAttributedConversionsValuePerCost_).mergeFrom(value).buildPartial();
+        } else {
+          currentModelAttributedConversionsValuePerCost_ = value;
+        }
+        onChanged();
+      } else {
+        currentModelAttributedConversionsValuePerCostBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the cost of ad
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+     */
+    public Builder clearCurrentModelAttributedConversionsValuePerCost() {
+      if (currentModelAttributedConversionsValuePerCostBuilder_ == null) {
+        currentModelAttributedConversionsValuePerCost_ = null;
+        onChanged();
+      } else {
+        currentModelAttributedConversionsValuePerCost_ = null;
+        currentModelAttributedConversionsValuePerCostBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the cost of ad
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getCurrentModelAttributedConversionsValuePerCostBuilder() {
+      
+      onChanged();
+      return getCurrentModelAttributedConversionsValuePerCostFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the cost of ad
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsValuePerCostOrBuilder() {
+      if (currentModelAttributedConversionsValuePerCostBuilder_ != null) {
+        return currentModelAttributedConversionsValuePerCostBuilder_.getMessageOrBuilder();
+      } else {
+        return currentModelAttributedConversionsValuePerCost_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsValuePerCost_;
+      }
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the cost of ad
+     * interactions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getCurrentModelAttributedConversionsValuePerCostFieldBuilder() {
+      if (currentModelAttributedConversionsValuePerCostBuilder_ == null) {
+        currentModelAttributedConversionsValuePerCostBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getCurrentModelAttributedConversionsValuePerCost(),
+                getParentForChildren(),
+                isClean());
+        currentModelAttributedConversionsValuePerCost_ = null;
+      }
+      return currentModelAttributedConversionsValuePerCostBuilder_;
     }
 
     private com.google.protobuf.DoubleValue engagementRate_ = null;
@@ -9794,6 +15893,993 @@ private static final long serialVersionUID = 0L;
         hotelAverageLeadValueMicros_ = null;
       }
       return hotelAverageLeadValueMicrosBuilder_;
+    }
+
+    private int historicalCreativeQualityScore_ = 0;
+    /**
+     * <pre>
+     * The creative historical quality score.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+     */
+    public int getHistoricalCreativeQualityScoreValue() {
+      return historicalCreativeQualityScore_;
+    }
+    /**
+     * <pre>
+     * The creative historical quality score.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+     */
+    public Builder setHistoricalCreativeQualityScoreValue(int value) {
+      historicalCreativeQualityScore_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The creative historical quality score.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+     */
+    public com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalCreativeQualityScore() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(historicalCreativeQualityScore_);
+      return result == null ? com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The creative historical quality score.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+     */
+    public Builder setHistoricalCreativeQualityScore(com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      historicalCreativeQualityScore_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The creative historical quality score.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+     */
+    public Builder clearHistoricalCreativeQualityScore() {
+      
+      historicalCreativeQualityScore_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int historicalLandingPageQualityScore_ = 0;
+    /**
+     * <pre>
+     * The quality of historical landing page experience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+     */
+    public int getHistoricalLandingPageQualityScoreValue() {
+      return historicalLandingPageQualityScore_;
+    }
+    /**
+     * <pre>
+     * The quality of historical landing page experience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+     */
+    public Builder setHistoricalLandingPageQualityScoreValue(int value) {
+      historicalLandingPageQualityScore_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The quality of historical landing page experience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+     */
+    public com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalLandingPageQualityScore() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(historicalLandingPageQualityScore_);
+      return result == null ? com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The quality of historical landing page experience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+     */
+    public Builder setHistoricalLandingPageQualityScore(com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      historicalLandingPageQualityScore_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The quality of historical landing page experience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+     */
+    public Builder clearHistoricalLandingPageQualityScore() {
+      
+      historicalLandingPageQualityScore_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Int64Value historicalQualityScore_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> historicalQualityScoreBuilder_;
+    /**
+     * <pre>
+     * The historical quality score.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+     */
+    public boolean hasHistoricalQualityScore() {
+      return historicalQualityScoreBuilder_ != null || historicalQualityScore_ != null;
+    }
+    /**
+     * <pre>
+     * The historical quality score.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+     */
+    public com.google.protobuf.Int64Value getHistoricalQualityScore() {
+      if (historicalQualityScoreBuilder_ == null) {
+        return historicalQualityScore_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : historicalQualityScore_;
+      } else {
+        return historicalQualityScoreBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The historical quality score.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+     */
+    public Builder setHistoricalQualityScore(com.google.protobuf.Int64Value value) {
+      if (historicalQualityScoreBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        historicalQualityScore_ = value;
+        onChanged();
+      } else {
+        historicalQualityScoreBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The historical quality score.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+     */
+    public Builder setHistoricalQualityScore(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (historicalQualityScoreBuilder_ == null) {
+        historicalQualityScore_ = builderForValue.build();
+        onChanged();
+      } else {
+        historicalQualityScoreBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The historical quality score.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+     */
+    public Builder mergeHistoricalQualityScore(com.google.protobuf.Int64Value value) {
+      if (historicalQualityScoreBuilder_ == null) {
+        if (historicalQualityScore_ != null) {
+          historicalQualityScore_ =
+            com.google.protobuf.Int64Value.newBuilder(historicalQualityScore_).mergeFrom(value).buildPartial();
+        } else {
+          historicalQualityScore_ = value;
+        }
+        onChanged();
+      } else {
+        historicalQualityScoreBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The historical quality score.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+     */
+    public Builder clearHistoricalQualityScore() {
+      if (historicalQualityScoreBuilder_ == null) {
+        historicalQualityScore_ = null;
+        onChanged();
+      } else {
+        historicalQualityScore_ = null;
+        historicalQualityScoreBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The historical quality score.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getHistoricalQualityScoreBuilder() {
+      
+      onChanged();
+      return getHistoricalQualityScoreFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The historical quality score.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getHistoricalQualityScoreOrBuilder() {
+      if (historicalQualityScoreBuilder_ != null) {
+        return historicalQualityScoreBuilder_.getMessageOrBuilder();
+      } else {
+        return historicalQualityScore_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : historicalQualityScore_;
+      }
+    }
+    /**
+     * <pre>
+     * The historical quality score.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getHistoricalQualityScoreFieldBuilder() {
+      if (historicalQualityScoreBuilder_ == null) {
+        historicalQualityScoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getHistoricalQualityScore(),
+                getParentForChildren(),
+                isClean());
+        historicalQualityScore_ = null;
+      }
+      return historicalQualityScoreBuilder_;
+    }
+
+    private int historicalSearchPredictedCtr_ = 0;
+    /**
+     * <pre>
+     * The historical search predicted click through rate (CTR).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+     */
+    public int getHistoricalSearchPredictedCtrValue() {
+      return historicalSearchPredictedCtr_;
+    }
+    /**
+     * <pre>
+     * The historical search predicted click through rate (CTR).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+     */
+    public Builder setHistoricalSearchPredictedCtrValue(int value) {
+      historicalSearchPredictedCtr_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The historical search predicted click through rate (CTR).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+     */
+    public com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalSearchPredictedCtr() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(historicalSearchPredictedCtr_);
+      return result == null ? com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The historical search predicted click through rate (CTR).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+     */
+    public Builder setHistoricalSearchPredictedCtr(com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      historicalSearchPredictedCtr_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The historical search predicted click through rate (CTR).
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+     */
+    public Builder clearHistoricalSearchPredictedCtr() {
+      
+      historicalSearchPredictedCtr_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Int64Value gmailForwards_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gmailForwardsBuilder_;
+    /**
+     * <pre>
+     * The number of times the ad was forwarded to someone else as a message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+     */
+    public boolean hasGmailForwards() {
+      return gmailForwardsBuilder_ != null || gmailForwards_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times the ad was forwarded to someone else as a message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+     */
+    public com.google.protobuf.Int64Value getGmailForwards() {
+      if (gmailForwardsBuilder_ == null) {
+        return gmailForwards_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gmailForwards_;
+      } else {
+        return gmailForwardsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times the ad was forwarded to someone else as a message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+     */
+    public Builder setGmailForwards(com.google.protobuf.Int64Value value) {
+      if (gmailForwardsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        gmailForwards_ = value;
+        onChanged();
+      } else {
+        gmailForwardsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times the ad was forwarded to someone else as a message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+     */
+    public Builder setGmailForwards(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (gmailForwardsBuilder_ == null) {
+        gmailForwards_ = builderForValue.build();
+        onChanged();
+      } else {
+        gmailForwardsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times the ad was forwarded to someone else as a message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+     */
+    public Builder mergeGmailForwards(com.google.protobuf.Int64Value value) {
+      if (gmailForwardsBuilder_ == null) {
+        if (gmailForwards_ != null) {
+          gmailForwards_ =
+            com.google.protobuf.Int64Value.newBuilder(gmailForwards_).mergeFrom(value).buildPartial();
+        } else {
+          gmailForwards_ = value;
+        }
+        onChanged();
+      } else {
+        gmailForwardsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times the ad was forwarded to someone else as a message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+     */
+    public Builder clearGmailForwards() {
+      if (gmailForwardsBuilder_ == null) {
+        gmailForwards_ = null;
+        onChanged();
+      } else {
+        gmailForwards_ = null;
+        gmailForwardsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times the ad was forwarded to someone else as a message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getGmailForwardsBuilder() {
+      
+      onChanged();
+      return getGmailForwardsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times the ad was forwarded to someone else as a message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getGmailForwardsOrBuilder() {
+      if (gmailForwardsBuilder_ != null) {
+        return gmailForwardsBuilder_.getMessageOrBuilder();
+      } else {
+        return gmailForwards_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : gmailForwards_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times the ad was forwarded to someone else as a message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getGmailForwardsFieldBuilder() {
+      if (gmailForwardsBuilder_ == null) {
+        gmailForwardsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getGmailForwards(),
+                getParentForChildren(),
+                isClean());
+        gmailForwards_ = null;
+      }
+      return gmailForwardsBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value gmailSaves_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gmailSavesBuilder_;
+    /**
+     * <pre>
+     * The number of times someone has saved your Gmail ad to their inbox as a
+     * message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+     */
+    public boolean hasGmailSaves() {
+      return gmailSavesBuilder_ != null || gmailSaves_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times someone has saved your Gmail ad to their inbox as a
+     * message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+     */
+    public com.google.protobuf.Int64Value getGmailSaves() {
+      if (gmailSavesBuilder_ == null) {
+        return gmailSaves_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gmailSaves_;
+      } else {
+        return gmailSavesBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times someone has saved your Gmail ad to their inbox as a
+     * message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+     */
+    public Builder setGmailSaves(com.google.protobuf.Int64Value value) {
+      if (gmailSavesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        gmailSaves_ = value;
+        onChanged();
+      } else {
+        gmailSavesBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times someone has saved your Gmail ad to their inbox as a
+     * message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+     */
+    public Builder setGmailSaves(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (gmailSavesBuilder_ == null) {
+        gmailSaves_ = builderForValue.build();
+        onChanged();
+      } else {
+        gmailSavesBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times someone has saved your Gmail ad to their inbox as a
+     * message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+     */
+    public Builder mergeGmailSaves(com.google.protobuf.Int64Value value) {
+      if (gmailSavesBuilder_ == null) {
+        if (gmailSaves_ != null) {
+          gmailSaves_ =
+            com.google.protobuf.Int64Value.newBuilder(gmailSaves_).mergeFrom(value).buildPartial();
+        } else {
+          gmailSaves_ = value;
+        }
+        onChanged();
+      } else {
+        gmailSavesBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times someone has saved your Gmail ad to their inbox as a
+     * message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+     */
+    public Builder clearGmailSaves() {
+      if (gmailSavesBuilder_ == null) {
+        gmailSaves_ = null;
+        onChanged();
+      } else {
+        gmailSaves_ = null;
+        gmailSavesBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times someone has saved your Gmail ad to their inbox as a
+     * message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getGmailSavesBuilder() {
+      
+      onChanged();
+      return getGmailSavesFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times someone has saved your Gmail ad to their inbox as a
+     * message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getGmailSavesOrBuilder() {
+      if (gmailSavesBuilder_ != null) {
+        return gmailSavesBuilder_.getMessageOrBuilder();
+      } else {
+        return gmailSaves_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : gmailSaves_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times someone has saved your Gmail ad to their inbox as a
+     * message.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getGmailSavesFieldBuilder() {
+      if (gmailSavesBuilder_ == null) {
+        gmailSavesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getGmailSaves(),
+                getParentForChildren(),
+                isClean());
+        gmailSaves_ = null;
+      }
+      return gmailSavesBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value gmailSecondaryClicks_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gmailSecondaryClicksBuilder_;
+    /**
+     * <pre>
+     * The number of clicks to the landing page on the expanded state of Gmail
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+     */
+    public boolean hasGmailSecondaryClicks() {
+      return gmailSecondaryClicksBuilder_ != null || gmailSecondaryClicks_ != null;
+    }
+    /**
+     * <pre>
+     * The number of clicks to the landing page on the expanded state of Gmail
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+     */
+    public com.google.protobuf.Int64Value getGmailSecondaryClicks() {
+      if (gmailSecondaryClicksBuilder_ == null) {
+        return gmailSecondaryClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gmailSecondaryClicks_;
+      } else {
+        return gmailSecondaryClicksBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of clicks to the landing page on the expanded state of Gmail
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+     */
+    public Builder setGmailSecondaryClicks(com.google.protobuf.Int64Value value) {
+      if (gmailSecondaryClicksBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        gmailSecondaryClicks_ = value;
+        onChanged();
+      } else {
+        gmailSecondaryClicksBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of clicks to the landing page on the expanded state of Gmail
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+     */
+    public Builder setGmailSecondaryClicks(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (gmailSecondaryClicksBuilder_ == null) {
+        gmailSecondaryClicks_ = builderForValue.build();
+        onChanged();
+      } else {
+        gmailSecondaryClicksBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of clicks to the landing page on the expanded state of Gmail
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+     */
+    public Builder mergeGmailSecondaryClicks(com.google.protobuf.Int64Value value) {
+      if (gmailSecondaryClicksBuilder_ == null) {
+        if (gmailSecondaryClicks_ != null) {
+          gmailSecondaryClicks_ =
+            com.google.protobuf.Int64Value.newBuilder(gmailSecondaryClicks_).mergeFrom(value).buildPartial();
+        } else {
+          gmailSecondaryClicks_ = value;
+        }
+        onChanged();
+      } else {
+        gmailSecondaryClicksBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of clicks to the landing page on the expanded state of Gmail
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+     */
+    public Builder clearGmailSecondaryClicks() {
+      if (gmailSecondaryClicksBuilder_ == null) {
+        gmailSecondaryClicks_ = null;
+        onChanged();
+      } else {
+        gmailSecondaryClicks_ = null;
+        gmailSecondaryClicksBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of clicks to the landing page on the expanded state of Gmail
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getGmailSecondaryClicksBuilder() {
+      
+      onChanged();
+      return getGmailSecondaryClicksFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of clicks to the landing page on the expanded state of Gmail
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getGmailSecondaryClicksOrBuilder() {
+      if (gmailSecondaryClicksBuilder_ != null) {
+        return gmailSecondaryClicksBuilder_.getMessageOrBuilder();
+      } else {
+        return gmailSecondaryClicks_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : gmailSecondaryClicks_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of clicks to the landing page on the expanded state of Gmail
+     * ads.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getGmailSecondaryClicksFieldBuilder() {
+      if (gmailSecondaryClicksBuilder_ == null) {
+        gmailSecondaryClicksBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getGmailSecondaryClicks(),
+                getParentForChildren(),
+                isClean());
+        gmailSecondaryClicks_ = null;
+      }
+      return gmailSecondaryClicksBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value impressionReach_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> impressionReachBuilder_;
+    /**
+     * <pre>
+     * Number of unique cookies that were exposed to your ad over a given time
+     * period.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+     */
+    public boolean hasImpressionReach() {
+      return impressionReachBuilder_ != null || impressionReach_ != null;
+    }
+    /**
+     * <pre>
+     * Number of unique cookies that were exposed to your ad over a given time
+     * period.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+     */
+    public com.google.protobuf.Int64Value getImpressionReach() {
+      if (impressionReachBuilder_ == null) {
+        return impressionReach_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : impressionReach_;
+      } else {
+        return impressionReachBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Number of unique cookies that were exposed to your ad over a given time
+     * period.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+     */
+    public Builder setImpressionReach(com.google.protobuf.Int64Value value) {
+      if (impressionReachBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        impressionReach_ = value;
+        onChanged();
+      } else {
+        impressionReachBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of unique cookies that were exposed to your ad over a given time
+     * period.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+     */
+    public Builder setImpressionReach(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (impressionReachBuilder_ == null) {
+        impressionReach_ = builderForValue.build();
+        onChanged();
+      } else {
+        impressionReachBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of unique cookies that were exposed to your ad over a given time
+     * period.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+     */
+    public Builder mergeImpressionReach(com.google.protobuf.Int64Value value) {
+      if (impressionReachBuilder_ == null) {
+        if (impressionReach_ != null) {
+          impressionReach_ =
+            com.google.protobuf.Int64Value.newBuilder(impressionReach_).mergeFrom(value).buildPartial();
+        } else {
+          impressionReach_ = value;
+        }
+        onChanged();
+      } else {
+        impressionReachBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of unique cookies that were exposed to your ad over a given time
+     * period.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+     */
+    public Builder clearImpressionReach() {
+      if (impressionReachBuilder_ == null) {
+        impressionReach_ = null;
+        onChanged();
+      } else {
+        impressionReach_ = null;
+        impressionReachBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of unique cookies that were exposed to your ad over a given time
+     * period.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getImpressionReachBuilder() {
+      
+      onChanged();
+      return getImpressionReachFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Number of unique cookies that were exposed to your ad over a given time
+     * period.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getImpressionReachOrBuilder() {
+      if (impressionReachBuilder_ != null) {
+        return impressionReachBuilder_.getMessageOrBuilder();
+      } else {
+        return impressionReach_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : impressionReach_;
+      }
+    }
+    /**
+     * <pre>
+     * Number of unique cookies that were exposed to your ad over a given time
+     * period.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getImpressionReachFieldBuilder() {
+      if (impressionReachBuilder_ == null) {
+        impressionReachBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getImpressionReach(),
+                getParentForChildren(),
+                isClean());
+        impressionReach_ = null;
+      }
+      return impressionReachBuilder_;
     }
 
     private com.google.protobuf.Int64Value impressions_ = null;
@@ -10298,6 +17384,172 @@ private static final long serialVersionUID = 0L;
         interactions_ = null;
       }
       return interactionsBuilder_;
+    }
+
+    private java.util.List<java.lang.Integer> interactionEventTypes_ =
+      java.util.Collections.emptyList();
+    private void ensureInteractionEventTypesIsMutable() {
+      if (!((bitField1_ & 0x20000000) == 0x20000000)) {
+        interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>(interactionEventTypes_);
+        bitField1_ |= 0x20000000;
+      }
+    }
+    /**
+     * <pre>
+     * The types of payable and free interactions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType> getInteractionEventTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType>(interactionEventTypes_, interactionEventTypes_converter_);
+    }
+    /**
+     * <pre>
+     * The types of payable and free interactions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     */
+    public int getInteractionEventTypesCount() {
+      return interactionEventTypes_.size();
+    }
+    /**
+     * <pre>
+     * The types of payable and free interactions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     */
+    public com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType getInteractionEventTypes(int index) {
+      return interactionEventTypes_converter_.convert(interactionEventTypes_.get(index));
+    }
+    /**
+     * <pre>
+     * The types of payable and free interactions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     */
+    public Builder setInteractionEventTypes(
+        int index, com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureInteractionEventTypesIsMutable();
+      interactionEventTypes_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The types of payable and free interactions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     */
+    public Builder addInteractionEventTypes(com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureInteractionEventTypesIsMutable();
+      interactionEventTypes_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The types of payable and free interactions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     */
+    public Builder addAllInteractionEventTypes(
+        java.lang.Iterable<? extends com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType> values) {
+      ensureInteractionEventTypesIsMutable();
+      for (com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType value : values) {
+        interactionEventTypes_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The types of payable and free interactions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     */
+    public Builder clearInteractionEventTypes() {
+      interactionEventTypes_ = java.util.Collections.emptyList();
+      bitField1_ = (bitField1_ & ~0x20000000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The types of payable and free interactions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getInteractionEventTypesValueList() {
+      return java.util.Collections.unmodifiableList(interactionEventTypes_);
+    }
+    /**
+     * <pre>
+     * The types of payable and free interactions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     */
+    public int getInteractionEventTypesValue(int index) {
+      return interactionEventTypes_.get(index);
+    }
+    /**
+     * <pre>
+     * The types of payable and free interactions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     */
+    public Builder setInteractionEventTypesValue(
+        int index, int value) {
+      ensureInteractionEventTypesIsMutable();
+      interactionEventTypes_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The types of payable and free interactions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     */
+    public Builder addInteractionEventTypesValue(int value) {
+      ensureInteractionEventTypesIsMutable();
+      interactionEventTypes_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The types of payable and free interactions.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     */
+    public Builder addAllInteractionEventTypesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureInteractionEventTypesIsMutable();
+      for (int value : values) {
+        interactionEventTypes_.add(value);
+      }
+      onChanged();
+      return this;
     }
 
     private com.google.protobuf.DoubleValue invalidClickRate_ = null;
@@ -11421,8 +18673,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchAbsoluteTopImpressionShareBuilder_;
     /**
      * <pre>
-     * The percentage of the customer's Shopping ad impressions that are shown in
-     * the most prominent Shopping position. See
+     * The percentage of the customer's Shopping or Search ad impressions that are
+     * shown in the most prominent Shopping position. See
      * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
      * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
@@ -11434,8 +18686,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percentage of the customer's Shopping ad impressions that are shown in
-     * the most prominent Shopping position. See
+     * The percentage of the customer's Shopping or Search ad impressions that are
+     * shown in the most prominent Shopping position. See
      * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
      * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
@@ -11451,8 +18703,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percentage of the customer's Shopping ad impressions that are shown in
-     * the most prominent Shopping position. See
+     * The percentage of the customer's Shopping or Search ad impressions that are
+     * shown in the most prominent Shopping position. See
      * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
      * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
@@ -11474,8 +18726,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percentage of the customer's Shopping ad impressions that are shown in
-     * the most prominent Shopping position. See
+     * The percentage of the customer's Shopping or Search ad impressions that are
+     * shown in the most prominent Shopping position. See
      * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
      * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
@@ -11495,8 +18747,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percentage of the customer's Shopping ad impressions that are shown in
-     * the most prominent Shopping position. See
+     * The percentage of the customer's Shopping or Search ad impressions that are
+     * shown in the most prominent Shopping position. See
      * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
      * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
@@ -11520,8 +18772,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percentage of the customer's Shopping ad impressions that are shown in
-     * the most prominent Shopping position. See
+     * The percentage of the customer's Shopping or Search ad impressions that are
+     * shown in the most prominent Shopping position. See
      * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
      * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
@@ -11541,8 +18793,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percentage of the customer's Shopping ad impressions that are shown in
-     * the most prominent Shopping position. See
+     * The percentage of the customer's Shopping or Search ad impressions that are
+     * shown in the most prominent Shopping position. See
      * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
      * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
@@ -11556,8 +18808,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percentage of the customer's Shopping ad impressions that are shown in
-     * the most prominent Shopping position. See
+     * The percentage of the customer's Shopping or Search ad impressions that are
+     * shown in the most prominent Shopping position. See
      * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
      * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
@@ -11574,8 +18826,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The percentage of the customer's Shopping ad impressions that are shown in
-     * the most prominent Shopping position. See
+     * The percentage of the customer's Shopping or Search ad impressions that are
+     * shown in the most prominent Shopping position. See
      * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
      * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
@@ -11594,6 +18846,186 @@ private static final long serialVersionUID = 0L;
         searchAbsoluteTopImpressionShare_ = null;
       }
       return searchAbsoluteTopImpressionShareBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue searchBudgetLostAbsoluteTopImpressionShare_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchBudgetLostAbsoluteTopImpressionShareBuilder_;
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost absolute top impression share is reported in the range of 0 to
+     * 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+     */
+    public boolean hasSearchBudgetLostAbsoluteTopImpressionShare() {
+      return searchBudgetLostAbsoluteTopImpressionShareBuilder_ != null || searchBudgetLostAbsoluteTopImpressionShare_ != null;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost absolute top impression share is reported in the range of 0 to
+     * 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+     */
+    public com.google.protobuf.DoubleValue getSearchBudgetLostAbsoluteTopImpressionShare() {
+      if (searchBudgetLostAbsoluteTopImpressionShareBuilder_ == null) {
+        return searchBudgetLostAbsoluteTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchBudgetLostAbsoluteTopImpressionShare_;
+      } else {
+        return searchBudgetLostAbsoluteTopImpressionShareBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost absolute top impression share is reported in the range of 0 to
+     * 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+     */
+    public Builder setSearchBudgetLostAbsoluteTopImpressionShare(com.google.protobuf.DoubleValue value) {
+      if (searchBudgetLostAbsoluteTopImpressionShareBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        searchBudgetLostAbsoluteTopImpressionShare_ = value;
+        onChanged();
+      } else {
+        searchBudgetLostAbsoluteTopImpressionShareBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost absolute top impression share is reported in the range of 0 to
+     * 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+     */
+    public Builder setSearchBudgetLostAbsoluteTopImpressionShare(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (searchBudgetLostAbsoluteTopImpressionShareBuilder_ == null) {
+        searchBudgetLostAbsoluteTopImpressionShare_ = builderForValue.build();
+        onChanged();
+      } else {
+        searchBudgetLostAbsoluteTopImpressionShareBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost absolute top impression share is reported in the range of 0 to
+     * 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+     */
+    public Builder mergeSearchBudgetLostAbsoluteTopImpressionShare(com.google.protobuf.DoubleValue value) {
+      if (searchBudgetLostAbsoluteTopImpressionShareBuilder_ == null) {
+        if (searchBudgetLostAbsoluteTopImpressionShare_ != null) {
+          searchBudgetLostAbsoluteTopImpressionShare_ =
+            com.google.protobuf.DoubleValue.newBuilder(searchBudgetLostAbsoluteTopImpressionShare_).mergeFrom(value).buildPartial();
+        } else {
+          searchBudgetLostAbsoluteTopImpressionShare_ = value;
+        }
+        onChanged();
+      } else {
+        searchBudgetLostAbsoluteTopImpressionShareBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost absolute top impression share is reported in the range of 0 to
+     * 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+     */
+    public Builder clearSearchBudgetLostAbsoluteTopImpressionShare() {
+      if (searchBudgetLostAbsoluteTopImpressionShareBuilder_ == null) {
+        searchBudgetLostAbsoluteTopImpressionShare_ = null;
+        onChanged();
+      } else {
+        searchBudgetLostAbsoluteTopImpressionShare_ = null;
+        searchBudgetLostAbsoluteTopImpressionShareBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost absolute top impression share is reported in the range of 0 to
+     * 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getSearchBudgetLostAbsoluteTopImpressionShareBuilder() {
+      
+      onChanged();
+      return getSearchBudgetLostAbsoluteTopImpressionShareFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost absolute top impression share is reported in the range of 0 to
+     * 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getSearchBudgetLostAbsoluteTopImpressionShareOrBuilder() {
+      if (searchBudgetLostAbsoluteTopImpressionShareBuilder_ != null) {
+        return searchBudgetLostAbsoluteTopImpressionShareBuilder_.getMessageOrBuilder();
+      } else {
+        return searchBudgetLostAbsoluteTopImpressionShare_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : searchBudgetLostAbsoluteTopImpressionShare_;
+      }
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost absolute top impression share is reported in the range of 0 to
+     * 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getSearchBudgetLostAbsoluteTopImpressionShareFieldBuilder() {
+      if (searchBudgetLostAbsoluteTopImpressionShareBuilder_ == null) {
+        searchBudgetLostAbsoluteTopImpressionShareBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getSearchBudgetLostAbsoluteTopImpressionShare(),
+                getParentForChildren(),
+                isClean());
+        searchBudgetLostAbsoluteTopImpressionShare_ = null;
+      }
+      return searchBudgetLostAbsoluteTopImpressionShareBuilder_;
     }
 
     private com.google.protobuf.DoubleValue searchBudgetLostImpressionShare_ = null;
@@ -11774,6 +19206,366 @@ private static final long serialVersionUID = 0L;
         searchBudgetLostImpressionShare_ = null;
       }
       return searchBudgetLostImpressionShareBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue searchBudgetLostTopImpressionShare_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchBudgetLostTopImpressionShareBuilder_;
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost top impression share is reported in the range of 0 to 0.9. Any
+     * value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+     */
+    public boolean hasSearchBudgetLostTopImpressionShare() {
+      return searchBudgetLostTopImpressionShareBuilder_ != null || searchBudgetLostTopImpressionShare_ != null;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost top impression share is reported in the range of 0 to 0.9. Any
+     * value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+     */
+    public com.google.protobuf.DoubleValue getSearchBudgetLostTopImpressionShare() {
+      if (searchBudgetLostTopImpressionShareBuilder_ == null) {
+        return searchBudgetLostTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchBudgetLostTopImpressionShare_;
+      } else {
+        return searchBudgetLostTopImpressionShareBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost top impression share is reported in the range of 0 to 0.9. Any
+     * value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+     */
+    public Builder setSearchBudgetLostTopImpressionShare(com.google.protobuf.DoubleValue value) {
+      if (searchBudgetLostTopImpressionShareBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        searchBudgetLostTopImpressionShare_ = value;
+        onChanged();
+      } else {
+        searchBudgetLostTopImpressionShareBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost top impression share is reported in the range of 0 to 0.9. Any
+     * value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+     */
+    public Builder setSearchBudgetLostTopImpressionShare(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (searchBudgetLostTopImpressionShareBuilder_ == null) {
+        searchBudgetLostTopImpressionShare_ = builderForValue.build();
+        onChanged();
+      } else {
+        searchBudgetLostTopImpressionShareBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost top impression share is reported in the range of 0 to 0.9. Any
+     * value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+     */
+    public Builder mergeSearchBudgetLostTopImpressionShare(com.google.protobuf.DoubleValue value) {
+      if (searchBudgetLostTopImpressionShareBuilder_ == null) {
+        if (searchBudgetLostTopImpressionShare_ != null) {
+          searchBudgetLostTopImpressionShare_ =
+            com.google.protobuf.DoubleValue.newBuilder(searchBudgetLostTopImpressionShare_).mergeFrom(value).buildPartial();
+        } else {
+          searchBudgetLostTopImpressionShare_ = value;
+        }
+        onChanged();
+      } else {
+        searchBudgetLostTopImpressionShareBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost top impression share is reported in the range of 0 to 0.9. Any
+     * value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+     */
+    public Builder clearSearchBudgetLostTopImpressionShare() {
+      if (searchBudgetLostTopImpressionShareBuilder_ == null) {
+        searchBudgetLostTopImpressionShare_ = null;
+        onChanged();
+      } else {
+        searchBudgetLostTopImpressionShare_ = null;
+        searchBudgetLostTopImpressionShareBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost top impression share is reported in the range of 0 to 0.9. Any
+     * value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getSearchBudgetLostTopImpressionShareBuilder() {
+      
+      onChanged();
+      return getSearchBudgetLostTopImpressionShareFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost top impression share is reported in the range of 0 to 0.9. Any
+     * value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getSearchBudgetLostTopImpressionShareOrBuilder() {
+      if (searchBudgetLostTopImpressionShareBuilder_ != null) {
+        return searchBudgetLostTopImpressionShareBuilder_.getMessageOrBuilder();
+      } else {
+        return searchBudgetLostTopImpressionShare_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : searchBudgetLostTopImpressionShare_;
+      }
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to a low budget. Note: Search
+     * budget lost top impression share is reported in the range of 0 to 0.9. Any
+     * value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getSearchBudgetLostTopImpressionShareFieldBuilder() {
+      if (searchBudgetLostTopImpressionShareBuilder_ == null) {
+        searchBudgetLostTopImpressionShareBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getSearchBudgetLostTopImpressionShare(),
+                getParentForChildren(),
+                isClean());
+        searchBudgetLostTopImpressionShare_ = null;
+      }
+      return searchBudgetLostTopImpressionShareBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue searchClickShare_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchClickShareBuilder_;
+    /**
+     * <pre>
+     * The number of clicks you've received on the Search Network
+     * divided by the estimated number of clicks you were eligible to receive.
+     * Note: Search click share is reported in the range of 0.1 to 1. Any value
+     * below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+     */
+    public boolean hasSearchClickShare() {
+      return searchClickShareBuilder_ != null || searchClickShare_ != null;
+    }
+    /**
+     * <pre>
+     * The number of clicks you've received on the Search Network
+     * divided by the estimated number of clicks you were eligible to receive.
+     * Note: Search click share is reported in the range of 0.1 to 1. Any value
+     * below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+     */
+    public com.google.protobuf.DoubleValue getSearchClickShare() {
+      if (searchClickShareBuilder_ == null) {
+        return searchClickShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchClickShare_;
+      } else {
+        return searchClickShareBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of clicks you've received on the Search Network
+     * divided by the estimated number of clicks you were eligible to receive.
+     * Note: Search click share is reported in the range of 0.1 to 1. Any value
+     * below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+     */
+    public Builder setSearchClickShare(com.google.protobuf.DoubleValue value) {
+      if (searchClickShareBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        searchClickShare_ = value;
+        onChanged();
+      } else {
+        searchClickShareBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of clicks you've received on the Search Network
+     * divided by the estimated number of clicks you were eligible to receive.
+     * Note: Search click share is reported in the range of 0.1 to 1. Any value
+     * below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+     */
+    public Builder setSearchClickShare(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (searchClickShareBuilder_ == null) {
+        searchClickShare_ = builderForValue.build();
+        onChanged();
+      } else {
+        searchClickShareBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of clicks you've received on the Search Network
+     * divided by the estimated number of clicks you were eligible to receive.
+     * Note: Search click share is reported in the range of 0.1 to 1. Any value
+     * below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+     */
+    public Builder mergeSearchClickShare(com.google.protobuf.DoubleValue value) {
+      if (searchClickShareBuilder_ == null) {
+        if (searchClickShare_ != null) {
+          searchClickShare_ =
+            com.google.protobuf.DoubleValue.newBuilder(searchClickShare_).mergeFrom(value).buildPartial();
+        } else {
+          searchClickShare_ = value;
+        }
+        onChanged();
+      } else {
+        searchClickShareBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of clicks you've received on the Search Network
+     * divided by the estimated number of clicks you were eligible to receive.
+     * Note: Search click share is reported in the range of 0.1 to 1. Any value
+     * below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+     */
+    public Builder clearSearchClickShare() {
+      if (searchClickShareBuilder_ == null) {
+        searchClickShare_ = null;
+        onChanged();
+      } else {
+        searchClickShare_ = null;
+        searchClickShareBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of clicks you've received on the Search Network
+     * divided by the estimated number of clicks you were eligible to receive.
+     * Note: Search click share is reported in the range of 0.1 to 1. Any value
+     * below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getSearchClickShareBuilder() {
+      
+      onChanged();
+      return getSearchClickShareFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of clicks you've received on the Search Network
+     * divided by the estimated number of clicks you were eligible to receive.
+     * Note: Search click share is reported in the range of 0.1 to 1. Any value
+     * below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getSearchClickShareOrBuilder() {
+      if (searchClickShareBuilder_ != null) {
+        return searchClickShareBuilder_.getMessageOrBuilder();
+      } else {
+        return searchClickShare_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : searchClickShare_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of clicks you've received on the Search Network
+     * divided by the estimated number of clicks you were eligible to receive.
+     * Note: Search click share is reported in the range of 0.1 to 1. Any value
+     * below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getSearchClickShareFieldBuilder() {
+      if (searchClickShareBuilder_ == null) {
+        searchClickShareBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getSearchClickShare(),
+                getParentForChildren(),
+                isClean());
+        searchClickShare_ = null;
+      }
+      return searchClickShareBuilder_;
     }
 
     private com.google.protobuf.DoubleValue searchExactMatchImpressionShare_ = null;
@@ -12154,6 +19946,186 @@ private static final long serialVersionUID = 0L;
       return searchImpressionShareBuilder_;
     }
 
+    private com.google.protobuf.DoubleValue searchRankLostAbsoluteTopImpressionShare_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchRankLostAbsoluteTopImpressionShareBuilder_;
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost absolute top impression share is reported in the
+     * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+     */
+    public boolean hasSearchRankLostAbsoluteTopImpressionShare() {
+      return searchRankLostAbsoluteTopImpressionShareBuilder_ != null || searchRankLostAbsoluteTopImpressionShare_ != null;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost absolute top impression share is reported in the
+     * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+     */
+    public com.google.protobuf.DoubleValue getSearchRankLostAbsoluteTopImpressionShare() {
+      if (searchRankLostAbsoluteTopImpressionShareBuilder_ == null) {
+        return searchRankLostAbsoluteTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchRankLostAbsoluteTopImpressionShare_;
+      } else {
+        return searchRankLostAbsoluteTopImpressionShareBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost absolute top impression share is reported in the
+     * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+     */
+    public Builder setSearchRankLostAbsoluteTopImpressionShare(com.google.protobuf.DoubleValue value) {
+      if (searchRankLostAbsoluteTopImpressionShareBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        searchRankLostAbsoluteTopImpressionShare_ = value;
+        onChanged();
+      } else {
+        searchRankLostAbsoluteTopImpressionShareBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost absolute top impression share is reported in the
+     * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+     */
+    public Builder setSearchRankLostAbsoluteTopImpressionShare(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (searchRankLostAbsoluteTopImpressionShareBuilder_ == null) {
+        searchRankLostAbsoluteTopImpressionShare_ = builderForValue.build();
+        onChanged();
+      } else {
+        searchRankLostAbsoluteTopImpressionShareBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost absolute top impression share is reported in the
+     * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+     */
+    public Builder mergeSearchRankLostAbsoluteTopImpressionShare(com.google.protobuf.DoubleValue value) {
+      if (searchRankLostAbsoluteTopImpressionShareBuilder_ == null) {
+        if (searchRankLostAbsoluteTopImpressionShare_ != null) {
+          searchRankLostAbsoluteTopImpressionShare_ =
+            com.google.protobuf.DoubleValue.newBuilder(searchRankLostAbsoluteTopImpressionShare_).mergeFrom(value).buildPartial();
+        } else {
+          searchRankLostAbsoluteTopImpressionShare_ = value;
+        }
+        onChanged();
+      } else {
+        searchRankLostAbsoluteTopImpressionShareBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost absolute top impression share is reported in the
+     * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+     */
+    public Builder clearSearchRankLostAbsoluteTopImpressionShare() {
+      if (searchRankLostAbsoluteTopImpressionShareBuilder_ == null) {
+        searchRankLostAbsoluteTopImpressionShare_ = null;
+        onChanged();
+      } else {
+        searchRankLostAbsoluteTopImpressionShare_ = null;
+        searchRankLostAbsoluteTopImpressionShareBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost absolute top impression share is reported in the
+     * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getSearchRankLostAbsoluteTopImpressionShareBuilder() {
+      
+      onChanged();
+      return getSearchRankLostAbsoluteTopImpressionShareFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost absolute top impression share is reported in the
+     * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getSearchRankLostAbsoluteTopImpressionShareOrBuilder() {
+      if (searchRankLostAbsoluteTopImpressionShareBuilder_ != null) {
+        return searchRankLostAbsoluteTopImpressionShareBuilder_.getMessageOrBuilder();
+      } else {
+        return searchRankLostAbsoluteTopImpressionShare_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : searchRankLostAbsoluteTopImpressionShare_;
+      }
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad wasn't the very first ad above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost absolute top impression share is reported in the
+     * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getSearchRankLostAbsoluteTopImpressionShareFieldBuilder() {
+      if (searchRankLostAbsoluteTopImpressionShareBuilder_ == null) {
+        searchRankLostAbsoluteTopImpressionShareBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getSearchRankLostAbsoluteTopImpressionShare(),
+                getParentForChildren(),
+                isClean());
+        searchRankLostAbsoluteTopImpressionShare_ = null;
+      }
+      return searchRankLostAbsoluteTopImpressionShareBuilder_;
+    }
+
     private com.google.protobuf.DoubleValue searchRankLostImpressionShare_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchRankLostImpressionShareBuilder_;
@@ -12334,6 +20306,537 @@ private static final long serialVersionUID = 0L;
       return searchRankLostImpressionShareBuilder_;
     }
 
+    private com.google.protobuf.DoubleValue searchRankLostTopImpressionShare_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchRankLostTopImpressionShareBuilder_;
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost top impression share is reported in the range of 0
+     * to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+     */
+    public boolean hasSearchRankLostTopImpressionShare() {
+      return searchRankLostTopImpressionShareBuilder_ != null || searchRankLostTopImpressionShare_ != null;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost top impression share is reported in the range of 0
+     * to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+     */
+    public com.google.protobuf.DoubleValue getSearchRankLostTopImpressionShare() {
+      if (searchRankLostTopImpressionShareBuilder_ == null) {
+        return searchRankLostTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchRankLostTopImpressionShare_;
+      } else {
+        return searchRankLostTopImpressionShareBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost top impression share is reported in the range of 0
+     * to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+     */
+    public Builder setSearchRankLostTopImpressionShare(com.google.protobuf.DoubleValue value) {
+      if (searchRankLostTopImpressionShareBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        searchRankLostTopImpressionShare_ = value;
+        onChanged();
+      } else {
+        searchRankLostTopImpressionShareBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost top impression share is reported in the range of 0
+     * to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+     */
+    public Builder setSearchRankLostTopImpressionShare(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (searchRankLostTopImpressionShareBuilder_ == null) {
+        searchRankLostTopImpressionShare_ = builderForValue.build();
+        onChanged();
+      } else {
+        searchRankLostTopImpressionShareBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost top impression share is reported in the range of 0
+     * to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+     */
+    public Builder mergeSearchRankLostTopImpressionShare(com.google.protobuf.DoubleValue value) {
+      if (searchRankLostTopImpressionShareBuilder_ == null) {
+        if (searchRankLostTopImpressionShare_ != null) {
+          searchRankLostTopImpressionShare_ =
+            com.google.protobuf.DoubleValue.newBuilder(searchRankLostTopImpressionShare_).mergeFrom(value).buildPartial();
+        } else {
+          searchRankLostTopImpressionShare_ = value;
+        }
+        onChanged();
+      } else {
+        searchRankLostTopImpressionShareBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost top impression share is reported in the range of 0
+     * to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+     */
+    public Builder clearSearchRankLostTopImpressionShare() {
+      if (searchRankLostTopImpressionShareBuilder_ == null) {
+        searchRankLostTopImpressionShare_ = null;
+        onChanged();
+      } else {
+        searchRankLostTopImpressionShare_ = null;
+        searchRankLostTopImpressionShareBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost top impression share is reported in the range of 0
+     * to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getSearchRankLostTopImpressionShareBuilder() {
+      
+      onChanged();
+      return getSearchRankLostTopImpressionShareFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost top impression share is reported in the range of 0
+     * to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getSearchRankLostTopImpressionShareOrBuilder() {
+      if (searchRankLostTopImpressionShareBuilder_ != null) {
+        return searchRankLostTopImpressionShareBuilder_.getMessageOrBuilder();
+      } else {
+        return searchRankLostTopImpressionShare_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : searchRankLostTopImpressionShare_;
+      }
+    }
+    /**
+     * <pre>
+     * The number estimating how often your ad didn't show anywhere above the
+     * organic search results due to poor Ad Rank.
+     * Note: Search rank lost top impression share is reported in the range of 0
+     * to 0.9. Any value above 0.9 is reported as 0.9001.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getSearchRankLostTopImpressionShareFieldBuilder() {
+      if (searchRankLostTopImpressionShareBuilder_ == null) {
+        searchRankLostTopImpressionShareBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getSearchRankLostTopImpressionShare(),
+                getParentForChildren(),
+                isClean());
+        searchRankLostTopImpressionShare_ = null;
+      }
+      return searchRankLostTopImpressionShareBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue searchTopImpressionShare_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchTopImpressionShareBuilder_;
+    /**
+     * <pre>
+     * The impressions you've received in the top location (anywhere above the
+     * organic search results) compared to the estimated number of impressions you
+     * were eligible to receive in the top location.
+     * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+     * value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+     */
+    public boolean hasSearchTopImpressionShare() {
+      return searchTopImpressionShareBuilder_ != null || searchTopImpressionShare_ != null;
+    }
+    /**
+     * <pre>
+     * The impressions you've received in the top location (anywhere above the
+     * organic search results) compared to the estimated number of impressions you
+     * were eligible to receive in the top location.
+     * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+     * value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+     */
+    public com.google.protobuf.DoubleValue getSearchTopImpressionShare() {
+      if (searchTopImpressionShareBuilder_ == null) {
+        return searchTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchTopImpressionShare_;
+      } else {
+        return searchTopImpressionShareBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The impressions you've received in the top location (anywhere above the
+     * organic search results) compared to the estimated number of impressions you
+     * were eligible to receive in the top location.
+     * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+     * value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+     */
+    public Builder setSearchTopImpressionShare(com.google.protobuf.DoubleValue value) {
+      if (searchTopImpressionShareBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        searchTopImpressionShare_ = value;
+        onChanged();
+      } else {
+        searchTopImpressionShareBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The impressions you've received in the top location (anywhere above the
+     * organic search results) compared to the estimated number of impressions you
+     * were eligible to receive in the top location.
+     * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+     * value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+     */
+    public Builder setSearchTopImpressionShare(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (searchTopImpressionShareBuilder_ == null) {
+        searchTopImpressionShare_ = builderForValue.build();
+        onChanged();
+      } else {
+        searchTopImpressionShareBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The impressions you've received in the top location (anywhere above the
+     * organic search results) compared to the estimated number of impressions you
+     * were eligible to receive in the top location.
+     * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+     * value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+     */
+    public Builder mergeSearchTopImpressionShare(com.google.protobuf.DoubleValue value) {
+      if (searchTopImpressionShareBuilder_ == null) {
+        if (searchTopImpressionShare_ != null) {
+          searchTopImpressionShare_ =
+            com.google.protobuf.DoubleValue.newBuilder(searchTopImpressionShare_).mergeFrom(value).buildPartial();
+        } else {
+          searchTopImpressionShare_ = value;
+        }
+        onChanged();
+      } else {
+        searchTopImpressionShareBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The impressions you've received in the top location (anywhere above the
+     * organic search results) compared to the estimated number of impressions you
+     * were eligible to receive in the top location.
+     * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+     * value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+     */
+    public Builder clearSearchTopImpressionShare() {
+      if (searchTopImpressionShareBuilder_ == null) {
+        searchTopImpressionShare_ = null;
+        onChanged();
+      } else {
+        searchTopImpressionShare_ = null;
+        searchTopImpressionShareBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The impressions you've received in the top location (anywhere above the
+     * organic search results) compared to the estimated number of impressions you
+     * were eligible to receive in the top location.
+     * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+     * value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getSearchTopImpressionShareBuilder() {
+      
+      onChanged();
+      return getSearchTopImpressionShareFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The impressions you've received in the top location (anywhere above the
+     * organic search results) compared to the estimated number of impressions you
+     * were eligible to receive in the top location.
+     * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+     * value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getSearchTopImpressionShareOrBuilder() {
+      if (searchTopImpressionShareBuilder_ != null) {
+        return searchTopImpressionShareBuilder_.getMessageOrBuilder();
+      } else {
+        return searchTopImpressionShare_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : searchTopImpressionShare_;
+      }
+    }
+    /**
+     * <pre>
+     * The impressions you've received in the top location (anywhere above the
+     * organic search results) compared to the estimated number of impressions you
+     * were eligible to receive in the top location.
+     * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+     * value below 0.1 is reported as 0.0999.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getSearchTopImpressionShareFieldBuilder() {
+      if (searchTopImpressionShareBuilder_ == null) {
+        searchTopImpressionShareBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getSearchTopImpressionShare(),
+                getParentForChildren(),
+                isClean());
+        searchTopImpressionShare_ = null;
+      }
+      return searchTopImpressionShareBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue topImpressionPercentage_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> topImpressionPercentageBuilder_;
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown anywhere above the
+     * organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+     */
+    public boolean hasTopImpressionPercentage() {
+      return topImpressionPercentageBuilder_ != null || topImpressionPercentage_ != null;
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown anywhere above the
+     * organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+     */
+    public com.google.protobuf.DoubleValue getTopImpressionPercentage() {
+      if (topImpressionPercentageBuilder_ == null) {
+        return topImpressionPercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : topImpressionPercentage_;
+      } else {
+        return topImpressionPercentageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown anywhere above the
+     * organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+     */
+    public Builder setTopImpressionPercentage(com.google.protobuf.DoubleValue value) {
+      if (topImpressionPercentageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        topImpressionPercentage_ = value;
+        onChanged();
+      } else {
+        topImpressionPercentageBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown anywhere above the
+     * organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+     */
+    public Builder setTopImpressionPercentage(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (topImpressionPercentageBuilder_ == null) {
+        topImpressionPercentage_ = builderForValue.build();
+        onChanged();
+      } else {
+        topImpressionPercentageBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown anywhere above the
+     * organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+     */
+    public Builder mergeTopImpressionPercentage(com.google.protobuf.DoubleValue value) {
+      if (topImpressionPercentageBuilder_ == null) {
+        if (topImpressionPercentage_ != null) {
+          topImpressionPercentage_ =
+            com.google.protobuf.DoubleValue.newBuilder(topImpressionPercentage_).mergeFrom(value).buildPartial();
+        } else {
+          topImpressionPercentage_ = value;
+        }
+        onChanged();
+      } else {
+        topImpressionPercentageBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown anywhere above the
+     * organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+     */
+    public Builder clearTopImpressionPercentage() {
+      if (topImpressionPercentageBuilder_ == null) {
+        topImpressionPercentage_ = null;
+        onChanged();
+      } else {
+        topImpressionPercentage_ = null;
+        topImpressionPercentageBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown anywhere above the
+     * organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getTopImpressionPercentageBuilder() {
+      
+      onChanged();
+      return getTopImpressionPercentageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown anywhere above the
+     * organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getTopImpressionPercentageOrBuilder() {
+      if (topImpressionPercentageBuilder_ != null) {
+        return topImpressionPercentageBuilder_.getMessageOrBuilder();
+      } else {
+        return topImpressionPercentage_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : topImpressionPercentage_;
+      }
+    }
+    /**
+     * <pre>
+     * The percent of your ad impressions that are shown anywhere above the
+     * organic search results.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getTopImpressionPercentageFieldBuilder() {
+      if (topImpressionPercentageBuilder_ == null) {
+        topImpressionPercentageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getTopImpressionPercentage(),
+                getParentForChildren(),
+                isClean());
+        topImpressionPercentage_ = null;
+      }
+      return topImpressionPercentageBuilder_;
+    }
+
     private com.google.protobuf.DoubleValue valuePerAllConversions_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> valuePerAllConversionsBuilder_;
@@ -12492,7 +20995,9 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> valuePerConversionBuilder_;
     /**
      * <pre>
-     * The value of conversions divided by the number of conversions.
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -12502,7 +21007,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of conversions.
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -12516,7 +21023,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of conversions.
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -12536,7 +21045,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of conversions.
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -12554,7 +21065,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of conversions.
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -12576,7 +21089,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of conversions.
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -12594,7 +21109,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of conversions.
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -12606,7 +21123,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of conversions.
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -12621,7 +21140,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of conversions divided by the number of conversions.
+     * The value of conversions divided by the number of conversions. This only
+     * includes conversion actions which include_in_conversions_metric attribute
+     * is set to true.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -12638,6 +21159,177 @@ private static final long serialVersionUID = 0L;
         valuePerConversion_ = null;
       }
       return valuePerConversionBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue valuePerCurrentModelAttributedConversion_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> valuePerCurrentModelAttributedConversionBuilder_;
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the number of
+     * the conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+     */
+    public boolean hasValuePerCurrentModelAttributedConversion() {
+      return valuePerCurrentModelAttributedConversionBuilder_ != null || valuePerCurrentModelAttributedConversion_ != null;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the number of
+     * the conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+     */
+    public com.google.protobuf.DoubleValue getValuePerCurrentModelAttributedConversion() {
+      if (valuePerCurrentModelAttributedConversionBuilder_ == null) {
+        return valuePerCurrentModelAttributedConversion_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : valuePerCurrentModelAttributedConversion_;
+      } else {
+        return valuePerCurrentModelAttributedConversionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the number of
+     * the conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+     */
+    public Builder setValuePerCurrentModelAttributedConversion(com.google.protobuf.DoubleValue value) {
+      if (valuePerCurrentModelAttributedConversionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        valuePerCurrentModelAttributedConversion_ = value;
+        onChanged();
+      } else {
+        valuePerCurrentModelAttributedConversionBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the number of
+     * the conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+     */
+    public Builder setValuePerCurrentModelAttributedConversion(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (valuePerCurrentModelAttributedConversionBuilder_ == null) {
+        valuePerCurrentModelAttributedConversion_ = builderForValue.build();
+        onChanged();
+      } else {
+        valuePerCurrentModelAttributedConversionBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the number of
+     * the conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+     */
+    public Builder mergeValuePerCurrentModelAttributedConversion(com.google.protobuf.DoubleValue value) {
+      if (valuePerCurrentModelAttributedConversionBuilder_ == null) {
+        if (valuePerCurrentModelAttributedConversion_ != null) {
+          valuePerCurrentModelAttributedConversion_ =
+            com.google.protobuf.DoubleValue.newBuilder(valuePerCurrentModelAttributedConversion_).mergeFrom(value).buildPartial();
+        } else {
+          valuePerCurrentModelAttributedConversion_ = value;
+        }
+        onChanged();
+      } else {
+        valuePerCurrentModelAttributedConversionBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the number of
+     * the conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+     */
+    public Builder clearValuePerCurrentModelAttributedConversion() {
+      if (valuePerCurrentModelAttributedConversionBuilder_ == null) {
+        valuePerCurrentModelAttributedConversion_ = null;
+        onChanged();
+      } else {
+        valuePerCurrentModelAttributedConversion_ = null;
+        valuePerCurrentModelAttributedConversionBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the number of
+     * the conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getValuePerCurrentModelAttributedConversionBuilder() {
+      
+      onChanged();
+      return getValuePerCurrentModelAttributedConversionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the number of
+     * the conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getValuePerCurrentModelAttributedConversionOrBuilder() {
+      if (valuePerCurrentModelAttributedConversionBuilder_ != null) {
+        return valuePerCurrentModelAttributedConversionBuilder_.getMessageOrBuilder();
+      } else {
+        return valuePerCurrentModelAttributedConversion_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : valuePerCurrentModelAttributedConversion_;
+      }
+    }
+    /**
+     * <pre>
+     * The value of current model attributed conversions divided by the number of
+     * the conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getValuePerCurrentModelAttributedConversionFieldBuilder() {
+      if (valuePerCurrentModelAttributedConversionBuilder_ == null) {
+        valuePerCurrentModelAttributedConversionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getValuePerCurrentModelAttributedConversion(),
+                getParentForChildren(),
+                isClean());
+        valuePerCurrentModelAttributedConversion_ = null;
+      }
+      return valuePerCurrentModelAttributedConversionBuilder_;
     }
 
     private com.google.protobuf.DoubleValue videoQuartile100Rate_ = null;

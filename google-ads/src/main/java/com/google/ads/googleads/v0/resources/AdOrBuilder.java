@@ -627,5 +627,30 @@ public interface AdOrBuilder extends
    */
   com.google.ads.googleads.v0.common.ImageAdInfoOrBuilder getImageAdOrBuilder();
 
+  /**
+   * <pre>
+   * Details pertaining to a Video ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+   */
+  boolean hasVideoAd();
+  /**
+   * <pre>
+   * Details pertaining to a Video ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+   */
+  com.google.ads.googleads.v0.common.VideoAdInfo getVideoAd();
+  /**
+   * <pre>
+   * Details pertaining to a Video ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+   */
+  com.google.ads.googleads.v0.common.VideoAdInfoOrBuilder getVideoAdOrBuilder();
+
   public com.google.ads.googleads.v0.resources.Ad.AdDataCase getAdDataCase();
 }

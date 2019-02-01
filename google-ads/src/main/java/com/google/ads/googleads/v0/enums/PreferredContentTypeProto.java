@@ -33,12 +33,13 @@ public final class PreferredContentTypeProto {
       "ds.v0.enums\"j\n\030PreferredContentTypeEnum\"" +
       "N\n\024PreferredContentType\022\017\n\013UNSPECIFIED\020\000" +
       "\022\013\n\007UNKNOWN\020\001\022\030\n\023YOUTUBE_TOP_CONTENT\020\220\003B" +
-      "\312\001\n!com.google.ads.googleads.v0.enumsB\031P" +
+      "\356\001\n!com.google.ads.googleads.v0.enumsB\031P" +
       "referredContentTypeProtoP\001ZBgoogle.golan" +
       "g.org/genproto/googleapis/ads/googleads/" +
       "v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.Google" +
       "Ads.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\E" +
-      "numsb\006proto3"
+      "nums\352\002!Google::Ads::GoogleAds::V0::Enums" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -38,13 +38,14 @@ public final class CustomerManagerLinkProto {
       "tringValue\0224\n\017manager_link_id\030\004 \001(\0132\033.go" +
       "ogle.protobuf.Int64Value\022V\n\006status\030\005 \001(\016" +
       "2F.google.ads.googleads.v0.enums.Manager" +
-      "LinkStatusEnum.ManagerLinkStatusB\335\001\n%com" +
+      "LinkStatusEnum.ManagerLinkStatusB\205\002\n%com" +
       ".google.ads.googleads.v0.resourcesB\030Cust" +
       "omerManagerLinkProtoP\001ZJgoogle.golang.or" +
       "g/genproto/googleapis/ads/googleads/v0/r" +
       "esources;resources\242\002\003GAA\252\002!Google.Ads.Go" +
       "ogleAds.V0.Resources\312\002!Google\\Ads\\Google" +
-      "Ads\\V0\\Resourcesb\006proto3"
+      "Ads\\V0\\Resources\352\002%Google::Ads::GoogleAd" +
+      "s::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

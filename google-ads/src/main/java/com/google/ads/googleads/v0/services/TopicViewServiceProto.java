@@ -38,12 +38,13 @@ public final class TopicViewServiceProto {
       "ds.v0.services.GetTopicViewRequest\032,.goo" +
       "gle.ads.googleads.v0.resources.TopicView" +
       "\"4\202\323\344\223\002.\022,/v0/{resource_name=customers/*" +
-      "/topicViews/*}B\325\001\n$com.google.ads.google" +
+      "/topicViews/*}B\374\001\n$com.google.ads.google" +
       "ads.v0.servicesB\025TopicViewServiceProtoP\001" +
       "ZHgoogle.golang.org/genproto/googleapis/" +
       "ads/googleads/v0/services;services\242\002\003GAA" +
       "\252\002 Google.Ads.GoogleAds.V0.Services\312\002 Go" +
-      "ogle\\Ads\\GoogleAds\\V0\\Servicesb\006proto3"
+      "ogle\\Ads\\GoogleAds\\V0\\Services\352\002$Google:" +
+      ":Ads::GoogleAds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

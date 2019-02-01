@@ -30,7 +30,7 @@ public final class RequestErrorProto {
     java.lang.String[] descriptorData = {
       "\n2google/ads/googleads/v0/errors/request" +
       "_error.proto\022\036google.ads.googleads.v0.er" +
-      "rors\"\214\004\n\020RequestErrorEnum\"\367\003\n\014RequestErr" +
+      "rors\"\266\004\n\020RequestErrorEnum\"\241\004\n\014RequestErr" +
       "or\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\031\n\025RESO" +
       "URCE_NAME_MISSING\020\003\022\033\n\027RESOURCE_NAME_MAL" +
       "FORMED\020\004\022\023\n\017BAD_RESOURCE_ID\020\021\022\027\n\023INVALID" +
@@ -43,12 +43,14 @@ public final class RequestErrorProto {
       "NNOT_MODIFY_FOREIGN_FIELD\020\017\022\026\n\022INVALID_E" +
       "NUM_VALUE\020\022\022%\n!DEVELOPER_TOKEN_PARAMETER" +
       "_MISSING\020\023\022\'\n#LOGIN_CUSTOMER_ID_PARAMETE" +
-      "R_MISSING\020\024B\307\001\n\"com.google.ads.googleads" +
-      ".v0.errorsB\021RequestErrorProtoP\001ZDgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads" +
-      ".GoogleAds.V0.Errors\312\002\036Google\\Ads\\Google" +
-      "Ads\\V0\\Errorsb\006proto3"
+      "R_MISSING\020\024\022(\n$VALIDATE_ONLY_REQUEST_HAS" +
+      "_PAGE_TOKEN\020\025B\354\001\n\"com.google.ads.googlea" +
+      "ds.v0.errorsB\021RequestErrorProtoP\001ZDgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v0/errors;errors\242\002\003GAA\252\002\036Google.A" +
+      "ds.GoogleAds.V0.Errors\312\002\036Google\\Ads\\Goog" +
+      "leAds\\V0\\Errors\352\002\"Google::Ads::GoogleAds" +
+      "::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

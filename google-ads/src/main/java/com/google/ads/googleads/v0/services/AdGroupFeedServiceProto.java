@@ -53,37 +53,42 @@ public final class AdGroupFeedServiceProto {
       "eads.v0.services\0325google/ads/googleads/v" +
       "0/resources/ad_group_feed.proto\032\034google/" +
       "api/annotations.proto\032 google/protobuf/f" +
-      "ield_mask.proto\".\n\025GetAdGroupFeedRequest" +
-      "\022\025\n\rresource_name\030\001 \001(\t\"|\n\031MutateAdGroup" +
-      "FeedsRequest\022\023\n\013customer_id\030\001 \001(\t\022J\n\nope" +
-      "rations\030\002 \003(\01326.google.ads.googleads.v0." +
-      "services.AdGroupFeedOperation\"\352\001\n\024AdGrou" +
-      "pFeedOperation\022/\n\013update_mask\030\004 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMask\022@\n\006create\030\001 \001(\0132" +
+      "ield_mask.proto\032\036google/protobuf/wrapper" +
+      "s.proto\032\027google/rpc/status.proto\".\n\025GetA" +
+      "dGroupFeedRequest\022\025\n\rresource_name\030\001 \001(\t" +
+      "\"\254\001\n\031MutateAdGroupFeedsRequest\022\023\n\013custom" +
+      "er_id\030\001 \001(\t\022J\n\noperations\030\002 \003(\01326.google" +
+      ".ads.googleads.v0.services.AdGroupFeedOp" +
+      "eration\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvali" +
+      "date_only\030\004 \001(\010\"\352\001\n\024AdGroupFeedOperation" +
+      "\022/\n\013update_mask\030\004 \001(\0132\032.google.protobuf." +
+      "FieldMask\022@\n\006create\030\001 \001(\0132..google.ads.g" +
+      "oogleads.v0.resources.AdGroupFeedH\000\022@\n\006u" +
+      "pdate\030\002 \001(\0132..google.ads.googleads.v0.re" +
+      "sources.AdGroupFeedH\000\022\020\n\006remove\030\003 \001(\tH\000B" +
+      "\013\n\toperation\"\233\001\n\032MutateAdGroupFeedsRespo" +
+      "nse\0221\n\025partial_failure_error\030\003 \001(\0132\022.goo" +
+      "gle.rpc.Status\022J\n\007results\030\002 \003(\01329.google" +
+      ".ads.googleads.v0.services.MutateAdGroup" +
+      "FeedResult\"0\n\027MutateAdGroupFeedResult\022\025\n" +
+      "\rresource_name\030\001 \001(\t2\230\003\n\022AdGroupFeedServ" +
+      "ice\022\261\001\n\016GetAdGroupFeed\0227.google.ads.goog" +
+      "leads.v0.services.GetAdGroupFeedRequest\032" +
       "..google.ads.googleads.v0.resources.AdGr" +
-      "oupFeedH\000\022@\n\006update\030\002 \001(\0132..google.ads.g" +
-      "oogleads.v0.resources.AdGroupFeedH\000\022\020\n\006r" +
-      "emove\030\003 \001(\tH\000B\013\n\toperation\"h\n\032MutateAdGr" +
-      "oupFeedsResponse\022J\n\007results\030\002 \003(\01329.goog" +
-      "le.ads.googleads.v0.services.MutateAdGro" +
-      "upFeedResult\"0\n\027MutateAdGroupFeedResult\022" +
-      "\025\n\rresource_name\030\001 \001(\t2\230\003\n\022AdGroupFeedSe" +
-      "rvice\022\261\001\n\016GetAdGroupFeed\0227.google.ads.go" +
-      "ogleads.v0.services.GetAdGroupFeedReques" +
-      "t\032..google.ads.googleads.v0.resources.Ad" +
-      "GroupFeed\"6\202\323\344\223\0020\022./v0/{resource_name=cu" +
-      "stomers/*/adGroupFeeds/*}\022\315\001\n\022MutateAdGr" +
-      "oupFeeds\022;.google.ads.googleads.v0.servi" +
-      "ces.MutateAdGroupFeedsRequest\032<.google.a" +
-      "ds.googleads.v0.services.MutateAdGroupFe" +
-      "edsResponse\"<\202\323\344\223\0026\"1/v0/customers/{cust" +
-      "omer_id=*}/adGroupFeeds:mutate:\001*B\327\001\n$co" +
-      "m.google.ads.googleads.v0.servicesB\027AdGr" +
-      "oupFeedServiceProtoP\001ZHgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v0/se" +
-      "rvices;services\242\002\003GAA\252\002 Google.Ads.Googl" +
-      "eAds.V0.Services\312\002 Google\\Ads\\GoogleAds\\" +
-      "V0\\Servicesb\006proto3"
+      "oupFeed\"6\202\323\344\223\0020\022./v0/{resource_name=cust" +
+      "omers/*/adGroupFeeds/*}\022\315\001\n\022MutateAdGrou" +
+      "pFeeds\022;.google.ads.googleads.v0.service" +
+      "s.MutateAdGroupFeedsRequest\032<.google.ads" +
+      ".googleads.v0.services.MutateAdGroupFeed" +
+      "sResponse\"<\202\323\344\223\0026\"1/v0/customers/{custom" +
+      "er_id=*}/adGroupFeeds:mutate:\001*B\376\001\n$com." +
+      "google.ads.googleads.v0.servicesB\027AdGrou" +
+      "pFeedServiceProtoP\001ZHgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v0/serv" +
+      "ices;services\242\002\003GAA\252\002 Google.Ads.GoogleA" +
+      "ds.V0.Services\312\002 Google\\Ads\\GoogleAds\\V0" +
+      "\\Services\352\002$Google::Ads::GoogleAds::V0::" +
+      "Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -99,6 +104,8 @@ public final class AdGroupFeedServiceProto {
           com.google.ads.googleads.v0.resources.AdGroupFeedProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_services_GetAdGroupFeedRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -111,7 +118,7 @@ public final class AdGroupFeedServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateAdGroupFeedsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateAdGroupFeedsRequest_descriptor,
-        new java.lang.String[] { "CustomerId", "Operations", });
+        new java.lang.String[] { "CustomerId", "Operations", "PartialFailure", "ValidateOnly", });
     internal_static_google_ads_googleads_v0_services_AdGroupFeedOperation_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v0_services_AdGroupFeedOperation_fieldAccessorTable = new
@@ -123,7 +130,7 @@ public final class AdGroupFeedServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateAdGroupFeedsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateAdGroupFeedsResponse_descriptor,
-        new java.lang.String[] { "Results", });
+        new java.lang.String[] { "PartialFailureError", "Results", });
     internal_static_google_ads_googleads_v0_services_MutateAdGroupFeedResult_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_google_ads_googleads_v0_services_MutateAdGroupFeedResult_fieldAccessorTable = new
@@ -138,6 +145,8 @@ public final class AdGroupFeedServiceProto {
     com.google.ads.googleads.v0.resources.AdGroupFeedProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

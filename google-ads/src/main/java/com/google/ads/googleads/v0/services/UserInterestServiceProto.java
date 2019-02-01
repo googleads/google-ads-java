@@ -38,13 +38,14 @@ public final class UserInterestServiceProto {
       "gle.ads.googleads.v0.services.GetUserInt" +
       "erestRequest\032/.google.ads.googleads.v0.r" +
       "esources.UserInterest\"7\202\323\344\223\0021\022//v0/{reso" +
-      "urce_name=customers/*/userInterests/*}B\330" +
+      "urce_name=customers/*/userInterests/*}B\377" +
       "\001\n$com.google.ads.googleads.v0.servicesB" +
       "\030UserInterestServiceProtoP\001ZHgoogle.gola" +
       "ng.org/genproto/googleapis/ads/googleads" +
       "/v0/services;services\242\002\003GAA\252\002 Google.Ads" +
       ".GoogleAds.V0.Services\312\002 Google\\Ads\\Goog" +
-      "leAds\\V0\\Servicesb\006proto3"
+      "leAds\\V0\\Services\352\002$Google::Ads::GoogleA" +
+      "ds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -38,12 +38,13 @@ public final class AttributionModelProto {
       "AR\020g\022(\n$GOOGLE_SEARCH_ATTRIBUTION_TIME_D" +
       "ECAY\020h\022,\n(GOOGLE_SEARCH_ATTRIBUTION_POSI" +
       "TION_BASED\020i\022)\n%GOOGLE_SEARCH_ATTRIBUTIO" +
-      "N_DATA_DRIVEN\020jB\306\001\n!com.google.ads.googl" +
+      "N_DATA_DRIVEN\020jB\352\001\n!com.google.ads.googl" +
       "eads.v0.enumsB\025AttributionModelProtoP\001ZB" +
       "google.golang.org/genproto/googleapis/ad" +
       "s/googleads/v0/enums;enums\242\002\003GAA\252\002\035Googl" +
       "e.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Go" +
-      "ogleAds\\V0\\Enumsb\006proto3"
+      "ogleAds\\V0\\Enums\352\002!Google::Ads::GoogleAd" +
+      "s::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

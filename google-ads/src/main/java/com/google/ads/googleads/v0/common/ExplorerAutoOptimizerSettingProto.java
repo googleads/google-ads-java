@@ -33,12 +33,13 @@ public final class ExplorerAutoOptimizerSettingProto {
       "ds.googleads.v0.common\032\036google/protobuf/" +
       "wrappers.proto\"J\n\034ExplorerAutoOptimizerS" +
       "etting\022*\n\006opt_in\030\001 \001(\0132\032.google.protobuf" +
-      ".BoolValueB\327\001\n\"com.google.ads.googleads." +
+      ".BoolValueB\374\001\n\"com.google.ads.googleads." +
       "v0.commonB!ExplorerAutoOptimizerSettingP" +
       "rotoP\001ZDgoogle.golang.org/genproto/googl" +
       "eapis/ads/googleads/v0/common;common\242\002\003G" +
       "AA\252\002\036Google.Ads.GoogleAds.V0.Common\312\002\036Go" +
-      "ogle\\Ads\\GoogleAds\\V0\\Commonb\006proto3"
+      "ogle\\Ads\\GoogleAds\\V0\\Common\352\002\"Google::A" +
+      "ds::GoogleAds::V0::Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

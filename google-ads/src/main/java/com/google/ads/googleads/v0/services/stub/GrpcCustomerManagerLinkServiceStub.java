@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,8 @@ package com.google.ads.googleads.v0.services.stub;
 
 import com.google.ads.googleads.v0.resources.CustomerManagerLink;
 import com.google.ads.googleads.v0.services.GetCustomerManagerLinkRequest;
+import com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest;
+import com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
@@ -51,11 +53,26 @@ public class GrpcCustomerManagerLinkServiceStub extends CustomerManagerLinkServi
               .setResponseMarshaller(
                   ProtoUtils.marshaller(CustomerManagerLink.getDefaultInstance()))
               .build();
+  private static final MethodDescriptor<
+          MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>
+      mutateCustomerManagerLinkMethodDescriptor =
+          MethodDescriptor
+              .<MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v0.services.CustomerManagerLinkService/MutateCustomerManagerLink")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(MutateCustomerManagerLinkRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(MutateCustomerManagerLinkResponse.getDefaultInstance()))
+              .build();
 
   private final BackgroundResource backgroundResources;
 
   private final UnaryCallable<GetCustomerManagerLinkRequest, CustomerManagerLink>
       getCustomerManagerLinkCallable;
+  private final UnaryCallable<MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>
+      mutateCustomerManagerLinkCallable;
 
   private final GrpcStubCallableFactory callableFactory;
 
@@ -106,11 +123,22 @@ public class GrpcCustomerManagerLinkServiceStub extends CustomerManagerLinkServi
             GrpcCallSettings.<GetCustomerManagerLinkRequest, CustomerManagerLink>newBuilder()
                 .setMethodDescriptor(getCustomerManagerLinkMethodDescriptor)
                 .build();
+    GrpcCallSettings<MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>
+        mutateCustomerManagerLinkTransportSettings =
+            GrpcCallSettings
+                .<MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>newBuilder()
+                .setMethodDescriptor(mutateCustomerManagerLinkMethodDescriptor)
+                .build();
 
     this.getCustomerManagerLinkCallable =
         callableFactory.createUnaryCallable(
             getCustomerManagerLinkTransportSettings,
             settings.getCustomerManagerLinkSettings(),
+            clientContext);
+    this.mutateCustomerManagerLinkCallable =
+        callableFactory.createUnaryCallable(
+            mutateCustomerManagerLinkTransportSettings,
+            settings.mutateCustomerManagerLinkSettings(),
             clientContext);
 
     backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
@@ -119,6 +147,11 @@ public class GrpcCustomerManagerLinkServiceStub extends CustomerManagerLinkServi
   public UnaryCallable<GetCustomerManagerLinkRequest, CustomerManagerLink>
       getCustomerManagerLinkCallable() {
     return getCustomerManagerLinkCallable;
+  }
+
+  public UnaryCallable<MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>
+      mutateCustomerManagerLinkCallable() {
+    return mutateCustomerManagerLinkCallable;
   }
 
   @Override

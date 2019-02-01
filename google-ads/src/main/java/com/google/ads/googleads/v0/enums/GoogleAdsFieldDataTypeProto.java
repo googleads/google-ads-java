@@ -35,12 +35,13 @@ public final class GoogleAdsFieldDataTypeProto {
       "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007BOOLEAN\020\002\022\010\n\004" +
       "DATE\020\003\022\n\n\006DOUBLE\020\004\022\010\n\004ENUM\020\005\022\t\n\005FLOAT\020\006\022" +
       "\t\n\005INT32\020\007\022\t\n\005INT64\020\010\022\013\n\007MESSAGE\020\t\022\021\n\rRE" +
-      "SOURCE_NAME\020\n\022\n\n\006STRING\020\013B\314\001\n!com.google" +
+      "SOURCE_NAME\020\n\022\n\n\006STRING\020\013B\360\001\n!com.google" +
       ".ads.googleads.v0.enumsB\033GoogleAdsFieldD" +
       "ataTypeProtoP\001ZBgoogle.golang.org/genpro" +
       "to/googleapis/ads/googleads/v0/enums;enu" +
       "ms\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums" +
-      "\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Googl" +
+      "e::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

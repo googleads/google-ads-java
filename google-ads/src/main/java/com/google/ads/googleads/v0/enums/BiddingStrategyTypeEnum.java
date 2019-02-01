@@ -185,6 +185,16 @@ private static final long serialVersionUID = 0L;
     TARGET_CPA(6),
     /**
      * <pre>
+     * Target CPM is an automated bid strategy that sets bids to help get
+     * as many impressions as possible at the target cost per one thousand
+     * impressions (CPM) you set.
+     * </pre>
+     *
+     * <code>TARGET_CPM = 14;</code>
+     */
+    TARGET_CPM(14),
+    /**
+     * <pre>
      * Target Outrank Share is an automated bidding strategy that sets bids
      * based on the target fraction of auctions where the advertiser
      * should outrank a specific competitor.
@@ -314,6 +324,16 @@ private static final long serialVersionUID = 0L;
     public static final int TARGET_CPA_VALUE = 6;
     /**
      * <pre>
+     * Target CPM is an automated bid strategy that sets bids to help get
+     * as many impressions as possible at the target cost per one thousand
+     * impressions (CPM) you set.
+     * </pre>
+     *
+     * <code>TARGET_CPM = 14;</code>
+     */
+    public static final int TARGET_CPM_VALUE = 14;
+    /**
+     * <pre>
      * Target Outrank Share is an automated bidding strategy that sets bids
      * based on the target fraction of auctions where the advertiser
      * should outrank a specific competitor.
@@ -372,6 +392,7 @@ private static final long serialVersionUID = 0L;
         case 5: return PAGE_ONE_PROMOTED;
         case 12: return PERCENT_CPC;
         case 6: return TARGET_CPA;
+        case 14: return TARGET_CPM;
         case 7: return TARGET_OUTRANK_SHARE;
         case 8: return TARGET_ROAS;
         case 9: return TARGET_SPEND;

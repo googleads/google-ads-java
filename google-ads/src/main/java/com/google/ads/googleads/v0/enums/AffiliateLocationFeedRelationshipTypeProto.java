@@ -34,12 +34,13 @@ public final class AffiliateLocationFeedRelationshipTypeProto {
       "iateLocationFeedRelationshipTypeEnum\"[\n%" +
       "AffiliateLocationFeedRelationshipType\022\017\n" +
       "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\024\n\020GENERAL_R" +
-      "ETAILER\020\002B\333\001\n!com.google.ads.googleads.v" +
+      "ETAILER\020\002B\377\001\n!com.google.ads.googleads.v" +
       "0.enumsB*AffiliateLocationFeedRelationsh" +
       "ipTypeProtoP\001ZBgoogle.golang.org/genprot" +
       "o/googleapis/ads/googleads/v0/enums;enum" +
       "s\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312" +
-      "\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Google" +
+      "::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

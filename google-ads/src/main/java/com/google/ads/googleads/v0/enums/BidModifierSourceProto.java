@@ -32,13 +32,13 @@ public final class BidModifierSourceProto {
       "fier_source.proto\022\035google.ads.googleads." +
       "v0.enums\"f\n\025BidModifierSourceEnum\"M\n\021Bid" +
       "ModifierSource\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
-      "WN\020\001\022\014\n\010CAMPAIGN\020\002\022\014\n\010AD_GROUP\020\003B\307\001\n!com" +
+      "WN\020\001\022\014\n\010CAMPAIGN\020\002\022\014\n\010AD_GROUP\020\003B\353\001\n!com" +
       ".google.ads.googleads.v0.enumsB\026BidModif" +
       "ierSourceProtoP\001ZBgoogle.golang.org/genp" +
       "roto/googleapis/ads/googleads/v0/enums;e" +
       "nums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enu" +
-      "ms\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006prot" +
-      "o3"
+      "ms\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Goo" +
+      "gle::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

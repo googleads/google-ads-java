@@ -33,12 +33,13 @@ public final class ResourceAccessDeniedErrorProto {
       "googleads.v0.errors\"s\n\035ResourceAccessDen" +
       "iedErrorEnum\"R\n\031ResourceAccessDeniedErro" +
       "r\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n\023WRITE" +
-      "_ACCESS_DENIED\020\003B\324\001\n\"com.google.ads.goog" +
+      "_ACCESS_DENIED\020\003B\371\001\n\"com.google.ads.goog" +
       "leads.v0.errorsB\036ResourceAccessDeniedErr" +
       "orProtoP\001ZDgoogle.golang.org/genproto/go" +
       "ogleapis/ads/googleads/v0/errors;errors\242" +
       "\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002" +
-      "\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "\036Google\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google" +
+      "::Ads::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

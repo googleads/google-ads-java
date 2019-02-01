@@ -53,37 +53,42 @@ public final class CustomerFeedServiceProto {
       "eads.v0.services\0325google/ads/googleads/v" +
       "0/resources/customer_feed.proto\032\034google/" +
       "api/annotations.proto\032 google/protobuf/f" +
-      "ield_mask.proto\"/\n\026GetCustomerFeedReques" +
-      "t\022\025\n\rresource_name\030\001 \001(\t\"~\n\032MutateCustom" +
-      "erFeedsRequest\022\023\n\013customer_id\030\001 \001(\t\022K\n\no" +
-      "perations\030\002 \003(\01327.google.ads.googleads.v" +
-      "0.services.CustomerFeedOperation\"\355\001\n\025Cus" +
-      "tomerFeedOperation\022/\n\013update_mask\030\004 \001(\0132" +
-      "\032.google.protobuf.FieldMask\022A\n\006create\030\001 " +
-      "\001(\0132/.google.ads.googleads.v0.resources." +
-      "CustomerFeedH\000\022A\n\006update\030\002 \001(\0132/.google." +
-      "ads.googleads.v0.resources.CustomerFeedH" +
-      "\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"j\n\033Muta" +
-      "teCustomerFeedsResponse\022K\n\007results\030\002 \003(\013" +
-      "2:.google.ads.googleads.v0.services.Muta" +
-      "teCustomerFeedResult\"1\n\030MutateCustomerFe" +
-      "edResult\022\025\n\rresource_name\030\001 \001(\t2\241\003\n\023Cust" +
-      "omerFeedService\022\265\001\n\017GetCustomerFeed\0228.go" +
-      "ogle.ads.googleads.v0.services.GetCustom" +
-      "erFeedRequest\032/.google.ads.googleads.v0." +
-      "resources.CustomerFeed\"7\202\323\344\223\0021\022//v0/{res" +
-      "ource_name=customers/*/customerFeeds/*}\022" +
-      "\321\001\n\023MutateCustomerFeeds\022<.google.ads.goo" +
-      "gleads.v0.services.MutateCustomerFeedsRe" +
-      "quest\032=.google.ads.googleads.v0.services" +
-      ".MutateCustomerFeedsResponse\"=\202\323\344\223\0027\"2/v" +
-      "0/customers/{customer_id=*}/customerFeed" +
-      "s:mutate:\001*B\330\001\n$com.google.ads.googleads" +
-      ".v0.servicesB\030CustomerFeedServiceProtoP\001" +
-      "ZHgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v0/services;services\242\002\003GAA" +
-      "\252\002 Google.Ads.GoogleAds.V0.Services\312\002 Go" +
-      "ogle\\Ads\\GoogleAds\\V0\\Servicesb\006proto3"
+      "ield_mask.proto\032\036google/protobuf/wrapper" +
+      "s.proto\032\027google/rpc/status.proto\"/\n\026GetC" +
+      "ustomerFeedRequest\022\025\n\rresource_name\030\001 \001(" +
+      "\t\"\256\001\n\032MutateCustomerFeedsRequest\022\023\n\013cust" +
+      "omer_id\030\001 \001(\t\022K\n\noperations\030\002 \003(\01327.goog" +
+      "le.ads.googleads.v0.services.CustomerFee" +
+      "dOperation\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rv" +
+      "alidate_only\030\004 \001(\010\"\355\001\n\025CustomerFeedOpera" +
+      "tion\022/\n\013update_mask\030\004 \001(\0132\032.google.proto" +
+      "buf.FieldMask\022A\n\006create\030\001 \001(\0132/.google.a" +
+      "ds.googleads.v0.resources.CustomerFeedH\000" +
+      "\022A\n\006update\030\002 \001(\0132/.google.ads.googleads." +
+      "v0.resources.CustomerFeedH\000\022\020\n\006remove\030\003 " +
+      "\001(\tH\000B\013\n\toperation\"\235\001\n\033MutateCustomerFee" +
+      "dsResponse\0221\n\025partial_failure_error\030\003 \001(" +
+      "\0132\022.google.rpc.Status\022K\n\007results\030\002 \003(\0132:" +
+      ".google.ads.googleads.v0.services.Mutate" +
+      "CustomerFeedResult\"1\n\030MutateCustomerFeed" +
+      "Result\022\025\n\rresource_name\030\001 \001(\t2\241\003\n\023Custom" +
+      "erFeedService\022\265\001\n\017GetCustomerFeed\0228.goog" +
+      "le.ads.googleads.v0.services.GetCustomer" +
+      "FeedRequest\032/.google.ads.googleads.v0.re" +
+      "sources.CustomerFeed\"7\202\323\344\223\0021\022//v0/{resou" +
+      "rce_name=customers/*/customerFeeds/*}\022\321\001" +
+      "\n\023MutateCustomerFeeds\022<.google.ads.googl" +
+      "eads.v0.services.MutateCustomerFeedsRequ" +
+      "est\032=.google.ads.googleads.v0.services.M" +
+      "utateCustomerFeedsResponse\"=\202\323\344\223\0027\"2/v0/" +
+      "customers/{customer_id=*}/customerFeeds:" +
+      "mutate:\001*B\377\001\n$com.google.ads.googleads.v" +
+      "0.servicesB\030CustomerFeedServiceProtoP\001ZH" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v0/services;services\242\002\003GAA\252\002" +
+      " Google.Ads.GoogleAds.V0.Services\312\002 Goog" +
+      "le\\Ads\\GoogleAds\\V0\\Services\352\002$Google::A" +
+      "ds::GoogleAds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -99,6 +104,8 @@ public final class CustomerFeedServiceProto {
           com.google.ads.googleads.v0.resources.CustomerFeedProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_services_GetCustomerFeedRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -111,7 +118,7 @@ public final class CustomerFeedServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateCustomerFeedsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateCustomerFeedsRequest_descriptor,
-        new java.lang.String[] { "CustomerId", "Operations", });
+        new java.lang.String[] { "CustomerId", "Operations", "PartialFailure", "ValidateOnly", });
     internal_static_google_ads_googleads_v0_services_CustomerFeedOperation_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v0_services_CustomerFeedOperation_fieldAccessorTable = new
@@ -123,7 +130,7 @@ public final class CustomerFeedServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateCustomerFeedsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateCustomerFeedsResponse_descriptor,
-        new java.lang.String[] { "Results", });
+        new java.lang.String[] { "PartialFailureError", "Results", });
     internal_static_google_ads_googleads_v0_services_MutateCustomerFeedResult_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_google_ads_googleads_v0_services_MutateCustomerFeedResult_fieldAccessorTable = new
@@ -138,6 +145,8 @@ public final class CustomerFeedServiceProto {
     com.google.ads.googleads.v0.resources.CustomerFeedProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

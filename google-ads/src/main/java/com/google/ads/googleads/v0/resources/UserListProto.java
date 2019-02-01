@@ -40,7 +40,7 @@ public final class UserListProto {
       "p_status.proto\0328google/ads/googleads/v0/" +
       "enums/user_list_size_range.proto\0322google" +
       "/ads/googleads/v0/enums/user_list_type.p" +
-      "roto\032\036google/protobuf/wrappers.proto\"\230\013\n" +
+      "roto\032\036google/protobuf/wrappers.proto\"\217\r\n" +
       "\010UserList\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\002" +
       " \001(\0132\033.google.protobuf.Int64Value\022-\n\trea" +
       "d_only\030\003 \001(\0132\032.google.protobuf.BoolValue" +
@@ -76,13 +76,20 @@ public final class UserListProto {
       "24.google.ads.googleads.v0.common.CrmBas" +
       "edUserListInfoH\000\022P\n\021similar_user_list\030\024 " +
       "\001(\01323.google.ads.googleads.v0.common.Sim" +
-      "ilarUserListInfoH\000B\013\n\tuser_listB\322\001\n%com." +
-      "google.ads.googleads.v0.resourcesB\rUserL" +
-      "istProtoP\001ZJgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v0/resources;res" +
-      "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.R" +
-      "esources\312\002!Google\\Ads\\GoogleAds\\V0\\Resou" +
-      "rcesb\006proto3"
+      "ilarUserListInfoH\000\022U\n\024rule_based_user_li" +
+      "st\030\025 \001(\01325.google.ads.googleads.v0.commo" +
+      "n.RuleBasedUserListInfoH\000\022P\n\021logical_use" +
+      "r_list\030\026 \001(\01323.google.ads.googleads.v0.c" +
+      "ommon.LogicalUserListInfoH\000\022L\n\017basic_use" +
+      "r_list\030\027 \001(\01321.google.ads.googleads.v0.c" +
+      "ommon.BasicUserListInfoH\000B\013\n\tuser_listB\372" +
+      "\001\n%com.google.ads.googleads.v0.resources" +
+      "B\rUserListProtoP\001ZJgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v0/resour" +
+      "ces;resources\242\002\003GAA\252\002!Google.Ads.GoogleA" +
+      "ds.V0.Resources\312\002!Google\\Ads\\GoogleAds\\V" +
+      "0\\Resources\352\002%Google::Ads::GoogleAds::V0" +
+      "::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -109,7 +116,7 @@ public final class UserListProto {
     internal_static_google_ads_googleads_v0_resources_UserList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_UserList_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "ReadOnly", "Name", "Description", "MembershipStatus", "IntegrationCode", "MembershipLifeSpan", "SizeForDisplay", "SizeRangeForDisplay", "SizeForSearch", "SizeRangeForSearch", "Type", "ClosingReason", "AccessReason", "AccountUserListStatus", "EligibleForSearch", "EligibleForDisplay", "CrmBasedUserList", "SimilarUserList", "UserList", });
+        new java.lang.String[] { "ResourceName", "Id", "ReadOnly", "Name", "Description", "MembershipStatus", "IntegrationCode", "MembershipLifeSpan", "SizeForDisplay", "SizeRangeForDisplay", "SizeForSearch", "SizeRangeForSearch", "Type", "ClosingReason", "AccessReason", "AccountUserListStatus", "EligibleForSearch", "EligibleForDisplay", "CrmBasedUserList", "SimilarUserList", "RuleBasedUserList", "LogicalUserList", "BasicUserList", "UserList", });
     com.google.ads.googleads.v0.common.UserListsProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AccessReasonProto.getDescriptor();
     com.google.ads.googleads.v0.enums.UserListAccessStatusProto.getDescriptor();

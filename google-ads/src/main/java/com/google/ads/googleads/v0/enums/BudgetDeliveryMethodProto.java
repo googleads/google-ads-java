@@ -33,12 +33,13 @@ public final class BudgetDeliveryMethodProto {
       "ds.v0.enums\"o\n\030BudgetDeliveryMethodEnum\"" +
       "S\n\024BudgetDeliveryMethod\022\017\n\013UNSPECIFIED\020\000" +
       "\022\013\n\007UNKNOWN\020\001\022\014\n\010STANDARD\020\002\022\017\n\013ACCELERAT" +
-      "ED\020\003B\312\001\n!com.google.ads.googleads.v0.enu" +
+      "ED\020\003B\356\001\n!com.google.ads.googleads.v0.enu" +
       "msB\031BudgetDeliveryMethodProtoP\001ZBgoogle." +
       "golang.org/genproto/googleapis/ads/googl" +
       "eads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.G" +
       "oogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleAds" +
-      "\\V0\\Enumsb\006proto3"
+      "\\V0\\Enums\352\002!Google::Ads::GoogleAds::V0::" +
+      "Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -33,13 +33,14 @@ public final class ProductChannelExclusivityProto {
       "ogleads.v0.enums\"\201\001\n\035ProductChannelExclu" +
       "sivityEnum\"`\n\031ProductChannelExclusivity\022" +
       "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n\016SINGLE_" +
-      "CHANNEL\020\002\022\021\n\rMULTI_CHANNEL\020\003B\317\001\n!com.goo" +
+      "CHANNEL\020\002\022\021\n\rMULTI_CHANNEL\020\003B\363\001\n!com.goo" +
       "gle.ads.googleads.v0.enumsB\036ProductChann" +
       "elExclusivityProtoP\001ZBgoogle.golang.org/" +
       "genproto/googleapis/ads/googleads/v0/enu" +
       "ms;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0" +
-      ".Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006" +
-      "proto3"
+      ".Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002" +
+      "!Google::Ads::GoogleAds::V0::Enumsb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

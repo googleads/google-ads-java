@@ -41,13 +41,14 @@ public final class HotelsPlaceholderFieldProto {
       "_KEYWORDS\020\016\022\016\n\nFINAL_URLS\020\017\022\025\n\021FINAL_MOB" +
       "ILE_URLS\020\020\022\020\n\014TRACKING_URL\020\021\022\024\n\020ANDROID_" +
       "APP_LINK\020\022\022\030\n\024SIMILAR_PROPERTY_IDS\020\023\022\020\n\014" +
-      "IOS_APP_LINK\020\024\022\024\n\020IOS_APP_STORE_ID\020\025B\314\001\n" +
+      "IOS_APP_LINK\020\024\022\024\n\020IOS_APP_STORE_ID\020\025B\360\001\n" +
       "!com.google.ads.googleads.v0.enumsB\033Hote" +
       "lsPlaceholderFieldProtoP\001ZBgoogle.golang" +
       ".org/genproto/googleapis/ads/googleads/v" +
       "0/enums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleA" +
       "ds.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\En" +
-      "umsb\006proto3"
+      "ums\352\002!Google::Ads::GoogleAds::V0::Enumsb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

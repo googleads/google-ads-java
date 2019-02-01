@@ -43,13 +43,13 @@ public final class AdGroupErrorProto {
       "DVERTISING_CHANNEL_TYPE\020\014\0229\n5ADGROUP_TYP" +
       "E_NOT_SUPPORTED_FOR_CAMPAIGN_SALES_COUNT" +
       "RY\020\r\022B\n>CANNOT_ADD_ADGROUP_OF_TYPE_DSA_T" +
-      "O_CAMPAIGN_WITHOUT_DSA_SETTING\020\016B\307\001\n\"com" +
+      "O_CAMPAIGN_WITHOUT_DSA_SETTING\020\016B\354\001\n\"com" +
       ".google.ads.googleads.v0.errorsB\021AdGroup" +
       "ErrorProtoP\001ZDgoogle.golang.org/genproto" +
       "/googleapis/ads/googleads/v0/errors;erro" +
       "rs\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Error" +
-      "s\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006prot" +
-      "o3"
+      "s\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors\352\002\"Goo" +
+      "gle::Ads::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

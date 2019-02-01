@@ -62,12 +62,13 @@ public final class BillingSetupProto {
       "s_profile_name\030\004 \001(\0132\034.google.protobuf.S" +
       "tringValue\022C\n\035secondary_payments_profile" +
       "_id\030\005 \001(\0132\034.google.protobuf.StringValueB" +
-      "\014\n\nstart_timeB\n\n\010end_timeB\326\001\n%com.google" +
+      "\014\n\nstart_timeB\n\n\010end_timeB\376\001\n%com.google" +
       ".ads.googleads.v0.resourcesB\021BillingSetu" +
       "pProtoP\001ZJgoogle.golang.org/genproto/goo" +
       "gleapis/ads/googleads/v0/resources;resou" +
       "rces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Res" +
       "ources\312\002!Google\\Ads\\GoogleAds\\V0\\Resourc" +
+      "es\352\002%Google::Ads::GoogleAds::V0::Resourc" +
       "esb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

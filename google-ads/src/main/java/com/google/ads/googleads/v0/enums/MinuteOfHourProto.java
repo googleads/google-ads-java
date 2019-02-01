@@ -33,12 +33,13 @@ public final class MinuteOfHourProto {
       "ums\"s\n\020MinuteOfHourEnum\"_\n\014MinuteOfHour\022" +
       "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\010\n\004ZERO\020\002\022" +
       "\013\n\007FIFTEEN\020\003\022\n\n\006THIRTY\020\004\022\016\n\nFORTY_FIVE\020\005" +
-      "B\302\001\n!com.google.ads.googleads.v0.enumsB\021" +
+      "B\346\001\n!com.google.ads.googleads.v0.enumsB\021" +
       "MinuteOfHourProtoP\001ZBgoogle.golang.org/g" +
       "enproto/googleapis/ads/googleads/v0/enum" +
       "s;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0." +
-      "Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006p" +
-      "roto3"
+      "Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!" +
+      "Google::Ads::GoogleAds::V0::Enumsb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

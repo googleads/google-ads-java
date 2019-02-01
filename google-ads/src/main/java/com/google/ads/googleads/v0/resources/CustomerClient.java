@@ -5,7 +5,9 @@ package com.google.ads.googleads.v0.resources;
 
 /**
  * <pre>
- * For a manager, it returns all the customers in its hierarchy and self.
+ * A link between the given customer and a client customer. CustomerClients only
+ * exist for manager customers. All direct and indirect client customers are
+ * included, as well as the manager itself.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v0.resources.CustomerClient}
@@ -174,7 +176,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue clientCustomer_;
   /**
    * <pre>
-   * The client customer linked to this customer. Read only.
+   * The resource name of the client-customer which is linked to
+   * the given customer. Read only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -184,7 +187,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The client customer linked to this customer. Read only.
+   * The resource name of the client-customer which is linked to
+   * the given customer. Read only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -194,7 +198,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The client customer linked to this customer. Read only.
+   * The resource name of the client-customer which is linked to
+   * the given customer. Read only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -207,7 +212,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue hidden_;
   /**
    * <pre>
-   * Whether the client is hidden or not. Default value is false. Read only.
+   * Specifies whether this is a hidden account. Learn more about hidden
+   * accounts
+   * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+   * Read only.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -217,7 +225,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Whether the client is hidden or not. Default value is false. Read only.
+   * Specifies whether this is a hidden account. Learn more about hidden
+   * accounts
+   * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+   * Read only.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -227,7 +238,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Whether the client is hidden or not. Default value is false. Read only.
+   * Specifies whether this is a hidden account. Learn more about hidden
+   * accounts
+   * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+   * Read only.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -240,8 +254,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value level_;
   /**
    * <pre>
-   * Distance between customer and client. For self link, the level value will
-   * be 0. Read only.
+   * Distance between given customer and client. For self link, the level value
+   * will be 0. Read only.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -251,8 +265,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Distance between customer and client. For self link, the level value will
-   * be 0. Read only.
+   * Distance between given customer and client. For self link, the level value
+   * will be 0. Read only.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -262,8 +276,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Distance between customer and client. For self link, the level value will
-   * be 0. Read only.
+   * Distance between given customer and client. For self link, the level value
+   * will be 0. Read only.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -477,7 +491,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * For a manager, it returns all the customers in its hierarchy and self.
+   * A link between the given customer and a client customer. CustomerClients only
+   * exist for manager customers. All direct and indirect client customers are
+   * included, as well as the manager itself.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v0.resources.CustomerClient}
@@ -773,7 +789,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> clientCustomerBuilder_;
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The resource name of the client-customer which is linked to
+     * the given customer. Read only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -783,7 +800,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The resource name of the client-customer which is linked to
+     * the given customer. Read only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -797,7 +815,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The resource name of the client-customer which is linked to
+     * the given customer. Read only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -817,7 +836,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The resource name of the client-customer which is linked to
+     * the given customer. Read only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -835,7 +855,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The resource name of the client-customer which is linked to
+     * the given customer. Read only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -857,7 +878,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The resource name of the client-customer which is linked to
+     * the given customer. Read only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -875,7 +897,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The resource name of the client-customer which is linked to
+     * the given customer. Read only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -887,7 +910,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The resource name of the client-customer which is linked to
+     * the given customer. Read only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -902,7 +926,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The client customer linked to this customer. Read only.
+     * The resource name of the client-customer which is linked to
+     * the given customer. Read only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -926,7 +951,10 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> hiddenBuilder_;
     /**
      * <pre>
-     * Whether the client is hidden or not. Default value is false. Read only.
+     * Specifies whether this is a hidden account. Learn more about hidden
+     * accounts
+     * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+     * Read only.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -936,7 +964,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the client is hidden or not. Default value is false. Read only.
+     * Specifies whether this is a hidden account. Learn more about hidden
+     * accounts
+     * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+     * Read only.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -950,7 +981,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the client is hidden or not. Default value is false. Read only.
+     * Specifies whether this is a hidden account. Learn more about hidden
+     * accounts
+     * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+     * Read only.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -970,7 +1004,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the client is hidden or not. Default value is false. Read only.
+     * Specifies whether this is a hidden account. Learn more about hidden
+     * accounts
+     * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+     * Read only.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -988,7 +1025,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the client is hidden or not. Default value is false. Read only.
+     * Specifies whether this is a hidden account. Learn more about hidden
+     * accounts
+     * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+     * Read only.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -1010,7 +1050,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the client is hidden or not. Default value is false. Read only.
+     * Specifies whether this is a hidden account. Learn more about hidden
+     * accounts
+     * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+     * Read only.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -1028,7 +1071,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the client is hidden or not. Default value is false. Read only.
+     * Specifies whether this is a hidden account. Learn more about hidden
+     * accounts
+     * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+     * Read only.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -1040,7 +1086,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the client is hidden or not. Default value is false. Read only.
+     * Specifies whether this is a hidden account. Learn more about hidden
+     * accounts
+     * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+     * Read only.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -1055,7 +1104,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the client is hidden or not. Default value is false. Read only.
+     * Specifies whether this is a hidden account. Learn more about hidden
+     * accounts
+     * &lt;a href="https://support.google.com/google-ads/answer/7519830"&gt;here&lt;/a&gt;.
+     * Read only.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue hidden = 4;</code>
@@ -1079,8 +1131,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> levelBuilder_;
     /**
      * <pre>
-     * Distance between customer and client. For self link, the level value will
-     * be 0. Read only.
+     * Distance between given customer and client. For self link, the level value
+     * will be 0. Read only.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -1090,8 +1142,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between customer and client. For self link, the level value will
-     * be 0. Read only.
+     * Distance between given customer and client. For self link, the level value
+     * will be 0. Read only.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -1105,8 +1157,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between customer and client. For self link, the level value will
-     * be 0. Read only.
+     * Distance between given customer and client. For self link, the level value
+     * will be 0. Read only.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -1126,8 +1178,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between customer and client. For self link, the level value will
-     * be 0. Read only.
+     * Distance between given customer and client. For self link, the level value
+     * will be 0. Read only.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -1145,8 +1197,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between customer and client. For self link, the level value will
-     * be 0. Read only.
+     * Distance between given customer and client. For self link, the level value
+     * will be 0. Read only.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -1168,8 +1220,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between customer and client. For self link, the level value will
-     * be 0. Read only.
+     * Distance between given customer and client. For self link, the level value
+     * will be 0. Read only.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -1187,8 +1239,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between customer and client. For self link, the level value will
-     * be 0. Read only.
+     * Distance between given customer and client. For self link, the level value
+     * will be 0. Read only.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -1200,8 +1252,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between customer and client. For self link, the level value will
-     * be 0. Read only.
+     * Distance between given customer and client. For self link, the level value
+     * will be 0. Read only.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value level = 5;</code>
@@ -1216,8 +1268,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Distance between customer and client. For self link, the level value will
-     * be 0. Read only.
+     * Distance between given customer and client. For self link, the level value
+     * will be 0. Read only.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value level = 5;</code>

@@ -104,7 +104,8 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Sitelink.
+     * Lets you show links in your ad to pages from your website, including the
+     * main landing page.
      * </pre>
      *
      * <code>SITELINK = 2;</code>
@@ -112,7 +113,8 @@ private static final long serialVersionUID = 0L;
     SITELINK(2),
     /**
      * <pre>
-     * Call.
+     * Lets you attach a phone number to an ad, allowing customers to call
+     * directly from the ad.
      * </pre>
      *
      * <code>CALL = 3;</code>
@@ -120,7 +122,8 @@ private static final long serialVersionUID = 0L;
     CALL(3),
     /**
      * <pre>
-     * App.
+     * Lets you provide users with a link that points to a mobile app in
+     * addition to a website.
      * </pre>
      *
      * <code>APP = 4;</code>
@@ -128,7 +131,11 @@ private static final long serialVersionUID = 0L;
     APP(4),
     /**
      * <pre>
-     * Location.
+     * Lets you show locations of businesses from your Google My Business
+     * account in your ad. This helps people find your locations by showing your
+     * ads with your address, a map to your location, or the distance to your
+     * business. This extension type is useful to draw customers to your
+     * brick-and-mortar location.
      * </pre>
      *
      * <code>LOCATION = 5;</code>
@@ -136,7 +143,8 @@ private static final long serialVersionUID = 0L;
     LOCATION(5),
     /**
      * <pre>
-     * Affiliate location.
+     * If you sell your product through retail chains, affiliate location
+     * extensions let you show nearby stores that carry your products.
      * </pre>
      *
      * <code>AFFILIATE_LOCATION = 6;</code>
@@ -144,7 +152,10 @@ private static final long serialVersionUID = 0L;
     AFFILIATE_LOCATION(6),
     /**
      * <pre>
-     * Callout.
+     * Lets you include additional text with your search ads that provide
+     * detailed information about your business, including products and services
+     * you offer. Callouts appear in ads at the top and bottom of Google search
+     * results.
      * </pre>
      *
      * <code>CALLOUT = 7;</code>
@@ -152,7 +163,9 @@ private static final long serialVersionUID = 0L;
     CALLOUT(7),
     /**
      * <pre>
-     * Structured snippet.
+     * Lets you add more info to your ad, specific to some predefined categories
+     * such as types, brands, styles, etc. A minimum of 3 text (SNIPPETS) values
+     * are required.
      * </pre>
      *
      * <code>STRUCTURED_SNIPPET = 8;</code>
@@ -160,7 +173,9 @@ private static final long serialVersionUID = 0L;
     STRUCTURED_SNIPPET(8),
     /**
      * <pre>
-     * Message.
+     * Allows users to see your ad, click an icon, and contact you directly by
+     * text message. With one tap on your ad, people can contact you to book an
+     * appointment, get a quote, ask for information, or request a service.
      * </pre>
      *
      * <code>MESSAGE = 9;</code>
@@ -168,7 +183,8 @@ private static final long serialVersionUID = 0L;
     MESSAGE(9),
     /**
      * <pre>
-     * Price.
+     * Lets you display prices for a list of items along with your ads. A price
+     * feed is composed of three to eight price table rows.
      * </pre>
      *
      * <code>PRICE = 10;</code>
@@ -176,7 +192,8 @@ private static final long serialVersionUID = 0L;
     PRICE(10),
     /**
      * <pre>
-     * Promotion.
+     * Allows you to highlight sales and other promotions that let users see how
+     * they can save by buying now.
      * </pre>
      *
      * <code>PROMOTION = 11;</code>
@@ -184,7 +201,8 @@ private static final long serialVersionUID = 0L;
     PROMOTION(11),
     /**
      * <pre>
-     * Ad customizer.
+     * Lets you dynamically inject custom data into the title and description
+     * of your ads.
      * </pre>
      *
      * <code>AD_CUSTOMIZER = 12;</code>
@@ -192,7 +210,7 @@ private static final long serialVersionUID = 0L;
     AD_CUSTOMIZER(12),
     /**
      * <pre>
-     * Dynamic education.
+     * Indicates that this feed is for education dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_EDUCATION = 13;</code>
@@ -200,7 +218,7 @@ private static final long serialVersionUID = 0L;
     DYNAMIC_EDUCATION(13),
     /**
      * <pre>
-     * Dynamic flights.
+     * Indicates that this feed is for flight dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_FLIGHT = 14;</code>
@@ -208,7 +226,9 @@ private static final long serialVersionUID = 0L;
     DYNAMIC_FLIGHT(14),
     /**
      * <pre>
-     * Dynamic custom.
+     * Indicates that this feed is for a custom dynamic remarketing type. Use
+     * this only if the other business types don't apply to your products or
+     * services.
      * </pre>
      *
      * <code>DYNAMIC_CUSTOM = 15;</code>
@@ -216,7 +236,7 @@ private static final long serialVersionUID = 0L;
     DYNAMIC_CUSTOM(15),
     /**
      * <pre>
-     * Dynamic hotels.
+     * Indicates that this feed is for hotels and rentals dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_HOTEL = 16;</code>
@@ -224,7 +244,7 @@ private static final long serialVersionUID = 0L;
     DYNAMIC_HOTEL(16),
     /**
      * <pre>
-     * Dynamic real estate.
+     * Indicates that this feed is for real estate dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_REAL_ESTATE = 17;</code>
@@ -232,7 +252,7 @@ private static final long serialVersionUID = 0L;
     DYNAMIC_REAL_ESTATE(17),
     /**
      * <pre>
-     * Dynamic travel.
+     * Indicates that this feed is for travel dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_TRAVEL = 18;</code>
@@ -240,7 +260,7 @@ private static final long serialVersionUID = 0L;
     DYNAMIC_TRAVEL(18),
     /**
      * <pre>
-     * Dynamic local.
+     * Indicates that this feed is for local deals dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_LOCAL = 19;</code>
@@ -248,7 +268,7 @@ private static final long serialVersionUID = 0L;
     DYNAMIC_LOCAL(19),
     /**
      * <pre>
-     * Dynamic jobs.
+     * Indicates that this feed is for job dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_JOB = 20;</code>
@@ -275,7 +295,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Sitelink.
+     * Lets you show links in your ad to pages from your website, including the
+     * main landing page.
      * </pre>
      *
      * <code>SITELINK = 2;</code>
@@ -283,7 +304,8 @@ private static final long serialVersionUID = 0L;
     public static final int SITELINK_VALUE = 2;
     /**
      * <pre>
-     * Call.
+     * Lets you attach a phone number to an ad, allowing customers to call
+     * directly from the ad.
      * </pre>
      *
      * <code>CALL = 3;</code>
@@ -291,7 +313,8 @@ private static final long serialVersionUID = 0L;
     public static final int CALL_VALUE = 3;
     /**
      * <pre>
-     * App.
+     * Lets you provide users with a link that points to a mobile app in
+     * addition to a website.
      * </pre>
      *
      * <code>APP = 4;</code>
@@ -299,7 +322,11 @@ private static final long serialVersionUID = 0L;
     public static final int APP_VALUE = 4;
     /**
      * <pre>
-     * Location.
+     * Lets you show locations of businesses from your Google My Business
+     * account in your ad. This helps people find your locations by showing your
+     * ads with your address, a map to your location, or the distance to your
+     * business. This extension type is useful to draw customers to your
+     * brick-and-mortar location.
      * </pre>
      *
      * <code>LOCATION = 5;</code>
@@ -307,7 +334,8 @@ private static final long serialVersionUID = 0L;
     public static final int LOCATION_VALUE = 5;
     /**
      * <pre>
-     * Affiliate location.
+     * If you sell your product through retail chains, affiliate location
+     * extensions let you show nearby stores that carry your products.
      * </pre>
      *
      * <code>AFFILIATE_LOCATION = 6;</code>
@@ -315,7 +343,10 @@ private static final long serialVersionUID = 0L;
     public static final int AFFILIATE_LOCATION_VALUE = 6;
     /**
      * <pre>
-     * Callout.
+     * Lets you include additional text with your search ads that provide
+     * detailed information about your business, including products and services
+     * you offer. Callouts appear in ads at the top and bottom of Google search
+     * results.
      * </pre>
      *
      * <code>CALLOUT = 7;</code>
@@ -323,7 +354,9 @@ private static final long serialVersionUID = 0L;
     public static final int CALLOUT_VALUE = 7;
     /**
      * <pre>
-     * Structured snippet.
+     * Lets you add more info to your ad, specific to some predefined categories
+     * such as types, brands, styles, etc. A minimum of 3 text (SNIPPETS) values
+     * are required.
      * </pre>
      *
      * <code>STRUCTURED_SNIPPET = 8;</code>
@@ -331,7 +364,9 @@ private static final long serialVersionUID = 0L;
     public static final int STRUCTURED_SNIPPET_VALUE = 8;
     /**
      * <pre>
-     * Message.
+     * Allows users to see your ad, click an icon, and contact you directly by
+     * text message. With one tap on your ad, people can contact you to book an
+     * appointment, get a quote, ask for information, or request a service.
      * </pre>
      *
      * <code>MESSAGE = 9;</code>
@@ -339,7 +374,8 @@ private static final long serialVersionUID = 0L;
     public static final int MESSAGE_VALUE = 9;
     /**
      * <pre>
-     * Price.
+     * Lets you display prices for a list of items along with your ads. A price
+     * feed is composed of three to eight price table rows.
      * </pre>
      *
      * <code>PRICE = 10;</code>
@@ -347,7 +383,8 @@ private static final long serialVersionUID = 0L;
     public static final int PRICE_VALUE = 10;
     /**
      * <pre>
-     * Promotion.
+     * Allows you to highlight sales and other promotions that let users see how
+     * they can save by buying now.
      * </pre>
      *
      * <code>PROMOTION = 11;</code>
@@ -355,7 +392,8 @@ private static final long serialVersionUID = 0L;
     public static final int PROMOTION_VALUE = 11;
     /**
      * <pre>
-     * Ad customizer.
+     * Lets you dynamically inject custom data into the title and description
+     * of your ads.
      * </pre>
      *
      * <code>AD_CUSTOMIZER = 12;</code>
@@ -363,7 +401,7 @@ private static final long serialVersionUID = 0L;
     public static final int AD_CUSTOMIZER_VALUE = 12;
     /**
      * <pre>
-     * Dynamic education.
+     * Indicates that this feed is for education dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_EDUCATION = 13;</code>
@@ -371,7 +409,7 @@ private static final long serialVersionUID = 0L;
     public static final int DYNAMIC_EDUCATION_VALUE = 13;
     /**
      * <pre>
-     * Dynamic flights.
+     * Indicates that this feed is for flight dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_FLIGHT = 14;</code>
@@ -379,7 +417,9 @@ private static final long serialVersionUID = 0L;
     public static final int DYNAMIC_FLIGHT_VALUE = 14;
     /**
      * <pre>
-     * Dynamic custom.
+     * Indicates that this feed is for a custom dynamic remarketing type. Use
+     * this only if the other business types don't apply to your products or
+     * services.
      * </pre>
      *
      * <code>DYNAMIC_CUSTOM = 15;</code>
@@ -387,7 +427,7 @@ private static final long serialVersionUID = 0L;
     public static final int DYNAMIC_CUSTOM_VALUE = 15;
     /**
      * <pre>
-     * Dynamic hotels.
+     * Indicates that this feed is for hotels and rentals dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_HOTEL = 16;</code>
@@ -395,7 +435,7 @@ private static final long serialVersionUID = 0L;
     public static final int DYNAMIC_HOTEL_VALUE = 16;
     /**
      * <pre>
-     * Dynamic real estate.
+     * Indicates that this feed is for real estate dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_REAL_ESTATE = 17;</code>
@@ -403,7 +443,7 @@ private static final long serialVersionUID = 0L;
     public static final int DYNAMIC_REAL_ESTATE_VALUE = 17;
     /**
      * <pre>
-     * Dynamic travel.
+     * Indicates that this feed is for travel dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_TRAVEL = 18;</code>
@@ -411,7 +451,7 @@ private static final long serialVersionUID = 0L;
     public static final int DYNAMIC_TRAVEL_VALUE = 18;
     /**
      * <pre>
-     * Dynamic local.
+     * Indicates that this feed is for local deals dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_LOCAL = 19;</code>
@@ -419,7 +459,7 @@ private static final long serialVersionUID = 0L;
     public static final int DYNAMIC_LOCAL_VALUE = 19;
     /**
      * <pre>
-     * Dynamic jobs.
+     * Indicates that this feed is for job dynamic remarketing.
      * </pre>
      *
      * <code>DYNAMIC_JOB = 20;</code>

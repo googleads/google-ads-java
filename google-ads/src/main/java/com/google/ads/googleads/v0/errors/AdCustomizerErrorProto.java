@@ -36,12 +36,13 @@ public final class AdCustomizerErrorProto {
       "T\020\002\022\032\n\026COUNTDOWN_DATE_IN_PAST\020\003\022\034\n\030COUNT" +
       "DOWN_INVALID_LOCALE\020\004\022\'\n#COUNTDOWN_INVAL" +
       "ID_START_DAYS_BEFORE\020\005\022\025\n\021UNKNOWN_USER_L" +
-      "IST\020\006B\314\001\n\"com.google.ads.googleads.v0.er" +
+      "IST\020\006B\361\001\n\"com.google.ads.googleads.v0.er" +
       "rorsB\026AdCustomizerErrorProtoP\001ZDgoogle.g" +
       "olang.org/genproto/googleapis/ads/google" +
       "ads/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads." +
       "GoogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleA" +
-      "ds\\V0\\Errorsb\006proto3"
+      "ds\\V0\\Errors\352\002\"Google::Ads::GoogleAds::V" +
+      "0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

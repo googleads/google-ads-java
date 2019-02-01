@@ -32,12 +32,13 @@ public final class DatabaseErrorProto {
       "e_error.proto\022\036google.ads.googleads.v0.e" +
       "rrors\"_\n\021DatabaseErrorEnum\"J\n\rDatabaseEr" +
       "ror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\033\n\027CON" +
-      "CURRENT_MODIFICATION\020\002B\310\001\n\"com.google.ad" +
+      "CURRENT_MODIFICATION\020\002B\355\001\n\"com.google.ad" +
       "s.googleads.v0.errorsB\022DatabaseErrorProt" +
       "oP\001ZDgoogle.golang.org/genproto/googleap" +
       "is/ads/googleads/v0/errors;errors\242\002\003GAA\252" +
       "\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Googl" +
-      "e\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "e\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::Ads:" +
+      ":GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

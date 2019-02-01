@@ -281,6 +281,20 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 28;
             break;
           }
+          case 234: {
+            com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder subBuilder = null;
+            if (criterionCase_ == 29) {
+              subBuilder = ((com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.MobileAppCategoryInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 29;
+            break;
+          }
           case 250: {
             com.google.protobuf.BoolValue.Builder subBuilder = null;
             if (negative_ != null) {
@@ -477,6 +491,34 @@ private static final long serialVersionUID = 0L;
               criterion_ = subBuilder.buildPartial();
             }
             criterionCase_ = 45;
+            break;
+          }
+          case 370: {
+            com.google.ads.googleads.v0.common.WebpageInfo.Builder subBuilder = null;
+            if (criterionCase_ == 46) {
+              subBuilder = ((com.google.ads.googleads.v0.common.WebpageInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.WebpageInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.WebpageInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 46;
+            break;
+          }
+          case 378: {
+            com.google.ads.googleads.v0.common.AppPaymentModelInfo.Builder subBuilder = null;
+            if (criterionCase_ == 47) {
+              subBuilder = ((com.google.ads.googleads.v0.common.AppPaymentModelInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.AppPaymentModelInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.AppPaymentModelInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 47;
             break;
           }
           default: {
@@ -1699,6 +1741,62 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value top_of_page_cpc_micros = 3;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getTopOfPageCpcMicrosOrBuilder();
+
+    /**
+     * <pre>
+     * Estimate of how many clicks per week you might get by changing your
+     * keyword bid to the value in first_position_cpc_micros.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+     */
+    boolean hasEstimatedAddClicksAtFirstPositionCpc();
+    /**
+     * <pre>
+     * Estimate of how many clicks per week you might get by changing your
+     * keyword bid to the value in first_position_cpc_micros.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+     */
+    com.google.protobuf.Int64Value getEstimatedAddClicksAtFirstPositionCpc();
+    /**
+     * <pre>
+     * Estimate of how many clicks per week you might get by changing your
+     * keyword bid to the value in first_position_cpc_micros.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getEstimatedAddClicksAtFirstPositionCpcOrBuilder();
+
+    /**
+     * <pre>
+     * Estimate of how your cost per week might change when changing your
+     * keyword bid to the value in first_position_cpc_micros.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+     */
+    boolean hasEstimatedAddCostAtFirstPositionCpc();
+    /**
+     * <pre>
+     * Estimate of how your cost per week might change when changing your
+     * keyword bid to the value in first_position_cpc_micros.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+     */
+    com.google.protobuf.Int64Value getEstimatedAddCostAtFirstPositionCpc();
+    /**
+     * <pre>
+     * Estimate of how your cost per week might change when changing your
+     * keyword bid to the value in first_position_cpc_micros.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getEstimatedAddCostAtFirstPositionCpcOrBuilder();
   }
   /**
    * <pre>
@@ -1778,6 +1876,32 @@ private static final long serialVersionUID = 0L;
               if (subBuilder != null) {
                 subBuilder.mergeFrom(topOfPageCpcMicros_);
                 topOfPageCpcMicros_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (estimatedAddClicksAtFirstPositionCpc_ != null) {
+                subBuilder = estimatedAddClicksAtFirstPositionCpc_.toBuilder();
+              }
+              estimatedAddClicksAtFirstPositionCpc_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(estimatedAddClicksAtFirstPositionCpc_);
+                estimatedAddClicksAtFirstPositionCpc_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (estimatedAddCostAtFirstPositionCpc_ != null) {
+                subBuilder = estimatedAddCostAtFirstPositionCpc_.toBuilder();
+              }
+              estimatedAddCostAtFirstPositionCpc_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(estimatedAddCostAtFirstPositionCpc_);
+                estimatedAddCostAtFirstPositionCpc_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1922,6 +2046,78 @@ private static final long serialVersionUID = 0L;
       return getTopOfPageCpcMicros();
     }
 
+    public static final int ESTIMATED_ADD_CLICKS_AT_FIRST_POSITION_CPC_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value estimatedAddClicksAtFirstPositionCpc_;
+    /**
+     * <pre>
+     * Estimate of how many clicks per week you might get by changing your
+     * keyword bid to the value in first_position_cpc_micros.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+     */
+    public boolean hasEstimatedAddClicksAtFirstPositionCpc() {
+      return estimatedAddClicksAtFirstPositionCpc_ != null;
+    }
+    /**
+     * <pre>
+     * Estimate of how many clicks per week you might get by changing your
+     * keyword bid to the value in first_position_cpc_micros.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+     */
+    public com.google.protobuf.Int64Value getEstimatedAddClicksAtFirstPositionCpc() {
+      return estimatedAddClicksAtFirstPositionCpc_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : estimatedAddClicksAtFirstPositionCpc_;
+    }
+    /**
+     * <pre>
+     * Estimate of how many clicks per week you might get by changing your
+     * keyword bid to the value in first_position_cpc_micros.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getEstimatedAddClicksAtFirstPositionCpcOrBuilder() {
+      return getEstimatedAddClicksAtFirstPositionCpc();
+    }
+
+    public static final int ESTIMATED_ADD_COST_AT_FIRST_POSITION_CPC_FIELD_NUMBER = 5;
+    private com.google.protobuf.Int64Value estimatedAddCostAtFirstPositionCpc_;
+    /**
+     * <pre>
+     * Estimate of how your cost per week might change when changing your
+     * keyword bid to the value in first_position_cpc_micros.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+     */
+    public boolean hasEstimatedAddCostAtFirstPositionCpc() {
+      return estimatedAddCostAtFirstPositionCpc_ != null;
+    }
+    /**
+     * <pre>
+     * Estimate of how your cost per week might change when changing your
+     * keyword bid to the value in first_position_cpc_micros.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+     */
+    public com.google.protobuf.Int64Value getEstimatedAddCostAtFirstPositionCpc() {
+      return estimatedAddCostAtFirstPositionCpc_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : estimatedAddCostAtFirstPositionCpc_;
+    }
+    /**
+     * <pre>
+     * Estimate of how your cost per week might change when changing your
+     * keyword bid to the value in first_position_cpc_micros.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getEstimatedAddCostAtFirstPositionCpcOrBuilder() {
+      return getEstimatedAddCostAtFirstPositionCpc();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1945,6 +2141,12 @@ private static final long serialVersionUID = 0L;
       if (topOfPageCpcMicros_ != null) {
         output.writeMessage(3, getTopOfPageCpcMicros());
       }
+      if (estimatedAddClicksAtFirstPositionCpc_ != null) {
+        output.writeMessage(4, getEstimatedAddClicksAtFirstPositionCpc());
+      }
+      if (estimatedAddCostAtFirstPositionCpc_ != null) {
+        output.writeMessage(5, getEstimatedAddCostAtFirstPositionCpc());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1965,6 +2167,14 @@ private static final long serialVersionUID = 0L;
       if (topOfPageCpcMicros_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTopOfPageCpcMicros());
+      }
+      if (estimatedAddClicksAtFirstPositionCpc_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getEstimatedAddClicksAtFirstPositionCpc());
+      }
+      if (estimatedAddCostAtFirstPositionCpc_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getEstimatedAddCostAtFirstPositionCpc());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1997,6 +2207,16 @@ private static final long serialVersionUID = 0L;
         result = result && getTopOfPageCpcMicros()
             .equals(other.getTopOfPageCpcMicros());
       }
+      result = result && (hasEstimatedAddClicksAtFirstPositionCpc() == other.hasEstimatedAddClicksAtFirstPositionCpc());
+      if (hasEstimatedAddClicksAtFirstPositionCpc()) {
+        result = result && getEstimatedAddClicksAtFirstPositionCpc()
+            .equals(other.getEstimatedAddClicksAtFirstPositionCpc());
+      }
+      result = result && (hasEstimatedAddCostAtFirstPositionCpc() == other.hasEstimatedAddCostAtFirstPositionCpc());
+      if (hasEstimatedAddCostAtFirstPositionCpc()) {
+        result = result && getEstimatedAddCostAtFirstPositionCpc()
+            .equals(other.getEstimatedAddCostAtFirstPositionCpc());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2019,6 +2239,14 @@ private static final long serialVersionUID = 0L;
       if (hasTopOfPageCpcMicros()) {
         hash = (37 * hash) + TOP_OF_PAGE_CPC_MICROS_FIELD_NUMBER;
         hash = (53 * hash) + getTopOfPageCpcMicros().hashCode();
+      }
+      if (hasEstimatedAddClicksAtFirstPositionCpc()) {
+        hash = (37 * hash) + ESTIMATED_ADD_CLICKS_AT_FIRST_POSITION_CPC_FIELD_NUMBER;
+        hash = (53 * hash) + getEstimatedAddClicksAtFirstPositionCpc().hashCode();
+      }
+      if (hasEstimatedAddCostAtFirstPositionCpc()) {
+        hash = (37 * hash) + ESTIMATED_ADD_COST_AT_FIRST_POSITION_CPC_FIELD_NUMBER;
+        hash = (53 * hash) + getEstimatedAddCostAtFirstPositionCpc().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2175,6 +2403,18 @@ private static final long serialVersionUID = 0L;
           topOfPageCpcMicros_ = null;
           topOfPageCpcMicrosBuilder_ = null;
         }
+        if (estimatedAddClicksAtFirstPositionCpcBuilder_ == null) {
+          estimatedAddClicksAtFirstPositionCpc_ = null;
+        } else {
+          estimatedAddClicksAtFirstPositionCpc_ = null;
+          estimatedAddClicksAtFirstPositionCpcBuilder_ = null;
+        }
+        if (estimatedAddCostAtFirstPositionCpcBuilder_ == null) {
+          estimatedAddCostAtFirstPositionCpc_ = null;
+        } else {
+          estimatedAddCostAtFirstPositionCpc_ = null;
+          estimatedAddCostAtFirstPositionCpcBuilder_ = null;
+        }
         return this;
       }
 
@@ -2215,6 +2455,16 @@ private static final long serialVersionUID = 0L;
           result.topOfPageCpcMicros_ = topOfPageCpcMicros_;
         } else {
           result.topOfPageCpcMicros_ = topOfPageCpcMicrosBuilder_.build();
+        }
+        if (estimatedAddClicksAtFirstPositionCpcBuilder_ == null) {
+          result.estimatedAddClicksAtFirstPositionCpc_ = estimatedAddClicksAtFirstPositionCpc_;
+        } else {
+          result.estimatedAddClicksAtFirstPositionCpc_ = estimatedAddClicksAtFirstPositionCpcBuilder_.build();
+        }
+        if (estimatedAddCostAtFirstPositionCpcBuilder_ == null) {
+          result.estimatedAddCostAtFirstPositionCpc_ = estimatedAddCostAtFirstPositionCpc_;
+        } else {
+          result.estimatedAddCostAtFirstPositionCpc_ = estimatedAddCostAtFirstPositionCpcBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2272,6 +2522,12 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasTopOfPageCpcMicros()) {
           mergeTopOfPageCpcMicros(other.getTopOfPageCpcMicros());
+        }
+        if (other.hasEstimatedAddClicksAtFirstPositionCpc()) {
+          mergeEstimatedAddClicksAtFirstPositionCpc(other.getEstimatedAddClicksAtFirstPositionCpc());
+        }
+        if (other.hasEstimatedAddCostAtFirstPositionCpc()) {
+          mergeEstimatedAddCostAtFirstPositionCpc(other.getEstimatedAddCostAtFirstPositionCpc());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2787,6 +3043,330 @@ private static final long serialVersionUID = 0L;
         }
         return topOfPageCpcMicrosBuilder_;
       }
+
+      private com.google.protobuf.Int64Value estimatedAddClicksAtFirstPositionCpc_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> estimatedAddClicksAtFirstPositionCpcBuilder_;
+      /**
+       * <pre>
+       * Estimate of how many clicks per week you might get by changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+       */
+      public boolean hasEstimatedAddClicksAtFirstPositionCpc() {
+        return estimatedAddClicksAtFirstPositionCpcBuilder_ != null || estimatedAddClicksAtFirstPositionCpc_ != null;
+      }
+      /**
+       * <pre>
+       * Estimate of how many clicks per week you might get by changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+       */
+      public com.google.protobuf.Int64Value getEstimatedAddClicksAtFirstPositionCpc() {
+        if (estimatedAddClicksAtFirstPositionCpcBuilder_ == null) {
+          return estimatedAddClicksAtFirstPositionCpc_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : estimatedAddClicksAtFirstPositionCpc_;
+        } else {
+          return estimatedAddClicksAtFirstPositionCpcBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Estimate of how many clicks per week you might get by changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+       */
+      public Builder setEstimatedAddClicksAtFirstPositionCpc(com.google.protobuf.Int64Value value) {
+        if (estimatedAddClicksAtFirstPositionCpcBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          estimatedAddClicksAtFirstPositionCpc_ = value;
+          onChanged();
+        } else {
+          estimatedAddClicksAtFirstPositionCpcBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Estimate of how many clicks per week you might get by changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+       */
+      public Builder setEstimatedAddClicksAtFirstPositionCpc(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (estimatedAddClicksAtFirstPositionCpcBuilder_ == null) {
+          estimatedAddClicksAtFirstPositionCpc_ = builderForValue.build();
+          onChanged();
+        } else {
+          estimatedAddClicksAtFirstPositionCpcBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Estimate of how many clicks per week you might get by changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+       */
+      public Builder mergeEstimatedAddClicksAtFirstPositionCpc(com.google.protobuf.Int64Value value) {
+        if (estimatedAddClicksAtFirstPositionCpcBuilder_ == null) {
+          if (estimatedAddClicksAtFirstPositionCpc_ != null) {
+            estimatedAddClicksAtFirstPositionCpc_ =
+              com.google.protobuf.Int64Value.newBuilder(estimatedAddClicksAtFirstPositionCpc_).mergeFrom(value).buildPartial();
+          } else {
+            estimatedAddClicksAtFirstPositionCpc_ = value;
+          }
+          onChanged();
+        } else {
+          estimatedAddClicksAtFirstPositionCpcBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Estimate of how many clicks per week you might get by changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+       */
+      public Builder clearEstimatedAddClicksAtFirstPositionCpc() {
+        if (estimatedAddClicksAtFirstPositionCpcBuilder_ == null) {
+          estimatedAddClicksAtFirstPositionCpc_ = null;
+          onChanged();
+        } else {
+          estimatedAddClicksAtFirstPositionCpc_ = null;
+          estimatedAddClicksAtFirstPositionCpcBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Estimate of how many clicks per week you might get by changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getEstimatedAddClicksAtFirstPositionCpcBuilder() {
+        
+        onChanged();
+        return getEstimatedAddClicksAtFirstPositionCpcFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Estimate of how many clicks per week you might get by changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getEstimatedAddClicksAtFirstPositionCpcOrBuilder() {
+        if (estimatedAddClicksAtFirstPositionCpcBuilder_ != null) {
+          return estimatedAddClicksAtFirstPositionCpcBuilder_.getMessageOrBuilder();
+        } else {
+          return estimatedAddClicksAtFirstPositionCpc_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : estimatedAddClicksAtFirstPositionCpc_;
+        }
+      }
+      /**
+       * <pre>
+       * Estimate of how many clicks per week you might get by changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getEstimatedAddClicksAtFirstPositionCpcFieldBuilder() {
+        if (estimatedAddClicksAtFirstPositionCpcBuilder_ == null) {
+          estimatedAddClicksAtFirstPositionCpcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getEstimatedAddClicksAtFirstPositionCpc(),
+                  getParentForChildren(),
+                  isClean());
+          estimatedAddClicksAtFirstPositionCpc_ = null;
+        }
+        return estimatedAddClicksAtFirstPositionCpcBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value estimatedAddCostAtFirstPositionCpc_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> estimatedAddCostAtFirstPositionCpcBuilder_;
+      /**
+       * <pre>
+       * Estimate of how your cost per week might change when changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+       */
+      public boolean hasEstimatedAddCostAtFirstPositionCpc() {
+        return estimatedAddCostAtFirstPositionCpcBuilder_ != null || estimatedAddCostAtFirstPositionCpc_ != null;
+      }
+      /**
+       * <pre>
+       * Estimate of how your cost per week might change when changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+       */
+      public com.google.protobuf.Int64Value getEstimatedAddCostAtFirstPositionCpc() {
+        if (estimatedAddCostAtFirstPositionCpcBuilder_ == null) {
+          return estimatedAddCostAtFirstPositionCpc_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : estimatedAddCostAtFirstPositionCpc_;
+        } else {
+          return estimatedAddCostAtFirstPositionCpcBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Estimate of how your cost per week might change when changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+       */
+      public Builder setEstimatedAddCostAtFirstPositionCpc(com.google.protobuf.Int64Value value) {
+        if (estimatedAddCostAtFirstPositionCpcBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          estimatedAddCostAtFirstPositionCpc_ = value;
+          onChanged();
+        } else {
+          estimatedAddCostAtFirstPositionCpcBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Estimate of how your cost per week might change when changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+       */
+      public Builder setEstimatedAddCostAtFirstPositionCpc(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (estimatedAddCostAtFirstPositionCpcBuilder_ == null) {
+          estimatedAddCostAtFirstPositionCpc_ = builderForValue.build();
+          onChanged();
+        } else {
+          estimatedAddCostAtFirstPositionCpcBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Estimate of how your cost per week might change when changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+       */
+      public Builder mergeEstimatedAddCostAtFirstPositionCpc(com.google.protobuf.Int64Value value) {
+        if (estimatedAddCostAtFirstPositionCpcBuilder_ == null) {
+          if (estimatedAddCostAtFirstPositionCpc_ != null) {
+            estimatedAddCostAtFirstPositionCpc_ =
+              com.google.protobuf.Int64Value.newBuilder(estimatedAddCostAtFirstPositionCpc_).mergeFrom(value).buildPartial();
+          } else {
+            estimatedAddCostAtFirstPositionCpc_ = value;
+          }
+          onChanged();
+        } else {
+          estimatedAddCostAtFirstPositionCpcBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Estimate of how your cost per week might change when changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+       */
+      public Builder clearEstimatedAddCostAtFirstPositionCpc() {
+        if (estimatedAddCostAtFirstPositionCpcBuilder_ == null) {
+          estimatedAddCostAtFirstPositionCpc_ = null;
+          onChanged();
+        } else {
+          estimatedAddCostAtFirstPositionCpc_ = null;
+          estimatedAddCostAtFirstPositionCpcBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Estimate of how your cost per week might change when changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getEstimatedAddCostAtFirstPositionCpcBuilder() {
+        
+        onChanged();
+        return getEstimatedAddCostAtFirstPositionCpcFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Estimate of how your cost per week might change when changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getEstimatedAddCostAtFirstPositionCpcOrBuilder() {
+        if (estimatedAddCostAtFirstPositionCpcBuilder_ != null) {
+          return estimatedAddCostAtFirstPositionCpcBuilder_.getMessageOrBuilder();
+        } else {
+          return estimatedAddCostAtFirstPositionCpc_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : estimatedAddCostAtFirstPositionCpc_;
+        }
+      }
+      /**
+       * <pre>
+       * Estimate of how your cost per week might change when changing your
+       * keyword bid to the value in first_position_cpc_micros.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getEstimatedAddCostAtFirstPositionCpcFieldBuilder() {
+        if (estimatedAddCostAtFirstPositionCpcBuilder_ == null) {
+          estimatedAddCostAtFirstPositionCpcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getEstimatedAddCostAtFirstPositionCpc(),
+                  getParentForChildren(),
+                  isClean());
+          estimatedAddCostAtFirstPositionCpc_ = null;
+        }
+        return estimatedAddCostAtFirstPositionCpcBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2848,6 +3428,7 @@ private static final long serialVersionUID = 0L;
       implements com.google.protobuf.Internal.EnumLite {
     KEYWORD(27),
     PLACEMENT(28),
+    MOBILE_APP_CATEGORY(29),
     LISTING_GROUP(32),
     AGE_RANGE(36),
     GENDER(37),
@@ -2858,6 +3439,8 @@ private static final long serialVersionUID = 0L;
     YOUTUBE_CHANNEL(41),
     TOPIC(43),
     USER_INTEREST(45),
+    WEBPAGE(46),
+    APP_PAYMENT_MODEL(47),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -2875,6 +3458,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 27: return KEYWORD;
         case 28: return PLACEMENT;
+        case 29: return MOBILE_APP_CATEGORY;
         case 32: return LISTING_GROUP;
         case 36: return AGE_RANGE;
         case 37: return GENDER;
@@ -2885,6 +3469,8 @@ private static final long serialVersionUID = 0L;
         case 41: return YOUTUBE_CHANNEL;
         case 43: return TOPIC;
         case 45: return USER_INTEREST;
+        case 46: return WEBPAGE;
+        case 47: return APP_PAYMENT_MODEL;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -3805,6 +4391,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
   }
 
+  public static final int MOBILE_APP_CATEGORY_FIELD_NUMBER = 29;
+  /**
+   * <pre>
+   * Mobile app category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+   */
+  public boolean hasMobileAppCategory() {
+    return criterionCase_ == 29;
+  }
+  /**
+   * <pre>
+   * Mobile app category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+   */
+  public com.google.ads.googleads.v0.common.MobileAppCategoryInfo getMobileAppCategory() {
+    if (criterionCase_ == 29) {
+       return (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Mobile app category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+   */
+  public com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder() {
+    if (criterionCase_ == 29) {
+       return (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+  }
+
   public static final int LISTING_GROUP_FIELD_NUMBER = 32;
   /**
    * <pre>
@@ -4185,6 +4809,82 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.UserInterestInfo.getDefaultInstance();
   }
 
+  public static final int WEBPAGE_FIELD_NUMBER = 46;
+  /**
+   * <pre>
+   * Webpage
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+   */
+  public boolean hasWebpage() {
+    return criterionCase_ == 46;
+  }
+  /**
+   * <pre>
+   * Webpage
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+   */
+  public com.google.ads.googleads.v0.common.WebpageInfo getWebpage() {
+    if (criterionCase_ == 46) {
+       return (com.google.ads.googleads.v0.common.WebpageInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Webpage
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+   */
+  public com.google.ads.googleads.v0.common.WebpageInfoOrBuilder getWebpageOrBuilder() {
+    if (criterionCase_ == 46) {
+       return (com.google.ads.googleads.v0.common.WebpageInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance();
+  }
+
+  public static final int APP_PAYMENT_MODEL_FIELD_NUMBER = 47;
+  /**
+   * <pre>
+   * App Payment Model.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+   */
+  public boolean hasAppPaymentModel() {
+    return criterionCase_ == 47;
+  }
+  /**
+   * <pre>
+   * App Payment Model.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+   */
+  public com.google.ads.googleads.v0.common.AppPaymentModelInfo getAppPaymentModel() {
+    if (criterionCase_ == 47) {
+       return (com.google.ads.googleads.v0.common.AppPaymentModelInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.AppPaymentModelInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * App Payment Model.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+   */
+  public com.google.ads.googleads.v0.common.AppPaymentModelInfoOrBuilder getAppPaymentModelOrBuilder() {
+    if (criterionCase_ == 47) {
+       return (com.google.ads.googleads.v0.common.AppPaymentModelInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.AppPaymentModelInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4262,6 +4962,9 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 28) {
       output.writeMessage(28, (com.google.ads.googleads.v0.common.PlacementInfo) criterion_);
     }
+    if (criterionCase_ == 29) {
+      output.writeMessage(29, (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_);
+    }
     if (negative_ != null) {
       output.writeMessage(31, getNegative());
     }
@@ -4306,6 +5009,12 @@ private static final long serialVersionUID = 0L;
     }
     if (criterionCase_ == 45) {
       output.writeMessage(45, (com.google.ads.googleads.v0.common.UserInterestInfo) criterion_);
+    }
+    if (criterionCase_ == 46) {
+      output.writeMessage(46, (com.google.ads.googleads.v0.common.WebpageInfo) criterion_);
+    }
+    if (criterionCase_ == 47) {
+      output.writeMessage(47, (com.google.ads.googleads.v0.common.AppPaymentModelInfo) criterion_);
     }
     unknownFields.writeTo(output);
   }
@@ -4399,6 +5108,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(28, (com.google.ads.googleads.v0.common.PlacementInfo) criterion_);
     }
+    if (criterionCase_ == 29) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(29, (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_);
+    }
     if (negative_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(31, getNegative());
@@ -4458,6 +5171,14 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 45) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(45, (com.google.ads.googleads.v0.common.UserInterestInfo) criterion_);
+    }
+    if (criterionCase_ == 46) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(46, (com.google.ads.googleads.v0.common.WebpageInfo) criterion_);
+    }
+    if (criterionCase_ == 47) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(47, (com.google.ads.googleads.v0.common.AppPaymentModelInfo) criterion_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -4574,6 +5295,10 @@ private static final long serialVersionUID = 0L;
         result = result && getPlacement()
             .equals(other.getPlacement());
         break;
+      case 29:
+        result = result && getMobileAppCategory()
+            .equals(other.getMobileAppCategory());
+        break;
       case 32:
         result = result && getListingGroup()
             .equals(other.getListingGroup());
@@ -4613,6 +5338,14 @@ private static final long serialVersionUID = 0L;
       case 45:
         result = result && getUserInterest()
             .equals(other.getUserInterest());
+        break;
+      case 46:
+        result = result && getWebpage()
+            .equals(other.getWebpage());
+        break;
+      case 47:
+        result = result && getAppPaymentModel()
+            .equals(other.getAppPaymentModel());
         break;
       case 0:
       default:
@@ -4719,6 +5452,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + PLACEMENT_FIELD_NUMBER;
         hash = (53 * hash) + getPlacement().hashCode();
         break;
+      case 29:
+        hash = (37 * hash) + MOBILE_APP_CATEGORY_FIELD_NUMBER;
+        hash = (53 * hash) + getMobileAppCategory().hashCode();
+        break;
       case 32:
         hash = (37 * hash) + LISTING_GROUP_FIELD_NUMBER;
         hash = (53 * hash) + getListingGroup().hashCode();
@@ -4758,6 +5495,14 @@ private static final long serialVersionUID = 0L;
       case 45:
         hash = (37 * hash) + USER_INTEREST_FIELD_NUMBER;
         hash = (53 * hash) + getUserInterest().hashCode();
+        break;
+      case 46:
+        hash = (37 * hash) + WEBPAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getWebpage().hashCode();
+        break;
+      case 47:
+        hash = (37 * hash) + APP_PAYMENT_MODEL_FIELD_NUMBER;
+        hash = (53 * hash) + getAppPaymentModel().hashCode();
         break;
       case 0:
       default:
@@ -5163,6 +5908,13 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = placementBuilder_.build();
         }
       }
+      if (criterionCase_ == 29) {
+        if (mobileAppCategoryBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = mobileAppCategoryBuilder_.build();
+        }
+      }
       if (criterionCase_ == 32) {
         if (listingGroupBuilder_ == null) {
           result.criterion_ = criterion_;
@@ -5231,6 +5983,20 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = criterion_;
         } else {
           result.criterion_ = userInterestBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 46) {
+        if (webpageBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = webpageBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 47) {
+        if (appPaymentModelBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = appPaymentModelBuilder_.build();
         }
       }
       result.bitField0_ = to_bitField0_;
@@ -5412,6 +6178,10 @@ private static final long serialVersionUID = 0L;
           mergePlacement(other.getPlacement());
           break;
         }
+        case MOBILE_APP_CATEGORY: {
+          mergeMobileAppCategory(other.getMobileAppCategory());
+          break;
+        }
         case LISTING_GROUP: {
           mergeListingGroup(other.getListingGroup());
           break;
@@ -5450,6 +6220,14 @@ private static final long serialVersionUID = 0L;
         }
         case USER_INTEREST: {
           mergeUserInterest(other.getUserInterest());
+          break;
+        }
+        case WEBPAGE: {
+          mergeWebpage(other.getWebpage());
+          break;
+        }
+        case APP_PAYMENT_MODEL: {
+          mergeAppPaymentModel(other.getAppPaymentModel());
           break;
         }
         case CRITERION_NOT_SET: {
@@ -9345,6 +10123,178 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.MobileAppCategoryInfo, com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder, com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder> mobileAppCategoryBuilder_;
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+     */
+    public boolean hasMobileAppCategory() {
+      return criterionCase_ == 29;
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+     */
+    public com.google.ads.googleads.v0.common.MobileAppCategoryInfo getMobileAppCategory() {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (criterionCase_ == 29) {
+          return (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 29) {
+          return mobileAppCategoryBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+     */
+    public Builder setMobileAppCategory(com.google.ads.googleads.v0.common.MobileAppCategoryInfo value) {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        mobileAppCategoryBuilder_.setMessage(value);
+      }
+      criterionCase_ = 29;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+     */
+    public Builder setMobileAppCategory(
+        com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder builderForValue) {
+      if (mobileAppCategoryBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        mobileAppCategoryBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 29;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+     */
+    public Builder mergeMobileAppCategory(com.google.ads.googleads.v0.common.MobileAppCategoryInfo value) {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (criterionCase_ == 29 &&
+            criterion_ != com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.MobileAppCategoryInfo.newBuilder((com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 29) {
+          mobileAppCategoryBuilder_.mergeFrom(value);
+        }
+        mobileAppCategoryBuilder_.setMessage(value);
+      }
+      criterionCase_ = 29;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+     */
+    public Builder clearMobileAppCategory() {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (criterionCase_ == 29) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 29) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        mobileAppCategoryBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+     */
+    public com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder getMobileAppCategoryBuilder() {
+      return getMobileAppCategoryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+     */
+    public com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder() {
+      if ((criterionCase_ == 29) && (mobileAppCategoryBuilder_ != null)) {
+        return mobileAppCategoryBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 29) {
+          return (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.MobileAppCategoryInfo, com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder, com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder> 
+        getMobileAppCategoryFieldBuilder() {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (!(criterionCase_ == 29)) {
+          criterion_ = com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+        }
+        mobileAppCategoryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.MobileAppCategoryInfo, com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder, com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 29;
+      onChanged();;
+      return mobileAppCategoryBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.common.ListingGroupInfo, com.google.ads.googleads.v0.common.ListingGroupInfo.Builder, com.google.ads.googleads.v0.common.ListingGroupInfoOrBuilder> listingGroupBuilder_;
     /**
      * <pre>
@@ -11062,6 +12012,350 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 45;
       onChanged();;
       return userInterestBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.WebpageInfo, com.google.ads.googleads.v0.common.WebpageInfo.Builder, com.google.ads.googleads.v0.common.WebpageInfoOrBuilder> webpageBuilder_;
+    /**
+     * <pre>
+     * Webpage
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+     */
+    public boolean hasWebpage() {
+      return criterionCase_ == 46;
+    }
+    /**
+     * <pre>
+     * Webpage
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+     */
+    public com.google.ads.googleads.v0.common.WebpageInfo getWebpage() {
+      if (webpageBuilder_ == null) {
+        if (criterionCase_ == 46) {
+          return (com.google.ads.googleads.v0.common.WebpageInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 46) {
+          return webpageBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Webpage
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+     */
+    public Builder setWebpage(com.google.ads.googleads.v0.common.WebpageInfo value) {
+      if (webpageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        webpageBuilder_.setMessage(value);
+      }
+      criterionCase_ = 46;
+      return this;
+    }
+    /**
+     * <pre>
+     * Webpage
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+     */
+    public Builder setWebpage(
+        com.google.ads.googleads.v0.common.WebpageInfo.Builder builderForValue) {
+      if (webpageBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        webpageBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 46;
+      return this;
+    }
+    /**
+     * <pre>
+     * Webpage
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+     */
+    public Builder mergeWebpage(com.google.ads.googleads.v0.common.WebpageInfo value) {
+      if (webpageBuilder_ == null) {
+        if (criterionCase_ == 46 &&
+            criterion_ != com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.WebpageInfo.newBuilder((com.google.ads.googleads.v0.common.WebpageInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 46) {
+          webpageBuilder_.mergeFrom(value);
+        }
+        webpageBuilder_.setMessage(value);
+      }
+      criterionCase_ = 46;
+      return this;
+    }
+    /**
+     * <pre>
+     * Webpage
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+     */
+    public Builder clearWebpage() {
+      if (webpageBuilder_ == null) {
+        if (criterionCase_ == 46) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 46) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        webpageBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Webpage
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+     */
+    public com.google.ads.googleads.v0.common.WebpageInfo.Builder getWebpageBuilder() {
+      return getWebpageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Webpage
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+     */
+    public com.google.ads.googleads.v0.common.WebpageInfoOrBuilder getWebpageOrBuilder() {
+      if ((criterionCase_ == 46) && (webpageBuilder_ != null)) {
+        return webpageBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 46) {
+          return (com.google.ads.googleads.v0.common.WebpageInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Webpage
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.WebpageInfo, com.google.ads.googleads.v0.common.WebpageInfo.Builder, com.google.ads.googleads.v0.common.WebpageInfoOrBuilder> 
+        getWebpageFieldBuilder() {
+      if (webpageBuilder_ == null) {
+        if (!(criterionCase_ == 46)) {
+          criterion_ = com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance();
+        }
+        webpageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.WebpageInfo, com.google.ads.googleads.v0.common.WebpageInfo.Builder, com.google.ads.googleads.v0.common.WebpageInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.WebpageInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 46;
+      onChanged();;
+      return webpageBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.AppPaymentModelInfo, com.google.ads.googleads.v0.common.AppPaymentModelInfo.Builder, com.google.ads.googleads.v0.common.AppPaymentModelInfoOrBuilder> appPaymentModelBuilder_;
+    /**
+     * <pre>
+     * App Payment Model.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+     */
+    public boolean hasAppPaymentModel() {
+      return criterionCase_ == 47;
+    }
+    /**
+     * <pre>
+     * App Payment Model.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+     */
+    public com.google.ads.googleads.v0.common.AppPaymentModelInfo getAppPaymentModel() {
+      if (appPaymentModelBuilder_ == null) {
+        if (criterionCase_ == 47) {
+          return (com.google.ads.googleads.v0.common.AppPaymentModelInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.AppPaymentModelInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 47) {
+          return appPaymentModelBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.AppPaymentModelInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * App Payment Model.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+     */
+    public Builder setAppPaymentModel(com.google.ads.googleads.v0.common.AppPaymentModelInfo value) {
+      if (appPaymentModelBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        appPaymentModelBuilder_.setMessage(value);
+      }
+      criterionCase_ = 47;
+      return this;
+    }
+    /**
+     * <pre>
+     * App Payment Model.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+     */
+    public Builder setAppPaymentModel(
+        com.google.ads.googleads.v0.common.AppPaymentModelInfo.Builder builderForValue) {
+      if (appPaymentModelBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        appPaymentModelBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 47;
+      return this;
+    }
+    /**
+     * <pre>
+     * App Payment Model.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+     */
+    public Builder mergeAppPaymentModel(com.google.ads.googleads.v0.common.AppPaymentModelInfo value) {
+      if (appPaymentModelBuilder_ == null) {
+        if (criterionCase_ == 47 &&
+            criterion_ != com.google.ads.googleads.v0.common.AppPaymentModelInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.AppPaymentModelInfo.newBuilder((com.google.ads.googleads.v0.common.AppPaymentModelInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 47) {
+          appPaymentModelBuilder_.mergeFrom(value);
+        }
+        appPaymentModelBuilder_.setMessage(value);
+      }
+      criterionCase_ = 47;
+      return this;
+    }
+    /**
+     * <pre>
+     * App Payment Model.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+     */
+    public Builder clearAppPaymentModel() {
+      if (appPaymentModelBuilder_ == null) {
+        if (criterionCase_ == 47) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 47) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        appPaymentModelBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * App Payment Model.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+     */
+    public com.google.ads.googleads.v0.common.AppPaymentModelInfo.Builder getAppPaymentModelBuilder() {
+      return getAppPaymentModelFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * App Payment Model.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+     */
+    public com.google.ads.googleads.v0.common.AppPaymentModelInfoOrBuilder getAppPaymentModelOrBuilder() {
+      if ((criterionCase_ == 47) && (appPaymentModelBuilder_ != null)) {
+        return appPaymentModelBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 47) {
+          return (com.google.ads.googleads.v0.common.AppPaymentModelInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.AppPaymentModelInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * App Payment Model.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.AppPaymentModelInfo, com.google.ads.googleads.v0.common.AppPaymentModelInfo.Builder, com.google.ads.googleads.v0.common.AppPaymentModelInfoOrBuilder> 
+        getAppPaymentModelFieldBuilder() {
+      if (appPaymentModelBuilder_ == null) {
+        if (!(criterionCase_ == 47)) {
+          criterion_ = com.google.ads.googleads.v0.common.AppPaymentModelInfo.getDefaultInstance();
+        }
+        appPaymentModelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.AppPaymentModelInfo, com.google.ads.googleads.v0.common.AppPaymentModelInfo.Builder, com.google.ads.googleads.v0.common.AppPaymentModelInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.AppPaymentModelInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 47;
+      onChanged();;
+      return appPaymentModelBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

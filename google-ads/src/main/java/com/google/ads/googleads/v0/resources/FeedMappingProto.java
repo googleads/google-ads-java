@@ -129,12 +129,13 @@ public final class FeedMappingProto {
       "FieldEnum.LocalPlaceholderFieldH\000\022_\n\tjob" +
       "_field\030\027 \001(\0162J.google.ads.googleads.v0.e" +
       "nums.JobPlaceholderFieldEnum.JobPlacehol" +
-      "derFieldH\000B\007\n\005fieldB\325\001\n%com.google.ads.g" +
+      "derFieldH\000B\007\n\005fieldB\375\001\n%com.google.ads.g" +
       "oogleads.v0.resourcesB\020FeedMappingProtoP" +
       "\001ZJgoogle.golang.org/genproto/googleapis" +
       "/ads/googleads/v0/resources;resources\242\002\003" +
       "GAA\252\002!Google.Ads.GoogleAds.V0.Resources\312" +
-      "\002!Google\\Ads\\GoogleAds\\V0\\Resourcesb\006pro" +
+      "\002!Google\\Ads\\GoogleAds\\V0\\Resources\352\002%Go" +
+      "ogle::Ads::GoogleAds::V0::Resourcesb\006pro" +
       "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

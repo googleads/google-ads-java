@@ -34,12 +34,13 @@ public final class SearchTermTargetingStatusProto {
       "gStatusEnum\"p\n\031SearchTermTargetingStatus" +
       "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\t\n\005ADDED\020" +
       "\002\022\014\n\010EXCLUDED\020\003\022\022\n\016ADDED_EXCLUDED\020\004\022\010\n\004N" +
-      "ONE\020\005B\317\001\n!com.google.ads.googleads.v0.en" +
+      "ONE\020\005B\363\001\n!com.google.ads.googleads.v0.en" +
       "umsB\036SearchTermTargetingStatusProtoP\001ZBg" +
       "oogle.golang.org/genproto/googleapis/ads" +
       "/googleads/v0/enums;enums\242\002\003GAA\252\002\035Google" +
       ".Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Goo" +
-      "gleAds\\V0\\Enumsb\006proto3"
+      "gleAds\\V0\\Enums\352\002!Google::Ads::GoogleAds" +
+      "::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

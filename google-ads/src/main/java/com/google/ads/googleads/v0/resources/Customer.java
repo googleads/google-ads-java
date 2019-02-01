@@ -170,6 +170,45 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 98: {
+            com.google.protobuf.BoolValue.Builder subBuilder = null;
+            if (manager_ != null) {
+              subBuilder = manager_.toBuilder();
+            }
+            manager_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(manager_);
+              manager_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 106: {
+            com.google.protobuf.BoolValue.Builder subBuilder = null;
+            if (testAccount_ != null) {
+              subBuilder = testAccount_.toBuilder();
+            }
+            testAccount_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(testAccount_);
+              testAccount_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 114: {
+            com.google.ads.googleads.v0.resources.ConversionTrackingSetting.Builder subBuilder = null;
+            if (conversionTrackingSetting_ != null) {
+              subBuilder = conversionTrackingSetting_.toBuilder();
+            }
+            conversionTrackingSetting_ = input.readMessage(com.google.ads.googleads.v0.resources.ConversionTrackingSetting.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(conversionTrackingSetting_);
+              conversionTrackingSetting_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -524,6 +563,72 @@ private static final long serialVersionUID = 0L;
     return getHasPartnersBadge();
   }
 
+  public static final int MANAGER_FIELD_NUMBER = 12;
+  private com.google.protobuf.BoolValue manager_;
+  /**
+   * <pre>
+   * Whether the customer is a manager.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue manager = 12;</code>
+   */
+  public boolean hasManager() {
+    return manager_ != null;
+  }
+  /**
+   * <pre>
+   * Whether the customer is a manager.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue manager = 12;</code>
+   */
+  public com.google.protobuf.BoolValue getManager() {
+    return manager_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : manager_;
+  }
+  /**
+   * <pre>
+   * Whether the customer is a manager.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue manager = 12;</code>
+   */
+  public com.google.protobuf.BoolValueOrBuilder getManagerOrBuilder() {
+    return getManager();
+  }
+
+  public static final int TEST_ACCOUNT_FIELD_NUMBER = 13;
+  private com.google.protobuf.BoolValue testAccount_;
+  /**
+   * <pre>
+   * Whether the customer is a test account.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue test_account = 13;</code>
+   */
+  public boolean hasTestAccount() {
+    return testAccount_ != null;
+  }
+  /**
+   * <pre>
+   * Whether the customer is a test account.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue test_account = 13;</code>
+   */
+  public com.google.protobuf.BoolValue getTestAccount() {
+    return testAccount_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : testAccount_;
+  }
+  /**
+   * <pre>
+   * Whether the customer is a test account.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue test_account = 13;</code>
+   */
+  public com.google.protobuf.BoolValueOrBuilder getTestAccountOrBuilder() {
+    return getTestAccount();
+  }
+
   public static final int CALL_REPORTING_SETTING_FIELD_NUMBER = 10;
   private com.google.ads.googleads.v0.resources.CallReportingSetting callReportingSetting_;
   /**
@@ -555,6 +660,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v0.resources.CallReportingSettingOrBuilder getCallReportingSettingOrBuilder() {
     return getCallReportingSetting();
+  }
+
+  public static final int CONVERSION_TRACKING_SETTING_FIELD_NUMBER = 14;
+  private com.google.ads.googleads.v0.resources.ConversionTrackingSetting conversionTrackingSetting_;
+  /**
+   * <pre>
+   * Conversion tracking setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+   */
+  public boolean hasConversionTrackingSetting() {
+    return conversionTrackingSetting_ != null;
+  }
+  /**
+   * <pre>
+   * Conversion tracking setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+   */
+  public com.google.ads.googleads.v0.resources.ConversionTrackingSetting getConversionTrackingSetting() {
+    return conversionTrackingSetting_ == null ? com.google.ads.googleads.v0.resources.ConversionTrackingSetting.getDefaultInstance() : conversionTrackingSetting_;
+  }
+  /**
+   * <pre>
+   * Conversion tracking setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+   */
+  public com.google.ads.googleads.v0.resources.ConversionTrackingSettingOrBuilder getConversionTrackingSettingOrBuilder() {
+    return getConversionTrackingSetting();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -600,6 +738,15 @@ private static final long serialVersionUID = 0L;
     }
     if (finalUrlSuffix_ != null) {
       output.writeMessage(11, getFinalUrlSuffix());
+    }
+    if (manager_ != null) {
+      output.writeMessage(12, getManager());
+    }
+    if (testAccount_ != null) {
+      output.writeMessage(13, getTestAccount());
+    }
+    if (conversionTrackingSetting_ != null) {
+      output.writeMessage(14, getConversionTrackingSetting());
     }
     unknownFields.writeTo(output);
   }
@@ -648,6 +795,18 @@ private static final long serialVersionUID = 0L;
     if (finalUrlSuffix_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getFinalUrlSuffix());
+    }
+    if (manager_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, getManager());
+    }
+    if (testAccount_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getTestAccount());
+    }
+    if (conversionTrackingSetting_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getConversionTrackingSetting());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -707,10 +866,25 @@ private static final long serialVersionUID = 0L;
       result = result && getHasPartnersBadge()
           .equals(other.getHasPartnersBadge());
     }
+    result = result && (hasManager() == other.hasManager());
+    if (hasManager()) {
+      result = result && getManager()
+          .equals(other.getManager());
+    }
+    result = result && (hasTestAccount() == other.hasTestAccount());
+    if (hasTestAccount()) {
+      result = result && getTestAccount()
+          .equals(other.getTestAccount());
+    }
     result = result && (hasCallReportingSetting() == other.hasCallReportingSetting());
     if (hasCallReportingSetting()) {
       result = result && getCallReportingSetting()
           .equals(other.getCallReportingSetting());
+    }
+    result = result && (hasConversionTrackingSetting() == other.hasConversionTrackingSetting());
+    if (hasConversionTrackingSetting()) {
+      result = result && getConversionTrackingSetting()
+          .equals(other.getConversionTrackingSetting());
     }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
@@ -757,9 +931,21 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HAS_PARTNERS_BADGE_FIELD_NUMBER;
       hash = (53 * hash) + getHasPartnersBadge().hashCode();
     }
+    if (hasManager()) {
+      hash = (37 * hash) + MANAGER_FIELD_NUMBER;
+      hash = (53 * hash) + getManager().hashCode();
+    }
+    if (hasTestAccount()) {
+      hash = (37 * hash) + TEST_ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getTestAccount().hashCode();
+    }
     if (hasCallReportingSetting()) {
       hash = (37 * hash) + CALL_REPORTING_SETTING_FIELD_NUMBER;
       hash = (53 * hash) + getCallReportingSetting().hashCode();
+    }
+    if (hasConversionTrackingSetting()) {
+      hash = (37 * hash) + CONVERSION_TRACKING_SETTING_FIELD_NUMBER;
+      hash = (53 * hash) + getConversionTrackingSetting().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -948,11 +1134,29 @@ private static final long serialVersionUID = 0L;
         hasPartnersBadge_ = null;
         hasPartnersBadgeBuilder_ = null;
       }
+      if (managerBuilder_ == null) {
+        manager_ = null;
+      } else {
+        manager_ = null;
+        managerBuilder_ = null;
+      }
+      if (testAccountBuilder_ == null) {
+        testAccount_ = null;
+      } else {
+        testAccount_ = null;
+        testAccountBuilder_ = null;
+      }
       if (callReportingSettingBuilder_ == null) {
         callReportingSetting_ = null;
       } else {
         callReportingSetting_ = null;
         callReportingSettingBuilder_ = null;
+      }
+      if (conversionTrackingSettingBuilder_ == null) {
+        conversionTrackingSetting_ = null;
+      } else {
+        conversionTrackingSetting_ = null;
+        conversionTrackingSettingBuilder_ = null;
       }
       return this;
     }
@@ -1021,10 +1225,25 @@ private static final long serialVersionUID = 0L;
       } else {
         result.hasPartnersBadge_ = hasPartnersBadgeBuilder_.build();
       }
+      if (managerBuilder_ == null) {
+        result.manager_ = manager_;
+      } else {
+        result.manager_ = managerBuilder_.build();
+      }
+      if (testAccountBuilder_ == null) {
+        result.testAccount_ = testAccount_;
+      } else {
+        result.testAccount_ = testAccountBuilder_.build();
+      }
       if (callReportingSettingBuilder_ == null) {
         result.callReportingSetting_ = callReportingSetting_;
       } else {
         result.callReportingSetting_ = callReportingSettingBuilder_.build();
+      }
+      if (conversionTrackingSettingBuilder_ == null) {
+        result.conversionTrackingSetting_ = conversionTrackingSetting_;
+      } else {
+        result.conversionTrackingSetting_ = conversionTrackingSettingBuilder_.build();
       }
       onBuilt();
       return result;
@@ -1102,8 +1321,17 @@ private static final long serialVersionUID = 0L;
       if (other.hasHasPartnersBadge()) {
         mergeHasPartnersBadge(other.getHasPartnersBadge());
       }
+      if (other.hasManager()) {
+        mergeManager(other.getManager());
+      }
+      if (other.hasTestAccount()) {
+        mergeTestAccount(other.getTestAccount());
+      }
       if (other.hasCallReportingSetting()) {
         mergeCallReportingSetting(other.getCallReportingSetting());
+      }
+      if (other.hasConversionTrackingSetting()) {
+        mergeConversionTrackingSetting(other.getConversionTrackingSetting());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -2493,6 +2721,312 @@ private static final long serialVersionUID = 0L;
       return hasPartnersBadgeBuilder_;
     }
 
+    private com.google.protobuf.BoolValue manager_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> managerBuilder_;
+    /**
+     * <pre>
+     * Whether the customer is a manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     */
+    public boolean hasManager() {
+      return managerBuilder_ != null || manager_ != null;
+    }
+    /**
+     * <pre>
+     * Whether the customer is a manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     */
+    public com.google.protobuf.BoolValue getManager() {
+      if (managerBuilder_ == null) {
+        return manager_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : manager_;
+      } else {
+        return managerBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Whether the customer is a manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     */
+    public Builder setManager(com.google.protobuf.BoolValue value) {
+      if (managerBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        manager_ = value;
+        onChanged();
+      } else {
+        managerBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the customer is a manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     */
+    public Builder setManager(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (managerBuilder_ == null) {
+        manager_ = builderForValue.build();
+        onChanged();
+      } else {
+        managerBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the customer is a manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     */
+    public Builder mergeManager(com.google.protobuf.BoolValue value) {
+      if (managerBuilder_ == null) {
+        if (manager_ != null) {
+          manager_ =
+            com.google.protobuf.BoolValue.newBuilder(manager_).mergeFrom(value).buildPartial();
+        } else {
+          manager_ = value;
+        }
+        onChanged();
+      } else {
+        managerBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the customer is a manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     */
+    public Builder clearManager() {
+      if (managerBuilder_ == null) {
+        manager_ = null;
+        onChanged();
+      } else {
+        manager_ = null;
+        managerBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the customer is a manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getManagerBuilder() {
+      
+      onChanged();
+      return getManagerFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Whether the customer is a manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getManagerOrBuilder() {
+      if (managerBuilder_ != null) {
+        return managerBuilder_.getMessageOrBuilder();
+      } else {
+        return manager_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : manager_;
+      }
+    }
+    /**
+     * <pre>
+     * Whether the customer is a manager.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getManagerFieldBuilder() {
+      if (managerBuilder_ == null) {
+        managerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getManager(),
+                getParentForChildren(),
+                isClean());
+        manager_ = null;
+      }
+      return managerBuilder_;
+    }
+
+    private com.google.protobuf.BoolValue testAccount_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> testAccountBuilder_;
+    /**
+     * <pre>
+     * Whether the customer is a test account.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     */
+    public boolean hasTestAccount() {
+      return testAccountBuilder_ != null || testAccount_ != null;
+    }
+    /**
+     * <pre>
+     * Whether the customer is a test account.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     */
+    public com.google.protobuf.BoolValue getTestAccount() {
+      if (testAccountBuilder_ == null) {
+        return testAccount_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : testAccount_;
+      } else {
+        return testAccountBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Whether the customer is a test account.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     */
+    public Builder setTestAccount(com.google.protobuf.BoolValue value) {
+      if (testAccountBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        testAccount_ = value;
+        onChanged();
+      } else {
+        testAccountBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the customer is a test account.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     */
+    public Builder setTestAccount(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (testAccountBuilder_ == null) {
+        testAccount_ = builderForValue.build();
+        onChanged();
+      } else {
+        testAccountBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the customer is a test account.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     */
+    public Builder mergeTestAccount(com.google.protobuf.BoolValue value) {
+      if (testAccountBuilder_ == null) {
+        if (testAccount_ != null) {
+          testAccount_ =
+            com.google.protobuf.BoolValue.newBuilder(testAccount_).mergeFrom(value).buildPartial();
+        } else {
+          testAccount_ = value;
+        }
+        onChanged();
+      } else {
+        testAccountBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the customer is a test account.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     */
+    public Builder clearTestAccount() {
+      if (testAccountBuilder_ == null) {
+        testAccount_ = null;
+        onChanged();
+      } else {
+        testAccount_ = null;
+        testAccountBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the customer is a test account.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getTestAccountBuilder() {
+      
+      onChanged();
+      return getTestAccountFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Whether the customer is a test account.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getTestAccountOrBuilder() {
+      if (testAccountBuilder_ != null) {
+        return testAccountBuilder_.getMessageOrBuilder();
+      } else {
+        return testAccount_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : testAccount_;
+      }
+    }
+    /**
+     * <pre>
+     * Whether the customer is a test account.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getTestAccountFieldBuilder() {
+      if (testAccountBuilder_ == null) {
+        testAccountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getTestAccount(),
+                getParentForChildren(),
+                isClean());
+        testAccount_ = null;
+      }
+      return testAccountBuilder_;
+    }
+
     private com.google.ads.googleads.v0.resources.CallReportingSetting callReportingSetting_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v0.resources.CallReportingSetting, com.google.ads.googleads.v0.resources.CallReportingSetting.Builder, com.google.ads.googleads.v0.resources.CallReportingSettingOrBuilder> callReportingSettingBuilder_;
@@ -2644,6 +3178,159 @@ private static final long serialVersionUID = 0L;
         callReportingSetting_ = null;
       }
       return callReportingSettingBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.resources.ConversionTrackingSetting conversionTrackingSetting_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.ConversionTrackingSetting, com.google.ads.googleads.v0.resources.ConversionTrackingSetting.Builder, com.google.ads.googleads.v0.resources.ConversionTrackingSettingOrBuilder> conversionTrackingSettingBuilder_;
+    /**
+     * <pre>
+     * Conversion tracking setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     */
+    public boolean hasConversionTrackingSetting() {
+      return conversionTrackingSettingBuilder_ != null || conversionTrackingSetting_ != null;
+    }
+    /**
+     * <pre>
+     * Conversion tracking setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     */
+    public com.google.ads.googleads.v0.resources.ConversionTrackingSetting getConversionTrackingSetting() {
+      if (conversionTrackingSettingBuilder_ == null) {
+        return conversionTrackingSetting_ == null ? com.google.ads.googleads.v0.resources.ConversionTrackingSetting.getDefaultInstance() : conversionTrackingSetting_;
+      } else {
+        return conversionTrackingSettingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Conversion tracking setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     */
+    public Builder setConversionTrackingSetting(com.google.ads.googleads.v0.resources.ConversionTrackingSetting value) {
+      if (conversionTrackingSettingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        conversionTrackingSetting_ = value;
+        onChanged();
+      } else {
+        conversionTrackingSettingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Conversion tracking setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     */
+    public Builder setConversionTrackingSetting(
+        com.google.ads.googleads.v0.resources.ConversionTrackingSetting.Builder builderForValue) {
+      if (conversionTrackingSettingBuilder_ == null) {
+        conversionTrackingSetting_ = builderForValue.build();
+        onChanged();
+      } else {
+        conversionTrackingSettingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Conversion tracking setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     */
+    public Builder mergeConversionTrackingSetting(com.google.ads.googleads.v0.resources.ConversionTrackingSetting value) {
+      if (conversionTrackingSettingBuilder_ == null) {
+        if (conversionTrackingSetting_ != null) {
+          conversionTrackingSetting_ =
+            com.google.ads.googleads.v0.resources.ConversionTrackingSetting.newBuilder(conversionTrackingSetting_).mergeFrom(value).buildPartial();
+        } else {
+          conversionTrackingSetting_ = value;
+        }
+        onChanged();
+      } else {
+        conversionTrackingSettingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Conversion tracking setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     */
+    public Builder clearConversionTrackingSetting() {
+      if (conversionTrackingSettingBuilder_ == null) {
+        conversionTrackingSetting_ = null;
+        onChanged();
+      } else {
+        conversionTrackingSetting_ = null;
+        conversionTrackingSettingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Conversion tracking setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     */
+    public com.google.ads.googleads.v0.resources.ConversionTrackingSetting.Builder getConversionTrackingSettingBuilder() {
+      
+      onChanged();
+      return getConversionTrackingSettingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Conversion tracking setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     */
+    public com.google.ads.googleads.v0.resources.ConversionTrackingSettingOrBuilder getConversionTrackingSettingOrBuilder() {
+      if (conversionTrackingSettingBuilder_ != null) {
+        return conversionTrackingSettingBuilder_.getMessageOrBuilder();
+      } else {
+        return conversionTrackingSetting_ == null ?
+            com.google.ads.googleads.v0.resources.ConversionTrackingSetting.getDefaultInstance() : conversionTrackingSetting_;
+      }
+    }
+    /**
+     * <pre>
+     * Conversion tracking setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.resources.ConversionTrackingSetting, com.google.ads.googleads.v0.resources.ConversionTrackingSetting.Builder, com.google.ads.googleads.v0.resources.ConversionTrackingSettingOrBuilder> 
+        getConversionTrackingSettingFieldBuilder() {
+      if (conversionTrackingSettingBuilder_ == null) {
+        conversionTrackingSettingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.resources.ConversionTrackingSetting, com.google.ads.googleads.v0.resources.ConversionTrackingSetting.Builder, com.google.ads.googleads.v0.resources.ConversionTrackingSettingOrBuilder>(
+                getConversionTrackingSetting(),
+                getParentForChildren(),
+                isClean());
+        conversionTrackingSetting_ = null;
+      }
+      return conversionTrackingSettingBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

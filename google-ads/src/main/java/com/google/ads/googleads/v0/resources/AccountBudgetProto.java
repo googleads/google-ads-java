@@ -104,12 +104,13 @@ public final class AccountBudgetProto {
       "\n\016spending_limitB\023\n\021proposed_end_timeB\023\n" +
       "\021approved_end_timeB\031\n\027proposed_spending_" +
       "limitB\031\n\027approved_spending_limitB\031\n\027adju" +
-      "sted_spending_limitB\327\001\n%com.google.ads.g" +
+      "sted_spending_limitB\377\001\n%com.google.ads.g" +
       "oogleads.v0.resourcesB\022AccountBudgetProt" +
       "oP\001ZJgoogle.golang.org/genproto/googleap" +
       "is/ads/googleads/v0/resources;resources\242" +
       "\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Resource" +
-      "s\312\002!Google\\Ads\\GoogleAds\\V0\\Resourcesb\006p" +
+      "s\312\002!Google\\Ads\\GoogleAds\\V0\\Resources\352\002%" +
+      "Google::Ads::GoogleAds::V0::Resourcesb\006p" +
       "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

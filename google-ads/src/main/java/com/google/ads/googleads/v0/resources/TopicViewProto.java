@@ -31,12 +31,13 @@ public final class TopicViewProto {
       "\n2google/ads/googleads/v0/resources/topi" +
       "c_view.proto\022!google.ads.googleads.v0.re" +
       "sources\"\"\n\tTopicView\022\025\n\rresource_name\030\001 " +
-      "\001(\tB\323\001\n%com.google.ads.googleads.v0.reso" +
+      "\001(\tB\373\001\n%com.google.ads.googleads.v0.reso" +
       "urcesB\016TopicViewProtoP\001ZJgoogle.golang.o" +
       "rg/genproto/googleapis/ads/googleads/v0/" +
       "resources;resources\242\002\003GAA\252\002!Google.Ads.G" +
       "oogleAds.V0.Resources\312\002!Google\\Ads\\Googl" +
-      "eAds\\V0\\Resourcesb\006proto3"
+      "eAds\\V0\\Resources\352\002%Google::Ads::GoogleA" +
+      "ds::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -39,12 +39,13 @@ public final class AccountBudgetServiceProto {
       "countBudgetRequest\0320.google.ads.googlead" +
       "s.v0.resources.AccountBudget\"8\202\323\344\223\0022\0220/v" +
       "0/{resource_name=customers/*/accountBudg" +
-      "ets/*}B\331\001\n$com.google.ads.googleads.v0.s" +
+      "ets/*}B\200\002\n$com.google.ads.googleads.v0.s" +
       "ervicesB\031AccountBudgetServiceProtoP\001ZHgo" +
       "ogle.golang.org/genproto/googleapis/ads/" +
       "googleads/v0/services;services\242\002\003GAA\252\002 G" +
       "oogle.Ads.GoogleAds.V0.Services\312\002 Google" +
-      "\\Ads\\GoogleAds\\V0\\Servicesb\006proto3"
+      "\\Ads\\GoogleAds\\V0\\Services\352\002$Google::Ads" +
+      "::GoogleAds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

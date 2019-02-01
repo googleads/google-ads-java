@@ -33,12 +33,13 @@ public final class FrequencyCapEventTypeProto {
       "eads.v0.enums\"r\n\031FrequencyCapEventTypeEn" +
       "um\"U\n\025FrequencyCapEventType\022\017\n\013UNSPECIFI" +
       "ED\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\nIMPRESSION\020\002\022\016\n\nVID" +
-      "EO_VIEW\020\003B\313\001\n!com.google.ads.googleads.v" +
+      "EO_VIEW\020\003B\357\001\n!com.google.ads.googleads.v" +
       "0.enumsB\032FrequencyCapEventTypeProtoP\001ZBg" +
       "oogle.golang.org/genproto/googleapis/ads" +
       "/googleads/v0/enums;enums\242\002\003GAA\252\002\035Google" +
       ".Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Goo" +
-      "gleAds\\V0\\Enumsb\006proto3"
+      "gleAds\\V0\\Enums\352\002!Google::Ads::GoogleAds" +
+      "::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -35,13 +35,14 @@ public final class CallConversionReportingStateProto {
       "rtingState\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001" +
       "\022\014\n\010DISABLED\020\002\022,\n(USE_ACCOUNT_LEVEL_CALL" +
       "_CONVERSION_ACTION\020\003\022-\n)USE_RESOURCE_LEV" +
-      "EL_CALL_CONVERSION_ACTION\020\004B\322\001\n!com.goog" +
+      "EL_CALL_CONVERSION_ACTION\020\004B\366\001\n!com.goog" +
       "le.ads.googleads.v0.enumsB!CallConversio" +
       "nReportingStateProtoP\001ZBgoogle.golang.or" +
       "g/genproto/googleapis/ads/googleads/v0/e" +
       "nums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds." +
       "V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums" +
-      "b\006proto3"
+      "\352\002!Google::Ads::GoogleAds::V0::Enumsb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

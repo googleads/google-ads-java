@@ -309,6 +309,20 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 194: {
+            com.google.ads.googleads.v0.common.VideoAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 24) {
+              subBuilder = ((com.google.ads.googleads.v0.common.VideoAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v0.common.VideoAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.VideoAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 24;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -366,6 +380,7 @@ private static final long serialVersionUID = 0L;
     SHOPPING_PRODUCT_AD(18),
     GMAIL_AD(21),
     IMAGE_AD(22),
+    VIDEO_AD(24),
     ADDATA_NOT_SET(0);
     private final int value;
     private AdDataCase(int value) {
@@ -392,6 +407,7 @@ private static final long serialVersionUID = 0L;
         case 18: return SHOPPING_PRODUCT_AD;
         case 21: return GMAIL_AD;
         case 22: return IMAGE_AD;
+        case 24: return VIDEO_AD;
         case 0: return ADDATA_NOT_SET;
         default: return null;
       }
@@ -1259,6 +1275,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.ImageAdInfo.getDefaultInstance();
   }
 
+  public static final int VIDEO_AD_FIELD_NUMBER = 24;
+  /**
+   * <pre>
+   * Details pertaining to a Video ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+   */
+  public boolean hasVideoAd() {
+    return adDataCase_ == 24;
+  }
+  /**
+   * <pre>
+   * Details pertaining to a Video ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+   */
+  public com.google.ads.googleads.v0.common.VideoAdInfo getVideoAd() {
+    if (adDataCase_ == 24) {
+       return (com.google.ads.googleads.v0.common.VideoAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v0.common.VideoAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to a Video ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+   */
+  public com.google.ads.googleads.v0.common.VideoAdInfoOrBuilder getVideoAdOrBuilder() {
+    if (adDataCase_ == 24) {
+       return (com.google.ads.googleads.v0.common.VideoAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v0.common.VideoAdInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1335,6 +1389,9 @@ private static final long serialVersionUID = 0L;
     }
     if (name_ != null) {
       output.writeMessage(23, getName());
+    }
+    if (adDataCase_ == 24) {
+      output.writeMessage(24, (com.google.ads.googleads.v0.common.VideoAdInfo) adData_);
     }
     unknownFields.writeTo(output);
   }
@@ -1428,6 +1485,10 @@ private static final long serialVersionUID = 0L;
     if (name_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(23, getName());
+    }
+    if (adDataCase_ == 24) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(24, (com.google.ads.googleads.v0.common.VideoAdInfo) adData_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1526,6 +1587,10 @@ private static final long serialVersionUID = 0L;
         result = result && getImageAd()
             .equals(other.getImageAd());
         break;
+      case 24:
+        result = result && getVideoAd()
+            .equals(other.getVideoAd());
+        break;
       case 0:
       default:
     }
@@ -1620,6 +1685,10 @@ private static final long serialVersionUID = 0L;
       case 22:
         hash = (37 * hash) + IMAGE_AD_FIELD_NUMBER;
         hash = (53 * hash) + getImageAd().hashCode();
+        break;
+      case 24:
+        hash = (37 * hash) + VIDEO_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getVideoAd().hashCode();
         break;
       case 0:
       default:
@@ -1977,6 +2046,13 @@ private static final long serialVersionUID = 0L;
           result.adData_ = imageAdBuilder_.build();
         }
       }
+      if (adDataCase_ == 24) {
+        if (videoAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = videoAdBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.adDataCase_ = adDataCase_;
       onBuilt();
@@ -2169,6 +2245,10 @@ private static final long serialVersionUID = 0L;
         }
         case IMAGE_AD: {
           mergeImageAd(other.getImageAd());
+          break;
+        }
+        case VIDEO_AD: {
+          mergeVideoAd(other.getVideoAd());
           break;
         }
         case ADDATA_NOT_SET: {
@@ -6110,6 +6190,178 @@ private static final long serialVersionUID = 0L;
       adDataCase_ = 22;
       onChanged();;
       return imageAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.VideoAdInfo, com.google.ads.googleads.v0.common.VideoAdInfo.Builder, com.google.ads.googleads.v0.common.VideoAdInfoOrBuilder> videoAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to a Video ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+     */
+    public boolean hasVideoAd() {
+      return adDataCase_ == 24;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+     */
+    public com.google.ads.googleads.v0.common.VideoAdInfo getVideoAd() {
+      if (videoAdBuilder_ == null) {
+        if (adDataCase_ == 24) {
+          return (com.google.ads.googleads.v0.common.VideoAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v0.common.VideoAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 24) {
+          return videoAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.VideoAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+     */
+    public Builder setVideoAd(com.google.ads.googleads.v0.common.VideoAdInfo value) {
+      if (videoAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        videoAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 24;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+     */
+    public Builder setVideoAd(
+        com.google.ads.googleads.v0.common.VideoAdInfo.Builder builderForValue) {
+      if (videoAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        videoAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 24;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+     */
+    public Builder mergeVideoAd(com.google.ads.googleads.v0.common.VideoAdInfo value) {
+      if (videoAdBuilder_ == null) {
+        if (adDataCase_ == 24 &&
+            adData_ != com.google.ads.googleads.v0.common.VideoAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v0.common.VideoAdInfo.newBuilder((com.google.ads.googleads.v0.common.VideoAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 24) {
+          videoAdBuilder_.mergeFrom(value);
+        }
+        videoAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 24;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+     */
+    public Builder clearVideoAd() {
+      if (videoAdBuilder_ == null) {
+        if (adDataCase_ == 24) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 24) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        videoAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+     */
+    public com.google.ads.googleads.v0.common.VideoAdInfo.Builder getVideoAdBuilder() {
+      return getVideoAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+     */
+    public com.google.ads.googleads.v0.common.VideoAdInfoOrBuilder getVideoAdOrBuilder() {
+      if ((adDataCase_ == 24) && (videoAdBuilder_ != null)) {
+        return videoAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 24) {
+          return (com.google.ads.googleads.v0.common.VideoAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v0.common.VideoAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Video ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.VideoAdInfo video_ad = 24;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.VideoAdInfo, com.google.ads.googleads.v0.common.VideoAdInfo.Builder, com.google.ads.googleads.v0.common.VideoAdInfoOrBuilder> 
+        getVideoAdFieldBuilder() {
+      if (videoAdBuilder_ == null) {
+        if (!(adDataCase_ == 24)) {
+          adData_ = com.google.ads.googleads.v0.common.VideoAdInfo.getDefaultInstance();
+        }
+        videoAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.VideoAdInfo, com.google.ads.googleads.v0.common.VideoAdInfo.Builder, com.google.ads.googleads.v0.common.VideoAdInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.VideoAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 24;
+      onChanged();;
+      return videoAdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

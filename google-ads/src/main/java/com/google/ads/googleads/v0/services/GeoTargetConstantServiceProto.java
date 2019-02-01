@@ -95,13 +95,13 @@ public final class GeoTargetConstantServiceProto {
       "tConstantsRequest\032C.google.ads.googleads" +
       ".v0.services.SuggestGeoTargetConstantsRe" +
       "sponse\")\202\323\344\223\002#\"\036/v0/geoTargetConstants:s" +
-      "uggest:\001*B\335\001\n$com.google.ads.googleads.v" +
+      "uggest:\001*B\204\002\n$com.google.ads.googleads.v" +
       "0.servicesB\035GeoTargetConstantServiceProt" +
       "oP\001ZHgoogle.golang.org/genproto/googleap" +
       "is/ads/googleads/v0/services;services\242\002\003" +
       "GAA\252\002 Google.Ads.GoogleAds.V0.Services\312\002" +
-      " Google\\Ads\\GoogleAds\\V0\\Servicesb\006proto" +
-      "3"
+      " Google\\Ads\\GoogleAds\\V0\\Services\352\002$Goog" +
+      "le::Ads::GoogleAds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

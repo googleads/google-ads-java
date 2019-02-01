@@ -46,12 +46,13 @@ public final class BillingSetupErrorProto {
       "\n\032PAYMENTS_PROFILE_NOT_FOUND\020\r\022\036\n\032PAYMEN" +
       "TS_ACCOUNT_NOT_FOUND\020\016\022\037\n\033PAYMENTS_PROFI" +
       "LE_INELIGIBLE\020\017\022\037\n\033PAYMENTS_ACCOUNT_INEL" +
-      "IGIBLE\020\020B\314\001\n\"com.google.ads.googleads.v0" +
+      "IGIBLE\020\020B\361\001\n\"com.google.ads.googleads.v0" +
       ".errorsB\026BillingSetupErrorProtoP\001ZDgoogl" +
       "e.golang.org/genproto/googleapis/ads/goo" +
       "gleads/v0/errors;errors\242\002\003GAA\252\002\036Google.A" +
       "ds.GoogleAds.V0.Errors\312\002\036Google\\Ads\\Goog" +
-      "leAds\\V0\\Errorsb\006proto3"
+      "leAds\\V0\\Errors\352\002\"Google::Ads::GoogleAds" +
+      "::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

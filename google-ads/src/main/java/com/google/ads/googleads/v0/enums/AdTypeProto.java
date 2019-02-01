@@ -37,12 +37,13 @@ public final class AdTypeProto {
       "XPANDED_DYNAMIC_SEARCH_AD\020\007\022\014\n\010HOTEL_AD\020" +
       "\010\022\025\n\021SHOPPING_SMART_AD\020\t\022\027\n\023SHOPPING_PRO" +
       "DUCT_AD\020\n\022\014\n\010VIDEO_AD\020\014\022\014\n\010GMAIL_AD\020\r\022\014\n" +
-      "\010IMAGE_AD\020\016B\274\001\n!com.google.ads.googleads" +
+      "\010IMAGE_AD\020\016B\340\001\n!com.google.ads.googleads" +
       ".v0.enumsB\013AdTypeProtoP\001ZBgoogle.golang." +
       "org/genproto/googleapis/ads/googleads/v0" +
       "/enums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAd" +
       "s.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enu" +
-      "msb\006proto3"
+      "ms\352\002!Google::Ads::GoogleAds::V0::Enumsb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

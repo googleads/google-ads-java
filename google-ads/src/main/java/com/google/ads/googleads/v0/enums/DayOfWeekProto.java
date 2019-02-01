@@ -33,12 +33,13 @@ public final class DayOfWeekProto {
       "\"\227\001\n\rDayOfWeekEnum\"\205\001\n\tDayOfWeek\022\017\n\013UNSP" +
       "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006MONDAY\020\002\022\013\n\007TU" +
       "ESDAY\020\003\022\r\n\tWEDNESDAY\020\004\022\014\n\010THURSDAY\020\005\022\n\n\006" +
-      "FRIDAY\020\006\022\014\n\010SATURDAY\020\007\022\n\n\006SUNDAY\020\010B\277\001\n!c" +
+      "FRIDAY\020\006\022\014\n\010SATURDAY\020\007\022\n\n\006SUNDAY\020\010B\343\001\n!c" +
       "om.google.ads.googleads.v0.enumsB\016DayOfW" +
       "eekProtoP\001ZBgoogle.golang.org/genproto/g" +
       "oogleapis/ads/googleads/v0/enums;enums\242\002" +
       "\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312\002\035G" +
-      "oogle\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "oogle\\Ads\\GoogleAds\\V0\\Enums\352\002!Google::A" +
+      "ds::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

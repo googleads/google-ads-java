@@ -35,12 +35,13 @@ public final class FieldErrorProto {
       "\022\023\n\017IMMUTABLE_FIELD\020\003\022\021\n\rINVALID_VALUE\020\004" +
       "\022\027\n\023VALUE_MUST_BE_UNSET\020\005\022\032\n\026REQUIRED_NO" +
       "NEMPTY_LIST\020\006\022\033\n\027FIELD_CANNOT_BE_CLEARED" +
-      "\020\007B\305\001\n\"com.google.ads.googleads.v0.error" +
+      "\020\007B\352\001\n\"com.google.ads.googleads.v0.error" +
       "sB\017FieldErrorProtoP\001ZDgoogle.golang.org/" +
       "genproto/googleapis/ads/googleads/v0/err" +
       "ors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds." +
       "V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Erro" +
-      "rsb\006proto3"
+      "rs\352\002\"Google::Ads::GoogleAds::V0::Errorsb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

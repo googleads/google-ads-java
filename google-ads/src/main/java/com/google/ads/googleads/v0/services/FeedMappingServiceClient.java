@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -216,7 +216,7 @@ public class FeedMappingServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final FeedMapping getFeedMapping(GetFeedMappingRequest request) {
+  public final FeedMapping getFeedMapping(GetFeedMappingRequest request) {
     return getFeedMappingCallable().call(request);
   }
 
@@ -240,6 +240,47 @@ public class FeedMappingServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetFeedMappingRequest, FeedMapping> getFeedMappingCallable() {
     return stub.getFeedMappingCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates or removes feed mappings. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;FeedMappingOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   boolean partialFailure = false;
+   *   boolean validateOnly = false;
+   *   MutateFeedMappingsResponse response = feedMappingServiceClient.mutateFeedMappings(customerId, operations, partialFailure, validateOnly);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer whose feed mappings are being modified.
+   * @param operations The list of operations to perform on individual feed mappings.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, all operations will be carried out in one transaction if and
+   *     only if they are all valid. Default is false.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateFeedMappingsResponse mutateFeedMappings(
+      String customerId,
+      List<FeedMappingOperation> operations,
+      boolean partialFailure,
+      boolean validateOnly) {
+
+    MutateFeedMappingsRequest request =
+        MutateFeedMappingsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllOperations(operations)
+            .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
+            .build();
+    return mutateFeedMappings(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

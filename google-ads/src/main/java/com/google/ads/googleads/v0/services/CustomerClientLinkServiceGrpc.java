@@ -67,6 +67,43 @@ public final class CustomerClientLinkServiceGrpc {
      }
      return getGetCustomerClientLinkMethod;
   }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getMutateCustomerClientLinkMethod()} instead. 
+  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest,
+      com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse> METHOD_MUTATE_CUSTOMER_CLIENT_LINK = getMutateCustomerClientLinkMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest,
+      com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse> getMutateCustomerClientLinkMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest,
+      com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse> getMutateCustomerClientLinkMethod() {
+    return getMutateCustomerClientLinkMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest,
+      com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse> getMutateCustomerClientLinkMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest, com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse> getMutateCustomerClientLinkMethod;
+    if ((getMutateCustomerClientLinkMethod = CustomerClientLinkServiceGrpc.getMutateCustomerClientLinkMethod) == null) {
+      synchronized (CustomerClientLinkServiceGrpc.class) {
+        if ((getMutateCustomerClientLinkMethod = CustomerClientLinkServiceGrpc.getMutateCustomerClientLinkMethod) == null) {
+          CustomerClientLinkServiceGrpc.getMutateCustomerClientLinkMethod = getMutateCustomerClientLinkMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest, com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v0.services.CustomerClientLinkService", "MutateCustomerClientLink"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CustomerClientLinkServiceMethodDescriptorSupplier("MutateCustomerClientLink"))
+                  .build();
+          }
+        }
+     }
+     return getMutateCustomerClientLinkMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -108,6 +145,16 @@ public final class CustomerClientLinkServiceGrpc {
       asyncUnimplementedUnaryCall(getGetCustomerClientLinkMethodHelper(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Creates or updates a customer client link. Operation statuses are returned.
+     * </pre>
+     */
+    public void mutateCustomerClientLink(com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getMutateCustomerClientLinkMethodHelper(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -117,6 +164,13 @@ public final class CustomerClientLinkServiceGrpc {
                 com.google.ads.googleads.v0.services.GetCustomerClientLinkRequest,
                 com.google.ads.googleads.v0.resources.CustomerClientLink>(
                   this, METHODID_GET_CUSTOMER_CLIENT_LINK)))
+          .addMethod(
+            getMutateCustomerClientLinkMethodHelper(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest,
+                com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse>(
+                  this, METHODID_MUTATE_CUSTOMER_CLIENT_LINK)))
           .build();
     }
   }
@@ -152,6 +206,17 @@ public final class CustomerClientLinkServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetCustomerClientLinkMethodHelper(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Creates or updates a customer client link. Operation statuses are returned.
+     * </pre>
+     */
+    public void mutateCustomerClientLink(com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getMutateCustomerClientLinkMethodHelper(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -183,6 +248,16 @@ public final class CustomerClientLinkServiceGrpc {
     public com.google.ads.googleads.v0.resources.CustomerClientLink getCustomerClientLink(com.google.ads.googleads.v0.services.GetCustomerClientLinkRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetCustomerClientLinkMethodHelper(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates or updates a customer client link. Operation statuses are returned.
+     * </pre>
+     */
+    public com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse mutateCustomerClientLink(com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getMutateCustomerClientLinkMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -217,9 +292,21 @@ public final class CustomerClientLinkServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetCustomerClientLinkMethodHelper(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Creates or updates a customer client link. Operation statuses are returned.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse> mutateCustomerClientLink(
+        com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getMutateCustomerClientLinkMethodHelper(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CUSTOMER_CLIENT_LINK = 0;
+  private static final int METHODID_MUTATE_CUSTOMER_CLIENT_LINK = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -241,6 +328,10 @@ public final class CustomerClientLinkServiceGrpc {
         case METHODID_GET_CUSTOMER_CLIENT_LINK:
           serviceImpl.getCustomerClientLink((com.google.ads.googleads.v0.services.GetCustomerClientLinkRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.resources.CustomerClientLink>) responseObserver);
+          break;
+        case METHODID_MUTATE_CUSTOMER_CLIENT_LINK:
+          serviceImpl.mutateCustomerClientLink((com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -304,6 +395,7 @@ public final class CustomerClientLinkServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CustomerClientLinkServiceFileDescriptorSupplier())
               .addMethod(getGetCustomerClientLinkMethodHelper())
+              .addMethod(getMutateCustomerClientLinkMethodHelper())
               .build();
         }
       }

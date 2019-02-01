@@ -34,13 +34,14 @@ public final class NewResourceCreationErrorProto {
       "onErrorEnum\"\217\001\n\030NewResourceCreationError" +
       "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\034\n\030CANNOT" +
       "_SET_ID_FOR_CREATE\020\002\022\026\n\022DUPLICATE_TEMP_I" +
-      "DS\020\003\022\037\n\033TEMP_ID_RESOURCE_HAD_ERRORS\020\004B\323\001" +
+      "DS\020\003\022\037\n\033TEMP_ID_RESOURCE_HAD_ERRORS\020\004B\370\001" +
       "\n\"com.google.ads.googleads.v0.errorsB\035Ne" +
       "wResourceCreationErrorProtoP\001ZDgoogle.go" +
       "lang.org/genproto/googleapis/ads/googlea" +
       "ds/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.G" +
       "oogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAd" +
-      "s\\V0\\Errorsb\006proto3"
+      "s\\V0\\Errors\352\002\"Google::Ads::GoogleAds::V0" +
+      "::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

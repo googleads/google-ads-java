@@ -33,13 +33,14 @@ public final class SharedCriterionErrorProto {
       "ads.v0.errors\"\204\001\n\030SharedCriterionErrorEn" +
       "um\"h\n\024SharedCriterionError\022\017\n\013UNSPECIFIE" +
       "D\020\000\022\013\n\007UNKNOWN\020\001\0222\n.CRITERION_TYPE_NOT_A" +
-      "LLOWED_FOR_SHARED_SET_TYPE\020\002B\317\001\n\"com.goo" +
+      "LLOWED_FOR_SHARED_SET_TYPE\020\002B\364\001\n\"com.goo" +
       "gle.ads.googleads.v0.errorsB\031SharedCrite" +
       "rionErrorProtoP\001ZDgoogle.golang.org/genp" +
       "roto/googleapis/ads/googleads/v0/errors;" +
       "errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.E" +
-      "rrors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006" +
-      "proto3"
+      "rrors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors\352\002" +
+      "\"Google::Ads::GoogleAds::V0::Errorsb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

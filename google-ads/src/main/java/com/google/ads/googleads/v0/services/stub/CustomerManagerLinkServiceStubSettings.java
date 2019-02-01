@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,8 @@ package com.google.ads.googleads.v0.services.stub;
 
 import com.google.ads.googleads.v0.resources.CustomerManagerLink;
 import com.google.ads.googleads.v0.services.GetCustomerManagerLinkRequest;
+import com.google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest;
+import com.google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse;
 import com.google.api.core.ApiFunction;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.GaxProperties;
@@ -77,11 +79,20 @@ public class CustomerManagerLinkServiceStubSettings
 
   private final UnaryCallSettings<GetCustomerManagerLinkRequest, CustomerManagerLink>
       getCustomerManagerLinkSettings;
+  private final UnaryCallSettings<
+          MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>
+      mutateCustomerManagerLinkSettings;
 
   /** Returns the object with the settings used for calls to getCustomerManagerLink. */
   public UnaryCallSettings<GetCustomerManagerLinkRequest, CustomerManagerLink>
       getCustomerManagerLinkSettings() {
     return getCustomerManagerLinkSettings;
+  }
+
+  /** Returns the object with the settings used for calls to mutateCustomerManagerLink. */
+  public UnaryCallSettings<MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>
+      mutateCustomerManagerLinkSettings() {
+    return mutateCustomerManagerLinkSettings;
   }
 
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
@@ -153,6 +164,7 @@ public class CustomerManagerLinkServiceStubSettings
     super(settingsBuilder);
 
     getCustomerManagerLinkSettings = settingsBuilder.getCustomerManagerLinkSettings().build();
+    mutateCustomerManagerLinkSettings = settingsBuilder.mutateCustomerManagerLinkSettings().build();
   }
 
   /** Builder for CustomerManagerLinkServiceStubSettings. */
@@ -162,6 +174,9 @@ public class CustomerManagerLinkServiceStubSettings
 
     private final UnaryCallSettings.Builder<GetCustomerManagerLinkRequest, CustomerManagerLink>
         getCustomerManagerLinkSettings;
+    private final UnaryCallSettings.Builder<
+            MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>
+        mutateCustomerManagerLinkSettings;
 
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
@@ -206,8 +221,11 @@ public class CustomerManagerLinkServiceStubSettings
 
       getCustomerManagerLinkSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
+      mutateCustomerManagerLinkSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(getCustomerManagerLinkSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              getCustomerManagerLinkSettings, mutateCustomerManagerLinkSettings);
 
       initDefaults(this);
     }
@@ -228,6 +246,11 @@ public class CustomerManagerLinkServiceStubSettings
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
+      builder
+          .mutateCustomerManagerLinkSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
+
       return builder;
     }
 
@@ -235,9 +258,11 @@ public class CustomerManagerLinkServiceStubSettings
       super(settings);
 
       getCustomerManagerLinkSettings = settings.getCustomerManagerLinkSettings.toBuilder();
+      mutateCustomerManagerLinkSettings = settings.mutateCustomerManagerLinkSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(getCustomerManagerLinkSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              getCustomerManagerLinkSettings, mutateCustomerManagerLinkSettings);
     }
 
     // NEXT_MAJOR_VER: remove 'throws Exception'
@@ -260,6 +285,13 @@ public class CustomerManagerLinkServiceStubSettings
     public UnaryCallSettings.Builder<GetCustomerManagerLinkRequest, CustomerManagerLink>
         getCustomerManagerLinkSettings() {
       return getCustomerManagerLinkSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to mutateCustomerManagerLink. */
+    public UnaryCallSettings.Builder<
+            MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>
+        mutateCustomerManagerLinkSettings() {
+      return mutateCustomerManagerLinkSettings;
     }
 
     @Override

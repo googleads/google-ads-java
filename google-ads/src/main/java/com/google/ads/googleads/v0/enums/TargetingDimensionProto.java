@@ -35,12 +35,13 @@ public final class TargetingDimensionProto {
       "NKNOWN\020\001\022\013\n\007KEYWORD\020\002\022\014\n\010AUDIENCE\020\003\022\t\n\005T" +
       "OPIC\020\004\022\n\n\006GENDER\020\005\022\r\n\tAGE_RANGE\020\006\022\r\n\tPLA" +
       "CEMENT\020\007\022\023\n\017PARENTAL_STATUS\020\010\022\020\n\014INCOME_" +
-      "RANGE\020\tB\310\001\n!com.google.ads.googleads.v0." +
+      "RANGE\020\tB\354\001\n!com.google.ads.googleads.v0." +
       "enumsB\027TargetingDimensionProtoP\001ZBgoogle" +
       ".golang.org/genproto/googleapis/ads/goog" +
       "leads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads." +
       "GoogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleAd" +
-      "s\\V0\\Enumsb\006proto3"
+      "s\\V0\\Enums\352\002!Google::Ads::GoogleAds::V0:" +
+      ":Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -41,13 +41,13 @@ public final class EducationPlaceholderFieldProto {
       "AL_MOBILE_URLS\020\014\022\020\n\014TRACKING_URL\020\r\022\027\n\023CO" +
       "NTEXTUAL_KEYWORDS\020\016\022\024\n\020ANDROID_APP_LINK\020" +
       "\017\022\027\n\023SIMILAR_PROGRAM_IDS\020\020\022\020\n\014IOS_APP_LI" +
-      "NK\020\021\022\024\n\020IOS_APP_STORE_ID\020\022B\317\001\n!com.googl" +
+      "NK\020\021\022\024\n\020IOS_APP_STORE_ID\020\022B\363\001\n!com.googl" +
       "e.ads.googleads.v0.enumsB\036EducationPlace" +
       "holderFieldProtoP\001ZBgoogle.golang.org/ge" +
       "nproto/googleapis/ads/googleads/v0/enums" +
       ";enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.E" +
-      "nums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006pr" +
-      "oto3"
+      "nums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!G" +
+      "oogle::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -39,12 +39,13 @@ public final class CarrierConstantServiceProto {
       "ices.GetCarrierConstantRequest\0322.google." +
       "ads.googleads.v0.resources.CarrierConsta" +
       "nt\".\202\323\344\223\002(\022&/v0/{resource_name=carrierCo" +
-      "nstants/*}B\333\001\n$com.google.ads.googleads." +
+      "nstants/*}B\202\002\n$com.google.ads.googleads." +
       "v0.servicesB\033CarrierConstantServiceProto" +
       "P\001ZHgoogle.golang.org/genproto/googleapi" +
       "s/ads/googleads/v0/services;services\242\002\003G" +
       "AA\252\002 Google.Ads.GoogleAds.V0.Services\312\002 " +
-      "Google\\Ads\\GoogleAds\\V0\\Servicesb\006proto3"
+      "Google\\Ads\\GoogleAds\\V0\\Services\352\002$Googl" +
+      "e::Ads::GoogleAds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

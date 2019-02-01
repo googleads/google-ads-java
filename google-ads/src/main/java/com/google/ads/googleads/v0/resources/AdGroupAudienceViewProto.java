@@ -31,12 +31,13 @@ public final class AdGroupAudienceViewProto {
       "\n>google/ads/googleads/v0/resources/ad_g" +
       "roup_audience_view.proto\022!google.ads.goo" +
       "gleads.v0.resources\",\n\023AdGroupAudienceVi" +
-      "ew\022\025\n\rresource_name\030\001 \001(\tB\335\001\n%com.google" +
+      "ew\022\025\n\rresource_name\030\001 \001(\tB\205\002\n%com.google" +
       ".ads.googleads.v0.resourcesB\030AdGroupAudi" +
       "enceViewProtoP\001ZJgoogle.golang.org/genpr" +
       "oto/googleapis/ads/googleads/v0/resource" +
       "s;resources\242\002\003GAA\252\002!Google.Ads.GoogleAds" +
       ".V0.Resources\312\002!Google\\Ads\\GoogleAds\\V0\\" +
+      "Resources\352\002%Google::Ads::GoogleAds::V0::" +
       "Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

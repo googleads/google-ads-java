@@ -53,13 +53,14 @@ public final class GoogleAdsFieldProto {
       "ds.v0.enums.GoogleAdsFieldDataTypeEnum.G" +
       "oogleAdsFieldDataType\022.\n\010type_url\030\r \001(\0132" +
       "\034.google.protobuf.StringValue\022/\n\013is_repe" +
-      "ated\030\016 \001(\0132\032.google.protobuf.BoolValueB\330" +
-      "\001\n%com.google.ads.googleads.v0.resources" +
+      "ated\030\016 \001(\0132\032.google.protobuf.BoolValueB\200" +
+      "\002\n%com.google.ads.googleads.v0.resources" +
       "B\023GoogleAdsFieldProtoP\001ZJgoogle.golang.o" +
       "rg/genproto/googleapis/ads/googleads/v0/" +
       "resources;resources\242\002\003GAA\252\002!Google.Ads.G" +
       "oogleAds.V0.Resources\312\002!Google\\Ads\\Googl" +
-      "eAds\\V0\\Resourcesb\006proto3"
+      "eAds\\V0\\Resources\352\002%Google::Ads::GoogleA" +
+      "ds::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

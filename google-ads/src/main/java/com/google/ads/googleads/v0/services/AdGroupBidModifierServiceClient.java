@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -227,7 +227,7 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final AdGroupBidModifier getAdGroupBidModifier(GetAdGroupBidModifierRequest request) {
+  public final AdGroupBidModifier getAdGroupBidModifier(GetAdGroupBidModifierRequest request) {
     return getAdGroupBidModifierCallable().call(request);
   }
 
@@ -252,6 +252,47 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
   public final UnaryCallable<GetAdGroupBidModifierRequest, AdGroupBidModifier>
       getAdGroupBidModifierCallable() {
     return stub.getAdGroupBidModifierCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates, updates, or removes ad group bid modifiers. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient = AdGroupBidModifierServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;AdGroupBidModifierOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   boolean partialFailure = false;
+   *   boolean validateOnly = false;
+   *   MutateAdGroupBidModifiersResponse response = adGroupBidModifierServiceClient.mutateAdGroupBidModifiers(customerId, operations, partialFailure, validateOnly);
+   * }
+   * </code></pre>
+   *
+   * @param customerId ID of the customer whose ad group bid modifiers are being modified.
+   * @param operations The list of operations to perform on individual ad group bid modifiers.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, all operations will be carried out in one transaction if and
+   *     only if they are all valid. Default is false.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateAdGroupBidModifiersResponse mutateAdGroupBidModifiers(
+      String customerId,
+      List<AdGroupBidModifierOperation> operations,
+      boolean partialFailure,
+      boolean validateOnly) {
+
+    MutateAdGroupBidModifiersRequest request =
+        MutateAdGroupBidModifiersRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllOperations(operations)
+            .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
+            .build();
+    return mutateAdGroupBidModifiers(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

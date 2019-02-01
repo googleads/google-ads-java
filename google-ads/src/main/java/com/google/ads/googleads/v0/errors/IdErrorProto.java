@@ -31,12 +31,13 @@ public final class IdErrorProto {
       "\n-google/ads/googleads/v0/errors/id_erro" +
       "r.proto\022\036google.ads.googleads.v0.errors\"" +
       "E\n\013IdErrorEnum\"6\n\007IdError\022\017\n\013UNSPECIFIED" +
-      "\020\000\022\013\n\007UNKNOWN\020\001\022\r\n\tNOT_FOUND\020\002B\302\001\n\"com.g" +
+      "\020\000\022\013\n\007UNKNOWN\020\001\022\r\n\tNOT_FOUND\020\002B\347\001\n\"com.g" +
       "oogle.ads.googleads.v0.errorsB\014IdErrorPr" +
       "otoP\001ZDgoogle.golang.org/genproto/google" +
       "apis/ads/googleads/v0/errors;errors\242\002\003GA" +
       "A\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Goo" +
-      "gle\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "gle\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::Ad" +
+      "s::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

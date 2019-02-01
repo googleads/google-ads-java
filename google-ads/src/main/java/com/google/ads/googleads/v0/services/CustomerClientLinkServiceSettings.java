@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -66,6 +66,13 @@ public class CustomerClientLinkServiceSettings
       getCustomerClientLinkSettings() {
     return ((CustomerClientLinkServiceStubSettings) getStubSettings())
         .getCustomerClientLinkSettings();
+  }
+
+  /** Returns the object with the settings used for calls to mutateCustomerClientLink. */
+  public UnaryCallSettings<MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>
+      mutateCustomerClientLinkSettings() {
+    return ((CustomerClientLinkServiceStubSettings) getStubSettings())
+        .mutateCustomerClientLinkSettings();
   }
 
   public static final CustomerClientLinkServiceSettings create(
@@ -170,6 +177,13 @@ public class CustomerClientLinkServiceSettings
     public UnaryCallSettings.Builder<GetCustomerClientLinkRequest, CustomerClientLink>
         getCustomerClientLinkSettings() {
       return getStubSettingsBuilder().getCustomerClientLinkSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to mutateCustomerClientLink. */
+    public UnaryCallSettings.Builder<
+            MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>
+        mutateCustomerClientLinkSettings() {
+      return getStubSettingsBuilder().mutateCustomerClientLinkSettings();
     }
 
     @Override

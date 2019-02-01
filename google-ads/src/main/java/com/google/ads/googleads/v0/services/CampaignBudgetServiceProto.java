@@ -53,39 +53,43 @@ public final class CampaignBudgetServiceProto {
       "gleads.v0.services\0327google/ads/googleads" +
       "/v0/resources/campaign_budget.proto\032\034goo" +
       "gle/api/annotations.proto\032 google/protob" +
-      "uf/field_mask.proto\"1\n\030GetCampaignBudget" +
-      "Request\022\025\n\rresource_name\030\001 \001(\t\"\202\001\n\034Mutat" +
-      "eCampaignBudgetsRequest\022\023\n\013customer_id\030\001" +
-      " \001(\t\022M\n\noperations\030\002 \003(\01329.google.ads.go" +
-      "ogleads.v0.services.CampaignBudgetOperat" +
-      "ion\"\363\001\n\027CampaignBudgetOperation\022/\n\013updat" +
-      "e_mask\030\004 \001(\0132\032.google.protobuf.FieldMask" +
-      "\022C\n\006create\030\001 \001(\01321.google.ads.googleads." +
-      "v0.resources.CampaignBudgetH\000\022C\n\006update\030" +
-      "\002 \001(\01321.google.ads.googleads.v0.resource" +
-      "s.CampaignBudgetH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\t" +
-      "operation\"n\n\035MutateCampaignBudgetsRespon" +
-      "se\022M\n\007results\030\002 \003(\0132<.google.ads.googlea" +
-      "ds.v0.services.MutateCampaignBudgetResul" +
-      "t\"3\n\032MutateCampaignBudgetResult\022\025\n\rresou" +
-      "rce_name\030\001 \001(\t2\263\003\n\025CampaignBudgetService" +
-      "\022\275\001\n\021GetCampaignBudget\022:.google.ads.goog" +
-      "leads.v0.services.GetCampaignBudgetReque" +
-      "st\0321.google.ads.googleads.v0.resources.C" +
-      "ampaignBudget\"9\202\323\344\223\0023\0221/v0/{resource_nam" +
-      "e=customers/*/campaignBudgets/*}\022\331\001\n\025Mut" +
-      "ateCampaignBudgets\022>.google.ads.googlead" +
-      "s.v0.services.MutateCampaignBudgetsReque" +
-      "st\032?.google.ads.googleads.v0.services.Mu" +
-      "tateCampaignBudgetsResponse\"?\202\323\344\223\0029\"4/v0" +
-      "/customers/{customer_id=*}/campaignBudge" +
-      "ts:mutate:\001*B\332\001\n$com.google.ads.googlead" +
-      "s.v0.servicesB\032CampaignBudgetServiceProt" +
-      "oP\001ZHgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v0/services;services\242\002\003" +
-      "GAA\252\002 Google.Ads.GoogleAds.V0.Services\312\002" +
-      " Google\\Ads\\GoogleAds\\V0\\Servicesb\006proto" +
-      "3"
+      "uf/field_mask.proto\032\036google/protobuf/wra" +
+      "ppers.proto\032\027google/rpc/status.proto\"1\n\030" +
+      "GetCampaignBudgetRequest\022\025\n\rresource_nam" +
+      "e\030\001 \001(\t\"\262\001\n\034MutateCampaignBudgetsRequest" +
+      "\022\023\n\013customer_id\030\001 \001(\t\022M\n\noperations\030\002 \003(" +
+      "\01329.google.ads.googleads.v0.services.Cam" +
+      "paignBudgetOperation\022\027\n\017partial_failure\030" +
+      "\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\363\001\n\027Campaig" +
+      "nBudgetOperation\022/\n\013update_mask\030\004 \001(\0132\032." +
+      "google.protobuf.FieldMask\022C\n\006create\030\001 \001(" +
+      "\01321.google.ads.googleads.v0.resources.Ca" +
+      "mpaignBudgetH\000\022C\n\006update\030\002 \001(\01321.google." +
+      "ads.googleads.v0.resources.CampaignBudge" +
+      "tH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\241\001\n\035M" +
+      "utateCampaignBudgetsResponse\0221\n\025partial_" +
+      "failure_error\030\003 \001(\0132\022.google.rpc.Status\022" +
+      "M\n\007results\030\002 \003(\0132<.google.ads.googleads." +
+      "v0.services.MutateCampaignBudgetResult\"3" +
+      "\n\032MutateCampaignBudgetResult\022\025\n\rresource" +
+      "_name\030\001 \001(\t2\263\003\n\025CampaignBudgetService\022\275\001" +
+      "\n\021GetCampaignBudget\022:.google.ads.googlea" +
+      "ds.v0.services.GetCampaignBudgetRequest\032" +
+      "1.google.ads.googleads.v0.resources.Camp" +
+      "aignBudget\"9\202\323\344\223\0023\0221/v0/{resource_name=c" +
+      "ustomers/*/campaignBudgets/*}\022\331\001\n\025Mutate" +
+      "CampaignBudgets\022>.google.ads.googleads.v" +
+      "0.services.MutateCampaignBudgetsRequest\032" +
+      "?.google.ads.googleads.v0.services.Mutat" +
+      "eCampaignBudgetsResponse\"?\202\323\344\223\0029\"4/v0/cu" +
+      "stomers/{customer_id=*}/campaignBudgets:" +
+      "mutate:\001*B\201\002\n$com.google.ads.googleads.v" +
+      "0.servicesB\032CampaignBudgetServiceProtoP\001" +
+      "ZHgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v0/services;services\242\002\003GAA" +
+      "\252\002 Google.Ads.GoogleAds.V0.Services\312\002 Go" +
+      "ogle\\Ads\\GoogleAds\\V0\\Services\352\002$Google:" +
+      ":Ads::GoogleAds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -101,6 +105,8 @@ public final class CampaignBudgetServiceProto {
           com.google.ads.googleads.v0.resources.CampaignBudgetProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_services_GetCampaignBudgetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -113,7 +119,7 @@ public final class CampaignBudgetServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateCampaignBudgetsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateCampaignBudgetsRequest_descriptor,
-        new java.lang.String[] { "CustomerId", "Operations", });
+        new java.lang.String[] { "CustomerId", "Operations", "PartialFailure", "ValidateOnly", });
     internal_static_google_ads_googleads_v0_services_CampaignBudgetOperation_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v0_services_CampaignBudgetOperation_fieldAccessorTable = new
@@ -125,7 +131,7 @@ public final class CampaignBudgetServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateCampaignBudgetsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateCampaignBudgetsResponse_descriptor,
-        new java.lang.String[] { "Results", });
+        new java.lang.String[] { "PartialFailureError", "Results", });
     internal_static_google_ads_googleads_v0_services_MutateCampaignBudgetResult_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_google_ads_googleads_v0_services_MutateCampaignBudgetResult_fieldAccessorTable = new
@@ -140,6 +146,8 @@ public final class CampaignBudgetServiceProto {
     com.google.ads.googleads.v0.resources.CampaignBudgetProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

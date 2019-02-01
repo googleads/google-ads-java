@@ -38,12 +38,13 @@ public final class AdGroupAdErrorProto {
       "_ON_REMOVED_ADGROUPAD\020\005\022 \n\034CANNOT_CREATE" +
       "_DEPRECATED_ADS\020\006\022\032\n\026CANNOT_CREATE_TEXT_" +
       "ADS\020\007\022\017\n\013EMPTY_FIELD\020\010\022\'\n#RESOURCE_REFER" +
-      "ENCED_IN_MULTIPLE_OPS\020\tB\311\001\n\"com.google.a" +
+      "ENCED_IN_MULTIPLE_OPS\020\tB\356\001\n\"com.google.a" +
       "ds.googleads.v0.errorsB\023AdGroupAdErrorPr" +
       "otoP\001ZDgoogle.golang.org/genproto/google" +
       "apis/ads/googleads/v0/errors;errors\242\002\003GA" +
       "A\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Goo" +
-      "gle\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "gle\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::Ad" +
+      "s::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

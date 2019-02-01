@@ -38,13 +38,14 @@ public final class KeywordViewServiceProto {
       "ds.googleads.v0.services.GetKeywordViewR" +
       "equest\032..google.ads.googleads.v0.resourc" +
       "es.KeywordView\"6\202\323\344\223\0020\022./v0/{resource_na" +
-      "me=customers/*/keywordViews/*}B\327\001\n$com.g" +
+      "me=customers/*/keywordViews/*}B\376\001\n$com.g" +
       "oogle.ads.googleads.v0.servicesB\027Keyword" +
       "ViewServiceProtoP\001ZHgoogle.golang.org/ge" +
       "nproto/googleapis/ads/googleads/v0/servi" +
       "ces;services\242\002\003GAA\252\002 Google.Ads.GoogleAd" +
       "s.V0.Services\312\002 Google\\Ads\\GoogleAds\\V0\\" +
-      "Servicesb\006proto3"
+      "Services\352\002$Google::Ads::GoogleAds::V0::S" +
+      "ervicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

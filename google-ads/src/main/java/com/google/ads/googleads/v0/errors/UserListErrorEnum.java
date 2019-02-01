@@ -217,7 +217,8 @@ private static final long serialVersionUID = 0L;
     OWNERSHIP_REQUIRED_FOR_SET(15),
     /**
      * <pre>
-     * The user list of the type is not mutable.
+     * Creating user list without setting type in oneof user_list field, or
+     * creating/updating read-only user list types is not allowed.
      * </pre>
      *
      * <code>USER_LIST_MUTATE_NOT_SUPPORTED = 16;</code>
@@ -291,6 +292,31 @@ private static final long serialVersionUID = 0L;
      * <code>ADVERTISER_NOT_WHITELISTED_FOR_USING_UPLOADED_DATA = 33;</code>
      */
     ADVERTISER_NOT_WHITELISTED_FOR_USING_UPLOADED_DATA(33),
+    /**
+     * <pre>
+     * The provided rule_type is not supported for the user list.
+     * </pre>
+     *
+     * <code>RULE_TYPE_IS_NOT_SUPPORTED = 34;</code>
+     */
+    RULE_TYPE_IS_NOT_SUPPORTED(34),
+    /**
+     * <pre>
+     * Similar user list cannot be used as a logical user list operand.
+     * </pre>
+     *
+     * <code>CAN_NOT_ADD_A_SIMILAR_USERLIST_AS_LOGICAL_LIST_OPERAND = 35;</code>
+     */
+    CAN_NOT_ADD_A_SIMILAR_USERLIST_AS_LOGICAL_LIST_OPERAND(35),
+    /**
+     * <pre>
+     * Logical user list should not have a mix of CRM based user list and other
+     * types of lists in its rules.
+     * </pre>
+     *
+     * <code>CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LISTS = 36;</code>
+     */
+    CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LISTS(36),
     UNRECOGNIZED(-1),
     ;
 
@@ -425,7 +451,8 @@ private static final long serialVersionUID = 0L;
     public static final int OWNERSHIP_REQUIRED_FOR_SET_VALUE = 15;
     /**
      * <pre>
-     * The user list of the type is not mutable.
+     * Creating user list without setting type in oneof user_list field, or
+     * creating/updating read-only user list types is not allowed.
      * </pre>
      *
      * <code>USER_LIST_MUTATE_NOT_SUPPORTED = 16;</code>
@@ -499,6 +526,31 @@ private static final long serialVersionUID = 0L;
      * <code>ADVERTISER_NOT_WHITELISTED_FOR_USING_UPLOADED_DATA = 33;</code>
      */
     public static final int ADVERTISER_NOT_WHITELISTED_FOR_USING_UPLOADED_DATA_VALUE = 33;
+    /**
+     * <pre>
+     * The provided rule_type is not supported for the user list.
+     * </pre>
+     *
+     * <code>RULE_TYPE_IS_NOT_SUPPORTED = 34;</code>
+     */
+    public static final int RULE_TYPE_IS_NOT_SUPPORTED_VALUE = 34;
+    /**
+     * <pre>
+     * Similar user list cannot be used as a logical user list operand.
+     * </pre>
+     *
+     * <code>CAN_NOT_ADD_A_SIMILAR_USERLIST_AS_LOGICAL_LIST_OPERAND = 35;</code>
+     */
+    public static final int CAN_NOT_ADD_A_SIMILAR_USERLIST_AS_LOGICAL_LIST_OPERAND_VALUE = 35;
+    /**
+     * <pre>
+     * Logical user list should not have a mix of CRM based user list and other
+     * types of lists in its rules.
+     * </pre>
+     *
+     * <code>CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LISTS = 36;</code>
+     */
+    public static final int CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LISTS_VALUE = 36;
 
 
     public final int getNumber() {
@@ -544,6 +596,9 @@ private static final long serialVersionUID = 0L;
         case 31: return APP_ID_NOT_SET;
         case 32: return USERLIST_NAME_IS_RESERVED_FOR_SYSTEM_LIST;
         case 33: return ADVERTISER_NOT_WHITELISTED_FOR_USING_UPLOADED_DATA;
+        case 34: return RULE_TYPE_IS_NOT_SUPPORTED;
+        case 35: return CAN_NOT_ADD_A_SIMILAR_USERLIST_AS_LOGICAL_LIST_OPERAND;
+        case 36: return CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LISTS;
         default: return null;
       }
     }

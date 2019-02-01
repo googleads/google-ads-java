@@ -43,12 +43,13 @@ public final class SharedSetProto {
       "edSetStatusEnum.SharedSetStatus\0221\n\014membe" +
       "r_count\030\006 \001(\0132\033.google.protobuf.Int64Val" +
       "ue\0224\n\017reference_count\030\007 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\323\001\n%com.google.ads.goog" +
+      "tobuf.Int64ValueB\373\001\n%com.google.ads.goog" +
       "leads.v0.resourcesB\016SharedSetProtoP\001ZJgo" +
       "ogle.golang.org/genproto/googleapis/ads/" +
       "googleads/v0/resources;resources\242\002\003GAA\252\002" +
       "!Google.Ads.GoogleAds.V0.Resources\312\002!Goo" +
-      "gle\\Ads\\GoogleAds\\V0\\Resourcesb\006proto3"
+      "gle\\Ads\\GoogleAds\\V0\\Resources\352\002%Google:" +
+      ":Ads::GoogleAds::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

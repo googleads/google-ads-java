@@ -39,12 +39,13 @@ public final class PaymentsAccountProto {
       "alue\0229\n\023payments_profile_id\030\005 \001(\0132\034.goog" +
       "le.protobuf.StringValue\022C\n\035secondary_pay" +
       "ments_profile_id\030\006 \001(\0132\034.google.protobuf" +
-      ".StringValueB\331\001\n%com.google.ads.googlead" +
+      ".StringValueB\201\002\n%com.google.ads.googlead" +
       "s.v0.resourcesB\024PaymentsAccountProtoP\001ZJ" +
       "google.golang.org/genproto/googleapis/ad" +
       "s/googleads/v0/resources;resources\242\002\003GAA" +
       "\252\002!Google.Ads.GoogleAds.V0.Resources\312\002!G" +
-      "oogle\\Ads\\GoogleAds\\V0\\Resourcesb\006proto3"
+      "oogle\\Ads\\GoogleAds\\V0\\Resources\352\002%Googl" +
+      "e::Ads::GoogleAds::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

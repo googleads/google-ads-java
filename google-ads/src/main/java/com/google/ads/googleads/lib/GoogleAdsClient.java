@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.lib;
 
+import com.google.ads.googleads.lib.logging.LoggingInterceptor;
+import com.google.ads.googleads.lib.logging.RequestLogger;
 import com.google.ads.googleads.v0.services.AccountBudgetProposalServiceClient;
 import com.google.ads.googleads.v0.services.AccountBudgetServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupAdServiceClient;
@@ -22,6 +24,8 @@ import com.google.ads.googleads.v0.services.AdGroupBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupFeedServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
+import com.google.ads.googleads.v0.services.AdParameterServiceClient;
+import com.google.ads.googleads.v0.services.AdScheduleViewServiceClient;
 import com.google.ads.googleads.v0.services.AgeRangeViewServiceClient;
 import com.google.ads.googleads.v0.services.BiddingStrategyServiceClient;
 import com.google.ads.googleads.v0.services.BillingSetupServiceClient;
@@ -30,7 +34,6 @@ import com.google.ads.googleads.v0.services.CampaignBidModifierServiceClient;
 import com.google.ads.googleads.v0.services.CampaignBudgetServiceClient;
 import com.google.ads.googleads.v0.services.CampaignCriterionServiceClient;
 import com.google.ads.googleads.v0.services.CampaignFeedServiceClient;
-import com.google.ads.googleads.v0.services.CampaignGroupServiceClient;
 import com.google.ads.googleads.v0.services.CampaignServiceClient;
 import com.google.ads.googleads.v0.services.CampaignSharedSetServiceClient;
 import com.google.ads.googleads.v0.services.CarrierConstantServiceClient;
@@ -61,10 +64,14 @@ import com.google.ads.googleads.v0.services.KeywordViewServiceClient;
 import com.google.ads.googleads.v0.services.LanguageConstantServiceClient;
 import com.google.ads.googleads.v0.services.ManagedPlacementViewServiceClient;
 import com.google.ads.googleads.v0.services.MediaFileServiceClient;
+import com.google.ads.googleads.v0.services.MobileAppCategoryConstantServiceClient;
+import com.google.ads.googleads.v0.services.MobileDeviceConstantServiceClient;
+import com.google.ads.googleads.v0.services.OperatingSystemVersionConstantServiceClient;
 import com.google.ads.googleads.v0.services.ParentalStatusViewServiceClient;
 import com.google.ads.googleads.v0.services.PaymentsAccountServiceClient;
 import com.google.ads.googleads.v0.services.ProductGroupViewServiceClient;
 import com.google.ads.googleads.v0.services.RecommendationServiceClient;
+import com.google.ads.googleads.v0.services.RemarketingActionServiceClient;
 import com.google.ads.googleads.v0.services.SearchTermViewServiceClient;
 import com.google.ads.googleads.v0.services.SharedCriterionServiceClient;
 import com.google.ads.googleads.v0.services.SharedSetServiceClient;
@@ -74,16 +81,15 @@ import com.google.ads.googleads.v0.services.UserInterestServiceClient;
 import com.google.ads.googleads.v0.services.UserListServiceClient;
 import com.google.ads.googleads.v0.services.VideoServiceClient;
 import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
-import com.google.api.gax.rpc.FixedHeaderProvider;
 import com.google.api.gax.rpc.TransportChannel;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.auth.Credentials;
 import com.google.auth.oauth2.UserCredentials;
 import com.google.auto.value.AutoValue;
-import com.google.auto.value.extension.memoized.Memoized;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import java.io.File;
 import java.io.FileInputStream;
@@ -92,8 +98,8 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ScheduledExecutorService;
-import javax.annotation.Nullable;
 import java.util.function.Supplier;
+import javax.annotation.Nullable;
 import javax.annotation.concurrent.Immutable;
 import javax.annotation.concurrent.ThreadSafe;
 
@@ -115,8 +121,8 @@ import javax.annotation.concurrent.ThreadSafe;
  * </code>
  * </pre>
  *
- * <p>If further customization of service clients or service settings is required, this class can be
- * used as a {@link TransportChannelProvider} to simplify the instantiation of subclasses of
+ * <p>If further customization of service clients or service settings is required, this class can
+ * be used as a {@link TransportChannelProvider} to simplify the instantiation of subclasses of
  * com.google.api.gax.grpc.ClientSettings, as shown in the following example.
  *
  * <pre>
@@ -144,7 +150,18 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
 
   /** Returns a new builder for {@link GoogleAdsClient} with only default values set. */
   public static Builder newBuilder() {
-    return new AutoValue_GoogleAdsClient.Builder().setEndpoint(DEFAULT_ENDPOINT);
+    AutoValue_GoogleAdsClient.Builder clientBuilder = new AutoValue_GoogleAdsClient.Builder();
+    InstantiatingGrpcChannelProvider transportChannelProvider = InstantiatingGrpcChannelProvider
+        .newBuilder()
+        .setInterceptorProvider(
+            () -> ImmutableList.of(new LoggingInterceptor(new RequestLogger(),
+                clientBuilder.getHeaders(),
+                clientBuilder.getEndpoint())))
+        .build();
+    clientBuilder
+        .setEndpoint(DEFAULT_ENDPOINT)
+        .setTransportChannelProvider(transportChannelProvider);
+    return clientBuilder;
   }
 
   /** Returns the credentials for this client. */
@@ -163,85 +180,62 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   /** Returns a new {@link GoogleAdsClient.Builder} with the properties as this instance. */
   public abstract Builder toBuilder();
 
-  /**
-   * Lazily instantiates the underlying {@link TransportChannelProvider} via AutoValue memoization.
-   *
-   * @return this object's {@link TransportChannelProvider}.
-   */
-  @Memoized
-  TransportChannelProvider getWrappedProvider() {
-    InstantiatingGrpcChannelProvider.Builder channelProviderBuilder =
-        InstantiatingGrpcChannelProvider.newBuilder();
+  public abstract TransportChannelProvider getTransportChannelProvider();
 
-    channelProviderBuilder
-        .setHeaderProvider(FixedHeaderProvider.create(getHeaders()))
-        .setEndpoint(getEndpoint());
-    return channelProviderBuilder.build();
-  }
-
-  @VisibleForTesting
-  Map<String, String> getHeaders() {
-    ImmutableMap.Builder<String, String> headersBuilder = ImmutableMap.builder();
-    headersBuilder.put("developer-token", getDeveloperToken());
-    if (getLoginCustomerId() != null) {
-      headersBuilder.put("login-customer-id", String.valueOf(getLoginCustomerId()));
-    }
-    return headersBuilder.build();
-  }
 
   @Override
   public boolean shouldAutoClose() {
-    return getWrappedProvider().shouldAutoClose();
+    return getTransportChannelProvider().shouldAutoClose();
   }
 
   @Override
   public boolean needsExecutor() {
-    return getWrappedProvider().needsExecutor();
+    return getTransportChannelProvider().needsExecutor();
   }
 
   @Override
   public TransportChannelProvider withExecutor(ScheduledExecutorService scheduledExecutorService) {
-    return getWrappedProvider().withExecutor(scheduledExecutorService);
+    return getTransportChannelProvider().withExecutor(scheduledExecutorService);
   }
 
   @Override
   public boolean needsHeaders() {
-    return getWrappedProvider().needsHeaders();
+    return getTransportChannelProvider().needsHeaders();
   }
 
   @Override
   public TransportChannelProvider withHeaders(Map<String, String> headers) {
-    return getWrappedProvider().withHeaders(headers);
+    return getTransportChannelProvider().withHeaders(headers);
   }
 
   @Override
   public String getTransportName() {
-    return getWrappedProvider().getTransportName();
+    return getTransportChannelProvider().getTransportName();
   }
 
   @Override
   public boolean needsEndpoint() {
-    return getWrappedProvider().needsEndpoint();
+    return getTransportChannelProvider().needsEndpoint();
   }
 
   @Override
   public TransportChannel getTransportChannel() throws IOException {
-    return getWrappedProvider().getTransportChannel();
+    return getTransportChannelProvider().getTransportChannel();
   }
 
   @Override
   public TransportChannelProvider withEndpoint(String endpoint) {
-    return getWrappedProvider().withEndpoint(endpoint);
+    return getTransportChannelProvider().withEndpoint(endpoint);
   }
 
   @Override
   public boolean acceptsPoolSize() {
-    return getWrappedProvider().acceptsPoolSize();
+    return getTransportChannelProvider().acceptsPoolSize();
   }
 
   @Override
   public TransportChannelProvider withPoolSize(int i) {
-    return getWrappedProvider().withPoolSize(i);
+    return getTransportChannelProvider().withPoolSize(i);
   }
 
   @Override
@@ -286,6 +280,16 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   }
 
   @Override
+  public AdParameterServiceClient getAdParameterServiceClient() {
+    return GrpcServiceDescriptor.get(AdParameterServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public AdScheduleViewServiceClient getAdScheduleViewServiceClient() {
+    return GrpcServiceDescriptor.get(AdScheduleViewServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
   public AgeRangeViewServiceClient getAgeRangeViewServiceClient() {
     return GrpcServiceDescriptor.get(AgeRangeViewServiceClient.class).newServiceClient(this);
   }
@@ -324,11 +328,6 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   @Override
   public CampaignFeedServiceClient getCampaignFeedServiceClient() {
     return GrpcServiceDescriptor.get(CampaignFeedServiceClient.class).newServiceClient(this);
-  }
-
-  @Override
-  public CampaignGroupServiceClient getCampaignGroupServiceClient() {
-    return GrpcServiceDescriptor.get(CampaignGroupServiceClient.class).newServiceClient(this);
   }
 
   @Override
@@ -485,6 +484,25 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   }
 
   @Override
+  public MobileAppCategoryConstantServiceClient getMobileAppCategoryConstantServiceClient() {
+    return GrpcServiceDescriptor.get(MobileAppCategoryConstantServiceClient.class)
+        .newServiceClient(this);
+  }
+
+  @Override
+  public MobileDeviceConstantServiceClient getMobileDeviceConstantServiceClient() {
+    return GrpcServiceDescriptor.get(MobileDeviceConstantServiceClient.class)
+        .newServiceClient(this);
+  }
+
+  @Override
+  public OperatingSystemVersionConstantServiceClient
+      getOperatingSystemVersionConstantServiceClient() {
+    return GrpcServiceDescriptor.get(OperatingSystemVersionConstantServiceClient.class)
+        .newServiceClient(this);
+  }
+
+  @Override
   public ParentalStatusViewServiceClient getParentalStatusViewServiceClient() {
     return GrpcServiceDescriptor.get(ParentalStatusViewServiceClient.class).newServiceClient(this);
   }
@@ -502,6 +520,11 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
   @Override
   public RecommendationServiceClient getRecommendationServiceClient() {
     return GrpcServiceDescriptor.get(RecommendationServiceClient.class).newServiceClient(this);
+  }
+
+  @Override
+  public RemarketingActionServiceClient getRemarketingActionServiceClient() {
+    return GrpcServiceDescriptor.get(RemarketingActionServiceClient.class).newServiceClient(this);
   }
 
   @Override
@@ -563,6 +586,9 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
     /**
      * Specifies the OAuth client ID, secret and refresh token. Use {@code
      * UserCredentials.newBuilder()} to build this object.
+     *
+     * <p>This field is marked nullable to facilitate testing of the client library. In practice,
+     * all requests to Google Ads API must be authenticated.
      */
     public abstract Builder setCredentials(Credentials credentials);
 
@@ -578,11 +604,56 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
      * Required for manager accounts only. When authenticating as a Google Ads manager account,
      * specifies the customer ID of the authenticating manager account.
      *
-     * <p>If your OAuth credentials are for a user with access to multiple manager accounts you must
-     * create a separate GoogleAdsClient instance for each manager account. Use {@code
+     * <p>If your OAuth credentials are for a user with access to multiple manager accounts you
+     * must create a separate GoogleAdsClient instance for each manager account. Use {@code
      * toBuilder().setLoginCustomerId(...).build()} to change the loginCustomerId.
      */
     public abstract Builder setLoginCustomerId(Long customerId);
+
+    /** Returns the TransportChannelProvider currently configured. */
+    @VisibleForTesting
+    abstract TransportChannelProvider getTransportChannelProvider();
+
+    /** Sets the TransportChannelProvider to use. */
+    @VisibleForTesting
+    abstract Builder setTransportChannelProvider(TransportChannelProvider transportChannelProvider);
+
+    /** Returns the developer token currently configured. */
+    public abstract String getDeveloperToken();
+
+    private void setDeveloperToken(Properties properties) {
+      setDeveloperToken(properties.getProperty(ConfigPropertyKey.DEVELOPER_TOKEN.getPropertyKey()));
+    }
+
+    /** Returns the login customer ID currently configured. */
+    public abstract Long getLoginCustomerId();
+
+    private void setLoginCustomerId(Properties properties) {
+      String configuredLoginCustomer =
+          properties.getProperty(ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyKey());
+      if (configuredLoginCustomer != null) {
+        try {
+          setLoginCustomerId(Long.parseLong(configuredLoginCustomer));
+        } catch (NumberFormatException ex) {
+          throw new IllegalArgumentException(
+              "Invalid loginCustomerId, must be a number, provided: " + configuredLoginCustomer,
+              ex);
+        }
+      }
+    }
+
+    /** Returns the endpoint currently configured. */
+    public abstract String getEndpoint();
+
+    private void setEndpoint(Properties properties) {
+      String endpoint =
+          MoreObjects.firstNonNull(
+              properties.getProperty(ConfigPropertyKey.ENDPOINT.getPropertyKey()),
+              MoreObjects.firstNonNull(
+                  System.getProperty(ConfigPropertyKey.ENDPOINT.getPropertyKey()),
+                  DEFAULT_ENDPOINT));
+      setEndpoint(endpoint);
+    }
 
     abstract GoogleAdsClient autoBuild();
 
@@ -591,8 +662,8 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
      * #DEFAULT_PROPERTIES_CONFIG_FILE_NAME}.
      *
      * @throws FileNotFoundException if the file does not exist.
-     * @throws IOException if the file exists, but a failure occurs when trying to load properties
-     *     from the file.
+     * @throws IOException if the file exists, but a failure occurs when trying to load
+     *     properties from the file.
      */
     public Builder fromPropertiesFile() throws IOException {
       return fromPropertiesFile(configurationFileSupplier.get());
@@ -606,8 +677,8 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
      * expected keys.
      *
      * @throws FileNotFoundException if the specified file does not exist.
-     * @throws IOException if the file exists, but a failure occurs when trying to load properties
-     *     from the file.
+     * @throws IOException if the file exists, but a failure occurs when trying to load
+     *     properties from the file.
      */
     public Builder fromPropertiesFile(File propertiesFile) throws IOException {
       Preconditions.checkNotNull(propertiesFile, "Null properties file");
@@ -625,8 +696,8 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
      * Java, except the property keys have changed. See {@link ConfigPropertyKey} for the list of
      * expected keys.
      *
-     * @throws IllegalArgumentException if a failure occurs when trying to load properties from the
-     *     file.
+     * @throws IllegalArgumentException if a failure occurs when trying to load properties from
+     *     the file.
      */
     public Builder fromProperties(Properties properties) {
       setCredentials(properties);
@@ -637,9 +708,29 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
     }
 
     /**
+     * Retrieves the headers to be provided in requests, generated from properties set on the
+     * builder, e.g. endpoint and developer token.
+     */
+    ImmutableMap<String, String> getHeaders() {
+      return GoogleAdsHeaderProvider.newBuilder()
+          .setDeveloperToken(getDeveloperToken())
+          .setLoginCustomerId(getLoginCustomerId())
+          .build()
+          .getHeaders();
+    }
+
+    /**
      * Returns a new instance of {@link GoogleAdsClient} based on the attributes of this builder.
      */
     public GoogleAdsClient build() {
+      TransportChannelProvider transportChannelProvider = getTransportChannelProvider();
+      if (transportChannelProvider.needsHeaders()) {
+        transportChannelProvider = transportChannelProvider.withHeaders(getHeaders());
+      }
+      if (transportChannelProvider.needsEndpoint()) {
+        transportChannelProvider = transportChannelProvider.withEndpoint(getEndpoint());
+      }
+      setTransportChannelProvider(transportChannelProvider);
       GoogleAdsClient provider = autoBuild();
       Long loginCustomerId = provider.getLoginCustomerId();
       Preconditions.checkArgument(
@@ -666,34 +757,6 @@ public abstract class GoogleAdsClient implements ServiceClientFactory, Transport
                   properties.getProperty(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey()))
               .build();
       setCredentials(credentials);
-    }
-
-    private void setDeveloperToken(Properties properties) {
-      setDeveloperToken(properties.getProperty(ConfigPropertyKey.DEVELOPER_TOKEN.getPropertyKey()));
-    }
-
-    private void setEndpoint(Properties properties) {
-      String endpoint =
-          MoreObjects.firstNonNull(
-              properties.getProperty(ConfigPropertyKey.ENDPOINT.getPropertyKey()),
-              MoreObjects.firstNonNull(
-                  System.getProperty(ConfigPropertyKey.ENDPOINT.getPropertyKey()),
-                  DEFAULT_ENDPOINT));
-      setEndpoint(endpoint);
-    }
-
-    private void setLoginCustomerId(Properties properties) {
-      String configuredLoginCustomer =
-          properties.getProperty(ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyKey());
-      if (configuredLoginCustomer != null) {
-        try {
-          setLoginCustomerId(Long.parseLong(configuredLoginCustomer));
-        } catch (NumberFormatException ex) {
-          throw new IllegalArgumentException(
-              "Invalid loginCustomerId, must be a number, provided: " + configuredLoginCustomer,
-              ex);
-        }
-      }
     }
 
     /** Enum of keys expected in the {@value DEFAULT_PROPERTIES_CONFIG_FILE_NAME}. */

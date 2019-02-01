@@ -45,12 +45,13 @@ public final class MultiplierErrorProto {
       "D_MAX_ALLOWED_BID\020\013\0221\n-BID_LESS_THAN_MIN" +
       "_ALLOWED_BID_WITH_MULTIPLIER\020\014\0221\n-MULTIP" +
       "LIER_AND_BIDDING_STRATEGY_TYPE_MISMATCH\020" +
-      "\rB\312\001\n\"com.google.ads.googleads.v0.errors" +
+      "\rB\357\001\n\"com.google.ads.googleads.v0.errors" +
       "B\024MultiplierErrorProtoP\001ZDgoogle.golang." +
       "org/genproto/googleapis/ads/googleads/v0" +
       "/errors;errors\242\002\003GAA\252\002\036Google.Ads.Google" +
       "Ads.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\" +
-      "Errorsb\006proto3"
+      "Errors\352\002\"Google::Ads::GoogleAds::V0::Err" +
+      "orsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -166,6 +166,14 @@ private static final long serialVersionUID = 0L;
      * <code>VIDEO_OUTSTREAM = 9;</code>
      */
     VIDEO_OUTSTREAM(9),
+    /**
+     * <pre>
+     * Video TrueView for Action campaigns.
+     * </pre>
+     *
+     * <code>VIDEO_ACTION = 10;</code>
+     */
+    VIDEO_ACTION(10),
     UNRECOGNIZED(-1),
     ;
 
@@ -249,6 +257,14 @@ private static final long serialVersionUID = 0L;
      * <code>VIDEO_OUTSTREAM = 9;</code>
      */
     public static final int VIDEO_OUTSTREAM_VALUE = 9;
+    /**
+     * <pre>
+     * Video TrueView for Action campaigns.
+     * </pre>
+     *
+     * <code>VIDEO_ACTION = 10;</code>
+     */
+    public static final int VIDEO_ACTION_VALUE = 10;
 
 
     public final int getNumber() {
@@ -279,6 +295,7 @@ private static final long serialVersionUID = 0L;
         case 7: return DISPLAY_GMAIL_AD;
         case 8: return DISPLAY_SMART_CAMPAIGN;
         case 9: return VIDEO_OUTSTREAM;
+        case 10: return VIDEO_ACTION;
         default: return null;
       }
     }

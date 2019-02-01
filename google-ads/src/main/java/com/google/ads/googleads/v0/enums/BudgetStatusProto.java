@@ -32,12 +32,13 @@ public final class BudgetStatusProto {
       "tatus.proto\022\035google.ads.googleads.v0.enu" +
       "ms\"Z\n\020BudgetStatusEnum\"F\n\014BudgetStatus\022\017" +
       "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007ENABLED\020" +
-      "\002\022\013\n\007REMOVED\020\003B\302\001\n!com.google.ads.google" +
+      "\002\022\013\n\007REMOVED\020\003B\346\001\n!com.google.ads.google" +
       "ads.v0.enumsB\021BudgetStatusProtoP\001ZBgoogl" +
       "e.golang.org/genproto/googleapis/ads/goo" +
       "gleads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads" +
       ".GoogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleA" +
-      "ds\\V0\\Enumsb\006proto3"
+      "ds\\V0\\Enums\352\002!Google::Ads::GoogleAds::V0" +
+      "::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

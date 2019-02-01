@@ -33,12 +33,13 @@ public final class QuotaErrorProto {
       "rs\"\217\001\n\016QuotaErrorEnum\"}\n\nQuotaError\022\017\n\013U" +
       "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n\022RESOURCE_EX" +
       "HAUSTED\020\002\022\025\n\021ACCESS_PROHIBITED\020\003\022\"\n\036RESO" +
-      "URCE_TEMPORARILY_EXHAUSTED\020\004B\305\001\n\"com.goo" +
+      "URCE_TEMPORARILY_EXHAUSTED\020\004B\352\001\n\"com.goo" +
       "gle.ads.googleads.v0.errorsB\017QuotaErrorP" +
       "rotoP\001ZDgoogle.golang.org/genproto/googl" +
       "eapis/ads/googleads/v0/errors;errors\242\002\003G" +
       "AA\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Go" +
-      "ogle\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "ogle\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::A" +
+      "ds::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -37,12 +37,13 @@ public final class VideoServiceProto {
       "google.ads.googleads.v0.services.GetVide" +
       "oRequest\032(.google.ads.googleads.v0.resou" +
       "rces.Video\"0\202\323\344\223\002*\022(/v0/{resource_name=c" +
-      "ustomers/*/videos/*}B\321\001\n$com.google.ads." +
+      "ustomers/*/videos/*}B\370\001\n$com.google.ads." +
       "googleads.v0.servicesB\021VideoServiceProto" +
       "P\001ZHgoogle.golang.org/genproto/googleapi" +
       "s/ads/googleads/v0/services;services\242\002\003G" +
       "AA\252\002 Google.Ads.GoogleAds.V0.Services\312\002 " +
-      "Google\\Ads\\GoogleAds\\V0\\Servicesb\006proto3"
+      "Google\\Ads\\GoogleAds\\V0\\Services\352\002$Googl" +
+      "e::Ads::GoogleAds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

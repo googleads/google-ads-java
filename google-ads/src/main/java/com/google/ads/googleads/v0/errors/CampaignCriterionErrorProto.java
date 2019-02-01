@@ -43,12 +43,13 @@ public final class CampaignCriterionErrorProto {
       "GN_SALES_COUNTRY_NOT_SUPPORTED_FOR_SALES" +
       "_CHANNEL\020\n\022\035\n\031CANNOT_ADD_EXISTING_FIELD\020" +
       "\013\022$\n CANNOT_UPDATE_NEGATIVE_CRITERION\020\014B" +
-      "\321\001\n\"com.google.ads.googleads.v0.errorsB\033" +
+      "\366\001\n\"com.google.ads.googleads.v0.errorsB\033" +
       "CampaignCriterionErrorProtoP\001ZDgoogle.go" +
       "lang.org/genproto/googleapis/ads/googlea" +
       "ds/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.G" +
       "oogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAd" +
-      "s\\V0\\Errorsb\006proto3"
+      "s\\V0\\Errors\352\002\"Google::Ads::GoogleAds::V0" +
+      "::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

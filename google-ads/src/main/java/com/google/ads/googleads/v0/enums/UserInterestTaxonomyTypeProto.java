@@ -35,12 +35,13 @@ public final class UserInterestTaxonomyTypeProto {
       "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010AFFINITY" +
       "\020\002\022\r\n\tIN_MARKET\020\003\022\033\n\027MOBILE_APP_INSTALL_" +
       "USER\020\004\022\020\n\014VERTICAL_GEO\020\005\022\030\n\024NEW_SMART_PH" +
-      "ONE_USER\020\006B\316\001\n!com.google.ads.googleads." +
+      "ONE_USER\020\006B\362\001\n!com.google.ads.googleads." +
       "v0.enumsB\035UserInterestTaxonomyTypeProtoP" +
       "\001ZBgoogle.golang.org/genproto/googleapis" +
       "/ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035Go" +
       "ogle.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads" +
-      "\\GoogleAds\\V0\\Enumsb\006proto3"
+      "\\GoogleAds\\V0\\Enums\352\002!Google::Ads::Googl" +
+      "eAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

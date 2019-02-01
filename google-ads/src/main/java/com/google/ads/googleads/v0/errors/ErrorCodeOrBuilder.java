@@ -1012,23 +1012,6 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
-   * The reasons for campaign group error.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
-   */
-  int getCampaignGroupErrorValue();
-  /**
-   * <pre>
-   * The reasons for campaign group error.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
-   */
-  com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError getCampaignGroupError();
-
-  /**
-   * <pre>
    * The reason for enum error.
    * </pre>
    *
@@ -1366,6 +1349,74 @@ public interface ErrorCodeOrBuilder extends
    * <code>.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError campaign_feed_error = 96;</code>
    */
   com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError getCampaignFeedError();
+
+  /**
+   * <pre>
+   * The reasons for the ad parameter error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+   */
+  int getAdParameterErrorValue();
+  /**
+   * <pre>
+   * The reasons for the ad parameter error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+   */
+  com.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError getAdParameterError();
+
+  /**
+   * <pre>
+   * The reasons for the feed item validation error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+   */
+  int getFeedItemValidationErrorValue();
+  /**
+   * <pre>
+   * The reasons for the feed item validation error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+   */
+  com.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError getFeedItemValidationError();
+
+  /**
+   * <pre>
+   * The reasons for the extension setting error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+   */
+  int getExtensionSettingErrorValue();
+  /**
+   * <pre>
+   * The reasons for the extension setting error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+   */
+  com.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError getExtensionSettingError();
+
+  /**
+   * <pre>
+   * The reasons for the policy violation error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+   */
+  int getPolicyViolationErrorValue();
+  /**
+   * <pre>
+   * The reasons for the policy violation error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+   */
+  com.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError getPolicyViolationError();
 
   public com.google.ads.googleads.v0.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

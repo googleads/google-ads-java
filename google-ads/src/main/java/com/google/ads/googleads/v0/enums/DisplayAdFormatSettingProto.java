@@ -33,13 +33,13 @@ public final class DisplayAdFormatSettingProto {
       "leads.v0.enums\"\201\001\n\032DisplayAdFormatSettin" +
       "gEnum\"c\n\026DisplayAdFormatSetting\022\017\n\013UNSPE" +
       "CIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013ALL_FORMATS\020\002\022\016" +
-      "\n\nNON_NATIVE\020\003\022\n\n\006NATIVE\020\004B\314\001\n!com.googl" +
+      "\n\nNON_NATIVE\020\003\022\n\n\006NATIVE\020\004B\360\001\n!com.googl" +
       "e.ads.googleads.v0.enumsB\033DisplayAdForma" +
       "tSettingProtoP\001ZBgoogle.golang.org/genpr" +
       "oto/googleapis/ads/googleads/v0/enums;en" +
       "ums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enum" +
-      "s\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto" +
-      "3"
+      "s\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Goog" +
+      "le::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     query_ = "";
     pageToken_ = "";
     pageSize_ = 0;
+    validateOnly_ = false;
   }
 
   @java.lang.Override
@@ -71,6 +72,11 @@ private static final long serialVersionUID = 0L;
           case 32: {
 
             pageSize_ = input.readInt32();
+            break;
+          }
+          case 40: {
+
+            validateOnly_ = input.readBool();
             break;
           }
           default: {
@@ -252,6 +258,19 @@ private static final long serialVersionUID = 0L;
     return pageSize_;
   }
 
+  public static final int VALIDATE_ONLY_FIELD_NUMBER = 5;
+  private boolean validateOnly_;
+  /**
+   * <pre>
+   * If true, the request is validated but not executed.
+   * </pre>
+   *
+   * <code>bool validate_only = 5;</code>
+   */
+  public boolean getValidateOnly() {
+    return validateOnly_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -278,6 +297,9 @@ private static final long serialVersionUID = 0L;
     if (pageSize_ != 0) {
       output.writeInt32(4, pageSize_);
     }
+    if (validateOnly_ != false) {
+      output.writeBool(5, validateOnly_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -299,6 +321,10 @@ private static final long serialVersionUID = 0L;
     if (pageSize_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(4, pageSize_);
+    }
+    if (validateOnly_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, validateOnly_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -324,6 +350,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPageToken());
     result = result && (getPageSize()
         == other.getPageSize());
+    result = result && (getValidateOnly()
+        == other.getValidateOnly());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -343,6 +371,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPageToken().hashCode();
     hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
     hash = (53 * hash) + getPageSize();
+    hash = (37 * hash) + VALIDATE_ONLY_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getValidateOnly());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -488,6 +519,8 @@ private static final long serialVersionUID = 0L;
 
       pageSize_ = 0;
 
+      validateOnly_ = false;
+
       return this;
     }
 
@@ -518,6 +551,7 @@ private static final long serialVersionUID = 0L;
       result.query_ = query_;
       result.pageToken_ = pageToken_;
       result.pageSize_ = pageSize_;
+      result.validateOnly_ = validateOnly_;
       onBuilt();
       return result;
     }
@@ -580,6 +614,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getPageSize() != 0) {
         setPageSize(other.getPageSize());
+      }
+      if (other.getValidateOnly() != false) {
+        setValidateOnly(other.getValidateOnly());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -932,6 +969,44 @@ private static final long serialVersionUID = 0L;
     public Builder clearPageSize() {
       
       pageSize_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean validateOnly_ ;
+    /**
+     * <pre>
+     * If true, the request is validated but not executed.
+     * </pre>
+     *
+     * <code>bool validate_only = 5;</code>
+     */
+    public boolean getValidateOnly() {
+      return validateOnly_;
+    }
+    /**
+     * <pre>
+     * If true, the request is validated but not executed.
+     * </pre>
+     *
+     * <code>bool validate_only = 5;</code>
+     */
+    public Builder setValidateOnly(boolean value) {
+      
+      validateOnly_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If true, the request is validated but not executed.
+     * </pre>
+     *
+     * <code>bool validate_only = 5;</code>
+     */
+    public Builder clearValidateOnly() {
+      
+      validateOnly_ = false;
       onChanged();
       return this;
     }

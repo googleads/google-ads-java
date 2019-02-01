@@ -61,13 +61,14 @@ public final class PricePlaceholderFieldProto {
       "_FINAL_MOBILE_URLS\020\301\005\022\022\n\rITEM_8_HEADER\020\240" +
       "\006\022\027\n\022ITEM_8_DESCRIPTION\020\241\006\022\021\n\014ITEM_8_PRI" +
       "CE\020\242\006\022\020\n\013ITEM_8_UNIT\020\243\006\022\026\n\021ITEM_8_FINAL_" +
-      "URLS\020\244\006\022\035\n\030ITEM_8_FINAL_MOBILE_URLS\020\245\006B\313" +
+      "URLS\020\244\006\022\035\n\030ITEM_8_FINAL_MOBILE_URLS\020\245\006B\357" +
       "\001\n!com.google.ads.googleads.v0.enumsB\032Pr" +
       "icePlaceholderFieldProtoP\001ZBgoogle.golan" +
       "g.org/genproto/googleapis/ads/googleads/" +
       "v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.Google" +
       "Ads.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\E" +
-      "numsb\006proto3"
+      "nums\352\002!Google::Ads::GoogleAds::V0::Enums" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

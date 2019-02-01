@@ -199,5 +199,30 @@ public interface SharedCriterionOrBuilder extends
    */
   com.google.ads.googleads.v0.common.PlacementInfoOrBuilder getPlacementOrBuilder();
 
+  /**
+   * <pre>
+   * Mobile App Category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+   */
+  boolean hasMobileAppCategory();
+  /**
+   * <pre>
+   * Mobile App Category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+   */
+  com.google.ads.googleads.v0.common.MobileAppCategoryInfo getMobileAppCategory();
+  /**
+   * <pre>
+   * Mobile App Category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+   */
+  com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder();
+
   public com.google.ads.googleads.v0.resources.SharedCriterion.CriterionCase getCriterionCase();
 }

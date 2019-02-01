@@ -186,6 +186,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required authentication token (from OAuth API) for the email.
+     * This field can only be specified in a create request. All its subfields
+     * are not selectable.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -194,6 +196,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required authentication token (from OAuth API) for the email.
+     * This field can only be specified in a create request. All its subfields
+     * are not selectable.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -202,6 +206,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required authentication token (from OAuth API) for the email.
+     * This field can only be specified in a create request. All its subfields
+     * are not selectable.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -241,31 +247,34 @@ private static final long serialVersionUID = 0L;
      * Plus page ID of the managed business whose locations should be used. If
      * this field is not set, then all businesses accessible by the user
      * (specified by email_address) are used.
+     * This field is mutate-only and is not selectable.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+     * <code>.google.protobuf.StringValue business_account_id = 10;</code>
      */
-    boolean hasBusinessAccountIdentifier();
+    boolean hasBusinessAccountId();
     /**
      * <pre>
      * Plus page ID of the managed business whose locations should be used. If
      * this field is not set, then all businesses accessible by the user
      * (specified by email_address) are used.
+     * This field is mutate-only and is not selectable.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+     * <code>.google.protobuf.StringValue business_account_id = 10;</code>
      */
-    com.google.protobuf.StringValue getBusinessAccountIdentifier();
+    com.google.protobuf.StringValue getBusinessAccountId();
     /**
      * <pre>
      * Plus page ID of the managed business whose locations should be used. If
      * this field is not set, then all businesses accessible by the user
      * (specified by email_address) are used.
+     * This field is mutate-only and is not selectable.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+     * <code>.google.protobuf.StringValue business_account_id = 10;</code>
      */
-    com.google.protobuf.StringValueOrBuilder getBusinessAccountIdentifierOrBuilder();
+    com.google.protobuf.StringValueOrBuilder getBusinessAccountIdOrBuilder();
 
     /**
      * <pre>
@@ -488,19 +497,6 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
-            case 26: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (businessAccountIdentifier_ != null) {
-                subBuilder = businessAccountIdentifier_.toBuilder();
-              }
-              businessAccountIdentifier_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(businessAccountIdentifier_);
-                businessAccountIdentifier_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
             case 34: {
               com.google.protobuf.StringValue.Builder subBuilder = null;
               if (businessNameFilter_ != null) {
@@ -530,6 +526,19 @@ private static final long serialVersionUID = 0L;
               }
               labelFilters_.add(
                   input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 82: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (businessAccountId_ != null) {
+                subBuilder = businessAccountId_.toBuilder();
+              }
+              businessAccountId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(businessAccountId_);
+                businessAccountId_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1759,6 +1768,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required authentication token (from OAuth API) for the email.
+     * This field can only be specified in a create request. All its subfields
+     * are not selectable.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -1769,6 +1780,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required authentication token (from OAuth API) for the email.
+     * This field can only be specified in a create request. All its subfields
+     * are not selectable.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -1779,6 +1792,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required authentication token (from OAuth API) for the email.
+     * This field can only be specified in a create request. All its subfields
+     * are not selectable.
      * </pre>
      *
      * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -1823,43 +1838,46 @@ private static final long serialVersionUID = 0L;
       return getEmailAddress();
     }
 
-    public static final int BUSINESS_ACCOUNT_IDENTIFIER_FIELD_NUMBER = 3;
-    private com.google.protobuf.StringValue businessAccountIdentifier_;
+    public static final int BUSINESS_ACCOUNT_ID_FIELD_NUMBER = 10;
+    private com.google.protobuf.StringValue businessAccountId_;
     /**
      * <pre>
      * Plus page ID of the managed business whose locations should be used. If
      * this field is not set, then all businesses accessible by the user
      * (specified by email_address) are used.
+     * This field is mutate-only and is not selectable.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+     * <code>.google.protobuf.StringValue business_account_id = 10;</code>
      */
-    public boolean hasBusinessAccountIdentifier() {
-      return businessAccountIdentifier_ != null;
+    public boolean hasBusinessAccountId() {
+      return businessAccountId_ != null;
     }
     /**
      * <pre>
      * Plus page ID of the managed business whose locations should be used. If
      * this field is not set, then all businesses accessible by the user
      * (specified by email_address) are used.
+     * This field is mutate-only and is not selectable.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+     * <code>.google.protobuf.StringValue business_account_id = 10;</code>
      */
-    public com.google.protobuf.StringValue getBusinessAccountIdentifier() {
-      return businessAccountIdentifier_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : businessAccountIdentifier_;
+    public com.google.protobuf.StringValue getBusinessAccountId() {
+      return businessAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : businessAccountId_;
     }
     /**
      * <pre>
      * Plus page ID of the managed business whose locations should be used. If
      * this field is not set, then all businesses accessible by the user
      * (specified by email_address) are used.
+     * This field is mutate-only and is not selectable.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+     * <code>.google.protobuf.StringValue business_account_id = 10;</code>
      */
-    public com.google.protobuf.StringValueOrBuilder getBusinessAccountIdentifierOrBuilder() {
-      return getBusinessAccountIdentifier();
+    public com.google.protobuf.StringValueOrBuilder getBusinessAccountIdOrBuilder() {
+      return getBusinessAccountId();
     }
 
     public static final int BUSINESS_NAME_FILTER_FIELD_NUMBER = 4;
@@ -2061,9 +2079,6 @@ private static final long serialVersionUID = 0L;
       if (emailAddress_ != null) {
         output.writeMessage(2, getEmailAddress());
       }
-      if (businessAccountIdentifier_ != null) {
-        output.writeMessage(3, getBusinessAccountIdentifier());
-      }
       if (businessNameFilter_ != null) {
         output.writeMessage(4, getBusinessNameFilter());
       }
@@ -2072,6 +2087,9 @@ private static final long serialVersionUID = 0L;
       }
       for (int i = 0; i < labelFilters_.size(); i++) {
         output.writeMessage(6, labelFilters_.get(i));
+      }
+      if (businessAccountId_ != null) {
+        output.writeMessage(10, getBusinessAccountId());
       }
       unknownFields.writeTo(output);
     }
@@ -2090,10 +2108,6 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEmailAddress());
       }
-      if (businessAccountIdentifier_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getBusinessAccountIdentifier());
-      }
       if (businessNameFilter_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getBusinessNameFilter());
@@ -2105,6 +2119,10 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < labelFilters_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, labelFilters_.get(i));
+      }
+      if (businessAccountId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getBusinessAccountId());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2132,10 +2150,10 @@ private static final long serialVersionUID = 0L;
         result = result && getEmailAddress()
             .equals(other.getEmailAddress());
       }
-      result = result && (hasBusinessAccountIdentifier() == other.hasBusinessAccountIdentifier());
-      if (hasBusinessAccountIdentifier()) {
-        result = result && getBusinessAccountIdentifier()
-            .equals(other.getBusinessAccountIdentifier());
+      result = result && (hasBusinessAccountId() == other.hasBusinessAccountId());
+      if (hasBusinessAccountId()) {
+        result = result && getBusinessAccountId()
+            .equals(other.getBusinessAccountId());
       }
       result = result && (hasBusinessNameFilter() == other.hasBusinessNameFilter());
       if (hasBusinessNameFilter()) {
@@ -2165,9 +2183,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + EMAIL_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getEmailAddress().hashCode();
       }
-      if (hasBusinessAccountIdentifier()) {
-        hash = (37 * hash) + BUSINESS_ACCOUNT_IDENTIFIER_FIELD_NUMBER;
-        hash = (53 * hash) + getBusinessAccountIdentifier().hashCode();
+      if (hasBusinessAccountId()) {
+        hash = (37 * hash) + BUSINESS_ACCOUNT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getBusinessAccountId().hashCode();
       }
       if (hasBusinessNameFilter()) {
         hash = (37 * hash) + BUSINESS_NAME_FILTER_FIELD_NUMBER;
@@ -2333,11 +2351,11 @@ private static final long serialVersionUID = 0L;
           emailAddress_ = null;
           emailAddressBuilder_ = null;
         }
-        if (businessAccountIdentifierBuilder_ == null) {
-          businessAccountIdentifier_ = null;
+        if (businessAccountIdBuilder_ == null) {
+          businessAccountId_ = null;
         } else {
-          businessAccountIdentifier_ = null;
-          businessAccountIdentifierBuilder_ = null;
+          businessAccountId_ = null;
+          businessAccountIdBuilder_ = null;
         }
         if (businessNameFilterBuilder_ == null) {
           businessNameFilter_ = null;
@@ -2395,10 +2413,10 @@ private static final long serialVersionUID = 0L;
         } else {
           result.emailAddress_ = emailAddressBuilder_.build();
         }
-        if (businessAccountIdentifierBuilder_ == null) {
-          result.businessAccountIdentifier_ = businessAccountIdentifier_;
+        if (businessAccountIdBuilder_ == null) {
+          result.businessAccountId_ = businessAccountId_;
         } else {
-          result.businessAccountIdentifier_ = businessAccountIdentifierBuilder_.build();
+          result.businessAccountId_ = businessAccountIdBuilder_.build();
         }
         if (businessNameFilterBuilder_ == null) {
           result.businessNameFilter_ = businessNameFilter_;
@@ -2478,8 +2496,8 @@ private static final long serialVersionUID = 0L;
         if (other.hasEmailAddress()) {
           mergeEmailAddress(other.getEmailAddress());
         }
-        if (other.hasBusinessAccountIdentifier()) {
-          mergeBusinessAccountIdentifier(other.getBusinessAccountIdentifier());
+        if (other.hasBusinessAccountId()) {
+          mergeBusinessAccountId(other.getBusinessAccountId());
         }
         if (other.hasBusinessNameFilter()) {
           mergeBusinessNameFilter(other.getBusinessNameFilter());
@@ -2572,6 +2590,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Required authentication token (from OAuth API) for the email.
+       * This field can only be specified in a create request. All its subfields
+       * are not selectable.
        * </pre>
        *
        * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -2582,6 +2602,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Required authentication token (from OAuth API) for the email.
+       * This field can only be specified in a create request. All its subfields
+       * are not selectable.
        * </pre>
        *
        * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -2596,6 +2618,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Required authentication token (from OAuth API) for the email.
+       * This field can only be specified in a create request. All its subfields
+       * are not selectable.
        * </pre>
        *
        * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -2616,6 +2640,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Required authentication token (from OAuth API) for the email.
+       * This field can only be specified in a create request. All its subfields
+       * are not selectable.
        * </pre>
        *
        * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -2634,6 +2660,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Required authentication token (from OAuth API) for the email.
+       * This field can only be specified in a create request. All its subfields
+       * are not selectable.
        * </pre>
        *
        * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -2656,6 +2684,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Required authentication token (from OAuth API) for the email.
+       * This field can only be specified in a create request. All its subfields
+       * are not selectable.
        * </pre>
        *
        * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -2674,6 +2704,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Required authentication token (from OAuth API) for the email.
+       * This field can only be specified in a create request. All its subfields
+       * are not selectable.
        * </pre>
        *
        * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -2686,6 +2718,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Required authentication token (from OAuth API) for the email.
+       * This field can only be specified in a create request. All its subfields
+       * are not selectable.
        * </pre>
        *
        * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -2701,6 +2735,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Required authentication token (from OAuth API) for the email.
+       * This field can only be specified in a create request. All its subfields
+       * are not selectable.
        * </pre>
        *
        * <code>.google.ads.googleads.v0.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
@@ -2881,35 +2917,37 @@ private static final long serialVersionUID = 0L;
         return emailAddressBuilder_;
       }
 
-      private com.google.protobuf.StringValue businessAccountIdentifier_ = null;
+      private com.google.protobuf.StringValue businessAccountId_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> businessAccountIdentifierBuilder_;
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> businessAccountIdBuilder_;
       /**
        * <pre>
        * Plus page ID of the managed business whose locations should be used. If
        * this field is not set, then all businesses accessible by the user
        * (specified by email_address) are used.
+       * This field is mutate-only and is not selectable.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+       * <code>.google.protobuf.StringValue business_account_id = 10;</code>
        */
-      public boolean hasBusinessAccountIdentifier() {
-        return businessAccountIdentifierBuilder_ != null || businessAccountIdentifier_ != null;
+      public boolean hasBusinessAccountId() {
+        return businessAccountIdBuilder_ != null || businessAccountId_ != null;
       }
       /**
        * <pre>
        * Plus page ID of the managed business whose locations should be used. If
        * this field is not set, then all businesses accessible by the user
        * (specified by email_address) are used.
+       * This field is mutate-only and is not selectable.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+       * <code>.google.protobuf.StringValue business_account_id = 10;</code>
        */
-      public com.google.protobuf.StringValue getBusinessAccountIdentifier() {
-        if (businessAccountIdentifierBuilder_ == null) {
-          return businessAccountIdentifier_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : businessAccountIdentifier_;
+      public com.google.protobuf.StringValue getBusinessAccountId() {
+        if (businessAccountIdBuilder_ == null) {
+          return businessAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : businessAccountId_;
         } else {
-          return businessAccountIdentifierBuilder_.getMessage();
+          return businessAccountIdBuilder_.getMessage();
         }
       }
       /**
@@ -2917,19 +2955,20 @@ private static final long serialVersionUID = 0L;
        * Plus page ID of the managed business whose locations should be used. If
        * this field is not set, then all businesses accessible by the user
        * (specified by email_address) are used.
+       * This field is mutate-only and is not selectable.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+       * <code>.google.protobuf.StringValue business_account_id = 10;</code>
        */
-      public Builder setBusinessAccountIdentifier(com.google.protobuf.StringValue value) {
-        if (businessAccountIdentifierBuilder_ == null) {
+      public Builder setBusinessAccountId(com.google.protobuf.StringValue value) {
+        if (businessAccountIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          businessAccountIdentifier_ = value;
+          businessAccountId_ = value;
           onChanged();
         } else {
-          businessAccountIdentifierBuilder_.setMessage(value);
+          businessAccountIdBuilder_.setMessage(value);
         }
 
         return this;
@@ -2939,17 +2978,18 @@ private static final long serialVersionUID = 0L;
        * Plus page ID of the managed business whose locations should be used. If
        * this field is not set, then all businesses accessible by the user
        * (specified by email_address) are used.
+       * This field is mutate-only and is not selectable.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+       * <code>.google.protobuf.StringValue business_account_id = 10;</code>
        */
-      public Builder setBusinessAccountIdentifier(
+      public Builder setBusinessAccountId(
           com.google.protobuf.StringValue.Builder builderForValue) {
-        if (businessAccountIdentifierBuilder_ == null) {
-          businessAccountIdentifier_ = builderForValue.build();
+        if (businessAccountIdBuilder_ == null) {
+          businessAccountId_ = builderForValue.build();
           onChanged();
         } else {
-          businessAccountIdentifierBuilder_.setMessage(builderForValue.build());
+          businessAccountIdBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
@@ -2959,21 +2999,22 @@ private static final long serialVersionUID = 0L;
        * Plus page ID of the managed business whose locations should be used. If
        * this field is not set, then all businesses accessible by the user
        * (specified by email_address) are used.
+       * This field is mutate-only and is not selectable.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+       * <code>.google.protobuf.StringValue business_account_id = 10;</code>
        */
-      public Builder mergeBusinessAccountIdentifier(com.google.protobuf.StringValue value) {
-        if (businessAccountIdentifierBuilder_ == null) {
-          if (businessAccountIdentifier_ != null) {
-            businessAccountIdentifier_ =
-              com.google.protobuf.StringValue.newBuilder(businessAccountIdentifier_).mergeFrom(value).buildPartial();
+      public Builder mergeBusinessAccountId(com.google.protobuf.StringValue value) {
+        if (businessAccountIdBuilder_ == null) {
+          if (businessAccountId_ != null) {
+            businessAccountId_ =
+              com.google.protobuf.StringValue.newBuilder(businessAccountId_).mergeFrom(value).buildPartial();
           } else {
-            businessAccountIdentifier_ = value;
+            businessAccountId_ = value;
           }
           onChanged();
         } else {
-          businessAccountIdentifierBuilder_.mergeFrom(value);
+          businessAccountIdBuilder_.mergeFrom(value);
         }
 
         return this;
@@ -2983,17 +3024,18 @@ private static final long serialVersionUID = 0L;
        * Plus page ID of the managed business whose locations should be used. If
        * this field is not set, then all businesses accessible by the user
        * (specified by email_address) are used.
+       * This field is mutate-only and is not selectable.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+       * <code>.google.protobuf.StringValue business_account_id = 10;</code>
        */
-      public Builder clearBusinessAccountIdentifier() {
-        if (businessAccountIdentifierBuilder_ == null) {
-          businessAccountIdentifier_ = null;
+      public Builder clearBusinessAccountId() {
+        if (businessAccountIdBuilder_ == null) {
+          businessAccountId_ = null;
           onChanged();
         } else {
-          businessAccountIdentifier_ = null;
-          businessAccountIdentifierBuilder_ = null;
+          businessAccountId_ = null;
+          businessAccountIdBuilder_ = null;
         }
 
         return this;
@@ -3003,30 +3045,32 @@ private static final long serialVersionUID = 0L;
        * Plus page ID of the managed business whose locations should be used. If
        * this field is not set, then all businesses accessible by the user
        * (specified by email_address) are used.
+       * This field is mutate-only and is not selectable.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+       * <code>.google.protobuf.StringValue business_account_id = 10;</code>
        */
-      public com.google.protobuf.StringValue.Builder getBusinessAccountIdentifierBuilder() {
+      public com.google.protobuf.StringValue.Builder getBusinessAccountIdBuilder() {
         
         onChanged();
-        return getBusinessAccountIdentifierFieldBuilder().getBuilder();
+        return getBusinessAccountIdFieldBuilder().getBuilder();
       }
       /**
        * <pre>
        * Plus page ID of the managed business whose locations should be used. If
        * this field is not set, then all businesses accessible by the user
        * (specified by email_address) are used.
+       * This field is mutate-only and is not selectable.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+       * <code>.google.protobuf.StringValue business_account_id = 10;</code>
        */
-      public com.google.protobuf.StringValueOrBuilder getBusinessAccountIdentifierOrBuilder() {
-        if (businessAccountIdentifierBuilder_ != null) {
-          return businessAccountIdentifierBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.StringValueOrBuilder getBusinessAccountIdOrBuilder() {
+        if (businessAccountIdBuilder_ != null) {
+          return businessAccountIdBuilder_.getMessageOrBuilder();
         } else {
-          return businessAccountIdentifier_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : businessAccountIdentifier_;
+          return businessAccountId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : businessAccountId_;
         }
       }
       /**
@@ -3034,22 +3078,23 @@ private static final long serialVersionUID = 0L;
        * Plus page ID of the managed business whose locations should be used. If
        * this field is not set, then all businesses accessible by the user
        * (specified by email_address) are used.
+       * This field is mutate-only and is not selectable.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue business_account_identifier = 3;</code>
+       * <code>.google.protobuf.StringValue business_account_id = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getBusinessAccountIdentifierFieldBuilder() {
-        if (businessAccountIdentifierBuilder_ == null) {
-          businessAccountIdentifierBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getBusinessAccountIdFieldBuilder() {
+        if (businessAccountIdBuilder_ == null) {
+          businessAccountIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getBusinessAccountIdentifier(),
+                  getBusinessAccountId(),
                   getParentForChildren(),
                   isClean());
-          businessAccountIdentifier_ = null;
+          businessAccountId_ = null;
         }
-        return businessAccountIdentifierBuilder_;
+        return businessAccountIdBuilder_;
       }
 
       private com.google.protobuf.StringValue businessNameFilter_ = null;

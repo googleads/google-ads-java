@@ -33,48 +33,63 @@ public final class AdGroupProto {
       "urces\0325google/ads/googleads/v0/common/cu" +
       "stom_parameter.proto\032Dgoogle/ads/googlea" +
       "ds/v0/common/explorer_auto_optimizer_set" +
-      "ting.proto\032=google/ads/googleads/v0/enum" +
-      "s/ad_group_ad_rotation_mode.proto\0323googl" +
-      "e/ads/googleads/v0/enums/ad_group_status" +
-      ".proto\0321google/ads/googleads/v0/enums/ad" +
-      "_group_type.proto\0327google/ads/googleads/" +
-      "v0/enums/targeting_dimension.proto\032\036goog" +
-      "le/protobuf/wrappers.proto\"\222\t\n\007AdGroup\022\025" +
-      "\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\003 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022*\n\004name\030\004 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\022N\n\006status\030\005 \001" +
-      "(\0162>.google.ads.googleads.v0.enums.AdGro" +
-      "upStatusEnum.AdGroupStatus\022H\n\004type\030\014 \001(\016" +
-      "2:.google.ads.googleads.v0.enums.AdGroup" +
-      "TypeEnum.AdGroupType\022h\n\020ad_rotation_mode" +
-      "\030\026 \001(\0162N.google.ads.googleads.v0.enums.A" +
-      "dGroupAdRotationModeEnum.AdGroupAdRotati" +
-      "onMode\022;\n\025tracking_url_template\030\r \001(\0132\034." +
-      "google.protobuf.StringValue\022N\n\025url_custo" +
-      "m_parameters\030\006 \003(\0132/.google.ads.googlead" +
-      "s.v0.common.CustomParameter\022.\n\010campaign\030" +
-      "\n \001(\0132\034.google.protobuf.StringValue\0223\n\016c" +
-      "pc_bid_micros\030\016 \001(\0132\033.google.protobuf.In" +
-      "t64Value\0223\n\016cpm_bid_micros\030\017 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\0223\n\016cpa_bid_micros\030" +
-      "\020 \001(\0132\033.google.protobuf.Int64Value\0223\n\016cp" +
-      "v_bid_micros\030\021 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022:\n\024target_roas_override\030\023 \001(\0132\034." +
-      "google.protobuf.DoubleValue\022;\n\026percent_c" +
-      "pc_bid_micros\030\024 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022e\n\037explorer_auto_optimizer_sett" +
-      "ing\030\025 \001(\0132<.google.ads.googleads.v0.comm" +
-      "on.ExplorerAutoOptimizerSetting\022n\n\034displ" +
-      "ay_custom_bid_dimension\030\027 \001(\0162H.google.a" +
-      "ds.googleads.v0.enums.TargetingDimension" +
-      "Enum.TargetingDimension\0226\n\020final_url_suf" +
-      "fix\030\030 \001(\0132\034.google.protobuf.StringValueB" +
-      "\321\001\n%com.google.ads.googleads.v0.resource" +
-      "sB\014AdGroupProtoP\001ZJgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v0/resour" +
-      "ces;resources\242\002\003GAA\252\002!Google.Ads.GoogleA" +
-      "ds.V0.Resources\312\002!Google\\Ads\\GoogleAds\\V" +
-      "0\\Resourcesb\006proto3"
+      "ting.proto\0326google/ads/googleads/v0/comm" +
+      "on/targeting_setting.proto\032=google/ads/g" +
+      "oogleads/v0/enums/ad_group_ad_rotation_m" +
+      "ode.proto\0323google/ads/googleads/v0/enums" +
+      "/ad_group_status.proto\0321google/ads/googl" +
+      "eads/v0/enums/ad_group_type.proto\0322googl" +
+      "e/ads/googleads/v0/enums/bidding_source." +
+      "proto\0327google/ads/googleads/v0/enums/tar" +
+      "geting_dimension.proto\032\036google/protobuf/" +
+      "wrappers.proto\"\333\014\n\007AdGroup\022\025\n\rresource_n" +
+      "ame\030\001 \001(\t\022\'\n\002id\030\003 \001(\0132\033.google.protobuf." +
+      "Int64Value\022*\n\004name\030\004 \001(\0132\034.google.protob" +
+      "uf.StringValue\022N\n\006status\030\005 \001(\0162>.google." +
+      "ads.googleads.v0.enums.AdGroupStatusEnum" +
+      ".AdGroupStatus\022H\n\004type\030\014 \001(\0162:.google.ad" +
+      "s.googleads.v0.enums.AdGroupTypeEnum.AdG" +
+      "roupType\022h\n\020ad_rotation_mode\030\026 \001(\0162N.goo" +
+      "gle.ads.googleads.v0.enums.AdGroupAdRota" +
+      "tionModeEnum.AdGroupAdRotationMode\022;\n\025tr" +
+      "acking_url_template\030\r \001(\0132\034.google.proto" +
+      "buf.StringValue\022N\n\025url_custom_parameters" +
+      "\030\006 \003(\0132/.google.ads.googleads.v0.common." +
+      "CustomParameter\022.\n\010campaign\030\n \001(\0132\034.goog" +
+      "le.protobuf.StringValue\0223\n\016cpc_bid_micro" +
+      "s\030\016 \001(\0132\033.google.protobuf.Int64Value\0223\n\016" +
+      "cpm_bid_micros\030\017 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\0226\n\021target_cpa_micros\030\033 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\0223\n\016cpv_bid_mic" +
+      "ros\030\021 \001(\0132\033.google.protobuf.Int64Value\0226" +
+      "\n\021target_cpm_micros\030\032 \001(\0132\033.google.proto" +
+      "buf.Int64Value\0221\n\013target_roas\030\036 \001(\0132\034.go" +
+      "ogle.protobuf.DoubleValue\022;\n\026percent_cpc" +
+      "_bid_micros\030\024 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022e\n\037explorer_auto_optimizer_settin" +
+      "g\030\025 \001(\0132<.google.ads.googleads.v0.common" +
+      ".ExplorerAutoOptimizerSetting\022n\n\034display" +
+      "_custom_bid_dimension\030\027 \001(\0162H.google.ads" +
+      ".googleads.v0.enums.TargetingDimensionEn" +
+      "um.TargetingDimension\0226\n\020final_url_suffi" +
+      "x\030\030 \001(\0132\034.google.protobuf.StringValue\022K\n" +
+      "\021targeting_setting\030\031 \001(\01320.google.ads.go" +
+      "ogleads.v0.common.TargetingSetting\022@\n\033ef" +
+      "fective_target_cpa_micros\030\034 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022c\n\033effective_target" +
+      "_cpa_source\030\035 \001(\0162>.google.ads.googleads" +
+      ".v0.enums.BiddingSourceEnum.BiddingSourc" +
+      "e\022;\n\025effective_target_roas\030\037 \001(\0132\034.googl" +
+      "e.protobuf.DoubleValue\022d\n\034effective_targ" +
+      "et_roas_source\030  \001(\0162>.google.ads.google" +
+      "ads.v0.enums.BiddingSourceEnum.BiddingSo" +
+      "urceB\371\001\n%com.google.ads.googleads.v0.res" +
+      "ourcesB\014AdGroupProtoP\001ZJgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v0/r" +
+      "esources;resources\242\002\003GAA\252\002!Google.Ads.Go" +
+      "ogleAds.V0.Resources\312\002!Google\\Ads\\Google" +
+      "Ads\\V0\\Resources\352\002%Google::Ads::GoogleAd" +
+      "s::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -89,9 +104,11 @@ public final class AdGroupProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v0.common.CustomParameterProto.getDescriptor(),
           com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSettingProto.getDescriptor(),
+          com.google.ads.googleads.v0.common.TargetingSettingProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.AdGroupAdRotationModeProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.AdGroupStatusProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.AdGroupTypeProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.BiddingSourceProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.TargetingDimensionProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
@@ -100,12 +117,14 @@ public final class AdGroupProto {
     internal_static_google_ads_googleads_v0_resources_AdGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_AdGroup_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "Type", "AdRotationMode", "TrackingUrlTemplate", "UrlCustomParameters", "Campaign", "CpcBidMicros", "CpmBidMicros", "CpaBidMicros", "CpvBidMicros", "TargetRoasOverride", "PercentCpcBidMicros", "ExplorerAutoOptimizerSetting", "DisplayCustomBidDimension", "FinalUrlSuffix", });
+        new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "Type", "AdRotationMode", "TrackingUrlTemplate", "UrlCustomParameters", "Campaign", "CpcBidMicros", "CpmBidMicros", "TargetCpaMicros", "CpvBidMicros", "TargetCpmMicros", "TargetRoas", "PercentCpcBidMicros", "ExplorerAutoOptimizerSetting", "DisplayCustomBidDimension", "FinalUrlSuffix", "TargetingSetting", "EffectiveTargetCpaMicros", "EffectiveTargetCpaSource", "EffectiveTargetRoas", "EffectiveTargetRoasSource", });
     com.google.ads.googleads.v0.common.CustomParameterProto.getDescriptor();
     com.google.ads.googleads.v0.common.ExplorerAutoOptimizerSettingProto.getDescriptor();
+    com.google.ads.googleads.v0.common.TargetingSettingProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdGroupAdRotationModeProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdGroupStatusProto.getDescriptor();
     com.google.ads.googleads.v0.enums.AdGroupTypeProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.BiddingSourceProto.getDescriptor();
     com.google.ads.googleads.v0.enums.TargetingDimensionProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }

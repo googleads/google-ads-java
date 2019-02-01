@@ -674,6 +674,31 @@ public interface AdGroupCriterionOrBuilder extends
 
   /**
    * <pre>
+   * Mobile app category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+   */
+  boolean hasMobileAppCategory();
+  /**
+   * <pre>
+   * Mobile app category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+   */
+  com.google.ads.googleads.v0.common.MobileAppCategoryInfo getMobileAppCategory();
+  /**
+   * <pre>
+   * Mobile app category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
+   */
+  com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder();
+
+  /**
+   * <pre>
    * Listing group.
    * </pre>
    *
@@ -921,6 +946,56 @@ public interface AdGroupCriterionOrBuilder extends
    * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 45;</code>
    */
   com.google.ads.googleads.v0.common.UserInterestInfoOrBuilder getUserInterestOrBuilder();
+
+  /**
+   * <pre>
+   * Webpage
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+   */
+  boolean hasWebpage();
+  /**
+   * <pre>
+   * Webpage
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+   */
+  com.google.ads.googleads.v0.common.WebpageInfo getWebpage();
+  /**
+   * <pre>
+   * Webpage
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 46;</code>
+   */
+  com.google.ads.googleads.v0.common.WebpageInfoOrBuilder getWebpageOrBuilder();
+
+  /**
+   * <pre>
+   * App Payment Model.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+   */
+  boolean hasAppPaymentModel();
+  /**
+   * <pre>
+   * App Payment Model.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+   */
+  com.google.ads.googleads.v0.common.AppPaymentModelInfo getAppPaymentModel();
+  /**
+   * <pre>
+   * App Payment Model.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.AppPaymentModelInfo app_payment_model = 47;</code>
+   */
+  com.google.ads.googleads.v0.common.AppPaymentModelInfoOrBuilder getAppPaymentModelOrBuilder();
 
   public com.google.ads.googleads.v0.resources.AdGroupCriterion.CriterionCase getCriterionCase();
 }

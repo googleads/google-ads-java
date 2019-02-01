@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -226,7 +226,7 @@ public class CustomerClientLinkServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final CustomerClientLink getCustomerClientLink(GetCustomerClientLinkRequest request) {
+  public final CustomerClientLink getCustomerClientLink(GetCustomerClientLinkRequest request) {
     return getCustomerClientLinkCallable().call(request);
   }
 
@@ -251,6 +251,86 @@ public class CustomerClientLinkServiceClient implements BackgroundResource {
   public final UnaryCallable<GetCustomerClientLinkRequest, CustomerClientLink>
       getCustomerClientLinkCallable() {
     return stub.getCustomerClientLinkCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates or updates a customer client link. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
+   *   String customerId = "";
+   *   CustomerClientLinkOperation operation = CustomerClientLinkOperation.newBuilder().build();
+   *   MutateCustomerClientLinkResponse response = customerClientLinkServiceClient.mutateCustomerClientLink(customerId, operation);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer whose customer link are being modified.
+   * @param operation The operation to perform on the individual CustomerClientLink.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateCustomerClientLinkResponse mutateCustomerClientLink(
+      String customerId, CustomerClientLinkOperation operation) {
+
+    MutateCustomerClientLinkRequest request =
+        MutateCustomerClientLinkRequest.newBuilder()
+            .setCustomerId(customerId)
+            .setOperation(operation)
+            .build();
+    return mutateCustomerClientLink(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates or updates a customer client link. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
+   *   String customerId = "";
+   *   CustomerClientLinkOperation operation = CustomerClientLinkOperation.newBuilder().build();
+   *   MutateCustomerClientLinkRequest request = MutateCustomerClientLinkRequest.newBuilder()
+   *     .setCustomerId(customerId)
+   *     .setOperation(operation)
+   *     .build();
+   *   MutateCustomerClientLinkResponse response = customerClientLinkServiceClient.mutateCustomerClientLink(request);
+   * }
+   * </code></pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateCustomerClientLinkResponse mutateCustomerClientLink(
+      MutateCustomerClientLinkRequest request) {
+    return mutateCustomerClientLinkCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates or updates a customer client link. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
+   *   String customerId = "";
+   *   CustomerClientLinkOperation operation = CustomerClientLinkOperation.newBuilder().build();
+   *   MutateCustomerClientLinkRequest request = MutateCustomerClientLinkRequest.newBuilder()
+   *     .setCustomerId(customerId)
+   *     .setOperation(operation)
+   *     .build();
+   *   ApiFuture&lt;MutateCustomerClientLinkResponse&gt; future = customerClientLinkServiceClient.mutateCustomerClientLinkCallable().futureCall(request);
+   *   // Do something
+   *   MutateCustomerClientLinkResponse response = future.get();
+   * }
+   * </code></pre>
+   */
+  public final UnaryCallable<MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>
+      mutateCustomerClientLinkCallable() {
+    return stub.mutateCustomerClientLinkCallable();
   }
 
   @Override

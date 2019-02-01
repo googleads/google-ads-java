@@ -43,12 +43,13 @@ public final class CustomerFeedProto {
       "nction\030\004 \001(\01320.google.ads.googleads.v0.c" +
       "ommon.MatchingFunction\022P\n\006status\030\005 \001(\0162@" +
       ".google.ads.googleads.v0.enums.FeedLinkS" +
-      "tatusEnum.FeedLinkStatusB\326\001\n%com.google." +
+      "tatusEnum.FeedLinkStatusB\376\001\n%com.google." +
       "ads.googleads.v0.resourcesB\021CustomerFeed" +
       "ProtoP\001ZJgoogle.golang.org/genproto/goog" +
       "leapis/ads/googleads/v0/resources;resour" +
       "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Reso" +
       "urces\312\002!Google\\Ads\\GoogleAds\\V0\\Resource" +
+      "s\352\002%Google::Ads::GoogleAds::V0::Resource" +
       "sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

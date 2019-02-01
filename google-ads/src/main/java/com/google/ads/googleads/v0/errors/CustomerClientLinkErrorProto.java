@@ -39,13 +39,14 @@ public final class CustomerClientLinkErrorProto {
       "O_MANY_ACCOUNTS\020\005\022#\n\037CLIENT_HAS_TOO_MANY" +
       "_INVITATIONS\020\006\022*\n&CANNOT_HIDE_OR_UNHIDE_" +
       "MANAGER_ACCOUNTS\020\007\022-\n)CUSTOMER_HAS_TOO_M" +
-      "ANY_ACCOUNTS_AT_MANAGER\020\010B\322\001\n\"com.google" +
+      "ANY_ACCOUNTS_AT_MANAGER\020\010B\367\001\n\"com.google" +
       ".ads.googleads.v0.errorsB\034CustomerClient" +
       "LinkErrorProtoP\001ZDgoogle.golang.org/genp" +
       "roto/googleapis/ads/googleads/v0/errors;" +
       "errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.E" +
-      "rrors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006" +
-      "proto3"
+      "rrors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors\352\002" +
+      "\"Google::Ads::GoogleAds::V0::Errorsb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -69,12 +69,13 @@ public final class CampaignErrorProto {
       "\n\033INVALID_HOTEL_CUSTOMER_LINK\020&\022\031\n\025MISSI" +
       "NG_HOTEL_SETTING\020\'\022B\n>CANNOT_USE_SHARED_" +
       "CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_G" +
-      "ROUP\020(B\310\001\n\"com.google.ads.googleads.v0.e" +
+      "ROUP\020(B\355\001\n\"com.google.ads.googleads.v0.e" +
       "rrorsB\022CampaignErrorProtoP\001ZDgoogle.gola" +
       "ng.org/genproto/googleapis/ads/googleads" +
       "/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.Goo" +
       "gleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\" +
-      "V0\\Errorsb\006proto3"
+      "V0\\Errors\352\002\"Google::Ads::GoogleAds::V0::" +
+      "Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

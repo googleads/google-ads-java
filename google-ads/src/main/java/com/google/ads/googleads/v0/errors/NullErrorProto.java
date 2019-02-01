@@ -32,12 +32,13 @@ public final class NullErrorProto {
       "ror.proto\022\036google.ads.googleads.v0.error" +
       "s\"L\n\rNullErrorEnum\";\n\tNullError\022\017\n\013UNSPE" +
       "CIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014NULL_CONTENT\020\002B" +
-      "\304\001\n\"com.google.ads.googleads.v0.errorsB\016" +
+      "\351\001\n\"com.google.ads.googleads.v0.errorsB\016" +
       "NullErrorProtoP\001ZDgoogle.golang.org/genp" +
       "roto/googleapis/ads/googleads/v0/errors;" +
       "errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.E" +
-      "rrors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006" +
-      "proto3"
+      "rrors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors\352\002" +
+      "\"Google::Ads::GoogleAds::V0::Errorsb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

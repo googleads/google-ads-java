@@ -36,12 +36,13 @@ public final class IncomeRangeTypeProto {
       "E_50_60\020\262\220\037\022\030\n\022INCOME_RANGE_60_70\020\263\220\037\022\030\n" +
       "\022INCOME_RANGE_70_80\020\264\220\037\022\030\n\022INCOME_RANGE_" +
       "80_90\020\265\220\037\022\030\n\022INCOME_RANGE_90_UP\020\266\220\037\022\037\n\031I" +
-      "NCOME_RANGE_UNDETERMINED\020\260\220\037B\305\001\n!com.goo" +
+      "NCOME_RANGE_UNDETERMINED\020\260\220\037B\351\001\n!com.goo" +
       "gle.ads.googleads.v0.enumsB\024IncomeRangeT" +
       "ypeProtoP\001ZBgoogle.golang.org/genproto/g" +
       "oogleapis/ads/googleads/v0/enums;enums\242\002" +
       "\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312\002\035G" +
-      "oogle\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "oogle\\Ads\\GoogleAds\\V0\\Enums\352\002!Google::A" +
+      "ds::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -31,7 +31,7 @@ public interface CustomerClientLinkOrBuilder extends
 
   /**
    * <pre>
-   * The client customer linked to this customer. Read only.
+   * The client customer linked to this customer.
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -39,7 +39,7 @@ public interface CustomerClientLinkOrBuilder extends
   boolean hasClientCustomer();
   /**
    * <pre>
-   * The client customer linked to this customer. Read only.
+   * The client customer linked to this customer.
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3;</code>
@@ -47,7 +47,7 @@ public interface CustomerClientLinkOrBuilder extends
   com.google.protobuf.StringValue getClientCustomer();
   /**
    * <pre>
-   * The client customer linked to this customer. Read only.
+   * The client customer linked to this customer.
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3;</code>

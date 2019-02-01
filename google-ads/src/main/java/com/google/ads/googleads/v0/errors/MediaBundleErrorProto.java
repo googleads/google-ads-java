@@ -47,13 +47,13 @@ public final class MediaBundleErrorProto {
       "UNSUPPORTED_GOOGLE_WEB_DESIGNER_ENVIRONM" +
       "ENT\020\025\022\035\n\031UNSUPPORTED_HTML5_FEATURE\020\026\022)\n%" +
       "URL_IN_MEDIA_BUNDLE_NOT_SSL_COMPLIANT\020\027\022" +
-      "\033\n\027CUSTOM_EXIT_NOT_ALLOWED\020\030B\313\001\n\"com.goo" +
+      "\033\n\027CUSTOM_EXIT_NOT_ALLOWED\020\030B\360\001\n\"com.goo" +
       "gle.ads.googleads.v0.errorsB\025MediaBundle" +
       "ErrorProtoP\001ZDgoogle.golang.org/genproto" +
       "/googleapis/ads/googleads/v0/errors;erro" +
       "rs\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.Error" +
-      "s\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb\006prot" +
-      "o3"
+      "s\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors\352\002\"Goo" +
+      "gle::Ads::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

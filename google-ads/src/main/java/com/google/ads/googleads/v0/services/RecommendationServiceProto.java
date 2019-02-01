@@ -99,9 +99,9 @@ public final class RecommendationServiceProto {
       "gle/rpc/status.proto\"1\n\030GetRecommendatio" +
       "nRequest\022\025\n\rresource_name\030\001 \001(\t\"\236\001\n\032Appl" +
       "yRecommendationRequest\022\023\n\013customer_id\030\001 " +
-      "\001(\t\022\027\n\017partial_failure\030\003 \001(\010\022R\n\noperatio" +
-      "ns\030\002 \003(\0132>.google.ads.googleads.v0.servi" +
-      "ces.ApplyRecommendationOperation\"\220\010\n\034App" +
+      "\001(\t\022R\n\noperations\030\002 \003(\0132>.google.ads.goo" +
+      "gleads.v0.services.ApplyRecommendationOp" +
+      "eration\022\027\n\017partial_failure\030\003 \001(\010\"\220\010\n\034App" +
       "lyRecommendationOperation\022\025\n\rresource_na" +
       "me\030\001 \001(\t\022r\n\017campaign_budget\030\002 \001(\0132W.goog" +
       "le.ads.googleads.v0.services.ApplyRecomm" +
@@ -134,11 +134,11 @@ public final class RecommendationServiceProto {
       "lure_error\030\002 \001(\0132\022.google.rpc.Status\"2\n\031" +
       "ApplyRecommendationResult\022\025\n\rresource_na" +
       "me\030\001 \001(\t\"\370\001\n\034DismissRecommendationReques" +
-      "t\022\023\n\013customer_id\030\001 \001(\t\022\027\n\017partial_failur" +
-      "e\030\002 \001(\010\022q\n\noperations\030\003 \003(\0132].google.ads" +
-      ".googleads.v0.services.DismissRecommenda" +
-      "tionRequest.DismissRecommendationOperati" +
-      "on\0327\n\036DismissRecommendationOperation\022\025\n\r" +
+      "t\022\023\n\013customer_id\030\001 \001(\t\022q\n\noperations\030\003 \003" +
+      "(\0132].google.ads.googleads.v0.services.Di" +
+      "smissRecommendationRequest.DismissRecomm" +
+      "endationOperation\022\027\n\017partial_failure\030\002 \001" +
+      "(\010\0327\n\036DismissRecommendationOperation\022\025\n\r" +
       "resource_name\030\001 \001(\t\"\366\001\n\035DismissRecommend" +
       "ationResponse\022l\n\007results\030\001 \003(\0132[.google." +
       "ads.googleads.v0.services.DismissRecomme" +
@@ -162,12 +162,13 @@ public final class RecommendationServiceProto {
       "ds.googleads.v0.services.DismissRecommen" +
       "dationResponse\"@\202\323\344\223\002:\"5/v0/customers/{c" +
       "ustomer_id=*}/recommendations:dismiss:\001*" +
-      "B\332\001\n$com.google.ads.googleads.v0.service" +
+      "B\201\002\n$com.google.ads.googleads.v0.service" +
       "sB\032RecommendationServiceProtoP\001ZHgoogle." +
       "golang.org/genproto/googleapis/ads/googl" +
       "eads/v0/services;services\242\002\003GAA\252\002 Google" +
       ".Ads.GoogleAds.V0.Services\312\002 Google\\Ads\\" +
-      "GoogleAds\\V0\\Servicesb\006proto3"
+      "GoogleAds\\V0\\Services\352\002$Google::Ads::Goo" +
+      "gleAds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -198,7 +199,7 @@ public final class RecommendationServiceProto {
     internal_static_google_ads_googleads_v0_services_ApplyRecommendationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_ApplyRecommendationRequest_descriptor,
-        new java.lang.String[] { "CustomerId", "PartialFailure", "Operations", });
+        new java.lang.String[] { "CustomerId", "Operations", "PartialFailure", });
     internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v0_services_ApplyRecommendationOperation_fieldAccessorTable = new
@@ -246,7 +247,7 @@ public final class RecommendationServiceProto {
     internal_static_google_ads_googleads_v0_services_DismissRecommendationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_DismissRecommendationRequest_descriptor,
-        new java.lang.String[] { "CustomerId", "PartialFailure", "Operations", });
+        new java.lang.String[] { "CustomerId", "Operations", "PartialFailure", });
     internal_static_google_ads_googleads_v0_services_DismissRecommendationRequest_DismissRecommendationOperation_descriptor =
       internal_static_google_ads_googleads_v0_services_DismissRecommendationRequest_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v0_services_DismissRecommendationRequest_DismissRecommendationOperation_fieldAccessorTable = new

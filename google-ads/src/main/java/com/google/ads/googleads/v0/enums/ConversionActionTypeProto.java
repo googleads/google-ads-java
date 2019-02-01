@@ -36,12 +36,13 @@ public final class ConversionActionTypeProto {
       "_CALL\020\003\022\030\n\024GOOGLE_PLAY_DOWNLOAD\020\004\022\037\n\033GOO" +
       "GLE_PLAY_IN_APP_PURCHASE\020\005\022\020\n\014UPLOAD_CAL" +
       "LS\020\006\022\021\n\rUPLOAD_CLICKS\020\007\022\013\n\007WEBPAGE\020\010\022\020\n\014" +
-      "WEBSITE_CALL\020\tB\312\001\n!com.google.ads.google" +
+      "WEBSITE_CALL\020\tB\356\001\n!com.google.ads.google" +
       "ads.v0.enumsB\031ConversionActionTypeProtoP" +
       "\001ZBgoogle.golang.org/genproto/googleapis" +
       "/ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035Go" +
       "ogle.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads" +
-      "\\GoogleAds\\V0\\Enumsb\006proto3"
+      "\\GoogleAds\\V0\\Enums\352\002!Google::Ads::Googl" +
+      "eAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

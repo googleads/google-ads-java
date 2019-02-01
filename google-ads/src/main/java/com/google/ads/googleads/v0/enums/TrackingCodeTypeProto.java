@@ -33,12 +33,13 @@ public final class TrackingCodeTypeProto {
       "0.enums\"}\n\024TrackingCodeTypeEnum\"e\n\020Track" +
       "ingCodeType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020" +
       "\001\022\013\n\007WEBPAGE\020\002\022\023\n\017WEBPAGE_ONCLICK\020\003\022\021\n\rC" +
-      "LICK_TO_CALL\020\004B\306\001\n!com.google.ads.google" +
+      "LICK_TO_CALL\020\004B\352\001\n!com.google.ads.google" +
       "ads.v0.enumsB\025TrackingCodeTypeProtoP\001ZBg" +
       "oogle.golang.org/genproto/googleapis/ads" +
       "/googleads/v0/enums;enums\242\002\003GAA\252\002\035Google" +
       ".Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Goo" +
-      "gleAds\\V0\\Enumsb\006proto3"
+      "gleAds\\V0\\Enums\352\002!Google::Ads::GoogleAds" +
+      "::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

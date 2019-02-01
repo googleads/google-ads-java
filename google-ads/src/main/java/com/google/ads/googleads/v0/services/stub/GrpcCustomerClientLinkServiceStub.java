@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,8 @@ package com.google.ads.googleads.v0.services.stub;
 
 import com.google.ads.googleads.v0.resources.CustomerClientLink;
 import com.google.ads.googleads.v0.services.GetCustomerClientLinkRequest;
+import com.google.ads.googleads.v0.services.MutateCustomerClientLinkRequest;
+import com.google.ads.googleads.v0.services.MutateCustomerClientLinkResponse;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.core.BackgroundResourceAggregation;
@@ -50,11 +52,26 @@ public class GrpcCustomerClientLinkServiceStub extends CustomerClientLinkService
                   ProtoUtils.marshaller(GetCustomerClientLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(CustomerClientLink.getDefaultInstance()))
               .build();
+  private static final MethodDescriptor<
+          MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>
+      mutateCustomerClientLinkMethodDescriptor =
+          MethodDescriptor
+              .<MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v0.services.CustomerClientLinkService/MutateCustomerClientLink")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(MutateCustomerClientLinkRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(MutateCustomerClientLinkResponse.getDefaultInstance()))
+              .build();
 
   private final BackgroundResource backgroundResources;
 
   private final UnaryCallable<GetCustomerClientLinkRequest, CustomerClientLink>
       getCustomerClientLinkCallable;
+  private final UnaryCallable<MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>
+      mutateCustomerClientLinkCallable;
 
   private final GrpcStubCallableFactory callableFactory;
 
@@ -103,11 +120,22 @@ public class GrpcCustomerClientLinkServiceStub extends CustomerClientLinkService
             GrpcCallSettings.<GetCustomerClientLinkRequest, CustomerClientLink>newBuilder()
                 .setMethodDescriptor(getCustomerClientLinkMethodDescriptor)
                 .build();
+    GrpcCallSettings<MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>
+        mutateCustomerClientLinkTransportSettings =
+            GrpcCallSettings
+                .<MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>newBuilder()
+                .setMethodDescriptor(mutateCustomerClientLinkMethodDescriptor)
+                .build();
 
     this.getCustomerClientLinkCallable =
         callableFactory.createUnaryCallable(
             getCustomerClientLinkTransportSettings,
             settings.getCustomerClientLinkSettings(),
+            clientContext);
+    this.mutateCustomerClientLinkCallable =
+        callableFactory.createUnaryCallable(
+            mutateCustomerClientLinkTransportSettings,
+            settings.mutateCustomerClientLinkSettings(),
             clientContext);
 
     backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
@@ -116,6 +144,11 @@ public class GrpcCustomerClientLinkServiceStub extends CustomerClientLinkService
   public UnaryCallable<GetCustomerClientLinkRequest, CustomerClientLink>
       getCustomerClientLinkCallable() {
     return getCustomerClientLinkCallable;
+  }
+
+  public UnaryCallable<MutateCustomerClientLinkRequest, MutateCustomerClientLinkResponse>
+      mutateCustomerClientLinkCallable() {
+    return mutateCustomerClientLinkCallable;
   }
 
   @Override

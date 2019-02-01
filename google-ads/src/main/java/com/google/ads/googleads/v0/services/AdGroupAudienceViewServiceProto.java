@@ -40,13 +40,14 @@ public final class AdGroupAudienceViewServiceProto {
       "udienceViewRequest\0326.google.ads.googlead" +
       "s.v0.resources.AdGroupAudienceView\">\202\323\344\223" +
       "\0028\0226/v0/{resource_name=customers/*/adGro" +
-      "upAudienceViews/*}B\337\001\n$com.google.ads.go" +
+      "upAudienceViews/*}B\206\002\n$com.google.ads.go" +
       "ogleads.v0.servicesB\037AdGroupAudienceView" +
       "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
       "to/googleapis/ads/googleads/v0/services;" +
       "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V0" +
       ".Services\312\002 Google\\Ads\\GoogleAds\\V0\\Serv" +
-      "icesb\006proto3"
+      "ices\352\002$Google::Ads::GoogleAds::V0::Servi" +
+      "cesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

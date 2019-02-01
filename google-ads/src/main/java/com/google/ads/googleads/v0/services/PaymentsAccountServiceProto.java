@@ -47,13 +47,14 @@ public final class PaymentsAccountServiceProto {
       "stPaymentsAccountsRequest\032>.google.ads.g" +
       "oogleads.v0.services.ListPaymentsAccount" +
       "sResponse\"6\202\323\344\223\0020\022./v0/customers/{custom" +
-      "er_id=*}/paymentsAccountsB\333\001\n$com.google" +
+      "er_id=*}/paymentsAccountsB\202\002\n$com.google" +
       ".ads.googleads.v0.servicesB\033PaymentsAcco" +
       "untServiceProtoP\001ZHgoogle.golang.org/gen" +
       "proto/googleapis/ads/googleads/v0/servic" +
       "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
       ".V0.Services\312\002 Google\\Ads\\GoogleAds\\V0\\S" +
-      "ervicesb\006proto3"
+      "ervices\352\002$Google::Ads::GoogleAds::V0::Se" +
+      "rvicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

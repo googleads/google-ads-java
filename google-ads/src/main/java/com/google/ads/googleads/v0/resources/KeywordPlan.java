@@ -6,6 +6,8 @@ package com.google.ads.googleads.v0.resources;
 /**
  * <pre>
  * A Keyword Planner plan.
+ * Max number of saved keyword plans: 10000.
+ * It's possible to remove plans if limit is reached.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v0.resources.KeywordPlan}
@@ -481,6 +483,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A Keyword Planner plan.
+   * Max number of saved keyword plans: 10000.
+   * It's possible to remove plans if limit is reached.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v0.resources.KeywordPlan}

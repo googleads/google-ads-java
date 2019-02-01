@@ -9,6 +9,227 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The percent of your ad impressions that are shown as the very first ad
+   * above the organic search results.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+   */
+  boolean hasAbsoluteTopImpressionPercentage();
+  /**
+   * <pre>
+   * The percent of your ad impressions that are shown as the very first ad
+   * above the organic search results.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+   */
+  com.google.protobuf.DoubleValue getAbsoluteTopImpressionPercentage();
+  /**
+   * <pre>
+   * The percent of your ad impressions that are shown as the very first ad
+   * above the organic search results.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAbsoluteTopImpressionPercentageOrBuilder();
+
+  /**
+   * <pre>
+   * Average cost of viewable impressions (`active_view_impressions`).
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+   */
+  boolean hasActiveViewCpm();
+  /**
+   * <pre>
+   * Average cost of viewable impressions (`active_view_impressions`).
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+   */
+  com.google.protobuf.DoubleValue getActiveViewCpm();
+  /**
+   * <pre>
+   * Average cost of viewable impressions (`active_view_impressions`).
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getActiveViewCpmOrBuilder();
+
+  /**
+   * <pre>
+   * Active view measurable clicks divided by active view viewable impressions.
+   * This metric is reported only for display network.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+   */
+  boolean hasActiveViewCtr();
+  /**
+   * <pre>
+   * Active view measurable clicks divided by active view viewable impressions.
+   * This metric is reported only for display network.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+   */
+  com.google.protobuf.DoubleValue getActiveViewCtr();
+  /**
+   * <pre>
+   * Active view measurable clicks divided by active view viewable impressions.
+   * This metric is reported only for display network.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getActiveViewCtrOrBuilder();
+
+  /**
+   * <pre>
+   * A measurement of how often your ad has become viewable on a Display
+   * Network site.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+   */
+  boolean hasActiveViewImpressions();
+  /**
+   * <pre>
+   * A measurement of how often your ad has become viewable on a Display
+   * Network site.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+   */
+  com.google.protobuf.Int64Value getActiveViewImpressions();
+  /**
+   * <pre>
+   * A measurement of how often your ad has become viewable on a Display
+   * Network site.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getActiveViewImpressionsOrBuilder();
+
+  /**
+   * <pre>
+   * The ratio of impressions that could be measured by Active View over the
+   * number of served impressions.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+   */
+  boolean hasActiveViewMeasurability();
+  /**
+   * <pre>
+   * The ratio of impressions that could be measured by Active View over the
+   * number of served impressions.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+   */
+  com.google.protobuf.DoubleValue getActiveViewMeasurability();
+  /**
+   * <pre>
+   * The ratio of impressions that could be measured by Active View over the
+   * number of served impressions.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getActiveViewMeasurabilityOrBuilder();
+
+  /**
+   * <pre>
+   * The cost of the impressions you received that were measurable by Active
+   * View.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+   */
+  boolean hasActiveViewMeasurableCostMicros();
+  /**
+   * <pre>
+   * The cost of the impressions you received that were measurable by Active
+   * View.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+   */
+  com.google.protobuf.Int64Value getActiveViewMeasurableCostMicros();
+  /**
+   * <pre>
+   * The cost of the impressions you received that were measurable by Active
+   * View.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getActiveViewMeasurableCostMicrosOrBuilder();
+
+  /**
+   * <pre>
+   * The number of times your ads are appearing on placements in positions
+   * where they can be seen.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+   */
+  boolean hasActiveViewMeasurableImpressions();
+  /**
+   * <pre>
+   * The number of times your ads are appearing on placements in positions
+   * where they can be seen.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+   */
+  com.google.protobuf.Int64Value getActiveViewMeasurableImpressions();
+  /**
+   * <pre>
+   * The number of times your ads are appearing on placements in positions
+   * where they can be seen.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getActiveViewMeasurableImpressionsOrBuilder();
+
+  /**
+   * <pre>
+   * The percentage of time when your ad appeared on an Active View enabled site
+   * (measurable impressions) and was viewable (viewable impressions).
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+   */
+  boolean hasActiveViewViewability();
+  /**
+   * <pre>
+   * The percentage of time when your ad appeared on an Active View enabled site
+   * (measurable impressions) and was viewable (viewable impressions).
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+   */
+  com.google.protobuf.DoubleValue getActiveViewViewability();
+  /**
+   * <pre>
+   * The percentage of time when your ad appeared on an Active View enabled site
+   * (measurable impressions) and was viewable (viewable impressions).
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getActiveViewViewabilityOrBuilder();
+
+  /**
+   * <pre>
    * All conversions from interactions (as oppose to view through conversions)
    * divided by the number of ad interactions.
    * </pre>
@@ -62,8 +283,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The total number of conversions. This includes "Conversions" plus
-   * conversions that have their "Include in Conversions" setting unchecked.
+   * The total number of conversions. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -71,8 +292,8 @@ public interface MetricsOrBuilder extends
   boolean hasAllConversions();
   /**
    * <pre>
-   * The total number of conversions. This includes "Conversions" plus
-   * conversions that have their "Include in Conversions" setting unchecked.
+   * The total number of conversions. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -80,8 +301,8 @@ public interface MetricsOrBuilder extends
   com.google.protobuf.DoubleValue getAllConversions();
   /**
    * <pre>
-   * The total number of conversions. This includes "Conversions" plus
-   * conversions that have their "Include in Conversions" setting unchecked.
+   * The total number of conversions. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -202,6 +423,37 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The average amount that you've been charged for an ad engagement. This
+   * amount is the total cost of all ad engagements divided by the total number
+   * of ad engagements.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+   */
+  boolean hasAverageCpe();
+  /**
+   * <pre>
+   * The average amount that you've been charged for an ad engagement. This
+   * amount is the total cost of all ad engagements divided by the total number
+   * of ad engagements.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+   */
+  com.google.protobuf.DoubleValue getAverageCpe();
+  /**
+   * <pre>
+   * The average amount that you've been charged for an ad engagement. This
+   * amount is the total cost of all ad engagements divided by the total number
+   * of ad engagements.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAverageCpeOrBuilder();
+
+  /**
+   * <pre>
    * Average cost-per-thousand impressions (CPM).
    * </pre>
    *
@@ -258,6 +510,59 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * Average number of times a unique cookie was exposed to your ad
+   * over a given time period. Imported from Google Analytics.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+   */
+  boolean hasAverageFrequency();
+  /**
+   * <pre>
+   * Average number of times a unique cookie was exposed to your ad
+   * over a given time period. Imported from Google Analytics.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+   */
+  com.google.protobuf.DoubleValue getAverageFrequency();
+  /**
+   * <pre>
+   * Average number of times a unique cookie was exposed to your ad
+   * over a given time period. Imported from Google Analytics.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_frequency = 12;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAverageFrequencyOrBuilder();
+
+  /**
+   * <pre>
+   * Average number of pages viewed per session.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+   */
+  boolean hasAveragePageViews();
+  /**
+   * <pre>
+   * Average number of pages viewed per session.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+   */
+  com.google.protobuf.DoubleValue getAveragePageViews();
+  /**
+   * <pre>
+   * Average number of pages viewed per session.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAveragePageViewsOrBuilder();
+
+  /**
+   * <pre>
    * Your ad's position relative to those of other advertisers.
    * </pre>
    *
@@ -280,6 +585,59 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.DoubleValue average_position = 13;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getAveragePositionOrBuilder();
+
+  /**
+   * <pre>
+   * Total duration of all sessions (in seconds) / number of sessions. Imported
+   * from Google Analytics.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+   */
+  boolean hasAverageTimeOnSite();
+  /**
+   * <pre>
+   * Total duration of all sessions (in seconds) / number of sessions. Imported
+   * from Google Analytics.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+   */
+  com.google.protobuf.DoubleValue getAverageTimeOnSite();
+  /**
+   * <pre>
+   * Total duration of all sessions (in seconds) / number of sessions. Imported
+   * from Google Analytics.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAverageTimeOnSiteOrBuilder();
+
+  /**
+   * <pre>
+   * An indication of how other advertisers are bidding on similar products.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+   */
+  boolean hasBenchmarkAverageMaxCpc();
+  /**
+   * <pre>
+   * An indication of how other advertisers are bidding on similar products.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+   */
+  com.google.protobuf.DoubleValue getBenchmarkAverageMaxCpc();
+  /**
+   * <pre>
+   * An indication of how other advertisers are bidding on similar products.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getBenchmarkAverageMaxCpcOrBuilder();
 
   /**
    * <pre>
@@ -532,7 +890,9 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Conversions from interactions divided by the number of ad interactions
-   * (such as clicks for text ads or views for video ads).
+   * (such as clicks for text ads or views for video ads). This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -541,7 +901,9 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Conversions from interactions divided by the number of ad interactions
-   * (such as clicks for text ads or views for video ads).
+   * (such as clicks for text ads or views for video ads). This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -550,7 +912,9 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Conversions from interactions divided by the number of ad interactions
-   * (such as clicks for text ads or views for video ads).
+   * (such as clicks for text ads or views for video ads). This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -559,7 +923,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The total value of conversions.
+   * The total value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -567,7 +932,8 @@ public interface MetricsOrBuilder extends
   boolean hasConversionsValue();
   /**
    * <pre>
-   * The total value of conversions.
+   * The total value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -575,7 +941,8 @@ public interface MetricsOrBuilder extends
   com.google.protobuf.DoubleValue getConversionsValue();
   /**
    * <pre>
-   * The total value of conversions.
+   * The total value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -584,7 +951,9 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The value of conversions divided by the cost of ad interactions.
+   * The value of conversions divided by the cost of ad interactions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -592,7 +961,9 @@ public interface MetricsOrBuilder extends
   boolean hasConversionsValuePerCost();
   /**
    * <pre>
-   * The value of conversions divided by the cost of ad interactions.
+   * The value of conversions divided by the cost of ad interactions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -600,7 +971,9 @@ public interface MetricsOrBuilder extends
   com.google.protobuf.DoubleValue getConversionsValuePerCost();
   /**
    * <pre>
-   * The value of conversions divided by the cost of ad interactions.
+   * The value of conversions divided by the cost of ad interactions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -610,7 +983,8 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The value of conversions from interactions divided by the number of ad
-   * interactions.
+   * interactions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -619,7 +993,8 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The value of conversions from interactions divided by the number of ad
-   * interactions.
+   * interactions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -628,7 +1003,8 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The value of conversions from interactions divided by the number of ad
-   * interactions.
+   * interactions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -637,8 +1013,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number of conversions. This only includes conversion actions which have
-   * "Include in Conversions" checked.
+   * The number of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -646,8 +1022,8 @@ public interface MetricsOrBuilder extends
   boolean hasConversions();
   /**
    * <pre>
-   * The number of conversions. This only includes conversion actions which have
-   * "Include in Conversions" checked.
+   * The number of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -655,8 +1031,8 @@ public interface MetricsOrBuilder extends
   com.google.protobuf.DoubleValue getConversions();
   /**
    * <pre>
-   * The number of conversions. This only includes conversion actions which have
-   * "Include in Conversions" checked.
+   * The number of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -718,7 +1094,9 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The cost of ad interactions divided by conversions.
+   * The cost of ad interactions divided by conversions. This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -726,7 +1104,9 @@ public interface MetricsOrBuilder extends
   boolean hasCostPerConversion();
   /**
    * <pre>
-   * The cost of ad interactions divided by conversions.
+   * The cost of ad interactions divided by conversions. This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -734,12 +1114,45 @@ public interface MetricsOrBuilder extends
   com.google.protobuf.DoubleValue getCostPerConversion();
   /**
    * <pre>
-   * The cost of ad interactions divided by conversions.
+   * The cost of ad interactions divided by conversions. This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getCostPerConversionOrBuilder();
+
+  /**
+   * <pre>
+   * The cost of ad interactions divided by current model attributed
+   * conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+   */
+  boolean hasCostPerCurrentModelAttributedConversion();
+  /**
+   * <pre>
+   * The cost of ad interactions divided by current model attributed
+   * conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+   */
+  com.google.protobuf.DoubleValue getCostPerCurrentModelAttributedConversion();
+  /**
+   * <pre>
+   * The cost of ad interactions divided by current model attributed
+   * conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getCostPerCurrentModelAttributedConversionOrBuilder();
 
   /**
    * <pre>
@@ -799,6 +1212,164 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.DoubleValue ctr = 30;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getCtrOrBuilder();
+
+  /**
+   * <pre>
+   * Shows how your historic conversions data would look under the attribution
+   * model you've currently selected. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+   */
+  boolean hasCurrentModelAttributedConversions();
+  /**
+   * <pre>
+   * Shows how your historic conversions data would look under the attribution
+   * model you've currently selected. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+   */
+  com.google.protobuf.DoubleValue getCurrentModelAttributedConversions();
+  /**
+   * <pre>
+   * Shows how your historic conversions data would look under the attribution
+   * model you've currently selected. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsOrBuilder();
+
+  /**
+   * <pre>
+   * Current model attributed conversions from interactions divided by the
+   * number of ad interactions (such as clicks for text ads or views for video
+   * ads). This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+   */
+  boolean hasCurrentModelAttributedConversionsFromInteractionsRate();
+  /**
+   * <pre>
+   * Current model attributed conversions from interactions divided by the
+   * number of ad interactions (such as clicks for text ads or views for video
+   * ads). This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+   */
+  com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsFromInteractionsRate();
+  /**
+   * <pre>
+   * Current model attributed conversions from interactions divided by the
+   * number of ad interactions (such as clicks for text ads or views for video
+   * ads). This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsFromInteractionsRateOrBuilder();
+
+  /**
+   * <pre>
+   * The value of current model attributed conversions from interactions divided
+   * by the number of ad interactions. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+   */
+  boolean hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction();
+  /**
+   * <pre>
+   * The value of current model attributed conversions from interactions divided
+   * by the number of ad interactions. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+   */
+  com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction();
+  /**
+   * <pre>
+   * The value of current model attributed conversions from interactions divided
+   * by the number of ad interactions. This only includes conversion actions
+   * which include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsFromInteractionsValuePerInteractionOrBuilder();
+
+  /**
+   * <pre>
+   * The total value of current model attributed conversions. This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+   */
+  boolean hasCurrentModelAttributedConversionsValue();
+  /**
+   * <pre>
+   * The total value of current model attributed conversions. This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+   */
+  com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsValue();
+  /**
+   * <pre>
+   * The total value of current model attributed conversions. This only includes
+   * conversion actions which include_in_conversions_metric attribute is set to
+   * true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsValueOrBuilder();
+
+  /**
+   * <pre>
+   * The value of current model attributed conversions divided by the cost of ad
+   * interactions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+   */
+  boolean hasCurrentModelAttributedConversionsValuePerCost();
+  /**
+   * <pre>
+   * The value of current model attributed conversions divided by the cost of ad
+   * interactions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+   */
+  com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsValuePerCost();
+  /**
+   * <pre>
+   * The value of current model attributed conversions divided by the cost of ad
+   * interactions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsValuePerCostOrBuilder();
 
   /**
    * <pre>
@@ -883,6 +1454,191 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getHotelAverageLeadValueMicrosOrBuilder();
+
+  /**
+   * <pre>
+   * The creative historical quality score.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+   */
+  int getHistoricalCreativeQualityScoreValue();
+  /**
+   * <pre>
+   * The creative historical quality score.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+   */
+  com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalCreativeQualityScore();
+
+  /**
+   * <pre>
+   * The quality of historical landing page experience.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+   */
+  int getHistoricalLandingPageQualityScoreValue();
+  /**
+   * <pre>
+   * The quality of historical landing page experience.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+   */
+  com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalLandingPageQualityScore();
+
+  /**
+   * <pre>
+   * The historical quality score.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+   */
+  boolean hasHistoricalQualityScore();
+  /**
+   * <pre>
+   * The historical quality score.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+   */
+  com.google.protobuf.Int64Value getHistoricalQualityScore();
+  /**
+   * <pre>
+   * The historical quality score.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getHistoricalQualityScoreOrBuilder();
+
+  /**
+   * <pre>
+   * The historical search predicted click through rate (CTR).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+   */
+  int getHistoricalSearchPredictedCtrValue();
+  /**
+   * <pre>
+   * The historical search predicted click through rate (CTR).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+   */
+  com.google.ads.googleads.v0.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalSearchPredictedCtr();
+
+  /**
+   * <pre>
+   * The number of times the ad was forwarded to someone else as a message.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+   */
+  boolean hasGmailForwards();
+  /**
+   * <pre>
+   * The number of times the ad was forwarded to someone else as a message.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+   */
+  com.google.protobuf.Int64Value getGmailForwards();
+  /**
+   * <pre>
+   * The number of times the ad was forwarded to someone else as a message.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getGmailForwardsOrBuilder();
+
+  /**
+   * <pre>
+   * The number of times someone has saved your Gmail ad to their inbox as a
+   * message.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+   */
+  boolean hasGmailSaves();
+  /**
+   * <pre>
+   * The number of times someone has saved your Gmail ad to their inbox as a
+   * message.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+   */
+  com.google.protobuf.Int64Value getGmailSaves();
+  /**
+   * <pre>
+   * The number of times someone has saved your Gmail ad to their inbox as a
+   * message.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getGmailSavesOrBuilder();
+
+  /**
+   * <pre>
+   * The number of clicks to the landing page on the expanded state of Gmail
+   * ads.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+   */
+  boolean hasGmailSecondaryClicks();
+  /**
+   * <pre>
+   * The number of clicks to the landing page on the expanded state of Gmail
+   * ads.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+   */
+  com.google.protobuf.Int64Value getGmailSecondaryClicks();
+  /**
+   * <pre>
+   * The number of clicks to the landing page on the expanded state of Gmail
+   * ads.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getGmailSecondaryClicksOrBuilder();
+
+  /**
+   * <pre>
+   * Number of unique cookies that were exposed to your ad over a given time
+   * period.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+   */
+  boolean hasImpressionReach();
+  /**
+   * <pre>
+   * Number of unique cookies that were exposed to your ad over a given time
+   * period.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+   */
+  com.google.protobuf.Int64Value getImpressionReach();
+  /**
+   * <pre>
+   * Number of unique cookies that were exposed to your ad over a given time
+   * period.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value impression_reach = 36;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getImpressionReachOrBuilder();
 
   /**
    * <pre>
@@ -973,6 +1729,48 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.Int64Value interactions = 39;</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getInteractionsOrBuilder();
+
+  /**
+   * <pre>
+   * The types of payable and free interactions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   */
+  java.util.List<com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType> getInteractionEventTypesList();
+  /**
+   * <pre>
+   * The types of payable and free interactions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   */
+  int getInteractionEventTypesCount();
+  /**
+   * <pre>
+   * The types of payable and free interactions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   */
+  com.google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType getInteractionEventTypes(int index);
+  /**
+   * <pre>
+   * The types of payable and free interactions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   */
+  java.util.List<java.lang.Integer>
+  getInteractionEventTypesValueList();
+  /**
+   * <pre>
+   * The types of payable and free interactions.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v0.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   */
+  int getInteractionEventTypesValue(int index);
 
   /**
    * <pre>
@@ -1166,8 +1964,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The percentage of the customer's Shopping ad impressions that are shown in
-   * the most prominent Shopping position. See
+   * The percentage of the customer's Shopping or Search ad impressions that are
+   * shown in the most prominent Shopping position. See
    * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
    * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
@@ -1177,8 +1975,8 @@ public interface MetricsOrBuilder extends
   boolean hasSearchAbsoluteTopImpressionShare();
   /**
    * <pre>
-   * The percentage of the customer's Shopping ad impressions that are shown in
-   * the most prominent Shopping position. See
+   * The percentage of the customer's Shopping or Search ad impressions that are
+   * shown in the most prominent Shopping position. See
    * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
    * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
@@ -1188,8 +1986,8 @@ public interface MetricsOrBuilder extends
   com.google.protobuf.DoubleValue getSearchAbsoluteTopImpressionShare();
   /**
    * <pre>
-   * The percentage of the customer's Shopping ad impressions that are shown in
-   * the most prominent Shopping position. See
+   * The percentage of the customer's Shopping or Search ad impressions that are
+   * shown in the most prominent Shopping position. See
    * &lt;a href="https://support.google.com/adwords/answer/7501826"&gt;this Merchant
    * Center article&lt;/a&gt; for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
@@ -1197,6 +1995,40 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getSearchAbsoluteTopImpressionShareOrBuilder();
+
+  /**
+   * <pre>
+   * The number estimating how often your ad wasn't the very first ad above the
+   * organic search results due to a low budget. Note: Search
+   * budget lost absolute top impression share is reported in the range of 0 to
+   * 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+   */
+  boolean hasSearchBudgetLostAbsoluteTopImpressionShare();
+  /**
+   * <pre>
+   * The number estimating how often your ad wasn't the very first ad above the
+   * organic search results due to a low budget. Note: Search
+   * budget lost absolute top impression share is reported in the range of 0 to
+   * 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+   */
+  com.google.protobuf.DoubleValue getSearchBudgetLostAbsoluteTopImpressionShare();
+  /**
+   * <pre>
+   * The number estimating how often your ad wasn't the very first ad above the
+   * organic search results due to a low budget. Note: Search
+   * budget lost absolute top impression share is reported in the range of 0 to
+   * 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getSearchBudgetLostAbsoluteTopImpressionShareOrBuilder();
 
   /**
    * <pre>
@@ -1231,6 +2063,74 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.DoubleValue search_budget_lost_impression_share = 47;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getSearchBudgetLostImpressionShareOrBuilder();
+
+  /**
+   * <pre>
+   * The number estimating how often your ad didn't show anywhere above the
+   * organic search results due to a low budget. Note: Search
+   * budget lost top impression share is reported in the range of 0 to 0.9. Any
+   * value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+   */
+  boolean hasSearchBudgetLostTopImpressionShare();
+  /**
+   * <pre>
+   * The number estimating how often your ad didn't show anywhere above the
+   * organic search results due to a low budget. Note: Search
+   * budget lost top impression share is reported in the range of 0 to 0.9. Any
+   * value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+   */
+  com.google.protobuf.DoubleValue getSearchBudgetLostTopImpressionShare();
+  /**
+   * <pre>
+   * The number estimating how often your ad didn't show anywhere above the
+   * organic search results due to a low budget. Note: Search
+   * budget lost top impression share is reported in the range of 0 to 0.9. Any
+   * value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getSearchBudgetLostTopImpressionShareOrBuilder();
+
+  /**
+   * <pre>
+   * The number of clicks you've received on the Search Network
+   * divided by the estimated number of clicks you were eligible to receive.
+   * Note: Search click share is reported in the range of 0.1 to 1. Any value
+   * below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+   */
+  boolean hasSearchClickShare();
+  /**
+   * <pre>
+   * The number of clicks you've received on the Search Network
+   * divided by the estimated number of clicks you were eligible to receive.
+   * Note: Search click share is reported in the range of 0.1 to 1. Any value
+   * below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+   */
+  com.google.protobuf.DoubleValue getSearchClickShare();
+  /**
+   * <pre>
+   * The number of clicks you've received on the Search Network
+   * divided by the estimated number of clicks you were eligible to receive.
+   * Note: Search click share is reported in the range of 0.1 to 1. Any value
+   * below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getSearchClickShareOrBuilder();
 
   /**
    * <pre>
@@ -1308,6 +2208,40 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The number estimating how often your ad wasn't the very first ad above the
+   * organic search results due to poor Ad Rank.
+   * Note: Search rank lost absolute top impression share is reported in the
+   * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+   */
+  boolean hasSearchRankLostAbsoluteTopImpressionShare();
+  /**
+   * <pre>
+   * The number estimating how often your ad wasn't the very first ad above the
+   * organic search results due to poor Ad Rank.
+   * Note: Search rank lost absolute top impression share is reported in the
+   * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+   */
+  com.google.protobuf.DoubleValue getSearchRankLostAbsoluteTopImpressionShare();
+  /**
+   * <pre>
+   * The number estimating how often your ad wasn't the very first ad above the
+   * organic search results due to poor Ad Rank.
+   * Note: Search rank lost absolute top impression share is reported in the
+   * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getSearchRankLostAbsoluteTopImpressionShareOrBuilder();
+
+  /**
+   * <pre>
    * The estimated percentage of impressions on the Search Network
    * that your ads didn't receive due to poor Ad Rank.
    * Note: Search rank lost impression share is reported in the range of 0 to
@@ -1342,6 +2276,105 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The number estimating how often your ad didn't show anywhere above the
+   * organic search results due to poor Ad Rank.
+   * Note: Search rank lost top impression share is reported in the range of 0
+   * to 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+   */
+  boolean hasSearchRankLostTopImpressionShare();
+  /**
+   * <pre>
+   * The number estimating how often your ad didn't show anywhere above the
+   * organic search results due to poor Ad Rank.
+   * Note: Search rank lost top impression share is reported in the range of 0
+   * to 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+   */
+  com.google.protobuf.DoubleValue getSearchRankLostTopImpressionShare();
+  /**
+   * <pre>
+   * The number estimating how often your ad didn't show anywhere above the
+   * organic search results due to poor Ad Rank.
+   * Note: Search rank lost top impression share is reported in the range of 0
+   * to 0.9. Any value above 0.9 is reported as 0.9001.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getSearchRankLostTopImpressionShareOrBuilder();
+
+  /**
+   * <pre>
+   * The impressions you've received in the top location (anywhere above the
+   * organic search results) compared to the estimated number of impressions you
+   * were eligible to receive in the top location.
+   * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+   * value below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+   */
+  boolean hasSearchTopImpressionShare();
+  /**
+   * <pre>
+   * The impressions you've received in the top location (anywhere above the
+   * organic search results) compared to the estimated number of impressions you
+   * were eligible to receive in the top location.
+   * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+   * value below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+   */
+  com.google.protobuf.DoubleValue getSearchTopImpressionShare();
+  /**
+   * <pre>
+   * The impressions you've received in the top location (anywhere above the
+   * organic search results) compared to the estimated number of impressions you
+   * were eligible to receive in the top location.
+   * Note: Search top impression share is reported in the range of 0.1 to 1. Any
+   * value below 0.1 is reported as 0.0999.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getSearchTopImpressionShareOrBuilder();
+
+  /**
+   * <pre>
+   * The percent of your ad impressions that are shown anywhere above the
+   * organic search results.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+   */
+  boolean hasTopImpressionPercentage();
+  /**
+   * <pre>
+   * The percent of your ad impressions that are shown anywhere above the
+   * organic search results.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+   */
+  com.google.protobuf.DoubleValue getTopImpressionPercentage();
+  /**
+   * <pre>
+   * The percent of your ad impressions that are shown anywhere above the
+   * organic search results.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getTopImpressionPercentageOrBuilder();
+
+  /**
+   * <pre>
    * The value of all conversions divided by the number of all conversions.
    * </pre>
    *
@@ -1367,7 +2400,9 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The value of conversions divided by the number of conversions.
+   * The value of conversions divided by the number of conversions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -1375,7 +2410,9 @@ public interface MetricsOrBuilder extends
   boolean hasValuePerConversion();
   /**
    * <pre>
-   * The value of conversions divided by the number of conversions.
+   * The value of conversions divided by the number of conversions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -1383,12 +2420,45 @@ public interface MetricsOrBuilder extends
   com.google.protobuf.DoubleValue getValuePerConversion();
   /**
    * <pre>
-   * The value of conversions divided by the number of conversions.
+   * The value of conversions divided by the number of conversions. This only
+   * includes conversion actions which include_in_conversions_metric attribute
+   * is set to true.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getValuePerConversionOrBuilder();
+
+  /**
+   * <pre>
+   * The value of current model attributed conversions divided by the number of
+   * the conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+   */
+  boolean hasValuePerCurrentModelAttributedConversion();
+  /**
+   * <pre>
+   * The value of current model attributed conversions divided by the number of
+   * the conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+   */
+  com.google.protobuf.DoubleValue getValuePerCurrentModelAttributedConversion();
+  /**
+   * <pre>
+   * The value of current model attributed conversions divided by the number of
+   * the conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getValuePerCurrentModelAttributedConversionOrBuilder();
 
   /**
    * <pre>

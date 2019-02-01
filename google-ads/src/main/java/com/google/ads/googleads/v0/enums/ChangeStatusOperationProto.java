@@ -33,12 +33,13 @@ public final class ChangeStatusOperationProto {
       "ads.v0.enums\"w\n\031ChangeStatusOperationEnu" +
       "m\"Z\n\025ChangeStatusOperation\022\017\n\013UNSPECIFIE" +
       "D\020\000\022\013\n\007UNKNOWN\020\001\022\t\n\005ADDED\020\002\022\013\n\007CHANGED\020\003" +
-      "\022\013\n\007REMOVED\020\004B\313\001\n!com.google.ads.googlea" +
+      "\022\013\n\007REMOVED\020\004B\357\001\n!com.google.ads.googlea" +
       "ds.v0.enumsB\032ChangeStatusOperationProtoP" +
       "\001ZBgoogle.golang.org/genproto/googleapis" +
       "/ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035Go" +
       "ogle.Ads.GoogleAds.V0.Enums\312\002\035Google\\Ads" +
-      "\\GoogleAds\\V0\\Enumsb\006proto3"
+      "\\GoogleAds\\V0\\Enums\352\002!Google::Ads::Googl" +
+      "eAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

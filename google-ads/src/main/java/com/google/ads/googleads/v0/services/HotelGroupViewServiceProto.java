@@ -39,13 +39,14 @@ public final class HotelGroupViewServiceProto {
       "s.GetHotelGroupViewRequest\0321.google.ads." +
       "googleads.v0.resources.HotelGroupView\"9\202" +
       "\323\344\223\0023\0221/v0/{resource_name=customers/*/ho" +
-      "telGroupViews/*}B\332\001\n$com.google.ads.goog" +
+      "telGroupViews/*}B\201\002\n$com.google.ads.goog" +
       "leads.v0.servicesB\032HotelGroupViewService" +
       "ProtoP\001ZHgoogle.golang.org/genproto/goog" +
       "leapis/ads/googleads/v0/services;service" +
       "s\242\002\003GAA\252\002 Google.Ads.GoogleAds.V0.Servic" +
-      "es\312\002 Google\\Ads\\GoogleAds\\V0\\Servicesb\006p" +
-      "roto3"
+      "es\312\002 Google\\Ads\\GoogleAds\\V0\\Services\352\002$" +
+      "Google::Ads::GoogleAds::V0::Servicesb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

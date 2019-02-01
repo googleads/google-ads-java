@@ -24,6 +24,81 @@ public final class UserListsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_common_CrmBasedUserListInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_UserListRuleInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_UserListRuleInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_UserListRuleItemGroupInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_UserListRuleItemGroupInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_UserListRuleItemInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_UserListRuleItemInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_UserListDateRuleItemInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_UserListDateRuleItemInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_UserListNumberRuleItemInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_UserListNumberRuleItemInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_UserListStringRuleItemInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_UserListStringRuleItemInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_CombinedRuleUserListInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_CombinedRuleUserListInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_DateSpecificRuleUserListInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_DateSpecificRuleUserListInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_ExpressionRuleUserListInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_ExpressionRuleUserListInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_RuleBasedUserListInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_RuleBasedUserListInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_LogicalUserListInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_LogicalUserListInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_UserListLogicalRuleInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_UserListLogicalRuleInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_LogicalUserListOperandInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_LogicalUserListOperandInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_BasicUserListInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_BasicUserListInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_common_UserListActionInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_common_UserListActionInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -36,24 +111,111 @@ public final class UserListsProto {
       "\n/google/ads/googleads/v0/common/user_li" +
       "sts.proto\022\036google.ads.googleads.v0.commo" +
       "n\032Bgoogle/ads/googleads/v0/enums/custome" +
-      "r_match_upload_key_type.proto\032Bgoogle/ad" +
-      "s/googleads/v0/enums/user_list_crm_data_" +
-      "source_type.proto\032\036google/protobuf/wrapp" +
-      "ers.proto\"K\n\023SimilarUserListInfo\0224\n\016seed" +
-      "_user_list\030\001 \001(\0132\034.google.protobuf.Strin" +
-      "gValue\"\251\002\n\024CrmBasedUserListInfo\022,\n\006app_i" +
-      "d\030\001 \001(\0132\034.google.protobuf.StringValue\022q\n" +
-      "\017upload_key_type\030\002 \001(\0162X.google.ads.goog" +
-      "leads.v0.enums.CustomerMatchUploadKeyTyp" +
-      "eEnum.CustomerMatchUploadKeyType\022p\n\020data" +
-      "_source_type\030\003 \001(\0162V.google.ads.googlead" +
-      "s.v0.enums.UserListCrmDataSourceTypeEnum" +
-      ".UserListCrmDataSourceTypeB\304\001\n\"com.googl" +
-      "e.ads.googleads.v0.commonB\016UserListsProt" +
-      "oP\001ZDgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v0/common;common\242\002\003GAA\252" +
-      "\002\036Google.Ads.GoogleAds.V0.Common\312\002\036Googl" +
-      "e\\Ads\\GoogleAds\\V0\\Commonb\006proto3"
+      "r_match_upload_key_type.proto\032Dgoogle/ad" +
+      "s/googleads/v0/enums/user_list_combined_" +
+      "rule_operator.proto\032Bgoogle/ads/googlead" +
+      "s/v0/enums/user_list_crm_data_source_typ" +
+      "e.proto\032Egoogle/ads/googleads/v0/enums/u" +
+      "ser_list_date_rule_item_operator.proto\032C" +
+      "google/ads/googleads/v0/enums/user_list_" +
+      "logical_rule_operator.proto\032Ggoogle/ads/" +
+      "googleads/v0/enums/user_list_number_rule" +
+      "_item_operator.proto\032Bgoogle/ads/googlea" +
+      "ds/v0/enums/user_list_prepopulation_stat" +
+      "us.proto\0327google/ads/googleads/v0/enums/" +
+      "user_list_rule_type.proto\032Ggoogle/ads/go" +
+      "ogleads/v0/enums/user_list_string_rule_i" +
+      "tem_operator.proto\032\036google/protobuf/wrap" +
+      "pers.proto\"K\n\023SimilarUserListInfo\0224\n\016see" +
+      "d_user_list\030\001 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\"\251\002\n\024CrmBasedUserListInfo\022,\n\006app_" +
+      "id\030\001 \001(\0132\034.google.protobuf.StringValue\022q" +
+      "\n\017upload_key_type\030\002 \001(\0162X.google.ads.goo" +
+      "gleads.v0.enums.CustomerMatchUploadKeyTy" +
+      "peEnum.CustomerMatchUploadKeyType\022p\n\020dat" +
+      "a_source_type\030\003 \001(\0162V.google.ads.googlea" +
+      "ds.v0.enums.UserListCrmDataSourceTypeEnu" +
+      "m.UserListCrmDataSourceType\"\300\001\n\020UserList" +
+      "RuleInfo\022W\n\trule_type\030\001 \001(\0162D.google.ads" +
+      ".googleads.v0.enums.UserListRuleTypeEnum" +
+      ".UserListRuleType\022S\n\020rule_item_groups\030\002 " +
+      "\003(\01329.google.ads.googleads.v0.common.Use" +
+      "rListRuleItemGroupInfo\"e\n\031UserListRuleIt" +
+      "emGroupInfo\022H\n\nrule_items\030\001 \003(\01324.google" +
+      ".ads.googleads.v0.common.UserListRuleIte" +
+      "mInfo\"\323\002\n\024UserListRuleItemInfo\022*\n\004name\030\001" +
+      " \001(\0132\034.google.protobuf.StringValue\022V\n\020nu" +
+      "mber_rule_item\030\002 \001(\0132:.google.ads.google" +
+      "ads.v0.common.UserListNumberRuleItemInfo" +
+      "H\000\022V\n\020string_rule_item\030\003 \001(\0132:.google.ad" +
+      "s.googleads.v0.common.UserListStringRule" +
+      "ItemInfoH\000\022R\n\016date_rule_item\030\004 \001(\01328.goo" +
+      "gle.ads.googleads.v0.common.UserListDate" +
+      "RuleItemInfoH\000B\013\n\trule_item\"\354\001\n\030UserList" +
+      "DateRuleItemInfo\022n\n\010operator\030\001 \001(\0162\\.goo" +
+      "gle.ads.googleads.v0.enums.UserListDateR" +
+      "uleItemOperatorEnum.UserListDateRuleItem" +
+      "Operator\022+\n\005value\030\002 \001(\0132\034.google.protobu" +
+      "f.StringValue\0223\n\016offset_in_days\030\003 \001(\0132\033." +
+      "google.protobuf.Int64Value\"\275\001\n\032UserListN" +
+      "umberRuleItemInfo\022r\n\010operator\030\001 \001(\0162`.go" +
+      "ogle.ads.googleads.v0.enums.UserListNumb" +
+      "erRuleItemOperatorEnum.UserListNumberRul" +
+      "eItemOperator\022+\n\005value\030\002 \001(\0132\034.google.pr" +
+      "otobuf.DoubleValue\"\275\001\n\032UserListStringRul" +
+      "eItemInfo\022r\n\010operator\030\001 \001(\0162`.google.ads" +
+      ".googleads.v0.enums.UserListStringRuleIt" +
+      "emOperatorEnum.UserListStringRuleItemOpe" +
+      "rator\022+\n\005value\030\002 \001(\0132\034.google.protobuf.S" +
+      "tringValue\"\240\002\n\030CombinedRuleUserListInfo\022" +
+      "F\n\014left_operand\030\001 \001(\01320.google.ads.googl" +
+      "eads.v0.common.UserListRuleInfo\022G\n\rright" +
+      "_operand\030\002 \001(\01320.google.ads.googleads.v0" +
+      ".common.UserListRuleInfo\022s\n\rrule_operato" +
+      "r\030\003 \001(\0162\\.google.ads.googleads.v0.enums." +
+      "UserListCombinedRuleOperatorEnum.UserLis" +
+      "tCombinedRuleOperator\"\300\001\n\034DateSpecificRu" +
+      "leUserListInfo\022>\n\004rule\030\001 \001(\01320.google.ad" +
+      "s.googleads.v0.common.UserListRuleInfo\0220" +
+      "\n\nstart_date\030\002 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022.\n\010end_date\030\003 \001(\0132\034.google.prot" +
+      "obuf.StringValue\"\\\n\032ExpressionRuleUserLi" +
+      "stInfo\022>\n\004rule\030\001 \001(\01320.google.ads.google" +
+      "ads.v0.common.UserListRuleInfo\"\315\003\n\025RuleB" +
+      "asedUserListInfo\022x\n\024prepopulation_status" +
+      "\030\001 \001(\0162Z.google.ads.googleads.v0.enums.U" +
+      "serListPrepopulationStatusEnum.UserListP" +
+      "repopulationStatus\022[\n\027combined_rule_user" +
+      "_list\030\002 \001(\01328.google.ads.googleads.v0.co" +
+      "mmon.CombinedRuleUserListInfoH\000\022d\n\034date_" +
+      "specific_rule_user_list\030\003 \001(\0132<.google.a" +
+      "ds.googleads.v0.common.DateSpecificRuleU" +
+      "serListInfoH\000\022_\n\031expression_rule_user_li" +
+      "st\030\004 \001(\0132:.google.ads.googleads.v0.commo" +
+      "n.ExpressionRuleUserListInfoH\000B\026\n\024rule_b" +
+      "ased_user_list\"]\n\023LogicalUserListInfo\022F\n" +
+      "\005rules\030\001 \003(\01327.google.ads.googleads.v0.c" +
+      "ommon.UserListLogicalRuleInfo\"\332\001\n\027UserLi" +
+      "stLogicalRuleInfo\022l\n\010operator\030\001 \001(\0162Z.go" +
+      "ogle.ads.googleads.v0.enums.UserListLogi" +
+      "calRuleOperatorEnum.UserListLogicalRuleO" +
+      "perator\022Q\n\rrule_operands\030\002 \003(\0132:.google." +
+      "ads.googleads.v0.common.LogicalUserListO" +
+      "perandInfo\"M\n\032LogicalUserListOperandInfo" +
+      "\022/\n\tuser_list\030\001 \001(\0132\034.google.protobuf.St" +
+      "ringValue\"X\n\021BasicUserListInfo\022C\n\007action" +
+      "s\030\001 \003(\01322.google.ads.googleads.v0.common" +
+      ".UserListActionInfo\"\237\001\n\022UserListActionIn" +
+      "fo\0229\n\021conversion_action\030\001 \001(\0132\034.google.p" +
+      "rotobuf.StringValueH\000\022:\n\022remarketing_act" +
+      "ion\030\002 \001(\0132\034.google.protobuf.StringValueH" +
+      "\000B\022\n\020user_list_actionB\351\001\n\"com.google.ads" +
+      ".googleads.v0.commonB\016UserListsProtoP\001ZD" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v0/common;common\242\002\003GAA\252\002\036Goo" +
+      "gle.Ads.GoogleAds.V0.Common\312\002\036Google\\Ads" +
+      "\\GoogleAds\\V0\\Common\352\002\"Google::Ads::Goog" +
+      "leAds::V0::Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -67,7 +229,14 @@ public final class UserListsProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v0.enums.CustomerMatchUploadKeyTypeProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.UserListCombinedRuleOperatorProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.UserListCrmDataSourceTypeProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.UserListDateRuleItemOperatorProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.UserListLogicalRuleOperatorProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.UserListNumberRuleItemOperatorProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.UserListPrepopulationStatusProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.UserListRuleTypeProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.UserListStringRuleItemOperatorProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_common_SimilarUserListInfo_descriptor =
@@ -82,8 +251,105 @@ public final class UserListsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_common_CrmBasedUserListInfo_descriptor,
         new java.lang.String[] { "AppId", "UploadKeyType", "DataSourceType", });
+    internal_static_google_ads_googleads_v0_common_UserListRuleInfo_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_google_ads_googleads_v0_common_UserListRuleInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_UserListRuleInfo_descriptor,
+        new java.lang.String[] { "RuleType", "RuleItemGroups", });
+    internal_static_google_ads_googleads_v0_common_UserListRuleItemGroupInfo_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_google_ads_googleads_v0_common_UserListRuleItemGroupInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_UserListRuleItemGroupInfo_descriptor,
+        new java.lang.String[] { "RuleItems", });
+    internal_static_google_ads_googleads_v0_common_UserListRuleItemInfo_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_google_ads_googleads_v0_common_UserListRuleItemInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_UserListRuleItemInfo_descriptor,
+        new java.lang.String[] { "Name", "NumberRuleItem", "StringRuleItem", "DateRuleItem", "RuleItem", });
+    internal_static_google_ads_googleads_v0_common_UserListDateRuleItemInfo_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_google_ads_googleads_v0_common_UserListDateRuleItemInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_UserListDateRuleItemInfo_descriptor,
+        new java.lang.String[] { "Operator", "Value", "OffsetInDays", });
+    internal_static_google_ads_googleads_v0_common_UserListNumberRuleItemInfo_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_google_ads_googleads_v0_common_UserListNumberRuleItemInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_UserListNumberRuleItemInfo_descriptor,
+        new java.lang.String[] { "Operator", "Value", });
+    internal_static_google_ads_googleads_v0_common_UserListStringRuleItemInfo_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_google_ads_googleads_v0_common_UserListStringRuleItemInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_UserListStringRuleItemInfo_descriptor,
+        new java.lang.String[] { "Operator", "Value", });
+    internal_static_google_ads_googleads_v0_common_CombinedRuleUserListInfo_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_google_ads_googleads_v0_common_CombinedRuleUserListInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_CombinedRuleUserListInfo_descriptor,
+        new java.lang.String[] { "LeftOperand", "RightOperand", "RuleOperator", });
+    internal_static_google_ads_googleads_v0_common_DateSpecificRuleUserListInfo_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_google_ads_googleads_v0_common_DateSpecificRuleUserListInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_DateSpecificRuleUserListInfo_descriptor,
+        new java.lang.String[] { "Rule", "StartDate", "EndDate", });
+    internal_static_google_ads_googleads_v0_common_ExpressionRuleUserListInfo_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_google_ads_googleads_v0_common_ExpressionRuleUserListInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_ExpressionRuleUserListInfo_descriptor,
+        new java.lang.String[] { "Rule", });
+    internal_static_google_ads_googleads_v0_common_RuleBasedUserListInfo_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_google_ads_googleads_v0_common_RuleBasedUserListInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_RuleBasedUserListInfo_descriptor,
+        new java.lang.String[] { "PrepopulationStatus", "CombinedRuleUserList", "DateSpecificRuleUserList", "ExpressionRuleUserList", "RuleBasedUserList", });
+    internal_static_google_ads_googleads_v0_common_LogicalUserListInfo_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_google_ads_googleads_v0_common_LogicalUserListInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_LogicalUserListInfo_descriptor,
+        new java.lang.String[] { "Rules", });
+    internal_static_google_ads_googleads_v0_common_UserListLogicalRuleInfo_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_google_ads_googleads_v0_common_UserListLogicalRuleInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_UserListLogicalRuleInfo_descriptor,
+        new java.lang.String[] { "Operator", "RuleOperands", });
+    internal_static_google_ads_googleads_v0_common_LogicalUserListOperandInfo_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_google_ads_googleads_v0_common_LogicalUserListOperandInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_LogicalUserListOperandInfo_descriptor,
+        new java.lang.String[] { "UserList", });
+    internal_static_google_ads_googleads_v0_common_BasicUserListInfo_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_google_ads_googleads_v0_common_BasicUserListInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_BasicUserListInfo_descriptor,
+        new java.lang.String[] { "Actions", });
+    internal_static_google_ads_googleads_v0_common_UserListActionInfo_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_google_ads_googleads_v0_common_UserListActionInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_common_UserListActionInfo_descriptor,
+        new java.lang.String[] { "ConversionAction", "RemarketingAction", "UserListAction", });
     com.google.ads.googleads.v0.enums.CustomerMatchUploadKeyTypeProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.UserListCombinedRuleOperatorProto.getDescriptor();
     com.google.ads.googleads.v0.enums.UserListCrmDataSourceTypeProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.UserListDateRuleItemOperatorProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.UserListLogicalRuleOperatorProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.UserListNumberRuleItemOperatorProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.UserListPrepopulationStatusProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.UserListRuleTypeProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.UserListStringRuleItemOperatorProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

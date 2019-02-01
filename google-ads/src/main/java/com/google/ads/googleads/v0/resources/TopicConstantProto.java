@@ -35,12 +35,13 @@ public final class TopicConstantProto {
       " \001(\t\022\'\n\002id\030\002 \001(\0132\033.google.protobuf.Int64" +
       "Value\022;\n\025topic_constant_parent\030\003 \001(\0132\034.g" +
       "oogle.protobuf.StringValue\022*\n\004path\030\004 \003(\013" +
-      "2\034.google.protobuf.StringValueB\327\001\n%com.g" +
+      "2\034.google.protobuf.StringValueB\377\001\n%com.g" +
       "oogle.ads.googleads.v0.resourcesB\022TopicC" +
       "onstantProtoP\001ZJgoogle.golang.org/genpro" +
       "to/googleapis/ads/googleads/v0/resources" +
       ";resources\242\002\003GAA\252\002!Google.Ads.GoogleAds." +
       "V0.Resources\312\002!Google\\Ads\\GoogleAds\\V0\\R" +
+      "esources\352\002%Google::Ads::GoogleAds::V0::R" +
       "esourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

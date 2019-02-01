@@ -50,12 +50,13 @@ public final class MediaFileErrorProto {
       "RTED_TYPE\020\025\022 \n\034YOU_TUBE_SERVICE_UNAVAILA" +
       "BLE\020\026\022,\n(YOU_TUBE_VIDEO_HAS_NON_POSITIVE" +
       "_DURATION\020\027\022\034\n\030YOU_TUBE_VIDEO_NOT_FOUND\020" +
-      "\030B\311\001\n\"com.google.ads.googleads.v0.errors" +
+      "\030B\356\001\n\"com.google.ads.googleads.v0.errors" +
       "B\023MediaFileErrorProtoP\001ZDgoogle.golang.o" +
       "rg/genproto/googleapis/ads/googleads/v0/" +
       "errors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
       "ds.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\E" +
-      "rrorsb\006proto3"
+      "rrors\352\002\"Google::Ads::GoogleAds::V0::Erro" +
+      "rsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

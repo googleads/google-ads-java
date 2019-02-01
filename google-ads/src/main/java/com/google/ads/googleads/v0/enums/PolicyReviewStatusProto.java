@@ -33,12 +33,13 @@ public final class PolicyReviewStatusProto {
       ".v0.enums\"\204\001\n\026PolicyReviewStatusEnum\"j\n\022" +
       "PolicyReviewStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007U" +
       "NKNOWN\020\001\022\026\n\022REVIEW_IN_PROGRESS\020\002\022\014\n\010REVI" +
-      "EWED\020\003\022\020\n\014UNDER_APPEAL\020\004B\310\001\n!com.google." +
+      "EWED\020\003\022\020\n\014UNDER_APPEAL\020\004B\354\001\n!com.google." +
       "ads.googleads.v0.enumsB\027PolicyReviewStat" +
       "usProtoP\001ZBgoogle.golang.org/genproto/go" +
       "ogleapis/ads/googleads/v0/enums;enums\242\002\003" +
       "GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312\002\035Go" +
-      "ogle\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "ogle\\Ads\\GoogleAds\\V0\\Enums\352\002!Google::Ad" +
+      "s::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

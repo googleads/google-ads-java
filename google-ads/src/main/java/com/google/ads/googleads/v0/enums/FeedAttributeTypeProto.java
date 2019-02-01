@@ -36,13 +36,13 @@ public final class FeedAttributeTypeProto {
       "\004\022\013\n\007BOOLEAN\020\005\022\007\n\003URL\020\006\022\r\n\tDATE_TIME\020\007\022\016" +
       "\n\nINT64_LIST\020\010\022\017\n\013DOUBLE_LIST\020\t\022\017\n\013STRIN" +
       "G_LIST\020\n\022\020\n\014BOOLEAN_LIST\020\013\022\014\n\010URL_LIST\020\014" +
-      "\022\022\n\016DATE_TIME_LIST\020\r\022\t\n\005PRICE\020\016B\307\001\n!com." +
+      "\022\022\n\016DATE_TIME_LIST\020\r\022\t\n\005PRICE\020\016B\353\001\n!com." +
       "google.ads.googleads.v0.enumsB\026FeedAttri" +
       "buteTypeProtoP\001ZBgoogle.golang.org/genpr" +
       "oto/googleapis/ads/googleads/v0/enums;en" +
       "ums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enum" +
-      "s\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto" +
-      "3"
+      "s\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Goog" +
+      "le::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

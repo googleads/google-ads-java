@@ -34,13 +34,14 @@ public final class AccountBudgetProposalStatusProto {
       "posalStatusEnum\"\206\001\n\033AccountBudgetProposa" +
       "lStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n" +
       "\007PENDING\020\002\022\021\n\rAPPROVED_HELD\020\003\022\014\n\010APPROVE" +
-      "D\020\004\022\r\n\tCANCELLED\020\005\022\014\n\010REJECTED\020\006B\321\001\n!com" +
+      "D\020\004\022\r\n\tCANCELLED\020\005\022\014\n\010REJECTED\020\006B\365\001\n!com" +
       ".google.ads.googleads.v0.enumsB AccountB" +
       "udgetProposalStatusProtoP\001ZBgoogle.golan" +
       "g.org/genproto/googleapis/ads/googleads/" +
       "v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.Google" +
       "Ads.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\E" +
-      "numsb\006proto3"
+      "nums\352\002!Google::Ads::GoogleAds::V0::Enums" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

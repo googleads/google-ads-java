@@ -40,12 +40,13 @@ public final class KeywordPlanNegativeKeywordProto {
       " \001(\0132\034.google.protobuf.StringValue\022X\n\nma" +
       "tch_type\030\005 \001(\0162D.google.ads.googleads.v0" +
       ".enums.KeywordMatchTypeEnum.KeywordMatch" +
-      "TypeB\344\001\n%com.google.ads.googleads.v0.res" +
+      "TypeB\214\002\n%com.google.ads.googleads.v0.res" +
       "ourcesB\037KeywordPlanNegativeKeywordProtoP" +
       "\001ZJgoogle.golang.org/genproto/googleapis" +
       "/ads/googleads/v0/resources;resources\242\002\003" +
       "GAA\252\002!Google.Ads.GoogleAds.V0.Resources\312" +
-      "\002!Google\\Ads\\GoogleAds\\V0\\Resourcesb\006pro" +
+      "\002!Google\\Ads\\GoogleAds\\V0\\Resources\352\002%Go" +
+      "ogle::Ads::GoogleAds::V0::Resourcesb\006pro" +
       "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

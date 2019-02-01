@@ -33,12 +33,13 @@ public final class DatesProto {
       "ogle/protobuf/wrappers.proto\"m\n\tDateRang" +
       "e\0220\n\nstart_date\030\001 \001(\0132\034.google.protobuf." +
       "StringValue\022.\n\010end_date\030\002 \001(\0132\034.google.p" +
-      "rotobuf.StringValueB\300\001\n\"com.google.ads.g" +
+      "rotobuf.StringValueB\345\001\n\"com.google.ads.g" +
       "oogleads.v0.commonB\nDatesProtoP\001ZDgoogle" +
       ".golang.org/genproto/googleapis/ads/goog" +
       "leads/v0/common;common\242\002\003GAA\252\002\036Google.Ad" +
       "s.GoogleAds.V0.Common\312\002\036Google\\Ads\\Googl" +
-      "eAds\\V0\\Commonb\006proto3"
+      "eAds\\V0\\Common\352\002\"Google::Ads::GoogleAds:" +
+      ":V0::Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

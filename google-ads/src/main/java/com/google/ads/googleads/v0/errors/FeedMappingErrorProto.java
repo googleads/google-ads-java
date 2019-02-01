@@ -48,13 +48,14 @@ public final class FeedMappingErrorProto {
       "T_MODIFY_MAPPINGS_FOR_TYPED_FEED\020\020\022:\n6IN" +
       "VALID_PLACEHOLDER_TYPE_FOR_NON_SYSTEM_GE" +
       "NERATED_FEED\020\021\022;\n7INVALID_PLACEHOLDER_TY" +
-      "PE_FOR_SYSTEM_GENERATED_FEED_TYPE\020\022B\313\001\n\"" +
+      "PE_FOR_SYSTEM_GENERATED_FEED_TYPE\020\022B\360\001\n\"" +
       "com.google.ads.googleads.v0.errorsB\025Feed" +
       "MappingErrorProtoP\001ZDgoogle.golang.org/g" +
       "enproto/googleapis/ads/googleads/v0/erro" +
       "rs;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
       "0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Error" +
-      "sb\006proto3"
+      "s\352\002\"Google::Ads::GoogleAds::V0::Errorsb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

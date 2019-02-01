@@ -35,12 +35,13 @@ public final class CarrierConstantProto {
       "me\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.google.protobuf.I" +
       "nt64Value\022*\n\004name\030\003 \001(\0132\034.google.protobu" +
       "f.StringValue\0222\n\014country_code\030\004 \001(\0132\034.go" +
-      "ogle.protobuf.StringValueB\331\001\n%com.google" +
+      "ogle.protobuf.StringValueB\201\002\n%com.google" +
       ".ads.googleads.v0.resourcesB\024CarrierCons" +
       "tantProtoP\001ZJgoogle.golang.org/genproto/" +
       "googleapis/ads/googleads/v0/resources;re" +
       "sources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0." +
       "Resources\312\002!Google\\Ads\\GoogleAds\\V0\\Reso" +
+      "urces\352\002%Google::Ads::GoogleAds::V0::Reso" +
       "urcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

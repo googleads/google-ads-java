@@ -73,13 +73,14 @@ public final class CriterionCategoryAvailabilityProto {
       "rionCategoryLocaleAvailabilityMode\0222\n\014co" +
       "untry_code\030\002 \001(\0132\034.google.protobuf.Strin" +
       "gValue\0223\n\rlanguage_code\030\003 \001(\0132\034.google.p" +
-      "rotobuf.StringValueB\330\001\n\"com.google.ads.g" +
+      "rotobuf.StringValueB\375\001\n\"com.google.ads.g" +
       "oogleads.v0.commonB\"CriterionCategoryAva" +
       "ilabilityProtoP\001ZDgoogle.golang.org/genp" +
       "roto/googleapis/ads/googleads/v0/common;" +
       "common\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0.C" +
-      "ommon\312\002\036Google\\Ads\\GoogleAds\\V0\\Commonb\006" +
-      "proto3"
+      "ommon\312\002\036Google\\Ads\\GoogleAds\\V0\\Common\352\002" +
+      "\"Google::Ads::GoogleAds::V0::Commonb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

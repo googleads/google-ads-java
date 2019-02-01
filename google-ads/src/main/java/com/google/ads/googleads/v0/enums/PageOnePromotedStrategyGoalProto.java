@@ -33,13 +33,14 @@ public final class PageOnePromotedStrategyGoalProto {
       "s.googleads.v0.enums\"\207\001\n\037PageOnePromoted" +
       "StrategyGoalEnum\"d\n\033PageOnePromotedStrat" +
       "egyGoal\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\016\n" +
-      "\nFIRST_PAGE\020\002\022\027\n\023FIRST_PAGE_PROMOTED\020\003B\321" +
+      "\nFIRST_PAGE\020\002\022\027\n\023FIRST_PAGE_PROMOTED\020\003B\365" +
       "\001\n!com.google.ads.googleads.v0.enumsB Pa" +
       "geOnePromotedStrategyGoalProtoP\001ZBgoogle" +
       ".golang.org/genproto/googleapis/ads/goog" +
       "leads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads." +
       "GoogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleAd" +
-      "s\\V0\\Enumsb\006proto3"
+      "s\\V0\\Enums\352\002!Google::Ads::GoogleAds::V0:" +
+      ":Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

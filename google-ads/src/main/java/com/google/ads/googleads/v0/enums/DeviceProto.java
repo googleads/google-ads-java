@@ -32,12 +32,13 @@ public final class DeviceProto {
       "roto\022\035google.ads.googleads.v0.enums\"Y\n\nD" +
       "eviceEnum\"K\n\006Device\022\017\n\013UNSPECIFIED\020\000\022\013\n\007" +
       "UNKNOWN\020\001\022\n\n\006MOBILE\020\002\022\n\n\006TABLET\020\003\022\013\n\007DES" +
-      "KTOP\020\004B\274\001\n!com.google.ads.googleads.v0.e" +
+      "KTOP\020\004B\340\001\n!com.google.ads.googleads.v0.e" +
       "numsB\013DeviceProtoP\001ZBgoogle.golang.org/g" +
       "enproto/googleapis/ads/googleads/v0/enum" +
       "s;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0." +
-      "Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006p" +
-      "roto3"
+      "Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!" +
+      "Google::Ads::GoogleAds::V0::Enumsb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

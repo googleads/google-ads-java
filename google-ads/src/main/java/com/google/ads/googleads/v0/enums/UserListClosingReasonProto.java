@@ -32,13 +32,13 @@ public final class UserListClosingReasonProto {
       "t_closing_reason.proto\022\035google.ads.googl" +
       "eads.v0.enums\"^\n\031UserListClosingReasonEn" +
       "um\"A\n\025UserListClosingReason\022\017\n\013UNSPECIFI" +
-      "ED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006UNUSED\020\002B\313\001\n!com.go" +
+      "ED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006UNUSED\020\002B\357\001\n!com.go" +
       "ogle.ads.googleads.v0.enumsB\032UserListClo" +
       "singReasonProtoP\001ZBgoogle.golang.org/gen" +
       "proto/googleapis/ads/googleads/v0/enums;" +
       "enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.En" +
-      "ums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006pro" +
-      "to3"
+      "ums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Go" +
+      "ogle::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

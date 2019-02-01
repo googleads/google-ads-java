@@ -129,6 +129,20 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 7;
             break;
           }
+          case 66: {
+            com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder subBuilder = null;
+            if (criterionCase_ == 8) {
+              subBuilder = ((com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.MobileAppCategoryInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 8;
+            break;
+          }
           case 210: {
             com.google.protobuf.Int64Value.Builder subBuilder = null;
             if (criterionId_ != null) {
@@ -182,6 +196,7 @@ private static final long serialVersionUID = 0L;
     YOUTUBE_VIDEO(5),
     YOUTUBE_CHANNEL(6),
     PLACEMENT(7),
+    MOBILE_APP_CATEGORY(8),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -201,6 +216,7 @@ private static final long serialVersionUID = 0L;
         case 5: return YOUTUBE_VIDEO;
         case 6: return YOUTUBE_CHANNEL;
         case 7: return PLACEMENT;
+        case 8: return MOBILE_APP_CATEGORY;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -508,6 +524,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
   }
 
+  public static final int MOBILE_APP_CATEGORY_FIELD_NUMBER = 8;
+  /**
+   * <pre>
+   * Mobile App Category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+   */
+  public boolean hasMobileAppCategory() {
+    return criterionCase_ == 8;
+  }
+  /**
+   * <pre>
+   * Mobile App Category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+   */
+  public com.google.ads.googleads.v0.common.MobileAppCategoryInfo getMobileAppCategory() {
+    if (criterionCase_ == 8) {
+       return (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Mobile App Category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+   */
+  public com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder() {
+    if (criterionCase_ == 8) {
+       return (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -542,6 +596,9 @@ private static final long serialVersionUID = 0L;
     }
     if (criterionCase_ == 7) {
       output.writeMessage(7, (com.google.ads.googleads.v0.common.PlacementInfo) criterion_);
+    }
+    if (criterionCase_ == 8) {
+      output.writeMessage(8, (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_);
     }
     if (criterionId_ != null) {
       output.writeMessage(26, getCriterionId());
@@ -581,6 +638,10 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 7) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, (com.google.ads.googleads.v0.common.PlacementInfo) criterion_);
+    }
+    if (criterionCase_ == 8) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_);
     }
     if (criterionId_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -635,6 +696,10 @@ private static final long serialVersionUID = 0L;
         result = result && getPlacement()
             .equals(other.getPlacement());
         break;
+      case 8:
+        result = result && getMobileAppCategory()
+            .equals(other.getMobileAppCategory());
+        break;
       case 0:
       default:
     }
@@ -677,6 +742,10 @@ private static final long serialVersionUID = 0L;
       case 7:
         hash = (37 * hash) + PLACEMENT_FIELD_NUMBER;
         hash = (53 * hash) + getPlacement().hashCode();
+        break;
+      case 8:
+        hash = (37 * hash) + MOBILE_APP_CATEGORY_FIELD_NUMBER;
+        hash = (53 * hash) + getMobileAppCategory().hashCode();
         break;
       case 0:
       default:
@@ -902,6 +971,13 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = placementBuilder_.build();
         }
       }
+      if (criterionCase_ == 8) {
+        if (mobileAppCategoryBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = mobileAppCategoryBuilder_.build();
+        }
+      }
       result.criterionCase_ = criterionCase_;
       onBuilt();
       return result;
@@ -979,6 +1055,10 @@ private static final long serialVersionUID = 0L;
         }
         case PLACEMENT: {
           mergePlacement(other.getPlacement());
+          break;
+        }
+        case MOBILE_APP_CATEGORY: {
+          mergeMobileAppCategory(other.getMobileAppCategory());
           break;
         }
         case CRITERION_NOT_SET: {
@@ -2194,6 +2274,178 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 7;
       onChanged();;
       return placementBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.MobileAppCategoryInfo, com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder, com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder> mobileAppCategoryBuilder_;
+    /**
+     * <pre>
+     * Mobile App Category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     */
+    public boolean hasMobileAppCategory() {
+      return criterionCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Mobile App Category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     */
+    public com.google.ads.googleads.v0.common.MobileAppCategoryInfo getMobileAppCategory() {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (criterionCase_ == 8) {
+          return (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 8) {
+          return mobileAppCategoryBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Mobile App Category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     */
+    public Builder setMobileAppCategory(com.google.ads.googleads.v0.common.MobileAppCategoryInfo value) {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        mobileAppCategoryBuilder_.setMessage(value);
+      }
+      criterionCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile App Category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     */
+    public Builder setMobileAppCategory(
+        com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder builderForValue) {
+      if (mobileAppCategoryBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        mobileAppCategoryBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile App Category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     */
+    public Builder mergeMobileAppCategory(com.google.ads.googleads.v0.common.MobileAppCategoryInfo value) {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (criterionCase_ == 8 &&
+            criterion_ != com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.MobileAppCategoryInfo.newBuilder((com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 8) {
+          mobileAppCategoryBuilder_.mergeFrom(value);
+        }
+        mobileAppCategoryBuilder_.setMessage(value);
+      }
+      criterionCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile App Category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     */
+    public Builder clearMobileAppCategory() {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (criterionCase_ == 8) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 8) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        mobileAppCategoryBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile App Category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     */
+    public com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder getMobileAppCategoryBuilder() {
+      return getMobileAppCategoryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Mobile App Category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     */
+    public com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder() {
+      if ((criterionCase_ == 8) && (mobileAppCategoryBuilder_ != null)) {
+        return mobileAppCategoryBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 8) {
+          return (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Mobile App Category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.MobileAppCategoryInfo, com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder, com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder> 
+        getMobileAppCategoryFieldBuilder() {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (!(criterionCase_ == 8)) {
+          criterion_ = com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+        }
+        mobileAppCategoryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.MobileAppCategoryInfo, com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder, com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 8;
+      onChanged();;
+      return mobileAppCategoryBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

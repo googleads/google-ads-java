@@ -19,6 +19,26 @@ public final class CustomerManagerLinkServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v0_services_GetCustomerManagerLinkRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_services_CustomerManagerLinkOperation_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_services_CustomerManagerLinkOperation_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkResult_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkResult_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -32,20 +52,40 @@ public final class CustomerManagerLinkServiceProto {
       "mer_manager_link_service.proto\022 google.a" +
       "ds.googleads.v0.services\032=google/ads/goo" +
       "gleads/v0/resources/customer_manager_lin" +
-      "k.proto\032\034google/api/annotations.proto\"6\n" +
-      "\035GetCustomerManagerLinkRequest\022\025\n\rresour" +
-      "ce_name\030\001 \001(\t2\360\001\n\032CustomerManagerLinkSer" +
-      "vice\022\321\001\n\026GetCustomerManagerLink\022?.google" +
-      ".ads.googleads.v0.services.GetCustomerMa" +
-      "nagerLinkRequest\0326.google.ads.googleads." +
-      "v0.resources.CustomerManagerLink\">\202\323\344\223\0028" +
-      "\0226/v0/{resource_name=customers/*/custome" +
-      "rManagerLinks/*}B\337\001\n$com.google.ads.goog" +
-      "leads.v0.servicesB\037CustomerManagerLinkSe" +
-      "rviceProtoP\001ZHgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v0/services;se" +
-      "rvices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V0.S" +
-      "ervices\312\002 Google\\Ads\\GoogleAds\\V0\\Servic" +
+      "k.proto\032\034google/api/annotations.proto\032 g" +
+      "oogle/protobuf/field_mask.proto\"6\n\035GetCu" +
+      "stomerManagerLinkRequest\022\025\n\rresource_nam" +
+      "e\030\001 \001(\t\"\213\001\n MutateCustomerManagerLinkReq" +
+      "uest\022\023\n\013customer_id\030\001 \001(\t\022R\n\noperations\030" +
+      "\002 \003(\0132>.google.ads.googleads.v0.services" +
+      ".CustomerManagerLinkOperation\"\246\001\n\034Custom" +
+      "erManagerLinkOperation\022/\n\013update_mask\030\004 " +
+      "\001(\0132\032.google.protobuf.FieldMask\022H\n\006updat" +
+      "e\030\002 \001(\01326.google.ads.googleads.v0.resour" +
+      "ces.CustomerManagerLinkH\000B\013\n\toperation\"w" +
+      "\n!MutateCustomerManagerLinkResponse\022R\n\007r" +
+      "esults\030\001 \003(\0132A.google.ads.googleads.v0.s" +
+      "ervices.MutateCustomerManagerLinkResult\"" +
+      "8\n\037MutateCustomerManagerLinkResult\022\025\n\rre" +
+      "source_name\030\001 \001(\t2\335\003\n\032CustomerManagerLin" +
+      "kService\022\321\001\n\026GetCustomerManagerLink\022?.go" +
+      "ogle.ads.googleads.v0.services.GetCustom" +
+      "erManagerLinkRequest\0326.google.ads.google" +
+      "ads.v0.resources.CustomerManagerLink\">\202\323" +
+      "\344\223\0028\0226/v0/{resource_name=customers/*/cus" +
+      "tomerManagerLinks/*}\022\352\001\n\031MutateCustomerM" +
+      "anagerLink\022B.google.ads.googleads.v0.ser" +
+      "vices.MutateCustomerManagerLinkRequest\032C" +
+      ".google.ads.googleads.v0.services.Mutate" +
+      "CustomerManagerLinkResponse\"D\202\323\344\223\002>\"9/v0" +
+      "/customers/{customer_id=*}/customerManag" +
+      "erLinks:mutate:\001*B\206\002\n$com.google.ads.goo" +
+      "gleads.v0.servicesB\037CustomerManagerLinkS" +
+      "erviceProtoP\001ZHgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v0/services;s" +
+      "ervices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V0." +
+      "Services\312\002 Google\\Ads\\GoogleAds\\V0\\Servi" +
+      "ces\352\002$Google::Ads::GoogleAds::V0::Servic" +
       "esb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
@@ -61,12 +101,37 @@ public final class CustomerManagerLinkServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v0.resources.CustomerManagerLinkProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_services_GetCustomerManagerLinkRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v0_services_GetCustomerManagerLinkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_GetCustomerManagerLinkRequest_descriptor,
+        new java.lang.String[] { "ResourceName", });
+    internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkRequest_descriptor,
+        new java.lang.String[] { "CustomerId", "Operations", });
+    internal_static_google_ads_googleads_v0_services_CustomerManagerLinkOperation_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_google_ads_googleads_v0_services_CustomerManagerLinkOperation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_services_CustomerManagerLinkOperation_descriptor,
+        new java.lang.String[] { "UpdateMask", "Update", "Operation", });
+    internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkResponse_descriptor,
+        new java.lang.String[] { "Results", });
+    internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkResult_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v0_services_MutateCustomerManagerLinkResult_descriptor,
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -75,6 +140,7 @@ public final class CustomerManagerLinkServiceProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v0.resources.CustomerManagerLinkProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

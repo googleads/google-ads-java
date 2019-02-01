@@ -34,12 +34,13 @@ public final class SearchTermMatchTypeProto {
       "v\n\023SearchTermMatchType\022\017\n\013UNSPECIFIED\020\000\022" +
       "\013\n\007UNKNOWN\020\001\022\t\n\005BROAD\020\002\022\t\n\005EXACT\020\003\022\n\n\006PH" +
       "RASE\020\004\022\016\n\nNEAR_EXACT\020\005\022\017\n\013NEAR_PHRASE\020\006B" +
-      "\311\001\n!com.google.ads.googleads.v0.enumsB\030S" +
+      "\355\001\n!com.google.ads.googleads.v0.enumsB\030S" +
       "earchTermMatchTypeProtoP\001ZBgoogle.golang" +
       ".org/genproto/googleapis/ads/googleads/v" +
       "0/enums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleA" +
       "ds.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\En" +
-      "umsb\006proto3"
+      "ums\352\002!Google::Ads::GoogleAds::V0::Enumsb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -33,12 +33,13 @@ public final class ParentalStatusTypeProto {
       ".v0.enums\"\177\n\026ParentalStatusTypeEnum\"e\n\022P" +
       "arentalStatusType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
       "KNOWN\020\001\022\013\n\006PARENT\020\254\002\022\021\n\014NOT_A_PARENT\020\255\002\022" +
-      "\021\n\014UNDETERMINED\020\256\002B\310\001\n!com.google.ads.go" +
+      "\021\n\014UNDETERMINED\020\256\002B\354\001\n!com.google.ads.go" +
       "ogleads.v0.enumsB\027ParentalStatusTypeProt" +
       "oP\001ZBgoogle.golang.org/genproto/googleap" +
       "is/ads/googleads/v0/enums;enums\242\002\003GAA\252\002\035" +
       "Google.Ads.GoogleAds.V0.Enums\312\002\035Google\\A" +
-      "ds\\GoogleAds\\V0\\Enumsb\006proto3"
+      "ds\\GoogleAds\\V0\\Enums\352\002!Google::Ads::Goo" +
+      "gleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

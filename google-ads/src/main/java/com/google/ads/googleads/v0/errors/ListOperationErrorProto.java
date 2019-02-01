@@ -33,12 +33,13 @@ public final class ListOperationErrorProto {
       "s.v0.errors\"~\n\026ListOperationErrorEnum\"d\n" +
       "\022ListOperationError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007" +
       "UNKNOWN\020\001\022\032\n\026REQUIRED_FIELD_MISSING\020\007\022\024\n" +
-      "\020DUPLICATE_VALUES\020\010B\315\001\n\"com.google.ads.g" +
+      "\020DUPLICATE_VALUES\020\010B\362\001\n\"com.google.ads.g" +
       "oogleads.v0.errorsB\027ListOperationErrorPr" +
       "otoP\001ZDgoogle.golang.org/genproto/google" +
       "apis/ads/googleads/v0/errors;errors\242\002\003GA" +
       "A\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Goo" +
-      "gle\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "gle\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::Ad" +
+      "s::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

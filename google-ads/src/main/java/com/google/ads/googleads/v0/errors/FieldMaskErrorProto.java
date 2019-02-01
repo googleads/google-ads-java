@@ -34,12 +34,13 @@ public final class FieldMaskErrorProto {
       "MaskError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
       "\026\n\022FIELD_MASK_MISSING\020\005\022\032\n\026FIELD_MASK_NO" +
       "T_ALLOWED\020\004\022\023\n\017FIELD_NOT_FOUND\020\002\022\027\n\023FIEL" +
-      "D_HAS_SUBFIELDS\020\003B\311\001\n\"com.google.ads.goo" +
+      "D_HAS_SUBFIELDS\020\003B\356\001\n\"com.google.ads.goo" +
       "gleads.v0.errorsB\023FieldMaskErrorProtoP\001Z" +
       "Dgoogle.golang.org/genproto/googleapis/a" +
       "ds/googleads/v0/errors;errors\242\002\003GAA\252\002\036Go" +
       "ogle.Ads.GoogleAds.V0.Errors\312\002\036Google\\Ad" +
-      "s\\GoogleAds\\V0\\Errorsb\006proto3"
+      "s\\GoogleAds\\V0\\Errors\352\002\"Google::Ads::Goo" +
+      "gleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

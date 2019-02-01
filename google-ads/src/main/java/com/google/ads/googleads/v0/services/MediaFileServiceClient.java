@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -215,7 +215,7 @@ public class MediaFileServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final MediaFile getMediaFile(GetMediaFileRequest request) {
+  public final MediaFile getMediaFile(GetMediaFileRequest request) {
     return getMediaFileCallable().call(request);
   }
 
@@ -239,6 +239,47 @@ public class MediaFileServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetMediaFileRequest, MediaFile> getMediaFileCallable() {
     return stub.getMediaFileCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates media files. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;MediaFileOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   boolean partialFailure = false;
+   *   boolean validateOnly = false;
+   *   MutateMediaFilesResponse response = mediaFileServiceClient.mutateMediaFiles(customerId, operations, partialFailure, validateOnly);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer whose media files are being modified.
+   * @param operations The list of operations to perform on individual media file.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, all operations will be carried out in one transaction if and
+   *     only if they are all valid. Default is false.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateMediaFilesResponse mutateMediaFiles(
+      String customerId,
+      List<MediaFileOperation> operations,
+      boolean partialFailure,
+      boolean validateOnly) {
+
+    MutateMediaFilesRequest request =
+        MutateMediaFilesRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllOperations(operations)
+            .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
+            .build();
+    return mutateMediaFiles(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

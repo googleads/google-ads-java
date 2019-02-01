@@ -31,12 +31,13 @@ public final class TimeTypeProto {
       "\n-google/ads/googleads/v0/enums/time_typ" +
       "e.proto\022\035google.ads.googleads.v0.enums\"N" +
       "\n\014TimeTypeEnum\">\n\010TimeType\022\017\n\013UNSPECIFIE" +
-      "D\020\000\022\013\n\007UNKNOWN\020\001\022\007\n\003NOW\020\002\022\013\n\007FOREVER\020\003B\276" +
+      "D\020\000\022\013\n\007UNKNOWN\020\001\022\007\n\003NOW\020\002\022\013\n\007FOREVER\020\003B\342" +
       "\001\n!com.google.ads.googleads.v0.enumsB\rTi" +
       "meTypeProtoP\001ZBgoogle.golang.org/genprot" +
       "o/googleapis/ads/googleads/v0/enums;enum" +
       "s\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312" +
-      "\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Google" +
+      "::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

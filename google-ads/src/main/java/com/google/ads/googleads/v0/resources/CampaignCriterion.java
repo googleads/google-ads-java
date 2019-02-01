@@ -127,6 +127,20 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 9;
             break;
           }
+          case 82: {
+            com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder subBuilder = null;
+            if (criterionCase_ == 10) {
+              subBuilder = ((com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.MobileAppCategoryInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 10;
+            break;
+          }
           case 98: {
             com.google.ads.googleads.v0.common.LocationInfo.Builder subBuilder = null;
             if (criterionCase_ == 12) {
@@ -392,6 +406,34 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 30;
             break;
           }
+          case 250: {
+            com.google.ads.googleads.v0.common.WebpageInfo.Builder subBuilder = null;
+            if (criterionCase_ == 31) {
+              subBuilder = ((com.google.ads.googleads.v0.common.WebpageInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.WebpageInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.WebpageInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 31;
+            break;
+          }
+          case 258: {
+            com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.Builder subBuilder = null;
+            if (criterionCase_ == 32) {
+              subBuilder = ((com.google.ads.googleads.v0.common.OperatingSystemVersionInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v0.common.OperatingSystemVersionInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 32;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -430,6 +472,7 @@ private static final long serialVersionUID = 0L;
       implements com.google.protobuf.Internal.EnumLite {
     KEYWORD(8),
     PLACEMENT(9),
+    MOBILE_APP_CATEGORY(10),
     LOCATION(12),
     DEVICE(13),
     AD_SCHEDULE(15),
@@ -448,6 +491,8 @@ private static final long serialVersionUID = 0L;
     CONTENT_LABEL(28),
     CARRIER(29),
     USER_INTEREST(30),
+    WEBPAGE(31),
+    OPERATING_SYSTEM_VERSION(32),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -465,6 +510,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 8: return KEYWORD;
         case 9: return PLACEMENT;
+        case 10: return MOBILE_APP_CATEGORY;
         case 12: return LOCATION;
         case 13: return DEVICE;
         case 15: return AD_SCHEDULE;
@@ -483,6 +529,8 @@ private static final long serialVersionUID = 0L;
         case 28: return CONTENT_LABEL;
         case 29: return CARRIER;
         case 30: return USER_INTEREST;
+        case 31: return WEBPAGE;
+        case 32: return OPERATING_SYSTEM_VERSION;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -784,6 +832,44 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v0.common.PlacementInfo) criterion_;
     }
     return com.google.ads.googleads.v0.common.PlacementInfo.getDefaultInstance();
+  }
+
+  public static final int MOBILE_APP_CATEGORY_FIELD_NUMBER = 10;
+  /**
+   * <pre>
+   * Mobile app category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+   */
+  public boolean hasMobileAppCategory() {
+    return criterionCase_ == 10;
+  }
+  /**
+   * <pre>
+   * Mobile app category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+   */
+  public com.google.ads.googleads.v0.common.MobileAppCategoryInfo getMobileAppCategory() {
+    if (criterionCase_ == 10) {
+       return (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Mobile app category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+   */
+  public com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder() {
+    if (criterionCase_ == 10) {
+       return (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
   }
 
   public static final int LOCATION_FIELD_NUMBER = 12;
@@ -1470,6 +1556,82 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.common.UserInterestInfo.getDefaultInstance();
   }
 
+  public static final int WEBPAGE_FIELD_NUMBER = 31;
+  /**
+   * <pre>
+   * Webpage.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+   */
+  public boolean hasWebpage() {
+    return criterionCase_ == 31;
+  }
+  /**
+   * <pre>
+   * Webpage.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+   */
+  public com.google.ads.googleads.v0.common.WebpageInfo getWebpage() {
+    if (criterionCase_ == 31) {
+       return (com.google.ads.googleads.v0.common.WebpageInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Webpage.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+   */
+  public com.google.ads.googleads.v0.common.WebpageInfoOrBuilder getWebpageOrBuilder() {
+    if (criterionCase_ == 31) {
+       return (com.google.ads.googleads.v0.common.WebpageInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance();
+  }
+
+  public static final int OPERATING_SYSTEM_VERSION_FIELD_NUMBER = 32;
+  /**
+   * <pre>
+   * Operating system version.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+   */
+  public boolean hasOperatingSystemVersion() {
+    return criterionCase_ == 32;
+  }
+  /**
+   * <pre>
+   * Operating system version.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+   */
+  public com.google.ads.googleads.v0.common.OperatingSystemVersionInfo getOperatingSystemVersion() {
+    if (criterionCase_ == 32) {
+       return (com.google.ads.googleads.v0.common.OperatingSystemVersionInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Operating system version.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+   */
+  public com.google.ads.googleads.v0.common.OperatingSystemVersionInfoOrBuilder getOperatingSystemVersionOrBuilder() {
+    if (criterionCase_ == 32) {
+       return (com.google.ads.googleads.v0.common.OperatingSystemVersionInfo) criterion_;
+    }
+    return com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1504,6 +1666,9 @@ private static final long serialVersionUID = 0L;
     }
     if (criterionCase_ == 9) {
       output.writeMessage(9, (com.google.ads.googleads.v0.common.PlacementInfo) criterion_);
+    }
+    if (criterionCase_ == 10) {
+      output.writeMessage(10, (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_);
     }
     if (criterionCase_ == 12) {
       output.writeMessage(12, (com.google.ads.googleads.v0.common.LocationInfo) criterion_);
@@ -1562,6 +1727,12 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 30) {
       output.writeMessage(30, (com.google.ads.googleads.v0.common.UserInterestInfo) criterion_);
     }
+    if (criterionCase_ == 31) {
+      output.writeMessage(31, (com.google.ads.googleads.v0.common.WebpageInfo) criterion_);
+    }
+    if (criterionCase_ == 32) {
+      output.writeMessage(32, (com.google.ads.googleads.v0.common.OperatingSystemVersionInfo) criterion_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -1597,6 +1768,10 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 9) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, (com.google.ads.googleads.v0.common.PlacementInfo) criterion_);
+    }
+    if (criterionCase_ == 10) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_);
     }
     if (criterionCase_ == 12) {
       size += com.google.protobuf.CodedOutputStream
@@ -1674,6 +1849,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(30, (com.google.ads.googleads.v0.common.UserInterestInfo) criterion_);
     }
+    if (criterionCase_ == 31) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(31, (com.google.ads.googleads.v0.common.WebpageInfo) criterion_);
+    }
+    if (criterionCase_ == 32) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(32, (com.google.ads.googleads.v0.common.OperatingSystemVersionInfo) criterion_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1724,6 +1907,10 @@ private static final long serialVersionUID = 0L;
       case 9:
         result = result && getPlacement()
             .equals(other.getPlacement());
+        break;
+      case 10:
+        result = result && getMobileAppCategory()
+            .equals(other.getMobileAppCategory());
         break;
       case 12:
         result = result && getLocation()
@@ -1797,6 +1984,14 @@ private static final long serialVersionUID = 0L;
         result = result && getUserInterest()
             .equals(other.getUserInterest());
         break;
+      case 31:
+        result = result && getWebpage()
+            .equals(other.getWebpage());
+        break;
+      case 32:
+        result = result && getOperatingSystemVersion()
+            .equals(other.getOperatingSystemVersion());
+        break;
       case 0:
       default:
     }
@@ -1839,6 +2034,10 @@ private static final long serialVersionUID = 0L;
       case 9:
         hash = (37 * hash) + PLACEMENT_FIELD_NUMBER;
         hash = (53 * hash) + getPlacement().hashCode();
+        break;
+      case 10:
+        hash = (37 * hash) + MOBILE_APP_CATEGORY_FIELD_NUMBER;
+        hash = (53 * hash) + getMobileAppCategory().hashCode();
         break;
       case 12:
         hash = (37 * hash) + LOCATION_FIELD_NUMBER;
@@ -1911,6 +2110,14 @@ private static final long serialVersionUID = 0L;
       case 30:
         hash = (37 * hash) + USER_INTEREST_FIELD_NUMBER;
         hash = (53 * hash) + getUserInterest().hashCode();
+        break;
+      case 31:
+        hash = (37 * hash) + WEBPAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getWebpage().hashCode();
+        break;
+      case 32:
+        hash = (37 * hash) + OPERATING_SYSTEM_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getOperatingSystemVersion().hashCode();
         break;
       case 0:
       default:
@@ -2144,6 +2351,13 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = placementBuilder_.build();
         }
       }
+      if (criterionCase_ == 10) {
+        if (mobileAppCategoryBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = mobileAppCategoryBuilder_.build();
+        }
+      }
       if (criterionCase_ == 12) {
         if (locationBuilder_ == null) {
           result.criterion_ = criterion_;
@@ -2270,6 +2484,20 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = userInterestBuilder_.build();
         }
       }
+      if (criterionCase_ == 31) {
+        if (webpageBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = webpageBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 32) {
+        if (operatingSystemVersionBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = operatingSystemVersionBuilder_.build();
+        }
+      }
       result.criterionCase_ = criterionCase_;
       onBuilt();
       return result;
@@ -2347,6 +2575,10 @@ private static final long serialVersionUID = 0L;
           mergePlacement(other.getPlacement());
           break;
         }
+        case MOBILE_APP_CATEGORY: {
+          mergeMobileAppCategory(other.getMobileAppCategory());
+          break;
+        }
         case LOCATION: {
           mergeLocation(other.getLocation());
           break;
@@ -2417,6 +2649,14 @@ private static final long serialVersionUID = 0L;
         }
         case USER_INTEREST: {
           mergeUserInterest(other.getUserInterest());
+          break;
+        }
+        case WEBPAGE: {
+          mergeWebpage(other.getWebpage());
+          break;
+        }
+        case OPERATING_SYSTEM_VERSION: {
+          mergeOperatingSystemVersion(other.getOperatingSystemVersion());
           break;
         }
         case CRITERION_NOT_SET: {
@@ -3612,6 +3852,178 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 9;
       onChanged();;
       return placementBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.MobileAppCategoryInfo, com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder, com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder> mobileAppCategoryBuilder_;
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+     */
+    public boolean hasMobileAppCategory() {
+      return criterionCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+     */
+    public com.google.ads.googleads.v0.common.MobileAppCategoryInfo getMobileAppCategory() {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (criterionCase_ == 10) {
+          return (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 10) {
+          return mobileAppCategoryBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+     */
+    public Builder setMobileAppCategory(com.google.ads.googleads.v0.common.MobileAppCategoryInfo value) {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        mobileAppCategoryBuilder_.setMessage(value);
+      }
+      criterionCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+     */
+    public Builder setMobileAppCategory(
+        com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder builderForValue) {
+      if (mobileAppCategoryBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        mobileAppCategoryBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+     */
+    public Builder mergeMobileAppCategory(com.google.ads.googleads.v0.common.MobileAppCategoryInfo value) {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (criterionCase_ == 10 &&
+            criterion_ != com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.MobileAppCategoryInfo.newBuilder((com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 10) {
+          mobileAppCategoryBuilder_.mergeFrom(value);
+        }
+        mobileAppCategoryBuilder_.setMessage(value);
+      }
+      criterionCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+     */
+    public Builder clearMobileAppCategory() {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (criterionCase_ == 10) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 10) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        mobileAppCategoryBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+     */
+    public com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder getMobileAppCategoryBuilder() {
+      return getMobileAppCategoryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+     */
+    public com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder() {
+      if ((criterionCase_ == 10) && (mobileAppCategoryBuilder_ != null)) {
+        return mobileAppCategoryBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 10) {
+          return (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Mobile app category.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.MobileAppCategoryInfo, com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder, com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder> 
+        getMobileAppCategoryFieldBuilder() {
+      if (mobileAppCategoryBuilder_ == null) {
+        if (!(criterionCase_ == 10)) {
+          criterion_ = com.google.ads.googleads.v0.common.MobileAppCategoryInfo.getDefaultInstance();
+        }
+        mobileAppCategoryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.MobileAppCategoryInfo, com.google.ads.googleads.v0.common.MobileAppCategoryInfo.Builder, com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.MobileAppCategoryInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 10;
+      onChanged();;
+      return mobileAppCategoryBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -6708,6 +7120,350 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 30;
       onChanged();;
       return userInterestBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.WebpageInfo, com.google.ads.googleads.v0.common.WebpageInfo.Builder, com.google.ads.googleads.v0.common.WebpageInfoOrBuilder> webpageBuilder_;
+    /**
+     * <pre>
+     * Webpage.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+     */
+    public boolean hasWebpage() {
+      return criterionCase_ == 31;
+    }
+    /**
+     * <pre>
+     * Webpage.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+     */
+    public com.google.ads.googleads.v0.common.WebpageInfo getWebpage() {
+      if (webpageBuilder_ == null) {
+        if (criterionCase_ == 31) {
+          return (com.google.ads.googleads.v0.common.WebpageInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 31) {
+          return webpageBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Webpage.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+     */
+    public Builder setWebpage(com.google.ads.googleads.v0.common.WebpageInfo value) {
+      if (webpageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        webpageBuilder_.setMessage(value);
+      }
+      criterionCase_ = 31;
+      return this;
+    }
+    /**
+     * <pre>
+     * Webpage.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+     */
+    public Builder setWebpage(
+        com.google.ads.googleads.v0.common.WebpageInfo.Builder builderForValue) {
+      if (webpageBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        webpageBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 31;
+      return this;
+    }
+    /**
+     * <pre>
+     * Webpage.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+     */
+    public Builder mergeWebpage(com.google.ads.googleads.v0.common.WebpageInfo value) {
+      if (webpageBuilder_ == null) {
+        if (criterionCase_ == 31 &&
+            criterion_ != com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.WebpageInfo.newBuilder((com.google.ads.googleads.v0.common.WebpageInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 31) {
+          webpageBuilder_.mergeFrom(value);
+        }
+        webpageBuilder_.setMessage(value);
+      }
+      criterionCase_ = 31;
+      return this;
+    }
+    /**
+     * <pre>
+     * Webpage.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+     */
+    public Builder clearWebpage() {
+      if (webpageBuilder_ == null) {
+        if (criterionCase_ == 31) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 31) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        webpageBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Webpage.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+     */
+    public com.google.ads.googleads.v0.common.WebpageInfo.Builder getWebpageBuilder() {
+      return getWebpageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Webpage.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+     */
+    public com.google.ads.googleads.v0.common.WebpageInfoOrBuilder getWebpageOrBuilder() {
+      if ((criterionCase_ == 31) && (webpageBuilder_ != null)) {
+        return webpageBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 31) {
+          return (com.google.ads.googleads.v0.common.WebpageInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Webpage.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.WebpageInfo, com.google.ads.googleads.v0.common.WebpageInfo.Builder, com.google.ads.googleads.v0.common.WebpageInfoOrBuilder> 
+        getWebpageFieldBuilder() {
+      if (webpageBuilder_ == null) {
+        if (!(criterionCase_ == 31)) {
+          criterion_ = com.google.ads.googleads.v0.common.WebpageInfo.getDefaultInstance();
+        }
+        webpageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.WebpageInfo, com.google.ads.googleads.v0.common.WebpageInfo.Builder, com.google.ads.googleads.v0.common.WebpageInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.WebpageInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 31;
+      onChanged();;
+      return webpageBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.OperatingSystemVersionInfo, com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.Builder, com.google.ads.googleads.v0.common.OperatingSystemVersionInfoOrBuilder> operatingSystemVersionBuilder_;
+    /**
+     * <pre>
+     * Operating system version.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+     */
+    public boolean hasOperatingSystemVersion() {
+      return criterionCase_ == 32;
+    }
+    /**
+     * <pre>
+     * Operating system version.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+     */
+    public com.google.ads.googleads.v0.common.OperatingSystemVersionInfo getOperatingSystemVersion() {
+      if (operatingSystemVersionBuilder_ == null) {
+        if (criterionCase_ == 32) {
+          return (com.google.ads.googleads.v0.common.OperatingSystemVersionInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 32) {
+          return operatingSystemVersionBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Operating system version.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+     */
+    public Builder setOperatingSystemVersion(com.google.ads.googleads.v0.common.OperatingSystemVersionInfo value) {
+      if (operatingSystemVersionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        operatingSystemVersionBuilder_.setMessage(value);
+      }
+      criterionCase_ = 32;
+      return this;
+    }
+    /**
+     * <pre>
+     * Operating system version.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+     */
+    public Builder setOperatingSystemVersion(
+        com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.Builder builderForValue) {
+      if (operatingSystemVersionBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        operatingSystemVersionBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 32;
+      return this;
+    }
+    /**
+     * <pre>
+     * Operating system version.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+     */
+    public Builder mergeOperatingSystemVersion(com.google.ads.googleads.v0.common.OperatingSystemVersionInfo value) {
+      if (operatingSystemVersionBuilder_ == null) {
+        if (criterionCase_ == 32 &&
+            criterion_ != com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.newBuilder((com.google.ads.googleads.v0.common.OperatingSystemVersionInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 32) {
+          operatingSystemVersionBuilder_.mergeFrom(value);
+        }
+        operatingSystemVersionBuilder_.setMessage(value);
+      }
+      criterionCase_ = 32;
+      return this;
+    }
+    /**
+     * <pre>
+     * Operating system version.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+     */
+    public Builder clearOperatingSystemVersion() {
+      if (operatingSystemVersionBuilder_ == null) {
+        if (criterionCase_ == 32) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 32) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        operatingSystemVersionBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Operating system version.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+     */
+    public com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.Builder getOperatingSystemVersionBuilder() {
+      return getOperatingSystemVersionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Operating system version.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+     */
+    public com.google.ads.googleads.v0.common.OperatingSystemVersionInfoOrBuilder getOperatingSystemVersionOrBuilder() {
+      if ((criterionCase_ == 32) && (operatingSystemVersionBuilder_ != null)) {
+        return operatingSystemVersionBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 32) {
+          return (com.google.ads.googleads.v0.common.OperatingSystemVersionInfo) criterion_;
+        }
+        return com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Operating system version.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.OperatingSystemVersionInfo, com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.Builder, com.google.ads.googleads.v0.common.OperatingSystemVersionInfoOrBuilder> 
+        getOperatingSystemVersionFieldBuilder() {
+      if (operatingSystemVersionBuilder_ == null) {
+        if (!(criterionCase_ == 32)) {
+          criterion_ = com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.getDefaultInstance();
+        }
+        operatingSystemVersionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.OperatingSystemVersionInfo, com.google.ads.googleads.v0.common.OperatingSystemVersionInfo.Builder, com.google.ads.googleads.v0.common.OperatingSystemVersionInfoOrBuilder>(
+                (com.google.ads.googleads.v0.common.OperatingSystemVersionInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 32;
+      onChanged();;
+      return operatingSystemVersionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

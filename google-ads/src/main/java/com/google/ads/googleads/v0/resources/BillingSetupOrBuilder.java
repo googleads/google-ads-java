@@ -75,8 +75,7 @@ public interface BillingSetupOrBuilder extends
    * <pre>
    * The resource name of the Payments account associated with this billing
    * setup. Payments resource names have the form:
-   * `customers/{customer_id}/paymentsAccounts/
-   *                       {payments_profile_id}_{payments_account_id}`
+   * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing Payments
    * account (and then payments_account_info should not be set).
    * When getting a billing setup, this and payments_account_info will be
@@ -90,8 +89,7 @@ public interface BillingSetupOrBuilder extends
    * <pre>
    * The resource name of the Payments account associated with this billing
    * setup. Payments resource names have the form:
-   * `customers/{customer_id}/paymentsAccounts/
-   *                       {payments_profile_id}_{payments_account_id}`
+   * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing Payments
    * account (and then payments_account_info should not be set).
    * When getting a billing setup, this and payments_account_info will be
@@ -105,8 +103,7 @@ public interface BillingSetupOrBuilder extends
    * <pre>
    * The resource name of the Payments account associated with this billing
    * setup. Payments resource names have the form:
-   * `customers/{customer_id}/paymentsAccounts/
-   *                       {payments_profile_id}_{payments_account_id}`
+   * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing Payments
    * account (and then payments_account_info should not be set).
    * When getting a billing setup, this and payments_account_info will be

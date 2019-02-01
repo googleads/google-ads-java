@@ -207,6 +207,31 @@ public interface CampaignCriterionOrBuilder extends
 
   /**
    * <pre>
+   * Mobile app category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+   */
+  boolean hasMobileAppCategory();
+  /**
+   * <pre>
+   * Mobile app category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+   */
+  com.google.ads.googleads.v0.common.MobileAppCategoryInfo getMobileAppCategory();
+  /**
+   * <pre>
+   * Mobile app category.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.MobileAppCategoryInfo mobile_app_category = 10;</code>
+   */
+  com.google.ads.googleads.v0.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder();
+
+  /**
+   * <pre>
    * Location.
    * </pre>
    *
@@ -654,6 +679,56 @@ public interface CampaignCriterionOrBuilder extends
    * <code>.google.ads.googleads.v0.common.UserInterestInfo user_interest = 30;</code>
    */
   com.google.ads.googleads.v0.common.UserInterestInfoOrBuilder getUserInterestOrBuilder();
+
+  /**
+   * <pre>
+   * Webpage.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+   */
+  boolean hasWebpage();
+  /**
+   * <pre>
+   * Webpage.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+   */
+  com.google.ads.googleads.v0.common.WebpageInfo getWebpage();
+  /**
+   * <pre>
+   * Webpage.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.WebpageInfo webpage = 31;</code>
+   */
+  com.google.ads.googleads.v0.common.WebpageInfoOrBuilder getWebpageOrBuilder();
+
+  /**
+   * <pre>
+   * Operating system version.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+   */
+  boolean hasOperatingSystemVersion();
+  /**
+   * <pre>
+   * Operating system version.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+   */
+  com.google.ads.googleads.v0.common.OperatingSystemVersionInfo getOperatingSystemVersion();
+  /**
+   * <pre>
+   * Operating system version.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.OperatingSystemVersionInfo operating_system_version = 32;</code>
+   */
+  com.google.ads.googleads.v0.common.OperatingSystemVersionInfoOrBuilder getOperatingSystemVersionOrBuilder();
 
   public com.google.ads.googleads.v0.resources.CampaignCriterion.CriterionCase getCriterionCase();
 }

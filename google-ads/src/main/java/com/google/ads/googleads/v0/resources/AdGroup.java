@@ -26,6 +26,8 @@ private static final long serialVersionUID = 0L;
     adRotationMode_ = 0;
     urlCustomParameters_ = java.util.Collections.emptyList();
     displayCustomBidDimension_ = 0;
+    effectiveTargetCpaSource_ = 0;
+    effectiveTargetRoasSource_ = 0;
   }
 
   @java.lang.Override
@@ -157,19 +159,6 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 130: {
-            com.google.protobuf.Int64Value.Builder subBuilder = null;
-            if (cpaBidMicros_ != null) {
-              subBuilder = cpaBidMicros_.toBuilder();
-            }
-            cpaBidMicros_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(cpaBidMicros_);
-              cpaBidMicros_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
           case 138: {
             com.google.protobuf.Int64Value.Builder subBuilder = null;
             if (cpvBidMicros_ != null) {
@@ -179,19 +168,6 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(cpvBidMicros_);
               cpvBidMicros_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 154: {
-            com.google.protobuf.DoubleValue.Builder subBuilder = null;
-            if (targetRoasOverride_ != null) {
-              subBuilder = targetRoasOverride_.toBuilder();
-            }
-            targetRoasOverride_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(targetRoasOverride_);
-              targetRoasOverride_ = subBuilder.buildPartial();
             }
 
             break;
@@ -245,6 +221,96 @@ private static final long serialVersionUID = 0L;
               finalUrlSuffix_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 202: {
+            com.google.ads.googleads.v0.common.TargetingSetting.Builder subBuilder = null;
+            if (targetingSetting_ != null) {
+              subBuilder = targetingSetting_.toBuilder();
+            }
+            targetingSetting_ = input.readMessage(com.google.ads.googleads.v0.common.TargetingSetting.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(targetingSetting_);
+              targetingSetting_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 210: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (targetCpmMicros_ != null) {
+              subBuilder = targetCpmMicros_.toBuilder();
+            }
+            targetCpmMicros_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(targetCpmMicros_);
+              targetCpmMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 218: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (targetCpaMicros_ != null) {
+              subBuilder = targetCpaMicros_.toBuilder();
+            }
+            targetCpaMicros_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(targetCpaMicros_);
+              targetCpaMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 226: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (effectiveTargetCpaMicros_ != null) {
+              subBuilder = effectiveTargetCpaMicros_.toBuilder();
+            }
+            effectiveTargetCpaMicros_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(effectiveTargetCpaMicros_);
+              effectiveTargetCpaMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 232: {
+            int rawValue = input.readEnum();
+
+            effectiveTargetCpaSource_ = rawValue;
+            break;
+          }
+          case 242: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (targetRoas_ != null) {
+              subBuilder = targetRoas_.toBuilder();
+            }
+            targetRoas_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(targetRoas_);
+              targetRoas_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 250: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (effectiveTargetRoas_ != null) {
+              subBuilder = effectiveTargetRoas_.toBuilder();
+            }
+            effectiveTargetRoas_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(effectiveTargetRoas_);
+              effectiveTargetRoas_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 256: {
+            int rawValue = input.readEnum();
+
+            effectiveTargetRoasSource_ = rawValue;
             break;
           }
           default: {
@@ -677,37 +743,37 @@ private static final long serialVersionUID = 0L;
     return getCpmBidMicros();
   }
 
-  public static final int CPA_BID_MICROS_FIELD_NUMBER = 16;
-  private com.google.protobuf.Int64Value cpaBidMicros_;
+  public static final int TARGET_CPA_MICROS_FIELD_NUMBER = 27;
+  private com.google.protobuf.Int64Value targetCpaMicros_;
   /**
    * <pre>
-   * The target cost-per-acquisition (conversion) bid.
+   * The target CPA (cost-per-acquisition).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+   * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
    */
-  public boolean hasCpaBidMicros() {
-    return cpaBidMicros_ != null;
+  public boolean hasTargetCpaMicros() {
+    return targetCpaMicros_ != null;
   }
   /**
    * <pre>
-   * The target cost-per-acquisition (conversion) bid.
+   * The target CPA (cost-per-acquisition).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+   * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
    */
-  public com.google.protobuf.Int64Value getCpaBidMicros() {
-    return cpaBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpaBidMicros_;
+  public com.google.protobuf.Int64Value getTargetCpaMicros() {
+    return targetCpaMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : targetCpaMicros_;
   }
   /**
    * <pre>
-   * The target cost-per-acquisition (conversion) bid.
+   * The target CPA (cost-per-acquisition).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+   * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
    */
-  public com.google.protobuf.Int64ValueOrBuilder getCpaBidMicrosOrBuilder() {
-    return getCpaBidMicros();
+  public com.google.protobuf.Int64ValueOrBuilder getTargetCpaMicrosOrBuilder() {
+    return getTargetCpaMicros();
   }
 
   public static final int CPV_BID_MICROS_FIELD_NUMBER = 17;
@@ -743,46 +809,82 @@ private static final long serialVersionUID = 0L;
     return getCpvBidMicros();
   }
 
-  public static final int TARGET_ROAS_OVERRIDE_FIELD_NUMBER = 19;
-  private com.google.protobuf.DoubleValue targetRoasOverride_;
+  public static final int TARGET_CPM_MICROS_FIELD_NUMBER = 26;
+  private com.google.protobuf.Int64Value targetCpmMicros_;
   /**
    * <pre>
-   * The target return on ad spend (ROAS) override. If the ad group's campaign
-   * bidding strategy is a standard Target ROAS strategy, then this field
-   * overrides the target ROAS specified in the campaign's bidding strategy.
-   * Otherwise, this value is ignored.
+   * Average amount in micros that the advertiser is willing to pay for every
+   * thousand times the ad is shown.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+   * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
    */
-  public boolean hasTargetRoasOverride() {
-    return targetRoasOverride_ != null;
+  public boolean hasTargetCpmMicros() {
+    return targetCpmMicros_ != null;
   }
   /**
    * <pre>
-   * The target return on ad spend (ROAS) override. If the ad group's campaign
-   * bidding strategy is a standard Target ROAS strategy, then this field
-   * overrides the target ROAS specified in the campaign's bidding strategy.
-   * Otherwise, this value is ignored.
+   * Average amount in micros that the advertiser is willing to pay for every
+   * thousand times the ad is shown.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+   * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
    */
-  public com.google.protobuf.DoubleValue getTargetRoasOverride() {
-    return targetRoasOverride_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : targetRoasOverride_;
+  public com.google.protobuf.Int64Value getTargetCpmMicros() {
+    return targetCpmMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : targetCpmMicros_;
   }
   /**
    * <pre>
-   * The target return on ad spend (ROAS) override. If the ad group's campaign
+   * Average amount in micros that the advertiser is willing to pay for every
+   * thousand times the ad is shown.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getTargetCpmMicrosOrBuilder() {
+    return getTargetCpmMicros();
+  }
+
+  public static final int TARGET_ROAS_FIELD_NUMBER = 30;
+  private com.google.protobuf.DoubleValue targetRoas_;
+  /**
+   * <pre>
+   * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
    * bidding strategy is a standard Target ROAS strategy, then this field
    * overrides the target ROAS specified in the campaign's bidding strategy.
    * Otherwise, this value is ignored.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+   * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
    */
-  public com.google.protobuf.DoubleValueOrBuilder getTargetRoasOverrideOrBuilder() {
-    return getTargetRoasOverride();
+  public boolean hasTargetRoas() {
+    return targetRoas_ != null;
+  }
+  /**
+   * <pre>
+   * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
+   * bidding strategy is a standard Target ROAS strategy, then this field
+   * overrides the target ROAS specified in the campaign's bidding strategy.
+   * Otherwise, this value is ignored.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+   */
+  public com.google.protobuf.DoubleValue getTargetRoas() {
+    return targetRoas_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : targetRoas_;
+  }
+  /**
+   * <pre>
+   * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
+   * bidding strategy is a standard Target ROAS strategy, then this field
+   * overrides the target ROAS specified in the campaign's bidding strategy.
+   * Otherwise, this value is ignored.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getTargetRoasOrBuilder() {
+    return getTargetRoas();
   }
 
   public static final int PERCENT_CPC_BID_MICROS_FIELD_NUMBER = 20;
@@ -919,6 +1021,165 @@ private static final long serialVersionUID = 0L;
     return getFinalUrlSuffix();
   }
 
+  public static final int TARGETING_SETTING_FIELD_NUMBER = 25;
+  private com.google.ads.googleads.v0.common.TargetingSetting targetingSetting_;
+  /**
+   * <pre>
+   * Setting for targeting related features.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+   */
+  public boolean hasTargetingSetting() {
+    return targetingSetting_ != null;
+  }
+  /**
+   * <pre>
+   * Setting for targeting related features.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+   */
+  public com.google.ads.googleads.v0.common.TargetingSetting getTargetingSetting() {
+    return targetingSetting_ == null ? com.google.ads.googleads.v0.common.TargetingSetting.getDefaultInstance() : targetingSetting_;
+  }
+  /**
+   * <pre>
+   * Setting for targeting related features.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+   */
+  public com.google.ads.googleads.v0.common.TargetingSettingOrBuilder getTargetingSettingOrBuilder() {
+    return getTargetingSetting();
+  }
+
+  public static final int EFFECTIVE_TARGET_CPA_MICROS_FIELD_NUMBER = 28;
+  private com.google.protobuf.Int64Value effectiveTargetCpaMicros_;
+  /**
+   * <pre>
+   * The effective target CPA (cost-per-acquisition).
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+   */
+  public boolean hasEffectiveTargetCpaMicros() {
+    return effectiveTargetCpaMicros_ != null;
+  }
+  /**
+   * <pre>
+   * The effective target CPA (cost-per-acquisition).
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+   */
+  public com.google.protobuf.Int64Value getEffectiveTargetCpaMicros() {
+    return effectiveTargetCpaMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectiveTargetCpaMicros_;
+  }
+  /**
+   * <pre>
+   * The effective target CPA (cost-per-acquisition).
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getEffectiveTargetCpaMicrosOrBuilder() {
+    return getEffectiveTargetCpaMicros();
+  }
+
+  public static final int EFFECTIVE_TARGET_CPA_SOURCE_FIELD_NUMBER = 29;
+  private int effectiveTargetCpaSource_;
+  /**
+   * <pre>
+   * Source of the effective target CPA.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+   */
+  public int getEffectiveTargetCpaSourceValue() {
+    return effectiveTargetCpaSource_;
+  }
+  /**
+   * <pre>
+   * Source of the effective target CPA.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+   */
+  public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetCpaSource() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveTargetCpaSource_);
+    return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
+  }
+
+  public static final int EFFECTIVE_TARGET_ROAS_FIELD_NUMBER = 31;
+  private com.google.protobuf.DoubleValue effectiveTargetRoas_;
+  /**
+   * <pre>
+   * The effective target ROAS (return-on-ad-spend).
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+   */
+  public boolean hasEffectiveTargetRoas() {
+    return effectiveTargetRoas_ != null;
+  }
+  /**
+   * <pre>
+   * The effective target ROAS (return-on-ad-spend).
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+   */
+  public com.google.protobuf.DoubleValue getEffectiveTargetRoas() {
+    return effectiveTargetRoas_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : effectiveTargetRoas_;
+  }
+  /**
+   * <pre>
+   * The effective target ROAS (return-on-ad-spend).
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getEffectiveTargetRoasOrBuilder() {
+    return getEffectiveTargetRoas();
+  }
+
+  public static final int EFFECTIVE_TARGET_ROAS_SOURCE_FIELD_NUMBER = 32;
+  private int effectiveTargetRoasSource_;
+  /**
+   * <pre>
+   * Source of the effective target ROAS.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+   */
+  public int getEffectiveTargetRoasSourceValue() {
+    return effectiveTargetRoasSource_;
+  }
+  /**
+   * <pre>
+   * Source of the effective target ROAS.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+   */
+  public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetRoasSource() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveTargetRoasSource_);
+    return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -963,14 +1224,8 @@ private static final long serialVersionUID = 0L;
     if (cpmBidMicros_ != null) {
       output.writeMessage(15, getCpmBidMicros());
     }
-    if (cpaBidMicros_ != null) {
-      output.writeMessage(16, getCpaBidMicros());
-    }
     if (cpvBidMicros_ != null) {
       output.writeMessage(17, getCpvBidMicros());
-    }
-    if (targetRoasOverride_ != null) {
-      output.writeMessage(19, getTargetRoasOverride());
     }
     if (percentCpcBidMicros_ != null) {
       output.writeMessage(20, getPercentCpcBidMicros());
@@ -986,6 +1241,30 @@ private static final long serialVersionUID = 0L;
     }
     if (finalUrlSuffix_ != null) {
       output.writeMessage(24, getFinalUrlSuffix());
+    }
+    if (targetingSetting_ != null) {
+      output.writeMessage(25, getTargetingSetting());
+    }
+    if (targetCpmMicros_ != null) {
+      output.writeMessage(26, getTargetCpmMicros());
+    }
+    if (targetCpaMicros_ != null) {
+      output.writeMessage(27, getTargetCpaMicros());
+    }
+    if (effectiveTargetCpaMicros_ != null) {
+      output.writeMessage(28, getEffectiveTargetCpaMicros());
+    }
+    if (effectiveTargetCpaSource_ != com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
+      output.writeEnum(29, effectiveTargetCpaSource_);
+    }
+    if (targetRoas_ != null) {
+      output.writeMessage(30, getTargetRoas());
+    }
+    if (effectiveTargetRoas_ != null) {
+      output.writeMessage(31, getEffectiveTargetRoas());
+    }
+    if (effectiveTargetRoasSource_ != com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
+      output.writeEnum(32, effectiveTargetRoasSource_);
     }
     unknownFields.writeTo(output);
   }
@@ -1035,17 +1314,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getCpmBidMicros());
     }
-    if (cpaBidMicros_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(16, getCpaBidMicros());
-    }
     if (cpvBidMicros_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, getCpvBidMicros());
-    }
-    if (targetRoasOverride_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(19, getTargetRoasOverride());
     }
     if (percentCpcBidMicros_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -1066,6 +1337,38 @@ private static final long serialVersionUID = 0L;
     if (finalUrlSuffix_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(24, getFinalUrlSuffix());
+    }
+    if (targetingSetting_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(25, getTargetingSetting());
+    }
+    if (targetCpmMicros_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(26, getTargetCpmMicros());
+    }
+    if (targetCpaMicros_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(27, getTargetCpaMicros());
+    }
+    if (effectiveTargetCpaMicros_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(28, getEffectiveTargetCpaMicros());
+    }
+    if (effectiveTargetCpaSource_ != com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(29, effectiveTargetCpaSource_);
+    }
+    if (targetRoas_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(30, getTargetRoas());
+    }
+    if (effectiveTargetRoas_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(31, getEffectiveTargetRoas());
+    }
+    if (effectiveTargetRoasSource_ != com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(32, effectiveTargetRoasSource_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1120,20 +1423,25 @@ private static final long serialVersionUID = 0L;
       result = result && getCpmBidMicros()
           .equals(other.getCpmBidMicros());
     }
-    result = result && (hasCpaBidMicros() == other.hasCpaBidMicros());
-    if (hasCpaBidMicros()) {
-      result = result && getCpaBidMicros()
-          .equals(other.getCpaBidMicros());
+    result = result && (hasTargetCpaMicros() == other.hasTargetCpaMicros());
+    if (hasTargetCpaMicros()) {
+      result = result && getTargetCpaMicros()
+          .equals(other.getTargetCpaMicros());
     }
     result = result && (hasCpvBidMicros() == other.hasCpvBidMicros());
     if (hasCpvBidMicros()) {
       result = result && getCpvBidMicros()
           .equals(other.getCpvBidMicros());
     }
-    result = result && (hasTargetRoasOverride() == other.hasTargetRoasOverride());
-    if (hasTargetRoasOverride()) {
-      result = result && getTargetRoasOverride()
-          .equals(other.getTargetRoasOverride());
+    result = result && (hasTargetCpmMicros() == other.hasTargetCpmMicros());
+    if (hasTargetCpmMicros()) {
+      result = result && getTargetCpmMicros()
+          .equals(other.getTargetCpmMicros());
+    }
+    result = result && (hasTargetRoas() == other.hasTargetRoas());
+    if (hasTargetRoas()) {
+      result = result && getTargetRoas()
+          .equals(other.getTargetRoas());
     }
     result = result && (hasPercentCpcBidMicros() == other.hasPercentCpcBidMicros());
     if (hasPercentCpcBidMicros()) {
@@ -1151,6 +1459,23 @@ private static final long serialVersionUID = 0L;
       result = result && getFinalUrlSuffix()
           .equals(other.getFinalUrlSuffix());
     }
+    result = result && (hasTargetingSetting() == other.hasTargetingSetting());
+    if (hasTargetingSetting()) {
+      result = result && getTargetingSetting()
+          .equals(other.getTargetingSetting());
+    }
+    result = result && (hasEffectiveTargetCpaMicros() == other.hasEffectiveTargetCpaMicros());
+    if (hasEffectiveTargetCpaMicros()) {
+      result = result && getEffectiveTargetCpaMicros()
+          .equals(other.getEffectiveTargetCpaMicros());
+    }
+    result = result && effectiveTargetCpaSource_ == other.effectiveTargetCpaSource_;
+    result = result && (hasEffectiveTargetRoas() == other.hasEffectiveTargetRoas());
+    if (hasEffectiveTargetRoas()) {
+      result = result && getEffectiveTargetRoas()
+          .equals(other.getEffectiveTargetRoas());
+    }
+    result = result && effectiveTargetRoasSource_ == other.effectiveTargetRoasSource_;
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -1198,17 +1523,21 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CPM_BID_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + getCpmBidMicros().hashCode();
     }
-    if (hasCpaBidMicros()) {
-      hash = (37 * hash) + CPA_BID_MICROS_FIELD_NUMBER;
-      hash = (53 * hash) + getCpaBidMicros().hashCode();
+    if (hasTargetCpaMicros()) {
+      hash = (37 * hash) + TARGET_CPA_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetCpaMicros().hashCode();
     }
     if (hasCpvBidMicros()) {
       hash = (37 * hash) + CPV_BID_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + getCpvBidMicros().hashCode();
     }
-    if (hasTargetRoasOverride()) {
-      hash = (37 * hash) + TARGET_ROAS_OVERRIDE_FIELD_NUMBER;
-      hash = (53 * hash) + getTargetRoasOverride().hashCode();
+    if (hasTargetCpmMicros()) {
+      hash = (37 * hash) + TARGET_CPM_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetCpmMicros().hashCode();
+    }
+    if (hasTargetRoas()) {
+      hash = (37 * hash) + TARGET_ROAS_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetRoas().hashCode();
     }
     if (hasPercentCpcBidMicros()) {
       hash = (37 * hash) + PERCENT_CPC_BID_MICROS_FIELD_NUMBER;
@@ -1224,6 +1553,22 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FINAL_URL_SUFFIX_FIELD_NUMBER;
       hash = (53 * hash) + getFinalUrlSuffix().hashCode();
     }
+    if (hasTargetingSetting()) {
+      hash = (37 * hash) + TARGETING_SETTING_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetingSetting().hashCode();
+    }
+    if (hasEffectiveTargetCpaMicros()) {
+      hash = (37 * hash) + EFFECTIVE_TARGET_CPA_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + getEffectiveTargetCpaMicros().hashCode();
+    }
+    hash = (37 * hash) + EFFECTIVE_TARGET_CPA_SOURCE_FIELD_NUMBER;
+    hash = (53 * hash) + effectiveTargetCpaSource_;
+    if (hasEffectiveTargetRoas()) {
+      hash = (37 * hash) + EFFECTIVE_TARGET_ROAS_FIELD_NUMBER;
+      hash = (53 * hash) + getEffectiveTargetRoas().hashCode();
+    }
+    hash = (37 * hash) + EFFECTIVE_TARGET_ROAS_SOURCE_FIELD_NUMBER;
+    hash = (53 * hash) + effectiveTargetRoasSource_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1412,11 +1757,11 @@ private static final long serialVersionUID = 0L;
         cpmBidMicros_ = null;
         cpmBidMicrosBuilder_ = null;
       }
-      if (cpaBidMicrosBuilder_ == null) {
-        cpaBidMicros_ = null;
+      if (targetCpaMicrosBuilder_ == null) {
+        targetCpaMicros_ = null;
       } else {
-        cpaBidMicros_ = null;
-        cpaBidMicrosBuilder_ = null;
+        targetCpaMicros_ = null;
+        targetCpaMicrosBuilder_ = null;
       }
       if (cpvBidMicrosBuilder_ == null) {
         cpvBidMicros_ = null;
@@ -1424,11 +1769,17 @@ private static final long serialVersionUID = 0L;
         cpvBidMicros_ = null;
         cpvBidMicrosBuilder_ = null;
       }
-      if (targetRoasOverrideBuilder_ == null) {
-        targetRoasOverride_ = null;
+      if (targetCpmMicrosBuilder_ == null) {
+        targetCpmMicros_ = null;
       } else {
-        targetRoasOverride_ = null;
-        targetRoasOverrideBuilder_ = null;
+        targetCpmMicros_ = null;
+        targetCpmMicrosBuilder_ = null;
+      }
+      if (targetRoasBuilder_ == null) {
+        targetRoas_ = null;
+      } else {
+        targetRoas_ = null;
+        targetRoasBuilder_ = null;
       }
       if (percentCpcBidMicrosBuilder_ == null) {
         percentCpcBidMicros_ = null;
@@ -1450,6 +1801,28 @@ private static final long serialVersionUID = 0L;
         finalUrlSuffix_ = null;
         finalUrlSuffixBuilder_ = null;
       }
+      if (targetingSettingBuilder_ == null) {
+        targetingSetting_ = null;
+      } else {
+        targetingSetting_ = null;
+        targetingSettingBuilder_ = null;
+      }
+      if (effectiveTargetCpaMicrosBuilder_ == null) {
+        effectiveTargetCpaMicros_ = null;
+      } else {
+        effectiveTargetCpaMicros_ = null;
+        effectiveTargetCpaMicrosBuilder_ = null;
+      }
+      effectiveTargetCpaSource_ = 0;
+
+      if (effectiveTargetRoasBuilder_ == null) {
+        effectiveTargetRoas_ = null;
+      } else {
+        effectiveTargetRoas_ = null;
+        effectiveTargetRoasBuilder_ = null;
+      }
+      effectiveTargetRoasSource_ = 0;
+
       return this;
     }
 
@@ -1521,20 +1894,25 @@ private static final long serialVersionUID = 0L;
       } else {
         result.cpmBidMicros_ = cpmBidMicrosBuilder_.build();
       }
-      if (cpaBidMicrosBuilder_ == null) {
-        result.cpaBidMicros_ = cpaBidMicros_;
+      if (targetCpaMicrosBuilder_ == null) {
+        result.targetCpaMicros_ = targetCpaMicros_;
       } else {
-        result.cpaBidMicros_ = cpaBidMicrosBuilder_.build();
+        result.targetCpaMicros_ = targetCpaMicrosBuilder_.build();
       }
       if (cpvBidMicrosBuilder_ == null) {
         result.cpvBidMicros_ = cpvBidMicros_;
       } else {
         result.cpvBidMicros_ = cpvBidMicrosBuilder_.build();
       }
-      if (targetRoasOverrideBuilder_ == null) {
-        result.targetRoasOverride_ = targetRoasOverride_;
+      if (targetCpmMicrosBuilder_ == null) {
+        result.targetCpmMicros_ = targetCpmMicros_;
       } else {
-        result.targetRoasOverride_ = targetRoasOverrideBuilder_.build();
+        result.targetCpmMicros_ = targetCpmMicrosBuilder_.build();
+      }
+      if (targetRoasBuilder_ == null) {
+        result.targetRoas_ = targetRoas_;
+      } else {
+        result.targetRoas_ = targetRoasBuilder_.build();
       }
       if (percentCpcBidMicrosBuilder_ == null) {
         result.percentCpcBidMicros_ = percentCpcBidMicros_;
@@ -1552,6 +1930,23 @@ private static final long serialVersionUID = 0L;
       } else {
         result.finalUrlSuffix_ = finalUrlSuffixBuilder_.build();
       }
+      if (targetingSettingBuilder_ == null) {
+        result.targetingSetting_ = targetingSetting_;
+      } else {
+        result.targetingSetting_ = targetingSettingBuilder_.build();
+      }
+      if (effectiveTargetCpaMicrosBuilder_ == null) {
+        result.effectiveTargetCpaMicros_ = effectiveTargetCpaMicros_;
+      } else {
+        result.effectiveTargetCpaMicros_ = effectiveTargetCpaMicrosBuilder_.build();
+      }
+      result.effectiveTargetCpaSource_ = effectiveTargetCpaSource_;
+      if (effectiveTargetRoasBuilder_ == null) {
+        result.effectiveTargetRoas_ = effectiveTargetRoas_;
+      } else {
+        result.effectiveTargetRoas_ = effectiveTargetRoasBuilder_.build();
+      }
+      result.effectiveTargetRoasSource_ = effectiveTargetRoasSource_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1658,14 +2053,17 @@ private static final long serialVersionUID = 0L;
       if (other.hasCpmBidMicros()) {
         mergeCpmBidMicros(other.getCpmBidMicros());
       }
-      if (other.hasCpaBidMicros()) {
-        mergeCpaBidMicros(other.getCpaBidMicros());
+      if (other.hasTargetCpaMicros()) {
+        mergeTargetCpaMicros(other.getTargetCpaMicros());
       }
       if (other.hasCpvBidMicros()) {
         mergeCpvBidMicros(other.getCpvBidMicros());
       }
-      if (other.hasTargetRoasOverride()) {
-        mergeTargetRoasOverride(other.getTargetRoasOverride());
+      if (other.hasTargetCpmMicros()) {
+        mergeTargetCpmMicros(other.getTargetCpmMicros());
+      }
+      if (other.hasTargetRoas()) {
+        mergeTargetRoas(other.getTargetRoas());
       }
       if (other.hasPercentCpcBidMicros()) {
         mergePercentCpcBidMicros(other.getPercentCpcBidMicros());
@@ -1678,6 +2076,21 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasFinalUrlSuffix()) {
         mergeFinalUrlSuffix(other.getFinalUrlSuffix());
+      }
+      if (other.hasTargetingSetting()) {
+        mergeTargetingSetting(other.getTargetingSetting());
+      }
+      if (other.hasEffectiveTargetCpaMicros()) {
+        mergeEffectiveTargetCpaMicros(other.getEffectiveTargetCpaMicros());
+      }
+      if (other.effectiveTargetCpaSource_ != 0) {
+        setEffectiveTargetCpaSourceValue(other.getEffectiveTargetCpaSourceValue());
+      }
+      if (other.hasEffectiveTargetRoas()) {
+        mergeEffectiveTargetRoas(other.getEffectiveTargetRoas());
+      }
+      if (other.effectiveTargetRoasSource_ != 0) {
+        setEffectiveTargetRoasSourceValue(other.getEffectiveTargetRoasSourceValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -3296,157 +3709,157 @@ private static final long serialVersionUID = 0L;
       return cpmBidMicrosBuilder_;
     }
 
-    private com.google.protobuf.Int64Value cpaBidMicros_ = null;
+    private com.google.protobuf.Int64Value targetCpaMicros_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> cpaBidMicrosBuilder_;
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> targetCpaMicrosBuilder_;
     /**
      * <pre>
-     * The target cost-per-acquisition (conversion) bid.
+     * The target CPA (cost-per-acquisition).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
      */
-    public boolean hasCpaBidMicros() {
-      return cpaBidMicrosBuilder_ != null || cpaBidMicros_ != null;
+    public boolean hasTargetCpaMicros() {
+      return targetCpaMicrosBuilder_ != null || targetCpaMicros_ != null;
     }
     /**
      * <pre>
-     * The target cost-per-acquisition (conversion) bid.
+     * The target CPA (cost-per-acquisition).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
      */
-    public com.google.protobuf.Int64Value getCpaBidMicros() {
-      if (cpaBidMicrosBuilder_ == null) {
-        return cpaBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpaBidMicros_;
+    public com.google.protobuf.Int64Value getTargetCpaMicros() {
+      if (targetCpaMicrosBuilder_ == null) {
+        return targetCpaMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : targetCpaMicros_;
       } else {
-        return cpaBidMicrosBuilder_.getMessage();
+        return targetCpaMicrosBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * The target cost-per-acquisition (conversion) bid.
+     * The target CPA (cost-per-acquisition).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
      */
-    public Builder setCpaBidMicros(com.google.protobuf.Int64Value value) {
-      if (cpaBidMicrosBuilder_ == null) {
+    public Builder setTargetCpaMicros(com.google.protobuf.Int64Value value) {
+      if (targetCpaMicrosBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        cpaBidMicros_ = value;
+        targetCpaMicros_ = value;
         onChanged();
       } else {
-        cpaBidMicrosBuilder_.setMessage(value);
+        targetCpaMicrosBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * The target cost-per-acquisition (conversion) bid.
+     * The target CPA (cost-per-acquisition).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
      */
-    public Builder setCpaBidMicros(
+    public Builder setTargetCpaMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (cpaBidMicrosBuilder_ == null) {
-        cpaBidMicros_ = builderForValue.build();
+      if (targetCpaMicrosBuilder_ == null) {
+        targetCpaMicros_ = builderForValue.build();
         onChanged();
       } else {
-        cpaBidMicrosBuilder_.setMessage(builderForValue.build());
+        targetCpaMicrosBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * The target cost-per-acquisition (conversion) bid.
+     * The target CPA (cost-per-acquisition).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
      */
-    public Builder mergeCpaBidMicros(com.google.protobuf.Int64Value value) {
-      if (cpaBidMicrosBuilder_ == null) {
-        if (cpaBidMicros_ != null) {
-          cpaBidMicros_ =
-            com.google.protobuf.Int64Value.newBuilder(cpaBidMicros_).mergeFrom(value).buildPartial();
+    public Builder mergeTargetCpaMicros(com.google.protobuf.Int64Value value) {
+      if (targetCpaMicrosBuilder_ == null) {
+        if (targetCpaMicros_ != null) {
+          targetCpaMicros_ =
+            com.google.protobuf.Int64Value.newBuilder(targetCpaMicros_).mergeFrom(value).buildPartial();
         } else {
-          cpaBidMicros_ = value;
+          targetCpaMicros_ = value;
         }
         onChanged();
       } else {
-        cpaBidMicrosBuilder_.mergeFrom(value);
+        targetCpaMicrosBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * The target cost-per-acquisition (conversion) bid.
+     * The target CPA (cost-per-acquisition).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
      */
-    public Builder clearCpaBidMicros() {
-      if (cpaBidMicrosBuilder_ == null) {
-        cpaBidMicros_ = null;
+    public Builder clearTargetCpaMicros() {
+      if (targetCpaMicrosBuilder_ == null) {
+        targetCpaMicros_ = null;
         onChanged();
       } else {
-        cpaBidMicros_ = null;
-        cpaBidMicrosBuilder_ = null;
+        targetCpaMicros_ = null;
+        targetCpaMicrosBuilder_ = null;
       }
 
       return this;
     }
     /**
      * <pre>
-     * The target cost-per-acquisition (conversion) bid.
+     * The target CPA (cost-per-acquisition).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
      */
-    public com.google.protobuf.Int64Value.Builder getCpaBidMicrosBuilder() {
+    public com.google.protobuf.Int64Value.Builder getTargetCpaMicrosBuilder() {
       
       onChanged();
-      return getCpaBidMicrosFieldBuilder().getBuilder();
+      return getTargetCpaMicrosFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The target cost-per-acquisition (conversion) bid.
+     * The target CPA (cost-per-acquisition).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
      */
-    public com.google.protobuf.Int64ValueOrBuilder getCpaBidMicrosOrBuilder() {
-      if (cpaBidMicrosBuilder_ != null) {
-        return cpaBidMicrosBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.Int64ValueOrBuilder getTargetCpaMicrosOrBuilder() {
+      if (targetCpaMicrosBuilder_ != null) {
+        return targetCpaMicrosBuilder_.getMessageOrBuilder();
       } else {
-        return cpaBidMicros_ == null ?
-            com.google.protobuf.Int64Value.getDefaultInstance() : cpaBidMicros_;
+        return targetCpaMicros_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : targetCpaMicros_;
       }
     }
     /**
      * <pre>
-     * The target cost-per-acquisition (conversion) bid.
+     * The target CPA (cost-per-acquisition).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpa_bid_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-        getCpaBidMicrosFieldBuilder() {
-      if (cpaBidMicrosBuilder_ == null) {
-        cpaBidMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getTargetCpaMicrosFieldBuilder() {
+      if (targetCpaMicrosBuilder_ == null) {
+        targetCpaMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                getCpaBidMicros(),
+                getTargetCpaMicros(),
                 getParentForChildren(),
                 isClean());
-        cpaBidMicros_ = null;
+        targetCpaMicros_ = null;
       }
-      return cpaBidMicrosBuilder_;
+      return targetCpaMicrosBuilder_;
     }
 
     private com.google.protobuf.Int64Value cpvBidMicros_ = null;
@@ -3602,184 +4015,346 @@ private static final long serialVersionUID = 0L;
       return cpvBidMicrosBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue targetRoasOverride_ = null;
+    private com.google.protobuf.Int64Value targetCpmMicros_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> targetRoasOverrideBuilder_;
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> targetCpmMicrosBuilder_;
     /**
      * <pre>
-     * The target return on ad spend (ROAS) override. If the ad group's campaign
-     * bidding strategy is a standard Target ROAS strategy, then this field
-     * overrides the target ROAS specified in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * Average amount in micros that the advertiser is willing to pay for every
+     * thousand times the ad is shown.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+     * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
      */
-    public boolean hasTargetRoasOverride() {
-      return targetRoasOverrideBuilder_ != null || targetRoasOverride_ != null;
+    public boolean hasTargetCpmMicros() {
+      return targetCpmMicrosBuilder_ != null || targetCpmMicros_ != null;
     }
     /**
      * <pre>
-     * The target return on ad spend (ROAS) override. If the ad group's campaign
-     * bidding strategy is a standard Target ROAS strategy, then this field
-     * overrides the target ROAS specified in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * Average amount in micros that the advertiser is willing to pay for every
+     * thousand times the ad is shown.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+     * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
      */
-    public com.google.protobuf.DoubleValue getTargetRoasOverride() {
-      if (targetRoasOverrideBuilder_ == null) {
-        return targetRoasOverride_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : targetRoasOverride_;
+    public com.google.protobuf.Int64Value getTargetCpmMicros() {
+      if (targetCpmMicrosBuilder_ == null) {
+        return targetCpmMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : targetCpmMicros_;
       } else {
-        return targetRoasOverrideBuilder_.getMessage();
+        return targetCpmMicrosBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * The target return on ad spend (ROAS) override. If the ad group's campaign
-     * bidding strategy is a standard Target ROAS strategy, then this field
-     * overrides the target ROAS specified in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * Average amount in micros that the advertiser is willing to pay for every
+     * thousand times the ad is shown.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+     * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
      */
-    public Builder setTargetRoasOverride(com.google.protobuf.DoubleValue value) {
-      if (targetRoasOverrideBuilder_ == null) {
+    public Builder setTargetCpmMicros(com.google.protobuf.Int64Value value) {
+      if (targetCpmMicrosBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        targetRoasOverride_ = value;
+        targetCpmMicros_ = value;
         onChanged();
       } else {
-        targetRoasOverrideBuilder_.setMessage(value);
+        targetCpmMicrosBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * The target return on ad spend (ROAS) override. If the ad group's campaign
-     * bidding strategy is a standard Target ROAS strategy, then this field
-     * overrides the target ROAS specified in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * Average amount in micros that the advertiser is willing to pay for every
+     * thousand times the ad is shown.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+     * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
      */
-    public Builder setTargetRoasOverride(
-        com.google.protobuf.DoubleValue.Builder builderForValue) {
-      if (targetRoasOverrideBuilder_ == null) {
-        targetRoasOverride_ = builderForValue.build();
+    public Builder setTargetCpmMicros(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (targetCpmMicrosBuilder_ == null) {
+        targetCpmMicros_ = builderForValue.build();
         onChanged();
       } else {
-        targetRoasOverrideBuilder_.setMessage(builderForValue.build());
+        targetCpmMicrosBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * The target return on ad spend (ROAS) override. If the ad group's campaign
-     * bidding strategy is a standard Target ROAS strategy, then this field
-     * overrides the target ROAS specified in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * Average amount in micros that the advertiser is willing to pay for every
+     * thousand times the ad is shown.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+     * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
      */
-    public Builder mergeTargetRoasOverride(com.google.protobuf.DoubleValue value) {
-      if (targetRoasOverrideBuilder_ == null) {
-        if (targetRoasOverride_ != null) {
-          targetRoasOverride_ =
-            com.google.protobuf.DoubleValue.newBuilder(targetRoasOverride_).mergeFrom(value).buildPartial();
+    public Builder mergeTargetCpmMicros(com.google.protobuf.Int64Value value) {
+      if (targetCpmMicrosBuilder_ == null) {
+        if (targetCpmMicros_ != null) {
+          targetCpmMicros_ =
+            com.google.protobuf.Int64Value.newBuilder(targetCpmMicros_).mergeFrom(value).buildPartial();
         } else {
-          targetRoasOverride_ = value;
+          targetCpmMicros_ = value;
         }
         onChanged();
       } else {
-        targetRoasOverrideBuilder_.mergeFrom(value);
+        targetCpmMicrosBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * The target return on ad spend (ROAS) override. If the ad group's campaign
-     * bidding strategy is a standard Target ROAS strategy, then this field
-     * overrides the target ROAS specified in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * Average amount in micros that the advertiser is willing to pay for every
+     * thousand times the ad is shown.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+     * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
      */
-    public Builder clearTargetRoasOverride() {
-      if (targetRoasOverrideBuilder_ == null) {
-        targetRoasOverride_ = null;
+    public Builder clearTargetCpmMicros() {
+      if (targetCpmMicrosBuilder_ == null) {
+        targetCpmMicros_ = null;
         onChanged();
       } else {
-        targetRoasOverride_ = null;
-        targetRoasOverrideBuilder_ = null;
+        targetCpmMicros_ = null;
+        targetCpmMicrosBuilder_ = null;
       }
 
       return this;
     }
     /**
      * <pre>
-     * The target return on ad spend (ROAS) override. If the ad group's campaign
-     * bidding strategy is a standard Target ROAS strategy, then this field
-     * overrides the target ROAS specified in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * Average amount in micros that the advertiser is willing to pay for every
+     * thousand times the ad is shown.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+     * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
      */
-    public com.google.protobuf.DoubleValue.Builder getTargetRoasOverrideBuilder() {
+    public com.google.protobuf.Int64Value.Builder getTargetCpmMicrosBuilder() {
       
       onChanged();
-      return getTargetRoasOverrideFieldBuilder().getBuilder();
+      return getTargetCpmMicrosFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The target return on ad spend (ROAS) override. If the ad group's campaign
-     * bidding strategy is a standard Target ROAS strategy, then this field
-     * overrides the target ROAS specified in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * Average amount in micros that the advertiser is willing to pay for every
+     * thousand times the ad is shown.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+     * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getTargetRoasOverrideOrBuilder() {
-      if (targetRoasOverrideBuilder_ != null) {
-        return targetRoasOverrideBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.Int64ValueOrBuilder getTargetCpmMicrosOrBuilder() {
+      if (targetCpmMicrosBuilder_ != null) {
+        return targetCpmMicrosBuilder_.getMessageOrBuilder();
       } else {
-        return targetRoasOverride_ == null ?
-            com.google.protobuf.DoubleValue.getDefaultInstance() : targetRoasOverride_;
+        return targetCpmMicros_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : targetCpmMicros_;
       }
     }
     /**
      * <pre>
-     * The target return on ad spend (ROAS) override. If the ad group's campaign
+     * Average amount in micros that the advertiser is willing to pay for every
+     * thousand times the ad is shown.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getTargetCpmMicrosFieldBuilder() {
+      if (targetCpmMicrosBuilder_ == null) {
+        targetCpmMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getTargetCpmMicros(),
+                getParentForChildren(),
+                isClean());
+        targetCpmMicros_ = null;
+      }
+      return targetCpmMicrosBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue targetRoas_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> targetRoasBuilder_;
+    /**
+     * <pre>
+     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
      * bidding strategy is a standard Target ROAS strategy, then this field
      * overrides the target ROAS specified in the campaign's bidding strategy.
      * Otherwise, this value is ignored.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue target_roas_override = 19;</code>
+     * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+     */
+    public boolean hasTargetRoas() {
+      return targetRoasBuilder_ != null || targetRoas_ != null;
+    }
+    /**
+     * <pre>
+     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
+     * bidding strategy is a standard Target ROAS strategy, then this field
+     * overrides the target ROAS specified in the campaign's bidding strategy.
+     * Otherwise, this value is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+     */
+    public com.google.protobuf.DoubleValue getTargetRoas() {
+      if (targetRoasBuilder_ == null) {
+        return targetRoas_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : targetRoas_;
+      } else {
+        return targetRoasBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
+     * bidding strategy is a standard Target ROAS strategy, then this field
+     * overrides the target ROAS specified in the campaign's bidding strategy.
+     * Otherwise, this value is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+     */
+    public Builder setTargetRoas(com.google.protobuf.DoubleValue value) {
+      if (targetRoasBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        targetRoas_ = value;
+        onChanged();
+      } else {
+        targetRoasBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
+     * bidding strategy is a standard Target ROAS strategy, then this field
+     * overrides the target ROAS specified in the campaign's bidding strategy.
+     * Otherwise, this value is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+     */
+    public Builder setTargetRoas(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (targetRoasBuilder_ == null) {
+        targetRoas_ = builderForValue.build();
+        onChanged();
+      } else {
+        targetRoasBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
+     * bidding strategy is a standard Target ROAS strategy, then this field
+     * overrides the target ROAS specified in the campaign's bidding strategy.
+     * Otherwise, this value is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+     */
+    public Builder mergeTargetRoas(com.google.protobuf.DoubleValue value) {
+      if (targetRoasBuilder_ == null) {
+        if (targetRoas_ != null) {
+          targetRoas_ =
+            com.google.protobuf.DoubleValue.newBuilder(targetRoas_).mergeFrom(value).buildPartial();
+        } else {
+          targetRoas_ = value;
+        }
+        onChanged();
+      } else {
+        targetRoasBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
+     * bidding strategy is a standard Target ROAS strategy, then this field
+     * overrides the target ROAS specified in the campaign's bidding strategy.
+     * Otherwise, this value is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+     */
+    public Builder clearTargetRoas() {
+      if (targetRoasBuilder_ == null) {
+        targetRoas_ = null;
+        onChanged();
+      } else {
+        targetRoas_ = null;
+        targetRoasBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
+     * bidding strategy is a standard Target ROAS strategy, then this field
+     * overrides the target ROAS specified in the campaign's bidding strategy.
+     * Otherwise, this value is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getTargetRoasBuilder() {
+      
+      onChanged();
+      return getTargetRoasFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
+     * bidding strategy is a standard Target ROAS strategy, then this field
+     * overrides the target ROAS specified in the campaign's bidding strategy.
+     * Otherwise, this value is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getTargetRoasOrBuilder() {
+      if (targetRoasBuilder_ != null) {
+        return targetRoasBuilder_.getMessageOrBuilder();
+      } else {
+        return targetRoas_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : targetRoas_;
+      }
+    }
+    /**
+     * <pre>
+     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
+     * bidding strategy is a standard Target ROAS strategy, then this field
+     * overrides the target ROAS specified in the campaign's bidding strategy.
+     * Otherwise, this value is ignored.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
-        getTargetRoasOverrideFieldBuilder() {
-      if (targetRoasOverrideBuilder_ == null) {
-        targetRoasOverrideBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getTargetRoasFieldBuilder() {
+      if (targetRoasBuilder_ == null) {
+        targetRoasBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
-                getTargetRoasOverride(),
+                getTargetRoas(),
                 getParentForChildren(),
                 isClean());
-        targetRoasOverride_ = null;
+        targetRoas_ = null;
       }
-      return targetRoasOverrideBuilder_;
+      return targetRoasBuilder_;
     }
 
     private com.google.protobuf.Int64Value percentCpcBidMicros_ = null;
@@ -4332,6 +4907,623 @@ private static final long serialVersionUID = 0L;
         finalUrlSuffix_ = null;
       }
       return finalUrlSuffixBuilder_;
+    }
+
+    private com.google.ads.googleads.v0.common.TargetingSetting targetingSetting_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.TargetingSetting, com.google.ads.googleads.v0.common.TargetingSetting.Builder, com.google.ads.googleads.v0.common.TargetingSettingOrBuilder> targetingSettingBuilder_;
+    /**
+     * <pre>
+     * Setting for targeting related features.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+     */
+    public boolean hasTargetingSetting() {
+      return targetingSettingBuilder_ != null || targetingSetting_ != null;
+    }
+    /**
+     * <pre>
+     * Setting for targeting related features.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+     */
+    public com.google.ads.googleads.v0.common.TargetingSetting getTargetingSetting() {
+      if (targetingSettingBuilder_ == null) {
+        return targetingSetting_ == null ? com.google.ads.googleads.v0.common.TargetingSetting.getDefaultInstance() : targetingSetting_;
+      } else {
+        return targetingSettingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Setting for targeting related features.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+     */
+    public Builder setTargetingSetting(com.google.ads.googleads.v0.common.TargetingSetting value) {
+      if (targetingSettingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        targetingSetting_ = value;
+        onChanged();
+      } else {
+        targetingSettingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Setting for targeting related features.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+     */
+    public Builder setTargetingSetting(
+        com.google.ads.googleads.v0.common.TargetingSetting.Builder builderForValue) {
+      if (targetingSettingBuilder_ == null) {
+        targetingSetting_ = builderForValue.build();
+        onChanged();
+      } else {
+        targetingSettingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Setting for targeting related features.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+     */
+    public Builder mergeTargetingSetting(com.google.ads.googleads.v0.common.TargetingSetting value) {
+      if (targetingSettingBuilder_ == null) {
+        if (targetingSetting_ != null) {
+          targetingSetting_ =
+            com.google.ads.googleads.v0.common.TargetingSetting.newBuilder(targetingSetting_).mergeFrom(value).buildPartial();
+        } else {
+          targetingSetting_ = value;
+        }
+        onChanged();
+      } else {
+        targetingSettingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Setting for targeting related features.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+     */
+    public Builder clearTargetingSetting() {
+      if (targetingSettingBuilder_ == null) {
+        targetingSetting_ = null;
+        onChanged();
+      } else {
+        targetingSetting_ = null;
+        targetingSettingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Setting for targeting related features.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+     */
+    public com.google.ads.googleads.v0.common.TargetingSetting.Builder getTargetingSettingBuilder() {
+      
+      onChanged();
+      return getTargetingSettingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Setting for targeting related features.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+     */
+    public com.google.ads.googleads.v0.common.TargetingSettingOrBuilder getTargetingSettingOrBuilder() {
+      if (targetingSettingBuilder_ != null) {
+        return targetingSettingBuilder_.getMessageOrBuilder();
+      } else {
+        return targetingSetting_ == null ?
+            com.google.ads.googleads.v0.common.TargetingSetting.getDefaultInstance() : targetingSetting_;
+      }
+    }
+    /**
+     * <pre>
+     * Setting for targeting related features.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.common.TargetingSetting targeting_setting = 25;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v0.common.TargetingSetting, com.google.ads.googleads.v0.common.TargetingSetting.Builder, com.google.ads.googleads.v0.common.TargetingSettingOrBuilder> 
+        getTargetingSettingFieldBuilder() {
+      if (targetingSettingBuilder_ == null) {
+        targetingSettingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v0.common.TargetingSetting, com.google.ads.googleads.v0.common.TargetingSetting.Builder, com.google.ads.googleads.v0.common.TargetingSettingOrBuilder>(
+                getTargetingSetting(),
+                getParentForChildren(),
+                isClean());
+        targetingSetting_ = null;
+      }
+      return targetingSettingBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value effectiveTargetCpaMicros_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> effectiveTargetCpaMicrosBuilder_;
+    /**
+     * <pre>
+     * The effective target CPA (cost-per-acquisition).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     */
+    public boolean hasEffectiveTargetCpaMicros() {
+      return effectiveTargetCpaMicrosBuilder_ != null || effectiveTargetCpaMicros_ != null;
+    }
+    /**
+     * <pre>
+     * The effective target CPA (cost-per-acquisition).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     */
+    public com.google.protobuf.Int64Value getEffectiveTargetCpaMicros() {
+      if (effectiveTargetCpaMicrosBuilder_ == null) {
+        return effectiveTargetCpaMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectiveTargetCpaMicros_;
+      } else {
+        return effectiveTargetCpaMicrosBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The effective target CPA (cost-per-acquisition).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     */
+    public Builder setEffectiveTargetCpaMicros(com.google.protobuf.Int64Value value) {
+      if (effectiveTargetCpaMicrosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        effectiveTargetCpaMicros_ = value;
+        onChanged();
+      } else {
+        effectiveTargetCpaMicrosBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The effective target CPA (cost-per-acquisition).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     */
+    public Builder setEffectiveTargetCpaMicros(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (effectiveTargetCpaMicrosBuilder_ == null) {
+        effectiveTargetCpaMicros_ = builderForValue.build();
+        onChanged();
+      } else {
+        effectiveTargetCpaMicrosBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The effective target CPA (cost-per-acquisition).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     */
+    public Builder mergeEffectiveTargetCpaMicros(com.google.protobuf.Int64Value value) {
+      if (effectiveTargetCpaMicrosBuilder_ == null) {
+        if (effectiveTargetCpaMicros_ != null) {
+          effectiveTargetCpaMicros_ =
+            com.google.protobuf.Int64Value.newBuilder(effectiveTargetCpaMicros_).mergeFrom(value).buildPartial();
+        } else {
+          effectiveTargetCpaMicros_ = value;
+        }
+        onChanged();
+      } else {
+        effectiveTargetCpaMicrosBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The effective target CPA (cost-per-acquisition).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     */
+    public Builder clearEffectiveTargetCpaMicros() {
+      if (effectiveTargetCpaMicrosBuilder_ == null) {
+        effectiveTargetCpaMicros_ = null;
+        onChanged();
+      } else {
+        effectiveTargetCpaMicros_ = null;
+        effectiveTargetCpaMicrosBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The effective target CPA (cost-per-acquisition).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getEffectiveTargetCpaMicrosBuilder() {
+      
+      onChanged();
+      return getEffectiveTargetCpaMicrosFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The effective target CPA (cost-per-acquisition).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getEffectiveTargetCpaMicrosOrBuilder() {
+      if (effectiveTargetCpaMicrosBuilder_ != null) {
+        return effectiveTargetCpaMicrosBuilder_.getMessageOrBuilder();
+      } else {
+        return effectiveTargetCpaMicros_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : effectiveTargetCpaMicros_;
+      }
+    }
+    /**
+     * <pre>
+     * The effective target CPA (cost-per-acquisition).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getEffectiveTargetCpaMicrosFieldBuilder() {
+      if (effectiveTargetCpaMicrosBuilder_ == null) {
+        effectiveTargetCpaMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getEffectiveTargetCpaMicros(),
+                getParentForChildren(),
+                isClean());
+        effectiveTargetCpaMicros_ = null;
+      }
+      return effectiveTargetCpaMicrosBuilder_;
+    }
+
+    private int effectiveTargetCpaSource_ = 0;
+    /**
+     * <pre>
+     * Source of the effective target CPA.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+     */
+    public int getEffectiveTargetCpaSourceValue() {
+      return effectiveTargetCpaSource_;
+    }
+    /**
+     * <pre>
+     * Source of the effective target CPA.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+     */
+    public Builder setEffectiveTargetCpaSourceValue(int value) {
+      effectiveTargetCpaSource_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Source of the effective target CPA.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+     */
+    public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetCpaSource() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveTargetCpaSource_);
+      return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Source of the effective target CPA.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+     */
+    public Builder setEffectiveTargetCpaSource(com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      effectiveTargetCpaSource_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Source of the effective target CPA.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+     */
+    public Builder clearEffectiveTargetCpaSource() {
+      
+      effectiveTargetCpaSource_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.DoubleValue effectiveTargetRoas_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> effectiveTargetRoasBuilder_;
+    /**
+     * <pre>
+     * The effective target ROAS (return-on-ad-spend).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     */
+    public boolean hasEffectiveTargetRoas() {
+      return effectiveTargetRoasBuilder_ != null || effectiveTargetRoas_ != null;
+    }
+    /**
+     * <pre>
+     * The effective target ROAS (return-on-ad-spend).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     */
+    public com.google.protobuf.DoubleValue getEffectiveTargetRoas() {
+      if (effectiveTargetRoasBuilder_ == null) {
+        return effectiveTargetRoas_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : effectiveTargetRoas_;
+      } else {
+        return effectiveTargetRoasBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The effective target ROAS (return-on-ad-spend).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     */
+    public Builder setEffectiveTargetRoas(com.google.protobuf.DoubleValue value) {
+      if (effectiveTargetRoasBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        effectiveTargetRoas_ = value;
+        onChanged();
+      } else {
+        effectiveTargetRoasBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The effective target ROAS (return-on-ad-spend).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     */
+    public Builder setEffectiveTargetRoas(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (effectiveTargetRoasBuilder_ == null) {
+        effectiveTargetRoas_ = builderForValue.build();
+        onChanged();
+      } else {
+        effectiveTargetRoasBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The effective target ROAS (return-on-ad-spend).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     */
+    public Builder mergeEffectiveTargetRoas(com.google.protobuf.DoubleValue value) {
+      if (effectiveTargetRoasBuilder_ == null) {
+        if (effectiveTargetRoas_ != null) {
+          effectiveTargetRoas_ =
+            com.google.protobuf.DoubleValue.newBuilder(effectiveTargetRoas_).mergeFrom(value).buildPartial();
+        } else {
+          effectiveTargetRoas_ = value;
+        }
+        onChanged();
+      } else {
+        effectiveTargetRoasBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The effective target ROAS (return-on-ad-spend).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     */
+    public Builder clearEffectiveTargetRoas() {
+      if (effectiveTargetRoasBuilder_ == null) {
+        effectiveTargetRoas_ = null;
+        onChanged();
+      } else {
+        effectiveTargetRoas_ = null;
+        effectiveTargetRoasBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The effective target ROAS (return-on-ad-spend).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getEffectiveTargetRoasBuilder() {
+      
+      onChanged();
+      return getEffectiveTargetRoasFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The effective target ROAS (return-on-ad-spend).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getEffectiveTargetRoasOrBuilder() {
+      if (effectiveTargetRoasBuilder_ != null) {
+        return effectiveTargetRoasBuilder_.getMessageOrBuilder();
+      } else {
+        return effectiveTargetRoas_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : effectiveTargetRoas_;
+      }
+    }
+    /**
+     * <pre>
+     * The effective target ROAS (return-on-ad-spend).
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getEffectiveTargetRoasFieldBuilder() {
+      if (effectiveTargetRoasBuilder_ == null) {
+        effectiveTargetRoasBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getEffectiveTargetRoas(),
+                getParentForChildren(),
+                isClean());
+        effectiveTargetRoas_ = null;
+      }
+      return effectiveTargetRoasBuilder_;
+    }
+
+    private int effectiveTargetRoasSource_ = 0;
+    /**
+     * <pre>
+     * Source of the effective target ROAS.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+     */
+    public int getEffectiveTargetRoasSourceValue() {
+      return effectiveTargetRoasSource_;
+    }
+    /**
+     * <pre>
+     * Source of the effective target ROAS.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+     */
+    public Builder setEffectiveTargetRoasSourceValue(int value) {
+      effectiveTargetRoasSource_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Source of the effective target ROAS.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+     */
+    public com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetRoasSource() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveTargetRoasSource_);
+      return result == null ? com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Source of the effective target ROAS.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+     */
+    public Builder setEffectiveTargetRoasSource(com.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      effectiveTargetRoasSource_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Source of the effective target ROAS.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+     */
+    public Builder clearEffectiveTargetRoasSource() {
+      
+      effectiveTargetRoasSource_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -31,12 +31,13 @@ public final class KeywordViewProto {
       "\n4google/ads/googleads/v0/resources/keyw" +
       "ord_view.proto\022!google.ads.googleads.v0." +
       "resources\"$\n\013KeywordView\022\025\n\rresource_nam" +
-      "e\030\001 \001(\tB\325\001\n%com.google.ads.googleads.v0." +
+      "e\030\001 \001(\tB\375\001\n%com.google.ads.googleads.v0." +
       "resourcesB\020KeywordViewProtoP\001ZJgoogle.go" +
       "lang.org/genproto/googleapis/ads/googlea" +
       "ds/v0/resources;resources\242\002\003GAA\252\002!Google" +
       ".Ads.GoogleAds.V0.Resources\312\002!Google\\Ads" +
-      "\\GoogleAds\\V0\\Resourcesb\006proto3"
+      "\\GoogleAds\\V0\\Resources\352\002%Google::Ads::G" +
+      "oogleAds::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

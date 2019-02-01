@@ -32,13 +32,14 @@ public final class StringLengthErrorProto {
       "length_error.proto\022\036google.ads.googleads" +
       ".v0.errors\"g\n\025StringLengthErrorEnum\"N\n\021S" +
       "tringLengthError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
-      "NOWN\020\001\022\r\n\tTOO_SHORT\020\002\022\014\n\010TOO_LONG\020\003B\314\001\n\"" +
+      "NOWN\020\001\022\r\n\tTOO_SHORT\020\002\022\014\n\010TOO_LONG\020\003B\361\001\n\"" +
       "com.google.ads.googleads.v0.errorsB\026Stri" +
       "ngLengthErrorProtoP\001ZDgoogle.golang.org/" +
       "genproto/googleapis/ads/googleads/v0/err" +
       "ors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds." +
       "V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Erro" +
-      "rsb\006proto3"
+      "rs\352\002\"Google::Ads::GoogleAds::V0::Errorsb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

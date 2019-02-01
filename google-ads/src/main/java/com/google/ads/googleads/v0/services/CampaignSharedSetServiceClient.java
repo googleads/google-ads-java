@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -226,7 +226,7 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final CampaignSharedSet getCampaignSharedSet(GetCampaignSharedSetRequest request) {
+  public final CampaignSharedSet getCampaignSharedSet(GetCampaignSharedSetRequest request) {
     return getCampaignSharedSetCallable().call(request);
   }
 
@@ -251,6 +251,47 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
   public final UnaryCallable<GetCampaignSharedSetRequest, CampaignSharedSet>
       getCampaignSharedSetCallable() {
     return stub.getCampaignSharedSetCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates or removes campaign shared sets. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignSharedSetServiceClient campaignSharedSetServiceClient = CampaignSharedSetServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;CampaignSharedSetOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   boolean partialFailure = false;
+   *   boolean validateOnly = false;
+   *   MutateCampaignSharedSetsResponse response = campaignSharedSetServiceClient.mutateCampaignSharedSets(customerId, operations, partialFailure, validateOnly);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer whose campaign shared sets are being modified.
+   * @param operations The list of operations to perform on individual campaign shared sets.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, all operations will be carried out in one transaction if and
+   *     only if they are all valid. Default is false.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateCampaignSharedSetsResponse mutateCampaignSharedSets(
+      String customerId,
+      List<CampaignSharedSetOperation> operations,
+      boolean partialFailure,
+      boolean validateOnly) {
+
+    MutateCampaignSharedSetsRequest request =
+        MutateCampaignSharedSetsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllOperations(operations)
+            .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
+            .build();
+    return mutateCampaignSharedSets(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

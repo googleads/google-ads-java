@@ -34,12 +34,13 @@ public final class SlotProto {
       "OWN\020\001\022\017\n\013SEARCH_SIDE\020\002\022\016\n\nSEARCH_TOP\020\003\022\020" +
       "\n\014SEARCH_OTHER\020\004\022\013\n\007CONTENT\020\005\022\026\n\022SEARCH_" +
       "PARTNER_TOP\020\006\022\030\n\024SEARCH_PARTNER_OTHER\020\007\022" +
-      "\t\n\005MIXED\020\010B\272\001\n!com.google.ads.googleads." +
+      "\t\n\005MIXED\020\010B\336\001\n!com.google.ads.googleads." +
       "v0.enumsB\tSlotProtoP\001ZBgoogle.golang.org" +
       "/genproto/googleapis/ads/googleads/v0/en" +
       "ums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V" +
-      "0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb" +
-      "\006proto3"
+      "0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352" +
+      "\002!Google::Ads::GoogleAds::V0::Enumsb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

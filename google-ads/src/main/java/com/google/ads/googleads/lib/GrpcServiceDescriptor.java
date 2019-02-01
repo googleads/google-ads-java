@@ -30,6 +30,10 @@ import com.google.ads.googleads.v0.services.AdGroupFeedServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupFeedServiceSettings;
 import com.google.ads.googleads.v0.services.AdGroupServiceClient;
 import com.google.ads.googleads.v0.services.AdGroupServiceSettings;
+import com.google.ads.googleads.v0.services.AdParameterServiceClient;
+import com.google.ads.googleads.v0.services.AdParameterServiceSettings;
+import com.google.ads.googleads.v0.services.AdScheduleViewServiceClient;
+import com.google.ads.googleads.v0.services.AdScheduleViewServiceSettings;
 import com.google.ads.googleads.v0.services.AgeRangeViewServiceClient;
 import com.google.ads.googleads.v0.services.AgeRangeViewServiceSettings;
 import com.google.ads.googleads.v0.services.BiddingStrategyServiceClient;
@@ -46,8 +50,6 @@ import com.google.ads.googleads.v0.services.CampaignCriterionServiceClient;
 import com.google.ads.googleads.v0.services.CampaignCriterionServiceSettings;
 import com.google.ads.googleads.v0.services.CampaignFeedServiceClient;
 import com.google.ads.googleads.v0.services.CampaignFeedServiceSettings;
-import com.google.ads.googleads.v0.services.CampaignGroupServiceClient;
-import com.google.ads.googleads.v0.services.CampaignGroupServiceSettings;
 import com.google.ads.googleads.v0.services.CampaignServiceClient;
 import com.google.ads.googleads.v0.services.CampaignServiceSettings;
 import com.google.ads.googleads.v0.services.CampaignSharedSetServiceClient;
@@ -108,6 +110,12 @@ import com.google.ads.googleads.v0.services.ManagedPlacementViewServiceClient;
 import com.google.ads.googleads.v0.services.ManagedPlacementViewServiceSettings;
 import com.google.ads.googleads.v0.services.MediaFileServiceClient;
 import com.google.ads.googleads.v0.services.MediaFileServiceSettings;
+import com.google.ads.googleads.v0.services.MobileAppCategoryConstantServiceClient;
+import com.google.ads.googleads.v0.services.MobileAppCategoryConstantServiceSettings;
+import com.google.ads.googleads.v0.services.MobileDeviceConstantServiceClient;
+import com.google.ads.googleads.v0.services.MobileDeviceConstantServiceSettings;
+import com.google.ads.googleads.v0.services.OperatingSystemVersionConstantServiceClient;
+import com.google.ads.googleads.v0.services.OperatingSystemVersionConstantServiceSettings;
 import com.google.ads.googleads.v0.services.ParentalStatusViewServiceClient;
 import com.google.ads.googleads.v0.services.ParentalStatusViewServiceSettings;
 import com.google.ads.googleads.v0.services.PaymentsAccountServiceClient;
@@ -116,6 +124,8 @@ import com.google.ads.googleads.v0.services.ProductGroupViewServiceClient;
 import com.google.ads.googleads.v0.services.ProductGroupViewServiceSettings;
 import com.google.ads.googleads.v0.services.RecommendationServiceClient;
 import com.google.ads.googleads.v0.services.RecommendationServiceSettings;
+import com.google.ads.googleads.v0.services.RemarketingActionServiceClient;
+import com.google.ads.googleads.v0.services.RemarketingActionServiceSettings;
 import com.google.ads.googleads.v0.services.SearchTermViewServiceClient;
 import com.google.ads.googleads.v0.services.SearchTermViewServiceSettings;
 import com.google.ads.googleads.v0.services.SharedCriterionServiceClient;
@@ -161,6 +171,8 @@ abstract class GrpcServiceDescriptor<ClientT, SettingsBuilderT extends ClientSet
               .put(AdGroupCriterionServiceClient.class, new AdGroupCriterionServiceDescriptor())
               .put(AdGroupFeedServiceClient.class, new AdGroupFeedServiceDescriptor())
               .put(AdGroupServiceClient.class, new AdGroupServiceDescriptor())
+              .put(AdParameterServiceClient.class, new AdParameterServiceDescriptor())
+              .put(AdScheduleViewServiceClient.class, new AdScheduleViewServiceDescriptor())
               .put(AgeRangeViewServiceClient.class, new AgeRangeViewServiceDescriptor())
               .put(BiddingStrategyServiceClient.class, new BiddingStrategyServiceDescriptor())
               .put(BillingSetupServiceClient.class, new BillingSetupServiceDescriptor())
@@ -173,7 +185,6 @@ abstract class GrpcServiceDescriptor<ClientT, SettingsBuilderT extends ClientSet
               .put(CampaignBudgetServiceClient.class, new CampaignBudgetServiceDescriptor())
               .put(CampaignCriterionServiceClient.class, new CampaignCriterionServiceDescriptor())
               .put(CampaignFeedServiceClient.class, new CampaignFeedServiceDescriptor())
-              .put(CampaignGroupServiceClient.class, new CampaignGroupServiceDescriptor())
               .put(CampaignServiceClient.class, new CampaignServiceDescriptor())
               .put(CampaignSharedSetServiceClient.class, new CampaignSharedSetServiceDescriptor())
               .put(CarrierConstantServiceClient.class, new CarrierConstantServiceDescriptor())
@@ -214,10 +225,20 @@ abstract class GrpcServiceDescriptor<ClientT, SettingsBuilderT extends ClientSet
                   ManagedPlacementViewServiceClient.class,
                   new ManagedPlacementViewServiceDescriptor())
               .put(MediaFileServiceClient.class, new MediaFileServiceDescriptor())
+              .put(
+                  MobileAppCategoryConstantServiceClient.class,
+                  new MobileAppCategoryConstantServiceDescriptor())
+              .put(
+                  MobileDeviceConstantServiceClient.class,
+                  new MobileDeviceConstantServiceDescriptor())
+              .put(
+                  OperatingSystemVersionConstantServiceClient.class,
+                  new OperatingSystemVersionConstantServiceDescriptor())
               .put(ParentalStatusViewServiceClient.class, new ParentalStatusViewServiceDescriptor())
               .put(PaymentsAccountServiceClient.class, new PaymentsAccountServiceDescriptor())
               .put(ProductGroupViewServiceClient.class, new ProductGroupViewServiceDescriptor())
               .put(RecommendationServiceClient.class, new RecommendationServiceDescriptor())
+              .put(RemarketingActionServiceClient.class, new RemarketingActionServiceDescriptor())
               .put(SearchTermViewServiceClient.class, new SearchTermViewServiceDescriptor())
               .put(SharedCriterionServiceClient.class, new SharedCriterionServiceDescriptor())
               .put(SharedSetServiceClient.class, new SharedSetServiceDescriptor())
@@ -424,6 +445,45 @@ abstract class GrpcServiceDescriptor<ClientT, SettingsBuilderT extends ClientSet
     }
   }
 
+  private static final class AdParameterServiceDescriptor
+      extends GrpcServiceDescriptor<AdParameterServiceClient, AdParameterServiceSettings.Builder> {
+
+    @Override
+    public AdParameterServiceClient newServiceClient(GoogleAdsClient googleAdsClient)
+        throws ServiceClientCreationException {
+      try {
+        return AdParameterServiceClient.create(
+            AdParameterServiceSettings.newBuilder()
+                .setTransportChannelProvider(googleAdsClient)
+                .setCredentialsProvider(
+                    FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
+                .build());
+      } catch (IOException ioe) {
+        throw new ServiceClientCreationException(this, ioe);
+      }
+    }
+  }
+
+  private static final class AdScheduleViewServiceDescriptor
+      extends GrpcServiceDescriptor<
+          AdScheduleViewServiceClient, AdScheduleViewServiceSettings.Builder> {
+
+    @Override
+    public AdScheduleViewServiceClient newServiceClient(GoogleAdsClient googleAdsClient)
+        throws ServiceClientCreationException {
+      try {
+        return AdScheduleViewServiceClient.create(
+            AdScheduleViewServiceSettings.newBuilder()
+                .setTransportChannelProvider(googleAdsClient)
+                .setCredentialsProvider(
+                    FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
+                .build());
+      } catch (IOException ioe) {
+        throw new ServiceClientCreationException(this, ioe);
+      }
+    }
+  }
+
   private static final class AgeRangeViewServiceDescriptor
       extends GrpcServiceDescriptor<
           AgeRangeViewServiceClient, AgeRangeViewServiceSettings.Builder> {
@@ -574,26 +634,6 @@ abstract class GrpcServiceDescriptor<ClientT, SettingsBuilderT extends ClientSet
       try {
         return CampaignFeedServiceClient.create(
             CampaignFeedServiceSettings.newBuilder()
-                .setTransportChannelProvider(googleAdsClient)
-                .setCredentialsProvider(
-                    FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
-                .build());
-      } catch (IOException ioe) {
-        throw new ServiceClientCreationException(this, ioe);
-      }
-    }
-  }
-
-  private static final class CampaignGroupServiceDescriptor
-      extends GrpcServiceDescriptor<
-          CampaignGroupServiceClient, CampaignGroupServiceSettings.Builder> {
-
-    @Override
-    public CampaignGroupServiceClient newServiceClient(GoogleAdsClient googleAdsClient)
-        throws ServiceClientCreationException {
-      try {
-        return CampaignGroupServiceClient.create(
-            CampaignGroupServiceSettings.newBuilder()
                 .setTransportChannelProvider(googleAdsClient)
                 .setCredentialsProvider(
                     FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
@@ -1195,6 +1235,68 @@ abstract class GrpcServiceDescriptor<ClientT, SettingsBuilderT extends ClientSet
     }
   }
 
+  private static final class MobileAppCategoryConstantServiceDescriptor
+      extends GrpcServiceDescriptor<
+          MobileAppCategoryConstantServiceClient,
+          MobileAppCategoryConstantServiceSettings.Builder> {
+
+    @Override
+    public MobileAppCategoryConstantServiceClient newServiceClient(GoogleAdsClient googleAdsClient)
+        throws ServiceClientCreationException {
+      try {
+        return MobileAppCategoryConstantServiceClient.create(
+            MobileAppCategoryConstantServiceSettings.newBuilder()
+                .setTransportChannelProvider(googleAdsClient)
+                .setCredentialsProvider(
+                    FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
+                .build());
+      } catch (IOException ioe) {
+        throw new ServiceClientCreationException(this, ioe);
+      }
+    }
+  }
+
+  private static final class MobileDeviceConstantServiceDescriptor
+      extends GrpcServiceDescriptor<
+          MobileDeviceConstantServiceClient, MobileDeviceConstantServiceSettings.Builder> {
+
+    @Override
+    public MobileDeviceConstantServiceClient newServiceClient(GoogleAdsClient googleAdsClient)
+        throws ServiceClientCreationException {
+      try {
+        return MobileDeviceConstantServiceClient.create(
+            MobileDeviceConstantServiceSettings.newBuilder()
+                .setTransportChannelProvider(googleAdsClient)
+                .setCredentialsProvider(
+                    FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
+                .build());
+      } catch (IOException ioe) {
+        throw new ServiceClientCreationException(this, ioe);
+      }
+    }
+  }
+
+  private static final class OperatingSystemVersionConstantServiceDescriptor
+      extends GrpcServiceDescriptor<
+          OperatingSystemVersionConstantServiceClient,
+          OperatingSystemVersionConstantServiceSettings.Builder> {
+
+    @Override
+    public OperatingSystemVersionConstantServiceClient newServiceClient(
+        GoogleAdsClient googleAdsClient) throws ServiceClientCreationException {
+      try {
+        return OperatingSystemVersionConstantServiceClient.create(
+            OperatingSystemVersionConstantServiceSettings.newBuilder()
+                .setTransportChannelProvider(googleAdsClient)
+                .setCredentialsProvider(
+                    FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
+                .build());
+      } catch (IOException ioe) {
+        throw new ServiceClientCreationException(this, ioe);
+      }
+    }
+  }
+
   private static final class ParentalStatusViewServiceDescriptor
       extends GrpcServiceDescriptor<
           ParentalStatusViewServiceClient, ParentalStatusViewServiceSettings.Builder> {
@@ -1265,6 +1367,26 @@ abstract class GrpcServiceDescriptor<ClientT, SettingsBuilderT extends ClientSet
       try {
         return RecommendationServiceClient.create(
             RecommendationServiceSettings.newBuilder()
+                .setTransportChannelProvider(googleAdsClient)
+                .setCredentialsProvider(
+                    FixedCredentialsProvider.create(googleAdsClient.getCredentials()))
+                .build());
+      } catch (IOException ioe) {
+        throw new ServiceClientCreationException(this, ioe);
+      }
+    }
+  }
+
+  private static final class RemarketingActionServiceDescriptor
+      extends GrpcServiceDescriptor<
+          RemarketingActionServiceClient, RemarketingActionServiceSettings.Builder> {
+
+    @Override
+    public RemarketingActionServiceClient newServiceClient(GoogleAdsClient googleAdsClient)
+        throws ServiceClientCreationException {
+      try {
+        return RemarketingActionServiceClient.create(
+            RemarketingActionServiceSettings.newBuilder()
                 .setTransportChannelProvider(googleAdsClient)
                 .setCredentialsProvider(
                     FixedCredentialsProvider.create(googleAdsClient.getCredentials()))

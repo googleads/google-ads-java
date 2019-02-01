@@ -75,12 +75,13 @@ public final class UrlFieldErrorProto {
       "RMED\0202\022#\n\037INVALID_TAG_IN_FINAL_URL_SUFFI" +
       "X\0203\022\034\n\030INVALID_TOP_LEVEL_DOMAIN\0205\022\036\n\032MAL" +
       "FORMED_TOP_LEVEL_DOMAIN\0206\022\021\n\rMALFORMED_U" +
-      "RL\0207\022\020\n\014MISSING_HOST\0208B\310\001\n\"com.google.ad" +
+      "RL\0207\022\020\n\014MISSING_HOST\0208B\355\001\n\"com.google.ad" +
       "s.googleads.v0.errorsB\022UrlFieldErrorProt" +
       "oP\001ZDgoogle.golang.org/genproto/googleap" +
       "is/ads/googleads/v0/errors;errors\242\002\003GAA\252" +
       "\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Googl" +
-      "e\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "e\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::Ads:" +
+      ":GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

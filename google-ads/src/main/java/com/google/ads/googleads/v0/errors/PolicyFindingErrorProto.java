@@ -33,12 +33,13 @@ public final class PolicyFindingErrorProto {
       "s.v0.errors\"|\n\026PolicyFindingErrorEnum\"b\n" +
       "\022PolicyFindingError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007" +
       "UNKNOWN\020\001\022\022\n\016POLICY_FINDING\020\002\022\032\n\026POLICY_" +
-      "TOPIC_NOT_FOUND\020\003B\315\001\n\"com.google.ads.goo" +
+      "TOPIC_NOT_FOUND\020\003B\362\001\n\"com.google.ads.goo" +
       "gleads.v0.errorsB\027PolicyFindingErrorProt" +
       "oP\001ZDgoogle.golang.org/genproto/googleap" +
       "is/ads/googleads/v0/errors;errors\242\002\003GAA\252" +
       "\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Googl" +
-      "e\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "e\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::Ads:" +
+      ":GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

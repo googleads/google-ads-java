@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (HotelPerformanceViewServiceClient hotelPerformanceViewServiceClient = HotelPerformanceViewServiceClient.create()) {
- *   String formattedResourceName = HotelPerformanceViewServiceClient.formatHotelPerformanceViewName("[CUSTOMER]");
+ *   String formattedResourceName = HotelPerformanceViewServiceClient.formatCustomerName("[CUSTOMER]");
  *   HotelPerformanceView response = hotelPerformanceViewServiceClient.getHotelPerformanceView(formattedResourceName);
  * }
  * </code>
@@ -102,12 +102,20 @@ public class HotelPerformanceViewServiceClient implements BackgroundResource {
   private static final PathTemplate HOTEL_PERFORMANCE_VIEW_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/hotelPerformanceView");
 
+  private static final PathTemplate CUSTOMER_PATH_TEMPLATE =
+      PathTemplate.createWithoutUrlEncoding("customers/{customer}");
+
   /**
    * Formats a string containing the fully-qualified path to represent a hotel_performance_view
    * resource.
    */
   public static final String formatHotelPerformanceViewName(String customer) {
     return HOTEL_PERFORMANCE_VIEW_PATH_TEMPLATE.instantiate("customer", customer);
+  }
+
+  /** Formats a string containing the fully-qualified path to represent a customer resource. */
+  public static final String formatCustomerName(String customer) {
+    return CUSTOMER_PATH_TEMPLATE.instantiate("customer", customer);
   }
 
   /**
@@ -117,6 +125,13 @@ public class HotelPerformanceViewServiceClient implements BackgroundResource {
   public static final String parseCustomerFromHotelPerformanceViewName(
       String hotelPerformanceViewName) {
     return HOTEL_PERFORMANCE_VIEW_PATH_TEMPLATE.parse(hotelPerformanceViewName).get("customer");
+  }
+
+  /**
+   * Parses the customer from the given fully-qualified path which represents a customer resource.
+   */
+  public static final String parseCustomerFromCustomerName(String customerName) {
+    return CUSTOMER_PATH_TEMPLATE.parse(customerName).get("customer");
   }
 
   /** Constructs an instance of HotelPerformanceViewServiceClient with default settings. */
@@ -178,7 +193,7 @@ public class HotelPerformanceViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (HotelPerformanceViewServiceClient hotelPerformanceViewServiceClient = HotelPerformanceViewServiceClient.create()) {
-   *   String formattedResourceName = HotelPerformanceViewServiceClient.formatHotelPerformanceViewName("[CUSTOMER]");
+   *   String formattedResourceName = HotelPerformanceViewServiceClient.formatCustomerName("[CUSTOMER]");
    *   HotelPerformanceView response = hotelPerformanceViewServiceClient.getHotelPerformanceView(formattedResourceName);
    * }
    * </code></pre>
@@ -187,7 +202,7 @@ public class HotelPerformanceViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final HotelPerformanceView getHotelPerformanceView(String resourceName) {
-    HOTEL_PERFORMANCE_VIEW_PATH_TEMPLATE.validate(resourceName, "getHotelPerformanceView");
+    CUSTOMER_PATH_TEMPLATE.validate(resourceName, "getHotelPerformanceView");
     GetHotelPerformanceViewRequest request =
         GetHotelPerformanceViewRequest.newBuilder().setResourceName(resourceName).build();
     return getHotelPerformanceView(request);
@@ -201,7 +216,7 @@ public class HotelPerformanceViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (HotelPerformanceViewServiceClient hotelPerformanceViewServiceClient = HotelPerformanceViewServiceClient.create()) {
-   *   String formattedResourceName = HotelPerformanceViewServiceClient.formatHotelPerformanceViewName("[CUSTOMER]");
+   *   String formattedResourceName = HotelPerformanceViewServiceClient.formatCustomerName("[CUSTOMER]");
    *   GetHotelPerformanceViewRequest request = GetHotelPerformanceViewRequest.newBuilder()
    *     .setResourceName(formattedResourceName)
    *     .build();
@@ -212,7 +227,7 @@ public class HotelPerformanceViewServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final HotelPerformanceView getHotelPerformanceView(
+  public final HotelPerformanceView getHotelPerformanceView(
       GetHotelPerformanceViewRequest request) {
     return getHotelPerformanceViewCallable().call(request);
   }
@@ -225,7 +240,7 @@ public class HotelPerformanceViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (HotelPerformanceViewServiceClient hotelPerformanceViewServiceClient = HotelPerformanceViewServiceClient.create()) {
-   *   String formattedResourceName = HotelPerformanceViewServiceClient.formatHotelPerformanceViewName("[CUSTOMER]");
+   *   String formattedResourceName = HotelPerformanceViewServiceClient.formatCustomerName("[CUSTOMER]");
    *   GetHotelPerformanceViewRequest request = GetHotelPerformanceViewRequest.newBuilder()
    *     .setResourceName(formattedResourceName)
    *     .build();

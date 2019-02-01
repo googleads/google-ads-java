@@ -39,12 +39,13 @@ public final class JobsPlaceholderFieldProto {
       "\020\013\022\016\n\nFINAL_URLS\020\014\022\025\n\021FINAL_MOBILE_URLS\020" +
       "\016\022\020\n\014TRACKING_URL\020\017\022\024\n\020ANDROID_APP_LINK\020" +
       "\020\022\023\n\017SIMILAR_JOB_IDS\020\021\022\020\n\014IOS_APP_LINK\020\022" +
-      "\022\024\n\020IOS_APP_STORE_ID\020\023B\312\001\n!com.google.ad" +
+      "\022\024\n\020IOS_APP_STORE_ID\020\023B\356\001\n!com.google.ad" +
       "s.googleads.v0.enumsB\031JobsPlaceholderFie" +
       "ldProtoP\001ZBgoogle.golang.org/genproto/go" +
       "ogleapis/ads/googleads/v0/enums;enums\242\002\003" +
       "GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312\002\035Go" +
-      "ogle\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "ogle\\Ads\\GoogleAds\\V0\\Enums\352\002!Google::Ad" +
+      "s::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

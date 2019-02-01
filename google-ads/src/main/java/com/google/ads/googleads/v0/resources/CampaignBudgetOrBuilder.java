@@ -211,8 +211,8 @@ public interface CampaignBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Whether the budget is explicitly shared. This field is set to false by
-   * default.
+   * Specifies whether the budget is explicitly shared. Defaults to true if
+   * unspecified in a create operation.
    * If true, the budget was created with the purpose of sharing
    * across one or more campaigns.
    * If false, the budget was created with the intention of only being used
@@ -230,8 +230,8 @@ public interface CampaignBudgetOrBuilder extends
   boolean hasExplicitlyShared();
   /**
    * <pre>
-   * Whether the budget is explicitly shared. This field is set to false by
-   * default.
+   * Specifies whether the budget is explicitly shared. Defaults to true if
+   * unspecified in a create operation.
    * If true, the budget was created with the purpose of sharing
    * across one or more campaigns.
    * If false, the budget was created with the intention of only being used
@@ -249,8 +249,8 @@ public interface CampaignBudgetOrBuilder extends
   com.google.protobuf.BoolValue getExplicitlyShared();
   /**
    * <pre>
-   * Whether the budget is explicitly shared. This field is set to false by
-   * default.
+   * Specifies whether the budget is explicitly shared. Defaults to true if
+   * unspecified in a create operation.
    * If true, the budget was created with the purpose of sharing
    * across one or more campaigns.
    * If false, the budget was created with the intention of only being used
@@ -294,4 +294,204 @@ public interface CampaignBudgetOrBuilder extends
    * <code>.google.protobuf.Int64Value reference_count = 9;</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getReferenceCountOrBuilder();
+
+  /**
+   * <pre>
+   * Indicates whether there is a recommended budget for this campaign budget.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+   */
+  boolean hasHasRecommendedBudget();
+  /**
+   * <pre>
+   * Indicates whether there is a recommended budget for this campaign budget.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+   */
+  com.google.protobuf.BoolValue getHasRecommendedBudget();
+  /**
+   * <pre>
+   * Indicates whether there is a recommended budget for this campaign budget.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue has_recommended_budget = 11;</code>
+   */
+  com.google.protobuf.BoolValueOrBuilder getHasRecommendedBudgetOrBuilder();
+
+  /**
+   * <pre>
+   * The recommended budget amount. If no recommendation is available, this will
+   * be set to the budget amount.
+   * Amount is specified in micros, where one million is equivalent to one
+   * currency unit.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+   */
+  boolean hasRecommendedBudgetAmountMicros();
+  /**
+   * <pre>
+   * The recommended budget amount. If no recommendation is available, this will
+   * be set to the budget amount.
+   * Amount is specified in micros, where one million is equivalent to one
+   * currency unit.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+   */
+  com.google.protobuf.Int64Value getRecommendedBudgetAmountMicros();
+  /**
+   * <pre>
+   * The recommended budget amount. If no recommendation is available, this will
+   * be set to the budget amount.
+   * Amount is specified in micros, where one million is equivalent to one
+   * currency unit.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_amount_micros = 12;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetAmountMicrosOrBuilder();
+
+  /**
+   * <pre>
+   * Period over which to spend the budget. Defaults to DAILY if not specified.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+   */
+  int getPeriodValue();
+  /**
+   * <pre>
+   * Period over which to spend the budget. Defaults to DAILY if not specified.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod period = 13;</code>
+   */
+  com.google.ads.googleads.v0.enums.BudgetPeriodEnum.BudgetPeriod getPeriod();
+
+  /**
+   * <pre>
+   * The estimated change in weekly clicks if the recommended budget is applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+   */
+  boolean hasRecommendedBudgetEstimatedChangeWeeklyClicks();
+  /**
+   * <pre>
+   * The estimated change in weekly clicks if the recommended budget is applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+   */
+  com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyClicks();
+  /**
+   * <pre>
+   * The estimated change in weekly clicks if the recommended budget is applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_clicks = 14;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyClicksOrBuilder();
+
+  /**
+   * <pre>
+   * The estimated change in weekly cost in micros if the recommended budget is
+   * applied. One million is equivalent to one currency unit.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+   */
+  boolean hasRecommendedBudgetEstimatedChangeWeeklyCostMicros();
+  /**
+   * <pre>
+   * The estimated change in weekly cost in micros if the recommended budget is
+   * applied. One million is equivalent to one currency unit.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+   */
+  com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyCostMicros();
+  /**
+   * <pre>
+   * The estimated change in weekly cost in micros if the recommended budget is
+   * applied. One million is equivalent to one currency unit.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_cost_micros = 15;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyCostMicrosOrBuilder();
+
+  /**
+   * <pre>
+   * The estimated change in weekly interactions if the recommended budget is
+   * applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+   */
+  boolean hasRecommendedBudgetEstimatedChangeWeeklyInteractions();
+  /**
+   * <pre>
+   * The estimated change in weekly interactions if the recommended budget is
+   * applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+   */
+  com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyInteractions();
+  /**
+   * <pre>
+   * The estimated change in weekly interactions if the recommended budget is
+   * applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_interactions = 16;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyInteractionsOrBuilder();
+
+  /**
+   * <pre>
+   * The estimated change in weekly views if the recommended budget is applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+   */
+  boolean hasRecommendedBudgetEstimatedChangeWeeklyViews();
+  /**
+   * <pre>
+   * The estimated change in weekly views if the recommended budget is applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+   */
+  com.google.protobuf.Int64Value getRecommendedBudgetEstimatedChangeWeeklyViews();
+  /**
+   * <pre>
+   * The estimated change in weekly views if the recommended budget is applied.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyViewsOrBuilder();
 }

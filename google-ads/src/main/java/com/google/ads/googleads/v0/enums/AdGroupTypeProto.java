@@ -37,12 +37,13 @@ public final class AdGroupTypeProto {
       "PING_SMART_ADS\020\007\022\020\n\014VIDEO_BUMPER\020\010\022\035\n\031VI" +
       "DEO_TRUE_VIEW_IN_STREAM\020\t\022\036\n\032VIDEO_TRUE_" +
       "VIEW_IN_DISPLAY\020\n\022!\n\035VIDEO_NON_SKIPPABLE" +
-      "_IN_STREAM\020\013\022\023\n\017VIDEO_OUTSTREAM\020\014B\301\001\n!co" +
+      "_IN_STREAM\020\013\022\023\n\017VIDEO_OUTSTREAM\020\014B\345\001\n!co" +
       "m.google.ads.googleads.v0.enumsB\020AdGroup" +
       "TypeProtoP\001ZBgoogle.golang.org/genproto/" +
       "googleapis/ads/googleads/v0/enums;enums\242" +
       "\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.Enums\312\002\035" +
-      "Google\\Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Google::" +
+      "Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

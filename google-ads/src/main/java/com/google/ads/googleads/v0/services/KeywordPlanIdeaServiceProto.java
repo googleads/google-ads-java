@@ -90,13 +90,14 @@ public final class KeywordPlanIdeaServiceProto {
       "s.GenerateKeywordIdeasRequest\032=.google.a" +
       "ds.googleads.v0.services.GenerateKeyword" +
       "IdeaResponse\"=\202\323\344\223\0027\"2/v0/customers/{cus" +
-      "tomer_id=*}:generateKeywordIdeas:\001*B\333\001\n$" +
+      "tomer_id=*}:generateKeywordIdeas:\001*B\202\002\n$" +
       "com.google.ads.googleads.v0.servicesB\033Ke" +
       "ywordPlanIdeaServiceProtoP\001ZHgoogle.gola" +
       "ng.org/genproto/googleapis/ads/googleads" +
       "/v0/services;services\242\002\003GAA\252\002 Google.Ads" +
       ".GoogleAds.V0.Services\312\002 Google\\Ads\\Goog" +
-      "leAds\\V0\\Servicesb\006proto3"
+      "leAds\\V0\\Services\352\002$Google::Ads::GoogleA" +
+      "ds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -145,6 +145,32 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 98: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (feed_ != null) {
+              subBuilder = feed_.toBuilder();
+            }
+            feed_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(feed_);
+              feed_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 106: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (feedItem_ != null) {
+              subBuilder = feedItem_.toBuilder();
+            }
+            feedItem_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(feedItem_);
+              feedItem_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -475,6 +501,72 @@ private static final long serialVersionUID = 0L;
     return getCampaignCriterion();
   }
 
+  public static final int FEED_FIELD_NUMBER = 12;
+  private com.google.protobuf.StringValue feed_;
+  /**
+   * <pre>
+   * The Feed affected by this change.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue feed = 12;</code>
+   */
+  public boolean hasFeed() {
+    return feed_ != null;
+  }
+  /**
+   * <pre>
+   * The Feed affected by this change.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue feed = 12;</code>
+   */
+  public com.google.protobuf.StringValue getFeed() {
+    return feed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feed_;
+  }
+  /**
+   * <pre>
+   * The Feed affected by this change.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue feed = 12;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
+    return getFeed();
+  }
+
+  public static final int FEED_ITEM_FIELD_NUMBER = 13;
+  private com.google.protobuf.StringValue feedItem_;
+  /**
+   * <pre>
+   * The FeedItem affected by this change.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue feed_item = 13;</code>
+   */
+  public boolean hasFeedItem() {
+    return feedItem_ != null;
+  }
+  /**
+   * <pre>
+   * The FeedItem affected by this change.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue feed_item = 13;</code>
+   */
+  public com.google.protobuf.StringValue getFeedItem() {
+    return feedItem_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feedItem_;
+  }
+  /**
+   * <pre>
+   * The FeedItem affected by this change.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue feed_item = 13;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getFeedItemOrBuilder() {
+    return getFeedItem();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -515,6 +607,12 @@ private static final long serialVersionUID = 0L;
     }
     if (campaignCriterion_ != null) {
       output.writeMessage(11, getCampaignCriterion());
+    }
+    if (feed_ != null) {
+      output.writeMessage(12, getFeed());
+    }
+    if (feedItem_ != null) {
+      output.writeMessage(13, getFeedItem());
     }
     unknownFields.writeTo(output);
   }
@@ -559,6 +657,14 @@ private static final long serialVersionUID = 0L;
     if (campaignCriterion_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getCampaignCriterion());
+    }
+    if (feed_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, getFeed());
+    }
+    if (feedItem_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getFeedItem());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -610,6 +716,16 @@ private static final long serialVersionUID = 0L;
       result = result && getCampaignCriterion()
           .equals(other.getCampaignCriterion());
     }
+    result = result && (hasFeed() == other.hasFeed());
+    if (hasFeed()) {
+      result = result && getFeed()
+          .equals(other.getFeed());
+    }
+    result = result && (hasFeedItem() == other.hasFeedItem());
+    if (hasFeedItem()) {
+      result = result && getFeedItem()
+          .equals(other.getFeedItem());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -650,6 +766,14 @@ private static final long serialVersionUID = 0L;
     if (hasCampaignCriterion()) {
       hash = (37 * hash) + CAMPAIGN_CRITERION_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignCriterion().hashCode();
+    }
+    if (hasFeed()) {
+      hash = (37 * hash) + FEED_FIELD_NUMBER;
+      hash = (53 * hash) + getFeed().hashCode();
+    }
+    if (hasFeedItem()) {
+      hash = (37 * hash) + FEED_ITEM_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedItem().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -830,6 +954,18 @@ private static final long serialVersionUID = 0L;
         campaignCriterion_ = null;
         campaignCriterionBuilder_ = null;
       }
+      if (feedBuilder_ == null) {
+        feed_ = null;
+      } else {
+        feed_ = null;
+        feedBuilder_ = null;
+      }
+      if (feedItemBuilder_ == null) {
+        feedItem_ = null;
+      } else {
+        feedItem_ = null;
+        feedItemBuilder_ = null;
+      }
       return this;
     }
 
@@ -888,6 +1024,16 @@ private static final long serialVersionUID = 0L;
         result.campaignCriterion_ = campaignCriterion_;
       } else {
         result.campaignCriterion_ = campaignCriterionBuilder_.build();
+      }
+      if (feedBuilder_ == null) {
+        result.feed_ = feed_;
+      } else {
+        result.feed_ = feedBuilder_.build();
+      }
+      if (feedItemBuilder_ == null) {
+        result.feedItem_ = feedItem_;
+      } else {
+        result.feedItem_ = feedItemBuilder_.build();
       }
       onBuilt();
       return result;
@@ -964,6 +1110,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCampaignCriterion()) {
         mergeCampaignCriterion(other.getCampaignCriterion());
+      }
+      if (other.hasFeed()) {
+        mergeFeed(other.getFeed());
+      }
+      if (other.hasFeedItem()) {
+        mergeFeedItem(other.getFeedItem());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -2149,6 +2301,312 @@ private static final long serialVersionUID = 0L;
         campaignCriterion_ = null;
       }
       return campaignCriterionBuilder_;
+    }
+
+    private com.google.protobuf.StringValue feed_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> feedBuilder_;
+    /**
+     * <pre>
+     * The Feed affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed = 12;</code>
+     */
+    public boolean hasFeed() {
+      return feedBuilder_ != null || feed_ != null;
+    }
+    /**
+     * <pre>
+     * The Feed affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed = 12;</code>
+     */
+    public com.google.protobuf.StringValue getFeed() {
+      if (feedBuilder_ == null) {
+        return feed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feed_;
+      } else {
+        return feedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The Feed affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed = 12;</code>
+     */
+    public Builder setFeed(com.google.protobuf.StringValue value) {
+      if (feedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        feed_ = value;
+        onChanged();
+      } else {
+        feedBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The Feed affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed = 12;</code>
+     */
+    public Builder setFeed(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (feedBuilder_ == null) {
+        feed_ = builderForValue.build();
+        onChanged();
+      } else {
+        feedBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The Feed affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed = 12;</code>
+     */
+    public Builder mergeFeed(com.google.protobuf.StringValue value) {
+      if (feedBuilder_ == null) {
+        if (feed_ != null) {
+          feed_ =
+            com.google.protobuf.StringValue.newBuilder(feed_).mergeFrom(value).buildPartial();
+        } else {
+          feed_ = value;
+        }
+        onChanged();
+      } else {
+        feedBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The Feed affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed = 12;</code>
+     */
+    public Builder clearFeed() {
+      if (feedBuilder_ == null) {
+        feed_ = null;
+        onChanged();
+      } else {
+        feed_ = null;
+        feedBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The Feed affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed = 12;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getFeedBuilder() {
+      
+      onChanged();
+      return getFeedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The Feed affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed = 12;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
+      if (feedBuilder_ != null) {
+        return feedBuilder_.getMessageOrBuilder();
+      } else {
+        return feed_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : feed_;
+      }
+    }
+    /**
+     * <pre>
+     * The Feed affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed = 12;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getFeedFieldBuilder() {
+      if (feedBuilder_ == null) {
+        feedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getFeed(),
+                getParentForChildren(),
+                isClean());
+        feed_ = null;
+      }
+      return feedBuilder_;
+    }
+
+    private com.google.protobuf.StringValue feedItem_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> feedItemBuilder_;
+    /**
+     * <pre>
+     * The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     */
+    public boolean hasFeedItem() {
+      return feedItemBuilder_ != null || feedItem_ != null;
+    }
+    /**
+     * <pre>
+     * The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     */
+    public com.google.protobuf.StringValue getFeedItem() {
+      if (feedItemBuilder_ == null) {
+        return feedItem_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feedItem_;
+      } else {
+        return feedItemBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     */
+    public Builder setFeedItem(com.google.protobuf.StringValue value) {
+      if (feedItemBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        feedItem_ = value;
+        onChanged();
+      } else {
+        feedItemBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     */
+    public Builder setFeedItem(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (feedItemBuilder_ == null) {
+        feedItem_ = builderForValue.build();
+        onChanged();
+      } else {
+        feedItemBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     */
+    public Builder mergeFeedItem(com.google.protobuf.StringValue value) {
+      if (feedItemBuilder_ == null) {
+        if (feedItem_ != null) {
+          feedItem_ =
+            com.google.protobuf.StringValue.newBuilder(feedItem_).mergeFrom(value).buildPartial();
+        } else {
+          feedItem_ = value;
+        }
+        onChanged();
+      } else {
+        feedItemBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     */
+    public Builder clearFeedItem() {
+      if (feedItemBuilder_ == null) {
+        feedItem_ = null;
+        onChanged();
+      } else {
+        feedItem_ = null;
+        feedItemBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getFeedItemBuilder() {
+      
+      onChanged();
+      return getFeedItemFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getFeedItemOrBuilder() {
+      if (feedItemBuilder_ != null) {
+        return feedItemBuilder_.getMessageOrBuilder();
+      } else {
+        return feedItem_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : feedItem_;
+      }
+    }
+    /**
+     * <pre>
+     * The FeedItem affected by this change.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue feed_item = 13;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getFeedItemFieldBuilder() {
+      if (feedItemBuilder_ == null) {
+        feedItemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getFeedItem(),
+                getParentForChildren(),
+                isClean());
+        feedItem_ = null;
+      }
+      return feedItemBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

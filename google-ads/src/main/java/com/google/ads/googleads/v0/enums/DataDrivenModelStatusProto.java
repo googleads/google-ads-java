@@ -33,13 +33,14 @@ public final class DataDrivenModelStatusProto {
       "eads.v0.enums\"\216\001\n\031DataDrivenModelStatusE" +
       "num\"q\n\025DataDrivenModelStatus\022\017\n\013UNSPECIF" +
       "IED\020\000\022\013\n\007UNKNOWN\020\001\022\r\n\tAVAILABLE\020\002\022\t\n\005STA" +
-      "LE\020\003\022\013\n\007EXPIRED\020\004\022\023\n\017NEVER_GENERATED\020\005B\313" +
+      "LE\020\003\022\013\n\007EXPIRED\020\004\022\023\n\017NEVER_GENERATED\020\005B\357" +
       "\001\n!com.google.ads.googleads.v0.enumsB\032Da" +
       "taDrivenModelStatusProtoP\001ZBgoogle.golan" +
       "g.org/genproto/googleapis/ads/googleads/" +
       "v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.Google" +
       "Ads.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\E" +
-      "numsb\006proto3"
+      "nums\352\002!Google::Ads::GoogleAds::V0::Enums" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

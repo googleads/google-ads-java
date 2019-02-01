@@ -56,12 +56,13 @@ public final class ImageErrorProto {
       "\030\n\024IMAGE_DATA_TOO_LARGE\020\"\022\032\n\026IMAGE_PROCE" +
       "SSING_ERROR\020#\022\023\n\017IMAGE_TOO_SMALL\020$\022\021\n\rIN" +
       "VALID_INPUT\020%\022\030\n\024PROBLEM_READING_FILE\020&B" +
-      "\305\001\n\"com.google.ads.googleads.v0.errorsB\017" +
+      "\352\001\n\"com.google.ads.googleads.v0.errorsB\017" +
       "ImageErrorProtoP\001ZDgoogle.golang.org/gen" +
       "proto/googleapis/ads/googleads/v0/errors" +
       ";errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0." +
-      "Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errorsb" +
-      "\006proto3"
+      "Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors\352" +
+      "\002\"Google::Ads::GoogleAds::V0::Errorsb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

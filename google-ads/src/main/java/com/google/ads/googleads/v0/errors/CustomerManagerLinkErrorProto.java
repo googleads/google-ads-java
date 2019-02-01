@@ -40,13 +40,14 @@ public final class CustomerManagerLinkErrorProto {
       "EMOVE_LAST_CLIENT_ACCOUNT_OWNER\020\006\022+\n\'CAN" +
       "NOT_CHANGE_ROLE_BY_NON_ACCOUNT_OWNER\020\007\0222" +
       "\n.CANNOT_CHANGE_ROLE_FOR_NON_ACTIVE_LINK" +
-      "_ACCOUNT\020\010\022\031\n\025DUPLICATE_CHILD_FOUND\020\tB\323\001" +
+      "_ACCOUNT\020\010\022\031\n\025DUPLICATE_CHILD_FOUND\020\tB\370\001" +
       "\n\"com.google.ads.googleads.v0.errorsB\035Cu" +
       "stomerManagerLinkErrorProtoP\001ZDgoogle.go" +
       "lang.org/genproto/googleapis/ads/googlea" +
       "ds/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads.G" +
       "oogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleAd" +
-      "s\\V0\\Errorsb\006proto3"
+      "s\\V0\\Errors\352\002\"Google::Ads::GoogleAds::V0" +
+      "::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

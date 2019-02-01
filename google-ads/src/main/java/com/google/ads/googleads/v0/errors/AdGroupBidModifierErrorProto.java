@@ -35,12 +35,13 @@ public final class AdGroupBidModifierErrorProto {
       "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\036\n\032CRITERIO" +
       "N_ID_NOT_SUPPORTED\020\002\022=\n9CANNOT_OVERRIDE_" +
       "OPTED_OUT_CAMPAIGN_CRITERION_BID_MODIFIE" +
-      "R\020\003B\322\001\n\"com.google.ads.googleads.v0.erro" +
+      "R\020\003B\367\001\n\"com.google.ads.googleads.v0.erro" +
       "rsB\034AdGroupBidModifierErrorProtoP\001ZDgoog" +
       "le.golang.org/genproto/googleapis/ads/go" +
       "ogleads/v0/errors;errors\242\002\003GAA\252\002\036Google." +
       "Ads.GoogleAds.V0.Errors\312\002\036Google\\Ads\\Goo" +
-      "gleAds\\V0\\Errorsb\006proto3"
+      "gleAds\\V0\\Errors\352\002\"Google::Ads::GoogleAd" +
+      "s::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

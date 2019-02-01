@@ -38,13 +38,14 @@ public final class SearchTermViewProto {
       "alue\022.\n\010ad_group\030\003 \001(\0132\034.google.protobuf" +
       ".StringValue\022f\n\006status\030\004 \001(\0162V.google.ad" +
       "s.googleads.v0.enums.SearchTermTargeting" +
-      "StatusEnum.SearchTermTargetingStatusB\330\001\n" +
+      "StatusEnum.SearchTermTargetingStatusB\200\002\n" +
       "%com.google.ads.googleads.v0.resourcesB\023" +
       "SearchTermViewProtoP\001ZJgoogle.golang.org" +
       "/genproto/googleapis/ads/googleads/v0/re" +
       "sources;resources\242\002\003GAA\252\002!Google.Ads.Goo" +
       "gleAds.V0.Resources\312\002!Google\\Ads\\GoogleA" +
-      "ds\\V0\\Resourcesb\006proto3"
+      "ds\\V0\\Resources\352\002%Google::Ads::GoogleAds" +
+      "::V0::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

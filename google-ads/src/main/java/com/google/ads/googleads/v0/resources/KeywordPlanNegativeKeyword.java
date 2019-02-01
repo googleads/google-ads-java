@@ -6,6 +6,7 @@ package com.google.ads.googleads.v0.resources;
 /**
  * <pre>
  * A Keyword Plan negative keyword.
+ * Max number of keyword plan negative keywords per plan: 1000.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword}
@@ -517,6 +518,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A Keyword Plan negative keyword.
+   * Max number of keyword plan negative keywords per plan: 1000.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v0.resources.KeywordPlanNegativeKeyword}

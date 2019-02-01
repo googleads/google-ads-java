@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -47,6 +47,8 @@ public class CampaignFeedServiceClientTest {
   private static MockAdGroupCriterionService mockAdGroupCriterionService;
   private static MockAdGroupFeedService mockAdGroupFeedService;
   private static MockAdGroupService mockAdGroupService;
+  private static MockAdParameterService mockAdParameterService;
+  private static MockAdScheduleViewService mockAdScheduleViewService;
   private static MockAgeRangeViewService mockAgeRangeViewService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
   private static MockBillingSetupService mockBillingSetupService;
@@ -55,7 +57,6 @@ public class CampaignFeedServiceClientTest {
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
   private static MockCampaignFeedService mockCampaignFeedService;
-  private static MockCampaignGroupService mockCampaignGroupService;
   private static MockCampaignService mockCampaignService;
   private static MockCampaignSharedSetService mockCampaignSharedSetService;
   private static MockCarrierConstantService mockCarrierConstantService;
@@ -89,10 +90,15 @@ public class CampaignFeedServiceClientTest {
   private static MockLanguageConstantService mockLanguageConstantService;
   private static MockManagedPlacementViewService mockManagedPlacementViewService;
   private static MockMediaFileService mockMediaFileService;
+  private static MockMobileAppCategoryConstantService mockMobileAppCategoryConstantService;
+  private static MockMobileDeviceConstantService mockMobileDeviceConstantService;
+  private static MockOperatingSystemVersionConstantService
+      mockOperatingSystemVersionConstantService;
   private static MockParentalStatusViewService mockParentalStatusViewService;
   private static MockPaymentsAccountService mockPaymentsAccountService;
   private static MockProductGroupViewService mockProductGroupViewService;
   private static MockRecommendationService mockRecommendationService;
+  private static MockRemarketingActionService mockRemarketingActionService;
   private static MockSearchTermViewService mockSearchTermViewService;
   private static MockTopicConstantService mockTopicConstantService;
   private static MockTopicViewService mockTopicViewService;
@@ -112,6 +118,8 @@ public class CampaignFeedServiceClientTest {
     mockAdGroupCriterionService = new MockAdGroupCriterionService();
     mockAdGroupFeedService = new MockAdGroupFeedService();
     mockAdGroupService = new MockAdGroupService();
+    mockAdParameterService = new MockAdParameterService();
+    mockAdScheduleViewService = new MockAdScheduleViewService();
     mockAgeRangeViewService = new MockAgeRangeViewService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
     mockBillingSetupService = new MockBillingSetupService();
@@ -120,7 +128,6 @@ public class CampaignFeedServiceClientTest {
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
     mockCampaignFeedService = new MockCampaignFeedService();
-    mockCampaignGroupService = new MockCampaignGroupService();
     mockCampaignService = new MockCampaignService();
     mockCampaignSharedSetService = new MockCampaignSharedSetService();
     mockCarrierConstantService = new MockCarrierConstantService();
@@ -154,10 +161,14 @@ public class CampaignFeedServiceClientTest {
     mockLanguageConstantService = new MockLanguageConstantService();
     mockManagedPlacementViewService = new MockManagedPlacementViewService();
     mockMediaFileService = new MockMediaFileService();
+    mockMobileAppCategoryConstantService = new MockMobileAppCategoryConstantService();
+    mockMobileDeviceConstantService = new MockMobileDeviceConstantService();
+    mockOperatingSystemVersionConstantService = new MockOperatingSystemVersionConstantService();
     mockParentalStatusViewService = new MockParentalStatusViewService();
     mockPaymentsAccountService = new MockPaymentsAccountService();
     mockProductGroupViewService = new MockProductGroupViewService();
     mockRecommendationService = new MockRecommendationService();
+    mockRemarketingActionService = new MockRemarketingActionService();
     mockSearchTermViewService = new MockSearchTermViewService();
     mockTopicConstantService = new MockTopicConstantService();
     mockTopicViewService = new MockTopicViewService();
@@ -175,6 +186,8 @@ public class CampaignFeedServiceClientTest {
                 mockAdGroupCriterionService,
                 mockAdGroupFeedService,
                 mockAdGroupService,
+                mockAdParameterService,
+                mockAdScheduleViewService,
                 mockAgeRangeViewService,
                 mockBiddingStrategyService,
                 mockBillingSetupService,
@@ -183,7 +196,6 @@ public class CampaignFeedServiceClientTest {
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
                 mockCampaignFeedService,
-                mockCampaignGroupService,
                 mockCampaignService,
                 mockCampaignSharedSetService,
                 mockCarrierConstantService,
@@ -217,10 +229,14 @@ public class CampaignFeedServiceClientTest {
                 mockLanguageConstantService,
                 mockManagedPlacementViewService,
                 mockMediaFileService,
+                mockMobileAppCategoryConstantService,
+                mockMobileDeviceConstantService,
+                mockOperatingSystemVersionConstantService,
                 mockParentalStatusViewService,
                 mockPaymentsAccountService,
                 mockProductGroupViewService,
                 mockRecommendationService,
+                mockRemarketingActionService,
                 mockSearchTermViewService,
                 mockTopicConstantService,
                 mockTopicViewService,
@@ -301,6 +317,54 @@ public class CampaignFeedServiceClientTest {
 
     String customerId = "customerId-1772061412";
     List<CampaignFeedOperation> operations = new ArrayList<>();
+    boolean partialFailure = true;
+    boolean validateOnly = false;
+
+    MutateCampaignFeedsResponse actualResponse =
+        client.mutateCampaignFeeds(customerId, operations, partialFailure, validateOnly);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<GeneratedMessageV3> actualRequests = mockCampaignFeedService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    MutateCampaignFeedsRequest actualRequest = (MutateCampaignFeedsRequest) actualRequests.get(0);
+
+    Assert.assertEquals(customerId, actualRequest.getCustomerId());
+    Assert.assertEquals(operations, actualRequest.getOperationsList());
+    Assert.assertEquals(partialFailure, actualRequest.getPartialFailure());
+    Assert.assertEquals(validateOnly, actualRequest.getValidateOnly());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void mutateCampaignFeedsExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    mockCampaignFeedService.addException(exception);
+
+    try {
+      String customerId = "customerId-1772061412";
+      List<CampaignFeedOperation> operations = new ArrayList<>();
+      boolean partialFailure = true;
+      boolean validateOnly = false;
+
+      client.mutateCampaignFeeds(customerId, operations, partialFailure, validateOnly);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception
+    }
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void mutateCampaignFeedsTest2() {
+    MutateCampaignFeedsResponse expectedResponse = MutateCampaignFeedsResponse.newBuilder().build();
+    mockCampaignFeedService.addResponse(expectedResponse);
+
+    String customerId = "customerId-1772061412";
+    List<CampaignFeedOperation> operations = new ArrayList<>();
 
     MutateCampaignFeedsResponse actualResponse = client.mutateCampaignFeeds(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -319,7 +383,7 @@ public class CampaignFeedServiceClientTest {
 
   @Test
   @SuppressWarnings("all")
-  public void mutateCampaignFeedsExceptionTest() throws Exception {
+  public void mutateCampaignFeedsExceptionTest2() throws Exception {
     StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
     mockCampaignFeedService.addException(exception);
 

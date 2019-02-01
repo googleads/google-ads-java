@@ -390,12 +390,6 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
-          case 552: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 69;
-            errorCode_ = rawValue;
-            break;
-          }
           case 560: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 70;
@@ -528,6 +522,30 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 808: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 101;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 816: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 102;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 824: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 103;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 840: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 105;
+            errorCode_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -623,7 +641,6 @@ private static final long serialVersionUID = 0L;
     HEADER_ERROR(66),
     DATABASE_ERROR(67),
     POLICY_FINDING_ERROR(68),
-    CAMPAIGN_GROUP_ERROR(69),
     ENUM_ERROR(70),
     KEYWORD_PLAN_ERROR(71),
     KEYWORD_PLAN_CAMPAIGN_ERROR(72),
@@ -644,6 +661,10 @@ private static final long serialVersionUID = 0L;
     CUSTOMER_FEED_ERROR(93),
     AD_GROUP_FEED_ERROR(94),
     CAMPAIGN_FEED_ERROR(96),
+    AD_PARAMETER_ERROR(101),
+    FEED_ITEM_VALIDATION_ERROR(102),
+    EXTENSION_SETTING_ERROR(103),
+    POLICY_VIOLATION_ERROR(105),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -718,7 +739,6 @@ private static final long serialVersionUID = 0L;
         case 66: return HEADER_ERROR;
         case 67: return DATABASE_ERROR;
         case 68: return POLICY_FINDING_ERROR;
-        case 69: return CAMPAIGN_GROUP_ERROR;
         case 70: return ENUM_ERROR;
         case 71: return KEYWORD_PLAN_ERROR;
         case 72: return KEYWORD_PLAN_CAMPAIGN_ERROR;
@@ -739,6 +759,10 @@ private static final long serialVersionUID = 0L;
         case 93: return CUSTOMER_FEED_ERROR;
         case 94: return AD_GROUP_FEED_ERROR;
         case 96: return CAMPAIGN_FEED_ERROR;
+        case 101: return AD_PARAMETER_ERROR;
+        case 102: return FEED_ITEM_VALIDATION_ERROR;
+        case 103: return EXTENSION_SETTING_ERROR;
+        case 105: return POLICY_VIOLATION_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -2583,37 +2607,6 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.PolicyFindingErrorEnum.PolicyFindingError.UNSPECIFIED;
   }
 
-  public static final int CAMPAIGN_GROUP_ERROR_FIELD_NUMBER = 69;
-  /**
-   * <pre>
-   * The reasons for campaign group error.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
-   */
-  public int getCampaignGroupErrorValue() {
-    if (errorCodeCase_ == 69) {
-      return (java.lang.Integer) errorCode_;
-    }
-    return 0;
-  }
-  /**
-   * <pre>
-   * The reasons for campaign group error.
-   * </pre>
-   *
-   * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
-   */
-  public com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError getCampaignGroupError() {
-    if (errorCodeCase_ == 69) {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError result = com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError.valueOf(
-          (java.lang.Integer) errorCode_);
-      return result == null ? com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError.UNRECOGNIZED : result;
-    }
-    return com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError.UNSPECIFIED;
-  }
-
   public static final int ENUM_ERROR_FIELD_NUMBER = 70;
   /**
    * <pre>
@@ -3234,6 +3227,130 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v0.errors.CampaignFeedErrorEnum.CampaignFeedError.UNSPECIFIED;
   }
 
+  public static final int AD_PARAMETER_ERROR_FIELD_NUMBER = 101;
+  /**
+   * <pre>
+   * The reasons for the ad parameter error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+   */
+  public int getAdParameterErrorValue() {
+    if (errorCodeCase_ == 101) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the ad parameter error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+   */
+  public com.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError getAdParameterError() {
+    if (errorCodeCase_ == 101) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError result = com.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError.UNSPECIFIED;
+  }
+
+  public static final int FEED_ITEM_VALIDATION_ERROR_FIELD_NUMBER = 102;
+  /**
+   * <pre>
+   * The reasons for the feed item validation error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+   */
+  public int getFeedItemValidationErrorValue() {
+    if (errorCodeCase_ == 102) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the feed item validation error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+   */
+  public com.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError getFeedItemValidationError() {
+    if (errorCodeCase_ == 102) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError result = com.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError.UNSPECIFIED;
+  }
+
+  public static final int EXTENSION_SETTING_ERROR_FIELD_NUMBER = 103;
+  /**
+   * <pre>
+   * The reasons for the extension setting error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+   */
+  public int getExtensionSettingErrorValue() {
+    if (errorCodeCase_ == 103) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the extension setting error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+   */
+  public com.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError getExtensionSettingError() {
+    if (errorCodeCase_ == 103) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError result = com.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError.UNSPECIFIED;
+  }
+
+  public static final int POLICY_VIOLATION_ERROR_FIELD_NUMBER = 105;
+  /**
+   * <pre>
+   * The reasons for the policy violation error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+   */
+  public int getPolicyViolationErrorValue() {
+    if (errorCodeCase_ == 105) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the policy violation error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+   */
+  public com.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError getPolicyViolationError() {
+    if (errorCodeCase_ == 105) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError result = com.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3419,9 +3536,6 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 68) {
       output.writeEnum(68, ((java.lang.Integer) errorCode_));
     }
-    if (errorCodeCase_ == 69) {
-      output.writeEnum(69, ((java.lang.Integer) errorCode_));
-    }
     if (errorCodeCase_ == 70) {
       output.writeEnum(70, ((java.lang.Integer) errorCode_));
     }
@@ -3487,6 +3601,18 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 96) {
       output.writeEnum(96, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 101) {
+      output.writeEnum(101, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 102) {
+      output.writeEnum(102, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 103) {
+      output.writeEnum(103, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 105) {
+      output.writeEnum(105, ((java.lang.Integer) errorCode_));
     }
     unknownFields.writeTo(output);
   }
@@ -3725,10 +3851,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(68, ((java.lang.Integer) errorCode_));
     }
-    if (errorCodeCase_ == 69) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(69, ((java.lang.Integer) errorCode_));
-    }
     if (errorCodeCase_ == 70) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(70, ((java.lang.Integer) errorCode_));
@@ -3816,6 +3938,22 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 96) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(96, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 101) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(101, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 102) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(102, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 103) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(103, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 105) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(105, ((java.lang.Integer) errorCode_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -4073,10 +4211,6 @@ private static final long serialVersionUID = 0L;
         result = result && getPolicyFindingErrorValue()
             == other.getPolicyFindingErrorValue();
         break;
-      case 69:
-        result = result && getCampaignGroupErrorValue()
-            == other.getCampaignGroupErrorValue();
-        break;
       case 70:
         result = result && getEnumErrorValue()
             == other.getEnumErrorValue();
@@ -4156,6 +4290,22 @@ private static final long serialVersionUID = 0L;
       case 96:
         result = result && getCampaignFeedErrorValue()
             == other.getCampaignFeedErrorValue();
+        break;
+      case 101:
+        result = result && getAdParameterErrorValue()
+            == other.getAdParameterErrorValue();
+        break;
+      case 102:
+        result = result && getFeedItemValidationErrorValue()
+            == other.getFeedItemValidationErrorValue();
+        break;
+      case 103:
+        result = result && getExtensionSettingErrorValue()
+            == other.getExtensionSettingErrorValue();
+        break;
+      case 105:
+        result = result && getPolicyViolationErrorValue()
+            == other.getPolicyViolationErrorValue();
         break;
       case 0:
       default:
@@ -4408,10 +4558,6 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + POLICY_FINDING_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getPolicyFindingErrorValue();
         break;
-      case 69:
-        hash = (37 * hash) + CAMPAIGN_GROUP_ERROR_FIELD_NUMBER;
-        hash = (53 * hash) + getCampaignGroupErrorValue();
-        break;
       case 70:
         hash = (37 * hash) + ENUM_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getEnumErrorValue();
@@ -4491,6 +4637,22 @@ private static final long serialVersionUID = 0L;
       case 96:
         hash = (37 * hash) + CAMPAIGN_FEED_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignFeedErrorValue();
+        break;
+      case 101:
+        hash = (37 * hash) + AD_PARAMETER_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getAdParameterErrorValue();
+        break;
+      case 102:
+        hash = (37 * hash) + FEED_ITEM_VALIDATION_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getFeedItemValidationErrorValue();
+        break;
+      case 103:
+        hash = (37 * hash) + EXTENSION_SETTING_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getExtensionSettingErrorValue();
+        break;
+      case 105:
+        hash = (37 * hash) + POLICY_VIOLATION_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getPolicyViolationErrorValue();
         break;
       case 0:
       default:
@@ -4837,9 +4999,6 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 68) {
         result.errorCode_ = errorCode_;
       }
-      if (errorCodeCase_ == 69) {
-        result.errorCode_ = errorCode_;
-      }
       if (errorCodeCase_ == 70) {
         result.errorCode_ = errorCode_;
       }
@@ -4898,6 +5057,18 @@ private static final long serialVersionUID = 0L;
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 96) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 101) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 102) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 103) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 105) {
         result.errorCode_ = errorCode_;
       }
       result.errorCodeCase_ = errorCodeCase_;
@@ -5186,10 +5357,6 @@ private static final long serialVersionUID = 0L;
           setPolicyFindingErrorValue(other.getPolicyFindingErrorValue());
           break;
         }
-        case CAMPAIGN_GROUP_ERROR: {
-          setCampaignGroupErrorValue(other.getCampaignGroupErrorValue());
-          break;
-        }
         case ENUM_ERROR: {
           setEnumErrorValue(other.getEnumErrorValue());
           break;
@@ -5268,6 +5435,22 @@ private static final long serialVersionUID = 0L;
         }
         case CAMPAIGN_FEED_ERROR: {
           setCampaignFeedErrorValue(other.getCampaignFeedErrorValue());
+          break;
+        }
+        case AD_PARAMETER_ERROR: {
+          setAdParameterErrorValue(other.getAdParameterErrorValue());
+          break;
+        }
+        case FEED_ITEM_VALIDATION_ERROR: {
+          setFeedItemValidationErrorValue(other.getFeedItemValidationErrorValue());
+          break;
+        }
+        case EXTENSION_SETTING_ERROR: {
+          setExtensionSettingErrorValue(other.getExtensionSettingErrorValue());
+          break;
+        }
+        case POLICY_VIOLATION_ERROR: {
+          setPolicyViolationErrorValue(other.getPolicyViolationErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -9686,80 +9869,6 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The reasons for campaign group error.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
-     */
-    public int getCampaignGroupErrorValue() {
-      if (errorCodeCase_ == 69) {
-        return ((java.lang.Integer) errorCode_).intValue();
-      }
-      return 0;
-    }
-    /**
-     * <pre>
-     * The reasons for campaign group error.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
-     */
-    public Builder setCampaignGroupErrorValue(int value) {
-      errorCodeCase_ = 69;
-      errorCode_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The reasons for campaign group error.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
-     */
-    public com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError getCampaignGroupError() {
-      if (errorCodeCase_ == 69) {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError result = com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError.valueOf(
-            (java.lang.Integer) errorCode_);
-        return result == null ? com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError.UNRECOGNIZED : result;
-      }
-      return com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError.UNSPECIFIED;
-    }
-    /**
-     * <pre>
-     * The reasons for campaign group error.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
-     */
-    public Builder setCampaignGroupError(com.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      errorCodeCase_ = 69;
-      errorCode_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The reasons for campaign group error.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v0.errors.CampaignGroupErrorEnum.CampaignGroupError campaign_group_error = 69;</code>
-     */
-    public Builder clearCampaignGroupError() {
-      if (errorCodeCase_ == 69) {
-        errorCodeCase_ = 0;
-        errorCode_ = null;
-        onChanged();
-      }
-      return this;
-    }
-
-    /**
-     * <pre>
      * The reason for enum error.
      * </pre>
      *
@@ -11231,6 +11340,302 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCampaignFeedError() {
       if (errorCodeCase_ == 96) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the ad parameter error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+     */
+    public int getAdParameterErrorValue() {
+      if (errorCodeCase_ == 101) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the ad parameter error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+     */
+    public Builder setAdParameterErrorValue(int value) {
+      errorCodeCase_ = 101;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the ad parameter error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+     */
+    public com.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError getAdParameterError() {
+      if (errorCodeCase_ == 101) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError result = com.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the ad parameter error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+     */
+    public Builder setAdParameterError(com.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 101;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the ad parameter error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.AdParameterErrorEnum.AdParameterError ad_parameter_error = 101;</code>
+     */
+    public Builder clearAdParameterError() {
+      if (errorCodeCase_ == 101) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the feed item validation error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+     */
+    public int getFeedItemValidationErrorValue() {
+      if (errorCodeCase_ == 102) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed item validation error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+     */
+    public Builder setFeedItemValidationErrorValue(int value) {
+      errorCodeCase_ = 102;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed item validation error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+     */
+    public com.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError getFeedItemValidationError() {
+      if (errorCodeCase_ == 102) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError result = com.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed item validation error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+     */
+    public Builder setFeedItemValidationError(com.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 102;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the feed item validation error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.FeedItemValidationErrorEnum.FeedItemValidationError feed_item_validation_error = 102;</code>
+     */
+    public Builder clearFeedItemValidationError() {
+      if (errorCodeCase_ == 102) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the extension setting error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+     */
+    public int getExtensionSettingErrorValue() {
+      if (errorCodeCase_ == 103) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the extension setting error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+     */
+    public Builder setExtensionSettingErrorValue(int value) {
+      errorCodeCase_ = 103;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the extension setting error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+     */
+    public com.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError getExtensionSettingError() {
+      if (errorCodeCase_ == 103) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError result = com.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the extension setting error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+     */
+    public Builder setExtensionSettingError(com.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 103;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the extension setting error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.ExtensionSettingErrorEnum.ExtensionSettingError extension_setting_error = 103;</code>
+     */
+    public Builder clearExtensionSettingError() {
+      if (errorCodeCase_ == 103) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the policy violation error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+     */
+    public int getPolicyViolationErrorValue() {
+      if (errorCodeCase_ == 105) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the policy violation error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+     */
+    public Builder setPolicyViolationErrorValue(int value) {
+      errorCodeCase_ = 105;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the policy violation error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+     */
+    public com.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError getPolicyViolationError() {
+      if (errorCodeCase_ == 105) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError result = com.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the policy violation error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+     */
+    public Builder setPolicyViolationError(com.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 105;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the policy violation error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v0.errors.PolicyViolationErrorEnum.PolicyViolationError policy_violation_error = 105;</code>
+     */
+    public Builder clearPolicyViolationError() {
+      if (errorCodeCase_ == 105) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

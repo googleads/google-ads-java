@@ -35,12 +35,13 @@ public final class MessagePlaceholderFieldProto {
       "SPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\021\n\rBUSINESS_NAM" +
       "E\020\002\022\020\n\014COUNTRY_CODE\020\003\022\020\n\014PHONE_NUMBER\020\004\022" +
       "\032\n\026MESSAGE_EXTENSION_TEXT\020\005\022\020\n\014MESSAGE_T" +
-      "EXT\020\006B\315\001\n!com.google.ads.googleads.v0.en" +
+      "EXT\020\006B\361\001\n!com.google.ads.googleads.v0.en" +
       "umsB\034MessagePlaceholderFieldProtoP\001ZBgoo" +
       "gle.golang.org/genproto/googleapis/ads/g" +
       "oogleads/v0/enums;enums\242\002\003GAA\252\002\035Google.A" +
       "ds.GoogleAds.V0.Enums\312\002\035Google\\Ads\\Googl" +
-      "eAds\\V0\\Enumsb\006proto3"
+      "eAds\\V0\\Enums\352\002!Google::Ads::GoogleAds::" +
+      "V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

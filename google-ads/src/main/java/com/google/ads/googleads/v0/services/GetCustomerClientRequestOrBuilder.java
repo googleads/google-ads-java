@@ -9,7 +9,7 @@ public interface GetCustomerClientRequestOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the customer client to fetch.
+   * The resource name of the client to fetch.
    * </pre>
    *
    * <code>string resource_name = 1;</code>
@@ -17,7 +17,7 @@ public interface GetCustomerClientRequestOrBuilder extends
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the customer client to fetch.
+   * The resource name of the client to fetch.
    * </pre>
    *
    * <code>string resource_name = 1;</code>

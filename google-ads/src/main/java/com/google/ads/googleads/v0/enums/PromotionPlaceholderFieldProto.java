@@ -39,13 +39,13 @@ public final class PromotionPlaceholderFieldProto {
       "\n\017PROMOTION_START\020\010\022\021\n\rPROMOTION_END\020\t\022\014" +
       "\n\010OCCASION\020\n\022\016\n\nFINAL_URLS\020\013\022\025\n\021FINAL_MO" +
       "BILE_URLS\020\014\022\020\n\014TRACKING_URL\020\r\022\014\n\010LANGUAG" +
-      "E\020\016\022\024\n\020FINAL_URL_SUFFIX\020\017B\317\001\n!com.google" +
+      "E\020\016\022\024\n\020FINAL_URL_SUFFIX\020\017B\363\001\n!com.google" +
       ".ads.googleads.v0.enumsB\036PromotionPlaceh" +
       "olderFieldProtoP\001ZBgoogle.golang.org/gen" +
       "proto/googleapis/ads/googleads/v0/enums;" +
       "enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V0.En" +
-      "ums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb\006pro" +
-      "to3"
+      "ums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352\002!Go" +
+      "ogle::Ads::GoogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

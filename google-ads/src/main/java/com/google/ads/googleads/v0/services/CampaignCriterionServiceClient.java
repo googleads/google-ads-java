@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -222,7 +222,7 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  private final CampaignCriterion getCampaignCriterion(GetCampaignCriterionRequest request) {
+  public final CampaignCriterion getCampaignCriterion(GetCampaignCriterionRequest request) {
     return getCampaignCriterionCallable().call(request);
   }
 
@@ -247,6 +247,47 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
   public final UnaryCallable<GetCampaignCriterionRequest, CampaignCriterion>
       getCampaignCriterionCallable() {
     return stub.getCampaignCriterionCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates, updates, or removes criteria. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;CampaignCriterionOperation&gt; operations = new ArrayList&lt;&gt;();
+   *   boolean partialFailure = false;
+   *   boolean validateOnly = false;
+   *   MutateCampaignCriteriaResponse response = campaignCriterionServiceClient.mutateCampaignCriteria(customerId, operations, partialFailure, validateOnly);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer whose criteria are being modified.
+   * @param operations The list of operations to perform on individual criteria.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, all operations will be carried out in one transaction if and
+   *     only if they are all valid. Default is false.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateCampaignCriteriaResponse mutateCampaignCriteria(
+      String customerId,
+      List<CampaignCriterionOperation> operations,
+      boolean partialFailure,
+      boolean validateOnly) {
+
+    MutateCampaignCriteriaRequest request =
+        MutateCampaignCriteriaRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllOperations(operations)
+            .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
+            .build();
+    return mutateCampaignCriteria(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

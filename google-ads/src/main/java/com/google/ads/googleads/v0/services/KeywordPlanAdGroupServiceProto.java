@@ -53,41 +53,46 @@ public final class KeywordPlanAdGroupServiceProto {
       "ds.googleads.v0.services\032=google/ads/goo" +
       "gleads/v0/resources/keyword_plan_ad_grou" +
       "p.proto\032\034google/api/annotations.proto\032 g" +
-      "oogle/protobuf/field_mask.proto\"5\n\034GetKe" +
-      "ywordPlanAdGroupRequest\022\025\n\rresource_name" +
-      "\030\001 \001(\t\"\212\001\n MutateKeywordPlanAdGroupsRequ" +
-      "est\022\023\n\013customer_id\030\001 \001(\t\022Q\n\noperations\030\002" +
-      " \003(\0132=.google.ads.googleads.v0.services." +
-      "KeywordPlanAdGroupOperation\"\377\001\n\033KeywordP" +
-      "lanAdGroupOperation\022/\n\013update_mask\030\004 \001(\013" +
-      "2\032.google.protobuf.FieldMask\022G\n\006create\030\001" +
-      " \001(\01325.google.ads.googleads.v0.resources" +
-      ".KeywordPlanAdGroupH\000\022G\n\006update\030\002 \001(\01325." +
-      "google.ads.googleads.v0.resources.Keywor" +
-      "dPlanAdGroupH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toper" +
-      "ation\"v\n!MutateKeywordPlanAdGroupsRespon" +
-      "se\022Q\n\007results\030\002 \003(\0132@.google.ads.googlea" +
-      "ds.v0.services.MutateKeywordPlanAdGroupR" +
-      "esult\"7\n\036MutateKeywordPlanAdGroupResult\022" +
-      "\025\n\rresource_name\030\001 \001(\t2\327\003\n\031KeywordPlanAd" +
-      "GroupService\022\315\001\n\025GetKeywordPlanAdGroup\022>" +
-      ".google.ads.googleads.v0.services.GetKey" +
-      "wordPlanAdGroupRequest\0325.google.ads.goog" +
-      "leads.v0.resources.KeywordPlanAdGroup\"=\202" +
-      "\323\344\223\0027\0225/v0/{resource_name=customers/*/ke" +
-      "ywordPlanAdGroups/*}\022\351\001\n\031MutateKeywordPl" +
-      "anAdGroups\022B.google.ads.googleads.v0.ser" +
-      "vices.MutateKeywordPlanAdGroupsRequest\032C" +
-      ".google.ads.googleads.v0.services.Mutate" +
-      "KeywordPlanAdGroupsResponse\"C\202\323\344\223\002=\"8/v0" +
-      "/customers/{customer_id=*}/keywordPlanAd" +
-      "Groups:mutate:\001*B\336\001\n$com.google.ads.goog" +
-      "leads.v0.servicesB\036KeywordPlanAdGroupSer" +
-      "viceProtoP\001ZHgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v0/services;ser" +
-      "vices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V0.Se" +
-      "rvices\312\002 Google\\Ads\\GoogleAds\\V0\\Service" +
-      "sb\006proto3"
+      "oogle/protobuf/field_mask.proto\032\036google/" +
+      "protobuf/wrappers.proto\032\027google/rpc/stat" +
+      "us.proto\"5\n\034GetKeywordPlanAdGroupRequest" +
+      "\022\025\n\rresource_name\030\001 \001(\t\"\272\001\n MutateKeywor" +
+      "dPlanAdGroupsRequest\022\023\n\013customer_id\030\001 \001(" +
+      "\t\022Q\n\noperations\030\002 \003(\0132=.google.ads.googl" +
+      "eads.v0.services.KeywordPlanAdGroupOpera" +
+      "tion\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidat" +
+      "e_only\030\004 \001(\010\"\377\001\n\033KeywordPlanAdGroupOpera" +
+      "tion\022/\n\013update_mask\030\004 \001(\0132\032.google.proto" +
+      "buf.FieldMask\022G\n\006create\030\001 \001(\01325.google.a" +
+      "ds.googleads.v0.resources.KeywordPlanAdG" +
+      "roupH\000\022G\n\006update\030\002 \001(\01325.google.ads.goog" +
+      "leads.v0.resources.KeywordPlanAdGroupH\000\022" +
+      "\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\251\001\n!Mutat" +
+      "eKeywordPlanAdGroupsResponse\0221\n\025partial_" +
+      "failure_error\030\003 \001(\0132\022.google.rpc.Status\022" +
+      "Q\n\007results\030\002 \003(\0132@.google.ads.googleads." +
+      "v0.services.MutateKeywordPlanAdGroupResu" +
+      "lt\"7\n\036MutateKeywordPlanAdGroupResult\022\025\n\r" +
+      "resource_name\030\001 \001(\t2\327\003\n\031KeywordPlanAdGro" +
+      "upService\022\315\001\n\025GetKeywordPlanAdGroup\022>.go" +
+      "ogle.ads.googleads.v0.services.GetKeywor" +
+      "dPlanAdGroupRequest\0325.google.ads.googlea" +
+      "ds.v0.resources.KeywordPlanAdGroup\"=\202\323\344\223" +
+      "\0027\0225/v0/{resource_name=customers/*/keywo" +
+      "rdPlanAdGroups/*}\022\351\001\n\031MutateKeywordPlanA" +
+      "dGroups\022B.google.ads.googleads.v0.servic" +
+      "es.MutateKeywordPlanAdGroupsRequest\032C.go" +
+      "ogle.ads.googleads.v0.services.MutateKey" +
+      "wordPlanAdGroupsResponse\"C\202\323\344\223\002=\"8/v0/cu" +
+      "stomers/{customer_id=*}/keywordPlanAdGro" +
+      "ups:mutate:\001*B\205\002\n$com.google.ads.googlea" +
+      "ds.v0.servicesB\036KeywordPlanAdGroupServic" +
+      "eProtoP\001ZHgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v0/services;servic" +
+      "es\242\002\003GAA\252\002 Google.Ads.GoogleAds.V0.Servi" +
+      "ces\312\002 Google\\Ads\\GoogleAds\\V0\\Services\352\002" +
+      "$Google::Ads::GoogleAds::V0::Servicesb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -103,6 +108,8 @@ public final class KeywordPlanAdGroupServiceProto {
           com.google.ads.googleads.v0.resources.KeywordPlanAdGroupProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v0_services_GetKeywordPlanAdGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -115,7 +122,7 @@ public final class KeywordPlanAdGroupServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateKeywordPlanAdGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateKeywordPlanAdGroupsRequest_descriptor,
-        new java.lang.String[] { "CustomerId", "Operations", });
+        new java.lang.String[] { "CustomerId", "Operations", "PartialFailure", "ValidateOnly", });
     internal_static_google_ads_googleads_v0_services_KeywordPlanAdGroupOperation_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v0_services_KeywordPlanAdGroupOperation_fieldAccessorTable = new
@@ -127,7 +134,7 @@ public final class KeywordPlanAdGroupServiceProto {
     internal_static_google_ads_googleads_v0_services_MutateKeywordPlanAdGroupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_services_MutateKeywordPlanAdGroupsResponse_descriptor,
-        new java.lang.String[] { "Results", });
+        new java.lang.String[] { "PartialFailureError", "Results", });
     internal_static_google_ads_googleads_v0_services_MutateKeywordPlanAdGroupResult_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_google_ads_googleads_v0_services_MutateKeywordPlanAdGroupResult_fieldAccessorTable = new
@@ -142,6 +149,8 @@ public final class KeywordPlanAdGroupServiceProto {
     com.google.ads.googleads.v0.resources.KeywordPlanAdGroupProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

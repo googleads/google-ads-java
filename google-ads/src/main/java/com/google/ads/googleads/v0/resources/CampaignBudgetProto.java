@@ -32,27 +32,44 @@ public final class CampaignBudgetProto {
       "aign_budget.proto\022!google.ads.googleads." +
       "v0.resources\032:google/ads/googleads/v0/en" +
       "ums/budget_delivery_method.proto\0321google" +
-      "/ads/googleads/v0/enums/budget_status.pr" +
-      "oto\032\036google/protobuf/wrappers.proto\"\214\004\n\016" +
-      "CampaignBudget\022\025\n\rresource_name\030\001 \001(\t\022\'\n" +
-      "\002id\030\003 \001(\0132\033.google.protobuf.Int64Value\022*" +
-      "\n\004name\030\004 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\0222\n\ramount_micros\030\005 \001(\0132\033.google.proto" +
-      "buf.Int64Value\0228\n\023total_amount_micros\030\n " +
-      "\001(\0132\033.google.protobuf.Int64Value\022L\n\006stat" +
-      "us\030\006 \001(\0162<.google.ads.googleads.v0.enums" +
-      ".BudgetStatusEnum.BudgetStatus\022e\n\017delive" +
-      "ry_method\030\007 \001(\0162L.google.ads.googleads.v" +
-      "0.enums.BudgetDeliveryMethodEnum.BudgetD" +
-      "eliveryMethod\0225\n\021explicitly_shared\030\010 \001(\013" +
-      "2\032.google.protobuf.BoolValue\0224\n\017referenc" +
-      "e_count\030\t \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\330\001\n%com.google.ads.googleads.v0.resou" +
-      "rcesB\023CampaignBudgetProtoP\001ZJgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v0/resources;resources\242\002\003GAA\252\002!Google.A" +
-      "ds.GoogleAds.V0.Resources\312\002!Google\\Ads\\G" +
-      "oogleAds\\V0\\Resourcesb\006proto3"
+      "/ads/googleads/v0/enums/budget_period.pr" +
+      "oto\0321google/ads/googleads/v0/enums/budge" +
+      "t_status.proto\032\036google/protobuf/wrappers" +
+      ".proto\"\307\010\n\016CampaignBudget\022\025\n\rresource_na" +
+      "me\030\001 \001(\t\022\'\n\002id\030\003 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022*\n\004name\030\004 \001(\0132\034.google.protobu" +
+      "f.StringValue\0222\n\ramount_micros\030\005 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\0228\n\023total_amoun" +
+      "t_micros\030\n \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022L\n\006status\030\006 \001(\0162<.google.ads.googlea" +
+      "ds.v0.enums.BudgetStatusEnum.BudgetStatu" +
+      "s\022e\n\017delivery_method\030\007 \001(\0162L.google.ads." +
+      "googleads.v0.enums.BudgetDeliveryMethodE" +
+      "num.BudgetDeliveryMethod\0225\n\021explicitly_s" +
+      "hared\030\010 \001(\0132\032.google.protobuf.BoolValue\022" +
+      "4\n\017reference_count\030\t \001(\0132\033.google.protob" +
+      "uf.Int64Value\022:\n\026has_recommended_budget\030" +
+      "\013 \001(\0132\032.google.protobuf.BoolValue\022E\n rec" +
+      "ommended_budget_amount_micros\030\014 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022L\n\006period\030\r \001(\016" +
+      "2<.google.ads.googleads.v0.enums.BudgetP" +
+      "eriodEnum.BudgetPeriod\022V\n1recommended_bu" +
+      "dget_estimated_change_weekly_clicks\030\016 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022[\n6recomm" +
+      "ended_budget_estimated_change_weekly_cos" +
+      "t_micros\030\017 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022\\\n7recommended_budget_estimated_chan" +
+      "ge_weekly_interactions\030\020 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022U\n0recommended_budget_" +
+      "estimated_change_weekly_views\030\021 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\200\002\n%com.google." +
+      "ads.googleads.v0.resourcesB\023CampaignBudg" +
+      "etProtoP\001ZJgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v0/resources;reso" +
+      "urces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V0.Re" +
+      "sources\312\002!Google\\Ads\\GoogleAds\\V0\\Resour" +
+      "ces\352\002%Google::Ads::GoogleAds::V0::Resour" +
+      "cesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,6 +83,7 @@ public final class CampaignBudgetProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v0.enums.BudgetDeliveryMethodProto.getDescriptor(),
+          com.google.ads.googleads.v0.enums.BudgetPeriodProto.getDescriptor(),
           com.google.ads.googleads.v0.enums.BudgetStatusProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
@@ -74,8 +92,9 @@ public final class CampaignBudgetProto {
     internal_static_google_ads_googleads_v0_resources_CampaignBudget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v0_resources_CampaignBudget_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Name", "AmountMicros", "TotalAmountMicros", "Status", "DeliveryMethod", "ExplicitlyShared", "ReferenceCount", });
+        new java.lang.String[] { "ResourceName", "Id", "Name", "AmountMicros", "TotalAmountMicros", "Status", "DeliveryMethod", "ExplicitlyShared", "ReferenceCount", "HasRecommendedBudget", "RecommendedBudgetAmountMicros", "Period", "RecommendedBudgetEstimatedChangeWeeklyClicks", "RecommendedBudgetEstimatedChangeWeeklyCostMicros", "RecommendedBudgetEstimatedChangeWeeklyInteractions", "RecommendedBudgetEstimatedChangeWeeklyViews", });
     com.google.ads.googleads.v0.enums.BudgetDeliveryMethodProto.getDescriptor();
+    com.google.ads.googleads.v0.enums.BudgetPeriodProto.getDescriptor();
     com.google.ads.googleads.v0.enums.BudgetStatusProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,7 +44,9 @@ import javax.annotation.Generated;
  * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
  *   String customerId = "";
  *   List&lt;MutateOperation&gt; mutateOperations = new ArrayList&lt;&gt;();
- *   MutateGoogleAdsResponse response = googleAdsServiceClient.mutate(customerId, mutateOperations);
+ *   boolean partialFailure = false;
+ *   boolean validateOnly = false;
+ *   MutateGoogleAdsResponse response = googleAdsServiceClient.mutate(customerId, mutateOperations, partialFailure, validateOnly);
  * }
  * </code>
  * </pre>
@@ -164,6 +166,38 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
    *   String customerId = "";
    *   String query = "";
+   *   boolean validateOnly = false;
+   *   for (GoogleAdsRow element : googleAdsServiceClient.search(customerId, query, validateOnly).iterateAll()) {
+   *     // doThingsWith(element);
+   *   }
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer being queried.
+   * @param query The query string.
+   * @param validateOnly If true, the request is validated but not executed.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final SearchPagedResponse search(String customerId, String query, boolean validateOnly) {
+    SearchGoogleAdsRequest request =
+        SearchGoogleAdsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .setQuery(query)
+            .setValidateOnly(validateOnly)
+            .build();
+    return search(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns all rows that match the search query.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
+   *   String customerId = "";
+   *   String query = "";
    *   for (GoogleAdsRow element : googleAdsServiceClient.search(customerId, query).iterateAll()) {
    *     // doThingsWith(element);
    *   }
@@ -264,6 +298,47 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<SearchGoogleAdsRequest, SearchGoogleAdsResponse> searchCallable() {
     return stub.searchCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Creates, updates, or removes resources. Operation statuses are returned.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;MutateOperation&gt; mutateOperations = new ArrayList&lt;&gt;();
+   *   boolean partialFailure = false;
+   *   boolean validateOnly = false;
+   *   MutateGoogleAdsResponse response = googleAdsServiceClient.mutate(customerId, mutateOperations, partialFailure, validateOnly);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer whose resources are being modified.
+   * @param mutateOperations The list of operations to perform on individual resources.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, all operations will be carried out in one transaction if and
+   *     only if they are all valid. Default is false.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MutateGoogleAdsResponse mutate(
+      String customerId,
+      List<MutateOperation> mutateOperations,
+      boolean partialFailure,
+      boolean validateOnly) {
+
+    MutateGoogleAdsRequest request =
+        MutateGoogleAdsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllMutateOperations(mutateOperations)
+            .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
+            .build();
+    return mutate(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

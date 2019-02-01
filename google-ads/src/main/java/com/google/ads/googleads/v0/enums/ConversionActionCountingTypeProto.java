@@ -33,13 +33,14 @@ public final class ConversionActionCountingTypeProto {
       "s.googleads.v0.enums\"\207\001\n ConversionActio" +
       "nCountingTypeEnum\"c\n\034ConversionActionCou" +
       "ntingType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
-      "\021\n\rONE_PER_CLICK\020\002\022\022\n\016MANY_PER_CLICK\020\003B\322" +
+      "\021\n\rONE_PER_CLICK\020\002\022\022\n\016MANY_PER_CLICK\020\003B\366" +
       "\001\n!com.google.ads.googleads.v0.enumsB!Co" +
       "nversionActionCountingTypeProtoP\001ZBgoogl" +
       "e.golang.org/genproto/googleapis/ads/goo" +
       "gleads/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads" +
       ".GoogleAds.V0.Enums\312\002\035Google\\Ads\\GoogleA" +
-      "ds\\V0\\Enumsb\006proto3"
+      "ds\\V0\\Enums\352\002!Google::Ads::GoogleAds::V0" +
+      "::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

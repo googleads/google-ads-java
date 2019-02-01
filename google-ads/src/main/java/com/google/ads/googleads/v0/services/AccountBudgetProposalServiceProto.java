@@ -80,13 +80,14 @@ public final class AccountBudgetProposalServiceProto {
       "lRequest\032E.google.ads.googleads.v0.servi" +
       "ces.MutateAccountBudgetProposalResponse\"" +
       "F\202\323\344\223\002@\";/v0/customers/{customer_id=*}/a" +
-      "ccountBudgetProposals:mutate:\001*B\341\001\n$com." +
+      "ccountBudgetProposals:mutate:\001*B\210\002\n$com." +
       "google.ads.googleads.v0.servicesB!Accoun" +
       "tBudgetProposalServiceProtoP\001ZHgoogle.go" +
       "lang.org/genproto/googleapis/ads/googlea" +
       "ds/v0/services;services\242\002\003GAA\252\002 Google.A" +
       "ds.GoogleAds.V0.Services\312\002 Google\\Ads\\Go" +
-      "ogleAds\\V0\\Servicesb\006proto3"
+      "ogleAds\\V0\\Services\352\002$Google::Ads::Googl" +
+      "eAds::V0::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

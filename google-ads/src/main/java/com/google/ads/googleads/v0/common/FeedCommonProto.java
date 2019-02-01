@@ -33,12 +33,13 @@ public final class FeedCommonProto {
       "on\032\036google/protobuf/wrappers.proto\"p\n\005Pr" +
       "ice\0223\n\rcurrency_code\030\001 \001(\0132\034.google.prot" +
       "obuf.StringValue\0222\n\ramount_micros\030\002 \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\305\001\n\"com.goo" +
+      "\033.google.protobuf.Int64ValueB\352\001\n\"com.goo" +
       "gle.ads.googleads.v0.commonB\017FeedCommonP" +
       "rotoP\001ZDgoogle.golang.org/genproto/googl" +
       "eapis/ads/googleads/v0/common;common\242\002\003G" +
       "AA\252\002\036Google.Ads.GoogleAds.V0.Common\312\002\036Go" +
-      "ogle\\Ads\\GoogleAds\\V0\\Commonb\006proto3"
+      "ogle\\Ads\\GoogleAds\\V0\\Common\352\002\"Google::A" +
+      "ds::GoogleAds::V0::Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

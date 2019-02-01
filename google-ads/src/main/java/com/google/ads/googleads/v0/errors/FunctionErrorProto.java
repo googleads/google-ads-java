@@ -44,12 +44,13 @@ public final class FunctionErrorProto {
       "ND_VALUE\020\r\022\023\n\017INVALID_NESTING\020\016\022#\n\037MULTI" +
       "PLE_FEED_IDS_NOT_SUPPORTED\020\017\022/\n+INVALID_" +
       "FUNCTION_FOR_FEED_WITH_FIXED_SCHEMA\020\020\022\032\n" +
-      "\026INVALID_ATTRIBUTE_NAME\020\021B\310\001\n\"com.google" +
+      "\026INVALID_ATTRIBUTE_NAME\020\021B\355\001\n\"com.google" +
       ".ads.googleads.v0.errorsB\022FunctionErrorP" +
       "rotoP\001ZDgoogle.golang.org/genproto/googl" +
       "eapis/ads/googleads/v0/errors;errors\242\002\003G" +
       "AA\252\002\036Google.Ads.GoogleAds.V0.Errors\312\002\036Go" +
-      "ogle\\Ads\\GoogleAds\\V0\\Errorsb\006proto3"
+      "ogle\\Ads\\GoogleAds\\V0\\Errors\352\002\"Google::A" +
+      "ds::GoogleAds::V0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

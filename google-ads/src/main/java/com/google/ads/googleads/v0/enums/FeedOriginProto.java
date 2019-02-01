@@ -32,12 +32,13 @@ public final class FeedOriginProto {
       "gin.proto\022\035google.ads.googleads.v0.enums" +
       "\"R\n\016FeedOriginEnum\"@\n\nFeedOrigin\022\017\n\013UNSP" +
       "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\010\n\004USER\020\002\022\n\n\006GOOG" +
-      "LE\020\003B\300\001\n!com.google.ads.googleads.v0.enu" +
+      "LE\020\003B\344\001\n!com.google.ads.googleads.v0.enu" +
       "msB\017FeedOriginProtoP\001ZBgoogle.golang.org" +
       "/genproto/googleapis/ads/googleads/v0/en" +
       "ums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V" +
-      "0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enumsb" +
-      "\006proto3"
+      "0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\Enums\352" +
+      "\002!Google::Ads::GoogleAds::V0::Enumsb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

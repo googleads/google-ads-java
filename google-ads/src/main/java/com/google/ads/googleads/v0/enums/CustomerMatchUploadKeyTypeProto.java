@@ -34,12 +34,13 @@ public final class CustomerMatchUploadKeyTypeProto {
       "oadKeyTypeEnum\"s\n\032CustomerMatchUploadKey" +
       "Type\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014CO" +
       "NTACT_INFO\020\002\022\n\n\006CRM_ID\020\003\022\031\n\025MOBILE_ADVER" +
-      "TISING_ID\020\004B\320\001\n!com.google.ads.googleads" +
+      "TISING_ID\020\004B\364\001\n!com.google.ads.googleads" +
       ".v0.enumsB\037CustomerMatchUploadKeyTypePro" +
       "toP\001ZBgoogle.golang.org/genproto/googlea" +
       "pis/ads/googleads/v0/enums;enums\242\002\003GAA\252\002" +
       "\035Google.Ads.GoogleAds.V0.Enums\312\002\035Google\\" +
-      "Ads\\GoogleAds\\V0\\Enumsb\006proto3"
+      "Ads\\GoogleAds\\V0\\Enums\352\002!Google::Ads::Go" +
+      "ogleAds::V0::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

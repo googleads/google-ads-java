@@ -57,12 +57,13 @@ public final class AdGroupAdProto {
       "v0.enums.PolicyReviewStatusEnum.PolicyRe" +
       "viewStatus\022e\n\017approval_status\030\003 \001(\0162L.go" +
       "ogle.ads.googleads.v0.enums.PolicyApprov" +
-      "alStatusEnum.PolicyApprovalStatusB\323\001\n%co" +
+      "alStatusEnum.PolicyApprovalStatusB\373\001\n%co" +
       "m.google.ads.googleads.v0.resourcesB\016AdG" +
       "roupAdProtoP\001ZJgoogle.golang.org/genprot" +
       "o/googleapis/ads/googleads/v0/resources;" +
       "resources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
       "0.Resources\312\002!Google\\Ads\\GoogleAds\\V0\\Re" +
+      "sources\352\002%Google::Ads::GoogleAds::V0::Re" +
       "sourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

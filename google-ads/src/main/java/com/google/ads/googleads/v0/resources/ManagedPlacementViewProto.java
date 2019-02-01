@@ -31,13 +31,14 @@ public final class ManagedPlacementViewProto {
       "\n>google/ads/googleads/v0/resources/mana" +
       "ged_placement_view.proto\022!google.ads.goo" +
       "gleads.v0.resources\"-\n\024ManagedPlacementV" +
-      "iew\022\025\n\rresource_name\030\001 \001(\tB\336\001\n%com.googl" +
+      "iew\022\025\n\rresource_name\030\001 \001(\tB\206\002\n%com.googl" +
       "e.ads.googleads.v0.resourcesB\031ManagedPla" +
       "cementViewProtoP\001ZJgoogle.golang.org/gen" +
       "proto/googleapis/ads/googleads/v0/resour" +
       "ces;resources\242\002\003GAA\252\002!Google.Ads.GoogleA" +
       "ds.V0.Resources\312\002!Google\\Ads\\GoogleAds\\V" +
-      "0\\Resourcesb\006proto3"
+      "0\\Resources\352\002%Google::Ads::GoogleAds::V0" +
+      "::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -6,6 +6,7 @@ package com.google.ads.googleads.v0.resources;
 /**
  * <pre>
  * A Keyword Plan campaign.
+ * Max number of keyword plan campaigns per plan allowed: 1.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v0.resources.KeywordPlanCampaign}
@@ -327,6 +328,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The languages targeted for the Keyword Plan campaign.
+   * Max allowed: 1.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -337,6 +339,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The languages targeted for the Keyword Plan campaign.
+   * Max allowed: 1.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -348,6 +351,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The languages targeted for the Keyword Plan campaign.
+   * Max allowed: 1.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -358,6 +362,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The languages targeted for the Keyword Plan campaign.
+   * Max allowed: 1.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -368,6 +373,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The languages targeted for the Keyword Plan campaign.
+   * Max allowed: 1.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -453,6 +459,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The geo targets.
+   * Max number allowed: 20.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -463,6 +470,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The geo targets.
+   * Max number allowed: 20.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -474,6 +482,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The geo targets.
+   * Max number allowed: 20.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -484,6 +493,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The geo targets.
+   * Max number allowed: 20.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -494,6 +504,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The geo targets.
+   * Max number allowed: 20.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -761,6 +772,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A Keyword Plan campaign.
+   * Max number of keyword plan campaigns per plan allowed: 1.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v0.resources.KeywordPlanCampaign}
@@ -1651,6 +1663,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1665,6 +1678,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1679,6 +1693,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1693,6 +1708,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1714,6 +1730,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1732,6 +1749,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1752,6 +1770,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1773,6 +1792,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1791,6 +1811,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1809,6 +1830,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1828,6 +1850,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1845,6 +1868,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1862,6 +1886,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1873,6 +1898,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1887,6 +1913,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1902,6 +1929,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1913,6 +1941,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -1925,6 +1954,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The languages targeted for the Keyword Plan campaign.
+     * Max allowed: 1.
      * </pre>
      *
      * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
@@ -2218,6 +2248,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2232,6 +2263,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2246,6 +2278,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2260,6 +2293,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2281,6 +2315,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2299,6 +2334,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2319,6 +2355,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2340,6 +2377,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2358,6 +2396,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2376,6 +2415,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2395,6 +2435,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2412,6 +2453,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2429,6 +2471,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2440,6 +2483,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2454,6 +2498,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2469,6 +2514,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2480,6 +2526,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
@@ -2492,6 +2539,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The geo targets.
+     * Max number allowed: 20.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v0.resources.KeywordPlanGeoTarget geo_targets = 8;</code>

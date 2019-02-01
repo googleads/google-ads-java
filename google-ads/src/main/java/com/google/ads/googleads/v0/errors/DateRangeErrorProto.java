@@ -36,12 +36,13 @@ public final class DateRangeErrorProto {
       "D_DATE\020\003\022\033\n\027CANNOT_SET_DATE_TO_PAST\020\004\022 \n" +
       "\034AFTER_MAXIMUM_ALLOWABLE_DATE\020\005\022/\n+CANNO" +
       "T_MODIFY_START_DATE_IF_ALREADY_STARTED\020\006" +
-      "B\311\001\n\"com.google.ads.googleads.v0.errorsB" +
+      "B\356\001\n\"com.google.ads.googleads.v0.errorsB" +
       "\023DateRangeErrorProtoP\001ZDgoogle.golang.or" +
       "g/genproto/googleapis/ads/googleads/v0/e" +
       "rrors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAd" +
       "s.V0.Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Er" +
-      "rorsb\006proto3"
+      "rors\352\002\"Google::Ads::GoogleAds::V0::Error" +
+      "sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

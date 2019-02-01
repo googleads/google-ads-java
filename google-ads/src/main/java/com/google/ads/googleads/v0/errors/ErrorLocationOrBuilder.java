@@ -9,31 +9,6 @@ public interface ErrorLocationOrBuilder extends
 
   /**
    * <pre>
-   * The mutate operation that failed
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-   */
-  boolean hasOperationIndex();
-  /**
-   * <pre>
-   * The mutate operation that failed
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-   */
-  com.google.protobuf.Int64Value getOperationIndex();
-  /**
-   * <pre>
-   * The mutate operation that failed
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value operation_index = 1;</code>
-   */
-  com.google.protobuf.Int64ValueOrBuilder getOperationIndexOrBuilder();
-
-  /**
-   * <pre>
    * A field path that indicates which field was invalid in the request.
    * </pre>
    *

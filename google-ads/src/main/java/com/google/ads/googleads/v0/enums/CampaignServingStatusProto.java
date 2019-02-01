@@ -34,12 +34,13 @@ public final class CampaignServingStatusProto {
       "um\"s\n\025CampaignServingStatus\022\017\n\013UNSPECIFI" +
       "ED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007SERVING\020\002\022\010\n\004NONE\020\003" +
       "\022\t\n\005ENDED\020\004\022\013\n\007PENDING\020\005\022\r\n\tSUSPENDED\020\006B" +
-      "\313\001\n!com.google.ads.googleads.v0.enumsB\032C" +
+      "\357\001\n!com.google.ads.googleads.v0.enumsB\032C" +
       "ampaignServingStatusProtoP\001ZBgoogle.gola" +
       "ng.org/genproto/googleapis/ads/googleads" +
       "/v0/enums;enums\242\002\003GAA\252\002\035Google.Ads.Googl" +
       "eAds.V0.Enums\312\002\035Google\\Ads\\GoogleAds\\V0\\" +
-      "Enumsb\006proto3"
+      "Enums\352\002!Google::Ads::GoogleAds::V0::Enum" +
+      "sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

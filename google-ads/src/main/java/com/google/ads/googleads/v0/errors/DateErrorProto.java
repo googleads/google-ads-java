@@ -40,12 +40,13 @@ public final class DateErrorProto {
       "N_MAXIMUM_DATE\020\010\0223\n/DATE_RANGE_MINIMUM_D" +
       "ATE_LATER_THAN_MAXIMUM_DATE\020\t\0222\n.DATE_RA" +
       "NGE_MINIMUM_AND_MAXIMUM_DATES_BOTH_NULL\020" +
-      "\nB\304\001\n\"com.google.ads.googleads.v0.errors" +
+      "\nB\351\001\n\"com.google.ads.googleads.v0.errors" +
       "B\016DateErrorProtoP\001ZDgoogle.golang.org/ge" +
       "nproto/googleapis/ads/googleads/v0/error" +
       "s;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V0" +
       ".Errors\312\002\036Google\\Ads\\GoogleAds\\V0\\Errors" +
-      "b\006proto3"
+      "\352\002\"Google::Ads::GoogleAds::V0::Errorsb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -33,12 +33,13 @@ public final class StringFormatErrorProto {
       ".v0.errors\"q\n\025StringFormatErrorEnum\"X\n\021S" +
       "tringFormatError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
       "NOWN\020\001\022\021\n\rILLEGAL_CHARS\020\002\022\022\n\016INVALID_FOR" +
-      "MAT\020\003B\314\001\n\"com.google.ads.googleads.v0.er" +
+      "MAT\020\003B\361\001\n\"com.google.ads.googleads.v0.er" +
       "rorsB\026StringFormatErrorProtoP\001ZDgoogle.g" +
       "olang.org/genproto/googleapis/ads/google" +
       "ads/v0/errors;errors\242\002\003GAA\252\002\036Google.Ads." +
       "GoogleAds.V0.Errors\312\002\036Google\\Ads\\GoogleA" +
-      "ds\\V0\\Errorsb\006proto3"
+      "ds\\V0\\Errors\352\002\"Google::Ads::GoogleAds::V" +
+      "0::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

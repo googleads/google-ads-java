@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Google LLC
+ * Copyright 2019 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -152,6 +152,36 @@
  * </code>
  * </pre>
  *
+ * ======================== AdParameterServiceClient ========================
+ *
+ * <p>Service Description: Service to manage ad parameters.
+ *
+ * <p>Sample for AdParameterServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (AdParameterServiceClient adParameterServiceClient = AdParameterServiceClient.create()) {
+ *   String formattedResourceName = AdParameterServiceClient.formatAdParameterName("[CUSTOMER]", "[AD_PARAMETER]");
+ *   AdParameter response = adParameterServiceClient.getAdParameter(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * =========================== AdScheduleViewServiceClient ===========================
+ *
+ * <p>Service Description: Service to fetch ad schedule views.
+ *
+ * <p>Sample for AdScheduleViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (AdScheduleViewServiceClient adScheduleViewServiceClient = AdScheduleViewServiceClient.create()) {
+ *   String formattedResourceName = AdScheduleViewServiceClient.formatAdScheduleViewName("[CUSTOMER]", "[AD_SCHEDULE_VIEW]");
+ *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ========================= AgeRangeViewServiceClient =========================
  *
  * <p>Service Description: Service to manage age range views.
@@ -282,21 +312,6 @@
  * </code>
  * </pre>
  *
- * ========================== CampaignGroupServiceClient ==========================
- *
- * <p>Service Description: Service to manage campaign groups.
- *
- * <p>Sample for CampaignGroupServiceClient:
- *
- * <pre>
- * <code>
- * try (CampaignGroupServiceClient campaignGroupServiceClient = CampaignGroupServiceClient.create()) {
- *   String formattedResourceName = CampaignGroupServiceClient.formatCampaignGroupName("[CUSTOMER]", "[CAMPAIGN_GROUP]");
- *   CampaignGroup response = campaignGroupServiceClient.getCampaignGroup(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
  * ===================== CampaignServiceClient =====================
  *
  * <p>Service Description: Service to manage campaigns.
@@ -389,7 +404,7 @@
  *
  * =========================== CustomerClientServiceClient ===========================
  *
- * <p>Service Description: Service to manage customer clients in a manager hierarchy.
+ * <p>Service Description: Service to get clients in a customer's hierarchy.
  *
  * <p>Sample for CustomerClientServiceClient:
  *
@@ -609,7 +624,9 @@
  * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
  *   String customerId = "";
  *   List&lt;MutateOperation&gt; mutateOperations = new ArrayList&lt;&gt;();
- *   MutateGoogleAdsResponse response = googleAdsServiceClient.mutate(customerId, mutateOperations);
+ *   boolean partialFailure = false;
+ *   boolean validateOnly = false;
+ *   MutateGoogleAdsResponse response = googleAdsServiceClient.mutate(customerId, mutateOperations, partialFailure, validateOnly);
  * }
  * </code>
  * </pre>
@@ -639,7 +656,7 @@
  * <pre>
  * <code>
  * try (HotelPerformanceViewServiceClient hotelPerformanceViewServiceClient = HotelPerformanceViewServiceClient.create()) {
- *   String formattedResourceName = HotelPerformanceViewServiceClient.formatHotelPerformanceViewName("[CUSTOMER]");
+ *   String formattedResourceName = HotelPerformanceViewServiceClient.formatCustomerName("[CUSTOMER]");
  *   HotelPerformanceView response = hotelPerformanceViewServiceClient.getHotelPerformanceView(formattedResourceName);
  * }
  * </code>
@@ -801,6 +818,54 @@
  * </code>
  * </pre>
  *
+ * ====================================== MobileAppCategoryConstantServiceClient
+ * ======================================
+ *
+ * <p>Service Description: Service to fetch mobile app category constants.
+ *
+ * <p>Sample for MobileAppCategoryConstantServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (MobileAppCategoryConstantServiceClient mobileAppCategoryConstantServiceClient = MobileAppCategoryConstantServiceClient.create()) {
+ *   String formattedResourceName = MobileAppCategoryConstantServiceClient.formatMobileAppCategoryConstantName("[MOBILE_APP_CATEGORY_CONSTANT]");
+ *   MobileAppCategoryConstant response = mobileAppCategoryConstantServiceClient.getMobileAppCategoryConstant(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ================================= MobileDeviceConstantServiceClient
+ * =================================
+ *
+ * <p>Service Description: Service to fetch mobile device constants.
+ *
+ * <p>Sample for MobileDeviceConstantServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (MobileDeviceConstantServiceClient mobileDeviceConstantServiceClient = MobileDeviceConstantServiceClient.create()) {
+ *   String formattedResourceName = MobileDeviceConstantServiceClient.formatMobileDeviceConstantName("[MOBILE_DEVICE_CONSTANT]");
+ *   MobileDeviceConstant response = mobileDeviceConstantServiceClient.getMobileDeviceConstant(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * =========================================== OperatingSystemVersionConstantServiceClient
+ * ===========================================
+ *
+ * <p>Service Description: Service to fetch Operating System Version constants.
+ *
+ * <p>Sample for OperatingSystemVersionConstantServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
+ *   String formattedResourceName = OperatingSystemVersionConstantServiceClient.formatOperatingSystemVersionConstantName("[OPERATING_SYSTEM_VERSION_CONSTANT]");
+ *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * =============================== ParentalStatusViewServiceClient ===============================
  *
  * <p>Service Description: Service to manage parental status views.
@@ -858,6 +923,21 @@
  * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
  *   String formattedResourceName = RecommendationServiceClient.formatRecommendationName("[CUSTOMER]", "[RECOMMENDATION]");
  *   Recommendation response = recommendationServiceClient.getRecommendation(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ============================== RemarketingActionServiceClient ==============================
+ *
+ * <p>Service Description: Service to manage remarketing actions.
+ *
+ * <p>Sample for RemarketingActionServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
+ *   String formattedResourceName = RemarketingActionServiceClient.formatRemarketingActionName("[CUSTOMER]", "[REMARKETING_ACTION]");
+ *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(formattedResourceName);
  * }
  * </code>
  * </pre>
