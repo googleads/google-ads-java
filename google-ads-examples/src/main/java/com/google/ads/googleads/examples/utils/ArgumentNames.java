@@ -27,6 +27,7 @@ public final class ArgumentNames {
   public static final String CPC_BID_MICRO_AMOUNT = "--cpcBidMicroAmount";
   public static final String CPC_BID_CEILING_MICRO_AMOUNT = "--cpcBidCeilingMicroAmount";
   public static final String ARTIFACT_NAME = "--artifactName";
+  public static final String KEYWORD_PLAN_ID = "--keywordPlanId";
   public static final String KEYWORD_TEXT = "--keywordText";
   public static final String LANGUAGE_ID = "--languageId";
   public static final String LOCATION_ID = "--locationId";
