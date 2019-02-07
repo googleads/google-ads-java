@@ -175,7 +175,7 @@ This project hosts the Java client library for the Google Ads API.
 ### Create a GoogleAdsClient
 
 To issue requests via the Google Ads API, you first need to create a
-[GoogleAdsClient](https://github.com/googleads/google-ads-java/blob/master/google-ads/src/main/java/com/google/googleads/lib/GoogleAdsClient.java).
+[GoogleAdsClient](https://github.com/googleads/google-ads-java/blob/master/google-ads/src/main/java/com/google/ads/googleads/lib/GoogleAdsClient.java).
 For convenience, you can store the required settings in a properties file with
 the following format:
 
