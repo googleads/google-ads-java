@@ -93,7 +93,7 @@ public class CreateAccount {
             StringValue.of("Account created with CustomerService on '" + dateTime + "'"))
         .setCurrencyCode(StringValue.of("USD"))
         .setTimeZone(StringValue.of("America/New_York"))
-        // Optional: Set the tracking URL template and final URL suffix
+        // Optional: Set additional attributes of the customer.
         .setTrackingUrlTemplate(StringValue.of("{lpurl}?device={device}"))
         .setFinalUrlSuffix(
             StringValue.of("keyword={keyword}&matchtype={matchtype}&adgroupid={adgroupid}"))
