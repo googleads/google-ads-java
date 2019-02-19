@@ -120,5 +120,13 @@
       <version>0.27</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- Java EE Modules deprecated since JDK 9 -->
+    <dependency>
+      <groupId>javax.annotation</groupId>
+      <artifactId>javax.annotation-api</artifactId>
+      <version>1.3.2</version>
+    </dependency>
+
   </dependencies>
 </project>
