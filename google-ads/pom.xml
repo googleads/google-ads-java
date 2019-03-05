@@ -21,7 +21,7 @@
   <parent>
     <groupId>com.google.api-ads</groupId>
     <artifactId>google-ads-parent</artifactId>
-    <version>0.7.2-SNAPSHOT</version>
+    <version>0.7.1</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -29,7 +29,7 @@
   <groupId>com.google.api-ads</groupId>
   <artifactId>google-ads</artifactId>
   <packaging>jar</packaging>
-  <version>0.7.2-SNAPSHOT</version>
+  <version>0.7.1</version>
   <name>Google Ads API client library for Java</name>
   <description>
     Google Ads API client library for Java.
