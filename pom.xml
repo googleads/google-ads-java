@@ -214,6 +214,7 @@
 
   <modules>
     <module>google-ads</module>
+    <module>google-ads-examples</module>
   </modules>
 
   <profiles>
