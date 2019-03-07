@@ -18,17 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.enums.ConversionActionCategoryEnum.ConversionActionCategory;
-import com.google.ads.googleads.v0.enums.ConversionActionStatusEnum.ConversionActionStatus;
-import com.google.ads.googleads.v0.enums.ConversionActionTypeEnum.ConversionActionType;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.ConversionAction;
-import com.google.ads.googleads.v0.resources.ConversionAction.ValueSettings;
-import com.google.ads.googleads.v0.services.ConversionActionOperation;
-import com.google.ads.googleads.v0.services.ConversionActionServiceClient;
-import com.google.ads.googleads.v0.services.MutateConversionActionResult;
-import com.google.ads.googleads.v0.services.MutateConversionActionsResponse;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.enums.ConversionActionCategoryEnum.ConversionActionCategory;
+import com.google.ads.googleads.v1.enums.ConversionActionStatusEnum.ConversionActionStatus;
+import com.google.ads.googleads.v1.enums.ConversionActionTypeEnum.ConversionActionType;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.ConversionAction;
+import com.google.ads.googleads.v1.resources.ConversionAction.ValueSettings;
+import com.google.ads.googleads.v1.services.ConversionActionOperation;
+import com.google.ads.googleads.v1.services.ConversionActionServiceClient;
+import com.google.ads.googleads.v1.services.MutateConversionActionResult;
+import com.google.ads.googleads.v1.services.MutateConversionActionsResponse;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.DoubleValue;
 import com.google.protobuf.Int64Value;
@@ -114,7 +114,7 @@ public class AddConversionAction {
         ConversionActionOperation.newBuilder().setCreate(conversionAction).build();
 
     try (ConversionActionServiceClient conversionActionServiceClient =
-        googleAdsClient.getConversionActionServiceClient()) {
+        googleAdsClient.getLatestVersion().createConversionActionServiceClient()) {
       MutateConversionActionsResponse response =
           conversionActionServiceClient.mutateConversionActions(
               Long.toString(customerId), Collections.singletonList(operation));

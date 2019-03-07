@@ -18,25 +18,25 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.common.KeywordInfo;
-import com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v0.enums.SharedSetTypeEnum.SharedSetType;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.CampaignName;
-import com.google.ads.googleads.v0.resources.CampaignSharedSet;
-import com.google.ads.googleads.v0.resources.SharedCriterion;
-import com.google.ads.googleads.v0.resources.SharedSet;
-import com.google.ads.googleads.v0.services.CampaignSharedSetOperation;
-import com.google.ads.googleads.v0.services.CampaignSharedSetServiceClient;
-import com.google.ads.googleads.v0.services.MutateCampaignSharedSetsResponse;
-import com.google.ads.googleads.v0.services.MutateSharedCriteriaResponse;
-import com.google.ads.googleads.v0.services.MutateSharedCriterionResult;
-import com.google.ads.googleads.v0.services.MutateSharedSetsResponse;
-import com.google.ads.googleads.v0.services.SharedCriterionOperation;
-import com.google.ads.googleads.v0.services.SharedCriterionServiceClient;
-import com.google.ads.googleads.v0.services.SharedSetOperation;
-import com.google.ads.googleads.v0.services.SharedSetServiceClient;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.common.KeywordInfo;
+import com.google.ads.googleads.v1.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v1.enums.SharedSetTypeEnum.SharedSetType;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.CampaignName;
+import com.google.ads.googleads.v1.resources.CampaignSharedSet;
+import com.google.ads.googleads.v1.resources.SharedCriterion;
+import com.google.ads.googleads.v1.resources.SharedSet;
+import com.google.ads.googleads.v1.services.CampaignSharedSetOperation;
+import com.google.ads.googleads.v1.services.CampaignSharedSetServiceClient;
+import com.google.ads.googleads.v1.services.MutateCampaignSharedSetsResponse;
+import com.google.ads.googleads.v1.services.MutateSharedCriteriaResponse;
+import com.google.ads.googleads.v1.services.MutateSharedCriterionResult;
+import com.google.ads.googleads.v1.services.MutateSharedSetsResponse;
+import com.google.ads.googleads.v1.services.SharedCriterionOperation;
+import com.google.ads.googleads.v1.services.SharedCriterionServiceClient;
+import com.google.ads.googleads.v1.services.SharedSetOperation;
+import com.google.ads.googleads.v1.services.SharedSetServiceClient;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -124,7 +124,7 @@ public class CreateAndAttachSharedKeywordSet {
 
     String sharedSetResourceName;
     try (SharedSetServiceClient sharedSetServiceClient =
-        googleAdsClient.getSharedSetServiceClient()) {
+        googleAdsClient.getLatestVersion().createSharedSetServiceClient()) {
       MutateSharedSetsResponse response =
           sharedSetServiceClient.mutateSharedSets(
               Long.toString(customerId), ImmutableList.of(operation));
@@ -150,7 +150,7 @@ public class CreateAndAttachSharedKeywordSet {
     }
 
     try (SharedCriterionServiceClient sharedCriterionServiceClient =
-        googleAdsClient.getSharedCriterionServiceClient()) {
+        googleAdsClient.getLatestVersion().createSharedCriterionServiceClient()) {
       MutateSharedCriteriaResponse response =
           sharedCriterionServiceClient.mutateSharedCriteria(
               Long.toString(customerId), sharedCriterionOperations);
@@ -172,7 +172,7 @@ public class CreateAndAttachSharedKeywordSet {
         CampaignSharedSetOperation.newBuilder().setCreate(campaignSharedSet).build();
 
     try (CampaignSharedSetServiceClient campaignSharedSetServiceClient =
-        googleAdsClient.getCampaignSharedSetServiceClient()) {
+        googleAdsClient.getLatestVersion().createCampaignSharedSetServiceClient()) {
       MutateCampaignSharedSetsResponse response =
           campaignSharedSetServiceClient.mutateCampaignSharedSets(
               Long.toString(customerId), ImmutableList.of(campaignSharedSetOperation));

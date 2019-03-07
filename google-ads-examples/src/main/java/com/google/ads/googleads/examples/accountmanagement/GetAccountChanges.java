@@ -18,12 +18,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.ChangeStatus;
-import com.google.ads.googleads.v0.services.GoogleAdsRow;
-import com.google.ads.googleads.v0.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v0.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.ChangeStatus;
+import com.google.ads.googleads.v1.services.GoogleAdsRow;
+import com.google.ads.googleads.v1.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Optional;
@@ -96,7 +96,7 @@ public class GetAccountChanges {
             + "WHERE change_status.last_change_date_time DURING LAST_7_DAYS "
             + "ORDER BY change_status.last_change_date_time";
 
-    try (GoogleAdsServiceClient client = googleAdsClient.getGoogleAdsServiceClient()) {
+    try (GoogleAdsServiceClient client = googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       SearchPagedResponse response = client.search(String.valueOf(customerId), query);
 
       for (GoogleAdsRow row : response.iterateAll()) {

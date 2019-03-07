@@ -15,24 +15,8 @@
  */
 package com.google.ads.googleads.v0.services.stub;
 
+import com.google.ads.googleads.lib.GrpcGoogleAdsCallableFactory;
 import com.google.api.core.BetaApi;
-import com.google.api.gax.grpc.GrpcCallSettings;
-import com.google.api.gax.grpc.GrpcCallableFactory;
-import com.google.api.gax.grpc.GrpcStubCallableFactory;
-import com.google.api.gax.rpc.BatchingCallSettings;
-import com.google.api.gax.rpc.BidiStreamingCallable;
-import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.ClientStreamingCallable;
-import com.google.api.gax.rpc.OperationCallSettings;
-import com.google.api.gax.rpc.OperationCallable;
-import com.google.api.gax.rpc.PagedCallSettings;
-import com.google.api.gax.rpc.ServerStreamingCallSettings;
-import com.google.api.gax.rpc.ServerStreamingCallable;
-import com.google.api.gax.rpc.StreamingCallSettings;
-import com.google.api.gax.rpc.UnaryCallSettings;
-import com.google.api.gax.rpc.UnaryCallable;
-import com.google.longrunning.Operation;
-import com.google.longrunning.stub.OperationsStub;
 import javax.annotation.Generated;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS
@@ -43,4 +27,5 @@ import javax.annotation.Generated;
  */
 @Generated("by gapic-generator")
 @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
-public class GrpcOperatingSystemVersionConstantServiceCallableFactory extends GrpcGoogleAdsCallableFactory {}
+public class GrpcOperatingSystemVersionConstantServiceCallableFactory extends
+    GrpcGoogleAdsCallableFactory {}

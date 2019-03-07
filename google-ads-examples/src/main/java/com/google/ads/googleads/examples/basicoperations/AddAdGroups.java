@@ -18,16 +18,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v0.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.AdGroup;
-import com.google.ads.googleads.v0.services.AdGroupOperation;
-import com.google.ads.googleads.v0.services.AdGroupServiceClient;
-import com.google.ads.googleads.v0.services.MutateAdGroupResult;
-import com.google.ads.googleads.v0.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v1.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.resources.AdGroup;
+import com.google.ads.googleads.v1.services.AdGroupOperation;
+import com.google.ads.googleads.v1.services.AdGroupServiceClient;
+import com.google.ads.googleads.v1.services.MutateAdGroupResult;
+import com.google.ads.googleads.v1.services.MutateAdGroupsResponse;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -121,7 +121,8 @@ public class AddAdGroups {
     operations.add(AdGroupOperation.newBuilder().setCreate(adGroup1).build());
     operations.add(AdGroupOperation.newBuilder().setCreate(adGroup2).build());
 
-    try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getAdGroupServiceClient()) {
+    try (AdGroupServiceClient adGroupServiceClient =
+        googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       MutateAdGroupsResponse response =
           adGroupServiceClient.mutateAdGroups(Long.toString(customerId), operations);
       System.out.printf("Added %d ad groups:%n", response.getResultsCount());

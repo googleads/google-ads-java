@@ -15,12 +15,12 @@
 package com.google.ads.googleads.examples.targeting;
 
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.services.GeoTargetConstantServiceClient;
-import com.google.ads.googleads.v0.services.GeoTargetConstantSuggestion;
-import com.google.ads.googleads.v0.services.SuggestGeoTargetConstantsRequest;
-import com.google.ads.googleads.v0.services.SuggestGeoTargetConstantsResponse;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.services.GeoTargetConstantServiceClient;
+import com.google.ads.googleads.v1.services.GeoTargetConstantSuggestion;
+import com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest;
+import com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsResponse;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -62,7 +62,7 @@ public class GetGeoTargetConstantByName {
 
   private void runExample(GoogleAdsClient googleAdsClient) {
     GeoTargetConstantServiceClient geoTargetClient =
-        googleAdsClient.getGeoTargetConstantServiceClient();
+        googleAdsClient.getLatestVersion().createGeoTargetConstantServiceClient();
 
     SuggestGeoTargetConstantsRequest.Builder requestBuilder =
         SuggestGeoTargetConstantsRequest.newBuilder();
