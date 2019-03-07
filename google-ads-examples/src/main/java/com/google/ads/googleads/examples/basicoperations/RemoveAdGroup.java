@@ -18,13 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.services.AdGroupOperation;
-import com.google.ads.googleads.v0.services.AdGroupServiceClient;
-import com.google.ads.googleads.v0.services.MutateAdGroupResult;
-import com.google.ads.googleads.v0.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.services.AdGroupOperation;
+import com.google.ads.googleads.v1.services.AdGroupServiceClient;
+import com.google.ads.googleads.v1.services.MutateAdGroupResult;
+import com.google.ads.googleads.v1.services.MutateAdGroupsResponse;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -93,7 +93,7 @@ public class RemoveAdGroup {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
 
-    try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getAdGroupServiceClient()) {
+    try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
       // Construct an operation that will remove the ad group with the specified resource name.
       AdGroupOperation operation =

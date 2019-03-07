@@ -14,11 +14,10 @@
 
 package com.google.ads.googleads.lib;
 
-import com.google.ads.googleads.v0.errors.GoogleAdsFailure;
+import com.google.ads.googleads.lib.catalog.ApiCatalog;
+import com.google.ads.googleads.lib.catalog.Version;
 import com.google.api.gax.rpc.ApiException;
-import com.google.protobuf.InvalidProtocolBufferException;
-import io.grpc.Metadata;
-import io.grpc.Metadata.Key;
+import java.util.Optional;
 
 /**
  * Transforms an ApiException into a GoogleAdsException whenever a binary GoogleAdsFailure message
@@ -26,27 +25,18 @@ import io.grpc.Metadata.Key;
  */
 public class GoogleAdsExceptionTransformation
     implements ExceptionTransformingCallable.ExceptionTransformation {
-  private static final Metadata.Key<byte[]> GOOGLE_ADS_FAILURE_KEY =
-      Key.of(
-          "google.ads.googleads.v0.errors.googleadsfailure-bin", Metadata.BINARY_BYTE_MARSHALLER);
+
+  private static final ApiCatalog catalog = ApiCatalog.getDefault();
 
   @Override
-  public Throwable transform(ApiException exception) {
-    Throwable cause = exception.getCause();
-    Metadata metadata = io.grpc.Status.trailersFromThrowable(cause);
-    if (!metadata.containsKey(GOOGLE_ADS_FAILURE_KEY)) {
-      // When the GoogleAdsFailure message is not present, return the original exception
-      return exception;
+  public Throwable transform(ApiException apiException) {
+    for (Version version : catalog.getSupportedVersions()) {
+      Optional<? extends BaseGoogleAdsException> result =
+          version.getExceptionFactory().createGoogleAdsException(apiException);
+      if (result.isPresent()) {
+        return result.get();
+      }
     }
-
-    try {
-      GoogleAdsFailure googleAdsFailure =
-          GoogleAdsFailure.parseFrom(metadata.get(GOOGLE_ADS_FAILURE_KEY));
-      return new GoogleAdsException(exception, googleAdsFailure, metadata);
-    } catch (InvalidProtocolBufferException e) {
-      // Swallow the exception and return the original
-    }
-
-    return exception;
+    return apiException;
   }
 }

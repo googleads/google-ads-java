@@ -16,7 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
@@ -217,6 +219,17 @@
   </modules>
 
   <profiles>
+    <!-- Enables the examples project by default.
+         Provides a profile to disable for Sonatype deploy. -->
+    <profile>
+      <id>examples-project</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <modules>
+        <module>google-ads-examples</module>
+      </modules>
+    </profile>
     <profile>
       <id>sonatype</id>
       <distributionManagement>

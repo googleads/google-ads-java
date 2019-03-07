@@ -18,13 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.services.DismissRecommendationRequest.DismissRecommendationOperation;
-import com.google.ads.googleads.v0.services.DismissRecommendationResponse;
-import com.google.ads.googleads.v0.services.DismissRecommendationResponse.DismissRecommendationResult;
-import com.google.ads.googleads.v0.services.RecommendationServiceClient;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation;
+import com.google.ads.googleads.v1.services.DismissRecommendationResponse;
+import com.google.ads.googleads.v1.services.DismissRecommendationResponse.DismissRecommendationResult;
+import com.google.ads.googleads.v1.services.RecommendationServiceClient;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
@@ -103,7 +103,7 @@ public class DismissRecommendation {
         .build();
 
     // Issues a mutate request to dismiss the recommendation.
-    try (RecommendationServiceClient client = googleAdsClient.getRecommendationServiceClient()) {
+    try (RecommendationServiceClient client = googleAdsClient.getLatestVersion().createRecommendationServiceClient()) {
       DismissRecommendationResponse response = client
           .dismissRecommendation(customerId.toString(), Arrays.asList(operation));
 

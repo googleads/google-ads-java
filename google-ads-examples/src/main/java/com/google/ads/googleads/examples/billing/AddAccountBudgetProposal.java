@@ -17,15 +17,15 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType;
-import com.google.ads.googleads.v0.enums.TimeTypeEnum.TimeType;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.AccountBudgetProposal;
-import com.google.ads.googleads.v0.services.AccountBudgetProposalOperation;
-import com.google.ads.googleads.v0.services.AccountBudgetProposalServiceClient;
-import com.google.ads.googleads.v0.services.MutateAccountBudgetProposalResponse;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType;
+import com.google.ads.googleads.v1.enums.TimeTypeEnum.TimeType;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.resources.AccountBudgetProposal;
+import com.google.ads.googleads.v1.services.AccountBudgetProposalOperation;
+import com.google.ads.googleads.v1.services.AccountBudgetProposalServiceClient;
+import com.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -124,14 +124,15 @@ public class AddAccountBudgetProposal {
     AccountBudgetProposalOperation operation = AccountBudgetProposalOperation.newBuilder()
         .setCreate(proposal).build();
 
-    try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient = googleAdsClient
-        .getAccountBudgetProposalServiceClient()) {
+    try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient =
+        googleAdsClient.getLatestVersion().createAccountBudgetProposalServiceClient()) {
       // Send the request to the Account Budget Proposal Service.
-      MutateAccountBudgetProposalResponse response = accountBudgetProposalServiceClient
-          .mutateAccountBudgetProposal(String.valueOf(customerId), operation);
+      MutateAccountBudgetProposalResponse response =
+          accountBudgetProposalServiceClient.mutateAccountBudgetProposal(
+              String.valueOf(customerId), operation);
 
-      System.out
-          .printf("Account budget proposal created: %s.%n", response.getResult().getResourceName());
+      System.out.printf(
+          "Account budget proposal created: %s.%n", response.getResult().getResourceName());
     }
   }
 }

@@ -18,16 +18,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.Campaign;
-import com.google.ads.googleads.v0.services.CampaignOperation;
-import com.google.ads.googleads.v0.services.CampaignServiceClient;
-import com.google.ads.googleads.v0.services.MutateCampaignResult;
-import com.google.ads.googleads.v0.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.Campaign;
+import com.google.ads.googleads.v1.services.CampaignOperation;
+import com.google.ads.googleads.v1.services.CampaignServiceClient;
+import com.google.ads.googleads.v1.services.MutateCampaignResult;
+import com.google.ads.googleads.v1.services.MutateCampaignsResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Collections;
@@ -95,7 +95,7 @@ public class UpdateCampaign {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(GoogleAdsClient googleAdsClient, Long customerId, Long campaignId) {
-    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getCampaignServiceClient()) {
+    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       // Create a Campaign object with the proper resource name and any other changes.
       Campaign campaign =
           Campaign.newBuilder()

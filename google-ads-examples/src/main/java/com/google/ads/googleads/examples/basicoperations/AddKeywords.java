@@ -18,17 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.common.KeywordInfo;
-import com.google.ads.googleads.v0.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.AdGroupCriterion;
-import com.google.ads.googleads.v0.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v0.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v0.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.common.KeywordInfo;
+import com.google.ads.googleads.v1.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v1.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.AdGroupCriterion;
+import com.google.ads.googleads.v1.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v1.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v1.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v1.services.MutateAdGroupCriterionResult;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -132,7 +132,7 @@ public class AddKeywords {
         AdGroupCriterionOperation.newBuilder().setCreate(criterion).build();
 
     try (AdGroupCriterionServiceClient agcServiceClient =
-        googleAdsClient.getAdGroupCriterionServiceClient()) {
+        googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
       MutateAdGroupCriteriaResponse response =
           agcServiceClient.mutateAdGroupCriteria(Long.toString(customerId), ImmutableList.of(op));
       System.out.printf("Added %d ad group criteria:%n", response.getResultsCount());

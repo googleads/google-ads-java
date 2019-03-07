@@ -18,29 +18,29 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.common.TargetSpend;
-import com.google.ads.googleads.v0.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v0.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v0.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.BiddingStrategy;
-import com.google.ads.googleads.v0.resources.Campaign;
-import com.google.ads.googleads.v0.resources.Campaign.NetworkSettings;
-import com.google.ads.googleads.v0.resources.CampaignBudget;
-import com.google.ads.googleads.v0.resources.CampaignBudgetName;
-import com.google.ads.googleads.v0.services.BiddingStrategyOperation;
-import com.google.ads.googleads.v0.services.BiddingStrategyServiceClient;
-import com.google.ads.googleads.v0.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v0.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v0.services.CampaignOperation;
-import com.google.ads.googleads.v0.services.CampaignServiceClient;
-import com.google.ads.googleads.v0.services.MutateBiddingStrategiesResponse;
-import com.google.ads.googleads.v0.services.MutateBiddingStrategyResult;
-import com.google.ads.googleads.v0.services.MutateCampaignBudgetResult;
-import com.google.ads.googleads.v0.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v0.services.MutateCampaignResult;
-import com.google.ads.googleads.v0.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.common.TargetSpend;
+import com.google.ads.googleads.v1.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v1.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v1.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.BiddingStrategy;
+import com.google.ads.googleads.v1.resources.Campaign;
+import com.google.ads.googleads.v1.resources.Campaign.NetworkSettings;
+import com.google.ads.googleads.v1.resources.CampaignBudget;
+import com.google.ads.googleads.v1.resources.CampaignBudgetName;
+import com.google.ads.googleads.v1.services.BiddingStrategyOperation;
+import com.google.ads.googleads.v1.services.BiddingStrategyServiceClient;
+import com.google.ads.googleads.v1.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v1.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v1.services.CampaignOperation;
+import com.google.ads.googleads.v1.services.CampaignServiceClient;
+import com.google.ads.googleads.v1.services.MutateBiddingStrategiesResponse;
+import com.google.ads.googleads.v1.services.MutateBiddingStrategyResult;
+import com.google.ads.googleads.v1.services.MutateCampaignBudgetResult;
+import com.google.ads.googleads.v1.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v1.services.MutateCampaignResult;
+import com.google.ads.googleads.v1.services.MutateCampaignsResponse;
 import com.google.common.collect.Lists;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.Int64Value;
@@ -136,7 +136,7 @@ public class UsePortfolioBiddingStrategy {
    */
   private String createBiddingStrategy(GoogleAdsClient googleAdsClient, long customerId) {
     try (BiddingStrategyServiceClient biddingStrategyServiceClient =
-        googleAdsClient.getBiddingStrategyServiceClient()) {
+        googleAdsClient.getLatestVersion().createBiddingStrategyServiceClient()) {
       // Create a portfolio bidding strategy.
       TargetSpend targetSpend =
           TargetSpend.newBuilder()
@@ -175,7 +175,7 @@ public class UsePortfolioBiddingStrategy {
    */
   private String createSharedCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     try (CampaignBudgetServiceClient campaignBudgetServiceClient =
-        googleAdsClient.getCampaignBudgetServiceClient()) {
+        googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
       // Create a shared budget.
       CampaignBudget budget =
           CampaignBudget.newBuilder()
@@ -217,7 +217,7 @@ public class UsePortfolioBiddingStrategy {
       long customerId,
       String biddingStrategyResourceName,
       String campaignBudgetResourceName) {
-    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getCampaignServiceClient()) {
+    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       // Create campaign.
       NetworkSettings networkSettings =
           NetworkSettings.newBuilder()
