@@ -53,13 +53,7 @@ This project hosts the Java client library for the Google Ads API.
 
             mvn install
 
-    *   Change into the `google-ads-examples` directory.
-
-            cd google-ads-examples
-
-    *   Compile the examples project via:
-
-            mvn compile
+    *   This will compile the library and examples.
 
 4.  Setup your OAuth2 credentials.
 
