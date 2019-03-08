@@ -31,35 +31,17 @@ This project hosts the Java client library for the Google Ads API.
 
         cd google-ads-java
 
+    Now run the following command to install the snapshot version of the library and examples
+    project.
+
+        mvn clean install
+
     You'll see a parent `pom.xml` for the project, as well as the following
     subdirectories:
 
     *   `google-ads`: source code for the library.
     *   `google-ads-examples`: multiple examples that demonstrate how to use
         the library to execute common use cases via the Google Ads API.
-
-3.  To run examples, you'll need to compile the `google-ads` and
-    `google-ads-examples` code.
-
-    **If you are using an IDE...**
-
-    *   Import the `google-ads-examples` project and confirm that your IDE
-        builds the project successfully.
-
-    **If you are using Maven from the command line...**
-
-    *   From the `google-ads-java` directory, install the snapshot version
-        of the library.
-
-            mvn install
-
-    *   Change into the `google-ads-examples` directory.
-
-            cd google-ads-examples
-
-    *   Compile the examples project via:
-
-            mvn compile
 
 4.  Setup your OAuth2 credentials.
 
@@ -107,7 +89,9 @@ This project hosts the Java client library for the Google Ads API.
         **If using the command line:**
 
         ```
-        $ mvn exec:java -Dexec.mainClass="com.google.ads.googleads.examples.authentication.AuthenticateInStandaloneApplication"
+        $ cd google-ads-java
+        $ mvn clean install
+        $ mvn -f google-ads-examples/pom.xml exec:java -Dexec.mainClass="com.google.ads.googleads.examples.authentication.AuthenticateInStandaloneApplication"
         ```
 
     *   Copy the output from the last step of the example into a file named
@@ -137,6 +121,8 @@ This project hosts the Java client library for the Google Ads API.
         **If using the command line:**
 
         ```
+        $ cd google-ads-java
+        $ mvn -f google-ads-examples/pom.xml
         $ mvn exec:java -Dexec.mainClass="com.google.ads.googleads.examples.authentication.AuthenticateInWebApplication"
         ```
 

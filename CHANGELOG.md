@@ -1,3 +1,11 @@
+1.0.0 - 2019-07-03
+------------------
+Added support and examples for Google Ads API v0_1.
+
+- Added support for multiple versions in the client library.
+- Added example for HandlePartialFailure.
+- Updated ResourceNames.java format to use '~' for v1.
+
 0.7.0 - 2019-02-01
 ------------------
 Added support and examples for Google Ads API v0_7.
