@@ -116,7 +116,10 @@ public abstract class BaseGoogleAdsException extends ApiException {
 
     /** Create an empty GoogleAdsFailure instance for this version. */
     @VisibleForTesting
-    public abstract U createDefaultFailure();
+    public abstract U createGoogleAdsFailure();
+
+    public abstract U createGoogleAdsFailure(byte [] serializedBytes)
+        throws InvalidProtocolBufferException;
 
     protected static Metadata.Key<byte[]> createKey(String trailerKey) {
       return Metadata.Key.of(trailerKey, Metadata.BINARY_BYTE_MARSHALLER);

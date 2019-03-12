@@ -23,6 +23,7 @@ import com.google.ads.googleads.lib.GoogleAdsAllVersions;
 import com.google.ads.googleads.lib.catalog.annotation.VersionDescriptor;
 import com.google.api.gax.rpc.ApiException;
 import com.google.common.collect.ImmutableSet;
+import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Message;
 import io.grpc.Metadata;
 import java.util.Set;
@@ -120,7 +121,13 @@ public class VersionDescriptorLoaderTest {
     }
 
     @Override
-    public Message createDefaultFailure() {
+    public Message createGoogleAdsFailure() {
+      return null;
+    }
+
+    @Override
+    public Message createGoogleAdsFailure(byte[] serializedBytes)
+        throws InvalidProtocolBufferException {
       return null;
     }
   }

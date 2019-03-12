@@ -38,13 +38,18 @@ public class GoogleAdsException extends BaseGoogleAdsException {
     protected GoogleAdsException createException(
         ApiException source, byte[] protoData, Metadata metadata)
         throws InvalidProtocolBufferException {
-      GoogleAdsFailure failure = GoogleAdsFailure.parseFrom(protoData);
+      GoogleAdsFailure failure = createGoogleAdsFailure(protoData);
       return new GoogleAdsException(source, failure, metadata);
     }
 
     @Override
-    public GoogleAdsFailure createDefaultFailure() {
+    public GoogleAdsFailure createGoogleAdsFailure() {
       return GoogleAdsFailure.newBuilder().build();
+    }
+
+    @Override
+    public GoogleAdsFailure createGoogleAdsFailure(byte[] protoData) throws InvalidProtocolBufferException {
+      return GoogleAdsFailure.parseFrom(protoData);
     }
 
     @Override

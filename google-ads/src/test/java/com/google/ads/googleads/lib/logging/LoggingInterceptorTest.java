@@ -16,12 +16,17 @@ package com.google.ads.googleads.lib.logging;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.eq;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import com.google.ads.googleads.lib.catalog.ApiCatalog;
+import com.google.ads.googleads.lib.catalog.Version;
 import com.google.ads.googleads.lib.logging.Event.Detail;
 import com.google.ads.googleads.lib.logging.Event.Summary;
 import com.google.common.collect.ImmutableMap;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.Message;
 import io.grpc.Channel;
 import io.grpc.ClientCall;
 import io.grpc.ClientCall.Listener;
@@ -39,6 +44,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.slf4j.Logger;
 
@@ -68,6 +74,7 @@ public class LoggingInterceptorTest {
   private Metadata responseHeaders;
   private Metadata trailers;
   private String requestId;
+  private Message failure;
 
   @Mock(name = "summaryLogger")
   private Logger summaryLogger;
@@ -82,9 +89,7 @@ public class LoggingInterceptorTest {
   @Before
   public void setup() {
     // Initialize Mockito objects.
-    when(nextChannel.newCall(any(), any())).thenReturn(nextCall);
-    enableAllLevels(summaryLogger);
-    enableAllLevels(detailLogger);
+    resetMocks();
 
     // Initialize dummy request object.
     devToken = "devtoken-test";
@@ -104,6 +109,7 @@ public class LoggingInterceptorTest {
     requestId = "testrqid";
     responseHeaders.put(LoggingInterceptor.REQUEST_ID_HEADER_KEY, requestId);
     trailers = new Metadata();
+    failure = null;
     customerId = null;
 
     // Initialize logger and gRPC.
@@ -238,6 +244,18 @@ public class LoggingInterceptorTest {
     runDefaultCall();
   }
 
+  /** Ensures that we can log a GoogleAdsFailure message from the response trailers. */
+  @Test
+  public void logsFailureMessageFromTrailers() {
+    ApiCatalog catalog = ApiCatalog.getDefault();
+    for (Version version : catalog.getSupportedVersions()) {
+      failure = version.getExceptionFactory().createGoogleAdsFailure();
+      trailers.put(version.getExceptionFactory().getTrailerKey(), failure.toByteArray());
+      runDefaultCall();
+      resetMocks();
+    }
+  }
+
   /** Ensures that logging works when onHeaders is not called. */
   @Test
   public void logsIfResponseHeadersNotSent() {
@@ -301,6 +319,7 @@ public class LoggingInterceptorTest {
         });
   }
 
+
   private static Listener simulateCall(
       RequestLogger requestLogger,
       Detail detail,
@@ -336,16 +355,21 @@ public class LoggingInterceptorTest {
   }
 
   private static Object[] getDetailLoggerParams(Detail detail) {
-    return new Object[] {
-      any(),
-      eq(detail.getMethodName()),
-      eq(detail.getEndpoint()),
-      eq(detail.getScrubbedRequestHeaders()),
-      eq(detail.getRequest()),
-      eq(detail.getResponseHeaderMetadata()),
-      eq(detail.getResponseAsText()),
-      eq(detail.getResponseStatus())
-    };
+    try {
+      return new Object[] {
+        any(),
+        eq(detail.getMethodName()),
+        eq(detail.getEndpoint()),
+        eq(detail.getScrubbedRequestHeaders()),
+        eq(detail.getRequest()),
+        eq(detail.getResponseHeaderMetadata()),
+        eq(detail.getResponseAsText()),
+        eq(detail.deserializeFailureMessage().orElse(null)),
+        eq(detail.getResponseStatus())
+      };
+    } catch (InvalidProtocolBufferException e) {
+      throw new IllegalStateException(e);
+    }
   }
 
   private static Object[] getSummaryLoggerParams(Summary summary) {
@@ -358,6 +382,17 @@ public class LoggingInterceptorTest {
       eq(summary.getResponseCode()),
       eq(summary.getResponseDescription())
     };
+  }
+
+  private void resetMocks() {
+    Mockito.reset(summaryLogger);
+    Mockito.reset(detailLogger);
+    Mockito.reset(nextChannel);
+    Mockito.reset(nextChannel);
+
+    when(nextChannel.newCall(any(), any())).thenReturn(nextCall);
+    enableAllLevels(summaryLogger);
+    enableAllLevels(detailLogger);
   }
 
   private void enableAllLevels(Logger logger) {

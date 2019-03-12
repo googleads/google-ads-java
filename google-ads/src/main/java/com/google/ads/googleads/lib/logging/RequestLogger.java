@@ -14,8 +14,11 @@
 
 package com.google.ads.googleads.lib.logging;
 
+import com.google.ads.googleads.lib.logging.Event.Detail;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.Message;
 import java.util.function.Supplier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +33,7 @@ public class RequestLogger {
   static final String TRUNCATE_MESSAGE =
       "\n... TRUNCATED. See README.md to configure/disable log truncation.";
 
+  private static final Logger libraryLogger = LoggerFactory.getLogger(RequestLogger.class);
   private static final String LOG_LENGTH_LIMIT_KEY = "api.googleads.maxLogMessageLength";
   private static final int DEFAULT_LOG_LENGTH_LIMIT = 1000;
   private final Logger detailLogger;
@@ -116,6 +120,7 @@ public class RequestLogger {
             + "--------\n"
             + "Headers: {}\n"
             + "Body: {}\n"
+            + "Failure message: {}\n"
             + "Status: {}.",
         event.isSuccess() ? "SUCCESS" : "FAILURE",
         event.getMethodName(),
@@ -124,6 +129,7 @@ public class RequestLogger {
         event.getRequest(),
         event.getResponseHeaderMetadata(),
         truncate(event.getResponseAsText()),
+        getDeserializedFailureMessage(event),
         event.getResponseStatus());
   }
 
@@ -162,5 +168,14 @@ public class RequestLogger {
     return (logLevel == Level.INFO && logger.isInfoEnabled())
         || (logLevel == Level.WARN && logger.isWarnEnabled())
         || (logLevel == Level.DEBUG && logger.isDebugEnabled());
+  }
+
+  private static Message getDeserializedFailureMessage(Detail event) {
+    try {
+      return event.deserializeFailureMessage().orElse(null);
+    } catch (InvalidProtocolBufferException e) {
+      libraryLogger.debug("GoogleAdsFailure message was present but not readable.", e);
+      return null;
+    }
   }
 }
