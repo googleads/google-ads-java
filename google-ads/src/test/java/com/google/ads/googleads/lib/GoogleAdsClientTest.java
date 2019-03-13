@@ -391,7 +391,7 @@ public class GoogleAdsClientTest {
             .setCredentials(fakeCredentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .build();
-    assertNotEquals("same instance should be equal", clientA, clientB);
+    assertNotEquals("different instances should not be equal", clientA, clientB);
   }
 
   /** Ensures that toString returns a nonnull value with length() > 0. */
