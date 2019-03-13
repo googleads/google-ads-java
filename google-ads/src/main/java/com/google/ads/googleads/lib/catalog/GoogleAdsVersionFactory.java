@@ -23,6 +23,7 @@ import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.auth.Credentials;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
+import com.google.common.reflect.AbstractInvocationHandler;
 import com.google.common.reflect.Reflection;
 import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
@@ -65,7 +66,7 @@ public class GoogleAdsVersionFactory {
   }
 
   /** Implements InvocationHandler for the dynamic proxy implementation of VersionDescriptor. */
-  private static class VersionDescriptorInvocationHandler implements InvocationHandler {
+  private static class VersionDescriptorInvocationHandler extends AbstractInvocationHandler {
 
     private final ImmutableMap<Class, Method> clientCreators;
     private final ImmutableMap<Method, Method> settingsBuilders;
@@ -94,7 +95,7 @@ public class GoogleAdsVersionFactory {
     }
 
     @Override
-    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+    protected Object handleInvocation(Object proxy, Method method, Object[] args) throws Throwable {
       ClientSettings settings = createClientSettings(method);
       return createServiceClient(method.getReturnType(), settings);
     }
