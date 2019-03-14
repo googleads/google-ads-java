@@ -16,6 +16,7 @@ package com.google.ads.googleads.lib;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
@@ -338,11 +339,72 @@ public class GoogleAdsClientTest {
     }
   }
 
+  /** Ensure that can set endpoint on default transport channel. */
   @Test
   public void transportChannelProvider_defaultRequiresEndpoint() {
     assertTrue(
         "Default TransportChannelProvider must accept endpoint.",
         GoogleAdsClient.newBuilder().getTransportChannelProvider().needsEndpoint());
+  }
+
+  /** Ensure that hashCode doesn't collide for a test instance. */
+  @Test
+  public void hashCode_doesNotCollide() {
+    GoogleAdsClient clientA =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(fakeCredentials)
+            .setDeveloperToken(DEVELOPER_TOKEN)
+            .build();
+    GoogleAdsClient clientB =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(fakeCredentials)
+            .setDeveloperToken(DEVELOPER_TOKEN + "asdf")
+            .build();
+    // Granted there could be hash collisions, but this should not happen for this test case.
+    assertNotEquals(
+        "Clients with distinct params should have distinct hashCodes",
+        clientA.hashCode(),
+        clientB.hashCode());
+  }
+
+  /** Ensures that equals is true for A == B. */
+  @Test
+  public void equals_equalIfSameInstance() {
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(fakeCredentials)
+            .setDeveloperToken(DEVELOPER_TOKEN)
+            .build();
+    assertEquals("same instance should be equal", client, client);
+  }
+
+  /** Ensures that equals is false for A != B, with same config. */
+  @Test
+  public void equals_notEqualIfDifferentInstance() {
+    GoogleAdsClient clientA =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(fakeCredentials)
+            .setDeveloperToken(DEVELOPER_TOKEN)
+            .build();
+    GoogleAdsClient clientB =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(fakeCredentials)
+            .setDeveloperToken(DEVELOPER_TOKEN)
+            .build();
+    assertNotEquals("different instances should not be equal", clientA, clientB);
+  }
+
+  /** Ensures that toString returns a nonnull value with length() > 0. */
+  @Test
+  public void toString_returnsNotNull() {
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(fakeCredentials)
+            .setDeveloperToken(DEVELOPER_TOKEN)
+            .build();
+    String toString = client.toString();
+    assertNotNull("toString should return a non-null string", toString);
+    assertFalse("toString should return a non-empty string", toString.isEmpty());
   }
 
   /** Creates an GoogleAdsClient using mock credentials. */

@@ -20,8 +20,8 @@ import com.google.auth.Credentials;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSortedSet;
+import com.google.common.reflect.AbstractInvocationHandler;
 import com.google.common.reflect.Reflection;
-import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.SortedSet;
@@ -68,11 +68,12 @@ class ApiCatalogImpl implements ApiCatalog {
     Preconditions.checkNotNull(
         credentials, "Credentials are required to create GoogleAdsAllVersions interface.");
     return Reflection.newProxy(
-        GoogleAdsAllVersions.class, new GoogleAdsAllVersionsInvocationHandler(provider, credentials));
+        GoogleAdsAllVersions.class,
+        new GoogleAdsAllVersionsInvocationHandler(provider, credentials));
   }
 
   /** A dynamic proxy implementation of GoogleAdsAllVersions. */
-  private static class GoogleAdsAllVersionsInvocationHandler implements InvocationHandler {
+  private static class GoogleAdsAllVersionsInvocationHandler extends AbstractInvocationHandler {
 
     private final ImmutableMap<Method, Object> clientFactories;
 
@@ -83,7 +84,7 @@ class ApiCatalogImpl implements ApiCatalog {
     }
 
     @Override
-    public Object invoke(Object proxy, Method method, Object[] args) {
+    protected Object handleInvocation(Object proxy, Method method, Object[] args) {
       return clientFactories.get(method);
     }
 
@@ -94,8 +95,7 @@ class ApiCatalogImpl implements ApiCatalog {
       for (Method method : GoogleAdsAllVersions.class.getMethods()) {
         builder.put(
             method,
-            GoogleAdsVersionFactory.createProxy(
-                method.getReturnType(), provider, credentials));
+            GoogleAdsVersionFactory.createProxy(method.getReturnType(), provider, credentials));
       }
       return builder.build();
     }
