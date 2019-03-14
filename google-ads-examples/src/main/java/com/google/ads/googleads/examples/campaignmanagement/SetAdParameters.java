@@ -1,4 +1,4 @@
-// Copyright 2018 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This example sets ad parameters for a ad group criterion.
+ * This example sets ad parameters for an ad group criterion.
  * To get ad group criteria, run GetKeywords.java
  * */
 public class SetAdParameters {
