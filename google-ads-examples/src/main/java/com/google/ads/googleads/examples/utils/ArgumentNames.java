@@ -36,4 +36,5 @@ public final class ArgumentNames {
   public static final String CREATE_DEFAULT_LISTING_GROUP = "--createDefaultListingGroup";
   public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
   public static final String PAGE_URL = "--pageUrl";
+  public static final String LABEL_ID = "--labelId";
 }
