@@ -18,11 +18,11 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.Customer;
-import com.google.ads.googleads.v0.services.CreateCustomerClientResponse;
-import com.google.ads.googleads.v0.services.CustomerServiceClient;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.resources.Customer;
+import com.google.ads.googleads.v1.services.CreateCustomerClientResponse;
+import com.google.ads.googleads.v1.services.CustomerServiceClient;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -101,9 +101,10 @@ public class CreateAccount {
         .build();
 
     // Sends the request to create the customer.
-    try (CustomerServiceClient client = googleAdsClient.getCustomerServiceClient()) {
-      CreateCustomerClientResponse response = client
-          .createCustomerClient(managerId.toString(), customer);
+    try (CustomerServiceClient client =
+        googleAdsClient.getLatestVersion().createCustomerServiceClient()) {
+      CreateCustomerClientResponse response =
+          client.createCustomerClient(managerId.toString(), customer);
       System.out.printf(
           "Created a customer with resource name '%s' under the manager account with"
               + " customer ID '%d'.%n",
