@@ -122,8 +122,8 @@ This project hosts the Java client library for the Google Ads API.
 
         ```
         $ cd google-ads-java
-        $ mvn -f google-ads-examples/pom.xml
-        $ mvn exec:java -Dexec.mainClass="com.google.ads.googleads.examples.authentication.AuthenticateInWebApplication"
+        $ mvn clean install
+        $ mvn -f google-ads-examples/pom.xml exec:java -Dexec.mainClass="com.google.ads.googleads.examples.authentication.AuthenticateInWebApplication"
         ```
 
     *   Copy the output from the last step of the example into a file named
