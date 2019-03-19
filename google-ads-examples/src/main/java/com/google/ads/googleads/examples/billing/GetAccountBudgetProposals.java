@@ -17,13 +17,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.AccountBudgetProposal;
-import com.google.ads.googleads.v0.services.GoogleAdsRow;
-import com.google.ads.googleads.v0.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v0.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v0.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.AccountBudgetProposal;
+import com.google.ads.googleads.v1.services.GoogleAdsRow;
+import com.google.ads.googleads.v1.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v1.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -109,7 +109,7 @@ public class GetAccountBudgetProposals {
             .build();
 
     try (GoogleAdsServiceClient googleAdsServiceClient =
-        googleAdsClient.getGoogleAdsServiceClient()) {
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Issues the search request.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
 

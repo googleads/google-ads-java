@@ -18,16 +18,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.common.InteractionTypeInfo;
-import com.google.ads.googleads.v0.enums.InteractionTypeEnum;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.CampaignBidModifier;
-import com.google.ads.googleads.v0.services.CampaignBidModifierOperation;
-import com.google.ads.googleads.v0.services.CampaignBidModifierServiceClient;
-import com.google.ads.googleads.v0.services.MutateCampaignBidModifierResult;
-import com.google.ads.googleads.v0.services.MutateCampaignBidModifiersResponse;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.common.InteractionTypeInfo;
+import com.google.ads.googleads.v1.enums.InteractionTypeEnum;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.CampaignBidModifier;
+import com.google.ads.googleads.v1.services.CampaignBidModifierOperation;
+import com.google.ads.googleads.v1.services.CampaignBidModifierServiceClient;
+import com.google.ads.googleads.v1.services.MutateCampaignBidModifierResult;
+import com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.DoubleValue;
 import com.google.protobuf.StringValue;
@@ -121,7 +121,7 @@ public class AddCampaignBidModifier {
 
     // Send the operation in a mutate request.
     try (CampaignBidModifierServiceClient agcServiceClient =
-        googleAdsClient.getCampaignBidModifierServiceClient()) {
+        googleAdsClient.getLatestVersion().createCampaignBidModifierServiceClient()) {
       MutateCampaignBidModifiersResponse response =
           agcServiceClient.mutateCampaignBidModifiers(
               Long.toString(customerId), ImmutableList.of(op));

@@ -18,17 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.common.HotelCheckInDayInfo;
-import com.google.ads.googleads.v0.common.HotelLengthOfStayInfo;
-import com.google.ads.googleads.v0.enums.DayOfWeekEnum.DayOfWeek;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.AdGroupBidModifier;
-import com.google.ads.googleads.v0.services.AdGroupBidModifierOperation;
-import com.google.ads.googleads.v0.services.AdGroupBidModifierServiceClient;
-import com.google.ads.googleads.v0.services.MutateAdGroupBidModifierResult;
-import com.google.ads.googleads.v0.services.MutateAdGroupBidModifiersResponse;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.common.HotelCheckInDayInfo;
+import com.google.ads.googleads.v1.common.HotelLengthOfStayInfo;
+import com.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.AdGroupBidModifier;
+import com.google.ads.googleads.v1.services.AdGroupBidModifierOperation;
+import com.google.ads.googleads.v1.services.AdGroupBidModifierServiceClient;
+import com.google.ads.googleads.v1.services.MutateAdGroupBidModifierResult;
+import com.google.ads.googleads.v1.services.MutateAdGroupBidModifiersResponse;
 import com.google.protobuf.DoubleValue;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
@@ -141,7 +141,7 @@ public class AddHotelAdGroupBidModifiers {
 
     // Issues a mutate request to add the ad group bid modifiers.
     try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient =
-        googleAdsClient.getAdGroupBidModifierServiceClient()) {
+        googleAdsClient.getLatestVersion().createAdGroupBidModifierServiceClient()) {
       MutateAdGroupBidModifiersResponse response =
           adGroupBidModifierServiceClient.mutateAdGroupBidModifiers(
               Long.toString(customerId), operations);

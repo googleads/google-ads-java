@@ -18,18 +18,18 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.common.CustomParameter;
-import com.google.ads.googleads.v0.common.ExpandedTextAdInfo;
-import com.google.ads.googleads.v0.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.Ad;
-import com.google.ads.googleads.v0.resources.AdGroupAd;
-import com.google.ads.googleads.v0.services.AdGroupAdOperation;
-import com.google.ads.googleads.v0.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v0.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v0.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.common.CustomParameter;
+import com.google.ads.googleads.v1.common.ExpandedTextAdInfo;
+import com.google.ads.googleads.v1.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.Ad;
+import com.google.ads.googleads.v1.resources.AdGroupAd;
+import com.google.ads.googleads.v1.services.AdGroupAdOperation;
+import com.google.ads.googleads.v1.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v1.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v1.services.MutateAdGroupAdsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -152,7 +152,7 @@ public class AddExpandedTextAdWithUpgradedUrls {
             .build();
 
     try (AdGroupAdServiceClient adGroupAdServiceClient =
-        googleAdsClient.getAdGroupAdServiceClient()) {
+        googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
       MutateAdGroupAdsResponse response =
           adGroupAdServiceClient.mutateAdGroupAds(
               Long.toString(customerId),

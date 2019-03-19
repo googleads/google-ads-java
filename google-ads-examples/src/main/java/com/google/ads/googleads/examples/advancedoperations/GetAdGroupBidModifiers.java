@@ -18,15 +18,15 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.AdGroup;
-import com.google.ads.googleads.v0.resources.AdGroupBidModifier;
-import com.google.ads.googleads.v0.resources.Campaign;
-import com.google.ads.googleads.v0.services.GoogleAdsRow;
-import com.google.ads.googleads.v0.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v0.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v0.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.AdGroup;
+import com.google.ads.googleads.v1.resources.AdGroupBidModifier;
+import com.google.ads.googleads.v1.resources.Campaign;
+import com.google.ads.googleads.v1.services.GoogleAdsRow;
+import com.google.ads.googleads.v1.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v1.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
@@ -98,7 +98,7 @@ public class GetAdGroupBidModifiers {
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, @Nullable Long adGroupId) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
-        googleAdsClient.getGoogleAdsServiceClient()) {
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       String searchQuery =
           "SELECT ad_group.id, ad_group_bid_modifier.criterion_id, "
               + "ad_group_bid_modifier.bid_modifier, ad_group_bid_modifier.device.type, "

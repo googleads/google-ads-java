@@ -21,7 +21,7 @@
   <parent>
     <groupId>com.google.api-ads</groupId>
     <artifactId>google-ads-parent</artifactId>
-    <version>0.7.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -29,7 +29,7 @@
   <groupId>com.google.api-ads</groupId>
   <artifactId>google-ads</artifactId>
   <packaging>jar</packaging>
-  <version>0.7.1-SNAPSHOT</version>
+  <version>1.0.2-SNAPSHOT</version>
   <name>Google Ads API client library for Java</name>
   <description>
     Google Ads API client library for Java.
@@ -120,5 +120,13 @@
       <version>0.27</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- Java EE Modules deprecated since JDK 9 -->
+    <dependency>
+      <groupId>javax.annotation</groupId>
+      <artifactId>javax.annotation-api</artifactId>
+      <version>1.3.2</version>
+    </dependency>
+
   </dependencies>
 </project>

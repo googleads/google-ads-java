@@ -18,11 +18,11 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.GoogleAdsField;
-import com.google.ads.googleads.v0.services.GoogleAdsFieldServiceClient;
-import com.google.ads.googleads.v0.services.GoogleAdsFieldServiceClient.SearchGoogleAdsFieldsPagedResponse;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.GoogleAdsField;
+import com.google.ads.googleads.v1.services.GoogleAdsFieldServiceClient;
+import com.google.ads.googleads.v1.services.GoogleAdsFieldServiceClient.SearchGoogleAdsFieldsPagedResponse;
 import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import com.google.protobuf.BoolValue;
@@ -94,7 +94,7 @@ public class GetArtifactMetadata {
    */
   private void runExample(GoogleAdsClient googleAdsClient, String artifactName) {
     try (GoogleAdsFieldServiceClient googleAdsFieldServiceClient =
-        googleAdsClient.getGoogleAdsFieldServiceClient()) {
+        googleAdsClient.getLatestVersion().createGoogleAdsFieldServiceClient()) {
       // Search for an artifact whose name is the same as the specified artifactName.
       SearchGoogleAdsFieldsPagedResponse searchGoogleAdsFieldsPagedResponse =
           googleAdsFieldServiceClient.searchGoogleAdsFields(

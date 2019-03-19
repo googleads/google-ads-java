@@ -18,11 +18,11 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.Customer;
-import com.google.ads.googleads.v0.services.CustomerServiceClient;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.Customer;
+import com.google.ads.googleads.v1.services.CustomerServiceClient;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -84,7 +84,7 @@ public class GetAccountInformation {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
-    try (CustomerServiceClient customerServiceClient = googleAdsClient.getCustomerServiceClient()) {
+    try (CustomerServiceClient customerServiceClient = googleAdsClient.getLatestVersion().createCustomerServiceClient()) {
       String customerResourceName = ResourceNames.customer(customerId);
       Customer customer = customerServiceClient.getCustomer(customerResourceName);
       // Print account information.
