@@ -18,14 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.services.GenerateKeywordIdeaResponse;
-import com.google.ads.googleads.v0.services.GenerateKeywordIdeaResult;
-import com.google.ads.googleads.v0.services.GenerateKeywordIdeasRequest;
-import com.google.ads.googleads.v0.services.KeywordPlanIdeaServiceClient;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.services.GenerateKeywordIdeaResponse;
+import com.google.ads.googleads.v1.services.GenerateKeywordIdeaResult;
+import com.google.ads.googleads.v1.services.GenerateKeywordIdeasRequest;
+import com.google.ads.googleads.v1.services.KeywordPlanIdeaServiceClient;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -143,7 +143,7 @@ public class GenerateKeywordIdeas {
       List<String> keywords,
       @Nullable String pageUrl) {
     try (KeywordPlanIdeaServiceClient keywordPlanServiceClient =
-        googleAdsClient.getKeywordPlanIdeaServiceClient()) {
+        googleAdsClient.getLatestVersion().createKeywordPlanIdeaServiceClient()) {
       GenerateKeywordIdeasRequest.Builder requestBuilder =
           GenerateKeywordIdeasRequest.newBuilder()
               .setCustomerId(Long.toString(customerId))

@@ -18,13 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v0.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v0.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v0.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v1.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v1.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v1.services.MutateAdGroupCriterionResult;
 import com.google.common.collect.Lists;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -100,7 +100,7 @@ public class RemoveKeyword {
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long adGroupId, long criterionId) {
     try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
-        googleAdsClient.getAdGroupCriterionServiceClient()) {
+        googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
       String adGroupCriterionResourceName = ResourceNames.adGroupCriterion(customerId, adGroupId, criterionId);
 
       // Construct an operation that will remove the keyword with the specified resource name.

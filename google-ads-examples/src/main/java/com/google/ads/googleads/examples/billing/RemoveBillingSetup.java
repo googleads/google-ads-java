@@ -17,12 +17,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.lib.utils.ResourceNames;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.services.BillingSetupOperation;
-import com.google.ads.googleads.v0.services.BillingSetupServiceClient;
-import com.google.ads.googleads.v0.services.MutateBillingSetupResponse;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.services.BillingSetupOperation;
+import com.google.ads.googleads.v1.services.BillingSetupServiceClient;
+import com.google.ads.googleads.v1.services.MutateBillingSetupResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -98,8 +98,8 @@ public class RemoveBillingSetup {
         .setRemove(billingSetupResourceName)
         .build();
 
-    try (BillingSetupServiceClient billingSetupServiceClient = googleAdsClient
-        .getBillingSetupServiceClient()) {
+    try (BillingSetupServiceClient billingSetupServiceClient = googleAdsClient.getLatestVersion()
+        .createBillingSetupServiceClient()) {
       // Send the operation in a mutate request.
       MutateBillingSetupResponse response = billingSetupServiceClient
           .mutateBillingSetup(String.valueOf(customerId), operation);

@@ -18,19 +18,19 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.common.PolicyTopicEntry;
-import com.google.ads.googleads.v0.common.PolicyTopicEvidence;
-import com.google.ads.googleads.v0.common.PolicyTopicEvidence.TextList;
-import com.google.ads.googleads.v0.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.Ad;
-import com.google.ads.googleads.v0.resources.AdGroupAd;
-import com.google.ads.googleads.v0.resources.AdGroupAdPolicySummary;
-import com.google.ads.googleads.v0.services.GoogleAdsRow;
-import com.google.ads.googleads.v0.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v0.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v0.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.common.PolicyTopicEntry;
+import com.google.ads.googleads.v1.common.PolicyTopicEvidence;
+import com.google.ads.googleads.v1.common.PolicyTopicEvidence.TextList;
+import com.google.ads.googleads.v1.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.Ad;
+import com.google.ads.googleads.v1.resources.AdGroupAd;
+import com.google.ads.googleads.v1.resources.AdGroupAdPolicySummary;
+import com.google.ads.googleads.v1.services.GoogleAdsRow;
+import com.google.ads.googleads.v1.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v1.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -97,7 +97,7 @@ public class GetAllDisapprovedAds {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, Long campaignId) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
-        googleAdsClient.getGoogleAdsServiceClient()) {
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       String searchQuery =
           String.format(
               "SELECT ad_group_ad.ad.id, "

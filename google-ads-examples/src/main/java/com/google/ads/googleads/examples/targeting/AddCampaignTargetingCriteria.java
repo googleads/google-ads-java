@@ -18,21 +18,21 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.common.AddressInfo;
-import com.google.ads.googleads.v0.common.KeywordInfo;
-import com.google.ads.googleads.v0.common.ProximityInfo;
-import com.google.ads.googleads.v0.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v0.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.resources.CampaignCriterion;
-import com.google.ads.googleads.v0.resources.CampaignCriterion.Builder;
-import com.google.ads.googleads.v0.resources.CampaignName;
-import com.google.ads.googleads.v0.resources.GeoTargetConstantName;
-import com.google.ads.googleads.v0.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v0.services.CampaignCriterionServiceClient;
-import com.google.ads.googleads.v0.services.MutateCampaignCriteriaResponse;
-import com.google.ads.googleads.v0.services.MutateCampaignCriterionResult;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.common.AddressInfo;
+import com.google.ads.googleads.v1.common.KeywordInfo;
+import com.google.ads.googleads.v1.common.ProximityInfo;
+import com.google.ads.googleads.v1.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v1.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.resources.CampaignCriterion;
+import com.google.ads.googleads.v1.resources.CampaignCriterion.Builder;
+import com.google.ads.googleads.v1.resources.CampaignName;
+import com.google.ads.googleads.v1.resources.GeoTargetConstantName;
+import com.google.ads.googleads.v1.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v1.services.CampaignCriterionServiceClient;
+import com.google.ads.googleads.v1.services.MutateCampaignCriteriaResponse;
+import com.google.ads.googleads.v1.services.MutateCampaignCriterionResult;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.DoubleValue;
@@ -146,7 +146,7 @@ public class AddCampaignTargetingCriteria {
                 .setCreate(buildProximityLocation(campaignResourceName)).build());
 
     try (CampaignCriterionServiceClient campaignCriterionServiceClient =
-        googleAdsClient.getCampaignCriterionServiceClient()) {
+        googleAdsClient.getLatestVersion().createCampaignCriterionServiceClient()) {
       MutateCampaignCriteriaResponse response =
           campaignCriterionServiceClient.mutateCampaignCriteria(
               Long.toString(customerId), operations);
