@@ -15,11 +15,11 @@
 package com.google.ads.googleads.examples.accountmanagement;
 
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.lib.GoogleAdsException;
-import com.google.ads.googleads.v0.errors.GoogleAdsError;
-import com.google.ads.googleads.v0.services.CustomerServiceClient;
-import com.google.ads.googleads.v0.services.ListAccessibleCustomersRequest;
-import com.google.ads.googleads.v0.services.ListAccessibleCustomersResponse;
+import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.ads.googleads.v1.services.CustomerServiceClient;
+import com.google.ads.googleads.v1.services.ListAccessibleCustomersRequest;
+import com.google.ads.googleads.v1.services.ListAccessibleCustomersResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -79,9 +79,11 @@ public class ListAccessibleCustomers {
     //
     // client = client.toBuilder().setCredentials(credentials).build();
 
-    try (CustomerServiceClient customerService = client.getCustomerServiceClient()) {
-      ListAccessibleCustomersResponse response = customerService
-          .listAccessibleCustomers(ListAccessibleCustomersRequest.newBuilder().build());
+    try (CustomerServiceClient customerService =
+        client.getLatestVersion().createCustomerServiceClient()) {
+      ListAccessibleCustomersResponse response =
+          customerService.listAccessibleCustomers(
+              ListAccessibleCustomersRequest.newBuilder().build());
 
       System.out.printf("Total results: %d%n", response.getResourceNamesCount());
 
