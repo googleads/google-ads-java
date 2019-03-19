@@ -27,11 +27,13 @@ import com.google.ads.googleads.v1.services.MutateMediaFilesResponse;
 import com.google.ads.googleads.v1.services.MutateMediaFileResult;
 import com.google.ads.googleads.v1.errors.GoogleAdsError;
 import com.google.ads.googleads.v1.errors.GoogleAdsException;
+import com.google.common.io.ByteStreams;
 import com.google.protobuf.StringValue;
 import com.google.protobuf.BytesValue;
 import com.google.protobuf.ByteString;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -92,8 +94,8 @@ public class UploadImage {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId)
       throws IOException {
 
-    byte[] imageData = com.google.api.ads.common.lib.utils.Media
-      .getMediaDataFromUrl("https://goo.gl/3b9Wfh");
+    byte[] imageData = ByteStreams.toByteArray(new URL(
+      "https://goo.gl/3b9Wfh").openStream());
 
     MediaImage image =
       MediaImage.newBuilder()
