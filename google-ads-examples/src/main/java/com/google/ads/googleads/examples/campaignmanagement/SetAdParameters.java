@@ -109,7 +109,13 @@ public class SetAdParameters {
     AdParameter adParameter1 =
       AdParameter.newBuilder()
         .setAdGroupCriterion(StringValue.of(adGroupCriterionResourceName))
+        // The unique index of this ad parameter. Must be either 1 or 2.
         .setParameterIndex(Int64Value.of(1))
+        // String containing a numeric value to insert into the ad text.
+        // The following restrictions apply: (a) can use comma or period as a separator,
+        // with an optional period or comma (respectively) for fractional values,
+        // (b) can be prepended or appended with a currency code, (c) can use plus or minus,
+        // (d) can use '/' between two numbers.
         .setInsertionText(StringValue.of("100"))
         .build();
 
