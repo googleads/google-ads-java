@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/** This example adds a campaign label to an array of campaigns. */
+/** This example adds a campaign label to a list of campaigns. */
 public class AddCampaignLabels {
 
   private static class AddCampaignLabelsParams extends CodeSampleParams {
