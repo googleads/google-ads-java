@@ -136,8 +136,7 @@ abstract class Event {
 
     /**
      * Attempts to read the GoogleAdsFailure from the response, if present. This is a relatively
-     * expensive operation when the proto is present, so take care not to negatively impact
-     * performance.
+     * expensive operation when the proto is present, so call this method judiciously.
      *
      * @return an empty Optional if no GoogleAdsFailure was found.
      * @throws InvalidProtocolBufferException if a failure was present but could not be read.
