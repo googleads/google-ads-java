@@ -85,12 +85,14 @@ public class GetAllVideosAndImages {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
            googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
-      // Creates a request that will retrieve all video and image files using pages of the specified page size.
+      // Creates a request that will retrieve all video and image files using pages of the
+      // specified page size.
       SearchGoogleAdsRequest request =
         SearchGoogleAdsRequest.newBuilder()
           .setCustomerId(Long.toString(customerId))
           .setPageSize(PAGE_SIZE)
-          .setQuery("SELECT media_file.id, media_file.name, media_file.type FROM media_file ORDER BY media_file.id")
+          .setQuery("SELECT media_file.id, media_file.name, media_file.type " +
+            "FROM media_file ORDER BY media_file.id")
           .build();
       // Issues the search request.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
