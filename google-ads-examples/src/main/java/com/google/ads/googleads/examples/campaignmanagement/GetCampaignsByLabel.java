@@ -110,7 +110,7 @@ public class GetCampaignsByLabel {
         // objects because these were included in the search criteria.
         for (GoogleAdsRow googleAdsRow : searchPagedResponse.iterateAll()) {
           System.out.printf(
-            "Campaign found with name '%s' and ID %d and label: %s.%n",
+            "Campaign found with name '%s', ID %d, and label: %s.%n",
             googleAdsRow.getCampaign().getName().getValue(),
             googleAdsRow.getCampaign().getId().getValue(),
             googleAdsRow.getLabel().getName().getValue());
