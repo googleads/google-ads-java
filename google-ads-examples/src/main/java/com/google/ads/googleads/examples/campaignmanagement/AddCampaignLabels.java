@@ -74,7 +74,8 @@ public class AddCampaignLabels {
     }
 
     try {
-      new AddCampaignLabels().runExample(googleAdsClient, params.customerId, params.campaignIds, params.labelId);
+      new AddCampaignLabels().runExample(googleAdsClient, params.customerId,
+        params.campaignIds, params.labelId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -99,7 +100,8 @@ public class AddCampaignLabels {
    * @param labelId the ID of the label to attach to campaigns.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, List<Long> campaignIds, Long labelId) {
+  private void runExample(GoogleAdsClient googleAdsClient, long customerId,
+    List<Long> campaignIds, Long labelId) {
     // Get the resource name of the label to be added across all given campaigns
     String labelResourceName = ResourceNames.label(customerId, labelId);
 
