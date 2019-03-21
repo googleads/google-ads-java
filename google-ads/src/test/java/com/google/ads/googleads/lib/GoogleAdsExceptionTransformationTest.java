@@ -39,7 +39,7 @@ public class GoogleAdsExceptionTransformationTest {
   @Test
   public void loadsAllVersions() {
     for (Version version : catalog.getSupportedVersions()) {
-      Message expectedFailure = version.getExceptionFactory().createDefaultFailure();
+      Message expectedFailure = version.getExceptionFactory().createGoogleAdsFailure();
       ApiException exception =
           getApiExceptionForVersion(
               version.getExceptionFactory().getTrailerKey(), expectedFailure.toByteArray());

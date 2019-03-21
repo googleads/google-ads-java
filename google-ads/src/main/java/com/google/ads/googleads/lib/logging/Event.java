@@ -14,12 +14,18 @@
 
 package com.google.ads.googleads.lib.logging;
 
+import com.google.ads.googleads.lib.BaseGoogleAdsException.Factory;
+import com.google.ads.googleads.lib.catalog.ApiCatalog;
+import com.google.ads.googleads.lib.catalog.Version;
 import com.google.auto.value.AutoValue;
 import com.google.common.collect.ImmutableMap;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.Message;
 import io.grpc.Metadata;
 import io.grpc.Status;
 import io.grpc.Status.Code;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /** Base class with common fields logged in all event cases. */
@@ -126,6 +132,28 @@ abstract class Event {
     /** The response message as a string, or null if not present. */
     public String getResponseAsText() {
       return getResponse() == null ? null : getResponse().toString();
+    }
+
+    /**
+     * Attempts to read the GoogleAdsFailure from the response, if present. This is a relatively
+     * expensive operation when the proto is present, so call this method judiciously.
+     *
+     * @return an empty Optional if no GoogleAdsFailure was found.
+     * @throws InvalidProtocolBufferException if a failure was present but could not be read.
+     */
+    public Optional<Message> deserializeFailureMessage() throws InvalidProtocolBufferException {
+      Metadata trailers = getResponseTrailerMetadata();
+      if (trailers != null) {
+        for (Version version : ApiCatalog.getDefault().getSupportedVersions()) {
+          Factory exceptionFactory = version.getExceptionFactory();
+          Metadata.Key<byte[]> trailerKey = exceptionFactory.getTrailerKey();
+          if (trailers.containsKey(trailerKey)) {
+            return Optional.ofNullable(
+                exceptionFactory.createGoogleAdsFailure(trailers.get(trailerKey)));
+          }
+        }
+      }
+      return Optional.empty();
     }
 
     @AutoValue.Builder

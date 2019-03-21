@@ -59,7 +59,7 @@ public class ApiCatalogTest {
   public void typeFactory_gettersWorkInBaseCase() {
     for (Version version : catalog.getSupportedVersions()) {
       assertNotNull(version.getExceptionFactory().getTrailerKey());
-      assertNotNull(version.getExceptionFactory().createDefaultFailure());
+      assertNotNull(version.getExceptionFactory().createGoogleAdsFailure());
     }
   }
 
@@ -81,7 +81,7 @@ public class ApiCatalogTest {
   @Test
   public void createGoogleAdsException_fromMetadata() {
     for (Version version : catalog.getSupportedVersions()) {
-      Message expectedFailure = version.getExceptionFactory().createDefaultFailure();
+      Message expectedFailure = version.getExceptionFactory().createGoogleAdsFailure();
       ApiException exception =
           getApiExceptionForVersion(
               version.getExceptionFactory().getTrailerKey(), expectedFailure.toByteArray());
