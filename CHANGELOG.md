@@ -1,4 +1,8 @@
-1.0.0 - 2019-07-03
+1.0.1 - 2019-03-14
+------------------
+- Added support for equals, hashCode and toString on proxy instances.
+
+1.0.0 - 2019-03-07
 ------------------
 Added support and examples for Google Ads API v0_1.
 
