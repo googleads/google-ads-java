@@ -208,9 +208,10 @@ If your configuration file is not in your home directory, you can pass the
 file location to the `fromPropertiesFile` method as follows:
 
 ```java
+File propertiesFile = new File("/path/to/ads.properties"); 
 GoogleAdsClient googleAdsClient =
     GoogleAdsClient.newBuilder()
-        .fromPropertiesFile("/path/to/ads.properties").build();
+        .fromPropertiesFile(propertiesFile).build();
 ```
 
 You can also construct a `Credentials` object by specifying the client ID,
