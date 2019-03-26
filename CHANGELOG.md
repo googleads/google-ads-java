@@ -1,6 +1,7 @@
 1.0.1 - 2019-03-14
 ------------------
 - Added support for equals, hashCode and toString on proxy instances.
+  Fixes [issue #70](https://github.com/googleads/google-ads-java/issues/70).
 
 1.0.0 - 2019-03-07
 ------------------
