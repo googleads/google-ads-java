@@ -55,6 +55,7 @@ private static final long serialVersionUID = 0L;
     }
     int mutable_bitField0_ = 0;
     int mutable_bitField1_ = 0;
+    int mutable_bitField2_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -771,6 +772,32 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 522: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (geoTargetAirport_ != null) {
+              subBuilder = geoTargetAirport_.toBuilder();
+            }
+            geoTargetAirport_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(geoTargetAirport_);
+              geoTargetAirport_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 530: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (webpage_ != null) {
+              subBuilder = webpage_.toBuilder();
+            }
+            webpage_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(webpage_);
+              webpage_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1177,6 +1204,39 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.ExternalConversionSourceEnum.ExternalConversionSource result = com.google.ads.googleads.v1.enums.ExternalConversionSourceEnum.ExternalConversionSource.valueOf(externalConversionSource_);
     return result == null ? com.google.ads.googleads.v1.enums.ExternalConversionSourceEnum.ExternalConversionSource.UNRECOGNIZED : result;
+  }
+
+  public static final int GEO_TARGET_AIRPORT_FIELD_NUMBER = 65;
+  private com.google.protobuf.StringValue geoTargetAirport_;
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents an airport.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+   */
+  public boolean hasGeoTargetAirport() {
+    return geoTargetAirport_ != null;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents an airport.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+   */
+  public com.google.protobuf.StringValue getGeoTargetAirport() {
+    return geoTargetAirport_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetAirport_;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents an airport.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getGeoTargetAirportOrBuilder() {
+    return getGeoTargetAirport();
   }
 
   public static final int GEO_TARGET_CITY_FIELD_NUMBER = 62;
@@ -2126,7 +2186,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue productCountry_;
   /**
    * <pre>
-   * Resource name of the geo target constant for the country of the product.
+   * Resource name of the geo target constant for the country of sale of the
+   * product.
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -2136,7 +2197,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Resource name of the geo target constant for the country of the product.
+   * Resource name of the geo target constant for the country of sale of the
+   * product.
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -2146,7 +2208,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Resource name of the geo target constant for the country of the product.
+   * Resource name of the geo target constant for the country of sale of the
+   * product.
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -2739,6 +2802,39 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v1.enums.SlotEnum.Slot.UNRECOGNIZED : result;
   }
 
+  public static final int WEBPAGE_FIELD_NUMBER = 66;
+  private com.google.protobuf.StringValue webpage_;
+  /**
+   * <pre>
+   * Resource name of the ad group criterion that represents webpage criterion.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue webpage = 66;</code>
+   */
+  public boolean hasWebpage() {
+    return webpage_ != null;
+  }
+  /**
+   * <pre>
+   * Resource name of the ad group criterion that represents webpage criterion.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue webpage = 66;</code>
+   */
+  public com.google.protobuf.StringValue getWebpage() {
+    return webpage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : webpage_;
+  }
+  /**
+   * <pre>
+   * Resource name of the ad group criterion that represents webpage criterion.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue webpage = 66;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getWebpageOrBuilder() {
+    return getWebpage();
+  }
+
   public static final int WEEK_FIELD_NUMBER = 24;
   private com.google.protobuf.StringValue week_;
   /**
@@ -3014,6 +3110,12 @@ private static final long serialVersionUID = 0L;
     if (geoTargetRegion_ != null) {
       output.writeMessage(64, getGeoTargetRegion());
     }
+    if (geoTargetAirport_ != null) {
+      output.writeMessage(65, getGeoTargetAirport());
+    }
+    if (webpage_ != null) {
+      output.writeMessage(66, getWebpage());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -3279,6 +3381,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(64, getGeoTargetRegion());
     }
+    if (geoTargetAirport_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(65, getGeoTargetAirport());
+    }
+    if (webpage_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(66, getWebpage());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3324,6 +3434,11 @@ private static final long serialVersionUID = 0L;
     result = result && dayOfWeek_ == other.dayOfWeek_;
     result = result && device_ == other.device_;
     result = result && externalConversionSource_ == other.externalConversionSource_;
+    result = result && (hasGeoTargetAirport() == other.hasGeoTargetAirport());
+    if (hasGeoTargetAirport()) {
+      result = result && getGeoTargetAirport()
+          .equals(other.getGeoTargetAirport());
+    }
     result = result && (hasGeoTargetCity() == other.hasGeoTargetCity());
     if (hasGeoTargetCity()) {
       result = result && getGeoTargetCity()
@@ -3533,6 +3648,11 @@ private static final long serialVersionUID = 0L;
     }
     result = result && searchTermMatchType_ == other.searchTermMatchType_;
     result = result && slot_ == other.slot_;
+    result = result && (hasWebpage() == other.hasWebpage());
+    if (hasWebpage()) {
+      result = result && getWebpage()
+          .equals(other.getWebpage());
+    }
     result = result && (hasWeek() == other.hasWeek());
     if (hasWeek()) {
       result = result && getWeek()
@@ -3588,6 +3708,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + device_;
     hash = (37 * hash) + EXTERNAL_CONVERSION_SOURCE_FIELD_NUMBER;
     hash = (53 * hash) + externalConversionSource_;
+    if (hasGeoTargetAirport()) {
+      hash = (37 * hash) + GEO_TARGET_AIRPORT_FIELD_NUMBER;
+      hash = (53 * hash) + getGeoTargetAirport().hashCode();
+    }
     if (hasGeoTargetCity()) {
       hash = (37 * hash) + GEO_TARGET_CITY_FIELD_NUMBER;
       hash = (53 * hash) + getGeoTargetCity().hashCode();
@@ -3766,6 +3890,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + searchTermMatchType_;
     hash = (37 * hash) + SLOT_FIELD_NUMBER;
     hash = (53 * hash) + slot_;
+    if (hasWebpage()) {
+      hash = (37 * hash) + WEBPAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getWebpage().hashCode();
+    }
     if (hasWeek()) {
       hash = (37 * hash) + WEEK_FIELD_NUMBER;
       hash = (53 * hash) + getWeek().hashCode();
@@ -3953,6 +4081,12 @@ private static final long serialVersionUID = 0L;
 
       externalConversionSource_ = 0;
 
+      if (geoTargetAirportBuilder_ == null) {
+        geoTargetAirport_ = null;
+      } else {
+        geoTargetAirport_ = null;
+        geoTargetAirportBuilder_ = null;
+      }
       if (geoTargetCityBuilder_ == null) {
         geoTargetCity_ = null;
       } else {
@@ -4211,6 +4345,12 @@ private static final long serialVersionUID = 0L;
 
       slot_ = 0;
 
+      if (webpageBuilder_ == null) {
+        webpage_ = null;
+      } else {
+        webpage_ = null;
+        webpageBuilder_ = null;
+      }
       if (weekBuilder_ == null) {
         week_ = null;
       } else {
@@ -4278,6 +4418,11 @@ private static final long serialVersionUID = 0L;
       result.dayOfWeek_ = dayOfWeek_;
       result.device_ = device_;
       result.externalConversionSource_ = externalConversionSource_;
+      if (geoTargetAirportBuilder_ == null) {
+        result.geoTargetAirport_ = geoTargetAirport_;
+      } else {
+        result.geoTargetAirport_ = geoTargetAirportBuilder_.build();
+      }
       if (geoTargetCityBuilder_ == null) {
         result.geoTargetCity_ = geoTargetCity_;
       } else {
@@ -4487,6 +4632,11 @@ private static final long serialVersionUID = 0L;
       }
       result.searchTermMatchType_ = searchTermMatchType_;
       result.slot_ = slot_;
+      if (webpageBuilder_ == null) {
+        result.webpage_ = webpage_;
+      } else {
+        result.webpage_ = webpageBuilder_.build();
+      }
       if (weekBuilder_ == null) {
         result.week_ = week_;
       } else {
@@ -4583,6 +4733,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.externalConversionSource_ != 0) {
         setExternalConversionSourceValue(other.getExternalConversionSourceValue());
+      }
+      if (other.hasGeoTargetAirport()) {
+        mergeGeoTargetAirport(other.getGeoTargetAirport());
       }
       if (other.hasGeoTargetCity()) {
         mergeGeoTargetCity(other.getGeoTargetCity());
@@ -4730,6 +4883,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.slot_ != 0) {
         setSlotValue(other.getSlotValue());
+      }
+      if (other.hasWebpage()) {
+        mergeWebpage(other.getWebpage());
       }
       if (other.hasWeek()) {
         mergeWeek(other.getWeek());
@@ -6016,6 +6172,159 @@ private static final long serialVersionUID = 0L;
       externalConversionSource_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.StringValue geoTargetAirport_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetAirportBuilder_;
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents an airport.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+     */
+    public boolean hasGeoTargetAirport() {
+      return geoTargetAirportBuilder_ != null || geoTargetAirport_ != null;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents an airport.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+     */
+    public com.google.protobuf.StringValue getGeoTargetAirport() {
+      if (geoTargetAirportBuilder_ == null) {
+        return geoTargetAirport_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetAirport_;
+      } else {
+        return geoTargetAirportBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents an airport.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+     */
+    public Builder setGeoTargetAirport(com.google.protobuf.StringValue value) {
+      if (geoTargetAirportBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        geoTargetAirport_ = value;
+        onChanged();
+      } else {
+        geoTargetAirportBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents an airport.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+     */
+    public Builder setGeoTargetAirport(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (geoTargetAirportBuilder_ == null) {
+        geoTargetAirport_ = builderForValue.build();
+        onChanged();
+      } else {
+        geoTargetAirportBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents an airport.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+     */
+    public Builder mergeGeoTargetAirport(com.google.protobuf.StringValue value) {
+      if (geoTargetAirportBuilder_ == null) {
+        if (geoTargetAirport_ != null) {
+          geoTargetAirport_ =
+            com.google.protobuf.StringValue.newBuilder(geoTargetAirport_).mergeFrom(value).buildPartial();
+        } else {
+          geoTargetAirport_ = value;
+        }
+        onChanged();
+      } else {
+        geoTargetAirportBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents an airport.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+     */
+    public Builder clearGeoTargetAirport() {
+      if (geoTargetAirportBuilder_ == null) {
+        geoTargetAirport_ = null;
+        onChanged();
+      } else {
+        geoTargetAirport_ = null;
+        geoTargetAirportBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents an airport.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getGeoTargetAirportBuilder() {
+      
+      onChanged();
+      return getGeoTargetAirportFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents an airport.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getGeoTargetAirportOrBuilder() {
+      if (geoTargetAirportBuilder_ != null) {
+        return geoTargetAirportBuilder_.getMessageOrBuilder();
+      } else {
+        return geoTargetAirport_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : geoTargetAirport_;
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents an airport.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getGeoTargetAirportFieldBuilder() {
+      if (geoTargetAirportBuilder_ == null) {
+        geoTargetAirportBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getGeoTargetAirport(),
+                getParentForChildren(),
+                isClean());
+        geoTargetAirport_ = null;
+      }
+      return geoTargetAirportBuilder_;
     }
 
     private com.google.protobuf.StringValue geoTargetCity_ = null;
@@ -10024,7 +10333,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productCountryBuilder_;
     /**
      * <pre>
-     * Resource name of the geo target constant for the country of the product.
+     * Resource name of the geo target constant for the country of sale of the
+     * product.
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -10034,7 +10344,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the geo target constant for the country of the product.
+     * Resource name of the geo target constant for the country of sale of the
+     * product.
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -10048,7 +10359,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the geo target constant for the country of the product.
+     * Resource name of the geo target constant for the country of sale of the
+     * product.
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -10068,7 +10380,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the geo target constant for the country of the product.
+     * Resource name of the geo target constant for the country of sale of the
+     * product.
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -10086,7 +10399,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the geo target constant for the country of the product.
+     * Resource name of the geo target constant for the country of sale of the
+     * product.
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -10108,7 +10422,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the geo target constant for the country of the product.
+     * Resource name of the geo target constant for the country of sale of the
+     * product.
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -10126,7 +10441,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the geo target constant for the country of the product.
+     * Resource name of the geo target constant for the country of sale of the
+     * product.
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -10138,7 +10454,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the geo target constant for the country of the product.
+     * Resource name of the geo target constant for the country of sale of the
+     * product.
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -10153,7 +10470,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the geo target constant for the country of the product.
+     * Resource name of the geo target constant for the country of sale of the
+     * product.
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -12766,6 +13084,159 @@ private static final long serialVersionUID = 0L;
       slot_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.StringValue webpage_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> webpageBuilder_;
+    /**
+     * <pre>
+     * Resource name of the ad group criterion that represents webpage criterion.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue webpage = 66;</code>
+     */
+    public boolean hasWebpage() {
+      return webpageBuilder_ != null || webpage_ != null;
+    }
+    /**
+     * <pre>
+     * Resource name of the ad group criterion that represents webpage criterion.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue webpage = 66;</code>
+     */
+    public com.google.protobuf.StringValue getWebpage() {
+      if (webpageBuilder_ == null) {
+        return webpage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : webpage_;
+      } else {
+        return webpageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the ad group criterion that represents webpage criterion.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue webpage = 66;</code>
+     */
+    public Builder setWebpage(com.google.protobuf.StringValue value) {
+      if (webpageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        webpage_ = value;
+        onChanged();
+      } else {
+        webpageBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the ad group criterion that represents webpage criterion.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue webpage = 66;</code>
+     */
+    public Builder setWebpage(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (webpageBuilder_ == null) {
+        webpage_ = builderForValue.build();
+        onChanged();
+      } else {
+        webpageBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the ad group criterion that represents webpage criterion.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue webpage = 66;</code>
+     */
+    public Builder mergeWebpage(com.google.protobuf.StringValue value) {
+      if (webpageBuilder_ == null) {
+        if (webpage_ != null) {
+          webpage_ =
+            com.google.protobuf.StringValue.newBuilder(webpage_).mergeFrom(value).buildPartial();
+        } else {
+          webpage_ = value;
+        }
+        onChanged();
+      } else {
+        webpageBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the ad group criterion that represents webpage criterion.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue webpage = 66;</code>
+     */
+    public Builder clearWebpage() {
+      if (webpageBuilder_ == null) {
+        webpage_ = null;
+        onChanged();
+      } else {
+        webpage_ = null;
+        webpageBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the ad group criterion that represents webpage criterion.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue webpage = 66;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getWebpageBuilder() {
+      
+      onChanged();
+      return getWebpageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Resource name of the ad group criterion that represents webpage criterion.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue webpage = 66;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getWebpageOrBuilder() {
+      if (webpageBuilder_ != null) {
+        return webpageBuilder_.getMessageOrBuilder();
+      } else {
+        return webpage_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : webpage_;
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the ad group criterion that represents webpage criterion.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue webpage = 66;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getWebpageFieldBuilder() {
+      if (webpageBuilder_ == null) {
+        webpageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getWebpage(),
+                getParentForChildren(),
+                isClean());
+        webpage_ = null;
+      }
+      return webpageBuilder_;
     }
 
     private com.google.protobuf.StringValue week_ = null;

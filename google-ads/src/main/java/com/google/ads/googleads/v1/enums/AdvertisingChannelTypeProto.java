@@ -31,17 +31,17 @@ public final class AdvertisingChannelTypeProto {
       "\n<google/ads/googleads/v1/enums/advertis" +
       "ing_channel_type.proto\022\035google.ads.googl" +
       "eads.v1.enums\032\034google/api/annotations.pr" +
-      "oto\"\221\001\n\032AdvertisingChannelTypeEnum\"s\n\026Ad" +
-      "vertisingChannelType\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
-      "\007UNKNOWN\020\001\022\n\n\006SEARCH\020\002\022\013\n\007DISPLAY\020\003\022\014\n\010S" +
-      "HOPPING\020\004\022\t\n\005HOTEL\020\005\022\t\n\005VIDEO\020\006B\360\001\n!com." +
-      "google.ads.googleads.v1.enumsB\033Advertisi" +
-      "ngChannelTypeProtoP\001ZBgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v1/enu" +
-      "ms;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V1" +
-      ".Enums\312\002\035Google\\Ads\\GoogleAds\\V1\\Enums\352\002" +
-      "!Google::Ads::GoogleAds::V1::Enumsb\006prot" +
-      "o3"
+      "oto\"\245\001\n\032AdvertisingChannelTypeEnum\"\206\001\n\026A" +
+      "dvertisingChannelType\022\017\n\013UNSPECIFIED\020\000\022\013" +
+      "\n\007UNKNOWN\020\001\022\n\n\006SEARCH\020\002\022\013\n\007DISPLAY\020\003\022\014\n\010" +
+      "SHOPPING\020\004\022\t\n\005HOTEL\020\005\022\t\n\005VIDEO\020\006\022\021\n\rMULT" +
+      "I_CHANNEL\020\007B\360\001\n!com.google.ads.googleads" +
+      ".v1.enumsB\033AdvertisingChannelTypeProtoP\001" +
+      "ZBgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v1/enums;enums\242\002\003GAA\252\002\035Goo" +
+      "gle.Ads.GoogleAds.V1.Enums\312\002\035Google\\Ads\\" +
+      "GoogleAds\\V1\\Enums\352\002!Google::Ads::Google" +
+      "Ads::V1::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

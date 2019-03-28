@@ -67,6 +67,13 @@ public class ConversionUploadServiceSettings
         .uploadClickConversionsSettings();
   }
 
+  /** Returns the object with the settings used for calls to uploadCallConversions. */
+  public UnaryCallSettings<UploadCallConversionsRequest, UploadCallConversionsResponse>
+      uploadCallConversionsSettings() {
+    return ((ConversionUploadServiceStubSettings) getStubSettings())
+        .uploadCallConversionsSettings();
+  }
+
   public static final ConversionUploadServiceSettings create(
       ConversionUploadServiceStubSettings stub) throws IOException {
     return new ConversionUploadServiceSettings.Builder(stub.toBuilder()).build();
@@ -169,6 +176,12 @@ public class ConversionUploadServiceSettings
     public UnaryCallSettings.Builder<UploadClickConversionsRequest, UploadClickConversionsResponse>
         uploadClickConversionsSettings() {
       return getStubSettingsBuilder().uploadClickConversionsSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to uploadCallConversions. */
+    public UnaryCallSettings.Builder<UploadCallConversionsRequest, UploadCallConversionsResponse>
+        uploadCallConversionsSettings() {
+      return getStubSettingsBuilder().uploadCallConversionsSettings();
     }
 
     @Override

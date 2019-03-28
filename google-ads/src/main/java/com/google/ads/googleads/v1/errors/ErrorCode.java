@@ -570,6 +570,12 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 856: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 107;
+            errorCode_ = rawValue;
+            break;
+          }
           case 864: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 108;
@@ -603,6 +609,12 @@ private static final long serialVersionUID = 0L;
           case 912: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 114;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 920: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 115;
             errorCode_ = rawValue;
             break;
           }
@@ -662,6 +674,7 @@ private static final long serialVersionUID = 0L;
     AD_GROUP_AD_ERROR(21),
     AD_SHARING_ERROR(24),
     ADX_ERROR(25),
+    ASSET_ERROR(107),
     BIDDING_ERROR(26),
     CAMPAIGN_CRITERION_ERROR(29),
     COLLECTION_SIZE_ERROR(31),
@@ -700,6 +713,7 @@ private static final long serialVersionUID = 0L;
     SHARED_CRITERION_ERROR(63),
     CAMPAIGN_SHARED_SET_ERROR(64),
     CONVERSION_ACTION_ERROR(65),
+    CONVERSION_ADJUSTMENT_UPLOAD_ERROR(115),
     CONVERSION_UPLOAD_ERROR(111),
     HEADER_ERROR(66),
     DATABASE_ERROR(67),
@@ -770,6 +784,7 @@ private static final long serialVersionUID = 0L;
         case 21: return AD_GROUP_AD_ERROR;
         case 24: return AD_SHARING_ERROR;
         case 25: return ADX_ERROR;
+        case 107: return ASSET_ERROR;
         case 26: return BIDDING_ERROR;
         case 29: return CAMPAIGN_CRITERION_ERROR;
         case 31: return COLLECTION_SIZE_ERROR;
@@ -808,6 +823,7 @@ private static final long serialVersionUID = 0L;
         case 63: return SHARED_CRITERION_ERROR;
         case 64: return CAMPAIGN_SHARED_SET_ERROR;
         case 65: return CONVERSION_ACTION_ERROR;
+        case 115: return CONVERSION_ADJUSTMENT_UPLOAD_ERROR;
         case 111: return CONVERSION_UPLOAD_ERROR;
         case 66: return HEADER_ERROR;
         case 67: return DATABASE_ERROR;
@@ -1476,6 +1492,37 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.ads.googleads.v1.errors.AdxErrorEnum.AdxError.UNRECOGNIZED : result;
     }
     return com.google.ads.googleads.v1.errors.AdxErrorEnum.AdxError.UNSPECIFIED;
+  }
+
+  public static final int ASSET_ERROR_FIELD_NUMBER = 107;
+  /**
+   * <pre>
+   * The reasons for the asset error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+   */
+  public int getAssetErrorValue() {
+    if (errorCodeCase_ == 107) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the asset error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+   */
+  public com.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError getAssetError() {
+    if (errorCodeCase_ == 107) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError result = com.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError.UNSPECIFIED;
   }
 
   public static final int BIDDING_ERROR_FIELD_NUMBER = 26;
@@ -2654,6 +2701,37 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.ads.googleads.v1.errors.ConversionActionErrorEnum.ConversionActionError.UNRECOGNIZED : result;
     }
     return com.google.ads.googleads.v1.errors.ConversionActionErrorEnum.ConversionActionError.UNSPECIFIED;
+  }
+
+  public static final int CONVERSION_ADJUSTMENT_UPLOAD_ERROR_FIELD_NUMBER = 115;
+  /**
+   * <pre>
+   * The reasons for the conversion adjustment upload error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+   */
+  public int getConversionAdjustmentUploadErrorValue() {
+    if (errorCodeCase_ == 115) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the conversion adjustment upload error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+   */
+  public com.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError getConversionAdjustmentUploadError() {
+    if (errorCodeCase_ == 115) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError result = com.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError.UNSPECIFIED;
   }
 
   public static final int CONVERSION_UPLOAD_ERROR_FIELD_NUMBER = 111;
@@ -4016,6 +4094,9 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 105) {
       output.writeEnum(105, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 107) {
+      output.writeEnum(107, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 108) {
       output.writeEnum(108, ((java.lang.Integer) errorCode_));
     }
@@ -4033,6 +4114,9 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 114) {
       output.writeEnum(114, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 115) {
+      output.writeEnum(115, ((java.lang.Integer) errorCode_));
     }
     unknownFields.writeTo(output);
   }
@@ -4391,6 +4475,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(105, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 107) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(107, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 108) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(108, ((java.lang.Integer) errorCode_));
@@ -4414,6 +4502,10 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 114) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(114, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 115) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(115, ((java.lang.Integer) errorCode_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -4514,6 +4606,10 @@ private static final long serialVersionUID = 0L;
       case 25:
         result = result && getAdxErrorValue()
             == other.getAdxErrorValue();
+        break;
+      case 107:
+        result = result && getAssetErrorValue()
+            == other.getAssetErrorValue();
         break;
       case 26:
         result = result && getBiddingErrorValue()
@@ -4666,6 +4762,10 @@ private static final long serialVersionUID = 0L;
       case 65:
         result = result && getConversionActionErrorValue()
             == other.getConversionActionErrorValue();
+        break;
+      case 115:
+        result = result && getConversionAdjustmentUploadErrorValue()
+            == other.getConversionAdjustmentUploadErrorValue();
         break;
       case 111:
         result = result && getConversionUploadErrorValue()
@@ -4902,6 +5002,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + ADX_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getAdxErrorValue();
         break;
+      case 107:
+        hash = (37 * hash) + ASSET_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetErrorValue();
+        break;
       case 26:
         hash = (37 * hash) + BIDDING_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getBiddingErrorValue();
@@ -5053,6 +5157,10 @@ private static final long serialVersionUID = 0L;
       case 65:
         hash = (37 * hash) + CONVERSION_ACTION_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getConversionActionErrorValue();
+        break;
+      case 115:
+        hash = (37 * hash) + CONVERSION_ADJUSTMENT_UPLOAD_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getConversionAdjustmentUploadErrorValue();
         break;
       case 111:
         hash = (37 * hash) + CONVERSION_UPLOAD_ERROR_FIELD_NUMBER;
@@ -5422,6 +5530,9 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 25) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 107) {
+        result.errorCode_ = errorCode_;
+      }
       if (errorCodeCase_ == 26) {
         result.errorCode_ = errorCode_;
       }
@@ -5534,6 +5645,9 @@ private static final long serialVersionUID = 0L;
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 65) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 115) {
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 111) {
@@ -5771,6 +5885,10 @@ private static final long serialVersionUID = 0L;
           setAdxErrorValue(other.getAdxErrorValue());
           break;
         }
+        case ASSET_ERROR: {
+          setAssetErrorValue(other.getAssetErrorValue());
+          break;
+        }
         case BIDDING_ERROR: {
           setBiddingErrorValue(other.getBiddingErrorValue());
           break;
@@ -5921,6 +6039,10 @@ private static final long serialVersionUID = 0L;
         }
         case CONVERSION_ACTION_ERROR: {
           setConversionActionErrorValue(other.getConversionActionErrorValue());
+          break;
+        }
+        case CONVERSION_ADJUSTMENT_UPLOAD_ERROR: {
+          setConversionAdjustmentUploadErrorValue(other.getConversionAdjustmentUploadErrorValue());
           break;
         }
         case CONVERSION_UPLOAD_ERROR: {
@@ -7584,6 +7706,80 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAdxError() {
       if (errorCodeCase_ == 25) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the asset error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+     */
+    public int getAssetErrorValue() {
+      if (errorCodeCase_ == 107) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the asset error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+     */
+    public Builder setAssetErrorValue(int value) {
+      errorCodeCase_ = 107;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the asset error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+     */
+    public com.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError getAssetError() {
+      if (errorCodeCase_ == 107) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError result = com.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the asset error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+     */
+    public Builder setAssetError(com.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 107;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the asset error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+     */
+    public Builder clearAssetError() {
+      if (errorCodeCase_ == 107) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();
@@ -10396,6 +10592,80 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearConversionActionError() {
       if (errorCodeCase_ == 65) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the conversion adjustment upload error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+     */
+    public int getConversionAdjustmentUploadErrorValue() {
+      if (errorCodeCase_ == 115) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion adjustment upload error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+     */
+    public Builder setConversionAdjustmentUploadErrorValue(int value) {
+      errorCodeCase_ = 115;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion adjustment upload error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+     */
+    public com.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError getConversionAdjustmentUploadError() {
+      if (errorCodeCase_ == 115) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError result = com.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion adjustment upload error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+     */
+    public Builder setConversionAdjustmentUploadError(com.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 115;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion adjustment upload error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+     */
+    public Builder clearConversionAdjustmentUploadError() {
+      if (errorCodeCase_ == 115) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

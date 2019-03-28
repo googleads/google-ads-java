@@ -327,6 +327,20 @@ private static final long serialVersionUID = 0L;
             operationCase_ = 22;
             break;
           }
+          case 186: {
+            com.google.ads.googleads.v1.services.AssetOperation.Builder subBuilder = null;
+            if (operationCase_ == 23) {
+              subBuilder = ((com.google.ads.googleads.v1.services.AssetOperation) operation_).toBuilder();
+            }
+            operation_ =
+                input.readMessage(com.google.ads.googleads.v1.services.AssetOperation.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.services.AssetOperation) operation_);
+              operation_ = subBuilder.buildPartial();
+            }
+            operationCase_ = 23;
+            break;
+          }
           case 210: {
             com.google.ads.googleads.v1.services.CampaignExtensionSettingOperation.Builder subBuilder = null;
             if (operationCase_ == 26) {
@@ -597,6 +611,7 @@ private static final long serialVersionUID = 0L;
     AD_GROUP_LABEL_OPERATION(21),
     AD_GROUP_OPERATION(5),
     AD_PARAMETER_OPERATION(22),
+    ASSET_OPERATION(23),
     BIDDING_STRATEGY_OPERATION(6),
     CAMPAIGN_BID_MODIFIER_OPERATION(7),
     CAMPAIGN_BUDGET_OPERATION(8),
@@ -648,6 +663,7 @@ private static final long serialVersionUID = 0L;
         case 21: return AD_GROUP_LABEL_OPERATION;
         case 5: return AD_GROUP_OPERATION;
         case 22: return AD_PARAMETER_OPERATION;
+        case 23: return ASSET_OPERATION;
         case 6: return BIDDING_STRATEGY_OPERATION;
         case 7: return CAMPAIGN_BID_MODIFIER_OPERATION;
         case 8: return CAMPAIGN_BUDGET_OPERATION;
@@ -1067,6 +1083,44 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v1.services.AdParameterOperation) operation_;
     }
     return com.google.ads.googleads.v1.services.AdParameterOperation.getDefaultInstance();
+  }
+
+  public static final int ASSET_OPERATION_FIELD_NUMBER = 23;
+  /**
+   * <pre>
+   * An asset mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+   */
+  public boolean hasAssetOperation() {
+    return operationCase_ == 23;
+  }
+  /**
+   * <pre>
+   * An asset mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+   */
+  public com.google.ads.googleads.v1.services.AssetOperation getAssetOperation() {
+    if (operationCase_ == 23) {
+       return (com.google.ads.googleads.v1.services.AssetOperation) operation_;
+    }
+    return com.google.ads.googleads.v1.services.AssetOperation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * An asset mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+   */
+  public com.google.ads.googleads.v1.services.AssetOperationOrBuilder getAssetOperationOrBuilder() {
+    if (operationCase_ == 23) {
+       return (com.google.ads.googleads.v1.services.AssetOperation) operation_;
+    }
+    return com.google.ads.googleads.v1.services.AssetOperation.getDefaultInstance();
   }
 
   public static final int BIDDING_STRATEGY_OPERATION_FIELD_NUMBER = 6;
@@ -2131,6 +2185,9 @@ private static final long serialVersionUID = 0L;
     if (operationCase_ == 22) {
       output.writeMessage(22, (com.google.ads.googleads.v1.services.AdParameterOperation) operation_);
     }
+    if (operationCase_ == 23) {
+      output.writeMessage(23, (com.google.ads.googleads.v1.services.AssetOperation) operation_);
+    }
     if (operationCase_ == 26) {
       output.writeMessage(26, (com.google.ads.googleads.v1.services.CampaignExtensionSettingOperation) operation_);
     }
@@ -2268,6 +2325,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, (com.google.ads.googleads.v1.services.AdParameterOperation) operation_);
     }
+    if (operationCase_ == 23) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(23, (com.google.ads.googleads.v1.services.AssetOperation) operation_);
+    }
     if (operationCase_ == 26) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(26, (com.google.ads.googleads.v1.services.CampaignExtensionSettingOperation) operation_);
@@ -2391,6 +2452,10 @@ private static final long serialVersionUID = 0L;
       case 22:
         result = result && getAdParameterOperation()
             .equals(other.getAdParameterOperation());
+        break;
+      case 23:
+        result = result && getAssetOperation()
+            .equals(other.getAssetOperation());
         break;
       case 6:
         result = result && getBiddingStrategyOperation()
@@ -2550,6 +2615,10 @@ private static final long serialVersionUID = 0L;
       case 22:
         hash = (37 * hash) + AD_PARAMETER_OPERATION_FIELD_NUMBER;
         hash = (53 * hash) + getAdParameterOperation().hashCode();
+        break;
+      case 23:
+        hash = (37 * hash) + ASSET_OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetOperation().hashCode();
         break;
       case 6:
         hash = (37 * hash) + BIDDING_STRATEGY_OPERATION_FIELD_NUMBER;
@@ -2893,6 +2962,13 @@ private static final long serialVersionUID = 0L;
           result.operation_ = adParameterOperationBuilder_.build();
         }
       }
+      if (operationCase_ == 23) {
+        if (assetOperationBuilder_ == null) {
+          result.operation_ = operation_;
+        } else {
+          result.operation_ = assetOperationBuilder_.build();
+        }
+      }
       if (operationCase_ == 6) {
         if (biddingStrategyOperationBuilder_ == null) {
           result.operation_ = operation_;
@@ -3163,6 +3239,10 @@ private static final long serialVersionUID = 0L;
         }
         case AD_PARAMETER_OPERATION: {
           mergeAdParameterOperation(other.getAdParameterOperation());
+          break;
+        }
+        case ASSET_OPERATION: {
+          mergeAssetOperation(other.getAssetOperation());
           break;
         }
         case BIDDING_STRATEGY_OPERATION: {
@@ -5035,6 +5115,178 @@ private static final long serialVersionUID = 0L;
       operationCase_ = 22;
       onChanged();;
       return adParameterOperationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.services.AssetOperation, com.google.ads.googleads.v1.services.AssetOperation.Builder, com.google.ads.googleads.v1.services.AssetOperationOrBuilder> assetOperationBuilder_;
+    /**
+     * <pre>
+     * An asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+     */
+    public boolean hasAssetOperation() {
+      return operationCase_ == 23;
+    }
+    /**
+     * <pre>
+     * An asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+     */
+    public com.google.ads.googleads.v1.services.AssetOperation getAssetOperation() {
+      if (assetOperationBuilder_ == null) {
+        if (operationCase_ == 23) {
+          return (com.google.ads.googleads.v1.services.AssetOperation) operation_;
+        }
+        return com.google.ads.googleads.v1.services.AssetOperation.getDefaultInstance();
+      } else {
+        if (operationCase_ == 23) {
+          return assetOperationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.services.AssetOperation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * An asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+     */
+    public Builder setAssetOperation(com.google.ads.googleads.v1.services.AssetOperation value) {
+      if (assetOperationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        operation_ = value;
+        onChanged();
+      } else {
+        assetOperationBuilder_.setMessage(value);
+      }
+      operationCase_ = 23;
+      return this;
+    }
+    /**
+     * <pre>
+     * An asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+     */
+    public Builder setAssetOperation(
+        com.google.ads.googleads.v1.services.AssetOperation.Builder builderForValue) {
+      if (assetOperationBuilder_ == null) {
+        operation_ = builderForValue.build();
+        onChanged();
+      } else {
+        assetOperationBuilder_.setMessage(builderForValue.build());
+      }
+      operationCase_ = 23;
+      return this;
+    }
+    /**
+     * <pre>
+     * An asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+     */
+    public Builder mergeAssetOperation(com.google.ads.googleads.v1.services.AssetOperation value) {
+      if (assetOperationBuilder_ == null) {
+        if (operationCase_ == 23 &&
+            operation_ != com.google.ads.googleads.v1.services.AssetOperation.getDefaultInstance()) {
+          operation_ = com.google.ads.googleads.v1.services.AssetOperation.newBuilder((com.google.ads.googleads.v1.services.AssetOperation) operation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          operation_ = value;
+        }
+        onChanged();
+      } else {
+        if (operationCase_ == 23) {
+          assetOperationBuilder_.mergeFrom(value);
+        }
+        assetOperationBuilder_.setMessage(value);
+      }
+      operationCase_ = 23;
+      return this;
+    }
+    /**
+     * <pre>
+     * An asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+     */
+    public Builder clearAssetOperation() {
+      if (assetOperationBuilder_ == null) {
+        if (operationCase_ == 23) {
+          operationCase_ = 0;
+          operation_ = null;
+          onChanged();
+        }
+      } else {
+        if (operationCase_ == 23) {
+          operationCase_ = 0;
+          operation_ = null;
+        }
+        assetOperationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * An asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+     */
+    public com.google.ads.googleads.v1.services.AssetOperation.Builder getAssetOperationBuilder() {
+      return getAssetOperationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * An asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+     */
+    public com.google.ads.googleads.v1.services.AssetOperationOrBuilder getAssetOperationOrBuilder() {
+      if ((operationCase_ == 23) && (assetOperationBuilder_ != null)) {
+        return assetOperationBuilder_.getMessageOrBuilder();
+      } else {
+        if (operationCase_ == 23) {
+          return (com.google.ads.googleads.v1.services.AssetOperation) operation_;
+        }
+        return com.google.ads.googleads.v1.services.AssetOperation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * An asset mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.services.AssetOperation, com.google.ads.googleads.v1.services.AssetOperation.Builder, com.google.ads.googleads.v1.services.AssetOperationOrBuilder> 
+        getAssetOperationFieldBuilder() {
+      if (assetOperationBuilder_ == null) {
+        if (!(operationCase_ == 23)) {
+          operation_ = com.google.ads.googleads.v1.services.AssetOperation.getDefaultInstance();
+        }
+        assetOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.services.AssetOperation, com.google.ads.googleads.v1.services.AssetOperation.Builder, com.google.ads.googleads.v1.services.AssetOperationOrBuilder>(
+                (com.google.ads.googleads.v1.services.AssetOperation) operation_,
+                getParentForChildren(),
+                isClean());
+        operation_ = null;
+      }
+      operationCase_ = 23;
+      onChanged();;
+      return assetOperationBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

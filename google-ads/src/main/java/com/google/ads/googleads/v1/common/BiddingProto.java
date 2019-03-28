@@ -15,6 +15,11 @@ public final class BiddingProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v1_common_Commission_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v1_common_Commission_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v1_common_EnhancedCpc_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -100,61 +105,63 @@ public final class BiddingProto {
       "googleads/v1/enums/target_impression_sha" +
       "re_location.proto\032\036google/protobuf/wrapp" +
       "ers.proto\032\034google/api/annotations.proto\"" +
-      "\r\n\013EnhancedCpc\"E\n\tManualCpc\0228\n\024enhanced_" +
-      "cpc_enabled\030\001 \001(\0132\032.google.protobuf.Bool" +
-      "Value\"\013\n\tManualCpm\"\013\n\tManualCpv\"\025\n\023Maxim" +
-      "izeConversions\"L\n\027MaximizeConversionValu" +
-      "e\0221\n\013target_roas\030\001 \001(\0132\034.google.protobuf" +
-      ".DoubleValue\"\306\003\n\017PageOnePromoted\022q\n\rstra" +
-      "tegy_goal\030\001 \001(\0162Z.google.ads.googleads.v" +
-      "1.enums.PageOnePromotedStrategyGoalEnum." +
-      "PageOnePromotedStrategyGoal\022;\n\026cpc_bid_c" +
-      "eiling_micros\030\002 \001(\0132\033.google.protobuf.In" +
-      "t64Value\0222\n\014bid_modifier\030\003 \001(\0132\034.google." +
-      "protobuf.DoubleValue\0227\n\023only_raise_cpc_b" +
-      "ids\030\004 \001(\0132\032.google.protobuf.BoolValue\022I\n" +
-      "%raise_cpc_bid_when_budget_constrained\030\005" +
-      " \001(\0132\032.google.protobuf.BoolValue\022K\n\'rais" +
-      "e_cpc_bid_when_quality_score_is_low\030\006 \001(" +
-      "\0132\032.google.protobuf.BoolValue\"\273\001\n\tTarget" +
-      "Cpa\0226\n\021target_cpa_micros\030\001 \001(\0132\033.google." +
-      "protobuf.Int64Value\022;\n\026cpc_bid_ceiling_m" +
-      "icros\030\002 \001(\0132\033.google.protobuf.Int64Value" +
-      "\0229\n\024cpc_bid_floor_micros\030\003 \001(\0132\033.google." +
-      "protobuf.Int64Value\"\013\n\tTargetCpm\"\205\002\n\025Tar" +
-      "getImpressionShare\022p\n\010location\030\001 \001(\0162^.g" +
-      "oogle.ads.googleads.v1.enums.TargetImpre" +
-      "ssionShareLocationEnum.TargetImpressionS" +
-      "hareLocation\022=\n\030location_fraction_micros" +
-      "\030\002 \001(\0132\033.google.protobuf.Int64Value\022;\n\026c" +
-      "pc_bid_ceiling_micros\030\003 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\"\322\002\n\022TargetOutrankShare\022" +
-      "@\n\033target_outrank_share_micros\030\001 \001(\0132\033.g" +
-      "oogle.protobuf.Int32Value\0227\n\021competitor_" +
-      "domain\030\002 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022;\n\026cpc_bid_ceiling_micros\030\003 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0227\n\023only_raise_cp" +
-      "c_bids\030\004 \001(\0132\032.google.protobuf.BoolValue" +
-      "\022K\n\'raise_cpc_bid_when_quality_score_is_" +
-      "low\030\005 \001(\0132\032.google.protobuf.BoolValue\"\267\001" +
-      "\n\nTargetRoas\0221\n\013target_roas\030\001 \001(\0132\034.goog" +
-      "le.protobuf.DoubleValue\022;\n\026cpc_bid_ceili" +
-      "ng_micros\030\002 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\0229\n\024cpc_bid_floor_micros\030\003 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\"\204\001\n\013TargetSpend\022" +
-      "8\n\023target_spend_micros\030\001 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022;\n\026cpc_bid_ceiling_mic" +
-      "ros\030\002 \001(\0132\033.google.protobuf.Int64Value\"\203" +
-      "\001\n\nPercentCpc\022;\n\026cpc_bid_ceiling_micros\030" +
-      "\001 \001(\0132\033.google.protobuf.Int64Value\0228\n\024en" +
-      "hanced_cpc_enabled\030\002 \001(\0132\032.google.protob" +
-      "uf.BoolValueB\347\001\n\"com.google.ads.googlead" +
-      "s.v1.commonB\014BiddingProtoP\001ZDgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v1/common;common\242\002\003GAA\252\002\036Google.Ads.Goo" +
-      "gleAds.V1.Common\312\002\036Google\\Ads\\GoogleAds\\" +
-      "V1\\Common\352\002\"Google::Ads::GoogleAds::V1::" +
-      "Commonb\006proto3"
+      "I\n\nCommission\022;\n\026commission_rate_micros\030" +
+      "\001 \001(\0132\033.google.protobuf.Int64Value\"\r\n\013En" +
+      "hancedCpc\"E\n\tManualCpc\0228\n\024enhanced_cpc_e" +
+      "nabled\030\001 \001(\0132\032.google.protobuf.BoolValue" +
+      "\"\013\n\tManualCpm\"\013\n\tManualCpv\"\025\n\023MaximizeCo" +
+      "nversions\"L\n\027MaximizeConversionValue\0221\n\013" +
+      "target_roas\030\001 \001(\0132\034.google.protobuf.Doub" +
+      "leValue\"\306\003\n\017PageOnePromoted\022q\n\rstrategy_" +
+      "goal\030\001 \001(\0162Z.google.ads.googleads.v1.enu" +
+      "ms.PageOnePromotedStrategyGoalEnum.PageO" +
+      "nePromotedStrategyGoal\022;\n\026cpc_bid_ceilin" +
+      "g_micros\030\002 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\0222\n\014bid_modifier\030\003 \001(\0132\034.google.proto" +
+      "buf.DoubleValue\0227\n\023only_raise_cpc_bids\030\004" +
+      " \001(\0132\032.google.protobuf.BoolValue\022I\n%rais" +
+      "e_cpc_bid_when_budget_constrained\030\005 \001(\0132" +
+      "\032.google.protobuf.BoolValue\022K\n\'raise_cpc" +
+      "_bid_when_quality_score_is_low\030\006 \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\"\273\001\n\tTargetCpa\0226" +
+      "\n\021target_cpa_micros\030\001 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022;\n\026cpc_bid_ceiling_micros" +
+      "\030\002 \001(\0132\033.google.protobuf.Int64Value\0229\n\024c" +
+      "pc_bid_floor_micros\030\003 \001(\0132\033.google.proto" +
+      "buf.Int64Value\"\013\n\tTargetCpm\"\205\002\n\025TargetIm" +
+      "pressionShare\022p\n\010location\030\001 \001(\0162^.google" +
+      ".ads.googleads.v1.enums.TargetImpression" +
+      "ShareLocationEnum.TargetImpressionShareL" +
+      "ocation\022=\n\030location_fraction_micros\030\002 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022;\n\026cpc_bi" +
+      "d_ceiling_micros\030\003 \001(\0132\033.google.protobuf" +
+      ".Int64Value\"\322\002\n\022TargetOutrankShare\022@\n\033ta" +
+      "rget_outrank_share_micros\030\001 \001(\0132\033.google" +
+      ".protobuf.Int32Value\0227\n\021competitor_domai" +
+      "n\030\002 \001(\0132\034.google.protobuf.StringValue\022;\n" +
+      "\026cpc_bid_ceiling_micros\030\003 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\0227\n\023only_raise_cpc_bid" +
+      "s\030\004 \001(\0132\032.google.protobuf.BoolValue\022K\n\'r" +
+      "aise_cpc_bid_when_quality_score_is_low\030\005" +
+      " \001(\0132\032.google.protobuf.BoolValue\"\267\001\n\nTar" +
+      "getRoas\0221\n\013target_roas\030\001 \001(\0132\034.google.pr" +
+      "otobuf.DoubleValue\022;\n\026cpc_bid_ceiling_mi" +
+      "cros\030\002 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "9\n\024cpc_bid_floor_micros\030\003 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\"\204\001\n\013TargetSpend\0228\n\023ta" +
+      "rget_spend_micros\030\001 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022;\n\026cpc_bid_ceiling_micros\030\002" +
+      " \001(\0132\033.google.protobuf.Int64Value\"\203\001\n\nPe" +
+      "rcentCpc\022;\n\026cpc_bid_ceiling_micros\030\001 \001(\013" +
+      "2\033.google.protobuf.Int64Value\0228\n\024enhance" +
+      "d_cpc_enabled\030\002 \001(\0132\032.google.protobuf.Bo" +
+      "olValueB\347\001\n\"com.google.ads.googleads.v1." +
+      "commonB\014BiddingProtoP\001ZDgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v1/c" +
+      "ommon;common\242\002\003GAA\252\002\036Google.Ads.GoogleAd" +
+      "s.V1.Common\312\002\036Google\\Ads\\GoogleAds\\V1\\Co" +
+      "mmon\352\002\"Google::Ads::GoogleAds::V1::Commo" +
+      "nb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -172,86 +179,92 @@ public final class BiddingProto {
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
-    internal_static_google_ads_googleads_v1_common_EnhancedCpc_descriptor =
+    internal_static_google_ads_googleads_v1_common_Commission_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_google_ads_googleads_v1_common_Commission_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v1_common_Commission_descriptor,
+        new java.lang.String[] { "CommissionRateMicros", });
+    internal_static_google_ads_googleads_v1_common_EnhancedCpc_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v1_common_EnhancedCpc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_EnhancedCpc_descriptor,
         new java.lang.String[] { });
     internal_static_google_ads_googleads_v1_common_ManualCpc_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v1_common_ManualCpc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_ManualCpc_descriptor,
         new java.lang.String[] { "EnhancedCpcEnabled", });
     internal_static_google_ads_googleads_v1_common_ManualCpm_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_google_ads_googleads_v1_common_ManualCpm_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_ManualCpm_descriptor,
         new java.lang.String[] { });
     internal_static_google_ads_googleads_v1_common_ManualCpv_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_google_ads_googleads_v1_common_ManualCpv_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_ManualCpv_descriptor,
         new java.lang.String[] { });
     internal_static_google_ads_googleads_v1_common_MaximizeConversions_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_google_ads_googleads_v1_common_MaximizeConversions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_MaximizeConversions_descriptor,
         new java.lang.String[] { });
     internal_static_google_ads_googleads_v1_common_MaximizeConversionValue_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_google_ads_googleads_v1_common_MaximizeConversionValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_MaximizeConversionValue_descriptor,
         new java.lang.String[] { "TargetRoas", });
     internal_static_google_ads_googleads_v1_common_PageOnePromoted_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_google_ads_googleads_v1_common_PageOnePromoted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_PageOnePromoted_descriptor,
         new java.lang.String[] { "StrategyGoal", "CpcBidCeilingMicros", "BidModifier", "OnlyRaiseCpcBids", "RaiseCpcBidWhenBudgetConstrained", "RaiseCpcBidWhenQualityScoreIsLow", });
     internal_static_google_ads_googleads_v1_common_TargetCpa_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_google_ads_googleads_v1_common_TargetCpa_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_TargetCpa_descriptor,
         new java.lang.String[] { "TargetCpaMicros", "CpcBidCeilingMicros", "CpcBidFloorMicros", });
     internal_static_google_ads_googleads_v1_common_TargetCpm_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_google_ads_googleads_v1_common_TargetCpm_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_TargetCpm_descriptor,
         new java.lang.String[] { });
     internal_static_google_ads_googleads_v1_common_TargetImpressionShare_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_google_ads_googleads_v1_common_TargetImpressionShare_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_TargetImpressionShare_descriptor,
         new java.lang.String[] { "Location", "LocationFractionMicros", "CpcBidCeilingMicros", });
     internal_static_google_ads_googleads_v1_common_TargetOutrankShare_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_google_ads_googleads_v1_common_TargetOutrankShare_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_TargetOutrankShare_descriptor,
         new java.lang.String[] { "TargetOutrankShareMicros", "CompetitorDomain", "CpcBidCeilingMicros", "OnlyRaiseCpcBids", "RaiseCpcBidWhenQualityScoreIsLow", });
     internal_static_google_ads_googleads_v1_common_TargetRoas_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_google_ads_googleads_v1_common_TargetRoas_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_TargetRoas_descriptor,
         new java.lang.String[] { "TargetRoas", "CpcBidCeilingMicros", "CpcBidFloorMicros", });
     internal_static_google_ads_googleads_v1_common_TargetSpend_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_google_ads_googleads_v1_common_TargetSpend_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_TargetSpend_descriptor,
         new java.lang.String[] { "TargetSpendMicros", "CpcBidCeilingMicros", });
     internal_static_google_ads_googleads_v1_common_PercentCpc_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_google_ads_googleads_v1_common_PercentCpc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_PercentCpc_descriptor,

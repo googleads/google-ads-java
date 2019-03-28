@@ -33,6 +33,7 @@ import com.google.ads.googleads.v1.resources.AdGroupName;
 import com.google.ads.googleads.v1.resources.AdParameterName;
 import com.google.ads.googleads.v1.resources.AdScheduleViewName;
 import com.google.ads.googleads.v1.resources.AgeRangeViewName;
+import com.google.ads.googleads.v1.resources.AssetName;
 import com.google.ads.googleads.v1.resources.BiddingStrategyName;
 import com.google.ads.googleads.v1.resources.BillingSetupName;
 import com.google.ads.googleads.v1.resources.CampaignAudienceViewName;
@@ -53,10 +54,12 @@ import com.google.ads.googleads.v1.resources.CustomerClientLinkName;
 import com.google.ads.googleads.v1.resources.CustomerClientName;
 import com.google.ads.googleads.v1.resources.CustomerExtensionSettingName;
 import com.google.ads.googleads.v1.resources.CustomerFeedName;
+import com.google.ads.googleads.v1.resources.CustomerHotelPerformanceViewName;
 import com.google.ads.googleads.v1.resources.CustomerLabelName;
 import com.google.ads.googleads.v1.resources.CustomerManagerLinkName;
 import com.google.ads.googleads.v1.resources.CustomerName;
 import com.google.ads.googleads.v1.resources.CustomerNegativeCriteriaName;
+import com.google.ads.googleads.v1.resources.CustomerShoppingPerformanceViewName;
 import com.google.ads.googleads.v1.resources.DetailPlacementViewName;
 import com.google.ads.googleads.v1.resources.DisplayKeywordViewName;
 import com.google.ads.googleads.v1.resources.DomainCategoryName;
@@ -73,7 +76,6 @@ import com.google.ads.googleads.v1.resources.GeographicViewName;
 import com.google.ads.googleads.v1.resources.GoogleAdsFieldName;
 import com.google.ads.googleads.v1.resources.GroupPlacementViewName;
 import com.google.ads.googleads.v1.resources.HotelGroupViewName;
-import com.google.ads.googleads.v1.resources.HotelPerformanceViewName;
 import com.google.ads.googleads.v1.resources.KeywordPlanAdGroupName;
 import com.google.ads.googleads.v1.resources.KeywordPlanCampaignName;
 import com.google.ads.googleads.v1.resources.KeywordPlanKeywordName;
@@ -209,6 +211,11 @@ public class ResourceNames {
   public static String ageRangeView(long customerId, long adGroupId, long criterionId) {
     return AgeRangeViewName.format(
         String.valueOf(customerId), concatIdentifiers(adGroupId, criterionId));
+  }
+
+  /** Returns the Asset resource name for the specified components. */
+  public static String asset(long customerId, long assetId) {
+    return AssetName.format(String.valueOf(customerId), String.valueOf(assetId));
   }
 
   /** Returns the bidding strategy resource name for the specified components. */
@@ -449,7 +456,7 @@ public class ResourceNames {
 
   /** Returns the hotel performance view resource name for the specified components. */
   public static String hotelPerformanceView(long customerId) {
-    return HotelPerformanceViewName.format(String.valueOf(customerId));
+    return CustomerHotelPerformanceViewName.format(String.valueOf(customerId));
   }
 
   /** Returns the keyword plan resource name for the specified components. */
@@ -593,9 +600,9 @@ public class ResourceNames {
     return SharedSetName.format(String.valueOf(customerId), String.valueOf(sharedSetId));
   }
 
-  /** Returns the shopping performance view for the specified components. */
+  /** Returns the Shopping Performance View resource name for the specified components. */
   public static String shoppingPerformanceView(long customerId) {
-    return String.format("customers/%s/shoppingPerformanceView", customerId);
+    return CustomerShoppingPerformanceViewName.format(String.valueOf(customerId));
   }
 
   /** Returns the topic constant resource name for the specified components. */

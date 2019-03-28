@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     status_ = 0;
     type_ = 0;
     systemServingStatus_ = 0;
+    approvalStatus_ = 0;
     effectiveCpcBidSource_ = 0;
     effectiveCpmBidSource_ = 0;
     effectiveCpvBidSource_ = 0;
@@ -110,9 +111,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 90: {
-            if (!((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+            if (!((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
               finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00400000;
+              mutable_bitField0_ |= 0x00800000;
             }
             finalUrls_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -132,9 +133,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 114: {
-            if (!((mutable_bitField0_ & 0x04000000) == 0x04000000)) {
+            if (!((mutable_bitField0_ & 0x08000000) == 0x08000000)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.CustomParameter>();
-              mutable_bitField0_ |= 0x04000000;
+              mutable_bitField0_ |= 0x08000000;
             }
             urlCustomParameters_.add(
                 input.readMessage(com.google.ads.googleads.v1.common.CustomParameter.parser(), extensionRegistry));
@@ -295,6 +296,20 @@ private static final long serialVersionUID = 0L;
               criterion_ = subBuilder.buildPartial();
             }
             criterionCase_ = 29;
+            break;
+          }
+          case 242: {
+            com.google.ads.googleads.v1.common.MobileApplicationInfo.Builder subBuilder = null;
+            if (criterionCase_ == 30) {
+              subBuilder = ((com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v1.common.MobileApplicationInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 30;
             break;
           }
           case 250: {
@@ -565,9 +580,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 410: {
-            if (!((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
+            if (!((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
               finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00800000;
+              mutable_bitField0_ |= 0x01000000;
             }
             finalMobileUrls_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -577,6 +592,12 @@ private static final long serialVersionUID = 0L;
             int rawValue = input.readEnum();
 
             systemServingStatus_ = rawValue;
+            break;
+          }
+          case 424: {
+            int rawValue = input.readEnum();
+
+            approvalStatus_ = rawValue;
             break;
           }
           default: {
@@ -594,13 +615,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+      if (((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
         finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
       }
-      if (((mutable_bitField0_ & 0x04000000) == 0x04000000)) {
+      if (((mutable_bitField0_ & 0x08000000) == 0x08000000)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
-      if (((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
+      if (((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
         finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
       }
       this.unknownFields = unknownFields.build();
@@ -3490,6 +3511,7 @@ private static final long serialVersionUID = 0L;
     KEYWORD(27),
     PLACEMENT(28),
     MOBILE_APP_CATEGORY(29),
+    MOBILE_APPLICATION(30),
     LISTING_GROUP(32),
     AGE_RANGE(36),
     GENDER(37),
@@ -3522,6 +3544,7 @@ private static final long serialVersionUID = 0L;
         case 27: return KEYWORD;
         case 28: return PLACEMENT;
         case 29: return MOBILE_APP_CATEGORY;
+        case 30: return MOBILE_APPLICATION;
         case 32: return LISTING_GROUP;
         case 36: return AGE_RANGE;
         case 37: return GENDER;
@@ -3811,6 +3834,31 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus result = com.google.ads.googleads.v1.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus.valueOf(systemServingStatus_);
     return result == null ? com.google.ads.googleads.v1.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus.UNRECOGNIZED : result;
+  }
+
+  public static final int APPROVAL_STATUS_FIELD_NUMBER = 53;
+  private int approvalStatus_;
+  /**
+   * <pre>
+   * Approval status of the criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53;</code>
+   */
+  public int getApprovalStatusValue() {
+    return approvalStatus_;
+  }
+  /**
+   * <pre>
+   * Approval status of the criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53;</code>
+   */
+  public com.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus getApprovalStatus() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus result = com.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.valueOf(approvalStatus_);
+    return result == null ? com.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.UNRECOGNIZED : result;
   }
 
   public static final int BID_MODIFIER_FIELD_NUMBER = 44;
@@ -4607,6 +4655,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.common.MobileAppCategoryInfo.getDefaultInstance();
   }
 
+  public static final int MOBILE_APPLICATION_FIELD_NUMBER = 30;
+  /**
+   * <pre>
+   * Mobile application.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+   */
+  public boolean hasMobileApplication() {
+    return criterionCase_ == 30;
+  }
+  /**
+   * <pre>
+   * Mobile application.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+   */
+  public com.google.ads.googleads.v1.common.MobileApplicationInfo getMobileApplication() {
+    if (criterionCase_ == 30) {
+       return (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_;
+    }
+    return com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Mobile application.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+   */
+  public com.google.ads.googleads.v1.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder() {
+    if (criterionCase_ == 30) {
+       return (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_;
+    }
+    return com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance();
+  }
+
   public static final int LISTING_GROUP_FIELD_NUMBER = 32;
   /**
    * <pre>
@@ -5219,6 +5305,9 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 29) {
       output.writeMessage(29, (com.google.ads.googleads.v1.common.MobileAppCategoryInfo) criterion_);
     }
+    if (criterionCase_ == 30) {
+      output.writeMessage(30, (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_);
+    }
     if (negative_ != null) {
       output.writeMessage(31, getNegative());
     }
@@ -5284,6 +5373,9 @@ private static final long serialVersionUID = 0L;
     }
     if (systemServingStatus_ != com.google.ads.googleads.v1.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus.UNSPECIFIED.getNumber()) {
       output.writeEnum(52, systemServingStatus_);
+    }
+    if (approvalStatus_ != com.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.UNSPECIFIED.getNumber()) {
+      output.writeEnum(53, approvalStatus_);
     }
     unknownFields.writeTo(output);
   }
@@ -5381,6 +5473,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(29, (com.google.ads.googleads.v1.common.MobileAppCategoryInfo) criterion_);
     }
+    if (criterionCase_ == 30) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(30, (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_);
+    }
     if (negative_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(31, getNegative());
@@ -5469,6 +5565,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(52, systemServingStatus_);
     }
+    if (approvalStatus_ != com.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(53, approvalStatus_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -5510,6 +5610,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getNegative());
     }
     result = result && systemServingStatus_ == other.systemServingStatus_;
+    result = result && approvalStatus_ == other.approvalStatus_;
     result = result && (hasBidModifier() == other.hasBidModifier());
     if (hasBidModifier()) {
       result = result && getBidModifier()
@@ -5595,6 +5696,10 @@ private static final long serialVersionUID = 0L;
       case 29:
         result = result && getMobileAppCategory()
             .equals(other.getMobileAppCategory());
+        break;
+      case 30:
+        result = result && getMobileApplication()
+            .equals(other.getMobileApplication());
         break;
       case 32:
         result = result && getListingGroup()
@@ -5690,6 +5795,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + SYSTEM_SERVING_STATUS_FIELD_NUMBER;
     hash = (53 * hash) + systemServingStatus_;
+    hash = (37 * hash) + APPROVAL_STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + approvalStatus_;
     if (hasBidModifier()) {
       hash = (37 * hash) + BID_MODIFIER_FIELD_NUMBER;
       hash = (53 * hash) + getBidModifier().hashCode();
@@ -5770,6 +5877,10 @@ private static final long serialVersionUID = 0L;
       case 29:
         hash = (37 * hash) + MOBILE_APP_CATEGORY_FIELD_NUMBER;
         hash = (53 * hash) + getMobileAppCategory().hashCode();
+        break;
+      case 30:
+        hash = (37 * hash) + MOBILE_APPLICATION_FIELD_NUMBER;
+        hash = (53 * hash) + getMobileApplication().hashCode();
         break;
       case 32:
         hash = (37 * hash) + LISTING_GROUP_FIELD_NUMBER;
@@ -6002,6 +6113,8 @@ private static final long serialVersionUID = 0L;
       }
       systemServingStatus_ = 0;
 
+      approvalStatus_ = 0;
+
       if (bidModifierBuilder_ == null) {
         bidModifier_ = null;
       } else {
@@ -6072,13 +6185,13 @@ private static final long serialVersionUID = 0L;
       }
       if (finalUrlsBuilder_ == null) {
         finalUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x00800000);
       } else {
         finalUrlsBuilder_.clear();
       }
       if (finalMobileUrlsBuilder_ == null) {
         finalMobileUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x01000000);
       } else {
         finalMobileUrlsBuilder_.clear();
       }
@@ -6096,7 +6209,7 @@ private static final long serialVersionUID = 0L;
       }
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField0_ = (bitField0_ & ~0x08000000);
       } else {
         urlCustomParametersBuilder_.clear();
       }
@@ -6156,6 +6269,7 @@ private static final long serialVersionUID = 0L;
         result.negative_ = negativeBuilder_.build();
       }
       result.systemServingStatus_ = systemServingStatus_;
+      result.approvalStatus_ = approvalStatus_;
       if (bidModifierBuilder_ == null) {
         result.bidModifier_ = bidModifier_;
       } else {
@@ -6211,18 +6325,18 @@ private static final long serialVersionUID = 0L;
         result.positionEstimates_ = positionEstimatesBuilder_.build();
       }
       if (finalUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00400000) == 0x00400000)) {
+        if (((bitField0_ & 0x00800000) == 0x00800000)) {
           finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
-          bitField0_ = (bitField0_ & ~0x00400000);
+          bitField0_ = (bitField0_ & ~0x00800000);
         }
         result.finalUrls_ = finalUrls_;
       } else {
         result.finalUrls_ = finalUrlsBuilder_.build();
       }
       if (finalMobileUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        if (((bitField0_ & 0x01000000) == 0x01000000)) {
           finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
-          bitField0_ = (bitField0_ & ~0x00800000);
+          bitField0_ = (bitField0_ & ~0x01000000);
         }
         result.finalMobileUrls_ = finalMobileUrls_;
       } else {
@@ -6239,9 +6353,9 @@ private static final long serialVersionUID = 0L;
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        if (((bitField0_ & 0x08000000) == 0x08000000)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x04000000);
+          bitField0_ = (bitField0_ & ~0x08000000);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
@@ -6266,6 +6380,13 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = criterion_;
         } else {
           result.criterion_ = mobileAppCategoryBuilder_.build();
+        }
+      }
+      if (criterionCase_ == 30) {
+        if (mobileApplicationBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = mobileApplicationBuilder_.build();
         }
       }
       if (criterionCase_ == 32) {
@@ -6442,6 +6563,9 @@ private static final long serialVersionUID = 0L;
       if (other.systemServingStatus_ != 0) {
         setSystemServingStatusValue(other.getSystemServingStatusValue());
       }
+      if (other.approvalStatus_ != 0) {
+        setApprovalStatusValue(other.getApprovalStatusValue());
+      }
       if (other.hasBidModifier()) {
         mergeBidModifier(other.getBidModifier());
       }
@@ -6488,7 +6612,7 @@ private static final long serialVersionUID = 0L;
         if (!other.finalUrls_.isEmpty()) {
           if (finalUrls_.isEmpty()) {
             finalUrls_ = other.finalUrls_;
-            bitField0_ = (bitField0_ & ~0x00400000);
+            bitField0_ = (bitField0_ & ~0x00800000);
           } else {
             ensureFinalUrlsIsMutable();
             finalUrls_.addAll(other.finalUrls_);
@@ -6501,7 +6625,7 @@ private static final long serialVersionUID = 0L;
             finalUrlsBuilder_.dispose();
             finalUrlsBuilder_ = null;
             finalUrls_ = other.finalUrls_;
-            bitField0_ = (bitField0_ & ~0x00400000);
+            bitField0_ = (bitField0_ & ~0x00800000);
             finalUrlsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFinalUrlsFieldBuilder() : null;
@@ -6514,7 +6638,7 @@ private static final long serialVersionUID = 0L;
         if (!other.finalMobileUrls_.isEmpty()) {
           if (finalMobileUrls_.isEmpty()) {
             finalMobileUrls_ = other.finalMobileUrls_;
-            bitField0_ = (bitField0_ & ~0x00800000);
+            bitField0_ = (bitField0_ & ~0x01000000);
           } else {
             ensureFinalMobileUrlsIsMutable();
             finalMobileUrls_.addAll(other.finalMobileUrls_);
@@ -6527,7 +6651,7 @@ private static final long serialVersionUID = 0L;
             finalMobileUrlsBuilder_.dispose();
             finalMobileUrlsBuilder_ = null;
             finalMobileUrls_ = other.finalMobileUrls_;
-            bitField0_ = (bitField0_ & ~0x00800000);
+            bitField0_ = (bitField0_ & ~0x01000000);
             finalMobileUrlsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFinalMobileUrlsFieldBuilder() : null;
@@ -6546,7 +6670,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x04000000);
+            bitField0_ = (bitField0_ & ~0x08000000);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -6559,7 +6683,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x04000000);
+            bitField0_ = (bitField0_ & ~0x08000000);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -6579,6 +6703,10 @@ private static final long serialVersionUID = 0L;
         }
         case MOBILE_APP_CATEGORY: {
           mergeMobileAppCategory(other.getMobileAppCategory());
+          break;
+        }
+        case MOBILE_APPLICATION: {
+          mergeMobileApplication(other.getMobileApplication());
           break;
         }
         case LISTING_GROUP: {
@@ -7616,6 +7744,71 @@ private static final long serialVersionUID = 0L;
     public Builder clearSystemServingStatus() {
       
       systemServingStatus_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int approvalStatus_ = 0;
+    /**
+     * <pre>
+     * Approval status of the criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53;</code>
+     */
+    public int getApprovalStatusValue() {
+      return approvalStatus_;
+    }
+    /**
+     * <pre>
+     * Approval status of the criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53;</code>
+     */
+    public Builder setApprovalStatusValue(int value) {
+      approvalStatus_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Approval status of the criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53;</code>
+     */
+    public com.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus getApprovalStatus() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus result = com.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.valueOf(approvalStatus_);
+      return result == null ? com.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Approval status of the criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53;</code>
+     */
+    public Builder setApprovalStatus(com.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      approvalStatus_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Approval status of the criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53;</code>
+     */
+    public Builder clearApprovalStatus() {
+      
+      approvalStatus_ = 0;
       onChanged();
       return this;
     }
@@ -9440,9 +9633,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalUrlsIsMutable() {
-      if (!((bitField0_ & 0x00400000) == 0x00400000)) {
+      if (!((bitField0_ & 0x00800000) == 0x00800000)) {
         finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalUrls_);
-        bitField0_ |= 0x00400000;
+        bitField0_ |= 0x00800000;
        }
     }
 
@@ -9647,7 +9840,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFinalUrls() {
       if (finalUrlsBuilder_ == null) {
         finalUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x00800000);
         onChanged();
       } else {
         finalUrlsBuilder_.clear();
@@ -9759,7 +9952,7 @@ private static final long serialVersionUID = 0L;
         finalUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalUrls_,
-                ((bitField0_ & 0x00400000) == 0x00400000),
+                ((bitField0_ & 0x00800000) == 0x00800000),
                 getParentForChildren(),
                 isClean());
         finalUrls_ = null;
@@ -9770,9 +9963,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalMobileUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalMobileUrlsIsMutable() {
-      if (!((bitField0_ & 0x00800000) == 0x00800000)) {
+      if (!((bitField0_ & 0x01000000) == 0x01000000)) {
         finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalMobileUrls_);
-        bitField0_ |= 0x00800000;
+        bitField0_ |= 0x01000000;
        }
     }
 
@@ -9966,7 +10159,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFinalMobileUrls() {
       if (finalMobileUrlsBuilder_ == null) {
         finalMobileUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x01000000);
         onChanged();
       } else {
         finalMobileUrlsBuilder_.clear();
@@ -10071,7 +10264,7 @@ private static final long serialVersionUID = 0L;
         finalMobileUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalMobileUrls_,
-                ((bitField0_ & 0x00800000) == 0x00800000),
+                ((bitField0_ & 0x01000000) == 0x01000000),
                 getParentForChildren(),
                 isClean());
         finalMobileUrls_ = null;
@@ -10388,9 +10581,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x04000000) == 0x04000000)) {
+      if (!((bitField0_ & 0x08000000) == 0x08000000)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x04000000;
+        bitField0_ |= 0x08000000;
        }
     }
 
@@ -10595,7 +10788,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField0_ = (bitField0_ & ~0x08000000);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -10707,7 +10900,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.CustomParameter, com.google.ads.googleads.v1.common.CustomParameter.Builder, com.google.ads.googleads.v1.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x04000000) == 0x04000000),
+                ((bitField0_ & 0x08000000) == 0x08000000),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -11229,6 +11422,178 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 29;
       onChanged();;
       return mobileAppCategoryBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.MobileApplicationInfo, com.google.ads.googleads.v1.common.MobileApplicationInfo.Builder, com.google.ads.googleads.v1.common.MobileApplicationInfoOrBuilder> mobileApplicationBuilder_;
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+     */
+    public boolean hasMobileApplication() {
+      return criterionCase_ == 30;
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+     */
+    public com.google.ads.googleads.v1.common.MobileApplicationInfo getMobileApplication() {
+      if (mobileApplicationBuilder_ == null) {
+        if (criterionCase_ == 30) {
+          return (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_;
+        }
+        return com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 30) {
+          return mobileApplicationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+     */
+    public Builder setMobileApplication(com.google.ads.googleads.v1.common.MobileApplicationInfo value) {
+      if (mobileApplicationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        mobileApplicationBuilder_.setMessage(value);
+      }
+      criterionCase_ = 30;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+     */
+    public Builder setMobileApplication(
+        com.google.ads.googleads.v1.common.MobileApplicationInfo.Builder builderForValue) {
+      if (mobileApplicationBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        mobileApplicationBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 30;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+     */
+    public Builder mergeMobileApplication(com.google.ads.googleads.v1.common.MobileApplicationInfo value) {
+      if (mobileApplicationBuilder_ == null) {
+        if (criterionCase_ == 30 &&
+            criterion_ != com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v1.common.MobileApplicationInfo.newBuilder((com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 30) {
+          mobileApplicationBuilder_.mergeFrom(value);
+        }
+        mobileApplicationBuilder_.setMessage(value);
+      }
+      criterionCase_ = 30;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+     */
+    public Builder clearMobileApplication() {
+      if (mobileApplicationBuilder_ == null) {
+        if (criterionCase_ == 30) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 30) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        mobileApplicationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+     */
+    public com.google.ads.googleads.v1.common.MobileApplicationInfo.Builder getMobileApplicationBuilder() {
+      return getMobileApplicationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+     */
+    public com.google.ads.googleads.v1.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder() {
+      if ((criterionCase_ == 30) && (mobileApplicationBuilder_ != null)) {
+        return mobileApplicationBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 30) {
+          return (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_;
+        }
+        return com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.MobileApplicationInfo, com.google.ads.googleads.v1.common.MobileApplicationInfo.Builder, com.google.ads.googleads.v1.common.MobileApplicationInfoOrBuilder> 
+        getMobileApplicationFieldBuilder() {
+      if (mobileApplicationBuilder_ == null) {
+        if (!(criterionCase_ == 30)) {
+          criterion_ = com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance();
+        }
+        mobileApplicationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.MobileApplicationInfo, com.google.ads.googleads.v1.common.MobileApplicationInfo.Builder, com.google.ads.googleads.v1.common.MobileApplicationInfoOrBuilder>(
+                (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 30;
+      onChanged();;
+      return mobileApplicationBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

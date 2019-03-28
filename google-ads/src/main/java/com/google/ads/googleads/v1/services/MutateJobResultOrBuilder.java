@@ -9,7 +9,7 @@ public interface MutateJobResultOrBuilder extends
 
   /**
    * <pre>
-   * Index of the Simply operation.
+   * Index of the mutate operation.
    * </pre>
    *
    * <code>int64 operation_index = 1;</code>

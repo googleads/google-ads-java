@@ -39,7 +39,7 @@ public interface AdGroupCriterionLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group criterion label
    * being removed, in this format:
-   * `customers/{customer_id}/adGroupCriterionLabels/{ad_group_id}_{criterion_id}_{label_id}`
+   * `customers/{customer_id}/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
    * </pre>
    *
    * <code>string remove = 2;</code>
@@ -49,7 +49,7 @@ public interface AdGroupCriterionLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group criterion label
    * being removed, in this format:
-   * `customers/{customer_id}/adGroupCriterionLabels/{ad_group_id}_{criterion_id}_{label_id}`
+   * `customers/{customer_id}/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
    * </pre>
    *
    * <code>string remove = 2;</code>

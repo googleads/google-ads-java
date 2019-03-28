@@ -36,7 +36,7 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (ShoppingPerformanceViewServiceClient shoppingPerformanceViewServiceClient = ShoppingPerformanceViewServiceClient.create()) {
- *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatShoppingPerformanceViewName("[CUSTOMER]", "[SHOPPING_PERFORMANCE_VIEW]");
+ *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatCustomerShoppingPerformanceViewName("[CUSTOMER]");
  *   ShoppingPerformanceView response = shoppingPerformanceViewServiceClient.getShoppingPerformanceView(formattedResourceName);
  * }
  * </code>
@@ -99,41 +99,26 @@ public class ShoppingPerformanceViewServiceClient implements BackgroundResource 
   private final ShoppingPerformanceViewServiceSettings settings;
   private final ShoppingPerformanceViewServiceStub stub;
 
-  private static final PathTemplate SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/shoppingPerformanceView/{shopping_performance_view}");
+  private static final PathTemplate CUSTOMER_SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE =
+      PathTemplate.createWithoutUrlEncoding("customers/{customer}/shoppingPerformanceView");
 
   /**
-   * Formats a string containing the fully-qualified path to represent a shopping_performance_view
-   * resource.
+   * Formats a string containing the fully-qualified path to represent a
+   * customer_shopping_performance_view resource.
    */
-  public static final String formatShoppingPerformanceViewName(
-      String customer, String shoppingPerformanceView) {
-    return SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "shopping_performance_view", shoppingPerformanceView);
+  public static final String formatCustomerShoppingPerformanceViewName(String customer) {
+    return CUSTOMER_SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE.instantiate("customer", customer);
   }
 
   /**
    * Parses the customer from the given fully-qualified path which represents a
-   * shopping_performance_view resource.
+   * customer_shopping_performance_view resource.
    */
-  public static final String parseCustomerFromShoppingPerformanceViewName(
-      String shoppingPerformanceViewName) {
-    return SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE
-        .parse(shoppingPerformanceViewName)
+  public static final String parseCustomerFromCustomerShoppingPerformanceViewName(
+      String customerShoppingPerformanceViewName) {
+    return CUSTOMER_SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE
+        .parse(customerShoppingPerformanceViewName)
         .get("customer");
-  }
-
-  /**
-   * Parses the shopping_performance_view from the given fully-qualified path which represents a
-   * shopping_performance_view resource.
-   */
-  public static final String parseShoppingPerformanceViewFromShoppingPerformanceViewName(
-      String shoppingPerformanceViewName) {
-    return SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE
-        .parse(shoppingPerformanceViewName)
-        .get("shopping_performance_view");
   }
 
   /** Constructs an instance of ShoppingPerformanceViewServiceClient with default settings. */
@@ -196,7 +181,7 @@ public class ShoppingPerformanceViewServiceClient implements BackgroundResource 
    *
    * <pre><code>
    * try (ShoppingPerformanceViewServiceClient shoppingPerformanceViewServiceClient = ShoppingPerformanceViewServiceClient.create()) {
-   *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatShoppingPerformanceViewName("[CUSTOMER]", "[SHOPPING_PERFORMANCE_VIEW]");
+   *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatCustomerShoppingPerformanceViewName("[CUSTOMER]");
    *   ShoppingPerformanceView response = shoppingPerformanceViewServiceClient.getShoppingPerformanceView(formattedResourceName);
    * }
    * </code></pre>
@@ -205,7 +190,8 @@ public class ShoppingPerformanceViewServiceClient implements BackgroundResource 
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ShoppingPerformanceView getShoppingPerformanceView(String resourceName) {
-    SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE.validate(resourceName, "getShoppingPerformanceView");
+    CUSTOMER_SHOPPING_PERFORMANCE_VIEW_PATH_TEMPLATE.validate(
+        resourceName, "getShoppingPerformanceView");
     GetShoppingPerformanceViewRequest request =
         GetShoppingPerformanceViewRequest.newBuilder().setResourceName(resourceName).build();
     return getShoppingPerformanceView(request);
@@ -219,7 +205,7 @@ public class ShoppingPerformanceViewServiceClient implements BackgroundResource 
    *
    * <pre><code>
    * try (ShoppingPerformanceViewServiceClient shoppingPerformanceViewServiceClient = ShoppingPerformanceViewServiceClient.create()) {
-   *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatShoppingPerformanceViewName("[CUSTOMER]", "[SHOPPING_PERFORMANCE_VIEW]");
+   *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatCustomerShoppingPerformanceViewName("[CUSTOMER]");
    *   GetShoppingPerformanceViewRequest request = GetShoppingPerformanceViewRequest.newBuilder()
    *     .setResourceName(formattedResourceName)
    *     .build();
@@ -243,7 +229,7 @@ public class ShoppingPerformanceViewServiceClient implements BackgroundResource 
    *
    * <pre><code>
    * try (ShoppingPerformanceViewServiceClient shoppingPerformanceViewServiceClient = ShoppingPerformanceViewServiceClient.create()) {
-   *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatShoppingPerformanceViewName("[CUSTOMER]", "[SHOPPING_PERFORMANCE_VIEW]");
+   *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatCustomerShoppingPerformanceViewName("[CUSTOMER]");
    *   GetShoppingPerformanceViewRequest request = GetShoppingPerformanceViewRequest.newBuilder()
    *     .setResourceName(formattedResourceName)
    *     .build();

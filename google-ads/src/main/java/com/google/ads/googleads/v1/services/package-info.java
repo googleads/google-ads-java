@@ -259,6 +259,21 @@
  * </code>
  * </pre>
  *
+ * ================== AssetServiceClient ==================
+ *
+ * <p>Service Description: Service to manage assets.
+ *
+ * <p>Sample for AssetServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
+ *   String formattedResourceName = AssetServiceClient.formatAssetName("[CUSTOMER]", "[ASSET]");
+ *   Asset response = assetServiceClient.getAsset(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ============================ BiddingStrategyServiceClient ============================
  *
  * <p>Service Description: Service to manage bidding strategies.
@@ -491,6 +506,24 @@
  * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
  *   String formattedResourceName = ConversionActionServiceClient.formatConversionActionName("[CUSTOMER]", "[CONVERSION_ACTION]");
  *   ConversionAction response = conversionActionServiceClient.getConversionAction(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ======================================= ConversionAdjustmentUploadServiceClient
+ * =======================================
+ *
+ * <p>Service Description: Service to upload conversion adjustments.
+ *
+ * <p>Sample for ConversionAdjustmentUploadServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (ConversionAdjustmentUploadServiceClient conversionAdjustmentUploadServiceClient = ConversionAdjustmentUploadServiceClient.create()) {
+ *   String customerId = "";
+ *   List&lt;ConversionAdjustment&gt; conversionAdjustments = new ArrayList&lt;&gt;();
+ *   boolean partialFailure = false;
+ *   UploadConversionAdjustmentsResponse response = conversionAdjustmentUploadServiceClient.uploadConversionAdjustments(customerId, conversionAdjustments, partialFailure);
  * }
  * </code>
  * </pre>
@@ -863,96 +896,6 @@
  * </code>
  * </pre>
  *
- * ================== LabelServiceClient ==================
- *
- * <p>Service Description: Service to manage labels.
- *
- * <p>Sample for LabelServiceClient:
- *
- * <pre>
- * <code>
- * try (LabelServiceClient labelServiceClient = LabelServiceClient.create()) {
- *   String formattedResourceName = LabelServiceClient.formatLabelName("[CUSTOMER]", "[LABEL]");
- *   Label response = labelServiceClient.getLabel(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
- * ====================== MediaFileServiceClient ======================
- *
- * <p>Service Description: Service to manage media files.
- *
- * <p>Sample for MediaFileServiceClient:
- *
- * <pre>
- * <code>
- * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
- *   String formattedResourceName = MediaFileServiceClient.formatMediaFileName("[CUSTOMER]", "[MEDIA_FILE]");
- *   MediaFile response = mediaFileServiceClient.getMediaFile(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
- * ============================== RemarketingActionServiceClient ==============================
- *
- * <p>Service Description: Service to manage remarketing actions.
- *
- * <p>Sample for RemarketingActionServiceClient:
- *
- * <pre>
- * <code>
- * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
- *   String formattedResourceName = RemarketingActionServiceClient.formatRemarketingActionName("[CUSTOMER]", "[REMARKETING_ACTION]");
- *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
- * ============================ SharedCriterionServiceClient ============================
- *
- * <p>Service Description: Service to manage shared criteria.
- *
- * <p>Sample for SharedCriterionServiceClient:
- *
- * <pre>
- * <code>
- * try (SharedCriterionServiceClient sharedCriterionServiceClient = SharedCriterionServiceClient.create()) {
- *   String formattedResourceName = SharedCriterionServiceClient.formatSharedCriteriaName("[CUSTOMER]", "[SHARED_CRITERIA]");
- *   SharedCriterion response = sharedCriterionServiceClient.getSharedCriterion(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
- * ====================== SharedSetServiceClient ======================
- *
- * <p>Service Description: Service to manage shared sets.
- *
- * <p>Sample for SharedSetServiceClient:
- *
- * <pre>
- * <code>
- * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
- *   String formattedResourceName = SharedSetServiceClient.formatSharedSetName("[CUSTOMER]", "[SHARED_SET]");
- *   SharedSet response = sharedSetServiceClient.getSharedSet(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
- * ===================== UserListServiceClient =====================
- *
- * <p>Service Description: Service to manage user lists.
- *
- * <p>Sample for UserListServiceClient:
- *
- * <pre>
- * <code>
- * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
- *   String formattedResourceName = UserListServiceClient.formatUserListName("[CUSTOMER]", "[USER_LIST]");
- *   UserList response = userListServiceClient.getUserList(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
  * ====================== GoogleAdsServiceClient ======================
  *
  * <p>Service Description: Service to fetch data and metrics across resources.
@@ -1011,7 +954,7 @@
  * <pre>
  * <code>
  * try (HotelPerformanceViewServiceClient hotelPerformanceViewServiceClient = HotelPerformanceViewServiceClient.create()) {
- *   String formattedResourceName = HotelPerformanceViewServiceClient.formatCustomerName("[CUSTOMER]");
+ *   String formattedResourceName = HotelPerformanceViewServiceClient.formatCustomerHotelPerformanceViewName("[CUSTOMER]");
  *   HotelPerformanceView response = hotelPerformanceViewServiceClient.getHotelPerformanceView(formattedResourceName);
  * }
  * </code>
@@ -1127,6 +1070,21 @@
  * </code>
  * </pre>
  *
+ * ================== LabelServiceClient ==================
+ *
+ * <p>Service Description: Service to manage labels.
+ *
+ * <p>Sample for LabelServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (LabelServiceClient labelServiceClient = LabelServiceClient.create()) {
+ *   String formattedResourceName = LabelServiceClient.formatLabelName("[CUSTOMER]", "[LABEL]");
+ *   Label response = labelServiceClient.getLabel(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ============================= LanguageConstantServiceClient =============================
  *
  * <p>Service Description: Service to fetch language constants.
@@ -1169,6 +1127,21 @@
  * try (ManagedPlacementViewServiceClient managedPlacementViewServiceClient = ManagedPlacementViewServiceClient.create()) {
  *   String formattedResourceName = ManagedPlacementViewServiceClient.formatManagedPlacementViewName("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
  *   ManagedPlacementView response = managedPlacementViewServiceClient.getManagedPlacementView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ====================== MediaFileServiceClient ======================
+ *
+ * <p>Service Description: Service to manage media files.
+ *
+ * <p>Sample for MediaFileServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
+ *   String formattedResourceName = MediaFileServiceClient.formatMediaFileName("[CUSTOMER]", "[MEDIA_FILE]");
+ *   MediaFile response = mediaFileServiceClient.getMediaFile(formattedResourceName);
  * }
  * </code>
  * </pre>
@@ -1329,6 +1302,21 @@
  * </code>
  * </pre>
  *
+ * ============================== RemarketingActionServiceClient ==============================
+ *
+ * <p>Service Description: Service to manage remarketing actions.
+ *
+ * <p>Sample for RemarketingActionServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
+ *   String formattedResourceName = RemarketingActionServiceClient.formatRemarketingActionName("[CUSTOMER]", "[REMARKETING_ACTION]");
+ *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * =========================== SearchTermViewServiceClient ===========================
  *
  * <p>Service Description: Service to manage search term views.
@@ -1344,6 +1332,36 @@
  * </code>
  * </pre>
  *
+ * ============================ SharedCriterionServiceClient ============================
+ *
+ * <p>Service Description: Service to manage shared criteria.
+ *
+ * <p>Sample for SharedCriterionServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (SharedCriterionServiceClient sharedCriterionServiceClient = SharedCriterionServiceClient.create()) {
+ *   String formattedResourceName = SharedCriterionServiceClient.formatSharedCriteriaName("[CUSTOMER]", "[SHARED_CRITERIA]");
+ *   SharedCriterion response = sharedCriterionServiceClient.getSharedCriterion(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ====================== SharedSetServiceClient ======================
+ *
+ * <p>Service Description: Service to manage shared sets.
+ *
+ * <p>Sample for SharedSetServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
+ *   String formattedResourceName = SharedSetServiceClient.formatSharedSetName("[CUSTOMER]", "[SHARED_SET]");
+ *   SharedSet response = sharedSetServiceClient.getSharedSet(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ==================================== ShoppingPerformanceViewServiceClient
  * ====================================
  *
@@ -1354,7 +1372,7 @@
  * <pre>
  * <code>
  * try (ShoppingPerformanceViewServiceClient shoppingPerformanceViewServiceClient = ShoppingPerformanceViewServiceClient.create()) {
- *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatShoppingPerformanceViewName("[CUSTOMER]", "[SHOPPING_PERFORMANCE_VIEW]");
+ *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatCustomerShoppingPerformanceViewName("[CUSTOMER]");
  *   ShoppingPerformanceView response = shoppingPerformanceViewServiceClient.getShoppingPerformanceView(formattedResourceName);
  * }
  * </code>
@@ -1401,6 +1419,21 @@
  * try (UserInterestServiceClient userInterestServiceClient = UserInterestServiceClient.create()) {
  *   String formattedResourceName = UserInterestServiceClient.formatUserInterestName("[CUSTOMER]", "[USER_INTEREST]");
  *   UserInterest response = userInterestServiceClient.getUserInterest(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ===================== UserListServiceClient =====================
+ *
+ * <p>Service Description: Service to manage user lists.
+ *
+ * <p>Sample for UserListServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
+ *   String formattedResourceName = UserListServiceClient.formatUserListName("[CUSTOMER]", "[USER_LIST]");
+ *   UserList response = userListServiceClient.getUserList(formattedResourceName);
  * }
  * </code>
  * </pre>

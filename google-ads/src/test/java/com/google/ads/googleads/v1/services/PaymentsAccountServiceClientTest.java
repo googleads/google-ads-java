@@ -52,6 +52,7 @@ public class PaymentsAccountServiceClientTest {
   private static MockAdParameterService mockAdParameterService;
   private static MockAdScheduleViewService mockAdScheduleViewService;
   private static MockAgeRangeViewService mockAgeRangeViewService;
+  private static MockAssetService mockAssetService;
   private static MockBiddingStrategyService mockBiddingStrategyService;
   private static MockBillingSetupService mockBillingSetupService;
   private static MockCampaignAudienceViewService mockCampaignAudienceViewService;
@@ -67,6 +68,7 @@ public class PaymentsAccountServiceClientTest {
   private static MockChangeStatusService mockChangeStatusService;
   private static MockClickViewService mockClickViewService;
   private static MockConversionActionService mockConversionActionService;
+  private static MockConversionAdjustmentUploadService mockConversionAdjustmentUploadService;
   private static MockConversionUploadService mockConversionUploadService;
   private static MockCustomInterestService mockCustomInterestService;
   private static MockCustomerClientLinkService mockCustomerClientLinkService;
@@ -92,12 +94,6 @@ public class PaymentsAccountServiceClientTest {
   private static MockGeoTargetConstantService mockGeoTargetConstantService;
   private static MockGeographicViewService mockGeographicViewService;
   private static MockGoogleAdsFieldService mockGoogleAdsFieldService;
-  private static MockLabelService mockLabelService;
-  private static MockMediaFileService mockMediaFileService;
-  private static MockRemarketingActionService mockRemarketingActionService;
-  private static MockSharedCriterionService mockSharedCriterionService;
-  private static MockSharedSetService mockSharedSetService;
-  private static MockUserListService mockUserListService;
   private static MockGoogleAdsService mockGoogleAdsService;
   private static MockGroupPlacementViewService mockGroupPlacementViewService;
   private static MockHotelGroupViewService mockHotelGroupViewService;
@@ -109,9 +105,11 @@ public class PaymentsAccountServiceClientTest {
   private static MockKeywordPlanNegativeKeywordService mockKeywordPlanNegativeKeywordService;
   private static MockKeywordPlanService mockKeywordPlanService;
   private static MockKeywordViewService mockKeywordViewService;
+  private static MockLabelService mockLabelService;
   private static MockLanguageConstantService mockLanguageConstantService;
   private static MockLocationViewService mockLocationViewService;
   private static MockManagedPlacementViewService mockManagedPlacementViewService;
+  private static MockMediaFileService mockMediaFileService;
   private static MockMerchantCenterLinkService mockMerchantCenterLinkService;
   private static MockMobileAppCategoryConstantService mockMobileAppCategoryConstantService;
   private static MockMobileDeviceConstantService mockMobileDeviceConstantService;
@@ -124,11 +122,15 @@ public class PaymentsAccountServiceClientTest {
       mockProductBiddingCategoryConstantService;
   private static MockProductGroupViewService mockProductGroupViewService;
   private static MockRecommendationService mockRecommendationService;
+  private static MockRemarketingActionService mockRemarketingActionService;
   private static MockSearchTermViewService mockSearchTermViewService;
+  private static MockSharedCriterionService mockSharedCriterionService;
+  private static MockSharedSetService mockSharedSetService;
   private static MockShoppingPerformanceViewService mockShoppingPerformanceViewService;
   private static MockTopicConstantService mockTopicConstantService;
   private static MockTopicViewService mockTopicViewService;
   private static MockUserInterestService mockUserInterestService;
+  private static MockUserListService mockUserListService;
   private static MockVideoService mockVideoService;
   private static MockServiceHelper serviceHelper;
   private PaymentsAccountServiceClient client;
@@ -151,6 +153,7 @@ public class PaymentsAccountServiceClientTest {
     mockAdParameterService = new MockAdParameterService();
     mockAdScheduleViewService = new MockAdScheduleViewService();
     mockAgeRangeViewService = new MockAgeRangeViewService();
+    mockAssetService = new MockAssetService();
     mockBiddingStrategyService = new MockBiddingStrategyService();
     mockBillingSetupService = new MockBillingSetupService();
     mockCampaignAudienceViewService = new MockCampaignAudienceViewService();
@@ -166,6 +169,7 @@ public class PaymentsAccountServiceClientTest {
     mockChangeStatusService = new MockChangeStatusService();
     mockClickViewService = new MockClickViewService();
     mockConversionActionService = new MockConversionActionService();
+    mockConversionAdjustmentUploadService = new MockConversionAdjustmentUploadService();
     mockConversionUploadService = new MockConversionUploadService();
     mockCustomInterestService = new MockCustomInterestService();
     mockCustomerClientLinkService = new MockCustomerClientLinkService();
@@ -190,12 +194,6 @@ public class PaymentsAccountServiceClientTest {
     mockGeoTargetConstantService = new MockGeoTargetConstantService();
     mockGeographicViewService = new MockGeographicViewService();
     mockGoogleAdsFieldService = new MockGoogleAdsFieldService();
-    mockLabelService = new MockLabelService();
-    mockMediaFileService = new MockMediaFileService();
-    mockRemarketingActionService = new MockRemarketingActionService();
-    mockSharedCriterionService = new MockSharedCriterionService();
-    mockSharedSetService = new MockSharedSetService();
-    mockUserListService = new MockUserListService();
     mockGoogleAdsService = new MockGoogleAdsService();
     mockGroupPlacementViewService = new MockGroupPlacementViewService();
     mockHotelGroupViewService = new MockHotelGroupViewService();
@@ -207,9 +205,11 @@ public class PaymentsAccountServiceClientTest {
     mockKeywordPlanNegativeKeywordService = new MockKeywordPlanNegativeKeywordService();
     mockKeywordPlanService = new MockKeywordPlanService();
     mockKeywordViewService = new MockKeywordViewService();
+    mockLabelService = new MockLabelService();
     mockLanguageConstantService = new MockLanguageConstantService();
     mockLocationViewService = new MockLocationViewService();
     mockManagedPlacementViewService = new MockManagedPlacementViewService();
+    mockMediaFileService = new MockMediaFileService();
     mockMerchantCenterLinkService = new MockMerchantCenterLinkService();
     mockMobileAppCategoryConstantService = new MockMobileAppCategoryConstantService();
     mockMobileDeviceConstantService = new MockMobileDeviceConstantService();
@@ -220,11 +220,15 @@ public class PaymentsAccountServiceClientTest {
     mockProductBiddingCategoryConstantService = new MockProductBiddingCategoryConstantService();
     mockProductGroupViewService = new MockProductGroupViewService();
     mockRecommendationService = new MockRecommendationService();
+    mockRemarketingActionService = new MockRemarketingActionService();
     mockSearchTermViewService = new MockSearchTermViewService();
+    mockSharedCriterionService = new MockSharedCriterionService();
+    mockSharedSetService = new MockSharedSetService();
     mockShoppingPerformanceViewService = new MockShoppingPerformanceViewService();
     mockTopicConstantService = new MockTopicConstantService();
     mockTopicViewService = new MockTopicViewService();
     mockUserInterestService = new MockUserInterestService();
+    mockUserListService = new MockUserListService();
     mockVideoService = new MockVideoService();
     serviceHelper =
         new MockServiceHelper(
@@ -245,6 +249,7 @@ public class PaymentsAccountServiceClientTest {
                 mockAdParameterService,
                 mockAdScheduleViewService,
                 mockAgeRangeViewService,
+                mockAssetService,
                 mockBiddingStrategyService,
                 mockBillingSetupService,
                 mockCampaignAudienceViewService,
@@ -260,6 +265,7 @@ public class PaymentsAccountServiceClientTest {
                 mockChangeStatusService,
                 mockClickViewService,
                 mockConversionActionService,
+                mockConversionAdjustmentUploadService,
                 mockConversionUploadService,
                 mockCustomInterestService,
                 mockCustomerClientLinkService,
@@ -284,12 +290,6 @@ public class PaymentsAccountServiceClientTest {
                 mockGeoTargetConstantService,
                 mockGeographicViewService,
                 mockGoogleAdsFieldService,
-                mockLabelService,
-                mockMediaFileService,
-                mockRemarketingActionService,
-                mockSharedCriterionService,
-                mockSharedSetService,
-                mockUserListService,
                 mockGoogleAdsService,
                 mockGroupPlacementViewService,
                 mockHotelGroupViewService,
@@ -301,9 +301,11 @@ public class PaymentsAccountServiceClientTest {
                 mockKeywordPlanNegativeKeywordService,
                 mockKeywordPlanService,
                 mockKeywordViewService,
+                mockLabelService,
                 mockLanguageConstantService,
                 mockLocationViewService,
                 mockManagedPlacementViewService,
+                mockMediaFileService,
                 mockMerchantCenterLinkService,
                 mockMobileAppCategoryConstantService,
                 mockMobileDeviceConstantService,
@@ -314,11 +316,15 @@ public class PaymentsAccountServiceClientTest {
                 mockProductBiddingCategoryConstantService,
                 mockProductGroupViewService,
                 mockRecommendationService,
+                mockRemarketingActionService,
                 mockSearchTermViewService,
+                mockSharedCriterionService,
+                mockSharedSetService,
                 mockShoppingPerformanceViewService,
                 mockTopicConstantService,
                 mockTopicViewService,
                 mockUserInterestService,
+                mockUserListService,
                 mockVideoService));
     serviceHelper.start();
   }

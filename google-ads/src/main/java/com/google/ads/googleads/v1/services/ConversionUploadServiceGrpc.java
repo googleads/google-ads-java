@@ -67,6 +67,43 @@ public final class ConversionUploadServiceGrpc {
      }
      return getUploadClickConversionsMethod;
   }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getUploadCallConversionsMethod()} instead. 
+  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.UploadCallConversionsRequest,
+      com.google.ads.googleads.v1.services.UploadCallConversionsResponse> METHOD_UPLOAD_CALL_CONVERSIONS = getUploadCallConversionsMethodHelper();
+
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.UploadCallConversionsRequest,
+      com.google.ads.googleads.v1.services.UploadCallConversionsResponse> getUploadCallConversionsMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.UploadCallConversionsRequest,
+      com.google.ads.googleads.v1.services.UploadCallConversionsResponse> getUploadCallConversionsMethod() {
+    return getUploadCallConversionsMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.UploadCallConversionsRequest,
+      com.google.ads.googleads.v1.services.UploadCallConversionsResponse> getUploadCallConversionsMethodHelper() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.UploadCallConversionsRequest, com.google.ads.googleads.v1.services.UploadCallConversionsResponse> getUploadCallConversionsMethod;
+    if ((getUploadCallConversionsMethod = ConversionUploadServiceGrpc.getUploadCallConversionsMethod) == null) {
+      synchronized (ConversionUploadServiceGrpc.class) {
+        if ((getUploadCallConversionsMethod = ConversionUploadServiceGrpc.getUploadCallConversionsMethod) == null) {
+          ConversionUploadServiceGrpc.getUploadCallConversionsMethod = getUploadCallConversionsMethod = 
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.UploadCallConversionsRequest, com.google.ads.googleads.v1.services.UploadCallConversionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "google.ads.googleads.v1.services.ConversionUploadService", "UploadCallConversions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v1.services.UploadCallConversionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v1.services.UploadCallConversionsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ConversionUploadServiceMethodDescriptorSupplier("UploadCallConversions"))
+                  .build();
+          }
+        }
+     }
+     return getUploadCallConversionsMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -108,6 +145,16 @@ public final class ConversionUploadServiceGrpc {
       asyncUnimplementedUnaryCall(getUploadClickConversionsMethodHelper(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Processes the given call conversions.
+     * </pre>
+     */
+    public void uploadCallConversions(com.google.ads.googleads.v1.services.UploadCallConversionsRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.UploadCallConversionsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getUploadCallConversionsMethodHelper(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -117,6 +164,13 @@ public final class ConversionUploadServiceGrpc {
                 com.google.ads.googleads.v1.services.UploadClickConversionsRequest,
                 com.google.ads.googleads.v1.services.UploadClickConversionsResponse>(
                   this, METHODID_UPLOAD_CLICK_CONVERSIONS)))
+          .addMethod(
+            getUploadCallConversionsMethodHelper(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v1.services.UploadCallConversionsRequest,
+                com.google.ads.googleads.v1.services.UploadCallConversionsResponse>(
+                  this, METHODID_UPLOAD_CALL_CONVERSIONS)))
           .build();
     }
   }
@@ -152,6 +206,17 @@ public final class ConversionUploadServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getUploadClickConversionsMethodHelper(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Processes the given call conversions.
+     * </pre>
+     */
+    public void uploadCallConversions(com.google.ads.googleads.v1.services.UploadCallConversionsRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.UploadCallConversionsResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUploadCallConversionsMethodHelper(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -183,6 +248,16 @@ public final class ConversionUploadServiceGrpc {
     public com.google.ads.googleads.v1.services.UploadClickConversionsResponse uploadClickConversions(com.google.ads.googleads.v1.services.UploadClickConversionsRequest request) {
       return blockingUnaryCall(
           getChannel(), getUploadClickConversionsMethodHelper(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Processes the given call conversions.
+     * </pre>
+     */
+    public com.google.ads.googleads.v1.services.UploadCallConversionsResponse uploadCallConversions(com.google.ads.googleads.v1.services.UploadCallConversionsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUploadCallConversionsMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -217,9 +292,21 @@ public final class ConversionUploadServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getUploadClickConversionsMethodHelper(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Processes the given call conversions.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.services.UploadCallConversionsResponse> uploadCallConversions(
+        com.google.ads.googleads.v1.services.UploadCallConversionsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUploadCallConversionsMethodHelper(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_UPLOAD_CLICK_CONVERSIONS = 0;
+  private static final int METHODID_UPLOAD_CALL_CONVERSIONS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -241,6 +328,10 @@ public final class ConversionUploadServiceGrpc {
         case METHODID_UPLOAD_CLICK_CONVERSIONS:
           serviceImpl.uploadClickConversions((com.google.ads.googleads.v1.services.UploadClickConversionsRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.UploadClickConversionsResponse>) responseObserver);
+          break;
+        case METHODID_UPLOAD_CALL_CONVERSIONS:
+          serviceImpl.uploadCallConversions((com.google.ads.googleads.v1.services.UploadCallConversionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.UploadCallConversionsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -304,6 +395,7 @@ public final class ConversionUploadServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ConversionUploadServiceFileDescriptorSupplier())
               .addMethod(getUploadClickConversionsMethodHelper())
+              .addMethod(getUploadCallConversionsMethodHelper())
               .build();
         }
       }

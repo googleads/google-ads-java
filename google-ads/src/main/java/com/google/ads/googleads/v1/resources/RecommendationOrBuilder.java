@@ -430,5 +430,55 @@ public interface RecommendationOrBuilder extends
    */
   com.google.ads.googleads.v1.resources.Recommendation.OptimizeAdRotationRecommendationOrBuilder getOptimizeAdRotationRecommendationOrBuilder();
 
+  /**
+   * <pre>
+   * The keyword match type recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.KeywordMatchTypeRecommendation keyword_match_type_recommendation = 20;</code>
+   */
+  boolean hasKeywordMatchTypeRecommendation();
+  /**
+   * <pre>
+   * The keyword match type recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.KeywordMatchTypeRecommendation keyword_match_type_recommendation = 20;</code>
+   */
+  com.google.ads.googleads.v1.resources.Recommendation.KeywordMatchTypeRecommendation getKeywordMatchTypeRecommendation();
+  /**
+   * <pre>
+   * The keyword match type recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.KeywordMatchTypeRecommendation keyword_match_type_recommendation = 20;</code>
+   */
+  com.google.ads.googleads.v1.resources.Recommendation.KeywordMatchTypeRecommendationOrBuilder getKeywordMatchTypeRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * The move unused budget recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.MoveUnusedBudgetRecommendation move_unused_budget_recommendation = 21;</code>
+   */
+  boolean hasMoveUnusedBudgetRecommendation();
+  /**
+   * <pre>
+   * The move unused budget recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.MoveUnusedBudgetRecommendation move_unused_budget_recommendation = 21;</code>
+   */
+  com.google.ads.googleads.v1.resources.Recommendation.MoveUnusedBudgetRecommendation getMoveUnusedBudgetRecommendation();
+  /**
+   * <pre>
+   * The move unused budget recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.MoveUnusedBudgetRecommendation move_unused_budget_recommendation = 21;</code>
+   */
+  com.google.ads.googleads.v1.resources.Recommendation.MoveUnusedBudgetRecommendationOrBuilder getMoveUnusedBudgetRecommendationOrBuilder();
+
   public com.google.ads.googleads.v1.resources.Recommendation.RecommendationCase getRecommendationCase();
 }

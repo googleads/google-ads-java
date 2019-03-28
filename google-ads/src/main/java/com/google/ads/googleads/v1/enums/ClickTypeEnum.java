@@ -512,7 +512,7 @@ private static final long serialVersionUID = 0L;
     PRICE_EXTENSION(54),
     /**
      * <pre>
-     * Hotel Book-on-Google room selection.
+     * Book on Google hotel room selection.
      * </pre>
      *
      * <code>HOTEL_BOOK_ON_GOOGLE_ROOM_SELECTION = 55;</code>
@@ -947,7 +947,7 @@ private static final long serialVersionUID = 0L;
     public static final int PRICE_EXTENSION_VALUE = 54;
     /**
      * <pre>
-     * Hotel Book-on-Google room selection.
+     * Book on Google hotel room selection.
      * </pre>
      *
      * <code>HOTEL_BOOK_ON_GOOGLE_ROOM_SELECTION = 55;</code>

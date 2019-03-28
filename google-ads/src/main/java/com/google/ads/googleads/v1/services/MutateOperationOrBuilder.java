@@ -259,6 +259,31 @@ public interface MutateOperationOrBuilder extends
 
   /**
    * <pre>
+   * An asset mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+   */
+  boolean hasAssetOperation();
+  /**
+   * <pre>
+   * An asset mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+   */
+  com.google.ads.googleads.v1.services.AssetOperation getAssetOperation();
+  /**
+   * <pre>
+   * An asset mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+   */
+  com.google.ads.googleads.v1.services.AssetOperationOrBuilder getAssetOperationOrBuilder();
+
+  /**
+   * <pre>
    * A bidding strategy mutate operation.
    * </pre>
    *

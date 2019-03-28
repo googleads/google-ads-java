@@ -39,7 +39,7 @@ public interface AdGroupLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group label
    * being removed, in this format:
-   * `customers/{customer_id}/adGroupLabels/{ad_group_id}_{label_id}`
+   * `customers/{customer_id}/adGroupLabels/{ad_group_id}~{label_id}`
    * </pre>
    *
    * <code>string remove = 2;</code>
@@ -49,7 +49,7 @@ public interface AdGroupLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group label
    * being removed, in this format:
-   * `customers/{customer_id}/adGroupLabels/{ad_group_id}_{label_id}`
+   * `customers/{customer_id}/adGroupLabels/{ad_group_id}~{label_id}`
    * </pre>
    *
    * <code>string remove = 2;</code>

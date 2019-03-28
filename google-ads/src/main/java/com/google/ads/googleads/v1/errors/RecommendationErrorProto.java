@@ -31,7 +31,7 @@ public final class RecommendationErrorProto {
       "\n9google/ads/googleads/v1/errors/recomme" +
       "ndation_error.proto\022\036google.ads.googlead" +
       "s.v1.errors\032\034google/api/annotations.prot" +
-      "o\"\277\003\n\027RecommendationErrorEnum\"\243\003\n\023Recomm" +
+      "o\"\332\003\n\027RecommendationErrorEnum\"\276\003\n\023Recomm" +
       "endationError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOW" +
       "N\020\001\022\033\n\027BUDGET_AMOUNT_TOO_SMALL\020\002\022\033\n\027BUDG" +
       "ET_AMOUNT_TOO_LARGE\020\003\022\031\n\025INVALID_BUDGET_" +
@@ -42,13 +42,14 @@ public final class RecommendationErrorProto {
       "ERATIONS\020\n\022\021\n\rNO_OPERATIONS\020\013\022!\n\035DIFFERE" +
       "NT_TYPES_NOT_SUPPORTED\020\014\022\033\n\027DUPLICATE_RE" +
       "SOURCE_NAME\020\r\022$\n RECOMMENDATION_ALREADY_" +
-      "DISMISSED\020\016B\363\001\n\"com.google.ads.googleads" +
-      ".v1.errorsB\030RecommendationErrorProtoP\001ZD" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v1/errors;errors\242\002\003GAA\252\002\036Goo" +
-      "gle.Ads.GoogleAds.V1.Errors\312\002\036Google\\Ads" +
-      "\\GoogleAds\\V1\\Errors\352\002\"Google::Ads::Goog" +
-      "leAds::V1::Errorsb\006proto3"
+      "DISMISSED\020\016\022\031\n\025INVALID_APPLY_REQUEST\020\017B\363" +
+      "\001\n\"com.google.ads.googleads.v1.errorsB\030R" +
+      "ecommendationErrorProtoP\001ZDgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "1/errors;errors\242\002\003GAA\252\002\036Google.Ads.Googl" +
+      "eAds.V1.Errors\312\002\036Google\\Ads\\GoogleAds\\V1" +
+      "\\Errors\352\002\"Google::Ads::GoogleAds::V1::Er" +
+      "rorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

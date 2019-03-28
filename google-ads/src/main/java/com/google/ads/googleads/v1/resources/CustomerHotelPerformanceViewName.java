@@ -24,22 +24,17 @@ import java.util.List;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS
 @javax.annotation.Generated("by GAPIC protoc plugin")
-public class ShoppingPerformanceViewName implements ResourceName {
+public class CustomerHotelPerformanceViewName implements ResourceName {
 
   private static final PathTemplate PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/shoppingPerformanceView/{shopping_performance_view}");
+      PathTemplate.createWithoutUrlEncoding("customers/{customer}/hotelPerformanceView");
 
   private volatile Map<String, String> fieldValuesMap;
 
   private final String customer;
-  private final String shoppingPerformanceView;
 
   public String getCustomer() {
     return customer;
-  }
-
-  public String getShoppingPerformanceView() {
-    return shoppingPerformanceView;
   }
 
   public static Builder newBuilder() {
@@ -50,46 +45,43 @@ public class ShoppingPerformanceViewName implements ResourceName {
     return new Builder(this);
   }
 
-  private ShoppingPerformanceViewName(Builder builder) {
+  private CustomerHotelPerformanceViewName(Builder builder) {
     customer = Preconditions.checkNotNull(builder.getCustomer());
-    shoppingPerformanceView = Preconditions.checkNotNull(builder.getShoppingPerformanceView());
   }
 
-  public static ShoppingPerformanceViewName of(String customer, String shoppingPerformanceView) {
+  public static CustomerHotelPerformanceViewName of(String customer) {
     return newBuilder()
       .setCustomer(customer)
-      .setShoppingPerformanceView(shoppingPerformanceView)
       .build();
   }
 
-  public static String format(String customer, String shoppingPerformanceView) {
+  public static String format(String customer) {
     return newBuilder()
       .setCustomer(customer)
-      .setShoppingPerformanceView(shoppingPerformanceView)
       .build()
       .toString();
   }
 
-  public static ShoppingPerformanceViewName parse(String formattedString) {
+  public static CustomerHotelPerformanceViewName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
     Map<String, String> matchMap =
-        PATH_TEMPLATE.validatedMatch(formattedString, "ShoppingPerformanceViewName.parse: formattedString not in valid format");
-    return of(matchMap.get("customer"), matchMap.get("shopping_performance_view"));
+        PATH_TEMPLATE.validatedMatch(formattedString, "CustomerHotelPerformanceViewName.parse: formattedString not in valid format");
+    return of(matchMap.get("customer"));
   }
 
-  public static List<ShoppingPerformanceViewName> parseList(List<String> formattedStrings) {
-    List<ShoppingPerformanceViewName> list = new ArrayList<>(formattedStrings.size());
+  public static List<CustomerHotelPerformanceViewName> parseList(List<String> formattedStrings) {
+    List<CustomerHotelPerformanceViewName> list = new ArrayList<>(formattedStrings.size());
     for (String formattedString : formattedStrings) {
       list.add(parse(formattedString));
     }
     return list;
   }
 
-  public static List<String> toStringList(List<ShoppingPerformanceViewName> values) {
+  public static List<String> toStringList(List<CustomerHotelPerformanceViewName> values) {
     List<String> list = new ArrayList<String>(values.size());
-    for (ShoppingPerformanceViewName value : values) {
+    for (CustomerHotelPerformanceViewName value : values) {
       if (value == null) {
         list.add("");
       } else {
@@ -109,7 +101,6 @@ public class ShoppingPerformanceViewName implements ResourceName {
         if (fieldValuesMap == null) {
           ImmutableMap.Builder<String, String> fieldMapBuilder = ImmutableMap.builder();
           fieldMapBuilder.put("customer", customer);
-          fieldMapBuilder.put("shoppingPerformanceView", shoppingPerformanceView);
           fieldValuesMap = fieldMapBuilder.build();
         }
       }
@@ -123,21 +114,16 @@ public class ShoppingPerformanceViewName implements ResourceName {
 
   @Override
   public String toString() {
-    return PATH_TEMPLATE.instantiate("customer", customer, "shopping_performance_view", shoppingPerformanceView);
+    return PATH_TEMPLATE.instantiate("customer", customer);
   }
 
-  /** Builder for ShoppingPerformanceViewName. */
+  /** Builder for CustomerHotelPerformanceViewName. */
   public static class Builder {
 
     private String customer;
-    private String shoppingPerformanceView;
 
     public String getCustomer() {
       return customer;
-    }
-
-    public String getShoppingPerformanceView() {
-      return shoppingPerformanceView;
     }
 
     public Builder setCustomer(String customer) {
@@ -145,21 +131,15 @@ public class ShoppingPerformanceViewName implements ResourceName {
       return this;
     }
 
-    public Builder setShoppingPerformanceView(String shoppingPerformanceView) {
-      this.shoppingPerformanceView = shoppingPerformanceView;
-      return this;
-    }
-
     private Builder() {
     }
 
-    private Builder(ShoppingPerformanceViewName shoppingPerformanceViewName) {
-      customer = shoppingPerformanceViewName.customer;
-      shoppingPerformanceView = shoppingPerformanceViewName.shoppingPerformanceView;
+    private Builder(CustomerHotelPerformanceViewName customerHotelPerformanceViewName) {
+      customer = customerHotelPerformanceViewName.customer;
     }
 
-    public ShoppingPerformanceViewName build() {
-      return new ShoppingPerformanceViewName(this);
+    public CustomerHotelPerformanceViewName build() {
+      return new CustomerHotelPerformanceViewName(this);
     }
   }
 
@@ -168,10 +148,9 @@ public class ShoppingPerformanceViewName implements ResourceName {
     if (o == this) {
       return true;
     }
-    if (o instanceof ShoppingPerformanceViewName) {
-      ShoppingPerformanceViewName that = (ShoppingPerformanceViewName) o;
-      return (this.customer.equals(that.customer))
-          && (this.shoppingPerformanceView.equals(that.shoppingPerformanceView));
+    if (o instanceof CustomerHotelPerformanceViewName) {
+      CustomerHotelPerformanceViewName that = (CustomerHotelPerformanceViewName) o;
+      return (this.customer.equals(that.customer));
     }
     return false;
   }
@@ -181,8 +160,6 @@ public class ShoppingPerformanceViewName implements ResourceName {
     int h = 1;
     h *= 1000003;
     h ^= customer.hashCode();
-    h *= 1000003;
-    h ^= shoppingPerformanceView.hashCode();
     return h;
   }
 }

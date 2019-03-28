@@ -71,4 +71,20 @@ public class MockConversionUploadServiceImpl extends ConversionUploadServiceImpl
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
   }
+
+  @Override
+  public void uploadCallConversions(
+      UploadCallConversionsRequest request,
+      StreamObserver<UploadCallConversionsResponse> responseObserver) {
+    Object response = responses.remove();
+    if (response instanceof UploadCallConversionsResponse) {
+      requests.add(request);
+      responseObserver.onNext((UploadCallConversionsResponse) response);
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError((Exception) response);
+    } else {
+      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+    }
+  }
 }

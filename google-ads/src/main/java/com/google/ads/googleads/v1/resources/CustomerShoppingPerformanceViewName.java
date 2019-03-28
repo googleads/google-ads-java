@@ -24,10 +24,10 @@ import java.util.List;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS
 @javax.annotation.Generated("by GAPIC protoc plugin")
-public class HotelPerformanceViewName implements ResourceName {
+public class CustomerShoppingPerformanceViewName implements ResourceName {
 
   private static final PathTemplate PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/hotelPerformanceView");
+      PathTemplate.createWithoutUrlEncoding("customers/{customer}/shoppingPerformanceView");
 
   private volatile Map<String, String> fieldValuesMap;
 
@@ -45,11 +45,11 @@ public class HotelPerformanceViewName implements ResourceName {
     return new Builder(this);
   }
 
-  private HotelPerformanceViewName(Builder builder) {
+  private CustomerShoppingPerformanceViewName(Builder builder) {
     customer = Preconditions.checkNotNull(builder.getCustomer());
   }
 
-  public static HotelPerformanceViewName of(String customer) {
+  public static CustomerShoppingPerformanceViewName of(String customer) {
     return newBuilder()
       .setCustomer(customer)
       .build();
@@ -62,26 +62,26 @@ public class HotelPerformanceViewName implements ResourceName {
       .toString();
   }
 
-  public static HotelPerformanceViewName parse(String formattedString) {
+  public static CustomerShoppingPerformanceViewName parse(String formattedString) {
     if (formattedString.isEmpty()) {
       return null;
     }
     Map<String, String> matchMap =
-        PATH_TEMPLATE.validatedMatch(formattedString, "HotelPerformanceViewName.parse: formattedString not in valid format");
+        PATH_TEMPLATE.validatedMatch(formattedString, "CustomerShoppingPerformanceViewName.parse: formattedString not in valid format");
     return of(matchMap.get("customer"));
   }
 
-  public static List<HotelPerformanceViewName> parseList(List<String> formattedStrings) {
-    List<HotelPerformanceViewName> list = new ArrayList<>(formattedStrings.size());
+  public static List<CustomerShoppingPerformanceViewName> parseList(List<String> formattedStrings) {
+    List<CustomerShoppingPerformanceViewName> list = new ArrayList<>(formattedStrings.size());
     for (String formattedString : formattedStrings) {
       list.add(parse(formattedString));
     }
     return list;
   }
 
-  public static List<String> toStringList(List<HotelPerformanceViewName> values) {
+  public static List<String> toStringList(List<CustomerShoppingPerformanceViewName> values) {
     List<String> list = new ArrayList<String>(values.size());
-    for (HotelPerformanceViewName value : values) {
+    for (CustomerShoppingPerformanceViewName value : values) {
       if (value == null) {
         list.add("");
       } else {
@@ -117,7 +117,7 @@ public class HotelPerformanceViewName implements ResourceName {
     return PATH_TEMPLATE.instantiate("customer", customer);
   }
 
-  /** Builder for HotelPerformanceViewName. */
+  /** Builder for CustomerShoppingPerformanceViewName. */
   public static class Builder {
 
     private String customer;
@@ -134,12 +134,12 @@ public class HotelPerformanceViewName implements ResourceName {
     private Builder() {
     }
 
-    private Builder(HotelPerformanceViewName hotelPerformanceViewName) {
-      customer = hotelPerformanceViewName.customer;
+    private Builder(CustomerShoppingPerformanceViewName customerShoppingPerformanceViewName) {
+      customer = customerShoppingPerformanceViewName.customer;
     }
 
-    public HotelPerformanceViewName build() {
-      return new HotelPerformanceViewName(this);
+    public CustomerShoppingPerformanceViewName build() {
+      return new CustomerShoppingPerformanceViewName(this);
     }
   }
 
@@ -148,8 +148,8 @@ public class HotelPerformanceViewName implements ResourceName {
     if (o == this) {
       return true;
     }
-    if (o instanceof HotelPerformanceViewName) {
-      HotelPerformanceViewName that = (HotelPerformanceViewName) o;
+    if (o instanceof CustomerShoppingPerformanceViewName) {
+      CustomerShoppingPerformanceViewName that = (CustomerShoppingPerformanceViewName) o;
       return (this.customer.equals(that.customer));
     }
     return false;

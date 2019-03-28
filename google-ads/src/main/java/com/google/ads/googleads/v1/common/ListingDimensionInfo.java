@@ -228,6 +228,20 @@ private static final long serialVersionUID = 0L;
             dimensionCase_ = 13;
             break;
           }
+          case 114: {
+            com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.Builder subBuilder = null;
+            if (dimensionCase_ == 14) {
+              subBuilder = ((com.google.ads.googleads.v1.common.UnknownListingDimensionInfo) dimension_).toBuilder();
+            }
+            dimension_ =
+                input.readMessage(com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.UnknownListingDimensionInfo) dimension_);
+              dimension_ = subBuilder.buildPartial();
+            }
+            dimensionCase_ = 14;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -277,6 +291,7 @@ private static final long serialVersionUID = 0L;
     PRODUCT_CONDITION(10),
     PRODUCT_ITEM_ID(11),
     PRODUCT_TYPE(12),
+    UNKNOWN_LISTING_DIMENSION(14),
     DIMENSION_NOT_SET(0);
     private final int value;
     private DimensionCase(int value) {
@@ -305,6 +320,7 @@ private static final long serialVersionUID = 0L;
         case 10: return PRODUCT_CONDITION;
         case 11: return PRODUCT_ITEM_ID;
         case 12: return PRODUCT_TYPE;
+        case 14: return UNKNOWN_LISTING_DIMENSION;
         case 0: return DIMENSION_NOT_SET;
         default: return null;
       }
@@ -814,6 +830,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.common.ProductTypeInfo.getDefaultInstance();
   }
 
+  public static final int UNKNOWN_LISTING_DIMENSION_FIELD_NUMBER = 14;
+  /**
+   * <pre>
+   * Unknown dimension. Set when no other listing dimension is set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+   */
+  public boolean hasUnknownListingDimension() {
+    return dimensionCase_ == 14;
+  }
+  /**
+   * <pre>
+   * Unknown dimension. Set when no other listing dimension is set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+   */
+  public com.google.ads.googleads.v1.common.UnknownListingDimensionInfo getUnknownListingDimension() {
+    if (dimensionCase_ == 14) {
+       return (com.google.ads.googleads.v1.common.UnknownListingDimensionInfo) dimension_;
+    }
+    return com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Unknown dimension. Set when no other listing dimension is set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+   */
+  public com.google.ads.googleads.v1.common.UnknownListingDimensionInfoOrBuilder getUnknownListingDimensionOrBuilder() {
+    if (dimensionCase_ == 14) {
+       return (com.google.ads.googleads.v1.common.UnknownListingDimensionInfo) dimension_;
+    }
+    return com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -866,6 +920,9 @@ private static final long serialVersionUID = 0L;
     }
     if (dimensionCase_ == 13) {
       output.writeMessage(13, (com.google.ads.googleads.v1.common.ProductBiddingCategoryInfo) dimension_);
+    }
+    if (dimensionCase_ == 14) {
+      output.writeMessage(14, (com.google.ads.googleads.v1.common.UnknownListingDimensionInfo) dimension_);
     }
     unknownFields.writeTo(output);
   }
@@ -927,6 +984,10 @@ private static final long serialVersionUID = 0L;
     if (dimensionCase_ == 13) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, (com.google.ads.googleads.v1.common.ProductBiddingCategoryInfo) dimension_);
+    }
+    if (dimensionCase_ == 14) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, (com.google.ads.googleads.v1.common.UnknownListingDimensionInfo) dimension_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1000,6 +1061,10 @@ private static final long serialVersionUID = 0L;
         result = result && getProductType()
             .equals(other.getProductType());
         break;
+      case 14:
+        result = result && getUnknownListingDimension()
+            .equals(other.getUnknownListingDimension());
+        break;
       case 0:
       default:
     }
@@ -1066,6 +1131,10 @@ private static final long serialVersionUID = 0L;
       case 12:
         hash = (37 * hash) + PRODUCT_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + getProductType().hashCode();
+        break;
+      case 14:
+        hash = (37 * hash) + UNKNOWN_LISTING_DIMENSION_FIELD_NUMBER;
+        hash = (53 * hash) + getUnknownListingDimension().hashCode();
         break;
       case 0:
       default:
@@ -1326,6 +1395,13 @@ private static final long serialVersionUID = 0L;
           result.dimension_ = productTypeBuilder_.build();
         }
       }
+      if (dimensionCase_ == 14) {
+        if (unknownListingDimensionBuilder_ == null) {
+          result.dimension_ = dimension_;
+        } else {
+          result.dimension_ = unknownListingDimensionBuilder_.build();
+        }
+      }
       result.dimensionCase_ = dimensionCase_;
       onBuilt();
       return result;
@@ -1426,6 +1502,10 @@ private static final long serialVersionUID = 0L;
         }
         case PRODUCT_TYPE: {
           mergeProductType(other.getProductType());
+          break;
+        }
+        case UNKNOWN_LISTING_DIMENSION: {
+          mergeUnknownListingDimension(other.getUnknownListingDimension());
           break;
         }
         case DIMENSION_NOT_SET: {
@@ -3710,6 +3790,178 @@ private static final long serialVersionUID = 0L;
       dimensionCase_ = 12;
       onChanged();;
       return productTypeBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.UnknownListingDimensionInfo, com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.Builder, com.google.ads.googleads.v1.common.UnknownListingDimensionInfoOrBuilder> unknownListingDimensionBuilder_;
+    /**
+     * <pre>
+     * Unknown dimension. Set when no other listing dimension is set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+     */
+    public boolean hasUnknownListingDimension() {
+      return dimensionCase_ == 14;
+    }
+    /**
+     * <pre>
+     * Unknown dimension. Set when no other listing dimension is set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+     */
+    public com.google.ads.googleads.v1.common.UnknownListingDimensionInfo getUnknownListingDimension() {
+      if (unknownListingDimensionBuilder_ == null) {
+        if (dimensionCase_ == 14) {
+          return (com.google.ads.googleads.v1.common.UnknownListingDimensionInfo) dimension_;
+        }
+        return com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.getDefaultInstance();
+      } else {
+        if (dimensionCase_ == 14) {
+          return unknownListingDimensionBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Unknown dimension. Set when no other listing dimension is set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+     */
+    public Builder setUnknownListingDimension(com.google.ads.googleads.v1.common.UnknownListingDimensionInfo value) {
+      if (unknownListingDimensionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        dimension_ = value;
+        onChanged();
+      } else {
+        unknownListingDimensionBuilder_.setMessage(value);
+      }
+      dimensionCase_ = 14;
+      return this;
+    }
+    /**
+     * <pre>
+     * Unknown dimension. Set when no other listing dimension is set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+     */
+    public Builder setUnknownListingDimension(
+        com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.Builder builderForValue) {
+      if (unknownListingDimensionBuilder_ == null) {
+        dimension_ = builderForValue.build();
+        onChanged();
+      } else {
+        unknownListingDimensionBuilder_.setMessage(builderForValue.build());
+      }
+      dimensionCase_ = 14;
+      return this;
+    }
+    /**
+     * <pre>
+     * Unknown dimension. Set when no other listing dimension is set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+     */
+    public Builder mergeUnknownListingDimension(com.google.ads.googleads.v1.common.UnknownListingDimensionInfo value) {
+      if (unknownListingDimensionBuilder_ == null) {
+        if (dimensionCase_ == 14 &&
+            dimension_ != com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.getDefaultInstance()) {
+          dimension_ = com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.newBuilder((com.google.ads.googleads.v1.common.UnknownListingDimensionInfo) dimension_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          dimension_ = value;
+        }
+        onChanged();
+      } else {
+        if (dimensionCase_ == 14) {
+          unknownListingDimensionBuilder_.mergeFrom(value);
+        }
+        unknownListingDimensionBuilder_.setMessage(value);
+      }
+      dimensionCase_ = 14;
+      return this;
+    }
+    /**
+     * <pre>
+     * Unknown dimension. Set when no other listing dimension is set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+     */
+    public Builder clearUnknownListingDimension() {
+      if (unknownListingDimensionBuilder_ == null) {
+        if (dimensionCase_ == 14) {
+          dimensionCase_ = 0;
+          dimension_ = null;
+          onChanged();
+        }
+      } else {
+        if (dimensionCase_ == 14) {
+          dimensionCase_ = 0;
+          dimension_ = null;
+        }
+        unknownListingDimensionBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Unknown dimension. Set when no other listing dimension is set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+     */
+    public com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.Builder getUnknownListingDimensionBuilder() {
+      return getUnknownListingDimensionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Unknown dimension. Set when no other listing dimension is set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+     */
+    public com.google.ads.googleads.v1.common.UnknownListingDimensionInfoOrBuilder getUnknownListingDimensionOrBuilder() {
+      if ((dimensionCase_ == 14) && (unknownListingDimensionBuilder_ != null)) {
+        return unknownListingDimensionBuilder_.getMessageOrBuilder();
+      } else {
+        if (dimensionCase_ == 14) {
+          return (com.google.ads.googleads.v1.common.UnknownListingDimensionInfo) dimension_;
+        }
+        return com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Unknown dimension. Set when no other listing dimension is set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.UnknownListingDimensionInfo, com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.Builder, com.google.ads.googleads.v1.common.UnknownListingDimensionInfoOrBuilder> 
+        getUnknownListingDimensionFieldBuilder() {
+      if (unknownListingDimensionBuilder_ == null) {
+        if (!(dimensionCase_ == 14)) {
+          dimension_ = com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.getDefaultInstance();
+        }
+        unknownListingDimensionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.UnknownListingDimensionInfo, com.google.ads.googleads.v1.common.UnknownListingDimensionInfo.Builder, com.google.ads.googleads.v1.common.UnknownListingDimensionInfoOrBuilder>(
+                (com.google.ads.googleads.v1.common.UnknownListingDimensionInfo) dimension_,
+                getParentForChildren(),
+                isClean());
+        dimension_ = null;
+      }
+      dimensionCase_ = 14;
+      onChanged();;
+      return unknownListingDimensionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

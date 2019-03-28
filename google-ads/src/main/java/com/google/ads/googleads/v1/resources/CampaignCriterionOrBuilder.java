@@ -232,6 +232,31 @@ public interface CampaignCriterionOrBuilder extends
 
   /**
    * <pre>
+   * Mobile application.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+   */
+  boolean hasMobileApplication();
+  /**
+   * <pre>
+   * Mobile application.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+   */
+  com.google.ads.googleads.v1.common.MobileApplicationInfo getMobileApplication();
+  /**
+   * <pre>
+   * Mobile application.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+   */
+  com.google.ads.googleads.v1.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder();
+
+  /**
+   * <pre>
    * Location.
    * </pre>
    *
