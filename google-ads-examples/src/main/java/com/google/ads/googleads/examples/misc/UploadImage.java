@@ -34,8 +34,7 @@ import com.google.protobuf.ByteString;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 /** This example uploads an image. */
 public class UploadImage {
@@ -109,13 +108,12 @@ public class UploadImage {
         .setImage(image)
         .build();
 
-    List<MediaFileOperation> operations = new ArrayList<>();
-    operations.add(MediaFileOperation.newBuilder().setCreate(file).build());
+    MediaFileOperation op = MediaFileOperation.newBuilder().setCreate(file).build();
 
     try (MediaFileServiceClient mediaFileServiceClient =
         googleAdsClient.getLatestVersion().createMediaFileServiceClient()) {
       MutateMediaFilesResponse response =
-        mediaFileServiceClient.mutateMediaFiles(Long.toString(customerId), operations);
+        mediaFileServiceClient.mutateMediaFiles(Long.toString(customerId), Arrays.asList(op));
       System.out.printf("Added %d images:%n", response.getResultsCount());
       for (MutateMediaFileResult result : response.getResultsList()) {
         System.out.println(result.getResourceName());
