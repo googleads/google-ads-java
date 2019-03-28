@@ -90,8 +90,7 @@ public class UploadImage {
    * @param customerId the client customer ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId)
-      throws IOException {
+  private void runExample(GoogleAdsClient googleAdsClient, long customerId) throws IOException {
 
     byte[] imageData = ByteStreams.toByteArray(new URL("https://goo.gl/3b9Wfh").openStream());
 
