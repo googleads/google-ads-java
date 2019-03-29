@@ -34,6 +34,85 @@ public interface AdGroupCriterionOperationOrBuilder extends
 
   /**
    * <pre>
+   * The list of policy violation keys that should not cause a
+   * PolicyViolationError to be reported. Not all policy violations are
+   * exemptable, please refer to the is_exemptible field in the returned
+   * PolicyViolationError.
+   * Resources violating these polices will be saved, but will not be eligible
+   * to serve. They may begin serving at a later time due to a change in
+   * policies, re-review of the resource, or a change in advertiser
+   * certificates.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+   */
+  java.util.List<com.google.ads.googleads.v1.common.PolicyViolationKey> 
+      getExemptPolicyViolationKeysList();
+  /**
+   * <pre>
+   * The list of policy violation keys that should not cause a
+   * PolicyViolationError to be reported. Not all policy violations are
+   * exemptable, please refer to the is_exemptible field in the returned
+   * PolicyViolationError.
+   * Resources violating these polices will be saved, but will not be eligible
+   * to serve. They may begin serving at a later time due to a change in
+   * policies, re-review of the resource, or a change in advertiser
+   * certificates.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+   */
+  com.google.ads.googleads.v1.common.PolicyViolationKey getExemptPolicyViolationKeys(int index);
+  /**
+   * <pre>
+   * The list of policy violation keys that should not cause a
+   * PolicyViolationError to be reported. Not all policy violations are
+   * exemptable, please refer to the is_exemptible field in the returned
+   * PolicyViolationError.
+   * Resources violating these polices will be saved, but will not be eligible
+   * to serve. They may begin serving at a later time due to a change in
+   * policies, re-review of the resource, or a change in advertiser
+   * certificates.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+   */
+  int getExemptPolicyViolationKeysCount();
+  /**
+   * <pre>
+   * The list of policy violation keys that should not cause a
+   * PolicyViolationError to be reported. Not all policy violations are
+   * exemptable, please refer to the is_exemptible field in the returned
+   * PolicyViolationError.
+   * Resources violating these polices will be saved, but will not be eligible
+   * to serve. They may begin serving at a later time due to a change in
+   * policies, re-review of the resource, or a change in advertiser
+   * certificates.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v1.common.PolicyViolationKeyOrBuilder> 
+      getExemptPolicyViolationKeysOrBuilderList();
+  /**
+   * <pre>
+   * The list of policy violation keys that should not cause a
+   * PolicyViolationError to be reported. Not all policy violations are
+   * exemptable, please refer to the is_exemptible field in the returned
+   * PolicyViolationError.
+   * Resources violating these polices will be saved, but will not be eligible
+   * to serve. They may begin serving at a later time due to a change in
+   * policies, re-review of the resource, or a change in advertiser
+   * certificates.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+   */
+  com.google.ads.googleads.v1.common.PolicyViolationKeyOrBuilder getExemptPolicyViolationKeysOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    * Create operation: No resource name is expected for the new criterion.
    * </pre>
    *

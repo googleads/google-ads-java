@@ -39,7 +39,7 @@ public final class AdProto {
       "ce.proto\032@google/ads/googleads/v1/enums/" +
       "system_managed_entity_source.proto\032\036goog" +
       "le/protobuf/wrappers.proto\032\034google/api/a" +
-      "nnotations.proto\"\307\r\n\002Ad\022\'\n\002id\030\001 \001(\0132\033.go" +
+      "nnotations.proto\"\267\017\n\002Ad\022\'\n\002id\030\001 \001(\0132\033.go" +
       "ogle.protobuf.Int64Value\0220\n\nfinal_urls\030\002" +
       " \003(\0132\034.google.protobuf.StringValue\0227\n\021fi" +
       "nal_mobile_urls\030\020 \003(\0132\034.google.protobuf." +
@@ -82,6 +82,12 @@ public final class AdProto {
       "leads.v1.common.ResponsiveSearchAdInfoH\000" +
       "\022e\n\034legacy_responsive_display_ad\030\034 \001(\0132=" +
       ".google.ads.googleads.v1.common.LegacyRe" +
+      "sponsiveDisplayAdInfoH\000\022;\n\006app_ad\030\035 \001(\0132" +
+      ").google.ads.googleads.v1.common.AppAdIn" +
+      "foH\000\022W\n\025legacy_app_install_ad\030\036 \001(\01326.go" +
+      "ogle.ads.googleads.v1.common.LegacyAppIn" +
+      "stallAdInfoH\000\022X\n\025responsive_display_ad\030\037" +
+      " \001(\01327.google.ads.googleads.v1.common.Re" +
       "sponsiveDisplayAdInfoH\000B\t\n\007ad_dataB\364\001\n%c" +
       "om.google.ads.googleads.v1.resourcesB\007Ad" +
       "ProtoP\001ZJgoogle.golang.org/genproto/goog" +
@@ -116,7 +122,7 @@ public final class AdProto {
     internal_static_google_ads_googleads_v1_resources_Ad_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_Ad_descriptor,
-        new java.lang.String[] { "Id", "FinalUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "UrlCollections", "Name", "SystemManagedResourceSource", "TextAd", "ExpandedTextAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "GmailAd", "ImageAd", "VideoAd", "ResponsiveSearchAd", "LegacyResponsiveDisplayAd", "AdData", });
+        new java.lang.String[] { "Id", "FinalUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "UrlCollections", "Name", "SystemManagedResourceSource", "TextAd", "ExpandedTextAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "GmailAd", "ImageAd", "VideoAd", "ResponsiveSearchAd", "LegacyResponsiveDisplayAd", "AppAd", "LegacyAppInstallAd", "ResponsiveDisplayAd", "AdData", });
     com.google.ads.googleads.v1.common.AdTypeInfosProto.getDescriptor();
     com.google.ads.googleads.v1.common.CustomParameterProto.getDescriptor();
     com.google.ads.googleads.v1.common.UrlCollectionProto.getDescriptor();

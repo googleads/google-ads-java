@@ -114,6 +114,21 @@ public final class AdTypeInfosProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v1_common_LegacyResponsiveDisplayAdInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v1_common_AppAdInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v1_common_AppAdInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v1_common_LegacyAppInstallAdInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v1_common_LegacyAppInstallAdInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v1_common_ResponsiveDisplayAdInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v1_common_ResponsiveDisplayAdInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -129,136 +144,186 @@ public final class AdTypeInfosProto {
       "asset.proto\032Cgoogle/ads/googleads/v1/enu" +
       "ms/call_conversion_reporting_state.proto" +
       "\032=google/ads/googleads/v1/enums/display_" +
-      "ad_format_setting.proto\032-google/ads/goog" +
-      "leads/v1/enums/mime_type.proto\032\036google/p" +
-      "rotobuf/wrappers.proto\032\034google/api/annot" +
-      "ations.proto\"\244\001\n\nTextAdInfo\022.\n\010headline\030" +
-      "\001 \001(\0132\034.google.protobuf.StringValue\0222\n\014d" +
-      "escription1\030\002 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\0222\n\014description2\030\003 \001(\0132\034.google.p" +
-      "rotobuf.StringValue\"\367\002\n\022ExpandedTextAdIn" +
-      "fo\0224\n\016headline_part1\030\001 \001(\0132\034.google.prot" +
-      "obuf.StringValue\0224\n\016headline_part2\030\002 \001(\013" +
-      "2\034.google.protobuf.StringValue\0224\n\016headli" +
-      "ne_part3\030\006 \001(\0132\034.google.protobuf.StringV" +
-      "alue\0221\n\013description\030\003 \001(\0132\034.google.proto" +
-      "buf.StringValue\0222\n\014description2\030\007 \001(\0132\034." +
-      "google.protobuf.StringValue\022+\n\005path1\030\004 \001" +
-      "(\0132\034.google.protobuf.StringValue\022+\n\005path" +
-      "2\030\005 \001(\0132\034.google.protobuf.StringValue\"\205\005" +
-      "\n\016CallOnlyAdInfo\0222\n\014country_code\030\001 \001(\0132\034" +
-      ".google.protobuf.StringValue\0222\n\014phone_nu" +
-      "mber\030\002 \001(\0132\034.google.protobuf.StringValue" +
-      "\0223\n\rbusiness_name\030\003 \001(\0132\034.google.protobu" +
-      "f.StringValue\0222\n\014description1\030\004 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\0222\n\014description" +
-      "2\030\005 \001(\0132\034.google.protobuf.StringValue\0220\n" +
-      "\014call_tracked\030\006 \001(\0132\032.google.protobuf.Bo" +
-      "olValue\022;\n\027disable_call_conversion\030\007 \001(\013" +
-      "2\032.google.protobuf.BoolValue\022C\n\035phone_nu" +
-      "mber_verification_url\030\010 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\0227\n\021conversion_action\030\t" +
-      " \001(\0132\034.google.protobuf.StringValue\022\200\001\n\032c" +
-      "onversion_reporting_state\030\n \001(\0162\\.google" +
-      ".ads.googleads.v1.enums.CallConversionRe" +
-      "portingStateEnum.CallConversionReporting" +
-      "State\"P\n\033ExpandedDynamicSearchAdInfo\0221\n\013" +
-      "description\030\001 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\"\r\n\013HotelAdInfo\"\025\n\023ShoppingSmartA" +
-      "dInfo\"\027\n\025ShoppingProductAdInfo\"\251\004\n\013Gmail" +
-      "AdInfo\022;\n\006teaser\030\001 \001(\0132+.google.ads.goog" +
-      "leads.v1.common.GmailTeaser\0222\n\014header_im" +
-      "age\030\002 \001(\0132\034.google.protobuf.StringValue\022" +
-      "5\n\017marketing_image\030\003 \001(\0132\034.google.protob" +
-      "uf.StringValue\022>\n\030marketing_image_headli" +
-      "ne\030\004 \001(\0132\034.google.protobuf.StringValue\022A" +
-      "\n\033marketing_image_description\030\005 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\022c\n&marketing_i" +
-      "mage_display_call_to_action\030\006 \001(\01323.goog" +
-      "le.ads.googleads.v1.common.DisplayCallTo" +
-      "Action\022D\n\016product_images\030\007 \003(\0132,.google." +
-      "ads.googleads.v1.common.ProductImage\022D\n\016" +
-      "product_videos\030\010 \003(\0132,.google.ads.google" +
-      "ads.v1.common.ProductVideo\"\327\001\n\013GmailTeas" +
-      "er\022.\n\010headline\030\001 \001(\0132\034.google.protobuf.S" +
-      "tringValue\0221\n\013description\030\002 \001(\0132\034.google" +
-      ".protobuf.StringValue\0223\n\rbusiness_name\030\003" +
-      " \001(\0132\034.google.protobuf.StringValue\0220\n\nlo" +
-      "go_image\030\004 \001(\0132\034.google.protobuf.StringV" +
-      "alue\"\254\001\n\023DisplayCallToAction\022*\n\004text\030\001 \001" +
-      "(\0132\034.google.protobuf.StringValue\0220\n\ntext" +
-      "_color\030\002 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\0227\n\021url_collection_id\030\003 \001(\0132\034.google.p" +
-      "rotobuf.StringValue\"\313\001\n\014ProductImage\0223\n\r" +
-      "product_image\030\001 \001(\0132\034.google.protobuf.St" +
-      "ringValue\0221\n\013description\030\002 \001(\0132\034.google." +
-      "protobuf.StringValue\022S\n\026display_call_to_" +
-      "action\030\003 \001(\01323.google.ads.googleads.v1.c" +
-      "ommon.DisplayCallToAction\"C\n\014ProductVide" +
-      "o\0223\n\rproduct_video\030\001 \001(\0132\034.google.protob" +
-      "uf.StringValue\"\361\004\n\013ImageAdInfo\0220\n\013pixel_" +
-      "width\030\004 \001(\0132\033.google.protobuf.Int64Value" +
-      "\0221\n\014pixel_height\030\005 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022/\n\timage_url\030\006 \001(\0132\034.google." +
-      "protobuf.StringValue\0228\n\023preview_pixel_wi" +
-      "dth\030\007 \001(\0132\033.google.protobuf.Int64Value\0229" +
-      "\n\024preview_pixel_height\030\010 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\0227\n\021preview_image_url\030\t" +
-      " \001(\0132\034.google.protobuf.StringValue\022G\n\tmi" +
-      "me_type\030\n \001(\01624.google.ads.googleads.v1." +
-      "enums.MimeTypeEnum.MimeType\022*\n\004name\030\013 \001(" +
-      "\0132\034.google.protobuf.StringValue\0222\n\nmedia" +
-      "_file\030\001 \001(\0132\034.google.protobuf.StringValu" +
-      "eH\000\022+\n\004data\030\002 \001(\0132\033.google.protobuf.Byte" +
-      "sValueH\000\022?\n\030ad_id_to_copy_image_from\030\003 \001" +
-      "(\0132\033.google.protobuf.Int64ValueH\000B\007\n\005ima" +
-      "ge\"\033\n\031VideoBumperInStreamAdInfo\"!\n\037Video" +
-      "NonSkippableInStreamAdInfo\"\217\001\n\033VideoTrue" +
-      "ViewInStreamAdInfo\0229\n\023action_button_labe" +
-      "l\030\001 \001(\0132\034.google.protobuf.StringValue\0225\n" +
-      "\017action_headline\030\002 \001(\0132\034.google.protobuf" +
-      ".StringValue\"y\n\024VideoOutstreamAdInfo\022.\n\010" +
-      "headline\030\001 \001(\0132\034.google.protobuf.StringV" +
-      "alue\0221\n\013description\030\002 \001(\0132\034.google.proto" +
-      "buf.StringValue\"\216\003\n\013VideoAdInfo\0220\n\nmedia" +
-      "_file\030\001 \001(\0132\034.google.protobuf.StringValu" +
-      "e\022P\n\tin_stream\030\002 \001(\0132;.google.ads.google" +
-      "ads.v1.common.VideoTrueViewInStreamAdInf" +
-      "oH\000\022K\n\006bumper\030\003 \001(\01329.google.ads.googlea" +
-      "ds.v1.common.VideoBumperInStreamAdInfoH\000" +
-      "\022J\n\nout_stream\030\004 \001(\01324.google.ads.google" +
-      "ads.v1.common.VideoOutstreamAdInfoH\000\022X\n\r" +
-      "non_skippable\030\005 \001(\0132?.google.ads.googlea" +
-      "ds.v1.common.VideoNonSkippableInStreamAd" +
-      "InfoH\000B\010\n\006format\"\365\001\n\026ResponsiveSearchAdI" +
-      "nfo\022>\n\theadlines\030\001 \003(\0132+.google.ads.goog" +
-      "leads.v1.common.AdTextAsset\022A\n\014descripti" +
-      "ons\030\002 \003(\0132+.google.ads.googleads.v1.comm" +
-      "on.AdTextAsset\022+\n\005path1\030\003 \001(\0132\034.google.p" +
-      "rotobuf.StringValue\022+\n\005path2\030\004 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\"\375\006\n\035LegacyRespo" +
-      "nsiveDisplayAdInfo\0224\n\016short_headline\030\001 \001" +
-      "(\0132\034.google.protobuf.StringValue\0223\n\rlong" +
-      "_headline\030\002 \001(\0132\034.google.protobuf.String" +
-      "Value\0221\n\013description\030\003 \001(\0132\034.google.prot" +
-      "obuf.StringValue\0223\n\rbusiness_name\030\004 \001(\0132" +
-      "\034.google.protobuf.StringValue\0228\n\024allow_f" +
-      "lexible_color\030\005 \001(\0132\032.google.protobuf.Bo" +
-      "olValue\0222\n\014accent_color\030\006 \001(\0132\034.google.p" +
-      "rotobuf.StringValue\0220\n\nmain_color\030\007 \001(\0132" +
-      "\034.google.protobuf.StringValue\0229\n\023call_to" +
-      "_action_text\030\010 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\0220\n\nlogo_image\030\t \001(\0132\034.google.pr" +
-      "otobuf.StringValue\0227\n\021square_logo_image\030" +
-      "\n \001(\0132\034.google.protobuf.StringValue\0225\n\017m" +
-      "arketing_image\030\013 \001(\0132\034.google.protobuf.S" +
-      "tringValue\022<\n\026square_marketing_image\030\014 \001" +
-      "(\0132\034.google.protobuf.StringValue\022h\n\016form" +
-      "at_setting\030\r \001(\0162P.google.ads.googleads." +
-      "v1.enums.DisplayAdFormatSettingEnum.Disp" +
-      "layAdFormatSetting\0222\n\014price_prefix\030\016 \001(\013" +
-      "2\034.google.protobuf.StringValue\0220\n\npromo_" +
-      "text\030\017 \001(\0132\034.google.protobuf.StringValue" +
+      "ad_format_setting.proto\032Cgoogle/ads/goog" +
+      "leads/v1/enums/legacy_app_install_ad_app" +
+      "_store.proto\032-google/ads/googleads/v1/en" +
+      "ums/mime_type.proto\032\036google/protobuf/wra" +
+      "ppers.proto\032\034google/api/annotations.prot" +
+      "o\"\244\001\n\nTextAdInfo\022.\n\010headline\030\001 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\0222\n\014description1" +
+      "\030\002 \001(\0132\034.google.protobuf.StringValue\0222\n\014" +
+      "description2\030\003 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\"\367\002\n\022ExpandedTextAdInfo\0224\n\016headl" +
+      "ine_part1\030\001 \001(\0132\034.google.protobuf.String" +
+      "Value\0224\n\016headline_part2\030\002 \001(\0132\034.google.p" +
+      "rotobuf.StringValue\0224\n\016headline_part3\030\006 " +
+      "\001(\0132\034.google.protobuf.StringValue\0221\n\013des" +
+      "cription\030\003 \001(\0132\034.google.protobuf.StringV" +
+      "alue\0222\n\014description2\030\007 \001(\0132\034.google.prot" +
+      "obuf.StringValue\022+\n\005path1\030\004 \001(\0132\034.google" +
+      ".protobuf.StringValue\022+\n\005path2\030\005 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\"\347\005\n\016CallOnlyA" +
+      "dInfo\0222\n\014country_code\030\001 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\0222\n\014phone_number\030\002 \001(\0132" +
+      "\034.google.protobuf.StringValue\0223\n\rbusines" +
+      "s_name\030\003 \001(\0132\034.google.protobuf.StringVal" +
+      "ue\022/\n\theadline1\030\013 \001(\0132\034.google.protobuf." +
+      "StringValue\022/\n\theadline2\030\014 \001(\0132\034.google." +
+      "protobuf.StringValue\0222\n\014description1\030\004 \001" +
+      "(\0132\034.google.protobuf.StringValue\0222\n\014desc" +
+      "ription2\030\005 \001(\0132\034.google.protobuf.StringV" +
+      "alue\0220\n\014call_tracked\030\006 \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022;\n\027disable_call_conversio" +
+      "n\030\007 \001(\0132\032.google.protobuf.BoolValue\022C\n\035p" +
+      "hone_number_verification_url\030\010 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\0227\n\021conversion_a" +
+      "ction\030\t \001(\0132\034.google.protobuf.StringValu" +
+      "e\022\200\001\n\032conversion_reporting_state\030\n \001(\0162\\" +
+      ".google.ads.googleads.v1.enums.CallConve" +
+      "rsionReportingStateEnum.CallConversionRe" +
+      "portingState\"P\n\033ExpandedDynamicSearchAdI" +
+      "nfo\0221\n\013description\030\001 \001(\0132\034.google.protob" +
+      "uf.StringValue\"\r\n\013HotelAdInfo\"\025\n\023Shoppin" +
+      "gSmartAdInfo\"\027\n\025ShoppingProductAdInfo\"\251\004" +
+      "\n\013GmailAdInfo\022;\n\006teaser\030\001 \001(\0132+.google.a" +
+      "ds.googleads.v1.common.GmailTeaser\0222\n\014he" +
+      "ader_image\030\002 \001(\0132\034.google.protobuf.Strin" +
+      "gValue\0225\n\017marketing_image\030\003 \001(\0132\034.google" +
+      ".protobuf.StringValue\022>\n\030marketing_image" +
+      "_headline\030\004 \001(\0132\034.google.protobuf.String" +
+      "Value\022A\n\033marketing_image_description\030\005 \001" +
+      "(\0132\034.google.protobuf.StringValue\022c\n&mark" +
+      "eting_image_display_call_to_action\030\006 \001(\013" +
+      "23.google.ads.googleads.v1.common.Displa" +
+      "yCallToAction\022D\n\016product_images\030\007 \003(\0132,." +
+      "google.ads.googleads.v1.common.ProductIm" +
+      "age\022D\n\016product_videos\030\010 \003(\0132,.google.ads" +
+      ".googleads.v1.common.ProductVideo\"\327\001\n\013Gm" +
+      "ailTeaser\022.\n\010headline\030\001 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\0221\n\013description\030\002 \001(\0132\034" +
+      ".google.protobuf.StringValue\0223\n\rbusiness" +
+      "_name\030\003 \001(\0132\034.google.protobuf.StringValu" +
+      "e\0220\n\nlogo_image\030\004 \001(\0132\034.google.protobuf." +
+      "StringValue\"\254\001\n\023DisplayCallToAction\022*\n\004t" +
+      "ext\030\001 \001(\0132\034.google.protobuf.StringValue\022" +
+      "0\n\ntext_color\030\002 \001(\0132\034.google.protobuf.St" +
+      "ringValue\0227\n\021url_collection_id\030\003 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\"\313\001\n\014ProductIm" +
+      "age\0223\n\rproduct_image\030\001 \001(\0132\034.google.prot" +
+      "obuf.StringValue\0221\n\013description\030\002 \001(\0132\034." +
+      "google.protobuf.StringValue\022S\n\026display_c" +
+      "all_to_action\030\003 \001(\01323.google.ads.googlea" +
+      "ds.v1.common.DisplayCallToAction\"C\n\014Prod" +
+      "uctVideo\0223\n\rproduct_video\030\001 \001(\0132\034.google" +
+      ".protobuf.StringValue\"\361\004\n\013ImageAdInfo\0220\n" +
+      "\013pixel_width\030\004 \001(\0132\033.google.protobuf.Int" +
+      "64Value\0221\n\014pixel_height\030\005 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022/\n\timage_url\030\006 \001(\0132\034." +
+      "google.protobuf.StringValue\0228\n\023preview_p" +
+      "ixel_width\030\007 \001(\0132\033.google.protobuf.Int64" +
+      "Value\0229\n\024preview_pixel_height\030\010 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0227\n\021preview_imag" +
+      "e_url\030\t \001(\0132\034.google.protobuf.StringValu" +
+      "e\022G\n\tmime_type\030\n \001(\01624.google.ads.google" +
+      "ads.v1.enums.MimeTypeEnum.MimeType\022*\n\004na" +
+      "me\030\013 \001(\0132\034.google.protobuf.StringValue\0222" +
+      "\n\nmedia_file\030\001 \001(\0132\034.google.protobuf.Str" +
+      "ingValueH\000\022+\n\004data\030\002 \001(\0132\033.google.protob" +
+      "uf.BytesValueH\000\022?\n\030ad_id_to_copy_image_f" +
+      "rom\030\003 \001(\0132\033.google.protobuf.Int64ValueH\000" +
+      "B\007\n\005image\"\033\n\031VideoBumperInStreamAdInfo\"!" +
+      "\n\037VideoNonSkippableInStreamAdInfo\"\217\001\n\033Vi" +
+      "deoTrueViewInStreamAdInfo\0229\n\023action_butt" +
+      "on_label\030\001 \001(\0132\034.google.protobuf.StringV" +
+      "alue\0225\n\017action_headline\030\002 \001(\0132\034.google.p" +
+      "rotobuf.StringValue\"y\n\024VideoOutstreamAdI" +
+      "nfo\022.\n\010headline\030\001 \001(\0132\034.google.protobuf." +
+      "StringValue\0221\n\013description\030\002 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\"\216\003\n\013VideoAdInfo\0220" +
+      "\n\nmedia_file\030\001 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022P\n\tin_stream\030\002 \001(\0132;.google.ads" +
+      ".googleads.v1.common.VideoTrueViewInStre" +
+      "amAdInfoH\000\022K\n\006bumper\030\003 \001(\01329.google.ads." +
+      "googleads.v1.common.VideoBumperInStreamA" +
+      "dInfoH\000\022J\n\nout_stream\030\004 \001(\01324.google.ads" +
+      ".googleads.v1.common.VideoOutstreamAdInf" +
+      "oH\000\022X\n\rnon_skippable\030\005 \001(\0132?.google.ads." +
+      "googleads.v1.common.VideoNonSkippableInS" +
+      "treamAdInfoH\000B\010\n\006format\"\365\001\n\026ResponsiveSe" +
+      "archAdInfo\022>\n\theadlines\030\001 \003(\0132+.google.a" +
+      "ds.googleads.v1.common.AdTextAsset\022A\n\014de" +
+      "scriptions\030\002 \003(\0132+.google.ads.googleads." +
+      "v1.common.AdTextAsset\022+\n\005path1\030\003 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\022+\n\005path2\030\004 \001(" +
+      "\0132\034.google.protobuf.StringValue\"\375\006\n\035Lega" +
+      "cyResponsiveDisplayAdInfo\0224\n\016short_headl" +
+      "ine\030\001 \001(\0132\034.google.protobuf.StringValue\022" +
+      "3\n\rlong_headline\030\002 \001(\0132\034.google.protobuf" +
+      ".StringValue\0221\n\013description\030\003 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\0223\n\rbusiness_name" +
+      "\030\004 \001(\0132\034.google.protobuf.StringValue\0228\n\024" +
+      "allow_flexible_color\030\005 \001(\0132\032.google.prot" +
+      "obuf.BoolValue\0222\n\014accent_color\030\006 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\0220\n\nmain_color" +
+      "\030\007 \001(\0132\034.google.protobuf.StringValue\0229\n\023" +
+      "call_to_action_text\030\010 \001(\0132\034.google.proto" +
+      "buf.StringValue\0220\n\nlogo_image\030\t \001(\0132\034.go" +
+      "ogle.protobuf.StringValue\0227\n\021square_logo" +
+      "_image\030\n \001(\0132\034.google.protobuf.StringVal" +
+      "ue\0225\n\017marketing_image\030\013 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022<\n\026square_marketing_im" +
+      "age\030\014 \001(\0132\034.google.protobuf.StringValue\022" +
+      "h\n\016format_setting\030\r \001(\0162P.google.ads.goo" +
+      "gleads.v1.enums.DisplayAdFormatSettingEn" +
+      "um.DisplayAdFormatSetting\0222\n\014price_prefi" +
+      "x\030\016 \001(\0132\034.google.protobuf.StringValue\0220\n" +
+      "\npromo_text\030\017 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\"\253\003\n\tAppAdInfo\022F\n\021mandatory_ad_te" +
+      "xt\030\001 \001(\0132+.google.ads.googleads.v1.commo" +
+      "n.AdTextAsset\022>\n\theadlines\030\002 \003(\0132+.googl" +
+      "e.ads.googleads.v1.common.AdTextAsset\022A\n" +
+      "\014descriptions\030\003 \003(\0132+.google.ads.googlea" +
+      "ds.v1.common.AdTextAsset\022<\n\006images\030\004 \003(\013" +
+      "2,.google.ads.googleads.v1.common.AdImag" +
+      "eAsset\022D\n\016youtube_videos\030\005 \003(\0132,.google." +
+      "ads.googleads.v1.common.AdVideoAsset\022O\n\023" +
+      "html5_media_bundles\030\006 \003(\01322.google.ads.g" +
+      "oogleads.v1.common.AdMediaBundleAsset\"\313\002" +
+      "\n\026LegacyAppInstallAdInfo\022,\n\006app_id\030\001 \001(\013" +
+      "2\034.google.protobuf.StringValue\022k\n\tapp_st" +
+      "ore\030\002 \001(\0162X.google.ads.googleads.v1.enum" +
+      "s.LegacyAppInstallAdAppStoreEnum.LegacyA" +
+      "ppInstallAdAppStore\022.\n\010headline\030\003 \001(\0132\034." +
+      "google.protobuf.StringValue\0222\n\014descripti" +
+      "on1\030\004 \001(\0132\034.google.protobuf.StringValue\022" +
+      "2\n\014description2\030\005 \001(\0132\034.google.protobuf." +
+      "StringValue\"\252\010\n\027ResponsiveDisplayAdInfo\022" +
+      "F\n\020marketing_images\030\001 \003(\0132,.google.ads.g" +
+      "oogleads.v1.common.AdImageAsset\022M\n\027squar" +
+      "e_marketing_images\030\002 \003(\0132,.google.ads.go" +
+      "ogleads.v1.common.AdImageAsset\022A\n\013logo_i" +
+      "mages\030\003 \003(\0132,.google.ads.googleads.v1.co" +
+      "mmon.AdImageAsset\022H\n\022square_logo_images\030" +
+      "\004 \003(\0132,.google.ads.googleads.v1.common.A" +
+      "dImageAsset\022>\n\theadlines\030\005 \003(\0132+.google." +
+      "ads.googleads.v1.common.AdTextAsset\022B\n\rl" +
+      "ong_headline\030\006 \001(\0132+.google.ads.googlead" +
+      "s.v1.common.AdTextAsset\022A\n\014descriptions\030" +
+      "\007 \003(\0132+.google.ads.googleads.v1.common.A" +
+      "dTextAsset\022D\n\016youtube_videos\030\010 \003(\0132,.goo" +
+      "gle.ads.googleads.v1.common.AdVideoAsset" +
+      "\0223\n\rbusiness_name\030\t \001(\0132\034.google.protobu" +
+      "f.StringValue\0220\n\nmain_color\030\n \001(\0132\034.goog" +
+      "le.protobuf.StringValue\0222\n\014accent_color\030" +
+      "\013 \001(\0132\034.google.protobuf.StringValue\0228\n\024a" +
+      "llow_flexible_color\030\014 \001(\0132\032.google.proto" +
+      "buf.BoolValue\0229\n\023call_to_action_text\030\r \001" +
+      "(\0132\034.google.protobuf.StringValue\0222\n\014pric" +
+      "e_prefix\030\016 \001(\0132\034.google.protobuf.StringV" +
+      "alue\0220\n\npromo_text\030\017 \001(\0132\034.google.protob" +
+      "uf.StringValue\022h\n\016format_setting\030\020 \001(\0162P" +
+      ".google.ads.googleads.v1.enums.DisplayAd" +
+      "FormatSettingEnum.DisplayAdFormatSetting" +
       "B\353\001\n\"com.google.ads.googleads.v1.commonB" +
       "\020AdTypeInfosProtoP\001ZDgoogle.golang.org/g" +
       "enproto/googleapis/ads/googleads/v1/comm" +
@@ -281,6 +346,7 @@ public final class AdTypeInfosProto {
           com.google.ads.googleads.v1.common.AdAssetProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.CallConversionReportingStateProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.DisplayAdFormatSettingProto.getDescriptor(),
+          com.google.ads.googleads.v1.enums.LegacyAppInstallAdAppStoreProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.MimeTypeProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -302,7 +368,7 @@ public final class AdTypeInfosProto {
     internal_static_google_ads_googleads_v1_common_CallOnlyAdInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_CallOnlyAdInfo_descriptor,
-        new java.lang.String[] { "CountryCode", "PhoneNumber", "BusinessName", "Description1", "Description2", "CallTracked", "DisableCallConversion", "PhoneNumberVerificationUrl", "ConversionAction", "ConversionReportingState", });
+        new java.lang.String[] { "CountryCode", "PhoneNumber", "BusinessName", "Headline1", "Headline2", "Description1", "Description2", "CallTracked", "DisableCallConversion", "PhoneNumberVerificationUrl", "ConversionAction", "ConversionReportingState", });
     internal_static_google_ads_googleads_v1_common_ExpandedDynamicSearchAdInfo_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_google_ads_googleads_v1_common_ExpandedDynamicSearchAdInfo_fieldAccessorTable = new
@@ -405,9 +471,28 @@ public final class AdTypeInfosProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_LegacyResponsiveDisplayAdInfo_descriptor,
         new java.lang.String[] { "ShortHeadline", "LongHeadline", "Description", "BusinessName", "AllowFlexibleColor", "AccentColor", "MainColor", "CallToActionText", "LogoImage", "SquareLogoImage", "MarketingImage", "SquareMarketingImage", "FormatSetting", "PricePrefix", "PromoText", });
+    internal_static_google_ads_googleads_v1_common_AppAdInfo_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_google_ads_googleads_v1_common_AppAdInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v1_common_AppAdInfo_descriptor,
+        new java.lang.String[] { "MandatoryAdText", "Headlines", "Descriptions", "Images", "YoutubeVideos", "Html5MediaBundles", });
+    internal_static_google_ads_googleads_v1_common_LegacyAppInstallAdInfo_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_google_ads_googleads_v1_common_LegacyAppInstallAdInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v1_common_LegacyAppInstallAdInfo_descriptor,
+        new java.lang.String[] { "AppId", "AppStore", "Headline", "Description1", "Description2", });
+    internal_static_google_ads_googleads_v1_common_ResponsiveDisplayAdInfo_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_google_ads_googleads_v1_common_ResponsiveDisplayAdInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v1_common_ResponsiveDisplayAdInfo_descriptor,
+        new java.lang.String[] { "MarketingImages", "SquareMarketingImages", "LogoImages", "SquareLogoImages", "Headlines", "LongHeadline", "Descriptions", "YoutubeVideos", "BusinessName", "MainColor", "AccentColor", "AllowFlexibleColor", "CallToActionText", "PricePrefix", "PromoText", "FormatSetting", });
     com.google.ads.googleads.v1.common.AdAssetProto.getDescriptor();
     com.google.ads.googleads.v1.enums.CallConversionReportingStateProto.getDescriptor();
     com.google.ads.googleads.v1.enums.DisplayAdFormatSettingProto.getDescriptor();
+    com.google.ads.googleads.v1.enums.LegacyAppInstallAdAppStoreProto.getDescriptor();
     com.google.ads.googleads.v1.enums.MimeTypeProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

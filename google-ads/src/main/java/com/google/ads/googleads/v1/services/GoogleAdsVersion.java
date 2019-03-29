@@ -111,6 +111,9 @@ public interface GoogleAdsVersion {
   @ServiceClientDescriptor(settingsClass = KeywordPlanNegativeKeywordServiceSettings.class)
   KeywordPlanNegativeKeywordServiceClient createKeywordPlanNegativeKeywordServiceClient();
 
+  @ServiceClientDescriptor(settingsClass = ConversionAdjustmentUploadServiceSettings.class)
+  ConversionAdjustmentUploadServiceClient createConversionAdjustmentUploadServiceClient();
+
   @ServiceClientDescriptor(settingsClass = SearchTermViewServiceSettings.class)
   SearchTermViewServiceClient createSearchTermViewServiceClient();
 
@@ -239,6 +242,9 @@ public interface GoogleAdsVersion {
 
   @ServiceClientDescriptor(settingsClass = CampaignCriterionServiceSettings.class)
   CampaignCriterionServiceClient createCampaignCriterionServiceClient();
+
+  @ServiceClientDescriptor(settingsClass = AssetServiceSettings.class)
+  AssetServiceClient createAssetServiceClient();
 
   @ServiceClientDescriptor(settingsClass = FeedMappingServiceSettings.class)
   FeedMappingServiceClient createFeedMappingServiceClient();

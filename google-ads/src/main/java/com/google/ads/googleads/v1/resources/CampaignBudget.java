@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     status_ = 0;
     deliveryMethod_ = 0;
     period_ = 0;
+    type_ = 0;
   }
 
   @java.lang.Override
@@ -228,6 +229,12 @@ private static final long serialVersionUID = 0L;
               recommendedBudgetEstimatedChangeWeeklyViews_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 144: {
+            int rawValue = input.readEnum();
+
+            type_ = rawValue;
             break;
           }
           default: {
@@ -891,6 +898,31 @@ private static final long serialVersionUID = 0L;
     return getRecommendedBudgetEstimatedChangeWeeklyViews();
   }
 
+  public static final int TYPE_FIELD_NUMBER = 18;
+  private int type_;
+  /**
+   * <pre>
+   * The type of the campaign budget.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+   */
+  public int getTypeValue() {
+    return type_;
+  }
+  /**
+   * <pre>
+   * The type of the campaign budget.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+   */
+  public com.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType getType() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType result = com.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType.valueOf(type_);
+    return result == null ? com.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -952,6 +984,9 @@ private static final long serialVersionUID = 0L;
     }
     if (recommendedBudgetEstimatedChangeWeeklyViews_ != null) {
       output.writeMessage(17, getRecommendedBudgetEstimatedChangeWeeklyViews());
+    }
+    if (type_ != com.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType.UNSPECIFIED.getNumber()) {
+      output.writeEnum(18, type_);
     }
     unknownFields.writeTo(output);
   }
@@ -1024,6 +1059,10 @@ private static final long serialVersionUID = 0L;
     if (recommendedBudgetEstimatedChangeWeeklyViews_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, getRecommendedBudgetEstimatedChangeWeeklyViews());
+    }
+    if (type_ != com.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(18, type_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1106,6 +1145,7 @@ private static final long serialVersionUID = 0L;
       result = result && getRecommendedBudgetEstimatedChangeWeeklyViews()
           .equals(other.getRecommendedBudgetEstimatedChangeWeeklyViews());
     }
+    result = result && type_ == other.type_;
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -1173,6 +1213,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RECOMMENDED_BUDGET_ESTIMATED_CHANGE_WEEKLY_VIEWS_FIELD_NUMBER;
       hash = (53 * hash) + getRecommendedBudgetEstimatedChangeWeeklyViews().hashCode();
     }
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + type_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1390,6 +1432,8 @@ private static final long serialVersionUID = 0L;
         recommendedBudgetEstimatedChangeWeeklyViews_ = null;
         recommendedBudgetEstimatedChangeWeeklyViewsBuilder_ = null;
       }
+      type_ = 0;
+
       return this;
     }
 
@@ -1480,6 +1524,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.recommendedBudgetEstimatedChangeWeeklyViews_ = recommendedBudgetEstimatedChangeWeeklyViewsBuilder_.build();
       }
+      result.type_ = type_;
       onBuilt();
       return result;
     }
@@ -1576,6 +1621,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasRecommendedBudgetEstimatedChangeWeeklyViews()) {
         mergeRecommendedBudgetEstimatedChangeWeeklyViews(other.getRecommendedBudgetEstimatedChangeWeeklyViews());
+      }
+      if (other.type_ != 0) {
+        setTypeValue(other.getTypeValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -4068,6 +4116,71 @@ private static final long serialVersionUID = 0L;
         recommendedBudgetEstimatedChangeWeeklyViews_ = null;
       }
       return recommendedBudgetEstimatedChangeWeeklyViewsBuilder_;
+    }
+
+    private int type_ = 0;
+    /**
+     * <pre>
+     * The type of the campaign budget.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+     */
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * The type of the campaign budget.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+     */
+    public Builder setTypeValue(int value) {
+      type_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of the campaign budget.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+     */
+    public com.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType getType() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType result = com.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType.valueOf(type_);
+      return result == null ? com.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The type of the campaign budget.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+     */
+    public Builder setType(com.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      type_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of the campaign budget.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+     */
+    public Builder clearType() {
+      
+      type_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

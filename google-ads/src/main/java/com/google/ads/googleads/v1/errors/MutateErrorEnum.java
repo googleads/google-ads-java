@@ -143,6 +143,14 @@ private static final long serialVersionUID = 0L;
      * <code>RESOURCE_NOT_IN_GOOGLE_ADS = 10;</code>
      */
     RESOURCE_NOT_IN_GOOGLE_ADS(10),
+    /**
+     * <pre>
+     * The resource being created already exists.
+     * </pre>
+     *
+     * <code>RESOURCE_ALREADY_EXISTS = 11;</code>
+     */
+    RESOURCE_ALREADY_EXISTS(11),
     UNRECOGNIZED(-1),
     ;
 
@@ -203,6 +211,14 @@ private static final long serialVersionUID = 0L;
      * <code>RESOURCE_NOT_IN_GOOGLE_ADS = 10;</code>
      */
     public static final int RESOURCE_NOT_IN_GOOGLE_ADS_VALUE = 10;
+    /**
+     * <pre>
+     * The resource being created already exists.
+     * </pre>
+     *
+     * <code>RESOURCE_ALREADY_EXISTS = 11;</code>
+     */
+    public static final int RESOURCE_ALREADY_EXISTS_VALUE = 11;
 
 
     public final int getNumber() {
@@ -230,6 +246,7 @@ private static final long serialVersionUID = 0L;
         case 8: return INCONSISTENT_FIELD_VALUES;
         case 9: return MUTATE_NOT_ALLOWED;
         case 10: return RESOURCE_NOT_IN_GOOGLE_ADS;
+        case 11: return RESOURCE_ALREADY_EXISTS;
         default: return null;
       }
     }

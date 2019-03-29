@@ -210,6 +210,14 @@ private static final long serialVersionUID = 0L;
      * <code>RECOMMENDATION_ALREADY_DISMISSED = 14;</code>
      */
     RECOMMENDATION_ALREADY_DISMISSED(14),
+    /**
+     * <pre>
+     * The recommendation apply request was malformed and invalid.
+     * </pre>
+     *
+     * <code>INVALID_APPLY_REQUEST = 15;</code>
+     */
+    INVALID_APPLY_REQUEST(15),
     UNRECOGNIZED(-1),
     ;
 
@@ -337,6 +345,14 @@ private static final long serialVersionUID = 0L;
      * <code>RECOMMENDATION_ALREADY_DISMISSED = 14;</code>
      */
     public static final int RECOMMENDATION_ALREADY_DISMISSED_VALUE = 14;
+    /**
+     * <pre>
+     * The recommendation apply request was malformed and invalid.
+     * </pre>
+     *
+     * <code>INVALID_APPLY_REQUEST = 15;</code>
+     */
+    public static final int INVALID_APPLY_REQUEST_VALUE = 15;
 
 
     public final int getNumber() {
@@ -372,6 +388,7 @@ private static final long serialVersionUID = 0L;
         case 12: return DIFFERENT_TYPES_NOT_SUPPORTED;
         case 13: return DUPLICATE_RESOURCE_NAME;
         case 14: return RECOMMENDATION_ALREADY_DISMISSED;
+        case 15: return INVALID_APPLY_REQUEST;
         default: return null;
       }
     }

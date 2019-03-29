@@ -15,6 +15,8 @@
  */
 package com.google.ads.googleads.v1.services.stub;
 
+import com.google.ads.googleads.v1.services.UploadCallConversionsRequest;
+import com.google.ads.googleads.v1.services.UploadCallConversionsResponse;
 import com.google.ads.googleads.v1.services.UploadClickConversionsRequest;
 import com.google.ads.googleads.v1.services.UploadClickConversionsResponse;
 import com.google.api.core.ApiFunction;
@@ -77,11 +79,19 @@ public class ConversionUploadServiceStubSettings
 
   private final UnaryCallSettings<UploadClickConversionsRequest, UploadClickConversionsResponse>
       uploadClickConversionsSettings;
+  private final UnaryCallSettings<UploadCallConversionsRequest, UploadCallConversionsResponse>
+      uploadCallConversionsSettings;
 
   /** Returns the object with the settings used for calls to uploadClickConversions. */
   public UnaryCallSettings<UploadClickConversionsRequest, UploadClickConversionsResponse>
       uploadClickConversionsSettings() {
     return uploadClickConversionsSettings;
+  }
+
+  /** Returns the object with the settings used for calls to uploadCallConversions. */
+  public UnaryCallSettings<UploadCallConversionsRequest, UploadCallConversionsResponse>
+      uploadCallConversionsSettings() {
+    return uploadCallConversionsSettings;
   }
 
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
@@ -153,6 +163,7 @@ public class ConversionUploadServiceStubSettings
     super(settingsBuilder);
 
     uploadClickConversionsSettings = settingsBuilder.uploadClickConversionsSettings().build();
+    uploadCallConversionsSettings = settingsBuilder.uploadCallConversionsSettings().build();
   }
 
   /** Builder for ConversionUploadServiceStubSettings. */
@@ -163,6 +174,9 @@ public class ConversionUploadServiceStubSettings
     private final UnaryCallSettings.Builder<
             UploadClickConversionsRequest, UploadClickConversionsResponse>
         uploadClickConversionsSettings;
+    private final UnaryCallSettings.Builder<
+            UploadCallConversionsRequest, UploadCallConversionsResponse>
+        uploadCallConversionsSettings;
 
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
@@ -207,8 +221,11 @@ public class ConversionUploadServiceStubSettings
 
       uploadClickConversionsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
+      uploadCallConversionsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(uploadClickConversionsSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              uploadClickConversionsSettings, uploadCallConversionsSettings);
 
       initDefaults(this);
     }
@@ -229,6 +246,11 @@ public class ConversionUploadServiceStubSettings
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
+      builder
+          .uploadCallConversionsSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
+
       return builder;
     }
 
@@ -236,9 +258,11 @@ public class ConversionUploadServiceStubSettings
       super(settings);
 
       uploadClickConversionsSettings = settings.uploadClickConversionsSettings.toBuilder();
+      uploadCallConversionsSettings = settings.uploadCallConversionsSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(uploadClickConversionsSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              uploadClickConversionsSettings, uploadCallConversionsSettings);
     }
 
     // NEXT_MAJOR_VER: remove 'throws Exception'
@@ -261,6 +285,12 @@ public class ConversionUploadServiceStubSettings
     public UnaryCallSettings.Builder<UploadClickConversionsRequest, UploadClickConversionsResponse>
         uploadClickConversionsSettings() {
       return uploadClickConversionsSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to uploadCallConversions. */
+    public UnaryCallSettings.Builder<UploadCallConversionsRequest, UploadCallConversionsResponse>
+        uploadCallConversionsSettings() {
+      return uploadCallConversionsSettings;
     }
 
     @Override

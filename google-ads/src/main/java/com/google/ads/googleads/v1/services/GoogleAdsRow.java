@@ -919,6 +919,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 842: {
+            com.google.ads.googleads.v1.resources.Asset.Builder subBuilder = null;
+            if (asset_ != null) {
+              subBuilder = asset_.toBuilder();
+            }
+            asset_ = input.readMessage(com.google.ads.googleads.v1.resources.Asset.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(asset_);
+              asset_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 850: {
             com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView.Builder subBuilder = null;
             if (dynamicSearchAdsSearchTermView_ != null) {
@@ -1665,6 +1678,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v1.resources.DomainCategoryOrBuilder getDomainCategoryOrBuilder() {
     return getDomainCategory();
+  }
+
+  public static final int ASSET_FIELD_NUMBER = 105;
+  private com.google.ads.googleads.v1.resources.Asset asset_;
+  /**
+   * <pre>
+   * The asset referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+   */
+  public boolean hasAsset() {
+    return asset_ != null;
+  }
+  /**
+   * <pre>
+   * The asset referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+   */
+  public com.google.ads.googleads.v1.resources.Asset getAsset() {
+    return asset_ == null ? com.google.ads.googleads.v1.resources.Asset.getDefaultInstance() : asset_;
+  }
+  /**
+   * <pre>
+   * The asset referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+   */
+  public com.google.ads.googleads.v1.resources.AssetOrBuilder getAssetOrBuilder() {
+    return getAsset();
   }
 
   public static final int BIDDING_STRATEGY_FIELD_NUMBER = 18;
@@ -4159,6 +4205,9 @@ private static final long serialVersionUID = 0L;
     if (customInterest_ != null) {
       output.writeMessage(104, getCustomInterest());
     }
+    if (asset_ != null) {
+      output.writeMessage(105, getAsset());
+    }
     if (dynamicSearchAdsSearchTermView_ != null) {
       output.writeMessage(106, getDynamicSearchAdsSearchTermView());
     }
@@ -4487,6 +4536,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(104, getCustomInterest());
     }
+    if (asset_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(105, getAsset());
+    }
     if (dynamicSearchAdsSearchTermView_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(106, getDynamicSearchAdsSearchTermView());
@@ -4645,6 +4698,11 @@ private static final long serialVersionUID = 0L;
     if (hasDomainCategory()) {
       result = result && getDomainCategory()
           .equals(other.getDomainCategory());
+    }
+    result = result && (hasAsset() == other.hasAsset());
+    if (hasAsset()) {
+      result = result && getAsset()
+          .equals(other.getAsset());
     }
     result = result && (hasBiddingStrategy() == other.hasBiddingStrategy());
     if (hasBiddingStrategy()) {
@@ -5061,6 +5119,10 @@ private static final long serialVersionUID = 0L;
     if (hasDomainCategory()) {
       hash = (37 * hash) + DOMAIN_CATEGORY_FIELD_NUMBER;
       hash = (53 * hash) + getDomainCategory().hashCode();
+    }
+    if (hasAsset()) {
+      hash = (37 * hash) + ASSET_FIELD_NUMBER;
+      hash = (53 * hash) + getAsset().hashCode();
     }
     if (hasBiddingStrategy()) {
       hash = (37 * hash) + BIDDING_STRATEGY_FIELD_NUMBER;
@@ -5564,6 +5626,12 @@ private static final long serialVersionUID = 0L;
       } else {
         domainCategory_ = null;
         domainCategoryBuilder_ = null;
+      }
+      if (assetBuilder_ == null) {
+        asset_ = null;
+      } else {
+        asset_ = null;
+        assetBuilder_ = null;
       }
       if (biddingStrategyBuilder_ == null) {
         biddingStrategy_ = null;
@@ -6080,6 +6148,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.domainCategory_ = domainCategoryBuilder_.build();
       }
+      if (assetBuilder_ == null) {
+        result.asset_ = asset_;
+      } else {
+        result.asset_ = assetBuilder_.build();
+      }
       if (biddingStrategyBuilder_ == null) {
         result.biddingStrategy_ = biddingStrategy_;
       } else {
@@ -6517,6 +6590,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDomainCategory()) {
         mergeDomainCategory(other.getDomainCategory());
+      }
+      if (other.hasAsset()) {
+        mergeAsset(other.getAsset());
       }
       if (other.hasBiddingStrategy()) {
         mergeBiddingStrategy(other.getBiddingStrategy());
@@ -9047,6 +9123,159 @@ private static final long serialVersionUID = 0L;
         domainCategory_ = null;
       }
       return domainCategoryBuilder_;
+    }
+
+    private com.google.ads.googleads.v1.resources.Asset asset_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.Asset, com.google.ads.googleads.v1.resources.Asset.Builder, com.google.ads.googleads.v1.resources.AssetOrBuilder> assetBuilder_;
+    /**
+     * <pre>
+     * The asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+     */
+    public boolean hasAsset() {
+      return assetBuilder_ != null || asset_ != null;
+    }
+    /**
+     * <pre>
+     * The asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+     */
+    public com.google.ads.googleads.v1.resources.Asset getAsset() {
+      if (assetBuilder_ == null) {
+        return asset_ == null ? com.google.ads.googleads.v1.resources.Asset.getDefaultInstance() : asset_;
+      } else {
+        return assetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+     */
+    public Builder setAsset(com.google.ads.googleads.v1.resources.Asset value) {
+      if (assetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        asset_ = value;
+        onChanged();
+      } else {
+        assetBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+     */
+    public Builder setAsset(
+        com.google.ads.googleads.v1.resources.Asset.Builder builderForValue) {
+      if (assetBuilder_ == null) {
+        asset_ = builderForValue.build();
+        onChanged();
+      } else {
+        assetBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+     */
+    public Builder mergeAsset(com.google.ads.googleads.v1.resources.Asset value) {
+      if (assetBuilder_ == null) {
+        if (asset_ != null) {
+          asset_ =
+            com.google.ads.googleads.v1.resources.Asset.newBuilder(asset_).mergeFrom(value).buildPartial();
+        } else {
+          asset_ = value;
+        }
+        onChanged();
+      } else {
+        assetBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+     */
+    public Builder clearAsset() {
+      if (assetBuilder_ == null) {
+        asset_ = null;
+        onChanged();
+      } else {
+        asset_ = null;
+        assetBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+     */
+    public com.google.ads.googleads.v1.resources.Asset.Builder getAssetBuilder() {
+      
+      onChanged();
+      return getAssetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+     */
+    public com.google.ads.googleads.v1.resources.AssetOrBuilder getAssetOrBuilder() {
+      if (assetBuilder_ != null) {
+        return assetBuilder_.getMessageOrBuilder();
+      } else {
+        return asset_ == null ?
+            com.google.ads.googleads.v1.resources.Asset.getDefaultInstance() : asset_;
+      }
+    }
+    /**
+     * <pre>
+     * The asset referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.Asset, com.google.ads.googleads.v1.resources.Asset.Builder, com.google.ads.googleads.v1.resources.AssetOrBuilder> 
+        getAssetFieldBuilder() {
+      if (assetBuilder_ == null) {
+        assetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.resources.Asset, com.google.ads.googleads.v1.resources.Asset.Builder, com.google.ads.googleads.v1.resources.AssetOrBuilder>(
+                getAsset(),
+                getParentForChildren(),
+                isClean());
+        asset_ = null;
+      }
+      return assetBuilder_;
     }
 
     private com.google.ads.googleads.v1.resources.BiddingStrategy biddingStrategy_ = null;

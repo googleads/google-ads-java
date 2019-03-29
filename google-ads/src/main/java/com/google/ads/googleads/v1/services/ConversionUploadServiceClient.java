@@ -263,6 +263,120 @@ public class ConversionUploadServiceClient implements BackgroundResource {
     return stub.uploadClickConversionsCallable();
   }
 
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Processes the given call conversions.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ConversionUploadServiceClient conversionUploadServiceClient = ConversionUploadServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;CallConversion&gt; conversions = new ArrayList&lt;&gt;();
+   *   boolean partialFailure = false;
+   *   UploadCallConversionsResponse response = conversionUploadServiceClient.uploadCallConversions(customerId, conversions, partialFailure);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer performing the upload.
+   * @param conversions The conversions that are being uploaded.
+   * @param partialFailure If true, successful operations will be carried out and invalid operations
+   *     will return errors. If false, all operations will be carried out in one transaction if and
+   *     only if they are all valid. This should always be set to true.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final UploadCallConversionsResponse uploadCallConversions(
+      String customerId, List<CallConversion> conversions, boolean partialFailure) {
+
+    UploadCallConversionsRequest request =
+        UploadCallConversionsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllConversions(conversions)
+            .setPartialFailure(partialFailure)
+            .build();
+    return uploadCallConversions(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Processes the given call conversions.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ConversionUploadServiceClient conversionUploadServiceClient = ConversionUploadServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;CallConversion&gt; conversions = new ArrayList&lt;&gt;();
+   *   UploadCallConversionsResponse response = conversionUploadServiceClient.uploadCallConversions(customerId, conversions);
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer performing the upload.
+   * @param conversions The conversions that are being uploaded.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final UploadCallConversionsResponse uploadCallConversions(
+      String customerId, List<CallConversion> conversions) {
+
+    UploadCallConversionsRequest request =
+        UploadCallConversionsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .addAllConversions(conversions)
+            .build();
+    return uploadCallConversions(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Processes the given call conversions.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ConversionUploadServiceClient conversionUploadServiceClient = ConversionUploadServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;CallConversion&gt; conversions = new ArrayList&lt;&gt;();
+   *   UploadCallConversionsRequest request = UploadCallConversionsRequest.newBuilder()
+   *     .setCustomerId(customerId)
+   *     .addAllConversions(conversions)
+   *     .build();
+   *   UploadCallConversionsResponse response = conversionUploadServiceClient.uploadCallConversions(request);
+   * }
+   * </code></pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final UploadCallConversionsResponse uploadCallConversions(
+      UploadCallConversionsRequest request) {
+    return uploadCallConversionsCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Processes the given call conversions.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ConversionUploadServiceClient conversionUploadServiceClient = ConversionUploadServiceClient.create()) {
+   *   String customerId = "";
+   *   List&lt;CallConversion&gt; conversions = new ArrayList&lt;&gt;();
+   *   UploadCallConversionsRequest request = UploadCallConversionsRequest.newBuilder()
+   *     .setCustomerId(customerId)
+   *     .addAllConversions(conversions)
+   *     .build();
+   *   ApiFuture&lt;UploadCallConversionsResponse&gt; future = conversionUploadServiceClient.uploadCallConversionsCallable().futureCall(request);
+   *   // Do something
+   *   UploadCallConversionsResponse response = future.get();
+   * }
+   * </code></pre>
+   */
+  public final UnaryCallable<UploadCallConversionsRequest, UploadCallConversionsResponse>
+      uploadCallConversionsCallable() {
+    return stub.uploadCallConversionsCallable();
+  }
+
   @Override
   public final void close() {
     stub.close();

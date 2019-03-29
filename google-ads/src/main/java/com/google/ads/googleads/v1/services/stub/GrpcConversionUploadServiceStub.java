@@ -15,6 +15,8 @@
  */
 package com.google.ads.googleads.v1.services.stub;
 
+import com.google.ads.googleads.v1.services.UploadCallConversionsRequest;
+import com.google.ads.googleads.v1.services.UploadCallConversionsResponse;
 import com.google.ads.googleads.v1.services.UploadClickConversionsRequest;
 import com.google.ads.googleads.v1.services.UploadClickConversionsResponse;
 import com.google.api.core.BetaApi;
@@ -53,11 +55,24 @@ public class GrpcConversionUploadServiceStub extends ConversionUploadServiceStub
               .setResponseMarshaller(
                   ProtoUtils.marshaller(UploadClickConversionsResponse.getDefaultInstance()))
               .build();
+  private static final MethodDescriptor<UploadCallConversionsRequest, UploadCallConversionsResponse>
+      uploadCallConversionsMethodDescriptor =
+          MethodDescriptor.<UploadCallConversionsRequest, UploadCallConversionsResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v1.services.ConversionUploadService/UploadCallConversions")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(UploadCallConversionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(UploadCallConversionsResponse.getDefaultInstance()))
+              .build();
 
   private final BackgroundResource backgroundResources;
 
   private final UnaryCallable<UploadClickConversionsRequest, UploadClickConversionsResponse>
       uploadClickConversionsCallable;
+  private final UnaryCallable<UploadCallConversionsRequest, UploadCallConversionsResponse>
+      uploadCallConversionsCallable;
 
   private final GrpcStubCallableFactory callableFactory;
 
@@ -107,11 +122,22 @@ public class GrpcConversionUploadServiceStub extends ConversionUploadServiceStub
                 .<UploadClickConversionsRequest, UploadClickConversionsResponse>newBuilder()
                 .setMethodDescriptor(uploadClickConversionsMethodDescriptor)
                 .build();
+    GrpcCallSettings<UploadCallConversionsRequest, UploadCallConversionsResponse>
+        uploadCallConversionsTransportSettings =
+            GrpcCallSettings
+                .<UploadCallConversionsRequest, UploadCallConversionsResponse>newBuilder()
+                .setMethodDescriptor(uploadCallConversionsMethodDescriptor)
+                .build();
 
     this.uploadClickConversionsCallable =
         callableFactory.createUnaryCallable(
             uploadClickConversionsTransportSettings,
             settings.uploadClickConversionsSettings(),
+            clientContext);
+    this.uploadCallConversionsCallable =
+        callableFactory.createUnaryCallable(
+            uploadCallConversionsTransportSettings,
+            settings.uploadCallConversionsSettings(),
             clientContext);
 
     backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
@@ -120,6 +146,11 @@ public class GrpcConversionUploadServiceStub extends ConversionUploadServiceStub
   public UnaryCallable<UploadClickConversionsRequest, UploadClickConversionsResponse>
       uploadClickConversionsCallable() {
     return uploadClickConversionsCallable;
+  }
+
+  public UnaryCallable<UploadCallConversionsRequest, UploadCallConversionsResponse>
+      uploadCallConversionsCallable() {
+    return uploadCallConversionsCallable;
   }
 
   @Override

@@ -15,6 +15,8 @@
  */
 package com.google.ads.googleads.v1.services.stub;
 
+import com.google.ads.googleads.v1.services.UploadCallConversionsRequest;
+import com.google.ads.googleads.v1.services.UploadCallConversionsResponse;
 import com.google.ads.googleads.v1.services.UploadClickConversionsRequest;
 import com.google.ads.googleads.v1.services.UploadClickConversionsResponse;
 import com.google.api.core.BetaApi;
@@ -35,6 +37,11 @@ public abstract class ConversionUploadServiceStub implements BackgroundResource 
   public UnaryCallable<UploadClickConversionsRequest, UploadClickConversionsResponse>
       uploadClickConversionsCallable() {
     throw new UnsupportedOperationException("Not implemented: uploadClickConversionsCallable()");
+  }
+
+  public UnaryCallable<UploadCallConversionsRequest, UploadCallConversionsResponse>
+      uploadCallConversionsCallable() {
+    throw new UnsupportedOperationException("Not implemented: uploadCallConversionsCallable()");
   }
 
   @Override

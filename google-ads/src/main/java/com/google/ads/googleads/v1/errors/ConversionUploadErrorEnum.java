@@ -240,6 +240,59 @@ private static final long serialVersionUID = 0L;
      * <code>DUPLICATE_ORDER_ID = 16;</code>
      */
     DUPLICATE_ORDER_ID(16),
+    /**
+     * <pre>
+     * The call occurred too recently. Please try uploading again after 24 hours
+     * have passed since the call occurred.
+     * </pre>
+     *
+     * <code>TOO_RECENT_CALL = 17;</code>
+     */
+    TOO_RECENT_CALL(17),
+    /**
+     * <pre>
+     * The click that initiated the call is too old for this conversion to be
+     * imported.
+     * </pre>
+     *
+     * <code>EXPIRED_CALL = 18;</code>
+     */
+    EXPIRED_CALL(18),
+    /**
+     * <pre>
+     * The call or the click leading to the call was not found.
+     * </pre>
+     *
+     * <code>CALL_NOT_FOUND = 19;</code>
+     */
+    CALL_NOT_FOUND(19),
+    /**
+     * <pre>
+     * The specified conversion_date_time is before the call_start_date_time.
+     * </pre>
+     *
+     * <code>CONVERSION_PRECEDES_CALL = 20;</code>
+     */
+    CONVERSION_PRECEDES_CALL(20),
+    /**
+     * <pre>
+     * The click associated with the call does not contain conversion tracking
+     * information.
+     * </pre>
+     *
+     * <code>CONVERSION_TRACKING_NOT_ENABLED_AT_CALL_TIME = 21;</code>
+     */
+    CONVERSION_TRACKING_NOT_ENABLED_AT_CALL_TIME(21),
+    /**
+     * <pre>
+     * The caller’s phone number cannot be parsed. It should be formatted either
+     * as E.164 "+16502531234", International "+64 3-331 6005" or US national
+     * number "6502531234".
+     * </pre>
+     *
+     * <code>UNPARSEABLE_CALLERS_PHONE_NUMBER = 22;</code>
+     */
+    UNPARSEABLE_CALLERS_PHONE_NUMBER(22),
     UNRECOGNIZED(-1),
     ;
 
@@ -397,6 +450,59 @@ private static final long serialVersionUID = 0L;
      * <code>DUPLICATE_ORDER_ID = 16;</code>
      */
     public static final int DUPLICATE_ORDER_ID_VALUE = 16;
+    /**
+     * <pre>
+     * The call occurred too recently. Please try uploading again after 24 hours
+     * have passed since the call occurred.
+     * </pre>
+     *
+     * <code>TOO_RECENT_CALL = 17;</code>
+     */
+    public static final int TOO_RECENT_CALL_VALUE = 17;
+    /**
+     * <pre>
+     * The click that initiated the call is too old for this conversion to be
+     * imported.
+     * </pre>
+     *
+     * <code>EXPIRED_CALL = 18;</code>
+     */
+    public static final int EXPIRED_CALL_VALUE = 18;
+    /**
+     * <pre>
+     * The call or the click leading to the call was not found.
+     * </pre>
+     *
+     * <code>CALL_NOT_FOUND = 19;</code>
+     */
+    public static final int CALL_NOT_FOUND_VALUE = 19;
+    /**
+     * <pre>
+     * The specified conversion_date_time is before the call_start_date_time.
+     * </pre>
+     *
+     * <code>CONVERSION_PRECEDES_CALL = 20;</code>
+     */
+    public static final int CONVERSION_PRECEDES_CALL_VALUE = 20;
+    /**
+     * <pre>
+     * The click associated with the call does not contain conversion tracking
+     * information.
+     * </pre>
+     *
+     * <code>CONVERSION_TRACKING_NOT_ENABLED_AT_CALL_TIME = 21;</code>
+     */
+    public static final int CONVERSION_TRACKING_NOT_ENABLED_AT_CALL_TIME_VALUE = 21;
+    /**
+     * <pre>
+     * The caller’s phone number cannot be parsed. It should be formatted either
+     * as E.164 "+16502531234", International "+64 3-331 6005" or US national
+     * number "6502531234".
+     * </pre>
+     *
+     * <code>UNPARSEABLE_CALLERS_PHONE_NUMBER = 22;</code>
+     */
+    public static final int UNPARSEABLE_CALLERS_PHONE_NUMBER_VALUE = 22;
 
 
     public final int getNumber() {
@@ -434,6 +540,12 @@ private static final long serialVersionUID = 0L;
         case 14: return ORDER_ID_NOT_PERMITTED_FOR_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION;
         case 15: return ORDER_ID_ALREADY_IN_USE;
         case 16: return DUPLICATE_ORDER_ID;
+        case 17: return TOO_RECENT_CALL;
+        case 18: return EXPIRED_CALL;
+        case 19: return CALL_NOT_FOUND;
+        case 20: return CONVERSION_PRECEDES_CALL;
+        case 21: return CONVERSION_TRACKING_NOT_ENABLED_AT_CALL_TIME;
+        case 22: return UNPARSEABLE_CALLERS_PHONE_NUMBER;
         default: return null;
       }
     }

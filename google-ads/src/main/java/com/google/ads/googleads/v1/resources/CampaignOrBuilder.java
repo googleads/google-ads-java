@@ -448,6 +448,31 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * The setting related to App Campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Campaign.AppCampaignSetting app_campaign_setting = 51;</code>
+   */
+  boolean hasAppCampaignSetting();
+  /**
+   * <pre>
+   * The setting related to App Campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Campaign.AppCampaignSetting app_campaign_setting = 51;</code>
+   */
+  com.google.ads.googleads.v1.resources.Campaign.AppCampaignSetting getAppCampaignSetting();
+  /**
+   * <pre>
+   * The setting related to App Campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Campaign.AppCampaignSetting app_campaign_setting = 51;</code>
+   */
+  com.google.ads.googleads.v1.resources.Campaign.AppCampaignSettingOrBuilder getAppCampaignSettingOrBuilder();
+
+  /**
+   * <pre>
    * The budget of the campaign.
    * </pre>
    *
@@ -721,6 +746,23 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * Payment mode for the campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.PaymentModeEnum.PaymentMode payment_mode = 52;</code>
+   */
+  int getPaymentModeValue();
+  /**
+   * <pre>
+   * Payment mode for the campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.PaymentModeEnum.PaymentMode payment_mode = 52;</code>
+   */
+  com.google.ads.googleads.v1.enums.PaymentModeEnum.PaymentMode getPaymentMode();
+
+  /**
+   * <pre>
    * Portfolio bidding strategy used by campaign.
    * </pre>
    *
@@ -743,6 +785,34 @@ public interface CampaignOrBuilder extends
    * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
    */
   com.google.protobuf.StringValueOrBuilder getBiddingStrategyOrBuilder();
+
+  /**
+   * <pre>
+   * Commission is an automatic bidding strategy in which the advertiser pays
+   * a certain portion of the conversion value.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.Commission commission = 49;</code>
+   */
+  boolean hasCommission();
+  /**
+   * <pre>
+   * Commission is an automatic bidding strategy in which the advertiser pays
+   * a certain portion of the conversion value.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.Commission commission = 49;</code>
+   */
+  com.google.ads.googleads.v1.common.Commission getCommission();
+  /**
+   * <pre>
+   * Commission is an automatic bidding strategy in which the advertiser pays
+   * a certain portion of the conversion value.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.Commission commission = 49;</code>
+   */
+  com.google.ads.googleads.v1.common.CommissionOrBuilder getCommissionOrBuilder();
 
   /**
    * <pre>

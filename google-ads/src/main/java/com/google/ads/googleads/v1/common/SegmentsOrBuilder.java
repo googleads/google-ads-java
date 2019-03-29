@@ -281,6 +281,31 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Resource name of the geo target constant that represents an airport.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+   */
+  boolean hasGeoTargetAirport();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents an airport.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+   */
+  com.google.protobuf.StringValue getGeoTargetAirport();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents an airport.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getGeoTargetAirportOrBuilder();
+
+  /**
+   * <pre>
    * Resource name of the geo target constant that represents a city.
    * </pre>
    *
@@ -984,7 +1009,8 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
-   * Resource name of the geo target constant for the country of the product.
+   * Resource name of the geo target constant for the country of sale of the
+   * product.
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -992,7 +1018,8 @@ public interface SegmentsOrBuilder extends
   boolean hasProductCountry();
   /**
    * <pre>
-   * Resource name of the geo target constant for the country of the product.
+   * Resource name of the geo target constant for the country of sale of the
+   * product.
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -1000,7 +1027,8 @@ public interface SegmentsOrBuilder extends
   com.google.protobuf.StringValue getProductCountry();
   /**
    * <pre>
-   * Resource name of the geo target constant for the country of the product.
+   * Resource name of the geo target constant for the country of sale of the
+   * product.
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_country = 33;</code>
@@ -1446,6 +1474,31 @@ public interface SegmentsOrBuilder extends
    * <code>.google.ads.googleads.v1.enums.SlotEnum.Slot slot = 23;</code>
    */
   com.google.ads.googleads.v1.enums.SlotEnum.Slot getSlot();
+
+  /**
+   * <pre>
+   * Resource name of the ad group criterion that represents webpage criterion.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue webpage = 66;</code>
+   */
+  boolean hasWebpage();
+  /**
+   * <pre>
+   * Resource name of the ad group criterion that represents webpage criterion.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue webpage = 66;</code>
+   */
+  com.google.protobuf.StringValue getWebpage();
+  /**
+   * <pre>
+   * Resource name of the ad group criterion that represents webpage criterion.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue webpage = 66;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getWebpageOrBuilder();
 
   /**
    * <pre>

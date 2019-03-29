@@ -491,4 +491,21 @@ public interface CampaignBudgetOrBuilder extends
    * <code>.google.protobuf.Int64Value recommended_budget_estimated_change_weekly_views = 17;</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getRecommendedBudgetEstimatedChangeWeeklyViewsOrBuilder();
+
+  /**
+   * <pre>
+   * The type of the campaign budget.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+   */
+  int getTypeValue();
+  /**
+   * <pre>
+   * The type of the campaign budget.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType type = 18;</code>
+   */
+  com.google.ads.googleads.v1.enums.BudgetTypeEnum.BudgetType getType();
 }

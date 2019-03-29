@@ -141,6 +141,20 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 10;
             break;
           }
+          case 90: {
+            com.google.ads.googleads.v1.common.MobileApplicationInfo.Builder subBuilder = null;
+            if (criterionCase_ == 11) {
+              subBuilder = ((com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v1.common.MobileApplicationInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 11;
+            break;
+          }
           case 98: {
             com.google.ads.googleads.v1.common.LocationInfo.Builder subBuilder = null;
             if (criterionCase_ == 12) {
@@ -487,6 +501,7 @@ private static final long serialVersionUID = 0L;
     KEYWORD(8),
     PLACEMENT(9),
     MOBILE_APP_CATEGORY(10),
+    MOBILE_APPLICATION(11),
     LOCATION(12),
     DEVICE(13),
     AD_SCHEDULE(15),
@@ -526,6 +541,7 @@ private static final long serialVersionUID = 0L;
         case 8: return KEYWORD;
         case 9: return PLACEMENT;
         case 10: return MOBILE_APP_CATEGORY;
+        case 11: return MOBILE_APPLICATION;
         case 12: return LOCATION;
         case 13: return DEVICE;
         case 15: return AD_SCHEDULE;
@@ -886,6 +902,44 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v1.common.MobileAppCategoryInfo) criterion_;
     }
     return com.google.ads.googleads.v1.common.MobileAppCategoryInfo.getDefaultInstance();
+  }
+
+  public static final int MOBILE_APPLICATION_FIELD_NUMBER = 11;
+  /**
+   * <pre>
+   * Mobile application.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+   */
+  public boolean hasMobileApplication() {
+    return criterionCase_ == 11;
+  }
+  /**
+   * <pre>
+   * Mobile application.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+   */
+  public com.google.ads.googleads.v1.common.MobileApplicationInfo getMobileApplication() {
+    if (criterionCase_ == 11) {
+       return (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_;
+    }
+    return com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Mobile application.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+   */
+  public com.google.ads.googleads.v1.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder() {
+    if (criterionCase_ == 11) {
+       return (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_;
+    }
+    return com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance();
   }
 
   public static final int LOCATION_FIELD_NUMBER = 12;
@@ -1724,6 +1778,9 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 10) {
       output.writeMessage(10, (com.google.ads.googleads.v1.common.MobileAppCategoryInfo) criterion_);
     }
+    if (criterionCase_ == 11) {
+      output.writeMessage(11, (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_);
+    }
     if (criterionCase_ == 12) {
       output.writeMessage(12, (com.google.ads.googleads.v1.common.LocationInfo) criterion_);
     }
@@ -1829,6 +1886,10 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 10) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, (com.google.ads.googleads.v1.common.MobileAppCategoryInfo) criterion_);
+    }
+    if (criterionCase_ == 11) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_);
     }
     if (criterionCase_ == 12) {
       size += com.google.protobuf.CodedOutputStream
@@ -1973,6 +2034,10 @@ private static final long serialVersionUID = 0L;
         result = result && getMobileAppCategory()
             .equals(other.getMobileAppCategory());
         break;
+      case 11:
+        result = result && getMobileApplication()
+            .equals(other.getMobileApplication());
+        break;
       case 12:
         result = result && getLocation()
             .equals(other.getLocation());
@@ -2103,6 +2168,10 @@ private static final long serialVersionUID = 0L;
       case 10:
         hash = (37 * hash) + MOBILE_APP_CATEGORY_FIELD_NUMBER;
         hash = (53 * hash) + getMobileAppCategory().hashCode();
+        break;
+      case 11:
+        hash = (37 * hash) + MOBILE_APPLICATION_FIELD_NUMBER;
+        hash = (53 * hash) + getMobileApplication().hashCode();
         break;
       case 12:
         hash = (37 * hash) + LOCATION_FIELD_NUMBER;
@@ -2427,6 +2496,13 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = mobileAppCategoryBuilder_.build();
         }
       }
+      if (criterionCase_ == 11) {
+        if (mobileApplicationBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = mobileApplicationBuilder_.build();
+        }
+      }
       if (criterionCase_ == 12) {
         if (locationBuilder_ == null) {
           result.criterion_ = criterion_;
@@ -2653,6 +2729,10 @@ private static final long serialVersionUID = 0L;
         }
         case MOBILE_APP_CATEGORY: {
           mergeMobileAppCategory(other.getMobileAppCategory());
+          break;
+        }
+        case MOBILE_APPLICATION: {
+          mergeMobileApplication(other.getMobileApplication());
           break;
         }
         case LOCATION: {
@@ -4104,6 +4184,178 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 10;
       onChanged();;
       return mobileAppCategoryBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.MobileApplicationInfo, com.google.ads.googleads.v1.common.MobileApplicationInfo.Builder, com.google.ads.googleads.v1.common.MobileApplicationInfoOrBuilder> mobileApplicationBuilder_;
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+     */
+    public boolean hasMobileApplication() {
+      return criterionCase_ == 11;
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+     */
+    public com.google.ads.googleads.v1.common.MobileApplicationInfo getMobileApplication() {
+      if (mobileApplicationBuilder_ == null) {
+        if (criterionCase_ == 11) {
+          return (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_;
+        }
+        return com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 11) {
+          return mobileApplicationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+     */
+    public Builder setMobileApplication(com.google.ads.googleads.v1.common.MobileApplicationInfo value) {
+      if (mobileApplicationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        mobileApplicationBuilder_.setMessage(value);
+      }
+      criterionCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+     */
+    public Builder setMobileApplication(
+        com.google.ads.googleads.v1.common.MobileApplicationInfo.Builder builderForValue) {
+      if (mobileApplicationBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        mobileApplicationBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+     */
+    public Builder mergeMobileApplication(com.google.ads.googleads.v1.common.MobileApplicationInfo value) {
+      if (mobileApplicationBuilder_ == null) {
+        if (criterionCase_ == 11 &&
+            criterion_ != com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v1.common.MobileApplicationInfo.newBuilder((com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 11) {
+          mobileApplicationBuilder_.mergeFrom(value);
+        }
+        mobileApplicationBuilder_.setMessage(value);
+      }
+      criterionCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+     */
+    public Builder clearMobileApplication() {
+      if (mobileApplicationBuilder_ == null) {
+        if (criterionCase_ == 11) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 11) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        mobileApplicationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+     */
+    public com.google.ads.googleads.v1.common.MobileApplicationInfo.Builder getMobileApplicationBuilder() {
+      return getMobileApplicationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+     */
+    public com.google.ads.googleads.v1.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder() {
+      if ((criterionCase_ == 11) && (mobileApplicationBuilder_ != null)) {
+        return mobileApplicationBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 11) {
+          return (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_;
+        }
+        return com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Mobile application.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 11;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.MobileApplicationInfo, com.google.ads.googleads.v1.common.MobileApplicationInfo.Builder, com.google.ads.googleads.v1.common.MobileApplicationInfoOrBuilder> 
+        getMobileApplicationFieldBuilder() {
+      if (mobileApplicationBuilder_ == null) {
+        if (!(criterionCase_ == 11)) {
+          criterion_ = com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance();
+        }
+        mobileApplicationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.MobileApplicationInfo, com.google.ads.googleads.v1.common.MobileApplicationInfo.Builder, com.google.ads.googleads.v1.common.MobileApplicationInfoOrBuilder>(
+                (com.google.ads.googleads.v1.common.MobileApplicationInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 11;
+      onChanged();;
+      return mobileApplicationBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

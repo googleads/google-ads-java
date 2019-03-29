@@ -349,6 +349,23 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for the asset error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+   */
+  int getAssetErrorValue();
+  /**
+   * <pre>
+   * The reasons for the asset error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError asset_error = 107;</code>
+   */
+  com.google.ads.googleads.v1.errors.AssetErrorEnum.AssetError getAssetError();
+
+  /**
+   * <pre>
    * The reasons for the bidding errors
    * </pre>
    *
@@ -992,6 +1009,23 @@ public interface ErrorCodeOrBuilder extends
    * <code>.google.ads.googleads.v1.errors.ConversionActionErrorEnum.ConversionActionError conversion_action_error = 65;</code>
    */
   com.google.ads.googleads.v1.errors.ConversionActionErrorEnum.ConversionActionError getConversionActionError();
+
+  /**
+   * <pre>
+   * The reasons for the conversion adjustment upload error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+   */
+  int getConversionAdjustmentUploadErrorValue();
+  /**
+   * <pre>
+   * The reasons for the conversion adjustment upload error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError conversion_adjustment_upload_error = 115;</code>
+   */
+  com.google.ads.googleads.v1.errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError getConversionAdjustmentUploadError();
 
   /**
    * <pre>

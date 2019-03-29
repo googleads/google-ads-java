@@ -177,6 +177,15 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_TOS = 9;</code>
      */
     MISSING_TOS(9),
+    /**
+     * <pre>
+     * The developer token is not approved. Non-approved developer tokens can
+     * only be used with test accounts.
+     * </pre>
+     *
+     * <code>DEVELOPER_TOKEN_NOT_APPROVED = 10;</code>
+     */
+    DEVELOPER_TOKEN_NOT_APPROVED(10),
     UNRECOGNIZED(-1),
     ;
 
@@ -271,6 +280,15 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_TOS = 9;</code>
      */
     public static final int MISSING_TOS_VALUE = 9;
+    /**
+     * <pre>
+     * The developer token is not approved. Non-approved developer tokens can
+     * only be used with test accounts.
+     * </pre>
+     *
+     * <code>DEVELOPER_TOKEN_NOT_APPROVED = 10;</code>
+     */
+    public static final int DEVELOPER_TOKEN_NOT_APPROVED_VALUE = 10;
 
 
     public final int getNumber() {
@@ -302,6 +320,7 @@ private static final long serialVersionUID = 0L;
         case 8: return INCOMPLETE_SIGNUP;
         case 24: return CUSTOMER_NOT_ENABLED;
         case 9: return MISSING_TOS;
+        case 10: return DEVELOPER_TOKEN_NOT_APPROVED;
         default: return null;
       }
     }

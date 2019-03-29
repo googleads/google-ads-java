@@ -332,5 +332,30 @@ public interface ListingDimensionInfoOrBuilder extends
    */
   com.google.ads.googleads.v1.common.ProductTypeInfoOrBuilder getProductTypeOrBuilder();
 
+  /**
+   * <pre>
+   * Unknown dimension. Set when no other listing dimension is set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+   */
+  boolean hasUnknownListingDimension();
+  /**
+   * <pre>
+   * Unknown dimension. Set when no other listing dimension is set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+   */
+  com.google.ads.googleads.v1.common.UnknownListingDimensionInfo getUnknownListingDimension();
+  /**
+   * <pre>
+   * Unknown dimension. Set when no other listing dimension is set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+   */
+  com.google.ads.googleads.v1.common.UnknownListingDimensionInfoOrBuilder getUnknownListingDimensionOrBuilder();
+
   public com.google.ads.googleads.v1.common.ListingDimensionInfo.DimensionCase getDimensionCase();
 }

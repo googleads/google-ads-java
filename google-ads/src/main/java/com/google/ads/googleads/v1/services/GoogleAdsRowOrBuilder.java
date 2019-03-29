@@ -384,6 +384,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The asset referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+   */
+  boolean hasAsset();
+  /**
+   * <pre>
+   * The asset referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+   */
+  com.google.ads.googleads.v1.resources.Asset getAsset();
+  /**
+   * <pre>
+   * The asset referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Asset asset = 105;</code>
+   */
+  com.google.ads.googleads.v1.resources.AssetOrBuilder getAssetOrBuilder();
+
+  /**
+   * <pre>
    * The bidding strategy referenced in the query.
    * </pre>
    *

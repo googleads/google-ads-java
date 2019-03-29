@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private ExtensionFeedItem() {
     resourceName_ = "";
+    extensionType_ = 0;
     status_ = 0;
   }
 
@@ -198,6 +199,12 @@ private static final long serialVersionUID = 0L;
             extensionCase_ = 12;
             break;
           }
+          case 104: {
+            int rawValue = input.readEnum();
+
+            extensionType_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -324,6 +331,33 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int EXTENSION_TYPE_FIELD_NUMBER = 13;
+  private int extensionType_;
+  /**
+   * <pre>
+   * The extension type of the extension feed item.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+   */
+  public int getExtensionTypeValue() {
+    return extensionType_;
+  }
+  /**
+   * <pre>
+   * The extension type of the extension feed item.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+   */
+  public com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType result = com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType.valueOf(extensionType_);
+    return result == null ? com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType.UNRECOGNIZED : result;
   }
 
   public static final int START_DATE_TIME_FIELD_NUMBER = 5;
@@ -788,6 +822,9 @@ private static final long serialVersionUID = 0L;
     if (extensionCase_ == 12) {
       output.writeMessage(12, (com.google.ads.googleads.v1.common.PromotionFeedItem) extension_);
     }
+    if (extensionType_ != com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType.UNSPECIFIED.getNumber()) {
+      output.writeEnum(13, extensionType_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -844,6 +881,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, (com.google.ads.googleads.v1.common.PromotionFeedItem) extension_);
     }
+    if (extensionType_ != com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(13, extensionType_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -862,6 +903,7 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && getResourceName()
         .equals(other.getResourceName());
+    result = result && extensionType_ == other.extensionType_;
     result = result && (hasStartDateTime() == other.hasStartDateTime());
     if (hasStartDateTime()) {
       result = result && getStartDateTime()
@@ -925,6 +967,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getResourceName().hashCode();
+    hash = (37 * hash) + EXTENSION_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + extensionType_;
     if (hasStartDateTime()) {
       hash = (37 * hash) + START_DATE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getStartDateTime().hashCode();
@@ -1110,6 +1154,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       resourceName_ = "";
 
+      extensionType_ = 0;
+
       if (startDateTimeBuilder_ == null) {
         startDateTime_ = null;
       } else {
@@ -1153,6 +1199,7 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v1.resources.ExtensionFeedItem buildPartial() {
       com.google.ads.googleads.v1.resources.ExtensionFeedItem result = new com.google.ads.googleads.v1.resources.ExtensionFeedItem(this);
       result.resourceName_ = resourceName_;
+      result.extensionType_ = extensionType_;
       if (startDateTimeBuilder_ == null) {
         result.startDateTime_ = startDateTime_;
       } else {
@@ -1272,6 +1319,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
         onChanged();
+      }
+      if (other.extensionType_ != 0) {
+        setExtensionTypeValue(other.getExtensionTypeValue());
       }
       if (other.hasStartDateTime()) {
         mergeStartDateTime(other.getStartDateTime());
@@ -1458,6 +1508,76 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       resourceName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int extensionType_ = 0;
+    /**
+     * <pre>
+     * The extension type of the extension feed item.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+     */
+    public int getExtensionTypeValue() {
+      return extensionType_;
+    }
+    /**
+     * <pre>
+     * The extension type of the extension feed item.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+     */
+    public Builder setExtensionTypeValue(int value) {
+      extensionType_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The extension type of the extension feed item.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+     */
+    public com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType result = com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType.valueOf(extensionType_);
+      return result == null ? com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The extension type of the extension feed item.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+     */
+    public Builder setExtensionType(com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      extensionType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The extension type of the extension feed item.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+     */
+    public Builder clearExtensionType() {
+      
+      extensionType_ = 0;
       onChanged();
       return this;
     }

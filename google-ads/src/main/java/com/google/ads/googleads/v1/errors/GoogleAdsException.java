@@ -48,7 +48,8 @@ public class GoogleAdsException extends BaseGoogleAdsException {
     }
 
     @Override
-    public GoogleAdsFailure createGoogleAdsFailure(byte[] protoData) throws InvalidProtocolBufferException {
+    public GoogleAdsFailure createGoogleAdsFailure(byte[] protoData)
+        throws InvalidProtocolBufferException {
       return GoogleAdsFailure.parseFrom(protoData);
     }
 
