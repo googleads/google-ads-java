@@ -178,6 +178,24 @@ private static final long serialVersionUID = 0L;
      * <code>OPTIMIZE_AD_ROTATION = 10;</code>
      */
     OPTIMIZE_AD_ROTATION(10),
+    /**
+     * <pre>
+     * Recommendation to change an existing keyword from one match type to a
+     * broader match type.
+     * </pre>
+     *
+     * <code>KEYWORD_MATCH_TYPE = 14;</code>
+     */
+    KEYWORD_MATCH_TYPE(14),
+    /**
+     * <pre>
+     * Recommendation to move unused budget from one budget to a constrained
+     * budget.
+     * </pre>
+     *
+     * <code>MOVE_UNUSED_BUDGET = 15;</code>
+     */
+    MOVE_UNUSED_BUDGET(15),
     UNRECOGNIZED(-1),
     ;
 
@@ -273,6 +291,24 @@ private static final long serialVersionUID = 0L;
      * <code>OPTIMIZE_AD_ROTATION = 10;</code>
      */
     public static final int OPTIMIZE_AD_ROTATION_VALUE = 10;
+    /**
+     * <pre>
+     * Recommendation to change an existing keyword from one match type to a
+     * broader match type.
+     * </pre>
+     *
+     * <code>KEYWORD_MATCH_TYPE = 14;</code>
+     */
+    public static final int KEYWORD_MATCH_TYPE_VALUE = 14;
+    /**
+     * <pre>
+     * Recommendation to move unused budget from one budget to a constrained
+     * budget.
+     * </pre>
+     *
+     * <code>MOVE_UNUSED_BUDGET = 15;</code>
+     */
+    public static final int MOVE_UNUSED_BUDGET_VALUE = 15;
 
 
     public final int getNumber() {
@@ -304,6 +340,8 @@ private static final long serialVersionUID = 0L;
         case 8: return SEARCH_PARTNERS_OPT_IN;
         case 9: return MAXIMIZE_CLICKS_OPT_IN;
         case 10: return OPTIMIZE_AD_ROTATION;
+        case 14: return KEYWORD_MATCH_TYPE;
+        case 15: return MOVE_UNUSED_BUDGET;
         default: return null;
       }
     }

@@ -38,26 +38,29 @@ public final class MutateJobProto {
       "sources\0325google/ads/googleads/v1/enums/m" +
       "utate_job_status.proto\032\036google/protobuf/" +
       "wrappers.proto\032\034google/api/annotations.p" +
-      "roto\"\376\003\n\tMutateJob\022\025\n\rresource_name\030\001 \001(" +
+      "roto\"\363\004\n\tMutateJob\022\025\n\rresource_name\030\001 \001(" +
       "\t\022\'\n\002id\030\002 \001(\0132\033.google.protobuf.Int64Val" +
       "ue\022=\n\027next_add_sequence_token\030\003 \001(\0132\034.go" +
       "ogle.protobuf.StringValue\022P\n\010metadata\030\004 " +
       "\001(\0132>.google.ads.googleads.v1.resources." +
       "MutateJob.MutateJobMetadata\022R\n\006status\030\005 " +
       "\001(\0162B.google.ads.googleads.v1.enums.Muta" +
-      "teJobStatusEnum.MutateJobStatus\032\313\001\n\021Muta" +
+      "teJobStatusEnum.MutateJobStatus\032\300\002\n\021Muta" +
       "teJobMetadata\0228\n\022creation_date_time\030\001 \001(" +
       "\0132\034.google.protobuf.StringValue\022:\n\024compl" +
       "etion_date_time\030\002 \001(\0132\034.google.protobuf." +
       "StringValue\022@\n\032estimated_completion_rati" +
-      "o\030\003 \001(\0132\034.google.protobuf.DoubleValueB\373\001" +
-      "\n%com.google.ads.googleads.v1.resourcesB" +
-      "\016MutateJobProtoP\001ZJgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v1/resour" +
-      "ces;resources\242\002\003GAA\252\002!Google.Ads.GoogleA" +
-      "ds.V1.Resources\312\002!Google\\Ads\\GoogleAds\\V" +
-      "1\\Resources\352\002%Google::Ads::GoogleAds::V1" +
-      "::Resourcesb\006proto3"
+      "o\030\003 \001(\0132\034.google.protobuf.DoubleValue\0224\n" +
+      "\017operation_count\030\004 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022=\n\030executed_operation_count\030" +
+      "\005 \001(\0132\033.google.protobuf.Int64ValueB\373\001\n%c" +
+      "om.google.ads.googleads.v1.resourcesB\016Mu" +
+      "tateJobProtoP\001ZJgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v1/resources" +
+      ";resources\242\002\003GAA\252\002!Google.Ads.GoogleAds." +
+      "V1.Resources\312\002!Google\\Ads\\GoogleAds\\V1\\R" +
+      "esources\352\002%Google::Ads::GoogleAds::V1::R" +
+      "esourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -85,7 +88,7 @@ public final class MutateJobProto {
     internal_static_google_ads_googleads_v1_resources_MutateJob_MutateJobMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_MutateJob_MutateJobMetadata_descriptor,
-        new java.lang.String[] { "CreationDateTime", "CompletionDateTime", "EstimatedCompletionRatio", });
+        new java.lang.String[] { "CreationDateTime", "CompletionDateTime", "EstimatedCompletionRatio", "OperationCount", "ExecutedOperationCount", });
     com.google.ads.googleads.v1.enums.MutateJobStatusProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

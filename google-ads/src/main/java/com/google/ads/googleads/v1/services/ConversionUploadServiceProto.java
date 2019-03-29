@@ -25,10 +25,25 @@ public final class ConversionUploadServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v1_services_UploadClickConversionsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v1_services_UploadCallConversionsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v1_services_UploadCallConversionsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v1_services_UploadCallConversionsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v1_services_UploadCallConversionsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v1_services_ClickConversion_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v1_services_ClickConversion_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v1_services_CallConversion_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v1_services_CallConversion_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v1_services_ExternalAttributionData_descriptor;
   static final 
@@ -39,6 +54,11 @@ public final class ConversionUploadServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v1_services_ClickConversionResult_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v1_services_CallConversionResult_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v1_services_CallConversionResult_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -60,40 +80,68 @@ public final class ConversionUploadServiceProto {
       "rsionsResponse\0221\n\025partial_failure_error\030" +
       "\001 \001(\0132\022.google.rpc.Status\022H\n\007results\030\002 \003" +
       "(\01327.google.ads.googleads.v1.services.Cl" +
-      "ickConversionResult\"\256\003\n\017ClickConversion\022" +
-      "+\n\005gclid\030\001 \001(\0132\034.google.protobuf.StringV" +
-      "alue\0227\n\021conversion_action\030\002 \001(\0132\034.google" +
-      ".protobuf.StringValue\022:\n\024conversion_date" +
-      "_time\030\003 \001(\0132\034.google.protobuf.StringValu" +
-      "e\0226\n\020conversion_value\030\004 \001(\0132\034.google.pro" +
-      "tobuf.DoubleValue\0223\n\rcurrency_code\030\005 \001(\013" +
-      "2\034.google.protobuf.StringValue\022.\n\010order_" +
-      "id\030\006 \001(\0132\034.google.protobuf.StringValue\022\\" +
-      "\n\031external_attribution_data\030\007 \001(\01329.goog" +
-      "le.ads.googleads.v1.services.ExternalAtt" +
-      "ributionData\"\236\001\n\027ExternalAttributionData" +
-      "\022A\n\033external_attribution_credit\030\001 \001(\0132\034." +
-      "google.protobuf.DoubleValue\022@\n\032external_" +
-      "attribution_model\030\002 \001(\0132\034.google.protobu" +
-      "f.StringValue\"\271\001\n\025ClickConversionResult\022" +
-      "+\n\005gclid\030\001 \001(\0132\034.google.protobuf.StringV" +
-      "alue\0227\n\021conversion_action\030\002 \001(\0132\034.google" +
-      ".protobuf.StringValue\022:\n\024conversion_date" +
-      "_time\030\003 \001(\0132\034.google.protobuf.StringValu" +
-      "e2\370\001\n\027ConversionUploadService\022\334\001\n\026Upload" +
-      "ClickConversions\022?.google.ads.googleads." +
-      "v1.services.UploadClickConversionsReques" +
-      "t\032@.google.ads.googleads.v1.services.Upl" +
-      "oadClickConversionsResponse\"?\202\323\344\223\0029\"4/v1" +
-      "/customers/{customer_id=*}:uploadClickCo" +
-      "nversions:\001*B\203\002\n$com.google.ads.googlead" +
-      "s.v1.servicesB\034ConversionUploadServicePr" +
-      "otoP\001ZHgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v1/services;services\242" +
-      "\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Services" +
-      "\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$Go" +
-      "ogle::Ads::GoogleAds::V1::Servicesb\006prot" +
-      "o3"
+      "ickConversionResult\"\223\001\n\034UploadCallConver" +
+      "sionsRequest\022\023\n\013customer_id\030\001 \001(\t\022E\n\013con" +
+      "versions\030\002 \003(\01320.google.ads.googleads.v1" +
+      ".services.CallConversion\022\027\n\017partial_fail" +
+      "ure\030\003 \001(\010\"\233\001\n\035UploadCallConversionsRespo" +
+      "nse\0221\n\025partial_failure_error\030\001 \001(\0132\022.goo" +
+      "gle.rpc.Status\022G\n\007results\030\002 \003(\01326.google" +
+      ".ads.googleads.v1.services.CallConversio" +
+      "nResult\"\256\003\n\017ClickConversion\022+\n\005gclid\030\001 \001" +
+      "(\0132\034.google.protobuf.StringValue\0227\n\021conv" +
+      "ersion_action\030\002 \001(\0132\034.google.protobuf.St" +
+      "ringValue\022:\n\024conversion_date_time\030\003 \001(\0132" +
+      "\034.google.protobuf.StringValue\0226\n\020convers" +
+      "ion_value\030\004 \001(\0132\034.google.protobuf.Double" +
+      "Value\0223\n\rcurrency_code\030\005 \001(\0132\034.google.pr" +
+      "otobuf.StringValue\022.\n\010order_id\030\006 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\022\\\n\031external_a" +
+      "ttribution_data\030\007 \001(\01329.google.ads.googl" +
+      "eads.v1.services.ExternalAttributionData" +
+      "\"\337\002\n\016CallConversion\022/\n\tcaller_id\030\001 \001(\0132\034" +
+      ".google.protobuf.StringValue\022:\n\024call_sta" +
+      "rt_date_time\030\002 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\0227\n\021conversion_action\030\003 \001(\0132\034.go" +
+      "ogle.protobuf.StringValue\022:\n\024conversion_" +
+      "date_time\030\004 \001(\0132\034.google.protobuf.String" +
+      "Value\0226\n\020conversion_value\030\005 \001(\0132\034.google" +
+      ".protobuf.DoubleValue\0223\n\rcurrency_code\030\006" +
+      " \001(\0132\034.google.protobuf.StringValue\"\236\001\n\027E" +
+      "xternalAttributionData\022A\n\033external_attri" +
+      "bution_credit\030\001 \001(\0132\034.google.protobuf.Do" +
+      "ubleValue\022@\n\032external_attribution_model\030" +
+      "\002 \001(\0132\034.google.protobuf.StringValue\"\271\001\n\025" +
+      "ClickConversionResult\022+\n\005gclid\030\001 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\0227\n\021conversion" +
+      "_action\030\002 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\022:\n\024conversion_date_time\030\003 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\"\370\001\n\024CallConversi" +
+      "onResult\022/\n\tcaller_id\030\001 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022:\n\024call_start_date_tim" +
+      "e\030\002 \001(\0132\034.google.protobuf.StringValue\0227\n" +
+      "\021conversion_action\030\003 \001(\0132\034.google.protob" +
+      "uf.StringValue\022:\n\024conversion_date_time\030\004" +
+      " \001(\0132\034.google.protobuf.StringValue2\323\003\n\027C" +
+      "onversionUploadService\022\334\001\n\026UploadClickCo" +
+      "nversions\022?.google.ads.googleads.v1.serv" +
+      "ices.UploadClickConversionsRequest\032@.goo" +
+      "gle.ads.googleads.v1.services.UploadClic" +
+      "kConversionsResponse\"?\202\323\344\223\0029\"4/v1/custom" +
+      "ers/{customer_id=*}:uploadClickConversio" +
+      "ns:\001*\022\330\001\n\025UploadCallConversions\022>.google" +
+      ".ads.googleads.v1.services.UploadCallCon" +
+      "versionsRequest\032?.google.ads.googleads.v" +
+      "1.services.UploadCallConversionsResponse" +
+      "\">\202\323\344\223\0028\"3/v1/customers/{customer_id=*}:" +
+      "uploadCallConversions:\001*B\203\002\n$com.google." +
+      "ads.googleads.v1.servicesB\034ConversionUpl" +
+      "oadServiceProtoP\001ZHgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v1/servic" +
+      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
+      ".V1.Services\312\002 Google\\Ads\\GoogleAds\\V1\\S" +
+      "ervices\352\002$Google::Ads::GoogleAds::V1::Se" +
+      "rvicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -122,24 +170,48 @@ public final class ConversionUploadServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_services_UploadClickConversionsResponse_descriptor,
         new java.lang.String[] { "PartialFailureError", "Results", });
-    internal_static_google_ads_googleads_v1_services_ClickConversion_descriptor =
+    internal_static_google_ads_googleads_v1_services_UploadCallConversionsRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_google_ads_googleads_v1_services_UploadCallConversionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v1_services_UploadCallConversionsRequest_descriptor,
+        new java.lang.String[] { "CustomerId", "Conversions", "PartialFailure", });
+    internal_static_google_ads_googleads_v1_services_UploadCallConversionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_google_ads_googleads_v1_services_UploadCallConversionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v1_services_UploadCallConversionsResponse_descriptor,
+        new java.lang.String[] { "PartialFailureError", "Results", });
+    internal_static_google_ads_googleads_v1_services_ClickConversion_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_google_ads_googleads_v1_services_ClickConversion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_services_ClickConversion_descriptor,
         new java.lang.String[] { "Gclid", "ConversionAction", "ConversionDateTime", "ConversionValue", "CurrencyCode", "OrderId", "ExternalAttributionData", });
+    internal_static_google_ads_googleads_v1_services_CallConversion_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_google_ads_googleads_v1_services_CallConversion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v1_services_CallConversion_descriptor,
+        new java.lang.String[] { "CallerId", "CallStartDateTime", "ConversionAction", "ConversionDateTime", "ConversionValue", "CurrencyCode", });
     internal_static_google_ads_googleads_v1_services_ExternalAttributionData_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_google_ads_googleads_v1_services_ExternalAttributionData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_services_ExternalAttributionData_descriptor,
         new java.lang.String[] { "ExternalAttributionCredit", "ExternalAttributionModel", });
     internal_static_google_ads_googleads_v1_services_ClickConversionResult_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_google_ads_googleads_v1_services_ClickConversionResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_services_ClickConversionResult_descriptor,
         new java.lang.String[] { "Gclid", "ConversionAction", "ConversionDateTime", });
+    internal_static_google_ads_googleads_v1_services_CallConversionResult_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_google_ads_googleads_v1_services_CallConversionResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v1_services_CallConversionResult_descriptor,
+        new java.lang.String[] { "CallerId", "CallStartDateTime", "ConversionAction", "ConversionDateTime", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

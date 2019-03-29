@@ -199,6 +199,30 @@ private static final long serialVersionUID = 0L;
      * <code>LEGACY_RESPONSIVE_DISPLAY_AD = 16;</code>
      */
     LEGACY_RESPONSIVE_DISPLAY_AD(16),
+    /**
+     * <pre>
+     * The ad is an app ad.
+     * </pre>
+     *
+     * <code>APP_AD = 17;</code>
+     */
+    APP_AD(17),
+    /**
+     * <pre>
+     * The ad is a legacy app install ad.
+     * </pre>
+     *
+     * <code>LEGACY_APP_INSTALL_AD = 18;</code>
+     */
+    LEGACY_APP_INSTALL_AD(18),
+    /**
+     * <pre>
+     * The ad is a responsive display ad.
+     * </pre>
+     *
+     * <code>RESPONSIVE_DISPLAY_AD = 19;</code>
+     */
+    RESPONSIVE_DISPLAY_AD(19),
     UNRECOGNIZED(-1),
     ;
 
@@ -315,6 +339,30 @@ private static final long serialVersionUID = 0L;
      * <code>LEGACY_RESPONSIVE_DISPLAY_AD = 16;</code>
      */
     public static final int LEGACY_RESPONSIVE_DISPLAY_AD_VALUE = 16;
+    /**
+     * <pre>
+     * The ad is an app ad.
+     * </pre>
+     *
+     * <code>APP_AD = 17;</code>
+     */
+    public static final int APP_AD_VALUE = 17;
+    /**
+     * <pre>
+     * The ad is a legacy app install ad.
+     * </pre>
+     *
+     * <code>LEGACY_APP_INSTALL_AD = 18;</code>
+     */
+    public static final int LEGACY_APP_INSTALL_AD_VALUE = 18;
+    /**
+     * <pre>
+     * The ad is a responsive display ad.
+     * </pre>
+     *
+     * <code>RESPONSIVE_DISPLAY_AD = 19;</code>
+     */
+    public static final int RESPONSIVE_DISPLAY_AD_VALUE = 19;
 
 
     public final int getNumber() {
@@ -349,6 +397,9 @@ private static final long serialVersionUID = 0L;
         case 14: return IMAGE_AD;
         case 15: return RESPONSIVE_SEARCH_AD;
         case 16: return LEGACY_RESPONSIVE_DISPLAY_AD;
+        case 17: return APP_AD;
+        case 18: return LEGACY_APP_INSTALL_AD;
+        case 19: return RESPONSIVE_DISPLAY_AD;
         default: return null;
       }
     }

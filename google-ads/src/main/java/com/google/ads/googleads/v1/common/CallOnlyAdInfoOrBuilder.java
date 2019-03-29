@@ -84,6 +84,56 @@ public interface CallOnlyAdInfoOrBuilder extends
 
   /**
    * <pre>
+   * First headline in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue headline1 = 11;</code>
+   */
+  boolean hasHeadline1();
+  /**
+   * <pre>
+   * First headline in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue headline1 = 11;</code>
+   */
+  com.google.protobuf.StringValue getHeadline1();
+  /**
+   * <pre>
+   * First headline in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue headline1 = 11;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getHeadline1OrBuilder();
+
+  /**
+   * <pre>
+   * Second headline in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue headline2 = 12;</code>
+   */
+  boolean hasHeadline2();
+  /**
+   * <pre>
+   * Second headline in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue headline2 = 12;</code>
+   */
+  com.google.protobuf.StringValue getHeadline2();
+  /**
+   * <pre>
+   * Second headline in the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue headline2 = 12;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getHeadline2OrBuilder();
+
+  /**
+   * <pre>
    * The first line of the ad's description.
    * </pre>
    *

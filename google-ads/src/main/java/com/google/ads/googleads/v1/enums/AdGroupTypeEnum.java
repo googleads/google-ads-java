@@ -185,6 +185,14 @@ private static final long serialVersionUID = 0L;
      * <code>VIDEO_OUTSTREAM = 12;</code>
      */
     VIDEO_OUTSTREAM(12),
+    /**
+     * <pre>
+     * Ad group type for Dynamic Search Ads ad groups.
+     * </pre>
+     *
+     * <code>SEARCH_DYNAMIC_ADS = 13;</code>
+     */
+    SEARCH_DYNAMIC_ADS(13),
     UNRECOGNIZED(-1),
     ;
 
@@ -285,6 +293,14 @@ private static final long serialVersionUID = 0L;
      * <code>VIDEO_OUTSTREAM = 12;</code>
      */
     public static final int VIDEO_OUTSTREAM_VALUE = 12;
+    /**
+     * <pre>
+     * Ad group type for Dynamic Search Ads ad groups.
+     * </pre>
+     *
+     * <code>SEARCH_DYNAMIC_ADS = 13;</code>
+     */
+    public static final int SEARCH_DYNAMIC_ADS_VALUE = 13;
 
 
     public final int getNumber() {
@@ -317,6 +333,7 @@ private static final long serialVersionUID = 0L;
         case 10: return VIDEO_TRUE_VIEW_IN_DISPLAY;
         case 11: return VIDEO_NON_SKIPPABLE_IN_STREAM;
         case 12: return VIDEO_OUTSTREAM;
+        case 13: return SEARCH_DYNAMIC_ADS;
         default: return null;
       }
     }

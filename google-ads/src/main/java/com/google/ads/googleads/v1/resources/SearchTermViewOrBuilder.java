@@ -11,7 +11,7 @@ public interface SearchTermViewOrBuilder extends
    * <pre>
    * The resource name of the search term view.
    * Search term view resource names have the form:
-   * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}_
+   * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}~
    * {URL-base64 search term}`
    * </pre>
    *
@@ -22,7 +22,7 @@ public interface SearchTermViewOrBuilder extends
    * <pre>
    * The resource name of the search term view.
    * Search term view resource names have the form:
-   * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}_
+   * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}~
    * {URL-base64 search term}`
    * </pre>
    *

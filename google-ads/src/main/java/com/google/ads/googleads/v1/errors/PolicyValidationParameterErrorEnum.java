@@ -110,6 +110,23 @@ private static final long serialVersionUID = 0L;
      * <code>UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS = 2;</code>
      */
     UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS(2),
+    /**
+     * <pre>
+     * Exempt policy violation keys are not supported for the ad type.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS = 3;</code>
+     */
+    UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS(3),
+    /**
+     * <pre>
+     * Cannot set ignorable policy topics and exempt policy violation keys in
+     * the same policy violation parameter.
+     * </pre>
+     *
+     * <code>CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS = 4;</code>
+     */
+    CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -137,6 +154,23 @@ private static final long serialVersionUID = 0L;
      * <code>UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS = 2;</code>
      */
     public static final int UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS_VALUE = 2;
+    /**
+     * <pre>
+     * Exempt policy violation keys are not supported for the ad type.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS = 3;</code>
+     */
+    public static final int UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS_VALUE = 3;
+    /**
+     * <pre>
+     * Cannot set ignorable policy topics and exempt policy violation keys in
+     * the same policy violation parameter.
+     * </pre>
+     *
+     * <code>CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS = 4;</code>
+     */
+    public static final int CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS_VALUE = 4;
 
 
     public final int getNumber() {
@@ -160,6 +194,8 @@ private static final long serialVersionUID = 0L;
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
         case 2: return UNSUPPORTED_AD_TYPE_FOR_IGNORABLE_POLICY_TOPICS;
+        case 3: return UNSUPPORTED_AD_TYPE_FOR_EXEMPT_POLICY_VIOLATION_KEYS;
+        case 4: return CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS;
         default: return null;
       }
     }

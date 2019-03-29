@@ -34,7 +34,7 @@ public final class SharedCriterionProto {
       "ommon/criteria.proto\0322google/ads/googlea" +
       "ds/v1/enums/criterion_type.proto\032\036google" +
       "/protobuf/wrappers.proto\032\034google/api/ann" +
-      "otations.proto\"\334\004\n\017SharedCriterion\022\025\n\rre" +
+      "otations.proto\"\261\005\n\017SharedCriterion\022\025\n\rre" +
       "source_name\030\001 \001(\t\0220\n\nshared_set\030\002 \001(\0132\034." +
       "google.protobuf.StringValue\0221\n\014criterion" +
       "_id\030\032 \001(\0132\033.google.protobuf.Int64Value\022L" +
@@ -49,14 +49,16 @@ public final class SharedCriterionProto {
       "le.ads.googleads.v1.common.PlacementInfo" +
       "H\000\022T\n\023mobile_app_category\030\010 \001(\01325.google" +
       ".ads.googleads.v1.common.MobileAppCatego" +
-      "ryInfoH\000B\013\n\tcriterionB\201\002\n%com.google.ads" +
-      ".googleads.v1.resourcesB\024SharedCriterion" +
-      "ProtoP\001ZJgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v1/resources;resour" +
-      "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1.Reso" +
-      "urces\312\002!Google\\Ads\\GoogleAds\\V1\\Resource" +
-      "s\352\002%Google::Ads::GoogleAds::V1::Resource" +
-      "sb\006proto3"
+      "ryInfoH\000\022S\n\022mobile_application\030\t \001(\01325.g" +
+      "oogle.ads.googleads.v1.common.MobileAppl" +
+      "icationInfoH\000B\013\n\tcriterionB\201\002\n%com.googl" +
+      "e.ads.googleads.v1.resourcesB\024SharedCrit" +
+      "erionProtoP\001ZJgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v1/resources;r" +
+      "esources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1" +
+      ".Resources\312\002!Google\\Ads\\GoogleAds\\V1\\Res" +
+      "ources\352\002%Google::Ads::GoogleAds::V1::Res" +
+      "ourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -79,7 +81,7 @@ public final class SharedCriterionProto {
     internal_static_google_ads_googleads_v1_resources_SharedCriterion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_SharedCriterion_descriptor,
-        new java.lang.String[] { "ResourceName", "SharedSet", "CriterionId", "Type", "Keyword", "YoutubeVideo", "YoutubeChannel", "Placement", "MobileAppCategory", "Criterion", });
+        new java.lang.String[] { "ResourceName", "SharedSet", "CriterionId", "Type", "Keyword", "YoutubeVideo", "YoutubeChannel", "Placement", "MobileAppCategory", "MobileApplication", "Criterion", });
     com.google.ads.googleads.v1.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v1.enums.CriterionTypeProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();

@@ -220,6 +220,59 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
      */
     com.google.protobuf.DoubleValueOrBuilder getEstimatedCompletionRatioOrBuilder();
+
+    /**
+     * <pre>
+     * The number of mutate operations in the mutate job.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+     */
+    boolean hasOperationCount();
+    /**
+     * <pre>
+     * The number of mutate operations in the mutate job.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+     */
+    com.google.protobuf.Int64Value getOperationCount();
+    /**
+     * <pre>
+     * The number of mutate operations in the mutate job.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getOperationCountOrBuilder();
+
+    /**
+     * <pre>
+     * The number of mutate operations executed by the mutate job.
+     * Present only if the job has started running.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+     */
+    boolean hasExecutedOperationCount();
+    /**
+     * <pre>
+     * The number of mutate operations executed by the mutate job.
+     * Present only if the job has started running.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+     */
+    com.google.protobuf.Int64Value getExecutedOperationCount();
+    /**
+     * <pre>
+     * The number of mutate operations executed by the mutate job.
+     * Present only if the job has started running.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getExecutedOperationCountOrBuilder();
   }
   /**
    * <pre>
@@ -300,6 +353,32 @@ private static final long serialVersionUID = 0L;
               if (subBuilder != null) {
                 subBuilder.mergeFrom(estimatedCompletionRatio_);
                 estimatedCompletionRatio_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (operationCount_ != null) {
+                subBuilder = operationCount_.toBuilder();
+              }
+              operationCount_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(operationCount_);
+                operationCount_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (executedOperationCount_ != null) {
+                subBuilder = executedOperationCount_.toBuilder();
+              }
+              executedOperationCount_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(executedOperationCount_);
+                executedOperationCount_ = subBuilder.buildPartial();
               }
 
               break;
@@ -444,6 +523,75 @@ private static final long serialVersionUID = 0L;
       return getEstimatedCompletionRatio();
     }
 
+    public static final int OPERATION_COUNT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value operationCount_;
+    /**
+     * <pre>
+     * The number of mutate operations in the mutate job.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+     */
+    public boolean hasOperationCount() {
+      return operationCount_ != null;
+    }
+    /**
+     * <pre>
+     * The number of mutate operations in the mutate job.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+     */
+    public com.google.protobuf.Int64Value getOperationCount() {
+      return operationCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : operationCount_;
+    }
+    /**
+     * <pre>
+     * The number of mutate operations in the mutate job.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getOperationCountOrBuilder() {
+      return getOperationCount();
+    }
+
+    public static final int EXECUTED_OPERATION_COUNT_FIELD_NUMBER = 5;
+    private com.google.protobuf.Int64Value executedOperationCount_;
+    /**
+     * <pre>
+     * The number of mutate operations executed by the mutate job.
+     * Present only if the job has started running.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+     */
+    public boolean hasExecutedOperationCount() {
+      return executedOperationCount_ != null;
+    }
+    /**
+     * <pre>
+     * The number of mutate operations executed by the mutate job.
+     * Present only if the job has started running.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+     */
+    public com.google.protobuf.Int64Value getExecutedOperationCount() {
+      return executedOperationCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : executedOperationCount_;
+    }
+    /**
+     * <pre>
+     * The number of mutate operations executed by the mutate job.
+     * Present only if the job has started running.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getExecutedOperationCountOrBuilder() {
+      return getExecutedOperationCount();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -467,6 +615,12 @@ private static final long serialVersionUID = 0L;
       if (estimatedCompletionRatio_ != null) {
         output.writeMessage(3, getEstimatedCompletionRatio());
       }
+      if (operationCount_ != null) {
+        output.writeMessage(4, getOperationCount());
+      }
+      if (executedOperationCount_ != null) {
+        output.writeMessage(5, getExecutedOperationCount());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -487,6 +641,14 @@ private static final long serialVersionUID = 0L;
       if (estimatedCompletionRatio_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getEstimatedCompletionRatio());
+      }
+      if (operationCount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getOperationCount());
+      }
+      if (executedOperationCount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getExecutedOperationCount());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -519,6 +681,16 @@ private static final long serialVersionUID = 0L;
         result = result && getEstimatedCompletionRatio()
             .equals(other.getEstimatedCompletionRatio());
       }
+      result = result && (hasOperationCount() == other.hasOperationCount());
+      if (hasOperationCount()) {
+        result = result && getOperationCount()
+            .equals(other.getOperationCount());
+      }
+      result = result && (hasExecutedOperationCount() == other.hasExecutedOperationCount());
+      if (hasExecutedOperationCount()) {
+        result = result && getExecutedOperationCount()
+            .equals(other.getExecutedOperationCount());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -541,6 +713,14 @@ private static final long serialVersionUID = 0L;
       if (hasEstimatedCompletionRatio()) {
         hash = (37 * hash) + ESTIMATED_COMPLETION_RATIO_FIELD_NUMBER;
         hash = (53 * hash) + getEstimatedCompletionRatio().hashCode();
+      }
+      if (hasOperationCount()) {
+        hash = (37 * hash) + OPERATION_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getOperationCount().hashCode();
+      }
+      if (hasExecutedOperationCount()) {
+        hash = (37 * hash) + EXECUTED_OPERATION_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getExecutedOperationCount().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -698,6 +878,18 @@ private static final long serialVersionUID = 0L;
           estimatedCompletionRatio_ = null;
           estimatedCompletionRatioBuilder_ = null;
         }
+        if (operationCountBuilder_ == null) {
+          operationCount_ = null;
+        } else {
+          operationCount_ = null;
+          operationCountBuilder_ = null;
+        }
+        if (executedOperationCountBuilder_ == null) {
+          executedOperationCount_ = null;
+        } else {
+          executedOperationCount_ = null;
+          executedOperationCountBuilder_ = null;
+        }
         return this;
       }
 
@@ -738,6 +930,16 @@ private static final long serialVersionUID = 0L;
           result.estimatedCompletionRatio_ = estimatedCompletionRatio_;
         } else {
           result.estimatedCompletionRatio_ = estimatedCompletionRatioBuilder_.build();
+        }
+        if (operationCountBuilder_ == null) {
+          result.operationCount_ = operationCount_;
+        } else {
+          result.operationCount_ = operationCountBuilder_.build();
+        }
+        if (executedOperationCountBuilder_ == null) {
+          result.executedOperationCount_ = executedOperationCount_;
+        } else {
+          result.executedOperationCount_ = executedOperationCountBuilder_.build();
         }
         onBuilt();
         return result;
@@ -795,6 +997,12 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasEstimatedCompletionRatio()) {
           mergeEstimatedCompletionRatio(other.getEstimatedCompletionRatio());
+        }
+        if (other.hasOperationCount()) {
+          mergeOperationCount(other.getOperationCount());
+        }
+        if (other.hasExecutedOperationCount()) {
+          mergeExecutedOperationCount(other.getExecutedOperationCount());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1309,6 +1517,321 @@ private static final long serialVersionUID = 0L;
           estimatedCompletionRatio_ = null;
         }
         return estimatedCompletionRatioBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value operationCount_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> operationCountBuilder_;
+      /**
+       * <pre>
+       * The number of mutate operations in the mutate job.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       */
+      public boolean hasOperationCount() {
+        return operationCountBuilder_ != null || operationCount_ != null;
+      }
+      /**
+       * <pre>
+       * The number of mutate operations in the mutate job.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       */
+      public com.google.protobuf.Int64Value getOperationCount() {
+        if (operationCountBuilder_ == null) {
+          return operationCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : operationCount_;
+        } else {
+          return operationCountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of mutate operations in the mutate job.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       */
+      public Builder setOperationCount(com.google.protobuf.Int64Value value) {
+        if (operationCountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          operationCount_ = value;
+          onChanged();
+        } else {
+          operationCountBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of mutate operations in the mutate job.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       */
+      public Builder setOperationCount(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (operationCountBuilder_ == null) {
+          operationCount_ = builderForValue.build();
+          onChanged();
+        } else {
+          operationCountBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of mutate operations in the mutate job.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       */
+      public Builder mergeOperationCount(com.google.protobuf.Int64Value value) {
+        if (operationCountBuilder_ == null) {
+          if (operationCount_ != null) {
+            operationCount_ =
+              com.google.protobuf.Int64Value.newBuilder(operationCount_).mergeFrom(value).buildPartial();
+          } else {
+            operationCount_ = value;
+          }
+          onChanged();
+        } else {
+          operationCountBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of mutate operations in the mutate job.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       */
+      public Builder clearOperationCount() {
+        if (operationCountBuilder_ == null) {
+          operationCount_ = null;
+          onChanged();
+        } else {
+          operationCount_ = null;
+          operationCountBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of mutate operations in the mutate job.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getOperationCountBuilder() {
+        
+        onChanged();
+        return getOperationCountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of mutate operations in the mutate job.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getOperationCountOrBuilder() {
+        if (operationCountBuilder_ != null) {
+          return operationCountBuilder_.getMessageOrBuilder();
+        } else {
+          return operationCount_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : operationCount_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of mutate operations in the mutate job.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getOperationCountFieldBuilder() {
+        if (operationCountBuilder_ == null) {
+          operationCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getOperationCount(),
+                  getParentForChildren(),
+                  isClean());
+          operationCount_ = null;
+        }
+        return operationCountBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value executedOperationCount_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> executedOperationCountBuilder_;
+      /**
+       * <pre>
+       * The number of mutate operations executed by the mutate job.
+       * Present only if the job has started running.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       */
+      public boolean hasExecutedOperationCount() {
+        return executedOperationCountBuilder_ != null || executedOperationCount_ != null;
+      }
+      /**
+       * <pre>
+       * The number of mutate operations executed by the mutate job.
+       * Present only if the job has started running.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       */
+      public com.google.protobuf.Int64Value getExecutedOperationCount() {
+        if (executedOperationCountBuilder_ == null) {
+          return executedOperationCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : executedOperationCount_;
+        } else {
+          return executedOperationCountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of mutate operations executed by the mutate job.
+       * Present only if the job has started running.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       */
+      public Builder setExecutedOperationCount(com.google.protobuf.Int64Value value) {
+        if (executedOperationCountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          executedOperationCount_ = value;
+          onChanged();
+        } else {
+          executedOperationCountBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of mutate operations executed by the mutate job.
+       * Present only if the job has started running.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       */
+      public Builder setExecutedOperationCount(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (executedOperationCountBuilder_ == null) {
+          executedOperationCount_ = builderForValue.build();
+          onChanged();
+        } else {
+          executedOperationCountBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of mutate operations executed by the mutate job.
+       * Present only if the job has started running.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       */
+      public Builder mergeExecutedOperationCount(com.google.protobuf.Int64Value value) {
+        if (executedOperationCountBuilder_ == null) {
+          if (executedOperationCount_ != null) {
+            executedOperationCount_ =
+              com.google.protobuf.Int64Value.newBuilder(executedOperationCount_).mergeFrom(value).buildPartial();
+          } else {
+            executedOperationCount_ = value;
+          }
+          onChanged();
+        } else {
+          executedOperationCountBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of mutate operations executed by the mutate job.
+       * Present only if the job has started running.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       */
+      public Builder clearExecutedOperationCount() {
+        if (executedOperationCountBuilder_ == null) {
+          executedOperationCount_ = null;
+          onChanged();
+        } else {
+          executedOperationCount_ = null;
+          executedOperationCountBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of mutate operations executed by the mutate job.
+       * Present only if the job has started running.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getExecutedOperationCountBuilder() {
+        
+        onChanged();
+        return getExecutedOperationCountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of mutate operations executed by the mutate job.
+       * Present only if the job has started running.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getExecutedOperationCountOrBuilder() {
+        if (executedOperationCountBuilder_ != null) {
+          return executedOperationCountBuilder_.getMessageOrBuilder();
+        } else {
+          return executedOperationCount_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : executedOperationCount_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of mutate operations executed by the mutate job.
+       * Present only if the job has started running.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getExecutedOperationCountFieldBuilder() {
+        if (executedOperationCountBuilder_ == null) {
+          executedOperationCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getExecutedOperationCount(),
+                  getParentForChildren(),
+                  isClean());
+          executedOperationCount_ = null;
+        }
+        return executedOperationCountBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

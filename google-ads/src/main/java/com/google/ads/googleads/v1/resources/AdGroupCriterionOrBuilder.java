@@ -191,6 +191,23 @@ public interface AdGroupCriterionOrBuilder extends
 
   /**
    * <pre>
+   * Approval status of the criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53;</code>
+   */
+  int getApprovalStatusValue();
+  /**
+   * <pre>
+   * Approval status of the criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53;</code>
+   */
+  com.google.ads.googleads.v1.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus getApprovalStatus();
+
+  /**
+   * <pre>
    * The modifier for the bid when the criterion matches. The modifier must be
    * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
    * </pre>
@@ -782,6 +799,31 @@ public interface AdGroupCriterionOrBuilder extends
    * <code>.google.ads.googleads.v1.common.MobileAppCategoryInfo mobile_app_category = 29;</code>
    */
   com.google.ads.googleads.v1.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder();
+
+  /**
+   * <pre>
+   * Mobile application.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+   */
+  boolean hasMobileApplication();
+  /**
+   * <pre>
+   * Mobile application.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+   */
+  com.google.ads.googleads.v1.common.MobileApplicationInfo getMobileApplication();
+  /**
+   * <pre>
+   * Mobile application.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.MobileApplicationInfo mobile_application = 30;</code>
+   */
+  com.google.ads.googleads.v1.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder();
 
   /**
    * <pre>

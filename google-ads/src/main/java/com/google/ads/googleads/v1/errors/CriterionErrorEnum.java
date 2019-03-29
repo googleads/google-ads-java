@@ -369,6 +369,22 @@ private static final long serialVersionUID = 0L;
     CANNOT_ADD_URLS_TO_CRITERION_TYPE_FOR_CAMPAIGN_TYPE(33),
     /**
      * <pre>
+     * Invalid custom affinity criterion.
+     * </pre>
+     *
+     * <code>INVALID_CUSTOM_AFFINITY = 96;</code>
+     */
+    INVALID_CUSTOM_AFFINITY(96),
+    /**
+     * <pre>
+     * Invalid custom intent criterion.
+     * </pre>
+     *
+     * <code>INVALID_CUSTOM_INTENT = 97;</code>
+     */
+    INVALID_CUSTOM_INTENT(97),
+    /**
+     * <pre>
      * IP address is not valid.
      * </pre>
      *
@@ -1174,6 +1190,22 @@ private static final long serialVersionUID = 0L;
     public static final int CANNOT_ADD_URLS_TO_CRITERION_TYPE_FOR_CAMPAIGN_TYPE_VALUE = 33;
     /**
      * <pre>
+     * Invalid custom affinity criterion.
+     * </pre>
+     *
+     * <code>INVALID_CUSTOM_AFFINITY = 96;</code>
+     */
+    public static final int INVALID_CUSTOM_AFFINITY_VALUE = 96;
+    /**
+     * <pre>
+     * Invalid custom intent criterion.
+     * </pre>
+     *
+     * <code>INVALID_CUSTOM_INTENT = 97;</code>
+     */
+    public static final int INVALID_CUSTOM_INTENT_VALUE = 97;
+    /**
+     * <pre>
      * IP address is not valid.
      * </pre>
      *
@@ -1747,6 +1779,8 @@ private static final long serialVersionUID = 0L;
         case 31: return CANNOT_ADD_USER_INTERESTS_TO_SEARCH_CAMPAIGNS;
         case 32: return CANNOT_SET_BIDS_ON_CRITERION_TYPE_IN_SEARCH_CAMPAIGNS;
         case 33: return CANNOT_ADD_URLS_TO_CRITERION_TYPE_FOR_CAMPAIGN_TYPE;
+        case 96: return INVALID_CUSTOM_AFFINITY;
+        case 97: return INVALID_CUSTOM_INTENT;
         case 34: return INVALID_IP_ADDRESS;
         case 35: return INVALID_IP_FORMAT;
         case 36: return INVALID_MOBILE_APP;

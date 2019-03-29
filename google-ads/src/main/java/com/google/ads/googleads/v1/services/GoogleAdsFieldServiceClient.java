@@ -29,6 +29,7 @@ import com.google.api.gax.paging.AbstractPagedListResponse;
 import com.google.api.gax.rpc.PageContext;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.api.pathtemplate.PathTemplate;
+import com.google.common.util.concurrent.MoreExecutors;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -396,7 +397,8 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
             public SearchGoogleAdsFieldsPagedResponse apply(SearchGoogleAdsFieldsPage input) {
               return new SearchGoogleAdsFieldsPagedResponse(input);
             }
-          });
+          },
+          MoreExecutors.directExecutor());
     }
 
     private SearchGoogleAdsFieldsPagedResponse(SearchGoogleAdsFieldsPage page) {

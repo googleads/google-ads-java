@@ -131,5 +131,30 @@ public interface ApplyRecommendationOperationOrBuilder extends
    */
   com.google.ads.googleads.v1.services.ApplyRecommendationOperation.TargetCpaOptInParametersOrBuilder getTargetCpaOptInOrBuilder();
 
+  /**
+   * <pre>
+   * Parameters to use when applying move unused budget recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters move_unused_budget = 9;</code>
+   */
+  boolean hasMoveUnusedBudget();
+  /**
+   * <pre>
+   * Parameters to use when applying move unused budget recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters move_unused_budget = 9;</code>
+   */
+  com.google.ads.googleads.v1.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters getMoveUnusedBudget();
+  /**
+   * <pre>
+   * Parameters to use when applying move unused budget recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters move_unused_budget = 9;</code>
+   */
+  com.google.ads.googleads.v1.services.ApplyRecommendationOperation.MoveUnusedBudgetParametersOrBuilder getMoveUnusedBudgetOrBuilder();
+
   public com.google.ads.googleads.v1.services.ApplyRecommendationOperation.ApplyParametersCase getApplyParametersCase();
 }

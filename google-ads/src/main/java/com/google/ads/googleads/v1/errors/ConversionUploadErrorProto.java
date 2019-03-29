@@ -31,7 +31,7 @@ public final class ConversionUploadErrorProto {
       "\n<google/ads/googleads/v1/errors/convers" +
       "ion_upload_error.proto\022\036google.ads.googl" +
       "eads.v1.errors\032\034google/api/annotations.p" +
-      "roto\"\243\005\n\031ConversionUploadErrorEnum\"\205\005\n\025C" +
+      "roto\"\324\006\n\031ConversionUploadErrorEnum\"\266\006\n\025C" +
       "onversionUploadError\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
       "\007UNKNOWN\020\001\022#\n\037TOO_MANY_CONVERSIONS_IN_RE" +
       "QUEST\020\002\022\025\n\021UNPARSEABLE_GCLID\020\003\022\035\n\031CONVER" +
@@ -48,13 +48,17 @@ public final class ConversionUploadErrorProto {
       "BORDER_ID_NOT_PERMITTED_FOR_EXTERNALLY_A" +
       "TTRIBUTED_CONVERSION_ACTION\020\016\022\033\n\027ORDER_I" +
       "D_ALREADY_IN_USE\020\017\022\026\n\022DUPLICATE_ORDER_ID" +
-      "\020\020B\365\001\n\"com.google.ads.googleads.v1.error" +
-      "sB\032ConversionUploadErrorProtoP\001ZDgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v1/errors;errors\242\002\003GAA\252\002\036Google.Ads" +
-      ".GoogleAds.V1.Errors\312\002\036Google\\Ads\\Google" +
-      "Ads\\V1\\Errors\352\002\"Google::Ads::GoogleAds::" +
-      "V1::Errorsb\006proto3"
+      "\020\020\022\023\n\017TOO_RECENT_CALL\020\021\022\020\n\014EXPIRED_CALL\020" +
+      "\022\022\022\n\016CALL_NOT_FOUND\020\023\022\034\n\030CONVERSION_PREC" +
+      "EDES_CALL\020\024\0220\n,CONVERSION_TRACKING_NOT_E" +
+      "NABLED_AT_CALL_TIME\020\025\022$\n UNPARSEABLE_CAL" +
+      "LERS_PHONE_NUMBER\020\026B\365\001\n\"com.google.ads.g" +
+      "oogleads.v1.errorsB\032ConversionUploadErro" +
+      "rProtoP\001ZDgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v1/errors;errors\242\002" +
+      "\003GAA\252\002\036Google.Ads.GoogleAds.V1.Errors\312\002\036" +
+      "Google\\Ads\\GoogleAds\\V1\\Errors\352\002\"Google:" +
+      ":Ads::GoogleAds::V1::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

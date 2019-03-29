@@ -31,6 +31,25 @@ public interface ExtensionFeedItemOrBuilder extends
 
   /**
    * <pre>
+   * The extension type of the extension feed item.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+   */
+  int getExtensionTypeValue();
+  /**
+   * <pre>
+   * The extension type of the extension feed item.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+   */
+  com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType getExtensionType();
+
+  /**
+   * <pre>
    * Start time in which this feed item is effective and can begin serving.
    * The format is "YYYY-MM-DD HH:MM:SS".
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"

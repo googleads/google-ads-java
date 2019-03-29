@@ -182,6 +182,14 @@ private static final long serialVersionUID = 0L;
      * <code>VIDEO_NON_SKIPPABLE = 11;</code>
      */
     VIDEO_NON_SKIPPABLE(11),
+    /**
+     * <pre>
+     * Universal App Campaign.
+     * </pre>
+     *
+     * <code>APP_CAMPAIGN = 12;</code>
+     */
+    APP_CAMPAIGN(12),
     UNRECOGNIZED(-1),
     ;
 
@@ -281,6 +289,14 @@ private static final long serialVersionUID = 0L;
      * <code>VIDEO_NON_SKIPPABLE = 11;</code>
      */
     public static final int VIDEO_NON_SKIPPABLE_VALUE = 11;
+    /**
+     * <pre>
+     * Universal App Campaign.
+     * </pre>
+     *
+     * <code>APP_CAMPAIGN = 12;</code>
+     */
+    public static final int APP_CAMPAIGN_VALUE = 12;
 
 
     public final int getNumber() {
@@ -313,6 +329,7 @@ private static final long serialVersionUID = 0L;
         case 9: return VIDEO_OUTSTREAM;
         case 10: return VIDEO_ACTION;
         case 11: return VIDEO_NON_SKIPPABLE;
+        case 12: return APP_CAMPAIGN;
         default: return null;
       }
     }

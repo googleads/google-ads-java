@@ -32,6 +32,7 @@ import com.google.api.gax.rpc.OperationCallable;
 import com.google.api.gax.rpc.PageContext;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.api.pathtemplate.PathTemplate;
+import com.google.common.util.concurrent.MoreExecutors;
 import com.google.longrunning.Operation;
 import com.google.longrunning.OperationsClient;
 import com.google.protobuf.Empty;
@@ -457,7 +458,7 @@ public class MutateJobServiceClient implements BackgroundResource {
    * <pre><code>
    * try (MutateJobServiceClient mutateJobServiceClient = MutateJobServiceClient.create()) {
    *   String formattedResourceName = MutateJobServiceClient.formatMutateJobName("[CUSTOMER]", "[MUTATE_JOB]");
-   *   Empty response = mutateJobServiceClient.runMutateJobAsync(formattedResourceName).get();
+   *   mutateJobServiceClient.runMutateJobAsync(formattedResourceName).get();
    * }
    * </code></pre>
    *
@@ -489,7 +490,7 @@ public class MutateJobServiceClient implements BackgroundResource {
    *   RunMutateJobRequest request = RunMutateJobRequest.newBuilder()
    *     .setResourceName(formattedResourceName)
    *     .build();
-   *   Empty response = mutateJobServiceClient.runMutateJobAsync(request).get();
+   *   mutateJobServiceClient.runMutateJobAsync(request).get();
    * }
    * </code></pre>
    *
@@ -519,9 +520,9 @@ public class MutateJobServiceClient implements BackgroundResource {
    *   RunMutateJobRequest request = RunMutateJobRequest.newBuilder()
    *     .setResourceName(formattedResourceName)
    *     .build();
-   *   OperationFuture&lt;Operation&gt; future = mutateJobServiceClient.runMutateJobOperationCallable().futureCall(request);
+   *   OperationFuture&lt;Empty, MutateJobMetadata&gt; future = mutateJobServiceClient.runMutateJobOperationCallable().futureCall(request);
    *   // Do something
-   *   Empty response = future.get();
+   *   future.get();
    * }
    * </code></pre>
    */
@@ -701,7 +702,8 @@ public class MutateJobServiceClient implements BackgroundResource {
             public ListMutateJobResultsPagedResponse apply(ListMutateJobResultsPage input) {
               return new ListMutateJobResultsPagedResponse(input);
             }
-          });
+          },
+          MoreExecutors.directExecutor());
     }
 
     private ListMutateJobResultsPagedResponse(ListMutateJobResultsPage page) {

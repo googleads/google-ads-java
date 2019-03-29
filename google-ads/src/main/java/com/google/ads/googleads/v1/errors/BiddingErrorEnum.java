@@ -275,6 +275,14 @@ private static final long serialVersionUID = 0L;
      * <code>NOT_COMPATIBLE_WITH_PAYMENT_MODE = 34;</code>
      */
     NOT_COMPATIBLE_WITH_PAYMENT_MODE(34),
+    /**
+     * <pre>
+     * Bidding strategy is incompatible with the budget type.
+     * </pre>
+     *
+     * <code>NOT_COMPATIBLE_WITH_BUDGET_TYPE = 35;</code>
+     */
+    NOT_COMPATIBLE_WITH_BUDGET_TYPE(35),
     UNRECOGNIZED(-1),
     ;
 
@@ -467,6 +475,14 @@ private static final long serialVersionUID = 0L;
      * <code>NOT_COMPATIBLE_WITH_PAYMENT_MODE = 34;</code>
      */
     public static final int NOT_COMPATIBLE_WITH_PAYMENT_MODE_VALUE = 34;
+    /**
+     * <pre>
+     * Bidding strategy is incompatible with the budget type.
+     * </pre>
+     *
+     * <code>NOT_COMPATIBLE_WITH_BUDGET_TYPE = 35;</code>
+     */
+    public static final int NOT_COMPATIBLE_WITH_BUDGET_TYPE_VALUE = 35;
 
 
     public final int getNumber() {
@@ -510,6 +526,7 @@ private static final long serialVersionUID = 0L;
         case 32: return BID_TOO_MANY_FRACTIONAL_DIGITS;
         case 33: return INVALID_DOMAIN_NAME;
         case 34: return NOT_COMPATIBLE_WITH_PAYMENT_MODE;
+        case 35: return NOT_COMPATIBLE_WITH_BUDGET_TYPE;
         default: return null;
       }
     }

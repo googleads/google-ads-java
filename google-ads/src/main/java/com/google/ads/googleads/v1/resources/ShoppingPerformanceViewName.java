@@ -27,19 +27,14 @@ import java.util.List;
 public class ShoppingPerformanceViewName implements ResourceName {
 
   private static final PathTemplate PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/shoppingPerformanceView/{shopping_performance_view}");
+      PathTemplate.createWithoutUrlEncoding("customers/{customer}/shoppingPerformanceView");
 
   private volatile Map<String, String> fieldValuesMap;
 
   private final String customer;
-  private final String shoppingPerformanceView;
 
   public String getCustomer() {
     return customer;
-  }
-
-  public String getShoppingPerformanceView() {
-    return shoppingPerformanceView;
   }
 
   public static Builder newBuilder() {
@@ -52,20 +47,17 @@ public class ShoppingPerformanceViewName implements ResourceName {
 
   private ShoppingPerformanceViewName(Builder builder) {
     customer = Preconditions.checkNotNull(builder.getCustomer());
-    shoppingPerformanceView = Preconditions.checkNotNull(builder.getShoppingPerformanceView());
   }
 
-  public static ShoppingPerformanceViewName of(String customer, String shoppingPerformanceView) {
+  public static ShoppingPerformanceViewName of(String customer) {
     return newBuilder()
       .setCustomer(customer)
-      .setShoppingPerformanceView(shoppingPerformanceView)
       .build();
   }
 
-  public static String format(String customer, String shoppingPerformanceView) {
+  public static String format(String customer) {
     return newBuilder()
       .setCustomer(customer)
-      .setShoppingPerformanceView(shoppingPerformanceView)
       .build()
       .toString();
   }
@@ -76,7 +68,7 @@ public class ShoppingPerformanceViewName implements ResourceName {
     }
     Map<String, String> matchMap =
         PATH_TEMPLATE.validatedMatch(formattedString, "ShoppingPerformanceViewName.parse: formattedString not in valid format");
-    return of(matchMap.get("customer"), matchMap.get("shopping_performance_view"));
+    return of(matchMap.get("customer"));
   }
 
   public static List<ShoppingPerformanceViewName> parseList(List<String> formattedStrings) {
@@ -109,7 +101,6 @@ public class ShoppingPerformanceViewName implements ResourceName {
         if (fieldValuesMap == null) {
           ImmutableMap.Builder<String, String> fieldMapBuilder = ImmutableMap.builder();
           fieldMapBuilder.put("customer", customer);
-          fieldMapBuilder.put("shoppingPerformanceView", shoppingPerformanceView);
           fieldValuesMap = fieldMapBuilder.build();
         }
       }
@@ -123,30 +114,20 @@ public class ShoppingPerformanceViewName implements ResourceName {
 
   @Override
   public String toString() {
-    return PATH_TEMPLATE.instantiate("customer", customer, "shopping_performance_view", shoppingPerformanceView);
+    return PATH_TEMPLATE.instantiate("customer", customer);
   }
 
   /** Builder for ShoppingPerformanceViewName. */
   public static class Builder {
 
     private String customer;
-    private String shoppingPerformanceView;
 
     public String getCustomer() {
       return customer;
     }
 
-    public String getShoppingPerformanceView() {
-      return shoppingPerformanceView;
-    }
-
     public Builder setCustomer(String customer) {
       this.customer = customer;
-      return this;
-    }
-
-    public Builder setShoppingPerformanceView(String shoppingPerformanceView) {
-      this.shoppingPerformanceView = shoppingPerformanceView;
       return this;
     }
 
@@ -155,7 +136,6 @@ public class ShoppingPerformanceViewName implements ResourceName {
 
     private Builder(ShoppingPerformanceViewName shoppingPerformanceViewName) {
       customer = shoppingPerformanceViewName.customer;
-      shoppingPerformanceView = shoppingPerformanceViewName.shoppingPerformanceView;
     }
 
     public ShoppingPerformanceViewName build() {
@@ -170,8 +150,7 @@ public class ShoppingPerformanceViewName implements ResourceName {
     }
     if (o instanceof ShoppingPerformanceViewName) {
       ShoppingPerformanceViewName that = (ShoppingPerformanceViewName) o;
-      return (this.customer.equals(that.customer))
-          && (this.shoppingPerformanceView.equals(that.shoppingPerformanceView));
+      return (this.customer.equals(that.customer));
     }
     return false;
   }
@@ -181,8 +160,6 @@ public class ShoppingPerformanceViewName implements ResourceName {
     int h = 1;
     h *= 1000003;
     h ^= customer.hashCode();
-    h *= 1000003;
-    h ^= shoppingPerformanceView.hashCode();
     return h;
   }
 }

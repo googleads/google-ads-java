@@ -143,6 +143,15 @@ private static final long serialVersionUID = 0L;
      * <code>VIDEO = 6;</code>
      */
     VIDEO(6),
+    /**
+     * <pre>
+     * Universal App Campaigns, including universal app install and universal
+     * app reengagement campaigns, that run across multiple channels.
+     * </pre>
+     *
+     * <code>MULTI_CHANNEL = 7;</code>
+     */
+    MULTI_CHANNEL(7),
     UNRECOGNIZED(-1),
     ;
 
@@ -203,6 +212,15 @@ private static final long serialVersionUID = 0L;
      * <code>VIDEO = 6;</code>
      */
     public static final int VIDEO_VALUE = 6;
+    /**
+     * <pre>
+     * Universal App Campaigns, including universal app install and universal
+     * app reengagement campaigns, that run across multiple channels.
+     * </pre>
+     *
+     * <code>MULTI_CHANNEL = 7;</code>
+     */
+    public static final int MULTI_CHANNEL_VALUE = 7;
 
 
     public final int getNumber() {
@@ -230,6 +248,7 @@ private static final long serialVersionUID = 0L;
         case 4: return SHOPPING;
         case 5: return HOTEL;
         case 6: return VIDEO;
+        case 7: return MULTI_CHANNEL;
         default: return null;
       }
     }

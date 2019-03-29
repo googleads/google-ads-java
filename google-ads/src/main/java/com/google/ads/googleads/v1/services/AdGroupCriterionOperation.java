@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AdGroupCriterionOperation() {
+    exemptPolicyViolationKeys_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -93,6 +94,15 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 42: {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              exemptPolicyViolationKeys_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.PolicyViolationKey>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            exemptPolicyViolationKeys_.add(
+                input.readMessage(com.google.ads.googleads.v1.common.PolicyViolationKey.parser(), extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -108,6 +118,9 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        exemptPolicyViolationKeys_ = java.util.Collections.unmodifiableList(exemptPolicyViolationKeys_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -125,6 +138,7 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v1.services.AdGroupCriterionOperation.class, com.google.ads.googleads.v1.services.AdGroupCriterionOperation.Builder.class);
   }
 
+  private int bitField0_;
   private int operationCase_ = 0;
   private java.lang.Object operation_;
   public enum OperationCase
@@ -196,6 +210,96 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
     return getUpdateMask();
+  }
+
+  public static final int EXEMPT_POLICY_VIOLATION_KEYS_FIELD_NUMBER = 5;
+  private java.util.List<com.google.ads.googleads.v1.common.PolicyViolationKey> exemptPolicyViolationKeys_;
+  /**
+   * <pre>
+   * The list of policy violation keys that should not cause a
+   * PolicyViolationError to be reported. Not all policy violations are
+   * exemptable, please refer to the is_exemptible field in the returned
+   * PolicyViolationError.
+   * Resources violating these polices will be saved, but will not be eligible
+   * to serve. They may begin serving at a later time due to a change in
+   * policies, re-review of the resource, or a change in advertiser
+   * certificates.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+   */
+  public java.util.List<com.google.ads.googleads.v1.common.PolicyViolationKey> getExemptPolicyViolationKeysList() {
+    return exemptPolicyViolationKeys_;
+  }
+  /**
+   * <pre>
+   * The list of policy violation keys that should not cause a
+   * PolicyViolationError to be reported. Not all policy violations are
+   * exemptable, please refer to the is_exemptible field in the returned
+   * PolicyViolationError.
+   * Resources violating these polices will be saved, but will not be eligible
+   * to serve. They may begin serving at a later time due to a change in
+   * policies, re-review of the resource, or a change in advertiser
+   * certificates.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+   */
+  public java.util.List<? extends com.google.ads.googleads.v1.common.PolicyViolationKeyOrBuilder> 
+      getExemptPolicyViolationKeysOrBuilderList() {
+    return exemptPolicyViolationKeys_;
+  }
+  /**
+   * <pre>
+   * The list of policy violation keys that should not cause a
+   * PolicyViolationError to be reported. Not all policy violations are
+   * exemptable, please refer to the is_exemptible field in the returned
+   * PolicyViolationError.
+   * Resources violating these polices will be saved, but will not be eligible
+   * to serve. They may begin serving at a later time due to a change in
+   * policies, re-review of the resource, or a change in advertiser
+   * certificates.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+   */
+  public int getExemptPolicyViolationKeysCount() {
+    return exemptPolicyViolationKeys_.size();
+  }
+  /**
+   * <pre>
+   * The list of policy violation keys that should not cause a
+   * PolicyViolationError to be reported. Not all policy violations are
+   * exemptable, please refer to the is_exemptible field in the returned
+   * PolicyViolationError.
+   * Resources violating these polices will be saved, but will not be eligible
+   * to serve. They may begin serving at a later time due to a change in
+   * policies, re-review of the resource, or a change in advertiser
+   * certificates.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+   */
+  public com.google.ads.googleads.v1.common.PolicyViolationKey getExemptPolicyViolationKeys(int index) {
+    return exemptPolicyViolationKeys_.get(index);
+  }
+  /**
+   * <pre>
+   * The list of policy violation keys that should not cause a
+   * PolicyViolationError to be reported. Not all policy violations are
+   * exemptable, please refer to the is_exemptible field in the returned
+   * PolicyViolationError.
+   * Resources violating these polices will be saved, but will not be eligible
+   * to serve. They may begin serving at a later time due to a change in
+   * policies, re-review of the resource, or a change in advertiser
+   * certificates.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+   */
+  public com.google.ads.googleads.v1.common.PolicyViolationKeyOrBuilder getExemptPolicyViolationKeysOrBuilder(
+      int index) {
+    return exemptPolicyViolationKeys_.get(index);
   }
 
   public static final int CREATE_FIELD_NUMBER = 1;
@@ -358,6 +462,9 @@ private static final long serialVersionUID = 0L;
     if (updateMask_ != null) {
       output.writeMessage(4, getUpdateMask());
     }
+    for (int i = 0; i < exemptPolicyViolationKeys_.size(); i++) {
+      output.writeMessage(5, exemptPolicyViolationKeys_.get(i));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -382,6 +489,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getUpdateMask());
     }
+    for (int i = 0; i < exemptPolicyViolationKeys_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, exemptPolicyViolationKeys_.get(i));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -403,6 +514,8 @@ private static final long serialVersionUID = 0L;
       result = result && getUpdateMask()
           .equals(other.getUpdateMask());
     }
+    result = result && getExemptPolicyViolationKeysList()
+        .equals(other.getExemptPolicyViolationKeysList());
     result = result && getOperationCase().equals(
         other.getOperationCase());
     if (!result) return false;
@@ -436,6 +549,10 @@ private static final long serialVersionUID = 0L;
     if (hasUpdateMask()) {
       hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getUpdateMask().hashCode();
+    }
+    if (getExemptPolicyViolationKeysCount() > 0) {
+      hash = (37 * hash) + EXEMPT_POLICY_VIOLATION_KEYS_FIELD_NUMBER;
+      hash = (53 * hash) + getExemptPolicyViolationKeysList().hashCode();
     }
     switch (operationCase_) {
       case 1:
@@ -585,6 +702,7 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getExemptPolicyViolationKeysFieldBuilder();
       }
     }
     @java.lang.Override
@@ -595,6 +713,12 @@ private static final long serialVersionUID = 0L;
       } else {
         updateMask_ = null;
         updateMaskBuilder_ = null;
+      }
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        exemptPolicyViolationKeys_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      } else {
+        exemptPolicyViolationKeysBuilder_.clear();
       }
       operationCase_ = 0;
       operation_ = null;
@@ -624,10 +748,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v1.services.AdGroupCriterionOperation buildPartial() {
       com.google.ads.googleads.v1.services.AdGroupCriterionOperation result = new com.google.ads.googleads.v1.services.AdGroupCriterionOperation(this);
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (updateMaskBuilder_ == null) {
         result.updateMask_ = updateMask_;
       } else {
         result.updateMask_ = updateMaskBuilder_.build();
+      }
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          exemptPolicyViolationKeys_ = java.util.Collections.unmodifiableList(exemptPolicyViolationKeys_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.exemptPolicyViolationKeys_ = exemptPolicyViolationKeys_;
+      } else {
+        result.exemptPolicyViolationKeys_ = exemptPolicyViolationKeysBuilder_.build();
       }
       if (operationCase_ == 1) {
         if (createBuilder_ == null) {
@@ -646,6 +781,7 @@ private static final long serialVersionUID = 0L;
       if (operationCase_ == 3) {
         result.operation_ = operation_;
       }
+      result.bitField0_ = to_bitField0_;
       result.operationCase_ = operationCase_;
       onBuilt();
       return result;
@@ -697,6 +833,32 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v1.services.AdGroupCriterionOperation.getDefaultInstance()) return this;
       if (other.hasUpdateMask()) {
         mergeUpdateMask(other.getUpdateMask());
+      }
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        if (!other.exemptPolicyViolationKeys_.isEmpty()) {
+          if (exemptPolicyViolationKeys_.isEmpty()) {
+            exemptPolicyViolationKeys_ = other.exemptPolicyViolationKeys_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureExemptPolicyViolationKeysIsMutable();
+            exemptPolicyViolationKeys_.addAll(other.exemptPolicyViolationKeys_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.exemptPolicyViolationKeys_.isEmpty()) {
+          if (exemptPolicyViolationKeysBuilder_.isEmpty()) {
+            exemptPolicyViolationKeysBuilder_.dispose();
+            exemptPolicyViolationKeysBuilder_ = null;
+            exemptPolicyViolationKeys_ = other.exemptPolicyViolationKeys_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            exemptPolicyViolationKeysBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getExemptPolicyViolationKeysFieldBuilder() : null;
+          } else {
+            exemptPolicyViolationKeysBuilder_.addAllMessages(other.exemptPolicyViolationKeys_);
+          }
+        }
       }
       switch (other.getOperationCase()) {
         case CREATE: {
@@ -760,6 +922,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.FieldMask updateMask_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -912,6 +1075,444 @@ private static final long serialVersionUID = 0L;
         updateMask_ = null;
       }
       return updateMaskBuilder_;
+    }
+
+    private java.util.List<com.google.ads.googleads.v1.common.PolicyViolationKey> exemptPolicyViolationKeys_ =
+      java.util.Collections.emptyList();
+    private void ensureExemptPolicyViolationKeysIsMutable() {
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        exemptPolicyViolationKeys_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.PolicyViolationKey>(exemptPolicyViolationKeys_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v1.common.PolicyViolationKey, com.google.ads.googleads.v1.common.PolicyViolationKey.Builder, com.google.ads.googleads.v1.common.PolicyViolationKeyOrBuilder> exemptPolicyViolationKeysBuilder_;
+
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v1.common.PolicyViolationKey> getExemptPolicyViolationKeysList() {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(exemptPolicyViolationKeys_);
+      } else {
+        return exemptPolicyViolationKeysBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public int getExemptPolicyViolationKeysCount() {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        return exemptPolicyViolationKeys_.size();
+      } else {
+        return exemptPolicyViolationKeysBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public com.google.ads.googleads.v1.common.PolicyViolationKey getExemptPolicyViolationKeys(int index) {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        return exemptPolicyViolationKeys_.get(index);
+      } else {
+        return exemptPolicyViolationKeysBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public Builder setExemptPolicyViolationKeys(
+        int index, com.google.ads.googleads.v1.common.PolicyViolationKey value) {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExemptPolicyViolationKeysIsMutable();
+        exemptPolicyViolationKeys_.set(index, value);
+        onChanged();
+      } else {
+        exemptPolicyViolationKeysBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public Builder setExemptPolicyViolationKeys(
+        int index, com.google.ads.googleads.v1.common.PolicyViolationKey.Builder builderForValue) {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        ensureExemptPolicyViolationKeysIsMutable();
+        exemptPolicyViolationKeys_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        exemptPolicyViolationKeysBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public Builder addExemptPolicyViolationKeys(com.google.ads.googleads.v1.common.PolicyViolationKey value) {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExemptPolicyViolationKeysIsMutable();
+        exemptPolicyViolationKeys_.add(value);
+        onChanged();
+      } else {
+        exemptPolicyViolationKeysBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public Builder addExemptPolicyViolationKeys(
+        int index, com.google.ads.googleads.v1.common.PolicyViolationKey value) {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExemptPolicyViolationKeysIsMutable();
+        exemptPolicyViolationKeys_.add(index, value);
+        onChanged();
+      } else {
+        exemptPolicyViolationKeysBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public Builder addExemptPolicyViolationKeys(
+        com.google.ads.googleads.v1.common.PolicyViolationKey.Builder builderForValue) {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        ensureExemptPolicyViolationKeysIsMutable();
+        exemptPolicyViolationKeys_.add(builderForValue.build());
+        onChanged();
+      } else {
+        exemptPolicyViolationKeysBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public Builder addExemptPolicyViolationKeys(
+        int index, com.google.ads.googleads.v1.common.PolicyViolationKey.Builder builderForValue) {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        ensureExemptPolicyViolationKeysIsMutable();
+        exemptPolicyViolationKeys_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        exemptPolicyViolationKeysBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public Builder addAllExemptPolicyViolationKeys(
+        java.lang.Iterable<? extends com.google.ads.googleads.v1.common.PolicyViolationKey> values) {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        ensureExemptPolicyViolationKeysIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, exemptPolicyViolationKeys_);
+        onChanged();
+      } else {
+        exemptPolicyViolationKeysBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public Builder clearExemptPolicyViolationKeys() {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        exemptPolicyViolationKeys_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        exemptPolicyViolationKeysBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public Builder removeExemptPolicyViolationKeys(int index) {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        ensureExemptPolicyViolationKeysIsMutable();
+        exemptPolicyViolationKeys_.remove(index);
+        onChanged();
+      } else {
+        exemptPolicyViolationKeysBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public com.google.ads.googleads.v1.common.PolicyViolationKey.Builder getExemptPolicyViolationKeysBuilder(
+        int index) {
+      return getExemptPolicyViolationKeysFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public com.google.ads.googleads.v1.common.PolicyViolationKeyOrBuilder getExemptPolicyViolationKeysOrBuilder(
+        int index) {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        return exemptPolicyViolationKeys_.get(index);  } else {
+        return exemptPolicyViolationKeysBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v1.common.PolicyViolationKeyOrBuilder> 
+         getExemptPolicyViolationKeysOrBuilderList() {
+      if (exemptPolicyViolationKeysBuilder_ != null) {
+        return exemptPolicyViolationKeysBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(exemptPolicyViolationKeys_);
+      }
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public com.google.ads.googleads.v1.common.PolicyViolationKey.Builder addExemptPolicyViolationKeysBuilder() {
+      return getExemptPolicyViolationKeysFieldBuilder().addBuilder(
+          com.google.ads.googleads.v1.common.PolicyViolationKey.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public com.google.ads.googleads.v1.common.PolicyViolationKey.Builder addExemptPolicyViolationKeysBuilder(
+        int index) {
+      return getExemptPolicyViolationKeysFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v1.common.PolicyViolationKey.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The list of policy violation keys that should not cause a
+     * PolicyViolationError to be reported. Not all policy violations are
+     * exemptable, please refer to the is_exemptible field in the returned
+     * PolicyViolationError.
+     * Resources violating these polices will be saved, but will not be eligible
+     * to serve. They may begin serving at a later time due to a change in
+     * policies, re-review of the resource, or a change in advertiser
+     * certificates.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v1.common.PolicyViolationKey.Builder> 
+         getExemptPolicyViolationKeysBuilderList() {
+      return getExemptPolicyViolationKeysFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v1.common.PolicyViolationKey, com.google.ads.googleads.v1.common.PolicyViolationKey.Builder, com.google.ads.googleads.v1.common.PolicyViolationKeyOrBuilder> 
+        getExemptPolicyViolationKeysFieldBuilder() {
+      if (exemptPolicyViolationKeysBuilder_ == null) {
+        exemptPolicyViolationKeysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v1.common.PolicyViolationKey, com.google.ads.googleads.v1.common.PolicyViolationKey.Builder, com.google.ads.googleads.v1.common.PolicyViolationKeyOrBuilder>(
+                exemptPolicyViolationKeys_,
+                ((bitField0_ & 0x00000002) == 0x00000002),
+                getParentForChildren(),
+                isClean());
+        exemptPolicyViolationKeys_ = null;
+      }
+      return exemptPolicyViolationKeysBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

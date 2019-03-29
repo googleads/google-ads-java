@@ -340,6 +340,48 @@ private static final long serialVersionUID = 0L;
             adDataCase_ = 28;
             break;
           }
+          case 234: {
+            com.google.ads.googleads.v1.common.AppAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 29) {
+              subBuilder = ((com.google.ads.googleads.v1.common.AppAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v1.common.AppAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.AppAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 29;
+            break;
+          }
+          case 242: {
+            com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 30) {
+              subBuilder = ((com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 30;
+            break;
+          }
+          case 250: {
+            com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 31) {
+              subBuilder = ((com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 31;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -401,6 +443,9 @@ private static final long serialVersionUID = 0L;
     VIDEO_AD(24),
     RESPONSIVE_SEARCH_AD(25),
     LEGACY_RESPONSIVE_DISPLAY_AD(28),
+    APP_AD(29),
+    LEGACY_APP_INSTALL_AD(30),
+    RESPONSIVE_DISPLAY_AD(31),
     ADDATA_NOT_SET(0);
     private final int value;
     private AdDataCase(int value) {
@@ -428,6 +473,9 @@ private static final long serialVersionUID = 0L;
         case 24: return VIDEO_AD;
         case 25: return RESPONSIVE_SEARCH_AD;
         case 28: return LEGACY_RESPONSIVE_DISPLAY_AD;
+        case 29: return APP_AD;
+        case 30: return LEGACY_APP_INSTALL_AD;
+        case 31: return RESPONSIVE_DISPLAY_AD;
         case 0: return ADDATA_NOT_SET;
         default: return null;
       }
@@ -1415,6 +1463,120 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.common.LegacyResponsiveDisplayAdInfo.getDefaultInstance();
   }
 
+  public static final int APP_AD_FIELD_NUMBER = 29;
+  /**
+   * <pre>
+   * Details pertaining to an app ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+   */
+  public boolean hasAppAd() {
+    return adDataCase_ == 29;
+  }
+  /**
+   * <pre>
+   * Details pertaining to an app ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+   */
+  public com.google.ads.googleads.v1.common.AppAdInfo getAppAd() {
+    if (adDataCase_ == 29) {
+       return (com.google.ads.googleads.v1.common.AppAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v1.common.AppAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to an app ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+   */
+  public com.google.ads.googleads.v1.common.AppAdInfoOrBuilder getAppAdOrBuilder() {
+    if (adDataCase_ == 29) {
+       return (com.google.ads.googleads.v1.common.AppAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v1.common.AppAdInfo.getDefaultInstance();
+  }
+
+  public static final int LEGACY_APP_INSTALL_AD_FIELD_NUMBER = 30;
+  /**
+   * <pre>
+   * Details pertaining to a legacy app install ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   */
+  public boolean hasLegacyAppInstallAd() {
+    return adDataCase_ == 30;
+  }
+  /**
+   * <pre>
+   * Details pertaining to a legacy app install ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   */
+  public com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo getLegacyAppInstallAd() {
+    if (adDataCase_ == 30) {
+       return (com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to a legacy app install ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   */
+  public com.google.ads.googleads.v1.common.LegacyAppInstallAdInfoOrBuilder getLegacyAppInstallAdOrBuilder() {
+    if (adDataCase_ == 30) {
+       return (com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.getDefaultInstance();
+  }
+
+  public static final int RESPONSIVE_DISPLAY_AD_FIELD_NUMBER = 31;
+  /**
+   * <pre>
+   * Details pertaining to a responsive display ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+   */
+  public boolean hasResponsiveDisplayAd() {
+    return adDataCase_ == 31;
+  }
+  /**
+   * <pre>
+   * Details pertaining to a responsive display ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+   */
+  public com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo getResponsiveDisplayAd() {
+    if (adDataCase_ == 31) {
+       return (com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to a responsive display ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+   */
+  public com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfoOrBuilder getResponsiveDisplayAdOrBuilder() {
+    if (adDataCase_ == 31) {
+       return (com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1500,6 +1662,15 @@ private static final long serialVersionUID = 0L;
     }
     if (adDataCase_ == 28) {
       output.writeMessage(28, (com.google.ads.googleads.v1.common.LegacyResponsiveDisplayAdInfo) adData_);
+    }
+    if (adDataCase_ == 29) {
+      output.writeMessage(29, (com.google.ads.googleads.v1.common.AppAdInfo) adData_);
+    }
+    if (adDataCase_ == 30) {
+      output.writeMessage(30, (com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo) adData_);
+    }
+    if (adDataCase_ == 31) {
+      output.writeMessage(31, (com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo) adData_);
     }
     unknownFields.writeTo(output);
   }
@@ -1606,6 +1777,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(28, (com.google.ads.googleads.v1.common.LegacyResponsiveDisplayAdInfo) adData_);
     }
+    if (adDataCase_ == 29) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(29, (com.google.ads.googleads.v1.common.AppAdInfo) adData_);
+    }
+    if (adDataCase_ == 30) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(30, (com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo) adData_);
+    }
+    if (adDataCase_ == 31) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(31, (com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo) adData_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1709,6 +1892,18 @@ private static final long serialVersionUID = 0L;
       case 28:
         result = result && getLegacyResponsiveDisplayAd()
             .equals(other.getLegacyResponsiveDisplayAd());
+        break;
+      case 29:
+        result = result && getAppAd()
+            .equals(other.getAppAd());
+        break;
+      case 30:
+        result = result && getLegacyAppInstallAd()
+            .equals(other.getLegacyAppInstallAd());
+        break;
+      case 31:
+        result = result && getResponsiveDisplayAd()
+            .equals(other.getResponsiveDisplayAd());
         break;
       case 0:
       default:
@@ -1814,6 +2009,18 @@ private static final long serialVersionUID = 0L;
       case 28:
         hash = (37 * hash) + LEGACY_RESPONSIVE_DISPLAY_AD_FIELD_NUMBER;
         hash = (53 * hash) + getLegacyResponsiveDisplayAd().hashCode();
+        break;
+      case 29:
+        hash = (37 * hash) + APP_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getAppAd().hashCode();
+        break;
+      case 30:
+        hash = (37 * hash) + LEGACY_APP_INSTALL_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getLegacyAppInstallAd().hashCode();
+        break;
+      case 31:
+        hash = (37 * hash) + RESPONSIVE_DISPLAY_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getResponsiveDisplayAd().hashCode();
         break;
       case 0:
       default:
@@ -2197,6 +2404,27 @@ private static final long serialVersionUID = 0L;
           result.adData_ = legacyResponsiveDisplayAdBuilder_.build();
         }
       }
+      if (adDataCase_ == 29) {
+        if (appAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = appAdBuilder_.build();
+        }
+      }
+      if (adDataCase_ == 30) {
+        if (legacyAppInstallAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = legacyAppInstallAdBuilder_.build();
+        }
+      }
+      if (adDataCase_ == 31) {
+        if (responsiveDisplayAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = responsiveDisplayAdBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.adDataCase_ = adDataCase_;
       onBuilt();
@@ -2422,6 +2650,18 @@ private static final long serialVersionUID = 0L;
         }
         case LEGACY_RESPONSIVE_DISPLAY_AD: {
           mergeLegacyResponsiveDisplayAd(other.getLegacyResponsiveDisplayAd());
+          break;
+        }
+        case APP_AD: {
+          mergeAppAd(other.getAppAd());
+          break;
+        }
+        case LEGACY_APP_INSTALL_AD: {
+          mergeLegacyAppInstallAd(other.getLegacyAppInstallAd());
+          break;
+        }
+        case RESPONSIVE_DISPLAY_AD: {
+          mergeResponsiveDisplayAd(other.getResponsiveDisplayAd());
           break;
         }
         case ADDATA_NOT_SET: {
@@ -6917,6 +7157,522 @@ private static final long serialVersionUID = 0L;
       adDataCase_ = 28;
       onChanged();;
       return legacyResponsiveDisplayAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.AppAdInfo, com.google.ads.googleads.v1.common.AppAdInfo.Builder, com.google.ads.googleads.v1.common.AppAdInfoOrBuilder> appAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to an app ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+     */
+    public boolean hasAppAd() {
+      return adDataCase_ == 29;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+     */
+    public com.google.ads.googleads.v1.common.AppAdInfo getAppAd() {
+      if (appAdBuilder_ == null) {
+        if (adDataCase_ == 29) {
+          return (com.google.ads.googleads.v1.common.AppAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v1.common.AppAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 29) {
+          return appAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.AppAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+     */
+    public Builder setAppAd(com.google.ads.googleads.v1.common.AppAdInfo value) {
+      if (appAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        appAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 29;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+     */
+    public Builder setAppAd(
+        com.google.ads.googleads.v1.common.AppAdInfo.Builder builderForValue) {
+      if (appAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        appAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 29;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+     */
+    public Builder mergeAppAd(com.google.ads.googleads.v1.common.AppAdInfo value) {
+      if (appAdBuilder_ == null) {
+        if (adDataCase_ == 29 &&
+            adData_ != com.google.ads.googleads.v1.common.AppAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v1.common.AppAdInfo.newBuilder((com.google.ads.googleads.v1.common.AppAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 29) {
+          appAdBuilder_.mergeFrom(value);
+        }
+        appAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 29;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+     */
+    public Builder clearAppAd() {
+      if (appAdBuilder_ == null) {
+        if (adDataCase_ == 29) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 29) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        appAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+     */
+    public com.google.ads.googleads.v1.common.AppAdInfo.Builder getAppAdBuilder() {
+      return getAppAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+     */
+    public com.google.ads.googleads.v1.common.AppAdInfoOrBuilder getAppAdOrBuilder() {
+      if ((adDataCase_ == 29) && (appAdBuilder_ != null)) {
+        return appAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 29) {
+          return (com.google.ads.googleads.v1.common.AppAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v1.common.AppAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.AppAdInfo, com.google.ads.googleads.v1.common.AppAdInfo.Builder, com.google.ads.googleads.v1.common.AppAdInfoOrBuilder> 
+        getAppAdFieldBuilder() {
+      if (appAdBuilder_ == null) {
+        if (!(adDataCase_ == 29)) {
+          adData_ = com.google.ads.googleads.v1.common.AppAdInfo.getDefaultInstance();
+        }
+        appAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.AppAdInfo, com.google.ads.googleads.v1.common.AppAdInfo.Builder, com.google.ads.googleads.v1.common.AppAdInfoOrBuilder>(
+                (com.google.ads.googleads.v1.common.AppAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 29;
+      onChanged();;
+      return appAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo, com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.Builder, com.google.ads.googleads.v1.common.LegacyAppInstallAdInfoOrBuilder> legacyAppInstallAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to a legacy app install ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     */
+    public boolean hasLegacyAppInstallAd() {
+      return adDataCase_ == 30;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a legacy app install ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     */
+    public com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo getLegacyAppInstallAd() {
+      if (legacyAppInstallAdBuilder_ == null) {
+        if (adDataCase_ == 30) {
+          return (com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 30) {
+          return legacyAppInstallAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a legacy app install ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     */
+    public Builder setLegacyAppInstallAd(com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo value) {
+      if (legacyAppInstallAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        legacyAppInstallAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 30;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a legacy app install ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     */
+    public Builder setLegacyAppInstallAd(
+        com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.Builder builderForValue) {
+      if (legacyAppInstallAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        legacyAppInstallAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 30;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a legacy app install ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     */
+    public Builder mergeLegacyAppInstallAd(com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo value) {
+      if (legacyAppInstallAdBuilder_ == null) {
+        if (adDataCase_ == 30 &&
+            adData_ != com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.newBuilder((com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 30) {
+          legacyAppInstallAdBuilder_.mergeFrom(value);
+        }
+        legacyAppInstallAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 30;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a legacy app install ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     */
+    public Builder clearLegacyAppInstallAd() {
+      if (legacyAppInstallAdBuilder_ == null) {
+        if (adDataCase_ == 30) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 30) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        legacyAppInstallAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a legacy app install ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     */
+    public com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.Builder getLegacyAppInstallAdBuilder() {
+      return getLegacyAppInstallAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to a legacy app install ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     */
+    public com.google.ads.googleads.v1.common.LegacyAppInstallAdInfoOrBuilder getLegacyAppInstallAdOrBuilder() {
+      if ((adDataCase_ == 30) && (legacyAppInstallAdBuilder_ != null)) {
+        return legacyAppInstallAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 30) {
+          return (com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a legacy app install ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo, com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.Builder, com.google.ads.googleads.v1.common.LegacyAppInstallAdInfoOrBuilder> 
+        getLegacyAppInstallAdFieldBuilder() {
+      if (legacyAppInstallAdBuilder_ == null) {
+        if (!(adDataCase_ == 30)) {
+          adData_ = com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.getDefaultInstance();
+        }
+        legacyAppInstallAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo, com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo.Builder, com.google.ads.googleads.v1.common.LegacyAppInstallAdInfoOrBuilder>(
+                (com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 30;
+      onChanged();;
+      return legacyAppInstallAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo, com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.Builder, com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfoOrBuilder> responsiveDisplayAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to a responsive display ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+     */
+    public boolean hasResponsiveDisplayAd() {
+      return adDataCase_ == 31;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a responsive display ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+     */
+    public com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo getResponsiveDisplayAd() {
+      if (responsiveDisplayAdBuilder_ == null) {
+        if (adDataCase_ == 31) {
+          return (com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 31) {
+          return responsiveDisplayAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a responsive display ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+     */
+    public Builder setResponsiveDisplayAd(com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo value) {
+      if (responsiveDisplayAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        responsiveDisplayAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 31;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a responsive display ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+     */
+    public Builder setResponsiveDisplayAd(
+        com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.Builder builderForValue) {
+      if (responsiveDisplayAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        responsiveDisplayAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 31;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a responsive display ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+     */
+    public Builder mergeResponsiveDisplayAd(com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo value) {
+      if (responsiveDisplayAdBuilder_ == null) {
+        if (adDataCase_ == 31 &&
+            adData_ != com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.newBuilder((com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 31) {
+          responsiveDisplayAdBuilder_.mergeFrom(value);
+        }
+        responsiveDisplayAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 31;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a responsive display ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+     */
+    public Builder clearResponsiveDisplayAd() {
+      if (responsiveDisplayAdBuilder_ == null) {
+        if (adDataCase_ == 31) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 31) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        responsiveDisplayAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a responsive display ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+     */
+    public com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.Builder getResponsiveDisplayAdBuilder() {
+      return getResponsiveDisplayAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to a responsive display ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+     */
+    public com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfoOrBuilder getResponsiveDisplayAdOrBuilder() {
+      if ((adDataCase_ == 31) && (responsiveDisplayAdBuilder_ != null)) {
+        return responsiveDisplayAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 31) {
+          return (com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a responsive display ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo, com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.Builder, com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfoOrBuilder> 
+        getResponsiveDisplayAdFieldBuilder() {
+      if (responsiveDisplayAdBuilder_ == null) {
+        if (!(adDataCase_ == 31)) {
+          adData_ = com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.getDefaultInstance();
+        }
+        responsiveDisplayAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo, com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.Builder, com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfoOrBuilder>(
+                (com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 31;
+      onChanged();;
+      return responsiveDisplayAdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

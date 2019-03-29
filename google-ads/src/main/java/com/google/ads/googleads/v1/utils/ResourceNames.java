@@ -33,6 +33,7 @@ import com.google.ads.googleads.v1.resources.AdGroupName;
 import com.google.ads.googleads.v1.resources.AdParameterName;
 import com.google.ads.googleads.v1.resources.AdScheduleViewName;
 import com.google.ads.googleads.v1.resources.AgeRangeViewName;
+import com.google.ads.googleads.v1.resources.AssetName;
 import com.google.ads.googleads.v1.resources.BiddingStrategyName;
 import com.google.ads.googleads.v1.resources.BillingSetupName;
 import com.google.ads.googleads.v1.resources.CampaignAudienceViewName;
@@ -98,6 +99,7 @@ import com.google.ads.googleads.v1.resources.RemarketingActionName;
 import com.google.ads.googleads.v1.resources.SearchTermViewName;
 import com.google.ads.googleads.v1.resources.SharedCriteriaName;
 import com.google.ads.googleads.v1.resources.SharedSetName;
+import com.google.ads.googleads.v1.resources.ShoppingPerformanceViewName;
 import com.google.ads.googleads.v1.resources.TopicConstantName;
 import com.google.ads.googleads.v1.resources.TopicViewName;
 import com.google.ads.googleads.v1.resources.UserInterestName;
@@ -209,6 +211,11 @@ public class ResourceNames {
   public static String ageRangeView(long customerId, long adGroupId, long criterionId) {
     return AgeRangeViewName.format(
         String.valueOf(customerId), concatIdentifiers(adGroupId, criterionId));
+  }
+
+  /** Returns the Asset resource name for the specified components. */
+  public static String asset(long customerId, long assetId) {
+    return AssetName.format(String.valueOf(customerId), String.valueOf(assetId));
   }
 
   /** Returns the bidding strategy resource name for the specified components. */
@@ -593,9 +600,9 @@ public class ResourceNames {
     return SharedSetName.format(String.valueOf(customerId), String.valueOf(sharedSetId));
   }
 
-  /** Returns the shopping performance view for the specified components. */
+  /** Returns the Shopping Performance View resource name for the specified components. */
   public static String shoppingPerformanceView(long customerId) {
-    return String.format("customers/%s/shoppingPerformanceView", customerId);
+    return ShoppingPerformanceViewName.format(String.valueOf(customerId));
   }
 
   /** Returns the topic constant resource name for the specified components. */

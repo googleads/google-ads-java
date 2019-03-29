@@ -402,6 +402,14 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_USE_SHARED_CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_GROUP = 40;</code>
      */
     CANNOT_USE_SHARED_CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_GROUP(40),
+    /**
+     * <pre>
+     * The app ID was not found.
+     * </pre>
+     *
+     * <code>APP_NOT_FOUND = 41;</code>
+     */
+    APP_NOT_FOUND(41),
     UNRECOGNIZED(-1),
     ;
 
@@ -721,6 +729,14 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_USE_SHARED_CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_GROUP = 40;</code>
      */
     public static final int CANNOT_USE_SHARED_CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_GROUP_VALUE = 40;
+    /**
+     * <pre>
+     * The app ID was not found.
+     * </pre>
+     *
+     * <code>APP_NOT_FOUND = 41;</code>
+     */
+    public static final int APP_NOT_FOUND_VALUE = 41;
 
 
     public final int getNumber() {
@@ -779,6 +795,7 @@ private static final long serialVersionUID = 0L;
         case 38: return INVALID_HOTEL_CUSTOMER_LINK;
         case 39: return MISSING_HOTEL_SETTING;
         case 40: return CANNOT_USE_SHARED_CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_GROUP;
+        case 41: return APP_NOT_FOUND;
         default: return null;
       }
     }

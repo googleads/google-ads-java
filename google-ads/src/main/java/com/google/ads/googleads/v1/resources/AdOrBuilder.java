@@ -715,5 +715,80 @@ public interface AdOrBuilder extends
    */
   com.google.ads.googleads.v1.common.LegacyResponsiveDisplayAdInfoOrBuilder getLegacyResponsiveDisplayAdOrBuilder();
 
+  /**
+   * <pre>
+   * Details pertaining to an app ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+   */
+  boolean hasAppAd();
+  /**
+   * <pre>
+   * Details pertaining to an app ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+   */
+  com.google.ads.googleads.v1.common.AppAdInfo getAppAd();
+  /**
+   * <pre>
+   * Details pertaining to an app ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AppAdInfo app_ad = 29;</code>
+   */
+  com.google.ads.googleads.v1.common.AppAdInfoOrBuilder getAppAdOrBuilder();
+
+  /**
+   * <pre>
+   * Details pertaining to a legacy app install ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   */
+  boolean hasLegacyAppInstallAd();
+  /**
+   * <pre>
+   * Details pertaining to a legacy app install ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   */
+  com.google.ads.googleads.v1.common.LegacyAppInstallAdInfo getLegacyAppInstallAd();
+  /**
+   * <pre>
+   * Details pertaining to a legacy app install ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   */
+  com.google.ads.googleads.v1.common.LegacyAppInstallAdInfoOrBuilder getLegacyAppInstallAdOrBuilder();
+
+  /**
+   * <pre>
+   * Details pertaining to a responsive display ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+   */
+  boolean hasResponsiveDisplayAd();
+  /**
+   * <pre>
+   * Details pertaining to a responsive display ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+   */
+  com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo getResponsiveDisplayAd();
+  /**
+   * <pre>
+   * Details pertaining to a responsive display ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+   */
+  com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfoOrBuilder getResponsiveDisplayAdOrBuilder();
+
   public com.google.ads.googleads.v1.resources.Ad.AdDataCase getAdDataCase();
 }
