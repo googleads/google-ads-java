@@ -36,9 +36,9 @@ import java.time.format.DateTimeFormatter;
  * Note: this example must be run using the credentials of a Google Ads manager account. By default,
  * the new account will only be accessible via the manager account.
  */
-public class CreateAccount {
+public class CreateCustomer {
 
-  private static class CreateAccountParams extends CodeSampleParams {
+  private static class CreateCustomerParams extends CodeSampleParams {
 
     @Parameter(
         names = ArgumentNames.CUSTOMER_ID,
@@ -47,7 +47,7 @@ public class CreateAccount {
   }
 
   public static void main(String[] args) {
-    CreateAccountParams params = new CreateAccountParams();
+    CreateCustomerParams params = new CreateCustomerParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the owning manager account on the command line or insert the ID here.
@@ -67,7 +67,7 @@ public class CreateAccount {
     }
 
     try {
-      new CreateAccount().runExample(googleAdsClient, params.managerAccountId);
+      new CreateCustomer().runExample(googleAdsClient, params.managerAccountId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
