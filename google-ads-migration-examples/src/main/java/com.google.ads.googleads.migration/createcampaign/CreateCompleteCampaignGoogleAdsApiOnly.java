@@ -34,6 +34,7 @@ import com.google.ads.googleads.v1.errors.GoogleAdsError;
 import com.google.ads.googleads.v1.resources.*;
 import com.google.ads.googleads.v1.resources.Campaign.NetworkSettings;
 import com.google.ads.googleads.v1.services.*;
+import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.Int64Value;
@@ -46,6 +47,8 @@ import java.util.List;
 import org.joda.time.DateTime;
 
 public class CreateCompleteCampaignGoogleAdsApiOnly {
+
+  private static final int PAGE_SIZE = 1_000;
 
   /** The number of campaigns this example will add. */
   private static final int NUMBER_OF_ADS = 5;
@@ -97,6 +100,45 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
   }
 
   /**
+   * Retrieves the keyword ad group criteria.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param newResourceNames resource names of the new ad group criteria.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
+  private List<AdGroupCriterion> getKeywords(GoogleAdsClient googleAdsClient, long customerId,
+                                             List<String> newResourceNames) {
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+
+      SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
+        .setCustomerId(Long.toString(customerId))
+        .setPageSize(PAGE_SIZE)
+        .setQuery(String.format("SELECT " +
+          "ad_group.id, " +
+          "ad_group.status," +
+          "ad_group_criterion.criterion_id," +
+          "ad_group_criterion.keyword.text" +
+          "ad_group_criterion.keyword.match_type" +
+          "FROM ad_group_criterion" +
+          "WHERE ad_group_criterion.type = 'KEYWORD'" +
+          "AND ad_group.status = 'ENABLED'" +
+          "AND ad_group_criterion.status IN ('%s')",
+          String.join(", ", newResourceNames)))
+        .build();
+
+      SearchPagedResponse response = googleAdsServiceClient.search(request);
+
+      List<AdGroupCriterion> adGroupCriteria = new ArrayList<>();
+      for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
+        adGroupCriteria.add(googleAdsRow.getAdGroupCriterion());
+      }
+      return adGroupCriteria;
+    }
+  }
+
+  /**
    * Creates keywords ad group criteria.
    *
    * @param googleAdsClient the Google Ads API client.
@@ -133,6 +175,45 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
       for (MutateAdGroupCriterionResult result : response.getResultsList()) {
         System.out.println(result.getResourceName());
       }
+    }
+  }
+
+  /**
+   * Retrieves the ad group ads.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param newResourceNames resource names of the new ad group ad.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
+  private List<AdGroupAd> getAdGroupAds(GoogleAdsClient googleAdsClient, long customerId,
+                                             List<String> newResourceNames) {
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+
+      SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
+        .setCustomerId(Long.toString(customerId))
+        .setPageSize(PAGE_SIZE)
+        .setQuery(String.format("SELECT " +
+          "ad_group.id, " +
+          "ad_group_ad.id, " +
+          "ad_group_ad.ad.expanded_text_ad.headline_part1, " +
+          "ad_group_ad.ad.expanded_text_ad.headline_part2, " +
+          "ad_group_ad.status, " +
+          "ad_group_ad.ad.final_urls, " +
+          "ad_group_ad.resource_name " +
+          "FROM ad_group_ad " +
+          "WHERE ad_group_ad.resource_name IN ('%s')",
+          String.join(", ", newResourceNames)))
+        .build();
+
+      SearchPagedResponse response = googleAdsServiceClient.search(request);
+
+      List<AdGroupAd> adGroupAds = new ArrayList<>();
+      for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
+        adGroupAds.add(googleAdsRow.getAdGroupAd());
+      }
+      return adGroupAds;
     }
   }
 
@@ -182,6 +263,31 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
   }
 
   /**
+   * Retrieves the ad group.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param adGroupResourceName resource names of the new ad group.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
+  private AdGroup getAdGroup(GoogleAdsClient googleAdsClient, long customerId,
+                                        String adGroupResourceName) {
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+
+      SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
+        .setCustomerId(Long.toString(customerId))
+        .setPageSize(PAGE_SIZE)
+        .setQuery(String.format("SELECT ad_group.id, ad_group.name, ad_group.resource_name " +
+          "FROM ad_group WHERE ad_group.resource_name = '%s'", adGroupResourceName))
+        .build();
+
+      SearchPagedResponse response = googleAdsServiceClient.search(request);
+      return response.getPage().getResponse().getResults(0).getAdGroup();
+    }
+  }
+
+  /**
    * Creates an ad group.
    *
    * @param googleAdsClient the Google Ads API client.
@@ -213,6 +319,30 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
     }
   }
 
+  /**
+   * Retrieves the campaign.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param campaignResourceName resource names of the new campaign.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
+  private Campaign getCampaign(GoogleAdsClient googleAdsClient, long customerId,
+                                   String campaignResourceName) {
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+
+      SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
+        .setCustomerId(Long.toString(customerId))
+        .setPageSize(PAGE_SIZE)
+        .setQuery(String.format("SELECT campaign.id, campaign.name, campaign.resource_Name FROM campaign " +
+          "WHERE campaign.resource_name = '%s'", campaignResourceName))
+        .build();
+
+      SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
+      return searchPagedResponse.getPage().getResponse().getResults(0).getCampaign();
+    }
+  }
 
   /**
    * Creates a campaign.
@@ -260,6 +390,32 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
       String campaignResourceName = response.getResults(0).getResourceName();
       System.out.printf("Added campaign: %s%n", campaignResourceName);
       return campaignResourceName;
+    }
+  }
+
+  /**
+   * Retrieves the campaign budget.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param budgetResourceName resource names of the new campaign budget.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
+  private CampaignBudget getBudget(GoogleAdsClient googleAdsClient, long customerId,
+                                     String budgetResourceName) {
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+      googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+
+      SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
+        .setCustomerId(Long.toString(customerId))
+        .setPageSize(PAGE_SIZE)
+        .setQuery(String.format("SELECT campaign_budget.id, campaign_budget.name, " +
+          "campaign_budget.resource_name FROM campaign_budget " +
+          "WHERE campaign_budget.resource_name = '%s'", budgetResourceName))
+        .build();
+
+      SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
+      return searchPagedResponse.getPage().getResponse().getResults(0).getCampaignBudget();
     }
   }
 
