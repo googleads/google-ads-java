@@ -229,6 +229,15 @@
       </modules>
     </profile>
     <profile>
+      <id>migration-examples-project</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <modules>
+        <module>google-ads-migration-examples</module>
+      </modules>
+    </profile>
+    <profile>
       <id>sonatype</id>
       <distributionManagement>
         <repository>
