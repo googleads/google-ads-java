@@ -45,7 +45,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import org.joda.time.DateTime;
+
+/**
+ * This code example is the last in a series of code examples that shows how to create a Search
+ * campign using the AdWords API, and then migrate it to the Google Ads API one functionality at a
+ * time. See Step0 through Step5 for code examples in various stages of migration.
+ *
+ * This code example represents the final state, where all the functionality - create a
+ * campaign budget, a Search campaign, ad groups, keywords and expanded text ads have been
+ * migrated to using the Google Ads API. The AdWords API is not used.
+ */
 
 public class CreateCompleteCampaignGoogleAdsApiOnly {
 
@@ -111,27 +123,35 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    */
   private List<AdGroupCriterion> getKeywords(GoogleAdsClient googleAdsClient, long customerId,
                                              List<String> newResourceNames) {
+    // Get the GoogleAdsService.
     try (GoogleAdsServiceClient googleAdsServiceClient =
            googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
 
+      // Create the request.
       SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
         .setCustomerId(Long.toString(customerId))
         .setPageSize(PAGE_SIZE)
-        .setQuery(String.format("SELECT " +
-          "ad_group.id, " +
-          "ad_group.status," +
-          "ad_group_criterion.criterion_id," +
-          "ad_group_criterion.keyword.text" +
-          "ad_group_criterion.keyword.match_type" +
-          "FROM ad_group_criterion" +
-          "WHERE ad_group_criterion.type = 'KEYWORD'" +
-          "AND ad_group.status = 'ENABLED'" +
-          "AND ad_group_criterion.status IN ('%s')",
-          String.join(", ", newResourceNames)))
+        // Create the search query.
+        .setQuery(String.format(
+          "SELECT " +
+            "ad_group.id, " +
+            "ad_group.status, " +
+            "ad_group_criterion.criterion_id, " +
+            "ad_group_criterion.keyword.text, " +
+            "ad_group_criterion.keyword.match_type " +
+          "FROM ad_group_criterion " +
+          "WHERE ad_group_criterion.type = 'KEYWORD' " +
+            "AND ad_group.status = 'ENABLED' " +
+            "AND ad_group_criterion.status IN ('ENABLED', 'PAUSED') " +
+            "AND ad_group_criterion.resource_name IN (%s) ",
+          String.join(", ", newResourceNames.stream().map(
+            resourceName -> String.format("'%s'", resourceName)).collect(Collectors.toList()))))
         .build();
 
+      // Retrieve the adGroupCriteria.
       SearchPagedResponse response = googleAdsServiceClient.search(request);
 
+      // Create and return a list of adGroupCriteria
       List<AdGroupCriterion> adGroupCriteria = new ArrayList<>();
       for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
         adGroupCriteria.add(googleAdsRow.getAdGroupCriterion());
@@ -166,30 +186,36 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
           .build())
         .build();
 
+      // Create the operation.
       AdGroupCriterionOperation op = AdGroupCriterionOperation
         .newBuilder().setCreate(adGroupCriterion).build();
       operations.add(op);
     }
 
+    // Get the AdGroupCriterionService.
     try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
            googleAdsClient.getLatestVersion()
       .createAdGroupCriterionServiceClient()) {
+      // Add the keywords
       MutateAdGroupCriteriaResponse response =
         adGroupCriterionServiceClient.mutateAdGroupCriteria(Long.toString(customerId), operations);
       System.out.printf("Added %d keywords:%n", response.getResultsCount());
+      // Create a list of new keyword resource names
       List <String> newCriteriaResourceNames = new ArrayList<>();
       for (MutateAdGroupCriterionResult result : response.getResultsList()) {
         newCriteriaResourceNames.add(result.getResourceName());
       }
 
+      // Retrieve the newly created keywords.
       List <AdGroupCriterion> newCriteria =
         getKeywords(googleAdsClient, customerId, newCriteriaResourceNames);
+      // Display the results.
       for (AdGroupCriterion newCriterion : newCriteria) {
-        System.out.printf("Keyword with text=%s, id=%s, and match type=%s was retrieved for ad group=%s.",
+        System.out.printf("Keyword with text '%s', id %s, and match type %s was retrieved for ad group %s.%n",
           newCriterion.getKeyword().getText().getValue(),
           newCriterion.getCriterionId().getValue(),
           newCriterion.getKeyword().getMatchType(),
-          newCriterion.getAdGroup());
+          adGroup.getName().getValue());
       }
 
       return newCriteria;
@@ -206,27 +232,33 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    */
   private List<AdGroupAd> getAdGroupAds(GoogleAdsClient googleAdsClient, long customerId,
                                              List<String> newResourceNames) {
+    // Get the GoogleAdsService.
     try (GoogleAdsServiceClient googleAdsServiceClient =
            googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
 
+      // Create the request.
       SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
         .setCustomerId(Long.toString(customerId))
         .setPageSize(PAGE_SIZE)
-        .setQuery(String.format("SELECT " +
-          "ad_group.id, " +
-          "ad_group_ad.id, " +
-          "ad_group_ad.ad.expanded_text_ad.headline_part1, " +
-          "ad_group_ad.ad.expanded_text_ad.headline_part2, " +
-          "ad_group_ad.status, " +
-          "ad_group_ad.ad.final_urls, " +
-          "ad_group_ad.resource_name " +
+        .setQuery(String.format(
+          "SELECT " +
+            "ad_group.id, " +
+            "ad_group_ad.ad.id, " +
+            "ad_group_ad.ad.expanded_text_ad.headline_part1, " +
+            "ad_group_ad.ad.expanded_text_ad.headline_part2, " +
+            "ad_group_ad.status, " +
+            "ad_group_ad.ad.final_urls, " +
+            "ad_group_ad.resource_name " +
           "FROM ad_group_ad " +
-          "WHERE ad_group_ad.resource_name IN ('%s')",
-          String.join(", ", newResourceNames)))
+          "WHERE ad_group_ad.resource_name IN (%s)",
+          String.join(", ", newResourceNames.stream().map(
+            resourceName -> String.format("'%s'", resourceName)).collect(Collectors.toList()))))
         .build();
 
+      // Retrieve the ad group ads
       SearchPagedResponse response = googleAdsServiceClient.search(request);
 
+      // Create and return a list of the ad group ads.
       List<AdGroupAd> adGroupAds = new ArrayList<>();
       for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
         adGroupAds.add(googleAdsRow.getAdGroupAd());
@@ -256,7 +288,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
         .setAdGroup(StringValue.of(adGroupResourceName))
         .setStatus(AdGroupAdStatus.PAUSED)
         .setAd(Ad.newBuilder()
-          .setFinalUrls(i, StringValue.of("http://www.example.com/" + String.valueOf(i)))
+          .addFinalUrls(StringValue.of("http://www.example.com/" + String.valueOf(i)))
           .setExpandedTextAd(ExpandedTextAdInfo.newBuilder()
             .setDescription(StringValue.of("Buy your tickets now!"))
             .setHeadlinePart1(StringValue.of("Cruise #" + String.valueOf(i) + " to Mars"))
@@ -266,26 +298,32 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
             .build()))
         .build();
 
+      // Create the operation.
       AdGroupAdOperation op = AdGroupAdOperation.newBuilder().setCreate(adgroupAd).build();
       operations.add(op);
     }
 
+    // Get the AdGroupAd service.
     try (AdGroupAdServiceClient adGroupAdServiceClient = googleAdsClient.getLatestVersion()
       .createAdGroupAdServiceClient()) {
+      // Add the text ads.
       MutateAdGroupAdsResponse response =
         adGroupAdServiceClient.mutateAdGroupAds(Long.toString(customerId), operations);
-      List<String> newAdGroupAdResourceNames = new ArrayList<>();
       System.out.printf("Added %d text ads:%n", response.getResultsCount());
+      // Create a list of the text ad resource names.
+      List<String> newAdGroupAdResourceNames = new ArrayList<>();
       for (MutateAdGroupAdResult result : response.getResultsList()) {
         newAdGroupAdResourceNames.add(result.getResourceName());
       }
 
+      // Retrieve the expanded text ads.
       List<AdGroupAd> newAdGroupAds = getAdGroupAds(googleAdsClient, customerId, newAdGroupAdResourceNames);
       for (AdGroupAd newAdGroupAd : newAdGroupAds) {
         Ad ad = newAdGroupAd.getAd();
         ExpandedTextAdInfo expandedTextAdInfo = ad.getExpandedTextAd();
-        System.out.printf("Expanded text ad with ID=%s, status=%s, " +
-            "and headline='%s - %s' was found in ad group with ID=%s",
+        // Display the results.
+        System.out.printf("Expanded text ad with ID %s, status %s, " +
+            "and headline '%s - %s' was found in ad group with ID %s.%n",
           ad.getId().getValue(), newAdGroupAd.getStatus(), expandedTextAdInfo.getHeadlinePart1().getValue(),
           expandedTextAdInfo.getHeadlinePart2().getValue(), adGroup.getId().getValue());
       }
@@ -304,16 +342,18 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    */
   private AdGroup getAdGroup(GoogleAdsClient googleAdsClient, long customerId,
                                         String adGroupResourceName) {
+    // Get the GoogleAdsService.
     try (GoogleAdsServiceClient googleAdsServiceClient =
            googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
 
+      // Create the request.
       SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
         .setCustomerId(Long.toString(customerId))
         .setPageSize(PAGE_SIZE)
         .setQuery(String.format("SELECT ad_group.id, ad_group.name, ad_group.resource_name " +
           "FROM ad_group WHERE ad_group.resource_name = '%s'", adGroupResourceName))
         .build();
-
+      // Retrieve the AdGroup.
       SearchPagedResponse response = googleAdsServiceClient.search(request);
       return response.getPage().getResponse().getResults(0).getAdGroup();
     }
@@ -341,15 +381,20 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
         .setCpcBidMicros(Int64Value.of(10_000_000L))
         .build();
 
+    // Create the operation.
     AdGroupOperation op = AdGroupOperation.newBuilder().setCreate(adGroup).build();
 
+    // Get the AdGroup Service.
     try (AdGroupServiceClient adGroupServiceClient =
            googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
+      // Add the AdGroup.
       MutateAdGroupsResponse response =
         adGroupServiceClient.mutateAdGroups(Long.toString(customerId), ImmutableList.of(op));
       String adGroupResourceName = response.getResults(0).getResourceName();
+      // Retrieve the AdGroup.
       AdGroup newAdGroup = getAdGroup(googleAdsClient, customerId, adGroupResourceName);
-      System.out.printf("Ad group with ID=%s and name=%s was created",
+      // Display the results.
+      System.out.printf("Ad group with ID %s and name %s was created.%n",
         newAdGroup.getId().getValue(), newAdGroup.getName().getValue());
       return newAdGroup;
     }
@@ -365,17 +410,20 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    */
   private Campaign getCampaign(GoogleAdsClient googleAdsClient, long customerId,
                                    String campaignResourceName) {
+    // Get the GoogleAdsService.
     try (GoogleAdsServiceClient googleAdsServiceClient =
            googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
 
+      // Create the request.
       SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
         .setCustomerId(Long.toString(customerId))
         .setPageSize(PAGE_SIZE)
-        .setQuery(String.format("SELECT campaign.id, campaign.name, campaign.resource_Name " +
+        .setQuery(String.format("SELECT campaign.id, campaign.name, campaign.resource_name " +
           "FROM campaign " +
           "WHERE campaign.resource_name = '%s'", campaignResourceName))
         .build();
 
+      // Retrieve the campaign.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
       return searchPagedResponse.getPage().getResponse().getResults(0).getCampaign();
     }
@@ -421,16 +469,21 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
         .setEndDate(StringValue.of(new DateTime().plusDays(30).toString("yyyyMMdd")))
         .build();
 
+    // Create the operation.
     CampaignOperation op = CampaignOperation.newBuilder().setCreate(campaign).build();
 
+    // Get the Campaign service.
     try (CampaignServiceClient campaignServiceClient =
            googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+      // Add the campaign.
       MutateCampaignsResponse response =
         campaignServiceClient.mutateCampaigns(Long.toString(customerId), ImmutableList.of(op));
       String campaignResourceName = response.getResults(0).getResourceName();
+      // Retrieve the campaign.
       Campaign newCampaign = getCampaign(googleAdsClient, customerId, campaignResourceName);
-      System.out.printf("Campaign with ID=%s and name=%s was created.",
-        campaign.getId().getValue(), campaign.getName().getValue());
+      // Display the results.
+      System.out.printf("Campaign with ID %s and name %s was created.%n",
+        newCampaign.getId().getValue(), newCampaign.getName().getValue());
 
       return newCampaign;
     }
@@ -446,9 +499,11 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    */
   private CampaignBudget getBudget(GoogleAdsClient googleAdsClient, long customerId,
                                      String budgetResourceName) {
+    // Get the GoogleAdsService.
     try (GoogleAdsServiceClient googleAdsServiceClient =
       googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
 
+      // Create the request.
       SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
         .setCustomerId(Long.toString(customerId))
         .setPageSize(PAGE_SIZE)
@@ -457,6 +512,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
           "WHERE campaign_budget.resource_name = '%s'", budgetResourceName))
         .build();
 
+      // Retrieve the budget.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
       return searchPagedResponse.getPage().getResponse().getResults(0).getCampaignBudget();
     }
@@ -470,6 +526,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private CampaignBudget createBudget(GoogleAdsClient googleAdsClient, long customerId) {
+    // Create the budget.
     CampaignBudget budget =
       CampaignBudget.newBuilder()
         .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
@@ -477,16 +534,21 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
         .setAmountMicros(Int64Value.of(500_000))
         .build();
 
+    // Create the operation.
     CampaignBudgetOperation op = CampaignBudgetOperation.newBuilder().setCreate(budget).build();
 
+    // Get the CampaignBudget service.
     try (CampaignBudgetServiceClient campaignBudgetServiceClient =
            googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
+      // Add the budget.
       MutateCampaignBudgetsResponse response =
         campaignBudgetServiceClient.mutateCampaignBudgets(
           Long.toString(customerId), ImmutableList.of(op));
       String budgetResourceName = response.getResults(0).getResourceName();
+      // Retrieve the budget.
       CampaignBudget newBudget = getBudget(googleAdsClient, customerId, budgetResourceName);
-      System.out.printf("Budget with ID=%s and name=%s was created.",
+      // Display the results.
+      System.out.printf("Budget with ID %s and name %s was created.%n",
         newBudget.getId().getValue(),
         newBudget.getName().getValue());
 
