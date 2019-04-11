@@ -51,7 +51,7 @@ import org.joda.time.DateTime;
 
 /**
  * This code example is the last in a series of code examples that shows how to create a Search
- * campign using the AdWords API, and then migrate it to the Google Ads API one functionality at a
+ * campaign using the AdWords API, and then migrate it to the Google Ads API one functionality at a
  * time. See Step0 through Step5 for code examples in various stages of migration.
  *
  * This code example represents the final state, where all the functionality - create a
@@ -63,7 +63,6 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
 
   private static final int PAGE_SIZE = 1_000;
 
-  /** The number of campaigns this example will add. */
   private static final int NUMBER_OF_ADS = 5;
 
   private static final List<String> KEYWORDS_TO_ADD = Arrays.asList("mars cruise", "space hotel");
@@ -217,7 +216,6 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
           newCriterion.getKeyword().getMatchType(),
           adGroup.getName().getValue());
       }
-
       return newCriteria;
     }
   }
@@ -282,7 +280,6 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
     List<AdGroupAdOperation> operations = new ArrayList<>(NUMBER_OF_ADS);
 
     for (int i = 0; i < NUMBER_OF_ADS; i++) {
-
       // Create the text ad
       AdGroupAd adgroupAd = AdGroupAd.newBuilder()
         .setAdGroup(StringValue.of(adGroupResourceName))
@@ -327,7 +324,6 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
           ad.getId().getValue(), newAdGroupAd.getStatus(), expandedTextAdInfo.getHeadlinePart1().getValue(),
           expandedTextAdInfo.getHeadlinePart2().getValue(), adGroup.getId().getValue());
       }
-
       return newAdGroupAds;
     }
   }
@@ -367,8 +363,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    * @param campaign the campaign for the ad group.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private AdGroup createAdGroup(GoogleAdsClient googleAdsClient, long customerId,
-                               Campaign campaign) {
+  private AdGroup createAdGroup(GoogleAdsClient googleAdsClient, long customerId, Campaign campaign) {
     String campaignResourceName = ResourceNames.campaign(customerId, campaign.getId().getValue());
 
     // Create ad group, setting an optional CPC value.
@@ -409,7 +404,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private Campaign getCampaign(GoogleAdsClient googleAdsClient, long customerId,
-                                   String campaignResourceName) {
+                               String campaignResourceName) {
     // Get the GoogleAdsService.
     try (GoogleAdsServiceClient googleAdsServiceClient =
            googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -438,7 +433,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private Campaign createCampaign(GoogleAdsClient googleAdsClient, long customerId,
-                                CampaignBudget budget) {
+                                  CampaignBudget budget) {
     String budgetResourceName = ResourceNames.campaignBudget(customerId, budget.getId().getValue());
 
     // Configure the campaign network options
@@ -484,7 +479,6 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
       // Display the results.
       System.out.printf("Campaign with ID %s and name %s was created.%n",
         newCampaign.getId().getValue(), newCampaign.getName().getValue());
-
       return newCampaign;
     }
   }
@@ -551,7 +545,6 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
       System.out.printf("Budget with ID %s and name %s was created.%n",
         newBudget.getId().getValue(),
         newBudget.getName().getValue());
-
       return newBudget;
     }
   }
