@@ -349,7 +349,7 @@ public class CreateCompleteCampaignBothApisPhase2 {
     // Add ad groups.
     AdGroupReturnValue result = adGroupService.mutate(operations);
 
-    AdGroup adGroupResult = result.getValue()[0];
+    AdGroup adGroupResult = result.getValue(0);
     // Display new ad groups.
     System.out.printf("Ad group with ID '%d' and name %s was created.%n",
       adGroupResult.getId(), adGroupResult.getName());
