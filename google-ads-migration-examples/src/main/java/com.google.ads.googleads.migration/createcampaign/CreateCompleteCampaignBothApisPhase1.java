@@ -191,7 +191,6 @@ public class CreateCompleteCampaignBothApisPhase1 {
    * @param session the client session.
    * @param adGroup the ad group for the new criteria.
    * @param keywordsToAdd the keywords to add to the text ads.
-   * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private AdGroupCriterion[] createKeywords(AdWordsServicesInterface adWordsServices,
                                             AdWordsSession session, AdGroup adGroup,
@@ -249,7 +248,6 @@ public class CreateCompleteCampaignBothApisPhase1 {
    * @param adWordsServices the Google AdWords services interface.
    * @param session the client session.
    * @param adGroup the ad group for the text ad.
-   * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private AdGroupAd[] createTextAds(AdWordsServicesInterface adWordsServices,
                                     AdWordsSession session, AdGroup adGroup)
@@ -310,7 +308,6 @@ public class CreateCompleteCampaignBothApisPhase1 {
    * @param adWordsServices the Google AdWords services interface.
    * @param session the client session.
    * @param campaign the campaign for the ad group.
-   * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private AdGroup createAdGroup(AdWordsServicesInterface adWordsServices,
                                 AdWordsSession session, Campaign campaign)
@@ -362,7 +359,6 @@ public class CreateCompleteCampaignBothApisPhase1 {
    * @param adWordsServices the Google AdWords services interface.
    * @param session the client session.
    * @param budget the budget for the campaign.
-   * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private Campaign createCampaign(AdWordsServicesInterface adWordsServices,
                                   AdWordsSession session, CampaignBudget budget)
