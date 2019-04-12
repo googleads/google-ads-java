@@ -221,7 +221,7 @@ public class CreateCompleteCampaignBothApisPhase1 {
         URLEncoder.encode(keyword.getText(), UTF_8.name()));
       keywordBiddableAdGroupCriterion.setFinalUrls(new UrlList(new String[]{encodedFinalUrl}));
 
-      // Create operations.
+      // Create the operation.
       AdGroupCriterionOperation keywordAdGroupCriterionOperation = new AdGroupCriterionOperation();
       keywordAdGroupCriterionOperation.setOperand(keywordBiddableAdGroupCriterion);
       keywordAdGroupCriterionOperation.setOperator(Operator.ADD);
@@ -230,10 +230,10 @@ public class CreateCompleteCampaignBothApisPhase1 {
     }
 
 
-    // Add keywords.
+    // Add the keywords.
     AdGroupCriterionReturnValue result = adGroupCriterionService.mutate(ops);
 
-    // Display results.
+    // Display the results.
     for (AdGroupCriterion adGroupCriterionResult : result.getValue()) {
       System.out.printf("Keyword ad group criterion with ad group ID %d, criterion ID %d, "
           + "text '%s', and match type '%s' was added.%n", adGroupCriterionResult.getAdGroupId(),
@@ -269,7 +269,7 @@ public class CreateCompleteCampaignBothApisPhase1 {
       expandedTextAd.setHeadlinePart2("Best Space Cruise Line");
       expandedTextAd.setFinalUrls(new String[] {"http://www.example.com/" + i});
 
-      // Create ad group ad.
+      // Create the ad group ad.
       AdGroupAd expandedTextAdGroupAd = new AdGroupAd();
       expandedTextAdGroupAd.setAdGroupId(adGroup.getId());
       expandedTextAdGroupAd.setAd(expandedTextAd);
@@ -285,7 +285,7 @@ public class CreateCompleteCampaignBothApisPhase1 {
       operations.add(adGroupAdOperation);
     }
 
-    // Add ads.
+    // Add the ads.
     AdGroupAdReturnValue result =
       adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[operations.size()]));
 
@@ -319,7 +319,7 @@ public class CreateCompleteCampaignBothApisPhase1 {
     AdGroupServiceInterface adGroupService =
       adWordsServices.get(session, AdGroupServiceInterface.class);
 
-    // Create ad group.
+    // Create the ad group.
     AdGroup adGroup = new AdGroup();
     adGroup.setName("Earth to Mars Cruises #" + System.currentTimeMillis());
     adGroup.setStatus(AdGroupStatus.ENABLED);
@@ -338,18 +338,18 @@ public class CreateCompleteCampaignBothApisPhase1 {
     biddingStrategyConfiguration.setBids(new Bids[] {bid});
     adGroup.setBiddingStrategyConfiguration(biddingStrategyConfiguration);
 
-    // Create operations.
+    // Create the operation.
     AdGroupOperation operation = new AdGroupOperation();
     operation.setOperand(adGroup);
     operation.setOperator(Operator.ADD);
 
     AdGroupOperation[] operations = new AdGroupOperation[] {operation};
 
-    // Add ad groups.
+    // Add the ad group.
     AdGroupReturnValue result = adGroupService.mutate(operations);
 
     AdGroup adGroupResult = result.getValue()[0];
-    // Display new ad groups.
+    // Display the new ad group.
     System.out.printf("Ad group with ID '%d' and name %s was created.%n",
       adGroupResult.getId(), adGroupResult.getName());
 
@@ -371,7 +371,7 @@ public class CreateCompleteCampaignBothApisPhase1 {
     CampaignServiceInterface campaignService =
       adWordsServices.get(session, CampaignServiceInterface.class);
 
-    // Create campaign.
+    // Create the campaign.
     Campaign campaign = new Campaign();
     campaign.setName("Interplanetary Cruise #" + System.currentTimeMillis());
 
@@ -403,18 +403,18 @@ public class CreateCompleteCampaignBothApisPhase1 {
     networkSetting.setTargetPartnerSearchNetwork(false);
     campaign.setNetworkSetting(networkSetting);
 
-    // Create operations.
+    // Create the operation.
     CampaignOperation operation = new CampaignOperation();
     operation.setOperand(campaign);
     operation.setOperator(Operator.ADD);
 
     CampaignOperation[] operations = new CampaignOperation[] {operation};
 
-    // Add campaigns.
+    // Add the campaign.
     CampaignReturnValue result = campaignService.mutate(operations);
 
     Campaign campaignResult = result.getValue(0);
-    // Display campaigns.
+    // Display the campaign.
     System.out.printf("Campaign with ID '%d' and name %s was created.%n",
       campaignResult.getId(),
       campaignResult.getName());

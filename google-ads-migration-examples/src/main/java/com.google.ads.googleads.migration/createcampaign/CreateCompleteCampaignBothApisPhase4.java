@@ -221,7 +221,7 @@ public class CreateCompleteCampaignBothApisPhase4 {
         URLEncoder.encode(keyword.getText(), UTF_8.name()));
       keywordBiddableAdGroupCriterion.setFinalUrls(new UrlList(new String[]{encodedFinalUrl}));
 
-      // Create operations.
+      // Create the operation.
       AdGroupCriterionOperation keywordAdGroupCriterionOperation = new AdGroupCriterionOperation();
       keywordAdGroupCriterionOperation.setOperand(keywordBiddableAdGroupCriterion);
       keywordAdGroupCriterionOperation.setOperator(Operator.ADD);
@@ -230,10 +230,10 @@ public class CreateCompleteCampaignBothApisPhase4 {
     }
 
 
-    // Add keywords.
+    // Add the keywords.
     AdGroupCriterionReturnValue result = adGroupCriterionService.mutate(ops);
 
-    // Display results.
+    // Display the results.
     for (AdGroupCriterion adGroupCriterionResult : result.getValue()) {
       System.out.printf("Keyword ad group criterion with ad group ID %d, criterion ID %d, "
           + "text '%s', and match type '%s' was added.%n", adGroupCriterionResult.getAdGroupId(),

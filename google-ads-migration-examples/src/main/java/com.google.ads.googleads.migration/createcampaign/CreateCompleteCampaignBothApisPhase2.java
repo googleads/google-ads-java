@@ -222,7 +222,7 @@ public class CreateCompleteCampaignBothApisPhase2 {
         URLEncoder.encode(keyword.getText(), UTF_8.name()));
       keywordBiddableAdGroupCriterion.setFinalUrls(new UrlList(new String[]{encodedFinalUrl}));
 
-      // Create operations.
+      // Create the operation.
       AdGroupCriterionOperation keywordAdGroupCriterionOperation = new AdGroupCriterionOperation();
       keywordAdGroupCriterionOperation.setOperand(keywordBiddableAdGroupCriterion);
       keywordAdGroupCriterionOperation.setOperator(Operator.ADD);
@@ -231,10 +231,10 @@ public class CreateCompleteCampaignBothApisPhase2 {
     }
 
 
-    // Add keywords.
+    // Add the keyword.
     AdGroupCriterionReturnValue result = adGroupCriterionService.mutate(ops);
 
-    // Display results.
+    // Display the results.
     for (AdGroupCriterion adGroupCriterionResult : result.getValue()) {
       System.out.printf("Keyword ad group criterion with ad group ID %d, criterion ID %d, "
           + "text '%s', and match type '%s' was added.%n", adGroupCriterionResult.getAdGroupId(),
@@ -263,14 +263,14 @@ public class CreateCompleteCampaignBothApisPhase2 {
     List<AdGroupAdOperation> operations = new ArrayList<>(NUMBER_OF_ADS);
 
     for (int i = 0; i < NUMBER_OF_ADS; i++) {
-      // Create expanded text ad.
+      // Create the expanded text ad.
       ExpandedTextAd expandedTextAd = new ExpandedTextAd();
       expandedTextAd.setDescription("Buy your tickets now!");
       expandedTextAd.setHeadlinePart1(String.format("Cruise #%d to Mars", i));
       expandedTextAd.setHeadlinePart2("Best Space Cruise Line");
       expandedTextAd.setFinalUrls(new String[] {"http://www.example.com/" + i});
 
-      // Create ad group ad.
+      // Create the ad group ad.
       AdGroupAd expandedTextAdGroupAd = new AdGroupAd();
       expandedTextAdGroupAd.setAdGroupId(adGroup.getId());
       expandedTextAdGroupAd.setAd(expandedTextAd);
@@ -286,11 +286,11 @@ public class CreateCompleteCampaignBothApisPhase2 {
       operations.add(adGroupAdOperation);
     }
 
-    // Add ads.
+    // Add the ads.
     AdGroupAdReturnValue result =
       adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[operations.size()]));
 
-    // Display ads.
+    // Display the ads.
     Arrays.stream(result.getValue())
       .map(adGroupAdResult -> (ExpandedTextAd) adGroupAdResult.getAd())
       .forEach(
@@ -320,7 +320,7 @@ public class CreateCompleteCampaignBothApisPhase2 {
     AdGroupServiceInterface adGroupService =
       adWordsServices.get(session, AdGroupServiceInterface.class);
 
-    // Create ad group.
+    // Create the ad group.
     AdGroup adGroup = new AdGroup();
     adGroup.setName("Earth to Mars Cruises #" + System.currentTimeMillis());
     adGroup.setStatus(AdGroupStatus.ENABLED);
@@ -339,18 +339,18 @@ public class CreateCompleteCampaignBothApisPhase2 {
     biddingStrategyConfiguration.setBids(new Bids[] {bid});
     adGroup.setBiddingStrategyConfiguration(biddingStrategyConfiguration);
 
-    // Create operations.
+    // Create the operation.
     AdGroupOperation operation = new AdGroupOperation();
     operation.setOperand(adGroup);
     operation.setOperator(Operator.ADD);
 
     AdGroupOperation[] operations = new AdGroupOperation[] {operation};
 
-    // Add ad groups.
+    // Add the ad group.
     AdGroupReturnValue result = adGroupService.mutate(operations);
 
     AdGroup adGroupResult = result.getValue(0);
-    // Display new ad groups.
+    // Display the new ad group.
     System.out.printf("Ad group with ID '%d' and name %s was created.%n",
       adGroupResult.getId(), adGroupResult.getName());
 

@@ -217,7 +217,7 @@ public class CreateCompleteCampaignBothApisPhase3 {
         URLEncoder.encode(keyword.getText(), UTF_8.name()));
       keywordBiddableAdGroupCriterion.setFinalUrls(new UrlList(new String[]{encodedFinalUrl}));
 
-      // Create operations.
+      // Create the operation.
       AdGroupCriterionOperation keywordAdGroupCriterionOperation = new AdGroupCriterionOperation();
       keywordAdGroupCriterionOperation.setOperand(keywordBiddableAdGroupCriterion);
       keywordAdGroupCriterionOperation.setOperator(Operator.ADD);
@@ -226,10 +226,10 @@ public class CreateCompleteCampaignBothApisPhase3 {
     }
 
 
-    // Add keywords.
+    // Add the keywords.
     AdGroupCriterionReturnValue result = adGroupCriterionService.mutate(ops);
 
-    // Display results.
+    // Display the results.
     for (AdGroupCriterion adGroupCriterionResult : result.getValue()) {
       System.out.printf("Keyword ad group criterion with ad group ID %d, criterion ID %d, "
           + "text '%s', and match type '%s' was added.%n", adGroupCriterionResult.getAdGroupId(),
@@ -258,14 +258,14 @@ public class CreateCompleteCampaignBothApisPhase3 {
     List<AdGroupAdOperation> operations = new ArrayList<>(NUMBER_OF_ADS);
 
     for (int i = 0; i < NUMBER_OF_ADS; i++) {
-      // Create expanded text ad.
+      // Create the expanded text ad.
       ExpandedTextAd expandedTextAd = new ExpandedTextAd();
       expandedTextAd.setDescription("Buy your tickets now!");
       expandedTextAd.setHeadlinePart1(String.format("Cruise #%d to Mars", i));
       expandedTextAd.setHeadlinePart2("Best Space Cruise Line");
       expandedTextAd.setFinalUrls(new String[] {"http://www.example.com/" + i});
 
-      // Create ad group ad.
+      // Create the ad group ad.
       AdGroupAd expandedTextAdGroupAd = new AdGroupAd();
       expandedTextAdGroupAd.setAdGroupId(adGroup.getId().getValue());
       expandedTextAdGroupAd.setAd(expandedTextAd);
@@ -281,11 +281,11 @@ public class CreateCompleteCampaignBothApisPhase3 {
       operations.add(adGroupAdOperation);
     }
 
-    // Add ads.
+    // Add the ads.
     AdGroupAdReturnValue result =
       adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[operations.size()]));
 
-    // Display ads.
+    // Display the ads.
     Arrays.stream(result.getValue())
       .map(adGroupAdResult -> (ExpandedTextAd) adGroupAdResult.getAd())
       .forEach(
