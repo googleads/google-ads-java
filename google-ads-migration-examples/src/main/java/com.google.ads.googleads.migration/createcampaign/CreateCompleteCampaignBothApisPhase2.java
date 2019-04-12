@@ -108,15 +108,15 @@ public class CreateCompleteCampaignBothApisPhase2 {
 
   private static final List<String> KEYWORDS_TO_ADD = Arrays.asList("mars cruise", "space hotel");
 
-  private static class CreateCompleteCampaignBothApisParams extends CodeSampleParams {
+  private static class CreateCompleteCampaignBothApisPhase2Params extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
   }
 
   public static void main(String[] args) {
-    CreateCompleteCampaignBothApisParams params =
-      new CreateCompleteCampaignBothApisParams();
+    CreateCompleteCampaignBothApisPhase2Params params =
+      new CreateCompleteCampaignBothApisPhase2Params();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
