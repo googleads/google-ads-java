@@ -91,12 +91,12 @@ import org.joda.time.DateTime;
 import static com.google.api.ads.common.lib.utils.Builder.DEFAULT_CONFIGURATION_FILENAME;
 
 /**
- * This code example is the third in a series of code examples that shows how to create a Search
+ * This code example is the second in a series of code examples that shows how to create a Search
  * campaign using the AdWords API, and then migrate it to the Google Ads API one functionality at a
  * time. See other examples for code examples in various stages of migration.
  *
- * In this code example, the functionality to create campaign budget and search campaign have
- * been migrated to the Google Ads API. The rest of the functionality - creating ad groups,
+ * In this code example, the functionality to create campaign budget has been migrated to
+ * the Google Ads API. The rest of the functionality - creating a Search campaign, ad groups,
  * keywords and expanded text ads are done using the AdWords API.
  */
 public class CreateCompleteCampaignBothApisPhase1 {
