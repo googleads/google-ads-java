@@ -181,6 +181,10 @@ public class CreateCompleteCampaignBothApisPhase4 {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+    } catch (RemoteException re) {
+      System.err.printf("Request failed unexpectedly due to RemoteException: %s%n", re);
+    } catch (UnsupportedEncodingException ue) {
+      System.err.printf("Example failed due to encoding exception: %s%n", ue);
     }
   }
 
@@ -583,17 +587,12 @@ public class CreateCompleteCampaignBothApisPhase4 {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(GoogleAdsClient googleAdsClient, AdWordsServicesInterface adWordsServices,
-                          AdWordsSession session, long customerId) {
+                          AdWordsSession session, long customerId)
+    throws RemoteException, UnsupportedEncodingException {
     CampaignBudget budget = createBudget(googleAdsClient, customerId);
     Campaign campaign = createCampaign(googleAdsClient, customerId, budget);
     AdGroup adGroup = createAdGroup(googleAdsClient, customerId, campaign);
     createTextAds(googleAdsClient, customerId, adGroup);
-    try {
-      createKeywords(adWordsServices, session, adGroup, KEYWORDS_TO_ADD);
-    } catch (RemoteException re) {
-      System.err.printf("Request failed unexpectedly due to RemoteException: %s%n", re);
-    } catch (UnsupportedEncodingException ue) {
-      System.err.printf("Example failed due to encoding exception: %s%n", ue);
-    }
+    createKeywords(adWordsServices, session, adGroup, KEYWORDS_TO_ADD);
   }
 }

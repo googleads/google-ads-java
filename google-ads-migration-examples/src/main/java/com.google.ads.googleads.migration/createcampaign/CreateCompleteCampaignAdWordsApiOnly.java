@@ -124,7 +124,13 @@ public class CreateCompleteCampaignAdWordsApiOnly {
 
     AdWordsServicesInterface adWordsServices = AdWordsServices.getInstance();
 
-    new CreateCompleteCampaignAdWordsApiOnly().runExample(adWordsServices, session);
+    try {
+      new CreateCompleteCampaignAdWordsApiOnly().runExample(adWordsServices, session);
+    } catch (RemoteException re) {
+      System.err.printf("Request failed unexpectedly due to RemoteException: %s%n", re);
+    } catch (UnsupportedEncodingException ue) {
+      System.err.printf("Example failed due to encoding exception: %s%n", ue);
+    }
   }
 
   /**
@@ -402,17 +408,12 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    * @param adWordsServices the Google AdWords services interface.
    * @param session the client session.
    */
-  private void runExample(AdWordsServicesInterface adWordsServices, AdWordsSession session) {
-    try {
-      Budget budget = createBudget(adWordsServices, session);
-      Campaign campaign = createCampaign(adWordsServices, session, budget);
-      AdGroup adGroup = createAdGroup(adWordsServices, session, campaign);
-      createTextAds(adWordsServices, session, adGroup);
-      createKeywords(adWordsServices, session, adGroup, KEYWORDS_TO_ADD);
-    } catch (RemoteException re) {
-      System.err.printf("Request failed unexpectedly due to RemoteException: %s%n", re);
-    } catch (UnsupportedEncodingException ue) {
-      System.err.printf("Example failed due to encoding exception: %s%n", ue);
-    }
+  private void runExample(AdWordsServicesInterface adWordsServices, AdWordsSession session)
+    throws RemoteException, UnsupportedEncodingException {
+    Budget budget = createBudget(adWordsServices, session);
+    Campaign campaign = createCampaign(adWordsServices, session, budget);
+    AdGroup adGroup = createAdGroup(adWordsServices, session, campaign);
+    createTextAds(adWordsServices, session, adGroup);
+    createKeywords(adWordsServices, session, adGroup, KEYWORDS_TO_ADD);
   }
 }
