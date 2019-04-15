@@ -51,6 +51,7 @@ import com.google.api.ads.adwords.axis.v201809.cm.CampaignStatus;
 import com.google.api.ads.adwords.axis.v201809.cm.CpcBid;
 import com.google.api.ads.adwords.axis.v201809.cm.ExpandedTextAd;
 import com.google.api.ads.adwords.axis.v201809.cm.Keyword;
+import com.google.api.ads.adwords.axis.v201809.cm.KeywordMatchType;
 import com.google.api.ads.adwords.axis.v201809.cm.Money;
 import com.google.api.ads.adwords.axis.v201809.cm.NetworkSetting;
 import com.google.api.ads.adwords.axis.v201809.cm.Operator;
@@ -151,15 +152,15 @@ public class CreateCompleteCampaignAdWordsApiOnly {
     AdGroupCriterionServiceInterface adGroupCriterionService =
       adWordsServices.get(session, AdGroupCriterionServiceInterface.class);
 
-    AdGroupCriterionOperation[] ops = new AdGroupCriterionOperation[keywordsToAdd.size()];
+    AdGroupCriterionOperation[] operations = new AdGroupCriterionOperation[keywordsToAdd.size()];
 
     for (int i = 0; i < keywordsToAdd.size(); i++) {
       // Create the keyword.
       Keyword keyword = new Keyword();
       keyword.setText(keywordsToAdd.get(i));
-      keyword.setMatchType(com.google.api.ads.adwords.axis.v201809.cm.KeywordMatchType.EXACT);
+      keyword.setMatchType(KeywordMatchType.EXACT);
 
-      // Create biddable ad group criterion.
+      // Create the biddable ad group criterion.
       BiddableAdGroupCriterion keywordBiddableAdGroupCriterion = new BiddableAdGroupCriterion();
       keywordBiddableAdGroupCriterion.setAdGroupId(adGroup.getId());
       keywordBiddableAdGroupCriterion.setCriterion(keyword);
@@ -176,17 +177,18 @@ public class CreateCompleteCampaignAdWordsApiOnly {
       keywordAdGroupCriterionOperation.setOperand(keywordBiddableAdGroupCriterion);
       keywordAdGroupCriterionOperation.setOperator(Operator.ADD);
 
-      ops[i] = keywordAdGroupCriterionOperation;
+      operations[i] = keywordAdGroupCriterionOperation;
     }
 
 
     // Add the keywords.
-    AdGroupCriterionReturnValue result = adGroupCriterionService.mutate(ops);
+    AdGroupCriterionReturnValue result = adGroupCriterionService.mutate(operations);
 
     // Display the results.
     for (AdGroupCriterion adGroupCriterionResult : result.getValue()) {
       System.out.printf("Keyword ad group criterion with ad group ID %d, criterion ID %d, "
-          + "text '%s', and match type '%s' was added.%n", adGroupCriterionResult.getAdGroupId(),
+          + "text '%s', and match type '%s' was added.%n",
+        adGroupCriterionResult.getAdGroupId(),
         adGroupCriterionResult.getCriterion().getId(),
         ((Keyword) adGroupCriterionResult.getCriterion()).getText(),
         ((Keyword) adGroupCriterionResult.getCriterion()).getMatchType());
@@ -212,14 +214,14 @@ public class CreateCompleteCampaignAdWordsApiOnly {
     List<AdGroupAdOperation> operations = new ArrayList<>(NUMBER_OF_ADS);
 
     for (int i = 0; i < NUMBER_OF_ADS; i++) {
-      // Create expanded text ad.
+      // Create the expanded text ad.
       ExpandedTextAd expandedTextAd = new ExpandedTextAd();
       expandedTextAd.setDescription("Buy your tickets now!");
       expandedTextAd.setHeadlinePart1(String.format("Cruise #%d to Mars", i));
       expandedTextAd.setHeadlinePart2("Best Space Cruise Line");
       expandedTextAd.setFinalUrls(new String[] {"http://www.example.com/" + i});
 
-      // Create ad group ad.
+      // Create the ad group ad.
       AdGroupAd expandedTextAdGroupAd = new AdGroupAd();
       expandedTextAdGroupAd.setAdGroupId(adGroup.getId());
       expandedTextAdGroupAd.setAd(expandedTextAd);
@@ -298,7 +300,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
     // Add the ad group.
     AdGroupReturnValue result = adGroupService.mutate(operations);
 
-    AdGroup adGroupResult = result.getValue()[0];
+    AdGroup adGroupResult = result.getValue(0);
     // Display the new ad group.
     System.out.printf("Ad group with ID '%d' and name %s was created.%n",
       adGroupResult.getId(), adGroupResult.getName());
@@ -388,7 +390,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
     Budget sharedBudget = new Budget();
     sharedBudget.setName("Interplanetary Cruise #" + System.currentTimeMillis());
     Money budgetAmount = new Money();
-    budgetAmount.setMicroAmount(50_000_000L);
+    budgetAmount.setMicroAmount(500_000L);
     sharedBudget.setAmount(budgetAmount);
     sharedBudget.setDeliveryMethod(BudgetBudgetDeliveryMethod.STANDARD);
 

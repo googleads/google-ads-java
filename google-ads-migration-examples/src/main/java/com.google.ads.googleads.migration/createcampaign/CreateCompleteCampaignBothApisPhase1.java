@@ -61,6 +61,7 @@ import com.google.api.ads.adwords.axis.v201809.cm.CampaignStatus;
 import com.google.api.ads.adwords.axis.v201809.cm.CpcBid;
 import com.google.api.ads.adwords.axis.v201809.cm.ExpandedTextAd;
 import com.google.api.ads.adwords.axis.v201809.cm.Keyword;
+import com.google.api.ads.adwords.axis.v201809.cm.KeywordMatchType;
 import com.google.api.ads.adwords.axis.v201809.cm.Money;
 import com.google.api.ads.adwords.axis.v201809.cm.NetworkSetting;
 import com.google.api.ads.adwords.axis.v201809.cm.Operator;
@@ -95,7 +96,7 @@ import static com.google.api.ads.common.lib.utils.Builder.DEFAULT_CONFIGURATION_
  * campaign using the AdWords API, and then migrate it to the Google Ads API one functionality at a
  * time. See other examples for code examples in various stages of migration.
  *
- * In this code example, the functionality to create campaign budget has been migrated to
+ * In this code example, the functionality to create campaign a budget has been migrated to
  * the Google Ads API. The rest of the functionality - creating a Search campaign, ad groups,
  * keywords and expanded text ads are done using the AdWords API.
  */
@@ -206,15 +207,15 @@ public class CreateCompleteCampaignBothApisPhase1 {
     AdGroupCriterionServiceInterface adGroupCriterionService =
       adWordsServices.get(session, AdGroupCriterionServiceInterface.class);
 
-    AdGroupCriterionOperation[] ops = new AdGroupCriterionOperation[keywordsToAdd.size()];
+    AdGroupCriterionOperation[] operations = new AdGroupCriterionOperation[keywordsToAdd.size()];
 
     for (int i = 0; i < keywordsToAdd.size(); i++) {
       // Create the keyword.
       Keyword keyword = new Keyword();
       keyword.setText(keywordsToAdd.get(i));
-      keyword.setMatchType(com.google.api.ads.adwords.axis.v201809.cm.KeywordMatchType.EXACT);
+      keyword.setMatchType(KeywordMatchType.EXACT);
 
-      // Create biddable ad group criterion.
+      // Create the biddable ad group criterion.
       BiddableAdGroupCriterion keywordBiddableAdGroupCriterion = new BiddableAdGroupCriterion();
       keywordBiddableAdGroupCriterion.setAdGroupId(adGroup.getId());
       keywordBiddableAdGroupCriterion.setCriterion(keyword);
@@ -231,17 +232,18 @@ public class CreateCompleteCampaignBothApisPhase1 {
       keywordAdGroupCriterionOperation.setOperand(keywordBiddableAdGroupCriterion);
       keywordAdGroupCriterionOperation.setOperator(Operator.ADD);
 
-      ops[i] = keywordAdGroupCriterionOperation;
+      operations[i] = keywordAdGroupCriterionOperation;
     }
 
 
     // Add the keywords.
-    AdGroupCriterionReturnValue result = adGroupCriterionService.mutate(ops);
+    AdGroupCriterionReturnValue result = adGroupCriterionService.mutate(operations);
 
     // Display the results.
     for (AdGroupCriterion adGroupCriterionResult : result.getValue()) {
       System.out.printf("Keyword ad group criterion with ad group ID %d, criterion ID %d, "
-          + "text '%s', and match type '%s' was added.%n", adGroupCriterionResult.getAdGroupId(),
+          + "text '%s', and match type '%s' was added.%n",
+        adGroupCriterionResult.getAdGroupId(),
         adGroupCriterionResult.getCriterion().getId(),
         ((Keyword) adGroupCriterionResult.getCriterion()).getText(),
         ((Keyword) adGroupCriterionResult.getCriterion()).getMatchType());
@@ -267,7 +269,7 @@ public class CreateCompleteCampaignBothApisPhase1 {
     List<AdGroupAdOperation> operations = new ArrayList<>(NUMBER_OF_ADS);
 
     for (int i = 0; i < NUMBER_OF_ADS; i++) {
-      // Create expanded text ad.
+      // Create the expanded text ad.
       ExpandedTextAd expandedTextAd = new ExpandedTextAd();
       expandedTextAd.setDescription("Buy your tickets now!");
       expandedTextAd.setHeadlinePart1(String.format("Cruise #%d to Mars", i));
@@ -294,7 +296,7 @@ public class CreateCompleteCampaignBothApisPhase1 {
     AdGroupAdReturnValue result =
       adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[operations.size()]));
 
-    // Display ads.
+    // Display the ads.
     Arrays.stream(result.getValue())
       .map(adGroupAdResult -> (ExpandedTextAd) adGroupAdResult.getAd())
       .forEach(
@@ -353,7 +355,7 @@ public class CreateCompleteCampaignBothApisPhase1 {
     // Add the ad group.
     AdGroupReturnValue result = adGroupService.mutate(operations);
 
-    AdGroup adGroupResult = result.getValue()[0];
+    AdGroup adGroupResult = result.getValue(0);
     // Display the new ad group.
     System.out.printf("Ad group with ID '%d' and name %s was created.%n",
       adGroupResult.getId(), adGroupResult.getName());
@@ -431,7 +433,7 @@ public class CreateCompleteCampaignBothApisPhase1 {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
-   * @param budgetResourceName resource names of the new campaign budget.
+   * @param budgetResourceName resource name of the new campaign budget.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private CampaignBudget getBudget(GoogleAdsClient googleAdsClient, long customerId,

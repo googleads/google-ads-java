@@ -62,6 +62,7 @@ import com.google.api.ads.adwords.axis.v201809.cm.Bids;
 import com.google.api.ads.adwords.axis.v201809.cm.CpcBid;
 import com.google.api.ads.adwords.axis.v201809.cm.ExpandedTextAd;
 import com.google.api.ads.adwords.axis.v201809.cm.Keyword;
+import com.google.api.ads.adwords.axis.v201809.cm.KeywordMatchType;
 import com.google.api.ads.adwords.axis.v201809.cm.Money;
 import com.google.api.ads.adwords.axis.v201809.cm.Operator;
 import com.google.api.ads.adwords.axis.v201809.cm.UrlList;
@@ -96,7 +97,7 @@ import static com.google.api.ads.common.lib.utils.Builder.DEFAULT_CONFIGURATION_
  * campaign using the AdWords API, and then migrate it to the Google Ads API one functionality at a
  * time. See other examples for code examples in various stages of migration.
  *
- * In this code example, the functionality to create campaign budget and search campaign have
+ * In this code example, the functionality to create a campaign budget and search campaign have
  * been migrated to the Google Ads API. The rest of the functionality - creating ad groups,
  * keywords and expanded text ads are done using the AdWords API.
  */
@@ -213,9 +214,9 @@ public class CreateCompleteCampaignBothApisPhase2 {
       // Create the keyword.
       Keyword keyword = new Keyword();
       keyword.setText(keywordsToAdd.get(i));
-      keyword.setMatchType(com.google.api.ads.adwords.axis.v201809.cm.KeywordMatchType.EXACT);
+      keyword.setMatchType(KeywordMatchType.EXACT);
 
-      // Create biddable ad group criterion.
+      // Create the biddable ad group criterion.
       BiddableAdGroupCriterion keywordBiddableAdGroupCriterion = new BiddableAdGroupCriterion();
       keywordBiddableAdGroupCriterion.setAdGroupId(adGroup.getId());
       keywordBiddableAdGroupCriterion.setCriterion(keyword);
@@ -242,7 +243,8 @@ public class CreateCompleteCampaignBothApisPhase2 {
     // Display the results.
     for (AdGroupCriterion adGroupCriterionResult : result.getValue()) {
       System.out.printf("Keyword ad group criterion with ad group ID %d, criterion ID %d, "
-          + "text '%s', and match type '%s' was added.%n", adGroupCriterionResult.getAdGroupId(),
+          + "text '%s', and match type '%s' was added.%n",
+        adGroupCriterionResult.getAdGroupId(),
         adGroupCriterionResult.getCriterion().getId(),
         ((Keyword) adGroupCriterionResult.getCriterion()).getText(),
         ((Keyword) adGroupCriterionResult.getCriterion()).getMatchType());
@@ -367,7 +369,7 @@ public class CreateCompleteCampaignBothApisPhase2 {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
-   * @param campaignResourceName resource names of the new campaign.
+   * @param campaignResourceName resource name of the new campaign.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private Campaign getCampaign(GoogleAdsClient googleAdsClient, long customerId,
@@ -455,7 +457,7 @@ public class CreateCompleteCampaignBothApisPhase2 {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
-   * @param budgetResourceName resource names of the new campaign budget.
+   * @param budgetResourceName resource name of the new campaign budget.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private CampaignBudget getBudget(GoogleAdsClient googleAdsClient, long customerId,

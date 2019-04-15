@@ -79,7 +79,7 @@ import org.joda.time.DateTime;
  * time. See Step0 through Step5 for code examples in various stages of migration.
  *
  * This code example represents the final state, where all the functionality - create a
- * campaign budget, a Search campaign, ad groups, keywords and expanded text ads have been
+ * campaign budget, a search campaign, an ad group, keywords, and expanded text ads have all been
  * migrated to using the Google Ads API. The AdWords API is not used.
  */
 
@@ -357,7 +357,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
-   * @param adGroupResourceName resource names of the new ad group.
+   * @param adGroupResourceName resource name of the new ad group.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private AdGroup getAdGroup(GoogleAdsClient googleAdsClient, long customerId,
@@ -424,7 +424,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
-   * @param campaignResourceName resource names of the new campaign.
+   * @param campaignResourceName resource name of the new campaign.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private Campaign getCampaign(GoogleAdsClient googleAdsClient, long customerId,
@@ -512,7 +512,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
-   * @param budgetResourceName resource names of the new campaign budget.
+   * @param budgetResourceName resource name of the new campaign budget.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private CampaignBudget getBudget(GoogleAdsClient googleAdsClient, long customerId,
