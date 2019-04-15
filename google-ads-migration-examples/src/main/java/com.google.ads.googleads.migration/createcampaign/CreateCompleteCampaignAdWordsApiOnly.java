@@ -140,6 +140,8 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    * @param session the client session.
    * @param adGroup the ad group for the new criteria.
    * @param keywordsToAdd the keywords to add to the text ads.
+   * @throws RemoteException if the API request failed due to other errors.
+   * @throws UnsupportedEncodingException if encoding the final URL failed.
    */
   private AdGroupCriterion[] createKeywords(AdWordsServicesInterface adWordsServices,
                                             AdWordsSession session, AdGroup adGroup,
@@ -197,6 +199,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    * @param adWordsServices the Google AdWords services interface.
    * @param session the client session.
    * @param adGroup the ad group for the text ad.
+   * @throws RemoteException if the API request failed due to other errors.
    */
   private AdGroupAd[] createTextAds(AdWordsServicesInterface adWordsServices,
                                     AdWordsSession session, AdGroup adGroup)
@@ -257,6 +260,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    * @param adWordsServices the Google AdWords services interface.
    * @param session the client session.
    * @param campaign the campaign for the ad group.
+   * @throws RemoteException if the API request failed due to other errors.
    */
   private AdGroup createAdGroup(AdWordsServicesInterface adWordsServices,
                                 AdWordsSession session, Campaign campaign)
@@ -308,6 +312,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    * @param adWordsServices the Google AdWords services interface.
    * @param session the client session.
    * @param budget the budget for the campaign.
+   * @throws RemoteException if the API request failed due to other errors.
    */
   private Campaign createCampaign(AdWordsServicesInterface adWordsServices,
                                   AdWordsSession session, Budget budget)
@@ -371,6 +376,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    *
    * @param adWordsServices the Google AdWords services interface.
    * @param session the client session.
+   * @throws RemoteException if the API request failed due to other errors.
    */
   private Budget createBudget(AdWordsServicesInterface adWordsServices,
                                       AdWordsSession session) throws RemoteException {
@@ -407,6 +413,8 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    *
    * @param adWordsServices the Google AdWords services interface.
    * @param session the client session.
+   * @throws RemoteException if the API request failed due to other errors.
+   * @throws UnsupportedEncodingException if encoding the final URL failed.
    */
   private void runExample(AdWordsServicesInterface adWordsServices, AdWordsSession session)
     throws RemoteException, UnsupportedEncodingException {

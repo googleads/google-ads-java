@@ -191,6 +191,8 @@ public class CreateCompleteCampaignBothApisPhase3 {
    * @param session the client session.
    * @param adGroup the ad group for the new criteria.
    * @param keywordsToAdd the keywords to add to the text ads.
+   * @throws RemoteException if the API request failed due to other errors.
+   * @throws UnsupportedEncodingException if encoding the final URL failed.
    */
   private AdGroupCriterion[] createKeywords(AdWordsServicesInterface adWordsServices,
                                             AdWordsSession session, AdGroup adGroup,
@@ -248,6 +250,7 @@ public class CreateCompleteCampaignBothApisPhase3 {
    * @param adWordsServices the Google AdWords services interface.
    * @param session the client session.
    * @param adGroup the ad group for the text ad.
+   * @throws RemoteException if the API request failed due to other errors.
    */
   private AdGroupAd[] createTextAds(AdWordsServicesInterface adWordsServices,
                                         AdWordsSession session, AdGroup adGroup)
@@ -530,6 +533,8 @@ public class CreateCompleteCampaignBothApisPhase3 {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
+   * @throws RemoteException if the API request failed due to other errors.
+   * @throws UnsupportedEncodingException if encoding the final URL failed.
    */
   private void runExample(GoogleAdsClient googleAdsClient, AdWordsServicesInterface adWordsServices,
                           AdWordsSession session, long customerId)
