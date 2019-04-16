@@ -307,7 +307,10 @@ public class CreateCompleteCampaignBothApisPhase3 {
       System.out.printf(
           "Expanded text ad with ID %d "
               + "and headline '%s - %s' was created in ad group with ID %d.%n",
-          newAd.getId(), newAd.getHeadlinePart1(), newAd.getHeadlinePart2(), adGroup.getId());
+          newAd.getId(),
+          newAd.getHeadlinePart1(),
+          newAd.getHeadlinePart2(),
+          adGroup.getId().getValue());
     }
     return result.getValue();
   }
