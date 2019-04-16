@@ -81,19 +81,11 @@
       <artifactId>log4j-slf4j-impl</artifactId>
       <version>2.11.1</version>
     </dependency>
-    <!--Uncomment the portion below and comment the logging dependency above
-    to enable logging for AdWords API. Only one logging framework may be used
-    at a time-->
-    <!--<dependency>-->
-      <!--<groupId>log4j</groupId>-->
-      <!--<artifactId>log4j</artifactId>-->
-      <!--<version>1.2.16</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>org.slf4j</groupId>-->
-      <!--<artifactId>slf4j-log4j12</artifactId>-->
-      <!--<version>1.7.7</version>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.16</version>
+    </dependency>
     <!-- Test dependencies -->
     <dependency>
       <groupId>junit</groupId>
