@@ -14,6 +14,7 @@
 
 package com.google.ads.googleads.migration.createcampaign;
 
+import static com.google.api.ads.common.lib.utils.Builder.DEFAULT_CONFIGURATION_FILENAME;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import com.google.api.ads.adwords.axis.factory.AdWordsServices;
@@ -21,6 +22,7 @@ import com.google.api.ads.adwords.axis.v201809.cm.AdGroup;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAd;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAdOperation;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAdReturnValue;
+import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAdRotationMode;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAdServiceInterface;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAdStatus;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupCriterion;
@@ -29,7 +31,6 @@ import com.google.api.ads.adwords.axis.v201809.cm.AdGroupCriterionReturnValue;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupCriterionServiceInterface;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupOperation;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupReturnValue;
-import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAdRotationMode;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupServiceInterface;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupStatus;
 import com.google.api.ads.adwords.axis.v201809.cm.AdRotationMode;
@@ -57,31 +58,28 @@ import com.google.api.ads.adwords.axis.v201809.cm.NetworkSetting;
 import com.google.api.ads.adwords.axis.v201809.cm.Operator;
 import com.google.api.ads.adwords.axis.v201809.cm.UrlList;
 import com.google.api.ads.adwords.axis.v201809.cm.UserStatus;
+import com.google.api.ads.adwords.lib.client.AdWordsSession;
 import com.google.api.ads.adwords.lib.factory.AdWordsServicesInterface;
+import com.google.api.ads.common.lib.auth.OfflineCredentials;
+import com.google.api.ads.common.lib.auth.OfflineCredentials.Api;
 import com.google.api.ads.common.lib.conf.ConfigurationLoadException;
 import com.google.api.ads.common.lib.exception.OAuthException;
 import com.google.api.ads.common.lib.exception.ValidationException;
 import com.google.api.client.auth.oauth2.Credential;
-import com.google.api.ads.adwords.lib.client.AdWordsSession;
-import com.google.api.ads.common.lib.auth.OfflineCredentials;
-import com.google.api.ads.common.lib.auth.OfflineCredentials.Api;
 import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.net.URLEncoder;
-
 import org.joda.time.DateTime;
-
-import static com.google.api.ads.common.lib.utils.Builder.DEFAULT_CONFIGURATION_FILENAME;
 
 /**
  * This code example is the first in a series of code examples that shows how to create a Search
  * campaign using the AdWords API, and then migrate it to the Google Ads API one functionality at a
  * time. See other examples for code examples in various stages of migration.
  *
- * This code example represents the initial state, where the AdWords API is used to create a
+ * <p>This code example represents the initial state, where the AdWords API is used to create a
  * campaign budget, a Search campaign, ad groups, keywords and expanded text ads. The user has not
  * yet migrated any of the functionality to the Google Ads API.
  */
@@ -96,30 +94,30 @@ public class CreateCompleteCampaignAdWordsApiOnly {
     try {
       // Generate a refreshable OAuth2 credential for AdWords API.
       Credential oAuth2Credential =
-        new OfflineCredentials.Builder()
-          .forApi(Api.ADWORDS)
-          .fromFile()
-          .build()
-          .generateCredential();
+          new OfflineCredentials.Builder()
+              .forApi(Api.ADWORDS)
+              .fromFile()
+              .build()
+              .generateCredential();
 
       // Construct an AdWordsSession.
       session =
-        new AdWordsSession.Builder().fromFile().withOAuth2Credential(oAuth2Credential).build();
+          new AdWordsSession.Builder().fromFile().withOAuth2Credential(oAuth2Credential).build();
     } catch (ConfigurationLoadException cle) {
       System.err.printf(
-        "Failed to load configuration from the %s file. Exception: %s%n",
-        DEFAULT_CONFIGURATION_FILENAME, cle);
+          "Failed to load configuration from the %s file. Exception: %s%n",
+          DEFAULT_CONFIGURATION_FILENAME, cle);
       return;
     } catch (ValidationException ve) {
       System.err.printf(
-        "Invalid configuration in the %s file. Exception: %s%n",
-        DEFAULT_CONFIGURATION_FILENAME, ve);
+          "Invalid configuration in the %s file. Exception: %s%n",
+          DEFAULT_CONFIGURATION_FILENAME, ve);
       return;
     } catch (OAuthException oe) {
       System.err.printf(
-        "Failed to create OAuth credentials. Check OAuth settings in the %s file. "
-          + "Exception: %s%n",
-        DEFAULT_CONFIGURATION_FILENAME, oe);
+          "Failed to create OAuth credentials. Check OAuth settings in the %s file. "
+              + "Exception: %s%n",
+          DEFAULT_CONFIGURATION_FILENAME, oe);
       return;
     }
 
@@ -144,13 +142,15 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    * @throws RemoteException if the API request failed due to other errors.
    * @throws UnsupportedEncodingException if encoding the final URL failed.
    */
-  private AdGroupCriterion[] createKeywords(AdWordsServicesInterface adWordsServices,
-                                            AdWordsSession session, AdGroup adGroup,
-                                            List<String> keywordsToAdd)
-    throws RemoteException, UnsupportedEncodingException {
+  private AdGroupCriterion[] createKeywords(
+      AdWordsServicesInterface adWordsServices,
+      AdWordsSession session,
+      AdGroup adGroup,
+      List<String> keywordsToAdd)
+      throws RemoteException, UnsupportedEncodingException {
     // Get the AdGroupCriterionService.
     AdGroupCriterionServiceInterface adGroupCriterionService =
-      adWordsServices.get(session, AdGroupCriterionServiceInterface.class);
+        adWordsServices.get(session, AdGroupCriterionServiceInterface.class);
 
     AdGroupCriterionOperation[] operations = new AdGroupCriterionOperation[keywordsToAdd.size()];
 
@@ -168,9 +168,11 @@ public class CreateCompleteCampaignAdWordsApiOnly {
       // You can optionally provide these field(s).
       keywordBiddableAdGroupCriterion.setUserStatus(UserStatus.PAUSED);
 
-      String encodedFinalUrl = String.format("http://example.com/mars/cruise/?kw=%s",
-        URLEncoder.encode(keyword.getText(), UTF_8.name()));
-      keywordBiddableAdGroupCriterion.setFinalUrls(new UrlList(new String[]{encodedFinalUrl}));
+      String encodedFinalUrl =
+          String.format(
+              "http://example.com/mars/cruise/?kw=%s",
+              URLEncoder.encode(keyword.getText(), UTF_8.name()));
+      keywordBiddableAdGroupCriterion.setFinalUrls(new UrlList(new String[] {encodedFinalUrl}));
 
       // Create the operation.
       AdGroupCriterionOperation keywordAdGroupCriterionOperation = new AdGroupCriterionOperation();
@@ -185,30 +187,35 @@ public class CreateCompleteCampaignAdWordsApiOnly {
 
     // Display the results.
     for (AdGroupCriterion adGroupCriterionResult : result.getValue()) {
-      System.out.printf("Keyword ad group criterion with ad group ID %d, criterion ID %d, "
-          + "text '%s', and match type '%s' was added.%n",
-        adGroupCriterionResult.getAdGroupId(),
-        adGroupCriterionResult.getCriterion().getId(),
-        ((Keyword) adGroupCriterionResult.getCriterion()).getText(),
-        ((Keyword) adGroupCriterionResult.getCriterion()).getMatchType());
+      System.out.printf(
+          "Keyword ad group criterion with ad group ID %d, criterion ID %d, "
+              + "text '%s', and match type '%s' was added.%n",
+          adGroupCriterionResult.getAdGroupId(),
+          adGroupCriterionResult.getCriterion().getId(),
+          ((Keyword) adGroupCriterionResult.getCriterion()).getText(),
+          ((Keyword) adGroupCriterionResult.getCriterion()).getMatchType());
     }
     return result.getValue();
   }
 
   /**
    * Creates text ads.
+   *
    * @param adWordsServices the Google AdWords services interface.
    * @param session the client session.
    * @param adGroup the ad group for the text ad.
    * @throws RemoteException if the API request failed due to other errors.
    */
-  private AdGroupAd[] createTextAds(AdWordsServicesInterface adWordsServices,
-                                    AdWordsSession session, AdGroup adGroup, int numberOfAds)
-    throws RemoteException {
+  private AdGroupAd[] createTextAds(
+      AdWordsServicesInterface adWordsServices,
+      AdWordsSession session,
+      AdGroup adGroup,
+      int numberOfAds)
+      throws RemoteException {
 
     // Get the AdGroupAdService.
     AdGroupAdServiceInterface adGroupAdService =
-      adWordsServices.get(session, AdGroupAdServiceInterface.class);
+        adWordsServices.get(session, AdGroupAdServiceInterface.class);
 
     List<AdGroupAdOperation> operations = new ArrayList<>();
 
@@ -238,18 +245,15 @@ public class CreateCompleteCampaignAdWordsApiOnly {
 
     // Add the ads.
     AdGroupAdReturnValue result =
-      adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[operations.size()]));
-
+        adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[operations.size()]));
 
     // Display the ads.
     for (AdGroupAd adGroupAdResult : result.getValue()) {
       ExpandedTextAd newAd = (ExpandedTextAd) adGroupAdResult.getAd();
-      System.out.printf("Expanded text ad with ID %d " +
-          "and headline '%s - %s' was created in ad group with ID %d.%n",
-        newAd.getId(),
-        newAd.getHeadlinePart1(),
-        newAd.getHeadlinePart2(),
-        adGroup.getId());
+      System.out.printf(
+          "Expanded text ad with ID %d "
+              + "and headline '%s - %s' was created in ad group with ID %d.%n",
+          newAd.getId(), newAd.getHeadlinePart1(), newAd.getHeadlinePart2(), adGroup.getId());
     }
     return result.getValue();
   }
@@ -262,12 +266,12 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    * @param campaign the campaign for the ad group.
    * @throws RemoteException if the API request failed due to other errors.
    */
-  private AdGroup createAdGroup(AdWordsServicesInterface adWordsServices,
-                                AdWordsSession session, Campaign campaign)
-    throws RemoteException {
+  private AdGroup createAdGroup(
+      AdWordsServicesInterface adWordsServices, AdWordsSession session, Campaign campaign)
+      throws RemoteException {
     // Get the AdGroupService.
     AdGroupServiceInterface adGroupService =
-      adWordsServices.get(session, AdGroupServiceInterface.class);
+        adWordsServices.get(session, AdGroupServiceInterface.class);
 
     // Create ad group.
     AdGroup adGroup = new AdGroup();
@@ -300,8 +304,9 @@ public class CreateCompleteCampaignAdWordsApiOnly {
 
     AdGroup adGroupResult = result.getValue(0);
     // Display the new ad group.
-    System.out.printf("Ad group with ID %d and name '%s' was created.%n",
-      adGroupResult.getId(), adGroupResult.getName());
+    System.out.printf(
+        "Ad group with ID %d and name '%s' was created.%n",
+        adGroupResult.getId(), adGroupResult.getName());
 
     return adGroupResult;
   }
@@ -314,12 +319,12 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    * @param budget the budget for the campaign.
    * @throws RemoteException if the API request failed due to other errors.
    */
-  private Campaign createCampaign(AdWordsServicesInterface adWordsServices,
-                                  AdWordsSession session, Budget budget)
-    throws RemoteException {
+  private Campaign createCampaign(
+      AdWordsServicesInterface adWordsServices, AdWordsSession session, Budget budget)
+      throws RemoteException {
     // Get the CampaignService.
     CampaignServiceInterface campaignService =
-      adWordsServices.get(session, CampaignServiceInterface.class);
+        adWordsServices.get(session, CampaignServiceInterface.class);
 
     // Create the campaign.
     Campaign campaign = new Campaign();
@@ -365,9 +370,9 @@ public class CreateCompleteCampaignAdWordsApiOnly {
 
     Campaign campaignResult = result.getValue(0);
     // Display the campaign.
-    System.out.printf("Campaign with ID %d and name '%s' was created.%n",
-      campaignResult.getId(),
-      campaignResult.getName());
+    System.out.printf(
+        "Campaign with ID %d and name '%s' was created.%n",
+        campaignResult.getId(), campaignResult.getName());
     return campaignResult;
   }
 
@@ -378,11 +383,11 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    * @param session the client session.
    * @throws RemoteException if the API request failed due to other errors.
    */
-  private Budget createBudget(AdWordsServicesInterface adWordsServices,
-                                      AdWordsSession session) throws RemoteException {
+  private Budget createBudget(AdWordsServicesInterface adWordsServices, AdWordsSession session)
+      throws RemoteException {
     // Get the BudgetService.
     BudgetServiceInterface budgetService =
-      adWordsServices.get(session, BudgetServiceInterface.class);
+        adWordsServices.get(session, BudgetServiceInterface.class);
 
     // Create a budget, which can be shared by multiple campaigns.
     Budget sharedBudget = new Budget();
@@ -402,9 +407,9 @@ public class CreateCompleteCampaignAdWordsApiOnly {
     BudgetReturnValue result = budgetService.mutate(operations);
     Budget budgetResult = result.getValue(0);
     // Display budget.
-    System.out.printf("Budget with ID %d and name '%s' was created.%n",
-      budgetResult.getBudgetId(),
-      budgetResult.getName());
+    System.out.printf(
+        "Budget with ID %d and name '%s' was created.%n",
+        budgetResult.getBudgetId(), budgetResult.getName());
     return budgetResult;
   }
 
@@ -417,7 +422,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    * @throws UnsupportedEncodingException if encoding the final URL failed.
    */
   private void runExample(AdWordsServicesInterface adWordsServices, AdWordsSession session)
-    throws RemoteException, UnsupportedEncodingException {
+      throws RemoteException, UnsupportedEncodingException {
     Budget budget = createBudget(adWordsServices, session);
     Campaign campaign = createCampaign(adWordsServices, session, budget);
     AdGroup adGroup = createAdGroup(adWordsServices, session, campaign);

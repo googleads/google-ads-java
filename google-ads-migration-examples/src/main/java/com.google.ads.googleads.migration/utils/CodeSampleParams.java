@@ -16,7 +16,6 @@ package com.google.ads.googleads.migration.utils;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
-
 import java.io.PrintStream;
 
 /**

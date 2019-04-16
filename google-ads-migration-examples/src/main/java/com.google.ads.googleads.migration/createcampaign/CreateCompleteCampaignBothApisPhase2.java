@@ -14,36 +14,38 @@
 
 package com.google.ads.googleads.migration.createcampaign;
 
+import static com.google.api.ads.common.lib.utils.Builder.DEFAULT_CONFIGURATION_FILENAME;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import com.beust.jcommander.Parameter;
+import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.migration.utils.ArgumentNames;
 import com.google.ads.googleads.migration.utils.CodeSampleParams;
-import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v0.utils.ResourceNames;
-import com.google.ads.googleads.v1.errors.GoogleAdsException;
 import com.google.ads.googleads.v1.common.ManualCpc;
 import com.google.ads.googleads.v1.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
 import com.google.ads.googleads.v1.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
 import com.google.ads.googleads.v1.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
 import com.google.ads.googleads.v1.resources.Campaign;
-import com.google.ads.googleads.v1.resources.CampaignBudget;
 import com.google.ads.googleads.v1.resources.Campaign.NetworkSettings;
-import com.google.ads.googleads.v1.services.CampaignOperation;
-import com.google.ads.googleads.v1.services.CampaignServiceClient;
+import com.google.ads.googleads.v1.resources.CampaignBudget;
 import com.google.ads.googleads.v1.services.CampaignBudgetOperation;
 import com.google.ads.googleads.v1.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v1.services.CampaignOperation;
+import com.google.ads.googleads.v1.services.CampaignServiceClient;
+import com.google.ads.googleads.v1.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v1.services.MutateCampaignBudgetsResponse;
 import com.google.ads.googleads.v1.services.MutateCampaignsResponse;
 import com.google.ads.googleads.v1.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v1.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.api.ads.adwords.axis.factory.AdWordsServices;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroup;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAd;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAdOperation;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAdReturnValue;
+import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAdRotationMode;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAdServiceInterface;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAdStatus;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupCriterion;
@@ -52,7 +54,6 @@ import com.google.api.ads.adwords.axis.v201809.cm.AdGroupCriterionReturnValue;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupCriterionServiceInterface;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupOperation;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupReturnValue;
-import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAdRotationMode;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupServiceInterface;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupStatus;
 import com.google.api.ads.adwords.axis.v201809.cm.AdRotationMode;
@@ -67,39 +68,36 @@ import com.google.api.ads.adwords.axis.v201809.cm.Money;
 import com.google.api.ads.adwords.axis.v201809.cm.Operator;
 import com.google.api.ads.adwords.axis.v201809.cm.UrlList;
 import com.google.api.ads.adwords.axis.v201809.cm.UserStatus;
+import com.google.api.ads.adwords.lib.client.AdWordsSession;
 import com.google.api.ads.adwords.lib.factory.AdWordsServicesInterface;
+import com.google.api.ads.common.lib.auth.OfflineCredentials;
+import com.google.api.ads.common.lib.auth.OfflineCredentials.Api;
 import com.google.api.ads.common.lib.conf.ConfigurationLoadException;
 import com.google.api.ads.common.lib.exception.OAuthException;
 import com.google.api.ads.common.lib.exception.ValidationException;
+import com.google.api.client.auth.oauth2.Credential;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
-import com.google.api.client.auth.oauth2.Credential;
-import com.google.api.ads.adwords.lib.client.AdWordsSession;
-import com.google.api.ads.common.lib.auth.OfflineCredentials;
-import com.google.api.ads.common.lib.auth.OfflineCredentials.Api;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.net.URLEncoder;
-
 import org.joda.time.DateTime;
-
-import static com.google.api.ads.common.lib.utils.Builder.DEFAULT_CONFIGURATION_FILENAME;
 
 /**
  * This code example is the third in a series of code examples that shows how to create a Search
  * campaign using the AdWords API, and then migrate it to the Google Ads API one functionality at a
  * time. See other examples for code examples in various stages of migration.
  *
- * In this code example, the functionality to create a campaign budget and search campaign have
- * been migrated to the Google Ads API. The rest of the functionality - creating ad groups,
- * keywords and expanded text ads are done using the AdWords API.
+ * <p>In this code example, the functionality to create a campaign budget and search campaign have
+ * been migrated to the Google Ads API. The rest of the functionality - creating ad groups, keywords
+ * and expanded text ads are done using the AdWords API.
  */
 public class CreateCompleteCampaignBothApisPhase2 {
 
@@ -117,7 +115,7 @@ public class CreateCompleteCampaignBothApisPhase2 {
 
   public static void main(String[] args) {
     CreateCompleteCampaignBothApisPhase2Params params =
-      new CreateCompleteCampaignBothApisPhase2Params();
+        new CreateCompleteCampaignBothApisPhase2Params();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -131,7 +129,7 @@ public class CreateCompleteCampaignBothApisPhase2 {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -143,45 +141,45 @@ public class CreateCompleteCampaignBothApisPhase2 {
     try {
       // Generate a refreshable OAuth2 credential for AdWords API.
       Credential oAuth2Credential =
-        new OfflineCredentials.Builder()
-          .forApi(Api.ADWORDS)
-          .fromFile()
-          .build()
-          .generateCredential();
+          new OfflineCredentials.Builder()
+              .forApi(Api.ADWORDS)
+              .fromFile()
+              .build()
+              .generateCredential();
 
       // Construct an AdWordsSession.
       session =
-        new AdWordsSession.Builder().fromFile().withOAuth2Credential(oAuth2Credential).build();
+          new AdWordsSession.Builder().fromFile().withOAuth2Credential(oAuth2Credential).build();
     } catch (ConfigurationLoadException cle) {
       System.err.printf(
-        "Failed to load configuration from the %s file. Exception: %s%n",
-        DEFAULT_CONFIGURATION_FILENAME, cle);
+          "Failed to load configuration from the %s file. Exception: %s%n",
+          DEFAULT_CONFIGURATION_FILENAME, cle);
       return;
     } catch (ValidationException ve) {
       System.err.printf(
-        "Invalid configuration in the %s file. Exception: %s%n",
-        DEFAULT_CONFIGURATION_FILENAME, ve);
+          "Invalid configuration in the %s file. Exception: %s%n",
+          DEFAULT_CONFIGURATION_FILENAME, ve);
       return;
     } catch (OAuthException oe) {
       System.err.printf(
-        "Failed to create OAuth credentials. Check OAuth settings in the %s file. "
-          + "Exception: %s%n",
-        DEFAULT_CONFIGURATION_FILENAME, oe);
+          "Failed to create OAuth credentials. Check OAuth settings in the %s file. "
+              + "Exception: %s%n",
+          DEFAULT_CONFIGURATION_FILENAME, oe);
       return;
     }
     AdWordsServicesInterface adWordsServices = AdWordsServices.getInstance();
 
     try {
       new CreateCompleteCampaignBothApisPhase2()
-        .runExample(googleAdsClient, adWordsServices, session, params.customerId);
+          .runExample(googleAdsClient, adWordsServices, session, params.customerId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -203,13 +201,15 @@ public class CreateCompleteCampaignBothApisPhase2 {
    * @throws RemoteException if the API request failed due to other errors.
    * @throws UnsupportedEncodingException if encoding the final URL failed.
    */
-  private AdGroupCriterion[] createKeywords(AdWordsServicesInterface adWordsServices,
-                                            AdWordsSession session, AdGroup adGroup,
-                                            List<String> keywordsToAdd)
-    throws RemoteException, UnsupportedEncodingException {
+  private AdGroupCriterion[] createKeywords(
+      AdWordsServicesInterface adWordsServices,
+      AdWordsSession session,
+      AdGroup adGroup,
+      List<String> keywordsToAdd)
+      throws RemoteException, UnsupportedEncodingException {
     // Get the AdGroupCriterionService.
     AdGroupCriterionServiceInterface adGroupCriterionService =
-      adWordsServices.get(session, AdGroupCriterionServiceInterface.class);
+        adWordsServices.get(session, AdGroupCriterionServiceInterface.class);
 
     AdGroupCriterionOperation[] ops = new AdGroupCriterionOperation[keywordsToAdd.size()];
 
@@ -227,9 +227,11 @@ public class CreateCompleteCampaignBothApisPhase2 {
       // You can optionally provide these field(s).
       keywordBiddableAdGroupCriterion.setUserStatus(UserStatus.PAUSED);
 
-      String encodedFinalUrl = String.format("http://example.com/mars/cruise/?kw=%s",
-        URLEncoder.encode(keyword.getText(), UTF_8.name()));
-      keywordBiddableAdGroupCriterion.setFinalUrls(new UrlList(new String[]{encodedFinalUrl}));
+      String encodedFinalUrl =
+          String.format(
+              "http://example.com/mars/cruise/?kw=%s",
+              URLEncoder.encode(keyword.getText(), UTF_8.name()));
+      keywordBiddableAdGroupCriterion.setFinalUrls(new UrlList(new String[] {encodedFinalUrl}));
 
       // Create the operation.
       AdGroupCriterionOperation keywordAdGroupCriterionOperation = new AdGroupCriterionOperation();
@@ -239,36 +241,40 @@ public class CreateCompleteCampaignBothApisPhase2 {
       ops[i] = keywordAdGroupCriterionOperation;
     }
 
-
     // Add the keyword.
     AdGroupCriterionReturnValue result = adGroupCriterionService.mutate(ops);
 
     // Display the results.
     for (AdGroupCriterion adGroupCriterionResult : result.getValue()) {
-      System.out.printf("Keyword ad group criterion with ad group ID %d, criterion ID %d, "
-          + "text '%s', and match type '%s' was added.%n",
-        adGroupCriterionResult.getAdGroupId(),
-        adGroupCriterionResult.getCriterion().getId(),
-        ((Keyword) adGroupCriterionResult.getCriterion()).getText(),
-        ((Keyword) adGroupCriterionResult.getCriterion()).getMatchType());
+      System.out.printf(
+          "Keyword ad group criterion with ad group ID %d, criterion ID %d, "
+              + "text '%s', and match type '%s' was added.%n",
+          adGroupCriterionResult.getAdGroupId(),
+          adGroupCriterionResult.getCriterion().getId(),
+          ((Keyword) adGroupCriterionResult.getCriterion()).getText(),
+          ((Keyword) adGroupCriterionResult.getCriterion()).getMatchType());
     }
     return result.getValue();
   }
 
   /**
    * Creates text ads.
+   *
    * @param adWordsServices the Google AdWords services interface.
    * @param session the client session.
    * @param adGroup the ad group for the text ad.
    * @throws RemoteException if the API request failed due to other errors.
    */
-  private AdGroupAd[] createTextAds(AdWordsServicesInterface adWordsServices,
-                                    AdWordsSession session, AdGroup adGroup, int numberOfAds)
-    throws RemoteException {
+  private AdGroupAd[] createTextAds(
+      AdWordsServicesInterface adWordsServices,
+      AdWordsSession session,
+      AdGroup adGroup,
+      int numberOfAds)
+      throws RemoteException {
 
     // Get the AdGroupAdService.
     AdGroupAdServiceInterface adGroupAdService =
-      adWordsServices.get(session, AdGroupAdServiceInterface.class);
+        adWordsServices.get(session, AdGroupAdServiceInterface.class);
 
     List<AdGroupAdOperation> operations = new ArrayList<>();
 
@@ -298,17 +304,15 @@ public class CreateCompleteCampaignBothApisPhase2 {
 
     // Add the ads.
     AdGroupAdReturnValue result =
-      adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[operations.size()]));
+        adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[operations.size()]));
 
     // Display the ads.
     for (AdGroupAd adGroupAdResult : result.getValue()) {
       ExpandedTextAd newAd = (ExpandedTextAd) adGroupAdResult.getAd();
-      System.out.printf("Expanded text ad with ID %d " +
-          "and headline '%s - %s' was created in ad group with ID %d.%n",
-        newAd.getId(),
-        newAd.getHeadlinePart1(),
-        newAd.getHeadlinePart2(),
-        adGroup.getId());
+      System.out.printf(
+          "Expanded text ad with ID %d "
+              + "and headline '%s - %s' was created in ad group with ID %d.%n",
+          newAd.getId(), newAd.getHeadlinePart1(), newAd.getHeadlinePart2(), adGroup.getId());
     }
     return result.getValue();
   }
@@ -321,12 +325,12 @@ public class CreateCompleteCampaignBothApisPhase2 {
    * @param campaign the campaign for the ad group.
    * @throws RemoteException if the API request failed due to other errors.
    */
-  private AdGroup createAdGroup(AdWordsServicesInterface adWordsServices,
-                                AdWordsSession session, Campaign campaign)
-    throws RemoteException {
+  private AdGroup createAdGroup(
+      AdWordsServicesInterface adWordsServices, AdWordsSession session, Campaign campaign)
+      throws RemoteException {
     // Get the AdGroupService.
     AdGroupServiceInterface adGroupService =
-      adWordsServices.get(session, AdGroupServiceInterface.class);
+        adWordsServices.get(session, AdGroupServiceInterface.class);
 
     // Create the ad group.
     AdGroup adGroup = new AdGroup();
@@ -359,8 +363,9 @@ public class CreateCompleteCampaignBothApisPhase2 {
 
     AdGroup adGroupResult = result.getValue(0);
     // Display the new ad group.
-    System.out.printf("Ad group with ID %d and name '%s' was created.%n",
-      adGroupResult.getId(), adGroupResult.getName());
+    System.out.printf(
+        "Ad group with ID %d and name '%s' was created.%n",
+        adGroupResult.getId(), adGroupResult.getName());
 
     return adGroupResult;
   }
@@ -373,20 +378,24 @@ public class CreateCompleteCampaignBothApisPhase2 {
    * @param campaignResourceName resource name of the new campaign.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private Campaign getCampaign(GoogleAdsClient googleAdsClient, long customerId,
-                               String campaignResourceName) {
+  private Campaign getCampaign(
+      GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     // Get the GoogleAdsService.
     try (GoogleAdsServiceClient googleAdsServiceClient =
-           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
 
       // Create the request.
-      SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
-        .setCustomerId(Long.toString(customerId))
-        .setPageSize(PAGE_SIZE)
-        .setQuery(String.format("SELECT campaign.id, campaign.name, campaign.resource_name " +
-          "FROM campaign " +
-          "WHERE campaign.resource_name = '%s'", campaignResourceName))
-        .build();
+      SearchGoogleAdsRequest request =
+          SearchGoogleAdsRequest.newBuilder()
+              .setCustomerId(Long.toString(customerId))
+              .setPageSize(PAGE_SIZE)
+              .setQuery(
+                  String.format(
+                      "SELECT campaign.id, campaign.name, campaign.resource_name "
+                          + "FROM campaign "
+                          + "WHERE campaign.resource_name = '%s'",
+                      campaignResourceName))
+              .build();
 
       // Retrieve the campaign.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
@@ -402,53 +411,54 @@ public class CreateCompleteCampaignBothApisPhase2 {
    * @param budget the budget for the campaign.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private Campaign createCampaign(GoogleAdsClient googleAdsClient, long customerId,
-                                  CampaignBudget budget) {
+  private Campaign createCampaign(
+      GoogleAdsClient googleAdsClient, long customerId, CampaignBudget budget) {
     String budgetResourceName = ResourceNames.campaignBudget(customerId, budget.getId().getValue());
 
     // Configure the campaign network options
     NetworkSettings networkSettings =
-      NetworkSettings.newBuilder()
-        .setTargetGoogleSearch(BoolValue.of(true))
-        .setTargetSearchNetwork(BoolValue.of(true))
-        .setTargetContentNetwork(BoolValue.of(false))
-        .setTargetPartnerSearchNetwork(BoolValue.of(false))
-        .build();
+        NetworkSettings.newBuilder()
+            .setTargetGoogleSearch(BoolValue.of(true))
+            .setTargetSearchNetwork(BoolValue.of(true))
+            .setTargetContentNetwork(BoolValue.of(false))
+            .setTargetPartnerSearchNetwork(BoolValue.of(false))
+            .build();
 
     // Create the campaign.
     Campaign campaign =
-      Campaign.newBuilder()
-        .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
-        .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
-        // Recommendation: Set the campaign to PAUSED when creating it to prevent
-        // the ads from immediately serving. Set to ENABLED once you've added
-        // targeting and the ads are ready to serve
-        .setStatus(CampaignStatus.PAUSED)
-        // Set the bidding strategy and budget.
-        .setManualCpc(ManualCpc.newBuilder().build())
-        .setCampaignBudget(StringValue.of(budgetResourceName))
-        // Add the networkSettings configured above.
-        .setNetworkSettings(networkSettings)
-        // Optional: Set the start & end dates.
-        .setStartDate(StringValue.of(new DateTime().plusDays(1).toString("yyyyMMdd")))
-        .setEndDate(StringValue.of(new DateTime().plusDays(30).toString("yyyyMMdd")))
-        .build();
+        Campaign.newBuilder()
+            .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
+            .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
+            // Recommendation: Set the campaign to PAUSED when creating it to prevent
+            // the ads from immediately serving. Set to ENABLED once you've added
+            // targeting and the ads are ready to serve
+            .setStatus(CampaignStatus.PAUSED)
+            // Set the bidding strategy and budget.
+            .setManualCpc(ManualCpc.newBuilder().build())
+            .setCampaignBudget(StringValue.of(budgetResourceName))
+            // Add the networkSettings configured above.
+            .setNetworkSettings(networkSettings)
+            // Optional: Set the start & end dates.
+            .setStartDate(StringValue.of(new DateTime().plusDays(1).toString("yyyyMMdd")))
+            .setEndDate(StringValue.of(new DateTime().plusDays(30).toString("yyyyMMdd")))
+            .build();
 
     // Create the operation.
     CampaignOperation op = CampaignOperation.newBuilder().setCreate(campaign).build();
 
     // Get the Campaign service.
     try (CampaignServiceClient campaignServiceClient =
-           googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       // Add the campaign.
       MutateCampaignsResponse response =
-        campaignServiceClient.mutateCampaigns(Long.toString(customerId), ImmutableList.of(op));
+          campaignServiceClient.mutateCampaigns(Long.toString(customerId), ImmutableList.of(op));
       String campaignResourceName = response.getResults(0).getResourceName();
       // Retrieve the campaign.
       Campaign newCampaign = getCampaign(googleAdsClient, customerId, campaignResourceName);
       // Display the results.
-      System.out.printf("Campaign with ID %s and name '%s' was created.%n",
-        newCampaign.getId().getValue(), newCampaign.getName().getValue());
+      System.out.printf(
+          "Campaign with ID %s and name '%s' was created.%n",
+          newCampaign.getId().getValue(), newCampaign.getName().getValue());
       return newCampaign;
     }
   }
@@ -461,20 +471,24 @@ public class CreateCompleteCampaignBothApisPhase2 {
    * @param budgetResourceName resource name of the new campaign budget.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private CampaignBudget getBudget(GoogleAdsClient googleAdsClient, long customerId,
-                                   String budgetResourceName) {
+  private CampaignBudget getBudget(
+      GoogleAdsClient googleAdsClient, long customerId, String budgetResourceName) {
     // Get the GoogleAdsService.
     try (GoogleAdsServiceClient googleAdsServiceClient =
-           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
 
       // Create the request.
-      SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
-        .setCustomerId(Long.toString(customerId))
-        .setPageSize(PAGE_SIZE)
-        .setQuery(String.format("SELECT campaign_budget.id, campaign_budget.name, " +
-          "campaign_budget.resource_name FROM campaign_budget " +
-          "WHERE campaign_budget.resource_name = '%s'", budgetResourceName))
-        .build();
+      SearchGoogleAdsRequest request =
+          SearchGoogleAdsRequest.newBuilder()
+              .setCustomerId(Long.toString(customerId))
+              .setPageSize(PAGE_SIZE)
+              .setQuery(
+                  String.format(
+                      "SELECT campaign_budget.id, campaign_budget.name, "
+                          + "campaign_budget.resource_name FROM campaign_budget "
+                          + "WHERE campaign_budget.resource_name = '%s'",
+                      budgetResourceName))
+              .build();
 
       // Retrieve the budget.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
@@ -492,29 +506,29 @@ public class CreateCompleteCampaignBothApisPhase2 {
   private CampaignBudget createBudget(GoogleAdsClient googleAdsClient, long customerId) {
     // Create the budget.
     CampaignBudget budget =
-      CampaignBudget.newBuilder()
-        .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
-        .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
-        .setAmountMicros(Int64Value.of(500_000))
-        .build();
+        CampaignBudget.newBuilder()
+            .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
+            .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
+            .setAmountMicros(Int64Value.of(500_000))
+            .build();
 
     // Create the operation.
     CampaignBudgetOperation op = CampaignBudgetOperation.newBuilder().setCreate(budget).build();
 
     // Get the CampaignBudget service.
     try (CampaignBudgetServiceClient campaignBudgetServiceClient =
-           googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
+        googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
       // Add the budget.
       MutateCampaignBudgetsResponse response =
-        campaignBudgetServiceClient.mutateCampaignBudgets(
-          Long.toString(customerId), ImmutableList.of(op));
+          campaignBudgetServiceClient.mutateCampaignBudgets(
+              Long.toString(customerId), ImmutableList.of(op));
       String budgetResourceName = response.getResults(0).getResourceName();
       // Retrieve the budget.
       CampaignBudget newBudget = getBudget(googleAdsClient, customerId, budgetResourceName);
       // Display the results.
-      System.out.printf("Budget with ID %s and name '%s' was created.%n",
-        newBudget.getId().getValue(),
-        newBudget.getName().getValue());
+      System.out.printf(
+          "Budget with ID %s and name '%s' was created.%n",
+          newBudget.getId().getValue(), newBudget.getName().getValue());
       return newBudget;
     }
   }
@@ -528,9 +542,12 @@ public class CreateCompleteCampaignBothApisPhase2 {
    * @throws RemoteException if the API request failed due to other errors.
    * @throws UnsupportedEncodingException if encoding the final URL failed.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, AdWordsServicesInterface adWordsServices,
-                          AdWordsSession session, long customerId)
-    throws RemoteException, UnsupportedEncodingException {
+  private void runExample(
+      GoogleAdsClient googleAdsClient,
+      AdWordsServicesInterface adWordsServices,
+      AdWordsSession session,
+      long customerId)
+      throws RemoteException, UnsupportedEncodingException {
     CampaignBudget budget = createBudget(googleAdsClient, customerId);
     Campaign campaign = createCampaign(googleAdsClient, customerId, budget);
     AdGroup adGroup = createAdGroup(adWordsServices, session, campaign);
