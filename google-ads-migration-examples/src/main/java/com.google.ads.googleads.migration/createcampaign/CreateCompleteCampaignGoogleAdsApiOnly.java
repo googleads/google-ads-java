@@ -196,7 +196,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
                              AdGroup adGroup, List<String> keywordsToAdd) {
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroup.getId().getValue());
 
-    List<AdGroupCriterionOperation> operations = new ArrayList<>(keywordsToAdd.size());
+    List<AdGroupCriterionOperation> operations = new ArrayList<>();
 
     for (String keywordText : keywordsToAdd) {
       // Create the keyword criterion
@@ -234,7 +234,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
         getKeywords(googleAdsClient, customerId, newCriteriaResourceNames);
       // Display the results.
       for (AdGroupCriterion newCriterion : newCriteria) {
-        System.out.printf("Keyword with text '%s', id %s, and match type %s was retrieved for ad group %s.%n",
+        System.out.printf("Keyword with text '%s', id %s, and match type '%s' was retrieved for ad group '%s'.%n",
           newCriterion.getKeyword().getText().getValue(),
           newCriterion.getCriterionId().getValue(),
           newCriterion.getKeyword().getMatchType(),
@@ -298,12 +298,12 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private List<AdGroupAd> createTextAds(GoogleAdsClient googleAdsClient, long customerId,
-                             AdGroup adGroup) {
+                             AdGroup adGroup, int numberOfAds) {
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroup.getId().getValue());
 
-    List<AdGroupAdOperation> operations = new ArrayList<>(NUMBER_OF_ADS);
+    List<AdGroupAdOperation> operations = new ArrayList<>();
 
-    for (int i = 0; i < NUMBER_OF_ADS; i++) {
+    for (int i = 0; i < numberOfAds; i++) {
       // Create the text ad
       AdGroupAd adgroupAd = AdGroupAd.newBuilder()
         .setAdGroup(StringValue.of(adGroupResourceName))
@@ -343,8 +343,8 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
         Ad ad = newAdGroupAd.getAd();
         ExpandedTextAdInfo expandedTextAdInfo = ad.getExpandedTextAd();
         // Display the results.
-        System.out.printf("Expanded text ad with ID %s, status %s, " +
-            "and headline '%s - %s' was found in ad group with ID %s.%n",
+        System.out.printf("Expanded text ad with ID %s, status '%s', " +
+            "and headline '%s - %s' was created in ad group with ID %s.%n",
           ad.getId().getValue(), newAdGroupAd.getStatus(), expandedTextAdInfo.getHeadlinePart1().getValue(),
           expandedTextAdInfo.getHeadlinePart2().getValue(), adGroup.getId().getValue());
       }
@@ -413,7 +413,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
       // Retrieve the AdGroup.
       AdGroup newAdGroup = getAdGroup(googleAdsClient, customerId, adGroupResourceName);
       // Display the results.
-      System.out.printf("Ad group with ID %s and name %s was created.%n",
+      System.out.printf("Ad group with ID %s and name '%s' was created.%n",
         newAdGroup.getId().getValue(), newAdGroup.getName().getValue());
       return newAdGroup;
     }
@@ -501,7 +501,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
       // Retrieve the campaign.
       Campaign newCampaign = getCampaign(googleAdsClient, customerId, campaignResourceName);
       // Display the results.
-      System.out.printf("Campaign with ID %s and name %s was created.%n",
+      System.out.printf("Campaign with ID %s and name '%s' was created.%n",
         newCampaign.getId().getValue(), newCampaign.getName().getValue());
       return newCampaign;
     }
@@ -566,7 +566,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
       // Retrieve the budget.
       CampaignBudget newBudget = getBudget(googleAdsClient, customerId, budgetResourceName);
       // Display the results.
-      System.out.printf("Budget with ID %s and name %s was created.%n",
+      System.out.printf("Budget with ID %s and name '%s' was created.%n",
         newBudget.getId().getValue(),
         newBudget.getName().getValue());
       return newBudget;
@@ -584,7 +584,7 @@ public class CreateCompleteCampaignGoogleAdsApiOnly {
     CampaignBudget budget = createBudget(googleAdsClient, customerId);
     Campaign campaign = createCampaign(googleAdsClient, customerId, budget);
     AdGroup adGroup = createAdGroup(googleAdsClient, customerId, campaign);
-    createTextAds(googleAdsClient, customerId, adGroup);
+    createTextAds(googleAdsClient, customerId, adGroup, NUMBER_OF_ADS);
     createKeywords(googleAdsClient, customerId, adGroup, KEYWORDS_TO_ADD);
   }
 }

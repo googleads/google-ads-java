@@ -124,11 +124,22 @@ public class CreateCompleteCampaignBothApisPhase4 {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
     }
 
+    // Initialize the Google Ads client.
     GoogleAdsClient googleAdsClient;
-    AdWordsSession session;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
+    } catch (FileNotFoundException fnfe) {
+      System.err.printf(
+        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+      return;
+    } catch (IOException ioe) {
+      System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
+      return;
+    }
 
+    // Initialize the AdWords client.
+    AdWordsSession session;
+    try {
       // Generate a refreshable OAuth2 credential for AdWords API.
       Credential oAuth2Credential =
         new OfflineCredentials.Builder()
@@ -140,13 +151,6 @@ public class CreateCompleteCampaignBothApisPhase4 {
       // Construct an AdWordsSession.
       session =
         new AdWordsSession.Builder().fromFile().withOAuth2Credential(oAuth2Credential).build();
-    } catch (FileNotFoundException fnfe) {
-      System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
-    } catch (IOException ioe) {
-      System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
     } catch (ConfigurationLoadException cle) {
       System.err.printf(
         "Failed to load configuration from the %s file. Exception: %s%n",
@@ -164,7 +168,6 @@ public class CreateCompleteCampaignBothApisPhase4 {
         DEFAULT_CONFIGURATION_FILENAME, oe);
       return;
     }
-
     AdWordsServicesInterface adWordsServices = AdWordsServices.getInstance();
 
     try {
@@ -304,12 +307,12 @@ public class CreateCompleteCampaignBothApisPhase4 {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private List<AdGroupAd> createTextAds(GoogleAdsClient googleAdsClient, long customerId,
-                                        AdGroup adGroup) {
+                                        AdGroup adGroup, int numberOfAds) {
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroup.getId().getValue());
 
-    List<AdGroupAdOperation> operations = new ArrayList<>(NUMBER_OF_ADS);
+    List<AdGroupAdOperation> operations = new ArrayList<>();
 
-    for (int i = 0; i < NUMBER_OF_ADS; i++) {
+    for (int i = 0; i < numberOfAds; i++) {
       // Create the text ad
       AdGroupAd adgroupAd = AdGroupAd.newBuilder()
         .setAdGroup(StringValue.of(adGroupResourceName))
@@ -350,8 +353,8 @@ public class CreateCompleteCampaignBothApisPhase4 {
         Ad ad = newAdGroupAd.getAd();
         ExpandedTextAdInfo expandedTextAdInfo = ad.getExpandedTextAd();
         // Display the results.
-        System.out.printf("Expanded text ad with ID %s, status %s, " +
-            "and headline '%s - %s' was found in ad group with ID %s.%n",
+        System.out.printf("Expanded text ad with ID %s, status '%s', " +
+            "and headline '%s - %s' was created in ad group with ID %s.%n",
           ad.getId().getValue(), newAdGroupAd.getStatus(),
           expandedTextAdInfo.getHeadlinePart1().getValue(),
           expandedTextAdInfo.getHeadlinePart2().getValue(), adGroup.getId().getValue());
@@ -422,7 +425,7 @@ public class CreateCompleteCampaignBothApisPhase4 {
       // Retrieve the AdGroup.
       AdGroup newAdGroup = getAdGroup(googleAdsClient, customerId, adGroupResourceName);
       // Display the results.
-      System.out.printf("Ad group with ID %s and name %s was created.%n",
+      System.out.printf("Ad group with ID %s and name '%s' was created.%n",
         newAdGroup.getId().getValue(), newAdGroup.getName().getValue());
       return newAdGroup;
     }
@@ -510,7 +513,7 @@ public class CreateCompleteCampaignBothApisPhase4 {
       // Retrieve the campaign.
       Campaign newCampaign = getCampaign(googleAdsClient, customerId, campaignResourceName);
       // Display the results.
-      System.out.printf("Campaign with ID %s and name %s was created.%n",
+      System.out.printf("Campaign with ID %s and name '%s' was created.%n",
         newCampaign.getId().getValue(), newCampaign.getName().getValue());
       return newCampaign;
     }
@@ -575,7 +578,7 @@ public class CreateCompleteCampaignBothApisPhase4 {
       // Retrieve the budget.
       CampaignBudget newBudget = getBudget(googleAdsClient, customerId, budgetResourceName);
       // Display the results.
-      System.out.printf("Budget with ID %s and name %s was created.%n",
+      System.out.printf("Budget with ID %s and name '%s' was created.%n",
         newBudget.getId().getValue(),
         newBudget.getName().getValue());
       return newBudget;
@@ -597,7 +600,7 @@ public class CreateCompleteCampaignBothApisPhase4 {
     CampaignBudget budget = createBudget(googleAdsClient, customerId);
     Campaign campaign = createCampaign(googleAdsClient, customerId, budget);
     AdGroup adGroup = createAdGroup(googleAdsClient, customerId, campaign);
-    createTextAds(googleAdsClient, customerId, adGroup);
+    createTextAds(googleAdsClient, customerId, adGroup, NUMBER_OF_ADS);
     createKeywords(adWordsServices, session, adGroup, KEYWORDS_TO_ADD);
   }
 }

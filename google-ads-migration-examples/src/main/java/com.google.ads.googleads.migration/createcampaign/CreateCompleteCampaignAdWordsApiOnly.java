@@ -82,8 +82,8 @@ import static com.google.api.ads.common.lib.utils.Builder.DEFAULT_CONFIGURATION_
  * time. See other examples for code examples in various stages of migration.
  *
  * This code example represents the initial state, where the AdWords API is used to create a
- * campaign budget, a Search campaign, ad groups, keywords and expanded text ads. None of the
- * functionality has yet been migrated to the Google Ads API.
+ * campaign budget, a Search campaign, ad groups, keywords and expanded text ads. The user has not
+ * yet migrated any of the functionality to the Google Ads API.
  */
 public class CreateCompleteCampaignAdWordsApiOnly {
 
@@ -180,7 +180,6 @@ public class CreateCompleteCampaignAdWordsApiOnly {
       operations[i] = keywordAdGroupCriterionOperation;
     }
 
-
     // Add the keywords.
     AdGroupCriterionReturnValue result = adGroupCriterionService.mutate(operations);
 
@@ -204,16 +203,16 @@ public class CreateCompleteCampaignAdWordsApiOnly {
    * @throws RemoteException if the API request failed due to other errors.
    */
   private AdGroupAd[] createTextAds(AdWordsServicesInterface adWordsServices,
-                                    AdWordsSession session, AdGroup adGroup)
+                                    AdWordsSession session, AdGroup adGroup, int numberOfAds)
     throws RemoteException {
 
     // Get the AdGroupAdService.
     AdGroupAdServiceInterface adGroupAdService =
       adWordsServices.get(session, AdGroupAdServiceInterface.class);
 
-    List<AdGroupAdOperation> operations = new ArrayList<>(NUMBER_OF_ADS);
+    List<AdGroupAdOperation> operations = new ArrayList<>();
 
-    for (int i = 0; i < NUMBER_OF_ADS; i++) {
+    for (int i = 0; i < numberOfAds; i++) {
       // Create the expanded text ad.
       ExpandedTextAd expandedTextAd = new ExpandedTextAd();
       expandedTextAd.setDescription("Buy your tickets now!");
@@ -241,18 +240,17 @@ public class CreateCompleteCampaignAdWordsApiOnly {
     AdGroupAdReturnValue result =
       adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[operations.size()]));
 
-    // Display the ads.
-    Arrays.stream(result.getValue())
-      .map(adGroupAdResult -> (ExpandedTextAd) adGroupAdResult.getAd())
-      .forEach(
-        newAd ->
-          System.out.printf("Expanded text ad with ID %d" +
-              "and headline '%s - %s' was found in ad group with ID %d.%n",
-            newAd.getId(),
-            newAd.getHeadlinePart1(),
-            newAd.getHeadlinePart2(),
-            adGroup.getId()));
 
+    // Display the ads.
+    for (AdGroupAd adGroupAdResult : result.getValue()) {
+      ExpandedTextAd newAd = (ExpandedTextAd) adGroupAdResult.getAd();
+      System.out.printf("Expanded text ad with ID %d " +
+          "and headline '%s - %s' was created in ad group with ID %d.%n",
+        newAd.getId(),
+        newAd.getHeadlinePart1(),
+        newAd.getHeadlinePart2(),
+        adGroup.getId());
+    }
     return result.getValue();
   }
 
@@ -302,7 +300,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
 
     AdGroup adGroupResult = result.getValue(0);
     // Display the new ad group.
-    System.out.printf("Ad group with ID '%d' and name %s was created.%n",
+    System.out.printf("Ad group with ID %d and name '%s' was created.%n",
       adGroupResult.getId(), adGroupResult.getName());
 
     return adGroupResult;
@@ -367,7 +365,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
 
     Campaign campaignResult = result.getValue(0);
     // Display the campaign.
-    System.out.printf("Campaign with ID '%d' and name %s was created.%n",
+    System.out.printf("Campaign with ID %d and name '%s' was created.%n",
       campaignResult.getId(),
       campaignResult.getName());
     return campaignResult;
@@ -404,7 +402,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
     BudgetReturnValue result = budgetService.mutate(operations);
     Budget budgetResult = result.getValue(0);
     // Display budget.
-    System.out.printf("Budget with ID %d and name %s was created.%n",
+    System.out.printf("Budget with ID %d and name '%s' was created.%n",
       budgetResult.getBudgetId(),
       budgetResult.getName());
     return budgetResult;
@@ -423,7 +421,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
     Budget budget = createBudget(adWordsServices, session);
     Campaign campaign = createCampaign(adWordsServices, session, budget);
     AdGroup adGroup = createAdGroup(adWordsServices, session, campaign);
-    createTextAds(adWordsServices, session, adGroup);
+    createTextAds(adWordsServices, session, adGroup, NUMBER_OF_ADS);
     createKeywords(adWordsServices, session, adGroup, KEYWORDS_TO_ADD);
   }
 }

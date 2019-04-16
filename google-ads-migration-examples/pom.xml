@@ -32,7 +32,7 @@
   <version>1.1.1-SNAPSHOT</version>
   <name>Google Ads API client library for Java migration examples</name>
   <description>
-    Examples demonstrating a migration from the Google AdWords API to the Google Ads API using Java client library.
+    Examples demonstrating a migration from the Google AdWords API to the Google Ads API using the client libraries for Java.
   </description>
 
   <build>
