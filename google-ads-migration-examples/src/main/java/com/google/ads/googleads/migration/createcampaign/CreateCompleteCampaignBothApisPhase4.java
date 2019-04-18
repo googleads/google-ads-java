@@ -428,7 +428,7 @@ public class CreateCompleteCampaignBothApisPhase4 {
             .setStatus(AdGroupStatus.ENABLED)
             .setCampaign(StringValue.of(campaignResourceName))
             .setType(AdGroupType.SEARCH_STANDARD)
-            .setCpcBidMicros(Int64Value.of(10_000_000L))
+            .setCpcBidMicros(Int64Value.of(500_000L))
             .build();
 
     // Create the operation.
@@ -590,7 +590,7 @@ public class CreateCompleteCampaignBothApisPhase4 {
         CampaignBudget.newBuilder()
             .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
-            .setAmountMicros(Int64Value.of(500_000))
+            .setAmountMicros(Int64Value.of(10_000_000))
             .build();
 
     // Create the operation.

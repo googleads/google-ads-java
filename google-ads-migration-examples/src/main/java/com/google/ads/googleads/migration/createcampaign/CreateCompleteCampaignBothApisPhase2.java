@@ -345,7 +345,7 @@ public class CreateCompleteCampaignBothApisPhase2 {
     // Create ad group bid.
     BiddingStrategyConfiguration biddingStrategyConfiguration = new BiddingStrategyConfiguration();
     Money cpcBidMoney = new Money();
-    cpcBidMoney.setMicroAmount(10_000_000L);
+    cpcBidMoney.setMicroAmount(500_000L);
     CpcBid bid = new CpcBid();
     bid.setBid(cpcBidMoney);
     biddingStrategyConfiguration.setBids(new Bids[] {bid});
@@ -509,7 +509,7 @@ public class CreateCompleteCampaignBothApisPhase2 {
         CampaignBudget.newBuilder()
             .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
-            .setAmountMicros(Int64Value.of(500_000))
+            .setAmountMicros(Int64Value.of(10_000_000))
             .build();
 
     // Create the operation.

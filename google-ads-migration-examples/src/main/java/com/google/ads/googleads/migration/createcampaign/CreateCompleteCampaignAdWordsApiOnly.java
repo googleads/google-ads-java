@@ -286,7 +286,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
     // Create ad group bid.
     BiddingStrategyConfiguration biddingStrategyConfiguration = new BiddingStrategyConfiguration();
     Money cpcBidMoney = new Money();
-    cpcBidMoney.setMicroAmount(10_000_000L);
+    cpcBidMoney.setMicroAmount(500_000L);
     CpcBid bid = new CpcBid();
     bid.setBid(cpcBidMoney);
     biddingStrategyConfiguration.setBids(new Bids[] {bid});
@@ -393,7 +393,7 @@ public class CreateCompleteCampaignAdWordsApiOnly {
     Budget sharedBudget = new Budget();
     sharedBudget.setName("Interplanetary Cruise #" + System.currentTimeMillis());
     Money budgetAmount = new Money();
-    budgetAmount.setMicroAmount(500_000L);
+    budgetAmount.setMicroAmount(10_000_000L);
     sharedBudget.setAmount(budgetAmount);
     sharedBudget.setDeliveryMethod(BudgetBudgetDeliveryMethod.STANDARD);
 
