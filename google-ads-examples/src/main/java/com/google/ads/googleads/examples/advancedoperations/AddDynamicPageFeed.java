@@ -18,6 +18,9 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
+import com.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType;
+import com.google.ads.googleads.v1.resources.AttributeFieldMapping;
+import com.google.ads.googleads.v1.resources.FeedMapping;
 import com.google.ads.googleads.v1.services.*;
 import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v1.utils.ResourceNames;
@@ -28,6 +31,7 @@ import com.google.ads.googleads.v1.errors.GoogleAdsException;
 import com.google.ads.googleads.v1.resources.Feed;
 import com.google.ads.googleads.v1.resources.FeedAttribute;
 import com.google.common.collect.ImmutableList;
+import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 
 import java.io.FileNotFoundException;
@@ -39,6 +43,8 @@ import java.io.IOException;
  */
 public class AddDynamicPageFeed {
   private static final int PAGE_SIZE = 1_000;
+  private static final int DSA_PAGE_URLS_FIELD_ID = 0;
+  private static final int DSA_LABEL_FIELD_ID = 1;
 
   private static class AddDynamicPageFeedParams extends CodeSampleParams {
 
@@ -125,7 +131,7 @@ public class AddDynamicPageFeed {
       .build();
 
     // Create a label attribute
-    FeedAttribute labelAttritbute = FeedAttribute.newBuilder()
+    FeedAttribute labelAttribute = FeedAttribute.newBuilder()
       .setType(FeedAttributeType.STRING_LIST)
       .setName(StringValue.of("Label"))
       .build();
@@ -133,8 +139,8 @@ public class AddDynamicPageFeed {
     // Create the feed.
     Feed feed = Feed.newBuilder()
       .setName(StringValue.of("DSA Feed #" + System.currentTimeMillis()))
-      .setAttributes(0, urlAttribute)
-      .setAttributes(1, labelAttritbute)
+      .setAttributes(DSA_PAGE_URLS_FIELD_ID, urlAttribute)
+      .setAttributes(DSA_LABEL_FIELD_ID, labelAttribute)
       .setOrigin(FeedOrigin.USER)
       .build();
 
@@ -173,6 +179,46 @@ public class AddDynamicPageFeed {
   }
 
   private void createFeedMapping(GoogleAdsClient googleAdsClient, long customerId, Feed feed) {
+    // Map the FeedAttributeIds to the fieldId constants.
+    AttributeFieldMapping urlFieldMapping = AttributeFieldMapping.newBuilder()
+      .setFeedAttributeId(feed.getAttributes(DSA_PAGE_URLS_FIELD_ID).getId())
+      .setFieldId(Int64Value.of(DSA_PAGE_URLS_FIELD_ID))
+      .build();
+    AttributeFieldMapping labelFieldMapping = AttributeFieldMapping.newBuilder()
+      .setFeedAttributeId(feed.getAttributes(DSA_LABEL_FIELD_ID).getId())
+      .setFieldId(Int64Value.of(DSA_LABEL_FIELD_ID))
+      .build();
+
+    // Map the FeedAttributeIds to the fieldId constants.
+    FeedMapping feedMapping = FeedMapping.newBuilder()
+      .setCriterionType(FeedMappingCriterionType.DSA_PAGE_FEED)
+      .setFeed(StringValue.of(feed.getResourceName()))
+      .setAttributeFieldMappings(DSA_PAGE_URLS_FIELD_ID, urlFieldMapping)
+      .setAttributeFieldMappings(DSA_LABEL_FIELD_ID, labelFieldMapping)
+      .build();
+
+    // Create the operation
+    FeedMappingOperation operation =
+      FeedMappingOperation.newBuilder().setCreate(feedMapping).build();
+
+    // Add the FeedMapping.
+    try (FeedMappingServiceClient feedMappingServiceClient =
+           googleAdsClient.getLatestVersion().createFeedMappingServiceClient()) {
+      MutateFeedMappingsResponse response =
+        feedMappingServiceClient.mutateFeedMappings(
+          Long.toString(customerId),
+          ImmutableList.of(operation));
+
+      // Display the results
+      for (MutateFeedMappingResult result : response.getResultsList()) {
+        System.out.printf("Created feed mapping with resource name '%s'", result.getResourceName());
+      }
+    }
+    return;
+  }
+
+  private void createFeedItems(GoogleAdsClient googleAdsClient, long customerId,
+                               Feed feed, String dsaPageUrlLabel) {
     return;
   }
 
@@ -183,11 +229,6 @@ public class AddDynamicPageFeed {
 
   private void addDsaTarget(GoogleAdsClient googleAdsClient, long customerId,
                             String adGroupResourceName, String dsaPageUrlLabel) {
-    return;
-  }
-
-  private void createFeedItems(GoogleAdsClient googleAdsClient, long customerId,
-                               Feed feed, String dsaPageUrlLabel) {
     return;
   }
 }
