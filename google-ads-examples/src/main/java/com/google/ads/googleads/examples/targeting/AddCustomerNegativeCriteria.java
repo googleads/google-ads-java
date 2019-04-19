@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 package com.google.ads.googleads.examples.targeting;
 
 import com.beust.jcommander.Parameter;
@@ -30,7 +29,6 @@ import com.google.ads.googleads.v1.services.CustomerNegativeCriterionServiceClie
 import com.google.ads.googleads.v1.services.MutateCustomerNegativeCriteriaResponse;
 import com.google.ads.googleads.v1.services.MutateCustomerNegativeCriteriaResult;
 import com.google.protobuf.StringValue;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,8 +36,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * This example adds various types of negative criterion for exclusions at the
- * customer level. These criteria will be applied to all campaigns for the customer.
+ * This example adds various types of negative criterion for exclusions at the customer level. These
+ * criteria will be applied to all campaigns for the customer.
  */
 public class AddCustomerNegativeCriteria {
 
@@ -63,7 +61,7 @@ public class AddCustomerNegativeCriteria {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -78,8 +76,8 @@ public class AddCustomerNegativeCriteria {
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -97,36 +95,43 @@ public class AddCustomerNegativeCriteria {
   public static void runExample(GoogleAdsClient googleAdsClient, long customerId) {
 
     try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient =
-    googleAdsClient.getLatestVersion().createCustomerNegativeCriterionServiceClient()) {
+        googleAdsClient.getLatestVersion().createCustomerNegativeCriterionServiceClient()) {
 
       // Create a negative customer criterion targeting the content label type of 'TRAGEDY'
-      CustomerNegativeCriterion tragedyCriterion = CustomerNegativeCriterion.newBuilder()
-        .setContentLabel(ContentLabelInfo.newBuilder().setType(ContentLabelType.TRAGEDY).build())
-        .build();
-      // Create a negative customer crtierion targeting the placement with url 'http://www.example.com'
-      CustomerNegativeCriterion placementCriterion = CustomerNegativeCriterion.newBuilder()
-        .setPlacement(PlacementInfo.newBuilder().setUrl(
-          StringValue.of("http://www.example.com")).build())
-        .build();
+      CustomerNegativeCriterion tragedyCriterion =
+          CustomerNegativeCriterion.newBuilder()
+              .setContentLabel(
+                  ContentLabelInfo.newBuilder().setType(ContentLabelType.TRAGEDY).build())
+              .build();
+      // Create a negative customer crtierion targeting the placement with url
+      // 'http://www.example.com'
+      CustomerNegativeCriterion placementCriterion =
+          CustomerNegativeCriterion.newBuilder()
+              .setPlacement(
+                  PlacementInfo.newBuilder()
+                      .setUrl(StringValue.of("http://www.example.com"))
+                      .build())
+              .build();
 
       // Create the operations
       CustomerNegativeCriterionOperation tragedyCriterionOperation =
-        CustomerNegativeCriterionOperation.newBuilder().setCreate(tragedyCriterion).build();
+          CustomerNegativeCriterionOperation.newBuilder().setCreate(tragedyCriterion).build();
       CustomerNegativeCriterionOperation placementCriterionOperation =
-        CustomerNegativeCriterionOperation.newBuilder().setCreate(placementCriterion).build();
+          CustomerNegativeCriterionOperation.newBuilder().setCreate(placementCriterion).build();
       List<CustomerNegativeCriterionOperation> operations =
-        new ArrayList<>(Arrays.asList(tragedyCriterionOperation, placementCriterionOperation));
+          new ArrayList<>(Arrays.asList(tragedyCriterionOperation, placementCriterionOperation));
 
       // Add the negative customer criteria
       MutateCustomerNegativeCriteriaResponse response =
-        customerNegativeCriterionServiceClient
-          .mutateCustomerNegativeCriteria(Long.toString(customerId), operations);
+          customerNegativeCriterionServiceClient.mutateCustomerNegativeCriteria(
+              Long.toString(customerId), operations);
 
       // Display the results
       System.out.printf("Created %d new negative customer criteria.%n", response.getResultsCount());
       for (MutateCustomerNegativeCriteriaResult result : response.getResultsList()) {
-        System.out.printf("Created new negative customer criteria with resource name '%s'.%n",
-          result.getResourceName());
+        System.out.printf(
+            "Created new negative customer criteria with resource name '%s'.%n",
+            result.getResourceName());
       }
     }
   }
