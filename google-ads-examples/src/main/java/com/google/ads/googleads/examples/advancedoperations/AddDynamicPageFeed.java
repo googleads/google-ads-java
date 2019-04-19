@@ -18,9 +18,8 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v1.services.FeedOperation;
-import com.google.ads.googleads.v1.services.FeedServiceClient;
-import com.google.ads.googleads.v1.services.MutateFeedsResponse;
+import com.google.ads.googleads.v1.services.*;
+import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v1.utils.ResourceNames;
 import com.google.ads.googleads.v1.enums.FeedAttributeTypeEnum.FeedAttributeType;
 import com.google.ads.googleads.v1.enums.FeedOriginEnum.FeedOrigin;
@@ -33,15 +32,14 @@ import com.google.protobuf.StringValue;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * This code example adds a page feed to specify precisely which URLs to use with
  * your Dynamic Search Ads campaign.
  */
 public class AddDynamicPageFeed {
+  private static final int PAGE_SIZE = 1_000;
+
   private static class AddDynamicPageFeedParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
@@ -104,13 +102,13 @@ public class AddDynamicPageFeed {
 
     // Get the page feed details. This code example creates a new feed, but you can
     // fetch and re-use an existing feed.
-    String feedResourceName = createFeed(googleAdsClient, customerId);
-    createFeedMapping(googleAdsClient, customerId, feedResourceName);
-    createFeedItems(googleAdsClient, customerId, feedResourceName, dsaPageUrlLabel);
+    Feed feed = createFeed(googleAdsClient, customerId);
+    createFeedMapping(googleAdsClient, customerId, feed);
+    createFeedItems(googleAdsClient, customerId, feed, dsaPageUrlLabel);
 
     // Associate the page feed with the campaign.
     String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
-    updateCampaignDsaSetting(googleAdsClient, customerId, campaignResourceName, feedResourceName);
+    updateCampaignDsaSetting(googleAdsClient, customerId, campaignResourceName, feed);
 
     // Optional: Target web pages matching the feed's label in the ad group.
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
@@ -119,7 +117,7 @@ public class AddDynamicPageFeed {
     System.out.printf("Dynamic page feed setup is complete for campaign ID %s.%n", campaignId);
   }
 
-  private String createFeed(GoogleAdsClient googleAdsClient, long customerId) {
+  private Feed createFeed(GoogleAdsClient googleAdsClient, long customerId) {
     // Create a URL attribute
     FeedAttribute urlAttribute = FeedAttribute.newBuilder()
       .setType(FeedAttributeType.URL_LIST)
@@ -151,17 +149,35 @@ public class AddDynamicPageFeed {
       // Display the result.
       System.out.printf(
         "Feed with resource name '%s' was created.%n", feedResourceName);
-      return feedResourceName;
+
+      return getFeed(googleAdsClient, customerId, feedResourceName);
     }
 
   }
 
-  private void createFeedMapping(GoogleAdsClient googleAdsClient, long customerId, String feedResourceName) {
+  private Feed getFeed(GoogleAdsClient googleAdsClient, long customerId, String feedResourceName) {
+    String query =
+      "SELECT feed.attributes FROM feed WHERE feed.resource_name = '" + feedResourceName + "'";
+
+    SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
+      .setCustomerId(String.valueOf(customerId))
+      .setPageSize(PAGE_SIZE)
+      .setQuery(query)
+      .build();
+
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+      SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
+      return searchPagedResponse.getPage().getResponse().getResults(0).getFeed();
+    }
+  }
+
+  private void createFeedMapping(GoogleAdsClient googleAdsClient, long customerId, Feed feed) {
     return;
   }
 
   private void updateCampaignDsaSetting(GoogleAdsClient googleAdsClient, long customerId,
-                                        String campaignResourceName, String feedResourceName) {
+                                        String campaignResourceName, Feed feed) {
     return;
   }
 
@@ -171,7 +187,7 @@ public class AddDynamicPageFeed {
   }
 
   private void createFeedItems(GoogleAdsClient googleAdsClient, long customerId,
-                               String feedResourceName, String dsaPageUrlLabel) {
+                               Feed feed, String dsaPageUrlLabel) {
     return;
   }
 }
