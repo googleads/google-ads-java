@@ -19,8 +19,11 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
+import com.google.ads.googleads.v1.common.WebpageConditionInfo;
+import com.google.ads.googleads.v1.common.WebpageInfo;
 import com.google.ads.googleads.v1.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField;
 import com.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType;
+import com.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand;
 import com.google.ads.googleads.v1.resources.*;
 import com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting;
 import com.google.ads.googleads.v1.services.*;
@@ -81,7 +84,7 @@ public class AddDynamicPageFeed {
     }
   }
 
-  private static void main(String[] args) {
+  public static void main(String[] args) {
     AddDynamicPageFeedParams params = new AddDynamicPageFeedParams();
     if (!params.parseArguments(args)) {
 
@@ -145,11 +148,10 @@ public class AddDynamicPageFeed {
     createFeedItems(googleAdsClient, customerId, feedDetails, dsaPageUrlLabel);
 
     // Associate the page feed with the campaign.
-    updateCampaignDsaSetting(googleAdsClient, customerId, campaignId, feedDetails);
+    updateCampaignDsaSetting(googleAdsClient, customerId, feedDetails, campaignId);
 
     // Optional: Target web pages matching the feed's label in the ad group.
-    String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
-    addDsaTarget(googleAdsClient, customerId, adGroupResourceName, dsaPageUrlLabel);
+    addDsaTarget(googleAdsClient, customerId, adGroupId, dsaPageUrlLabel);
 
     System.out.printf("Dynamic page feed setup is complete for campaign ID %s.%n", campaignId);
   }
@@ -285,7 +287,7 @@ public class AddDynamicPageFeed {
 
       // Display the results
       for (MutateFeedMappingResult result : response.getResultsList()) {
-        System.out.printf("Created feed mapping with resource name '%s'", result.getResourceName());
+        System.out.printf("Created feed mapping with resource name '%s'.%n", result.getResourceName());
       }
     }
     return;
@@ -360,14 +362,15 @@ public class AddDynamicPageFeed {
    */
   private void updateCampaignDsaSetting(GoogleAdsClient googleAdsClient, long customerId,
                                         FeedDetails feedDetails, long campaignId) {
-    checkValidCampaign(googleAdsClient, customerId, campaignId);
+    DynamicSearchAdsSetting dsaSetting =
+      DynamicSearchAdsSetting.newBuilder(getDsaSetting(googleAdsClient, customerId, campaignId))
+        .addFeeds(StringValue.of(feedDetails.getFeedResourceName()))
+        .build();
 
     // Create the campaign.
     Campaign campaign = Campaign.newBuilder()
       .setResourceName(ResourceNames.campaign(customerId, campaignId))
-      .setDynamicSearchAdsSetting(DynamicSearchAdsSetting.newBuilder()
-        .addFeeds(StringValue.of(feedDetails.getFeedResourceName()))
-        .build())
+      .setDynamicSearchAdsSetting(dsaSetting)
       .build();
     // Create the operation.
     CampaignOperation operation = CampaignOperation.newBuilder()
@@ -390,21 +393,28 @@ public class AddDynamicPageFeed {
   }
 
   /**
-   * Checks if a campaign exists and is a DSA campaign.
+   * Returns the DSA settings for a campaign. Throws an error if the
+   * campaign does not exists or is not a DSA campaign.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID in which to create criterion.
    * @param campaignId the campaign ID.
    */
-  private void checkValidCampaign(
+  private DynamicSearchAdsSetting getDsaSetting(
     GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // Create the query.
-    String query = "SELECT " +
-      "campaign.id, campaign.name, campaign.dynamic_search_ads_setting.domain_name " +
+    // You must request all DSA fields in order to update the DSA settings in the following step.
+    String query =
+      "SELECT " +
+        "campaign.id, " +
+        "campaign.name, " +
+        "campaign.dynamic_search_ads_setting.domain_name, " +
+        "campaign.dynamic_search_ads_setting.language_code, " +
+        "campaign.dynamic_search_ads_setting.use_supplied_urls_only " +
       "FROM " +
-      "campaign" +
+        "campaign " +
       "WHERE " +
-      "campaign.id = " + campaignId;
+        "campaign.id = " + campaignId;
     // Create the request.
     SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
       .setCustomerId(Long.toString(customerId))
@@ -421,13 +431,17 @@ public class AddDynamicPageFeed {
       if (searchPagedResponse.getPage().getResponse().getTotalResultsCount() == 0) {
         throw new IllegalArgumentException("No campaign found with ID: " + campaignId);
       }
-      // Get the campaign.
-      String domainName = searchPagedResponse
+
+      // Get the DSA settings.
+      DynamicSearchAdsSetting dynamicSearchAdsSetting = searchPagedResponse
         .getPage()
         .getResponse()
         .getResults(0)
         .getCampaign()
-        .getDynamicSearchAdsSetting()
+        .getDynamicSearchAdsSetting();
+
+      // Get the campaign domain name.
+      String domainName = dynamicSearchAdsSetting
         .getDomainName()
         .getValue();
 
@@ -436,12 +450,54 @@ public class AddDynamicPageFeed {
         throw new IllegalArgumentException(
           "Campaign with ID " + campaignId + " is not a DSA campaign.");
       }
+      return dynamicSearchAdsSetting;
     }
-    return;
   }
 
+
+  /**
+   * Updates an ad group criterion targeting the DSA label.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID in which to create criterion.
+   * @param adGroupId the ad group with which the criterion will be associated.
+   * @param label the label for the criterion to target.
+   */
   private void addDsaTarget(GoogleAdsClient googleAdsClient, long customerId,
-                            String adGroupResourceName, String dsaPageUrlLabel) {
+                            long adGroupId, String label) {
+    String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
+    // Create the webpage condition info.
+    WebpageConditionInfo webpageConditionInfo = WebpageConditionInfo.newBuilder()
+      .setOperand(WebpageConditionOperand.CUSTOM_LABEL)
+      .setArgument(StringValue.of(label))
+      .build();
+    // Create the webpage info.
+    WebpageInfo webpageInfo = WebpageInfo.newBuilder()
+      .setCriterionName(StringValue.of("Test Criterion"))
+      .addConditions(webpageConditionInfo)
+      .build();
+    // Create the ad group criterion
+    AdGroupCriterion adGroupCriterion = AdGroupCriterion.newBuilder()
+      .setAdGroup(StringValue.of(adGroupResourceName))
+      .setWebpage(webpageInfo)
+      .setCpcBidMicros(Int64Value.of(1_500_000))
+      .build();
+    // Create the operation.
+    AdGroupCriterionOperation operation =
+      AdGroupCriterionOperation.newBuilder().setCreate(adGroupCriterion).build();
+    // Create the ad group criterion service.
+    try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
+           googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
+      // Add the ad group criterion.
+      MutateAdGroupCriteriaResponse mutateAdGroupCriteriaResponse =
+        adGroupCriterionServiceClient.mutateAdGroupCriteria(
+          Long.toString(customerId), ImmutableList.of(operation));
+      // Display the results.
+      for (MutateAdGroupCriterionResult result : mutateAdGroupCriteriaResponse.getResultsList()) {
+        System.out.printf(
+          "Created ad group criterion with resource name '%s'.%n", result.getResourceName());
+      }
+    }
     return;
   }
 }
