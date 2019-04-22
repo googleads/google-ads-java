@@ -18,9 +18,9 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
+import com.google.ads.googleads.v1.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField;
 import com.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType;
-import com.google.ads.googleads.v1.resources.AttributeFieldMapping;
-import com.google.ads.googleads.v1.resources.FeedMapping;
+import com.google.ads.googleads.v1.resources.*;
 import com.google.ads.googleads.v1.services.*;
 import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v1.utils.ResourceNames;
@@ -28,14 +28,14 @@ import com.google.ads.googleads.v1.enums.FeedAttributeTypeEnum.FeedAttributeType
 import com.google.ads.googleads.v1.enums.FeedOriginEnum.FeedOrigin;
 import com.google.ads.googleads.v1.errors.GoogleAdsError;
 import com.google.ads.googleads.v1.errors.GoogleAdsException;
-import com.google.ads.googleads.v1.resources.Feed;
-import com.google.ads.googleads.v1.resources.FeedAttribute;
+import com.google.api.resourcenames.ResourceName;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.*;
 
 /**
  * This code example adds a page feed to specify precisely which URLs to use with
@@ -43,8 +43,6 @@ import java.io.IOException;
  */
 public class AddDynamicPageFeed {
   private static final int PAGE_SIZE = 1_000;
-  private static final int DSA_PAGE_URLS_FIELD_ID = 0;
-  private static final int DSA_LABEL_FIELD_ID = 1;
 
   private static class AddDynamicPageFeedParams extends CodeSampleParams {
 
@@ -56,6 +54,30 @@ public class AddDynamicPageFeed {
 
     @Parameter(names = ArgumentNames.AD_GROUP_ID, required = true)
     private long adGroupId;
+  }
+
+  private static class FeedDetails {
+    private String feedResourceName;
+    private long urlAttributeId;
+    private long labelAttributeId;
+
+    private FeedDetails(String feedResourceName, long urlAttributeId, long labelAttributeId) {
+      this.feedResourceName = feedResourceName;
+      this.urlAttributeId = urlAttributeId;
+      this.labelAttributeId = labelAttributeId;
+    }
+
+    private String getFeedResourceName() {
+      return this.feedResourceName;
+    }
+
+    private long getUrlAttributeId() {
+      return this.urlAttributeId;
+    }
+
+    private long getLabelAttributeId() {
+      return this.labelAttributeId;
+    }
   }
 
   private static void main(String[] args) {
@@ -99,6 +121,15 @@ public class AddDynamicPageFeed {
     }
   }
 
+  /**
+   * Runs the example.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID in which to create criterion.
+   * @param adGroupId the adGroup ID.
+   * @param campaignId the campaign ID.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
   private void runExample(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -108,13 +139,13 @@ public class AddDynamicPageFeed {
 
     // Get the page feed details. This code example creates a new feed, but you can
     // fetch and re-use an existing feed.
-    Feed feed = createFeed(googleAdsClient, customerId);
-    createFeedMapping(googleAdsClient, customerId, feed);
-    createFeedItems(googleAdsClient, customerId, feed, dsaPageUrlLabel);
+    FeedDetails feedDetails = createFeed(googleAdsClient, customerId);
+    createFeedMapping(googleAdsClient, customerId, feedDetails);
+    createFeedItems(googleAdsClient, customerId, feedDetails, dsaPageUrlLabel);
 
     // Associate the page feed with the campaign.
     String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
-    updateCampaignDsaSetting(googleAdsClient, customerId, campaignResourceName, feed);
+    updateCampaignDsaSetting(googleAdsClient, customerId, campaignResourceName, feedDetails);
 
     // Optional: Target web pages matching the feed's label in the ad group.
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
@@ -123,7 +154,14 @@ public class AddDynamicPageFeed {
     System.out.printf("Dynamic page feed setup is complete for campaign ID %s.%n", campaignId);
   }
 
-  private Feed createFeed(GoogleAdsClient googleAdsClient, long customerId) {
+  /**
+   * Creates a feed.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID in which to create criterion.
+   * @return a FeedDetails object containing relevant information.
+   */
+  private FeedDetails createFeed(GoogleAdsClient googleAdsClient, long customerId) {
     // Create a URL attribute
     FeedAttribute urlAttribute = FeedAttribute.newBuilder()
       .setType(FeedAttributeType.URL_LIST)
@@ -139,13 +177,15 @@ public class AddDynamicPageFeed {
     // Create the feed.
     Feed feed = Feed.newBuilder()
       .setName(StringValue.of("DSA Feed #" + System.currentTimeMillis()))
-      .setAttributes(DSA_PAGE_URLS_FIELD_ID, urlAttribute)
-      .setAttributes(DSA_LABEL_FIELD_ID, labelAttribute)
+      .addAttributes(urlAttribute)
+      .addAttributes(labelAttribute)
       .setOrigin(FeedOrigin.USER)
       .build();
 
+    // Create the operation.
     FeedOperation operation = FeedOperation.newBuilder().setCreate(feed).build();
 
+    // Create the feed service client.
     try (FeedServiceClient feedServiceClient =
            googleAdsClient.getLatestVersion().createFeedServiceClient()) {
       // Add the feed.
@@ -156,45 +196,79 @@ public class AddDynamicPageFeed {
       System.out.printf(
         "Feed with resource name '%s' was created.%n", feedResourceName);
 
+      // Return a FeedDetails object.
       return getFeed(googleAdsClient, customerId, feedResourceName);
     }
 
   }
 
-  private Feed getFeed(GoogleAdsClient googleAdsClient, long customerId, String feedResourceName) {
+  /**
+   * Retrieves details about a feed.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID in which to create criterion.
+   * @return a FeedDetails object containing relevant information.
+   */
+  private FeedDetails getFeed(GoogleAdsClient googleAdsClient, long customerId, String feedResourceName) {
+    // Construct the query.
     String query =
       "SELECT feed.attributes FROM feed WHERE feed.resource_name = '" + feedResourceName + "'";
 
+    // Construct the request.
     SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
       .setCustomerId(String.valueOf(customerId))
       .setPageSize(PAGE_SIZE)
       .setQuery(query)
       .build();
 
+    // Issue the search request.
     try (GoogleAdsServiceClient googleAdsServiceClient =
            googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
-      return searchPagedResponse.getPage().getResponse().getResults(0).getFeed();
+      // Get the first result because we only need the single feed item we created previously.
+      GoogleAdsRow googleAdsRow = searchPagedResponse.getPage().getResponse().getResults(0);
+      // Get the attributes list from the feed and create a map with keys of each attribute and
+      // values of each corresponding ID.
+      List<FeedAttribute> feedAttributeList = googleAdsRow.getFeed().getAttributesList();
+      Map<String, Long> feedAttributeMap = new Hashtable<>();
+      for (FeedAttribute feedAttribute : feedAttributeList) {
+        feedAttributeMap.put(feedAttribute.getName().getValue(), feedAttribute.getId().getValue());
+      }
+      // Finally, construct a FeedDetails object so that we have a nice small
+      // wrapper around the details we care about for the next phase.
+      FeedDetails feedDetails = new FeedDetails(
+        googleAdsRow.getFeed().getResourceName(),
+        feedAttributeMap.get("Page URL"),
+        feedAttributeMap.get("Label"));
+
+      return feedDetails;
     }
   }
 
-  private void createFeedMapping(GoogleAdsClient googleAdsClient, long customerId, Feed feed) {
+  /**
+   * Creates a field mapping for a given feed.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID in which to create criterion.
+   * @param feedDetails the relevant information about the feed and its attributes.
+   */
+  private void createFeedMapping(GoogleAdsClient googleAdsClient, long customerId, FeedDetails feedDetails) {
     // Map the FeedAttributeIds to the fieldId constants.
     AttributeFieldMapping urlFieldMapping = AttributeFieldMapping.newBuilder()
-      .setFeedAttributeId(feed.getAttributes(DSA_PAGE_URLS_FIELD_ID).getId())
-      .setFieldId(Int64Value.of(DSA_PAGE_URLS_FIELD_ID))
+      .setFeedAttributeId(Int64Value.of(feedDetails.getUrlAttributeId()))
+      .setDsaPageFeedField(DsaPageFeedCriterionField.PAGE_URL)
       .build();
     AttributeFieldMapping labelFieldMapping = AttributeFieldMapping.newBuilder()
-      .setFeedAttributeId(feed.getAttributes(DSA_LABEL_FIELD_ID).getId())
-      .setFieldId(Int64Value.of(DSA_LABEL_FIELD_ID))
+      .setFeedAttributeId(Int64Value.of(feedDetails.getLabelAttributeId()))
+      .setDsaPageFeedField(DsaPageFeedCriterionField.LABEL)
       .build();
 
     // Map the FeedAttributeIds to the fieldId constants.
     FeedMapping feedMapping = FeedMapping.newBuilder()
       .setCriterionType(FeedMappingCriterionType.DSA_PAGE_FEED)
-      .setFeed(StringValue.of(feed.getResourceName()))
-      .setAttributeFieldMappings(DSA_PAGE_URLS_FIELD_ID, urlFieldMapping)
-      .setAttributeFieldMappings(DSA_LABEL_FIELD_ID, labelFieldMapping)
+      .setFeed(StringValue.of(feedDetails.getFeedResourceName()))
+      .addAttributeFieldMappings(urlFieldMapping)
+      .addAttributeFieldMappings(labelFieldMapping)
       .build();
 
     // Create the operation
@@ -217,13 +291,67 @@ public class AddDynamicPageFeed {
     return;
   }
 
+  /**
+   * Creates feed items for a given feed.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID in which to create criterion.
+   * @param feedDetails the relevant information about the feed and its attributes.
+   * @param dsaPageUrlLabel the label for the DSA Page URLs.
+   */
   private void createFeedItems(GoogleAdsClient googleAdsClient, long customerId,
-                               Feed feed, String dsaPageUrlLabel) {
+                               FeedDetails feedDetails, String dsaPageUrlLabel) {
+    List<String> urls = Arrays.asList(
+      "http://www.example.com/discounts/rental-cars",
+      "http://www.example.com/discounts/hotel-deals",
+      "http://www.example.com/discounts/flight-deals"
+    );
+
+    List<FeedItemOperation> ops = new ArrayList<>();
+
+    for (String url : urls) {
+      // Create a url attribute.
+      FeedItemAttributeValue urlAttributeValue = FeedItemAttributeValue.newBuilder()
+        .setFeedAttributeId(
+          Int64Value.of(feedDetails.getUrlAttributeId()))
+        .setStringValue(StringValue.of(url))
+        .build();
+      // Create a label attribute.
+      FeedItemAttributeValue labelAttributeValue = FeedItemAttributeValue.newBuilder()
+        .setFeedAttributeId(
+          Int64Value.of(feedDetails.getLabelAttributeId()))
+        .setStringValue(StringValue.of(dsaPageUrlLabel))
+        .build();
+      // Create a feed item.
+      FeedItem feedItem = FeedItem.newBuilder()
+        .setFeed(StringValue.of(feedDetails.getFeedResourceName()))
+        .addAttributeValues(urlAttributeValue)
+        .addAttributeValues(labelAttributeValue)
+        .build();
+      // Create an operation.
+      FeedItemOperation operation = FeedItemOperation.newBuilder()
+        .setCreate(feedItem)
+        .build();
+      ops.add(operation);
+    }
+
+    // Create the feed item service client.
+    try (FeedItemServiceClient feedItemServiceClient =
+           googleAdsClient.getLatestVersion().createFeedItemServiceClient()) {
+      // Add the feed items.
+      MutateFeedItemsResponse response =
+        feedItemServiceClient.mutateFeedItems(Long.toString(customerId), ops);
+      // Display the results.
+      for (MutateFeedItemResult result : response.getResultsList()) {
+        System.out.printf("Created feed items with resource name '%s'.%n",
+        result.getResourceName());
+      }
+    }
     return;
   }
 
   private void updateCampaignDsaSetting(GoogleAdsClient googleAdsClient, long customerId,
-                                        String campaignResourceName, Feed feed) {
+                                        String campaignResourceName, FeedDetails feedDetail) {
     return;
   }
 
