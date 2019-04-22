@@ -18,9 +18,11 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
+import com.google.ads.googleads.lib.utils.FieldMasks;
 import com.google.ads.googleads.v1.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField;
 import com.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType;
 import com.google.ads.googleads.v1.resources.*;
+import com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting;
 import com.google.ads.googleads.v1.services.*;
 import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v1.utils.ResourceNames;
@@ -28,7 +30,6 @@ import com.google.ads.googleads.v1.enums.FeedAttributeTypeEnum.FeedAttributeType
 import com.google.ads.googleads.v1.enums.FeedOriginEnum.FeedOrigin;
 import com.google.ads.googleads.v1.errors.GoogleAdsError;
 import com.google.ads.googleads.v1.errors.GoogleAdsException;
-import com.google.api.resourcenames.ResourceName;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
@@ -144,8 +145,7 @@ public class AddDynamicPageFeed {
     createFeedItems(googleAdsClient, customerId, feedDetails, dsaPageUrlLabel);
 
     // Associate the page feed with the campaign.
-    String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
-    updateCampaignDsaSetting(googleAdsClient, customerId, campaignResourceName, feedDetails);
+    updateCampaignDsaSetting(googleAdsClient, customerId, campaignId, feedDetails);
 
     // Optional: Target web pages matching the feed's label in the ad group.
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
@@ -350,8 +350,93 @@ public class AddDynamicPageFeed {
     return;
   }
 
+  /**
+   * Updates a campaign to set the DSA feed.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID in which to create criterion.
+   * @param feedDetails the relevant information about the feed and its attributes.
+   * @param campaignId the campaign ID of the campaign to update.
+   */
   private void updateCampaignDsaSetting(GoogleAdsClient googleAdsClient, long customerId,
-                                        String campaignResourceName, FeedDetails feedDetail) {
+                                        FeedDetails feedDetails, long campaignId) {
+    checkValidCampaign(googleAdsClient, customerId, campaignId);
+
+    // Create the campaign.
+    Campaign campaign = Campaign.newBuilder()
+      .setResourceName(ResourceNames.campaign(customerId, campaignId))
+      .setDynamicSearchAdsSetting(DynamicSearchAdsSetting.newBuilder()
+        .addFeeds(StringValue.of(feedDetails.getFeedResourceName()))
+        .build())
+      .build();
+    // Create the operation.
+    CampaignOperation operation = CampaignOperation.newBuilder()
+      .setUpdate(campaign)
+      .setUpdateMask(FieldMasks.allSetFieldsOf(campaign))
+      .build();
+    // Create the campaign service.
+    try (CampaignServiceClient campaignServiceClient =
+           googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+      // Update the campaign.
+      MutateCampaignsResponse response = campaignServiceClient.mutateCampaigns(
+        Long.toString(customerId), ImmutableList.of(operation));
+      // Display the results.
+      for (MutateCampaignResult mutateCampaignResult : response.getResultsList()) {
+        System.out.printf(
+          "Updated campaign with resourceName: %s.%n", mutateCampaignResult.getResourceName());
+      }
+    }
+    return;
+  }
+
+  /**
+   * Checks if a campaign exists and is a DSA campaign.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID in which to create criterion.
+   * @param campaignId the campaign ID.
+   */
+  private void checkValidCampaign(
+    GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
+    // Create the query.
+    String query = "SELECT " +
+      "campaign.id, campaign.name, campaign.dynamic_search_ads_setting.domain_name " +
+      "FROM " +
+      "campaign" +
+      "WHERE " +
+      "campaign.id = " + campaignId;
+    // Create the request.
+    SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
+      .setCustomerId(Long.toString(customerId))
+      .setPageSize(PAGE_SIZE)
+      .setQuery(query)
+      .build();
+
+    // Create the service client.
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+      SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
+
+      // Throw an exception a campaign with the provided ID does not exist.
+      if (searchPagedResponse.getPage().getResponse().getTotalResultsCount() == 0) {
+        throw new IllegalArgumentException("No campaign found with ID: " + campaignId);
+      }
+      // Get the campaign.
+      String domainName = searchPagedResponse
+        .getPage()
+        .getResponse()
+        .getResults(0)
+        .getCampaign()
+        .getDynamicSearchAdsSetting()
+        .getDomainName()
+        .getValue();
+
+      // Throw an exception if the campaign is not a DSA campaign.
+      if (domainName == null || domainName == "") {
+        throw new IllegalArgumentException(
+          "Campaign with ID " + campaignId + " is not a DSA campaign.");
+      }
+    }
     return;
   }
 
