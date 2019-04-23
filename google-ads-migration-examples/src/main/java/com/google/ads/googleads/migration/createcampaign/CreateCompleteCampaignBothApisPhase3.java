@@ -118,7 +118,7 @@ public class CreateCompleteCampaignBothApisPhase3 {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
     }
 
-    // Initialize the Google Ads client.
+    // Initializes the Google Ads client.
     GoogleAdsClient googleAdsClient;
     try {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
@@ -131,10 +131,10 @@ public class CreateCompleteCampaignBothApisPhase3 {
       return;
     }
 
-    // Initialize the AdWords client.
+    // Initializes the AdWords client.
     AdWordsSession session;
     try {
-      // Generate a refreshable OAuth2 credential for AdWords API.
+      // Generates a refreshable OAuth2 credential for AdWords API.
       Credential oAuth2Credential =
           new OfflineCredentials.Builder()
               .forApi(Api.ADWORDS)
@@ -142,7 +142,7 @@ public class CreateCompleteCampaignBothApisPhase3 {
               .build()
               .generateCredential();
 
-      // Construct an AdWordsSession.
+      // Constructs an AdWordsSession.
       session =
           new AdWordsSession.Builder().fromFile().withOAuth2Credential(oAuth2Credential).build();
     } catch (ConfigurationLoadException cle) {
@@ -187,371 +187,6 @@ public class CreateCompleteCampaignBothApisPhase3 {
   }
 
   /**
-   * Creates keywords ad group criteria.
-   *
-   * @param adWordsServices the Google AdWords services interface.
-   * @param session the client session.
-   * @param adGroup the ad group for the new criteria.
-   * @param keywordsToAdd the keywords to add to the text ads.
-   * @throws RemoteException if the API request failed due to other errors.
-   * @throws UnsupportedEncodingException if encoding the final URL failed.
-   */
-  private AdGroupCriterion[] createKeywords(
-      AdWordsServicesInterface adWordsServices,
-      AdWordsSession session,
-      AdGroup adGroup,
-      List<String> keywordsToAdd)
-      throws RemoteException, UnsupportedEncodingException {
-    // Get the AdGroupCriterionService.
-    AdGroupCriterionServiceInterface adGroupCriterionService =
-        adWordsServices.get(session, AdGroupCriterionServiceInterface.class);
-
-    AdGroupCriterionOperation[] ops = new AdGroupCriterionOperation[keywordsToAdd.size()];
-
-    for (int i = 0; i < keywordsToAdd.size(); i++) {
-      // Create the keyword.
-      Keyword keyword = new Keyword();
-      keyword.setText(keywordsToAdd.get(i));
-      keyword.setMatchType(KeywordMatchType.EXACT);
-
-      // Create biddable ad group criterion.
-      BiddableAdGroupCriterion keywordBiddableAdGroupCriterion = new BiddableAdGroupCriterion();
-      keywordBiddableAdGroupCriterion.setAdGroupId(adGroup.getId().getValue());
-      keywordBiddableAdGroupCriterion.setCriterion(keyword);
-
-      // You can optionally provide these field(s).
-      keywordBiddableAdGroupCriterion.setUserStatus(UserStatus.PAUSED);
-
-      String encodedFinalUrl =
-          String.format(
-              "http://example.com/mars/cruise/?kw=%s",
-              URLEncoder.encode(keyword.getText(), UTF_8.name()));
-      keywordBiddableAdGroupCriterion.setFinalUrls(new UrlList(new String[] {encodedFinalUrl}));
-
-      // Create the operation.
-      AdGroupCriterionOperation keywordAdGroupCriterionOperation = new AdGroupCriterionOperation();
-      keywordAdGroupCriterionOperation.setOperand(keywordBiddableAdGroupCriterion);
-      keywordAdGroupCriterionOperation.setOperator(Operator.ADD);
-
-      ops[i] = keywordAdGroupCriterionOperation;
-    }
-
-    // Add the keywords.
-    AdGroupCriterionReturnValue result = adGroupCriterionService.mutate(ops);
-
-    // Display the results.
-    for (AdGroupCriterion adGroupCriterionResult : result.getValue()) {
-      System.out.printf(
-          "Keyword ad group criterion with ad group ID %d, criterion ID %d, "
-              + "text '%s', and match type '%s' was added.%n",
-          adGroupCriterionResult.getAdGroupId(),
-          adGroupCriterionResult.getCriterion().getId(),
-          ((Keyword) adGroupCriterionResult.getCriterion()).getText(),
-          ((Keyword) adGroupCriterionResult.getCriterion()).getMatchType());
-    }
-    return result.getValue();
-  }
-
-  /**
-   * Creates text ads.
-   *
-   * @param adWordsServices the Google AdWords services interface.
-   * @param session the client session.
-   * @param adGroup the ad group for the text ad.
-   * @throws RemoteException if the API request failed due to other errors.
-   */
-  private AdGroupAd[] createTextAds(
-      AdWordsServicesInterface adWordsServices,
-      AdWordsSession session,
-      AdGroup adGroup,
-      int numberOfAds)
-      throws RemoteException {
-
-    // Get the AdGroupAdService.
-    AdGroupAdServiceInterface adGroupAdService =
-        adWordsServices.get(session, AdGroupAdServiceInterface.class);
-
-    List<AdGroupAdOperation> operations = new ArrayList<>();
-
-    for (int i = 0; i < numberOfAds; i++) {
-      // Create the expanded text ad.
-      ExpandedTextAd expandedTextAd = new ExpandedTextAd();
-      expandedTextAd.setDescription("Buy your tickets now!");
-      expandedTextAd.setHeadlinePart1(String.format("Cruise #%d to Mars", i));
-      expandedTextAd.setHeadlinePart2("Best Space Cruise Line");
-      expandedTextAd.setFinalUrls(new String[] {"http://www.example.com/" + i});
-
-      // Create the ad group ad.
-      AdGroupAd expandedTextAdGroupAd = new AdGroupAd();
-      expandedTextAdGroupAd.setAdGroupId(adGroup.getId().getValue());
-      expandedTextAdGroupAd.setAd(expandedTextAd);
-
-      // Optional: set the status.
-      expandedTextAdGroupAd.setStatus(AdGroupAdStatus.PAUSED);
-
-      // Create the operation.
-      AdGroupAdOperation adGroupAdOperation = new AdGroupAdOperation();
-      adGroupAdOperation.setOperand(expandedTextAdGroupAd);
-      adGroupAdOperation.setOperator(Operator.ADD);
-
-      operations.add(adGroupAdOperation);
-    }
-
-    // Add the ads.
-    AdGroupAdReturnValue result =
-        adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[operations.size()]));
-
-    // Display the ads.
-    for (AdGroupAd adGroupAdResult : result.getValue()) {
-      ExpandedTextAd newAd = (ExpandedTextAd) adGroupAdResult.getAd();
-      System.out.printf(
-          "Expanded text ad with ID %d "
-              + "and headline '%s - %s' was created in ad group with ID %d.%n",
-          newAd.getId(),
-          newAd.getHeadlinePart1(),
-          newAd.getHeadlinePart2(),
-          adGroup.getId().getValue());
-    }
-    return result.getValue();
-  }
-
-  /**
-   * Retrieves the ad group.
-   *
-   * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupResourceName resource name of the new ad group.
-   * @throws GoogleAdsException if an API request failed with one or more service errors.
-   */
-  private AdGroup getAdGroup(
-      GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName) {
-    // Get the GoogleAdsService.
-    try (GoogleAdsServiceClient googleAdsServiceClient =
-        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
-
-      // Create the request.
-      SearchGoogleAdsRequest request =
-          SearchGoogleAdsRequest.newBuilder()
-              .setCustomerId(Long.toString(customerId))
-              .setPageSize(PAGE_SIZE)
-              .setQuery(
-                  String.format(
-                      "SELECT ad_group.id, ad_group.name, ad_group.resource_name "
-                          + "FROM ad_group WHERE ad_group.resource_name = '%s'",
-                      adGroupResourceName))
-              .build();
-      // Retrieve the AdGroup.
-      SearchPagedResponse response = googleAdsServiceClient.search(request);
-      return response.getPage().getResponse().getResults(0).getAdGroup();
-    }
-  }
-
-  /**
-   * Creates an ad group.
-   *
-   * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param campaign the campaign for the ad group.
-   * @throws GoogleAdsException if an API request failed with one or more service errors.
-   */
-  private AdGroup createAdGroup(
-      GoogleAdsClient googleAdsClient, long customerId, Campaign campaign) {
-    String campaignResourceName = ResourceNames.campaign(customerId, campaign.getId().getValue());
-
-    // Create ad group, setting an optional CPC value.
-    AdGroup adGroup =
-        AdGroup.newBuilder()
-            .setName(StringValue.of("Earth to Mars Cruises #" + System.currentTimeMillis()))
-            .setStatus(AdGroupStatus.ENABLED)
-            .setCampaign(StringValue.of(campaignResourceName))
-            .setType(AdGroupType.SEARCH_STANDARD)
-            .setCpcBidMicros(Int64Value.of(500_000L))
-            .build();
-
-    // Create the operation.
-    AdGroupOperation op = AdGroupOperation.newBuilder().setCreate(adGroup).build();
-
-    // Get the AdGroup Service.
-    try (AdGroupServiceClient adGroupServiceClient =
-        googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
-      // Add the AdGroup.
-      MutateAdGroupsResponse response =
-          adGroupServiceClient.mutateAdGroups(Long.toString(customerId), ImmutableList.of(op));
-      String adGroupResourceName = response.getResults(0).getResourceName();
-      // Retrieve the AdGroup.
-      AdGroup newAdGroup = getAdGroup(googleAdsClient, customerId, adGroupResourceName);
-      // Display the results.
-      System.out.printf(
-          "Ad group with ID %s and name '%s' was created.%n",
-          newAdGroup.getId().getValue(), newAdGroup.getName().getValue());
-      return newAdGroup;
-    }
-  }
-
-  /**
-   * Retrieves the campaign.
-   *
-   * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param campaignResourceName resource name of the new campaign.
-   * @throws GoogleAdsException if an API request failed with one or more service errors.
-   */
-  private Campaign getCampaign(
-      GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
-    // Get the GoogleAdsService.
-    try (GoogleAdsServiceClient googleAdsServiceClient =
-        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
-
-      // Create the request.
-      SearchGoogleAdsRequest request =
-          SearchGoogleAdsRequest.newBuilder()
-              .setCustomerId(Long.toString(customerId))
-              .setPageSize(PAGE_SIZE)
-              .setQuery(
-                  String.format(
-                      "SELECT campaign.id, campaign.name, campaign.resource_name "
-                          + "FROM campaign "
-                          + "WHERE campaign.resource_name = '%s'",
-                      campaignResourceName))
-              .build();
-
-      // Retrieve the campaign.
-      SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
-      return searchPagedResponse.getPage().getResponse().getResults(0).getCampaign();
-    }
-  }
-
-  /**
-   * Creates a campaign.
-   *
-   * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param budget the budget for the campaign.
-   * @throws GoogleAdsException if an API request failed with one or more service errors.
-   */
-  private Campaign createCampaign(
-      GoogleAdsClient googleAdsClient, long customerId, CampaignBudget budget) {
-    String budgetResourceName = ResourceNames.campaignBudget(customerId, budget.getId().getValue());
-
-    // Configure the campaign network options
-    NetworkSettings networkSettings =
-        NetworkSettings.newBuilder()
-            .setTargetGoogleSearch(BoolValue.of(true))
-            .setTargetSearchNetwork(BoolValue.of(true))
-            .setTargetContentNetwork(BoolValue.of(false))
-            .setTargetPartnerSearchNetwork(BoolValue.of(false))
-            .build();
-
-    // Create the campaign.
-    Campaign campaign =
-        Campaign.newBuilder()
-            .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
-            .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
-            // Recommendation: Set the campaign to PAUSED when creating it to prevent
-            // the ads from immediately serving. Set to ENABLED once you've added
-            // targeting and the ads are ready to serve
-            .setStatus(CampaignStatus.PAUSED)
-            // Set the bidding strategy and budget.
-            .setManualCpc(ManualCpc.newBuilder().build())
-            .setCampaignBudget(StringValue.of(budgetResourceName))
-            // Add the networkSettings configured above.
-            .setNetworkSettings(networkSettings)
-            // Optional: Set the start & end dates.
-            .setStartDate(StringValue.of(new DateTime().plusDays(1).toString("yyyyMMdd")))
-            .setEndDate(StringValue.of(new DateTime().plusDays(30).toString("yyyyMMdd")))
-            .build();
-
-    // Create the operation.
-    CampaignOperation op = CampaignOperation.newBuilder().setCreate(campaign).build();
-
-    // Get the Campaign service.
-    try (CampaignServiceClient campaignServiceClient =
-        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
-      // Add the campaign.
-      MutateCampaignsResponse response =
-          campaignServiceClient.mutateCampaigns(Long.toString(customerId), ImmutableList.of(op));
-      String campaignResourceName = response.getResults(0).getResourceName();
-      // Retrieve the campaign.
-      Campaign newCampaign = getCampaign(googleAdsClient, customerId, campaignResourceName);
-      // Display the results.
-      System.out.printf(
-          "Campaign with ID %s and name '%s' was created.%n",
-          newCampaign.getId().getValue(), newCampaign.getName().getValue());
-      return newCampaign;
-    }
-  }
-
-  /**
-   * Retrieves the campaign budget.
-   *
-   * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param budgetResourceName resource name of the new campaign budget.
-   * @throws GoogleAdsException if an API request failed with one or more service errors.
-   */
-  private CampaignBudget getBudget(
-      GoogleAdsClient googleAdsClient, long customerId, String budgetResourceName) {
-    // Get the GoogleAdsService.
-    try (GoogleAdsServiceClient googleAdsServiceClient =
-        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
-
-      // Create the request.
-      SearchGoogleAdsRequest request =
-          SearchGoogleAdsRequest.newBuilder()
-              .setCustomerId(Long.toString(customerId))
-              .setPageSize(PAGE_SIZE)
-              .setQuery(
-                  String.format(
-                      "SELECT campaign_budget.id, campaign_budget.name, "
-                          + "campaign_budget.resource_name FROM campaign_budget "
-                          + "WHERE campaign_budget.resource_name = '%s'",
-                      budgetResourceName))
-              .build();
-
-      // Retrieve the budget.
-      SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
-      return searchPagedResponse.getPage().getResponse().getResults(0).getCampaignBudget();
-    }
-  }
-
-  /**
-   * Creates a budget.
-   *
-   * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @throws GoogleAdsException if an API request failed with one or more service errors.
-   */
-  private CampaignBudget createBudget(GoogleAdsClient googleAdsClient, long customerId) {
-    // Create the budget.
-    CampaignBudget budget =
-        CampaignBudget.newBuilder()
-            .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
-            .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
-            .setAmountMicros(Int64Value.of(10_000_000))
-            .build();
-
-    // Create the operation.
-    CampaignBudgetOperation op = CampaignBudgetOperation.newBuilder().setCreate(budget).build();
-
-    // Get the CampaignBudget service.
-    try (CampaignBudgetServiceClient campaignBudgetServiceClient =
-        googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
-      // Add the budget.
-      MutateCampaignBudgetsResponse response =
-          campaignBudgetServiceClient.mutateCampaignBudgets(
-              Long.toString(customerId), ImmutableList.of(op));
-      String budgetResourceName = response.getResults(0).getResourceName();
-      // Retrieve the budget.
-      CampaignBudget newBudget = getBudget(googleAdsClient, customerId, budgetResourceName);
-      // Display the results.
-      System.out.printf(
-          "Budget with ID %s and name '%s' was created.%n",
-          newBudget.getId().getValue(), newBudget.getName().getValue());
-      return newBudget;
-    }
-  }
-
-  /**
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
@@ -571,5 +206,371 @@ public class CreateCompleteCampaignBothApisPhase3 {
     AdGroup adGroup = createAdGroup(googleAdsClient, customerId, campaign);
     createTextAds(adWordsServices, session, adGroup, NUMBER_OF_ADS);
     createKeywords(adWordsServices, session, adGroup, KEYWORDS_TO_ADD);
+  }
+
+  /**
+   * Creates a budget.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
+  private CampaignBudget createBudget(GoogleAdsClient googleAdsClient, long customerId) {
+    // Creates the budget.
+    CampaignBudget budget =
+      CampaignBudget.newBuilder()
+        .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
+        .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
+        .setAmountMicros(Int64Value.of(10_000_000))
+        .build();
+
+    // Creates the operation.
+    CampaignBudgetOperation op = CampaignBudgetOperation.newBuilder().setCreate(budget).build();
+
+    // Get the CampaignBudget service.
+    try (CampaignBudgetServiceClient campaignBudgetServiceClient =
+           googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
+      // Adds the budget.
+      MutateCampaignBudgetsResponse response =
+        campaignBudgetServiceClient.mutateCampaignBudgets(
+          Long.toString(customerId), ImmutableList.of(op));
+      String budgetResourceName = response.getResults(0).getResourceName();
+      // Retrieves the budget.
+      CampaignBudget newBudget = getBudget(googleAdsClient, customerId, budgetResourceName);
+      // Displays the results.
+      System.out.printf(
+        "Budget with ID %s and name '%s' was created.%n",
+        newBudget.getId().getValue(), newBudget.getName().getValue());
+      return newBudget;
+    }
+  }
+
+  /**
+   * Retrieves the campaign budget.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param budgetResourceName resource name of the new campaign budget.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
+  private CampaignBudget getBudget(
+    GoogleAdsClient googleAdsClient, long customerId, String budgetResourceName) {
+    // Gets the GoogleAdsService.
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+
+      // Creates the request.
+      SearchGoogleAdsRequest request =
+        SearchGoogleAdsRequest.newBuilder()
+          .setCustomerId(Long.toString(customerId))
+          .setPageSize(PAGE_SIZE)
+          .setQuery(
+            String.format(
+              "SELECT campaign_budget.id, campaign_budget.name, "
+                + "campaign_budget.resource_name FROM campaign_budget "
+                + "WHERE campaign_budget.resource_name = '%s'",
+              budgetResourceName))
+          .build();
+
+      // Retrieves the budget.
+      SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
+      return searchPagedResponse.getPage().getResponse().getResults(0).getCampaignBudget();
+    }
+  }
+
+  /**
+   * Creates a campaign.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param budget the budget for the campaign.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
+  private Campaign createCampaign(
+    GoogleAdsClient googleAdsClient, long customerId, CampaignBudget budget) {
+    String budgetResourceName = ResourceNames.campaignBudget(customerId, budget.getId().getValue());
+
+    // Configures the campaign network options
+    NetworkSettings networkSettings =
+      NetworkSettings.newBuilder()
+        .setTargetGoogleSearch(BoolValue.of(true))
+        .setTargetSearchNetwork(BoolValue.of(true))
+        .setTargetContentNetwork(BoolValue.of(false))
+        .setTargetPartnerSearchNetwork(BoolValue.of(false))
+        .build();
+
+    // Creates the campaign.
+    Campaign campaign =
+      Campaign.newBuilder()
+        .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
+        .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
+        // Recommendation: Set the campaign to PAUSED when creating it to prevent
+        // the ads from immediately serving. Set to ENABLED once you've added
+        // targeting and the ads are ready to serve
+        .setStatus(CampaignStatus.PAUSED)
+        // Sets the bidding strategy and budget.
+        .setManualCpc(ManualCpc.newBuilder().build())
+        .setCampaignBudget(StringValue.of(budgetResourceName))
+        // Adds the networkSettings configured above.
+        .setNetworkSettings(networkSettings)
+        // Optional: sets the start & end dates.
+        .setStartDate(StringValue.of(new DateTime().plusDays(1).toString("yyyyMMdd")))
+        .setEndDate(StringValue.of(new DateTime().plusDays(30).toString("yyyyMMdd")))
+        .build();
+
+    // Creates the operation.
+    CampaignOperation op = CampaignOperation.newBuilder().setCreate(campaign).build();
+
+    // Gets the Campaign service.
+    try (CampaignServiceClient campaignServiceClient =
+           googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+      // Adds the campaign.
+      MutateCampaignsResponse response =
+        campaignServiceClient.mutateCampaigns(Long.toString(customerId), ImmutableList.of(op));
+      String campaignResourceName = response.getResults(0).getResourceName();
+      // Retrieves the campaign.
+      Campaign newCampaign = getCampaign(googleAdsClient, customerId, campaignResourceName);
+      // Displays the results.
+      System.out.printf(
+        "Campaign with ID %s and name '%s' was created.%n",
+        newCampaign.getId().getValue(), newCampaign.getName().getValue());
+      return newCampaign;
+    }
+  }
+
+  /**
+   * Retrieves the campaign.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param campaignResourceName resource name of the new campaign.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
+  private Campaign getCampaign(
+    GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
+    // Gets the GoogleAdsService.
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+
+      // Creates the request.
+      SearchGoogleAdsRequest request =
+        SearchGoogleAdsRequest.newBuilder()
+          .setCustomerId(Long.toString(customerId))
+          .setPageSize(PAGE_SIZE)
+          .setQuery(
+            String.format(
+              "SELECT campaign.id, campaign.name, campaign.resource_name "
+                + "FROM campaign "
+                + "WHERE campaign.resource_name = '%s'",
+              campaignResourceName))
+          .build();
+
+      // Retrieves the campaign.
+      SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
+      return searchPagedResponse.getPage().getResponse().getResults(0).getCampaign();
+    }
+  }
+
+  /**
+   * Creates an ad group.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param campaign the campaign for the ad group.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
+  private AdGroup createAdGroup(
+    GoogleAdsClient googleAdsClient, long customerId, Campaign campaign) {
+    String campaignResourceName = ResourceNames.campaign(customerId, campaign.getId().getValue());
+
+    // Creates ad group, setting an optional CPC value.
+    AdGroup adGroup =
+      AdGroup.newBuilder()
+        .setName(StringValue.of("Earth to Mars Cruises #" + System.currentTimeMillis()))
+        .setStatus(AdGroupStatus.ENABLED)
+        .setCampaign(StringValue.of(campaignResourceName))
+        .setType(AdGroupType.SEARCH_STANDARD)
+        .setCpcBidMicros(Int64Value.of(500_000L))
+        .build();
+
+    // Creates the operation.
+    AdGroupOperation op = AdGroupOperation.newBuilder().setCreate(adGroup).build();
+
+    // Gets the AdGroup Service.
+    try (AdGroupServiceClient adGroupServiceClient =
+           googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
+      // Adds the AdGroup.
+      MutateAdGroupsResponse response =
+        adGroupServiceClient.mutateAdGroups(Long.toString(customerId), ImmutableList.of(op));
+      String adGroupResourceName = response.getResults(0).getResourceName();
+      // Retrieves the AdGroup.
+      AdGroup newAdGroup = getAdGroup(googleAdsClient, customerId, adGroupResourceName);
+      // Displays the results.
+      System.out.printf(
+        "Ad group with ID %s and name '%s' was created.%n",
+        newAdGroup.getId().getValue(), newAdGroup.getName().getValue());
+      return newAdGroup;
+    }
+  }
+
+  /**
+   * Retrieves the ad group.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param adGroupResourceName resource name of the new ad group.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
+  private AdGroup getAdGroup(
+    GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName) {
+    // Gets the GoogleAdsService.
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+
+      // Creates the request.
+      SearchGoogleAdsRequest request =
+        SearchGoogleAdsRequest.newBuilder()
+          .setCustomerId(Long.toString(customerId))
+          .setPageSize(PAGE_SIZE)
+          .setQuery(
+            String.format(
+              "SELECT ad_group.id, ad_group.name, ad_group.resource_name "
+                + "FROM ad_group WHERE ad_group.resource_name = '%s'",
+              adGroupResourceName))
+          .build();
+      // Retrieves the AdGroup.
+      SearchPagedResponse response = googleAdsServiceClient.search(request);
+      return response.getPage().getResponse().getResults(0).getAdGroup();
+    }
+  }
+
+  /**
+   * Creates text ads.
+   *
+   * @param adWordsServices the Google AdWords services interface.
+   * @param session the client session.
+   * @param adGroup the ad group for the text ad.
+   * @throws RemoteException if the API request failed due to other errors.
+   */
+  private AdGroupAd[] createTextAds(
+    AdWordsServicesInterface adWordsServices,
+    AdWordsSession session,
+    AdGroup adGroup,
+    int numberOfAds)
+    throws RemoteException {
+
+    // Gets the AdGroupAdService.
+    AdGroupAdServiceInterface adGroupAdService =
+      adWordsServices.get(session, AdGroupAdServiceInterface.class);
+
+    List<AdGroupAdOperation> operations = new ArrayList<>();
+
+    for (int i = 0; i < numberOfAds; i++) {
+      // Creates the expanded text ad.
+      ExpandedTextAd expandedTextAd = new ExpandedTextAd();
+      expandedTextAd.setDescription("Buy your tickets now!");
+      expandedTextAd.setHeadlinePart1(String.format("Cruise #%d to Mars", i));
+      expandedTextAd.setHeadlinePart2("Best Space Cruise Line");
+      expandedTextAd.setFinalUrls(new String[] {"http://www.example.com/" + i});
+
+      // Creates the ad group ad.
+      AdGroupAd expandedTextAdGroupAd = new AdGroupAd();
+      expandedTextAdGroupAd.setAdGroupId(adGroup.getId().getValue());
+      expandedTextAdGroupAd.setAd(expandedTextAd);
+
+      // Optional: sets the status.
+      expandedTextAdGroupAd.setStatus(AdGroupAdStatus.PAUSED);
+
+      // Creates the operation.
+      AdGroupAdOperation adGroupAdOperation = new AdGroupAdOperation();
+      adGroupAdOperation.setOperand(expandedTextAdGroupAd);
+      adGroupAdOperation.setOperator(Operator.ADD);
+
+      operations.add(adGroupAdOperation);
+    }
+
+    // Adds the ads.
+    AdGroupAdReturnValue result =
+      adGroupAdService.mutate(operations.toArray(new AdGroupAdOperation[0]));
+
+    // Displays the ads.
+    for (AdGroupAd adGroupAdResult : result.getValue()) {
+      ExpandedTextAd newAd = (ExpandedTextAd) adGroupAdResult.getAd();
+      System.out.printf(
+        "Expanded text ad with ID %d "
+          + "and headline '%s - %s' was created in ad group with ID %d.%n",
+        newAd.getId(),
+        newAd.getHeadlinePart1(),
+        newAd.getHeadlinePart2(),
+        adGroup.getId().getValue());
+    }
+    return result.getValue();
+  }
+
+  /**
+   * Creates keywords ad group criteria.
+   *
+   * @param adWordsServices the Google AdWords services interface.
+   * @param session the client session.
+   * @param adGroup the ad group for the new criteria.
+   * @param keywordsToAdd the keywords to add to the text ads.
+   * @throws RemoteException if the API request failed due to other errors.
+   * @throws UnsupportedEncodingException if encoding the final URL failed.
+   */
+  private AdGroupCriterion[] createKeywords(
+    AdWordsServicesInterface adWordsServices,
+    AdWordsSession session,
+    AdGroup adGroup,
+    List<String> keywordsToAdd)
+    throws RemoteException, UnsupportedEncodingException {
+    // Gets the AdGroupCriterionService.
+    AdGroupCriterionServiceInterface adGroupCriterionService =
+      adWordsServices.get(session, AdGroupCriterionServiceInterface.class);
+
+    List<AdGroupCriterionOperation> operations = new ArrayList<>();
+
+    for (String keywordToAdd : keywordsToAdd) {
+      // Creates the keyword.
+      Keyword keyword = new Keyword();
+      keyword.setText(keywordToAdd);
+      keyword.setMatchType(KeywordMatchType.EXACT);
+
+      // Creates biddable ad group criterion.
+      BiddableAdGroupCriterion keywordBiddableAdGroupCriterion = new BiddableAdGroupCriterion();
+      keywordBiddableAdGroupCriterion.setAdGroupId(adGroup.getId().getValue());
+      keywordBiddableAdGroupCriterion.setCriterion(keyword);
+
+      // You can optionally provide these field(s).
+      keywordBiddableAdGroupCriterion.setUserStatus(UserStatus.PAUSED);
+
+      String encodedFinalUrl =
+        String.format(
+          "http://example.com/mars/cruise/?kw=%s",
+          URLEncoder.encode(keyword.getText(), UTF_8.name()));
+      keywordBiddableAdGroupCriterion.setFinalUrls(new UrlList(new String[] {encodedFinalUrl}));
+
+      // Creates the operation.
+      AdGroupCriterionOperation keywordAdGroupCriterionOperation = new AdGroupCriterionOperation();
+      keywordAdGroupCriterionOperation.setOperand(keywordBiddableAdGroupCriterion);
+      keywordAdGroupCriterionOperation.setOperator(Operator.ADD);
+
+      operations.add(keywordAdGroupCriterionOperation);
+    }
+
+    // Adds the keywords.
+    AdGroupCriterionReturnValue result =
+      adGroupCriterionService.mutate(operations.toArray(new AdGroupCriterionOperation[0]));
+
+    // Displays the results.
+    for (AdGroupCriterion adGroupCriterionResult : result.getValue()) {
+      System.out.printf(
+        "Keyword ad group criterion with ad group ID %d, criterion ID %d, "
+          + "text '%s', and match type '%s' was added.%n",
+        adGroupCriterionResult.getAdGroupId(),
+        adGroupCriterionResult.getCriterion().getId(),
+        ((Keyword) adGroupCriterionResult.getCriterion()).getText(),
+        ((Keyword) adGroupCriterionResult.getCriterion()).getMatchType());
+    }
+    return result.getValue();
   }
 }
