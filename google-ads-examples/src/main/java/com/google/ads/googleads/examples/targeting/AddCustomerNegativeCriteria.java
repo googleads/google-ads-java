@@ -36,7 +36,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * This example adds various types of negative criterion for exclusions at the customer level. These
+ * This example adds various types of negative criteria for exclusions at the customer level. These
  * criteria will be applied to all campaigns for the customer.
  */
 public class AddCustomerNegativeCriteria {
@@ -86,7 +86,7 @@ public class AddCustomerNegativeCriteria {
   }
 
   /**
-   * Creates customer negative criteria
+   * Creates customer negative criteria.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
@@ -97,14 +97,14 @@ public class AddCustomerNegativeCriteria {
     try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient =
         googleAdsClient.getLatestVersion().createCustomerNegativeCriterionServiceClient()) {
 
-      // Create a negative customer criterion targeting the content label type of 'TRAGEDY'
+      // Creates a negative customer criterion excluding the content label type of 'TRAGEDY'.
       CustomerNegativeCriterion tragedyCriterion =
           CustomerNegativeCriterion.newBuilder()
               .setContentLabel(
                   ContentLabelInfo.newBuilder().setType(ContentLabelType.TRAGEDY).build())
               .build();
-      // Create a negative customer crtierion targeting the placement with url
-      // 'http://www.example.com'
+      // Creates a negative customer criterion excluding the placement with url
+      // 'http://www.example.com'.
       CustomerNegativeCriterion placementCriterion =
           CustomerNegativeCriterion.newBuilder()
               .setPlacement(
@@ -113,7 +113,7 @@ public class AddCustomerNegativeCriteria {
                       .build())
               .build();
 
-      // Create the operations
+      // Creates the operations.
       CustomerNegativeCriterionOperation tragedyCriterionOperation =
           CustomerNegativeCriterionOperation.newBuilder().setCreate(tragedyCriterion).build();
       CustomerNegativeCriterionOperation placementCriterionOperation =
@@ -121,12 +121,12 @@ public class AddCustomerNegativeCriteria {
       List<CustomerNegativeCriterionOperation> operations =
           new ArrayList<>(Arrays.asList(tragedyCriterionOperation, placementCriterionOperation));
 
-      // Add the negative customer criteria
+      // Adds the negative customer criteria.
       MutateCustomerNegativeCriteriaResponse response =
           customerNegativeCriterionServiceClient.mutateCustomerNegativeCriteria(
               Long.toString(customerId), operations);
 
-      // Display the results
+      // Displays the results.
       System.out.printf("Created %d new negative customer criteria.%n", response.getResultsCount());
       for (MutateCustomerNegativeCriteriaResult result : response.getResultsList()) {
         System.out.printf(
