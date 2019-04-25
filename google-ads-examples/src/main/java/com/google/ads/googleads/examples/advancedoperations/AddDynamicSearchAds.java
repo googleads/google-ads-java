@@ -37,34 +37,31 @@ import com.google.ads.googleads.v1.resources.AdGroup;
 import com.google.ads.googleads.v1.resources.AdGroupAd;
 import com.google.ads.googleads.v1.resources.AdGroupCriterion;
 import com.google.ads.googleads.v1.resources.Campaign;
-import com.google.ads.googleads.v1.resources.CampaignBudget;
 import com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting;
-import com.google.ads.googleads.v1.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v1.resources.CampaignBudget;
 import com.google.ads.googleads.v1.services.AdGroupAdOperation;
-import com.google.ads.googleads.v1.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v1.services.AdGroupAdServiceClient;
 import com.google.ads.googleads.v1.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v1.services.AdGroupServiceClient;
+import com.google.ads.googleads.v1.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v1.services.AdGroupOperation;
+import com.google.ads.googleads.v1.services.AdGroupServiceClient;
+import com.google.ads.googleads.v1.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v1.services.CampaignBudgetServiceClient;
 import com.google.ads.googleads.v1.services.CampaignOperation;
 import com.google.ads.googleads.v1.services.CampaignServiceClient;
-import com.google.ads.googleads.v1.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v1.services.CampaignBudgetOperation;
 import com.google.ads.googleads.v1.services.MutateAdGroupAdsResponse;
 import com.google.ads.googleads.v1.services.MutateAdGroupCriteriaResponse;
 import com.google.ads.googleads.v1.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v1.services.MutateCampaignsResponse;
 import com.google.ads.googleads.v1.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v1.services.MutateCampaignsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
-import org.joda.time.DateTime;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import org.joda.time.DateTime;
 
-/**
- * This example adds a new dynamic search ad (DSA) and webpage targeting criteria for the DSA.
- * */
+/** This example adds a new dynamic search ad (DSA) and webpage targeting criteria for the DSA. */
 public class AddDynamicSearchAds {
   private static class AddDynamicSearchAdsParams extends CodeSampleParams {
 
@@ -85,7 +82,7 @@ public class AddDynamicSearchAds {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception %s%n", ioe);
@@ -100,8 +97,8 @@ public class AddDynamicSearchAds {
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -133,26 +130,27 @@ public class AddDynamicSearchAds {
    */
   private static String addCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates the budget.
-    CampaignBudget campaignBudget = CampaignBudget.newBuilder()
-      .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
-      .setAmountMicros(Int64Value.of(3_000_000))
-      .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
-      .build();
+    CampaignBudget campaignBudget =
+        CampaignBudget.newBuilder()
+            .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
+            .setAmountMicros(Int64Value.of(3_000_000))
+            .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
+            .build();
 
     // Creates the operation.
     CampaignBudgetOperation operation =
-      CampaignBudgetOperation.newBuilder().setCreate(campaignBudget).build();
+        CampaignBudgetOperation.newBuilder().setCreate(campaignBudget).build();
 
     // Creates the campaign budget service client.
     try (CampaignBudgetServiceClient campaignBudgetServiceClient =
-           googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
+        googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
       // Adds the campaign budget.
-      MutateCampaignBudgetsResponse response = campaignBudgetServiceClient
-          .mutateCampaignBudgets(Long.toString(customerId), ImmutableList.of(operation));
+      MutateCampaignBudgetsResponse response =
+          campaignBudgetServiceClient.mutateCampaignBudgets(
+              Long.toString(customerId), ImmutableList.of(operation));
       // Displays the result.
       String budgetResourceName = response.getResults(0).getResourceName();
-      System.out.printf(
-        "Added budget with resource name '%s'.%n", budgetResourceName);
+      System.out.printf("Added budget with resource name '%s'.%n", budgetResourceName);
       return budgetResourceName;
     }
   }
@@ -166,33 +164,35 @@ public class AddDynamicSearchAds {
    * @return the campaign resource name.
    */
   private static String addCampaign(
-    GoogleAdsClient googleAdsClient, long customerId, String budgetResourceName) {
+      GoogleAdsClient googleAdsClient, long customerId, String budgetResourceName) {
     // Creates the campaign.
-    Campaign campaign = Campaign.newBuilder()
-      .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
-      .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
-      .setStatus(CampaignStatus.PAUSED)
-      .setManualCpc(ManualCpc.newBuilder().build())
-      .setCampaignBudget(StringValue.of(budgetResourceName))
-      // Enables the campaign for DSAs.
-      .setDynamicSearchAdsSetting(
-        DynamicSearchAdsSetting.newBuilder()
-          .setDomainName(StringValue.of("example.com"))
-          .setLanguageCode(StringValue.of("en"))
-          .build())
-      .setStartDate(StringValue.of(new DateTime().plusDays(1).toString("yyyyMMdd")))
-      .setEndDate(StringValue.of(new DateTime().plusDays(30).toString("yyyyMMdd")))
-      .build();
+    Campaign campaign =
+        Campaign.newBuilder()
+            .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
+            .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
+            .setStatus(CampaignStatus.PAUSED)
+            .setManualCpc(ManualCpc.newBuilder().build())
+            .setCampaignBudget(StringValue.of(budgetResourceName))
+            // Enables the campaign for DSAs.
+            .setDynamicSearchAdsSetting(
+                DynamicSearchAdsSetting.newBuilder()
+                    .setDomainName(StringValue.of("example.com"))
+                    .setLanguageCode(StringValue.of("en"))
+                    .build())
+            .setStartDate(StringValue.of(new DateTime().plusDays(1).toString("yyyyMMdd")))
+            .setEndDate(StringValue.of(new DateTime().plusDays(30).toString("yyyyMMdd")))
+            .build();
 
     // Creates the operation.
     CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();
 
     // Creates the campaign service client.
     try (CampaignServiceClient campaignServiceClient =
-           googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       // Adds the campaign.
       MutateCampaignsResponse response =
-        campaignServiceClient.mutateCampaigns(Long.toString(customerId), ImmutableList.of(operation));
+          campaignServiceClient.mutateCampaigns(
+              Long.toString(customerId), ImmutableList.of(operation));
 
       String campaignResourceName = response.getResults(0).getResourceName();
       // Displays the results.
@@ -210,27 +210,28 @@ public class AddDynamicSearchAds {
    * @return the ad group resource name.
    */
   private static String addAdGroup(
-    GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
+      GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     // Creates the ad group.
-    AdGroup adGroup = AdGroup.newBuilder()
-      .setName(StringValue.of("Earth to Mars Cruises #" + System.currentTimeMillis()))
-      .setCampaign(StringValue.of(campaignResourceName))
-      .setType(AdGroupType.SEARCH_DYNAMIC_ADS)
-      .setStatus(AdGroupStatus.PAUSED)
-      .setTrackingUrlTemplate(StringValue.of(
-        "http://tracker.examples.com/traveltracker/{escapedlpurl}"
-      ))
-      .setCpcBidMicros(Int64Value.of(50_000))
-      .build();
+    AdGroup adGroup =
+        AdGroup.newBuilder()
+            .setName(StringValue.of("Earth to Mars Cruises #" + System.currentTimeMillis()))
+            .setCampaign(StringValue.of(campaignResourceName))
+            .setType(AdGroupType.SEARCH_DYNAMIC_ADS)
+            .setStatus(AdGroupStatus.PAUSED)
+            .setTrackingUrlTemplate(
+                StringValue.of("http://tracker.examples.com/traveltracker/{escapedlpurl}"))
+            .setCpcBidMicros(Int64Value.of(50_000))
+            .build();
 
     // Creates the operation.
     AdGroupOperation operation = AdGroupOperation.newBuilder().setCreate(adGroup).build();
 
     // Creates the ad group service client.
     try (AdGroupServiceClient adGroupServiceClient =
-           googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
+        googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       MutateAdGroupsResponse response =
-        adGroupServiceClient.mutateAdGroups(Long.toString(customerId), ImmutableList.of(operation));
+          adGroupServiceClient.mutateAdGroups(
+              Long.toString(customerId), ImmutableList.of(operation));
       String adGroupResourceName = response.getResults(0).getResourceName();
       // Displays the results.
       System.out.printf("Added ad group with resource name '%s'.%n", adGroupResourceName);
@@ -246,82 +247,89 @@ public class AddDynamicSearchAds {
    * @param adGroupResourceName the ad group resource name.
    */
   private static void addExpandedDSA(
-    GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName) {
+      GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName) {
     // Creates an ad group ad.
-    AdGroupAd adGroupAd = AdGroupAd.newBuilder()
-      .setAdGroup(StringValue.of(adGroupResourceName))
-      .setStatus(AdGroupAdStatus.PAUSED)
-      // Sets the ad as an expanded dynamic search ad
-      .setAd(Ad.newBuilder()
-        .setExpandedDynamicSearchAd(ExpandedDynamicSearchAdInfo.newBuilder()
-          .setDescription(StringValue.of("Buy tickets now!"))
-          .build())
-        .build())
-      .build();
+    AdGroupAd adGroupAd =
+        AdGroupAd.newBuilder()
+            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setStatus(AdGroupAdStatus.PAUSED)
+            // Sets the ad as an expanded dynamic search ad
+            .setAd(
+                Ad.newBuilder()
+                    .setExpandedDynamicSearchAd(
+                        ExpandedDynamicSearchAdInfo.newBuilder()
+                            .setDescription(StringValue.of("Buy tickets now!"))
+                            .build())
+                    .build())
+            .build();
 
     // Creates the operation.
     AdGroupAdOperation operation = AdGroupAdOperation.newBuilder().setCreate(adGroupAd).build();
 
     // Creates the ad group ad service client.
     try (AdGroupAdServiceClient adGroupAdServiceClient =
-           googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
+        googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
       // Adds the dynamic search ad.
       MutateAdGroupAdsResponse response =
-        adGroupAdServiceClient.mutateAdGroupAds(Long.toString(customerId), ImmutableList.of(operation));
+          adGroupAdServiceClient.mutateAdGroupAds(
+              Long.toString(customerId), ImmutableList.of(operation));
       // Displays the response.
       System.out.printf(
-        "Added ad group ad with resource name '%s'.%n",
-        response.getResults(0).getResourceName());
+          "Added ad group ad with resource name '%s'.%n", response.getResults(0).getResourceName());
     }
   }
 
   /**
-   *  Adds webpage targeting criteria for the DSA.
+   * Adds webpage targeting criteria for the DSA.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param adGroupResourceName the ad group resource name.
    */
   private static void addWebPageCriteria(
-    GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName) {
+      GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName) {
     // Creates the criteria.
-    AdGroupCriterion adGroupCriterion = AdGroupCriterion.newBuilder()
-      .setAdGroup(StringValue.of(adGroupResourceName))
-      .setCpcBidMicros(Int64Value.of(1_000_000))
-      .setStatus(AdGroupCriterionStatus.PAUSED)
-      // Sets the webpage targeting criteria.
-      .setWebpage(WebpageInfo.newBuilder()
-        .setCriterionName(StringValue.of("Special Offers"))
-        // Adds the url targeting criteria.
-        .addConditions(WebpageConditionInfo.newBuilder()
-          .setOperand(WebpageConditionOperand.URL)
-          .setArgument(StringValue.of("/specialoffers"))
-          .build())
-        // Adds the page title criteria.
-        // The list of webpage targeting conditions are
-        // and-ed together when evaluated for targeting.
-        .addConditions(WebpageConditionInfo.newBuilder()
-          .setOperand(WebpageConditionOperand.PAGE_TITLE)
-          .setArgument(StringValue.of("Special Offer"))
-          .build())
-        .build())
-      .build();
+    AdGroupCriterion adGroupCriterion =
+        AdGroupCriterion.newBuilder()
+            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setCpcBidMicros(Int64Value.of(1_000_000))
+            .setStatus(AdGroupCriterionStatus.PAUSED)
+            // Sets the webpage targeting criteria.
+            .setWebpage(
+                WebpageInfo.newBuilder()
+                    .setCriterionName(StringValue.of("Special Offers"))
+                    // Adds the url targeting criteria.
+                    .addConditions(
+                        WebpageConditionInfo.newBuilder()
+                            .setOperand(WebpageConditionOperand.URL)
+                            .setArgument(StringValue.of("/specialoffers"))
+                            .build())
+                    // Adds the page title criteria.
+                    // The list of webpage targeting conditions are
+                    // and-ed together when evaluated for targeting.
+                    .addConditions(
+                        WebpageConditionInfo.newBuilder()
+                            .setOperand(WebpageConditionOperand.PAGE_TITLE)
+                            .setArgument(StringValue.of("Special Offer"))
+                            .build())
+                    .build())
+            .build();
 
     // Creates the operation.
     AdGroupCriterionOperation operation =
-      AdGroupCriterionOperation.newBuilder().setCreate(adGroupCriterion).build();
+        AdGroupCriterionOperation.newBuilder().setCreate(adGroupCriterion).build();
 
     // Creates the service client.
     try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
-           googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
+        googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
       // Adds the criteria.
       MutateAdGroupCriteriaResponse response =
-        adGroupCriterionServiceClient.mutateAdGroupCriteria(
-          Long.toString(customerId), ImmutableList.of(operation));
+          adGroupCriterionServiceClient.mutateAdGroupCriteria(
+              Long.toString(customerId), ImmutableList.of(operation));
       // Displays the results.
       System.out.printf(
-        "Added ad group criterion with resource name '%s'.%n",
-        response.getResults(0).getResourceName());
+          "Added ad group criterion with resource name '%s'.%n",
+          response.getResults(0).getResourceName());
     }
   }
 }
