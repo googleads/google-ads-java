@@ -42,16 +42,14 @@ import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.BytesValue;
 import com.google.protobuf.StringValue;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 
 /**
- * This example adds a Gmail ad to a given ad group. The ad group's campaign
- * needs to have an AdvertisingChannelType of DISPLAY and
- * AdvertisingChannelSubType of DISPLAY_GMAIL_AD.
+ * This example adds a Gmail ad to a given ad group. The ad group's campaign needs to have an
+ * AdvertisingChannelType of DISPLAY and AdvertisingChannelSubType of DISPLAY_GMAIL_AD.
  */
 public class AddGmailAd {
   private static class AddGmailAdParams extends CodeSampleParams {
@@ -77,7 +75,7 @@ public class AddGmailAd {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -92,8 +90,8 @@ public class AddGmailAd {
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -110,8 +108,8 @@ public class AddGmailAd {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    * @throws IOException if there is an error opening the image files.
    */
-  private void runExample(
-    GoogleAdsClient googleAdsClient, long customerId, long adGroupId) throws IOException {
+  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId)
+      throws IOException {
     HashMap<String, String> mediaFiles = addMediaFiles(googleAdsClient, customerId);
     addGmailAd(googleAdsClient, customerId, adGroupId, mediaFiles);
   }
@@ -126,52 +124,56 @@ public class AddGmailAd {
    * @return a hash map of the image file resource names.
    */
   private HashMap<String, String> addMediaFiles(GoogleAdsClient googleAdsClient, long customerId)
-  throws IOException {
+      throws IOException {
     // Creates a bytes array from the logo image data.
-    byte[] logoImageData = ByteStreams.toByteArray(
-      new URL("https://goo.gl/mtt54n").openStream());
+    byte[] logoImageData = ByteStreams.toByteArray(new URL("https://goo.gl/mtt54n").openStream());
 
     // Creates the logo image.
-    MediaFile mediaFileLogo = MediaFile.newBuilder()
-      .setType(MediaType.IMAGE)
-      .setImage(MediaImage.newBuilder()
-        .setData(BytesValue.of(ByteString.copyFrom(logoImageData)))
-        .build())
-      .setMimeType(MimeType.IMAGE_PNG)
-      .build();
+    MediaFile mediaFileLogo =
+        MediaFile.newBuilder()
+            .setType(MediaType.IMAGE)
+            .setImage(
+                MediaImage.newBuilder()
+                    .setData(BytesValue.of(ByteString.copyFrom(logoImageData)))
+                    .build())
+            .setMimeType(MimeType.IMAGE_PNG)
+            .build();
 
     // Creates the operation for the logo image.
     MediaFileOperation mediaFileLogoOperation =
-      MediaFileOperation.newBuilder().setCreate(mediaFileLogo).build();
+        MediaFileOperation.newBuilder().setCreate(mediaFileLogo).build();
 
     // Creates a bytes array from the marketing image data.
-    byte[] marketingImageData = ByteStreams.toByteArray(
-      new URL("https://goo.gl/3b9Wfh").openStream());
+    byte[] marketingImageData =
+        ByteStreams.toByteArray(new URL("https://goo.gl/3b9Wfh").openStream());
 
     // Creates the marketing image.
-    MediaFile mediaFileMarketing = MediaFile.newBuilder()
-      .setType(MediaType.IMAGE)
-      .setImage(MediaImage.newBuilder()
-        .setData(BytesValue.of(ByteString.copyFrom(marketingImageData)))
-        .build())
-      .setMimeType(MimeType.IMAGE_JPEG)
-      .build();
+    MediaFile mediaFileMarketing =
+        MediaFile.newBuilder()
+            .setType(MediaType.IMAGE)
+            .setImage(
+                MediaImage.newBuilder()
+                    .setData(BytesValue.of(ByteString.copyFrom(marketingImageData)))
+                    .build())
+            .setMimeType(MimeType.IMAGE_JPEG)
+            .build();
 
     // Creates the operation for the marketing image.
     MediaFileOperation mediaFileMarketingOperation =
-      MediaFileOperation.newBuilder().setCreate(mediaFileMarketing).build();
+        MediaFileOperation.newBuilder().setCreate(mediaFileMarketing).build();
 
     // Creates the media file service client.
-    try (MediaFileServiceClient mediaFileServiceClient = googleAdsClient.getLatestVersion()
-      .createMediaFileServiceClient()) {
+    try (MediaFileServiceClient mediaFileServiceClient =
+        googleAdsClient.getLatestVersion().createMediaFileServiceClient()) {
       // Adds the media files.
       MutateMediaFilesResponse response =
-        mediaFileServiceClient.mutateMediaFiles(Long.toString(customerId),
-          ImmutableList.of(mediaFileLogoOperation, mediaFileMarketingOperation));
+          mediaFileServiceClient.mutateMediaFiles(
+              Long.toString(customerId),
+              ImmutableList.of(mediaFileLogoOperation, mediaFileMarketingOperation));
       // Displays the results.
       for (MutateMediaFileResult result : response.getResultsList()) {
         System.out.printf(
-          "Created media file with resource name '%s'.%n", result.getResourceName());
+            "Created media file with resource name '%s'.%n", result.getResourceName());
       }
       // Creates a map of the media files to return.
       HashMap<String, String> mediaFiles = new HashMap<>();
@@ -190,51 +192,60 @@ public class AddGmailAd {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    * @throws IOException if there is an error opening the image files.
    */
-  private void addGmailAd(GoogleAdsClient googleAdsClient, long customerId, long adGroupId,
-                             HashMap<String, String> mediaFiles) {
+  private void addGmailAd(
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      long adGroupId,
+      HashMap<String, String> mediaFiles) {
     // Creates the Gmail ad info.
-    GmailAdInfo gmailAdInfo = GmailAdInfo.newBuilder()
-      // Sets the teaser information.
-      .setTeaser(GmailTeaser.newBuilder()
-        .setHeadline(StringValue.of("Dream"))
-        .setDescription(StringValue.of("Create your own adventure"))
-        .setBusinessName(StringValue.of("Interplanetary Ships"))
-        .setLogoImage(StringValue.of(mediaFiles.get("logoResourceName")))
-        .build())
-      // Sets the marketing image and other information.
-      .setMarketingImage(StringValue.of(mediaFiles.get("marketingImageResourceName")))
-      .setMarketingImageHeadline(StringValue.of("Travel"))
-      .setMarketingImageDescription(StringValue.of("Take to the skies!"))
-      .build();
+    GmailAdInfo gmailAdInfo =
+        GmailAdInfo.newBuilder()
+            // Sets the teaser information.
+            .setTeaser(
+                GmailTeaser.newBuilder()
+                    .setHeadline(StringValue.of("Dream"))
+                    .setDescription(StringValue.of("Create your own adventure"))
+                    .setBusinessName(StringValue.of("Interplanetary Ships"))
+                    .setLogoImage(StringValue.of(mediaFiles.get("logoResourceName")))
+                    .build())
+            // Sets the marketing image and other information.
+            .setMarketingImage(StringValue.of(mediaFiles.get("marketingImageResourceName")))
+            .setMarketingImageHeadline(StringValue.of("Travel"))
+            .setMarketingImageDescription(StringValue.of("Take to the skies!"))
+            .build();
 
     // Creates the ad.
-    Ad ad = Ad.newBuilder()
-      .setName(StringValue.of("Gmail Ad #" + System.currentTimeMillis()))
-      .addFinalUrls(StringValue.of("http://www.example.com"))
-      .setGmailAd(gmailAdInfo)
-      .build();
+    Ad ad =
+        Ad.newBuilder()
+            .setName(StringValue.of("Gmail Ad #" + System.currentTimeMillis()))
+            .addFinalUrls(StringValue.of("http://www.example.com"))
+            .setGmailAd(gmailAdInfo)
+            .build();
 
     // Gets the ad group resource name.
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
     // Creates the ad group ad.
-    AdGroupAd adGroupAd = AdGroupAd.newBuilder()
-      .setAd(ad)
-      .setStatus(AdGroupAdStatus.PAUSED)
-      .setAdGroup(StringValue.of(adGroupResourceName))
-      .build();
+    AdGroupAd adGroupAd =
+        AdGroupAd.newBuilder()
+            .setAd(ad)
+            .setStatus(AdGroupAdStatus.PAUSED)
+            .setAdGroup(StringValue.of(adGroupResourceName))
+            .build();
 
     // Creates the operation.
     AdGroupAdOperation operation = AdGroupAdOperation.newBuilder().setCreate(adGroupAd).build();
 
     // Creates the ad group ad service client.
     try (AdGroupAdServiceClient adGroupAdServiceClient =
-           googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
-      MutateAdGroupAdsResponse response = adGroupAdServiceClient.mutateAdGroupAds(
-        Long.toString(customerId), ImmutableList.of(operation));
+        googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
+      MutateAdGroupAdsResponse response =
+          adGroupAdServiceClient.mutateAdGroupAds(
+              Long.toString(customerId), ImmutableList.of(operation));
       // Displays the results.
-      System.out.printf("Created ad group ad with resource name '%s'.%n",
-        response.getResults(0).getResourceName());
+      System.out.printf(
+          "Created ad group ad with resource name '%s'.%n",
+          response.getResults(0).getResourceName());
     }
   }
 }
