@@ -48,6 +48,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 
+/**
+ * This example adds a Gmail ad to a given ad group. The ad group's campaign
+ * needs to have an AdvertisingChannelType of DISPLAY and
+ * AdvertisingChannelSubType of DISPLAY_GMAIL_AD.
+ */
 public class AddGmailAd {
   private static class AddGmailAdParams extends CodeSampleParams {
 
@@ -96,13 +101,30 @@ public class AddGmailAd {
     }
   }
 
+  /**
+   * Runs the example.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param adGroupId the ad group ID.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   * @throws IOException if there is an error opening the image files.
+   */
   private void runExample(
-    GoogleAdsClient googleAdsClient, long customerId, long adGroupId)
-    throws IOException {
+    GoogleAdsClient googleAdsClient, long customerId, long adGroupId) throws IOException {
     HashMap<String, String> mediaFiles = addMediaFiles(googleAdsClient, customerId);
-    createGmailAd(googleAdsClient, customerId, adGroupId, mediaFiles);
+    addGmailAd(googleAdsClient, customerId, adGroupId, mediaFiles);
   }
 
+  /**
+   * Adds the image files.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   * @throws IOException if there is an error opening the image files.
+   * @return a hash map of the image file resource names.
+   */
   private HashMap<String, String> addMediaFiles(GoogleAdsClient googleAdsClient, long customerId)
   throws IOException {
     // Creates a bytes array from the logo image data.
@@ -124,7 +146,7 @@ public class AddGmailAd {
 
     // Creates a bytes array from the marketing image data.
     byte[] marketingImageData = ByteStreams.toByteArray(
-      new URL("http://goo.gl/3b9Wfh").openStream());
+      new URL("https://goo.gl/3b9Wfh").openStream());
 
     // Creates the marketing image.
     MediaFile mediaFileMarketing = MediaFile.newBuilder()
@@ -143,8 +165,9 @@ public class AddGmailAd {
     try (MediaFileServiceClient mediaFileServiceClient = googleAdsClient.getLatestVersion()
       .createMediaFileServiceClient()) {
       // Adds the media files.
-      MutateMediaFilesResponse response = mediaFileServiceClient.mutateMediaFiles(Long.toString
-        (customerId), ImmutableList.of(mediaFileLogoOperation, mediaFileMarketingOperation));
+      MutateMediaFilesResponse response =
+        mediaFileServiceClient.mutateMediaFiles(Long.toString(customerId),
+          ImmutableList.of(mediaFileLogoOperation, mediaFileMarketingOperation));
       // Displays the results.
       for (MutateMediaFileResult result : response.getResultsList()) {
         System.out.printf(
@@ -158,7 +181,16 @@ public class AddGmailAd {
     }
   }
 
-  private void createGmailAd(GoogleAdsClient googleAdsClient, long customerId, long adGroupId,
+  /**
+   * Adds the gmail ad.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param adGroupId the ad group ID.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   * @throws IOException if there is an error opening the image files.
+   */
+  private void addGmailAd(GoogleAdsClient googleAdsClient, long customerId, long adGroupId,
                              HashMap<String, String> mediaFiles) {
     // Creates the Gmail ad info.
     GmailAdInfo gmailAdInfo = GmailAdInfo.newBuilder()
