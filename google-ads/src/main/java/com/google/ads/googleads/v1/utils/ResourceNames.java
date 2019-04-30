@@ -562,7 +562,7 @@ public class ResourceNames {
   /** Returns the product bidding category constant for the specified components. */
   public static String productBiddingCategoryConstant(
       String countryCode, ProductBiddingCategoryLevel level, long constantId) {
-    return ProductBiddingCategoryConstantName.format(concatIdentifiers(level.name(), constantId));
+    return ProductBiddingCategoryConstantName.format(concatIdentifiers(countryCode, level.name(), constantId));
   }
 
   /** Returns the product group view resource name for the specified components. */
