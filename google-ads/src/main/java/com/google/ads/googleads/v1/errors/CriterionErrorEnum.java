@@ -772,6 +772,14 @@ private static final long serialVersionUID = 0L;
     LOCATION_FILTER_NOT_ALLOWED(79),
     /**
      * <pre>
+     * Feed not found, or the feed is not an enabled location feed.
+     * </pre>
+     *
+     * <code>INVALID_FEED_FOR_LOCATION_FILTER = 98;</code>
+     */
+    INVALID_FEED_FOR_LOCATION_FILTER(98),
+    /**
+     * <pre>
      * Given location filter parameter is invalid for location groups targeting.
      * </pre>
      *
@@ -1593,6 +1601,14 @@ private static final long serialVersionUID = 0L;
     public static final int LOCATION_FILTER_NOT_ALLOWED_VALUE = 79;
     /**
      * <pre>
+     * Feed not found, or the feed is not an enabled location feed.
+     * </pre>
+     *
+     * <code>INVALID_FEED_FOR_LOCATION_FILTER = 98;</code>
+     */
+    public static final int INVALID_FEED_FOR_LOCATION_FILTER_VALUE = 98;
+    /**
+     * <pre>
      * Given location filter parameter is invalid for location groups targeting.
      * </pre>
      *
@@ -1827,6 +1843,7 @@ private static final long serialVersionUID = 0L;
         case 77: return MISSING_SHOPPING_SETTING;
         case 78: return INVALID_MATCHING_FUNCTION;
         case 79: return LOCATION_FILTER_NOT_ALLOWED;
+        case 98: return INVALID_FEED_FOR_LOCATION_FILTER;
         case 80: return LOCATION_FILTER_INVALID;
         case 81: return CANNOT_ATTACH_CRITERIA_AT_CAMPAIGN_AND_ADGROUP;
         case 82: return HOTEL_LENGTH_OF_STAY_OVERLAPS_WITH_EXISTING_CRITERION;

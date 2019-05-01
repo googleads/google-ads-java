@@ -70,4 +70,29 @@ public interface MobileApplicationInfoOrBuilder extends
    * <code>.google.protobuf.StringValue app_id = 2;</code>
    */
   com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder();
+
+  /**
+   * <pre>
+   * Name of this mobile application.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue name = 3;</code>
+   */
+  boolean hasName();
+  /**
+   * <pre>
+   * Name of this mobile application.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue name = 3;</code>
+   */
+  com.google.protobuf.StringValue getName();
+  /**
+   * <pre>
+   * Name of this mobile application.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue name = 3;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
 }

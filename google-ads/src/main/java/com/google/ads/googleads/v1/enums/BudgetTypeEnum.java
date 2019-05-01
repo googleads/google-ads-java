@@ -118,6 +118,14 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL_ADS_COMMISSION = 3;</code>
      */
     HOTEL_ADS_COMMISSION(3),
+    /**
+     * <pre>
+     * Budget type with a fixed cost-per-acquisition.
+     * </pre>
+     *
+     * <code>FIXED_CPA = 4;</code>
+     */
+    FIXED_CPA(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -153,6 +161,14 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL_ADS_COMMISSION = 3;</code>
      */
     public static final int HOTEL_ADS_COMMISSION_VALUE = 3;
+    /**
+     * <pre>
+     * Budget type with a fixed cost-per-acquisition.
+     * </pre>
+     *
+     * <code>FIXED_CPA = 4;</code>
+     */
+    public static final int FIXED_CPA_VALUE = 4;
 
 
     public final int getNumber() {
@@ -177,6 +193,7 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 2: return STANDARD;
         case 3: return HOTEL_ADS_COMMISSION;
+        case 4: return FIXED_CPA;
         default: return null;
       }
     }

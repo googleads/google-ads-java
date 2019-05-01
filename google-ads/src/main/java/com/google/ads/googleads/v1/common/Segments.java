@@ -36,6 +36,7 @@ private static final long serialVersionUID = 0L;
     productChannel_ = 0;
     productChannelExclusivity_ = 0;
     productCondition_ = 0;
+    searchEngineResultsPageType_ = 0;
     searchTermMatchType_ = 0;
     slot_ = 0;
   }
@@ -798,6 +799,77 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 538: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (geoTargetState_ != null) {
+              subBuilder = geoTargetState_.toBuilder();
+            }
+            geoTargetState_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(geoTargetState_);
+              geoTargetState_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 546: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (geoTargetCounty_ != null) {
+              subBuilder = geoTargetCounty_.toBuilder();
+            }
+            geoTargetCounty_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(geoTargetCounty_);
+              geoTargetCounty_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 554: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (geoTargetDistrict_ != null) {
+              subBuilder = geoTargetDistrict_.toBuilder();
+            }
+            geoTargetDistrict_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(geoTargetDistrict_);
+              geoTargetDistrict_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 560: {
+            int rawValue = input.readEnum();
+
+            searchEngineResultsPageType_ = rawValue;
+            break;
+          }
+          case 570: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (geoTargetPostalCode_ != null) {
+              subBuilder = geoTargetPostalCode_.toBuilder();
+            }
+            geoTargetPostalCode_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(geoTargetPostalCode_);
+              geoTargetPostalCode_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 578: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (geoTargetMostSpecificLocation_ != null) {
+              subBuilder = geoTargetMostSpecificLocation_.toBuilder();
+            }
+            geoTargetMostSpecificLocation_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(geoTargetMostSpecificLocation_);
+              geoTargetMostSpecificLocation_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1272,6 +1344,72 @@ private static final long serialVersionUID = 0L;
     return getGeoTargetCity();
   }
 
+  public static final int GEO_TARGET_COUNTY_FIELD_NUMBER = 68;
+  private com.google.protobuf.StringValue geoTargetCounty_;
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a county.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+   */
+  public boolean hasGeoTargetCounty() {
+    return geoTargetCounty_ != null;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a county.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+   */
+  public com.google.protobuf.StringValue getGeoTargetCounty() {
+    return geoTargetCounty_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetCounty_;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a county.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getGeoTargetCountyOrBuilder() {
+    return getGeoTargetCounty();
+  }
+
+  public static final int GEO_TARGET_DISTRICT_FIELD_NUMBER = 69;
+  private com.google.protobuf.StringValue geoTargetDistrict_;
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a district.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+   */
+  public boolean hasGeoTargetDistrict() {
+    return geoTargetDistrict_ != null;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a district.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+   */
+  public com.google.protobuf.StringValue getGeoTargetDistrict() {
+    return geoTargetDistrict_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetDistrict_;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a district.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getGeoTargetDistrictOrBuilder() {
+    return getGeoTargetDistrict();
+  }
+
   public static final int GEO_TARGET_METRO_FIELD_NUMBER = 63;
   private com.google.protobuf.StringValue geoTargetMetro_;
   /**
@@ -1305,6 +1443,75 @@ private static final long serialVersionUID = 0L;
     return getGeoTargetMetro();
   }
 
+  public static final int GEO_TARGET_MOST_SPECIFIC_LOCATION_FIELD_NUMBER = 72;
+  private com.google.protobuf.StringValue geoTargetMostSpecificLocation_;
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents the most
+   * specific location.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+   */
+  public boolean hasGeoTargetMostSpecificLocation() {
+    return geoTargetMostSpecificLocation_ != null;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents the most
+   * specific location.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+   */
+  public com.google.protobuf.StringValue getGeoTargetMostSpecificLocation() {
+    return geoTargetMostSpecificLocation_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetMostSpecificLocation_;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents the most
+   * specific location.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getGeoTargetMostSpecificLocationOrBuilder() {
+    return getGeoTargetMostSpecificLocation();
+  }
+
+  public static final int GEO_TARGET_POSTAL_CODE_FIELD_NUMBER = 71;
+  private com.google.protobuf.StringValue geoTargetPostalCode_;
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a postal code.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+   */
+  public boolean hasGeoTargetPostalCode() {
+    return geoTargetPostalCode_ != null;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a postal code.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+   */
+  public com.google.protobuf.StringValue getGeoTargetPostalCode() {
+    return geoTargetPostalCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetPostalCode_;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a postal code.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getGeoTargetPostalCodeOrBuilder() {
+    return getGeoTargetPostalCode();
+  }
+
   public static final int GEO_TARGET_REGION_FIELD_NUMBER = 64;
   private com.google.protobuf.StringValue geoTargetRegion_;
   /**
@@ -1336,6 +1543,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.StringValueOrBuilder getGeoTargetRegionOrBuilder() {
     return getGeoTargetRegion();
+  }
+
+  public static final int GEO_TARGET_STATE_FIELD_NUMBER = 67;
+  private com.google.protobuf.StringValue geoTargetState_;
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a state.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+   */
+  public boolean hasGeoTargetState() {
+    return geoTargetState_ != null;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a state.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+   */
+  public com.google.protobuf.StringValue getGeoTargetState() {
+    return geoTargetState_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetState_;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a state.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getGeoTargetStateOrBuilder() {
+    return getGeoTargetState();
   }
 
   public static final int HOTEL_BOOKING_WINDOW_DAYS_FIELD_NUMBER = 6;
@@ -2752,6 +2992,31 @@ private static final long serialVersionUID = 0L;
     return getQuarter();
   }
 
+  public static final int SEARCH_ENGINE_RESULTS_PAGE_TYPE_FIELD_NUMBER = 70;
+  private int searchEngineResultsPageType_;
+  /**
+   * <pre>
+   * Type of the search engine results page.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+   */
+  public int getSearchEngineResultsPageTypeValue() {
+    return searchEngineResultsPageType_;
+  }
+  /**
+   * <pre>
+   * Type of the search engine results page.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+   */
+  public com.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType getSearchEngineResultsPageType() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType result = com.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType.valueOf(searchEngineResultsPageType_);
+    return result == null ? com.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType.UNRECOGNIZED : result;
+  }
+
   public static final int SEARCH_TERM_MATCH_TYPE_FIELD_NUMBER = 22;
   private int searchTermMatchType_;
   /**
@@ -3116,6 +3381,24 @@ private static final long serialVersionUID = 0L;
     if (webpage_ != null) {
       output.writeMessage(66, getWebpage());
     }
+    if (geoTargetState_ != null) {
+      output.writeMessage(67, getGeoTargetState());
+    }
+    if (geoTargetCounty_ != null) {
+      output.writeMessage(68, getGeoTargetCounty());
+    }
+    if (geoTargetDistrict_ != null) {
+      output.writeMessage(69, getGeoTargetDistrict());
+    }
+    if (searchEngineResultsPageType_ != com.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType.UNSPECIFIED.getNumber()) {
+      output.writeEnum(70, searchEngineResultsPageType_);
+    }
+    if (geoTargetPostalCode_ != null) {
+      output.writeMessage(71, getGeoTargetPostalCode());
+    }
+    if (geoTargetMostSpecificLocation_ != null) {
+      output.writeMessage(72, getGeoTargetMostSpecificLocation());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -3389,6 +3672,30 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(66, getWebpage());
     }
+    if (geoTargetState_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(67, getGeoTargetState());
+    }
+    if (geoTargetCounty_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(68, getGeoTargetCounty());
+    }
+    if (geoTargetDistrict_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(69, getGeoTargetDistrict());
+    }
+    if (searchEngineResultsPageType_ != com.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(70, searchEngineResultsPageType_);
+    }
+    if (geoTargetPostalCode_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(71, getGeoTargetPostalCode());
+    }
+    if (geoTargetMostSpecificLocation_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(72, getGeoTargetMostSpecificLocation());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3444,15 +3751,40 @@ private static final long serialVersionUID = 0L;
       result = result && getGeoTargetCity()
           .equals(other.getGeoTargetCity());
     }
+    result = result && (hasGeoTargetCounty() == other.hasGeoTargetCounty());
+    if (hasGeoTargetCounty()) {
+      result = result && getGeoTargetCounty()
+          .equals(other.getGeoTargetCounty());
+    }
+    result = result && (hasGeoTargetDistrict() == other.hasGeoTargetDistrict());
+    if (hasGeoTargetDistrict()) {
+      result = result && getGeoTargetDistrict()
+          .equals(other.getGeoTargetDistrict());
+    }
     result = result && (hasGeoTargetMetro() == other.hasGeoTargetMetro());
     if (hasGeoTargetMetro()) {
       result = result && getGeoTargetMetro()
           .equals(other.getGeoTargetMetro());
     }
+    result = result && (hasGeoTargetMostSpecificLocation() == other.hasGeoTargetMostSpecificLocation());
+    if (hasGeoTargetMostSpecificLocation()) {
+      result = result && getGeoTargetMostSpecificLocation()
+          .equals(other.getGeoTargetMostSpecificLocation());
+    }
+    result = result && (hasGeoTargetPostalCode() == other.hasGeoTargetPostalCode());
+    if (hasGeoTargetPostalCode()) {
+      result = result && getGeoTargetPostalCode()
+          .equals(other.getGeoTargetPostalCode());
+    }
     result = result && (hasGeoTargetRegion() == other.hasGeoTargetRegion());
     if (hasGeoTargetRegion()) {
       result = result && getGeoTargetRegion()
           .equals(other.getGeoTargetRegion());
+    }
+    result = result && (hasGeoTargetState() == other.hasGeoTargetState());
+    if (hasGeoTargetState()) {
+      result = result && getGeoTargetState()
+          .equals(other.getGeoTargetState());
     }
     result = result && (hasHotelBookingWindowDays() == other.hasHotelBookingWindowDays());
     if (hasHotelBookingWindowDays()) {
@@ -3646,6 +3978,7 @@ private static final long serialVersionUID = 0L;
       result = result && getQuarter()
           .equals(other.getQuarter());
     }
+    result = result && searchEngineResultsPageType_ == other.searchEngineResultsPageType_;
     result = result && searchTermMatchType_ == other.searchTermMatchType_;
     result = result && slot_ == other.slot_;
     result = result && (hasWebpage() == other.hasWebpage());
@@ -3716,13 +4049,33 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + GEO_TARGET_CITY_FIELD_NUMBER;
       hash = (53 * hash) + getGeoTargetCity().hashCode();
     }
+    if (hasGeoTargetCounty()) {
+      hash = (37 * hash) + GEO_TARGET_COUNTY_FIELD_NUMBER;
+      hash = (53 * hash) + getGeoTargetCounty().hashCode();
+    }
+    if (hasGeoTargetDistrict()) {
+      hash = (37 * hash) + GEO_TARGET_DISTRICT_FIELD_NUMBER;
+      hash = (53 * hash) + getGeoTargetDistrict().hashCode();
+    }
     if (hasGeoTargetMetro()) {
       hash = (37 * hash) + GEO_TARGET_METRO_FIELD_NUMBER;
       hash = (53 * hash) + getGeoTargetMetro().hashCode();
     }
+    if (hasGeoTargetMostSpecificLocation()) {
+      hash = (37 * hash) + GEO_TARGET_MOST_SPECIFIC_LOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getGeoTargetMostSpecificLocation().hashCode();
+    }
+    if (hasGeoTargetPostalCode()) {
+      hash = (37 * hash) + GEO_TARGET_POSTAL_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getGeoTargetPostalCode().hashCode();
+    }
     if (hasGeoTargetRegion()) {
       hash = (37 * hash) + GEO_TARGET_REGION_FIELD_NUMBER;
       hash = (53 * hash) + getGeoTargetRegion().hashCode();
+    }
+    if (hasGeoTargetState()) {
+      hash = (37 * hash) + GEO_TARGET_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getGeoTargetState().hashCode();
     }
     if (hasHotelBookingWindowDays()) {
       hash = (37 * hash) + HOTEL_BOOKING_WINDOW_DAYS_FIELD_NUMBER;
@@ -3886,6 +4239,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + QUARTER_FIELD_NUMBER;
       hash = (53 * hash) + getQuarter().hashCode();
     }
+    hash = (37 * hash) + SEARCH_ENGINE_RESULTS_PAGE_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + searchEngineResultsPageType_;
     hash = (37 * hash) + SEARCH_TERM_MATCH_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + searchTermMatchType_;
     hash = (37 * hash) + SLOT_FIELD_NUMBER;
@@ -4093,17 +4448,47 @@ private static final long serialVersionUID = 0L;
         geoTargetCity_ = null;
         geoTargetCityBuilder_ = null;
       }
+      if (geoTargetCountyBuilder_ == null) {
+        geoTargetCounty_ = null;
+      } else {
+        geoTargetCounty_ = null;
+        geoTargetCountyBuilder_ = null;
+      }
+      if (geoTargetDistrictBuilder_ == null) {
+        geoTargetDistrict_ = null;
+      } else {
+        geoTargetDistrict_ = null;
+        geoTargetDistrictBuilder_ = null;
+      }
       if (geoTargetMetroBuilder_ == null) {
         geoTargetMetro_ = null;
       } else {
         geoTargetMetro_ = null;
         geoTargetMetroBuilder_ = null;
       }
+      if (geoTargetMostSpecificLocationBuilder_ == null) {
+        geoTargetMostSpecificLocation_ = null;
+      } else {
+        geoTargetMostSpecificLocation_ = null;
+        geoTargetMostSpecificLocationBuilder_ = null;
+      }
+      if (geoTargetPostalCodeBuilder_ == null) {
+        geoTargetPostalCode_ = null;
+      } else {
+        geoTargetPostalCode_ = null;
+        geoTargetPostalCodeBuilder_ = null;
+      }
       if (geoTargetRegionBuilder_ == null) {
         geoTargetRegion_ = null;
       } else {
         geoTargetRegion_ = null;
         geoTargetRegionBuilder_ = null;
+      }
+      if (geoTargetStateBuilder_ == null) {
+        geoTargetState_ = null;
+      } else {
+        geoTargetState_ = null;
+        geoTargetStateBuilder_ = null;
       }
       if (hotelBookingWindowDaysBuilder_ == null) {
         hotelBookingWindowDays_ = null;
@@ -4341,6 +4726,8 @@ private static final long serialVersionUID = 0L;
         quarter_ = null;
         quarterBuilder_ = null;
       }
+      searchEngineResultsPageType_ = 0;
+
       searchTermMatchType_ = 0;
 
       slot_ = 0;
@@ -4428,15 +4815,40 @@ private static final long serialVersionUID = 0L;
       } else {
         result.geoTargetCity_ = geoTargetCityBuilder_.build();
       }
+      if (geoTargetCountyBuilder_ == null) {
+        result.geoTargetCounty_ = geoTargetCounty_;
+      } else {
+        result.geoTargetCounty_ = geoTargetCountyBuilder_.build();
+      }
+      if (geoTargetDistrictBuilder_ == null) {
+        result.geoTargetDistrict_ = geoTargetDistrict_;
+      } else {
+        result.geoTargetDistrict_ = geoTargetDistrictBuilder_.build();
+      }
       if (geoTargetMetroBuilder_ == null) {
         result.geoTargetMetro_ = geoTargetMetro_;
       } else {
         result.geoTargetMetro_ = geoTargetMetroBuilder_.build();
       }
+      if (geoTargetMostSpecificLocationBuilder_ == null) {
+        result.geoTargetMostSpecificLocation_ = geoTargetMostSpecificLocation_;
+      } else {
+        result.geoTargetMostSpecificLocation_ = geoTargetMostSpecificLocationBuilder_.build();
+      }
+      if (geoTargetPostalCodeBuilder_ == null) {
+        result.geoTargetPostalCode_ = geoTargetPostalCode_;
+      } else {
+        result.geoTargetPostalCode_ = geoTargetPostalCodeBuilder_.build();
+      }
       if (geoTargetRegionBuilder_ == null) {
         result.geoTargetRegion_ = geoTargetRegion_;
       } else {
         result.geoTargetRegion_ = geoTargetRegionBuilder_.build();
+      }
+      if (geoTargetStateBuilder_ == null) {
+        result.geoTargetState_ = geoTargetState_;
+      } else {
+        result.geoTargetState_ = geoTargetStateBuilder_.build();
       }
       if (hotelBookingWindowDaysBuilder_ == null) {
         result.hotelBookingWindowDays_ = hotelBookingWindowDays_;
@@ -4630,6 +5042,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.quarter_ = quarterBuilder_.build();
       }
+      result.searchEngineResultsPageType_ = searchEngineResultsPageType_;
       result.searchTermMatchType_ = searchTermMatchType_;
       result.slot_ = slot_;
       if (webpageBuilder_ == null) {
@@ -4740,11 +5153,26 @@ private static final long serialVersionUID = 0L;
       if (other.hasGeoTargetCity()) {
         mergeGeoTargetCity(other.getGeoTargetCity());
       }
+      if (other.hasGeoTargetCounty()) {
+        mergeGeoTargetCounty(other.getGeoTargetCounty());
+      }
+      if (other.hasGeoTargetDistrict()) {
+        mergeGeoTargetDistrict(other.getGeoTargetDistrict());
+      }
       if (other.hasGeoTargetMetro()) {
         mergeGeoTargetMetro(other.getGeoTargetMetro());
       }
+      if (other.hasGeoTargetMostSpecificLocation()) {
+        mergeGeoTargetMostSpecificLocation(other.getGeoTargetMostSpecificLocation());
+      }
+      if (other.hasGeoTargetPostalCode()) {
+        mergeGeoTargetPostalCode(other.getGeoTargetPostalCode());
+      }
       if (other.hasGeoTargetRegion()) {
         mergeGeoTargetRegion(other.getGeoTargetRegion());
+      }
+      if (other.hasGeoTargetState()) {
+        mergeGeoTargetState(other.getGeoTargetState());
       }
       if (other.hasHotelBookingWindowDays()) {
         mergeHotelBookingWindowDays(other.getHotelBookingWindowDays());
@@ -4877,6 +5305,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasQuarter()) {
         mergeQuarter(other.getQuarter());
+      }
+      if (other.searchEngineResultsPageType_ != 0) {
+        setSearchEngineResultsPageTypeValue(other.getSearchEngineResultsPageTypeValue());
       }
       if (other.searchTermMatchType_ != 0) {
         setSearchTermMatchTypeValue(other.getSearchTermMatchTypeValue());
@@ -6480,6 +6911,312 @@ private static final long serialVersionUID = 0L;
       return geoTargetCityBuilder_;
     }
 
+    private com.google.protobuf.StringValue geoTargetCounty_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetCountyBuilder_;
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a county.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+     */
+    public boolean hasGeoTargetCounty() {
+      return geoTargetCountyBuilder_ != null || geoTargetCounty_ != null;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a county.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+     */
+    public com.google.protobuf.StringValue getGeoTargetCounty() {
+      if (geoTargetCountyBuilder_ == null) {
+        return geoTargetCounty_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetCounty_;
+      } else {
+        return geoTargetCountyBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a county.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+     */
+    public Builder setGeoTargetCounty(com.google.protobuf.StringValue value) {
+      if (geoTargetCountyBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        geoTargetCounty_ = value;
+        onChanged();
+      } else {
+        geoTargetCountyBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a county.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+     */
+    public Builder setGeoTargetCounty(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (geoTargetCountyBuilder_ == null) {
+        geoTargetCounty_ = builderForValue.build();
+        onChanged();
+      } else {
+        geoTargetCountyBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a county.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+     */
+    public Builder mergeGeoTargetCounty(com.google.protobuf.StringValue value) {
+      if (geoTargetCountyBuilder_ == null) {
+        if (geoTargetCounty_ != null) {
+          geoTargetCounty_ =
+            com.google.protobuf.StringValue.newBuilder(geoTargetCounty_).mergeFrom(value).buildPartial();
+        } else {
+          geoTargetCounty_ = value;
+        }
+        onChanged();
+      } else {
+        geoTargetCountyBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a county.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+     */
+    public Builder clearGeoTargetCounty() {
+      if (geoTargetCountyBuilder_ == null) {
+        geoTargetCounty_ = null;
+        onChanged();
+      } else {
+        geoTargetCounty_ = null;
+        geoTargetCountyBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a county.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getGeoTargetCountyBuilder() {
+      
+      onChanged();
+      return getGeoTargetCountyFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a county.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getGeoTargetCountyOrBuilder() {
+      if (geoTargetCountyBuilder_ != null) {
+        return geoTargetCountyBuilder_.getMessageOrBuilder();
+      } else {
+        return geoTargetCounty_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : geoTargetCounty_;
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a county.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getGeoTargetCountyFieldBuilder() {
+      if (geoTargetCountyBuilder_ == null) {
+        geoTargetCountyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getGeoTargetCounty(),
+                getParentForChildren(),
+                isClean());
+        geoTargetCounty_ = null;
+      }
+      return geoTargetCountyBuilder_;
+    }
+
+    private com.google.protobuf.StringValue geoTargetDistrict_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetDistrictBuilder_;
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a district.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+     */
+    public boolean hasGeoTargetDistrict() {
+      return geoTargetDistrictBuilder_ != null || geoTargetDistrict_ != null;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a district.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+     */
+    public com.google.protobuf.StringValue getGeoTargetDistrict() {
+      if (geoTargetDistrictBuilder_ == null) {
+        return geoTargetDistrict_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetDistrict_;
+      } else {
+        return geoTargetDistrictBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a district.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+     */
+    public Builder setGeoTargetDistrict(com.google.protobuf.StringValue value) {
+      if (geoTargetDistrictBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        geoTargetDistrict_ = value;
+        onChanged();
+      } else {
+        geoTargetDistrictBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a district.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+     */
+    public Builder setGeoTargetDistrict(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (geoTargetDistrictBuilder_ == null) {
+        geoTargetDistrict_ = builderForValue.build();
+        onChanged();
+      } else {
+        geoTargetDistrictBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a district.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+     */
+    public Builder mergeGeoTargetDistrict(com.google.protobuf.StringValue value) {
+      if (geoTargetDistrictBuilder_ == null) {
+        if (geoTargetDistrict_ != null) {
+          geoTargetDistrict_ =
+            com.google.protobuf.StringValue.newBuilder(geoTargetDistrict_).mergeFrom(value).buildPartial();
+        } else {
+          geoTargetDistrict_ = value;
+        }
+        onChanged();
+      } else {
+        geoTargetDistrictBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a district.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+     */
+    public Builder clearGeoTargetDistrict() {
+      if (geoTargetDistrictBuilder_ == null) {
+        geoTargetDistrict_ = null;
+        onChanged();
+      } else {
+        geoTargetDistrict_ = null;
+        geoTargetDistrictBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a district.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getGeoTargetDistrictBuilder() {
+      
+      onChanged();
+      return getGeoTargetDistrictFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a district.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getGeoTargetDistrictOrBuilder() {
+      if (geoTargetDistrictBuilder_ != null) {
+        return geoTargetDistrictBuilder_.getMessageOrBuilder();
+      } else {
+        return geoTargetDistrict_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : geoTargetDistrict_;
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a district.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getGeoTargetDistrictFieldBuilder() {
+      if (geoTargetDistrictBuilder_ == null) {
+        geoTargetDistrictBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getGeoTargetDistrict(),
+                getParentForChildren(),
+                isClean());
+        geoTargetDistrict_ = null;
+      }
+      return geoTargetDistrictBuilder_;
+    }
+
     private com.google.protobuf.StringValue geoTargetMetro_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetMetroBuilder_;
@@ -6633,6 +7370,321 @@ private static final long serialVersionUID = 0L;
       return geoTargetMetroBuilder_;
     }
 
+    private com.google.protobuf.StringValue geoTargetMostSpecificLocation_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetMostSpecificLocationBuilder_;
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents the most
+     * specific location.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+     */
+    public boolean hasGeoTargetMostSpecificLocation() {
+      return geoTargetMostSpecificLocationBuilder_ != null || geoTargetMostSpecificLocation_ != null;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents the most
+     * specific location.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+     */
+    public com.google.protobuf.StringValue getGeoTargetMostSpecificLocation() {
+      if (geoTargetMostSpecificLocationBuilder_ == null) {
+        return geoTargetMostSpecificLocation_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetMostSpecificLocation_;
+      } else {
+        return geoTargetMostSpecificLocationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents the most
+     * specific location.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+     */
+    public Builder setGeoTargetMostSpecificLocation(com.google.protobuf.StringValue value) {
+      if (geoTargetMostSpecificLocationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        geoTargetMostSpecificLocation_ = value;
+        onChanged();
+      } else {
+        geoTargetMostSpecificLocationBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents the most
+     * specific location.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+     */
+    public Builder setGeoTargetMostSpecificLocation(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (geoTargetMostSpecificLocationBuilder_ == null) {
+        geoTargetMostSpecificLocation_ = builderForValue.build();
+        onChanged();
+      } else {
+        geoTargetMostSpecificLocationBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents the most
+     * specific location.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+     */
+    public Builder mergeGeoTargetMostSpecificLocation(com.google.protobuf.StringValue value) {
+      if (geoTargetMostSpecificLocationBuilder_ == null) {
+        if (geoTargetMostSpecificLocation_ != null) {
+          geoTargetMostSpecificLocation_ =
+            com.google.protobuf.StringValue.newBuilder(geoTargetMostSpecificLocation_).mergeFrom(value).buildPartial();
+        } else {
+          geoTargetMostSpecificLocation_ = value;
+        }
+        onChanged();
+      } else {
+        geoTargetMostSpecificLocationBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents the most
+     * specific location.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+     */
+    public Builder clearGeoTargetMostSpecificLocation() {
+      if (geoTargetMostSpecificLocationBuilder_ == null) {
+        geoTargetMostSpecificLocation_ = null;
+        onChanged();
+      } else {
+        geoTargetMostSpecificLocation_ = null;
+        geoTargetMostSpecificLocationBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents the most
+     * specific location.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getGeoTargetMostSpecificLocationBuilder() {
+      
+      onChanged();
+      return getGeoTargetMostSpecificLocationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents the most
+     * specific location.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getGeoTargetMostSpecificLocationOrBuilder() {
+      if (geoTargetMostSpecificLocationBuilder_ != null) {
+        return geoTargetMostSpecificLocationBuilder_.getMessageOrBuilder();
+      } else {
+        return geoTargetMostSpecificLocation_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : geoTargetMostSpecificLocation_;
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents the most
+     * specific location.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getGeoTargetMostSpecificLocationFieldBuilder() {
+      if (geoTargetMostSpecificLocationBuilder_ == null) {
+        geoTargetMostSpecificLocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getGeoTargetMostSpecificLocation(),
+                getParentForChildren(),
+                isClean());
+        geoTargetMostSpecificLocation_ = null;
+      }
+      return geoTargetMostSpecificLocationBuilder_;
+    }
+
+    private com.google.protobuf.StringValue geoTargetPostalCode_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetPostalCodeBuilder_;
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a postal code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+     */
+    public boolean hasGeoTargetPostalCode() {
+      return geoTargetPostalCodeBuilder_ != null || geoTargetPostalCode_ != null;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a postal code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+     */
+    public com.google.protobuf.StringValue getGeoTargetPostalCode() {
+      if (geoTargetPostalCodeBuilder_ == null) {
+        return geoTargetPostalCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetPostalCode_;
+      } else {
+        return geoTargetPostalCodeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a postal code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+     */
+    public Builder setGeoTargetPostalCode(com.google.protobuf.StringValue value) {
+      if (geoTargetPostalCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        geoTargetPostalCode_ = value;
+        onChanged();
+      } else {
+        geoTargetPostalCodeBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a postal code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+     */
+    public Builder setGeoTargetPostalCode(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (geoTargetPostalCodeBuilder_ == null) {
+        geoTargetPostalCode_ = builderForValue.build();
+        onChanged();
+      } else {
+        geoTargetPostalCodeBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a postal code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+     */
+    public Builder mergeGeoTargetPostalCode(com.google.protobuf.StringValue value) {
+      if (geoTargetPostalCodeBuilder_ == null) {
+        if (geoTargetPostalCode_ != null) {
+          geoTargetPostalCode_ =
+            com.google.protobuf.StringValue.newBuilder(geoTargetPostalCode_).mergeFrom(value).buildPartial();
+        } else {
+          geoTargetPostalCode_ = value;
+        }
+        onChanged();
+      } else {
+        geoTargetPostalCodeBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a postal code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+     */
+    public Builder clearGeoTargetPostalCode() {
+      if (geoTargetPostalCodeBuilder_ == null) {
+        geoTargetPostalCode_ = null;
+        onChanged();
+      } else {
+        geoTargetPostalCode_ = null;
+        geoTargetPostalCodeBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a postal code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getGeoTargetPostalCodeBuilder() {
+      
+      onChanged();
+      return getGeoTargetPostalCodeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a postal code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getGeoTargetPostalCodeOrBuilder() {
+      if (geoTargetPostalCodeBuilder_ != null) {
+        return geoTargetPostalCodeBuilder_.getMessageOrBuilder();
+      } else {
+        return geoTargetPostalCode_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : geoTargetPostalCode_;
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a postal code.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getGeoTargetPostalCodeFieldBuilder() {
+      if (geoTargetPostalCodeBuilder_ == null) {
+        geoTargetPostalCodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getGeoTargetPostalCode(),
+                getParentForChildren(),
+                isClean());
+        geoTargetPostalCode_ = null;
+      }
+      return geoTargetPostalCodeBuilder_;
+    }
+
     private com.google.protobuf.StringValue geoTargetRegion_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetRegionBuilder_;
@@ -6784,6 +7836,159 @@ private static final long serialVersionUID = 0L;
         geoTargetRegion_ = null;
       }
       return geoTargetRegionBuilder_;
+    }
+
+    private com.google.protobuf.StringValue geoTargetState_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetStateBuilder_;
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+     */
+    public boolean hasGeoTargetState() {
+      return geoTargetStateBuilder_ != null || geoTargetState_ != null;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+     */
+    public com.google.protobuf.StringValue getGeoTargetState() {
+      if (geoTargetStateBuilder_ == null) {
+        return geoTargetState_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetState_;
+      } else {
+        return geoTargetStateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+     */
+    public Builder setGeoTargetState(com.google.protobuf.StringValue value) {
+      if (geoTargetStateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        geoTargetState_ = value;
+        onChanged();
+      } else {
+        geoTargetStateBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+     */
+    public Builder setGeoTargetState(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (geoTargetStateBuilder_ == null) {
+        geoTargetState_ = builderForValue.build();
+        onChanged();
+      } else {
+        geoTargetStateBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+     */
+    public Builder mergeGeoTargetState(com.google.protobuf.StringValue value) {
+      if (geoTargetStateBuilder_ == null) {
+        if (geoTargetState_ != null) {
+          geoTargetState_ =
+            com.google.protobuf.StringValue.newBuilder(geoTargetState_).mergeFrom(value).buildPartial();
+        } else {
+          geoTargetState_ = value;
+        }
+        onChanged();
+      } else {
+        geoTargetStateBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+     */
+    public Builder clearGeoTargetState() {
+      if (geoTargetStateBuilder_ == null) {
+        geoTargetState_ = null;
+        onChanged();
+      } else {
+        geoTargetState_ = null;
+        geoTargetStateBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getGeoTargetStateBuilder() {
+      
+      onChanged();
+      return getGeoTargetStateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getGeoTargetStateOrBuilder() {
+      if (geoTargetStateBuilder_ != null) {
+        return geoTargetStateBuilder_.getMessageOrBuilder();
+      } else {
+        return geoTargetState_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : geoTargetState_;
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a state.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getGeoTargetStateFieldBuilder() {
+      if (geoTargetStateBuilder_ == null) {
+        geoTargetStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getGeoTargetState(),
+                getParentForChildren(),
+                isClean());
+        geoTargetState_ = null;
+      }
+      return geoTargetStateBuilder_;
     }
 
     private com.google.protobuf.Int64Value hotelBookingWindowDays_ = null;
@@ -12954,6 +14159,71 @@ private static final long serialVersionUID = 0L;
         quarter_ = null;
       }
       return quarterBuilder_;
+    }
+
+    private int searchEngineResultsPageType_ = 0;
+    /**
+     * <pre>
+     * Type of the search engine results page.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+     */
+    public int getSearchEngineResultsPageTypeValue() {
+      return searchEngineResultsPageType_;
+    }
+    /**
+     * <pre>
+     * Type of the search engine results page.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+     */
+    public Builder setSearchEngineResultsPageTypeValue(int value) {
+      searchEngineResultsPageType_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Type of the search engine results page.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+     */
+    public com.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType getSearchEngineResultsPageType() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType result = com.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType.valueOf(searchEngineResultsPageType_);
+      return result == null ? com.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Type of the search engine results page.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+     */
+    public Builder setSearchEngineResultsPageType(com.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      searchEngineResultsPageType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Type of the search engine results page.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+     */
+    public Builder clearSearchEngineResultsPageType() {
+      
+      searchEngineResultsPageType_ = 0;
+      onChanged();
+      return this;
     }
 
     private int searchTermMatchType_ = 0;

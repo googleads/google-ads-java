@@ -104,7 +104,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * The required field was not present in the resource.
+     * The required field was not present.
      * </pre>
      *
      * <code>REQUIRED = 2;</code>
@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * The required field was not present in the resource.
+     * The required field was not present.
      * </pre>
      *
      * <code>REQUIRED = 2;</code>

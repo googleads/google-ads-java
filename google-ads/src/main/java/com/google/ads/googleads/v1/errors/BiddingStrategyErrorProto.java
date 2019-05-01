@@ -31,18 +31,20 @@ public final class BiddingStrategyErrorProto {
       "\n;google/ads/googleads/v1/errors/bidding" +
       "_strategy_error.proto\022\036google.ads.google" +
       "ads.v1.errors\032\034google/api/annotations.pr" +
-      "oto\"\331\001\n\030BiddingStrategyErrorEnum\"\274\001\n\024Bid" +
+      "oto\"\233\002\n\030BiddingStrategyErrorEnum\"\376\001\n\024Bid" +
       "dingStrategyError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
       "KNOWN\020\001\022\022\n\016DUPLICATE_NAME\020\002\022\'\n#CANNOT_CH" +
       "ANGE_BIDDING_STRATEGY_TYPE\020\003\022%\n!CANNOT_R" +
       "EMOVE_ASSOCIATED_STRATEGY\020\004\022\"\n\036BIDDING_S" +
-      "TRATEGY_NOT_SUPPORTED\020\005B\364\001\n\"com.google.a" +
-      "ds.googleads.v1.errorsB\031BiddingStrategyE" +
-      "rrorProtoP\001ZDgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v1/errors;error" +
-      "s\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1.Errors" +
-      "\312\002\036Google\\Ads\\GoogleAds\\V1\\Errors\352\002\"Goog" +
-      "le::Ads::GoogleAds::V1::Errorsb\006proto3"
+      "TRATEGY_NOT_SUPPORTED\020\005\022@\n<INCOMPATIBLE_" +
+      "BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GO" +
+      "AL_TYPE\020\006B\364\001\n\"com.google.ads.googleads.v" +
+      "1.errorsB\031BiddingStrategyErrorProtoP\001ZDg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v1/errors;errors\242\002\003GAA\252\002\036Goog" +
+      "le.Ads.GoogleAds.V1.Errors\312\002\036Google\\Ads\\" +
+      "GoogleAds\\V1\\Errors\352\002\"Google::Ads::Googl" +
+      "eAds::V1::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

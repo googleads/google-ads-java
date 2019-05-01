@@ -30,8 +30,8 @@ public final class CriterionErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v1/errors/criteri" +
       "on_error.proto\022\036google.ads.googleads.v1." +
-      "errors\032\034google/api/annotations.proto\"\202\035\n" +
-      "\022CriterionErrorEnum\"\353\034\n\016CriterionError\022\017" +
+      "errors\032\034google/api/annotations.proto\"\250\035\n" +
+      "\022CriterionErrorEnum\"\221\035\n\016CriterionError\022\017" +
       "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\032\n\026CONCRETE" +
       "_TYPE_REQUIRED\020\002\022\035\n\031INVALID_EXCLUDED_CAT" +
       "EGORY\020\003\022\030\n\024INVALID_KEYWORD_TEXT\020\004\022\031\n\025KEY" +
@@ -103,34 +103,34 @@ public final class CriterionErrorProto {
       "NSION_TYPE\020K\022$\n INVALID_PRODUCT_BIDDING_" +
       "CATEGORY\020L\022\034\n\030MISSING_SHOPPING_SETTING\020M" +
       "\022\035\n\031INVALID_MATCHING_FUNCTION\020N\022\037\n\033LOCAT" +
-      "ION_FILTER_NOT_ALLOWED\020O\022\033\n\027LOCATION_FIL" +
-      "TER_INVALID\020P\0222\n.CANNOT_ATTACH_CRITERIA_" +
-      "AT_CAMPAIGN_AND_ADGROUP\020Q\0229\n5HOTEL_LENGT" +
-      "H_OF_STAY_OVERLAPS_WITH_EXISTING_CRITERI" +
-      "ON\020R\022A\n=HOTEL_ADVANCE_BOOKING_WINDOW_OVE" +
-      "RLAPS_WITH_EXISTING_CRITERION\020S\022.\n*FIELD" +
-      "_INCOMPATIBLE_WITH_NEGATIVE_TARGETING\020T\022" +
-      "\035\n\031INVALID_WEBPAGE_CONDITION\020U\022!\n\035INVALI" +
-      "D_WEBPAGE_CONDITION_URL\020V\022)\n%WEBPAGE_CON" +
-      "DITION_URL_CANNOT_BE_EMPTY\020W\022.\n*WEBPAGE_" +
-      "CONDITION_URL_UNSUPPORTED_PROTOCOL\020X\022.\n*" +
-      "WEBPAGE_CONDITION_URL_CANNOT_BE_IP_ADDRE" +
-      "SS\020Y\022E\nAWEBPAGE_CONDITION_URL_DOMAIN_NOT" +
-      "_CONSISTENT_WITH_CAMPAIGN_SETTING\020Z\0221\n-W" +
-      "EBPAGE_CONDITION_URL_CANNOT_BE_PUBLIC_SU" +
-      "FFIX\020[\022/\n+WEBPAGE_CONDITION_URL_INVALID_" +
-      "PUBLIC_SUFFIX\020\\\0229\n5WEBPAGE_CONDITION_URL" +
-      "_VALUE_TRACK_VALUE_NOT_SUPPORTED\020]\022<\n8WE" +
-      "BPAGE_CRITERION_URL_EQUALS_CAN_HAVE_ONLY" +
-      "_ONE_CONDITION\020^\0227\n3WEBPAGE_CRITERION_NO" +
-      "T_SUPPORTED_ON_NON_DSA_AD_GROUP\020_B\356\001\n\"co" +
-      "m.google.ads.googleads.v1.errorsB\023Criter" +
-      "ionErrorProtoP\001ZDgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v1/errors;e" +
-      "rrors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1.Er" +
-      "rors\312\002\036Google\\Ads\\GoogleAds\\V1\\Errors\352\002\"" +
-      "Google::Ads::GoogleAds::V1::Errorsb\006prot" +
-      "o3"
+      "ION_FILTER_NOT_ALLOWED\020O\022$\n INVALID_FEED" +
+      "_FOR_LOCATION_FILTER\020b\022\033\n\027LOCATION_FILTE" +
+      "R_INVALID\020P\0222\n.CANNOT_ATTACH_CRITERIA_AT" +
+      "_CAMPAIGN_AND_ADGROUP\020Q\0229\n5HOTEL_LENGTH_" +
+      "OF_STAY_OVERLAPS_WITH_EXISTING_CRITERION" +
+      "\020R\022A\n=HOTEL_ADVANCE_BOOKING_WINDOW_OVERL" +
+      "APS_WITH_EXISTING_CRITERION\020S\022.\n*FIELD_I" +
+      "NCOMPATIBLE_WITH_NEGATIVE_TARGETING\020T\022\035\n" +
+      "\031INVALID_WEBPAGE_CONDITION\020U\022!\n\035INVALID_" +
+      "WEBPAGE_CONDITION_URL\020V\022)\n%WEBPAGE_CONDI" +
+      "TION_URL_CANNOT_BE_EMPTY\020W\022.\n*WEBPAGE_CO" +
+      "NDITION_URL_UNSUPPORTED_PROTOCOL\020X\022.\n*WE" +
+      "BPAGE_CONDITION_URL_CANNOT_BE_IP_ADDRESS" +
+      "\020Y\022E\nAWEBPAGE_CONDITION_URL_DOMAIN_NOT_C" +
+      "ONSISTENT_WITH_CAMPAIGN_SETTING\020Z\0221\n-WEB" +
+      "PAGE_CONDITION_URL_CANNOT_BE_PUBLIC_SUFF" +
+      "IX\020[\022/\n+WEBPAGE_CONDITION_URL_INVALID_PU" +
+      "BLIC_SUFFIX\020\\\0229\n5WEBPAGE_CONDITION_URL_V" +
+      "ALUE_TRACK_VALUE_NOT_SUPPORTED\020]\022<\n8WEBP" +
+      "AGE_CRITERION_URL_EQUALS_CAN_HAVE_ONLY_O" +
+      "NE_CONDITION\020^\0227\n3WEBPAGE_CRITERION_NOT_" +
+      "SUPPORTED_ON_NON_DSA_AD_GROUP\020_B\356\001\n\"com." +
+      "google.ads.googleads.v1.errorsB\023Criterio" +
+      "nErrorProtoP\001ZDgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v1/errors;err" +
+      "ors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1.Erro" +
+      "rs\312\002\036Google\\Ads\\GoogleAds\\V1\\Errors\352\002\"Go" +
+      "ogle::Ads::GoogleAds::V1::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

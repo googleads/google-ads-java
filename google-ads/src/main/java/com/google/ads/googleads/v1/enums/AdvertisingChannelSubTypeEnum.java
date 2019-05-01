@@ -184,12 +184,24 @@ private static final long serialVersionUID = 0L;
     VIDEO_NON_SKIPPABLE(11),
     /**
      * <pre>
-     * Universal App Campaign.
+     * App Campaign that allows you to easily promote your Android or iOS app
+     * across Google's top properties including Search, Play, YouTube, and the
+     * Google Display Network.
      * </pre>
      *
      * <code>APP_CAMPAIGN = 12;</code>
      */
     APP_CAMPAIGN(12),
+    /**
+     * <pre>
+     * App Campaign for engagement, focused on driving re-engagement with the
+     * app across several of Google’s top properties including Search, YouTube,
+     * and the Google Display Network.
+     * </pre>
+     *
+     * <code>APP_CAMPAIGN_FOR_ENGAGEMENT = 13;</code>
+     */
+    APP_CAMPAIGN_FOR_ENGAGEMENT(13),
     UNRECOGNIZED(-1),
     ;
 
@@ -291,12 +303,24 @@ private static final long serialVersionUID = 0L;
     public static final int VIDEO_NON_SKIPPABLE_VALUE = 11;
     /**
      * <pre>
-     * Universal App Campaign.
+     * App Campaign that allows you to easily promote your Android or iOS app
+     * across Google's top properties including Search, Play, YouTube, and the
+     * Google Display Network.
      * </pre>
      *
      * <code>APP_CAMPAIGN = 12;</code>
      */
     public static final int APP_CAMPAIGN_VALUE = 12;
+    /**
+     * <pre>
+     * App Campaign for engagement, focused on driving re-engagement with the
+     * app across several of Google’s top properties including Search, YouTube,
+     * and the Google Display Network.
+     * </pre>
+     *
+     * <code>APP_CAMPAIGN_FOR_ENGAGEMENT = 13;</code>
+     */
+    public static final int APP_CAMPAIGN_FOR_ENGAGEMENT_VALUE = 13;
 
 
     public final int getNumber() {
@@ -330,6 +354,7 @@ private static final long serialVersionUID = 0L;
         case 10: return VIDEO_ACTION;
         case 11: return VIDEO_NON_SKIPPABLE;
         case 12: return APP_CAMPAIGN;
+        case 13: return APP_CAMPAIGN_FOR_ENGAGEMENT;
         default: return null;
       }
     }

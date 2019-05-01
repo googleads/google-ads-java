@@ -59,6 +59,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 26: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (name_ != null) {
+              subBuilder = name_.toBuilder();
+            }
+            name_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(name_);
+              name_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -163,6 +176,39 @@ private static final long serialVersionUID = 0L;
     return getAppId();
   }
 
+  public static final int NAME_FIELD_NUMBER = 3;
+  private com.google.protobuf.StringValue name_;
+  /**
+   * <pre>
+   * Name of this mobile application.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue name = 3;</code>
+   */
+  public boolean hasName() {
+    return name_ != null;
+  }
+  /**
+   * <pre>
+   * Name of this mobile application.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue name = 3;</code>
+   */
+  public com.google.protobuf.StringValue getName() {
+    return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
+  }
+  /**
+   * <pre>
+   * Name of this mobile application.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue name = 3;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
+    return getName();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -180,6 +226,9 @@ private static final long serialVersionUID = 0L;
     if (appId_ != null) {
       output.writeMessage(2, getAppId());
     }
+    if (name_ != null) {
+      output.writeMessage(3, getName());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -192,6 +241,10 @@ private static final long serialVersionUID = 0L;
     if (appId_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getAppId());
+    }
+    if (name_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getName());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -214,6 +267,11 @@ private static final long serialVersionUID = 0L;
       result = result && getAppId()
           .equals(other.getAppId());
     }
+    result = result && (hasName() == other.hasName());
+    if (hasName()) {
+      result = result && getName()
+          .equals(other.getName());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -228,6 +286,10 @@ private static final long serialVersionUID = 0L;
     if (hasAppId()) {
       hash = (37 * hash) + APP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAppId().hashCode();
+    }
+    if (hasName()) {
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -372,6 +434,12 @@ private static final long serialVersionUID = 0L;
         appId_ = null;
         appIdBuilder_ = null;
       }
+      if (nameBuilder_ == null) {
+        name_ = null;
+      } else {
+        name_ = null;
+        nameBuilder_ = null;
+      }
       return this;
     }
 
@@ -402,6 +470,11 @@ private static final long serialVersionUID = 0L;
         result.appId_ = appId_;
       } else {
         result.appId_ = appIdBuilder_.build();
+      }
+      if (nameBuilder_ == null) {
+        result.name_ = name_;
+      } else {
+        result.name_ = nameBuilder_.build();
       }
       onBuilt();
       return result;
@@ -453,6 +526,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v1.common.MobileApplicationInfo.getDefaultInstance()) return this;
       if (other.hasAppId()) {
         mergeAppId(other.getAppId());
+      }
+      if (other.hasName()) {
+        mergeName(other.getName());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -751,6 +827,159 @@ private static final long serialVersionUID = 0L;
         appId_ = null;
       }
       return appIdBuilder_;
+    }
+
+    private com.google.protobuf.StringValue name_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
+    /**
+     * <pre>
+     * Name of this mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 3;</code>
+     */
+    public boolean hasName() {
+      return nameBuilder_ != null || name_ != null;
+    }
+    /**
+     * <pre>
+     * Name of this mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 3;</code>
+     */
+    public com.google.protobuf.StringValue getName() {
+      if (nameBuilder_ == null) {
+        return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
+      } else {
+        return nameBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Name of this mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 3;</code>
+     */
+    public Builder setName(com.google.protobuf.StringValue value) {
+      if (nameBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        name_ = value;
+        onChanged();
+      } else {
+        nameBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Name of this mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 3;</code>
+     */
+    public Builder setName(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (nameBuilder_ == null) {
+        name_ = builderForValue.build();
+        onChanged();
+      } else {
+        nameBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Name of this mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 3;</code>
+     */
+    public Builder mergeName(com.google.protobuf.StringValue value) {
+      if (nameBuilder_ == null) {
+        if (name_ != null) {
+          name_ =
+            com.google.protobuf.StringValue.newBuilder(name_).mergeFrom(value).buildPartial();
+        } else {
+          name_ = value;
+        }
+        onChanged();
+      } else {
+        nameBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Name of this mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 3;</code>
+     */
+    public Builder clearName() {
+      if (nameBuilder_ == null) {
+        name_ = null;
+        onChanged();
+      } else {
+        name_ = null;
+        nameBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Name of this mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 3;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getNameBuilder() {
+      
+      onChanged();
+      return getNameFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Name of this mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 3;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
+      if (nameBuilder_ != null) {
+        return nameBuilder_.getMessageOrBuilder();
+      } else {
+        return name_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : name_;
+      }
+    }
+    /**
+     * <pre>
+     * Name of this mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue name = 3;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getNameFieldBuilder() {
+      if (nameBuilder_ == null) {
+        nameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getName(),
+                getParentForChildren(),
+                isClean());
+        name_ = null;
+      }
+      return nameBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

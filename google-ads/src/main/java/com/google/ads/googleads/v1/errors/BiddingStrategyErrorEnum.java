@@ -135,6 +135,15 @@ private static final long serialVersionUID = 0L;
      * <code>BIDDING_STRATEGY_NOT_SUPPORTED = 5;</code>
      */
     BIDDING_STRATEGY_NOT_SUPPORTED(5),
+    /**
+     * <pre>
+     * The bidding strategy is incompatible with the campaign's bidding
+     * strategy goal type.
+     * </pre>
+     *
+     * <code>INCOMPATIBLE_BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GOAL_TYPE = 6;</code>
+     */
+    INCOMPATIBLE_BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GOAL_TYPE(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -187,6 +196,15 @@ private static final long serialVersionUID = 0L;
      * <code>BIDDING_STRATEGY_NOT_SUPPORTED = 5;</code>
      */
     public static final int BIDDING_STRATEGY_NOT_SUPPORTED_VALUE = 5;
+    /**
+     * <pre>
+     * The bidding strategy is incompatible with the campaign's bidding
+     * strategy goal type.
+     * </pre>
+     *
+     * <code>INCOMPATIBLE_BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GOAL_TYPE = 6;</code>
+     */
+    public static final int INCOMPATIBLE_BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GOAL_TYPE_VALUE = 6;
 
 
     public final int getNumber() {
@@ -213,6 +231,7 @@ private static final long serialVersionUID = 0L;
         case 3: return CANNOT_CHANGE_BIDDING_STRATEGY_TYPE;
         case 4: return CANNOT_REMOVE_ASSOCIATED_STRATEGY;
         case 5: return BIDDING_STRATEGY_NOT_SUPPORTED;
+        case 6: return INCOMPATIBLE_BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GOAL_TYPE;
         default: return null;
       }
     }

@@ -183,6 +183,22 @@ private static final long serialVersionUID = 0L;
      * <code>STRUCTURED_SNIPPET = 11;</code>
      */
     STRUCTURED_SNIPPET(11),
+    /**
+     * <pre>
+     * Location.
+     * </pre>
+     *
+     * <code>LOCATION = 12;</code>
+     */
+    LOCATION(12),
+    /**
+     * <pre>
+     * Affiliate location.
+     * </pre>
+     *
+     * <code>AFFILIATE_LOCATION = 13;</code>
+     */
+    AFFILIATE_LOCATION(13),
     UNRECOGNIZED(-1),
     ;
 
@@ -282,6 +298,22 @@ private static final long serialVersionUID = 0L;
      * <code>STRUCTURED_SNIPPET = 11;</code>
      */
     public static final int STRUCTURED_SNIPPET_VALUE = 11;
+    /**
+     * <pre>
+     * Location.
+     * </pre>
+     *
+     * <code>LOCATION = 12;</code>
+     */
+    public static final int LOCATION_VALUE = 12;
+    /**
+     * <pre>
+     * Affiliate location.
+     * </pre>
+     *
+     * <code>AFFILIATE_LOCATION = 13;</code>
+     */
+    public static final int AFFILIATE_LOCATION_VALUE = 13;
 
 
     public final int getNumber() {
@@ -314,6 +346,8 @@ private static final long serialVersionUID = 0L;
         case 9: return REVIEW;
         case 10: return SITELINK;
         case 11: return STRUCTURED_SNIPPET;
+        case 12: return LOCATION;
+        case 13: return AFFILIATE_LOCATION;
         default: return null;
       }
     }

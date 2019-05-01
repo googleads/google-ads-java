@@ -34,6 +34,11 @@ public final class AssetTypesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v1_common_ImageDimension_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v1_common_TextAsset_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v1_common_TextAsset_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -61,13 +66,15 @@ public final class AssetTypesProto {
       "height_pixels\030\001 \001(\0132\033.google.protobuf.In" +
       "t64Value\0221\n\014width_pixels\030\002 \001(\0132\033.google." +
       "protobuf.Int64Value\022)\n\003url\030\003 \001(\0132\034.googl" +
-      "e.protobuf.StringValueB\352\001\n\"com.google.ad" +
-      "s.googleads.v1.commonB\017AssetTypesProtoP\001" +
-      "ZDgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v1/common;common\242\002\003GAA\252\002\036G" +
-      "oogle.Ads.GoogleAds.V1.Common\312\002\036Google\\A" +
-      "ds\\GoogleAds\\V1\\Common\352\002\"Google::Ads::Go" +
-      "ogleAds::V1::Commonb\006proto3"
+      "e.protobuf.StringValue\"7\n\tTextAsset\022*\n\004t" +
+      "ext\030\001 \001(\0132\034.google.protobuf.StringValueB" +
+      "\352\001\n\"com.google.ads.googleads.v1.commonB\017" +
+      "AssetTypesProtoP\001ZDgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v1/common" +
+      ";common\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1." +
+      "Common\312\002\036Google\\Ads\\GoogleAds\\V1\\Common\352" +
+      "\002\"Google::Ads::GoogleAds::V1::Commonb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -108,6 +115,12 @@ public final class AssetTypesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_ImageDimension_descriptor,
         new java.lang.String[] { "HeightPixels", "WidthPixels", "Url", });
+    internal_static_google_ads_googleads_v1_common_TextAsset_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_google_ads_googleads_v1_common_TextAsset_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v1_common_TextAsset_descriptor,
+        new java.lang.String[] { "Text", });
     com.google.ads.googleads.v1.enums.MimeTypeProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

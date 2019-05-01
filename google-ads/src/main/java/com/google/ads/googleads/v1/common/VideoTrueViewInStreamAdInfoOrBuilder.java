@@ -65,4 +65,29 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * <code>.google.protobuf.StringValue action_headline = 2;</code>
    */
   com.google.protobuf.StringValueOrBuilder getActionHeadlineOrBuilder();
+
+  /**
+   * <pre>
+   * The MediaFile resource name of the companion banner used with the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+   */
+  boolean hasCompanionBanner();
+  /**
+   * <pre>
+   * The MediaFile resource name of the companion banner used with the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+   */
+  com.google.protobuf.StringValue getCompanionBanner();
+  /**
+   * <pre>
+   * The MediaFile resource name of the companion banner used with the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getCompanionBannerOrBuilder();
 }

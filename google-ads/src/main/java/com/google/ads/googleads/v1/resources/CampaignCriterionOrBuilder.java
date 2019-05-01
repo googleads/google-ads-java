@@ -780,5 +780,30 @@ public interface CampaignCriterionOrBuilder extends
    */
   com.google.ads.googleads.v1.common.MobileDeviceInfoOrBuilder getMobileDeviceOrBuilder();
 
+  /**
+   * <pre>
+   * Location Group
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+   */
+  boolean hasLocationGroup();
+  /**
+   * <pre>
+   * Location Group
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+   */
+  com.google.ads.googleads.v1.common.LocationGroupInfo getLocationGroup();
+  /**
+   * <pre>
+   * Location Group
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+   */
+  com.google.ads.googleads.v1.common.LocationGroupInfoOrBuilder getLocationGroupOrBuilder();
+
   public com.google.ads.googleads.v1.resources.CampaignCriterion.CriterionCase getCriterionCase();
 }

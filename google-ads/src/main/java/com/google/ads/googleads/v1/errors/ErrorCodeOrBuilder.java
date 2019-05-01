@@ -638,6 +638,23 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for media uploading errors.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+   */
+  int getMediaUploadErrorValue();
+  /**
+   * <pre>
+   * The reasons for media uploading errors.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+   */
+  com.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError getMediaUploadError();
+
+  /**
+   * <pre>
    * The reasons for the media file error
    * </pre>
    *
@@ -890,6 +907,23 @@ public interface ErrorCodeOrBuilder extends
    * <code>.google.ads.googleads.v1.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError resource_count_limit_exceeded_error = 57;</code>
    */
   com.google.ads.googleads.v1.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError getResourceCountLimitExceededError();
+
+  /**
+   * <pre>
+   * The reasons for YouTube video registration errors.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+   */
+  int getYoutubeVideoRegistrationErrorValue();
+  /**
+   * <pre>
+   * The reasons for YouTube video registration errors.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+   */
+  com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError getYoutubeVideoRegistrationError();
 
   /**
    * <pre>
@@ -1621,6 +1655,23 @@ public interface ErrorCodeOrBuilder extends
    * <code>.google.ads.googleads.v1.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError policy_validation_parameter_error = 114;</code>
    */
   com.google.ads.googleads.v1.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError getPolicyValidationParameterError();
+
+  /**
+   * <pre>
+   * The reasons for the size limit error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+   */
+  int getSizeLimitErrorValue();
+  /**
+   * <pre>
+   * The reasons for the size limit error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+   */
+  com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError getSizeLimitError();
 
   public com.google.ads.googleads.v1.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

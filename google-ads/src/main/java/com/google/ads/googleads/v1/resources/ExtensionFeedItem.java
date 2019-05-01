@@ -22,6 +22,8 @@ private static final long serialVersionUID = 0L;
   private ExtensionFeedItem() {
     resourceName_ = "";
     extensionType_ = 0;
+    adSchedules_ = java.util.Collections.emptyList();
+    device_ = 0;
     status_ = 0;
   }
 
@@ -205,6 +207,49 @@ private static final long serialVersionUID = 0L;
             extensionType_ = rawValue;
             break;
           }
+          case 114: {
+            com.google.ads.googleads.v1.common.LocationFeedItem.Builder subBuilder = null;
+            if (extensionCase_ == 14) {
+              subBuilder = ((com.google.ads.googleads.v1.common.LocationFeedItem) extension_).toBuilder();
+            }
+            extension_ =
+                input.readMessage(com.google.ads.googleads.v1.common.LocationFeedItem.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.LocationFeedItem) extension_);
+              extension_ = subBuilder.buildPartial();
+            }
+            extensionCase_ = 14;
+            break;
+          }
+          case 122: {
+            com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.Builder subBuilder = null;
+            if (extensionCase_ == 15) {
+              subBuilder = ((com.google.ads.googleads.v1.common.AffiliateLocationFeedItem) extension_).toBuilder();
+            }
+            extension_ =
+                input.readMessage(com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.AffiliateLocationFeedItem) extension_);
+              extension_ = subBuilder.buildPartial();
+            }
+            extensionCase_ = 15;
+            break;
+          }
+          case 130: {
+            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              adSchedules_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.AdScheduleInfo>();
+              mutable_bitField0_ |= 0x00000010;
+            }
+            adSchedules_.add(
+                input.readMessage(com.google.ads.googleads.v1.common.AdScheduleInfo.parser(), extensionRegistry));
+            break;
+          }
+          case 136: {
+            int rawValue = input.readEnum();
+
+            device_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -220,6 +265,9 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        adSchedules_ = java.util.Collections.unmodifiableList(adSchedules_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -237,6 +285,7 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v1.resources.ExtensionFeedItem.class, com.google.ads.googleads.v1.resources.ExtensionFeedItem.Builder.class);
   }
 
+  private int bitField0_;
   private int extensionCase_ = 0;
   private java.lang.Object extension_;
   public enum ExtensionCase
@@ -249,6 +298,8 @@ private static final long serialVersionUID = 0L;
     TEXT_MESSAGE_FEED_ITEM(10),
     PRICE_FEED_ITEM(11),
     PROMOTION_FEED_ITEM(12),
+    LOCATION_FEED_ITEM(14),
+    AFFILIATE_LOCATION_FEED_ITEM(15),
     EXTENSION_NOT_SET(0);
     private final int value;
     private ExtensionCase(int value) {
@@ -272,6 +323,8 @@ private static final long serialVersionUID = 0L;
         case 10: return TEXT_MESSAGE_FEED_ITEM;
         case 11: return PRICE_FEED_ITEM;
         case 12: return PROMOTION_FEED_ITEM;
+        case 14: return LOCATION_FEED_ITEM;
+        case 15: return AFFILIATE_LOCATION_FEED_ITEM;
         case 0: return EXTENSION_NOT_SET;
         default: return null;
       }
@@ -439,6 +492,96 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder() {
     return getEndDateTime();
+  }
+
+  public static final int AD_SCHEDULES_FIELD_NUMBER = 16;
+  private java.util.List<com.google.ads.googleads.v1.common.AdScheduleInfo> adSchedules_;
+  /**
+   * <pre>
+   * List of non-overlapping schedules specifying all time intervals
+   * for which the feed item may serve. There can be a maximum of 6 schedules
+   * per day.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+   */
+  public java.util.List<com.google.ads.googleads.v1.common.AdScheduleInfo> getAdSchedulesList() {
+    return adSchedules_;
+  }
+  /**
+   * <pre>
+   * List of non-overlapping schedules specifying all time intervals
+   * for which the feed item may serve. There can be a maximum of 6 schedules
+   * per day.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+   */
+  public java.util.List<? extends com.google.ads.googleads.v1.common.AdScheduleInfoOrBuilder> 
+      getAdSchedulesOrBuilderList() {
+    return adSchedules_;
+  }
+  /**
+   * <pre>
+   * List of non-overlapping schedules specifying all time intervals
+   * for which the feed item may serve. There can be a maximum of 6 schedules
+   * per day.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+   */
+  public int getAdSchedulesCount() {
+    return adSchedules_.size();
+  }
+  /**
+   * <pre>
+   * List of non-overlapping schedules specifying all time intervals
+   * for which the feed item may serve. There can be a maximum of 6 schedules
+   * per day.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+   */
+  public com.google.ads.googleads.v1.common.AdScheduleInfo getAdSchedules(int index) {
+    return adSchedules_.get(index);
+  }
+  /**
+   * <pre>
+   * List of non-overlapping schedules specifying all time intervals
+   * for which the feed item may serve. There can be a maximum of 6 schedules
+   * per day.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+   */
+  public com.google.ads.googleads.v1.common.AdScheduleInfoOrBuilder getAdSchedulesOrBuilder(
+      int index) {
+    return adSchedules_.get(index);
+  }
+
+  public static final int DEVICE_FIELD_NUMBER = 17;
+  private int device_;
+  /**
+   * <pre>
+   * The targeted device.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
+   */
+  public int getDeviceValue() {
+    return device_;
+  }
+  /**
+   * <pre>
+   * The targeted device.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
+   */
+  public com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice getDevice() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice result = com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.valueOf(device_);
+    return result == null ? com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.UNRECOGNIZED : result;
   }
 
   public static final int STATUS_FIELD_NUMBER = 4;
@@ -772,6 +915,91 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.common.PromotionFeedItem.getDefaultInstance();
   }
 
+  public static final int LOCATION_FEED_ITEM_FIELD_NUMBER = 14;
+  /**
+   * <pre>
+   * Location extension. Locations are synced from a GMB account into a feed.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+   */
+  public boolean hasLocationFeedItem() {
+    return extensionCase_ == 14;
+  }
+  /**
+   * <pre>
+   * Location extension. Locations are synced from a GMB account into a feed.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+   */
+  public com.google.ads.googleads.v1.common.LocationFeedItem getLocationFeedItem() {
+    if (extensionCase_ == 14) {
+       return (com.google.ads.googleads.v1.common.LocationFeedItem) extension_;
+    }
+    return com.google.ads.googleads.v1.common.LocationFeedItem.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Location extension. Locations are synced from a GMB account into a feed.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+   */
+  public com.google.ads.googleads.v1.common.LocationFeedItemOrBuilder getLocationFeedItemOrBuilder() {
+    if (extensionCase_ == 14) {
+       return (com.google.ads.googleads.v1.common.LocationFeedItem) extension_;
+    }
+    return com.google.ads.googleads.v1.common.LocationFeedItem.getDefaultInstance();
+  }
+
+  public static final int AFFILIATE_LOCATION_FEED_ITEM_FIELD_NUMBER = 15;
+  /**
+   * <pre>
+   * Affiliate location extension. Feed locations are populated by Google Ads
+   * based on a chain ID.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+   */
+  public boolean hasAffiliateLocationFeedItem() {
+    return extensionCase_ == 15;
+  }
+  /**
+   * <pre>
+   * Affiliate location extension. Feed locations are populated by Google Ads
+   * based on a chain ID.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+   */
+  public com.google.ads.googleads.v1.common.AffiliateLocationFeedItem getAffiliateLocationFeedItem() {
+    if (extensionCase_ == 15) {
+       return (com.google.ads.googleads.v1.common.AffiliateLocationFeedItem) extension_;
+    }
+    return com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Affiliate location extension. Feed locations are populated by Google Ads
+   * based on a chain ID.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+   */
+  public com.google.ads.googleads.v1.common.AffiliateLocationFeedItemOrBuilder getAffiliateLocationFeedItemOrBuilder() {
+    if (extensionCase_ == 15) {
+       return (com.google.ads.googleads.v1.common.AffiliateLocationFeedItem) extension_;
+    }
+    return com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -824,6 +1052,18 @@ private static final long serialVersionUID = 0L;
     }
     if (extensionType_ != com.google.ads.googleads.v1.enums.ExtensionTypeEnum.ExtensionType.UNSPECIFIED.getNumber()) {
       output.writeEnum(13, extensionType_);
+    }
+    if (extensionCase_ == 14) {
+      output.writeMessage(14, (com.google.ads.googleads.v1.common.LocationFeedItem) extension_);
+    }
+    if (extensionCase_ == 15) {
+      output.writeMessage(15, (com.google.ads.googleads.v1.common.AffiliateLocationFeedItem) extension_);
+    }
+    for (int i = 0; i < adSchedules_.size(); i++) {
+      output.writeMessage(16, adSchedules_.get(i));
+    }
+    if (device_ != com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.UNSPECIFIED.getNumber()) {
+      output.writeEnum(17, device_);
     }
     unknownFields.writeTo(output);
   }
@@ -885,6 +1125,22 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(13, extensionType_);
     }
+    if (extensionCase_ == 14) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, (com.google.ads.googleads.v1.common.LocationFeedItem) extension_);
+    }
+    if (extensionCase_ == 15) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, (com.google.ads.googleads.v1.common.AffiliateLocationFeedItem) extension_);
+    }
+    for (int i = 0; i < adSchedules_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(16, adSchedules_.get(i));
+    }
+    if (device_ != com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(17, device_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -914,6 +1170,9 @@ private static final long serialVersionUID = 0L;
       result = result && getEndDateTime()
           .equals(other.getEndDateTime());
     }
+    result = result && getAdSchedulesList()
+        .equals(other.getAdSchedulesList());
+    result = result && device_ == other.device_;
     result = result && status_ == other.status_;
     result = result && getExtensionCase().equals(
         other.getExtensionCase());
@@ -951,6 +1210,14 @@ private static final long serialVersionUID = 0L;
         result = result && getPromotionFeedItem()
             .equals(other.getPromotionFeedItem());
         break;
+      case 14:
+        result = result && getLocationFeedItem()
+            .equals(other.getLocationFeedItem());
+        break;
+      case 15:
+        result = result && getAffiliateLocationFeedItem()
+            .equals(other.getAffiliateLocationFeedItem());
+        break;
       case 0:
       default:
     }
@@ -977,6 +1244,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + END_DATE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getEndDateTime().hashCode();
     }
+    if (getAdSchedulesCount() > 0) {
+      hash = (37 * hash) + AD_SCHEDULES_FIELD_NUMBER;
+      hash = (53 * hash) + getAdSchedulesList().hashCode();
+    }
+    hash = (37 * hash) + DEVICE_FIELD_NUMBER;
+    hash = (53 * hash) + device_;
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
     switch (extensionCase_) {
@@ -1011,6 +1284,14 @@ private static final long serialVersionUID = 0L;
       case 12:
         hash = (37 * hash) + PROMOTION_FEED_ITEM_FIELD_NUMBER;
         hash = (53 * hash) + getPromotionFeedItem().hashCode();
+        break;
+      case 14:
+        hash = (37 * hash) + LOCATION_FEED_ITEM_FIELD_NUMBER;
+        hash = (53 * hash) + getLocationFeedItem().hashCode();
+        break;
+      case 15:
+        hash = (37 * hash) + AFFILIATE_LOCATION_FEED_ITEM_FIELD_NUMBER;
+        hash = (53 * hash) + getAffiliateLocationFeedItem().hashCode();
         break;
       case 0:
       default:
@@ -1147,6 +1428,7 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getAdSchedulesFieldBuilder();
       }
     }
     @java.lang.Override
@@ -1168,6 +1450,14 @@ private static final long serialVersionUID = 0L;
         endDateTime_ = null;
         endDateTimeBuilder_ = null;
       }
+      if (adSchedulesBuilder_ == null) {
+        adSchedules_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      } else {
+        adSchedulesBuilder_.clear();
+      }
+      device_ = 0;
+
       status_ = 0;
 
       extensionCase_ = 0;
@@ -1198,6 +1488,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v1.resources.ExtensionFeedItem buildPartial() {
       com.google.ads.googleads.v1.resources.ExtensionFeedItem result = new com.google.ads.googleads.v1.resources.ExtensionFeedItem(this);
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       result.extensionType_ = extensionType_;
       if (startDateTimeBuilder_ == null) {
@@ -1210,6 +1502,16 @@ private static final long serialVersionUID = 0L;
       } else {
         result.endDateTime_ = endDateTimeBuilder_.build();
       }
+      if (adSchedulesBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          adSchedules_ = java.util.Collections.unmodifiableList(adSchedules_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.adSchedules_ = adSchedules_;
+      } else {
+        result.adSchedules_ = adSchedulesBuilder_.build();
+      }
+      result.device_ = device_;
       result.status_ = status_;
       if (extensionCase_ == 2) {
         if (sitelinkFeedItemBuilder_ == null) {
@@ -1267,6 +1569,21 @@ private static final long serialVersionUID = 0L;
           result.extension_ = promotionFeedItemBuilder_.build();
         }
       }
+      if (extensionCase_ == 14) {
+        if (locationFeedItemBuilder_ == null) {
+          result.extension_ = extension_;
+        } else {
+          result.extension_ = locationFeedItemBuilder_.build();
+        }
+      }
+      if (extensionCase_ == 15) {
+        if (affiliateLocationFeedItemBuilder_ == null) {
+          result.extension_ = extension_;
+        } else {
+          result.extension_ = affiliateLocationFeedItemBuilder_.build();
+        }
+      }
+      result.bitField0_ = to_bitField0_;
       result.extensionCase_ = extensionCase_;
       onBuilt();
       return result;
@@ -1329,6 +1646,35 @@ private static final long serialVersionUID = 0L;
       if (other.hasEndDateTime()) {
         mergeEndDateTime(other.getEndDateTime());
       }
+      if (adSchedulesBuilder_ == null) {
+        if (!other.adSchedules_.isEmpty()) {
+          if (adSchedules_.isEmpty()) {
+            adSchedules_ = other.adSchedules_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureAdSchedulesIsMutable();
+            adSchedules_.addAll(other.adSchedules_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.adSchedules_.isEmpty()) {
+          if (adSchedulesBuilder_.isEmpty()) {
+            adSchedulesBuilder_.dispose();
+            adSchedulesBuilder_ = null;
+            adSchedules_ = other.adSchedules_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            adSchedulesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getAdSchedulesFieldBuilder() : null;
+          } else {
+            adSchedulesBuilder_.addAllMessages(other.adSchedules_);
+          }
+        }
+      }
+      if (other.device_ != 0) {
+        setDeviceValue(other.getDeviceValue());
+      }
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
@@ -1363,6 +1709,14 @@ private static final long serialVersionUID = 0L;
         }
         case PROMOTION_FEED_ITEM: {
           mergePromotionFeedItem(other.getPromotionFeedItem());
+          break;
+        }
+        case LOCATION_FEED_ITEM: {
+          mergeLocationFeedItem(other.getLocationFeedItem());
+          break;
+        }
+        case AFFILIATE_LOCATION_FEED_ITEM: {
+          mergeAffiliateLocationFeedItem(other.getAffiliateLocationFeedItem());
           break;
         }
         case EXTENSION_NOT_SET: {
@@ -1412,6 +1766,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -1931,6 +2286,419 @@ private static final long serialVersionUID = 0L;
         endDateTime_ = null;
       }
       return endDateTimeBuilder_;
+    }
+
+    private java.util.List<com.google.ads.googleads.v1.common.AdScheduleInfo> adSchedules_ =
+      java.util.Collections.emptyList();
+    private void ensureAdSchedulesIsMutable() {
+      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        adSchedules_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.AdScheduleInfo>(adSchedules_);
+        bitField0_ |= 0x00000010;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v1.common.AdScheduleInfo, com.google.ads.googleads.v1.common.AdScheduleInfo.Builder, com.google.ads.googleads.v1.common.AdScheduleInfoOrBuilder> adSchedulesBuilder_;
+
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v1.common.AdScheduleInfo> getAdSchedulesList() {
+      if (adSchedulesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(adSchedules_);
+      } else {
+        return adSchedulesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public int getAdSchedulesCount() {
+      if (adSchedulesBuilder_ == null) {
+        return adSchedules_.size();
+      } else {
+        return adSchedulesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public com.google.ads.googleads.v1.common.AdScheduleInfo getAdSchedules(int index) {
+      if (adSchedulesBuilder_ == null) {
+        return adSchedules_.get(index);
+      } else {
+        return adSchedulesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public Builder setAdSchedules(
+        int index, com.google.ads.googleads.v1.common.AdScheduleInfo value) {
+      if (adSchedulesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAdSchedulesIsMutable();
+        adSchedules_.set(index, value);
+        onChanged();
+      } else {
+        adSchedulesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public Builder setAdSchedules(
+        int index, com.google.ads.googleads.v1.common.AdScheduleInfo.Builder builderForValue) {
+      if (adSchedulesBuilder_ == null) {
+        ensureAdSchedulesIsMutable();
+        adSchedules_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        adSchedulesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public Builder addAdSchedules(com.google.ads.googleads.v1.common.AdScheduleInfo value) {
+      if (adSchedulesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAdSchedulesIsMutable();
+        adSchedules_.add(value);
+        onChanged();
+      } else {
+        adSchedulesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public Builder addAdSchedules(
+        int index, com.google.ads.googleads.v1.common.AdScheduleInfo value) {
+      if (adSchedulesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAdSchedulesIsMutable();
+        adSchedules_.add(index, value);
+        onChanged();
+      } else {
+        adSchedulesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public Builder addAdSchedules(
+        com.google.ads.googleads.v1.common.AdScheduleInfo.Builder builderForValue) {
+      if (adSchedulesBuilder_ == null) {
+        ensureAdSchedulesIsMutable();
+        adSchedules_.add(builderForValue.build());
+        onChanged();
+      } else {
+        adSchedulesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public Builder addAdSchedules(
+        int index, com.google.ads.googleads.v1.common.AdScheduleInfo.Builder builderForValue) {
+      if (adSchedulesBuilder_ == null) {
+        ensureAdSchedulesIsMutable();
+        adSchedules_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        adSchedulesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public Builder addAllAdSchedules(
+        java.lang.Iterable<? extends com.google.ads.googleads.v1.common.AdScheduleInfo> values) {
+      if (adSchedulesBuilder_ == null) {
+        ensureAdSchedulesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, adSchedules_);
+        onChanged();
+      } else {
+        adSchedulesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public Builder clearAdSchedules() {
+      if (adSchedulesBuilder_ == null) {
+        adSchedules_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        adSchedulesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public Builder removeAdSchedules(int index) {
+      if (adSchedulesBuilder_ == null) {
+        ensureAdSchedulesIsMutable();
+        adSchedules_.remove(index);
+        onChanged();
+      } else {
+        adSchedulesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public com.google.ads.googleads.v1.common.AdScheduleInfo.Builder getAdSchedulesBuilder(
+        int index) {
+      return getAdSchedulesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public com.google.ads.googleads.v1.common.AdScheduleInfoOrBuilder getAdSchedulesOrBuilder(
+        int index) {
+      if (adSchedulesBuilder_ == null) {
+        return adSchedules_.get(index);  } else {
+        return adSchedulesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v1.common.AdScheduleInfoOrBuilder> 
+         getAdSchedulesOrBuilderList() {
+      if (adSchedulesBuilder_ != null) {
+        return adSchedulesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(adSchedules_);
+      }
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public com.google.ads.googleads.v1.common.AdScheduleInfo.Builder addAdSchedulesBuilder() {
+      return getAdSchedulesFieldBuilder().addBuilder(
+          com.google.ads.googleads.v1.common.AdScheduleInfo.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public com.google.ads.googleads.v1.common.AdScheduleInfo.Builder addAdSchedulesBuilder(
+        int index) {
+      return getAdSchedulesFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v1.common.AdScheduleInfo.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * List of non-overlapping schedules specifying all time intervals
+     * for which the feed item may serve. There can be a maximum of 6 schedules
+     * per day.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v1.common.AdScheduleInfo.Builder> 
+         getAdSchedulesBuilderList() {
+      return getAdSchedulesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v1.common.AdScheduleInfo, com.google.ads.googleads.v1.common.AdScheduleInfo.Builder, com.google.ads.googleads.v1.common.AdScheduleInfoOrBuilder> 
+        getAdSchedulesFieldBuilder() {
+      if (adSchedulesBuilder_ == null) {
+        adSchedulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v1.common.AdScheduleInfo, com.google.ads.googleads.v1.common.AdScheduleInfo.Builder, com.google.ads.googleads.v1.common.AdScheduleInfoOrBuilder>(
+                adSchedules_,
+                ((bitField0_ & 0x00000010) == 0x00000010),
+                getParentForChildren(),
+                isClean());
+        adSchedules_ = null;
+      }
+      return adSchedulesBuilder_;
+    }
+
+    private int device_ = 0;
+    /**
+     * <pre>
+     * The targeted device.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
+     */
+    public int getDeviceValue() {
+      return device_;
+    }
+    /**
+     * <pre>
+     * The targeted device.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
+     */
+    public Builder setDeviceValue(int value) {
+      device_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted device.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
+     */
+    public com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice getDevice() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice result = com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.valueOf(device_);
+      return result == null ? com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The targeted device.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
+     */
+    public Builder setDevice(com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      device_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted device.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
+     */
+    public Builder clearDevice() {
+      
+      device_ = 0;
+      onChanged();
+      return this;
     }
 
     private int status_ = 0;
@@ -3377,6 +4145,377 @@ private static final long serialVersionUID = 0L;
       extensionCase_ = 12;
       onChanged();;
       return promotionFeedItemBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.LocationFeedItem, com.google.ads.googleads.v1.common.LocationFeedItem.Builder, com.google.ads.googleads.v1.common.LocationFeedItemOrBuilder> locationFeedItemBuilder_;
+    /**
+     * <pre>
+     * Location extension. Locations are synced from a GMB account into a feed.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+     */
+    public boolean hasLocationFeedItem() {
+      return extensionCase_ == 14;
+    }
+    /**
+     * <pre>
+     * Location extension. Locations are synced from a GMB account into a feed.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+     */
+    public com.google.ads.googleads.v1.common.LocationFeedItem getLocationFeedItem() {
+      if (locationFeedItemBuilder_ == null) {
+        if (extensionCase_ == 14) {
+          return (com.google.ads.googleads.v1.common.LocationFeedItem) extension_;
+        }
+        return com.google.ads.googleads.v1.common.LocationFeedItem.getDefaultInstance();
+      } else {
+        if (extensionCase_ == 14) {
+          return locationFeedItemBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.LocationFeedItem.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Location extension. Locations are synced from a GMB account into a feed.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+     */
+    public Builder setLocationFeedItem(com.google.ads.googleads.v1.common.LocationFeedItem value) {
+      if (locationFeedItemBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        extension_ = value;
+        onChanged();
+      } else {
+        locationFeedItemBuilder_.setMessage(value);
+      }
+      extensionCase_ = 14;
+      return this;
+    }
+    /**
+     * <pre>
+     * Location extension. Locations are synced from a GMB account into a feed.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+     */
+    public Builder setLocationFeedItem(
+        com.google.ads.googleads.v1.common.LocationFeedItem.Builder builderForValue) {
+      if (locationFeedItemBuilder_ == null) {
+        extension_ = builderForValue.build();
+        onChanged();
+      } else {
+        locationFeedItemBuilder_.setMessage(builderForValue.build());
+      }
+      extensionCase_ = 14;
+      return this;
+    }
+    /**
+     * <pre>
+     * Location extension. Locations are synced from a GMB account into a feed.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+     */
+    public Builder mergeLocationFeedItem(com.google.ads.googleads.v1.common.LocationFeedItem value) {
+      if (locationFeedItemBuilder_ == null) {
+        if (extensionCase_ == 14 &&
+            extension_ != com.google.ads.googleads.v1.common.LocationFeedItem.getDefaultInstance()) {
+          extension_ = com.google.ads.googleads.v1.common.LocationFeedItem.newBuilder((com.google.ads.googleads.v1.common.LocationFeedItem) extension_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          extension_ = value;
+        }
+        onChanged();
+      } else {
+        if (extensionCase_ == 14) {
+          locationFeedItemBuilder_.mergeFrom(value);
+        }
+        locationFeedItemBuilder_.setMessage(value);
+      }
+      extensionCase_ = 14;
+      return this;
+    }
+    /**
+     * <pre>
+     * Location extension. Locations are synced from a GMB account into a feed.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+     */
+    public Builder clearLocationFeedItem() {
+      if (locationFeedItemBuilder_ == null) {
+        if (extensionCase_ == 14) {
+          extensionCase_ = 0;
+          extension_ = null;
+          onChanged();
+        }
+      } else {
+        if (extensionCase_ == 14) {
+          extensionCase_ = 0;
+          extension_ = null;
+        }
+        locationFeedItemBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Location extension. Locations are synced from a GMB account into a feed.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+     */
+    public com.google.ads.googleads.v1.common.LocationFeedItem.Builder getLocationFeedItemBuilder() {
+      return getLocationFeedItemFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Location extension. Locations are synced from a GMB account into a feed.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+     */
+    public com.google.ads.googleads.v1.common.LocationFeedItemOrBuilder getLocationFeedItemOrBuilder() {
+      if ((extensionCase_ == 14) && (locationFeedItemBuilder_ != null)) {
+        return locationFeedItemBuilder_.getMessageOrBuilder();
+      } else {
+        if (extensionCase_ == 14) {
+          return (com.google.ads.googleads.v1.common.LocationFeedItem) extension_;
+        }
+        return com.google.ads.googleads.v1.common.LocationFeedItem.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Location extension. Locations are synced from a GMB account into a feed.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.LocationFeedItem, com.google.ads.googleads.v1.common.LocationFeedItem.Builder, com.google.ads.googleads.v1.common.LocationFeedItemOrBuilder> 
+        getLocationFeedItemFieldBuilder() {
+      if (locationFeedItemBuilder_ == null) {
+        if (!(extensionCase_ == 14)) {
+          extension_ = com.google.ads.googleads.v1.common.LocationFeedItem.getDefaultInstance();
+        }
+        locationFeedItemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.LocationFeedItem, com.google.ads.googleads.v1.common.LocationFeedItem.Builder, com.google.ads.googleads.v1.common.LocationFeedItemOrBuilder>(
+                (com.google.ads.googleads.v1.common.LocationFeedItem) extension_,
+                getParentForChildren(),
+                isClean());
+        extension_ = null;
+      }
+      extensionCase_ = 14;
+      onChanged();;
+      return locationFeedItemBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.AffiliateLocationFeedItem, com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.Builder, com.google.ads.googleads.v1.common.AffiliateLocationFeedItemOrBuilder> affiliateLocationFeedItemBuilder_;
+    /**
+     * <pre>
+     * Affiliate location extension. Feed locations are populated by Google Ads
+     * based on a chain ID.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     */
+    public boolean hasAffiliateLocationFeedItem() {
+      return extensionCase_ == 15;
+    }
+    /**
+     * <pre>
+     * Affiliate location extension. Feed locations are populated by Google Ads
+     * based on a chain ID.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     */
+    public com.google.ads.googleads.v1.common.AffiliateLocationFeedItem getAffiliateLocationFeedItem() {
+      if (affiliateLocationFeedItemBuilder_ == null) {
+        if (extensionCase_ == 15) {
+          return (com.google.ads.googleads.v1.common.AffiliateLocationFeedItem) extension_;
+        }
+        return com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.getDefaultInstance();
+      } else {
+        if (extensionCase_ == 15) {
+          return affiliateLocationFeedItemBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Affiliate location extension. Feed locations are populated by Google Ads
+     * based on a chain ID.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     */
+    public Builder setAffiliateLocationFeedItem(com.google.ads.googleads.v1.common.AffiliateLocationFeedItem value) {
+      if (affiliateLocationFeedItemBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        extension_ = value;
+        onChanged();
+      } else {
+        affiliateLocationFeedItemBuilder_.setMessage(value);
+      }
+      extensionCase_ = 15;
+      return this;
+    }
+    /**
+     * <pre>
+     * Affiliate location extension. Feed locations are populated by Google Ads
+     * based on a chain ID.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     */
+    public Builder setAffiliateLocationFeedItem(
+        com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.Builder builderForValue) {
+      if (affiliateLocationFeedItemBuilder_ == null) {
+        extension_ = builderForValue.build();
+        onChanged();
+      } else {
+        affiliateLocationFeedItemBuilder_.setMessage(builderForValue.build());
+      }
+      extensionCase_ = 15;
+      return this;
+    }
+    /**
+     * <pre>
+     * Affiliate location extension. Feed locations are populated by Google Ads
+     * based on a chain ID.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     */
+    public Builder mergeAffiliateLocationFeedItem(com.google.ads.googleads.v1.common.AffiliateLocationFeedItem value) {
+      if (affiliateLocationFeedItemBuilder_ == null) {
+        if (extensionCase_ == 15 &&
+            extension_ != com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.getDefaultInstance()) {
+          extension_ = com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.newBuilder((com.google.ads.googleads.v1.common.AffiliateLocationFeedItem) extension_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          extension_ = value;
+        }
+        onChanged();
+      } else {
+        if (extensionCase_ == 15) {
+          affiliateLocationFeedItemBuilder_.mergeFrom(value);
+        }
+        affiliateLocationFeedItemBuilder_.setMessage(value);
+      }
+      extensionCase_ = 15;
+      return this;
+    }
+    /**
+     * <pre>
+     * Affiliate location extension. Feed locations are populated by Google Ads
+     * based on a chain ID.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     */
+    public Builder clearAffiliateLocationFeedItem() {
+      if (affiliateLocationFeedItemBuilder_ == null) {
+        if (extensionCase_ == 15) {
+          extensionCase_ = 0;
+          extension_ = null;
+          onChanged();
+        }
+      } else {
+        if (extensionCase_ == 15) {
+          extensionCase_ = 0;
+          extension_ = null;
+        }
+        affiliateLocationFeedItemBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Affiliate location extension. Feed locations are populated by Google Ads
+     * based on a chain ID.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     */
+    public com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.Builder getAffiliateLocationFeedItemBuilder() {
+      return getAffiliateLocationFeedItemFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Affiliate location extension. Feed locations are populated by Google Ads
+     * based on a chain ID.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     */
+    public com.google.ads.googleads.v1.common.AffiliateLocationFeedItemOrBuilder getAffiliateLocationFeedItemOrBuilder() {
+      if ((extensionCase_ == 15) && (affiliateLocationFeedItemBuilder_ != null)) {
+        return affiliateLocationFeedItemBuilder_.getMessageOrBuilder();
+      } else {
+        if (extensionCase_ == 15) {
+          return (com.google.ads.googleads.v1.common.AffiliateLocationFeedItem) extension_;
+        }
+        return com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Affiliate location extension. Feed locations are populated by Google Ads
+     * based on a chain ID.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.AffiliateLocationFeedItem, com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.Builder, com.google.ads.googleads.v1.common.AffiliateLocationFeedItemOrBuilder> 
+        getAffiliateLocationFeedItemFieldBuilder() {
+      if (affiliateLocationFeedItemBuilder_ == null) {
+        if (!(extensionCase_ == 15)) {
+          extension_ = com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.getDefaultInstance();
+        }
+        affiliateLocationFeedItemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.AffiliateLocationFeedItem, com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.Builder, com.google.ads.googleads.v1.common.AffiliateLocationFeedItemOrBuilder>(
+                (com.google.ads.googleads.v1.common.AffiliateLocationFeedItem) extension_,
+                getParentForChildren(),
+                isClean());
+        extension_ = null;
+      }
+      extensionCase_ = 15;
+      onChanged();;
+      return affiliateLocationFeedItemBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private Ad() {
     finalUrls_ = java.util.Collections.emptyList();
+    finalAppUrls_ = java.util.Collections.emptyList();
     finalMobileUrls_ = java.util.Collections.emptyList();
     urlCustomParameters_ = java.util.Collections.emptyList();
     type_ = 0;
@@ -123,9 +124,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 82: {
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.CustomParameter>();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000020;
             }
             urlCustomParameters_.add(
                 input.readMessage(com.google.ads.googleads.v1.common.CustomParameter.parser(), extensionRegistry));
@@ -187,9 +188,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 130: {
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
               finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000008;
             }
             finalMobileUrls_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -312,9 +313,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 210: {
-            if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+            if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
               urlCollections_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.UrlCollection>();
-              mutable_bitField0_ |= 0x00000200;
+              mutable_bitField0_ |= 0x00000400;
             }
             urlCollections_.add(
                 input.readMessage(com.google.ads.googleads.v1.common.UrlCollection.parser(), extensionRegistry));
@@ -382,6 +383,43 @@ private static final long serialVersionUID = 0L;
             adDataCase_ = 31;
             break;
           }
+          case 266: {
+            com.google.ads.googleads.v1.common.DisplayUploadAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 33) {
+              subBuilder = ((com.google.ads.googleads.v1.common.DisplayUploadAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v1.common.DisplayUploadAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.DisplayUploadAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 33;
+            break;
+          }
+          case 274: {
+            com.google.ads.googleads.v1.common.AppEngagementAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 34) {
+              subBuilder = ((com.google.ads.googleads.v1.common.AppEngagementAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v1.common.AppEngagementAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.AppEngagementAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 34;
+            break;
+          }
+          case 282: {
+            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              finalAppUrls_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.FinalAppUrl>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            finalAppUrls_.add(
+                input.readMessage(com.google.ads.googleads.v1.common.FinalAppUrl.parser(), extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -400,14 +438,17 @@ private static final long serialVersionUID = 0L;
       if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
       }
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
-      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
         finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
       }
-      if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+      if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
         urlCollections_ = java.util.Collections.unmodifiableList(urlCollections_);
+      }
+      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        finalAppUrls_ = java.util.Collections.unmodifiableList(finalAppUrls_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -446,6 +487,8 @@ private static final long serialVersionUID = 0L;
     APP_AD(29),
     LEGACY_APP_INSTALL_AD(30),
     RESPONSIVE_DISPLAY_AD(31),
+    DISPLAY_UPLOAD_AD(33),
+    APP_ENGAGEMENT_AD(34),
     ADDATA_NOT_SET(0);
     private final int value;
     private AdDataCase(int value) {
@@ -476,6 +519,8 @@ private static final long serialVersionUID = 0L;
         case 29: return APP_AD;
         case 30: return LEGACY_APP_INSTALL_AD;
         case 31: return RESPONSIVE_DISPLAY_AD;
+        case 33: return DISPLAY_UPLOAD_AD;
+        case 34: return APP_ENGAGEMENT_AD;
         case 0: return ADDATA_NOT_SET;
         default: return null;
       }
@@ -582,6 +627,66 @@ private static final long serialVersionUID = 0L;
   public com.google.protobuf.StringValueOrBuilder getFinalUrlsOrBuilder(
       int index) {
     return finalUrls_.get(index);
+  }
+
+  public static final int FINAL_APP_URLS_FIELD_NUMBER = 35;
+  private java.util.List<com.google.ads.googleads.v1.common.FinalAppUrl> finalAppUrls_;
+  /**
+   * <pre>
+   * A list of final app URLs that will be used on mobile if the user has the
+   * specific app installed.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+   */
+  public java.util.List<com.google.ads.googleads.v1.common.FinalAppUrl> getFinalAppUrlsList() {
+    return finalAppUrls_;
+  }
+  /**
+   * <pre>
+   * A list of final app URLs that will be used on mobile if the user has the
+   * specific app installed.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+   */
+  public java.util.List<? extends com.google.ads.googleads.v1.common.FinalAppUrlOrBuilder> 
+      getFinalAppUrlsOrBuilderList() {
+    return finalAppUrls_;
+  }
+  /**
+   * <pre>
+   * A list of final app URLs that will be used on mobile if the user has the
+   * specific app installed.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+   */
+  public int getFinalAppUrlsCount() {
+    return finalAppUrls_.size();
+  }
+  /**
+   * <pre>
+   * A list of final app URLs that will be used on mobile if the user has the
+   * specific app installed.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+   */
+  public com.google.ads.googleads.v1.common.FinalAppUrl getFinalAppUrls(int index) {
+    return finalAppUrls_.get(index);
+  }
+  /**
+   * <pre>
+   * A list of final app URLs that will be used on mobile if the user has the
+   * specific app installed.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+   */
+  public com.google.ads.googleads.v1.common.FinalAppUrlOrBuilder getFinalAppUrlsOrBuilder(
+      int index) {
+    return finalAppUrls_.get(index);
   }
 
   public static final int FINAL_MOBILE_URLS_FIELD_NUMBER = 16;
@@ -1577,6 +1682,82 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo.getDefaultInstance();
   }
 
+  public static final int DISPLAY_UPLOAD_AD_FIELD_NUMBER = 33;
+  /**
+   * <pre>
+   * Details pertaining to a display upload ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+   */
+  public boolean hasDisplayUploadAd() {
+    return adDataCase_ == 33;
+  }
+  /**
+   * <pre>
+   * Details pertaining to a display upload ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+   */
+  public com.google.ads.googleads.v1.common.DisplayUploadAdInfo getDisplayUploadAd() {
+    if (adDataCase_ == 33) {
+       return (com.google.ads.googleads.v1.common.DisplayUploadAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v1.common.DisplayUploadAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to a display upload ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+   */
+  public com.google.ads.googleads.v1.common.DisplayUploadAdInfoOrBuilder getDisplayUploadAdOrBuilder() {
+    if (adDataCase_ == 33) {
+       return (com.google.ads.googleads.v1.common.DisplayUploadAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v1.common.DisplayUploadAdInfo.getDefaultInstance();
+  }
+
+  public static final int APP_ENGAGEMENT_AD_FIELD_NUMBER = 34;
+  /**
+   * <pre>
+   * Details pertaining to an app engagement ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+   */
+  public boolean hasAppEngagementAd() {
+    return adDataCase_ == 34;
+  }
+  /**
+   * <pre>
+   * Details pertaining to an app engagement ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+   */
+  public com.google.ads.googleads.v1.common.AppEngagementAdInfo getAppEngagementAd() {
+    if (adDataCase_ == 34) {
+       return (com.google.ads.googleads.v1.common.AppEngagementAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v1.common.AppEngagementAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to an app engagement ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+   */
+  public com.google.ads.googleads.v1.common.AppEngagementAdInfoOrBuilder getAppEngagementAdOrBuilder() {
+    if (adDataCase_ == 34) {
+       return (com.google.ads.googleads.v1.common.AppEngagementAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v1.common.AppEngagementAdInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1671,6 +1852,15 @@ private static final long serialVersionUID = 0L;
     }
     if (adDataCase_ == 31) {
       output.writeMessage(31, (com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo) adData_);
+    }
+    if (adDataCase_ == 33) {
+      output.writeMessage(33, (com.google.ads.googleads.v1.common.DisplayUploadAdInfo) adData_);
+    }
+    if (adDataCase_ == 34) {
+      output.writeMessage(34, (com.google.ads.googleads.v1.common.AppEngagementAdInfo) adData_);
+    }
+    for (int i = 0; i < finalAppUrls_.size(); i++) {
+      output.writeMessage(35, finalAppUrls_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -1789,6 +1979,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(31, (com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo) adData_);
     }
+    if (adDataCase_ == 33) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(33, (com.google.ads.googleads.v1.common.DisplayUploadAdInfo) adData_);
+    }
+    if (adDataCase_ == 34) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(34, (com.google.ads.googleads.v1.common.AppEngagementAdInfo) adData_);
+    }
+    for (int i = 0; i < finalAppUrls_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(35, finalAppUrls_.get(i));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1812,6 +2014,8 @@ private static final long serialVersionUID = 0L;
     }
     result = result && getFinalUrlsList()
         .equals(other.getFinalUrlsList());
+    result = result && getFinalAppUrlsList()
+        .equals(other.getFinalAppUrlsList());
     result = result && getFinalMobileUrlsList()
         .equals(other.getFinalMobileUrlsList());
     result = result && (hasTrackingUrlTemplate() == other.hasTrackingUrlTemplate());
@@ -1905,6 +2109,14 @@ private static final long serialVersionUID = 0L;
         result = result && getResponsiveDisplayAd()
             .equals(other.getResponsiveDisplayAd());
         break;
+      case 33:
+        result = result && getDisplayUploadAd()
+            .equals(other.getDisplayUploadAd());
+        break;
+      case 34:
+        result = result && getAppEngagementAd()
+            .equals(other.getAppEngagementAd());
+        break;
       case 0:
       default:
     }
@@ -1926,6 +2138,10 @@ private static final long serialVersionUID = 0L;
     if (getFinalUrlsCount() > 0) {
       hash = (37 * hash) + FINAL_URLS_FIELD_NUMBER;
       hash = (53 * hash) + getFinalUrlsList().hashCode();
+    }
+    if (getFinalAppUrlsCount() > 0) {
+      hash = (37 * hash) + FINAL_APP_URLS_FIELD_NUMBER;
+      hash = (53 * hash) + getFinalAppUrlsList().hashCode();
     }
     if (getFinalMobileUrlsCount() > 0) {
       hash = (37 * hash) + FINAL_MOBILE_URLS_FIELD_NUMBER;
@@ -2021,6 +2237,14 @@ private static final long serialVersionUID = 0L;
       case 31:
         hash = (37 * hash) + RESPONSIVE_DISPLAY_AD_FIELD_NUMBER;
         hash = (53 * hash) + getResponsiveDisplayAd().hashCode();
+        break;
+      case 33:
+        hash = (37 * hash) + DISPLAY_UPLOAD_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getDisplayUploadAd().hashCode();
+        break;
+      case 34:
+        hash = (37 * hash) + APP_ENGAGEMENT_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getAppEngagementAd().hashCode();
         break;
       case 0:
       default:
@@ -2158,6 +2382,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getFinalUrlsFieldBuilder();
+        getFinalAppUrlsFieldBuilder();
         getFinalMobileUrlsFieldBuilder();
         getUrlCustomParametersFieldBuilder();
         getUrlCollectionsFieldBuilder();
@@ -2178,9 +2403,15 @@ private static final long serialVersionUID = 0L;
       } else {
         finalUrlsBuilder_.clear();
       }
+      if (finalAppUrlsBuilder_ == null) {
+        finalAppUrls_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      } else {
+        finalAppUrlsBuilder_.clear();
+      }
       if (finalMobileUrlsBuilder_ == null) {
         finalMobileUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
         finalMobileUrlsBuilder_.clear();
       }
@@ -2192,7 +2423,7 @@ private static final long serialVersionUID = 0L;
       }
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
       } else {
         urlCustomParametersBuilder_.clear();
       }
@@ -2214,7 +2445,7 @@ private static final long serialVersionUID = 0L;
 
       if (urlCollectionsBuilder_ == null) {
         urlCollections_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
       } else {
         urlCollectionsBuilder_.clear();
       }
@@ -2270,10 +2501,19 @@ private static final long serialVersionUID = 0L;
       } else {
         result.finalUrls_ = finalUrlsBuilder_.build();
       }
-      if (finalMobileUrlsBuilder_ == null) {
+      if (finalAppUrlsBuilder_ == null) {
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
+          finalAppUrls_ = java.util.Collections.unmodifiableList(finalAppUrls_);
           bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.finalAppUrls_ = finalAppUrls_;
+      } else {
+        result.finalAppUrls_ = finalAppUrlsBuilder_.build();
+      }
+      if (finalMobileUrlsBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.finalMobileUrls_ = finalMobileUrls_;
       } else {
@@ -2285,9 +2525,9 @@ private static final long serialVersionUID = 0L;
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
@@ -2306,9 +2546,9 @@ private static final long serialVersionUID = 0L;
       }
       result.devicePreference_ = devicePreference_;
       if (urlCollectionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((bitField0_ & 0x00000400) == 0x00000400)) {
           urlCollections_ = java.util.Collections.unmodifiableList(urlCollections_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.urlCollections_ = urlCollections_;
       } else {
@@ -2425,6 +2665,20 @@ private static final long serialVersionUID = 0L;
           result.adData_ = responsiveDisplayAdBuilder_.build();
         }
       }
+      if (adDataCase_ == 33) {
+        if (displayUploadAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = displayUploadAdBuilder_.build();
+        }
+      }
+      if (adDataCase_ == 34) {
+        if (appEngagementAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = appEngagementAdBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.adDataCase_ = adDataCase_;
       onBuilt();
@@ -2504,11 +2758,37 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (finalAppUrlsBuilder_ == null) {
+        if (!other.finalAppUrls_.isEmpty()) {
+          if (finalAppUrls_.isEmpty()) {
+            finalAppUrls_ = other.finalAppUrls_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureFinalAppUrlsIsMutable();
+            finalAppUrls_.addAll(other.finalAppUrls_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.finalAppUrls_.isEmpty()) {
+          if (finalAppUrlsBuilder_.isEmpty()) {
+            finalAppUrlsBuilder_.dispose();
+            finalAppUrlsBuilder_ = null;
+            finalAppUrls_ = other.finalAppUrls_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            finalAppUrlsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFinalAppUrlsFieldBuilder() : null;
+          } else {
+            finalAppUrlsBuilder_.addAllMessages(other.finalAppUrls_);
+          }
+        }
+      }
       if (finalMobileUrlsBuilder_ == null) {
         if (!other.finalMobileUrls_.isEmpty()) {
           if (finalMobileUrls_.isEmpty()) {
             finalMobileUrls_ = other.finalMobileUrls_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureFinalMobileUrlsIsMutable();
             finalMobileUrls_.addAll(other.finalMobileUrls_);
@@ -2521,7 +2801,7 @@ private static final long serialVersionUID = 0L;
             finalMobileUrlsBuilder_.dispose();
             finalMobileUrlsBuilder_ = null;
             finalMobileUrls_ = other.finalMobileUrls_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
             finalMobileUrlsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFinalMobileUrlsFieldBuilder() : null;
@@ -2537,7 +2817,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -2550,7 +2830,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -2575,7 +2855,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCollections_.isEmpty()) {
           if (urlCollections_.isEmpty()) {
             urlCollections_ = other.urlCollections_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000400);
           } else {
             ensureUrlCollectionsIsMutable();
             urlCollections_.addAll(other.urlCollections_);
@@ -2588,7 +2868,7 @@ private static final long serialVersionUID = 0L;
             urlCollectionsBuilder_.dispose();
             urlCollectionsBuilder_ = null;
             urlCollections_ = other.urlCollections_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000400);
             urlCollectionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCollectionsFieldBuilder() : null;
@@ -2662,6 +2942,14 @@ private static final long serialVersionUID = 0L;
         }
         case RESPONSIVE_DISPLAY_AD: {
           mergeResponsiveDisplayAd(other.getResponsiveDisplayAd());
+          break;
+        }
+        case DISPLAY_UPLOAD_AD: {
+          mergeDisplayUploadAd(other.getDisplayUploadAd());
+          break;
+        }
+        case APP_ENGAGEMENT_AD: {
+          mergeAppEngagementAd(other.getAppEngagementAd());
           break;
         }
         case ADDATA_NOT_SET: {
@@ -3196,12 +3484,342 @@ private static final long serialVersionUID = 0L;
       return finalUrlsBuilder_;
     }
 
+    private java.util.List<com.google.ads.googleads.v1.common.FinalAppUrl> finalAppUrls_ =
+      java.util.Collections.emptyList();
+    private void ensureFinalAppUrlsIsMutable() {
+      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        finalAppUrls_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.FinalAppUrl>(finalAppUrls_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v1.common.FinalAppUrl, com.google.ads.googleads.v1.common.FinalAppUrl.Builder, com.google.ads.googleads.v1.common.FinalAppUrlOrBuilder> finalAppUrlsBuilder_;
+
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v1.common.FinalAppUrl> getFinalAppUrlsList() {
+      if (finalAppUrlsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(finalAppUrls_);
+      } else {
+        return finalAppUrlsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public int getFinalAppUrlsCount() {
+      if (finalAppUrlsBuilder_ == null) {
+        return finalAppUrls_.size();
+      } else {
+        return finalAppUrlsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public com.google.ads.googleads.v1.common.FinalAppUrl getFinalAppUrls(int index) {
+      if (finalAppUrlsBuilder_ == null) {
+        return finalAppUrls_.get(index);
+      } else {
+        return finalAppUrlsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public Builder setFinalAppUrls(
+        int index, com.google.ads.googleads.v1.common.FinalAppUrl value) {
+      if (finalAppUrlsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFinalAppUrlsIsMutable();
+        finalAppUrls_.set(index, value);
+        onChanged();
+      } else {
+        finalAppUrlsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public Builder setFinalAppUrls(
+        int index, com.google.ads.googleads.v1.common.FinalAppUrl.Builder builderForValue) {
+      if (finalAppUrlsBuilder_ == null) {
+        ensureFinalAppUrlsIsMutable();
+        finalAppUrls_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        finalAppUrlsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public Builder addFinalAppUrls(com.google.ads.googleads.v1.common.FinalAppUrl value) {
+      if (finalAppUrlsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFinalAppUrlsIsMutable();
+        finalAppUrls_.add(value);
+        onChanged();
+      } else {
+        finalAppUrlsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public Builder addFinalAppUrls(
+        int index, com.google.ads.googleads.v1.common.FinalAppUrl value) {
+      if (finalAppUrlsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFinalAppUrlsIsMutable();
+        finalAppUrls_.add(index, value);
+        onChanged();
+      } else {
+        finalAppUrlsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public Builder addFinalAppUrls(
+        com.google.ads.googleads.v1.common.FinalAppUrl.Builder builderForValue) {
+      if (finalAppUrlsBuilder_ == null) {
+        ensureFinalAppUrlsIsMutable();
+        finalAppUrls_.add(builderForValue.build());
+        onChanged();
+      } else {
+        finalAppUrlsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public Builder addFinalAppUrls(
+        int index, com.google.ads.googleads.v1.common.FinalAppUrl.Builder builderForValue) {
+      if (finalAppUrlsBuilder_ == null) {
+        ensureFinalAppUrlsIsMutable();
+        finalAppUrls_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        finalAppUrlsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public Builder addAllFinalAppUrls(
+        java.lang.Iterable<? extends com.google.ads.googleads.v1.common.FinalAppUrl> values) {
+      if (finalAppUrlsBuilder_ == null) {
+        ensureFinalAppUrlsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, finalAppUrls_);
+        onChanged();
+      } else {
+        finalAppUrlsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public Builder clearFinalAppUrls() {
+      if (finalAppUrlsBuilder_ == null) {
+        finalAppUrls_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        finalAppUrlsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public Builder removeFinalAppUrls(int index) {
+      if (finalAppUrlsBuilder_ == null) {
+        ensureFinalAppUrlsIsMutable();
+        finalAppUrls_.remove(index);
+        onChanged();
+      } else {
+        finalAppUrlsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public com.google.ads.googleads.v1.common.FinalAppUrl.Builder getFinalAppUrlsBuilder(
+        int index) {
+      return getFinalAppUrlsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public com.google.ads.googleads.v1.common.FinalAppUrlOrBuilder getFinalAppUrlsOrBuilder(
+        int index) {
+      if (finalAppUrlsBuilder_ == null) {
+        return finalAppUrls_.get(index);  } else {
+        return finalAppUrlsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v1.common.FinalAppUrlOrBuilder> 
+         getFinalAppUrlsOrBuilderList() {
+      if (finalAppUrlsBuilder_ != null) {
+        return finalAppUrlsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(finalAppUrls_);
+      }
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public com.google.ads.googleads.v1.common.FinalAppUrl.Builder addFinalAppUrlsBuilder() {
+      return getFinalAppUrlsFieldBuilder().addBuilder(
+          com.google.ads.googleads.v1.common.FinalAppUrl.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public com.google.ads.googleads.v1.common.FinalAppUrl.Builder addFinalAppUrlsBuilder(
+        int index) {
+      return getFinalAppUrlsFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v1.common.FinalAppUrl.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * A list of final app URLs that will be used on mobile if the user has the
+     * specific app installed.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v1.common.FinalAppUrl.Builder> 
+         getFinalAppUrlsBuilderList() {
+      return getFinalAppUrlsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v1.common.FinalAppUrl, com.google.ads.googleads.v1.common.FinalAppUrl.Builder, com.google.ads.googleads.v1.common.FinalAppUrlOrBuilder> 
+        getFinalAppUrlsFieldBuilder() {
+      if (finalAppUrlsBuilder_ == null) {
+        finalAppUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v1.common.FinalAppUrl, com.google.ads.googleads.v1.common.FinalAppUrl.Builder, com.google.ads.googleads.v1.common.FinalAppUrlOrBuilder>(
+                finalAppUrls_,
+                ((bitField0_ & 0x00000004) == 0x00000004),
+                getParentForChildren(),
+                isClean());
+        finalAppUrls_ = null;
+      }
+      return finalAppUrlsBuilder_;
+    }
+
     private java.util.List<com.google.protobuf.StringValue> finalMobileUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalMobileUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
         finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalMobileUrls_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -3406,7 +4024,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFinalMobileUrls() {
       if (finalMobileUrlsBuilder_ == null) {
         finalMobileUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         finalMobileUrlsBuilder_.clear();
@@ -3518,7 +4136,7 @@ private static final long serialVersionUID = 0L;
         finalMobileUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalMobileUrls_,
-                ((bitField0_ & 0x00000004) == 0x00000004),
+                ((bitField0_ & 0x00000008) == 0x00000008),
                 getParentForChildren(),
                 isClean());
         finalMobileUrls_ = null;
@@ -3682,9 +4300,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (!((bitField0_ & 0x00000020) == 0x00000020)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -3889,7 +4507,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -4001,7 +4619,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.CustomParameter, com.google.ads.googleads.v1.common.CustomParameter.Builder, com.google.ads.googleads.v1.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000010) == 0x00000010),
+                ((bitField0_ & 0x00000020) == 0x00000020),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -4500,9 +5118,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.UrlCollection> urlCollections_ =
       java.util.Collections.emptyList();
     private void ensureUrlCollectionsIsMutable() {
-      if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+      if (!((bitField0_ & 0x00000400) == 0x00000400)) {
         urlCollections_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.UrlCollection>(urlCollections_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
        }
     }
 
@@ -4707,7 +5325,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCollections() {
       if (urlCollectionsBuilder_ == null) {
         urlCollections_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
       } else {
         urlCollectionsBuilder_.clear();
@@ -4819,7 +5437,7 @@ private static final long serialVersionUID = 0L;
         urlCollectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.UrlCollection, com.google.ads.googleads.v1.common.UrlCollection.Builder, com.google.ads.googleads.v1.common.UrlCollectionOrBuilder>(
                 urlCollections_,
-                ((bitField0_ & 0x00000200) == 0x00000200),
+                ((bitField0_ & 0x00000400) == 0x00000400),
                 getParentForChildren(),
                 isClean());
         urlCollections_ = null;
@@ -7673,6 +8291,350 @@ private static final long serialVersionUID = 0L;
       adDataCase_ = 31;
       onChanged();;
       return responsiveDisplayAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.DisplayUploadAdInfo, com.google.ads.googleads.v1.common.DisplayUploadAdInfo.Builder, com.google.ads.googleads.v1.common.DisplayUploadAdInfoOrBuilder> displayUploadAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to a display upload ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+     */
+    public boolean hasDisplayUploadAd() {
+      return adDataCase_ == 33;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a display upload ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+     */
+    public com.google.ads.googleads.v1.common.DisplayUploadAdInfo getDisplayUploadAd() {
+      if (displayUploadAdBuilder_ == null) {
+        if (adDataCase_ == 33) {
+          return (com.google.ads.googleads.v1.common.DisplayUploadAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v1.common.DisplayUploadAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 33) {
+          return displayUploadAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.DisplayUploadAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a display upload ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+     */
+    public Builder setDisplayUploadAd(com.google.ads.googleads.v1.common.DisplayUploadAdInfo value) {
+      if (displayUploadAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        displayUploadAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 33;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a display upload ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+     */
+    public Builder setDisplayUploadAd(
+        com.google.ads.googleads.v1.common.DisplayUploadAdInfo.Builder builderForValue) {
+      if (displayUploadAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        displayUploadAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 33;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a display upload ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+     */
+    public Builder mergeDisplayUploadAd(com.google.ads.googleads.v1.common.DisplayUploadAdInfo value) {
+      if (displayUploadAdBuilder_ == null) {
+        if (adDataCase_ == 33 &&
+            adData_ != com.google.ads.googleads.v1.common.DisplayUploadAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v1.common.DisplayUploadAdInfo.newBuilder((com.google.ads.googleads.v1.common.DisplayUploadAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 33) {
+          displayUploadAdBuilder_.mergeFrom(value);
+        }
+        displayUploadAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 33;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a display upload ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+     */
+    public Builder clearDisplayUploadAd() {
+      if (displayUploadAdBuilder_ == null) {
+        if (adDataCase_ == 33) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 33) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        displayUploadAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a display upload ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+     */
+    public com.google.ads.googleads.v1.common.DisplayUploadAdInfo.Builder getDisplayUploadAdBuilder() {
+      return getDisplayUploadAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to a display upload ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+     */
+    public com.google.ads.googleads.v1.common.DisplayUploadAdInfoOrBuilder getDisplayUploadAdOrBuilder() {
+      if ((adDataCase_ == 33) && (displayUploadAdBuilder_ != null)) {
+        return displayUploadAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 33) {
+          return (com.google.ads.googleads.v1.common.DisplayUploadAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v1.common.DisplayUploadAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a display upload ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.DisplayUploadAdInfo, com.google.ads.googleads.v1.common.DisplayUploadAdInfo.Builder, com.google.ads.googleads.v1.common.DisplayUploadAdInfoOrBuilder> 
+        getDisplayUploadAdFieldBuilder() {
+      if (displayUploadAdBuilder_ == null) {
+        if (!(adDataCase_ == 33)) {
+          adData_ = com.google.ads.googleads.v1.common.DisplayUploadAdInfo.getDefaultInstance();
+        }
+        displayUploadAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.DisplayUploadAdInfo, com.google.ads.googleads.v1.common.DisplayUploadAdInfo.Builder, com.google.ads.googleads.v1.common.DisplayUploadAdInfoOrBuilder>(
+                (com.google.ads.googleads.v1.common.DisplayUploadAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 33;
+      onChanged();;
+      return displayUploadAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.AppEngagementAdInfo, com.google.ads.googleads.v1.common.AppEngagementAdInfo.Builder, com.google.ads.googleads.v1.common.AppEngagementAdInfoOrBuilder> appEngagementAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to an app engagement ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+     */
+    public boolean hasAppEngagementAd() {
+      return adDataCase_ == 34;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app engagement ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+     */
+    public com.google.ads.googleads.v1.common.AppEngagementAdInfo getAppEngagementAd() {
+      if (appEngagementAdBuilder_ == null) {
+        if (adDataCase_ == 34) {
+          return (com.google.ads.googleads.v1.common.AppEngagementAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v1.common.AppEngagementAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 34) {
+          return appEngagementAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.AppEngagementAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app engagement ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+     */
+    public Builder setAppEngagementAd(com.google.ads.googleads.v1.common.AppEngagementAdInfo value) {
+      if (appEngagementAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        appEngagementAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app engagement ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+     */
+    public Builder setAppEngagementAd(
+        com.google.ads.googleads.v1.common.AppEngagementAdInfo.Builder builderForValue) {
+      if (appEngagementAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        appEngagementAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app engagement ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+     */
+    public Builder mergeAppEngagementAd(com.google.ads.googleads.v1.common.AppEngagementAdInfo value) {
+      if (appEngagementAdBuilder_ == null) {
+        if (adDataCase_ == 34 &&
+            adData_ != com.google.ads.googleads.v1.common.AppEngagementAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v1.common.AppEngagementAdInfo.newBuilder((com.google.ads.googleads.v1.common.AppEngagementAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 34) {
+          appEngagementAdBuilder_.mergeFrom(value);
+        }
+        appEngagementAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app engagement ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+     */
+    public Builder clearAppEngagementAd() {
+      if (appEngagementAdBuilder_ == null) {
+        if (adDataCase_ == 34) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 34) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        appEngagementAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app engagement ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+     */
+    public com.google.ads.googleads.v1.common.AppEngagementAdInfo.Builder getAppEngagementAdBuilder() {
+      return getAppEngagementAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app engagement ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+     */
+    public com.google.ads.googleads.v1.common.AppEngagementAdInfoOrBuilder getAppEngagementAdOrBuilder() {
+      if ((adDataCase_ == 34) && (appEngagementAdBuilder_ != null)) {
+        return appEngagementAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 34) {
+          return (com.google.ads.googleads.v1.common.AppEngagementAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v1.common.AppEngagementAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to an app engagement ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.AppEngagementAdInfo, com.google.ads.googleads.v1.common.AppEngagementAdInfo.Builder, com.google.ads.googleads.v1.common.AppEngagementAdInfoOrBuilder> 
+        getAppEngagementAdFieldBuilder() {
+      if (appEngagementAdBuilder_ == null) {
+        if (!(adDataCase_ == 34)) {
+          adData_ = com.google.ads.googleads.v1.common.AppEngagementAdInfo.getDefaultInstance();
+        }
+        appEngagementAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.AppEngagementAdInfo, com.google.ads.googleads.v1.common.AppEngagementAdInfo.Builder, com.google.ads.googleads.v1.common.AppEngagementAdInfoOrBuilder>(
+                (com.google.ads.googleads.v1.common.AppEngagementAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 34;
+      onChanged();;
+      return appEngagementAdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

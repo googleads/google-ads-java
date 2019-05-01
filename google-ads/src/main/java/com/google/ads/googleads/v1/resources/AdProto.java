@@ -32,70 +32,77 @@ public final class AdProto {
       "roto\022!google.ads.googleads.v1.resources\032" +
       "2google/ads/googleads/v1/common/ad_type_" +
       "infos.proto\0325google/ads/googleads/v1/com" +
-      "mon/custom_parameter.proto\0323google/ads/g" +
-      "oogleads/v1/common/url_collection.proto\032" +
-      "+google/ads/googleads/v1/enums/ad_type.p" +
-      "roto\032*google/ads/googleads/v1/enums/devi" +
-      "ce.proto\032@google/ads/googleads/v1/enums/" +
-      "system_managed_entity_source.proto\032\036goog" +
-      "le/protobuf/wrappers.proto\032\034google/api/a" +
-      "nnotations.proto\"\267\017\n\002Ad\022\'\n\002id\030\001 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\0220\n\nfinal_urls\030\002" +
-      " \003(\0132\034.google.protobuf.StringValue\0227\n\021fi" +
-      "nal_mobile_urls\030\020 \003(\0132\034.google.protobuf." +
-      "StringValue\022;\n\025tracking_url_template\030\014 \001" +
-      "(\0132\034.google.protobuf.StringValue\022N\n\025url_" +
-      "custom_parameters\030\n \003(\0132/.google.ads.goo" +
-      "gleads.v1.common.CustomParameter\0221\n\013disp" +
-      "lay_url\030\004 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\022>\n\004type\030\005 \001(\01620.google.ads.googleads" +
-      ".v1.enums.AdTypeEnum.AdType\0227\n\023added_by_" +
-      "google_ads\030\023 \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022K\n\021device_preference\030\024 \001(\01620.google" +
-      ".ads.googleads.v1.enums.DeviceEnum.Devic" +
-      "e\022F\n\017url_collections\030\032 \003(\0132-.google.ads." +
-      "googleads.v1.common.UrlCollection\022*\n\004nam" +
-      "e\030\027 \001(\0132\034.google.protobuf.StringValue\022\202\001" +
-      "\n\036system_managed_resource_source\030\033 \001(\0162Z" +
-      ".google.ads.googleads.v1.enums.SystemMan" +
-      "agedResourceSourceEnum.SystemManagedReso" +
-      "urceSource\022=\n\007text_ad\030\006 \001(\0132*.google.ads" +
-      ".googleads.v1.common.TextAdInfoH\000\022N\n\020exp" +
-      "anded_text_ad\030\007 \001(\01322.google.ads.googlea" +
-      "ds.v1.common.ExpandedTextAdInfoH\000\022F\n\014cal" +
-      "l_only_ad\030\r \001(\0132..google.ads.googleads.v" +
-      "1.common.CallOnlyAdInfoH\000\022a\n\032expanded_dy" +
-      "namic_search_ad\030\016 \001(\0132;.google.ads.googl" +
-      "eads.v1.common.ExpandedDynamicSearchAdIn" +
-      "foH\000\022?\n\010hotel_ad\030\017 \001(\0132+.google.ads.goog" +
-      "leads.v1.common.HotelAdInfoH\000\022P\n\021shoppin" +
-      "g_smart_ad\030\021 \001(\01323.google.ads.googleads." +
-      "v1.common.ShoppingSmartAdInfoH\000\022T\n\023shopp" +
-      "ing_product_ad\030\022 \001(\01325.google.ads.google" +
-      "ads.v1.common.ShoppingProductAdInfoH\000\022?\n" +
-      "\010gmail_ad\030\025 \001(\0132+.google.ads.googleads.v" +
-      "1.common.GmailAdInfoH\000\022?\n\010image_ad\030\026 \001(\013" +
-      "2+.google.ads.googleads.v1.common.ImageA" +
-      "dInfoH\000\022?\n\010video_ad\030\030 \001(\0132+.google.ads.g" +
-      "oogleads.v1.common.VideoAdInfoH\000\022V\n\024resp" +
-      "onsive_search_ad\030\031 \001(\01326.google.ads.goog" +
-      "leads.v1.common.ResponsiveSearchAdInfoH\000" +
-      "\022e\n\034legacy_responsive_display_ad\030\034 \001(\0132=" +
-      ".google.ads.googleads.v1.common.LegacyRe" +
-      "sponsiveDisplayAdInfoH\000\022;\n\006app_ad\030\035 \001(\0132" +
-      ").google.ads.googleads.v1.common.AppAdIn" +
-      "foH\000\022W\n\025legacy_app_install_ad\030\036 \001(\01326.go" +
-      "ogle.ads.googleads.v1.common.LegacyAppIn" +
-      "stallAdInfoH\000\022X\n\025responsive_display_ad\030\037" +
-      " \001(\01327.google.ads.googleads.v1.common.Re" +
-      "sponsiveDisplayAdInfoH\000B\t\n\007ad_dataB\364\001\n%c" +
-      "om.google.ads.googleads.v1.resourcesB\007Ad" +
-      "ProtoP\001ZJgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v1/resources;resour" +
-      "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1.Reso" +
-      "urces\312\002!Google\\Ads\\GoogleAds\\V1\\Resource" +
-      "s\352\002%Google::Ads::GoogleAds::V1::Resource" +
-      "sb\006proto3"
+      "mon/custom_parameter.proto\0322google/ads/g" +
+      "oogleads/v1/common/final_app_url.proto\0323" +
+      "google/ads/googleads/v1/common/url_colle" +
+      "ction.proto\032+google/ads/googleads/v1/enu" +
+      "ms/ad_type.proto\032*google/ads/googleads/v" +
+      "1/enums/device.proto\032@google/ads/googlea" +
+      "ds/v1/enums/system_managed_entity_source" +
+      ".proto\032\036google/protobuf/wrappers.proto\032\034" +
+      "google/api/annotations.proto\"\240\021\n\002Ad\022\'\n\002i" +
+      "d\030\001 \001(\0132\033.google.protobuf.Int64Value\0220\n\n" +
+      "final_urls\030\002 \003(\0132\034.google.protobuf.Strin" +
+      "gValue\022C\n\016final_app_urls\030# \003(\0132+.google." +
+      "ads.googleads.v1.common.FinalAppUrl\0227\n\021f" +
+      "inal_mobile_urls\030\020 \003(\0132\034.google.protobuf" +
+      ".StringValue\022;\n\025tracking_url_template\030\014 " +
+      "\001(\0132\034.google.protobuf.StringValue\022N\n\025url" +
+      "_custom_parameters\030\n \003(\0132/.google.ads.go" +
+      "ogleads.v1.common.CustomParameter\0221\n\013dis" +
+      "play_url\030\004 \001(\0132\034.google.protobuf.StringV" +
+      "alue\022>\n\004type\030\005 \001(\01620.google.ads.googlead" +
+      "s.v1.enums.AdTypeEnum.AdType\0227\n\023added_by" +
+      "_google_ads\030\023 \001(\0132\032.google.protobuf.Bool" +
+      "Value\022K\n\021device_preference\030\024 \001(\01620.googl" +
+      "e.ads.googleads.v1.enums.DeviceEnum.Devi" +
+      "ce\022F\n\017url_collections\030\032 \003(\0132-.google.ads" +
+      ".googleads.v1.common.UrlCollection\022*\n\004na" +
+      "me\030\027 \001(\0132\034.google.protobuf.StringValue\022\202" +
+      "\001\n\036system_managed_resource_source\030\033 \001(\0162" +
+      "Z.google.ads.googleads.v1.enums.SystemMa" +
+      "nagedResourceSourceEnum.SystemManagedRes" +
+      "ourceSource\022=\n\007text_ad\030\006 \001(\0132*.google.ad" +
+      "s.googleads.v1.common.TextAdInfoH\000\022N\n\020ex" +
+      "panded_text_ad\030\007 \001(\01322.google.ads.google" +
+      "ads.v1.common.ExpandedTextAdInfoH\000\022F\n\014ca" +
+      "ll_only_ad\030\r \001(\0132..google.ads.googleads." +
+      "v1.common.CallOnlyAdInfoH\000\022a\n\032expanded_d" +
+      "ynamic_search_ad\030\016 \001(\0132;.google.ads.goog" +
+      "leads.v1.common.ExpandedDynamicSearchAdI" +
+      "nfoH\000\022?\n\010hotel_ad\030\017 \001(\0132+.google.ads.goo" +
+      "gleads.v1.common.HotelAdInfoH\000\022P\n\021shoppi" +
+      "ng_smart_ad\030\021 \001(\01323.google.ads.googleads" +
+      ".v1.common.ShoppingSmartAdInfoH\000\022T\n\023shop" +
+      "ping_product_ad\030\022 \001(\01325.google.ads.googl" +
+      "eads.v1.common.ShoppingProductAdInfoH\000\022?" +
+      "\n\010gmail_ad\030\025 \001(\0132+.google.ads.googleads." +
+      "v1.common.GmailAdInfoH\000\022?\n\010image_ad\030\026 \001(" +
+      "\0132+.google.ads.googleads.v1.common.Image" +
+      "AdInfoH\000\022?\n\010video_ad\030\030 \001(\0132+.google.ads." +
+      "googleads.v1.common.VideoAdInfoH\000\022V\n\024res" +
+      "ponsive_search_ad\030\031 \001(\01326.google.ads.goo" +
+      "gleads.v1.common.ResponsiveSearchAdInfoH" +
+      "\000\022e\n\034legacy_responsive_display_ad\030\034 \001(\0132" +
+      "=.google.ads.googleads.v1.common.LegacyR" +
+      "esponsiveDisplayAdInfoH\000\022;\n\006app_ad\030\035 \001(\013" +
+      "2).google.ads.googleads.v1.common.AppAdI" +
+      "nfoH\000\022W\n\025legacy_app_install_ad\030\036 \001(\01326.g" +
+      "oogle.ads.googleads.v1.common.LegacyAppI" +
+      "nstallAdInfoH\000\022X\n\025responsive_display_ad\030" +
+      "\037 \001(\01327.google.ads.googleads.v1.common.R" +
+      "esponsiveDisplayAdInfoH\000\022P\n\021display_uplo" +
+      "ad_ad\030! \001(\01323.google.ads.googleads.v1.co" +
+      "mmon.DisplayUploadAdInfoH\000\022P\n\021app_engage" +
+      "ment_ad\030\" \001(\01323.google.ads.googleads.v1." +
+      "common.AppEngagementAdInfoH\000B\t\n\007ad_dataB" +
+      "\364\001\n%com.google.ads.googleads.v1.resource" +
+      "sB\007AdProtoP\001ZJgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v1/resources;r" +
+      "esources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1" +
+      ".Resources\312\002!Google\\Ads\\GoogleAds\\V1\\Res" +
+      "ources\352\002%Google::Ads::GoogleAds::V1::Res" +
+      "ourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -110,6 +117,7 @@ public final class AdProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.common.AdTypeInfosProto.getDescriptor(),
           com.google.ads.googleads.v1.common.CustomParameterProto.getDescriptor(),
+          com.google.ads.googleads.v1.common.FinalAppUrlProto.getDescriptor(),
           com.google.ads.googleads.v1.common.UrlCollectionProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.AdTypeProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.DeviceProto.getDescriptor(),
@@ -122,9 +130,10 @@ public final class AdProto {
     internal_static_google_ads_googleads_v1_resources_Ad_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_Ad_descriptor,
-        new java.lang.String[] { "Id", "FinalUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "UrlCollections", "Name", "SystemManagedResourceSource", "TextAd", "ExpandedTextAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "GmailAd", "ImageAd", "VideoAd", "ResponsiveSearchAd", "LegacyResponsiveDisplayAd", "AppAd", "LegacyAppInstallAd", "ResponsiveDisplayAd", "AdData", });
+        new java.lang.String[] { "Id", "FinalUrls", "FinalAppUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "UrlCollections", "Name", "SystemManagedResourceSource", "TextAd", "ExpandedTextAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "GmailAd", "ImageAd", "VideoAd", "ResponsiveSearchAd", "LegacyResponsiveDisplayAd", "AppAd", "LegacyAppInstallAd", "ResponsiveDisplayAd", "DisplayUploadAd", "AppEngagementAd", "AdData", });
     com.google.ads.googleads.v1.common.AdTypeInfosProto.getDescriptor();
     com.google.ads.googleads.v1.common.CustomParameterProto.getDescriptor();
+    com.google.ads.googleads.v1.common.FinalAppUrlProto.getDescriptor();
     com.google.ads.googleads.v1.common.UrlCollectionProto.getDescriptor();
     com.google.ads.googleads.v1.enums.AdTypeProto.getDescriptor();
     com.google.ads.googleads.v1.enums.DeviceProto.getDescriptor();

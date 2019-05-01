@@ -180,6 +180,30 @@ private static final long serialVersionUID = 0L;
     OPTIMIZE_AD_ROTATION(10),
     /**
      * <pre>
+     * Recommendation to add callout extensions to a campaign.
+     * </pre>
+     *
+     * <code>CALLOUT_EXTENSION = 11;</code>
+     */
+    CALLOUT_EXTENSION(11),
+    /**
+     * <pre>
+     * Recommendation to add sitelink extensions to a campaign.
+     * </pre>
+     *
+     * <code>SITELINK_EXTENSION = 12;</code>
+     */
+    SITELINK_EXTENSION(12),
+    /**
+     * <pre>
+     * Recommendation to add call extensions to a campaign.
+     * </pre>
+     *
+     * <code>CALL_EXTENSION = 13;</code>
+     */
+    CALL_EXTENSION(13),
+    /**
+     * <pre>
      * Recommendation to change an existing keyword from one match type to a
      * broader match type.
      * </pre>
@@ -293,6 +317,30 @@ private static final long serialVersionUID = 0L;
     public static final int OPTIMIZE_AD_ROTATION_VALUE = 10;
     /**
      * <pre>
+     * Recommendation to add callout extensions to a campaign.
+     * </pre>
+     *
+     * <code>CALLOUT_EXTENSION = 11;</code>
+     */
+    public static final int CALLOUT_EXTENSION_VALUE = 11;
+    /**
+     * <pre>
+     * Recommendation to add sitelink extensions to a campaign.
+     * </pre>
+     *
+     * <code>SITELINK_EXTENSION = 12;</code>
+     */
+    public static final int SITELINK_EXTENSION_VALUE = 12;
+    /**
+     * <pre>
+     * Recommendation to add call extensions to a campaign.
+     * </pre>
+     *
+     * <code>CALL_EXTENSION = 13;</code>
+     */
+    public static final int CALL_EXTENSION_VALUE = 13;
+    /**
+     * <pre>
      * Recommendation to change an existing keyword from one match type to a
      * broader match type.
      * </pre>
@@ -340,6 +388,9 @@ private static final long serialVersionUID = 0L;
         case 8: return SEARCH_PARTNERS_OPT_IN;
         case 9: return MAXIMIZE_CLICKS_OPT_IN;
         case 10: return OPTIMIZE_AD_ROTATION;
+        case 11: return CALLOUT_EXTENSION;
+        case 12: return SITELINK_EXTENSION;
+        case 13: return CALL_EXTENSION;
         case 14: return KEYWORD_MATCH_TYPE;
         case 15: return MOVE_UNUSED_BUDGET;
         default: return null;

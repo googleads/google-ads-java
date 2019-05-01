@@ -153,6 +153,22 @@
  * </code>
  * </pre>
  *
+ * ======================================= AdGroupCriterionSimulationServiceClient
+ * =======================================
+ *
+ * <p>Service Description: Service to fetch ad group criterion simulations.
+ *
+ * <p>Sample for AdGroupCriterionSimulationServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (AdGroupCriterionSimulationServiceClient adGroupCriterionSimulationServiceClient = AdGroupCriterionSimulationServiceClient.create()) {
+ *   String formattedResourceName = AdGroupCriterionSimulationServiceClient.formatAdGroupCriterionSimulationName("[CUSTOMER]", "[AD_GROUP_CRITERION_SIMULATION]");
+ *   AdGroupCriterionSimulation response = adGroupCriterionSimulationServiceClient.getAdGroupCriterionSimulation(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ==================================== AdGroupExtensionSettingServiceClient
  * ====================================
  *
@@ -210,6 +226,21 @@
  * try (AdGroupServiceClient adGroupServiceClient = AdGroupServiceClient.create()) {
  *   String formattedResourceName = AdGroupServiceClient.formatAdGroupName("[CUSTOMER]", "[AD_GROUP]");
  *   AdGroup response = adGroupServiceClient.getAdGroup(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ============================== AdGroupSimulationServiceClient ==============================
+ *
+ * <p>Service Description: Service to fetch ad group simulations.
+ *
+ * <p>Sample for AdGroupSimulationServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (AdGroupSimulationServiceClient adGroupSimulationServiceClient = AdGroupSimulationServiceClient.create()) {
+ *   String formattedResourceName = AdGroupSimulationServiceClient.formatAdGroupSimulationName("[CUSTOMER]", "[AD_GROUP_SIMULATION]");
+ *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(formattedResourceName);
  * }
  * </code>
  * </pre>
@@ -370,6 +401,22 @@
  * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
  *   String formattedResourceName = CampaignCriterionServiceClient.formatCampaignCriteriaName("[CUSTOMER]", "[CAMPAIGN_CRITERIA]");
  *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ======================================== CampaignCriterionSimulationServiceClient
+ * ========================================
+ *
+ * <p>Service Description: Service to fetch campaign criterion simulations.
+ *
+ * <p>Sample for CampaignCriterionSimulationServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (CampaignCriterionSimulationServiceClient campaignCriterionSimulationServiceClient = CampaignCriterionSimulationServiceClient.create()) {
+ *   String formattedResourceName = CampaignCriterionSimulationServiceClient.formatCampaignCriterionSimulationName("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
+ *   CampaignCriterionSimulation response = campaignCriterionSimulationServiceClient.getCampaignCriterionSimulation(formattedResourceName);
  * }
  * </code>
  * </pre>
@@ -745,6 +792,22 @@
  * </code>
  * </pre>
  *
+ * ==================================== ExpandedLandingPageViewServiceClient
+ * ====================================
+ *
+ * <p>Service Description: Service to fetch expanded landing page views.
+ *
+ * <p>Sample for ExpandedLandingPageViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (ExpandedLandingPageViewServiceClient expandedLandingPageViewServiceClient = ExpandedLandingPageViewServiceClient.create()) {
+ *   String formattedResourceName = ExpandedLandingPageViewServiceClient.formatExpandedLandingPageViewName("[CUSTOMER]", "[EXPANDED_LANDING_PAGE_VIEW]");
+ *   ExpandedLandingPageView response = expandedLandingPageViewServiceClient.getExpandedLandingPageView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ============================== ExtensionFeedItemServiceClient ==============================
  *
  * <p>Service Description: Service to manage extension feed items.
@@ -1085,6 +1148,21 @@
  * </code>
  * </pre>
  *
+ * ============================ LandingPageViewServiceClient ============================
+ *
+ * <p>Service Description: Service to fetch landing page views.
+ *
+ * <p>Sample for LandingPageViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (LandingPageViewServiceClient landingPageViewServiceClient = LandingPageViewServiceClient.create()) {
+ *   String formattedResourceName = LandingPageViewServiceClient.formatLandingPageViewName("[CUSTOMER]", "[LANDING_PAGE_VIEW]");
+ *   LandingPageView response = landingPageViewServiceClient.getLandingPageView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
  * ============================= LanguageConstantServiceClient =============================
  *
  * <p>Service Description: Service to fetch language constants.
@@ -1221,6 +1299,22 @@
  * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
  *   String formattedResourceName = OperatingSystemVersionConstantServiceClient.formatOperatingSystemVersionConstantName("[OPERATING_SYSTEM_VERSION_CONSTANT]");
  *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ====================================== PaidOrganicSearchTermViewServiceClient
+ * ======================================
+ *
+ * <p>Service Description: Service to fetch paid organic search term views.
+ *
+ * <p>Sample for PaidOrganicSearchTermViewServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient = PaidOrganicSearchTermViewServiceClient.create()) {
+ *   String formattedResourceName = PaidOrganicSearchTermViewServiceClient.formatPaidOrganicSearchTermViewName("[CUSTOMER]", "[PAID_ORGANIC_SEARCH_TERM_VIEW]");
+ *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(formattedResourceName);
  * }
  * </code>
  * </pre>

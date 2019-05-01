@@ -160,6 +160,22 @@ private static final long serialVersionUID = 0L;
     BAD_OPERATOR(3),
     /**
      * <pre>
+     * Parameter unknown or not supported.
+     * </pre>
+     *
+     * <code>BAD_PARAMETER_NAME = 61;</code>
+     */
+    BAD_PARAMETER_NAME(61),
+    /**
+     * <pre>
+     * Parameter have invalid value.
+     * </pre>
+     *
+     * <code>BAD_PARAMETER_VALUE = 62;</code>
+     */
+    BAD_PARAMETER_VALUE(62),
+    /**
+     * <pre>
      * Invalid resource type was specified in the FROM clause.
      * </pre>
      *
@@ -593,6 +609,22 @@ private static final long serialVersionUID = 0L;
     public static final int BAD_OPERATOR_VALUE = 3;
     /**
      * <pre>
+     * Parameter unknown or not supported.
+     * </pre>
+     *
+     * <code>BAD_PARAMETER_NAME = 61;</code>
+     */
+    public static final int BAD_PARAMETER_NAME_VALUE = 61;
+    /**
+     * <pre>
+     * Parameter have invalid value.
+     * </pre>
+     *
+     * <code>BAD_PARAMETER_VALUE = 62;</code>
+     */
+    public static final int BAD_PARAMETER_VALUE_VALUE = 62;
+    /**
+     * <pre>
      * Invalid resource type was specified in the FROM clause.
      * </pre>
      *
@@ -978,6 +1010,8 @@ private static final long serialVersionUID = 0L;
         case 15: return BAD_LIMIT_VALUE;
         case 5: return BAD_NUMBER;
         case 3: return BAD_OPERATOR;
+        case 61: return BAD_PARAMETER_NAME;
+        case 62: return BAD_PARAMETER_VALUE;
         case 45: return BAD_RESOURCE_TYPE_IN_FROM_CLAUSE;
         case 2: return BAD_SYMBOL;
         case 4: return BAD_VALUE;

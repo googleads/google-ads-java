@@ -234,6 +234,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The ad group criterion simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+   */
+  boolean hasAdGroupCriterionSimulation();
+  /**
+   * <pre>
+   * The ad group criterion simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+   */
+  com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation getAdGroupCriterionSimulation();
+  /**
+   * <pre>
+   * The ad group criterion simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+   */
+  com.google.ads.googleads.v1.resources.AdGroupCriterionSimulationOrBuilder getAdGroupCriterionSimulationOrBuilder();
+
+  /**
+   * <pre>
    * The ad group extension setting referenced in the query.
    * </pre>
    *
@@ -306,6 +331,56 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v1.resources.AdGroupLabel ad_group_label = 115;</code>
    */
   com.google.ads.googleads.v1.resources.AdGroupLabelOrBuilder getAdGroupLabelOrBuilder();
+
+  /**
+   * <pre>
+   * The ad group simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+   */
+  boolean hasAdGroupSimulation();
+  /**
+   * <pre>
+   * The ad group simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+   */
+  com.google.ads.googleads.v1.resources.AdGroupSimulation getAdGroupSimulation();
+  /**
+   * <pre>
+   * The ad group simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+   */
+  com.google.ads.googleads.v1.resources.AdGroupSimulationOrBuilder getAdGroupSimulationOrBuilder();
+
+  /**
+   * <pre>
+   * The ad parameter referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+   */
+  boolean hasAdParameter();
+  /**
+   * <pre>
+   * The ad parameter referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+   */
+  com.google.ads.googleads.v1.resources.AdParameter getAdParameter();
+  /**
+   * <pre>
+   * The ad parameter referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+   */
+  com.google.ads.googleads.v1.resources.AdParameterOrBuilder getAdParameterOrBuilder();
 
   /**
    * <pre>
@@ -581,6 +656,31 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v1.resources.CampaignCriterion campaign_criterion = 20;</code>
    */
   com.google.ads.googleads.v1.resources.CampaignCriterionOrBuilder getCampaignCriterionOrBuilder();
+
+  /**
+   * <pre>
+   * The campaign criterion simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+   */
+  boolean hasCampaignCriterionSimulation();
+  /**
+   * <pre>
+   * The campaign criterion simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+   */
+  com.google.ads.googleads.v1.resources.CampaignCriterionSimulation getCampaignCriterionSimulation();
+  /**
+   * <pre>
+   * The campaign criterion simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+   */
+  com.google.ads.googleads.v1.resources.CampaignCriterionSimulationOrBuilder getCampaignCriterionSimulationOrBuilder();
 
   /**
    * <pre>
@@ -1084,6 +1184,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The expanded landing page view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+   */
+  boolean hasExpandedLandingPageView();
+  /**
+   * <pre>
+   * The expanded landing page view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+   */
+  com.google.ads.googleads.v1.resources.ExpandedLandingPageView getExpandedLandingPageView();
+  /**
+   * <pre>
+   * The expanded landing page view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+   */
+  com.google.ads.googleads.v1.resources.ExpandedLandingPageViewOrBuilder getExpandedLandingPageViewOrBuilder();
+
+  /**
+   * <pre>
    * The extension feed item referenced in the query.
    * </pre>
    *
@@ -1559,6 +1684,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The landing page view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+   */
+  boolean hasLandingPageView();
+  /**
+   * <pre>
+   * The landing page view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+   */
+  com.google.ads.googleads.v1.resources.LandingPageView getLandingPageView();
+  /**
+   * <pre>
+   * The landing page view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+   */
+  com.google.ads.googleads.v1.resources.LandingPageViewOrBuilder getLandingPageViewOrBuilder();
+
+  /**
+   * <pre>
    * The language constant referenced in the query.
    * </pre>
    *
@@ -1709,6 +1859,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The mutate job referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+   */
+  boolean hasMutateJob();
+  /**
+   * <pre>
+   * The mutate job referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+   */
+  com.google.ads.googleads.v1.resources.MutateJob getMutateJob();
+  /**
+   * <pre>
+   * The mutate job referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+   */
+  com.google.ads.googleads.v1.resources.MutateJobOrBuilder getMutateJobOrBuilder();
+
+  /**
+   * <pre>
    * The operating system version constant referenced in the query.
    * </pre>
    *
@@ -1731,6 +1906,31 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v1.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
    */
   com.google.ads.googleads.v1.resources.OperatingSystemVersionConstantOrBuilder getOperatingSystemVersionConstantOrBuilder();
+
+  /**
+   * <pre>
+   * The paid organic search term view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+   */
+  boolean hasPaidOrganicSearchTermView();
+  /**
+   * <pre>
+   * The paid organic search term view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+   */
+  com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView getPaidOrganicSearchTermView();
+  /**
+   * <pre>
+   * The paid organic search term view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+   */
+  com.google.ads.googleads.v1.resources.PaidOrganicSearchTermViewOrBuilder getPaidOrganicSearchTermViewOrBuilder();
 
   /**
    * <pre>

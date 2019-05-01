@@ -42,14 +42,14 @@ public final class ProductBiddingCategoryConstantServiceProto {
       "uest\032A.google.ads.googleads.v1.resources" +
       ".ProductBiddingCategoryConstant\"=\202\323\344\223\0027\022" +
       "5/v1/{resource_name=productBiddingCatego" +
-      "ryConstants/*}B\216\002\n$com.google.ads.google" +
+      "ryConstants/*}B\221\002\n$com.google.ads.google" +
       "ads.v1.servicesB*ProductBiddingCategoryC" +
       "onstantServiceProtoP\001ZHgoogle.golang.org" +
       "/genproto/googleapis/ads/googleads/v1/se" +
       "rvices;services\242\002\003GAA\252\002 Google.Ads.Googl" +
       "eAds.V1.Services\312\002 Google\\Ads\\GoogleAds\\" +
-      "V1\\Services\352\002!Google::Ads::GoogleAds::V1" +
-      "::Enumsb\006proto3"
+      "V1\\Services\352\002$Google::Ads::GoogleAds::V1" +
+      "::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

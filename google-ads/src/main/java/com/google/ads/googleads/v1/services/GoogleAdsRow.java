@@ -945,6 +945,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 858: {
+            com.google.ads.googleads.v1.resources.AdGroupSimulation.Builder subBuilder = null;
+            if (adGroupSimulation_ != null) {
+              subBuilder = adGroupSimulation_.toBuilder();
+            }
+            adGroupSimulation_ = input.readMessage(com.google.ads.googleads.v1.resources.AdGroupSimulation.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(adGroupSimulation_);
+              adGroupSimulation_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 866: {
             com.google.ads.googleads.v1.resources.CampaignLabel.Builder subBuilder = null;
             if (campaignLabel_ != null) {
@@ -967,6 +980,32 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(productBiddingCategoryConstant_);
               productBiddingCategoryConstant_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 882: {
+            com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.Builder subBuilder = null;
+            if (adGroupCriterionSimulation_ != null) {
+              subBuilder = adGroupCriterionSimulation_.toBuilder();
+            }
+            adGroupCriterionSimulation_ = input.readMessage(com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(adGroupCriterionSimulation_);
+              adGroupCriterionSimulation_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 890: {
+            com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.Builder subBuilder = null;
+            if (campaignCriterionSimulation_ != null) {
+              subBuilder = campaignCriterionSimulation_.toBuilder();
+            }
+            campaignCriterionSimulation_ = input.readMessage(com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(campaignCriterionSimulation_);
+              campaignCriterionSimulation_ = subBuilder.buildPartial();
             }
 
             break;
@@ -1149,6 +1188,71 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(geographicView_);
               geographicView_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 1010: {
+            com.google.ads.googleads.v1.resources.LandingPageView.Builder subBuilder = null;
+            if (landingPageView_ != null) {
+              subBuilder = landingPageView_.toBuilder();
+            }
+            landingPageView_ = input.readMessage(com.google.ads.googleads.v1.resources.LandingPageView.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(landingPageView_);
+              landingPageView_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 1018: {
+            com.google.ads.googleads.v1.resources.MutateJob.Builder subBuilder = null;
+            if (mutateJob_ != null) {
+              subBuilder = mutateJob_.toBuilder();
+            }
+            mutateJob_ = input.readMessage(com.google.ads.googleads.v1.resources.MutateJob.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(mutateJob_);
+              mutateJob_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 1026: {
+            com.google.ads.googleads.v1.resources.ExpandedLandingPageView.Builder subBuilder = null;
+            if (expandedLandingPageView_ != null) {
+              subBuilder = expandedLandingPageView_.toBuilder();
+            }
+            expandedLandingPageView_ = input.readMessage(com.google.ads.googleads.v1.resources.ExpandedLandingPageView.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(expandedLandingPageView_);
+              expandedLandingPageView_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 1034: {
+            com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.Builder subBuilder = null;
+            if (paidOrganicSearchTermView_ != null) {
+              subBuilder = paidOrganicSearchTermView_.toBuilder();
+            }
+            paidOrganicSearchTermView_ = input.readMessage(com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(paidOrganicSearchTermView_);
+              paidOrganicSearchTermView_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 1042: {
+            com.google.ads.googleads.v1.resources.AdParameter.Builder subBuilder = null;
+            if (adParameter_ != null) {
+              subBuilder = adParameter_.toBuilder();
+            }
+            adParameter_ = input.readMessage(com.google.ads.googleads.v1.resources.AdParameter.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(adParameter_);
+              adParameter_ = subBuilder.buildPartial();
             }
 
             break;
@@ -1482,6 +1586,39 @@ private static final long serialVersionUID = 0L;
     return getAdGroupCriterionLabel();
   }
 
+  public static final int AD_GROUP_CRITERION_SIMULATION_FIELD_NUMBER = 110;
+  private com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation adGroupCriterionSimulation_;
+  /**
+   * <pre>
+   * The ad group criterion simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+   */
+  public boolean hasAdGroupCriterionSimulation() {
+    return adGroupCriterionSimulation_ != null;
+  }
+  /**
+   * <pre>
+   * The ad group criterion simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+   */
+  public com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation getAdGroupCriterionSimulation() {
+    return adGroupCriterionSimulation_ == null ? com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.getDefaultInstance() : adGroupCriterionSimulation_;
+  }
+  /**
+   * <pre>
+   * The ad group criterion simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+   */
+  public com.google.ads.googleads.v1.resources.AdGroupCriterionSimulationOrBuilder getAdGroupCriterionSimulationOrBuilder() {
+    return getAdGroupCriterionSimulation();
+  }
+
   public static final int AD_GROUP_EXTENSION_SETTING_FIELD_NUMBER = 112;
   private com.google.ads.googleads.v1.resources.AdGroupExtensionSetting adGroupExtensionSetting_;
   /**
@@ -1579,6 +1716,72 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v1.resources.AdGroupLabelOrBuilder getAdGroupLabelOrBuilder() {
     return getAdGroupLabel();
+  }
+
+  public static final int AD_GROUP_SIMULATION_FIELD_NUMBER = 107;
+  private com.google.ads.googleads.v1.resources.AdGroupSimulation adGroupSimulation_;
+  /**
+   * <pre>
+   * The ad group simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+   */
+  public boolean hasAdGroupSimulation() {
+    return adGroupSimulation_ != null;
+  }
+  /**
+   * <pre>
+   * The ad group simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+   */
+  public com.google.ads.googleads.v1.resources.AdGroupSimulation getAdGroupSimulation() {
+    return adGroupSimulation_ == null ? com.google.ads.googleads.v1.resources.AdGroupSimulation.getDefaultInstance() : adGroupSimulation_;
+  }
+  /**
+   * <pre>
+   * The ad group simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+   */
+  public com.google.ads.googleads.v1.resources.AdGroupSimulationOrBuilder getAdGroupSimulationOrBuilder() {
+    return getAdGroupSimulation();
+  }
+
+  public static final int AD_PARAMETER_FIELD_NUMBER = 130;
+  private com.google.ads.googleads.v1.resources.AdParameter adParameter_;
+  /**
+   * <pre>
+   * The ad parameter referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+   */
+  public boolean hasAdParameter() {
+    return adParameter_ != null;
+  }
+  /**
+   * <pre>
+   * The ad parameter referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+   */
+  public com.google.ads.googleads.v1.resources.AdParameter getAdParameter() {
+    return adParameter_ == null ? com.google.ads.googleads.v1.resources.AdParameter.getDefaultInstance() : adParameter_;
+  }
+  /**
+   * <pre>
+   * The ad parameter referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+   */
+  public com.google.ads.googleads.v1.resources.AdParameterOrBuilder getAdParameterOrBuilder() {
+    return getAdParameter();
   }
 
   public static final int AGE_RANGE_VIEW_FIELD_NUMBER = 48;
@@ -1942,6 +2145,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v1.resources.CampaignCriterionOrBuilder getCampaignCriterionOrBuilder() {
     return getCampaignCriterion();
+  }
+
+  public static final int CAMPAIGN_CRITERION_SIMULATION_FIELD_NUMBER = 111;
+  private com.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaignCriterionSimulation_;
+  /**
+   * <pre>
+   * The campaign criterion simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+   */
+  public boolean hasCampaignCriterionSimulation() {
+    return campaignCriterionSimulation_ != null;
+  }
+  /**
+   * <pre>
+   * The campaign criterion simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+   */
+  public com.google.ads.googleads.v1.resources.CampaignCriterionSimulation getCampaignCriterionSimulation() {
+    return campaignCriterionSimulation_ == null ? com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.getDefaultInstance() : campaignCriterionSimulation_;
+  }
+  /**
+   * <pre>
+   * The campaign criterion simulation referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+   */
+  public com.google.ads.googleads.v1.resources.CampaignCriterionSimulationOrBuilder getCampaignCriterionSimulationOrBuilder() {
+    return getCampaignCriterionSimulation();
   }
 
   public static final int CAMPAIGN_EXTENSION_SETTING_FIELD_NUMBER = 113;
@@ -2604,6 +2840,39 @@ private static final long serialVersionUID = 0L;
     return getDynamicSearchAdsSearchTermView();
   }
 
+  public static final int EXPANDED_LANDING_PAGE_VIEW_FIELD_NUMBER = 128;
+  private com.google.ads.googleads.v1.resources.ExpandedLandingPageView expandedLandingPageView_;
+  /**
+   * <pre>
+   * The expanded landing page view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+   */
+  public boolean hasExpandedLandingPageView() {
+    return expandedLandingPageView_ != null;
+  }
+  /**
+   * <pre>
+   * The expanded landing page view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+   */
+  public com.google.ads.googleads.v1.resources.ExpandedLandingPageView getExpandedLandingPageView() {
+    return expandedLandingPageView_ == null ? com.google.ads.googleads.v1.resources.ExpandedLandingPageView.getDefaultInstance() : expandedLandingPageView_;
+  }
+  /**
+   * <pre>
+   * The expanded landing page view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+   */
+  public com.google.ads.googleads.v1.resources.ExpandedLandingPageViewOrBuilder getExpandedLandingPageViewOrBuilder() {
+    return getExpandedLandingPageView();
+  }
+
   public static final int EXTENSION_FEED_ITEM_FIELD_NUMBER = 85;
   private com.google.ads.googleads.v1.resources.ExtensionFeedItem extensionFeedItem_;
   /**
@@ -3231,6 +3500,39 @@ private static final long serialVersionUID = 0L;
     return getLabel();
   }
 
+  public static final int LANDING_PAGE_VIEW_FIELD_NUMBER = 126;
+  private com.google.ads.googleads.v1.resources.LandingPageView landingPageView_;
+  /**
+   * <pre>
+   * The landing page view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+   */
+  public boolean hasLandingPageView() {
+    return landingPageView_ != null;
+  }
+  /**
+   * <pre>
+   * The landing page view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+   */
+  public com.google.ads.googleads.v1.resources.LandingPageView getLandingPageView() {
+    return landingPageView_ == null ? com.google.ads.googleads.v1.resources.LandingPageView.getDefaultInstance() : landingPageView_;
+  }
+  /**
+   * <pre>
+   * The landing page view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+   */
+  public com.google.ads.googleads.v1.resources.LandingPageViewOrBuilder getLandingPageViewOrBuilder() {
+    return getLandingPageView();
+  }
+
   public static final int LANGUAGE_CONSTANT_FIELD_NUMBER = 55;
   private com.google.ads.googleads.v1.resources.LanguageConstant languageConstant_;
   /**
@@ -3429,6 +3731,39 @@ private static final long serialVersionUID = 0L;
     return getMobileDeviceConstant();
   }
 
+  public static final int MUTATE_JOB_FIELD_NUMBER = 127;
+  private com.google.ads.googleads.v1.resources.MutateJob mutateJob_;
+  /**
+   * <pre>
+   * The mutate job referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+   */
+  public boolean hasMutateJob() {
+    return mutateJob_ != null;
+  }
+  /**
+   * <pre>
+   * The mutate job referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+   */
+  public com.google.ads.googleads.v1.resources.MutateJob getMutateJob() {
+    return mutateJob_ == null ? com.google.ads.googleads.v1.resources.MutateJob.getDefaultInstance() : mutateJob_;
+  }
+  /**
+   * <pre>
+   * The mutate job referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+   */
+  public com.google.ads.googleads.v1.resources.MutateJobOrBuilder getMutateJobOrBuilder() {
+    return getMutateJob();
+  }
+
   public static final int OPERATING_SYSTEM_VERSION_CONSTANT_FIELD_NUMBER = 86;
   private com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant operatingSystemVersionConstant_;
   /**
@@ -3460,6 +3795,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v1.resources.OperatingSystemVersionConstantOrBuilder getOperatingSystemVersionConstantOrBuilder() {
     return getOperatingSystemVersionConstant();
+  }
+
+  public static final int PAID_ORGANIC_SEARCH_TERM_VIEW_FIELD_NUMBER = 129;
+  private com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paidOrganicSearchTermView_;
+  /**
+   * <pre>
+   * The paid organic search term view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+   */
+  public boolean hasPaidOrganicSearchTermView() {
+    return paidOrganicSearchTermView_ != null;
+  }
+  /**
+   * <pre>
+   * The paid organic search term view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+   */
+  public com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView getPaidOrganicSearchTermView() {
+    return paidOrganicSearchTermView_ == null ? com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.getDefaultInstance() : paidOrganicSearchTermView_;
+  }
+  /**
+   * <pre>
+   * The paid organic search term view referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+   */
+  public com.google.ads.googleads.v1.resources.PaidOrganicSearchTermViewOrBuilder getPaidOrganicSearchTermViewOrBuilder() {
+    return getPaidOrganicSearchTermView();
   }
 
   public static final int PARENTAL_STATUS_VIEW_FIELD_NUMBER = 45;
@@ -4211,11 +4579,20 @@ private static final long serialVersionUID = 0L;
     if (dynamicSearchAdsSearchTermView_ != null) {
       output.writeMessage(106, getDynamicSearchAdsSearchTermView());
     }
+    if (adGroupSimulation_ != null) {
+      output.writeMessage(107, getAdGroupSimulation());
+    }
     if (campaignLabel_ != null) {
       output.writeMessage(108, getCampaignLabel());
     }
     if (productBiddingCategoryConstant_ != null) {
       output.writeMessage(109, getProductBiddingCategoryConstant());
+    }
+    if (adGroupCriterionSimulation_ != null) {
+      output.writeMessage(110, getAdGroupCriterionSimulation());
+    }
+    if (campaignCriterionSimulation_ != null) {
+      output.writeMessage(111, getCampaignCriterionSimulation());
     }
     if (adGroupExtensionSetting_ != null) {
       output.writeMessage(112, getAdGroupExtensionSetting());
@@ -4258,6 +4635,21 @@ private static final long serialVersionUID = 0L;
     }
     if (geographicView_ != null) {
       output.writeMessage(125, getGeographicView());
+    }
+    if (landingPageView_ != null) {
+      output.writeMessage(126, getLandingPageView());
+    }
+    if (mutateJob_ != null) {
+      output.writeMessage(127, getMutateJob());
+    }
+    if (expandedLandingPageView_ != null) {
+      output.writeMessage(128, getExpandedLandingPageView());
+    }
+    if (paidOrganicSearchTermView_ != null) {
+      output.writeMessage(129, getPaidOrganicSearchTermView());
+    }
+    if (adParameter_ != null) {
+      output.writeMessage(130, getAdParameter());
     }
     unknownFields.writeTo(output);
   }
@@ -4544,6 +4936,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(106, getDynamicSearchAdsSearchTermView());
     }
+    if (adGroupSimulation_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(107, getAdGroupSimulation());
+    }
     if (campaignLabel_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(108, getCampaignLabel());
@@ -4551,6 +4947,14 @@ private static final long serialVersionUID = 0L;
     if (productBiddingCategoryConstant_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(109, getProductBiddingCategoryConstant());
+    }
+    if (adGroupCriterionSimulation_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(110, getAdGroupCriterionSimulation());
+    }
+    if (campaignCriterionSimulation_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(111, getCampaignCriterionSimulation());
     }
     if (adGroupExtensionSetting_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -4607,6 +5011,26 @@ private static final long serialVersionUID = 0L;
     if (geographicView_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(125, getGeographicView());
+    }
+    if (landingPageView_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(126, getLandingPageView());
+    }
+    if (mutateJob_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(127, getMutateJob());
+    }
+    if (expandedLandingPageView_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(128, getExpandedLandingPageView());
+    }
+    if (paidOrganicSearchTermView_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(129, getPaidOrganicSearchTermView());
+    }
+    if (adParameter_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(130, getAdParameter());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -4669,6 +5093,11 @@ private static final long serialVersionUID = 0L;
       result = result && getAdGroupCriterionLabel()
           .equals(other.getAdGroupCriterionLabel());
     }
+    result = result && (hasAdGroupCriterionSimulation() == other.hasAdGroupCriterionSimulation());
+    if (hasAdGroupCriterionSimulation()) {
+      result = result && getAdGroupCriterionSimulation()
+          .equals(other.getAdGroupCriterionSimulation());
+    }
     result = result && (hasAdGroupExtensionSetting() == other.hasAdGroupExtensionSetting());
     if (hasAdGroupExtensionSetting()) {
       result = result && getAdGroupExtensionSetting()
@@ -4683,6 +5112,16 @@ private static final long serialVersionUID = 0L;
     if (hasAdGroupLabel()) {
       result = result && getAdGroupLabel()
           .equals(other.getAdGroupLabel());
+    }
+    result = result && (hasAdGroupSimulation() == other.hasAdGroupSimulation());
+    if (hasAdGroupSimulation()) {
+      result = result && getAdGroupSimulation()
+          .equals(other.getAdGroupSimulation());
+    }
+    result = result && (hasAdParameter() == other.hasAdParameter());
+    if (hasAdParameter()) {
+      result = result && getAdParameter()
+          .equals(other.getAdParameter());
     }
     result = result && (hasAgeRangeView() == other.hasAgeRangeView());
     if (hasAgeRangeView()) {
@@ -4738,6 +5177,11 @@ private static final long serialVersionUID = 0L;
     if (hasCampaignCriterion()) {
       result = result && getCampaignCriterion()
           .equals(other.getCampaignCriterion());
+    }
+    result = result && (hasCampaignCriterionSimulation() == other.hasCampaignCriterionSimulation());
+    if (hasCampaignCriterionSimulation()) {
+      result = result && getCampaignCriterionSimulation()
+          .equals(other.getCampaignCriterionSimulation());
     }
     result = result && (hasCampaignExtensionSetting() == other.hasCampaignExtensionSetting());
     if (hasCampaignExtensionSetting()) {
@@ -4839,6 +5283,11 @@ private static final long serialVersionUID = 0L;
       result = result && getDynamicSearchAdsSearchTermView()
           .equals(other.getDynamicSearchAdsSearchTermView());
     }
+    result = result && (hasExpandedLandingPageView() == other.hasExpandedLandingPageView());
+    if (hasExpandedLandingPageView()) {
+      result = result && getExpandedLandingPageView()
+          .equals(other.getExpandedLandingPageView());
+    }
     result = result && (hasExtensionFeedItem() == other.hasExtensionFeedItem());
     if (hasExtensionFeedItem()) {
       result = result && getExtensionFeedItem()
@@ -4934,6 +5383,11 @@ private static final long serialVersionUID = 0L;
       result = result && getLabel()
           .equals(other.getLabel());
     }
+    result = result && (hasLandingPageView() == other.hasLandingPageView());
+    if (hasLandingPageView()) {
+      result = result && getLandingPageView()
+          .equals(other.getLandingPageView());
+    }
     result = result && (hasLanguageConstant() == other.hasLanguageConstant());
     if (hasLanguageConstant()) {
       result = result && getLanguageConstant()
@@ -4964,10 +5418,20 @@ private static final long serialVersionUID = 0L;
       result = result && getMobileDeviceConstant()
           .equals(other.getMobileDeviceConstant());
     }
+    result = result && (hasMutateJob() == other.hasMutateJob());
+    if (hasMutateJob()) {
+      result = result && getMutateJob()
+          .equals(other.getMutateJob());
+    }
     result = result && (hasOperatingSystemVersionConstant() == other.hasOperatingSystemVersionConstant());
     if (hasOperatingSystemVersionConstant()) {
       result = result && getOperatingSystemVersionConstant()
           .equals(other.getOperatingSystemVersionConstant());
+    }
+    result = result && (hasPaidOrganicSearchTermView() == other.hasPaidOrganicSearchTermView());
+    if (hasPaidOrganicSearchTermView()) {
+      result = result && getPaidOrganicSearchTermView()
+          .equals(other.getPaidOrganicSearchTermView());
     }
     result = result && (hasParentalStatusView() == other.hasParentalStatusView());
     if (hasParentalStatusView()) {
@@ -5096,6 +5560,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AD_GROUP_CRITERION_LABEL_FIELD_NUMBER;
       hash = (53 * hash) + getAdGroupCriterionLabel().hashCode();
     }
+    if (hasAdGroupCriterionSimulation()) {
+      hash = (37 * hash) + AD_GROUP_CRITERION_SIMULATION_FIELD_NUMBER;
+      hash = (53 * hash) + getAdGroupCriterionSimulation().hashCode();
+    }
     if (hasAdGroupExtensionSetting()) {
       hash = (37 * hash) + AD_GROUP_EXTENSION_SETTING_FIELD_NUMBER;
       hash = (53 * hash) + getAdGroupExtensionSetting().hashCode();
@@ -5107,6 +5575,14 @@ private static final long serialVersionUID = 0L;
     if (hasAdGroupLabel()) {
       hash = (37 * hash) + AD_GROUP_LABEL_FIELD_NUMBER;
       hash = (53 * hash) + getAdGroupLabel().hashCode();
+    }
+    if (hasAdGroupSimulation()) {
+      hash = (37 * hash) + AD_GROUP_SIMULATION_FIELD_NUMBER;
+      hash = (53 * hash) + getAdGroupSimulation().hashCode();
+    }
+    if (hasAdParameter()) {
+      hash = (37 * hash) + AD_PARAMETER_FIELD_NUMBER;
+      hash = (53 * hash) + getAdParameter().hashCode();
     }
     if (hasAgeRangeView()) {
       hash = (37 * hash) + AGE_RANGE_VIEW_FIELD_NUMBER;
@@ -5151,6 +5627,10 @@ private static final long serialVersionUID = 0L;
     if (hasCampaignCriterion()) {
       hash = (37 * hash) + CAMPAIGN_CRITERION_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignCriterion().hashCode();
+    }
+    if (hasCampaignCriterionSimulation()) {
+      hash = (37 * hash) + CAMPAIGN_CRITERION_SIMULATION_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignCriterionSimulation().hashCode();
     }
     if (hasCampaignExtensionSetting()) {
       hash = (37 * hash) + CAMPAIGN_EXTENSION_SETTING_FIELD_NUMBER;
@@ -5232,6 +5712,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW_FIELD_NUMBER;
       hash = (53 * hash) + getDynamicSearchAdsSearchTermView().hashCode();
     }
+    if (hasExpandedLandingPageView()) {
+      hash = (37 * hash) + EXPANDED_LANDING_PAGE_VIEW_FIELD_NUMBER;
+      hash = (53 * hash) + getExpandedLandingPageView().hashCode();
+    }
     if (hasExtensionFeedItem()) {
       hash = (37 * hash) + EXTENSION_FEED_ITEM_FIELD_NUMBER;
       hash = (53 * hash) + getExtensionFeedItem().hashCode();
@@ -5308,6 +5792,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LABEL_FIELD_NUMBER;
       hash = (53 * hash) + getLabel().hashCode();
     }
+    if (hasLandingPageView()) {
+      hash = (37 * hash) + LANDING_PAGE_VIEW_FIELD_NUMBER;
+      hash = (53 * hash) + getLandingPageView().hashCode();
+    }
     if (hasLanguageConstant()) {
       hash = (37 * hash) + LANGUAGE_CONSTANT_FIELD_NUMBER;
       hash = (53 * hash) + getLanguageConstant().hashCode();
@@ -5332,9 +5820,17 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MOBILE_DEVICE_CONSTANT_FIELD_NUMBER;
       hash = (53 * hash) + getMobileDeviceConstant().hashCode();
     }
+    if (hasMutateJob()) {
+      hash = (37 * hash) + MUTATE_JOB_FIELD_NUMBER;
+      hash = (53 * hash) + getMutateJob().hashCode();
+    }
     if (hasOperatingSystemVersionConstant()) {
       hash = (37 * hash) + OPERATING_SYSTEM_VERSION_CONSTANT_FIELD_NUMBER;
       hash = (53 * hash) + getOperatingSystemVersionConstant().hashCode();
+    }
+    if (hasPaidOrganicSearchTermView()) {
+      hash = (37 * hash) + PAID_ORGANIC_SEARCH_TERM_VIEW_FIELD_NUMBER;
+      hash = (53 * hash) + getPaidOrganicSearchTermView().hashCode();
     }
     if (hasParentalStatusView()) {
       hash = (37 * hash) + PARENTAL_STATUS_VIEW_FIELD_NUMBER;
@@ -5591,6 +6087,12 @@ private static final long serialVersionUID = 0L;
         adGroupCriterionLabel_ = null;
         adGroupCriterionLabelBuilder_ = null;
       }
+      if (adGroupCriterionSimulationBuilder_ == null) {
+        adGroupCriterionSimulation_ = null;
+      } else {
+        adGroupCriterionSimulation_ = null;
+        adGroupCriterionSimulationBuilder_ = null;
+      }
       if (adGroupExtensionSettingBuilder_ == null) {
         adGroupExtensionSetting_ = null;
       } else {
@@ -5608,6 +6110,18 @@ private static final long serialVersionUID = 0L;
       } else {
         adGroupLabel_ = null;
         adGroupLabelBuilder_ = null;
+      }
+      if (adGroupSimulationBuilder_ == null) {
+        adGroupSimulation_ = null;
+      } else {
+        adGroupSimulation_ = null;
+        adGroupSimulationBuilder_ = null;
+      }
+      if (adParameterBuilder_ == null) {
+        adParameter_ = null;
+      } else {
+        adParameter_ = null;
+        adParameterBuilder_ = null;
       }
       if (ageRangeViewBuilder_ == null) {
         ageRangeView_ = null;
@@ -5674,6 +6188,12 @@ private static final long serialVersionUID = 0L;
       } else {
         campaignCriterion_ = null;
         campaignCriterionBuilder_ = null;
+      }
+      if (campaignCriterionSimulationBuilder_ == null) {
+        campaignCriterionSimulation_ = null;
+      } else {
+        campaignCriterionSimulation_ = null;
+        campaignCriterionSimulationBuilder_ = null;
       }
       if (campaignExtensionSettingBuilder_ == null) {
         campaignExtensionSetting_ = null;
@@ -5795,6 +6315,12 @@ private static final long serialVersionUID = 0L;
         dynamicSearchAdsSearchTermView_ = null;
         dynamicSearchAdsSearchTermViewBuilder_ = null;
       }
+      if (expandedLandingPageViewBuilder_ == null) {
+        expandedLandingPageView_ = null;
+      } else {
+        expandedLandingPageView_ = null;
+        expandedLandingPageViewBuilder_ = null;
+      }
       if (extensionFeedItemBuilder_ == null) {
         extensionFeedItem_ = null;
       } else {
@@ -5909,6 +6435,12 @@ private static final long serialVersionUID = 0L;
         label_ = null;
         labelBuilder_ = null;
       }
+      if (landingPageViewBuilder_ == null) {
+        landingPageView_ = null;
+      } else {
+        landingPageView_ = null;
+        landingPageViewBuilder_ = null;
+      }
       if (languageConstantBuilder_ == null) {
         languageConstant_ = null;
       } else {
@@ -5945,11 +6477,23 @@ private static final long serialVersionUID = 0L;
         mobileDeviceConstant_ = null;
         mobileDeviceConstantBuilder_ = null;
       }
+      if (mutateJobBuilder_ == null) {
+        mutateJob_ = null;
+      } else {
+        mutateJob_ = null;
+        mutateJobBuilder_ = null;
+      }
       if (operatingSystemVersionConstantBuilder_ == null) {
         operatingSystemVersionConstant_ = null;
       } else {
         operatingSystemVersionConstant_ = null;
         operatingSystemVersionConstantBuilder_ = null;
+      }
+      if (paidOrganicSearchTermViewBuilder_ == null) {
+        paidOrganicSearchTermView_ = null;
+      } else {
+        paidOrganicSearchTermView_ = null;
+        paidOrganicSearchTermViewBuilder_ = null;
       }
       if (parentalStatusViewBuilder_ == null) {
         parentalStatusView_ = null;
@@ -6118,6 +6662,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.adGroupCriterionLabel_ = adGroupCriterionLabelBuilder_.build();
       }
+      if (adGroupCriterionSimulationBuilder_ == null) {
+        result.adGroupCriterionSimulation_ = adGroupCriterionSimulation_;
+      } else {
+        result.adGroupCriterionSimulation_ = adGroupCriterionSimulationBuilder_.build();
+      }
       if (adGroupExtensionSettingBuilder_ == null) {
         result.adGroupExtensionSetting_ = adGroupExtensionSetting_;
       } else {
@@ -6132,6 +6681,16 @@ private static final long serialVersionUID = 0L;
         result.adGroupLabel_ = adGroupLabel_;
       } else {
         result.adGroupLabel_ = adGroupLabelBuilder_.build();
+      }
+      if (adGroupSimulationBuilder_ == null) {
+        result.adGroupSimulation_ = adGroupSimulation_;
+      } else {
+        result.adGroupSimulation_ = adGroupSimulationBuilder_.build();
+      }
+      if (adParameterBuilder_ == null) {
+        result.adParameter_ = adParameter_;
+      } else {
+        result.adParameter_ = adParameterBuilder_.build();
       }
       if (ageRangeViewBuilder_ == null) {
         result.ageRangeView_ = ageRangeView_;
@@ -6187,6 +6746,11 @@ private static final long serialVersionUID = 0L;
         result.campaignCriterion_ = campaignCriterion_;
       } else {
         result.campaignCriterion_ = campaignCriterionBuilder_.build();
+      }
+      if (campaignCriterionSimulationBuilder_ == null) {
+        result.campaignCriterionSimulation_ = campaignCriterionSimulation_;
+      } else {
+        result.campaignCriterionSimulation_ = campaignCriterionSimulationBuilder_.build();
       }
       if (campaignExtensionSettingBuilder_ == null) {
         result.campaignExtensionSetting_ = campaignExtensionSetting_;
@@ -6288,6 +6852,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.dynamicSearchAdsSearchTermView_ = dynamicSearchAdsSearchTermViewBuilder_.build();
       }
+      if (expandedLandingPageViewBuilder_ == null) {
+        result.expandedLandingPageView_ = expandedLandingPageView_;
+      } else {
+        result.expandedLandingPageView_ = expandedLandingPageViewBuilder_.build();
+      }
       if (extensionFeedItemBuilder_ == null) {
         result.extensionFeedItem_ = extensionFeedItem_;
       } else {
@@ -6383,6 +6952,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.label_ = labelBuilder_.build();
       }
+      if (landingPageViewBuilder_ == null) {
+        result.landingPageView_ = landingPageView_;
+      } else {
+        result.landingPageView_ = landingPageViewBuilder_.build();
+      }
       if (languageConstantBuilder_ == null) {
         result.languageConstant_ = languageConstant_;
       } else {
@@ -6413,10 +6987,20 @@ private static final long serialVersionUID = 0L;
       } else {
         result.mobileDeviceConstant_ = mobileDeviceConstantBuilder_.build();
       }
+      if (mutateJobBuilder_ == null) {
+        result.mutateJob_ = mutateJob_;
+      } else {
+        result.mutateJob_ = mutateJobBuilder_.build();
+      }
       if (operatingSystemVersionConstantBuilder_ == null) {
         result.operatingSystemVersionConstant_ = operatingSystemVersionConstant_;
       } else {
         result.operatingSystemVersionConstant_ = operatingSystemVersionConstantBuilder_.build();
+      }
+      if (paidOrganicSearchTermViewBuilder_ == null) {
+        result.paidOrganicSearchTermView_ = paidOrganicSearchTermView_;
+      } else {
+        result.paidOrganicSearchTermView_ = paidOrganicSearchTermViewBuilder_.build();
       }
       if (parentalStatusViewBuilder_ == null) {
         result.parentalStatusView_ = parentalStatusView_;
@@ -6573,6 +7157,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasAdGroupCriterionLabel()) {
         mergeAdGroupCriterionLabel(other.getAdGroupCriterionLabel());
       }
+      if (other.hasAdGroupCriterionSimulation()) {
+        mergeAdGroupCriterionSimulation(other.getAdGroupCriterionSimulation());
+      }
       if (other.hasAdGroupExtensionSetting()) {
         mergeAdGroupExtensionSetting(other.getAdGroupExtensionSetting());
       }
@@ -6581,6 +7168,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAdGroupLabel()) {
         mergeAdGroupLabel(other.getAdGroupLabel());
+      }
+      if (other.hasAdGroupSimulation()) {
+        mergeAdGroupSimulation(other.getAdGroupSimulation());
+      }
+      if (other.hasAdParameter()) {
+        mergeAdParameter(other.getAdParameter());
       }
       if (other.hasAgeRangeView()) {
         mergeAgeRangeView(other.getAgeRangeView());
@@ -6614,6 +7207,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCampaignCriterion()) {
         mergeCampaignCriterion(other.getCampaignCriterion());
+      }
+      if (other.hasCampaignCriterionSimulation()) {
+        mergeCampaignCriterionSimulation(other.getCampaignCriterionSimulation());
       }
       if (other.hasCampaignExtensionSetting()) {
         mergeCampaignExtensionSetting(other.getCampaignExtensionSetting());
@@ -6675,6 +7271,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasDynamicSearchAdsSearchTermView()) {
         mergeDynamicSearchAdsSearchTermView(other.getDynamicSearchAdsSearchTermView());
       }
+      if (other.hasExpandedLandingPageView()) {
+        mergeExpandedLandingPageView(other.getExpandedLandingPageView());
+      }
       if (other.hasExtensionFeedItem()) {
         mergeExtensionFeedItem(other.getExtensionFeedItem());
       }
@@ -6732,6 +7331,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasLabel()) {
         mergeLabel(other.getLabel());
       }
+      if (other.hasLandingPageView()) {
+        mergeLandingPageView(other.getLandingPageView());
+      }
       if (other.hasLanguageConstant()) {
         mergeLanguageConstant(other.getLanguageConstant());
       }
@@ -6750,8 +7352,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasMobileDeviceConstant()) {
         mergeMobileDeviceConstant(other.getMobileDeviceConstant());
       }
+      if (other.hasMutateJob()) {
+        mergeMutateJob(other.getMutateJob());
+      }
       if (other.hasOperatingSystemVersionConstant()) {
         mergeOperatingSystemVersionConstant(other.getOperatingSystemVersionConstant());
+      }
+      if (other.hasPaidOrganicSearchTermView()) {
+        mergePaidOrganicSearchTermView(other.getPaidOrganicSearchTermView());
       }
       if (other.hasParentalStatusView()) {
         mergeParentalStatusView(other.getParentalStatusView());
@@ -8207,6 +8815,159 @@ private static final long serialVersionUID = 0L;
       return adGroupCriterionLabelBuilder_;
     }
 
+    private com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation adGroupCriterionSimulation_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation, com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.Builder, com.google.ads.googleads.v1.resources.AdGroupCriterionSimulationOrBuilder> adGroupCriterionSimulationBuilder_;
+    /**
+     * <pre>
+     * The ad group criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+     */
+    public boolean hasAdGroupCriterionSimulation() {
+      return adGroupCriterionSimulationBuilder_ != null || adGroupCriterionSimulation_ != null;
+    }
+    /**
+     * <pre>
+     * The ad group criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+     */
+    public com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation getAdGroupCriterionSimulation() {
+      if (adGroupCriterionSimulationBuilder_ == null) {
+        return adGroupCriterionSimulation_ == null ? com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.getDefaultInstance() : adGroupCriterionSimulation_;
+      } else {
+        return adGroupCriterionSimulationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The ad group criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+     */
+    public Builder setAdGroupCriterionSimulation(com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation value) {
+      if (adGroupCriterionSimulationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adGroupCriterionSimulation_ = value;
+        onChanged();
+      } else {
+        adGroupCriterionSimulationBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad group criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+     */
+    public Builder setAdGroupCriterionSimulation(
+        com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.Builder builderForValue) {
+      if (adGroupCriterionSimulationBuilder_ == null) {
+        adGroupCriterionSimulation_ = builderForValue.build();
+        onChanged();
+      } else {
+        adGroupCriterionSimulationBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad group criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+     */
+    public Builder mergeAdGroupCriterionSimulation(com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation value) {
+      if (adGroupCriterionSimulationBuilder_ == null) {
+        if (adGroupCriterionSimulation_ != null) {
+          adGroupCriterionSimulation_ =
+            com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.newBuilder(adGroupCriterionSimulation_).mergeFrom(value).buildPartial();
+        } else {
+          adGroupCriterionSimulation_ = value;
+        }
+        onChanged();
+      } else {
+        adGroupCriterionSimulationBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad group criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+     */
+    public Builder clearAdGroupCriterionSimulation() {
+      if (adGroupCriterionSimulationBuilder_ == null) {
+        adGroupCriterionSimulation_ = null;
+        onChanged();
+      } else {
+        adGroupCriterionSimulation_ = null;
+        adGroupCriterionSimulationBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad group criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+     */
+    public com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.Builder getAdGroupCriterionSimulationBuilder() {
+      
+      onChanged();
+      return getAdGroupCriterionSimulationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The ad group criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+     */
+    public com.google.ads.googleads.v1.resources.AdGroupCriterionSimulationOrBuilder getAdGroupCriterionSimulationOrBuilder() {
+      if (adGroupCriterionSimulationBuilder_ != null) {
+        return adGroupCriterionSimulationBuilder_.getMessageOrBuilder();
+      } else {
+        return adGroupCriterionSimulation_ == null ?
+            com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.getDefaultInstance() : adGroupCriterionSimulation_;
+      }
+    }
+    /**
+     * <pre>
+     * The ad group criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupCriterionSimulation ad_group_criterion_simulation = 110;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation, com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.Builder, com.google.ads.googleads.v1.resources.AdGroupCriterionSimulationOrBuilder> 
+        getAdGroupCriterionSimulationFieldBuilder() {
+      if (adGroupCriterionSimulationBuilder_ == null) {
+        adGroupCriterionSimulationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation, com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.Builder, com.google.ads.googleads.v1.resources.AdGroupCriterionSimulationOrBuilder>(
+                getAdGroupCriterionSimulation(),
+                getParentForChildren(),
+                isClean());
+        adGroupCriterionSimulation_ = null;
+      }
+      return adGroupCriterionSimulationBuilder_;
+    }
+
     private com.google.ads.googleads.v1.resources.AdGroupExtensionSetting adGroupExtensionSetting_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroupExtensionSetting, com.google.ads.googleads.v1.resources.AdGroupExtensionSetting.Builder, com.google.ads.googleads.v1.resources.AdGroupExtensionSettingOrBuilder> adGroupExtensionSettingBuilder_;
@@ -8664,6 +9425,312 @@ private static final long serialVersionUID = 0L;
         adGroupLabel_ = null;
       }
       return adGroupLabelBuilder_;
+    }
+
+    private com.google.ads.googleads.v1.resources.AdGroupSimulation adGroupSimulation_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.AdGroupSimulation, com.google.ads.googleads.v1.resources.AdGroupSimulation.Builder, com.google.ads.googleads.v1.resources.AdGroupSimulationOrBuilder> adGroupSimulationBuilder_;
+    /**
+     * <pre>
+     * The ad group simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+     */
+    public boolean hasAdGroupSimulation() {
+      return adGroupSimulationBuilder_ != null || adGroupSimulation_ != null;
+    }
+    /**
+     * <pre>
+     * The ad group simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+     */
+    public com.google.ads.googleads.v1.resources.AdGroupSimulation getAdGroupSimulation() {
+      if (adGroupSimulationBuilder_ == null) {
+        return adGroupSimulation_ == null ? com.google.ads.googleads.v1.resources.AdGroupSimulation.getDefaultInstance() : adGroupSimulation_;
+      } else {
+        return adGroupSimulationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The ad group simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+     */
+    public Builder setAdGroupSimulation(com.google.ads.googleads.v1.resources.AdGroupSimulation value) {
+      if (adGroupSimulationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adGroupSimulation_ = value;
+        onChanged();
+      } else {
+        adGroupSimulationBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad group simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+     */
+    public Builder setAdGroupSimulation(
+        com.google.ads.googleads.v1.resources.AdGroupSimulation.Builder builderForValue) {
+      if (adGroupSimulationBuilder_ == null) {
+        adGroupSimulation_ = builderForValue.build();
+        onChanged();
+      } else {
+        adGroupSimulationBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad group simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+     */
+    public Builder mergeAdGroupSimulation(com.google.ads.googleads.v1.resources.AdGroupSimulation value) {
+      if (adGroupSimulationBuilder_ == null) {
+        if (adGroupSimulation_ != null) {
+          adGroupSimulation_ =
+            com.google.ads.googleads.v1.resources.AdGroupSimulation.newBuilder(adGroupSimulation_).mergeFrom(value).buildPartial();
+        } else {
+          adGroupSimulation_ = value;
+        }
+        onChanged();
+      } else {
+        adGroupSimulationBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad group simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+     */
+    public Builder clearAdGroupSimulation() {
+      if (adGroupSimulationBuilder_ == null) {
+        adGroupSimulation_ = null;
+        onChanged();
+      } else {
+        adGroupSimulation_ = null;
+        adGroupSimulationBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad group simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+     */
+    public com.google.ads.googleads.v1.resources.AdGroupSimulation.Builder getAdGroupSimulationBuilder() {
+      
+      onChanged();
+      return getAdGroupSimulationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The ad group simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+     */
+    public com.google.ads.googleads.v1.resources.AdGroupSimulationOrBuilder getAdGroupSimulationOrBuilder() {
+      if (adGroupSimulationBuilder_ != null) {
+        return adGroupSimulationBuilder_.getMessageOrBuilder();
+      } else {
+        return adGroupSimulation_ == null ?
+            com.google.ads.googleads.v1.resources.AdGroupSimulation.getDefaultInstance() : adGroupSimulation_;
+      }
+    }
+    /**
+     * <pre>
+     * The ad group simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdGroupSimulation ad_group_simulation = 107;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.AdGroupSimulation, com.google.ads.googleads.v1.resources.AdGroupSimulation.Builder, com.google.ads.googleads.v1.resources.AdGroupSimulationOrBuilder> 
+        getAdGroupSimulationFieldBuilder() {
+      if (adGroupSimulationBuilder_ == null) {
+        adGroupSimulationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.resources.AdGroupSimulation, com.google.ads.googleads.v1.resources.AdGroupSimulation.Builder, com.google.ads.googleads.v1.resources.AdGroupSimulationOrBuilder>(
+                getAdGroupSimulation(),
+                getParentForChildren(),
+                isClean());
+        adGroupSimulation_ = null;
+      }
+      return adGroupSimulationBuilder_;
+    }
+
+    private com.google.ads.googleads.v1.resources.AdParameter adParameter_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.AdParameter, com.google.ads.googleads.v1.resources.AdParameter.Builder, com.google.ads.googleads.v1.resources.AdParameterOrBuilder> adParameterBuilder_;
+    /**
+     * <pre>
+     * The ad parameter referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+     */
+    public boolean hasAdParameter() {
+      return adParameterBuilder_ != null || adParameter_ != null;
+    }
+    /**
+     * <pre>
+     * The ad parameter referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+     */
+    public com.google.ads.googleads.v1.resources.AdParameter getAdParameter() {
+      if (adParameterBuilder_ == null) {
+        return adParameter_ == null ? com.google.ads.googleads.v1.resources.AdParameter.getDefaultInstance() : adParameter_;
+      } else {
+        return adParameterBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The ad parameter referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+     */
+    public Builder setAdParameter(com.google.ads.googleads.v1.resources.AdParameter value) {
+      if (adParameterBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adParameter_ = value;
+        onChanged();
+      } else {
+        adParameterBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad parameter referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+     */
+    public Builder setAdParameter(
+        com.google.ads.googleads.v1.resources.AdParameter.Builder builderForValue) {
+      if (adParameterBuilder_ == null) {
+        adParameter_ = builderForValue.build();
+        onChanged();
+      } else {
+        adParameterBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad parameter referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+     */
+    public Builder mergeAdParameter(com.google.ads.googleads.v1.resources.AdParameter value) {
+      if (adParameterBuilder_ == null) {
+        if (adParameter_ != null) {
+          adParameter_ =
+            com.google.ads.googleads.v1.resources.AdParameter.newBuilder(adParameter_).mergeFrom(value).buildPartial();
+        } else {
+          adParameter_ = value;
+        }
+        onChanged();
+      } else {
+        adParameterBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad parameter referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+     */
+    public Builder clearAdParameter() {
+      if (adParameterBuilder_ == null) {
+        adParameter_ = null;
+        onChanged();
+      } else {
+        adParameter_ = null;
+        adParameterBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ad parameter referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+     */
+    public com.google.ads.googleads.v1.resources.AdParameter.Builder getAdParameterBuilder() {
+      
+      onChanged();
+      return getAdParameterFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The ad parameter referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+     */
+    public com.google.ads.googleads.v1.resources.AdParameterOrBuilder getAdParameterOrBuilder() {
+      if (adParameterBuilder_ != null) {
+        return adParameterBuilder_.getMessageOrBuilder();
+      } else {
+        return adParameter_ == null ?
+            com.google.ads.googleads.v1.resources.AdParameter.getDefaultInstance() : adParameter_;
+      }
+    }
+    /**
+     * <pre>
+     * The ad parameter referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.AdParameter ad_parameter = 130;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.AdParameter, com.google.ads.googleads.v1.resources.AdParameter.Builder, com.google.ads.googleads.v1.resources.AdParameterOrBuilder> 
+        getAdParameterFieldBuilder() {
+      if (adParameterBuilder_ == null) {
+        adParameterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.resources.AdParameter, com.google.ads.googleads.v1.resources.AdParameter.Builder, com.google.ads.googleads.v1.resources.AdParameterOrBuilder>(
+                getAdParameter(),
+                getParentForChildren(),
+                isClean());
+        adParameter_ = null;
+      }
+      return adParameterBuilder_;
     }
 
     private com.google.ads.googleads.v1.resources.AgeRangeView ageRangeView_ = null;
@@ -10347,6 +11414,159 @@ private static final long serialVersionUID = 0L;
         campaignCriterion_ = null;
       }
       return campaignCriterionBuilder_;
+    }
+
+    private com.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaignCriterionSimulation_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.CampaignCriterionSimulation, com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.Builder, com.google.ads.googleads.v1.resources.CampaignCriterionSimulationOrBuilder> campaignCriterionSimulationBuilder_;
+    /**
+     * <pre>
+     * The campaign criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+     */
+    public boolean hasCampaignCriterionSimulation() {
+      return campaignCriterionSimulationBuilder_ != null || campaignCriterionSimulation_ != null;
+    }
+    /**
+     * <pre>
+     * The campaign criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+     */
+    public com.google.ads.googleads.v1.resources.CampaignCriterionSimulation getCampaignCriterionSimulation() {
+      if (campaignCriterionSimulationBuilder_ == null) {
+        return campaignCriterionSimulation_ == null ? com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.getDefaultInstance() : campaignCriterionSimulation_;
+      } else {
+        return campaignCriterionSimulationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The campaign criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+     */
+    public Builder setCampaignCriterionSimulation(com.google.ads.googleads.v1.resources.CampaignCriterionSimulation value) {
+      if (campaignCriterionSimulationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignCriterionSimulation_ = value;
+        onChanged();
+      } else {
+        campaignCriterionSimulationBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+     */
+    public Builder setCampaignCriterionSimulation(
+        com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.Builder builderForValue) {
+      if (campaignCriterionSimulationBuilder_ == null) {
+        campaignCriterionSimulation_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignCriterionSimulationBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+     */
+    public Builder mergeCampaignCriterionSimulation(com.google.ads.googleads.v1.resources.CampaignCriterionSimulation value) {
+      if (campaignCriterionSimulationBuilder_ == null) {
+        if (campaignCriterionSimulation_ != null) {
+          campaignCriterionSimulation_ =
+            com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.newBuilder(campaignCriterionSimulation_).mergeFrom(value).buildPartial();
+        } else {
+          campaignCriterionSimulation_ = value;
+        }
+        onChanged();
+      } else {
+        campaignCriterionSimulationBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+     */
+    public Builder clearCampaignCriterionSimulation() {
+      if (campaignCriterionSimulationBuilder_ == null) {
+        campaignCriterionSimulation_ = null;
+        onChanged();
+      } else {
+        campaignCriterionSimulation_ = null;
+        campaignCriterionSimulationBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+     */
+    public com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.Builder getCampaignCriterionSimulationBuilder() {
+      
+      onChanged();
+      return getCampaignCriterionSimulationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The campaign criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+     */
+    public com.google.ads.googleads.v1.resources.CampaignCriterionSimulationOrBuilder getCampaignCriterionSimulationOrBuilder() {
+      if (campaignCriterionSimulationBuilder_ != null) {
+        return campaignCriterionSimulationBuilder_.getMessageOrBuilder();
+      } else {
+        return campaignCriterionSimulation_ == null ?
+            com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.getDefaultInstance() : campaignCriterionSimulation_;
+      }
+    }
+    /**
+     * <pre>
+     * The campaign criterion simulation referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaign_criterion_simulation = 111;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.CampaignCriterionSimulation, com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.Builder, com.google.ads.googleads.v1.resources.CampaignCriterionSimulationOrBuilder> 
+        getCampaignCriterionSimulationFieldBuilder() {
+      if (campaignCriterionSimulationBuilder_ == null) {
+        campaignCriterionSimulationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.resources.CampaignCriterionSimulation, com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.Builder, com.google.ads.googleads.v1.resources.CampaignCriterionSimulationOrBuilder>(
+                getCampaignCriterionSimulation(),
+                getParentForChildren(),
+                isClean());
+        campaignCriterionSimulation_ = null;
+      }
+      return campaignCriterionSimulationBuilder_;
     }
 
     private com.google.ads.googleads.v1.resources.CampaignExtensionSetting campaignExtensionSetting_ = null;
@@ -13409,6 +14629,159 @@ private static final long serialVersionUID = 0L;
       return dynamicSearchAdsSearchTermViewBuilder_;
     }
 
+    private com.google.ads.googleads.v1.resources.ExpandedLandingPageView expandedLandingPageView_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.ExpandedLandingPageView, com.google.ads.googleads.v1.resources.ExpandedLandingPageView.Builder, com.google.ads.googleads.v1.resources.ExpandedLandingPageViewOrBuilder> expandedLandingPageViewBuilder_;
+    /**
+     * <pre>
+     * The expanded landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+     */
+    public boolean hasExpandedLandingPageView() {
+      return expandedLandingPageViewBuilder_ != null || expandedLandingPageView_ != null;
+    }
+    /**
+     * <pre>
+     * The expanded landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+     */
+    public com.google.ads.googleads.v1.resources.ExpandedLandingPageView getExpandedLandingPageView() {
+      if (expandedLandingPageViewBuilder_ == null) {
+        return expandedLandingPageView_ == null ? com.google.ads.googleads.v1.resources.ExpandedLandingPageView.getDefaultInstance() : expandedLandingPageView_;
+      } else {
+        return expandedLandingPageViewBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The expanded landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+     */
+    public Builder setExpandedLandingPageView(com.google.ads.googleads.v1.resources.ExpandedLandingPageView value) {
+      if (expandedLandingPageViewBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        expandedLandingPageView_ = value;
+        onChanged();
+      } else {
+        expandedLandingPageViewBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The expanded landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+     */
+    public Builder setExpandedLandingPageView(
+        com.google.ads.googleads.v1.resources.ExpandedLandingPageView.Builder builderForValue) {
+      if (expandedLandingPageViewBuilder_ == null) {
+        expandedLandingPageView_ = builderForValue.build();
+        onChanged();
+      } else {
+        expandedLandingPageViewBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The expanded landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+     */
+    public Builder mergeExpandedLandingPageView(com.google.ads.googleads.v1.resources.ExpandedLandingPageView value) {
+      if (expandedLandingPageViewBuilder_ == null) {
+        if (expandedLandingPageView_ != null) {
+          expandedLandingPageView_ =
+            com.google.ads.googleads.v1.resources.ExpandedLandingPageView.newBuilder(expandedLandingPageView_).mergeFrom(value).buildPartial();
+        } else {
+          expandedLandingPageView_ = value;
+        }
+        onChanged();
+      } else {
+        expandedLandingPageViewBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The expanded landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+     */
+    public Builder clearExpandedLandingPageView() {
+      if (expandedLandingPageViewBuilder_ == null) {
+        expandedLandingPageView_ = null;
+        onChanged();
+      } else {
+        expandedLandingPageView_ = null;
+        expandedLandingPageViewBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The expanded landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+     */
+    public com.google.ads.googleads.v1.resources.ExpandedLandingPageView.Builder getExpandedLandingPageViewBuilder() {
+      
+      onChanged();
+      return getExpandedLandingPageViewFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The expanded landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+     */
+    public com.google.ads.googleads.v1.resources.ExpandedLandingPageViewOrBuilder getExpandedLandingPageViewOrBuilder() {
+      if (expandedLandingPageViewBuilder_ != null) {
+        return expandedLandingPageViewBuilder_.getMessageOrBuilder();
+      } else {
+        return expandedLandingPageView_ == null ?
+            com.google.ads.googleads.v1.resources.ExpandedLandingPageView.getDefaultInstance() : expandedLandingPageView_;
+      }
+    }
+    /**
+     * <pre>
+     * The expanded landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.ExpandedLandingPageView, com.google.ads.googleads.v1.resources.ExpandedLandingPageView.Builder, com.google.ads.googleads.v1.resources.ExpandedLandingPageViewOrBuilder> 
+        getExpandedLandingPageViewFieldBuilder() {
+      if (expandedLandingPageViewBuilder_ == null) {
+        expandedLandingPageViewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.resources.ExpandedLandingPageView, com.google.ads.googleads.v1.resources.ExpandedLandingPageView.Builder, com.google.ads.googleads.v1.resources.ExpandedLandingPageViewOrBuilder>(
+                getExpandedLandingPageView(),
+                getParentForChildren(),
+                isClean());
+        expandedLandingPageView_ = null;
+      }
+      return expandedLandingPageViewBuilder_;
+    }
+
     private com.google.ads.googleads.v1.resources.ExtensionFeedItem extensionFeedItem_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.ExtensionFeedItem, com.google.ads.googleads.v1.resources.ExtensionFeedItem.Builder, com.google.ads.googleads.v1.resources.ExtensionFeedItemOrBuilder> extensionFeedItemBuilder_;
@@ -16316,6 +17689,159 @@ private static final long serialVersionUID = 0L;
       return labelBuilder_;
     }
 
+    private com.google.ads.googleads.v1.resources.LandingPageView landingPageView_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.LandingPageView, com.google.ads.googleads.v1.resources.LandingPageView.Builder, com.google.ads.googleads.v1.resources.LandingPageViewOrBuilder> landingPageViewBuilder_;
+    /**
+     * <pre>
+     * The landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+     */
+    public boolean hasLandingPageView() {
+      return landingPageViewBuilder_ != null || landingPageView_ != null;
+    }
+    /**
+     * <pre>
+     * The landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+     */
+    public com.google.ads.googleads.v1.resources.LandingPageView getLandingPageView() {
+      if (landingPageViewBuilder_ == null) {
+        return landingPageView_ == null ? com.google.ads.googleads.v1.resources.LandingPageView.getDefaultInstance() : landingPageView_;
+      } else {
+        return landingPageViewBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+     */
+    public Builder setLandingPageView(com.google.ads.googleads.v1.resources.LandingPageView value) {
+      if (landingPageViewBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        landingPageView_ = value;
+        onChanged();
+      } else {
+        landingPageViewBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+     */
+    public Builder setLandingPageView(
+        com.google.ads.googleads.v1.resources.LandingPageView.Builder builderForValue) {
+      if (landingPageViewBuilder_ == null) {
+        landingPageView_ = builderForValue.build();
+        onChanged();
+      } else {
+        landingPageViewBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+     */
+    public Builder mergeLandingPageView(com.google.ads.googleads.v1.resources.LandingPageView value) {
+      if (landingPageViewBuilder_ == null) {
+        if (landingPageView_ != null) {
+          landingPageView_ =
+            com.google.ads.googleads.v1.resources.LandingPageView.newBuilder(landingPageView_).mergeFrom(value).buildPartial();
+        } else {
+          landingPageView_ = value;
+        }
+        onChanged();
+      } else {
+        landingPageViewBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+     */
+    public Builder clearLandingPageView() {
+      if (landingPageViewBuilder_ == null) {
+        landingPageView_ = null;
+        onChanged();
+      } else {
+        landingPageView_ = null;
+        landingPageViewBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+     */
+    public com.google.ads.googleads.v1.resources.LandingPageView.Builder getLandingPageViewBuilder() {
+      
+      onChanged();
+      return getLandingPageViewFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+     */
+    public com.google.ads.googleads.v1.resources.LandingPageViewOrBuilder getLandingPageViewOrBuilder() {
+      if (landingPageViewBuilder_ != null) {
+        return landingPageViewBuilder_.getMessageOrBuilder();
+      } else {
+        return landingPageView_ == null ?
+            com.google.ads.googleads.v1.resources.LandingPageView.getDefaultInstance() : landingPageView_;
+      }
+    }
+    /**
+     * <pre>
+     * The landing page view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.LandingPageView landing_page_view = 126;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.LandingPageView, com.google.ads.googleads.v1.resources.LandingPageView.Builder, com.google.ads.googleads.v1.resources.LandingPageViewOrBuilder> 
+        getLandingPageViewFieldBuilder() {
+      if (landingPageViewBuilder_ == null) {
+        landingPageViewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.resources.LandingPageView, com.google.ads.googleads.v1.resources.LandingPageView.Builder, com.google.ads.googleads.v1.resources.LandingPageViewOrBuilder>(
+                getLandingPageView(),
+                getParentForChildren(),
+                isClean());
+        landingPageView_ = null;
+      }
+      return landingPageViewBuilder_;
+    }
+
     private com.google.ads.googleads.v1.resources.LanguageConstant languageConstant_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.LanguageConstant, com.google.ads.googleads.v1.resources.LanguageConstant.Builder, com.google.ads.googleads.v1.resources.LanguageConstantOrBuilder> languageConstantBuilder_;
@@ -17234,6 +18760,159 @@ private static final long serialVersionUID = 0L;
       return mobileDeviceConstantBuilder_;
     }
 
+    private com.google.ads.googleads.v1.resources.MutateJob mutateJob_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.MutateJob, com.google.ads.googleads.v1.resources.MutateJob.Builder, com.google.ads.googleads.v1.resources.MutateJobOrBuilder> mutateJobBuilder_;
+    /**
+     * <pre>
+     * The mutate job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+     */
+    public boolean hasMutateJob() {
+      return mutateJobBuilder_ != null || mutateJob_ != null;
+    }
+    /**
+     * <pre>
+     * The mutate job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+     */
+    public com.google.ads.googleads.v1.resources.MutateJob getMutateJob() {
+      if (mutateJobBuilder_ == null) {
+        return mutateJob_ == null ? com.google.ads.googleads.v1.resources.MutateJob.getDefaultInstance() : mutateJob_;
+      } else {
+        return mutateJobBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The mutate job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+     */
+    public Builder setMutateJob(com.google.ads.googleads.v1.resources.MutateJob value) {
+      if (mutateJobBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        mutateJob_ = value;
+        onChanged();
+      } else {
+        mutateJobBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutate job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+     */
+    public Builder setMutateJob(
+        com.google.ads.googleads.v1.resources.MutateJob.Builder builderForValue) {
+      if (mutateJobBuilder_ == null) {
+        mutateJob_ = builderForValue.build();
+        onChanged();
+      } else {
+        mutateJobBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutate job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+     */
+    public Builder mergeMutateJob(com.google.ads.googleads.v1.resources.MutateJob value) {
+      if (mutateJobBuilder_ == null) {
+        if (mutateJob_ != null) {
+          mutateJob_ =
+            com.google.ads.googleads.v1.resources.MutateJob.newBuilder(mutateJob_).mergeFrom(value).buildPartial();
+        } else {
+          mutateJob_ = value;
+        }
+        onChanged();
+      } else {
+        mutateJobBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutate job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+     */
+    public Builder clearMutateJob() {
+      if (mutateJobBuilder_ == null) {
+        mutateJob_ = null;
+        onChanged();
+      } else {
+        mutateJob_ = null;
+        mutateJobBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The mutate job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+     */
+    public com.google.ads.googleads.v1.resources.MutateJob.Builder getMutateJobBuilder() {
+      
+      onChanged();
+      return getMutateJobFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The mutate job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+     */
+    public com.google.ads.googleads.v1.resources.MutateJobOrBuilder getMutateJobOrBuilder() {
+      if (mutateJobBuilder_ != null) {
+        return mutateJobBuilder_.getMessageOrBuilder();
+      } else {
+        return mutateJob_ == null ?
+            com.google.ads.googleads.v1.resources.MutateJob.getDefaultInstance() : mutateJob_;
+      }
+    }
+    /**
+     * <pre>
+     * The mutate job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.MutateJob mutate_job = 127;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.MutateJob, com.google.ads.googleads.v1.resources.MutateJob.Builder, com.google.ads.googleads.v1.resources.MutateJobOrBuilder> 
+        getMutateJobFieldBuilder() {
+      if (mutateJobBuilder_ == null) {
+        mutateJobBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.resources.MutateJob, com.google.ads.googleads.v1.resources.MutateJob.Builder, com.google.ads.googleads.v1.resources.MutateJobOrBuilder>(
+                getMutateJob(),
+                getParentForChildren(),
+                isClean());
+        mutateJob_ = null;
+      }
+      return mutateJobBuilder_;
+    }
+
     private com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant operatingSystemVersionConstant_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant, com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant.Builder, com.google.ads.googleads.v1.resources.OperatingSystemVersionConstantOrBuilder> operatingSystemVersionConstantBuilder_;
@@ -17385,6 +19064,159 @@ private static final long serialVersionUID = 0L;
         operatingSystemVersionConstant_ = null;
       }
       return operatingSystemVersionConstantBuilder_;
+    }
+
+    private com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paidOrganicSearchTermView_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView, com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.Builder, com.google.ads.googleads.v1.resources.PaidOrganicSearchTermViewOrBuilder> paidOrganicSearchTermViewBuilder_;
+    /**
+     * <pre>
+     * The paid organic search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+     */
+    public boolean hasPaidOrganicSearchTermView() {
+      return paidOrganicSearchTermViewBuilder_ != null || paidOrganicSearchTermView_ != null;
+    }
+    /**
+     * <pre>
+     * The paid organic search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+     */
+    public com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView getPaidOrganicSearchTermView() {
+      if (paidOrganicSearchTermViewBuilder_ == null) {
+        return paidOrganicSearchTermView_ == null ? com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.getDefaultInstance() : paidOrganicSearchTermView_;
+      } else {
+        return paidOrganicSearchTermViewBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The paid organic search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+     */
+    public Builder setPaidOrganicSearchTermView(com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView value) {
+      if (paidOrganicSearchTermViewBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        paidOrganicSearchTermView_ = value;
+        onChanged();
+      } else {
+        paidOrganicSearchTermViewBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The paid organic search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+     */
+    public Builder setPaidOrganicSearchTermView(
+        com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.Builder builderForValue) {
+      if (paidOrganicSearchTermViewBuilder_ == null) {
+        paidOrganicSearchTermView_ = builderForValue.build();
+        onChanged();
+      } else {
+        paidOrganicSearchTermViewBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The paid organic search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+     */
+    public Builder mergePaidOrganicSearchTermView(com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView value) {
+      if (paidOrganicSearchTermViewBuilder_ == null) {
+        if (paidOrganicSearchTermView_ != null) {
+          paidOrganicSearchTermView_ =
+            com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.newBuilder(paidOrganicSearchTermView_).mergeFrom(value).buildPartial();
+        } else {
+          paidOrganicSearchTermView_ = value;
+        }
+        onChanged();
+      } else {
+        paidOrganicSearchTermViewBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The paid organic search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+     */
+    public Builder clearPaidOrganicSearchTermView() {
+      if (paidOrganicSearchTermViewBuilder_ == null) {
+        paidOrganicSearchTermView_ = null;
+        onChanged();
+      } else {
+        paidOrganicSearchTermView_ = null;
+        paidOrganicSearchTermViewBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The paid organic search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+     */
+    public com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.Builder getPaidOrganicSearchTermViewBuilder() {
+      
+      onChanged();
+      return getPaidOrganicSearchTermViewFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The paid organic search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+     */
+    public com.google.ads.googleads.v1.resources.PaidOrganicSearchTermViewOrBuilder getPaidOrganicSearchTermViewOrBuilder() {
+      if (paidOrganicSearchTermViewBuilder_ != null) {
+        return paidOrganicSearchTermViewBuilder_.getMessageOrBuilder();
+      } else {
+        return paidOrganicSearchTermView_ == null ?
+            com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.getDefaultInstance() : paidOrganicSearchTermView_;
+      }
+    }
+    /**
+     * <pre>
+     * The paid organic search term view referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView, com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.Builder, com.google.ads.googleads.v1.resources.PaidOrganicSearchTermViewOrBuilder> 
+        getPaidOrganicSearchTermViewFieldBuilder() {
+      if (paidOrganicSearchTermViewBuilder_ == null) {
+        paidOrganicSearchTermViewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView, com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.Builder, com.google.ads.googleads.v1.resources.PaidOrganicSearchTermViewOrBuilder>(
+                getPaidOrganicSearchTermView(),
+                getParentForChildren(),
+                isClean());
+        paidOrganicSearchTermView_ = null;
+      }
+      return paidOrganicSearchTermViewBuilder_;
     }
 
     private com.google.ads.googleads.v1.resources.ParentalStatusView parentalStatusView_ = null;

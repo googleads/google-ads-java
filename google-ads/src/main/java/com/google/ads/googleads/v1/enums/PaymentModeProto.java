@@ -30,16 +30,16 @@ public final class PaymentModeProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v1/enums/payment_" +
       "mode.proto\022\035google.ads.googleads.v1.enum" +
-      "s\032\034google/api/annotations.proto\"`\n\017Payme" +
-      "ntModeEnum\"M\n\013PaymentMode\022\017\n\013UNSPECIFIED" +
+      "s\032\034google/api/annotations.proto\"q\n\017Payme" +
+      "ntModeEnum\"^\n\013PaymentMode\022\017\n\013UNSPECIFIED" +
       "\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006CLICKS\020\004\022\024\n\020CONVERSIO" +
-      "N_VALUE\020\005B\345\001\n!com.google.ads.googleads.v" +
-      "1.enumsB\020PaymentModeProtoP\001ZBgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v1/enums;enums\242\002\003GAA\252\002\035Google.Ads.Googl" +
-      "eAds.V1.Enums\312\002\035Google\\Ads\\GoogleAds\\V1\\" +
-      "Enums\352\002!Google::Ads::GoogleAds::V1::Enum" +
-      "sb\006proto3"
+      "N_VALUE\020\005\022\017\n\013CONVERSIONS\020\006B\345\001\n!com.googl" +
+      "e.ads.googleads.v1.enumsB\020PaymentModePro" +
+      "toP\001ZBgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v1/enums;enums\242\002\003GAA\252\002" +
+      "\035Google.Ads.GoogleAds.V1.Enums\312\002\035Google\\" +
+      "Ads\\GoogleAds\\V1\\Enums\352\002!Google::Ads::Go" +
+      "ogleAds::V1::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

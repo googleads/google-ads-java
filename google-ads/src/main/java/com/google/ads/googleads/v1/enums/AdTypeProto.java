@@ -30,8 +30,8 @@ public final class AdTypeProto {
     java.lang.String[] descriptorData = {
       "\n+google/ads/googleads/v1/enums/ad_type." +
       "proto\022\035google.ads.googleads.v1.enums\032\034go" +
-      "ogle/api/annotations.proto\"\360\002\n\nAdTypeEnu" +
-      "m\"\341\002\n\006AdType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN" +
+      "ogle/api/annotations.proto\"\262\003\n\nAdTypeEnu" +
+      "m\"\243\003\n\006AdType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN" +
       "\020\001\022\013\n\007TEXT_AD\020\002\022\024\n\020EXPANDED_TEXT_AD\020\003\022\020\n" +
       "\014CALL_ONLY_AD\020\006\022\036\n\032EXPANDED_DYNAMIC_SEAR" +
       "CH_AD\020\007\022\014\n\010HOTEL_AD\020\010\022\025\n\021SHOPPING_SMART_" +
@@ -39,13 +39,15 @@ public final class AdTypeProto {
       "D\020\014\022\014\n\010GMAIL_AD\020\r\022\014\n\010IMAGE_AD\020\016\022\030\n\024RESPO" +
       "NSIVE_SEARCH_AD\020\017\022 \n\034LEGACY_RESPONSIVE_D" +
       "ISPLAY_AD\020\020\022\n\n\006APP_AD\020\021\022\031\n\025LEGACY_APP_IN" +
-      "STALL_AD\020\022\022\031\n\025RESPONSIVE_DISPLAY_AD\020\023B\340\001" +
-      "\n!com.google.ads.googleads.v1.enumsB\013AdT" +
-      "ypeProtoP\001ZBgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v1/enums;enums\242\002" +
-      "\003GAA\252\002\035Google.Ads.GoogleAds.V1.Enums\312\002\035G" +
-      "oogle\\Ads\\GoogleAds\\V1\\Enums\352\002!Google::A" +
-      "ds::GoogleAds::V1::Enumsb\006proto3"
+      "STALL_AD\020\022\022\031\n\025RESPONSIVE_DISPLAY_AD\020\023\022\023\n" +
+      "\017HTML5_UPLOAD_AD\020\025\022\024\n\020DYNAMIC_HTML5_AD\020\026" +
+      "\022\025\n\021APP_ENGAGEMENT_AD\020\027B\340\001\n!com.google.a" +
+      "ds.googleads.v1.enumsB\013AdTypeProtoP\001ZBgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v1/enums;enums\242\002\003GAA\252\002\035Google." +
+      "Ads.GoogleAds.V1.Enums\312\002\035Google\\Ads\\Goog" +
+      "leAds\\V1\\Enums\352\002!Google::Ads::GoogleAds:" +
+      ":V1::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
