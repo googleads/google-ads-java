@@ -21,11 +21,6 @@ public abstract class AbstractGoogleAdsClient implements GoogleAdsAllVersions {
   protected abstract GoogleAdsAllVersions getGoogleAdsAllVersions();
 
   @Override
-  public com.google.ads.googleads.v0.services.GoogleAdsVersion getVersion0() {
-    return getGoogleAdsAllVersions().getVersion0();
-  }
-
-  @Override
   public com.google.ads.googleads.v1.services.GoogleAdsVersion getVersion1() {
     return getGoogleAdsAllVersions().getVersion1();
   }
