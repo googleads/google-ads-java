@@ -55,6 +55,11 @@ public final class PolicyProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_DestinationMismatch_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_DestinationNotWorking_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_DestinationNotWorking_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v1_common_PolicyTopicConstraint_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -88,37 +93,42 @@ public final class PolicyProto {
       "oogle/ads/googleads/v1/enums/policy_topi" +
       "c_entry_type.proto\032Wgoogle/ads/googleads" +
       "/v1/enums/policy_topic_evidence_destinat" +
-      "ion_mismatch_url_type.proto\032\036google/prot" +
-      "obuf/wrappers.proto\032\034google/api/annotati" +
-      "ons.proto\"}\n\022PolicyViolationKey\0221\n\013polic" +
-      "y_name\030\001 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\0224\n\016violating_text\030\002 \001(\0132\034.google.prot" +
-      "obuf.StringValue\"\264\001\n\031PolicyValidationPar" +
-      "ameter\022=\n\027ignorable_policy_topics\030\001 \003(\0132" +
-      "\034.google.protobuf.StringValue\022X\n\034exempt_" +
-      "policy_violation_keys\030\002 \003(\01322.google.ads" +
-      ".googleads.v1.common.PolicyViolationKey\"" +
-      "\257\002\n\020PolicyTopicEntry\022+\n\005topic\030\001 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\022Z\n\004type\030\002 \001(\0162" +
-      "L.google.ads.googleads.v1.enums.PolicyTo" +
-      "picEntryTypeEnum.PolicyTopicEntryType\022F\n" +
-      "\tevidences\030\003 \003(\01323.google.ads.googleads." +
-      "v1.common.PolicyTopicEvidence\022J\n\013constra" +
-      "ints\030\004 \003(\01325.google.ads.googleads.v1.com" +
-      "mon.PolicyTopicConstraint\"\372\006\n\023PolicyTopi" +
-      "cEvidence\0220\n\thttp_code\030\002 \001(\0132\033.google.pr" +
-      "otobuf.Int32ValueH\000\022W\n\014website_list\030\003 \001(" +
-      "\0132?.google.ads.googleads.v1.common.Polic" +
-      "yTopicEvidence.WebsiteListH\000\022Q\n\ttext_lis" +
-      "t\030\004 \001(\0132<.google.ads.googleads.v1.common" +
-      ".PolicyTopicEvidence.TextListH\000\0225\n\rlangu" +
-      "age_code\030\005 \001(\0132\034.google.protobuf.StringV" +
-      "alueH\000\022h\n\025destination_text_list\030\006 \001(\0132G." +
-      "google.ads.googleads.v1.common.PolicyTop" +
-      "icEvidence.DestinationTextListH\000\022g\n\024dest" +
-      "ination_mismatch\030\007 \001(\0132G.google.ads.goog" +
-      "leads.v1.common.PolicyTopicEvidence.Dest" +
-      "inationMismatchH\000\0327\n\010TextList\022+\n\005texts\030\001" +
+      "ion_mismatch_url_type.proto\032Xgoogle/ads/" +
+      "googleads/v1/enums/policy_topic_evidence" +
+      "_destination_not_working_device.proto\032\036g" +
+      "oogle/protobuf/wrappers.proto\032\034google/ap" +
+      "i/annotations.proto\"}\n\022PolicyViolationKe" +
+      "y\0221\n\013policy_name\030\001 \001(\0132\034.google.protobuf" +
+      ".StringValue\0224\n\016violating_text\030\002 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\"\264\001\n\031PolicyVal" +
+      "idationParameter\022=\n\027ignorable_policy_top" +
+      "ics\030\001 \003(\0132\034.google.protobuf.StringValue\022" +
+      "X\n\034exempt_policy_violation_keys\030\002 \003(\01322." +
+      "google.ads.googleads.v1.common.PolicyVio" +
+      "lationKey\"\257\002\n\020PolicyTopicEntry\022+\n\005topic\030" +
+      "\001 \001(\0132\034.google.protobuf.StringValue\022Z\n\004t" +
+      "ype\030\002 \001(\0162L.google.ads.googleads.v1.enum" +
+      "s.PolicyTopicEntryTypeEnum.PolicyTopicEn" +
+      "tryType\022F\n\tevidences\030\003 \003(\01323.google.ads." +
+      "googleads.v1.common.PolicyTopicEvidence\022" +
+      "J\n\013constraints\030\004 \003(\01325.google.ads.google" +
+      "ads.v1.common.PolicyTopicConstraint\"\210\n\n\023" +
+      "PolicyTopicEvidence\0220\n\thttp_code\030\002 \001(\0132\033" +
+      ".google.protobuf.Int32ValueH\000\022W\n\014website" +
+      "_list\030\003 \001(\0132?.google.ads.googleads.v1.co" +
+      "mmon.PolicyTopicEvidence.WebsiteListH\000\022Q" +
+      "\n\ttext_list\030\004 \001(\0132<.google.ads.googleads" +
+      ".v1.common.PolicyTopicEvidence.TextListH" +
+      "\000\0225\n\rlanguage_code\030\005 \001(\0132\034.google.protob" +
+      "uf.StringValueH\000\022h\n\025destination_text_lis" +
+      "t\030\006 \001(\0132G.google.ads.googleads.v1.common" +
+      ".PolicyTopicEvidence.DestinationTextList" +
+      "H\000\022g\n\024destination_mismatch\030\007 \001(\0132G.googl" +
+      "e.ads.googleads.v1.common.PolicyTopicEvi" +
+      "dence.DestinationMismatchH\000\022l\n\027destinati" +
+      "on_not_working\030\010 \001(\0132I.google.ads.google" +
+      "ads.v1.common.PolicyTopicEvidence.Destin" +
+      "ationNotWorkingH\000\0327\n\010TextList\022+\n\005texts\030\001" +
       " \003(\0132\034.google.protobuf.StringValue\032=\n\013We" +
       "bsiteList\022.\n\010websites\030\001 \003(\0132\034.google.pro" +
       "tobuf.StringValue\032N\n\023DestinationTextList" +
@@ -127,33 +137,40 @@ public final class PolicyProto {
       "h\022\221\001\n\turl_types\030\001 \003(\0162~.google.ads.googl" +
       "eads.v1.enums.PolicyTopicEvidenceDestina" +
       "tionMismatchUrlTypeEnum.PolicyTopicEvide" +
-      "nceDestinationMismatchUrlTypeB\007\n\005value\"\223" +
-      "\006\n\025PolicyTopicConstraint\022n\n\027country_cons" +
-      "traint_list\030\001 \001(\0132K.google.ads.googleads" +
-      ".v1.common.PolicyTopicConstraint.Country" +
-      "ConstraintListH\000\022g\n\023reseller_constraint\030" +
-      "\002 \001(\0132H.google.ads.googleads.v1.common.P" +
-      "olicyTopicConstraint.ResellerConstraintH" +
-      "\000\022z\n#certificate_missing_in_country_list" +
-      "\030\003 \001(\0132K.google.ads.googleads.v1.common." +
-      "PolicyTopicConstraint.CountryConstraintL" +
-      "istH\000\022\202\001\n+certificate_domain_mismatch_in" +
-      "_country_list\030\004 \001(\0132K.google.ads.googlea" +
-      "ds.v1.common.PolicyTopicConstraint.Count" +
-      "ryConstraintListH\000\032\262\001\n\025CountryConstraint" +
-      "List\022=\n\030total_targeted_countries\030\001 \001(\0132\033" +
-      ".google.protobuf.Int32Value\022Z\n\tcountries" +
-      "\030\002 \003(\0132G.google.ads.googleads.v1.common." +
-      "PolicyTopicConstraint.CountryConstraint\032" +
-      "\024\n\022ResellerConstraint\032L\n\021CountryConstrai" +
-      "nt\0227\n\021country_criterion\030\001 \001(\0132\034.google.p" +
-      "rotobuf.StringValueB\007\n\005valueB\346\001\n\"com.goo" +
-      "gle.ads.googleads.v1.commonB\013PolicyProto" +
-      "P\001ZDgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v1/common;common\242\002\003GAA\252\002" +
-      "\036Google.Ads.GoogleAds.V1.Common\312\002\036Google" +
-      "\\Ads\\GoogleAds\\V1\\Common\352\002\"Google::Ads::" +
-      "GoogleAds::V1::Commonb\006proto3"
+      "nceDestinationMismatchUrlType\032\235\002\n\025Destin" +
+      "ationNotWorking\0222\n\014expanded_url\030\003 \001(\0132\034." +
+      "google.protobuf.StringValue\022\221\001\n\006device\030\004" +
+      " \001(\0162\200\001.google.ads.googleads.v1.enums.Po" +
+      "licyTopicEvidenceDestinationNotWorkingDe" +
+      "viceEnum.PolicyTopicEvidenceDestinationN" +
+      "otWorkingDevice\022<\n\026last_checked_date_tim" +
+      "e\030\005 \001(\0132\034.google.protobuf.StringValueB\007\n" +
+      "\005value\"\223\006\n\025PolicyTopicConstraint\022n\n\027coun" +
+      "try_constraint_list\030\001 \001(\0132K.google.ads.g" +
+      "oogleads.v1.common.PolicyTopicConstraint" +
+      ".CountryConstraintListH\000\022g\n\023reseller_con" +
+      "straint\030\002 \001(\0132H.google.ads.googleads.v1." +
+      "common.PolicyTopicConstraint.ResellerCon" +
+      "straintH\000\022z\n#certificate_missing_in_coun" +
+      "try_list\030\003 \001(\0132K.google.ads.googleads.v1" +
+      ".common.PolicyTopicConstraint.CountryCon" +
+      "straintListH\000\022\202\001\n+certificate_domain_mis" +
+      "match_in_country_list\030\004 \001(\0132K.google.ads" +
+      ".googleads.v1.common.PolicyTopicConstrai" +
+      "nt.CountryConstraintListH\000\032\262\001\n\025CountryCo" +
+      "nstraintList\022=\n\030total_targeted_countries" +
+      "\030\001 \001(\0132\033.google.protobuf.Int32Value\022Z\n\tc" +
+      "ountries\030\002 \003(\0132G.google.ads.googleads.v1" +
+      ".common.PolicyTopicConstraint.CountryCon" +
+      "straint\032\024\n\022ResellerConstraint\032L\n\021Country" +
+      "Constraint\0227\n\021country_criterion\030\001 \001(\0132\034." +
+      "google.protobuf.StringValueB\007\n\005valueB\346\001\n" +
+      "\"com.google.ads.googleads.v1.commonB\013Pol" +
+      "icyProtoP\001ZDgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v1/common;common" +
+      "\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1.Common\312" +
+      "\002\036Google\\Ads\\GoogleAds\\V1\\Common\352\002\"Googl" +
+      "e::Ads::GoogleAds::V1::Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -168,6 +185,7 @@ public final class PolicyProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.enums.PolicyTopicEntryTypeProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeProto.getDescriptor(),
+          com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
@@ -194,7 +212,7 @@ public final class PolicyProto {
     internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_descriptor,
-        new java.lang.String[] { "HttpCode", "WebsiteList", "TextList", "LanguageCode", "DestinationTextList", "DestinationMismatch", "Value", });
+        new java.lang.String[] { "HttpCode", "WebsiteList", "TextList", "LanguageCode", "DestinationTextList", "DestinationMismatch", "DestinationNotWorking", "Value", });
     internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_TextList_descriptor =
       internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_TextList_fieldAccessorTable = new
@@ -219,6 +237,12 @@ public final class PolicyProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_DestinationMismatch_descriptor,
         new java.lang.String[] { "UrlTypes", });
+    internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_DestinationNotWorking_descriptor =
+      internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_descriptor.getNestedTypes().get(4);
+    internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_DestinationNotWorking_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_DestinationNotWorking_descriptor,
+        new java.lang.String[] { "ExpandedUrl", "Device", "LastCheckedDateTime", });
     internal_static_google_ads_googleads_v1_common_PolicyTopicConstraint_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_google_ads_googleads_v1_common_PolicyTopicConstraint_fieldAccessorTable = new
@@ -245,6 +269,7 @@ public final class PolicyProto {
         new java.lang.String[] { "CountryCriterion", });
     com.google.ads.googleads.v1.enums.PolicyTopicEntryTypeProto.getDescriptor();
     com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeProto.getDescriptor();
+    com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

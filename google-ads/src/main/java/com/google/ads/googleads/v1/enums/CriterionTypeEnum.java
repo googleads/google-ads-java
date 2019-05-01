@@ -334,6 +334,14 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOM_INTENT = 30;</code>
      */
     CUSTOM_INTENT(30),
+    /**
+     * <pre>
+     * Location group.
+     * </pre>
+     *
+     * <code>LOCATION_GROUP = 31;</code>
+     */
+    LOCATION_GROUP(31),
     UNRECOGNIZED(-1),
     ;
 
@@ -585,6 +593,14 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOM_INTENT = 30;</code>
      */
     public static final int CUSTOM_INTENT_VALUE = 30;
+    /**
+     * <pre>
+     * Location group.
+     * </pre>
+     *
+     * <code>LOCATION_GROUP = 31;</code>
+     */
+    public static final int LOCATION_GROUP_VALUE = 31;
 
 
     public final int getNumber() {
@@ -636,6 +652,7 @@ private static final long serialVersionUID = 0L;
         case 28: return MOBILE_DEVICE;
         case 29: return CUSTOM_AFFINITY;
         case 30: return CUSTOM_INTENT;
+        case 31: return LOCATION_GROUP;
         default: return null;
       }
     }

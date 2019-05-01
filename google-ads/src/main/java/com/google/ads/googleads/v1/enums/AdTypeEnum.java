@@ -223,6 +223,31 @@ private static final long serialVersionUID = 0L;
      * <code>RESPONSIVE_DISPLAY_AD = 19;</code>
      */
     RESPONSIVE_DISPLAY_AD(19),
+    /**
+     * <pre>
+     * The ad is a display upload ad with the HTML5_UPLOAD_AD product type.
+     * </pre>
+     *
+     * <code>HTML5_UPLOAD_AD = 21;</code>
+     */
+    HTML5_UPLOAD_AD(21),
+    /**
+     * <pre>
+     * The ad is a display upload ad with one of the DYNAMIC_HTML5_* product
+     * types.
+     * </pre>
+     *
+     * <code>DYNAMIC_HTML5_AD = 22;</code>
+     */
+    DYNAMIC_HTML5_AD(22),
+    /**
+     * <pre>
+     * The ad is an app engagement ad.
+     * </pre>
+     *
+     * <code>APP_ENGAGEMENT_AD = 23;</code>
+     */
+    APP_ENGAGEMENT_AD(23),
     UNRECOGNIZED(-1),
     ;
 
@@ -363,6 +388,31 @@ private static final long serialVersionUID = 0L;
      * <code>RESPONSIVE_DISPLAY_AD = 19;</code>
      */
     public static final int RESPONSIVE_DISPLAY_AD_VALUE = 19;
+    /**
+     * <pre>
+     * The ad is a display upload ad with the HTML5_UPLOAD_AD product type.
+     * </pre>
+     *
+     * <code>HTML5_UPLOAD_AD = 21;</code>
+     */
+    public static final int HTML5_UPLOAD_AD_VALUE = 21;
+    /**
+     * <pre>
+     * The ad is a display upload ad with one of the DYNAMIC_HTML5_* product
+     * types.
+     * </pre>
+     *
+     * <code>DYNAMIC_HTML5_AD = 22;</code>
+     */
+    public static final int DYNAMIC_HTML5_AD_VALUE = 22;
+    /**
+     * <pre>
+     * The ad is an app engagement ad.
+     * </pre>
+     *
+     * <code>APP_ENGAGEMENT_AD = 23;</code>
+     */
+    public static final int APP_ENGAGEMENT_AD_VALUE = 23;
 
 
     public final int getNumber() {
@@ -400,6 +450,9 @@ private static final long serialVersionUID = 0L;
         case 17: return APP_AD;
         case 18: return LEGACY_APP_INSTALL_AD;
         case 19: return RESPONSIVE_DISPLAY_AD;
+        case 21: return HTML5_UPLOAD_AD;
+        case 22: return DYNAMIC_HTML5_AD;
+        case 23: return APP_ENGAGEMENT_AD;
         default: return null;
       }
     }

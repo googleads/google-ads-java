@@ -121,6 +121,15 @@ private static final long serialVersionUID = 0L;
     LIMITED(4),
     /**
      * <pre>
+     * The resource cannot serve at all because of the current targeting
+     * criteria.
+     * </pre>
+     *
+     * <code>FULLY_LIMITED = 8;</code>
+     */
+    FULLY_LIMITED(8),
+    /**
+     * <pre>
      * May be of interest, but does not limit how the resource is served.
      * </pre>
      *
@@ -182,6 +191,15 @@ private static final long serialVersionUID = 0L;
     public static final int LIMITED_VALUE = 4;
     /**
      * <pre>
+     * The resource cannot serve at all because of the current targeting
+     * criteria.
+     * </pre>
+     *
+     * <code>FULLY_LIMITED = 8;</code>
+     */
+    public static final int FULLY_LIMITED_VALUE = 8;
+    /**
+     * <pre>
      * May be of interest, but does not limit how the resource is served.
      * </pre>
      *
@@ -229,6 +247,7 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 2: return PROHIBITED;
         case 4: return LIMITED;
+        case 8: return FULLY_LIMITED;
         case 5: return DESCRIPTIVE;
         case 6: return BROADENING;
         case 7: return AREA_OF_INTEREST_ONLY;

@@ -6,7 +6,6 @@ package com.google.ads.googleads.v1.common;
 /**
  * <pre>
  * Additional information that explains a policy finding.
- * Next Id: 8
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEvidence}
@@ -131,6 +130,20 @@ private static final long serialVersionUID = 0L;
             valueCase_ = 7;
             break;
           }
+          case 66: {
+            com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.Builder subBuilder = null;
+            if (valueCase_ == 8) {
+              subBuilder = ((com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) value_).toBuilder();
+            }
+            value_ =
+                input.readMessage(com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) value_);
+              value_ = subBuilder.buildPartial();
+            }
+            valueCase_ = 8;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -214,7 +227,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of fragments of text that violated a policy.
-   * Next Id: 2
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEvidence.TextList}
@@ -516,7 +528,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of fragments of text that violated a policy.
-     * Next Id: 2
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEvidence.TextList}
@@ -1121,7 +1132,6 @@ private static final long serialVersionUID = 0L;
    * ONE_WEBSITE_PER_AD_GROUP policy topic, for example. In case there are more
    * than five websites, only the top five (those that appear in resources the
    * most) will be listed here.
-   * Next Id: 2
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEvidence.WebsiteList}
@@ -1426,7 +1436,6 @@ private static final long serialVersionUID = 0L;
      * ONE_WEBSITE_PER_AD_GROUP policy topic, for example. In case there are more
      * than five websites, only the top five (those that appear in resources the
      * most) will be listed here.
-     * Next Id: 2
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEvidence.WebsiteList}
@@ -2029,7 +2038,6 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * A list of strings found in a destination page that caused a policy
    * finding.
-   * Next Id: 2
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationTextList}
@@ -2332,7 +2340,6 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A list of strings found in a destination page that caused a policy
      * finding.
-     * Next Id: 2
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationTextList}
@@ -2932,7 +2939,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Evidence of mismatches between the URLs of a resource.
-   * Next Id: 2
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationMismatch}
@@ -3271,7 +3277,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Evidence of mismatches between the URLs of a resource.
-     * Next Id: 2
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationMismatch}
@@ -3651,6 +3656,1097 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface DestinationNotWorkingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The full URL that didn't work.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+     */
+    boolean hasExpandedUrl();
+    /**
+     * <pre>
+     * The full URL that didn't work.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+     */
+    com.google.protobuf.StringValue getExpandedUrl();
+    /**
+     * <pre>
+     * The full URL that didn't work.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getExpandedUrlOrBuilder();
+
+    /**
+     * <pre>
+     * The type of device that failed to load the URL.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+     */
+    int getDeviceValue();
+    /**
+     * <pre>
+     * The type of device that failed to load the URL.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+     */
+    com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice getDevice();
+
+    /**
+     * <pre>
+     * The time the URL was last checked.
+     * The format is "YYYY-MM-DD HH:MM:SS".
+     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+     */
+    boolean hasLastCheckedDateTime();
+    /**
+     * <pre>
+     * The time the URL was last checked.
+     * The format is "YYYY-MM-DD HH:MM:SS".
+     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+     */
+    com.google.protobuf.StringValue getLastCheckedDateTime();
+    /**
+     * <pre>
+     * The time the URL was last checked.
+     * The format is "YYYY-MM-DD HH:MM:SS".
+     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getLastCheckedDateTimeOrBuilder();
+  }
+  /**
+   * <pre>
+   * Evidence details when the destination is returning an HTTP error
+   * code or isn't functional in all locations for commonly used devices.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking}
+   */
+  public  static final class DestinationNotWorking extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking)
+      DestinationNotWorkingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DestinationNotWorking.newBuilder() to construct.
+    private DestinationNotWorking(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DestinationNotWorking() {
+      device_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DestinationNotWorking(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 26: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (expandedUrl_ != null) {
+                subBuilder = expandedUrl_.toBuilder();
+              }
+              expandedUrl_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(expandedUrl_);
+                expandedUrl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              device_ = rawValue;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (lastCheckedDateTime_ != null) {
+                subBuilder = lastCheckedDateTime_.toBuilder();
+              }
+              lastCheckedDateTime_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastCheckedDateTime_);
+                lastCheckedDateTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v1.common.PolicyProto.internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_DestinationNotWorking_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v1.common.PolicyProto.internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_DestinationNotWorking_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.class, com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.Builder.class);
+    }
+
+    public static final int EXPANDED_URL_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue expandedUrl_;
+    /**
+     * <pre>
+     * The full URL that didn't work.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+     */
+    public boolean hasExpandedUrl() {
+      return expandedUrl_ != null;
+    }
+    /**
+     * <pre>
+     * The full URL that didn't work.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+     */
+    public com.google.protobuf.StringValue getExpandedUrl() {
+      return expandedUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : expandedUrl_;
+    }
+    /**
+     * <pre>
+     * The full URL that didn't work.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getExpandedUrlOrBuilder() {
+      return getExpandedUrl();
+    }
+
+    public static final int DEVICE_FIELD_NUMBER = 4;
+    private int device_;
+    /**
+     * <pre>
+     * The type of device that failed to load the URL.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+     */
+    public int getDeviceValue() {
+      return device_;
+    }
+    /**
+     * <pre>
+     * The type of device that failed to load the URL.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+     */
+    public com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice getDevice() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice result = com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.valueOf(device_);
+      return result == null ? com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.UNRECOGNIZED : result;
+    }
+
+    public static final int LAST_CHECKED_DATE_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.StringValue lastCheckedDateTime_;
+    /**
+     * <pre>
+     * The time the URL was last checked.
+     * The format is "YYYY-MM-DD HH:MM:SS".
+     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+     */
+    public boolean hasLastCheckedDateTime() {
+      return lastCheckedDateTime_ != null;
+    }
+    /**
+     * <pre>
+     * The time the URL was last checked.
+     * The format is "YYYY-MM-DD HH:MM:SS".
+     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+     */
+    public com.google.protobuf.StringValue getLastCheckedDateTime() {
+      return lastCheckedDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : lastCheckedDateTime_;
+    }
+    /**
+     * <pre>
+     * The time the URL was last checked.
+     * The format is "YYYY-MM-DD HH:MM:SS".
+     * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getLastCheckedDateTimeOrBuilder() {
+      return getLastCheckedDateTime();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (expandedUrl_ != null) {
+        output.writeMessage(3, getExpandedUrl());
+      }
+      if (device_ != com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, device_);
+      }
+      if (lastCheckedDateTime_ != null) {
+        output.writeMessage(5, getLastCheckedDateTime());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (expandedUrl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getExpandedUrl());
+      }
+      if (device_ != com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, device_);
+      }
+      if (lastCheckedDateTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getLastCheckedDateTime());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking other = (com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) obj;
+
+      boolean result = true;
+      result = result && (hasExpandedUrl() == other.hasExpandedUrl());
+      if (hasExpandedUrl()) {
+        result = result && getExpandedUrl()
+            .equals(other.getExpandedUrl());
+      }
+      result = result && device_ == other.device_;
+      result = result && (hasLastCheckedDateTime() == other.hasLastCheckedDateTime());
+      if (hasLastCheckedDateTime()) {
+        result = result && getLastCheckedDateTime()
+            .equals(other.getLastCheckedDateTime());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasExpandedUrl()) {
+        hash = (37 * hash) + EXPANDED_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getExpandedUrl().hashCode();
+      }
+      hash = (37 * hash) + DEVICE_FIELD_NUMBER;
+      hash = (53 * hash) + device_;
+      if (hasLastCheckedDateTime()) {
+        hash = (37 * hash) + LAST_CHECKED_DATE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getLastCheckedDateTime().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Evidence details when the destination is returning an HTTP error
+     * code or isn't functional in all locations for commonly used devices.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking)
+        com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorkingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v1.common.PolicyProto.internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_DestinationNotWorking_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v1.common.PolicyProto.internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_DestinationNotWorking_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.class, com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (expandedUrlBuilder_ == null) {
+          expandedUrl_ = null;
+        } else {
+          expandedUrl_ = null;
+          expandedUrlBuilder_ = null;
+        }
+        device_ = 0;
+
+        if (lastCheckedDateTimeBuilder_ == null) {
+          lastCheckedDateTime_ = null;
+        } else {
+          lastCheckedDateTime_ = null;
+          lastCheckedDateTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v1.common.PolicyProto.internal_static_google_ads_googleads_v1_common_PolicyTopicEvidence_DestinationNotWorking_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking getDefaultInstanceForType() {
+        return com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking build() {
+        com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking buildPartial() {
+        com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking result = new com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking(this);
+        if (expandedUrlBuilder_ == null) {
+          result.expandedUrl_ = expandedUrl_;
+        } else {
+          result.expandedUrl_ = expandedUrlBuilder_.build();
+        }
+        result.device_ = device_;
+        if (lastCheckedDateTimeBuilder_ == null) {
+          result.lastCheckedDateTime_ = lastCheckedDateTime_;
+        } else {
+          result.lastCheckedDateTime_ = lastCheckedDateTimeBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) {
+          return mergeFrom((com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking other) {
+        if (other == com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.getDefaultInstance()) return this;
+        if (other.hasExpandedUrl()) {
+          mergeExpandedUrl(other.getExpandedUrl());
+        }
+        if (other.device_ != 0) {
+          setDeviceValue(other.getDeviceValue());
+        }
+        if (other.hasLastCheckedDateTime()) {
+          mergeLastCheckedDateTime(other.getLastCheckedDateTime());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.StringValue expandedUrl_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> expandedUrlBuilder_;
+      /**
+       * <pre>
+       * The full URL that didn't work.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+       */
+      public boolean hasExpandedUrl() {
+        return expandedUrlBuilder_ != null || expandedUrl_ != null;
+      }
+      /**
+       * <pre>
+       * The full URL that didn't work.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+       */
+      public com.google.protobuf.StringValue getExpandedUrl() {
+        if (expandedUrlBuilder_ == null) {
+          return expandedUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : expandedUrl_;
+        } else {
+          return expandedUrlBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The full URL that didn't work.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+       */
+      public Builder setExpandedUrl(com.google.protobuf.StringValue value) {
+        if (expandedUrlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          expandedUrl_ = value;
+          onChanged();
+        } else {
+          expandedUrlBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The full URL that didn't work.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+       */
+      public Builder setExpandedUrl(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (expandedUrlBuilder_ == null) {
+          expandedUrl_ = builderForValue.build();
+          onChanged();
+        } else {
+          expandedUrlBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The full URL that didn't work.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+       */
+      public Builder mergeExpandedUrl(com.google.protobuf.StringValue value) {
+        if (expandedUrlBuilder_ == null) {
+          if (expandedUrl_ != null) {
+            expandedUrl_ =
+              com.google.protobuf.StringValue.newBuilder(expandedUrl_).mergeFrom(value).buildPartial();
+          } else {
+            expandedUrl_ = value;
+          }
+          onChanged();
+        } else {
+          expandedUrlBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The full URL that didn't work.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+       */
+      public Builder clearExpandedUrl() {
+        if (expandedUrlBuilder_ == null) {
+          expandedUrl_ = null;
+          onChanged();
+        } else {
+          expandedUrl_ = null;
+          expandedUrlBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The full URL that didn't work.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getExpandedUrlBuilder() {
+        
+        onChanged();
+        return getExpandedUrlFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The full URL that didn't work.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getExpandedUrlOrBuilder() {
+        if (expandedUrlBuilder_ != null) {
+          return expandedUrlBuilder_.getMessageOrBuilder();
+        } else {
+          return expandedUrl_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : expandedUrl_;
+        }
+      }
+      /**
+       * <pre>
+       * The full URL that didn't work.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue expanded_url = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getExpandedUrlFieldBuilder() {
+        if (expandedUrlBuilder_ == null) {
+          expandedUrlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getExpandedUrl(),
+                  getParentForChildren(),
+                  isClean());
+          expandedUrl_ = null;
+        }
+        return expandedUrlBuilder_;
+      }
+
+      private int device_ = 0;
+      /**
+       * <pre>
+       * The type of device that failed to load the URL.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+       */
+      public int getDeviceValue() {
+        return device_;
+      }
+      /**
+       * <pre>
+       * The type of device that failed to load the URL.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+       */
+      public Builder setDeviceValue(int value) {
+        device_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of device that failed to load the URL.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+       */
+      public com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice getDevice() {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice result = com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.valueOf(device_);
+        return result == null ? com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The type of device that failed to load the URL.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+       */
+      public Builder setDevice(com.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        device_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of device that failed to load the URL.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice device = 4;</code>
+       */
+      public Builder clearDevice() {
+        
+        device_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.StringValue lastCheckedDateTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> lastCheckedDateTimeBuilder_;
+      /**
+       * <pre>
+       * The time the URL was last checked.
+       * The format is "YYYY-MM-DD HH:MM:SS".
+       * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+       */
+      public boolean hasLastCheckedDateTime() {
+        return lastCheckedDateTimeBuilder_ != null || lastCheckedDateTime_ != null;
+      }
+      /**
+       * <pre>
+       * The time the URL was last checked.
+       * The format is "YYYY-MM-DD HH:MM:SS".
+       * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+       */
+      public com.google.protobuf.StringValue getLastCheckedDateTime() {
+        if (lastCheckedDateTimeBuilder_ == null) {
+          return lastCheckedDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : lastCheckedDateTime_;
+        } else {
+          return lastCheckedDateTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time the URL was last checked.
+       * The format is "YYYY-MM-DD HH:MM:SS".
+       * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+       */
+      public Builder setLastCheckedDateTime(com.google.protobuf.StringValue value) {
+        if (lastCheckedDateTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastCheckedDateTime_ = value;
+          onChanged();
+        } else {
+          lastCheckedDateTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the URL was last checked.
+       * The format is "YYYY-MM-DD HH:MM:SS".
+       * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+       */
+      public Builder setLastCheckedDateTime(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (lastCheckedDateTimeBuilder_ == null) {
+          lastCheckedDateTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastCheckedDateTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the URL was last checked.
+       * The format is "YYYY-MM-DD HH:MM:SS".
+       * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+       */
+      public Builder mergeLastCheckedDateTime(com.google.protobuf.StringValue value) {
+        if (lastCheckedDateTimeBuilder_ == null) {
+          if (lastCheckedDateTime_ != null) {
+            lastCheckedDateTime_ =
+              com.google.protobuf.StringValue.newBuilder(lastCheckedDateTime_).mergeFrom(value).buildPartial();
+          } else {
+            lastCheckedDateTime_ = value;
+          }
+          onChanged();
+        } else {
+          lastCheckedDateTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the URL was last checked.
+       * The format is "YYYY-MM-DD HH:MM:SS".
+       * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+       */
+      public Builder clearLastCheckedDateTime() {
+        if (lastCheckedDateTimeBuilder_ == null) {
+          lastCheckedDateTime_ = null;
+          onChanged();
+        } else {
+          lastCheckedDateTime_ = null;
+          lastCheckedDateTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the URL was last checked.
+       * The format is "YYYY-MM-DD HH:MM:SS".
+       * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getLastCheckedDateTimeBuilder() {
+        
+        onChanged();
+        return getLastCheckedDateTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time the URL was last checked.
+       * The format is "YYYY-MM-DD HH:MM:SS".
+       * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getLastCheckedDateTimeOrBuilder() {
+        if (lastCheckedDateTimeBuilder_ != null) {
+          return lastCheckedDateTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return lastCheckedDateTime_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : lastCheckedDateTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The time the URL was last checked.
+       * The format is "YYYY-MM-DD HH:MM:SS".
+       * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue last_checked_date_time = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getLastCheckedDateTimeFieldBuilder() {
+        if (lastCheckedDateTimeBuilder_ == null) {
+          lastCheckedDateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getLastCheckedDateTime(),
+                  getParentForChildren(),
+                  isClean());
+          lastCheckedDateTime_ = null;
+        }
+        return lastCheckedDateTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking)
+    private static final com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking();
+    }
+
+    public static com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DestinationNotWorking>
+        PARSER = new com.google.protobuf.AbstractParser<DestinationNotWorking>() {
+      @java.lang.Override
+      public DestinationNotWorking parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DestinationNotWorking(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DestinationNotWorking> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DestinationNotWorking> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int valueCase_ = 0;
   private java.lang.Object value_;
   public enum ValueCase
@@ -3661,6 +4757,7 @@ private static final long serialVersionUID = 0L;
     LANGUAGE_CODE(5),
     DESTINATION_TEXT_LIST(6),
     DESTINATION_MISMATCH(7),
+    DESTINATION_NOT_WORKING(8),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -3682,6 +4779,7 @@ private static final long serialVersionUID = 0L;
         case 5: return LANGUAGE_CODE;
         case 6: return DESTINATION_TEXT_LIST;
         case 7: return DESTINATION_MISMATCH;
+        case 8: return DESTINATION_NOT_WORKING;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -3931,6 +5029,47 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationMismatch.getDefaultInstance();
   }
 
+  public static final int DESTINATION_NOT_WORKING_FIELD_NUMBER = 8;
+  /**
+   * <pre>
+   * Details when the destination is returning an HTTP error code or isn't
+   * functional in all locations for commonly used devices.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+   */
+  public boolean hasDestinationNotWorking() {
+    return valueCase_ == 8;
+  }
+  /**
+   * <pre>
+   * Details when the destination is returning an HTTP error code or isn't
+   * functional in all locations for commonly used devices.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+   */
+  public com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking getDestinationNotWorking() {
+    if (valueCase_ == 8) {
+       return (com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) value_;
+    }
+    return com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details when the destination is returning an HTTP error code or isn't
+   * functional in all locations for commonly used devices.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+   */
+  public com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorkingOrBuilder getDestinationNotWorkingOrBuilder() {
+    if (valueCase_ == 8) {
+       return (com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) value_;
+    }
+    return com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3962,6 +5101,9 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 7) {
       output.writeMessage(7, (com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationMismatch) value_);
+    }
+    if (valueCase_ == 8) {
+      output.writeMessage(8, (com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) value_);
     }
     unknownFields.writeTo(output);
   }
@@ -3995,6 +5137,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 7) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, (com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationMismatch) value_);
+    }
+    if (valueCase_ == 8) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, (com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) value_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -4040,6 +5186,10 @@ private static final long serialVersionUID = 0L;
         result = result && getDestinationMismatch()
             .equals(other.getDestinationMismatch());
         break;
+      case 8:
+        result = result && getDestinationNotWorking()
+            .equals(other.getDestinationNotWorking());
+        break;
       case 0:
       default:
     }
@@ -4078,6 +5228,10 @@ private static final long serialVersionUID = 0L;
       case 7:
         hash = (37 * hash) + DESTINATION_MISMATCH_FIELD_NUMBER;
         hash = (53 * hash) + getDestinationMismatch().hashCode();
+        break;
+      case 8:
+        hash = (37 * hash) + DESTINATION_NOT_WORKING_FIELD_NUMBER;
+        hash = (53 * hash) + getDestinationNotWorking().hashCode();
         break;
       case 0:
       default:
@@ -4180,7 +5334,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Additional information that explains a policy finding.
-   * Next Id: 8
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEvidence}
@@ -4290,6 +5443,13 @@ private static final long serialVersionUID = 0L;
           result.value_ = destinationMismatchBuilder_.build();
         }
       }
+      if (valueCase_ == 8) {
+        if (destinationNotWorkingBuilder_ == null) {
+          result.value_ = value_;
+        } else {
+          result.value_ = destinationNotWorkingBuilder_.build();
+        }
+      }
       result.valueCase_ = valueCase_;
       onBuilt();
       return result;
@@ -4362,6 +5522,10 @@ private static final long serialVersionUID = 0L;
         }
         case DESTINATION_MISMATCH: {
           mergeDestinationMismatch(other.getDestinationMismatch());
+          break;
+        }
+        case DESTINATION_NOT_WORKING: {
+          mergeDestinationNotWorking(other.getDestinationNotWorking());
           break;
         }
         case VALUE_NOT_SET: {
@@ -5460,6 +6624,187 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 7;
       onChanged();;
       return destinationMismatchBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking, com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.Builder, com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorkingOrBuilder> destinationNotWorkingBuilder_;
+    /**
+     * <pre>
+     * Details when the destination is returning an HTTP error code or isn't
+     * functional in all locations for commonly used devices.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+     */
+    public boolean hasDestinationNotWorking() {
+      return valueCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Details when the destination is returning an HTTP error code or isn't
+     * functional in all locations for commonly used devices.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+     */
+    public com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking getDestinationNotWorking() {
+      if (destinationNotWorkingBuilder_ == null) {
+        if (valueCase_ == 8) {
+          return (com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) value_;
+        }
+        return com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.getDefaultInstance();
+      } else {
+        if (valueCase_ == 8) {
+          return destinationNotWorkingBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details when the destination is returning an HTTP error code or isn't
+     * functional in all locations for commonly used devices.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+     */
+    public Builder setDestinationNotWorking(com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking value) {
+      if (destinationNotWorkingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        destinationNotWorkingBuilder_.setMessage(value);
+      }
+      valueCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details when the destination is returning an HTTP error code or isn't
+     * functional in all locations for commonly used devices.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+     */
+    public Builder setDestinationNotWorking(
+        com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.Builder builderForValue) {
+      if (destinationNotWorkingBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        destinationNotWorkingBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details when the destination is returning an HTTP error code or isn't
+     * functional in all locations for commonly used devices.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+     */
+    public Builder mergeDestinationNotWorking(com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking value) {
+      if (destinationNotWorkingBuilder_ == null) {
+        if (valueCase_ == 8 &&
+            value_ != com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.getDefaultInstance()) {
+          value_ = com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.newBuilder((com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 8) {
+          destinationNotWorkingBuilder_.mergeFrom(value);
+        }
+        destinationNotWorkingBuilder_.setMessage(value);
+      }
+      valueCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details when the destination is returning an HTTP error code or isn't
+     * functional in all locations for commonly used devices.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+     */
+    public Builder clearDestinationNotWorking() {
+      if (destinationNotWorkingBuilder_ == null) {
+        if (valueCase_ == 8) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 8) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        destinationNotWorkingBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details when the destination is returning an HTTP error code or isn't
+     * functional in all locations for commonly used devices.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+     */
+    public com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.Builder getDestinationNotWorkingBuilder() {
+      return getDestinationNotWorkingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details when the destination is returning an HTTP error code or isn't
+     * functional in all locations for commonly used devices.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+     */
+    public com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorkingOrBuilder getDestinationNotWorkingOrBuilder() {
+      if ((valueCase_ == 8) && (destinationNotWorkingBuilder_ != null)) {
+        return destinationNotWorkingBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 8) {
+          return (com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) value_;
+        }
+        return com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details when the destination is returning an HTTP error code or isn't
+     * functional in all locations for commonly used devices.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking, com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.Builder, com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorkingOrBuilder> 
+        getDestinationNotWorkingFieldBuilder() {
+      if (destinationNotWorkingBuilder_ == null) {
+        if (!(valueCase_ == 8)) {
+          value_ = com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.getDefaultInstance();
+        }
+        destinationNotWorkingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking, com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking.Builder, com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorkingOrBuilder>(
+                (com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 8;
+      onChanged();;
+      return destinationNotWorkingBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

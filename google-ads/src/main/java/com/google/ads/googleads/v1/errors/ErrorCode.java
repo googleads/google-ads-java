@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
     int mutable_bitField0_ = 0;
     int mutable_bitField1_ = 0;
     int mutable_bitField2_ = 0;
+    int mutable_bitField3_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -618,6 +619,24 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 928: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 116;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 936: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 117;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 944: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 118;
+            errorCode_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -691,6 +710,7 @@ private static final long serialVersionUID = 0L;
     IMAGE_ERROR(40),
     LANGUAGE_CODE_ERROR(110),
     MEDIA_BUNDLE_ERROR(42),
+    MEDIA_UPLOAD_ERROR(116),
     MEDIA_FILE_ERROR(86),
     MULTIPLIER_ERROR(44),
     NEW_RESOURCE_CREATION_ERROR(45),
@@ -706,6 +726,7 @@ private static final long serialVersionUID = 0L;
     OPERATION_ACCESS_DENIED_ERROR(55),
     RESOURCE_ACCESS_DENIED_ERROR(56),
     RESOURCE_COUNT_LIMIT_EXCEEDED_ERROR(57),
+    YOUTUBE_VIDEO_REGISTRATION_ERROR(117),
     AD_GROUP_BID_MODIFIER_ERROR(59),
     CONTEXT_ERROR(60),
     FIELD_ERROR(61),
@@ -749,6 +770,7 @@ private static final long serialVersionUID = 0L;
     MUTATE_JOB_ERROR(108),
     PARTIAL_FAILURE_ERROR(112),
     POLICY_VALIDATION_PARAMETER_ERROR(114),
+    SIZE_LIMIT_ERROR(118),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -801,6 +823,7 @@ private static final long serialVersionUID = 0L;
         case 40: return IMAGE_ERROR;
         case 110: return LANGUAGE_CODE_ERROR;
         case 42: return MEDIA_BUNDLE_ERROR;
+        case 116: return MEDIA_UPLOAD_ERROR;
         case 86: return MEDIA_FILE_ERROR;
         case 44: return MULTIPLIER_ERROR;
         case 45: return NEW_RESOURCE_CREATION_ERROR;
@@ -816,6 +839,7 @@ private static final long serialVersionUID = 0L;
         case 55: return OPERATION_ACCESS_DENIED_ERROR;
         case 56: return RESOURCE_ACCESS_DENIED_ERROR;
         case 57: return RESOURCE_COUNT_LIMIT_EXCEEDED_ERROR;
+        case 117: return YOUTUBE_VIDEO_REGISTRATION_ERROR;
         case 59: return AD_GROUP_BID_MODIFIER_ERROR;
         case 60: return CONTEXT_ERROR;
         case 61: return FIELD_ERROR;
@@ -859,6 +883,7 @@ private static final long serialVersionUID = 0L;
         case 108: return MUTATE_JOB_ERROR;
         case 112: return PARTIAL_FAILURE_ERROR;
         case 114: return POLICY_VALIDATION_PARAMETER_ERROR;
+        case 118: return SIZE_LIMIT_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -2021,6 +2046,37 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.errors.MediaBundleErrorEnum.MediaBundleError.UNSPECIFIED;
   }
 
+  public static final int MEDIA_UPLOAD_ERROR_FIELD_NUMBER = 116;
+  /**
+   * <pre>
+   * The reasons for media uploading errors.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+   */
+  public int getMediaUploadErrorValue() {
+    if (errorCodeCase_ == 116) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for media uploading errors.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+   */
+  public com.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError getMediaUploadError() {
+    if (errorCodeCase_ == 116) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError result = com.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError.UNSPECIFIED;
+  }
+
   public static final int MEDIA_FILE_ERROR_FIELD_NUMBER = 86;
   /**
    * <pre>
@@ -2484,6 +2540,37 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.ads.googleads.v1.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError.UNRECOGNIZED : result;
     }
     return com.google.ads.googleads.v1.errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError.UNSPECIFIED;
+  }
+
+  public static final int YOUTUBE_VIDEO_REGISTRATION_ERROR_FIELD_NUMBER = 117;
+  /**
+   * <pre>
+   * The reasons for YouTube video registration errors.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+   */
+  public int getYoutubeVideoRegistrationErrorValue() {
+    if (errorCodeCase_ == 117) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for YouTube video registration errors.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+   */
+  public com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError getYoutubeVideoRegistrationError() {
+    if (errorCodeCase_ == 117) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError result = com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError.UNSPECIFIED;
   }
 
   public static final int AD_GROUP_BID_MODIFIER_ERROR_FIELD_NUMBER = 59;
@@ -3819,6 +3906,37 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError.UNSPECIFIED;
   }
 
+  public static final int SIZE_LIMIT_ERROR_FIELD_NUMBER = 118;
+  /**
+   * <pre>
+   * The reasons for the size limit error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+   */
+  public int getSizeLimitErrorValue() {
+    if (errorCodeCase_ == 118) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the size limit error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+   */
+  public com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError getSizeLimitError() {
+    if (errorCodeCase_ == 118) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError result = com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4117,6 +4235,15 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 115) {
       output.writeEnum(115, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 116) {
+      output.writeEnum(116, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 117) {
+      output.writeEnum(117, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 118) {
+      output.writeEnum(118, ((java.lang.Integer) errorCode_));
     }
     unknownFields.writeTo(output);
   }
@@ -4507,6 +4634,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(115, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 116) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(116, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 117) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(117, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 118) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(118, ((java.lang.Integer) errorCode_));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -4675,6 +4814,10 @@ private static final long serialVersionUID = 0L;
         result = result && getMediaBundleErrorValue()
             == other.getMediaBundleErrorValue();
         break;
+      case 116:
+        result = result && getMediaUploadErrorValue()
+            == other.getMediaUploadErrorValue();
+        break;
       case 86:
         result = result && getMediaFileErrorValue()
             == other.getMediaFileErrorValue();
@@ -4734,6 +4877,10 @@ private static final long serialVersionUID = 0L;
       case 57:
         result = result && getResourceCountLimitExceededErrorValue()
             == other.getResourceCountLimitExceededErrorValue();
+        break;
+      case 117:
+        result = result && getYoutubeVideoRegistrationErrorValue()
+            == other.getYoutubeVideoRegistrationErrorValue();
         break;
       case 59:
         result = result && getAdGroupBidModifierErrorValue()
@@ -4907,6 +5054,10 @@ private static final long serialVersionUID = 0L;
         result = result && getPolicyValidationParameterErrorValue()
             == other.getPolicyValidationParameterErrorValue();
         break;
+      case 118:
+        result = result && getSizeLimitErrorValue()
+            == other.getSizeLimitErrorValue();
+        break;
       case 0:
       default:
     }
@@ -5070,6 +5221,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + MEDIA_BUNDLE_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getMediaBundleErrorValue();
         break;
+      case 116:
+        hash = (37 * hash) + MEDIA_UPLOAD_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getMediaUploadErrorValue();
+        break;
       case 86:
         hash = (37 * hash) + MEDIA_FILE_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getMediaFileErrorValue();
@@ -5129,6 +5284,10 @@ private static final long serialVersionUID = 0L;
       case 57:
         hash = (37 * hash) + RESOURCE_COUNT_LIMIT_EXCEEDED_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getResourceCountLimitExceededErrorValue();
+        break;
+      case 117:
+        hash = (37 * hash) + YOUTUBE_VIDEO_REGISTRATION_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getYoutubeVideoRegistrationErrorValue();
         break;
       case 59:
         hash = (37 * hash) + AD_GROUP_BID_MODIFIER_ERROR_FIELD_NUMBER;
@@ -5301,6 +5460,10 @@ private static final long serialVersionUID = 0L;
       case 114:
         hash = (37 * hash) + POLICY_VALIDATION_PARAMETER_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getPolicyValidationParameterErrorValue();
+        break;
+      case 118:
+        hash = (37 * hash) + SIZE_LIMIT_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getSizeLimitErrorValue();
         break;
       case 0:
       default:
@@ -5581,6 +5744,9 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 42) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 116) {
+        result.errorCode_ = errorCode_;
+      }
       if (errorCodeCase_ == 86) {
         result.errorCode_ = errorCode_;
       }
@@ -5624,6 +5790,9 @@ private static final long serialVersionUID = 0L;
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 57) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 117) {
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 59) {
@@ -5753,6 +5922,9 @@ private static final long serialVersionUID = 0L;
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 114) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 118) {
         result.errorCode_ = errorCode_;
       }
       result.errorCodeCase_ = errorCodeCase_;
@@ -5953,6 +6125,10 @@ private static final long serialVersionUID = 0L;
           setMediaBundleErrorValue(other.getMediaBundleErrorValue());
           break;
         }
+        case MEDIA_UPLOAD_ERROR: {
+          setMediaUploadErrorValue(other.getMediaUploadErrorValue());
+          break;
+        }
         case MEDIA_FILE_ERROR: {
           setMediaFileErrorValue(other.getMediaFileErrorValue());
           break;
@@ -6011,6 +6187,10 @@ private static final long serialVersionUID = 0L;
         }
         case RESOURCE_COUNT_LIMIT_EXCEEDED_ERROR: {
           setResourceCountLimitExceededErrorValue(other.getResourceCountLimitExceededErrorValue());
+          break;
+        }
+        case YOUTUBE_VIDEO_REGISTRATION_ERROR: {
+          setYoutubeVideoRegistrationErrorValue(other.getYoutubeVideoRegistrationErrorValue());
           break;
         }
         case AD_GROUP_BID_MODIFIER_ERROR: {
@@ -6183,6 +6363,10 @@ private static final long serialVersionUID = 0L;
         }
         case POLICY_VALIDATION_PARAMETER_ERROR: {
           setPolicyValidationParameterErrorValue(other.getPolicyValidationParameterErrorValue());
+          break;
+        }
+        case SIZE_LIMIT_ERROR: {
+          setSizeLimitErrorValue(other.getSizeLimitErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -8973,6 +9157,80 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * The reasons for media uploading errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+     */
+    public int getMediaUploadErrorValue() {
+      if (errorCodeCase_ == 116) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for media uploading errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+     */
+    public Builder setMediaUploadErrorValue(int value) {
+      errorCodeCase_ = 116;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for media uploading errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+     */
+    public com.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError getMediaUploadError() {
+      if (errorCodeCase_ == 116) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError result = com.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for media uploading errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+     */
+    public Builder setMediaUploadError(com.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 116;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for media uploading errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.MediaUploadErrorEnum.MediaUploadError media_upload_error = 116;</code>
+     */
+    public Builder clearMediaUploadError() {
+      if (errorCodeCase_ == 116) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
      * The reasons for the media file error
      * </pre>
      *
@@ -10074,6 +10332,80 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearResourceCountLimitExceededError() {
       if (errorCodeCase_ == 57) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for YouTube video registration errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+     */
+    public int getYoutubeVideoRegistrationErrorValue() {
+      if (errorCodeCase_ == 117) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for YouTube video registration errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+     */
+    public Builder setYoutubeVideoRegistrationErrorValue(int value) {
+      errorCodeCase_ = 117;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for YouTube video registration errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+     */
+    public com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError getYoutubeVideoRegistrationError() {
+      if (errorCodeCase_ == 117) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError result = com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for YouTube video registration errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+     */
+    public Builder setYoutubeVideoRegistrationError(com.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 117;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for YouTube video registration errors.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError youtube_video_registration_error = 117;</code>
+     */
+    public Builder clearYoutubeVideoRegistrationError() {
+      if (errorCodeCase_ == 117) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();
@@ -13256,6 +13588,80 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearPolicyValidationParameterError() {
       if (errorCodeCase_ == 114) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the size limit error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+     */
+    public int getSizeLimitErrorValue() {
+      if (errorCodeCase_ == 118) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the size limit error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+     */
+    public Builder setSizeLimitErrorValue(int value) {
+      errorCodeCase_ = 118;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the size limit error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+     */
+    public com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError getSizeLimitError() {
+      if (errorCodeCase_ == 118) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError result = com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the size limit error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+     */
+    public Builder setSizeLimitError(com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 118;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the size limit error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
+     */
+    public Builder clearSizeLimitError() {
+      if (errorCodeCase_ == 118) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

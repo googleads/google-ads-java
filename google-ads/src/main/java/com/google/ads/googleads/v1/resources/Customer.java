@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private Customer() {
     resourceName_ = "";
+    payPerConversionEligibilityFailureReasons_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -222,6 +223,29 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 128: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+              payPerConversionEligibilityFailureReasons_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00004000;
+            }
+            payPerConversionEligibilityFailureReasons_.add(rawValue);
+            break;
+          }
+          case 130: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+                payPerConversionEligibilityFailureReasons_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00004000;
+              }
+              payPerConversionEligibilityFailureReasons_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -237,6 +261,9 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+        payPerConversionEligibilityFailureReasons_ = java.util.Collections.unmodifiableList(payPerConversionEligibilityFailureReasons_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -254,6 +281,7 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v1.resources.Customer.class, com.google.ads.googleads.v1.resources.Customer.Builder.class);
   }
 
+  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -741,6 +769,77 @@ private static final long serialVersionUID = 0L;
     return getRemarketingSetting();
   }
 
+  public static final int PAY_PER_CONVERSION_ELIGIBILITY_FAILURE_REASONS_FIELD_NUMBER = 16;
+  private java.util.List<java.lang.Integer> payPerConversionEligibilityFailureReasons_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> payPerConversionEligibilityFailureReasons_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason>() {
+            public com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason convert(java.lang.Integer from) {
+              @SuppressWarnings("deprecation")
+              com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason result = com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason.valueOf(from);
+              return result == null ? com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * the list is empty, the customer is eligible. This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   */
+  public java.util.List<com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> getPayPerConversionEligibilityFailureReasonsList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason>(payPerConversionEligibilityFailureReasons_, payPerConversionEligibilityFailureReasons_converter_);
+  }
+  /**
+   * <pre>
+   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * the list is empty, the customer is eligible. This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   */
+  public int getPayPerConversionEligibilityFailureReasonsCount() {
+    return payPerConversionEligibilityFailureReasons_.size();
+  }
+  /**
+   * <pre>
+   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * the list is empty, the customer is eligible. This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   */
+  public com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason getPayPerConversionEligibilityFailureReasons(int index) {
+    return payPerConversionEligibilityFailureReasons_converter_.convert(payPerConversionEligibilityFailureReasons_.get(index));
+  }
+  /**
+   * <pre>
+   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * the list is empty, the customer is eligible. This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   */
+  public java.util.List<java.lang.Integer>
+  getPayPerConversionEligibilityFailureReasonsValueList() {
+    return payPerConversionEligibilityFailureReasons_;
+  }
+  /**
+   * <pre>
+   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * the list is empty, the customer is eligible. This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   */
+  public int getPayPerConversionEligibilityFailureReasonsValue(int index) {
+    return payPerConversionEligibilityFailureReasons_.get(index);
+  }
+  private int payPerConversionEligibilityFailureReasonsMemoizedSerializedSize;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -755,6 +854,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (!getResourceNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
@@ -796,6 +896,13 @@ private static final long serialVersionUID = 0L;
     }
     if (remarketingSetting_ != null) {
       output.writeMessage(15, getRemarketingSetting());
+    }
+    if (getPayPerConversionEligibilityFailureReasonsList().size() > 0) {
+      output.writeUInt32NoTag(130);
+      output.writeUInt32NoTag(payPerConversionEligibilityFailureReasonsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < payPerConversionEligibilityFailureReasons_.size(); i++) {
+      output.writeEnumNoTag(payPerConversionEligibilityFailureReasons_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -860,6 +967,18 @@ private static final long serialVersionUID = 0L;
     if (remarketingSetting_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getRemarketingSetting());
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < payPerConversionEligibilityFailureReasons_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(payPerConversionEligibilityFailureReasons_.get(i));
+      }
+      size += dataSize;
+      if (!getPayPerConversionEligibilityFailureReasonsList().isEmpty()) {  size += 2;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }payPerConversionEligibilityFailureReasonsMemoizedSerializedSize = dataSize;
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -944,6 +1063,7 @@ private static final long serialVersionUID = 0L;
       result = result && getRemarketingSetting()
           .equals(other.getRemarketingSetting());
     }
+    result = result && payPerConversionEligibilityFailureReasons_.equals(other.payPerConversionEligibilityFailureReasons_);
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -1008,6 +1128,10 @@ private static final long serialVersionUID = 0L;
     if (hasRemarketingSetting()) {
       hash = (37 * hash) + REMARKETING_SETTING_FIELD_NUMBER;
       hash = (53 * hash) + getRemarketingSetting().hashCode();
+    }
+    if (getPayPerConversionEligibilityFailureReasonsCount() > 0) {
+      hash = (37 * hash) + PAY_PER_CONVERSION_ELIGIBILITY_FAILURE_REASONS_FIELD_NUMBER;
+      hash = (53 * hash) + payPerConversionEligibilityFailureReasons_.hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -1226,6 +1350,8 @@ private static final long serialVersionUID = 0L;
         remarketingSetting_ = null;
         remarketingSettingBuilder_ = null;
       }
+      payPerConversionEligibilityFailureReasons_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00004000);
       return this;
     }
 
@@ -1252,6 +1378,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v1.resources.Customer buildPartial() {
       com.google.ads.googleads.v1.resources.Customer result = new com.google.ads.googleads.v1.resources.Customer(this);
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (idBuilder_ == null) {
         result.id_ = id_;
@@ -1318,6 +1446,12 @@ private static final long serialVersionUID = 0L;
       } else {
         result.remarketingSetting_ = remarketingSettingBuilder_.build();
       }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        payPerConversionEligibilityFailureReasons_ = java.util.Collections.unmodifiableList(payPerConversionEligibilityFailureReasons_);
+        bitField0_ = (bitField0_ & ~0x00004000);
+      }
+      result.payPerConversionEligibilityFailureReasons_ = payPerConversionEligibilityFailureReasons_;
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -1409,6 +1543,16 @@ private static final long serialVersionUID = 0L;
       if (other.hasRemarketingSetting()) {
         mergeRemarketingSetting(other.getRemarketingSetting());
       }
+      if (!other.payPerConversionEligibilityFailureReasons_.isEmpty()) {
+        if (payPerConversionEligibilityFailureReasons_.isEmpty()) {
+          payPerConversionEligibilityFailureReasons_ = other.payPerConversionEligibilityFailureReasons_;
+          bitField0_ = (bitField0_ & ~0x00004000);
+        } else {
+          ensurePayPerConversionEligibilityFailureReasonsIsMutable();
+          payPerConversionEligibilityFailureReasons_.addAll(other.payPerConversionEligibilityFailureReasons_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -1437,6 +1581,7 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -3560,6 +3705,184 @@ private static final long serialVersionUID = 0L;
         remarketingSetting_ = null;
       }
       return remarketingSettingBuilder_;
+    }
+
+    private java.util.List<java.lang.Integer> payPerConversionEligibilityFailureReasons_ =
+      java.util.Collections.emptyList();
+    private void ensurePayPerConversionEligibilityFailureReasonsIsMutable() {
+      if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+        payPerConversionEligibilityFailureReasons_ = new java.util.ArrayList<java.lang.Integer>(payPerConversionEligibilityFailureReasons_);
+        bitField0_ |= 0x00004000;
+      }
+    }
+    /**
+     * <pre>
+     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * the list is empty, the customer is eligible. This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> getPayPerConversionEligibilityFailureReasonsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason>(payPerConversionEligibilityFailureReasons_, payPerConversionEligibilityFailureReasons_converter_);
+    }
+    /**
+     * <pre>
+     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * the list is empty, the customer is eligible. This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     */
+    public int getPayPerConversionEligibilityFailureReasonsCount() {
+      return payPerConversionEligibilityFailureReasons_.size();
+    }
+    /**
+     * <pre>
+     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * the list is empty, the customer is eligible. This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     */
+    public com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason getPayPerConversionEligibilityFailureReasons(int index) {
+      return payPerConversionEligibilityFailureReasons_converter_.convert(payPerConversionEligibilityFailureReasons_.get(index));
+    }
+    /**
+     * <pre>
+     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * the list is empty, the customer is eligible. This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     */
+    public Builder setPayPerConversionEligibilityFailureReasons(
+        int index, com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensurePayPerConversionEligibilityFailureReasonsIsMutable();
+      payPerConversionEligibilityFailureReasons_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * the list is empty, the customer is eligible. This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     */
+    public Builder addPayPerConversionEligibilityFailureReasons(com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensurePayPerConversionEligibilityFailureReasonsIsMutable();
+      payPerConversionEligibilityFailureReasons_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * the list is empty, the customer is eligible. This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     */
+    public Builder addAllPayPerConversionEligibilityFailureReasons(
+        java.lang.Iterable<? extends com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> values) {
+      ensurePayPerConversionEligibilityFailureReasonsIsMutable();
+      for (com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason value : values) {
+        payPerConversionEligibilityFailureReasons_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * the list is empty, the customer is eligible. This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     */
+    public Builder clearPayPerConversionEligibilityFailureReasons() {
+      payPerConversionEligibilityFailureReasons_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00004000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * the list is empty, the customer is eligible. This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getPayPerConversionEligibilityFailureReasonsValueList() {
+      return java.util.Collections.unmodifiableList(payPerConversionEligibilityFailureReasons_);
+    }
+    /**
+     * <pre>
+     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * the list is empty, the customer is eligible. This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     */
+    public int getPayPerConversionEligibilityFailureReasonsValue(int index) {
+      return payPerConversionEligibilityFailureReasons_.get(index);
+    }
+    /**
+     * <pre>
+     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * the list is empty, the customer is eligible. This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     */
+    public Builder setPayPerConversionEligibilityFailureReasonsValue(
+        int index, int value) {
+      ensurePayPerConversionEligibilityFailureReasonsIsMutable();
+      payPerConversionEligibilityFailureReasons_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * the list is empty, the customer is eligible. This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     */
+    public Builder addPayPerConversionEligibilityFailureReasonsValue(int value) {
+      ensurePayPerConversionEligibilityFailureReasonsIsMutable();
+      payPerConversionEligibilityFailureReasons_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * the list is empty, the customer is eligible. This field is read-only.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     */
+    public Builder addAllPayPerConversionEligibilityFailureReasonsValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensurePayPerConversionEligibilityFailureReasonsIsMutable();
+      for (int value : values) {
+        payPerConversionEligibilityFailureReasons_.add(value);
+      }
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

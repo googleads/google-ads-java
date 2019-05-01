@@ -31,17 +31,18 @@ public final class PolicyTopicEntryTypeProto {
       "\n;google/ads/googleads/v1/enums/policy_t" +
       "opic_entry_type.proto\022\035google.ads.google" +
       "ads.v1.enums\032\034google/api/annotations.pro" +
-      "to\"\252\001\n\030PolicyTopicEntryTypeEnum\"\215\001\n\024Poli" +
+      "to\"\275\001\n\030PolicyTopicEntryTypeEnum\"\240\001\n\024Poli" +
       "cyTopicEntryType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
-      "NOWN\020\001\022\016\n\nPROHIBITED\020\002\022\013\n\007LIMITED\020\004\022\017\n\013D" +
-      "ESCRIPTIVE\020\005\022\016\n\nBROADENING\020\006\022\031\n\025AREA_OF_" +
-      "INTEREST_ONLY\020\007B\356\001\n!com.google.ads.googl" +
-      "eads.v1.enumsB\031PolicyTopicEntryTypeProto" +
-      "P\001ZBgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v1/enums;enums\242\002\003GAA\252\002\035G" +
-      "oogle.Ads.GoogleAds.V1.Enums\312\002\035Google\\Ad" +
-      "s\\GoogleAds\\V1\\Enums\352\002!Google::Ads::Goog" +
-      "leAds::V1::Enumsb\006proto3"
+      "NOWN\020\001\022\016\n\nPROHIBITED\020\002\022\013\n\007LIMITED\020\004\022\021\n\rF" +
+      "ULLY_LIMITED\020\010\022\017\n\013DESCRIPTIVE\020\005\022\016\n\nBROAD" +
+      "ENING\020\006\022\031\n\025AREA_OF_INTEREST_ONLY\020\007B\356\001\n!c" +
+      "om.google.ads.googleads.v1.enumsB\031Policy" +
+      "TopicEntryTypeProtoP\001ZBgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v1/en" +
+      "ums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V" +
+      "1.Enums\312\002\035Google\\Ads\\GoogleAds\\V1\\Enums\352" +
+      "\002!Google::Ads::GoogleAds::V1::Enumsb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

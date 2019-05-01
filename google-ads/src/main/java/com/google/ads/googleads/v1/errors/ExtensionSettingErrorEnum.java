@@ -619,7 +619,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Customer hasn't consented for call recording, which is required for
-     * adding/updating call extensions.
+     * adding/updating call extensions. Please see
+     * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
      * <code>CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED = 66;</code>
@@ -1170,7 +1171,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Customer hasn't consented for call recording, which is required for
-     * adding/updating call extensions.
+     * adding/updating call extensions. Please see
+     * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
      * <code>CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED = 66;</code>

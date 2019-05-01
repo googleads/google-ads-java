@@ -1132,6 +1132,31 @@ private static final long serialVersionUID = 0L;
      * <code>INCOMPATIBLE_WITH_RESTRICTION_TYPE = 130;</code>
      */
     INCOMPATIBLE_WITH_RESTRICTION_TYPE(130),
+    /**
+     * <pre>
+     * Consent for call recording is required for creating/updating call only
+     * ads. Please see https://support.google.com/google-ads/answer/7412639.
+     * </pre>
+     *
+     * <code>CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED = 131;</code>
+     */
+    CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED(131),
+    /**
+     * <pre>
+     * Either an image or a media bundle is required in a display upload ad.
+     * </pre>
+     *
+     * <code>MISSING_IMAGE_OR_MEDIA_BUNDLE = 132;</code>
+     */
+    MISSING_IMAGE_OR_MEDIA_BUNDLE(132),
+    /**
+     * <pre>
+     * The display upload product type is not supported in this campaign.
+     * </pre>
+     *
+     * <code>PRODUCT_TYPE_NOT_SUPPORTED_IN_THIS_CAMPAIGN = 133;</code>
+     */
+    PRODUCT_TYPE_NOT_SUPPORTED_IN_THIS_CAMPAIGN(133),
     UNRECOGNIZED(-1),
     ;
 
@@ -2181,6 +2206,31 @@ private static final long serialVersionUID = 0L;
      * <code>INCOMPATIBLE_WITH_RESTRICTION_TYPE = 130;</code>
      */
     public static final int INCOMPATIBLE_WITH_RESTRICTION_TYPE_VALUE = 130;
+    /**
+     * <pre>
+     * Consent for call recording is required for creating/updating call only
+     * ads. Please see https://support.google.com/google-ads/answer/7412639.
+     * </pre>
+     *
+     * <code>CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED = 131;</code>
+     */
+    public static final int CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED_VALUE = 131;
+    /**
+     * <pre>
+     * Either an image or a media bundle is required in a display upload ad.
+     * </pre>
+     *
+     * <code>MISSING_IMAGE_OR_MEDIA_BUNDLE = 132;</code>
+     */
+    public static final int MISSING_IMAGE_OR_MEDIA_BUNDLE_VALUE = 132;
+    /**
+     * <pre>
+     * The display upload product type is not supported in this campaign.
+     * </pre>
+     *
+     * <code>PRODUCT_TYPE_NOT_SUPPORTED_IN_THIS_CAMPAIGN = 133;</code>
+     */
+    public static final int PRODUCT_TYPE_NOT_SUPPORTED_IN_THIS_CAMPAIGN_VALUE = 133;
 
 
     public final int getNumber() {
@@ -2329,6 +2379,9 @@ private static final long serialVersionUID = 0L;
         case 128: return CANNOT_SET_PATH2_WITHOUT_PATH1;
         case 129: return MISSING_DYNAMIC_SEARCH_ADS_SETTING_DOMAIN_NAME;
         case 130: return INCOMPATIBLE_WITH_RESTRICTION_TYPE;
+        case 131: return CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED;
+        case 132: return MISSING_IMAGE_OR_MEDIA_BUNDLE;
+        case 133: return PRODUCT_TYPE_NOT_SUPPORTED_IN_THIS_CAMPAIGN;
         default: return null;
       }
     }

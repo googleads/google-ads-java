@@ -30,8 +30,8 @@ public final class AdErrorProto {
     java.lang.String[] descriptorData = {
       "\n-google/ads/googleads/v1/errors/ad_erro" +
       "r.proto\022\036google.ads.googleads.v1.errors\032" +
-      "\034google/api/annotations.proto\"\347\037\n\013AdErro" +
-      "rEnum\"\327\037\n\007AdError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
+      "\034google/api/annotations.proto\"\360 \n\013AdErro" +
+      "rEnum\"\340 \n\007AdError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
       "KNOWN\020\001\022,\n(AD_CUSTOMIZERS_NOT_SUPPORTED_" +
       "FOR_AD_TYPE\020\002\022\032\n\026APPROXIMATELY_TOO_LONG\020" +
       "\003\022\033\n\027APPROXIMATELY_TOO_SHORT\020\004\022\017\n\013BAD_SN" +
@@ -132,13 +132,17 @@ public final class AdErrorProto {
       "ON_TYPE_ID\020\177\022#\n\036CANNOT_SET_PATH2_WITHOUT" +
       "_PATH1\020\200\001\0223\n.MISSING_DYNAMIC_SEARCH_ADS_" +
       "SETTING_DOMAIN_NAME\020\201\001\022\'\n\"INCOMPATIBLE_W" +
-      "ITH_RESTRICTION_TYPE\020\202\001B\347\001\n\"com.google.a" +
-      "ds.googleads.v1.errorsB\014AdErrorProtoP\001ZD" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v1/errors;errors\242\002\003GAA\252\002\036Goo" +
-      "gle.Ads.GoogleAds.V1.Errors\312\002\036Google\\Ads" +
-      "\\GoogleAds\\V1\\Errors\352\002\"Google::Ads::Goog" +
-      "leAds::V1::Errorsb\006proto3"
+      "ITH_RESTRICTION_TYPE\020\202\001\0221\n,CUSTOMER_CONS" +
+      "ENT_FOR_CALL_RECORDING_REQUIRED\020\203\001\022\"\n\035MI" +
+      "SSING_IMAGE_OR_MEDIA_BUNDLE\020\204\001\0220\n+PRODUC" +
+      "T_TYPE_NOT_SUPPORTED_IN_THIS_CAMPAIGN\020\205\001" +
+      "B\347\001\n\"com.google.ads.googleads.v1.errorsB" +
+      "\014AdErrorProtoP\001ZDgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v1/errors;e" +
+      "rrors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1.Er" +
+      "rors\312\002\036Google\\Ads\\GoogleAds\\V1\\Errors\352\002\"" +
+      "Google::Ads::GoogleAds::V1::Errorsb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

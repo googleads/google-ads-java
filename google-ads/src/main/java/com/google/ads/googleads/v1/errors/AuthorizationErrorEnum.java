@@ -104,7 +104,11 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * User doesn't have permission to access customer.
+     * User doesn't have permission to access customer. Note: If you're
+     * accessing a client customer, the manager's customer id must be set in the
+     * 'login-customer-id' header. See
+     * https://developers.google.com/google-ads/api/docs/concepts/
+     * call-structure#login-customer-id
      * </pre>
      *
      * <code>USER_PERMISSION_DENIED = 2;</code>
@@ -207,7 +211,11 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * User doesn't have permission to access customer.
+     * User doesn't have permission to access customer. Note: If you're
+     * accessing a client customer, the manager's customer id must be set in the
+     * 'login-customer-id' header. See
+     * https://developers.google.com/google-ads/api/docs/concepts/
+     * call-structure#login-customer-id
      * </pre>
      *
      * <code>USER_PERMISSION_DENIED = 2;</code>

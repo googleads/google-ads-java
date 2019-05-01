@@ -30,8 +30,8 @@ public final class CriterionTypeProto {
     java.lang.String[] descriptorData = {
       "\n2google/ads/googleads/v1/enums/criterio" +
       "n_type.proto\022\035google.ads.googleads.v1.en" +
-      "ums\032\034google/api/annotations.proto\"\300\004\n\021Cr" +
-      "iterionTypeEnum\"\252\004\n\rCriterionType\022\017\n\013UNS" +
+      "ums\032\034google/api/annotations.proto\"\324\004\n\021Cr" +
+      "iterionTypeEnum\"\276\004\n\rCriterionType\022\017\n\013UNS" +
       "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007KEYWORD\020\002\022\r\n\t" +
       "PLACEMENT\020\003\022\027\n\023MOBILE_APP_CATEGORY\020\004\022\026\n\022" +
       "MOBILE_APPLICATION\020\005\022\n\n\006DEVICE\020\006\022\014\n\010LOCA" +
@@ -45,13 +45,13 @@ public final class CriterionTypeProto {
       "EREST\020\030\022\013\n\007WEBPAGE\020\031\022\034\n\030OPERATING_SYSTEM" +
       "_VERSION\020\032\022\025\n\021APP_PAYMENT_MODEL\020\033\022\021\n\rMOB" +
       "ILE_DEVICE\020\034\022\023\n\017CUSTOM_AFFINITY\020\035\022\021\n\rCUS" +
-      "TOM_INTENT\020\036B\347\001\n!com.google.ads.googlead" +
-      "s.v1.enumsB\022CriterionTypeProtoP\001ZBgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v1/enums;enums\242\002\003GAA\252\002\035Google.Ads." +
-      "GoogleAds.V1.Enums\312\002\035Google\\Ads\\GoogleAd" +
-      "s\\V1\\Enums\352\002!Google::Ads::GoogleAds::V1:" +
-      ":Enumsb\006proto3"
+      "TOM_INTENT\020\036\022\022\n\016LOCATION_GROUP\020\037B\347\001\n!com" +
+      ".google.ads.googleads.v1.enumsB\022Criterio" +
+      "nTypeProtoP\001ZBgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v1/enums;enums" +
+      "\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V1.Enums\312\002" +
+      "\035Google\\Ads\\GoogleAds\\V1\\Enums\352\002!Google:" +
+      ":Ads::GoogleAds::V1::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

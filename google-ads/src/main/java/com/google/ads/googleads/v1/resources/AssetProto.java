@@ -34,7 +34,7 @@ public final class AssetProto {
       "_types.proto\032.google/ads/googleads/v1/en" +
       "ums/asset_type.proto\032\036google/protobuf/wr" +
       "appers.proto\032\034google/api/annotations.pro" +
-      "to\"\254\003\n\005Asset\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002i" +
+      "to\"\355\003\n\005Asset\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002i" +
       "d\030\002 \001(\0132\033.google.protobuf.Int64Value\022*\n\004" +
       "name\030\003 \001(\0132\034.google.protobuf.StringValue" +
       "\022D\n\004type\030\004 \001(\01626.google.ads.googleads.v1" +
@@ -44,14 +44,15 @@ public final class AssetProto {
       "a_bundle_asset\030\006 \001(\01320.google.ads.google" +
       "ads.v1.common.MediaBundleAssetH\000\022A\n\013imag" +
       "e_asset\030\007 \001(\0132*.google.ads.googleads.v1." +
-      "common.ImageAssetH\000B\014\n\nasset_dataB\367\001\n%co" +
-      "m.google.ads.googleads.v1.resourcesB\nAss" +
-      "etProtoP\001ZJgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v1/resources;reso" +
-      "urces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1.Re" +
-      "sources\312\002!Google\\Ads\\GoogleAds\\V1\\Resour" +
-      "ces\352\002%Google::Ads::GoogleAds::V1::Resour" +
-      "cesb\006proto3"
+      "common.ImageAssetH\000\022?\n\ntext_asset\030\010 \001(\0132" +
+      ").google.ads.googleads.v1.common.TextAss" +
+      "etH\000B\014\n\nasset_dataB\367\001\n%com.google.ads.go" +
+      "ogleads.v1.resourcesB\nAssetProtoP\001ZJgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v1/resources;resources\242\002\003GAA\252\002!G" +
+      "oogle.Ads.GoogleAds.V1.Resources\312\002!Googl" +
+      "e\\Ads\\GoogleAds\\V1\\Resources\352\002%Google::A" +
+      "ds::GoogleAds::V1::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -74,7 +75,7 @@ public final class AssetProto {
     internal_static_google_ads_googleads_v1_resources_Asset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_Asset_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "Name", "Type", "YoutubeVideoAsset", "MediaBundleAsset", "ImageAsset", "AssetData", });
+        new java.lang.String[] { "ResourceName", "Id", "Name", "Type", "YoutubeVideoAsset", "MediaBundleAsset", "ImageAsset", "TextAsset", "AssetData", });
     com.google.ads.googleads.v1.common.AssetTypesProto.getDescriptor();
     com.google.ads.googleads.v1.enums.AssetTypeProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();

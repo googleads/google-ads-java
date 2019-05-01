@@ -74,6 +74,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 26: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (companionBanner_ != null) {
+              subBuilder = companionBanner_.toBuilder();
+            }
+            companionBanner_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(companionBanner_);
+              companionBanner_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -181,6 +194,39 @@ private static final long serialVersionUID = 0L;
     return getActionHeadline();
   }
 
+  public static final int COMPANION_BANNER_FIELD_NUMBER = 3;
+  private com.google.protobuf.StringValue companionBanner_;
+  /**
+   * <pre>
+   * The MediaFile resource name of the companion banner used with the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+   */
+  public boolean hasCompanionBanner() {
+    return companionBanner_ != null;
+  }
+  /**
+   * <pre>
+   * The MediaFile resource name of the companion banner used with the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+   */
+  public com.google.protobuf.StringValue getCompanionBanner() {
+    return companionBanner_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : companionBanner_;
+  }
+  /**
+   * <pre>
+   * The MediaFile resource name of the companion banner used with the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getCompanionBannerOrBuilder() {
+    return getCompanionBanner();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -201,6 +247,9 @@ private static final long serialVersionUID = 0L;
     if (actionHeadline_ != null) {
       output.writeMessage(2, getActionHeadline());
     }
+    if (companionBanner_ != null) {
+      output.writeMessage(3, getCompanionBanner());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -217,6 +266,10 @@ private static final long serialVersionUID = 0L;
     if (actionHeadline_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getActionHeadline());
+    }
+    if (companionBanner_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getCompanionBanner());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -244,6 +297,11 @@ private static final long serialVersionUID = 0L;
       result = result && getActionHeadline()
           .equals(other.getActionHeadline());
     }
+    result = result && (hasCompanionBanner() == other.hasCompanionBanner());
+    if (hasCompanionBanner()) {
+      result = result && getCompanionBanner()
+          .equals(other.getCompanionBanner());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -262,6 +320,10 @@ private static final long serialVersionUID = 0L;
     if (hasActionHeadline()) {
       hash = (37 * hash) + ACTION_HEADLINE_FIELD_NUMBER;
       hash = (53 * hash) + getActionHeadline().hashCode();
+    }
+    if (hasCompanionBanner()) {
+      hash = (37 * hash) + COMPANION_BANNER_FIELD_NUMBER;
+      hash = (53 * hash) + getCompanionBanner().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -414,6 +476,12 @@ private static final long serialVersionUID = 0L;
         actionHeadline_ = null;
         actionHeadlineBuilder_ = null;
       }
+      if (companionBannerBuilder_ == null) {
+        companionBanner_ = null;
+      } else {
+        companionBanner_ = null;
+        companionBannerBuilder_ = null;
+      }
       return this;
     }
 
@@ -449,6 +517,11 @@ private static final long serialVersionUID = 0L;
         result.actionHeadline_ = actionHeadline_;
       } else {
         result.actionHeadline_ = actionHeadlineBuilder_.build();
+      }
+      if (companionBannerBuilder_ == null) {
+        result.companionBanner_ = companionBanner_;
+      } else {
+        result.companionBanner_ = companionBannerBuilder_.build();
       }
       onBuilt();
       return result;
@@ -503,6 +576,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasActionHeadline()) {
         mergeActionHeadline(other.getActionHeadline());
+      }
+      if (other.hasCompanionBanner()) {
+        mergeCompanionBanner(other.getCompanionBanner());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -864,6 +940,159 @@ private static final long serialVersionUID = 0L;
         actionHeadline_ = null;
       }
       return actionHeadlineBuilder_;
+    }
+
+    private com.google.protobuf.StringValue companionBanner_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> companionBannerBuilder_;
+    /**
+     * <pre>
+     * The MediaFile resource name of the companion banner used with the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+     */
+    public boolean hasCompanionBanner() {
+      return companionBannerBuilder_ != null || companionBanner_ != null;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the companion banner used with the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+     */
+    public com.google.protobuf.StringValue getCompanionBanner() {
+      if (companionBannerBuilder_ == null) {
+        return companionBanner_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : companionBanner_;
+      } else {
+        return companionBannerBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the companion banner used with the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+     */
+    public Builder setCompanionBanner(com.google.protobuf.StringValue value) {
+      if (companionBannerBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        companionBanner_ = value;
+        onChanged();
+      } else {
+        companionBannerBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the companion banner used with the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+     */
+    public Builder setCompanionBanner(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (companionBannerBuilder_ == null) {
+        companionBanner_ = builderForValue.build();
+        onChanged();
+      } else {
+        companionBannerBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the companion banner used with the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+     */
+    public Builder mergeCompanionBanner(com.google.protobuf.StringValue value) {
+      if (companionBannerBuilder_ == null) {
+        if (companionBanner_ != null) {
+          companionBanner_ =
+            com.google.protobuf.StringValue.newBuilder(companionBanner_).mergeFrom(value).buildPartial();
+        } else {
+          companionBanner_ = value;
+        }
+        onChanged();
+      } else {
+        companionBannerBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the companion banner used with the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+     */
+    public Builder clearCompanionBanner() {
+      if (companionBannerBuilder_ == null) {
+        companionBanner_ = null;
+        onChanged();
+      } else {
+        companionBanner_ = null;
+        companionBannerBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the companion banner used with the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getCompanionBannerBuilder() {
+      
+      onChanged();
+      return getCompanionBannerFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the companion banner used with the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getCompanionBannerOrBuilder() {
+      if (companionBannerBuilder_ != null) {
+        return companionBannerBuilder_.getMessageOrBuilder();
+      } else {
+        return companionBanner_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : companionBanner_;
+      }
+    }
+    /**
+     * <pre>
+     * The MediaFile resource name of the companion banner used with the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getCompanionBannerFieldBuilder() {
+      if (companionBannerBuilder_ == null) {
+        companionBannerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getCompanionBanner(),
+                getParentForChildren(),
+                isClean());
+        companionBanner_ = null;
+      }
+      return companionBannerBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

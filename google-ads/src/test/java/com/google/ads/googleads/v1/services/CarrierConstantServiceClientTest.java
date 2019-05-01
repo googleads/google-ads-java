@@ -46,10 +46,12 @@ public class CarrierConstantServiceClientTest {
   private static MockAdGroupBidModifierService mockAdGroupBidModifierService;
   private static MockAdGroupCriterionLabelService mockAdGroupCriterionLabelService;
   private static MockAdGroupCriterionService mockAdGroupCriterionService;
+  private static MockAdGroupCriterionSimulationService mockAdGroupCriterionSimulationService;
   private static MockAdGroupExtensionSettingService mockAdGroupExtensionSettingService;
   private static MockAdGroupFeedService mockAdGroupFeedService;
   private static MockAdGroupLabelService mockAdGroupLabelService;
   private static MockAdGroupService mockAdGroupService;
+  private static MockAdGroupSimulationService mockAdGroupSimulationService;
   private static MockAdParameterService mockAdParameterService;
   private static MockAdScheduleViewService mockAdScheduleViewService;
   private static MockAgeRangeViewService mockAgeRangeViewService;
@@ -60,6 +62,7 @@ public class CarrierConstantServiceClientTest {
   private static MockCampaignBidModifierService mockCampaignBidModifierService;
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
+  private static MockCampaignCriterionSimulationService mockCampaignCriterionSimulationService;
   private static MockCampaignExtensionSettingService mockCampaignExtensionSettingService;
   private static MockCampaignFeedService mockCampaignFeedService;
   private static MockCampaignLabelService mockCampaignLabelService;
@@ -85,6 +88,7 @@ public class CarrierConstantServiceClientTest {
   private static MockDomainCategoryService mockDomainCategoryService;
   private static MockDynamicSearchAdsSearchTermViewService
       mockDynamicSearchAdsSearchTermViewService;
+  private static MockExpandedLandingPageViewService mockExpandedLandingPageViewService;
   private static MockExtensionFeedItemService mockExtensionFeedItemService;
   private static MockFeedItemService mockFeedItemService;
   private static MockFeedItemTargetService mockFeedItemTargetService;
@@ -107,6 +111,7 @@ public class CarrierConstantServiceClientTest {
   private static MockKeywordPlanService mockKeywordPlanService;
   private static MockKeywordViewService mockKeywordViewService;
   private static MockLabelService mockLabelService;
+  private static MockLandingPageViewService mockLandingPageViewService;
   private static MockLanguageConstantService mockLanguageConstantService;
   private static MockLocationViewService mockLocationViewService;
   private static MockManagedPlacementViewService mockManagedPlacementViewService;
@@ -117,6 +122,7 @@ public class CarrierConstantServiceClientTest {
   private static MockMutateJobService mockMutateJobService;
   private static MockOperatingSystemVersionConstantService
       mockOperatingSystemVersionConstantService;
+  private static MockPaidOrganicSearchTermViewService mockPaidOrganicSearchTermViewService;
   private static MockParentalStatusViewService mockParentalStatusViewService;
   private static MockPaymentsAccountService mockPaymentsAccountService;
   private static MockProductBiddingCategoryConstantService
@@ -147,10 +153,12 @@ public class CarrierConstantServiceClientTest {
     mockAdGroupBidModifierService = new MockAdGroupBidModifierService();
     mockAdGroupCriterionLabelService = new MockAdGroupCriterionLabelService();
     mockAdGroupCriterionService = new MockAdGroupCriterionService();
+    mockAdGroupCriterionSimulationService = new MockAdGroupCriterionSimulationService();
     mockAdGroupExtensionSettingService = new MockAdGroupExtensionSettingService();
     mockAdGroupFeedService = new MockAdGroupFeedService();
     mockAdGroupLabelService = new MockAdGroupLabelService();
     mockAdGroupService = new MockAdGroupService();
+    mockAdGroupSimulationService = new MockAdGroupSimulationService();
     mockAdParameterService = new MockAdParameterService();
     mockAdScheduleViewService = new MockAdScheduleViewService();
     mockAgeRangeViewService = new MockAgeRangeViewService();
@@ -161,6 +169,7 @@ public class CarrierConstantServiceClientTest {
     mockCampaignBidModifierService = new MockCampaignBidModifierService();
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
+    mockCampaignCriterionSimulationService = new MockCampaignCriterionSimulationService();
     mockCampaignExtensionSettingService = new MockCampaignExtensionSettingService();
     mockCampaignFeedService = new MockCampaignFeedService();
     mockCampaignLabelService = new MockCampaignLabelService();
@@ -185,6 +194,7 @@ public class CarrierConstantServiceClientTest {
     mockDisplayKeywordViewService = new MockDisplayKeywordViewService();
     mockDomainCategoryService = new MockDomainCategoryService();
     mockDynamicSearchAdsSearchTermViewService = new MockDynamicSearchAdsSearchTermViewService();
+    mockExpandedLandingPageViewService = new MockExpandedLandingPageViewService();
     mockExtensionFeedItemService = new MockExtensionFeedItemService();
     mockFeedItemService = new MockFeedItemService();
     mockFeedItemTargetService = new MockFeedItemTargetService();
@@ -207,6 +217,7 @@ public class CarrierConstantServiceClientTest {
     mockKeywordPlanService = new MockKeywordPlanService();
     mockKeywordViewService = new MockKeywordViewService();
     mockLabelService = new MockLabelService();
+    mockLandingPageViewService = new MockLandingPageViewService();
     mockLanguageConstantService = new MockLanguageConstantService();
     mockLocationViewService = new MockLocationViewService();
     mockManagedPlacementViewService = new MockManagedPlacementViewService();
@@ -216,6 +227,7 @@ public class CarrierConstantServiceClientTest {
     mockMobileDeviceConstantService = new MockMobileDeviceConstantService();
     mockMutateJobService = new MockMutateJobService();
     mockOperatingSystemVersionConstantService = new MockOperatingSystemVersionConstantService();
+    mockPaidOrganicSearchTermViewService = new MockPaidOrganicSearchTermViewService();
     mockParentalStatusViewService = new MockParentalStatusViewService();
     mockPaymentsAccountService = new MockPaymentsAccountService();
     mockProductBiddingCategoryConstantService = new MockProductBiddingCategoryConstantService();
@@ -243,10 +255,12 @@ public class CarrierConstantServiceClientTest {
                 mockAdGroupBidModifierService,
                 mockAdGroupCriterionLabelService,
                 mockAdGroupCriterionService,
+                mockAdGroupCriterionSimulationService,
                 mockAdGroupExtensionSettingService,
                 mockAdGroupFeedService,
                 mockAdGroupLabelService,
                 mockAdGroupService,
+                mockAdGroupSimulationService,
                 mockAdParameterService,
                 mockAdScheduleViewService,
                 mockAgeRangeViewService,
@@ -257,6 +271,7 @@ public class CarrierConstantServiceClientTest {
                 mockCampaignBidModifierService,
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
+                mockCampaignCriterionSimulationService,
                 mockCampaignExtensionSettingService,
                 mockCampaignFeedService,
                 mockCampaignLabelService,
@@ -281,6 +296,7 @@ public class CarrierConstantServiceClientTest {
                 mockDisplayKeywordViewService,
                 mockDomainCategoryService,
                 mockDynamicSearchAdsSearchTermViewService,
+                mockExpandedLandingPageViewService,
                 mockExtensionFeedItemService,
                 mockFeedItemService,
                 mockFeedItemTargetService,
@@ -303,6 +319,7 @@ public class CarrierConstantServiceClientTest {
                 mockKeywordPlanService,
                 mockKeywordViewService,
                 mockLabelService,
+                mockLandingPageViewService,
                 mockLanguageConstantService,
                 mockLocationViewService,
                 mockManagedPlacementViewService,
@@ -312,6 +329,7 @@ public class CarrierConstantServiceClientTest {
                 mockMobileDeviceConstantService,
                 mockMutateJobService,
                 mockOperatingSystemVersionConstantService,
+                mockPaidOrganicSearchTermViewService,
                 mockParentalStatusViewService,
                 mockPaymentsAccountService,
                 mockProductBiddingCategoryConstantService,

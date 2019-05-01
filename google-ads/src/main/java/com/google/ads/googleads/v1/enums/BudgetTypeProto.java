@@ -30,16 +30,16 @@ public final class BudgetTypeProto {
     java.lang.String[] descriptorData = {
       "\n/google/ads/googleads/v1/enums/budget_t" +
       "ype.proto\022\035google.ads.googleads.v1.enums" +
-      "\032\034google/api/annotations.proto\"d\n\016Budget" +
-      "TypeEnum\"R\n\nBudgetType\022\017\n\013UNSPECIFIED\020\000\022" +
+      "\032\034google/api/annotations.proto\"s\n\016Budget" +
+      "TypeEnum\"a\n\nBudgetType\022\017\n\013UNSPECIFIED\020\000\022" +
       "\013\n\007UNKNOWN\020\001\022\014\n\010STANDARD\020\002\022\030\n\024HOTEL_ADS_" +
-      "COMMISSION\020\003B\344\001\n!com.google.ads.googlead" +
-      "s.v1.enumsB\017BudgetTypeProtoP\001ZBgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v1/enums;enums\242\002\003GAA\252\002\035Google.Ads.Goo" +
-      "gleAds.V1.Enums\312\002\035Google\\Ads\\GoogleAds\\V" +
-      "1\\Enums\352\002!Google::Ads::GoogleAds::V1::En" +
-      "umsb\006proto3"
+      "COMMISSION\020\003\022\r\n\tFIXED_CPA\020\004B\344\001\n!com.goog" +
+      "le.ads.googleads.v1.enumsB\017BudgetTypePro" +
+      "toP\001ZBgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v1/enums;enums\242\002\003GAA\252\002" +
+      "\035Google.Ads.GoogleAds.V1.Enums\312\002\035Google\\" +
+      "Ads\\GoogleAds\\V1\\Enums\352\002!Google::Ads::Go" +
+      "ogleAds::V1::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

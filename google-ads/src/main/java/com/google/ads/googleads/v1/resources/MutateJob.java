@@ -101,6 +101,19 @@ private static final long serialVersionUID = 0L;
             status_ = rawValue;
             break;
           }
+          case 50: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (longRunningOperation_ != null) {
+              subBuilder = longRunningOperation_.toBuilder();
+            }
+            longRunningOperation_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(longRunningOperation_);
+              longRunningOperation_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -2059,6 +2072,42 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v1.enums.MutateJobStatusEnum.MutateJobStatus.UNRECOGNIZED : result;
   }
 
+  public static final int LONG_RUNNING_OPERATION_FIELD_NUMBER = 6;
+  private com.google.protobuf.StringValue longRunningOperation_;
+  /**
+   * <pre>
+   * The resource name of the long-running operation that can be used to poll
+   * for completion. Only set when the mutate job status is RUNNING or DONE.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+   */
+  public boolean hasLongRunningOperation() {
+    return longRunningOperation_ != null;
+  }
+  /**
+   * <pre>
+   * The resource name of the long-running operation that can be used to poll
+   * for completion. Only set when the mutate job status is RUNNING or DONE.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+   */
+  public com.google.protobuf.StringValue getLongRunningOperation() {
+    return longRunningOperation_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : longRunningOperation_;
+  }
+  /**
+   * <pre>
+   * The resource name of the long-running operation that can be used to poll
+   * for completion. Only set when the mutate job status is RUNNING or DONE.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getLongRunningOperationOrBuilder() {
+    return getLongRunningOperation();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2088,6 +2137,9 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.google.ads.googleads.v1.enums.MutateJobStatusEnum.MutateJobStatus.UNSPECIFIED.getNumber()) {
       output.writeEnum(5, status_);
     }
+    if (longRunningOperation_ != null) {
+      output.writeMessage(6, getLongRunningOperation());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2115,6 +2167,10 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.google.ads.googleads.v1.enums.MutateJobStatusEnum.MutateJobStatus.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, status_);
+    }
+    if (longRunningOperation_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getLongRunningOperation());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2150,6 +2206,11 @@ private static final long serialVersionUID = 0L;
           .equals(other.getMetadata());
     }
     result = result && status_ == other.status_;
+    result = result && (hasLongRunningOperation() == other.hasLongRunningOperation());
+    if (hasLongRunningOperation()) {
+      result = result && getLongRunningOperation()
+          .equals(other.getLongRunningOperation());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -2177,6 +2238,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
+    if (hasLongRunningOperation()) {
+      hash = (37 * hash) + LONG_RUNNING_OPERATION_FIELD_NUMBER;
+      hash = (53 * hash) + getLongRunningOperation().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2338,6 +2403,12 @@ private static final long serialVersionUID = 0L;
       }
       status_ = 0;
 
+      if (longRunningOperationBuilder_ == null) {
+        longRunningOperation_ = null;
+      } else {
+        longRunningOperation_ = null;
+        longRunningOperationBuilder_ = null;
+      }
       return this;
     }
 
@@ -2381,6 +2452,11 @@ private static final long serialVersionUID = 0L;
         result.metadata_ = metadataBuilder_.build();
       }
       result.status_ = status_;
+      if (longRunningOperationBuilder_ == null) {
+        result.longRunningOperation_ = longRunningOperation_;
+      } else {
+        result.longRunningOperation_ = longRunningOperationBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -2444,6 +2520,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
+      }
+      if (other.hasLongRunningOperation()) {
+        mergeLongRunningOperation(other.getLongRunningOperation());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -3104,6 +3183,168 @@ private static final long serialVersionUID = 0L;
       status_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.StringValue longRunningOperation_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> longRunningOperationBuilder_;
+    /**
+     * <pre>
+     * The resource name of the long-running operation that can be used to poll
+     * for completion. Only set when the mutate job status is RUNNING or DONE.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     */
+    public boolean hasLongRunningOperation() {
+      return longRunningOperationBuilder_ != null || longRunningOperation_ != null;
+    }
+    /**
+     * <pre>
+     * The resource name of the long-running operation that can be used to poll
+     * for completion. Only set when the mutate job status is RUNNING or DONE.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     */
+    public com.google.protobuf.StringValue getLongRunningOperation() {
+      if (longRunningOperationBuilder_ == null) {
+        return longRunningOperation_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : longRunningOperation_;
+      } else {
+        return longRunningOperationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The resource name of the long-running operation that can be used to poll
+     * for completion. Only set when the mutate job status is RUNNING or DONE.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     */
+    public Builder setLongRunningOperation(com.google.protobuf.StringValue value) {
+      if (longRunningOperationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        longRunningOperation_ = value;
+        onChanged();
+      } else {
+        longRunningOperationBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource name of the long-running operation that can be used to poll
+     * for completion. Only set when the mutate job status is RUNNING or DONE.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     */
+    public Builder setLongRunningOperation(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (longRunningOperationBuilder_ == null) {
+        longRunningOperation_ = builderForValue.build();
+        onChanged();
+      } else {
+        longRunningOperationBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource name of the long-running operation that can be used to poll
+     * for completion. Only set when the mutate job status is RUNNING or DONE.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     */
+    public Builder mergeLongRunningOperation(com.google.protobuf.StringValue value) {
+      if (longRunningOperationBuilder_ == null) {
+        if (longRunningOperation_ != null) {
+          longRunningOperation_ =
+            com.google.protobuf.StringValue.newBuilder(longRunningOperation_).mergeFrom(value).buildPartial();
+        } else {
+          longRunningOperation_ = value;
+        }
+        onChanged();
+      } else {
+        longRunningOperationBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource name of the long-running operation that can be used to poll
+     * for completion. Only set when the mutate job status is RUNNING or DONE.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     */
+    public Builder clearLongRunningOperation() {
+      if (longRunningOperationBuilder_ == null) {
+        longRunningOperation_ = null;
+        onChanged();
+      } else {
+        longRunningOperation_ = null;
+        longRunningOperationBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource name of the long-running operation that can be used to poll
+     * for completion. Only set when the mutate job status is RUNNING or DONE.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getLongRunningOperationBuilder() {
+      
+      onChanged();
+      return getLongRunningOperationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The resource name of the long-running operation that can be used to poll
+     * for completion. Only set when the mutate job status is RUNNING or DONE.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getLongRunningOperationOrBuilder() {
+      if (longRunningOperationBuilder_ != null) {
+        return longRunningOperationBuilder_.getMessageOrBuilder();
+      } else {
+        return longRunningOperation_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : longRunningOperation_;
+      }
+    }
+    /**
+     * <pre>
+     * The resource name of the long-running operation that can be used to poll
+     * for completion. Only set when the mutate job status is RUNNING or DONE.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getLongRunningOperationFieldBuilder() {
+      if (longRunningOperationBuilder_ == null) {
+        longRunningOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getLongRunningOperation(),
+                getParentForChildren(),
+                isClean());
+        longRunningOperation_ = null;
+      }
+      return longRunningOperationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

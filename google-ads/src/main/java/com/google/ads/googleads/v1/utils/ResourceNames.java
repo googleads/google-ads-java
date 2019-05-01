@@ -18,6 +18,8 @@ import com.google.ads.googleads.v1.enums.FeedItemTargetTypeEnum.FeedItemTargetTy
 import com.google.ads.googleads.v1.enums.GeoTargetingTypeEnum.GeoTargetingType;
 import com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType;
 import com.google.ads.googleads.v1.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel;
+import com.google.ads.googleads.v1.enums.SimulationModificationMethodEnum.SimulationModificationMethod;
+import com.google.ads.googleads.v1.enums.SimulationTypeEnum.SimulationType;
 import com.google.ads.googleads.v1.resources.AccountBudgetName;
 import com.google.ads.googleads.v1.resources.AccountBudgetProposalName;
 import com.google.ads.googleads.v1.resources.AdGroupAdLabelName;
@@ -26,10 +28,12 @@ import com.google.ads.googleads.v1.resources.AdGroupAudienceViewName;
 import com.google.ads.googleads.v1.resources.AdGroupBidModifierName;
 import com.google.ads.googleads.v1.resources.AdGroupCriteriaName;
 import com.google.ads.googleads.v1.resources.AdGroupCriterionLabelName;
+import com.google.ads.googleads.v1.resources.AdGroupCriterionSimulationName;
 import com.google.ads.googleads.v1.resources.AdGroupExtensionSettingName;
 import com.google.ads.googleads.v1.resources.AdGroupFeedName;
 import com.google.ads.googleads.v1.resources.AdGroupLabelName;
 import com.google.ads.googleads.v1.resources.AdGroupName;
+import com.google.ads.googleads.v1.resources.AdGroupSimulationName;
 import com.google.ads.googleads.v1.resources.AdParameterName;
 import com.google.ads.googleads.v1.resources.AdScheduleViewName;
 import com.google.ads.googleads.v1.resources.AgeRangeViewName;
@@ -40,6 +44,7 @@ import com.google.ads.googleads.v1.resources.CampaignAudienceViewName;
 import com.google.ads.googleads.v1.resources.CampaignBidModifierName;
 import com.google.ads.googleads.v1.resources.CampaignBudgetName;
 import com.google.ads.googleads.v1.resources.CampaignCriteriaName;
+import com.google.ads.googleads.v1.resources.CampaignCriterionSimulationName;
 import com.google.ads.googleads.v1.resources.CampaignExtensionSettingName;
 import com.google.ads.googleads.v1.resources.CampaignFeedName;
 import com.google.ads.googleads.v1.resources.CampaignLabelName;
@@ -62,6 +67,7 @@ import com.google.ads.googleads.v1.resources.DetailPlacementViewName;
 import com.google.ads.googleads.v1.resources.DisplayKeywordViewName;
 import com.google.ads.googleads.v1.resources.DomainCategoryName;
 import com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermViewName;
+import com.google.ads.googleads.v1.resources.ExpandedLandingPageViewName;
 import com.google.ads.googleads.v1.resources.ExtensionFeedItemName;
 import com.google.ads.googleads.v1.resources.FeedItemName;
 import com.google.ads.googleads.v1.resources.FeedItemTargetName;
@@ -82,6 +88,7 @@ import com.google.ads.googleads.v1.resources.KeywordPlanName;
 import com.google.ads.googleads.v1.resources.KeywordPlanNegativeKeywordName;
 import com.google.ads.googleads.v1.resources.KeywordViewName;
 import com.google.ads.googleads.v1.resources.LabelName;
+import com.google.ads.googleads.v1.resources.LandingPageViewName;
 import com.google.ads.googleads.v1.resources.LanguageConstantName;
 import com.google.ads.googleads.v1.resources.LocationViewName;
 import com.google.ads.googleads.v1.resources.ManagedPlacementViewName;
@@ -91,6 +98,7 @@ import com.google.ads.googleads.v1.resources.MobileAppCategoryConstantName;
 import com.google.ads.googleads.v1.resources.MobileDeviceConstantName;
 import com.google.ads.googleads.v1.resources.MutateJobName;
 import com.google.ads.googleads.v1.resources.OperatingSystemVersionConstantName;
+import com.google.ads.googleads.v1.resources.PaidOrganicSearchTermViewName;
 import com.google.ads.googleads.v1.resources.ParentalStatusViewName;
 import com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstantName;
 import com.google.ads.googleads.v1.resources.ProductGroupViewName;
@@ -176,6 +184,20 @@ public class ResourceNames {
         String.valueOf(customerId), concatIdentifiers(adGroupId, criterionId, labelId));
   }
 
+  /** Returns the Ad Group Criterion Simulation resource name for the specified components. */
+  public static String adGroupCriterionSimulation(
+      long customerId,
+      long adGroupId,
+      long criterionId,
+      SimulationType type,
+      SimulationModificationMethod method,
+      String startDate,
+      String endDate) {
+    return AdGroupCriterionSimulationName.format(
+        String.valueOf(customerId),
+        concatIdentifiers(adGroupId, criterionId, type, method, startDate, endDate));
+  }
+
   /** Returns the ad group extension setting for the specified components. */
   public static String adGroupExtensionSetting(
       long customerId, long adGroupId, ExtensionType extensionType) {
@@ -192,6 +214,18 @@ public class ResourceNames {
   public static String adGroupLabel(long customerId, long adGroupId, long labelId) {
     return AdGroupLabelName.format(
         String.valueOf(customerId), concatIdentifiers(adGroupId, labelId));
+  }
+
+  /** Returns the Ad Group Simulation resource name for the specified components. */
+  public static String adGroupSimulation(
+      long customerId,
+      long adGroupId,
+      SimulationType type,
+      SimulationModificationMethod method,
+      String startDate,
+      String endDate) {
+    return AdGroupSimulationName.format(
+        String.valueOf(customerId), concatIdentifiers(adGroupId, type, method, startDate, endDate));
   }
 
   /** Returns the ad parameter resource name for the specified components. */
@@ -255,6 +289,19 @@ public class ResourceNames {
   public static String campaignCriterion(long customerId, long campaignId, long criterionId) {
     return CampaignCriteriaName.format(
         String.valueOf(customerId), concatIdentifiers(campaignId, criterionId));
+  }
+
+  /** Returns the Campaign Criterion Simulation resource name for the specified components. */
+  public static String campaignCriterionSimulation(
+      long customerId,
+      long campaignId,
+      SimulationType type,
+      SimulationModificationMethod method,
+      String startDate,
+      String endDate) {
+    return CampaignCriterionSimulationName.format(
+        String.valueOf(customerId),
+        concatIdentifiers(campaignId, type, method, startDate, endDate));
   }
 
   /** Returns the campaign extension setting for the specified components. */
@@ -381,6 +428,13 @@ public class ResourceNames {
         concatIdentifiers(adGroupId, searchTerm, headline, landingPage));
   }
 
+  /** Returns the Expanded Landing Page View resource name for the specified components. */
+  public static String expandedLandingPageView(
+      long customerId, String expandedFinalUrlFingerprint) {
+    return ExpandedLandingPageViewName.format(
+        String.valueOf(customerId), expandedFinalUrlFingerprint);
+  }
+
   /** Returns the extension feed item for the specified components. */
   public static String extensionFeedItem(long customerId, long feedItemId) {
     return ExtensionFeedItemName.format(String.valueOf(customerId), String.valueOf(feedItemId));
@@ -497,6 +551,11 @@ public class ResourceNames {
     return LabelName.format(String.valueOf(customerId), String.valueOf(labelId));
   }
 
+  /** Returns the Landing Page View resource name for the specified components. */
+  public static String landingPageView(long customerId, String unexpandedFinalUrlFingerprint) {
+    return LandingPageViewName.format(String.valueOf(customerId), unexpandedFinalUrlFingerprint);
+  }
+
   /** Returns the language constant resource name for the specified components. */
   public static String languageConstant(long criterionId) {
     return LanguageConstantName.format(String.valueOf(criterionId));
@@ -543,6 +602,13 @@ public class ResourceNames {
   /** Returns the operation system version constant resource name for the specified components. */
   public static String operatingSystemVersionConstant(long criterionId) {
     return OperatingSystemVersionConstantName.format(String.valueOf(criterionId));
+  }
+
+  /** Returns the Paid Organic Search Term View resource name for the specified components. */
+  public static String paidOrganicSearchTermView(
+      long customerId, long campaignId, long adGroupid, String searchTermBase64) {
+    return PaidOrganicSearchTermViewName.format(
+        String.valueOf(customerId), concatIdentifiers(campaignId, adGroupid, searchTermBase64));
   }
 
   /** Returns the parental status view resource name for the specified components. */

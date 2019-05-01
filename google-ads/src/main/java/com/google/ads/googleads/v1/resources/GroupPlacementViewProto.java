@@ -40,14 +40,14 @@ public final class GroupPlacementViewProto {
       "\n\ntarget_url\030\004 \001(\0132\034.google.protobuf.Str" +
       "ingValue\022V\n\016placement_type\030\005 \001(\0162>.googl" +
       "e.ads.googleads.v1.enums.PlacementTypeEn" +
-      "um.PlacementTypeB\203\002\n%com.google.ads.goog" +
+      "um.PlacementTypeB\204\002\n%com.google.ads.goog" +
       "leads.v1.resourcesB\027GroupPlacementViewPr" +
       "otoP\001ZJgoogle.golang.org/genproto/google" +
       "apis/ads/googleads/v1/resources;resource" +
       "s\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1.Resour" +
       "ces\312\002!Google\\Ads\\GoogleAds\\V1\\Resources\352" +
-      "\002$Google::Ads::GoogleAds::V1::Servicesb\006" +
-      "proto3"
+      "\002%Google::Ads::GoogleAds::V1::Resourcesb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

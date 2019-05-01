@@ -331,6 +331,56 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Resource name of the geo target constant that represents a county.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+   */
+  boolean hasGeoTargetCounty();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a county.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+   */
+  com.google.protobuf.StringValue getGeoTargetCounty();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a county.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getGeoTargetCountyOrBuilder();
+
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a district.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+   */
+  boolean hasGeoTargetDistrict();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a district.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+   */
+  com.google.protobuf.StringValue getGeoTargetDistrict();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a district.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getGeoTargetDistrictOrBuilder();
+
+  /**
+   * <pre>
    * Resource name of the geo target constant that represents a metro.
    * </pre>
    *
@@ -356,6 +406,59 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Resource name of the geo target constant that represents the most
+   * specific location.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+   */
+  boolean hasGeoTargetMostSpecificLocation();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents the most
+   * specific location.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+   */
+  com.google.protobuf.StringValue getGeoTargetMostSpecificLocation();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents the most
+   * specific location.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getGeoTargetMostSpecificLocationOrBuilder();
+
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a postal code.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+   */
+  boolean hasGeoTargetPostalCode();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a postal code.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+   */
+  com.google.protobuf.StringValue getGeoTargetPostalCode();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a postal code.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getGeoTargetPostalCodeOrBuilder();
+
+  /**
+   * <pre>
    * Resource name of the geo target constant that represents a region.
    * </pre>
    *
@@ -378,6 +481,31 @@ public interface SegmentsOrBuilder extends
    * <code>.google.protobuf.StringValue geo_target_region = 64;</code>
    */
   com.google.protobuf.StringValueOrBuilder getGeoTargetRegionOrBuilder();
+
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a state.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+   */
+  boolean hasGeoTargetState();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a state.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+   */
+  com.google.protobuf.StringValue getGeoTargetState();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a state.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getGeoTargetStateOrBuilder();
 
   /**
    * <pre>
@@ -1440,6 +1568,23 @@ public interface SegmentsOrBuilder extends
    * <code>.google.protobuf.StringValue quarter = 21;</code>
    */
   com.google.protobuf.StringValueOrBuilder getQuarterOrBuilder();
+
+  /**
+   * <pre>
+   * Type of the search engine results page.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+   */
+  int getSearchEngineResultsPageTypeValue();
+  /**
+   * <pre>
+   * Type of the search engine results page.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+   */
+  com.google.ads.googleads.v1.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType getSearchEngineResultsPageType();
 
   /**
    * <pre>

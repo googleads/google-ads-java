@@ -6,7 +6,6 @@ package com.google.ads.googleads.v1.common;
 /**
  * <pre>
  * Describes the effect on serving that a policy topic entry will have.
- * Next Id: 5
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicConstraint}
@@ -211,7 +210,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of countries where a resource's serving is constrained.
-   * Next Id: 3
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraintList}
@@ -576,7 +574,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of countries where a resource's serving is constrained.
-     * Next Id: 3
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraintList}
@@ -1304,7 +1301,6 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Indicates that a policy topic was constrained due to disapproval of the
    * website for reseller purposes.
-   * Next Id: 1
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicConstraint.ResellerConstraint}
@@ -1525,7 +1521,6 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Indicates that a policy topic was constrained due to disapproval of the
      * website for reseller purposes.
-     * Next Id: 1
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicConstraint.ResellerConstraint}
@@ -1756,7 +1751,6 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Indicates that a resource's ability to serve in a particular country is
    * constrained.
-   * Next Id: 2
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraint}
@@ -2043,7 +2037,6 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Indicates that a resource's ability to serve in a particular country is
      * constrained.
-     * Next Id: 2
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraint}
@@ -2830,7 +2823,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Describes the effect on serving that a policy topic entry will have.
-   * Next Id: 5
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicConstraint}

@@ -473,6 +473,54 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * The type of campaign: normal, draft, or experiment.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17;</code>
+   */
+  int getExperimentTypeValue();
+  /**
+   * <pre>
+   * The type of campaign: normal, draft, or experiment.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17;</code>
+   */
+  com.google.ads.googleads.v1.enums.CampaignExperimentTypeEnum.CampaignExperimentType getExperimentType();
+
+  /**
+   * <pre>
+   * The resource name of the base campaign of a draft or experiment campaign.
+   * For base campaigns, this is equal to `resource_name`.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+   */
+  boolean hasBaseCampaign();
+  /**
+   * <pre>
+   * The resource name of the base campaign of a draft or experiment campaign.
+   * For base campaigns, this is equal to `resource_name`.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+   */
+  com.google.protobuf.StringValue getBaseCampaign();
+  /**
+   * <pre>
+   * The resource name of the base campaign of a draft or experiment campaign.
+   * For base campaigns, this is equal to `resource_name`.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getBaseCampaignOrBuilder();
+
+  /**
+   * <pre>
    * The budget of the campaign.
    * </pre>
    *
