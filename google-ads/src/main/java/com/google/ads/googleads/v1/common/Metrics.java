@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
     int mutable_bitField0_ = 0;
     int mutable_bitField1_ = 0;
     int mutable_bitField2_ = 0;
+    int mutable_bitField3_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -1125,9 +1126,9 @@ private static final long serialVersionUID = 0L;
           }
           case 800: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField1_ & 0x20000000) == 0x20000000)) {
+            if (!((mutable_bitField2_ & 0x00000100) == 0x00000100)) {
               interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField1_ |= 0x20000000;
+              mutable_bitField2_ |= 0x00000100;
             }
             interactionEventTypes_.add(rawValue);
             break;
@@ -1137,9 +1138,9 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField1_ & 0x20000000) == 0x20000000)) {
+              if (!((mutable_bitField2_ & 0x00000100) == 0x00000100)) {
                 interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField1_ |= 0x20000000;
+                mutable_bitField2_ |= 0x00000100;
               }
               interactionEventTypes_.add(rawValue);
             }
@@ -1224,6 +1225,253 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 858: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (speedScore_ != null) {
+              subBuilder = speedScore_.toBuilder();
+            }
+            speedScore_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(speedScore_);
+              speedScore_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 866: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (validAcceleratedMobilePagesClicksPercentage_ != null) {
+              subBuilder = validAcceleratedMobilePagesClicksPercentage_.toBuilder();
+            }
+            validAcceleratedMobilePagesClicksPercentage_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(validAcceleratedMobilePagesClicksPercentage_);
+              validAcceleratedMobilePagesClicksPercentage_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 874: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (mobileFriendlyClicksPercentage_ != null) {
+              subBuilder = mobileFriendlyClicksPercentage_.toBuilder();
+            }
+            mobileFriendlyClicksPercentage_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(mobileFriendlyClicksPercentage_);
+              mobileFriendlyClicksPercentage_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 882: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (organicClicks_ != null) {
+              subBuilder = organicClicks_.toBuilder();
+            }
+            organicClicks_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(organicClicks_);
+              organicClicks_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 890: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (organicClicksPerQuery_ != null) {
+              subBuilder = organicClicksPerQuery_.toBuilder();
+            }
+            organicClicksPerQuery_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(organicClicksPerQuery_);
+              organicClicksPerQuery_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 898: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (organicImpressions_ != null) {
+              subBuilder = organicImpressions_.toBuilder();
+            }
+            organicImpressions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(organicImpressions_);
+              organicImpressions_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 906: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (organicImpressionsPerQuery_ != null) {
+              subBuilder = organicImpressionsPerQuery_.toBuilder();
+            }
+            organicImpressionsPerQuery_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(organicImpressionsPerQuery_);
+              organicImpressionsPerQuery_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 914: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (organicQueries_ != null) {
+              subBuilder = organicQueries_.toBuilder();
+            }
+            organicQueries_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(organicQueries_);
+              organicQueries_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 922: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (combinedClicks_ != null) {
+              subBuilder = combinedClicks_.toBuilder();
+            }
+            combinedClicks_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(combinedClicks_);
+              combinedClicks_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 930: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (combinedClicksPerQuery_ != null) {
+              subBuilder = combinedClicksPerQuery_.toBuilder();
+            }
+            combinedClicksPerQuery_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(combinedClicksPerQuery_);
+              combinedClicksPerQuery_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 938: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (combinedQueries_ != null) {
+              subBuilder = combinedQueries_.toBuilder();
+            }
+            combinedQueries_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(combinedQueries_);
+              combinedQueries_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 946: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (allConversionsFromClickToCall_ != null) {
+              subBuilder = allConversionsFromClickToCall_.toBuilder();
+            }
+            allConversionsFromClickToCall_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(allConversionsFromClickToCall_);
+              allConversionsFromClickToCall_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 954: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (allConversionsFromDirections_ != null) {
+              subBuilder = allConversionsFromDirections_.toBuilder();
+            }
+            allConversionsFromDirections_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(allConversionsFromDirections_);
+              allConversionsFromDirections_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 962: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (allConversionsFromMenu_ != null) {
+              subBuilder = allConversionsFromMenu_.toBuilder();
+            }
+            allConversionsFromMenu_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(allConversionsFromMenu_);
+              allConversionsFromMenu_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 970: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (allConversionsFromOrder_ != null) {
+              subBuilder = allConversionsFromOrder_.toBuilder();
+            }
+            allConversionsFromOrder_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(allConversionsFromOrder_);
+              allConversionsFromOrder_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 978: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (allConversionsFromOtherEngagement_ != null) {
+              subBuilder = allConversionsFromOtherEngagement_.toBuilder();
+            }
+            allConversionsFromOtherEngagement_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(allConversionsFromOtherEngagement_);
+              allConversionsFromOtherEngagement_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 986: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (allConversionsFromStoreVisit_ != null) {
+              subBuilder = allConversionsFromStoreVisit_.toBuilder();
+            }
+            allConversionsFromStoreVisit_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(allConversionsFromStoreVisit_);
+              allConversionsFromStoreVisit_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 994: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (allConversionsFromStoreWebsite_ != null) {
+              subBuilder = allConversionsFromStoreWebsite_.toBuilder();
+            }
+            allConversionsFromStoreWebsite_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(allConversionsFromStoreWebsite_);
+              allConversionsFromStoreWebsite_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 1002: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (impressionsFromStoreReach_ != null) {
+              subBuilder = impressionsFromStoreReach_.toBuilder();
+            }
+            impressionsFromStoreReach_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(impressionsFromStoreReach_);
+              impressionsFromStoreReach_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1239,7 +1487,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField1_ & 0x20000000) == 0x20000000)) {
+      if (((mutable_bitField2_ & 0x00000100) == 0x00000100)) {
         interactionEventTypes_ = java.util.Collections.unmodifiableList(interactionEventTypes_);
       }
       this.unknownFields = unknownFields.build();
@@ -1262,6 +1510,7 @@ private static final long serialVersionUID = 0L;
   private int bitField0_;
   private int bitField1_;
   private int bitField2_;
+  private int bitField3_;
   public static final int ABSOLUTE_TOP_IMPRESSION_PERCENTAGE_FIELD_NUMBER = 95;
   private com.google.protobuf.DoubleValue absoluteTopImpressionPercentage_;
   /**
@@ -1688,6 +1937,87 @@ private static final long serialVersionUID = 0L;
     return getAllConversionsValuePerCost();
   }
 
+  public static final int ALL_CONVERSIONS_FROM_CLICK_TO_CALL_FIELD_NUMBER = 118;
+  private com.google.protobuf.DoubleValue allConversionsFromClickToCall_;
+  /**
+   * <pre>
+   * The number of times people clicked the “Call” button to call a store during
+   * or after clicking an ad. This number doesn’t include whether or not calls
+   * were connected, or the duration of any calls.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+   */
+  public boolean hasAllConversionsFromClickToCall() {
+    return allConversionsFromClickToCall_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times people clicked the “Call” button to call a store during
+   * or after clicking an ad. This number doesn’t include whether or not calls
+   * were connected, or the duration of any calls.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+   */
+  public com.google.protobuf.DoubleValue getAllConversionsFromClickToCall() {
+    return allConversionsFromClickToCall_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromClickToCall_;
+  }
+  /**
+   * <pre>
+   * The number of times people clicked the “Call” button to call a store during
+   * or after clicking an ad. This number doesn’t include whether or not calls
+   * were connected, or the duration of any calls.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromClickToCallOrBuilder() {
+    return getAllConversionsFromClickToCall();
+  }
+
+  public static final int ALL_CONVERSIONS_FROM_DIRECTIONS_FIELD_NUMBER = 119;
+  private com.google.protobuf.DoubleValue allConversionsFromDirections_;
+  /**
+   * <pre>
+   * The number of times people clicked a “Get directions” button to navigate to
+   * a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+   */
+  public boolean hasAllConversionsFromDirections() {
+    return allConversionsFromDirections_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times people clicked a “Get directions” button to navigate to
+   * a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+   */
+  public com.google.protobuf.DoubleValue getAllConversionsFromDirections() {
+    return allConversionsFromDirections_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromDirections_;
+  }
+  /**
+   * <pre>
+   * The number of times people clicked a “Get directions” button to navigate to
+   * a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromDirectionsOrBuilder() {
+    return getAllConversionsFromDirections();
+  }
+
   public static final int ALL_CONVERSIONS_FROM_INTERACTIONS_VALUE_PER_INTERACTION_FIELD_NUMBER = 67;
   private com.google.protobuf.DoubleValue allConversionsFromInteractionsValuePerInteraction_;
   /**
@@ -1722,6 +2052,195 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromInteractionsValuePerInteractionOrBuilder() {
     return getAllConversionsFromInteractionsValuePerInteraction();
+  }
+
+  public static final int ALL_CONVERSIONS_FROM_MENU_FIELD_NUMBER = 120;
+  private com.google.protobuf.DoubleValue allConversionsFromMenu_;
+  /**
+   * <pre>
+   * The number of times people clicked a link to view a store’s menu after
+   * clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+   */
+  public boolean hasAllConversionsFromMenu() {
+    return allConversionsFromMenu_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times people clicked a link to view a store’s menu after
+   * clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+   */
+  public com.google.protobuf.DoubleValue getAllConversionsFromMenu() {
+    return allConversionsFromMenu_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromMenu_;
+  }
+  /**
+   * <pre>
+   * The number of times people clicked a link to view a store’s menu after
+   * clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromMenuOrBuilder() {
+    return getAllConversionsFromMenu();
+  }
+
+  public static final int ALL_CONVERSIONS_FROM_ORDER_FIELD_NUMBER = 121;
+  private com.google.protobuf.DoubleValue allConversionsFromOrder_;
+  /**
+   * <pre>
+   * The number of times people placed an order at a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+   */
+  public boolean hasAllConversionsFromOrder() {
+    return allConversionsFromOrder_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times people placed an order at a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+   */
+  public com.google.protobuf.DoubleValue getAllConversionsFromOrder() {
+    return allConversionsFromOrder_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromOrder_;
+  }
+  /**
+   * <pre>
+   * The number of times people placed an order at a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromOrderOrBuilder() {
+    return getAllConversionsFromOrder();
+  }
+
+  public static final int ALL_CONVERSIONS_FROM_OTHER_ENGAGEMENT_FIELD_NUMBER = 122;
+  private com.google.protobuf.DoubleValue allConversionsFromOtherEngagement_;
+  /**
+   * <pre>
+   * The number of other conversions (for example, posting a review or saving a
+   * location for a store) that occurred after people clicked an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+   */
+  public boolean hasAllConversionsFromOtherEngagement() {
+    return allConversionsFromOtherEngagement_ != null;
+  }
+  /**
+   * <pre>
+   * The number of other conversions (for example, posting a review or saving a
+   * location for a store) that occurred after people clicked an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+   */
+  public com.google.protobuf.DoubleValue getAllConversionsFromOtherEngagement() {
+    return allConversionsFromOtherEngagement_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromOtherEngagement_;
+  }
+  /**
+   * <pre>
+   * The number of other conversions (for example, posting a review or saving a
+   * location for a store) that occurred after people clicked an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromOtherEngagementOrBuilder() {
+    return getAllConversionsFromOtherEngagement();
+  }
+
+  public static final int ALL_CONVERSIONS_FROM_STORE_VISIT_FIELD_NUMBER = 123;
+  private com.google.protobuf.DoubleValue allConversionsFromStoreVisit_;
+  /**
+   * <pre>
+   * Estimated number of times people visited a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+   */
+  public boolean hasAllConversionsFromStoreVisit() {
+    return allConversionsFromStoreVisit_ != null;
+  }
+  /**
+   * <pre>
+   * Estimated number of times people visited a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+   */
+  public com.google.protobuf.DoubleValue getAllConversionsFromStoreVisit() {
+    return allConversionsFromStoreVisit_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromStoreVisit_;
+  }
+  /**
+   * <pre>
+   * Estimated number of times people visited a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromStoreVisitOrBuilder() {
+    return getAllConversionsFromStoreVisit();
+  }
+
+  public static final int ALL_CONVERSIONS_FROM_STORE_WEBSITE_FIELD_NUMBER = 124;
+  private com.google.protobuf.DoubleValue allConversionsFromStoreWebsite_;
+  /**
+   * <pre>
+   * The number of times that people were taken to a store's URL after clicking
+   * an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+   */
+  public boolean hasAllConversionsFromStoreWebsite() {
+    return allConversionsFromStoreWebsite_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times that people were taken to a store's URL after clicking
+   * an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+   */
+  public com.google.protobuf.DoubleValue getAllConversionsFromStoreWebsite() {
+    return allConversionsFromStoreWebsite_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromStoreWebsite_;
+  }
+  /**
+   * <pre>
+   * The number of times that people were taken to a store's URL after clicking
+   * an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromStoreWebsiteOrBuilder() {
+    return getAllConversionsFromStoreWebsite();
   }
 
   public static final int AVERAGE_COST_FIELD_NUMBER = 8;
@@ -2181,6 +2700,126 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.Int64ValueOrBuilder getClicksOrBuilder() {
     return getClicks();
+  }
+
+  public static final int COMBINED_CLICKS_FIELD_NUMBER = 115;
+  private com.google.protobuf.Int64Value combinedClicks_;
+  /**
+   * <pre>
+   * The number of times your ad or your site's listing in the unpaid
+   * results was clicked. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+   */
+  public boolean hasCombinedClicks() {
+    return combinedClicks_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times your ad or your site's listing in the unpaid
+   * results was clicked. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+   */
+  public com.google.protobuf.Int64Value getCombinedClicks() {
+    return combinedClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : combinedClicks_;
+  }
+  /**
+   * <pre>
+   * The number of times your ad or your site's listing in the unpaid
+   * results was clicked. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getCombinedClicksOrBuilder() {
+    return getCombinedClicks();
+  }
+
+  public static final int COMBINED_CLICKS_PER_QUERY_FIELD_NUMBER = 116;
+  private com.google.protobuf.DoubleValue combinedClicksPerQuery_;
+  /**
+   * <pre>
+   * The number of times your ad or your site's listing in the unpaid
+   * results was clicked (combined_clicks) divided by combined_queries. See the
+   * help page at https://support.google.com/google-ads/answer/3097241 for
+   * details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+   */
+  public boolean hasCombinedClicksPerQuery() {
+    return combinedClicksPerQuery_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times your ad or your site's listing in the unpaid
+   * results was clicked (combined_clicks) divided by combined_queries. See the
+   * help page at https://support.google.com/google-ads/answer/3097241 for
+   * details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+   */
+  public com.google.protobuf.DoubleValue getCombinedClicksPerQuery() {
+    return combinedClicksPerQuery_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : combinedClicksPerQuery_;
+  }
+  /**
+   * <pre>
+   * The number of times your ad or your site's listing in the unpaid
+   * results was clicked (combined_clicks) divided by combined_queries. See the
+   * help page at https://support.google.com/google-ads/answer/3097241 for
+   * details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getCombinedClicksPerQueryOrBuilder() {
+    return getCombinedClicksPerQuery();
+  }
+
+  public static final int COMBINED_QUERIES_FIELD_NUMBER = 117;
+  private com.google.protobuf.Int64Value combinedQueries_;
+  /**
+   * <pre>
+   * The number of searches that returned pages from your site in the unpaid
+   * results or showed one of your text ads. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+   */
+  public boolean hasCombinedQueries() {
+    return combinedQueries_ != null;
+  }
+  /**
+   * <pre>
+   * The number of searches that returned pages from your site in the unpaid
+   * results or showed one of your text ads. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+   */
+  public com.google.protobuf.Int64Value getCombinedQueries() {
+    return combinedQueries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : combinedQueries_;
+  }
+  /**
+   * <pre>
+   * The number of searches that returned pages from your site in the unpaid
+   * results or showed one of your text ads. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getCombinedQueriesOrBuilder() {
+    return getCombinedQueries();
   }
 
   public static final int CONTENT_BUDGET_LOST_IMPRESSION_SHARE_FIELD_NUMBER = 20;
@@ -3359,6 +3998,42 @@ private static final long serialVersionUID = 0L;
     return getImpressionReach();
   }
 
+  public static final int IMPRESSIONS_FROM_STORE_REACH_FIELD_NUMBER = 125;
+  private com.google.protobuf.Int64Value impressionsFromStoreReach_;
+  /**
+   * <pre>
+   * The number of times a store's location-based ad was shown.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+   */
+  public boolean hasImpressionsFromStoreReach() {
+    return impressionsFromStoreReach_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times a store's location-based ad was shown.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+   */
+  public com.google.protobuf.Int64Value getImpressionsFromStoreReach() {
+    return impressionsFromStoreReach_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : impressionsFromStoreReach_;
+  }
+  /**
+   * <pre>
+   * The number of times a store's location-based ad was shown.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getImpressionsFromStoreReachOrBuilder() {
+    return getImpressionsFromStoreReach();
+  }
+
   public static final int IMPRESSIONS_FIELD_NUMBER = 37;
   private com.google.protobuf.Int64Value impressions_;
   /**
@@ -3606,6 +4281,240 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.Int64ValueOrBuilder getInvalidClicksOrBuilder() {
     return getInvalidClicks();
+  }
+
+  public static final int MOBILE_FRIENDLY_CLICKS_PERCENTAGE_FIELD_NUMBER = 109;
+  private com.google.protobuf.DoubleValue mobileFriendlyClicksPercentage_;
+  /**
+   * <pre>
+   * The percentage of mobile clicks that go to a mobile-friendly page.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+   */
+  public boolean hasMobileFriendlyClicksPercentage() {
+    return mobileFriendlyClicksPercentage_ != null;
+  }
+  /**
+   * <pre>
+   * The percentage of mobile clicks that go to a mobile-friendly page.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+   */
+  public com.google.protobuf.DoubleValue getMobileFriendlyClicksPercentage() {
+    return mobileFriendlyClicksPercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : mobileFriendlyClicksPercentage_;
+  }
+  /**
+   * <pre>
+   * The percentage of mobile clicks that go to a mobile-friendly page.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getMobileFriendlyClicksPercentageOrBuilder() {
+    return getMobileFriendlyClicksPercentage();
+  }
+
+  public static final int ORGANIC_CLICKS_FIELD_NUMBER = 110;
+  private com.google.protobuf.Int64Value organicClicks_;
+  /**
+   * <pre>
+   * The number of times someone clicked your site's listing in the unpaid
+   * results for a particular query. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+   */
+  public boolean hasOrganicClicks() {
+    return organicClicks_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times someone clicked your site's listing in the unpaid
+   * results for a particular query. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+   */
+  public com.google.protobuf.Int64Value getOrganicClicks() {
+    return organicClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : organicClicks_;
+  }
+  /**
+   * <pre>
+   * The number of times someone clicked your site's listing in the unpaid
+   * results for a particular query. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getOrganicClicksOrBuilder() {
+    return getOrganicClicks();
+  }
+
+  public static final int ORGANIC_CLICKS_PER_QUERY_FIELD_NUMBER = 111;
+  private com.google.protobuf.DoubleValue organicClicksPerQuery_;
+  /**
+   * <pre>
+   * The number of times someone clicked your site's listing in the unpaid
+   * results (organic_clicks) divided by the total number of searches that
+   * returned pages from your site (organic_queries). See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+   */
+  public boolean hasOrganicClicksPerQuery() {
+    return organicClicksPerQuery_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times someone clicked your site's listing in the unpaid
+   * results (organic_clicks) divided by the total number of searches that
+   * returned pages from your site (organic_queries). See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+   */
+  public com.google.protobuf.DoubleValue getOrganicClicksPerQuery() {
+    return organicClicksPerQuery_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : organicClicksPerQuery_;
+  }
+  /**
+   * <pre>
+   * The number of times someone clicked your site's listing in the unpaid
+   * results (organic_clicks) divided by the total number of searches that
+   * returned pages from your site (organic_queries). See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getOrganicClicksPerQueryOrBuilder() {
+    return getOrganicClicksPerQuery();
+  }
+
+  public static final int ORGANIC_IMPRESSIONS_FIELD_NUMBER = 112;
+  private com.google.protobuf.Int64Value organicImpressions_;
+  /**
+   * <pre>
+   * The number of listings for your site in the unpaid search results. See the
+   * help page at https://support.google.com/google-ads/answer/3097241 for
+   * details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+   */
+  public boolean hasOrganicImpressions() {
+    return organicImpressions_ != null;
+  }
+  /**
+   * <pre>
+   * The number of listings for your site in the unpaid search results. See the
+   * help page at https://support.google.com/google-ads/answer/3097241 for
+   * details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+   */
+  public com.google.protobuf.Int64Value getOrganicImpressions() {
+    return organicImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : organicImpressions_;
+  }
+  /**
+   * <pre>
+   * The number of listings for your site in the unpaid search results. See the
+   * help page at https://support.google.com/google-ads/answer/3097241 for
+   * details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getOrganicImpressionsOrBuilder() {
+    return getOrganicImpressions();
+  }
+
+  public static final int ORGANIC_IMPRESSIONS_PER_QUERY_FIELD_NUMBER = 113;
+  private com.google.protobuf.DoubleValue organicImpressionsPerQuery_;
+  /**
+   * <pre>
+   * The number of times a page from your site was listed in the unpaid search
+   * results (organic_impressions) divided by the number of searches returning
+   * your site's listing in the unpaid results (organic_queries). See the help
+   * page at https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+   */
+  public boolean hasOrganicImpressionsPerQuery() {
+    return organicImpressionsPerQuery_ != null;
+  }
+  /**
+   * <pre>
+   * The number of times a page from your site was listed in the unpaid search
+   * results (organic_impressions) divided by the number of searches returning
+   * your site's listing in the unpaid results (organic_queries). See the help
+   * page at https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+   */
+  public com.google.protobuf.DoubleValue getOrganicImpressionsPerQuery() {
+    return organicImpressionsPerQuery_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : organicImpressionsPerQuery_;
+  }
+  /**
+   * <pre>
+   * The number of times a page from your site was listed in the unpaid search
+   * results (organic_impressions) divided by the number of searches returning
+   * your site's listing in the unpaid results (organic_queries). See the help
+   * page at https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getOrganicImpressionsPerQueryOrBuilder() {
+    return getOrganicImpressionsPerQuery();
+  }
+
+  public static final int ORGANIC_QUERIES_FIELD_NUMBER = 114;
+  private com.google.protobuf.Int64Value organicQueries_;
+  /**
+   * <pre>
+   * The total number of searches that returned your site's listing in the
+   * unpaid results. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+   */
+  public boolean hasOrganicQueries() {
+    return organicQueries_ != null;
+  }
+  /**
+   * <pre>
+   * The total number of searches that returned your site's listing in the
+   * unpaid results. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+   */
+  public com.google.protobuf.Int64Value getOrganicQueries() {
+    return organicQueries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : organicQueries_;
+  }
+  /**
+   * <pre>
+   * The total number of searches that returned your site's listing in the
+   * unpaid results. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getOrganicQueriesOrBuilder() {
+    return getOrganicQueries();
   }
 
   public static final int PERCENT_NEW_VISITORS_FIELD_NUMBER = 42;
@@ -4256,6 +5165,42 @@ private static final long serialVersionUID = 0L;
     return getSearchTopImpressionShare();
   }
 
+  public static final int SPEED_SCORE_FIELD_NUMBER = 107;
+  private com.google.protobuf.Int64Value speedScore_;
+  /**
+   * <pre>
+   * A measure of how quickly your page loads after clicks on your mobile ads.
+   * The score is a range from 1 to 10, 10 being the fastest.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+   */
+  public boolean hasSpeedScore() {
+    return speedScore_ != null;
+  }
+  /**
+   * <pre>
+   * A measure of how quickly your page loads after clicks on your mobile ads.
+   * The score is a range from 1 to 10, 10 being the fastest.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+   */
+  public com.google.protobuf.Int64Value getSpeedScore() {
+    return speedScore_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : speedScore_;
+  }
+  /**
+   * <pre>
+   * A measure of how quickly your page loads after clicks on your mobile ads.
+   * The score is a range from 1 to 10, 10 being the fastest.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getSpeedScoreOrBuilder() {
+    return getSpeedScore();
+  }
+
   public static final int TOP_IMPRESSION_PERCENTAGE_FIELD_NUMBER = 93;
   private com.google.protobuf.DoubleValue topImpressionPercentage_;
   /**
@@ -4290,6 +5235,42 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.DoubleValueOrBuilder getTopImpressionPercentageOrBuilder() {
     return getTopImpressionPercentage();
+  }
+
+  public static final int VALID_ACCELERATED_MOBILE_PAGES_CLICKS_PERCENTAGE_FIELD_NUMBER = 108;
+  private com.google.protobuf.DoubleValue validAcceleratedMobilePagesClicksPercentage_;
+  /**
+   * <pre>
+   * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+   * that reach a valid AMP page.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+   */
+  public boolean hasValidAcceleratedMobilePagesClicksPercentage() {
+    return validAcceleratedMobilePagesClicksPercentage_ != null;
+  }
+  /**
+   * <pre>
+   * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+   * that reach a valid AMP page.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+   */
+  public com.google.protobuf.DoubleValue getValidAcceleratedMobilePagesClicksPercentage() {
+    return validAcceleratedMobilePagesClicksPercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : validAcceleratedMobilePagesClicksPercentage_;
+  }
+  /**
+   * <pre>
+   * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+   * that reach a valid AMP page.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getValidAcceleratedMobilePagesClicksPercentageOrBuilder() {
+    return getValidAcceleratedMobilePagesClicksPercentage();
   }
 
   public static final int VALUE_PER_ALL_CONVERSIONS_FIELD_NUMBER = 52;
@@ -4941,6 +5922,63 @@ private static final long serialVersionUID = 0L;
     if (costPerCurrentModelAttributedConversion_ != null) {
       output.writeMessage(106, getCostPerCurrentModelAttributedConversion());
     }
+    if (speedScore_ != null) {
+      output.writeMessage(107, getSpeedScore());
+    }
+    if (validAcceleratedMobilePagesClicksPercentage_ != null) {
+      output.writeMessage(108, getValidAcceleratedMobilePagesClicksPercentage());
+    }
+    if (mobileFriendlyClicksPercentage_ != null) {
+      output.writeMessage(109, getMobileFriendlyClicksPercentage());
+    }
+    if (organicClicks_ != null) {
+      output.writeMessage(110, getOrganicClicks());
+    }
+    if (organicClicksPerQuery_ != null) {
+      output.writeMessage(111, getOrganicClicksPerQuery());
+    }
+    if (organicImpressions_ != null) {
+      output.writeMessage(112, getOrganicImpressions());
+    }
+    if (organicImpressionsPerQuery_ != null) {
+      output.writeMessage(113, getOrganicImpressionsPerQuery());
+    }
+    if (organicQueries_ != null) {
+      output.writeMessage(114, getOrganicQueries());
+    }
+    if (combinedClicks_ != null) {
+      output.writeMessage(115, getCombinedClicks());
+    }
+    if (combinedClicksPerQuery_ != null) {
+      output.writeMessage(116, getCombinedClicksPerQuery());
+    }
+    if (combinedQueries_ != null) {
+      output.writeMessage(117, getCombinedQueries());
+    }
+    if (allConversionsFromClickToCall_ != null) {
+      output.writeMessage(118, getAllConversionsFromClickToCall());
+    }
+    if (allConversionsFromDirections_ != null) {
+      output.writeMessage(119, getAllConversionsFromDirections());
+    }
+    if (allConversionsFromMenu_ != null) {
+      output.writeMessage(120, getAllConversionsFromMenu());
+    }
+    if (allConversionsFromOrder_ != null) {
+      output.writeMessage(121, getAllConversionsFromOrder());
+    }
+    if (allConversionsFromOtherEngagement_ != null) {
+      output.writeMessage(122, getAllConversionsFromOtherEngagement());
+    }
+    if (allConversionsFromStoreVisit_ != null) {
+      output.writeMessage(123, getAllConversionsFromStoreVisit());
+    }
+    if (allConversionsFromStoreWebsite_ != null) {
+      output.writeMessage(124, getAllConversionsFromStoreWebsite());
+    }
+    if (impressionsFromStoreReach_ != null) {
+      output.writeMessage(125, getImpressionsFromStoreReach());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -5322,6 +6360,82 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(106, getCostPerCurrentModelAttributedConversion());
     }
+    if (speedScore_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(107, getSpeedScore());
+    }
+    if (validAcceleratedMobilePagesClicksPercentage_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(108, getValidAcceleratedMobilePagesClicksPercentage());
+    }
+    if (mobileFriendlyClicksPercentage_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(109, getMobileFriendlyClicksPercentage());
+    }
+    if (organicClicks_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(110, getOrganicClicks());
+    }
+    if (organicClicksPerQuery_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(111, getOrganicClicksPerQuery());
+    }
+    if (organicImpressions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(112, getOrganicImpressions());
+    }
+    if (organicImpressionsPerQuery_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(113, getOrganicImpressionsPerQuery());
+    }
+    if (organicQueries_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(114, getOrganicQueries());
+    }
+    if (combinedClicks_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(115, getCombinedClicks());
+    }
+    if (combinedClicksPerQuery_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(116, getCombinedClicksPerQuery());
+    }
+    if (combinedQueries_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(117, getCombinedQueries());
+    }
+    if (allConversionsFromClickToCall_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(118, getAllConversionsFromClickToCall());
+    }
+    if (allConversionsFromDirections_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(119, getAllConversionsFromDirections());
+    }
+    if (allConversionsFromMenu_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(120, getAllConversionsFromMenu());
+    }
+    if (allConversionsFromOrder_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(121, getAllConversionsFromOrder());
+    }
+    if (allConversionsFromOtherEngagement_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(122, getAllConversionsFromOtherEngagement());
+    }
+    if (allConversionsFromStoreVisit_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(123, getAllConversionsFromStoreVisit());
+    }
+    if (allConversionsFromStoreWebsite_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(124, getAllConversionsFromStoreWebsite());
+    }
+    if (impressionsFromStoreReach_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(125, getImpressionsFromStoreReach());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -5398,10 +6512,45 @@ private static final long serialVersionUID = 0L;
       result = result && getAllConversionsValuePerCost()
           .equals(other.getAllConversionsValuePerCost());
     }
+    result = result && (hasAllConversionsFromClickToCall() == other.hasAllConversionsFromClickToCall());
+    if (hasAllConversionsFromClickToCall()) {
+      result = result && getAllConversionsFromClickToCall()
+          .equals(other.getAllConversionsFromClickToCall());
+    }
+    result = result && (hasAllConversionsFromDirections() == other.hasAllConversionsFromDirections());
+    if (hasAllConversionsFromDirections()) {
+      result = result && getAllConversionsFromDirections()
+          .equals(other.getAllConversionsFromDirections());
+    }
     result = result && (hasAllConversionsFromInteractionsValuePerInteraction() == other.hasAllConversionsFromInteractionsValuePerInteraction());
     if (hasAllConversionsFromInteractionsValuePerInteraction()) {
       result = result && getAllConversionsFromInteractionsValuePerInteraction()
           .equals(other.getAllConversionsFromInteractionsValuePerInteraction());
+    }
+    result = result && (hasAllConversionsFromMenu() == other.hasAllConversionsFromMenu());
+    if (hasAllConversionsFromMenu()) {
+      result = result && getAllConversionsFromMenu()
+          .equals(other.getAllConversionsFromMenu());
+    }
+    result = result && (hasAllConversionsFromOrder() == other.hasAllConversionsFromOrder());
+    if (hasAllConversionsFromOrder()) {
+      result = result && getAllConversionsFromOrder()
+          .equals(other.getAllConversionsFromOrder());
+    }
+    result = result && (hasAllConversionsFromOtherEngagement() == other.hasAllConversionsFromOtherEngagement());
+    if (hasAllConversionsFromOtherEngagement()) {
+      result = result && getAllConversionsFromOtherEngagement()
+          .equals(other.getAllConversionsFromOtherEngagement());
+    }
+    result = result && (hasAllConversionsFromStoreVisit() == other.hasAllConversionsFromStoreVisit());
+    if (hasAllConversionsFromStoreVisit()) {
+      result = result && getAllConversionsFromStoreVisit()
+          .equals(other.getAllConversionsFromStoreVisit());
+    }
+    result = result && (hasAllConversionsFromStoreWebsite() == other.hasAllConversionsFromStoreWebsite());
+    if (hasAllConversionsFromStoreWebsite()) {
+      result = result && getAllConversionsFromStoreWebsite()
+          .equals(other.getAllConversionsFromStoreWebsite());
     }
     result = result && (hasAverageCost() == other.hasAverageCost());
     if (hasAverageCost()) {
@@ -5467,6 +6616,21 @@ private static final long serialVersionUID = 0L;
     if (hasClicks()) {
       result = result && getClicks()
           .equals(other.getClicks());
+    }
+    result = result && (hasCombinedClicks() == other.hasCombinedClicks());
+    if (hasCombinedClicks()) {
+      result = result && getCombinedClicks()
+          .equals(other.getCombinedClicks());
+    }
+    result = result && (hasCombinedClicksPerQuery() == other.hasCombinedClicksPerQuery());
+    if (hasCombinedClicksPerQuery()) {
+      result = result && getCombinedClicksPerQuery()
+          .equals(other.getCombinedClicksPerQuery());
+    }
+    result = result && (hasCombinedQueries() == other.hasCombinedQueries());
+    if (hasCombinedQueries()) {
+      result = result && getCombinedQueries()
+          .equals(other.getCombinedQueries());
     }
     result = result && (hasContentBudgetLostImpressionShare() == other.hasContentBudgetLostImpressionShare());
     if (hasContentBudgetLostImpressionShare()) {
@@ -5616,6 +6780,11 @@ private static final long serialVersionUID = 0L;
       result = result && getImpressionReach()
           .equals(other.getImpressionReach());
     }
+    result = result && (hasImpressionsFromStoreReach() == other.hasImpressionsFromStoreReach());
+    if (hasImpressionsFromStoreReach()) {
+      result = result && getImpressionsFromStoreReach()
+          .equals(other.getImpressionsFromStoreReach());
+    }
     result = result && (hasImpressions() == other.hasImpressions());
     if (hasImpressions()) {
       result = result && getImpressions()
@@ -5641,6 +6810,36 @@ private static final long serialVersionUID = 0L;
     if (hasInvalidClicks()) {
       result = result && getInvalidClicks()
           .equals(other.getInvalidClicks());
+    }
+    result = result && (hasMobileFriendlyClicksPercentage() == other.hasMobileFriendlyClicksPercentage());
+    if (hasMobileFriendlyClicksPercentage()) {
+      result = result && getMobileFriendlyClicksPercentage()
+          .equals(other.getMobileFriendlyClicksPercentage());
+    }
+    result = result && (hasOrganicClicks() == other.hasOrganicClicks());
+    if (hasOrganicClicks()) {
+      result = result && getOrganicClicks()
+          .equals(other.getOrganicClicks());
+    }
+    result = result && (hasOrganicClicksPerQuery() == other.hasOrganicClicksPerQuery());
+    if (hasOrganicClicksPerQuery()) {
+      result = result && getOrganicClicksPerQuery()
+          .equals(other.getOrganicClicksPerQuery());
+    }
+    result = result && (hasOrganicImpressions() == other.hasOrganicImpressions());
+    if (hasOrganicImpressions()) {
+      result = result && getOrganicImpressions()
+          .equals(other.getOrganicImpressions());
+    }
+    result = result && (hasOrganicImpressionsPerQuery() == other.hasOrganicImpressionsPerQuery());
+    if (hasOrganicImpressionsPerQuery()) {
+      result = result && getOrganicImpressionsPerQuery()
+          .equals(other.getOrganicImpressionsPerQuery());
+    }
+    result = result && (hasOrganicQueries() == other.hasOrganicQueries());
+    if (hasOrganicQueries()) {
+      result = result && getOrganicQueries()
+          .equals(other.getOrganicQueries());
     }
     result = result && (hasPercentNewVisitors() == other.hasPercentNewVisitors());
     if (hasPercentNewVisitors()) {
@@ -5722,10 +6921,20 @@ private static final long serialVersionUID = 0L;
       result = result && getSearchTopImpressionShare()
           .equals(other.getSearchTopImpressionShare());
     }
+    result = result && (hasSpeedScore() == other.hasSpeedScore());
+    if (hasSpeedScore()) {
+      result = result && getSpeedScore()
+          .equals(other.getSpeedScore());
+    }
     result = result && (hasTopImpressionPercentage() == other.hasTopImpressionPercentage());
     if (hasTopImpressionPercentage()) {
       result = result && getTopImpressionPercentage()
           .equals(other.getTopImpressionPercentage());
+    }
+    result = result && (hasValidAcceleratedMobilePagesClicksPercentage() == other.hasValidAcceleratedMobilePagesClicksPercentage());
+    if (hasValidAcceleratedMobilePagesClicksPercentage()) {
+      result = result && getValidAcceleratedMobilePagesClicksPercentage()
+          .equals(other.getValidAcceleratedMobilePagesClicksPercentage());
     }
     result = result && (hasValuePerAllConversions() == other.hasValuePerAllConversions());
     if (hasValuePerAllConversions()) {
@@ -5836,9 +7045,37 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ALL_CONVERSIONS_VALUE_PER_COST_FIELD_NUMBER;
       hash = (53 * hash) + getAllConversionsValuePerCost().hashCode();
     }
+    if (hasAllConversionsFromClickToCall()) {
+      hash = (37 * hash) + ALL_CONVERSIONS_FROM_CLICK_TO_CALL_FIELD_NUMBER;
+      hash = (53 * hash) + getAllConversionsFromClickToCall().hashCode();
+    }
+    if (hasAllConversionsFromDirections()) {
+      hash = (37 * hash) + ALL_CONVERSIONS_FROM_DIRECTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getAllConversionsFromDirections().hashCode();
+    }
     if (hasAllConversionsFromInteractionsValuePerInteraction()) {
       hash = (37 * hash) + ALL_CONVERSIONS_FROM_INTERACTIONS_VALUE_PER_INTERACTION_FIELD_NUMBER;
       hash = (53 * hash) + getAllConversionsFromInteractionsValuePerInteraction().hashCode();
+    }
+    if (hasAllConversionsFromMenu()) {
+      hash = (37 * hash) + ALL_CONVERSIONS_FROM_MENU_FIELD_NUMBER;
+      hash = (53 * hash) + getAllConversionsFromMenu().hashCode();
+    }
+    if (hasAllConversionsFromOrder()) {
+      hash = (37 * hash) + ALL_CONVERSIONS_FROM_ORDER_FIELD_NUMBER;
+      hash = (53 * hash) + getAllConversionsFromOrder().hashCode();
+    }
+    if (hasAllConversionsFromOtherEngagement()) {
+      hash = (37 * hash) + ALL_CONVERSIONS_FROM_OTHER_ENGAGEMENT_FIELD_NUMBER;
+      hash = (53 * hash) + getAllConversionsFromOtherEngagement().hashCode();
+    }
+    if (hasAllConversionsFromStoreVisit()) {
+      hash = (37 * hash) + ALL_CONVERSIONS_FROM_STORE_VISIT_FIELD_NUMBER;
+      hash = (53 * hash) + getAllConversionsFromStoreVisit().hashCode();
+    }
+    if (hasAllConversionsFromStoreWebsite()) {
+      hash = (37 * hash) + ALL_CONVERSIONS_FROM_STORE_WEBSITE_FIELD_NUMBER;
+      hash = (53 * hash) + getAllConversionsFromStoreWebsite().hashCode();
     }
     if (hasAverageCost()) {
       hash = (37 * hash) + AVERAGE_COST_FIELD_NUMBER;
@@ -5891,6 +7128,18 @@ private static final long serialVersionUID = 0L;
     if (hasClicks()) {
       hash = (37 * hash) + CLICKS_FIELD_NUMBER;
       hash = (53 * hash) + getClicks().hashCode();
+    }
+    if (hasCombinedClicks()) {
+      hash = (37 * hash) + COMBINED_CLICKS_FIELD_NUMBER;
+      hash = (53 * hash) + getCombinedClicks().hashCode();
+    }
+    if (hasCombinedClicksPerQuery()) {
+      hash = (37 * hash) + COMBINED_CLICKS_PER_QUERY_FIELD_NUMBER;
+      hash = (53 * hash) + getCombinedClicksPerQuery().hashCode();
+    }
+    if (hasCombinedQueries()) {
+      hash = (37 * hash) + COMBINED_QUERIES_FIELD_NUMBER;
+      hash = (53 * hash) + getCombinedQueries().hashCode();
     }
     if (hasContentBudgetLostImpressionShare()) {
       hash = (37 * hash) + CONTENT_BUDGET_LOST_IMPRESSION_SHARE_FIELD_NUMBER;
@@ -6014,6 +7263,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + IMPRESSION_REACH_FIELD_NUMBER;
       hash = (53 * hash) + getImpressionReach().hashCode();
     }
+    if (hasImpressionsFromStoreReach()) {
+      hash = (37 * hash) + IMPRESSIONS_FROM_STORE_REACH_FIELD_NUMBER;
+      hash = (53 * hash) + getImpressionsFromStoreReach().hashCode();
+    }
     if (hasImpressions()) {
       hash = (37 * hash) + IMPRESSIONS_FIELD_NUMBER;
       hash = (53 * hash) + getImpressions().hashCode();
@@ -6037,6 +7290,30 @@ private static final long serialVersionUID = 0L;
     if (hasInvalidClicks()) {
       hash = (37 * hash) + INVALID_CLICKS_FIELD_NUMBER;
       hash = (53 * hash) + getInvalidClicks().hashCode();
+    }
+    if (hasMobileFriendlyClicksPercentage()) {
+      hash = (37 * hash) + MOBILE_FRIENDLY_CLICKS_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMobileFriendlyClicksPercentage().hashCode();
+    }
+    if (hasOrganicClicks()) {
+      hash = (37 * hash) + ORGANIC_CLICKS_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganicClicks().hashCode();
+    }
+    if (hasOrganicClicksPerQuery()) {
+      hash = (37 * hash) + ORGANIC_CLICKS_PER_QUERY_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganicClicksPerQuery().hashCode();
+    }
+    if (hasOrganicImpressions()) {
+      hash = (37 * hash) + ORGANIC_IMPRESSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganicImpressions().hashCode();
+    }
+    if (hasOrganicImpressionsPerQuery()) {
+      hash = (37 * hash) + ORGANIC_IMPRESSIONS_PER_QUERY_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganicImpressionsPerQuery().hashCode();
+    }
+    if (hasOrganicQueries()) {
+      hash = (37 * hash) + ORGANIC_QUERIES_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganicQueries().hashCode();
     }
     if (hasPercentNewVisitors()) {
       hash = (37 * hash) + PERCENT_NEW_VISITORS_FIELD_NUMBER;
@@ -6102,9 +7379,17 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SEARCH_TOP_IMPRESSION_SHARE_FIELD_NUMBER;
       hash = (53 * hash) + getSearchTopImpressionShare().hashCode();
     }
+    if (hasSpeedScore()) {
+      hash = (37 * hash) + SPEED_SCORE_FIELD_NUMBER;
+      hash = (53 * hash) + getSpeedScore().hashCode();
+    }
     if (hasTopImpressionPercentage()) {
       hash = (37 * hash) + TOP_IMPRESSION_PERCENTAGE_FIELD_NUMBER;
       hash = (53 * hash) + getTopImpressionPercentage().hashCode();
+    }
+    if (hasValidAcceleratedMobilePagesClicksPercentage()) {
+      hash = (37 * hash) + VALID_ACCELERATED_MOBILE_PAGES_CLICKS_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getValidAcceleratedMobilePagesClicksPercentage().hashCode();
     }
     if (hasValuePerAllConversions()) {
       hash = (37 * hash) + VALUE_PER_ALL_CONVERSIONS_FIELD_NUMBER;
@@ -6355,11 +7640,53 @@ private static final long serialVersionUID = 0L;
         allConversionsValuePerCost_ = null;
         allConversionsValuePerCostBuilder_ = null;
       }
+      if (allConversionsFromClickToCallBuilder_ == null) {
+        allConversionsFromClickToCall_ = null;
+      } else {
+        allConversionsFromClickToCall_ = null;
+        allConversionsFromClickToCallBuilder_ = null;
+      }
+      if (allConversionsFromDirectionsBuilder_ == null) {
+        allConversionsFromDirections_ = null;
+      } else {
+        allConversionsFromDirections_ = null;
+        allConversionsFromDirectionsBuilder_ = null;
+      }
       if (allConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
         allConversionsFromInteractionsValuePerInteraction_ = null;
       } else {
         allConversionsFromInteractionsValuePerInteraction_ = null;
         allConversionsFromInteractionsValuePerInteractionBuilder_ = null;
+      }
+      if (allConversionsFromMenuBuilder_ == null) {
+        allConversionsFromMenu_ = null;
+      } else {
+        allConversionsFromMenu_ = null;
+        allConversionsFromMenuBuilder_ = null;
+      }
+      if (allConversionsFromOrderBuilder_ == null) {
+        allConversionsFromOrder_ = null;
+      } else {
+        allConversionsFromOrder_ = null;
+        allConversionsFromOrderBuilder_ = null;
+      }
+      if (allConversionsFromOtherEngagementBuilder_ == null) {
+        allConversionsFromOtherEngagement_ = null;
+      } else {
+        allConversionsFromOtherEngagement_ = null;
+        allConversionsFromOtherEngagementBuilder_ = null;
+      }
+      if (allConversionsFromStoreVisitBuilder_ == null) {
+        allConversionsFromStoreVisit_ = null;
+      } else {
+        allConversionsFromStoreVisit_ = null;
+        allConversionsFromStoreVisitBuilder_ = null;
+      }
+      if (allConversionsFromStoreWebsiteBuilder_ == null) {
+        allConversionsFromStoreWebsite_ = null;
+      } else {
+        allConversionsFromStoreWebsite_ = null;
+        allConversionsFromStoreWebsiteBuilder_ = null;
       }
       if (averageCostBuilder_ == null) {
         averageCost_ = null;
@@ -6438,6 +7765,24 @@ private static final long serialVersionUID = 0L;
       } else {
         clicks_ = null;
         clicksBuilder_ = null;
+      }
+      if (combinedClicksBuilder_ == null) {
+        combinedClicks_ = null;
+      } else {
+        combinedClicks_ = null;
+        combinedClicksBuilder_ = null;
+      }
+      if (combinedClicksPerQueryBuilder_ == null) {
+        combinedClicksPerQuery_ = null;
+      } else {
+        combinedClicksPerQuery_ = null;
+        combinedClicksPerQueryBuilder_ = null;
+      }
+      if (combinedQueriesBuilder_ == null) {
+        combinedQueries_ = null;
+      } else {
+        combinedQueries_ = null;
+        combinedQueriesBuilder_ = null;
       }
       if (contentBudgetLostImpressionShareBuilder_ == null) {
         contentBudgetLostImpressionShare_ = null;
@@ -6619,6 +7964,12 @@ private static final long serialVersionUID = 0L;
         impressionReach_ = null;
         impressionReachBuilder_ = null;
       }
+      if (impressionsFromStoreReachBuilder_ == null) {
+        impressionsFromStoreReach_ = null;
+      } else {
+        impressionsFromStoreReach_ = null;
+        impressionsFromStoreReachBuilder_ = null;
+      }
       if (impressionsBuilder_ == null) {
         impressions_ = null;
       } else {
@@ -6638,7 +7989,7 @@ private static final long serialVersionUID = 0L;
         interactionsBuilder_ = null;
       }
       interactionEventTypes_ = java.util.Collections.emptyList();
-      bitField1_ = (bitField1_ & ~0x20000000);
+      bitField2_ = (bitField2_ & ~0x00000100);
       if (invalidClickRateBuilder_ == null) {
         invalidClickRate_ = null;
       } else {
@@ -6650,6 +8001,42 @@ private static final long serialVersionUID = 0L;
       } else {
         invalidClicks_ = null;
         invalidClicksBuilder_ = null;
+      }
+      if (mobileFriendlyClicksPercentageBuilder_ == null) {
+        mobileFriendlyClicksPercentage_ = null;
+      } else {
+        mobileFriendlyClicksPercentage_ = null;
+        mobileFriendlyClicksPercentageBuilder_ = null;
+      }
+      if (organicClicksBuilder_ == null) {
+        organicClicks_ = null;
+      } else {
+        organicClicks_ = null;
+        organicClicksBuilder_ = null;
+      }
+      if (organicClicksPerQueryBuilder_ == null) {
+        organicClicksPerQuery_ = null;
+      } else {
+        organicClicksPerQuery_ = null;
+        organicClicksPerQueryBuilder_ = null;
+      }
+      if (organicImpressionsBuilder_ == null) {
+        organicImpressions_ = null;
+      } else {
+        organicImpressions_ = null;
+        organicImpressionsBuilder_ = null;
+      }
+      if (organicImpressionsPerQueryBuilder_ == null) {
+        organicImpressionsPerQuery_ = null;
+      } else {
+        organicImpressionsPerQuery_ = null;
+        organicImpressionsPerQueryBuilder_ = null;
+      }
+      if (organicQueriesBuilder_ == null) {
+        organicQueries_ = null;
+      } else {
+        organicQueries_ = null;
+        organicQueriesBuilder_ = null;
       }
       if (percentNewVisitorsBuilder_ == null) {
         percentNewVisitors_ = null;
@@ -6747,11 +8134,23 @@ private static final long serialVersionUID = 0L;
         searchTopImpressionShare_ = null;
         searchTopImpressionShareBuilder_ = null;
       }
+      if (speedScoreBuilder_ == null) {
+        speedScore_ = null;
+      } else {
+        speedScore_ = null;
+        speedScoreBuilder_ = null;
+      }
       if (topImpressionPercentageBuilder_ == null) {
         topImpressionPercentage_ = null;
       } else {
         topImpressionPercentage_ = null;
         topImpressionPercentageBuilder_ = null;
+      }
+      if (validAcceleratedMobilePagesClicksPercentageBuilder_ == null) {
+        validAcceleratedMobilePagesClicksPercentage_ = null;
+      } else {
+        validAcceleratedMobilePagesClicksPercentage_ = null;
+        validAcceleratedMobilePagesClicksPercentageBuilder_ = null;
       }
       if (valuePerAllConversionsBuilder_ == null) {
         valuePerAllConversions_ = null;
@@ -6842,9 +8241,11 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       int from_bitField1_ = bitField1_;
       int from_bitField2_ = bitField2_;
+      int from_bitField3_ = bitField3_;
       int to_bitField0_ = 0;
       int to_bitField1_ = 0;
       int to_bitField2_ = 0;
+      int to_bitField3_ = 0;
       if (absoluteTopImpressionPercentageBuilder_ == null) {
         result.absoluteTopImpressionPercentage_ = absoluteTopImpressionPercentage_;
       } else {
@@ -6905,10 +8306,45 @@ private static final long serialVersionUID = 0L;
       } else {
         result.allConversionsValuePerCost_ = allConversionsValuePerCostBuilder_.build();
       }
+      if (allConversionsFromClickToCallBuilder_ == null) {
+        result.allConversionsFromClickToCall_ = allConversionsFromClickToCall_;
+      } else {
+        result.allConversionsFromClickToCall_ = allConversionsFromClickToCallBuilder_.build();
+      }
+      if (allConversionsFromDirectionsBuilder_ == null) {
+        result.allConversionsFromDirections_ = allConversionsFromDirections_;
+      } else {
+        result.allConversionsFromDirections_ = allConversionsFromDirectionsBuilder_.build();
+      }
       if (allConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
         result.allConversionsFromInteractionsValuePerInteraction_ = allConversionsFromInteractionsValuePerInteraction_;
       } else {
         result.allConversionsFromInteractionsValuePerInteraction_ = allConversionsFromInteractionsValuePerInteractionBuilder_.build();
+      }
+      if (allConversionsFromMenuBuilder_ == null) {
+        result.allConversionsFromMenu_ = allConversionsFromMenu_;
+      } else {
+        result.allConversionsFromMenu_ = allConversionsFromMenuBuilder_.build();
+      }
+      if (allConversionsFromOrderBuilder_ == null) {
+        result.allConversionsFromOrder_ = allConversionsFromOrder_;
+      } else {
+        result.allConversionsFromOrder_ = allConversionsFromOrderBuilder_.build();
+      }
+      if (allConversionsFromOtherEngagementBuilder_ == null) {
+        result.allConversionsFromOtherEngagement_ = allConversionsFromOtherEngagement_;
+      } else {
+        result.allConversionsFromOtherEngagement_ = allConversionsFromOtherEngagementBuilder_.build();
+      }
+      if (allConversionsFromStoreVisitBuilder_ == null) {
+        result.allConversionsFromStoreVisit_ = allConversionsFromStoreVisit_;
+      } else {
+        result.allConversionsFromStoreVisit_ = allConversionsFromStoreVisitBuilder_.build();
+      }
+      if (allConversionsFromStoreWebsiteBuilder_ == null) {
+        result.allConversionsFromStoreWebsite_ = allConversionsFromStoreWebsite_;
+      } else {
+        result.allConversionsFromStoreWebsite_ = allConversionsFromStoreWebsiteBuilder_.build();
       }
       if (averageCostBuilder_ == null) {
         result.averageCost_ = averageCost_;
@@ -6974,6 +8410,21 @@ private static final long serialVersionUID = 0L;
         result.clicks_ = clicks_;
       } else {
         result.clicks_ = clicksBuilder_.build();
+      }
+      if (combinedClicksBuilder_ == null) {
+        result.combinedClicks_ = combinedClicks_;
+      } else {
+        result.combinedClicks_ = combinedClicksBuilder_.build();
+      }
+      if (combinedClicksPerQueryBuilder_ == null) {
+        result.combinedClicksPerQuery_ = combinedClicksPerQuery_;
+      } else {
+        result.combinedClicksPerQuery_ = combinedClicksPerQueryBuilder_.build();
+      }
+      if (combinedQueriesBuilder_ == null) {
+        result.combinedQueries_ = combinedQueries_;
+      } else {
+        result.combinedQueries_ = combinedQueriesBuilder_.build();
       }
       if (contentBudgetLostImpressionShareBuilder_ == null) {
         result.contentBudgetLostImpressionShare_ = contentBudgetLostImpressionShare_;
@@ -7123,6 +8574,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.impressionReach_ = impressionReachBuilder_.build();
       }
+      if (impressionsFromStoreReachBuilder_ == null) {
+        result.impressionsFromStoreReach_ = impressionsFromStoreReach_;
+      } else {
+        result.impressionsFromStoreReach_ = impressionsFromStoreReachBuilder_.build();
+      }
       if (impressionsBuilder_ == null) {
         result.impressions_ = impressions_;
       } else {
@@ -7138,9 +8594,9 @@ private static final long serialVersionUID = 0L;
       } else {
         result.interactions_ = interactionsBuilder_.build();
       }
-      if (((bitField1_ & 0x20000000) == 0x20000000)) {
+      if (((bitField2_ & 0x00000100) == 0x00000100)) {
         interactionEventTypes_ = java.util.Collections.unmodifiableList(interactionEventTypes_);
-        bitField1_ = (bitField1_ & ~0x20000000);
+        bitField2_ = (bitField2_ & ~0x00000100);
       }
       result.interactionEventTypes_ = interactionEventTypes_;
       if (invalidClickRateBuilder_ == null) {
@@ -7152,6 +8608,36 @@ private static final long serialVersionUID = 0L;
         result.invalidClicks_ = invalidClicks_;
       } else {
         result.invalidClicks_ = invalidClicksBuilder_.build();
+      }
+      if (mobileFriendlyClicksPercentageBuilder_ == null) {
+        result.mobileFriendlyClicksPercentage_ = mobileFriendlyClicksPercentage_;
+      } else {
+        result.mobileFriendlyClicksPercentage_ = mobileFriendlyClicksPercentageBuilder_.build();
+      }
+      if (organicClicksBuilder_ == null) {
+        result.organicClicks_ = organicClicks_;
+      } else {
+        result.organicClicks_ = organicClicksBuilder_.build();
+      }
+      if (organicClicksPerQueryBuilder_ == null) {
+        result.organicClicksPerQuery_ = organicClicksPerQuery_;
+      } else {
+        result.organicClicksPerQuery_ = organicClicksPerQueryBuilder_.build();
+      }
+      if (organicImpressionsBuilder_ == null) {
+        result.organicImpressions_ = organicImpressions_;
+      } else {
+        result.organicImpressions_ = organicImpressionsBuilder_.build();
+      }
+      if (organicImpressionsPerQueryBuilder_ == null) {
+        result.organicImpressionsPerQuery_ = organicImpressionsPerQuery_;
+      } else {
+        result.organicImpressionsPerQuery_ = organicImpressionsPerQueryBuilder_.build();
+      }
+      if (organicQueriesBuilder_ == null) {
+        result.organicQueries_ = organicQueries_;
+      } else {
+        result.organicQueries_ = organicQueriesBuilder_.build();
       }
       if (percentNewVisitorsBuilder_ == null) {
         result.percentNewVisitors_ = percentNewVisitors_;
@@ -7233,10 +8719,20 @@ private static final long serialVersionUID = 0L;
       } else {
         result.searchTopImpressionShare_ = searchTopImpressionShareBuilder_.build();
       }
+      if (speedScoreBuilder_ == null) {
+        result.speedScore_ = speedScore_;
+      } else {
+        result.speedScore_ = speedScoreBuilder_.build();
+      }
       if (topImpressionPercentageBuilder_ == null) {
         result.topImpressionPercentage_ = topImpressionPercentage_;
       } else {
         result.topImpressionPercentage_ = topImpressionPercentageBuilder_.build();
+      }
+      if (validAcceleratedMobilePagesClicksPercentageBuilder_ == null) {
+        result.validAcceleratedMobilePagesClicksPercentage_ = validAcceleratedMobilePagesClicksPercentage_;
+      } else {
+        result.validAcceleratedMobilePagesClicksPercentage_ = validAcceleratedMobilePagesClicksPercentageBuilder_.build();
       }
       if (valuePerAllConversionsBuilder_ == null) {
         result.valuePerAllConversions_ = valuePerAllConversions_;
@@ -7291,6 +8787,7 @@ private static final long serialVersionUID = 0L;
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       result.bitField2_ = to_bitField2_;
+      result.bitField3_ = to_bitField3_;
       onBuilt();
       return result;
     }
@@ -7375,8 +8872,29 @@ private static final long serialVersionUID = 0L;
       if (other.hasAllConversionsValuePerCost()) {
         mergeAllConversionsValuePerCost(other.getAllConversionsValuePerCost());
       }
+      if (other.hasAllConversionsFromClickToCall()) {
+        mergeAllConversionsFromClickToCall(other.getAllConversionsFromClickToCall());
+      }
+      if (other.hasAllConversionsFromDirections()) {
+        mergeAllConversionsFromDirections(other.getAllConversionsFromDirections());
+      }
       if (other.hasAllConversionsFromInteractionsValuePerInteraction()) {
         mergeAllConversionsFromInteractionsValuePerInteraction(other.getAllConversionsFromInteractionsValuePerInteraction());
+      }
+      if (other.hasAllConversionsFromMenu()) {
+        mergeAllConversionsFromMenu(other.getAllConversionsFromMenu());
+      }
+      if (other.hasAllConversionsFromOrder()) {
+        mergeAllConversionsFromOrder(other.getAllConversionsFromOrder());
+      }
+      if (other.hasAllConversionsFromOtherEngagement()) {
+        mergeAllConversionsFromOtherEngagement(other.getAllConversionsFromOtherEngagement());
+      }
+      if (other.hasAllConversionsFromStoreVisit()) {
+        mergeAllConversionsFromStoreVisit(other.getAllConversionsFromStoreVisit());
+      }
+      if (other.hasAllConversionsFromStoreWebsite()) {
+        mergeAllConversionsFromStoreWebsite(other.getAllConversionsFromStoreWebsite());
       }
       if (other.hasAverageCost()) {
         mergeAverageCost(other.getAverageCost());
@@ -7416,6 +8934,15 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasClicks()) {
         mergeClicks(other.getClicks());
+      }
+      if (other.hasCombinedClicks()) {
+        mergeCombinedClicks(other.getCombinedClicks());
+      }
+      if (other.hasCombinedClicksPerQuery()) {
+        mergeCombinedClicksPerQuery(other.getCombinedClicksPerQuery());
+      }
+      if (other.hasCombinedQueries()) {
+        mergeCombinedQueries(other.getCombinedQueries());
       }
       if (other.hasContentBudgetLostImpressionShare()) {
         mergeContentBudgetLostImpressionShare(other.getContentBudgetLostImpressionShare());
@@ -7513,6 +9040,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasImpressionReach()) {
         mergeImpressionReach(other.getImpressionReach());
       }
+      if (other.hasImpressionsFromStoreReach()) {
+        mergeImpressionsFromStoreReach(other.getImpressionsFromStoreReach());
+      }
       if (other.hasImpressions()) {
         mergeImpressions(other.getImpressions());
       }
@@ -7525,7 +9055,7 @@ private static final long serialVersionUID = 0L;
       if (!other.interactionEventTypes_.isEmpty()) {
         if (interactionEventTypes_.isEmpty()) {
           interactionEventTypes_ = other.interactionEventTypes_;
-          bitField1_ = (bitField1_ & ~0x20000000);
+          bitField2_ = (bitField2_ & ~0x00000100);
         } else {
           ensureInteractionEventTypesIsMutable();
           interactionEventTypes_.addAll(other.interactionEventTypes_);
@@ -7537,6 +9067,24 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasInvalidClicks()) {
         mergeInvalidClicks(other.getInvalidClicks());
+      }
+      if (other.hasMobileFriendlyClicksPercentage()) {
+        mergeMobileFriendlyClicksPercentage(other.getMobileFriendlyClicksPercentage());
+      }
+      if (other.hasOrganicClicks()) {
+        mergeOrganicClicks(other.getOrganicClicks());
+      }
+      if (other.hasOrganicClicksPerQuery()) {
+        mergeOrganicClicksPerQuery(other.getOrganicClicksPerQuery());
+      }
+      if (other.hasOrganicImpressions()) {
+        mergeOrganicImpressions(other.getOrganicImpressions());
+      }
+      if (other.hasOrganicImpressionsPerQuery()) {
+        mergeOrganicImpressionsPerQuery(other.getOrganicImpressionsPerQuery());
+      }
+      if (other.hasOrganicQueries()) {
+        mergeOrganicQueries(other.getOrganicQueries());
       }
       if (other.hasPercentNewVisitors()) {
         mergePercentNewVisitors(other.getPercentNewVisitors());
@@ -7586,8 +9134,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasSearchTopImpressionShare()) {
         mergeSearchTopImpressionShare(other.getSearchTopImpressionShare());
       }
+      if (other.hasSpeedScore()) {
+        mergeSpeedScore(other.getSpeedScore());
+      }
       if (other.hasTopImpressionPercentage()) {
         mergeTopImpressionPercentage(other.getTopImpressionPercentage());
+      }
+      if (other.hasValidAcceleratedMobilePagesClicksPercentage()) {
+        mergeValidAcceleratedMobilePagesClicksPercentage(other.getValidAcceleratedMobilePagesClicksPercentage());
       }
       if (other.hasValuePerAllConversions()) {
         mergeValuePerAllConversions(other.getValuePerAllConversions());
@@ -7650,6 +9204,7 @@ private static final long serialVersionUID = 0L;
     private int bitField0_;
     private int bitField1_;
     private int bitField2_;
+    private int bitField3_;
 
     private com.google.protobuf.DoubleValue absoluteTopImpressionPercentage_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -9577,6 +11132,357 @@ private static final long serialVersionUID = 0L;
       return allConversionsValuePerCostBuilder_;
     }
 
+    private com.google.protobuf.DoubleValue allConversionsFromClickToCall_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromClickToCallBuilder_;
+    /**
+     * <pre>
+     * The number of times people clicked the “Call” button to call a store during
+     * or after clicking an ad. This number doesn’t include whether or not calls
+     * were connected, or the duration of any calls.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+     */
+    public boolean hasAllConversionsFromClickToCall() {
+      return allConversionsFromClickToCallBuilder_ != null || allConversionsFromClickToCall_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked the “Call” button to call a store during
+     * or after clicking an ad. This number doesn’t include whether or not calls
+     * were connected, or the duration of any calls.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+     */
+    public com.google.protobuf.DoubleValue getAllConversionsFromClickToCall() {
+      if (allConversionsFromClickToCallBuilder_ == null) {
+        return allConversionsFromClickToCall_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromClickToCall_;
+      } else {
+        return allConversionsFromClickToCallBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times people clicked the “Call” button to call a store during
+     * or after clicking an ad. This number doesn’t include whether or not calls
+     * were connected, or the duration of any calls.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+     */
+    public Builder setAllConversionsFromClickToCall(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromClickToCallBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        allConversionsFromClickToCall_ = value;
+        onChanged();
+      } else {
+        allConversionsFromClickToCallBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked the “Call” button to call a store during
+     * or after clicking an ad. This number doesn’t include whether or not calls
+     * were connected, or the duration of any calls.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+     */
+    public Builder setAllConversionsFromClickToCall(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (allConversionsFromClickToCallBuilder_ == null) {
+        allConversionsFromClickToCall_ = builderForValue.build();
+        onChanged();
+      } else {
+        allConversionsFromClickToCallBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked the “Call” button to call a store during
+     * or after clicking an ad. This number doesn’t include whether or not calls
+     * were connected, or the duration of any calls.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+     */
+    public Builder mergeAllConversionsFromClickToCall(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromClickToCallBuilder_ == null) {
+        if (allConversionsFromClickToCall_ != null) {
+          allConversionsFromClickToCall_ =
+            com.google.protobuf.DoubleValue.newBuilder(allConversionsFromClickToCall_).mergeFrom(value).buildPartial();
+        } else {
+          allConversionsFromClickToCall_ = value;
+        }
+        onChanged();
+      } else {
+        allConversionsFromClickToCallBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked the “Call” button to call a store during
+     * or after clicking an ad. This number doesn’t include whether or not calls
+     * were connected, or the duration of any calls.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+     */
+    public Builder clearAllConversionsFromClickToCall() {
+      if (allConversionsFromClickToCallBuilder_ == null) {
+        allConversionsFromClickToCall_ = null;
+        onChanged();
+      } else {
+        allConversionsFromClickToCall_ = null;
+        allConversionsFromClickToCallBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked the “Call” button to call a store during
+     * or after clicking an ad. This number doesn’t include whether or not calls
+     * were connected, or the duration of any calls.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAllConversionsFromClickToCallBuilder() {
+      
+      onChanged();
+      return getAllConversionsFromClickToCallFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times people clicked the “Call” button to call a store during
+     * or after clicking an ad. This number doesn’t include whether or not calls
+     * were connected, or the duration of any calls.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromClickToCallOrBuilder() {
+      if (allConversionsFromClickToCallBuilder_ != null) {
+        return allConversionsFromClickToCallBuilder_.getMessageOrBuilder();
+      } else {
+        return allConversionsFromClickToCall_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromClickToCall_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times people clicked the “Call” button to call a store during
+     * or after clicking an ad. This number doesn’t include whether or not calls
+     * were connected, or the duration of any calls.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAllConversionsFromClickToCallFieldBuilder() {
+      if (allConversionsFromClickToCallBuilder_ == null) {
+        allConversionsFromClickToCallBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAllConversionsFromClickToCall(),
+                getParentForChildren(),
+                isClean());
+        allConversionsFromClickToCall_ = null;
+      }
+      return allConversionsFromClickToCallBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue allConversionsFromDirections_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromDirectionsBuilder_;
+    /**
+     * <pre>
+     * The number of times people clicked a “Get directions” button to navigate to
+     * a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+     */
+    public boolean hasAllConversionsFromDirections() {
+      return allConversionsFromDirectionsBuilder_ != null || allConversionsFromDirections_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a “Get directions” button to navigate to
+     * a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+     */
+    public com.google.protobuf.DoubleValue getAllConversionsFromDirections() {
+      if (allConversionsFromDirectionsBuilder_ == null) {
+        return allConversionsFromDirections_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromDirections_;
+      } else {
+        return allConversionsFromDirectionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a “Get directions” button to navigate to
+     * a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+     */
+    public Builder setAllConversionsFromDirections(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromDirectionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        allConversionsFromDirections_ = value;
+        onChanged();
+      } else {
+        allConversionsFromDirectionsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a “Get directions” button to navigate to
+     * a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+     */
+    public Builder setAllConversionsFromDirections(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (allConversionsFromDirectionsBuilder_ == null) {
+        allConversionsFromDirections_ = builderForValue.build();
+        onChanged();
+      } else {
+        allConversionsFromDirectionsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a “Get directions” button to navigate to
+     * a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+     */
+    public Builder mergeAllConversionsFromDirections(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromDirectionsBuilder_ == null) {
+        if (allConversionsFromDirections_ != null) {
+          allConversionsFromDirections_ =
+            com.google.protobuf.DoubleValue.newBuilder(allConversionsFromDirections_).mergeFrom(value).buildPartial();
+        } else {
+          allConversionsFromDirections_ = value;
+        }
+        onChanged();
+      } else {
+        allConversionsFromDirectionsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a “Get directions” button to navigate to
+     * a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+     */
+    public Builder clearAllConversionsFromDirections() {
+      if (allConversionsFromDirectionsBuilder_ == null) {
+        allConversionsFromDirections_ = null;
+        onChanged();
+      } else {
+        allConversionsFromDirections_ = null;
+        allConversionsFromDirectionsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a “Get directions” button to navigate to
+     * a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAllConversionsFromDirectionsBuilder() {
+      
+      onChanged();
+      return getAllConversionsFromDirectionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a “Get directions” button to navigate to
+     * a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromDirectionsOrBuilder() {
+      if (allConversionsFromDirectionsBuilder_ != null) {
+        return allConversionsFromDirectionsBuilder_.getMessageOrBuilder();
+      } else {
+        return allConversionsFromDirections_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromDirections_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a “Get directions” button to navigate to
+     * a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAllConversionsFromDirectionsFieldBuilder() {
+      if (allConversionsFromDirectionsBuilder_ == null) {
+        allConversionsFromDirectionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAllConversionsFromDirections(),
+                getParentForChildren(),
+                isClean());
+        allConversionsFromDirections_ = null;
+      }
+      return allConversionsFromDirectionsBuilder_;
+    }
+
     private com.google.protobuf.DoubleValue allConversionsFromInteractionsValuePerInteraction_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromInteractionsValuePerInteractionBuilder_;
@@ -9737,6 +11643,843 @@ private static final long serialVersionUID = 0L;
         allConversionsFromInteractionsValuePerInteraction_ = null;
       }
       return allConversionsFromInteractionsValuePerInteractionBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue allConversionsFromMenu_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromMenuBuilder_;
+    /**
+     * <pre>
+     * The number of times people clicked a link to view a store’s menu after
+     * clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+     */
+    public boolean hasAllConversionsFromMenu() {
+      return allConversionsFromMenuBuilder_ != null || allConversionsFromMenu_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a link to view a store’s menu after
+     * clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+     */
+    public com.google.protobuf.DoubleValue getAllConversionsFromMenu() {
+      if (allConversionsFromMenuBuilder_ == null) {
+        return allConversionsFromMenu_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromMenu_;
+      } else {
+        return allConversionsFromMenuBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a link to view a store’s menu after
+     * clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+     */
+    public Builder setAllConversionsFromMenu(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromMenuBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        allConversionsFromMenu_ = value;
+        onChanged();
+      } else {
+        allConversionsFromMenuBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a link to view a store’s menu after
+     * clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+     */
+    public Builder setAllConversionsFromMenu(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (allConversionsFromMenuBuilder_ == null) {
+        allConversionsFromMenu_ = builderForValue.build();
+        onChanged();
+      } else {
+        allConversionsFromMenuBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a link to view a store’s menu after
+     * clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+     */
+    public Builder mergeAllConversionsFromMenu(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromMenuBuilder_ == null) {
+        if (allConversionsFromMenu_ != null) {
+          allConversionsFromMenu_ =
+            com.google.protobuf.DoubleValue.newBuilder(allConversionsFromMenu_).mergeFrom(value).buildPartial();
+        } else {
+          allConversionsFromMenu_ = value;
+        }
+        onChanged();
+      } else {
+        allConversionsFromMenuBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a link to view a store’s menu after
+     * clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+     */
+    public Builder clearAllConversionsFromMenu() {
+      if (allConversionsFromMenuBuilder_ == null) {
+        allConversionsFromMenu_ = null;
+        onChanged();
+      } else {
+        allConversionsFromMenu_ = null;
+        allConversionsFromMenuBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a link to view a store’s menu after
+     * clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAllConversionsFromMenuBuilder() {
+      
+      onChanged();
+      return getAllConversionsFromMenuFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a link to view a store’s menu after
+     * clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromMenuOrBuilder() {
+      if (allConversionsFromMenuBuilder_ != null) {
+        return allConversionsFromMenuBuilder_.getMessageOrBuilder();
+      } else {
+        return allConversionsFromMenu_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromMenu_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times people clicked a link to view a store’s menu after
+     * clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAllConversionsFromMenuFieldBuilder() {
+      if (allConversionsFromMenuBuilder_ == null) {
+        allConversionsFromMenuBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAllConversionsFromMenu(),
+                getParentForChildren(),
+                isClean());
+        allConversionsFromMenu_ = null;
+      }
+      return allConversionsFromMenuBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue allConversionsFromOrder_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromOrderBuilder_;
+    /**
+     * <pre>
+     * The number of times people placed an order at a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+     */
+    public boolean hasAllConversionsFromOrder() {
+      return allConversionsFromOrderBuilder_ != null || allConversionsFromOrder_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times people placed an order at a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+     */
+    public com.google.protobuf.DoubleValue getAllConversionsFromOrder() {
+      if (allConversionsFromOrderBuilder_ == null) {
+        return allConversionsFromOrder_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromOrder_;
+      } else {
+        return allConversionsFromOrderBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times people placed an order at a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+     */
+    public Builder setAllConversionsFromOrder(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromOrderBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        allConversionsFromOrder_ = value;
+        onChanged();
+      } else {
+        allConversionsFromOrderBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people placed an order at a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+     */
+    public Builder setAllConversionsFromOrder(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (allConversionsFromOrderBuilder_ == null) {
+        allConversionsFromOrder_ = builderForValue.build();
+        onChanged();
+      } else {
+        allConversionsFromOrderBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people placed an order at a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+     */
+    public Builder mergeAllConversionsFromOrder(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromOrderBuilder_ == null) {
+        if (allConversionsFromOrder_ != null) {
+          allConversionsFromOrder_ =
+            com.google.protobuf.DoubleValue.newBuilder(allConversionsFromOrder_).mergeFrom(value).buildPartial();
+        } else {
+          allConversionsFromOrder_ = value;
+        }
+        onChanged();
+      } else {
+        allConversionsFromOrderBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people placed an order at a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+     */
+    public Builder clearAllConversionsFromOrder() {
+      if (allConversionsFromOrderBuilder_ == null) {
+        allConversionsFromOrder_ = null;
+        onChanged();
+      } else {
+        allConversionsFromOrder_ = null;
+        allConversionsFromOrderBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times people placed an order at a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAllConversionsFromOrderBuilder() {
+      
+      onChanged();
+      return getAllConversionsFromOrderFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times people placed an order at a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromOrderOrBuilder() {
+      if (allConversionsFromOrderBuilder_ != null) {
+        return allConversionsFromOrderBuilder_.getMessageOrBuilder();
+      } else {
+        return allConversionsFromOrder_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromOrder_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times people placed an order at a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAllConversionsFromOrderFieldBuilder() {
+      if (allConversionsFromOrderBuilder_ == null) {
+        allConversionsFromOrderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAllConversionsFromOrder(),
+                getParentForChildren(),
+                isClean());
+        allConversionsFromOrder_ = null;
+      }
+      return allConversionsFromOrderBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue allConversionsFromOtherEngagement_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromOtherEngagementBuilder_;
+    /**
+     * <pre>
+     * The number of other conversions (for example, posting a review or saving a
+     * location for a store) that occurred after people clicked an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+     */
+    public boolean hasAllConversionsFromOtherEngagement() {
+      return allConversionsFromOtherEngagementBuilder_ != null || allConversionsFromOtherEngagement_ != null;
+    }
+    /**
+     * <pre>
+     * The number of other conversions (for example, posting a review or saving a
+     * location for a store) that occurred after people clicked an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+     */
+    public com.google.protobuf.DoubleValue getAllConversionsFromOtherEngagement() {
+      if (allConversionsFromOtherEngagementBuilder_ == null) {
+        return allConversionsFromOtherEngagement_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromOtherEngagement_;
+      } else {
+        return allConversionsFromOtherEngagementBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of other conversions (for example, posting a review or saving a
+     * location for a store) that occurred after people clicked an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+     */
+    public Builder setAllConversionsFromOtherEngagement(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromOtherEngagementBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        allConversionsFromOtherEngagement_ = value;
+        onChanged();
+      } else {
+        allConversionsFromOtherEngagementBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of other conversions (for example, posting a review or saving a
+     * location for a store) that occurred after people clicked an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+     */
+    public Builder setAllConversionsFromOtherEngagement(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (allConversionsFromOtherEngagementBuilder_ == null) {
+        allConversionsFromOtherEngagement_ = builderForValue.build();
+        onChanged();
+      } else {
+        allConversionsFromOtherEngagementBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of other conversions (for example, posting a review or saving a
+     * location for a store) that occurred after people clicked an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+     */
+    public Builder mergeAllConversionsFromOtherEngagement(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromOtherEngagementBuilder_ == null) {
+        if (allConversionsFromOtherEngagement_ != null) {
+          allConversionsFromOtherEngagement_ =
+            com.google.protobuf.DoubleValue.newBuilder(allConversionsFromOtherEngagement_).mergeFrom(value).buildPartial();
+        } else {
+          allConversionsFromOtherEngagement_ = value;
+        }
+        onChanged();
+      } else {
+        allConversionsFromOtherEngagementBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of other conversions (for example, posting a review or saving a
+     * location for a store) that occurred after people clicked an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+     */
+    public Builder clearAllConversionsFromOtherEngagement() {
+      if (allConversionsFromOtherEngagementBuilder_ == null) {
+        allConversionsFromOtherEngagement_ = null;
+        onChanged();
+      } else {
+        allConversionsFromOtherEngagement_ = null;
+        allConversionsFromOtherEngagementBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of other conversions (for example, posting a review or saving a
+     * location for a store) that occurred after people clicked an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAllConversionsFromOtherEngagementBuilder() {
+      
+      onChanged();
+      return getAllConversionsFromOtherEngagementFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of other conversions (for example, posting a review or saving a
+     * location for a store) that occurred after people clicked an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromOtherEngagementOrBuilder() {
+      if (allConversionsFromOtherEngagementBuilder_ != null) {
+        return allConversionsFromOtherEngagementBuilder_.getMessageOrBuilder();
+      } else {
+        return allConversionsFromOtherEngagement_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromOtherEngagement_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of other conversions (for example, posting a review or saving a
+     * location for a store) that occurred after people clicked an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAllConversionsFromOtherEngagementFieldBuilder() {
+      if (allConversionsFromOtherEngagementBuilder_ == null) {
+        allConversionsFromOtherEngagementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAllConversionsFromOtherEngagement(),
+                getParentForChildren(),
+                isClean());
+        allConversionsFromOtherEngagement_ = null;
+      }
+      return allConversionsFromOtherEngagementBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue allConversionsFromStoreVisit_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromStoreVisitBuilder_;
+    /**
+     * <pre>
+     * Estimated number of times people visited a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+     */
+    public boolean hasAllConversionsFromStoreVisit() {
+      return allConversionsFromStoreVisitBuilder_ != null || allConversionsFromStoreVisit_ != null;
+    }
+    /**
+     * <pre>
+     * Estimated number of times people visited a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+     */
+    public com.google.protobuf.DoubleValue getAllConversionsFromStoreVisit() {
+      if (allConversionsFromStoreVisitBuilder_ == null) {
+        return allConversionsFromStoreVisit_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromStoreVisit_;
+      } else {
+        return allConversionsFromStoreVisitBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Estimated number of times people visited a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+     */
+    public Builder setAllConversionsFromStoreVisit(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromStoreVisitBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        allConversionsFromStoreVisit_ = value;
+        onChanged();
+      } else {
+        allConversionsFromStoreVisitBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Estimated number of times people visited a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+     */
+    public Builder setAllConversionsFromStoreVisit(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (allConversionsFromStoreVisitBuilder_ == null) {
+        allConversionsFromStoreVisit_ = builderForValue.build();
+        onChanged();
+      } else {
+        allConversionsFromStoreVisitBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Estimated number of times people visited a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+     */
+    public Builder mergeAllConversionsFromStoreVisit(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromStoreVisitBuilder_ == null) {
+        if (allConversionsFromStoreVisit_ != null) {
+          allConversionsFromStoreVisit_ =
+            com.google.protobuf.DoubleValue.newBuilder(allConversionsFromStoreVisit_).mergeFrom(value).buildPartial();
+        } else {
+          allConversionsFromStoreVisit_ = value;
+        }
+        onChanged();
+      } else {
+        allConversionsFromStoreVisitBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Estimated number of times people visited a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+     */
+    public Builder clearAllConversionsFromStoreVisit() {
+      if (allConversionsFromStoreVisitBuilder_ == null) {
+        allConversionsFromStoreVisit_ = null;
+        onChanged();
+      } else {
+        allConversionsFromStoreVisit_ = null;
+        allConversionsFromStoreVisitBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Estimated number of times people visited a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAllConversionsFromStoreVisitBuilder() {
+      
+      onChanged();
+      return getAllConversionsFromStoreVisitFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Estimated number of times people visited a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromStoreVisitOrBuilder() {
+      if (allConversionsFromStoreVisitBuilder_ != null) {
+        return allConversionsFromStoreVisitBuilder_.getMessageOrBuilder();
+      } else {
+        return allConversionsFromStoreVisit_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromStoreVisit_;
+      }
+    }
+    /**
+     * <pre>
+     * Estimated number of times people visited a store after clicking an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAllConversionsFromStoreVisitFieldBuilder() {
+      if (allConversionsFromStoreVisitBuilder_ == null) {
+        allConversionsFromStoreVisitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAllConversionsFromStoreVisit(),
+                getParentForChildren(),
+                isClean());
+        allConversionsFromStoreVisit_ = null;
+      }
+      return allConversionsFromStoreVisitBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue allConversionsFromStoreWebsite_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromStoreWebsiteBuilder_;
+    /**
+     * <pre>
+     * The number of times that people were taken to a store's URL after clicking
+     * an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+     */
+    public boolean hasAllConversionsFromStoreWebsite() {
+      return allConversionsFromStoreWebsiteBuilder_ != null || allConversionsFromStoreWebsite_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times that people were taken to a store's URL after clicking
+     * an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+     */
+    public com.google.protobuf.DoubleValue getAllConversionsFromStoreWebsite() {
+      if (allConversionsFromStoreWebsiteBuilder_ == null) {
+        return allConversionsFromStoreWebsite_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromStoreWebsite_;
+      } else {
+        return allConversionsFromStoreWebsiteBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times that people were taken to a store's URL after clicking
+     * an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+     */
+    public Builder setAllConversionsFromStoreWebsite(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromStoreWebsiteBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        allConversionsFromStoreWebsite_ = value;
+        onChanged();
+      } else {
+        allConversionsFromStoreWebsiteBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times that people were taken to a store's URL after clicking
+     * an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+     */
+    public Builder setAllConversionsFromStoreWebsite(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (allConversionsFromStoreWebsiteBuilder_ == null) {
+        allConversionsFromStoreWebsite_ = builderForValue.build();
+        onChanged();
+      } else {
+        allConversionsFromStoreWebsiteBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times that people were taken to a store's URL after clicking
+     * an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+     */
+    public Builder mergeAllConversionsFromStoreWebsite(com.google.protobuf.DoubleValue value) {
+      if (allConversionsFromStoreWebsiteBuilder_ == null) {
+        if (allConversionsFromStoreWebsite_ != null) {
+          allConversionsFromStoreWebsite_ =
+            com.google.protobuf.DoubleValue.newBuilder(allConversionsFromStoreWebsite_).mergeFrom(value).buildPartial();
+        } else {
+          allConversionsFromStoreWebsite_ = value;
+        }
+        onChanged();
+      } else {
+        allConversionsFromStoreWebsiteBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times that people were taken to a store's URL after clicking
+     * an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+     */
+    public Builder clearAllConversionsFromStoreWebsite() {
+      if (allConversionsFromStoreWebsiteBuilder_ == null) {
+        allConversionsFromStoreWebsite_ = null;
+        onChanged();
+      } else {
+        allConversionsFromStoreWebsite_ = null;
+        allConversionsFromStoreWebsiteBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times that people were taken to a store's URL after clicking
+     * an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getAllConversionsFromStoreWebsiteBuilder() {
+      
+      onChanged();
+      return getAllConversionsFromStoreWebsiteFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times that people were taken to a store's URL after clicking
+     * an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromStoreWebsiteOrBuilder() {
+      if (allConversionsFromStoreWebsiteBuilder_ != null) {
+        return allConversionsFromStoreWebsiteBuilder_.getMessageOrBuilder();
+      } else {
+        return allConversionsFromStoreWebsite_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromStoreWebsite_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times that people were taken to a store's URL after clicking
+     * an ad.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getAllConversionsFromStoreWebsiteFieldBuilder() {
+      if (allConversionsFromStoreWebsiteBuilder_ == null) {
+        allConversionsFromStoreWebsiteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getAllConversionsFromStoreWebsite(),
+                getParentForChildren(),
+                isClean());
+        allConversionsFromStoreWebsite_ = null;
+      }
+      return allConversionsFromStoreWebsiteBuilder_;
     }
 
     private com.google.protobuf.DoubleValue averageCost_ = null;
@@ -11816,6 +14559,528 @@ private static final long serialVersionUID = 0L;
         clicks_ = null;
       }
       return clicksBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value combinedClicks_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> combinedClicksBuilder_;
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+     */
+    public boolean hasCombinedClicks() {
+      return combinedClicksBuilder_ != null || combinedClicks_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+     */
+    public com.google.protobuf.Int64Value getCombinedClicks() {
+      if (combinedClicksBuilder_ == null) {
+        return combinedClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : combinedClicks_;
+      } else {
+        return combinedClicksBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+     */
+    public Builder setCombinedClicks(com.google.protobuf.Int64Value value) {
+      if (combinedClicksBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        combinedClicks_ = value;
+        onChanged();
+      } else {
+        combinedClicksBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+     */
+    public Builder setCombinedClicks(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (combinedClicksBuilder_ == null) {
+        combinedClicks_ = builderForValue.build();
+        onChanged();
+      } else {
+        combinedClicksBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+     */
+    public Builder mergeCombinedClicks(com.google.protobuf.Int64Value value) {
+      if (combinedClicksBuilder_ == null) {
+        if (combinedClicks_ != null) {
+          combinedClicks_ =
+            com.google.protobuf.Int64Value.newBuilder(combinedClicks_).mergeFrom(value).buildPartial();
+        } else {
+          combinedClicks_ = value;
+        }
+        onChanged();
+      } else {
+        combinedClicksBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+     */
+    public Builder clearCombinedClicks() {
+      if (combinedClicksBuilder_ == null) {
+        combinedClicks_ = null;
+        onChanged();
+      } else {
+        combinedClicks_ = null;
+        combinedClicksBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getCombinedClicksBuilder() {
+      
+      onChanged();
+      return getCombinedClicksFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getCombinedClicksOrBuilder() {
+      if (combinedClicksBuilder_ != null) {
+        return combinedClicksBuilder_.getMessageOrBuilder();
+      } else {
+        return combinedClicks_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : combinedClicks_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getCombinedClicksFieldBuilder() {
+      if (combinedClicksBuilder_ == null) {
+        combinedClicksBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getCombinedClicks(),
+                getParentForChildren(),
+                isClean());
+        combinedClicks_ = null;
+      }
+      return combinedClicksBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue combinedClicksPerQuery_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> combinedClicksPerQueryBuilder_;
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked (combined_clicks) divided by combined_queries. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+     */
+    public boolean hasCombinedClicksPerQuery() {
+      return combinedClicksPerQueryBuilder_ != null || combinedClicksPerQuery_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked (combined_clicks) divided by combined_queries. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+     */
+    public com.google.protobuf.DoubleValue getCombinedClicksPerQuery() {
+      if (combinedClicksPerQueryBuilder_ == null) {
+        return combinedClicksPerQuery_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : combinedClicksPerQuery_;
+      } else {
+        return combinedClicksPerQueryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked (combined_clicks) divided by combined_queries. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+     */
+    public Builder setCombinedClicksPerQuery(com.google.protobuf.DoubleValue value) {
+      if (combinedClicksPerQueryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        combinedClicksPerQuery_ = value;
+        onChanged();
+      } else {
+        combinedClicksPerQueryBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked (combined_clicks) divided by combined_queries. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+     */
+    public Builder setCombinedClicksPerQuery(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (combinedClicksPerQueryBuilder_ == null) {
+        combinedClicksPerQuery_ = builderForValue.build();
+        onChanged();
+      } else {
+        combinedClicksPerQueryBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked (combined_clicks) divided by combined_queries. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+     */
+    public Builder mergeCombinedClicksPerQuery(com.google.protobuf.DoubleValue value) {
+      if (combinedClicksPerQueryBuilder_ == null) {
+        if (combinedClicksPerQuery_ != null) {
+          combinedClicksPerQuery_ =
+            com.google.protobuf.DoubleValue.newBuilder(combinedClicksPerQuery_).mergeFrom(value).buildPartial();
+        } else {
+          combinedClicksPerQuery_ = value;
+        }
+        onChanged();
+      } else {
+        combinedClicksPerQueryBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked (combined_clicks) divided by combined_queries. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+     */
+    public Builder clearCombinedClicksPerQuery() {
+      if (combinedClicksPerQueryBuilder_ == null) {
+        combinedClicksPerQuery_ = null;
+        onChanged();
+      } else {
+        combinedClicksPerQuery_ = null;
+        combinedClicksPerQueryBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked (combined_clicks) divided by combined_queries. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getCombinedClicksPerQueryBuilder() {
+      
+      onChanged();
+      return getCombinedClicksPerQueryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked (combined_clicks) divided by combined_queries. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getCombinedClicksPerQueryOrBuilder() {
+      if (combinedClicksPerQueryBuilder_ != null) {
+        return combinedClicksPerQueryBuilder_.getMessageOrBuilder();
+      } else {
+        return combinedClicksPerQuery_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : combinedClicksPerQuery_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times your ad or your site's listing in the unpaid
+     * results was clicked (combined_clicks) divided by combined_queries. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getCombinedClicksPerQueryFieldBuilder() {
+      if (combinedClicksPerQueryBuilder_ == null) {
+        combinedClicksPerQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getCombinedClicksPerQuery(),
+                getParentForChildren(),
+                isClean());
+        combinedClicksPerQuery_ = null;
+      }
+      return combinedClicksPerQueryBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value combinedQueries_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> combinedQueriesBuilder_;
+    /**
+     * <pre>
+     * The number of searches that returned pages from your site in the unpaid
+     * results or showed one of your text ads. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+     */
+    public boolean hasCombinedQueries() {
+      return combinedQueriesBuilder_ != null || combinedQueries_ != null;
+    }
+    /**
+     * <pre>
+     * The number of searches that returned pages from your site in the unpaid
+     * results or showed one of your text ads. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+     */
+    public com.google.protobuf.Int64Value getCombinedQueries() {
+      if (combinedQueriesBuilder_ == null) {
+        return combinedQueries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : combinedQueries_;
+      } else {
+        return combinedQueriesBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of searches that returned pages from your site in the unpaid
+     * results or showed one of your text ads. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+     */
+    public Builder setCombinedQueries(com.google.protobuf.Int64Value value) {
+      if (combinedQueriesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        combinedQueries_ = value;
+        onChanged();
+      } else {
+        combinedQueriesBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of searches that returned pages from your site in the unpaid
+     * results or showed one of your text ads. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+     */
+    public Builder setCombinedQueries(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (combinedQueriesBuilder_ == null) {
+        combinedQueries_ = builderForValue.build();
+        onChanged();
+      } else {
+        combinedQueriesBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of searches that returned pages from your site in the unpaid
+     * results or showed one of your text ads. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+     */
+    public Builder mergeCombinedQueries(com.google.protobuf.Int64Value value) {
+      if (combinedQueriesBuilder_ == null) {
+        if (combinedQueries_ != null) {
+          combinedQueries_ =
+            com.google.protobuf.Int64Value.newBuilder(combinedQueries_).mergeFrom(value).buildPartial();
+        } else {
+          combinedQueries_ = value;
+        }
+        onChanged();
+      } else {
+        combinedQueriesBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of searches that returned pages from your site in the unpaid
+     * results or showed one of your text ads. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+     */
+    public Builder clearCombinedQueries() {
+      if (combinedQueriesBuilder_ == null) {
+        combinedQueries_ = null;
+        onChanged();
+      } else {
+        combinedQueries_ = null;
+        combinedQueriesBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of searches that returned pages from your site in the unpaid
+     * results or showed one of your text ads. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getCombinedQueriesBuilder() {
+      
+      onChanged();
+      return getCombinedQueriesFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of searches that returned pages from your site in the unpaid
+     * results or showed one of your text ads. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getCombinedQueriesOrBuilder() {
+      if (combinedQueriesBuilder_ != null) {
+        return combinedQueriesBuilder_.getMessageOrBuilder();
+      } else {
+        return combinedQueries_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : combinedQueries_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of searches that returned pages from your site in the unpaid
+     * results or showed one of your text ads. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getCombinedQueriesFieldBuilder() {
+      if (combinedQueriesBuilder_ == null) {
+        combinedQueriesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getCombinedQueries(),
+                getParentForChildren(),
+                isClean());
+        combinedQueries_ = null;
+      }
+      return combinedQueriesBuilder_;
     }
 
     private com.google.protobuf.DoubleValue contentBudgetLostImpressionShare_ = null;
@@ -16882,6 +20147,168 @@ private static final long serialVersionUID = 0L;
       return impressionReachBuilder_;
     }
 
+    private com.google.protobuf.Int64Value impressionsFromStoreReach_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> impressionsFromStoreReachBuilder_;
+    /**
+     * <pre>
+     * The number of times a store's location-based ad was shown.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+     */
+    public boolean hasImpressionsFromStoreReach() {
+      return impressionsFromStoreReachBuilder_ != null || impressionsFromStoreReach_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times a store's location-based ad was shown.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+     */
+    public com.google.protobuf.Int64Value getImpressionsFromStoreReach() {
+      if (impressionsFromStoreReachBuilder_ == null) {
+        return impressionsFromStoreReach_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : impressionsFromStoreReach_;
+      } else {
+        return impressionsFromStoreReachBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times a store's location-based ad was shown.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+     */
+    public Builder setImpressionsFromStoreReach(com.google.protobuf.Int64Value value) {
+      if (impressionsFromStoreReachBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        impressionsFromStoreReach_ = value;
+        onChanged();
+      } else {
+        impressionsFromStoreReachBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times a store's location-based ad was shown.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+     */
+    public Builder setImpressionsFromStoreReach(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (impressionsFromStoreReachBuilder_ == null) {
+        impressionsFromStoreReach_ = builderForValue.build();
+        onChanged();
+      } else {
+        impressionsFromStoreReachBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times a store's location-based ad was shown.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+     */
+    public Builder mergeImpressionsFromStoreReach(com.google.protobuf.Int64Value value) {
+      if (impressionsFromStoreReachBuilder_ == null) {
+        if (impressionsFromStoreReach_ != null) {
+          impressionsFromStoreReach_ =
+            com.google.protobuf.Int64Value.newBuilder(impressionsFromStoreReach_).mergeFrom(value).buildPartial();
+        } else {
+          impressionsFromStoreReach_ = value;
+        }
+        onChanged();
+      } else {
+        impressionsFromStoreReachBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times a store's location-based ad was shown.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+     */
+    public Builder clearImpressionsFromStoreReach() {
+      if (impressionsFromStoreReachBuilder_ == null) {
+        impressionsFromStoreReach_ = null;
+        onChanged();
+      } else {
+        impressionsFromStoreReach_ = null;
+        impressionsFromStoreReachBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times a store's location-based ad was shown.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getImpressionsFromStoreReachBuilder() {
+      
+      onChanged();
+      return getImpressionsFromStoreReachFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times a store's location-based ad was shown.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getImpressionsFromStoreReachOrBuilder() {
+      if (impressionsFromStoreReachBuilder_ != null) {
+        return impressionsFromStoreReachBuilder_.getMessageOrBuilder();
+      } else {
+        return impressionsFromStoreReach_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : impressionsFromStoreReach_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times a store's location-based ad was shown.
+     * This metric applies to feed items only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getImpressionsFromStoreReachFieldBuilder() {
+      if (impressionsFromStoreReachBuilder_ == null) {
+        impressionsFromStoreReachBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getImpressionsFromStoreReach(),
+                getParentForChildren(),
+                isClean());
+        impressionsFromStoreReach_ = null;
+      }
+      return impressionsFromStoreReachBuilder_;
+    }
+
     private com.google.protobuf.Int64Value impressions_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> impressionsBuilder_;
@@ -17389,9 +20816,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> interactionEventTypes_ =
       java.util.Collections.emptyList();
     private void ensureInteractionEventTypesIsMutable() {
-      if (!((bitField1_ & 0x20000000) == 0x20000000)) {
+      if (!((bitField2_ & 0x00000100) == 0x00000100)) {
         interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>(interactionEventTypes_);
-        bitField1_ |= 0x20000000;
+        bitField2_ |= 0x00000100;
       }
     }
     /**
@@ -17483,7 +20910,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearInteractionEventTypes() {
       interactionEventTypes_ = java.util.Collections.emptyList();
-      bitField1_ = (bitField1_ & ~0x20000000);
+      bitField2_ = (bitField2_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -17865,6 +21292,1032 @@ private static final long serialVersionUID = 0L;
         invalidClicks_ = null;
       }
       return invalidClicksBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue mobileFriendlyClicksPercentage_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> mobileFriendlyClicksPercentageBuilder_;
+    /**
+     * <pre>
+     * The percentage of mobile clicks that go to a mobile-friendly page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+     */
+    public boolean hasMobileFriendlyClicksPercentage() {
+      return mobileFriendlyClicksPercentageBuilder_ != null || mobileFriendlyClicksPercentage_ != null;
+    }
+    /**
+     * <pre>
+     * The percentage of mobile clicks that go to a mobile-friendly page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+     */
+    public com.google.protobuf.DoubleValue getMobileFriendlyClicksPercentage() {
+      if (mobileFriendlyClicksPercentageBuilder_ == null) {
+        return mobileFriendlyClicksPercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : mobileFriendlyClicksPercentage_;
+      } else {
+        return mobileFriendlyClicksPercentageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The percentage of mobile clicks that go to a mobile-friendly page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+     */
+    public Builder setMobileFriendlyClicksPercentage(com.google.protobuf.DoubleValue value) {
+      if (mobileFriendlyClicksPercentageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        mobileFriendlyClicksPercentage_ = value;
+        onChanged();
+      } else {
+        mobileFriendlyClicksPercentageBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of mobile clicks that go to a mobile-friendly page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+     */
+    public Builder setMobileFriendlyClicksPercentage(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (mobileFriendlyClicksPercentageBuilder_ == null) {
+        mobileFriendlyClicksPercentage_ = builderForValue.build();
+        onChanged();
+      } else {
+        mobileFriendlyClicksPercentageBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of mobile clicks that go to a mobile-friendly page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+     */
+    public Builder mergeMobileFriendlyClicksPercentage(com.google.protobuf.DoubleValue value) {
+      if (mobileFriendlyClicksPercentageBuilder_ == null) {
+        if (mobileFriendlyClicksPercentage_ != null) {
+          mobileFriendlyClicksPercentage_ =
+            com.google.protobuf.DoubleValue.newBuilder(mobileFriendlyClicksPercentage_).mergeFrom(value).buildPartial();
+        } else {
+          mobileFriendlyClicksPercentage_ = value;
+        }
+        onChanged();
+      } else {
+        mobileFriendlyClicksPercentageBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of mobile clicks that go to a mobile-friendly page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+     */
+    public Builder clearMobileFriendlyClicksPercentage() {
+      if (mobileFriendlyClicksPercentageBuilder_ == null) {
+        mobileFriendlyClicksPercentage_ = null;
+        onChanged();
+      } else {
+        mobileFriendlyClicksPercentage_ = null;
+        mobileFriendlyClicksPercentageBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of mobile clicks that go to a mobile-friendly page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getMobileFriendlyClicksPercentageBuilder() {
+      
+      onChanged();
+      return getMobileFriendlyClicksPercentageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The percentage of mobile clicks that go to a mobile-friendly page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getMobileFriendlyClicksPercentageOrBuilder() {
+      if (mobileFriendlyClicksPercentageBuilder_ != null) {
+        return mobileFriendlyClicksPercentageBuilder_.getMessageOrBuilder();
+      } else {
+        return mobileFriendlyClicksPercentage_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : mobileFriendlyClicksPercentage_;
+      }
+    }
+    /**
+     * <pre>
+     * The percentage of mobile clicks that go to a mobile-friendly page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getMobileFriendlyClicksPercentageFieldBuilder() {
+      if (mobileFriendlyClicksPercentageBuilder_ == null) {
+        mobileFriendlyClicksPercentageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getMobileFriendlyClicksPercentage(),
+                getParentForChildren(),
+                isClean());
+        mobileFriendlyClicksPercentage_ = null;
+      }
+      return mobileFriendlyClicksPercentageBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value organicClicks_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> organicClicksBuilder_;
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results for a particular query. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+     */
+    public boolean hasOrganicClicks() {
+      return organicClicksBuilder_ != null || organicClicks_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results for a particular query. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+     */
+    public com.google.protobuf.Int64Value getOrganicClicks() {
+      if (organicClicksBuilder_ == null) {
+        return organicClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : organicClicks_;
+      } else {
+        return organicClicksBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results for a particular query. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+     */
+    public Builder setOrganicClicks(com.google.protobuf.Int64Value value) {
+      if (organicClicksBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        organicClicks_ = value;
+        onChanged();
+      } else {
+        organicClicksBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results for a particular query. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+     */
+    public Builder setOrganicClicks(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (organicClicksBuilder_ == null) {
+        organicClicks_ = builderForValue.build();
+        onChanged();
+      } else {
+        organicClicksBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results for a particular query. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+     */
+    public Builder mergeOrganicClicks(com.google.protobuf.Int64Value value) {
+      if (organicClicksBuilder_ == null) {
+        if (organicClicks_ != null) {
+          organicClicks_ =
+            com.google.protobuf.Int64Value.newBuilder(organicClicks_).mergeFrom(value).buildPartial();
+        } else {
+          organicClicks_ = value;
+        }
+        onChanged();
+      } else {
+        organicClicksBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results for a particular query. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+     */
+    public Builder clearOrganicClicks() {
+      if (organicClicksBuilder_ == null) {
+        organicClicks_ = null;
+        onChanged();
+      } else {
+        organicClicks_ = null;
+        organicClicksBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results for a particular query. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getOrganicClicksBuilder() {
+      
+      onChanged();
+      return getOrganicClicksFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results for a particular query. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getOrganicClicksOrBuilder() {
+      if (organicClicksBuilder_ != null) {
+        return organicClicksBuilder_.getMessageOrBuilder();
+      } else {
+        return organicClicks_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : organicClicks_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results for a particular query. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getOrganicClicksFieldBuilder() {
+      if (organicClicksBuilder_ == null) {
+        organicClicksBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getOrganicClicks(),
+                getParentForChildren(),
+                isClean());
+        organicClicks_ = null;
+      }
+      return organicClicksBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue organicClicksPerQuery_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> organicClicksPerQueryBuilder_;
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results (organic_clicks) divided by the total number of searches that
+     * returned pages from your site (organic_queries). See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+     */
+    public boolean hasOrganicClicksPerQuery() {
+      return organicClicksPerQueryBuilder_ != null || organicClicksPerQuery_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results (organic_clicks) divided by the total number of searches that
+     * returned pages from your site (organic_queries). See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+     */
+    public com.google.protobuf.DoubleValue getOrganicClicksPerQuery() {
+      if (organicClicksPerQueryBuilder_ == null) {
+        return organicClicksPerQuery_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : organicClicksPerQuery_;
+      } else {
+        return organicClicksPerQueryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results (organic_clicks) divided by the total number of searches that
+     * returned pages from your site (organic_queries). See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+     */
+    public Builder setOrganicClicksPerQuery(com.google.protobuf.DoubleValue value) {
+      if (organicClicksPerQueryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        organicClicksPerQuery_ = value;
+        onChanged();
+      } else {
+        organicClicksPerQueryBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results (organic_clicks) divided by the total number of searches that
+     * returned pages from your site (organic_queries). See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+     */
+    public Builder setOrganicClicksPerQuery(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (organicClicksPerQueryBuilder_ == null) {
+        organicClicksPerQuery_ = builderForValue.build();
+        onChanged();
+      } else {
+        organicClicksPerQueryBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results (organic_clicks) divided by the total number of searches that
+     * returned pages from your site (organic_queries). See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+     */
+    public Builder mergeOrganicClicksPerQuery(com.google.protobuf.DoubleValue value) {
+      if (organicClicksPerQueryBuilder_ == null) {
+        if (organicClicksPerQuery_ != null) {
+          organicClicksPerQuery_ =
+            com.google.protobuf.DoubleValue.newBuilder(organicClicksPerQuery_).mergeFrom(value).buildPartial();
+        } else {
+          organicClicksPerQuery_ = value;
+        }
+        onChanged();
+      } else {
+        organicClicksPerQueryBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results (organic_clicks) divided by the total number of searches that
+     * returned pages from your site (organic_queries). See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+     */
+    public Builder clearOrganicClicksPerQuery() {
+      if (organicClicksPerQueryBuilder_ == null) {
+        organicClicksPerQuery_ = null;
+        onChanged();
+      } else {
+        organicClicksPerQuery_ = null;
+        organicClicksPerQueryBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results (organic_clicks) divided by the total number of searches that
+     * returned pages from your site (organic_queries). See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getOrganicClicksPerQueryBuilder() {
+      
+      onChanged();
+      return getOrganicClicksPerQueryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results (organic_clicks) divided by the total number of searches that
+     * returned pages from your site (organic_queries). See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getOrganicClicksPerQueryOrBuilder() {
+      if (organicClicksPerQueryBuilder_ != null) {
+        return organicClicksPerQueryBuilder_.getMessageOrBuilder();
+      } else {
+        return organicClicksPerQuery_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : organicClicksPerQuery_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times someone clicked your site's listing in the unpaid
+     * results (organic_clicks) divided by the total number of searches that
+     * returned pages from your site (organic_queries). See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getOrganicClicksPerQueryFieldBuilder() {
+      if (organicClicksPerQueryBuilder_ == null) {
+        organicClicksPerQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getOrganicClicksPerQuery(),
+                getParentForChildren(),
+                isClean());
+        organicClicksPerQuery_ = null;
+      }
+      return organicClicksPerQueryBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value organicImpressions_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> organicImpressionsBuilder_;
+    /**
+     * <pre>
+     * The number of listings for your site in the unpaid search results. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+     */
+    public boolean hasOrganicImpressions() {
+      return organicImpressionsBuilder_ != null || organicImpressions_ != null;
+    }
+    /**
+     * <pre>
+     * The number of listings for your site in the unpaid search results. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+     */
+    public com.google.protobuf.Int64Value getOrganicImpressions() {
+      if (organicImpressionsBuilder_ == null) {
+        return organicImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : organicImpressions_;
+      } else {
+        return organicImpressionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of listings for your site in the unpaid search results. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+     */
+    public Builder setOrganicImpressions(com.google.protobuf.Int64Value value) {
+      if (organicImpressionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        organicImpressions_ = value;
+        onChanged();
+      } else {
+        organicImpressionsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of listings for your site in the unpaid search results. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+     */
+    public Builder setOrganicImpressions(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (organicImpressionsBuilder_ == null) {
+        organicImpressions_ = builderForValue.build();
+        onChanged();
+      } else {
+        organicImpressionsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of listings for your site in the unpaid search results. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+     */
+    public Builder mergeOrganicImpressions(com.google.protobuf.Int64Value value) {
+      if (organicImpressionsBuilder_ == null) {
+        if (organicImpressions_ != null) {
+          organicImpressions_ =
+            com.google.protobuf.Int64Value.newBuilder(organicImpressions_).mergeFrom(value).buildPartial();
+        } else {
+          organicImpressions_ = value;
+        }
+        onChanged();
+      } else {
+        organicImpressionsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of listings for your site in the unpaid search results. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+     */
+    public Builder clearOrganicImpressions() {
+      if (organicImpressionsBuilder_ == null) {
+        organicImpressions_ = null;
+        onChanged();
+      } else {
+        organicImpressions_ = null;
+        organicImpressionsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of listings for your site in the unpaid search results. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getOrganicImpressionsBuilder() {
+      
+      onChanged();
+      return getOrganicImpressionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of listings for your site in the unpaid search results. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getOrganicImpressionsOrBuilder() {
+      if (organicImpressionsBuilder_ != null) {
+        return organicImpressionsBuilder_.getMessageOrBuilder();
+      } else {
+        return organicImpressions_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : organicImpressions_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of listings for your site in the unpaid search results. See the
+     * help page at https://support.google.com/google-ads/answer/3097241 for
+     * details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getOrganicImpressionsFieldBuilder() {
+      if (organicImpressionsBuilder_ == null) {
+        organicImpressionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getOrganicImpressions(),
+                getParentForChildren(),
+                isClean());
+        organicImpressions_ = null;
+      }
+      return organicImpressionsBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue organicImpressionsPerQuery_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> organicImpressionsPerQueryBuilder_;
+    /**
+     * <pre>
+     * The number of times a page from your site was listed in the unpaid search
+     * results (organic_impressions) divided by the number of searches returning
+     * your site's listing in the unpaid results (organic_queries). See the help
+     * page at https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+     */
+    public boolean hasOrganicImpressionsPerQuery() {
+      return organicImpressionsPerQueryBuilder_ != null || organicImpressionsPerQuery_ != null;
+    }
+    /**
+     * <pre>
+     * The number of times a page from your site was listed in the unpaid search
+     * results (organic_impressions) divided by the number of searches returning
+     * your site's listing in the unpaid results (organic_queries). See the help
+     * page at https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+     */
+    public com.google.protobuf.DoubleValue getOrganicImpressionsPerQuery() {
+      if (organicImpressionsPerQueryBuilder_ == null) {
+        return organicImpressionsPerQuery_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : organicImpressionsPerQuery_;
+      } else {
+        return organicImpressionsPerQueryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The number of times a page from your site was listed in the unpaid search
+     * results (organic_impressions) divided by the number of searches returning
+     * your site's listing in the unpaid results (organic_queries). See the help
+     * page at https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+     */
+    public Builder setOrganicImpressionsPerQuery(com.google.protobuf.DoubleValue value) {
+      if (organicImpressionsPerQueryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        organicImpressionsPerQuery_ = value;
+        onChanged();
+      } else {
+        organicImpressionsPerQueryBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times a page from your site was listed in the unpaid search
+     * results (organic_impressions) divided by the number of searches returning
+     * your site's listing in the unpaid results (organic_queries). See the help
+     * page at https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+     */
+    public Builder setOrganicImpressionsPerQuery(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (organicImpressionsPerQueryBuilder_ == null) {
+        organicImpressionsPerQuery_ = builderForValue.build();
+        onChanged();
+      } else {
+        organicImpressionsPerQueryBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times a page from your site was listed in the unpaid search
+     * results (organic_impressions) divided by the number of searches returning
+     * your site's listing in the unpaid results (organic_queries). See the help
+     * page at https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+     */
+    public Builder mergeOrganicImpressionsPerQuery(com.google.protobuf.DoubleValue value) {
+      if (organicImpressionsPerQueryBuilder_ == null) {
+        if (organicImpressionsPerQuery_ != null) {
+          organicImpressionsPerQuery_ =
+            com.google.protobuf.DoubleValue.newBuilder(organicImpressionsPerQuery_).mergeFrom(value).buildPartial();
+        } else {
+          organicImpressionsPerQuery_ = value;
+        }
+        onChanged();
+      } else {
+        organicImpressionsPerQueryBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times a page from your site was listed in the unpaid search
+     * results (organic_impressions) divided by the number of searches returning
+     * your site's listing in the unpaid results (organic_queries). See the help
+     * page at https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+     */
+    public Builder clearOrganicImpressionsPerQuery() {
+      if (organicImpressionsPerQueryBuilder_ == null) {
+        organicImpressionsPerQuery_ = null;
+        onChanged();
+      } else {
+        organicImpressionsPerQuery_ = null;
+        organicImpressionsPerQueryBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of times a page from your site was listed in the unpaid search
+     * results (organic_impressions) divided by the number of searches returning
+     * your site's listing in the unpaid results (organic_queries). See the help
+     * page at https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getOrganicImpressionsPerQueryBuilder() {
+      
+      onChanged();
+      return getOrganicImpressionsPerQueryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The number of times a page from your site was listed in the unpaid search
+     * results (organic_impressions) divided by the number of searches returning
+     * your site's listing in the unpaid results (organic_queries). See the help
+     * page at https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getOrganicImpressionsPerQueryOrBuilder() {
+      if (organicImpressionsPerQueryBuilder_ != null) {
+        return organicImpressionsPerQueryBuilder_.getMessageOrBuilder();
+      } else {
+        return organicImpressionsPerQuery_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : organicImpressionsPerQuery_;
+      }
+    }
+    /**
+     * <pre>
+     * The number of times a page from your site was listed in the unpaid search
+     * results (organic_impressions) divided by the number of searches returning
+     * your site's listing in the unpaid results (organic_queries). See the help
+     * page at https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getOrganicImpressionsPerQueryFieldBuilder() {
+      if (organicImpressionsPerQueryBuilder_ == null) {
+        organicImpressionsPerQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getOrganicImpressionsPerQuery(),
+                getParentForChildren(),
+                isClean());
+        organicImpressionsPerQuery_ = null;
+      }
+      return organicImpressionsPerQueryBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value organicQueries_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> organicQueriesBuilder_;
+    /**
+     * <pre>
+     * The total number of searches that returned your site's listing in the
+     * unpaid results. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+     */
+    public boolean hasOrganicQueries() {
+      return organicQueriesBuilder_ != null || organicQueries_ != null;
+    }
+    /**
+     * <pre>
+     * The total number of searches that returned your site's listing in the
+     * unpaid results. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+     */
+    public com.google.protobuf.Int64Value getOrganicQueries() {
+      if (organicQueriesBuilder_ == null) {
+        return organicQueries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : organicQueries_;
+      } else {
+        return organicQueriesBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The total number of searches that returned your site's listing in the
+     * unpaid results. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+     */
+    public Builder setOrganicQueries(com.google.protobuf.Int64Value value) {
+      if (organicQueriesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        organicQueries_ = value;
+        onChanged();
+      } else {
+        organicQueriesBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The total number of searches that returned your site's listing in the
+     * unpaid results. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+     */
+    public Builder setOrganicQueries(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (organicQueriesBuilder_ == null) {
+        organicQueries_ = builderForValue.build();
+        onChanged();
+      } else {
+        organicQueriesBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The total number of searches that returned your site's listing in the
+     * unpaid results. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+     */
+    public Builder mergeOrganicQueries(com.google.protobuf.Int64Value value) {
+      if (organicQueriesBuilder_ == null) {
+        if (organicQueries_ != null) {
+          organicQueries_ =
+            com.google.protobuf.Int64Value.newBuilder(organicQueries_).mergeFrom(value).buildPartial();
+        } else {
+          organicQueries_ = value;
+        }
+        onChanged();
+      } else {
+        organicQueriesBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The total number of searches that returned your site's listing in the
+     * unpaid results. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+     */
+    public Builder clearOrganicQueries() {
+      if (organicQueriesBuilder_ == null) {
+        organicQueries_ = null;
+        onChanged();
+      } else {
+        organicQueries_ = null;
+        organicQueriesBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The total number of searches that returned your site's listing in the
+     * unpaid results. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getOrganicQueriesBuilder() {
+      
+      onChanged();
+      return getOrganicQueriesFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The total number of searches that returned your site's listing in the
+     * unpaid results. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getOrganicQueriesOrBuilder() {
+      if (organicQueriesBuilder_ != null) {
+        return organicQueriesBuilder_.getMessageOrBuilder();
+      } else {
+        return organicQueries_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : organicQueries_;
+      }
+    }
+    /**
+     * <pre>
+     * The total number of searches that returned your site's listing in the
+     * unpaid results. See the help page at
+     * https://support.google.com/google-ads/answer/3097241 for details.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getOrganicQueriesFieldBuilder() {
+      if (organicQueriesBuilder_ == null) {
+        organicQueriesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getOrganicQueries(),
+                getParentForChildren(),
+                isClean());
+        organicQueries_ = null;
+      }
+      return organicQueriesBuilder_;
     }
 
     private com.google.protobuf.DoubleValue percentNewVisitors_ = null;
@@ -20675,6 +25128,168 @@ private static final long serialVersionUID = 0L;
       return searchTopImpressionShareBuilder_;
     }
 
+    private com.google.protobuf.Int64Value speedScore_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> speedScoreBuilder_;
+    /**
+     * <pre>
+     * A measure of how quickly your page loads after clicks on your mobile ads.
+     * The score is a range from 1 to 10, 10 being the fastest.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+     */
+    public boolean hasSpeedScore() {
+      return speedScoreBuilder_ != null || speedScore_ != null;
+    }
+    /**
+     * <pre>
+     * A measure of how quickly your page loads after clicks on your mobile ads.
+     * The score is a range from 1 to 10, 10 being the fastest.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+     */
+    public com.google.protobuf.Int64Value getSpeedScore() {
+      if (speedScoreBuilder_ == null) {
+        return speedScore_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : speedScore_;
+      } else {
+        return speedScoreBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * A measure of how quickly your page loads after clicks on your mobile ads.
+     * The score is a range from 1 to 10, 10 being the fastest.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+     */
+    public Builder setSpeedScore(com.google.protobuf.Int64Value value) {
+      if (speedScoreBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        speedScore_ = value;
+        onChanged();
+      } else {
+        speedScoreBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * A measure of how quickly your page loads after clicks on your mobile ads.
+     * The score is a range from 1 to 10, 10 being the fastest.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+     */
+    public Builder setSpeedScore(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (speedScoreBuilder_ == null) {
+        speedScore_ = builderForValue.build();
+        onChanged();
+      } else {
+        speedScoreBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * A measure of how quickly your page loads after clicks on your mobile ads.
+     * The score is a range from 1 to 10, 10 being the fastest.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+     */
+    public Builder mergeSpeedScore(com.google.protobuf.Int64Value value) {
+      if (speedScoreBuilder_ == null) {
+        if (speedScore_ != null) {
+          speedScore_ =
+            com.google.protobuf.Int64Value.newBuilder(speedScore_).mergeFrom(value).buildPartial();
+        } else {
+          speedScore_ = value;
+        }
+        onChanged();
+      } else {
+        speedScoreBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * A measure of how quickly your page loads after clicks on your mobile ads.
+     * The score is a range from 1 to 10, 10 being the fastest.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+     */
+    public Builder clearSpeedScore() {
+      if (speedScoreBuilder_ == null) {
+        speedScore_ = null;
+        onChanged();
+      } else {
+        speedScore_ = null;
+        speedScoreBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * A measure of how quickly your page loads after clicks on your mobile ads.
+     * The score is a range from 1 to 10, 10 being the fastest.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getSpeedScoreBuilder() {
+      
+      onChanged();
+      return getSpeedScoreFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A measure of how quickly your page loads after clicks on your mobile ads.
+     * The score is a range from 1 to 10, 10 being the fastest.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSpeedScoreOrBuilder() {
+      if (speedScoreBuilder_ != null) {
+        return speedScoreBuilder_.getMessageOrBuilder();
+      } else {
+        return speedScore_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : speedScore_;
+      }
+    }
+    /**
+     * <pre>
+     * A measure of how quickly your page loads after clicks on your mobile ads.
+     * The score is a range from 1 to 10, 10 being the fastest.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getSpeedScoreFieldBuilder() {
+      if (speedScoreBuilder_ == null) {
+        speedScoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getSpeedScore(),
+                getParentForChildren(),
+                isClean());
+        speedScore_ = null;
+      }
+      return speedScoreBuilder_;
+    }
+
     private com.google.protobuf.DoubleValue topImpressionPercentage_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> topImpressionPercentageBuilder_;
@@ -20835,6 +25450,168 @@ private static final long serialVersionUID = 0L;
         topImpressionPercentage_ = null;
       }
       return topImpressionPercentageBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue validAcceleratedMobilePagesClicksPercentage_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> validAcceleratedMobilePagesClicksPercentageBuilder_;
+    /**
+     * <pre>
+     * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+     * that reach a valid AMP page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+     */
+    public boolean hasValidAcceleratedMobilePagesClicksPercentage() {
+      return validAcceleratedMobilePagesClicksPercentageBuilder_ != null || validAcceleratedMobilePagesClicksPercentage_ != null;
+    }
+    /**
+     * <pre>
+     * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+     * that reach a valid AMP page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+     */
+    public com.google.protobuf.DoubleValue getValidAcceleratedMobilePagesClicksPercentage() {
+      if (validAcceleratedMobilePagesClicksPercentageBuilder_ == null) {
+        return validAcceleratedMobilePagesClicksPercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : validAcceleratedMobilePagesClicksPercentage_;
+      } else {
+        return validAcceleratedMobilePagesClicksPercentageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+     * that reach a valid AMP page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+     */
+    public Builder setValidAcceleratedMobilePagesClicksPercentage(com.google.protobuf.DoubleValue value) {
+      if (validAcceleratedMobilePagesClicksPercentageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        validAcceleratedMobilePagesClicksPercentage_ = value;
+        onChanged();
+      } else {
+        validAcceleratedMobilePagesClicksPercentageBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+     * that reach a valid AMP page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+     */
+    public Builder setValidAcceleratedMobilePagesClicksPercentage(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (validAcceleratedMobilePagesClicksPercentageBuilder_ == null) {
+        validAcceleratedMobilePagesClicksPercentage_ = builderForValue.build();
+        onChanged();
+      } else {
+        validAcceleratedMobilePagesClicksPercentageBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+     * that reach a valid AMP page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+     */
+    public Builder mergeValidAcceleratedMobilePagesClicksPercentage(com.google.protobuf.DoubleValue value) {
+      if (validAcceleratedMobilePagesClicksPercentageBuilder_ == null) {
+        if (validAcceleratedMobilePagesClicksPercentage_ != null) {
+          validAcceleratedMobilePagesClicksPercentage_ =
+            com.google.protobuf.DoubleValue.newBuilder(validAcceleratedMobilePagesClicksPercentage_).mergeFrom(value).buildPartial();
+        } else {
+          validAcceleratedMobilePagesClicksPercentage_ = value;
+        }
+        onChanged();
+      } else {
+        validAcceleratedMobilePagesClicksPercentageBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+     * that reach a valid AMP page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+     */
+    public Builder clearValidAcceleratedMobilePagesClicksPercentage() {
+      if (validAcceleratedMobilePagesClicksPercentageBuilder_ == null) {
+        validAcceleratedMobilePagesClicksPercentage_ = null;
+        onChanged();
+      } else {
+        validAcceleratedMobilePagesClicksPercentage_ = null;
+        validAcceleratedMobilePagesClicksPercentageBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+     * that reach a valid AMP page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getValidAcceleratedMobilePagesClicksPercentageBuilder() {
+      
+      onChanged();
+      return getValidAcceleratedMobilePagesClicksPercentageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+     * that reach a valid AMP page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getValidAcceleratedMobilePagesClicksPercentageOrBuilder() {
+      if (validAcceleratedMobilePagesClicksPercentageBuilder_ != null) {
+        return validAcceleratedMobilePagesClicksPercentageBuilder_.getMessageOrBuilder();
+      } else {
+        return validAcceleratedMobilePagesClicksPercentage_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : validAcceleratedMobilePagesClicksPercentage_;
+      }
+    }
+    /**
+     * <pre>
+     * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+     * that reach a valid AMP page.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getValidAcceleratedMobilePagesClicksPercentageFieldBuilder() {
+      if (validAcceleratedMobilePagesClicksPercentageBuilder_ == null) {
+        validAcceleratedMobilePagesClicksPercentageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getValidAcceleratedMobilePagesClicksPercentage(),
+                getParentForChildren(),
+                isClean());
+        validAcceleratedMobilePagesClicksPercentage_ = null;
+      }
+      return validAcceleratedMobilePagesClicksPercentageBuilder_;
     }
 
     private com.google.protobuf.DoubleValue valuePerAllConversions_ = null;

@@ -12,7 +12,6 @@ package com.google.ads.googleads.v1.common;
  * on serving. It may optionally have one or more evidences that indicate the
  * reason for the finding. It may also optionally have one or more constraints
  * that provide details about how serving may be restricted.
- * Next tag: 5
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEntry}
@@ -525,7 +524,6 @@ private static final long serialVersionUID = 0L;
    * on serving. It may optionally have one or more evidences that indicate the
    * reason for the finding. It may also optionally have one or more constraints
    * that provide details about how serving may be restricted.
-   * Next tag: 5
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.common.PolicyTopicEntry}

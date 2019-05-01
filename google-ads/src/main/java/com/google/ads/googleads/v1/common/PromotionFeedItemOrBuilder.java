@@ -55,7 +55,6 @@ public interface PromotionFeedItemOrBuilder extends
   /**
    * <pre>
    * Start date of when the promotion is eligible to be redeemed.
-   * This field is currently mutate only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -64,7 +63,6 @@ public interface PromotionFeedItemOrBuilder extends
   /**
    * <pre>
    * Start date of when the promotion is eligible to be redeemed.
-   * This field is currently mutate only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -73,7 +71,6 @@ public interface PromotionFeedItemOrBuilder extends
   /**
    * <pre>
    * Start date of when the promotion is eligible to be redeemed.
-   * This field is currently mutate only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -83,7 +80,6 @@ public interface PromotionFeedItemOrBuilder extends
   /**
    * <pre>
    * End date of when the promotion is eligible to be redeemed.
-   * This field is currently mutate only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -92,7 +88,6 @@ public interface PromotionFeedItemOrBuilder extends
   /**
    * <pre>
    * End date of when the promotion is eligible to be redeemed.
-   * This field is currently mutate only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -101,7 +96,6 @@ public interface PromotionFeedItemOrBuilder extends
   /**
    * <pre>
    * End date of when the promotion is eligible to be redeemed.
-   * This field is currently mutate only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>

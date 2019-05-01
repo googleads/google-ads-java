@@ -126,6 +126,14 @@ private static final long serialVersionUID = 0L;
      * <code>IMAGE = 4;</code>
      */
     IMAGE(4),
+    /**
+     * <pre>
+     * Text asset.
+     * </pre>
+     *
+     * <code>TEXT = 5;</code>
+     */
+    TEXT(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -169,6 +177,14 @@ private static final long serialVersionUID = 0L;
      * <code>IMAGE = 4;</code>
      */
     public static final int IMAGE_VALUE = 4;
+    /**
+     * <pre>
+     * Text asset.
+     * </pre>
+     *
+     * <code>TEXT = 5;</code>
+     */
+    public static final int TEXT_VALUE = 5;
 
 
     public final int getNumber() {
@@ -194,6 +210,7 @@ private static final long serialVersionUID = 0L;
         case 2: return YOUTUBE_VIDEO;
         case 3: return MEDIA_BUNDLE;
         case 4: return IMAGE;
+        case 5: return TEXT;
         default: return null;
       }
     }

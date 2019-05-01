@@ -408,7 +408,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Start date of when the promotion is eligible to be redeemed.
-   * This field is currently mutate only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -419,7 +418,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Start date of when the promotion is eligible to be redeemed.
-   * This field is currently mutate only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -430,7 +428,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Start date of when the promotion is eligible to be redeemed.
-   * This field is currently mutate only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -444,7 +441,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * End date of when the promotion is eligible to be redeemed.
-   * This field is currently mutate only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -455,7 +451,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * End date of when the promotion is eligible to be redeemed.
-   * This field is currently mutate only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -466,7 +461,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * End date of when the promotion is eligible to be redeemed.
-   * This field is currently mutate only.
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -2024,7 +2018,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Start date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -2035,7 +2028,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Start date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -2050,7 +2042,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Start date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -2071,7 +2062,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Start date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -2090,7 +2080,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Start date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -2113,7 +2102,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Start date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -2132,7 +2120,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Start date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -2145,7 +2132,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Start date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -2161,7 +2147,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Start date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
@@ -2186,7 +2171,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -2197,7 +2181,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -2212,7 +2195,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -2233,7 +2215,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -2252,7 +2233,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -2275,7 +2255,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -2294,7 +2273,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -2307,7 +2285,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
@@ -2323,7 +2300,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * End date of when the promotion is eligible to be redeemed.
-     * This field is currently mutate only.
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>

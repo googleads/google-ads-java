@@ -24,6 +24,9 @@ public interface GoogleAdsVersion {
   @ServiceClientDescriptor(settingsClass = CustomInterestServiceSettings.class)
   CustomInterestServiceClient createCustomInterestServiceClient();
 
+  @ServiceClientDescriptor(settingsClass = ExpandedLandingPageViewServiceSettings.class)
+  ExpandedLandingPageViewServiceClient createExpandedLandingPageViewServiceClient();
+
   @ServiceClientDescriptor(settingsClass = SharedSetServiceSettings.class)
   SharedSetServiceClient createSharedSetServiceClient();
 
@@ -56,6 +59,9 @@ public interface GoogleAdsVersion {
 
   @ServiceClientDescriptor(settingsClass = VideoServiceSettings.class)
   VideoServiceClient createVideoServiceClient();
+
+  @ServiceClientDescriptor(settingsClass = CampaignCriterionSimulationServiceSettings.class)
+  CampaignCriterionSimulationServiceClient createCampaignCriterionSimulationServiceClient();
 
   @ServiceClientDescriptor(settingsClass = GoogleAdsFieldServiceSettings.class)
   GoogleAdsFieldServiceClient createGoogleAdsFieldServiceClient();
@@ -177,6 +183,9 @@ public interface GoogleAdsVersion {
   @ServiceClientDescriptor(settingsClass = CustomerNegativeCriterionServiceSettings.class)
   CustomerNegativeCriterionServiceClient createCustomerNegativeCriterionServiceClient();
 
+  @ServiceClientDescriptor(settingsClass = PaidOrganicSearchTermViewServiceSettings.class)
+  PaidOrganicSearchTermViewServiceClient createPaidOrganicSearchTermViewServiceClient();
+
   @ServiceClientDescriptor(settingsClass = BillingSetupServiceSettings.class)
   BillingSetupServiceClient createBillingSetupServiceClient();
 
@@ -249,6 +258,9 @@ public interface GoogleAdsVersion {
   @ServiceClientDescriptor(settingsClass = FeedMappingServiceSettings.class)
   FeedMappingServiceClient createFeedMappingServiceClient();
 
+  @ServiceClientDescriptor(settingsClass = AdGroupCriterionSimulationServiceSettings.class)
+  AdGroupCriterionSimulationServiceClient createAdGroupCriterionSimulationServiceClient();
+
   @ServiceClientDescriptor(settingsClass = CarrierConstantServiceSettings.class)
   CarrierConstantServiceClient createCarrierConstantServiceClient();
 
@@ -258,6 +270,9 @@ public interface GoogleAdsVersion {
   @ServiceClientDescriptor(settingsClass = CustomerServiceSettings.class)
   CustomerServiceClient createCustomerServiceClient();
 
+  @ServiceClientDescriptor(settingsClass = LandingPageViewServiceSettings.class)
+  LandingPageViewServiceClient createLandingPageViewServiceClient();
+
   @ServiceClientDescriptor(settingsClass = CampaignExtensionSettingServiceSettings.class)
   CampaignExtensionSettingServiceClient createCampaignExtensionSettingServiceClient();
 
@@ -266,6 +281,9 @@ public interface GoogleAdsVersion {
 
   @ServiceClientDescriptor(settingsClass = KeywordViewServiceSettings.class)
   KeywordViewServiceClient createKeywordViewServiceClient();
+
+  @ServiceClientDescriptor(settingsClass = AdGroupSimulationServiceSettings.class)
+  AdGroupSimulationServiceClient createAdGroupSimulationServiceClient();
 
   @ServiceClientDescriptor(settingsClass = RecommendationServiceSettings.class)
   RecommendationServiceClient createRecommendationServiceClient();

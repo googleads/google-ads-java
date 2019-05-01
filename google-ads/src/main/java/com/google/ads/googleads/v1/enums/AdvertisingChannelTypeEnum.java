@@ -145,8 +145,8 @@ private static final long serialVersionUID = 0L;
     VIDEO(6),
     /**
      * <pre>
-     * Universal App Campaigns, including universal app install and universal
-     * app reengagement campaigns, that run across multiple channels.
+     * App Campaigns, and App Campaigns for Engagement, that run
+     * across multiple channels.
      * </pre>
      *
      * <code>MULTI_CHANNEL = 7;</code>
@@ -214,8 +214,8 @@ private static final long serialVersionUID = 0L;
     public static final int VIDEO_VALUE = 6;
     /**
      * <pre>
-     * Universal App Campaigns, including universal app install and universal
-     * app reengagement campaigns, that run across multiple channels.
+     * App Campaigns, and App Campaigns for Engagement, that run
+     * across multiple channels.
      * </pre>
      *
      * <code>MULTI_CHANNEL = 7;</code>

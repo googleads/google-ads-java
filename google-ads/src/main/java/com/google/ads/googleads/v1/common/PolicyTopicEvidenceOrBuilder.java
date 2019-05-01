@@ -163,5 +163,33 @@ public interface PolicyTopicEvidenceOrBuilder extends
    */
   com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationMismatchOrBuilder getDestinationMismatchOrBuilder();
 
+  /**
+   * <pre>
+   * Details when the destination is returning an HTTP error code or isn't
+   * functional in all locations for commonly used devices.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+   */
+  boolean hasDestinationNotWorking();
+  /**
+   * <pre>
+   * Details when the destination is returning an HTTP error code or isn't
+   * functional in all locations for commonly used devices.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+   */
+  com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking getDestinationNotWorking();
+  /**
+   * <pre>
+   * Details when the destination is returning an HTTP error code or isn't
+   * functional in all locations for commonly used devices.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+   */
+  com.google.ads.googleads.v1.common.PolicyTopicEvidence.DestinationNotWorkingOrBuilder getDestinationNotWorkingOrBuilder();
+
   public com.google.ads.googleads.v1.common.PolicyTopicEvidence.ValueCase getValueCase();
 }

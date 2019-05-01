@@ -775,7 +775,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Consent for call recording, which is required for the use of call
-     * extensions, was not provided by the advertiser.
+     * extensions, was not provided by the advertiser. Please see
+     * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
      * <code>CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED = 84;</code>
@@ -831,6 +832,54 @@ private static final long serialVersionUID = 0L;
      * <code>AUTO_REPLY_NOT_AVAILABLE_IN_COUNTRY = 90;</code>
      */
     AUTO_REPLY_NOT_AVAILABLE_IN_COUNTRY(90),
+    /**
+     * <pre>
+     * Invalid value specified for latitude.
+     * </pre>
+     *
+     * <code>INVALID_LATITUDE_VALUE = 91;</code>
+     */
+    INVALID_LATITUDE_VALUE(91),
+    /**
+     * <pre>
+     * Invalid value specified for longitude.
+     * </pre>
+     *
+     * <code>INVALID_LONGITUDE_VALUE = 92;</code>
+     */
+    INVALID_LONGITUDE_VALUE(92),
+    /**
+     * <pre>
+     * Too many label fields provided.
+     * </pre>
+     *
+     * <code>TOO_MANY_LABELS = 93;</code>
+     */
+    TOO_MANY_LABELS(93),
+    /**
+     * <pre>
+     * Invalid image url.
+     * </pre>
+     *
+     * <code>INVALID_IMAGE_URL = 94;</code>
+     */
+    INVALID_IMAGE_URL(94),
+    /**
+     * <pre>
+     * Latitude value is missing.
+     * </pre>
+     *
+     * <code>MISSING_LATITUDE_VALUE = 95;</code>
+     */
+    MISSING_LATITUDE_VALUE(95),
+    /**
+     * <pre>
+     * Longitude value is missing.
+     * </pre>
+     *
+     * <code>MISSING_LONGITUDE_VALUE = 96;</code>
+     */
+    MISSING_LONGITUDE_VALUE(96),
     UNRECOGNIZED(-1),
     ;
 
@@ -1523,7 +1572,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Consent for call recording, which is required for the use of call
-     * extensions, was not provided by the advertiser.
+     * extensions, was not provided by the advertiser. Please see
+     * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
      * <code>CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED = 84;</code>
@@ -1579,6 +1629,54 @@ private static final long serialVersionUID = 0L;
      * <code>AUTO_REPLY_NOT_AVAILABLE_IN_COUNTRY = 90;</code>
      */
     public static final int AUTO_REPLY_NOT_AVAILABLE_IN_COUNTRY_VALUE = 90;
+    /**
+     * <pre>
+     * Invalid value specified for latitude.
+     * </pre>
+     *
+     * <code>INVALID_LATITUDE_VALUE = 91;</code>
+     */
+    public static final int INVALID_LATITUDE_VALUE_VALUE = 91;
+    /**
+     * <pre>
+     * Invalid value specified for longitude.
+     * </pre>
+     *
+     * <code>INVALID_LONGITUDE_VALUE = 92;</code>
+     */
+    public static final int INVALID_LONGITUDE_VALUE_VALUE = 92;
+    /**
+     * <pre>
+     * Too many label fields provided.
+     * </pre>
+     *
+     * <code>TOO_MANY_LABELS = 93;</code>
+     */
+    public static final int TOO_MANY_LABELS_VALUE = 93;
+    /**
+     * <pre>
+     * Invalid image url.
+     * </pre>
+     *
+     * <code>INVALID_IMAGE_URL = 94;</code>
+     */
+    public static final int INVALID_IMAGE_URL_VALUE = 94;
+    /**
+     * <pre>
+     * Latitude value is missing.
+     * </pre>
+     *
+     * <code>MISSING_LATITUDE_VALUE = 95;</code>
+     */
+    public static final int MISSING_LATITUDE_VALUE_VALUE = 95;
+    /**
+     * <pre>
+     * Longitude value is missing.
+     * </pre>
+     *
+     * <code>MISSING_LONGITUDE_VALUE = 96;</code>
+     */
+    public static final int MISSING_LONGITUDE_VALUE_VALUE = 96;
 
 
     public final int getNumber() {
@@ -1690,6 +1788,12 @@ private static final long serialVersionUID = 0L;
         case 88: return IMAGE_SIZE_WRONG;
         case 89: return EMAIL_DELIVERY_NOT_AVAILABLE_IN_COUNTRY;
         case 90: return AUTO_REPLY_NOT_AVAILABLE_IN_COUNTRY;
+        case 91: return INVALID_LATITUDE_VALUE;
+        case 92: return INVALID_LONGITUDE_VALUE;
+        case 93: return TOO_MANY_LABELS;
+        case 94: return INVALID_IMAGE_URL;
+        case 95: return MISSING_LATITUDE_VALUE;
+        case 96: return MISSING_LONGITUDE_VALUE;
         default: return null;
       }
     }

@@ -123,4 +123,32 @@ public interface MutateJobOrBuilder extends
    * <code>.google.ads.googleads.v1.enums.MutateJobStatusEnum.MutateJobStatus status = 5;</code>
    */
   com.google.ads.googleads.v1.enums.MutateJobStatusEnum.MutateJobStatus getStatus();
+
+  /**
+   * <pre>
+   * The resource name of the long-running operation that can be used to poll
+   * for completion. Only set when the mutate job status is RUNNING or DONE.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+   */
+  boolean hasLongRunningOperation();
+  /**
+   * <pre>
+   * The resource name of the long-running operation that can be used to poll
+   * for completion. Only set when the mutate job status is RUNNING or DONE.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+   */
+  com.google.protobuf.StringValue getLongRunningOperation();
+  /**
+   * <pre>
+   * The resource name of the long-running operation that can be used to poll
+   * for completion. Only set when the mutate job status is RUNNING or DONE.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getLongRunningOperationOrBuilder();
 }

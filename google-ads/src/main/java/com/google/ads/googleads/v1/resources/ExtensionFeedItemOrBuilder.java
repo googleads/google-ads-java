@@ -115,6 +115,77 @@ public interface ExtensionFeedItemOrBuilder extends
 
   /**
    * <pre>
+   * List of non-overlapping schedules specifying all time intervals
+   * for which the feed item may serve. There can be a maximum of 6 schedules
+   * per day.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+   */
+  java.util.List<com.google.ads.googleads.v1.common.AdScheduleInfo> 
+      getAdSchedulesList();
+  /**
+   * <pre>
+   * List of non-overlapping schedules specifying all time intervals
+   * for which the feed item may serve. There can be a maximum of 6 schedules
+   * per day.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+   */
+  com.google.ads.googleads.v1.common.AdScheduleInfo getAdSchedules(int index);
+  /**
+   * <pre>
+   * List of non-overlapping schedules specifying all time intervals
+   * for which the feed item may serve. There can be a maximum of 6 schedules
+   * per day.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+   */
+  int getAdSchedulesCount();
+  /**
+   * <pre>
+   * List of non-overlapping schedules specifying all time intervals
+   * for which the feed item may serve. There can be a maximum of 6 schedules
+   * per day.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v1.common.AdScheduleInfoOrBuilder> 
+      getAdSchedulesOrBuilderList();
+  /**
+   * <pre>
+   * List of non-overlapping schedules specifying all time intervals
+   * for which the feed item may serve. There can be a maximum of 6 schedules
+   * per day.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.AdScheduleInfo ad_schedules = 16;</code>
+   */
+  com.google.ads.googleads.v1.common.AdScheduleInfoOrBuilder getAdSchedulesOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * The targeted device.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
+   */
+  int getDeviceValue();
+  /**
+   * <pre>
+   * The targeted device.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 17;</code>
+   */
+  com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice getDevice();
+
+  /**
+   * <pre>
    * Status of the feed item.
    * This field is read-only.
    * </pre>
@@ -331,6 +402,65 @@ public interface ExtensionFeedItemOrBuilder extends
    * <code>.google.ads.googleads.v1.common.PromotionFeedItem promotion_feed_item = 12;</code>
    */
   com.google.ads.googleads.v1.common.PromotionFeedItemOrBuilder getPromotionFeedItemOrBuilder();
+
+  /**
+   * <pre>
+   * Location extension. Locations are synced from a GMB account into a feed.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+   */
+  boolean hasLocationFeedItem();
+  /**
+   * <pre>
+   * Location extension. Locations are synced from a GMB account into a feed.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+   */
+  com.google.ads.googleads.v1.common.LocationFeedItem getLocationFeedItem();
+  /**
+   * <pre>
+   * Location extension. Locations are synced from a GMB account into a feed.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LocationFeedItem location_feed_item = 14;</code>
+   */
+  com.google.ads.googleads.v1.common.LocationFeedItemOrBuilder getLocationFeedItemOrBuilder();
+
+  /**
+   * <pre>
+   * Affiliate location extension. Feed locations are populated by Google Ads
+   * based on a chain ID.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+   */
+  boolean hasAffiliateLocationFeedItem();
+  /**
+   * <pre>
+   * Affiliate location extension. Feed locations are populated by Google Ads
+   * based on a chain ID.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+   */
+  com.google.ads.googleads.v1.common.AffiliateLocationFeedItem getAffiliateLocationFeedItem();
+  /**
+   * <pre>
+   * Affiliate location extension. Feed locations are populated by Google Ads
+   * based on a chain ID.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+   */
+  com.google.ads.googleads.v1.common.AffiliateLocationFeedItemOrBuilder getAffiliateLocationFeedItemOrBuilder();
 
   public com.google.ads.googleads.v1.resources.ExtensionFeedItem.ExtensionCase getExtensionCase();
 }

@@ -83,6 +83,55 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
+   * A list of final app URLs that will be used on mobile if the user has the
+   * specific app installed.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+   */
+  java.util.List<com.google.ads.googleads.v1.common.FinalAppUrl> 
+      getFinalAppUrlsList();
+  /**
+   * <pre>
+   * A list of final app URLs that will be used on mobile if the user has the
+   * specific app installed.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+   */
+  com.google.ads.googleads.v1.common.FinalAppUrl getFinalAppUrls(int index);
+  /**
+   * <pre>
+   * A list of final app URLs that will be used on mobile if the user has the
+   * specific app installed.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+   */
+  int getFinalAppUrlsCount();
+  /**
+   * <pre>
+   * A list of final app URLs that will be used on mobile if the user has the
+   * specific app installed.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v1.common.FinalAppUrlOrBuilder> 
+      getFinalAppUrlsOrBuilderList();
+  /**
+   * <pre>
+   * A list of final app URLs that will be used on mobile if the user has the
+   * specific app installed.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.common.FinalAppUrl final_app_urls = 35;</code>
+   */
+  com.google.ads.googleads.v1.common.FinalAppUrlOrBuilder getFinalAppUrlsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    * The list of possible final mobile URLs after all cross-domain redirects
    * for the ad.
    * </pre>
@@ -789,6 +838,56 @@ public interface AdOrBuilder extends
    * <code>.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
    */
   com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfoOrBuilder getResponsiveDisplayAdOrBuilder();
+
+  /**
+   * <pre>
+   * Details pertaining to a display upload ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+   */
+  boolean hasDisplayUploadAd();
+  /**
+   * <pre>
+   * Details pertaining to a display upload ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+   */
+  com.google.ads.googleads.v1.common.DisplayUploadAdInfo getDisplayUploadAd();
+  /**
+   * <pre>
+   * Details pertaining to a display upload ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+   */
+  com.google.ads.googleads.v1.common.DisplayUploadAdInfoOrBuilder getDisplayUploadAdOrBuilder();
+
+  /**
+   * <pre>
+   * Details pertaining to an app engagement ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+   */
+  boolean hasAppEngagementAd();
+  /**
+   * <pre>
+   * Details pertaining to an app engagement ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+   */
+  com.google.ads.googleads.v1.common.AppEngagementAdInfo getAppEngagementAd();
+  /**
+   * <pre>
+   * Details pertaining to an app engagement ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+   */
+  com.google.ads.googleads.v1.common.AppEngagementAdInfoOrBuilder getAppEngagementAdOrBuilder();
 
   public com.google.ads.googleads.v1.resources.Ad.AdDataCase getAdDataCase();
 }

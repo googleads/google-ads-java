@@ -30,44 +30,55 @@ public final class ExtensionFeedItemProto {
     java.lang.String[] descriptorData = {
       "\n;google/ads/googleads/v1/resources/exte" +
       "nsion_feed_item.proto\022!google.ads.google" +
-      "ads.v1.resources\032/google/ads/googleads/v" +
-      "1/common/extensions.proto\0322google/ads/go" +
-      "ogleads/v1/enums/extension_type.proto\0324g" +
-      "oogle/ads/googleads/v1/enums/feed_item_s" +
-      "tatus.proto\032\036google/protobuf/wrappers.pr" +
-      "oto\032\034google/api/annotations.proto\"\317\007\n\021Ex" +
-      "tensionFeedItem\022\025\n\rresource_name\030\001 \001(\t\022V" +
-      "\n\016extension_type\030\r \001(\0162>.google.ads.goog" +
-      "leads.v1.enums.ExtensionTypeEnum.Extensi" +
-      "onType\0225\n\017start_date_time\030\005 \001(\0132\034.google" +
-      ".protobuf.StringValue\0223\n\rend_date_time\030\006" +
-      " \001(\0132\034.google.protobuf.StringValue\022P\n\006st" +
-      "atus\030\004 \001(\0162@.google.ads.googleads.v1.enu" +
-      "ms.FeedItemStatusEnum.FeedItemStatus\022N\n\022" +
-      "sitelink_feed_item\030\002 \001(\01320.google.ads.go" +
-      "ogleads.v1.common.SitelinkFeedItemH\000\022a\n\034" +
-      "structured_snippet_feed_item\030\003 \001(\01329.goo" +
-      "gle.ads.googleads.v1.common.StructuredSn" +
-      "ippetFeedItemH\000\022D\n\rapp_feed_item\030\007 \001(\0132+" +
-      ".google.ads.googleads.v1.common.AppFeedI" +
-      "temH\000\022F\n\016call_feed_item\030\010 \001(\0132,.google.a" +
-      "ds.googleads.v1.common.CallFeedItemH\000\022L\n" +
-      "\021callout_feed_item\030\t \001(\0132/.google.ads.go" +
-      "ogleads.v1.common.CalloutFeedItemH\000\022U\n\026t" +
-      "ext_message_feed_item\030\n \001(\01323.google.ads" +
-      ".googleads.v1.common.TextMessageFeedItem" +
-      "H\000\022H\n\017price_feed_item\030\013 \001(\0132-.google.ads" +
-      ".googleads.v1.common.PriceFeedItemH\000\022P\n\023" +
-      "promotion_feed_item\030\014 \001(\01321.google.ads.g" +
-      "oogleads.v1.common.PromotionFeedItemH\000B\013" +
-      "\n\textensionB\203\002\n%com.google.ads.googleads" +
-      ".v1.resourcesB\026ExtensionFeedItemProtoP\001Z" +
-      "Jgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v1/resources;resources\242\002\003GA" +
-      "A\252\002!Google.Ads.GoogleAds.V1.Resources\312\002!" +
-      "Google\\Ads\\GoogleAds\\V1\\Resources\352\002%Goog" +
-      "le::Ads::GoogleAds::V1::Resourcesb\006proto" +
-      "3"
+      "ads.v1.resources\032-google/ads/googleads/v" +
+      "1/common/criteria.proto\032/google/ads/goog" +
+      "leads/v1/common/extensions.proto\0322google" +
+      "/ads/googleads/v1/enums/extension_type.p" +
+      "roto\0324google/ads/googleads/v1/enums/feed" +
+      "_item_status.proto\032;google/ads/googleads" +
+      "/v1/enums/feed_item_target_device.proto\032" +
+      "\036google/protobuf/wrappers.proto\032\034google/" +
+      "api/annotations.proto\"\246\n\n\021ExtensionFeedI" +
+      "tem\022\025\n\rresource_name\030\001 \001(\t\022V\n\016extension_" +
+      "type\030\r \001(\0162>.google.ads.googleads.v1.enu" +
+      "ms.ExtensionTypeEnum.ExtensionType\0225\n\017st" +
+      "art_date_time\030\005 \001(\0132\034.google.protobuf.St" +
+      "ringValue\0223\n\rend_date_time\030\006 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\022D\n\014ad_schedules\030\020" +
+      " \003(\0132..google.ads.googleads.v1.common.Ad" +
+      "ScheduleInfo\022\\\n\006device\030\021 \001(\0162L.google.ad" +
+      "s.googleads.v1.enums.FeedItemTargetDevic" +
+      "eEnum.FeedItemTargetDevice\022P\n\006status\030\004 \001" +
+      "(\0162@.google.ads.googleads.v1.enums.FeedI" +
+      "temStatusEnum.FeedItemStatus\022N\n\022sitelink" +
+      "_feed_item\030\002 \001(\01320.google.ads.googleads." +
+      "v1.common.SitelinkFeedItemH\000\022a\n\034structur" +
+      "ed_snippet_feed_item\030\003 \001(\01329.google.ads." +
+      "googleads.v1.common.StructuredSnippetFee" +
+      "dItemH\000\022D\n\rapp_feed_item\030\007 \001(\0132+.google." +
+      "ads.googleads.v1.common.AppFeedItemH\000\022F\n" +
+      "\016call_feed_item\030\010 \001(\0132,.google.ads.googl" +
+      "eads.v1.common.CallFeedItemH\000\022L\n\021callout" +
+      "_feed_item\030\t \001(\0132/.google.ads.googleads." +
+      "v1.common.CalloutFeedItemH\000\022U\n\026text_mess" +
+      "age_feed_item\030\n \001(\01323.google.ads.googlea" +
+      "ds.v1.common.TextMessageFeedItemH\000\022H\n\017pr" +
+      "ice_feed_item\030\013 \001(\0132-.google.ads.googlea" +
+      "ds.v1.common.PriceFeedItemH\000\022P\n\023promotio" +
+      "n_feed_item\030\014 \001(\01321.google.ads.googleads" +
+      ".v1.common.PromotionFeedItemH\000\022N\n\022locati" +
+      "on_feed_item\030\016 \001(\01320.google.ads.googlead" +
+      "s.v1.common.LocationFeedItemH\000\022a\n\034affili" +
+      "ate_location_feed_item\030\017 \001(\01329.google.ad" +
+      "s.googleads.v1.common.AffiliateLocationF" +
+      "eedItemH\000B\013\n\textensionB\203\002\n%com.google.ad" +
+      "s.googleads.v1.resourcesB\026ExtensionFeedI" +
+      "temProtoP\001ZJgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v1/resources;res" +
+      "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1.R" +
+      "esources\312\002!Google\\Ads\\GoogleAds\\V1\\Resou" +
+      "rces\352\002%Google::Ads::GoogleAds::V1::Resou" +
+      "rcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -80,9 +91,11 @@ public final class ExtensionFeedItemProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v1.common.CriteriaProto.getDescriptor(),
           com.google.ads.googleads.v1.common.ExtensionsProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.ExtensionTypeProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.FeedItemStatusProto.getDescriptor(),
+          com.google.ads.googleads.v1.enums.FeedItemTargetDeviceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
@@ -91,10 +104,12 @@ public final class ExtensionFeedItemProto {
     internal_static_google_ads_googleads_v1_resources_ExtensionFeedItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_ExtensionFeedItem_descriptor,
-        new java.lang.String[] { "ResourceName", "ExtensionType", "StartDateTime", "EndDateTime", "Status", "SitelinkFeedItem", "StructuredSnippetFeedItem", "AppFeedItem", "CallFeedItem", "CalloutFeedItem", "TextMessageFeedItem", "PriceFeedItem", "PromotionFeedItem", "Extension", });
+        new java.lang.String[] { "ResourceName", "ExtensionType", "StartDateTime", "EndDateTime", "AdSchedules", "Device", "Status", "SitelinkFeedItem", "StructuredSnippetFeedItem", "AppFeedItem", "CallFeedItem", "CalloutFeedItem", "TextMessageFeedItem", "PriceFeedItem", "PromotionFeedItem", "LocationFeedItem", "AffiliateLocationFeedItem", "Extension", });
+    com.google.ads.googleads.v1.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v1.common.ExtensionsProto.getDescriptor();
     com.google.ads.googleads.v1.enums.ExtensionTypeProto.getDescriptor();
     com.google.ads.googleads.v1.enums.FeedItemStatusProto.getDescriptor();
+    com.google.ads.googleads.v1.enums.FeedItemTargetDeviceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

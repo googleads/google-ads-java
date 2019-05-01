@@ -31,8 +31,8 @@ public final class FeedItemValidationErrorProto {
       "\n?google/ads/googleads/v1/errors/feed_it" +
       "em_validation_error.proto\022\036google.ads.go" +
       "ogleads.v1.errors\032\034google/api/annotation" +
-      "s.proto\"\226\030\n\033FeedItemValidationErrorEnum\"" +
-      "\366\027\n\027FeedItemValidationError\022\017\n\013UNSPECIFI" +
+      "s.proto\"\264\031\n\033FeedItemValidationErrorEnum\"" +
+      "\224\031\n\027FeedItemValidationError\022\017\n\013UNSPECIFI" +
       "ED\020\000\022\013\n\007UNKNOWN\020\001\022\024\n\020STRING_TOO_SHORT\020\002\022" +
       "\023\n\017STRING_TOO_LONG\020\003\022\027\n\023VALUE_NOT_SPECIF" +
       "IED\020\004\022(\n$INVALID_DOMESTIC_PHONE_NUMBER_F" +
@@ -108,14 +108,17 @@ public final class FeedItemValidationErrorProto {
       "INVALID_CONVERSION_REPORTING_STATE\020W\022\024\n\020" +
       "IMAGE_SIZE_WRONG\020X\022+\n\'EMAIL_DELIVERY_NOT" +
       "_AVAILABLE_IN_COUNTRY\020Y\022\'\n#AUTO_REPLY_NO" +
-      "T_AVAILABLE_IN_COUNTRY\020ZB\367\001\n\"com.google." +
-      "ads.googleads.v1.errorsB\034FeedItemValidat" +
-      "ionErrorProtoP\001ZDgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v1/errors;e" +
-      "rrors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1.Er" +
-      "rors\312\002\036Google\\Ads\\GoogleAds\\V1\\Errors\352\002\"" +
-      "Google::Ads::GoogleAds::V1::Errorsb\006prot" +
-      "o3"
+      "T_AVAILABLE_IN_COUNTRY\020Z\022\032\n\026INVALID_LATI" +
+      "TUDE_VALUE\020[\022\033\n\027INVALID_LONGITUDE_VALUE\020" +
+      "\\\022\023\n\017TOO_MANY_LABELS\020]\022\025\n\021INVALID_IMAGE_" +
+      "URL\020^\022\032\n\026MISSING_LATITUDE_VALUE\020_\022\033\n\027MIS" +
+      "SING_LONGITUDE_VALUE\020`B\367\001\n\"com.google.ad" +
+      "s.googleads.v1.errorsB\034FeedItemValidatio" +
+      "nErrorProtoP\001ZDgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v1/errors;err" +
+      "ors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1.Erro" +
+      "rs\312\002\036Google\\Ads\\GoogleAds\\V1\\Errors\352\002\"Go" +
+      "ogle::Ads::GoogleAds::V1::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

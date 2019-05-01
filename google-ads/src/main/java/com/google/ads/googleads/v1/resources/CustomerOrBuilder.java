@@ -365,4 +365,51 @@ public interface CustomerOrBuilder extends
    * <code>.google.ads.googleads.v1.resources.RemarketingSetting remarketing_setting = 15;</code>
    */
   com.google.ads.googleads.v1.resources.RemarketingSettingOrBuilder getRemarketingSettingOrBuilder();
+
+  /**
+   * <pre>
+   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * the list is empty, the customer is eligible. This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   */
+  java.util.List<com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> getPayPerConversionEligibilityFailureReasonsList();
+  /**
+   * <pre>
+   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * the list is empty, the customer is eligible. This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   */
+  int getPayPerConversionEligibilityFailureReasonsCount();
+  /**
+   * <pre>
+   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * the list is empty, the customer is eligible. This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   */
+  com.google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason getPayPerConversionEligibilityFailureReasons(int index);
+  /**
+   * <pre>
+   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * the list is empty, the customer is eligible. This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   */
+  java.util.List<java.lang.Integer>
+  getPayPerConversionEligibilityFailureReasonsValueList();
+  /**
+   * <pre>
+   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * the list is empty, the customer is eligible. This field is read-only.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v1.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   */
+  int getPayPerConversionEligibilityFailureReasonsValue(int index);
 }

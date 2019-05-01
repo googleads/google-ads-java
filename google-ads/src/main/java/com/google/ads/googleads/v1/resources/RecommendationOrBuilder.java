@@ -432,6 +432,81 @@ public interface RecommendationOrBuilder extends
 
   /**
    * <pre>
+   * The Callout extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.CalloutExtensionRecommendation callout_extension_recommendation = 17;</code>
+   */
+  boolean hasCalloutExtensionRecommendation();
+  /**
+   * <pre>
+   * The Callout extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.CalloutExtensionRecommendation callout_extension_recommendation = 17;</code>
+   */
+  com.google.ads.googleads.v1.resources.Recommendation.CalloutExtensionRecommendation getCalloutExtensionRecommendation();
+  /**
+   * <pre>
+   * The Callout extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.CalloutExtensionRecommendation callout_extension_recommendation = 17;</code>
+   */
+  com.google.ads.googleads.v1.resources.Recommendation.CalloutExtensionRecommendationOrBuilder getCalloutExtensionRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * The Sitelink extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18;</code>
+   */
+  boolean hasSitelinkExtensionRecommendation();
+  /**
+   * <pre>
+   * The Sitelink extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18;</code>
+   */
+  com.google.ads.googleads.v1.resources.Recommendation.SitelinkExtensionRecommendation getSitelinkExtensionRecommendation();
+  /**
+   * <pre>
+   * The Sitelink extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18;</code>
+   */
+  com.google.ads.googleads.v1.resources.Recommendation.SitelinkExtensionRecommendationOrBuilder getSitelinkExtensionRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * The Call extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.CallExtensionRecommendation call_extension_recommendation = 19;</code>
+   */
+  boolean hasCallExtensionRecommendation();
+  /**
+   * <pre>
+   * The Call extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.CallExtensionRecommendation call_extension_recommendation = 19;</code>
+   */
+  com.google.ads.googleads.v1.resources.Recommendation.CallExtensionRecommendation getCallExtensionRecommendation();
+  /**
+   * <pre>
+   * The Call extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.Recommendation.CallExtensionRecommendation call_extension_recommendation = 19;</code>
+   */
+  com.google.ads.googleads.v1.resources.Recommendation.CallExtensionRecommendationOrBuilder getCallExtensionRecommendationOrBuilder();
+
+  /**
+   * <pre>
    * The keyword match type recommendation.
    * </pre>
    *

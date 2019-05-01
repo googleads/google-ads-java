@@ -118,6 +118,14 @@ private static final long serialVersionUID = 0L;
      * <code>CONVERSION_VALUE = 5;</code>
      */
     CONVERSION_VALUE(5),
+    /**
+     * <pre>
+     * Pay per conversion.
+     * </pre>
+     *
+     * <code>CONVERSIONS = 6;</code>
+     */
+    CONVERSIONS(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -153,6 +161,14 @@ private static final long serialVersionUID = 0L;
      * <code>CONVERSION_VALUE = 5;</code>
      */
     public static final int CONVERSION_VALUE_VALUE = 5;
+    /**
+     * <pre>
+     * Pay per conversion.
+     * </pre>
+     *
+     * <code>CONVERSIONS = 6;</code>
+     */
+    public static final int CONVERSIONS_VALUE = 6;
 
 
     public final int getNumber() {
@@ -177,6 +193,7 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 4: return CLICKS;
         case 5: return CONVERSION_VALUE;
+        case 6: return CONVERSIONS;
         default: return null;
       }
     }

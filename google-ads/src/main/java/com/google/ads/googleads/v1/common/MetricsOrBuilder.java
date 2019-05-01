@@ -339,6 +339,71 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The number of times people clicked the “Call” button to call a store during
+   * or after clicking an ad. This number doesn’t include whether or not calls
+   * were connected, or the duration of any calls.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+   */
+  boolean hasAllConversionsFromClickToCall();
+  /**
+   * <pre>
+   * The number of times people clicked the “Call” button to call a store during
+   * or after clicking an ad. This number doesn’t include whether or not calls
+   * were connected, or the duration of any calls.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+   */
+  com.google.protobuf.DoubleValue getAllConversionsFromClickToCall();
+  /**
+   * <pre>
+   * The number of times people clicked the “Call” button to call a store during
+   * or after clicking an ad. This number doesn’t include whether or not calls
+   * were connected, or the duration of any calls.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromClickToCallOrBuilder();
+
+  /**
+   * <pre>
+   * The number of times people clicked a “Get directions” button to navigate to
+   * a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+   */
+  boolean hasAllConversionsFromDirections();
+  /**
+   * <pre>
+   * The number of times people clicked a “Get directions” button to navigate to
+   * a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+   */
+  com.google.protobuf.DoubleValue getAllConversionsFromDirections();
+  /**
+   * <pre>
+   * The number of times people clicked a “Get directions” button to navigate to
+   * a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromDirectionsOrBuilder();
+
+  /**
+   * <pre>
    * The value of all conversions from interactions divided by the total number
    * of interactions.
    * </pre>
@@ -364,6 +429,155 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromInteractionsValuePerInteractionOrBuilder();
+
+  /**
+   * <pre>
+   * The number of times people clicked a link to view a store’s menu after
+   * clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+   */
+  boolean hasAllConversionsFromMenu();
+  /**
+   * <pre>
+   * The number of times people clicked a link to view a store’s menu after
+   * clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+   */
+  com.google.protobuf.DoubleValue getAllConversionsFromMenu();
+  /**
+   * <pre>
+   * The number of times people clicked a link to view a store’s menu after
+   * clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromMenuOrBuilder();
+
+  /**
+   * <pre>
+   * The number of times people placed an order at a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+   */
+  boolean hasAllConversionsFromOrder();
+  /**
+   * <pre>
+   * The number of times people placed an order at a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+   */
+  com.google.protobuf.DoubleValue getAllConversionsFromOrder();
+  /**
+   * <pre>
+   * The number of times people placed an order at a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromOrderOrBuilder();
+
+  /**
+   * <pre>
+   * The number of other conversions (for example, posting a review or saving a
+   * location for a store) that occurred after people clicked an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+   */
+  boolean hasAllConversionsFromOtherEngagement();
+  /**
+   * <pre>
+   * The number of other conversions (for example, posting a review or saving a
+   * location for a store) that occurred after people clicked an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+   */
+  com.google.protobuf.DoubleValue getAllConversionsFromOtherEngagement();
+  /**
+   * <pre>
+   * The number of other conversions (for example, posting a review or saving a
+   * location for a store) that occurred after people clicked an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromOtherEngagementOrBuilder();
+
+  /**
+   * <pre>
+   * Estimated number of times people visited a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+   */
+  boolean hasAllConversionsFromStoreVisit();
+  /**
+   * <pre>
+   * Estimated number of times people visited a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+   */
+  com.google.protobuf.DoubleValue getAllConversionsFromStoreVisit();
+  /**
+   * <pre>
+   * Estimated number of times people visited a store after clicking an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromStoreVisitOrBuilder();
+
+  /**
+   * <pre>
+   * The number of times that people were taken to a store's URL after clicking
+   * an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+   */
+  boolean hasAllConversionsFromStoreWebsite();
+  /**
+   * <pre>
+   * The number of times that people were taken to a store's URL after clicking
+   * an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+   */
+  com.google.protobuf.DoubleValue getAllConversionsFromStoreWebsite();
+  /**
+   * <pre>
+   * The number of times that people were taken to a store's URL after clicking
+   * an ad.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromStoreWebsiteOrBuilder();
 
   /**
    * <pre>
@@ -719,6 +933,102 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.Int64Value clicks = 19;</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getClicksOrBuilder();
+
+  /**
+   * <pre>
+   * The number of times your ad or your site's listing in the unpaid
+   * results was clicked. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+   */
+  boolean hasCombinedClicks();
+  /**
+   * <pre>
+   * The number of times your ad or your site's listing in the unpaid
+   * results was clicked. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+   */
+  com.google.protobuf.Int64Value getCombinedClicks();
+  /**
+   * <pre>
+   * The number of times your ad or your site's listing in the unpaid
+   * results was clicked. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getCombinedClicksOrBuilder();
+
+  /**
+   * <pre>
+   * The number of times your ad or your site's listing in the unpaid
+   * results was clicked (combined_clicks) divided by combined_queries. See the
+   * help page at https://support.google.com/google-ads/answer/3097241 for
+   * details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+   */
+  boolean hasCombinedClicksPerQuery();
+  /**
+   * <pre>
+   * The number of times your ad or your site's listing in the unpaid
+   * results was clicked (combined_clicks) divided by combined_queries. See the
+   * help page at https://support.google.com/google-ads/answer/3097241 for
+   * details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+   */
+  com.google.protobuf.DoubleValue getCombinedClicksPerQuery();
+  /**
+   * <pre>
+   * The number of times your ad or your site's listing in the unpaid
+   * results was clicked (combined_clicks) divided by combined_queries. See the
+   * help page at https://support.google.com/google-ads/answer/3097241 for
+   * details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getCombinedClicksPerQueryOrBuilder();
+
+  /**
+   * <pre>
+   * The number of searches that returned pages from your site in the unpaid
+   * results or showed one of your text ads. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+   */
+  boolean hasCombinedQueries();
+  /**
+   * <pre>
+   * The number of searches that returned pages from your site in the unpaid
+   * results or showed one of your text ads. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+   */
+  com.google.protobuf.Int64Value getCombinedQueries();
+  /**
+   * <pre>
+   * The number of searches that returned pages from your site in the unpaid
+   * results or showed one of your text ads. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getCombinedQueriesOrBuilder();
 
   /**
    * <pre>
@@ -1642,6 +1952,34 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The number of times a store's location-based ad was shown.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+   */
+  boolean hasImpressionsFromStoreReach();
+  /**
+   * <pre>
+   * The number of times a store's location-based ad was shown.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+   */
+  com.google.protobuf.Int64Value getImpressionsFromStoreReach();
+  /**
+   * <pre>
+   * The number of times a store's location-based ad was shown.
+   * This metric applies to feed items only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getImpressionsFromStoreReachOrBuilder();
+
+  /**
+   * <pre>
    * Count of how often your ad has appeared on a search results page or
    * website on the Google Network.
    * </pre>
@@ -1824,6 +2162,192 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.Int64Value invalid_clicks = 41;</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getInvalidClicksOrBuilder();
+
+  /**
+   * <pre>
+   * The percentage of mobile clicks that go to a mobile-friendly page.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+   */
+  boolean hasMobileFriendlyClicksPercentage();
+  /**
+   * <pre>
+   * The percentage of mobile clicks that go to a mobile-friendly page.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+   */
+  com.google.protobuf.DoubleValue getMobileFriendlyClicksPercentage();
+  /**
+   * <pre>
+   * The percentage of mobile clicks that go to a mobile-friendly page.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getMobileFriendlyClicksPercentageOrBuilder();
+
+  /**
+   * <pre>
+   * The number of times someone clicked your site's listing in the unpaid
+   * results for a particular query. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+   */
+  boolean hasOrganicClicks();
+  /**
+   * <pre>
+   * The number of times someone clicked your site's listing in the unpaid
+   * results for a particular query. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+   */
+  com.google.protobuf.Int64Value getOrganicClicks();
+  /**
+   * <pre>
+   * The number of times someone clicked your site's listing in the unpaid
+   * results for a particular query. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getOrganicClicksOrBuilder();
+
+  /**
+   * <pre>
+   * The number of times someone clicked your site's listing in the unpaid
+   * results (organic_clicks) divided by the total number of searches that
+   * returned pages from your site (organic_queries). See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+   */
+  boolean hasOrganicClicksPerQuery();
+  /**
+   * <pre>
+   * The number of times someone clicked your site's listing in the unpaid
+   * results (organic_clicks) divided by the total number of searches that
+   * returned pages from your site (organic_queries). See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+   */
+  com.google.protobuf.DoubleValue getOrganicClicksPerQuery();
+  /**
+   * <pre>
+   * The number of times someone clicked your site's listing in the unpaid
+   * results (organic_clicks) divided by the total number of searches that
+   * returned pages from your site (organic_queries). See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getOrganicClicksPerQueryOrBuilder();
+
+  /**
+   * <pre>
+   * The number of listings for your site in the unpaid search results. See the
+   * help page at https://support.google.com/google-ads/answer/3097241 for
+   * details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+   */
+  boolean hasOrganicImpressions();
+  /**
+   * <pre>
+   * The number of listings for your site in the unpaid search results. See the
+   * help page at https://support.google.com/google-ads/answer/3097241 for
+   * details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+   */
+  com.google.protobuf.Int64Value getOrganicImpressions();
+  /**
+   * <pre>
+   * The number of listings for your site in the unpaid search results. See the
+   * help page at https://support.google.com/google-ads/answer/3097241 for
+   * details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getOrganicImpressionsOrBuilder();
+
+  /**
+   * <pre>
+   * The number of times a page from your site was listed in the unpaid search
+   * results (organic_impressions) divided by the number of searches returning
+   * your site's listing in the unpaid results (organic_queries). See the help
+   * page at https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+   */
+  boolean hasOrganicImpressionsPerQuery();
+  /**
+   * <pre>
+   * The number of times a page from your site was listed in the unpaid search
+   * results (organic_impressions) divided by the number of searches returning
+   * your site's listing in the unpaid results (organic_queries). See the help
+   * page at https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+   */
+  com.google.protobuf.DoubleValue getOrganicImpressionsPerQuery();
+  /**
+   * <pre>
+   * The number of times a page from your site was listed in the unpaid search
+   * results (organic_impressions) divided by the number of searches returning
+   * your site's listing in the unpaid results (organic_queries). See the help
+   * page at https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getOrganicImpressionsPerQueryOrBuilder();
+
+  /**
+   * <pre>
+   * The total number of searches that returned your site's listing in the
+   * unpaid results. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+   */
+  boolean hasOrganicQueries();
+  /**
+   * <pre>
+   * The total number of searches that returned your site's listing in the
+   * unpaid results. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+   */
+  com.google.protobuf.Int64Value getOrganicQueries();
+  /**
+   * <pre>
+   * The total number of searches that returned your site's listing in the
+   * unpaid results. See the help page at
+   * https://support.google.com/google-ads/answer/3097241 for details.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getOrganicQueriesOrBuilder();
 
   /**
    * <pre>
@@ -2347,6 +2871,34 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * A measure of how quickly your page loads after clicks on your mobile ads.
+   * The score is a range from 1 to 10, 10 being the fastest.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+   */
+  boolean hasSpeedScore();
+  /**
+   * <pre>
+   * A measure of how quickly your page loads after clicks on your mobile ads.
+   * The score is a range from 1 to 10, 10 being the fastest.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+   */
+  com.google.protobuf.Int64Value getSpeedScore();
+  /**
+   * <pre>
+   * A measure of how quickly your page loads after clicks on your mobile ads.
+   * The score is a range from 1 to 10, 10 being the fastest.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getSpeedScoreOrBuilder();
+
+  /**
+   * <pre>
    * The percent of your ad impressions that are shown anywhere above the
    * organic search results.
    * </pre>
@@ -2372,6 +2924,34 @@ public interface MetricsOrBuilder extends
    * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getTopImpressionPercentageOrBuilder();
+
+  /**
+   * <pre>
+   * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+   * that reach a valid AMP page.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+   */
+  boolean hasValidAcceleratedMobilePagesClicksPercentage();
+  /**
+   * <pre>
+   * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+   * that reach a valid AMP page.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+   */
+  com.google.protobuf.DoubleValue getValidAcceleratedMobilePagesClicksPercentage();
+  /**
+   * <pre>
+   * The percentage of ad clicks to Accelerated Mobile Pages (AMP) landing pages
+   * that reach a valid AMP page.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getValidAcceleratedMobilePagesClicksPercentageOrBuilder();
 
   /**
    * <pre>

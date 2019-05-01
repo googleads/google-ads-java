@@ -42,13 +42,13 @@ public final class DetailPlacementViewProto {
       "\030\005 \001(\0132\034.google.protobuf.StringValue\022V\n\016" +
       "placement_type\030\006 \001(\0162>.google.ads.google" +
       "ads.v1.enums.PlacementTypeEnum.Placement" +
-      "TypeB\204\002\n%com.google.ads.googleads.v1.res" +
+      "TypeB\205\002\n%com.google.ads.googleads.v1.res" +
       "ourcesB\030DetailPlacementViewProtoP\001ZJgoog" +
       "le.golang.org/genproto/googleapis/ads/go" +
       "ogleads/v1/resources;resources\242\002\003GAA\252\002!G" +
       "oogle.Ads.GoogleAds.V1.Resources\312\002!Googl" +
-      "e\\Ads\\GoogleAds\\V1\\Resources\352\002$Google::A" +
-      "ds::GoogleAds::V1::Servicesb\006proto3"
+      "e\\Ads\\GoogleAds\\V1\\Resources\352\002%Google::A" +
+      "ds::GoogleAds::V1::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

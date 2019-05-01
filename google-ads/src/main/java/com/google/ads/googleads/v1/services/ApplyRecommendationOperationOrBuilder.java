@@ -133,6 +133,81 @@ public interface ApplyRecommendationOperationOrBuilder extends
 
   /**
    * <pre>
+   * Parameters to use when applying callout extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.CalloutExtensionParameters callout_extension = 6;</code>
+   */
+  boolean hasCalloutExtension();
+  /**
+   * <pre>
+   * Parameters to use when applying callout extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.CalloutExtensionParameters callout_extension = 6;</code>
+   */
+  com.google.ads.googleads.v1.services.ApplyRecommendationOperation.CalloutExtensionParameters getCalloutExtension();
+  /**
+   * <pre>
+   * Parameters to use when applying callout extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.CalloutExtensionParameters callout_extension = 6;</code>
+   */
+  com.google.ads.googleads.v1.services.ApplyRecommendationOperation.CalloutExtensionParametersOrBuilder getCalloutExtensionOrBuilder();
+
+  /**
+   * <pre>
+   * Parameters to use when applying call extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.CallExtensionParameters call_extension = 7;</code>
+   */
+  boolean hasCallExtension();
+  /**
+   * <pre>
+   * Parameters to use when applying call extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.CallExtensionParameters call_extension = 7;</code>
+   */
+  com.google.ads.googleads.v1.services.ApplyRecommendationOperation.CallExtensionParameters getCallExtension();
+  /**
+   * <pre>
+   * Parameters to use when applying call extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.CallExtensionParameters call_extension = 7;</code>
+   */
+  com.google.ads.googleads.v1.services.ApplyRecommendationOperation.CallExtensionParametersOrBuilder getCallExtensionOrBuilder();
+
+  /**
+   * <pre>
+   * Parameters to use when applying call extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
+   */
+  boolean hasSitelinkExtension();
+  /**
+   * <pre>
+   * Parameters to use when applying call extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
+   */
+  com.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters getSitelinkExtension();
+  /**
+   * <pre>
+   * Parameters to use when applying call extension recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
+   */
+  com.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParametersOrBuilder getSitelinkExtensionOrBuilder();
+
+  /**
+   * <pre>
    * Parameters to use when applying move unused budget recommendation.
    * </pre>
    *

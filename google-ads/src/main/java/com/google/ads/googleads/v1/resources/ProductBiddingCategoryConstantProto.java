@@ -49,14 +49,14 @@ public final class ProductBiddingCategoryConstantProto {
       "atusEnum.ProductBiddingCategoryStatus\0223\n" +
       "\rlanguage_code\030\007 \001(\0132\034.google.protobuf.S" +
       "tringValue\0224\n\016localized_name\030\010 \001(\0132\034.goo" +
-      "gle.protobuf.StringValueB\214\002\n%com.google." +
+      "gle.protobuf.StringValueB\220\002\n%com.google." +
       "ads.googleads.v1.resourcesB#ProductBiddi" +
       "ngCategoryConstantProtoP\001ZJgoogle.golang" +
       ".org/genproto/googleapis/ads/googleads/v" +
       "1/resources;resources\242\002\003GAA\252\002!Google.Ads" +
       ".GoogleAds.V1.Resources\312\002!Google\\Ads\\Goo" +
-      "gleAds\\V1\\Resources\352\002!Google::Ads::Googl" +
-      "eAds::V1::Enumsb\006proto3"
+      "gleAds\\V1\\Resources\352\002%Google::Ads::Googl" +
+      "eAds::V1::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

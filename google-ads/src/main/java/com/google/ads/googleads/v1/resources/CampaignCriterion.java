@@ -462,6 +462,20 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 33;
             break;
           }
+          case 274: {
+            com.google.ads.googleads.v1.common.LocationGroupInfo.Builder subBuilder = null;
+            if (criterionCase_ == 34) {
+              subBuilder = ((com.google.ads.googleads.v1.common.LocationGroupInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v1.common.LocationGroupInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.LocationGroupInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 34;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -523,6 +537,7 @@ private static final long serialVersionUID = 0L;
     WEBPAGE(31),
     OPERATING_SYSTEM_VERSION(32),
     MOBILE_DEVICE(33),
+    LOCATION_GROUP(34),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -563,6 +578,7 @@ private static final long serialVersionUID = 0L;
         case 31: return WEBPAGE;
         case 32: return OPERATING_SYSTEM_VERSION;
         case 33: return MOBILE_DEVICE;
+        case 34: return LOCATION_GROUP;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -1740,6 +1756,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.common.MobileDeviceInfo.getDefaultInstance();
   }
 
+  public static final int LOCATION_GROUP_FIELD_NUMBER = 34;
+  /**
+   * <pre>
+   * Location Group
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+   */
+  public boolean hasLocationGroup() {
+    return criterionCase_ == 34;
+  }
+  /**
+   * <pre>
+   * Location Group
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+   */
+  public com.google.ads.googleads.v1.common.LocationGroupInfo getLocationGroup() {
+    if (criterionCase_ == 34) {
+       return (com.google.ads.googleads.v1.common.LocationGroupInfo) criterion_;
+    }
+    return com.google.ads.googleads.v1.common.LocationGroupInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Location Group
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+   */
+  public com.google.ads.googleads.v1.common.LocationGroupInfoOrBuilder getLocationGroupOrBuilder() {
+    if (criterionCase_ == 34) {
+       return (com.google.ads.googleads.v1.common.LocationGroupInfo) criterion_;
+    }
+    return com.google.ads.googleads.v1.common.LocationGroupInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1846,6 +1900,9 @@ private static final long serialVersionUID = 0L;
     }
     if (criterionCase_ == 33) {
       output.writeMessage(33, (com.google.ads.googleads.v1.common.MobileDeviceInfo) criterion_);
+    }
+    if (criterionCase_ == 34) {
+      output.writeMessage(34, (com.google.ads.googleads.v1.common.LocationGroupInfo) criterion_);
     }
     unknownFields.writeTo(output);
   }
@@ -1978,6 +2035,10 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 33) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(33, (com.google.ads.googleads.v1.common.MobileDeviceInfo) criterion_);
+    }
+    if (criterionCase_ == 34) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(34, (com.google.ads.googleads.v1.common.LocationGroupInfo) criterion_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2122,6 +2183,10 @@ private static final long serialVersionUID = 0L;
         result = result && getMobileDevice()
             .equals(other.getMobileDevice());
         break;
+      case 34:
+        result = result && getLocationGroup()
+            .equals(other.getLocationGroup());
+        break;
       case 0:
       default:
     }
@@ -2256,6 +2321,10 @@ private static final long serialVersionUID = 0L;
       case 33:
         hash = (37 * hash) + MOBILE_DEVICE_FIELD_NUMBER;
         hash = (53 * hash) + getMobileDevice().hashCode();
+        break;
+      case 34:
+        hash = (37 * hash) + LOCATION_GROUP_FIELD_NUMBER;
+        hash = (53 * hash) + getLocationGroup().hashCode();
         break;
       case 0:
       default:
@@ -2650,6 +2719,13 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = mobileDeviceBuilder_.build();
         }
       }
+      if (criterionCase_ == 34) {
+        if (locationGroupBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = locationGroupBuilder_.build();
+        }
+      }
       result.criterionCase_ = criterionCase_;
       onBuilt();
       return result;
@@ -2817,6 +2893,10 @@ private static final long serialVersionUID = 0L;
         }
         case MOBILE_DEVICE: {
           mergeMobileDevice(other.getMobileDevice());
+          break;
+        }
+        case LOCATION_GROUP: {
+          mergeLocationGroup(other.getLocationGroup());
           break;
         }
         case CRITERION_NOT_SET: {
@@ -7968,6 +8048,178 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 33;
       onChanged();;
       return mobileDeviceBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.LocationGroupInfo, com.google.ads.googleads.v1.common.LocationGroupInfo.Builder, com.google.ads.googleads.v1.common.LocationGroupInfoOrBuilder> locationGroupBuilder_;
+    /**
+     * <pre>
+     * Location Group
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+     */
+    public boolean hasLocationGroup() {
+      return criterionCase_ == 34;
+    }
+    /**
+     * <pre>
+     * Location Group
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+     */
+    public com.google.ads.googleads.v1.common.LocationGroupInfo getLocationGroup() {
+      if (locationGroupBuilder_ == null) {
+        if (criterionCase_ == 34) {
+          return (com.google.ads.googleads.v1.common.LocationGroupInfo) criterion_;
+        }
+        return com.google.ads.googleads.v1.common.LocationGroupInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 34) {
+          return locationGroupBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.LocationGroupInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Location Group
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+     */
+    public Builder setLocationGroup(com.google.ads.googleads.v1.common.LocationGroupInfo value) {
+      if (locationGroupBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        locationGroupBuilder_.setMessage(value);
+      }
+      criterionCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Location Group
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+     */
+    public Builder setLocationGroup(
+        com.google.ads.googleads.v1.common.LocationGroupInfo.Builder builderForValue) {
+      if (locationGroupBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        locationGroupBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Location Group
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+     */
+    public Builder mergeLocationGroup(com.google.ads.googleads.v1.common.LocationGroupInfo value) {
+      if (locationGroupBuilder_ == null) {
+        if (criterionCase_ == 34 &&
+            criterion_ != com.google.ads.googleads.v1.common.LocationGroupInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v1.common.LocationGroupInfo.newBuilder((com.google.ads.googleads.v1.common.LocationGroupInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 34) {
+          locationGroupBuilder_.mergeFrom(value);
+        }
+        locationGroupBuilder_.setMessage(value);
+      }
+      criterionCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Location Group
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+     */
+    public Builder clearLocationGroup() {
+      if (locationGroupBuilder_ == null) {
+        if (criterionCase_ == 34) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 34) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        locationGroupBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Location Group
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+     */
+    public com.google.ads.googleads.v1.common.LocationGroupInfo.Builder getLocationGroupBuilder() {
+      return getLocationGroupFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Location Group
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+     */
+    public com.google.ads.googleads.v1.common.LocationGroupInfoOrBuilder getLocationGroupOrBuilder() {
+      if ((criterionCase_ == 34) && (locationGroupBuilder_ != null)) {
+        return locationGroupBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 34) {
+          return (com.google.ads.googleads.v1.common.LocationGroupInfo) criterion_;
+        }
+        return com.google.ads.googleads.v1.common.LocationGroupInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Location Group
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.LocationGroupInfo location_group = 34;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.LocationGroupInfo, com.google.ads.googleads.v1.common.LocationGroupInfo.Builder, com.google.ads.googleads.v1.common.LocationGroupInfoOrBuilder> 
+        getLocationGroupFieldBuilder() {
+      if (locationGroupBuilder_ == null) {
+        if (!(criterionCase_ == 34)) {
+          criterion_ = com.google.ads.googleads.v1.common.LocationGroupInfo.getDefaultInstance();
+        }
+        locationGroupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.LocationGroupInfo, com.google.ads.googleads.v1.common.LocationGroupInfo.Builder, com.google.ads.googleads.v1.common.LocationGroupInfoOrBuilder>(
+                (com.google.ads.googleads.v1.common.LocationGroupInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 34;
+      onChanged();;
+      return locationGroupBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

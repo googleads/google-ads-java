@@ -129,6 +129,20 @@ private static final long serialVersionUID = 0L;
             assetDataCase_ = 7;
             break;
           }
+          case 66: {
+            com.google.ads.googleads.v1.common.TextAsset.Builder subBuilder = null;
+            if (assetDataCase_ == 8) {
+              subBuilder = ((com.google.ads.googleads.v1.common.TextAsset) assetData_).toBuilder();
+            }
+            assetData_ =
+                input.readMessage(com.google.ads.googleads.v1.common.TextAsset.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.TextAsset) assetData_);
+              assetData_ = subBuilder.buildPartial();
+            }
+            assetDataCase_ = 8;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -168,6 +182,7 @@ private static final long serialVersionUID = 0L;
     YOUTUBE_VIDEO_ASSET(5),
     MEDIA_BUNDLE_ASSET(6),
     IMAGE_ASSET(7),
+    TEXT_ASSET(8),
     ASSETDATA_NOT_SET(0);
     private final int value;
     private AssetDataCase(int value) {
@@ -186,6 +201,7 @@ private static final long serialVersionUID = 0L;
         case 5: return YOUTUBE_VIDEO_ASSET;
         case 6: return MEDIA_BUNDLE_ASSET;
         case 7: return IMAGE_ASSET;
+        case 8: return TEXT_ASSET;
         case 0: return ASSETDATA_NOT_SET;
         default: return null;
       }
@@ -452,6 +468,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.common.ImageAsset.getDefaultInstance();
   }
 
+  public static final int TEXT_ASSET_FIELD_NUMBER = 8;
+  /**
+   * <pre>
+   * A text asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+   */
+  public boolean hasTextAsset() {
+    return assetDataCase_ == 8;
+  }
+  /**
+   * <pre>
+   * A text asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+   */
+  public com.google.ads.googleads.v1.common.TextAsset getTextAsset() {
+    if (assetDataCase_ == 8) {
+       return (com.google.ads.googleads.v1.common.TextAsset) assetData_;
+    }
+    return com.google.ads.googleads.v1.common.TextAsset.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A text asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+   */
+  public com.google.ads.googleads.v1.common.TextAssetOrBuilder getTextAssetOrBuilder() {
+    if (assetDataCase_ == 8) {
+       return (com.google.ads.googleads.v1.common.TextAsset) assetData_;
+    }
+    return com.google.ads.googleads.v1.common.TextAsset.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -486,6 +540,9 @@ private static final long serialVersionUID = 0L;
     }
     if (assetDataCase_ == 7) {
       output.writeMessage(7, (com.google.ads.googleads.v1.common.ImageAsset) assetData_);
+    }
+    if (assetDataCase_ == 8) {
+      output.writeMessage(8, (com.google.ads.googleads.v1.common.TextAsset) assetData_);
     }
     unknownFields.writeTo(output);
   }
@@ -522,6 +579,10 @@ private static final long serialVersionUID = 0L;
     if (assetDataCase_ == 7) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, (com.google.ads.googleads.v1.common.ImageAsset) assetData_);
+    }
+    if (assetDataCase_ == 8) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, (com.google.ads.googleads.v1.common.TextAsset) assetData_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -568,6 +629,10 @@ private static final long serialVersionUID = 0L;
         result = result && getImageAsset()
             .equals(other.getImageAsset());
         break;
+      case 8:
+        result = result && getTextAsset()
+            .equals(other.getTextAsset());
+        break;
       case 0:
       default:
     }
@@ -606,6 +671,10 @@ private static final long serialVersionUID = 0L;
       case 7:
         hash = (37 * hash) + IMAGE_ASSET_FIELD_NUMBER;
         hash = (53 * hash) + getImageAsset().hashCode();
+        break;
+      case 8:
+        hash = (37 * hash) + TEXT_ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getTextAsset().hashCode();
         break;
       case 0:
       default:
@@ -825,6 +894,13 @@ private static final long serialVersionUID = 0L;
           result.assetData_ = imageAssetBuilder_.build();
         }
       }
+      if (assetDataCase_ == 8) {
+        if (textAssetBuilder_ == null) {
+          result.assetData_ = assetData_;
+        } else {
+          result.assetData_ = textAssetBuilder_.build();
+        }
+      }
       result.assetDataCase_ = assetDataCase_;
       onBuilt();
       return result;
@@ -898,6 +974,10 @@ private static final long serialVersionUID = 0L;
         }
         case IMAGE_ASSET: {
           mergeImageAsset(other.getImageAsset());
+          break;
+        }
+        case TEXT_ASSET: {
+          mergeTextAsset(other.getTextAsset());
           break;
         }
         case ASSETDATA_NOT_SET: {
@@ -1932,6 +2012,178 @@ private static final long serialVersionUID = 0L;
       assetDataCase_ = 7;
       onChanged();;
       return imageAssetBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.TextAsset, com.google.ads.googleads.v1.common.TextAsset.Builder, com.google.ads.googleads.v1.common.TextAssetOrBuilder> textAssetBuilder_;
+    /**
+     * <pre>
+     * A text asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+     */
+    public boolean hasTextAsset() {
+      return assetDataCase_ == 8;
+    }
+    /**
+     * <pre>
+     * A text asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+     */
+    public com.google.ads.googleads.v1.common.TextAsset getTextAsset() {
+      if (textAssetBuilder_ == null) {
+        if (assetDataCase_ == 8) {
+          return (com.google.ads.googleads.v1.common.TextAsset) assetData_;
+        }
+        return com.google.ads.googleads.v1.common.TextAsset.getDefaultInstance();
+      } else {
+        if (assetDataCase_ == 8) {
+          return textAssetBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.TextAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A text asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+     */
+    public Builder setTextAsset(com.google.ads.googleads.v1.common.TextAsset value) {
+      if (textAssetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        assetData_ = value;
+        onChanged();
+      } else {
+        textAssetBuilder_.setMessage(value);
+      }
+      assetDataCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * A text asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+     */
+    public Builder setTextAsset(
+        com.google.ads.googleads.v1.common.TextAsset.Builder builderForValue) {
+      if (textAssetBuilder_ == null) {
+        assetData_ = builderForValue.build();
+        onChanged();
+      } else {
+        textAssetBuilder_.setMessage(builderForValue.build());
+      }
+      assetDataCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * A text asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+     */
+    public Builder mergeTextAsset(com.google.ads.googleads.v1.common.TextAsset value) {
+      if (textAssetBuilder_ == null) {
+        if (assetDataCase_ == 8 &&
+            assetData_ != com.google.ads.googleads.v1.common.TextAsset.getDefaultInstance()) {
+          assetData_ = com.google.ads.googleads.v1.common.TextAsset.newBuilder((com.google.ads.googleads.v1.common.TextAsset) assetData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          assetData_ = value;
+        }
+        onChanged();
+      } else {
+        if (assetDataCase_ == 8) {
+          textAssetBuilder_.mergeFrom(value);
+        }
+        textAssetBuilder_.setMessage(value);
+      }
+      assetDataCase_ = 8;
+      return this;
+    }
+    /**
+     * <pre>
+     * A text asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+     */
+    public Builder clearTextAsset() {
+      if (textAssetBuilder_ == null) {
+        if (assetDataCase_ == 8) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+          onChanged();
+        }
+      } else {
+        if (assetDataCase_ == 8) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+        }
+        textAssetBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A text asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+     */
+    public com.google.ads.googleads.v1.common.TextAsset.Builder getTextAssetBuilder() {
+      return getTextAssetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A text asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+     */
+    public com.google.ads.googleads.v1.common.TextAssetOrBuilder getTextAssetOrBuilder() {
+      if ((assetDataCase_ == 8) && (textAssetBuilder_ != null)) {
+        return textAssetBuilder_.getMessageOrBuilder();
+      } else {
+        if (assetDataCase_ == 8) {
+          return (com.google.ads.googleads.v1.common.TextAsset) assetData_;
+        }
+        return com.google.ads.googleads.v1.common.TextAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A text asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.TextAsset, com.google.ads.googleads.v1.common.TextAsset.Builder, com.google.ads.googleads.v1.common.TextAssetOrBuilder> 
+        getTextAssetFieldBuilder() {
+      if (textAssetBuilder_ == null) {
+        if (!(assetDataCase_ == 8)) {
+          assetData_ = com.google.ads.googleads.v1.common.TextAsset.getDefaultInstance();
+        }
+        textAssetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.TextAsset, com.google.ads.googleads.v1.common.TextAsset.Builder, com.google.ads.googleads.v1.common.TextAssetOrBuilder>(
+                (com.google.ads.googleads.v1.common.TextAsset) assetData_,
+                getParentForChildren(),
+                isClean());
+        assetData_ = null;
+      }
+      assetDataCase_ = 8;
+      onChanged();;
+      return textAssetBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

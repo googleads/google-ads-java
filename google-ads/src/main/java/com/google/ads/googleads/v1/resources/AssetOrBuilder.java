@@ -171,5 +171,30 @@ public interface AssetOrBuilder extends
    */
   com.google.ads.googleads.v1.common.ImageAssetOrBuilder getImageAssetOrBuilder();
 
+  /**
+   * <pre>
+   * A text asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+   */
+  boolean hasTextAsset();
+  /**
+   * <pre>
+   * A text asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+   */
+  com.google.ads.googleads.v1.common.TextAsset getTextAsset();
+  /**
+   * <pre>
+   * A text asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.TextAsset text_asset = 8;</code>
+   */
+  com.google.ads.googleads.v1.common.TextAssetOrBuilder getTextAssetOrBuilder();
+
   public com.google.ads.googleads.v1.resources.Asset.AssetDataCase getAssetDataCase();
 }
