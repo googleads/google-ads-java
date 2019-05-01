@@ -1,4 +1,4 @@
-1.2.0 - 2019-04-30
+2.0.0 - 2019-05-01
 ------------------
 - Added support for Google Ads API v1_2.
 - Removed support for Google Ads API v0.
