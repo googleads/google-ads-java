@@ -211,6 +211,7 @@
 
   <modules>
     <module>google-ads</module>
+    <module>google-ads-shaded</module>
   </modules>
 
   <profiles>
