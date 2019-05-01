@@ -25,7 +25,7 @@ added to include the Google Ads Java library.
     </dependency>
 
 If you encounter dependency resolution issues, swapping `google-ads` for
-`google-ads-shaded` may help.
+`google-ads-shaded` may help resolve issues arising from this library.
 
     <dependency>
       <groupId>com.google.api-ads</groupId>
@@ -34,8 +34,8 @@ If you encounter dependency resolution issues, swapping `google-ads` for
     </dependency>
 
 The [shaded](https://maven.apache.org/plugins/maven-shade-plugin/) version relocates our
-dependencies under `com.google.ads.googleads.shaded` and removes the transitive dependencies. You
-can therefore depend on multiple versions of libraries such as Guava and Protobuf.
+dependencies under `com.google.ads.googleads.shaded` and removes these from the POM. You can
+therefore depend on multiple versions of libraries such as Guava and Protobuf.
 
 ## Getting started
 
