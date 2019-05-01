@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>google-ads-parent</artifactId>
+    <groupId>com.google.api-ads</groupId>
+    <version>1.1.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>google-ads-shaded</artifactId>
+
+  <name>Google Ads API client library for Java - shaded</name>
+
+  <properties>
+    <shadedBase>com.google.ads.googleads.shaded</shadedBase>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.1</version>
+        <executions>
+          <execution>
+            <id>create-shaded-jar</id>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <phase>package</phase>
+            <configuration>
+              <createSourcesJar>true</createSourcesJar>
+              <shadeSourcesContent>true</shadeSourcesContent>
+              <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
+              <createDependencyReducedPom>true</createDependencyReducedPom>
+              <artifactSet>
+                <includes>
+                  <!-- Explicit dependency inclusions are mandatory: do not use wildcards!
+                       Reason is compilation should fail when new dependencies are added.
+                       These should be carefully added to the shaded jar. -->
+                  <include>com.google.api-ads:google-ads</include>
+
+                  <!-- Google Dependencies -->
+                  <include>com.google.api:api-common</include>
+                  <include>com.google.api:gax-grpc</include>
+                  <include>com.google.api:gax</include>
+                  <include>com.google.api.grpc:grpc-google-common-protos</include>
+                  <include>com.google.api.grpc:proto-google-common-protos</include>
+                  <include>com.google.auth:google-auth-library-credentials</include>
+                  <include>com.google.auth:google-auth-library-oauth2-http</include>
+                  <include>com.google.code.findbugs:jsr305</include>
+                  <include>com.google.code.gson:gson</include>
+                  <include>com.google.errorprone:error_prone_annotations
+                  </include>
+                  <include>com.google.guava:guava</include>
+                  <include>com.google.http-client:google-http-client-jackson2</include>
+                  <include>com.google.http-client:google-http-client</include>
+                  <include>com.google.instrumentation:instrumentation-api</include>
+                  <include>com.google.j2objc:j2objc-annotations</include>
+                  <include>com.google.protobuf:protobuf-java</include>
+
+                  <include>io.grpc:grpc-stub</include>
+                  <include>io.grpc:grpc-core</include>
+                  <include>io.grpc:grpc-context</include>
+                  <include>io.grpc:grpc-auth</include>
+                  <include>io.grpc:grpc-protobuf</include>
+                  <include>io.grpc:grpc-protobuf-lite</include>
+                  <include>io.grpc:grpc-stub</include>
+                  <include>io.grpc:grpc-netty-shaded</include>
+                  <include>io.grpc:grpc-netty</include>
+
+                  <!-- Netty dependencies -->
+                  <include>io.netty:netty-buffer</include>
+                  <include>io.netty:netty-codec-http2</include>
+                  <include>io.netty:netty-codec-http</include>
+                  <include>io.netty:netty-codec</include>
+                  <include>io.netty:netty-codec-socks</include>
+                  <include>io.netty:netty-common</include>
+                  <include>io.netty:netty-handler</include>
+                  <include>io.netty:netty-handler-proxy</include>
+                  <include>io.netty:netty-resolver</include>
+                  <include>io.netty:netty-tcnative-boringssl-static</include>
+                  <include>io.netty:netty-transport</include>
+
+                  <!-- All others -->
+                  <include>com.fasterxml.jackson.core:jackson-core</include>
+                  <include>commons-codec:commons-codec</include>
+                  <include>commons-logging:commons-logging</include>
+                  <include>io.opencensus:opencensus-api</include>
+                  <include>io.opencensus:opencensus-contrib-grpc-metrics</include>
+                  <include>org.apache.httpcomponents:httpclient</include>
+                  <include>org.apache.httpcomponents:httpcore</include>
+                  <include>org.codehaus.mojo:animal-sniffer-annotations
+                  </include> <!-- check if this is needed, it's for JDK compat testing -->
+                  <include>org.checkerframework:checker-compat-qual</include>
+                  <include>org.threeten:threetenbp</include>
+                </includes>
+              </artifactSet>
+              <relocations>
+                <!-- Google relocations -->
+                <relocation>
+                  <pattern>com.google.api</pattern>
+                  <shadedPattern>${shadedBase}.api</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.auth</pattern>
+                  <shadedPattern>${shadedBase}.auth</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.cloud</pattern>
+                  <shadedPattern>${shadedBase}.com.google.cloud</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.common</pattern>
+                  <shadedPattern>${shadedBase}.guava</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.errorprone</pattern>
+                  <shadedPattern>${shadedBase}.com.google.errorprone</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.gax</pattern>
+                  <shadedPattern>${shadedBase}.gax</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.gson</pattern>
+                  <shadedPattern>${shadedBase}.gson</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.j2objc</pattern>
+                  <shadedPattern>${shadedBase}.j2objc</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.logging</pattern>
+                  <shadedPattern>${shadedBase}.com.google.logging</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.longrunning</pattern>
+                  <shadedPattern>${shadedBase}.longrunning</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.protobuf</pattern>
+                  <shadedPattern>${shadedBase}.protobuf</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.rpc</pattern>
+                  <shadedPattern>${shadedBase}.com.google.rpc</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.thirdparty</pattern>
+                  <shadedPattern>${shadedBase}.thirdparty</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.type</pattern>
+                  <shadedPattern>${shadedBase}.com.google.type</shadedPattern>
+                </relocation>
+
+                <relocation>
+                  <pattern>io.grpc</pattern>
+                  <shadedPattern>${shadedBase}.io.grpc</shadedPattern>
+                </relocation>
+
+                <!-- Netty relocations -->
+                <relocation>
+                  <pattern>io.netty</pattern>
+                  <shadedPattern>${shadedBase}.io.netty</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>META-INF/native/libnetty</pattern>
+                  <shadedPattern>META-INF/native/libcom_google_ads_googleads_shaded_netty
+                  </shadedPattern>
+                  <!-- Setting rawString to only change the file name, not the content. Also allows
+                       specifying the full path rather than just matching on the filename.
+
+                       For implementation details (undocumented), refer to:
+                         org.apache.maven.plugins.shade.relocation.SimpleRelocator -->
+                  <rawString>true</rawString>
+                  <includes>
+                    <include>META-INF/native/*</include>
+                  </includes>
+                </relocation>
+                <relocation>
+                  <pattern>META-INF/native/netty</pattern>
+                  <shadedPattern>META-INF/native/com_google_ads_googleads_shaded_netty
+                  </shadedPattern>
+                  <rawString>true</rawString>
+                  <includes>
+                    <include>META-INF/native/*</include>
+                  </includes>
+                </relocation>
+
+                <!-- Other relocations -->
+                <relocation>
+                  <pattern>com.fasterxml</pattern>
+                  <shadedPattern>${shadedBase}.fasterxml</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>io.opencensus</pattern>
+                  <shadedPattern>${shadedBase}.opencensus</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>javax.annotation</pattern>
+                  <shadedPattern>${shadedBase}.javax.annotation</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.commons</pattern>
+                  <shadedPattern>${shadedBase}.apache.commons</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.http</pattern>
+                  <shadedPattern>${shadedBase}.apache.http</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.checkerframework</pattern>
+                  <shadedPattern>${shadedBase}.checkerframework</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.codehaus.mojo.animal_sniffer</pattern>
+                  <shadedPattern>${shadedBase}.animal_sniffer</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.threeten</pattern>
+                  <shadedPattern>${shadedBase}.threeten</shadedPattern>
+                </relocation>
+              </relocations>
+              <transformers>
+                <transformer
+                    implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>3.0.0-M3</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+            <configuration>
+              <argLine>-DdependencyReducedPom=${basedir}/dependency-reduced-pom.xml</argLine>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.google.api-ads</groupId>
+      <artifactId>google-ads</artifactId>
+      <version>1.1.1-SNAPSHOT</version>
+      <exclusions>
+        <exclusion>
+          <groupId>io.grpc</groupId>
+          <artifactId>grpc-netty-shaded</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <!-- Exclude grpc-netty-shaded and reshade. Shade plugin duplicates the shadedPattern when
+         pattern is found twice in classname. -->
+    <dependency>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-netty</artifactId>
+      <version>1.16.1</version>
+    </dependency>
+
+    <!-- Test dependencies -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-model</artifactId>
+      <version>3.6.0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
