@@ -71,8 +71,7 @@
                   <include>com.google.auth:google-auth-library-oauth2-http</include>
                   <include>com.google.code.findbugs:jsr305</include>
                   <include>com.google.code.gson:gson</include>
-                  <include>com.google.errorprone:error_prone_annotations
-                  </include>
+                  <include>com.google.errorprone:error_prone_annotations</include>
                   <include>com.google.guava:guava</include>
                   <include>com.google.http-client:google-http-client-jackson2</include>
                   <include>com.google.http-client:google-http-client</include>
@@ -87,7 +86,6 @@
                   <include>io.grpc:grpc-protobuf</include>
                   <include>io.grpc:grpc-protobuf-lite</include>
                   <include>io.grpc:grpc-stub</include>
-                  <include>io.grpc:grpc-netty-shaded</include>
                   <include>io.grpc:grpc-netty</include>
 
                   <!-- Netty dependencies -->
@@ -111,8 +109,7 @@
                   <include>io.opencensus:opencensus-contrib-grpc-metrics</include>
                   <include>org.apache.httpcomponents:httpclient</include>
                   <include>org.apache.httpcomponents:httpcore</include>
-                  <include>org.codehaus.mojo:animal-sniffer-annotations
-                  </include> <!-- check if this is needed, it's for JDK compat testing -->
+                  <include>org.codehaus.mojo:animal-sniffer-annotations</include>
                   <include>org.checkerframework:checker-compat-qual</include>
                   <include>org.threeten:threetenbp</include>
                 </includes>
@@ -175,7 +172,6 @@
                   <pattern>com.google.type</pattern>
                   <shadedPattern>${shadedBase}.com.google.type</shadedPattern>
                 </relocation>
-
                 <relocation>
                   <pattern>io.grpc</pattern>
                   <shadedPattern>${shadedBase}.io.grpc</shadedPattern>
