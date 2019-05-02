@@ -29,7 +29,7 @@ limitations under the License.
   <artifactId>google-ads</artifactId>
   <packaging>jar</packaging>
   <version>4.0.1-SNAPSHOT</version>
-  <name>Google Ads API client library for Java</name>
+  <name>Google Ads API client for Java - core library</name>
   <description>
     Google Ads API client library for Java.
   </description>

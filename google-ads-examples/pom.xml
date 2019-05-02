@@ -27,7 +27,7 @@ limitations under the License.
   <artifactId>google-ads-examples</artifactId>
   <packaging>jar</packaging>
   <version>4.0.1-SNAPSHOT</version>
-  <name>Google Ads API client library for Java examples</name>
+  <name>Google Ads API client for Java - examples</name>
   <description>
     Examples demonstrating the Google Ads API client library for Java.
   </description>

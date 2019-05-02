@@ -27,7 +27,7 @@ limitations under the License.
 
   <artifactId>google-ads-shaded</artifactId>
 
-  <name>Google Ads API client library for Java - shaded</name>
+  <name>Google Ads API client for Java - shaded</name>
 
   <properties>
     <shadedBase>com.google.ads.googleads.shaded</shadedBase>
