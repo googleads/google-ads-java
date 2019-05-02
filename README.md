@@ -37,6 +37,9 @@ The [shaded](https://maven.apache.org/plugins/maven-shade-plugin/) version reloc
 dependencies under `com.google.ads.googleads.shaded` and removes these from the POM. You can
 therefore depend on multiple versions of libraries such as Guava and Protobuf.
 
+Note that if using the shaded version, the imports of common protocol buffers (StringValue etc.)
+will need to be updated to `com.google.ads.googleads.shaded.protobuf.StringValue`.
+
 ## Getting started
 
 1.  Clone this project in the directory of your choice via:
