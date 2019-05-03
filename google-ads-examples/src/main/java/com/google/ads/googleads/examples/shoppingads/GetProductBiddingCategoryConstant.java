@@ -32,9 +32,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * This example fetches the set of valid ProductBiddingCategories.
- */
+/** This example fetches the set of valid ProductBiddingCategories. */
 public class GetProductBiddingCategoryConstant {
 
   private static final int PAGE_SIZE = 1_000;
@@ -58,7 +56,7 @@ public class GetProductBiddingCategoryConstant {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -73,8 +71,8 @@ public class GetProductBiddingCategoryConstant {
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -91,24 +89,25 @@ public class GetProductBiddingCategoryConstant {
   private static void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates the query.
     String query =
-      "SELECT " +
-        "product_bidding_category_constant.localized_name, " +
-        "product_bidding_category_constant.product_bidding_category_constant_parent " +
-      "FROM " +
-        "product_bidding_category_constant " +
-      "WHERE " +
-        "product_bidding_category_constant.country_code IN ('US')";
+        "SELECT "
+            + "product_bidding_category_constant.localized_name, "
+            + "product_bidding_category_constant.product_bidding_category_constant_parent "
+            + "FROM "
+            + "product_bidding_category_constant "
+            + "WHERE "
+            + "product_bidding_category_constant.country_code IN ('US')";
 
     // Creates the request.
-    SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
-      .setPageSize(PAGE_SIZE)
-      .setCustomerId(Long.toString(customerId))
-      .setQuery(query)
-      .build();
+    SearchGoogleAdsRequest request =
+        SearchGoogleAdsRequest.newBuilder()
+            .setPageSize(PAGE_SIZE)
+            .setCustomerId(Long.toString(customerId))
+            .setQuery(query)
+            .build();
 
     // Creates the Google Ads Service Client.
     try (GoogleAdsServiceClient googleAdsServiceClient =
-           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
 
       // Creates a list of top level category nodes.
       List<CategoryNode> rootCategories = new ArrayList<>();
@@ -119,7 +118,7 @@ public class GetProductBiddingCategoryConstant {
       SearchPagedResponse response = googleAdsServiceClient.search(request);
       for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
         ProductBiddingCategoryConstant productBiddingCategory =
-          googleAdsRow.getProductBiddingCategoryConstant();
+            googleAdsRow.getProductBiddingCategoryConstant();
 
         String name = productBiddingCategory.getLocalizedName().getValue();
         String resourceName = productBiddingCategory.getResourceName();
@@ -135,7 +134,7 @@ public class GetProductBiddingCategoryConstant {
 
         if (productBiddingCategory.hasProductBiddingCategoryConstantParent()) {
           String parentResourceName =
-            productBiddingCategory.getProductBiddingCategoryConstantParent().getValue();
+              productBiddingCategory.getProductBiddingCategoryConstantParent().getValue();
           CategoryNode parentNode = biddingCategories.get(parentResourceName);
           if (parentNode == null) {
             parentNode = new CategoryNode(parentResourceName);
@@ -163,9 +162,7 @@ public class GetProductBiddingCategoryConstant {
     }
   }
 
-  /**
-   * Node that tracks a product bidding category's id, name, and child nodes.
-   */
+  /** Node that tracks a product bidding category's id, name, and child nodes. */
   private static class CategoryNode {
     final String resourceName;
     String name;
