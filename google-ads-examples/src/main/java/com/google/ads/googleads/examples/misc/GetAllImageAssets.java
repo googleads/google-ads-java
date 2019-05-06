@@ -23,13 +23,10 @@ import com.google.ads.googleads.v1.services.GoogleAdsRow;
 import com.google.ads.googleads.v1.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v1.services.SearchGoogleAdsRequest;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- * This code example gets all image assets.
- */
+/** This code example gets all image assets. */
 public class GetAllImageAssets {
 
   private static final int PAGE_SIZE = 1_000;
@@ -53,7 +50,7 @@ public class GetAllImageAssets {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -68,8 +65,8 @@ public class GetAllImageAssets {
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -87,27 +84,28 @@ public class GetAllImageAssets {
   private static void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates the search query.
     String searchQuery =
-      "SELECT " +
-        "asset.name, " +
-        "asset.image_asset.file_size, " +
-        "asset.image_asset.full_size.width_pixels, " +
-        "asset.image_asset.full_size.height_pixels, " +
-        "asset.image_asset.full_size.url " +
-      "FROM " +
-        "asset " +
-      "WHERE " +
-        "asset.type = 'IMAGE'";
+        "SELECT "
+            + "asset.name, "
+            + "asset.image_asset.file_size, "
+            + "asset.image_asset.full_size.width_pixels, "
+            + "asset.image_asset.full_size.height_pixels, "
+            + "asset.image_asset.full_size.url "
+            + "FROM "
+            + "asset "
+            + "WHERE "
+            + "asset.type = 'IMAGE'";
 
     // Creates the request.
-    SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
-      .setCustomerId(Long.toString(customerId))
-      .setPageSize(PAGE_SIZE)
-      .setQuery(searchQuery)
-      .build();
+    SearchGoogleAdsRequest request =
+        SearchGoogleAdsRequest.newBuilder()
+            .setCustomerId(Long.toString(customerId))
+            .setPageSize(PAGE_SIZE)
+            .setQuery(searchQuery)
+            .build();
 
     // Creates the Google Ads Service Client.
     try (GoogleAdsServiceClient googleAdsServiceClient =
-           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Issues the search request.
       SearchPagedResponse response = googleAdsServiceClient.search(request);
 
@@ -120,14 +118,13 @@ public class GetAllImageAssets {
       for (GoogleAdsRow row : response.iterateAll()) {
         // Displays the results.
         System.out.printf(
-          "Image with name '%s', file size %d bytes, width %dpx, height %dpx, and url '%s' " +
-            "found.%n",
-          row.getAsset().getName().getValue(),
-          row.getAsset().getImageAsset().getFileSize().getValue(),
-          row.getAsset().getImageAsset().getFullSize().getWidthPixels().getValue(),
-          row.getAsset().getImageAsset().getFullSize().getHeightPixels().getValue(),
-          row.getAsset().getImageAsset().getFullSize().getUrl().getValue()
-        );
+            "Image with name '%s', file size %d bytes, width %dpx, height %dpx, and url '%s' "
+                + "found.%n",
+            row.getAsset().getName().getValue(),
+            row.getAsset().getImageAsset().getFileSize().getValue(),
+            row.getAsset().getImageAsset().getFullSize().getWidthPixels().getValue(),
+            row.getAsset().getImageAsset().getFullSize().getHeightPixels().getValue(),
+            row.getAsset().getImageAsset().getFullSize().getUrl().getValue());
       }
     }
   }
