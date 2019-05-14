@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.examples.shoppingads;
 
-import qcom.beust.jcommander.Parameter;
+import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
