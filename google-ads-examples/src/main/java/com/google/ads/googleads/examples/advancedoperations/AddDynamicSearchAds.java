@@ -61,7 +61,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import org.joda.time.DateTime;
 
-/** This example adds a new dynamic search ad (DSA) and webpage targeting criteria for the DSA. */
+/** Adds a new dynamic search ad (DSA) and webpage targeting criteria for the DSA. */
 public class AddDynamicSearchAds {
   private static class AddDynamicSearchAdsParams extends CodeSampleParams {
 
