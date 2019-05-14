@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.examples.shoppingads;
 
-import com.beust.jcommander.Parameter;
+import qcom.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
@@ -31,8 +31,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-/** This example fetches the set of valid ProductBiddingCategories. */
+/** Fetches the set of valid ProductBiddingCategories. */
 public class GetProductBiddingCategoryConstant {
 
   private static final int PAGE_SIZE = 1_000;
@@ -95,7 +96,9 @@ public class GetProductBiddingCategoryConstant {
             + "FROM "
             + "product_bidding_category_constant "
             + "WHERE "
-            + "product_bidding_category_constant.country_code IN ('US')";
+            + "product_bidding_category_constant.country_code IN ('US') "
+            + "ORDER BY "
+            + "product_bidding_category_constant.localized_name ASC";
 
     // Creates the request.
     SearchGoogleAdsRequest request =
@@ -112,7 +115,8 @@ public class GetProductBiddingCategoryConstant {
       // Creates a list of top level category nodes.
       List<CategoryNode> rootCategories = new ArrayList<>();
       // Creates a map of category ID to category node for all categories found in the results.
-      HashMap<String, CategoryNode> biddingCategories = new HashMap<>();
+      // This Map is a convenience lookup to enable fast retrieval of existing nodes.
+      Map<String, CategoryNode> biddingCategories = new HashMap<>();
 
       // Performs the search request.
       SearchPagedResponse response = googleAdsServiceClient.search(request);
@@ -120,16 +124,16 @@ public class GetProductBiddingCategoryConstant {
         ProductBiddingCategoryConstant productBiddingCategory =
             googleAdsRow.getProductBiddingCategoryConstant();
 
-        String name = productBiddingCategory.getLocalizedName().getValue();
+        String localizedName = productBiddingCategory.getLocalizedName().getValue();
         String resourceName = productBiddingCategory.getResourceName();
         CategoryNode node = biddingCategories.get(resourceName);
         if (node == null) {
-          node = new CategoryNode(resourceName, name);
+          node = new CategoryNode(resourceName, localizedName);
           biddingCategories.put(resourceName, node);
-        } else if (node.name == null) {
+        } else if (node.getLocalizedName() == null) {
           // Ensures that the name attribute for the node is set. Name will be null for nodes added
           // to biddingCategories as a result of being a parentNode below.
-          node.name = name;
+          node.setLocalizedName(localizedName);
         }
 
         if (productBiddingCategory.hasProductBiddingCategoryConstantParent()) {
@@ -157,27 +161,47 @@ public class GetProductBiddingCategoryConstant {
    */
   private static void displayCategories(List<CategoryNode> categories, String prefix) {
     for (CategoryNode category : categories) {
-      System.out.printf("%s%s [%s]%n", prefix, category.name, category.resourceName);
-      displayCategories(category.children, String.format("%s%s > ", prefix, category.name));
+      System.out.printf("%s%s [%s]%n", prefix, category.localizedName, category.resourceName);
+      displayCategories(
+        category.children,
+        String.format("%s%s > ", prefix, category.localizedName));
     }
   }
 
   /** Node that tracks a product bidding category's id, name, and child nodes. */
   private static class CategoryNode {
-    final String resourceName;
-    String name;
-    final List<CategoryNode> children;
+    private final String resourceName;
+    private String localizedName;
+    private final List<CategoryNode> children;
+
+    /**
+     * Gets the localized name of the category.
+     *
+     * @return the name of the category.
+     */
+    public String getLocalizedName() {
+      return this.localizedName;
+    }
+
+    /**
+     * Sets the localized name of the category.
+     *
+     * @param localizedName the new name of the category.
+     */
+    public void setLocalizedName(String localizedName) {
+      this.localizedName = localizedName;
+    }
 
     /**
      * Constructor for categories first encountered as non-parent elements in the results.
      *
      * @param resourceName the resource name = of the category
-     * @param name the name of the category
+     * @param localizedName the name of the category
      */
-    CategoryNode(String resourceName, String name) {
+    CategoryNode(String resourceName, String localizedName) {
       this.children = new ArrayList<>();
       this.resourceName = Preconditions.checkNotNull(resourceName);
-      this.name = name;
+      this.localizedName = localizedName;
     }
 
     /**
