@@ -26,7 +26,7 @@ import com.google.ads.googleads.v1.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** This code example gets all image assets. */
+/** Gets all image assets. */
 public class GetAllImageAssets {
 
   private static final int PAGE_SIZE = 1_000;
@@ -114,7 +114,7 @@ public class GetAllImageAssets {
         System.out.printf("No image assets found.%n");
       }
 
-      // Iterates over reach row of the response.
+      // Iterates over each row of the response.
       for (GoogleAdsRow row : response.iterateAll()) {
         // Displays the results.
         System.out.printf(
