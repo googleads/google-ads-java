@@ -24,7 +24,6 @@ import com.google.ads.googleads.v1.common.WebpageInfo;
 import com.google.ads.googleads.v1.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField;
 import com.google.ads.googleads.v1.enums.FeedAttributeTypeEnum.FeedAttributeType;
 import com.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType;
-import com.google.ads.googleads.v1.enums.FeedOriginEnum.FeedOrigin;
 import com.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand;
 import com.google.ads.googleads.v1.errors.GoogleAdsError;
 import com.google.ads.googleads.v1.errors.GoogleAdsException;
@@ -68,10 +67,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 
-/**
- * This code example adds a page feed to specify precisely which URLs to use with your Dynamic
- * Search Ads campaign.
- */
+/** Adds a page feed to specify precisely which URLs to use with your Dynamic Search Ads. */
 public class AddDynamicPageFeed {
   private static final int PAGE_SIZE = 1_000;
 
@@ -88,9 +84,9 @@ public class AddDynamicPageFeed {
   }
 
   private static class FeedDetails {
-    private String feedResourceName;
-    private long urlAttributeId;
-    private long labelAttributeId;
+    private final String feedResourceName;
+    private final long urlAttributeId;
+    private final long labelAttributeId;
 
     private FeedDetails(String feedResourceName, long urlAttributeId, long labelAttributeId) {
       this.feedResourceName = feedResourceName;
@@ -188,14 +184,14 @@ public class AddDynamicPageFeed {
    * @return a FeedDetails object containing relevant information.
    */
   private FeedDetails createFeed(GoogleAdsClient googleAdsClient, long customerId) {
-    // Creates a URL attribute
+    // Creates a URL attribute.
     FeedAttribute urlAttribute =
         FeedAttribute.newBuilder()
             .setType(FeedAttributeType.URL_LIST)
             .setName(StringValue.of("Page URL"))
             .build();
 
-    // Creates a label attribute
+    // Creates a label attribute.
     FeedAttribute labelAttribute =
         FeedAttribute.newBuilder()
             .setType(FeedAttributeType.STRING_LIST)
@@ -208,7 +204,6 @@ public class AddDynamicPageFeed {
             .setName(StringValue.of("DSA Feed #" + System.currentTimeMillis()))
             .addAttributes(urlAttribute)
             .addAttributes(labelAttribute)
-            .setOrigin(FeedOrigin.USER)
             .build();
 
     // Creates the operation.
@@ -234,6 +229,7 @@ public class AddDynamicPageFeed {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID in which to create criterion.
+   * @param feedResourceName the resource name of the feed.
    * @return a FeedDetails object containing relevant information.
    */
   private FeedDetails getFeed(
@@ -259,7 +255,7 @@ public class AddDynamicPageFeed {
       // Gets the attributes list from the feed and create a map with keys of each attribute and
       // values of each corresponding ID.
       List<FeedAttribute> feedAttributeList = googleAdsRow.getFeed().getAttributesList();
-      HashMap<String, Long> feedAttributeMap = new HashMap<>();
+      Map<String, Long> feedAttributeMap = new HashMap<>();
       for (FeedAttribute feedAttribute : feedAttributeList) {
         feedAttributeMap.put(feedAttribute.getName().getValue(), feedAttribute.getId().getValue());
       }
@@ -305,7 +301,7 @@ public class AddDynamicPageFeed {
             .addAttributeFieldMappings(labelFieldMapping)
             .build();
 
-    // Creates the operation
+    // Creates the operation.
     FeedMappingOperation operation =
         FeedMappingOperation.newBuilder().setCreate(feedMapping).build();
 
@@ -316,13 +312,12 @@ public class AddDynamicPageFeed {
           feedMappingServiceClient.mutateFeedMappings(
               Long.toString(customerId), ImmutableList.of(operation));
 
-      // Displays the results
+      // Displays the results.
       for (MutateFeedMappingResult result : response.getResultsList()) {
         System.out.printf(
             "Created feed mapping with resource name '%s'.%n", result.getResourceName());
       }
     }
-    return;
   }
 
   /**
@@ -383,7 +378,6 @@ public class AddDynamicPageFeed {
             "Created feed items with resource name '%s'.%n", result.getResourceName());
       }
     }
-    return;
   }
 
   /**
@@ -426,7 +420,6 @@ public class AddDynamicPageFeed {
             "Updated campaign with resourceName: %s.%n", mutateCampaignResult.getResourceName());
       }
     }
-    return;
   }
 
   /**
@@ -512,7 +505,7 @@ public class AddDynamicPageFeed {
             .setCriterionName(StringValue.of("Test Criterion"))
             .addConditions(webpageConditionInfo)
             .build();
-    // Creates the ad group criterion
+    // Creates the ad group criterion.
     AdGroupCriterion adGroupCriterion =
         AdGroupCriterion.newBuilder()
             .setAdGroup(StringValue.of(adGroupResourceName))
@@ -535,6 +528,5 @@ public class AddDynamicPageFeed {
             "Created ad group criterion with resource name '%s'.%n", result.getResourceName());
       }
     }
-    return;
   }
 }
