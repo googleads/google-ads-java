@@ -31,12 +31,11 @@ import com.google.ads.googleads.v1.services.MutateCustomerNegativeCriteriaResult
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * This example adds various types of negative criteria for exclusions at the customer level. These
+ * Adds various types of negative criteria as exclusions at the customer level. These
  * criteria will be applied to all campaigns for the customer.
  */
 public class AddCustomerNegativeCriteria {
@@ -93,7 +92,6 @@ public class AddCustomerNegativeCriteria {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   public static void runExample(GoogleAdsClient googleAdsClient, long customerId) {
-
     try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient =
         googleAdsClient.getLatestVersion().createCustomerNegativeCriterionServiceClient()) {
 
@@ -103,6 +101,7 @@ public class AddCustomerNegativeCriteria {
               .setContentLabel(
                   ContentLabelInfo.newBuilder().setType(ContentLabelType.TRAGEDY).build())
               .build();
+
       // Creates a negative customer criterion excluding the placement with url
       // 'http://www.example.com'.
       CustomerNegativeCriterion placementCriterion =
@@ -119,7 +118,7 @@ public class AddCustomerNegativeCriteria {
       CustomerNegativeCriterionOperation placementCriterionOperation =
           CustomerNegativeCriterionOperation.newBuilder().setCreate(placementCriterion).build();
       List<CustomerNegativeCriterionOperation> operations =
-          new ArrayList<>(Arrays.asList(tragedyCriterionOperation, placementCriterionOperation));
+          Arrays.asList(tragedyCriterionOperation, placementCriterionOperation);
 
       // Adds the negative customer criteria.
       MutateCustomerNegativeCriteriaResponse response =
