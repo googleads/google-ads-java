@@ -46,9 +46,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
- * This example adds a Gmail ad to a given ad group. The ad group's campaign needs to have an
+ * Adds a Gmail ad to a given ad group. The ad group's campaign needs to have an
  * AdvertisingChannelType of DISPLAY and AdvertisingChannelSubType of DISPLAY_GMAIL_AD.
  */
 public class AddGmailAd {
@@ -110,7 +111,7 @@ public class AddGmailAd {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId)
       throws IOException {
-    HashMap<String, String> mediaFiles = addMediaFiles(googleAdsClient, customerId);
+    Map<String, String> mediaFiles = addMediaFiles(googleAdsClient, customerId);
     addGmailAd(googleAdsClient, customerId, adGroupId, mediaFiles);
   }
 
@@ -123,7 +124,7 @@ public class AddGmailAd {
    * @throws IOException if there is an error opening the image files.
    * @return a hash map of the image file resource names.
    */
-  private HashMap<String, String> addMediaFiles(GoogleAdsClient googleAdsClient, long customerId)
+  private Map<String, String> addMediaFiles(GoogleAdsClient googleAdsClient, long customerId)
       throws IOException {
     // Creates a bytes array from the logo image data.
     byte[] logoImageData = ByteStreams.toByteArray(new URL("https://goo.gl/mtt54n").openStream());
@@ -176,7 +177,7 @@ public class AddGmailAd {
             "Created media file with resource name '%s'.%n", result.getResourceName());
       }
       // Creates a map of the media files to return.
-      HashMap<String, String> mediaFiles = new HashMap<>();
+      Map<String, String> mediaFiles = new HashMap<>();
       mediaFiles.put("logoResourceName", response.getResults(0).getResourceName());
       mediaFiles.put("marketingImageResourceName", response.getResults(1).getResourceName());
       return mediaFiles;
@@ -189,6 +190,8 @@ public class AddGmailAd {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param adGroupId the ad group ID.
+   * @param mediaFiles a map with keys of unique string identifiers and values of media file
+   *                   resource names.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    * @throws IOException if there is an error opening the image files.
    */
@@ -196,7 +199,7 @@ public class AddGmailAd {
       GoogleAdsClient googleAdsClient,
       long customerId,
       long adGroupId,
-      HashMap<String, String> mediaFiles) {
+      Map<String, String> mediaFiles) {
     // Creates the Gmail ad info.
     GmailAdInfo gmailAdInfo =
         GmailAdInfo.newBuilder()
