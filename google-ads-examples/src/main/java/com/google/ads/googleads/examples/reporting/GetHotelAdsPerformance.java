@@ -28,7 +28,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example gets Hotel-ads performance statistics for the 50 Hotel ad groups with the most
+ * Gets Hotel-ads performance statistics for the 50 Hotel ad groups with the most
  * impressions over the last 7 days.
  */
 public class GetHotelAdsPerformance {

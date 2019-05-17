@@ -30,7 +30,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 /**
- * This example dismisses a given recommendation. To retrieve recommendations for text ads,
+ * Dismisses a given recommendation. To retrieve recommendations for text ads,
  * run GetTextAdRecommendations.java.
  */
 public class DismissRecommendation {

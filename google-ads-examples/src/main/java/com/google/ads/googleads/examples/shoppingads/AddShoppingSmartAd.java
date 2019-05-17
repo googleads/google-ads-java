@@ -63,7 +63,7 @@ import java.io.IOException;
 import java.util.Collections;
 
 /**
- * This example creates a Smart Shopping campaign, a Smart Shopping ad group, a Smart Shopping ad
+ * Creates a Smart Shopping campaign, a Smart Shopping ad group, a Smart Shopping ad
  * group ad and a listing group for "All products".
  *
  * <p>Prerequisite: You need to have access to a Merchant Center account. You can find instructions
@@ -239,7 +239,7 @@ public class AddShoppingSmartAd {
             .setAdvertisingChannelType(AdvertisingChannelType.SHOPPING)
             .setAdvertisingChannelSubType(AdvertisingChannelSubType.SHOPPING_SMART_ADS)
             .setShoppingSetting(shoppingSetting)
-            // Recommendation: Set the campaign to PAUSED when creating it to prevent
+            // Recommendation: Sets the campaign to PAUSED when creating it to prevent
             // the ads from immediately serving. Set to ENABLED once you've added
             // targeting and the ads are ready to serve.
             .setStatus(CampaignStatus.PAUSED)

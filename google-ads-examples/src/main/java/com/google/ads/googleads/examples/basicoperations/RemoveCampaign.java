@@ -30,7 +30,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example deletes a campaign using the 'REMOVE' operation. To get campaigns, run
+ * Deletes a campaign using the 'REMOVE' operation. To get campaigns, run
  * GetCampaigns.java.
  */
 public class RemoveCampaign {
@@ -94,14 +94,14 @@ public class RemoveCampaign {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
-      // Construct an operation that will remove the campaign with the specified resource name.
+      // Constructs an operation that will remove the campaign with the specified resource name.
       CampaignOperation operation =
           CampaignOperation.newBuilder().setRemove(campaignResourceName).build();
-      // Send the operation in a mutate request.
+      // Sends the operation in a mutate request.
       MutateCampaignsResponse response =
           campaignServiceClient.mutateCampaigns(
               Long.toString(customerId), Lists.newArrayList(operation));
-      // Print the resource name of each removed object.
+      // Prints the resource name of each removed object.
       for (MutateCampaignResult mutateCampaignResult : response.getResultsList()) {
         System.out.printf(
             "Removed campaign with resource name: '%s'.%n", mutateCampaignResult.getResourceName());

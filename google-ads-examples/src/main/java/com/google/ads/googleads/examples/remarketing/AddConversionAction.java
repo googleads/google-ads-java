@@ -37,7 +37,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Collections;
 
-/** This example illustrates adding a conversion action. */
+/** Adds a conversion action. */
 public class AddConversionAction {
 
   private static class AddConversionActionParams extends CodeSampleParams {

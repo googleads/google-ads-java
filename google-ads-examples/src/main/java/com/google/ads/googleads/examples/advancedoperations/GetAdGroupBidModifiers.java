@@ -31,7 +31,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
 
-/** This example gets ad group bid modifiers. */
+/** Gets ad group bid modifiers. */
 public class GetAdGroupBidModifiers {
 
   private static final int PAGE_SIZE = 1_000;

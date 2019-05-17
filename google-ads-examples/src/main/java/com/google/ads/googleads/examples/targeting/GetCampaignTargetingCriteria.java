@@ -30,7 +30,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example gets all campaign criteria. To add campaign criteria, run AddCampaignCriteria.java.
+ * Gets all campaign criteria. To add campaign criteria, run AddCampaignCriteria.java.
  */
 public class GetCampaignTargetingCriteria {
 

@@ -36,7 +36,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example adds expanded text ads to a given ad group. To get ad groups, run GetAdGroups.java.
+ * Adds expanded text ads to a given ad group. To get ad groups, run GetAdGroups.java.
  */
 public class AddExpandedTextAdWithUpgradedUrls {
 
@@ -100,7 +100,7 @@ public class AddExpandedTextAdWithUpgradedUrls {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
-    // Create an expanded text ad.
+    // Creates an expanded text ad.
     Ad ad =
         Ad.newBuilder()
             .setExpandedTextAd(
@@ -109,7 +109,7 @@ public class AddExpandedTextAdWithUpgradedUrls {
                     .setHeadlinePart1(StringValue.of("Luxury Cruise to Mars"))
                     .setHeadlinePart2(StringValue.of("Visit the Red Planet in style."))
                     .build())
-            // Specify a tracking URL for 3rd party tracking provider. You may specify one at
+            // Specifies a tracking URL for 3rd party tracking provider. You may specify one at
             // customer, campaign, ad group, ad, criterion or feed item levels.
             .setTrackingUrlTemplate(
                 StringValue.of(
@@ -127,14 +127,15 @@ public class AddExpandedTextAdWithUpgradedUrls {
                         .setKey(StringValue.of("promocode"))
                         .setValue(StringValue.of("NY123"))
                         .build()))
-            // Specify a list of final URLs. This field cannot be set if URL field is set. This may
-            // be specified at ad, criterion and feed item levels.
+            // Specifies a list of final URLs. This field cannot be set if URL field is set. This
+            // may be specified at ad, criterion and feed item levels.
             .addAllFinalUrls(
                 ImmutableList.of(
                     StringValue.of("http://www.example.com/cruise/space/"),
                     StringValue.of("http://www.example.com/locations/mars/")))
-            // Specify a list of final mobile URLs. This field cannot be set if URL field is set, or
-            // finalUrls is unset. This may be specified at ad, criterion and feed item levels.
+            // Specifies a list of final mobile URLs. This field cannot be set if URL field is
+            // set, or finalUrls is unset. This may be specified at ad, criterion and feed item
+            // levels.
             /*
             .addAllFinalMobileUrls(Lists.newArrayList(
                 StringValue.of("http://mobile.example.com/cruise/space/"),
@@ -142,12 +143,12 @@ public class AddExpandedTextAdWithUpgradedUrls {
              */
             .build();
 
-    // Create an ad group ad containing the ad.
+    // Creates an ad group ad containing the ad.
     AdGroupAd adGroupAd =
         AdGroupAd.newBuilder()
             .setAdGroup(StringValue.of(adGroupResourceName))
             .setAd(ad)
-            // Set the status to PAUSED.
+            // Sets the status to PAUSED.
             .setStatus(AdGroupAdStatus.PAUSED)
             .build();
 

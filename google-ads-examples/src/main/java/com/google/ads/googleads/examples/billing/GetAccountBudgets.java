@@ -26,7 +26,7 @@ import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedRe
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** This example retrieves all account budgets for a Google Ads customer. */
+/** Retrieves all account budgets for a Google Ads customer. */
 public class GetAccountBudgets {
 
   private static class GetAccountBudgetParams extends CodeSampleParams {

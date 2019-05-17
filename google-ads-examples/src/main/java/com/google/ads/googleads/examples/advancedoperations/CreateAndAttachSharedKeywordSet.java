@@ -46,7 +46,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * This example creates a shared list of negative broad match keywords. It then attaches them to a
+ * Creates a shared list of negative broad match keywords. It then attaches them to a
  * campaign.
  */
 public class CreateAndAttachSharedKeywordSet {
@@ -110,10 +110,10 @@ public class CreateAndAttachSharedKeywordSet {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
 
-    // Keywords to create a shared set of.
+    // Creates a keywords list to create a shared set of.
     List<String> keywords = Arrays.asList("mars cruise", "mars hotels");
 
-    // Create shared negative keyword set.
+    // Creates shared negative keyword set.
     SharedSet sharedSet =
         SharedSet.newBuilder()
             .setName(StringValue.of("API Negative keyword list - " + System.currentTimeMillis()))

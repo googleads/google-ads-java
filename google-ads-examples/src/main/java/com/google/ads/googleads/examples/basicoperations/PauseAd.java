@@ -32,7 +32,7 @@ import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** This example changes the status of a given ad to {@code PAUSED}. */
+/** Changes the status of a given ad to {@code PAUSED}. */
 public class PauseAd {
 
   private static class PauseAdParams extends CodeSampleParams {
@@ -101,7 +101,7 @@ public class PauseAd {
 
     String adGroupAdResourceName = ResourceNames.adGroupAd(customerId, adGroupId, adId);
 
-    // Create an ad representation with its status set to PAUSED.
+    // Creates an ad representation with its status set to PAUSED.
     AdGroupAd adGroupAd =
         AdGroupAd.newBuilder()
             .setResourceName(adGroupAdResourceName)

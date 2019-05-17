@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This example applies a given recommendation. To retrieve recommendations for text ads, run
+ * Applies a given recommendation. To retrieve recommendations for text ads, run
  * GetTextAdRecommendations.java.
  */
 public class ApplyRecommendation {

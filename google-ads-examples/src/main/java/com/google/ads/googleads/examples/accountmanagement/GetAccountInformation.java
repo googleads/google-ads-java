@@ -27,7 +27,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example lists basic information about an advertising account. For instance, the name,
+ * Lists basic information about an advertising account. For instance, the name,
  * currency, time zone etc.
  */
 public class GetAccountInformation {
@@ -87,7 +87,7 @@ public class GetAccountInformation {
     try (CustomerServiceClient customerServiceClient = googleAdsClient.getLatestVersion().createCustomerServiceClient()) {
       String customerResourceName = ResourceNames.customer(customerId);
       Customer customer = customerServiceClient.getCustomer(customerResourceName);
-      // Print account information.
+      // Prints account information.
       System.out.printf(
           "Customer with ID %d, descriptive name '%s', currency code '%s', timezone '%s', "
               + "tracking URL template '%s' and auto tagging enabled '%s' was retrieved.%n",

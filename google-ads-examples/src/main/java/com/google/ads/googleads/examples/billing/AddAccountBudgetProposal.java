@@ -32,7 +32,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example creates an account budget proposal using the 'CREATE' operation. To get account
+ * Creates an account budget proposal using the 'CREATE' operation. To get account
  * budget proposals, run GetAccountBudgetProposals.java.
  */
 public class AddAccountBudgetProposal {
@@ -87,15 +87,15 @@ public class AddAccountBudgetProposal {
   }
 
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long billingSetupId) {
-    // Create an AccountBudgetProposal, this will be reviewed offline by Google Ads, and if approved
-    // will become an AccountBudget.
+    // Creates an AccountBudgetProposal. This will be reviewed offline by Google Ads, and if
+    // approved will become an AccountBudget.
     AccountBudgetProposal proposal =
         AccountBudgetProposal.newBuilder()
             .setBillingSetup(StringValue.of(ResourceNames.billingSetup(customerId, billingSetupId)))
             .setProposalType(AccountBudgetProposalType.CREATE)
             .setProposedName(StringValue.of("Account Budget (example)"))
 
-            // Specify the account budget starts immediately
+            // Specifies the account budget starts immediately.
             .setProposedStartTimeType(TimeType.NOW)
             // Alternatively you can specify a specific start time. Refer to the
             // AccountBudgetProposal
@@ -103,30 +103,30 @@ public class AddAccountBudgetProposal {
             //
             // .setProposedStartDateTime(StringValue.of("2020-01-02 03:04:05"))
 
-            // Specify that the budget runs forever.
+            // Specifies that the budget runs forever.
             .setProposedEndTimeType(TimeType.FOREVER)
             // Alternatively you can specify a specific end time. Allowed formats are as above.
             // .setProposedEndDateTime(StringValue.of("2021-02-03 04:05:06"))
 
-            // Optional: set notes for the budget. These are free text and do not effect budget
+            // Optional: sets notes for the budget. These are free text and do not effect budget
             // delivery.
             // .setProposedNotes(StringValue.of("Received prepayment of $0.01"))
 
-            // Set the spending limit to 0.01, measured in the Google Ads account currency.
+            // Sets the spending limit to 0.01, measured in the Google Ads account currency.
             .setProposedSpendingLimitMicros(Int64Value.of(10_000))
 
-            // Optional: set PO number for record keeping. This value is at the user's
+            // Optional: sets PO number for record keeping. This value is at the user's
             // discretion, and has no effect on Google Billing & Payments.
             // .setProposedPurchaseOrderNumber(StringValue.of("PO number 12345"))
             .build();
 
-    // Create an operation which will add the new AccountBudgetProposal.
+    // Creates an operation which will add the new AccountBudgetProposal.
     AccountBudgetProposalOperation operation = AccountBudgetProposalOperation.newBuilder()
         .setCreate(proposal).build();
 
     try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient =
         googleAdsClient.getLatestVersion().createAccountBudgetProposalServiceClient()) {
-      // Send the request to the Account Budget Proposal Service.
+      // Sends the request to the Account Budget Proposal Service.
       MutateAccountBudgetProposalResponse response =
           accountBudgetProposalServiceClient.mutateAccountBudgetProposal(
               String.valueOf(customerId), operation);

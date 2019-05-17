@@ -30,7 +30,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example deletes an ad group using the 'REMOVE' operation. To get ad groups, run
+ * Deletes an ad group using the 'REMOVE' operation. To get ad groups, run
  * GetAdGroups.java.
  */
 public class RemoveAdGroup {
@@ -95,14 +95,14 @@ public class RemoveAdGroup {
 
     try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
-      // Construct an operation that will remove the ad group with the specified resource name.
+      // Constructs an operation that will remove the ad group with the specified resource name.
       AdGroupOperation operation =
           AdGroupOperation.newBuilder().setRemove(adGroupResourceName).build();
-      // Send the operation in a mutate request.
+      // Sends the operation in a mutate request.
       MutateAdGroupsResponse response =
           adGroupServiceClient.mutateAdGroups(
               Long.toString(customerId), ImmutableList.of(operation));
-      // Print the resource name of each removed object.
+      // Prints the resource name of each removed object.
       for (MutateAdGroupResult mutateAdGroupResult : response.getResultsList()) {
         System.out.printf(
             "Removed ad group with resourceName: '%s'.%n", mutateAdGroupResult.getResourceName());

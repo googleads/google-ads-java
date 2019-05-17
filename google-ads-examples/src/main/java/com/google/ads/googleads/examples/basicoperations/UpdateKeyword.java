@@ -34,7 +34,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example updates a keyword ({@code AdGroupCriterion}) in an ad group. To get keywords, run
+ * Updates a keyword ({@code AdGroupCriterion}) in an ad group. To get keywords, run
  * GetKeywords.java.
  */
 public class UpdateKeyword {
@@ -105,14 +105,14 @@ public class UpdateKeyword {
       GoogleAdsClient googleAdsClient, long customerId, long adGroupId, long criterionId) {
     try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
         googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
-      // Create an ad group criterion object with the proper resource name and any other changes.
+      // Creates an ad group criterion object with the proper resource name and any other changes.
       AdGroupCriterion adGroupCriterion =
           AdGroupCriterion.newBuilder()
               .setResourceName(ResourceNames.adGroupCriterion(customerId, adGroupId, criterionId))
               .setStatus(AdGroupCriterionStatus.ENABLED)
               .addFinalUrls(StringValue.of("https://www.example.com"))
               .build();
-      // Construct an operation that will update the ad group criterion, using the FieldMasks
+      // Constructs an operation that will update the ad group criterion, using the FieldMasks
       // utility to derive the update mask. This mask tells the Google Ads API which attributes of
       // the ad group criterion you want to change.
       AdGroupCriterionOperation operation =
@@ -120,11 +120,11 @@ public class UpdateKeyword {
               .setUpdate(adGroupCriterion)
               .setUpdateMask(FieldMasks.allSetFieldsOf(adGroupCriterion))
               .build();
-      // Send the operation in a mutate request.
+      // Sends the operation in a mutate request.
       MutateAdGroupCriteriaResponse response =
           adGroupCriterionServiceClient.mutateAdGroupCriteria(
               Long.toString(customerId), ImmutableList.of(operation));
-      // Print the resource name of each updated object.
+      // Prints the resource name of each updated object.
       for (MutateAdGroupCriterionResult mutateAdGroupCriterionResult : response.getResultsList()) {
         System.out.printf(
             "Updated ad group criterion with the resource name: '%s'.%n",

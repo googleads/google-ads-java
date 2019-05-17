@@ -30,7 +30,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example deletes a keyword as an ad group criterion using the 'REMOVE' operation. To get
+ * Deletes a keyword as an ad group criterion using the 'REMOVE' operation. To get
  * keyword, run GetKeywords.java.
  */
 public class RemoveKeyword {
@@ -103,14 +103,14 @@ public class RemoveKeyword {
         googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
       String adGroupCriterionResourceName = ResourceNames.adGroupCriterion(customerId, adGroupId, criterionId);
 
-      // Construct an operation that will remove the keyword with the specified resource name.
+      // Constructs an operation that will remove the keyword with the specified resource name.
       AdGroupCriterionOperation operation =
           AdGroupCriterionOperation.newBuilder().setRemove(adGroupCriterionResourceName).build();
-      // Send the operation in a mutate request.
+      // Sends the operation in a mutate request.
       MutateAdGroupCriteriaResponse response =
           adGroupCriterionServiceClient.mutateAdGroupCriteria(
               Long.toString(customerId), Lists.newArrayList(operation));
-      // Print the resource name of each removed object.
+      // Prints the resource name of each removed object.
       for (MutateAdGroupCriterionResult mutateAdGroupCriterionResult : response.getResultsList()) {
         System.out.printf(
             "Removed ad group criterion with resource name: '%s'.%n",

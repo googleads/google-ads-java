@@ -29,7 +29,7 @@ import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** This example removes the ad with the specified ID. */
+/** Removes the ad with the specified ID. */
 public class RemoveAd {
 
   private static class RemoveAdParams extends CodeSampleParams {
@@ -98,7 +98,7 @@ public class RemoveAd {
 
     String adGroupAdResourceName = ResourceNames.adGroupAd(customerId, adGroupId, adId);
 
-    // Create a single remove operation, specifying the ad's resource name
+    // Creates a single remove operation, specifying the ad's resource name.
     AdGroupAdOperation op =
         AdGroupAdOperation.newBuilder().setRemove(adGroupAdResourceName).build();
 

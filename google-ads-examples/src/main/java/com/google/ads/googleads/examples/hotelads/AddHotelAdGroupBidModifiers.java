@@ -38,7 +38,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This example shows how to add ad group bid modifiers to a hotel ad group based on hotel check-in
+ * Adds ad group bid modifiers to a hotel ad group based on hotel check-in
  * day and hotel length of stay.
  */
 public class AddHotelAdGroupBidModifiers {
@@ -146,7 +146,7 @@ public class AddHotelAdGroupBidModifiers {
           adGroupBidModifierServiceClient.mutateAdGroupBidModifiers(
               Long.toString(customerId), operations);
 
-      // Print the resource names of the added ad group bid modifiers.
+      // Prints the resource names of the added ad group bid modifiers.
       System.out.printf("Added %d hotel ad group bid modifiers:%n", response.getResultsCount());
       for (MutateAdGroupBidModifierResult mutateAdGroupBidModifierResult :
           response.getResultsList()) {

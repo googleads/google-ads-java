@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
-/** This example generates keyword ideas from a list of seed keywords. */
+/** Generates keyword ideas from a list of seed keywords. */
 public class GenerateKeywordIdeas {
 
   private static class GenerateKeywordIdeasParams extends CodeSampleParams {
@@ -147,19 +147,19 @@ public class GenerateKeywordIdeas {
       GenerateKeywordIdeasRequest.Builder requestBuilder =
           GenerateKeywordIdeasRequest.newBuilder()
               .setCustomerId(Long.toString(customerId))
-              // Set the language resource using the provided language ID.
+              // Sets the language resource using the provided language ID.
               .setLanguage(StringValue.of(ResourceNames.languageConstant(languageId)))
-              // Set the network. To restrict to only Google Search, change the parameter below to
+              // Sets the network. To restrict to only Google Search, change the parameter below to
               // KeywordPlanNetwork.GOOGLE_SEARCH.
               .setKeywordPlanNetwork(KeywordPlanNetwork.GOOGLE_SEARCH_AND_PARTNERS);
 
-      // Add the resource name of each location ID to the request.
+      // Adds the resource name of each location ID to the request.
       for (Long locationId : locationIds) {
         requestBuilder.addGeoTargetConstants(
             StringValue.of(ResourceNames.geoTargetConstant(locationId)));
       }
 
-      // Make sure that keywords and/or page URL were specified. The request must have exactly one
+      // Makes sure that keywords and/or page URL were specified. The request must have exactly one
       // of urlSeed, keywordSeed, or keywordAndUrlSeed set.
       if (keywords.isEmpty() && pageUrl == null) {
         throw new IllegalArgumentException(
@@ -182,10 +182,10 @@ public class GenerateKeywordIdeas {
             .addAllKeywords(keywords.stream().map(StringValue::of).collect(Collectors.toList()));
       }
 
-      // Send the keyword ideas request.
+      // Sends the keyword ideas request.
       GenerateKeywordIdeaResponse response =
           keywordPlanServiceClient.generateKeywordIdeas(requestBuilder.build());
-      // Print each result in the response.
+      // Prints each result in the response.
       for (GenerateKeywordIdeaResult result : response.getResultsList()) {
         System.out.printf(
             "Keyword idea text '%s' has %d average monthly searches and '%s' competition.%n",

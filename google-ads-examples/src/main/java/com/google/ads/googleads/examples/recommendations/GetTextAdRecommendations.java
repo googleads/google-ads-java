@@ -31,7 +31,7 @@ import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** This example gets all TEXT_AD recommendations. */
+/** Gets all TEXT_AD recommendations. */
 public class GetTextAdRecommendations {
   private static final int PAGE_SIZE = 1_000;
 

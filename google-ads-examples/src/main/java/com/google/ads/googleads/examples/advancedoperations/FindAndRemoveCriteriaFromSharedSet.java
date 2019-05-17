@@ -38,7 +38,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This example demonstrates how to find shared sets, how to find shared set criteria, and how to
+ * Demonstrates how to find shared sets, how to find shared set criteria, and how to
  * remove shared set criteria.
  */
 public class FindAndRemoveCriteriaFromSharedSet {
@@ -108,7 +108,7 @@ public class FindAndRemoveCriteriaFromSharedSet {
     List<Long> sharedSetIds = new ArrayList<>();
     List<String> criterionResourceNames = new ArrayList<>();
 
-    // First, retrieve all shared sets associated with the campaign.
+    // Retrieves all shared sets associated with the campaign.
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       String searchQuery =
@@ -133,7 +133,7 @@ public class FindAndRemoveCriteriaFromSharedSet {
       }
     }
 
-    // Next, retrieve shared criteria for all found shared sets.
+    // Retrieves shared criteria for all found shared sets.
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       String searchQuery =
@@ -169,7 +169,7 @@ public class FindAndRemoveCriteriaFromSharedSet {
       }
     }
 
-    // Finally, remove the criteria.
+    // Removes the criteria.
     try (SharedCriterionServiceClient sharedCriterionServiceClient =
         googleAdsClient.getLatestVersion().createSharedCriterionServiceClient()) {
       List<SharedCriterionOperation> operations = new ArrayList<>();
@@ -178,10 +178,10 @@ public class FindAndRemoveCriteriaFromSharedSet {
             SharedCriterionOperation.newBuilder().setRemove(criterionResourceName).build();
         operations.add(operation);
       }
-      // Send the operation in a mutate request.
+      // Sends the operation in a mutate request.
       MutateSharedCriteriaResponse response =
           sharedCriterionServiceClient.mutateSharedCriteria(Long.toString(customerId), operations);
-      // Print the resource name of each removed object.
+      // Prints the resource name of each removed object.
       for (MutateSharedCriterionResult mutateSharedCriterionResult : response.getResultsList()) {
         System.out.printf(
             "Removed shared criterion with resource name: '%s'.%n",

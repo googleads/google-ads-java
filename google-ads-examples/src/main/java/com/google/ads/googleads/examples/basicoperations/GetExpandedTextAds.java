@@ -30,7 +30,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
 
-/** This example gets expanded text ads. */
+/** Gets expanded text ads. */
 public class GetExpandedTextAds {
 
   private static final int PAGE_SIZE = 1_000;

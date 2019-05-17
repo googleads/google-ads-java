@@ -49,7 +49,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
 
-/** This example adds a portfolio bidding strategy and uses it to construct a campaign. */
+/** Adds a portfolio bidding strategy and uses it to construct a campaign. */
 public class UsePortfolioBiddingStrategy {
 
   private static class UsePortfolioBiddingStrategyParams extends CodeSampleParams {
@@ -137,7 +137,7 @@ public class UsePortfolioBiddingStrategy {
   private String createBiddingStrategy(GoogleAdsClient googleAdsClient, long customerId) {
     try (BiddingStrategyServiceClient biddingStrategyServiceClient =
         googleAdsClient.getLatestVersion().createBiddingStrategyServiceClient()) {
-      // Create a portfolio bidding strategy.
+      // Creates a portfolio bidding strategy.
       TargetSpend targetSpend =
           TargetSpend.newBuilder()
               .setCpcBidCeilingMicros(Int64Value.of(2_000_000L))
@@ -148,16 +148,16 @@ public class UsePortfolioBiddingStrategy {
               .setName(StringValue.of("Maximize Clicks #" + System.currentTimeMillis()))
               .setTargetSpend(targetSpend)
               .build();
-      // Construct an operation that will create a portfolio bidding strategy.
+      // Constructs an operation that will create a portfolio bidding strategy.
       BiddingStrategyOperation operation =
           BiddingStrategyOperation.newBuilder().setCreate(portfolioBiddingStrategy).build();
-      // Send the operation in a mutate request.
+      // Sends the operation in a mutate request.
       MutateBiddingStrategiesResponse response =
           biddingStrategyServiceClient.mutateBiddingStrategies(
               Long.toString(customerId), Lists.newArrayList(operation));
 
       MutateBiddingStrategyResult mutateBiddingStrategyResult = response.getResults(0);
-      // Print the resource name of the created object.
+      // Prints the resource name of the created object.
       System.out.printf(
           "Created portfolio bidding strategy with resource name: '%s'.%n",
           mutateBiddingStrategyResult.getResourceName());
@@ -176,7 +176,7 @@ public class UsePortfolioBiddingStrategy {
   private String createSharedCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     try (CampaignBudgetServiceClient campaignBudgetServiceClient =
         googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
-      // Create a shared budget.
+      // Creates a shared budget.
       CampaignBudget budget =
           CampaignBudget.newBuilder()
               .setName(
@@ -185,16 +185,16 @@ public class UsePortfolioBiddingStrategy {
               .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
               .setExplicitlyShared(BoolValue.of(true))
               .build();
-      // Construct an operation that will create a shared budget.
+      // Constructs an operation that will create a shared budget.
       CampaignBudgetOperation operation =
           CampaignBudgetOperation.newBuilder().setCreate(budget).build();
-      // Send the operation in a mutate request.
+      // Sends the operation in a mutate request.
       MutateCampaignBudgetsResponse response =
           campaignBudgetServiceClient.mutateCampaignBudgets(
               Long.toString(customerId), Lists.newArrayList(operation));
 
       MutateCampaignBudgetResult mutateCampaignBudgetResult = response.getResults(0);
-      // Print the resource name of the created object.
+      // Prints the resource name of the created object.
       System.out.printf(
           "Created shared budget with resource name: '%s'.%n",
           mutateCampaignBudgetResult.getResourceName());
@@ -218,7 +218,7 @@ public class UsePortfolioBiddingStrategy {
       String biddingStrategyResourceName,
       String campaignBudgetResourceName) {
     try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
-      // Create campaign.
+      // Creates the campaign.
       NetworkSettings networkSettings =
           NetworkSettings.newBuilder()
               .setTargetGoogleSearch(BoolValue.of(true))
@@ -234,15 +234,15 @@ public class UsePortfolioBiddingStrategy {
               .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
               .setNetworkSettings(networkSettings)
               .build();
-      // Construct an operation that will create a campaign.
+      // Constructs an operation that will create a campaign.
       CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();
-      // Send the operation in a mutate request.
+      // Sends the operation in a mutate request.
       MutateCampaignsResponse response =
           campaignServiceClient.mutateCampaigns(
               Long.toString(customerId), Lists.newArrayList(operation));
 
       MutateCampaignResult mutateCampaignResult = response.getResults(0);
-      // Print the resource name of the created object.
+      // Prints the resource name of the created object.
       System.out.printf(
           "Created campaign with resource name: '%s'.%n", mutateCampaignResult.getResourceName());
 

@@ -29,7 +29,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
 
-/** This example gets ad groups. */
+/** Gets ad groups. */
 public class GetAdGroups {
 
   private static final int PAGE_SIZE = 1_000;

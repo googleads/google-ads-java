@@ -35,7 +35,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example demonstrates how to add an ad group bid modifier for mobile devices. To get ad group
+ * Demonstrates how to add an ad group bid modifier for mobile devices. To get ad group
  * bid modifiers, see advancedoperations/GetAdGroupBidModifiers.java.
  */
 public class AddAdGroupBidModifier {

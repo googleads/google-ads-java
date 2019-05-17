@@ -34,7 +34,7 @@ import com.google.ads.googleads.v1.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** This example retrieves all the disapproved ads in a given campaign. */
+/** Retrieves all the disapproved ads in a given campaign. */
 public class GetAllDisapprovedAds {
 
   private static final int PAGE_SIZE = 1_000;
