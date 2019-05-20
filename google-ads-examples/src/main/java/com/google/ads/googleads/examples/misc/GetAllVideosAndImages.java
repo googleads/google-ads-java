@@ -27,7 +27,7 @@ import com.google.ads.googleads.v1.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** This example gets all video and image files. */
+/** Gets all video and image files. */
 public class GetAllVideosAndImages {
   private static final int PAGE_SIZE = 1_000;
 

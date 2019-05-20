@@ -27,7 +27,7 @@ import java.io.IOException;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/** This code example illustrates getting GeoTargetConstants by given location names. */
+/** Gets GeoTargetConstants by given location names. */
 public class GetGeoTargetConstantByName {
 
   public static void main(String[] args) {

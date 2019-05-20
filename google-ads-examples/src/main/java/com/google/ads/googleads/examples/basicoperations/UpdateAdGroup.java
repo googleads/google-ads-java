@@ -34,7 +34,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example updates the CPC bid and status for a given ad group. To get ad groups, run
+ * Updates the CPC bid and status for a given ad group. To get ad groups, run
  * GetAdGroups.java.
  */
 public class UpdateAdGroup {
@@ -105,14 +105,14 @@ public class UpdateAdGroup {
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long adGroupId, long bidMicroAmount) {
     try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
-      // Create an ad group object with the proper resource name and any other changes.
+      // Creates an ad group object with the proper resource name and any other changes.
       AdGroup adGroup =
           AdGroup.newBuilder()
               .setResourceName(ResourceNames.adGroup(customerId, adGroupId))
               .setCpcBidMicros(Int64Value.of(bidMicroAmount))
               .setStatus(AdGroupStatus.PAUSED)
               .build();
-      // Construct an operation that will update the ad group, using the FieldMasks utility to
+      // Constructs an operation that will update the ad group, using the FieldMasks utility to
       // derive the update mask. This mask tells the Google Ads API which attributes of the
       // ad group you want to change.
       AdGroupOperation operation =
@@ -120,11 +120,11 @@ public class UpdateAdGroup {
               .setUpdate(adGroup)
               .setUpdateMask(FieldMasks.allSetFieldsOf(adGroup))
               .build();
-      // Send the operation in a mutate request.
+      // Sends the operation in a mutate request.
       MutateAdGroupsResponse response =
           adGroupServiceClient.mutateAdGroups(
               Long.toString(customerId), ImmutableList.of(operation));
-      // Print the resource name of each updated object.
+      // Prints the resource name of each updated object.
       for (MutateAdGroupResult mutateAdGroupResult : response.getResultsList()) {
         System.out.printf(
             "Updated ad group with resourceName: '%s'.%n", mutateAdGroupResult.getResourceName());

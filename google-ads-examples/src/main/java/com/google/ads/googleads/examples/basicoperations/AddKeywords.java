@@ -34,7 +34,7 @@ import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** This example demonstrates how to add a keyword to an ad group. */
+/** Adds a keyword to an ad group. */
 public class AddKeywords {
 
   /** The default keyword text to add if none is specified as a parameter. */
@@ -111,7 +111,7 @@ public class AddKeywords {
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long adGroupId, String keywordText) {
 
-    // Configure the keywordText text and match type settings.
+    // Configures the keywordText text and match type settings.
     KeywordInfo keywordInfo =
         KeywordInfo.newBuilder()
             .setText(StringValue.of(keywordText))
@@ -120,7 +120,7 @@ public class AddKeywords {
 
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
-    // Construct an ad group criterion using the keywordText configuration above.
+    // Constructs an ad group criterion using the keywordText configuration above.
     AdGroupCriterion criterion =
         AdGroupCriterion.newBuilder()
             .setAdGroup(StringValue.of(adGroupResourceName))

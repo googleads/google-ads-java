@@ -28,7 +28,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This sample gets all BillingSetup objects available for the specified customerId.
+ * Gets all BillingSetup objects available for the specified customerId.
  */
 public class GetBillingSetup {
 
@@ -85,7 +85,7 @@ public class GetBillingSetup {
    * @param customerId the customer ID for which to retrieve BillingSetups.
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
-    // Define a GAQL query to retrieve all billing setup information.
+    // Defines a GAQL query to retrieve all billing setup information.
     String searchQuery = "SELECT billing_setup.id, "
         + "  billing_setup.status, "
         + "  billing_setup.payments_account, "

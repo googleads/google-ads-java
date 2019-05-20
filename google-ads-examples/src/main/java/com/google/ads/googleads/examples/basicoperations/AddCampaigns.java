@@ -44,7 +44,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.joda.time.DateTime;
 
-/** This example adds new campaigns to a client account. */
+/** Adds new campaigns to a client account. */
 public class AddCampaigns {
 
   /** The number of campaigns this example will add. */
@@ -132,13 +132,13 @@ public class AddCampaigns {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
 
-    // Create a single shared budget to be used by the campaigns added below.
+    // Creates a single shared budget to be used by the campaigns added below.
     String budgetResourceName = addCampaignBudget(googleAdsClient, customerId);
 
     List<CampaignOperation> operations = new ArrayList<>(NUMBER_OF_CAMPAIGNS_TO_ADD);
 
     for (int i = 0; i < NUMBER_OF_CAMPAIGNS_TO_ADD; i++) {
-      // Configure the campaign network options
+      // Configures the campaign network options
       NetworkSettings networkSettings =
           NetworkSettings.newBuilder()
               .setTargetGoogleSearch(BoolValue.of(true))
@@ -147,7 +147,7 @@ public class AddCampaigns {
               .setTargetPartnerSearchNetwork(BoolValue.of(false))
               .build();
 
-      // Create the campaign.
+      // Creates the campaign.
       Campaign campaign =
           Campaign.newBuilder()
               .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
@@ -156,12 +156,12 @@ public class AddCampaigns {
               // the ads from immediately serving. Set to ENABLED once you've added
               // targeting and the ads are ready to serve
               .setStatus(CampaignStatus.PAUSED)
-              // Set the bidding strategy and budget.
+              // Sets the bidding strategy and budget.
               .setManualCpc(ManualCpc.newBuilder().build())
               .setCampaignBudget(StringValue.of(budgetResourceName))
-              // Add the networkSettings configured above.
+              // Adds the networkSettings configured above.
               .setNetworkSettings(networkSettings)
-              // Optional: Set the start & end dates.
+              // Optional: Sets the start & end dates.
               .setStartDate(StringValue.of(new DateTime().plusDays(1).toString("yyyyMMdd")))
               .setEndDate(StringValue.of(new DateTime().plusDays(30).toString("yyyyMMdd")))
               .build();

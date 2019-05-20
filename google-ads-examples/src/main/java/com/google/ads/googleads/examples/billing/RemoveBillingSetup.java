@@ -27,7 +27,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This removes a BillingSetup, specified by ID. To get available BillingSetups run
+ * Removes a BillingSetup, specified by ID. To get available BillingSetups run
  * GetBillingSetups.java.
  */
 public class RemoveBillingSetup {
@@ -90,17 +90,17 @@ public class RemoveBillingSetup {
    * @param billingSetupId the BillingSetup ID to remove.
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long billingSetupId) {
-    // Format the customerId and billingSetupId into a resource name.
+    // Formats the customerId and billingSetupId into a resource name.
     String billingSetupResourceName = ResourceNames.billingSetup(customerId, billingSetupId);
 
-    // Construct an operation that will remove the billing setup.
+    // Constructs an operation that will remove the billing setup.
     BillingSetupOperation operation = BillingSetupOperation.newBuilder()
         .setRemove(billingSetupResourceName)
         .build();
 
     try (BillingSetupServiceClient billingSetupServiceClient = googleAdsClient.getLatestVersion()
         .createBillingSetupServiceClient()) {
-      // Send the operation in a mutate request.
+      // Sends the operation in a mutate request.
       MutateBillingSetupResponse response = billingSetupServiceClient
           .mutateBillingSetup(String.valueOf(customerId), operation);
 

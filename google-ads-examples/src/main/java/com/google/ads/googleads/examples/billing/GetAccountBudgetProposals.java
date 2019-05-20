@@ -28,7 +28,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example gets all account budget proposals. To add an account budget proposal, run
+ * Gets all account budget proposals. To add an account budget proposal, run
  * AddAccountBudgetProposal.java.
  */
 public class GetAccountBudgetProposals {
@@ -85,7 +85,7 @@ public class GetAccountBudgetProposals {
    * @param customerId the customer ID for which to retrieve AccountBudgetProposals.
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
-    // Construct a GAQL query which will retrieve AccountBudgetProposals.
+    // Constructs a GAQL query which will retrieve AccountBudgetProposals.
     String queryString =
         "SELECT account_budget_proposal.id, "
             + "  account_budget_proposal.account_budget, "

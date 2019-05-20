@@ -57,7 +57,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * This code example creates a keyword plan, which can be reused for retrieving forecast metrics and
+ * Creates a keyword plan, which can be reused for retrieving forecast metrics and
  * historic metrics.
  */
 public class AddKeywordPlan {
@@ -106,7 +106,12 @@ public class AddKeywordPlan {
     }
   }
 
-  /** Runs the code example. */
+  /**
+   * Runs the code example.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   */
   private void runExample(GoogleAdsClient googleAdsClient, Long customerId) {
     String keywordPlanResource = createKeywordPlan(googleAdsClient, customerId);
     String planCampaignResource =
@@ -117,7 +122,12 @@ public class AddKeywordPlan {
     createKeywordPlanNegativeKeywords(googleAdsClient, customerId, planCampaignResource);
   }
 
-  /** Creates a keyword plan. */
+  /**
+   * Creates a keyword plan.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   */
   private static String createKeywordPlan(GoogleAdsClient googleAdsClient, Long customerId) {
     KeywordPlan plan =
         KeywordPlan.newBuilder()
@@ -133,21 +143,27 @@ public class AddKeywordPlan {
 
     try (KeywordPlanServiceClient client =
         googleAdsClient.getLatestVersion().createKeywordPlanServiceClient()) {
-      // Add the keyword plan.
+      // Adds the keyword plan.
       MutateKeywordPlansResponse response =
           client.mutateKeywordPlans(String.valueOf(customerId), Arrays.asList(op));
 
-      // Display the results.
+      // Displays the results.
       String resourceName = response.getResults(0).getResourceName();
       System.out.printf("Created keyword plan: %s%n", resourceName);
       return resourceName;
     }
   }
 
-  /** Creates a campaign for the keyword plan. */
+  /**
+   * Creates a campaign for the keyword plan.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param keywordPlanResource the keyword plan resource name.
+   */
   private static String createKeywordPlanCampaign(
       GoogleAdsClient googleAdsClient, Long customerId, String keywordPlanResource) {
-    // Create a keyword plan campaign.
+    // Creates a keyword plan campaign.
     KeywordPlanCampaign.Builder campaign =
         KeywordPlanCampaign.newBuilder()
             .setName(StringValue.of("Keyword plan campaign #" + System.currentTimeMillis()))
@@ -174,21 +190,27 @@ public class AddKeywordPlan {
 
     try (KeywordPlanCampaignServiceClient client =
         googleAdsClient.getLatestVersion().createKeywordPlanCampaignServiceClient()) {
-      // Add the campaign.
+      // Adds the campaign.
       MutateKeywordPlanCampaignsResponse response =
           client.mutateKeywordPlanCampaigns(String.valueOf(customerId), Arrays.asList(op));
 
-      // Display the result.
+      // Displays the result.
       String resourceName = response.getResults(0).getResourceName();
       System.out.printf("Created campaign for keyword plan: %s%n", resourceName);
       return resourceName;
     }
   }
 
-  /** Creates the ad group for the keyword plan. */
+  /**
+   * Creates the ad group for the keyword plan.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param planCampaignResource plan campaign resource name.
+   */
   private static String createKeywordPlanAdGroup(
       GoogleAdsClient googleAdsClient, Long customerId, String planCampaignResource) {
-    // Create the keyword plan ad group.
+    // Creates the keyword plan ad group.
     KeywordPlanAdGroup.Builder adGroup =
         KeywordPlanAdGroup.newBuilder()
             .setKeywordPlanCampaign(StringValue.of(planCampaignResource))
@@ -199,11 +221,11 @@ public class AddKeywordPlan {
         KeywordPlanAdGroupOperation.newBuilder().setCreate(adGroup).build();
     try (KeywordPlanAdGroupServiceClient client =
         googleAdsClient.getLatestVersion().createKeywordPlanAdGroupServiceClient()) {
-      // Add the ad group.
+      // Adds the ad group.
       MutateKeywordPlanAdGroupsResponse response =
           client.mutateKeywordPlanAdGroups(String.valueOf(customerId), Arrays.asList(op));
 
-      // Display the result.
+      // Displays the result.
       String resourceName = response.getResults(0).getResourceName();
       System.out.println("Created ad group for keyword plan: " + resourceName);
       return resourceName;
@@ -211,10 +233,16 @@ public class AddKeywordPlan {
   }
 
 
-  /** Creates keywords for the keyword plan. */
+  /**
+   * Creates keywords for the keyword plan.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param planAdGroupResource plan ad group resource name.
+   * */
   private static void createKeywordPlanKeywords(
       GoogleAdsClient googleAdsClient, Long customerId, String planAdGroupResource) {
-    // Create the keywords for keyword plan.
+    // Creates the keywords for keyword plan.
     KeywordPlanKeyword keyword1 =
         KeywordPlanKeyword.newBuilder()
             .setKeywordPlanAdGroup(StringValue.of(planAdGroupResource))
@@ -237,7 +265,7 @@ public class AddKeywordPlan {
             .setText(StringValue.of("jupiter cruise"))
             .build();
 
-    // Create an operation for each plan keyword.
+    // Creates an operation for each plan keyword.
     List<KeywordPlanKeywordOperation> operations =
         Stream.of(keyword1, keyword2, keyword3)
             .map(kw -> KeywordPlanKeywordOperation.newBuilder().setCreate(kw).build())
@@ -245,17 +273,23 @@ public class AddKeywordPlan {
 
     try (KeywordPlanKeywordServiceClient client =
         googleAdsClient.getLatestVersion().createKeywordPlanKeywordServiceClient()) {
-      // Add the keywords.
+      // Adds the keywords.
       MutateKeywordPlanKeywordsResponse response =
           client.mutateKeywordPlanKeywords(String.valueOf(customerId), operations);
-      // Display the results.
+      // Displays the results.
       for (MutateKeywordPlanKeywordResult result : response.getResultsList()) {
         System.out.printf("Created keyword for keyword plan: %s%n", result.getResourceName());
       }
     }
   }
 
-  /** Creates negative keywords for the keyword plan. */
+  /**
+   * Creates negative keywords for the keyword plan.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param planCampaignResource plan campaign resource name.
+   * */
   private void createKeywordPlanNegativeKeywords(
       GoogleAdsClient googleAdsClient, Long customerId, String planCampaignResource) {
     KeywordPlanNegativeKeyword negativeKeyword =
@@ -269,11 +303,11 @@ public class AddKeywordPlan {
 
     try (KeywordPlanNegativeKeywordServiceClient client =
         googleAdsClient.getLatestVersion().createKeywordPlanNegativeKeywordServiceClient()) {
-      // Add the negative keyword.
+      // Adds the negative keyword.
       MutateKeywordPlanNegativeKeywordsResponse response =
           client.mutateKeywordPlanNegativeKeywords(String.valueOf(customerId), Arrays.asList(op));
 
-      // Display the result.
+      // Displays the result.
       String resourceName = response.getResults(0).getResourceName();
       System.out.printf("Created negative keyword for keyword plan: %s%n", resourceName);
     }

@@ -35,7 +35,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/** This code example adds expanded text ads to a given ad group. */
+/** Adds expanded text ads to a given ad group. */
 public class AddExpandedTextAds {
 
   /** Number of ads being added / updated in this code example. */
@@ -105,7 +105,7 @@ public class AddExpandedTextAds {
 
     for (int i = 0; i < NUMBER_OF_ADS_TO_ADD; i++) {
 
-      // Create the expanded text ad info.
+      // Creates the expanded text ad info.
       ExpandedTextAdInfo expandedTextAdInfo =
           ExpandedTextAdInfo.newBuilder()
               .setHeadlinePart1(StringValue.of(String.format("Cruise #%d to Mars", i)))
@@ -113,14 +113,14 @@ public class AddExpandedTextAds {
               .setDescription(StringValue.of("Buy your tickets now!"))
               .build();
 
-      // Wrap the info in an Ad object.
+      // Wraps the info in an Ad object.
       Ad ad =
           Ad.newBuilder()
               .setExpandedTextAd(expandedTextAdInfo)
               .addFinalUrls(StringValue.of("http://www.example.com"))
               .build();
 
-      // Build the final ad group ad representation.
+      // Builds the final ad group ad representation.
       AdGroupAd adGroupAd =
           AdGroupAd.newBuilder()
               .setAdGroup(StringValue.of(adGroupResourceName))

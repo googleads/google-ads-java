@@ -27,7 +27,7 @@ import com.google.ads.googleads.v1.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** This example gets all campaigns. To add campaigns, run AddCampaigns.java. */
+/** Gets all campaigns. To add campaigns, run AddCampaigns.java. */
 public class GetCampaigns {
 
   private static final int PAGE_SIZE = 1_000;

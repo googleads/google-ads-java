@@ -57,7 +57,7 @@ import java.io.IOException;
 import java.util.Collections;
 
 /**
- * This example creates a hotel campaign, a hotel ad group and a hotel ad group ad.
+ * Creates a hotel campaign, a hotel ad group and a hotel ad group ad.
  *
  * <p>Prerequisite: You need to have access to the Hotel Ads Center, which can be granted during
  * integration with Google Hotels. The integration instructions can be found at:
@@ -214,7 +214,7 @@ public class AddHotelAd {
     NetworkSettings networkSettings =
         NetworkSettings.newBuilder().setTargetGoogleSearch(BoolValue.of(true)).build();
 
-    // Create the campaign.
+    // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
             .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
@@ -222,7 +222,7 @@ public class AddHotelAd {
             // and hotel setting info.
             .setAdvertisingChannelType(AdvertisingChannelType.HOTEL)
             .setHotelSetting(hotelSettingInfo)
-            // Recommendation: Set the campaign to PAUSED when creating it to prevent
+            // Recommendation: Sets the campaign to PAUSED when creating it to prevent
             // the ads from immediately serving. Set to ENABLED once you've added
             // targeting and the ads are ready to serve
             .setStatus(CampaignStatus.PAUSED)

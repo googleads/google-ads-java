@@ -34,7 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This example sets ad parameters for an ad group criterion.
+ * Sets ad parameters for an ad group criterion.
  * To get ad group criteria, run GetKeywords.java
  * */
 public class SetAdParameters {
@@ -103,7 +103,7 @@ public class SetAdParameters {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId, long criterionId) {
     String adGroupCriterionResourceName = ResourceNames.adGroupCriterion(customerId, adGroupId, criterionId);
 
-    // Create ad parameters.
+    // Creates ad parameters.
     // There can be a maximum of two AdParameters per ad group criterion.
     // (One with parameter_index = 1 and one with parameter_index = 2.)
     AdParameter adParameter1 =

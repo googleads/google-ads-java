@@ -34,7 +34,7 @@ import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** This example demonstrates how to add a campaign-level bid modifier for call interactions. */
+/** Adds a campaign-level bid modifier for call interactions. */
 public class AddCampaignBidModifier {
 
   private static class AddCampaignBidModifierParams extends CodeSampleParams {
@@ -104,22 +104,22 @@ public class AddCampaignBidModifier {
 
     String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
 
-    // Construct a campaign bid modifier.
+    // Constructs a campaign bid modifier.
     CampaignBidModifier campaignBidModifier =
         CampaignBidModifier.newBuilder()
             .setCampaign(StringValue.of(campaignResourceName))
-            // Make the bid modifier apply to call interactions.
+            // Makes the bid modifier apply to call interactions.
             .setInteractionType(
                 InteractionTypeInfo.newBuilder().setType(InteractionTypeEnum.InteractionType.CALLS))
-            // Use the specified bid modifier value.
+            // Uses the specified bid modifier value.
             .setBidModifier(DoubleValue.of(bidModifier))
             .build();
 
-    // Construct an operation to create the campaign bid modifier.
+    // Constructs an operation to create the campaign bid modifier.
     CampaignBidModifierOperation op =
         CampaignBidModifierOperation.newBuilder().setCreate(campaignBidModifier).build();
 
-    // Send the operation in a mutate request.
+    // Sends the operation in a mutate request.
     try (CampaignBidModifierServiceClient agcServiceClient =
         googleAdsClient.getLatestVersion().createCampaignBidModifierServiceClient()) {
       MutateCampaignBidModifiersResponse response =

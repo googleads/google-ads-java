@@ -33,7 +33,7 @@ import java.io.IOException;
 import java.util.Collections;
 
 /**
- * This example updates a campaign by setting the status to PAUSED. To get campaigns, run
+ * Updates a campaign by setting the status to PAUSED. To get campaigns, run
  * GetCampaigns.java.
  */
 public class UpdateCampaign {
@@ -96,13 +96,13 @@ public class UpdateCampaign {
    */
   private void runExample(GoogleAdsClient googleAdsClient, Long customerId, Long campaignId) {
     try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
-      // Create a Campaign object with the proper resource name and any other changes.
+      // Creates a Campaign object with the proper resource name and any other changes.
       Campaign campaign =
           Campaign.newBuilder()
               .setResourceName(ResourceNames.campaign(customerId, campaignId))
               .setStatus(CampaignStatus.PAUSED)
               .build();
-      // Construct an operation that will update the campaign, using the FieldMasks utility to
+      // Constructs an operation that will update the campaign, using the FieldMasks utility to
       // derive the update mask. This mask tells the Google Ads API which attributes of the
       // campaign you want to change.
       CampaignOperation operation =
@@ -110,11 +110,11 @@ public class UpdateCampaign {
               .setUpdate(campaign)
               .setUpdateMask(FieldMasks.allSetFieldsOf(campaign))
               .build();
-      // Send the operation in a mutate request.
+      // Sends the operation in a mutate request.
       MutateCampaignsResponse response =
           campaignServiceClient.mutateCampaigns(
               customerId.toString(), Collections.singletonList(operation));
-      // Print the resource name of each updated object.
+      // Prints the resource name of each updated object.
       for (MutateCampaignResult mutateCampaignResult : response.getResultsList()) {
         System.out.printf(
             "Updated campaign with resourceName: %s.%n", mutateCampaignResult.getResourceName());

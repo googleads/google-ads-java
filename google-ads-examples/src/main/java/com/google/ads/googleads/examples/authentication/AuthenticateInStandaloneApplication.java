@@ -30,7 +30,7 @@ import java.net.URL;
 import java.util.Properties;
 
 /**
- * This example will create an OAuth2 refresh token for the Google Ads API using the
+ * Creates an OAuth2 refresh token for the Google Ads API using the
  * Native/Installed application flow.
  *
  * <p>This example is meant to be run from the command line and requires user input.
@@ -45,7 +45,7 @@ public class AuthenticateInStandaloneApplication {
   private static final String CALLBACK_URI = "urn:ietf:wg:oauth:2.0:oob";
 
   public static void main(String[] args) throws IOException {
-    // Generate the client ID and client secret from the Google Cloud Console:
+    // Generates the client ID and client secret from the Google Cloud Console:
     // https://console.cloud.google.com
     String clientId;
     String clientSecret;
@@ -56,7 +56,7 @@ public class AuthenticateInStandaloneApplication {
       // set the clientId and clientSecret in the lines below.
       clientId = "INSERT_CLIENT_ID_HERE";
       clientSecret = "INSERT_CLIENT_SECRET_HERE";
-      // Ensure that the client ID and client secret are not the "INSERT_..._HERE" values.
+      // Ensures that the client ID and client secret are not the "INSERT_..._HERE" values.
       Preconditions.checkArgument(
           !clientId.matches("INSERT_.*_HERE"),
           "Client ID is invalid. Please update the example and try again.");
@@ -86,17 +86,17 @@ public class AuthenticateInStandaloneApplication {
     URL authorizationUrl = userAuthorizer.getAuthorizationUrl(null, null, null);
     System.out.printf("Paste this url in your browser:%n%s%n", authorizationUrl);
 
-    // Wait for the authorization code.
+    // Waits for the authorization code.
     System.out.println("Type the code you received here: ");
     @SuppressWarnings("DefaultCharset") // Reading from stdin, so default charset is appropriate.
     String authorizationCode = new BufferedReader(new InputStreamReader(System.in)).readLine();
 
-    // Exchange the authorization code for credentials and print the refresh token.
+    // Exchanges the authorization code for credentials and print the refresh token.
     UserCredentials userCredentials =
         userAuthorizer.getCredentialsFromCode(authorizationCode, null);
     System.out.printf("Your refresh token is: %s%n", userCredentials.getRefreshToken());
 
-    // Print the configuration file contents.
+    // Prints the configuration file contents.
     Properties adsProperties = new Properties();
     adsProperties.put(ConfigPropertyKey.CLIENT_ID.getPropertyKey(), clientId);
     adsProperties.put(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey(), clientSecret);

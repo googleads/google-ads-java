@@ -29,7 +29,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This code example creates a keyword plan, which can be reused for retrieving forecast metrics and
+ * Creates a keyword plan, which can be reused for retrieving forecast metrics and
  * historic metrics.
  */
 public class GenerateForecastMetrics {
@@ -86,7 +86,13 @@ public class GenerateForecastMetrics {
     }
   }
 
-  /** Runs the code example. */
+  /**
+   * Runs the code example.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID.
+   * @param planId the plan ID.
+   */
   private void runExample(GoogleAdsClient googleAdsClient, Long customerId, Long planId) {
     String planResourceName = ResourceNames.keywordPlan(customerId, planId);
 

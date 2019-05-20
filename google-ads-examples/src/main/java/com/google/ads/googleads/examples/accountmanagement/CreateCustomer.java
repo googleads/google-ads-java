@@ -31,7 +31,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * This code example illustrates how to create a new customer under a given manager account.
+ * Creates a new customer under a given manager account.
  *
  * Note: this example must be run using the credentials of a Google Ads manager account. By default,
  * the new account will only be accessible via the manager account.
@@ -93,7 +93,7 @@ public class CreateCustomer {
             StringValue.of("Account created with CustomerService on '" + dateTime + "'"))
         .setCurrencyCode(StringValue.of("USD"))
         .setTimeZone(StringValue.of("America/New_York"))
-        // Optional: Set additional attributes of the customer.
+        // Optional: Sets additional attributes of the customer.
         .setTrackingUrlTemplate(StringValue.of("{lpurl}?device={device}"))
         .setFinalUrlSuffix(
             StringValue.of("keyword={keyword}&matchtype={matchtype}&adgroupid={adgroupid}"))

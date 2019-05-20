@@ -35,7 +35,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/** This example adds ad groups to a campaign. */
+/** Adds ad groups to a campaign. */
 public class AddAdGroups {
 
   private static class AddAdGroupParams extends CodeSampleParams {
@@ -97,7 +97,7 @@ public class AddAdGroups {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
 
-    // Create ad group, setting an optional CPC value.
+    // Creates an ad group, setting an optional CPC value.
     AdGroup adGroup1 =
         AdGroup.newBuilder()
             .setName(StringValue.of("Earth to Mars Cruises #" + System.currentTimeMillis()))
@@ -107,7 +107,7 @@ public class AddAdGroups {
             .setCpcBidMicros(Int64Value.of(10_000_000L))
             .build();
 
-    // Add as many additional ad groups as you need.
+    // You may add as many additional ad groups as you need.
     AdGroup adGroup2 =
         AdGroup.newBuilder()
             .setName(StringValue.of("Earth to Venus Cruises #" + System.currentTimeMillis()))

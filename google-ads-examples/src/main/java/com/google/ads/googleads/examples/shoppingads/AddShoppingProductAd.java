@@ -64,7 +64,7 @@ import java.io.IOException;
 import java.util.Collections;
 
 /**
- * This example creates a standard shopping campaign, a shopping product ad group and a shopping
+ * Creates a standard shopping campaign, a shopping product ad group and a shopping
  * product ad.
  *
  * <p>Prerequisite: You need to have access to a Merchant Center account. You can find instructions
@@ -224,7 +224,7 @@ public class AddShoppingProductAd {
             // For Shopping product ad campaigns, allowed values are between 0 and 2, inclusive.
             .setCampaignPriority(Int32Value.of(0))
             .setMerchantId(Int64Value.of(merchantCenterAccountId))
-            // Enables local inventory ads for this campaign
+            // Enables local inventory ads for this campaign.
             .setEnableLocal(BoolValue.of(true))
             .build();
 
@@ -236,14 +236,14 @@ public class AddShoppingProductAd {
             // and shopping setting.
             .setAdvertisingChannelType(AdvertisingChannelType.SHOPPING)
             .setShoppingSetting(shoppingSetting)
-            // Recommendation: Set the campaign to PAUSED when creating it to prevent
+            // Recommendation: Sets the campaign to PAUSED when creating it to prevent
             // the ads from immediately serving. Set to ENABLED once you've added
-            // targeting and the ads are ready to serve
+            // targeting and the ads are ready to serve.
             .setStatus(CampaignStatus.PAUSED)
             // Sets the bidding strategy to Manual CPC (with eCPC enabled)
             // Recommendation: Use one of the automated bidding strategies for Shopping campaigns
             // to help you optimize your advertising spend. More information can be found here:
-            // https://support.google.com/google-ads/answer/6309029
+            // https://support.google.com/google-ads/answer/6309029.
             .setManualCpc(ManualCpc.newBuilder().setEnhancedCpcEnabled(BoolValue.of(true)).build())
             // Sets the budget.
             .setCampaignBudget(StringValue.of(budgetResourceName))
@@ -369,9 +369,9 @@ public class AddShoppingProductAd {
             .setAdGroup(StringValue.of(adGroupResourceName))
             .setStatus(AdGroupCriterionStatus.ENABLED)
             // Creates a new listing group. This will be the top-level "root" node.
-            // Set the type of the listing group to be a biddable unit.
+            // Sets the type of the listing group to be a biddable unit.
             .setListingGroup(ListingGroupInfo.newBuilder().setType(ListingGroupType.UNIT).build())
-            // Set the bid for products in this listing group unit.
+            // Sets the bid for products in this listing group unit.
             .setCpcBidMicros(Int64Value.of(500_000L))
             .build();
 

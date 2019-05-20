@@ -42,7 +42,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * This example adds campaign targeting criteria. To get campaign targeting criteria, run
+ * Adds campaign targeting criteria. To get campaign targeting criteria, run
  * GetCampaignTargetingCriteria.java.
  */
 public class AddCampaignTargetingCriteria {

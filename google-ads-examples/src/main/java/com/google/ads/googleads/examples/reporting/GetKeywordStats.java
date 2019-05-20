@@ -32,7 +32,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * This example gets keyword performance statistics for the 50 keywords with the most impressions
+ * Gets keyword performance statistics for the 50 keywords with the most impressions
  * over the last 7 days.
  */
 public class GetKeywordStats {

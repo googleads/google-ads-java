@@ -34,7 +34,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * This example gets the metadata, such as whether the artifact is selectable, filterable and
+ * Gets the metadata, such as whether the artifact is selectable, filterable and
  * sortable, of an artifact. The artifact can be either a resource (such as customer, campaign) or a
  * field (such as metrics.impressions, campaign.id). It'll also show the data type and artifacts
  * that are selectable with the artifact.
@@ -95,7 +95,7 @@ public class GetArtifactMetadata {
   private void runExample(GoogleAdsClient googleAdsClient, String artifactName) {
     try (GoogleAdsFieldServiceClient googleAdsFieldServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsFieldServiceClient()) {
-      // Search for an artifact whose name is the same as the specified artifactName.
+      // Searches for an artifact whose name is the same as the specified artifactName.
       SearchGoogleAdsFieldsPagedResponse searchGoogleAdsFieldsPagedResponse =
           googleAdsFieldServiceClient.searchGoogleAdsFields(
               String.format(
@@ -103,7 +103,7 @@ public class GetArtifactMetadata {
                       + "data_type, is_repeated WHERE name = '%s'",
                   artifactName));
 
-      // Get all returned artifacts and print out their metadata.
+      // Gets all returned artifacts and prints out their metadata.
       List<GoogleAdsField> googleAdsFields =
           Lists.newArrayList(searchGoogleAdsFieldsPagedResponse.iterateAll());
       for (GoogleAdsField googleAdsField : googleAdsFields) {
@@ -118,7 +118,7 @@ public class GetArtifactMetadata {
             getIsOrIsNot(googleAdsField.getSortable()),
             getIsOrIsNot(googleAdsField.getIsRepeated()));
 
-        // Unwrap and sort the list of artifact names that are selectable with the specified
+        // Unwraps and sorts the list of artifact names that are selectable with the specified
         // artifact.
         List<String> selectableArtifacts =
             new ArrayList<>(

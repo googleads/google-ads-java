@@ -31,7 +31,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
 
-/** This example gets keywords from ad group criteria. */
+/** Gets keywords from ad group criteria. */
 public class GetKeywords {
 
   private static final int PAGE_SIZE = 1_000;

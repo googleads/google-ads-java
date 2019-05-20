@@ -28,7 +28,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Optional;
 
-/** This example gets the changes in the account made in the last 7 days. */
+/** Gets the changes in the account made in the last 7 days. */
 public class GetAccountChanges {
 
   private static class GetAccountChangesParams extends CodeSampleParams {

@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/** This example adds a campaign label to a list of campaigns. */
+/** Adds a campaign label to a list of campaigns. */
 public class AddCampaignLabels {
 
   private static class AddCampaignLabelsParams extends CodeSampleParams {
@@ -102,16 +102,16 @@ public class AddCampaignLabels {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId,
     List<Long> campaignIds, Long labelId) {
-    // Get the resource name of the label to be added across all given campaigns
+    // Gets the resource name of the label to be added across all given campaigns.
     String labelResourceName = ResourceNames.label(customerId, labelId);
 
     List <CampaignLabelOperation> operations = new ArrayList<>(
       campaignIds.size());
-    // Create a campaign label operation for each campaign
+    // Creates a campaign label operation for each campaign.
     for (Long campaignId : campaignIds) {
-      // Get the resource name of the given campaign
+      // Gets the resource name of the given campaign.
       String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
-      // Create the campaign label
+      // Creates the campaign label.
       CampaignLabel campaignLabel =
         CampaignLabel.newBuilder()
           .setCampaign(StringValue.of(campaignResourceName))

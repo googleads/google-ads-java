@@ -47,7 +47,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * This example shows how to add a shopping listing group tree to a shopping ad group. The example
+ * Adds a shopping listing group tree to a shopping ad group. The example
  * will clear an existing listing group tree and rebuild it include the following tree structure:
  *
  * <pre>
@@ -135,14 +135,14 @@ public class AddShoppingProductListingGroupTree {
       long customerId,
       long adGroupId,
       boolean replaceExistingTree) {
-    // 1) Optional: Remove the existing listing group tree, if it already exists on the ad group.
+    // 1) Optional: Removes the existing listing group tree, if it already exists on the ad group.
     if (replaceExistingTree) {
       removeListingGroupTree(googleAdsClient, customerId, adGroupId);
     }
-    // Create a list of ad group criterion to add
+    // Creates a list of ad group criterion to add.q
     List<AdGroupCriterionOperation> operations = new ArrayList<>();
 
-    // 2) Construct the listing group tree "root" node.
+    // 2) Constructs the listing group tree "root" node.
 
     // Subdivision node: (Root node)
     AdGroupCriterion adGroupCriterionRoot =
@@ -201,7 +201,7 @@ public class AddShoppingProductListingGroupTree {
                 // parent
                 .setProductCondition(ProductConditionInfo.newBuilder().build())
                 .build());
-    // Get the resource name that will be used for the condition other node.
+    // Gets the resource name that will be used for the condition other node.
     // This resource has not been created yet and will include the temporary ID as part of the
     // criterion ID.
     String adGroupCriterionResourceNameConditionOther =
@@ -209,7 +209,7 @@ public class AddShoppingProductListingGroupTree {
     operations.add(
         AdGroupCriterionOperation.newBuilder().setCreate(adGroupCriterionConditionOther).build());
 
-    // 4) Construct the listing group unit nodes for CoolBrand, CheapBrand and other
+    // 4) Constructs the listing group unit nodes for CoolBrand, CheapBrand and other
 
     // Biddable Unit node: (Brand CoolBrand node)
     // * Brand: CoolBrand
@@ -361,16 +361,16 @@ public class AddShoppingProductListingGroupTree {
             .setStatus(AdGroupCriterionStatus.ENABLED)
             .setListingGroup(
                 ListingGroupInfo.newBuilder()
-                    // Set the type as a UNIT, which will allow the group to be biddable.
+                    // Sets the type as a UNIT, which will allow the group to be biddable.
                     .setType(ListingGroupType.UNIT)
-                    // Set the ad group criterion resource name for the parent listing group.
+                    // Sets the ad group criterion resource name for the parent listing group.
                     // This can include a temporary ID if the parent criterion is not yet created.
                     // Use StringValue to convert from a String to a compatible argument type.
                     .setParentAdGroupCriterion(StringValue.of(parentAdGroupCriterionResourceName))
                     // Case values contain the listing dimension used for the node.
                     .setCaseValue(listingDimensionInfo)
                     .build())
-            // Set the bid for this listing group unit.
+            // Sets the bid for this listing group unit.
             // This will be used as the CPC bid for items that are included in this listing group
             .setCpcBidMicros(Int64Value.of(cpcBidMicros))
             .build();
@@ -408,12 +408,12 @@ public class AddShoppingProductListingGroupTree {
             .setStatus(AdGroupCriterionStatus.ENABLED)
             .setListingGroup(
                 ListingGroupInfo.newBuilder()
-                    // Set the type as a SUBDIVISION, which will allow the node to be the parent of
+                    // Sets the type as a SUBDIVISION, which will allow the node to be the parent of
                     // another sub-tree.
                     .setType(ListingGroupType.SUBDIVISION)
-                    // Set the ad group criterion resource name for the parent listing group.
+                    // Sets the ad group criterion resource name for the parent listing group.
                     // This can include a temporary ID if the parent criterion is not yet created.
-                    // Use StringValue to convert from a String to a compatible argument type.
+                    // Uses StringValue to convert from a String to a compatible argument type.
                     .setParentAdGroupCriterion(StringValue.of(parentAdGroupCriterionResourceName))
                     // Case values contain the listing dimension used for the node.
                     .setCaseValue(listingDimensionInfo)
@@ -447,7 +447,7 @@ public class AddShoppingProductListingGroupTree {
             .setStatus(AdGroupCriterionStatus.ENABLED)
             .setListingGroup(
                 ListingGroupInfo.newBuilder()
-                    // Set the type as a SUBDIVISION, which will allow the node to be the parent of
+                    // Sets the type as a SUBDIVISION, which will allow the node to be the parent of
                     // another sub-tree.
                     .setType(ListingGroupType.SUBDIVISION)
                     .build())

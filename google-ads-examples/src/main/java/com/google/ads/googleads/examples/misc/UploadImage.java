@@ -36,7 +36,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
 
-/** This example uploads an image. */
+/** Uploads an image. */
 public class UploadImage {
 
   private static class AddAdGroupParams extends CodeSampleParams {

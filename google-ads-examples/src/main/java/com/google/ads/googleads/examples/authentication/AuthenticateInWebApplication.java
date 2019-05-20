@@ -43,7 +43,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * This example will create an OAuth2 refresh token for the Google Ads API using the Web application
+ * Creates an OAuth2 refresh token for the Google Ads API using the Web application
  * flow.
  *
  * <p>This example will start a basic server that listens for requests at {@code
@@ -79,7 +79,7 @@ public class AuthenticateInWebApplication {
       // to the user's email address so that the Google Authentication Server will automatically
       // populate the account selection prompt with that address.
       loginEmailAddressHint = null;
-      // Ensure that the client ID and client secret are not the "INSERT_..._HERE" values.
+      // Ensures that the client ID and client secret are not the "INSERT_..._HERE" values.
       Preconditions.checkArgument(
           !clientId.matches("INSERT_.*_HERE"),
           "Client ID is invalid. Please update the example and try again.");
@@ -103,11 +103,11 @@ public class AuthenticateInWebApplication {
 
   public void runExample(String clientId, String clientSecret, String loginEmailAddressHint)
       throws Exception {
-    // Create an anti-forgery state token as described here:
+    // Creates an anti-forgery state token as described here:
     // https://developers.google.com/identity/protocols/OpenIDConnect#createxsrftoken
     String state = new BigInteger(130, new SecureRandom()).toString(32);
 
-    // Create an HTTP server that will listen for the OAuth2 callback request.
+    // Creates an HTTP server that will listen for the OAuth2 callback request.
     URI baseUri;
     UserAuthorizer userAuthorizer;
     AuthorizationResponse authorizationResponse = null;
@@ -123,7 +123,7 @@ public class AuthenticateInWebApplication {
           "Paste this url in your browser:%n%s%n",
           userAuthorizer.getAuthorizationUrl(loginEmailAddressHint, state, baseUri));
 
-      // Wait for the authorization code.
+      // Waits for the authorization code.
       simpleCallbackServer.accept();
       authorizationResponse = simpleCallbackServer.authorizationResponse;
     }
@@ -133,18 +133,18 @@ public class AuthenticateInWebApplication {
           "OAuth2 callback did not contain an authorization code: " + authorizationResponse);
     }
 
-    // Confirm that the state in the response matches the state token used to generate the
+    // Confirms that the state in the response matches the state token used to generate the
     // authorization URL.
     if (!state.equals(authorizationResponse.state)) {
       throw new IllegalStateException("State does not match expected state");
     }
 
-    // Exchange the authorization code for credentials and print the refresh token.
+    // Exchanges the authorization code for credentials and print the refresh token.
     UserCredentials userCredentials =
         userAuthorizer.getCredentialsFromCode(authorizationResponse.code, baseUri);
     System.out.printf("Your refresh token is: %s%n", userCredentials.getRefreshToken());
 
-    // Print the configuration file contents.
+    // Prints the configuration file contents.
     Properties adsProperties = new Properties();
     adsProperties.put(ConfigPropertyKey.CLIENT_ID.getPropertyKey(), clientId);
     adsProperties.put(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey(), clientSecret);
@@ -182,7 +182,7 @@ public class AuthenticateInWebApplication {
     private AuthorizationResponse authorizationResponse;
 
     SimpleCallbackServer() throws IOException {
-      // Pass a port # of zero so that a port will be automatically allocated.
+      // Passes a port # of zero so that a port will be automatically allocated.
       super(0);
     }
 
@@ -199,7 +199,7 @@ public class AuthenticateInWebApplication {
           new BufferedReader(
               new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8))) {
         String callbackRequest = in.readLine();
-        // Use a regular expression to extract the request line from the first line of the
+        // Uses a regular expression to extract the request line from the first line of the
         // callback request, e.g.:
         //   GET /?code=AUTH_CODE&state=XYZ&scope=https://www.googleapis.com/auth/adwords HTTP/1.1
         Pattern pattern = Pattern.compile("GET +([^ ]+)");

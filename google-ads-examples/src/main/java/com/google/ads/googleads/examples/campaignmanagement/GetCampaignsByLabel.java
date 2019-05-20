@@ -27,7 +27,7 @@ import com.google.ads.googleads.v1.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** This example gets all campaigns with a specific label. */
+/** Gets all campaigns with a specific label. */
 public class GetCampaignsByLabel {
 
   private static final int PAGE_SIZE = 1_000;
@@ -103,7 +103,7 @@ public class GetCampaignsByLabel {
           .build();
       // Issues the search request.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
-      // Check if the total results count is greater than 0
+      // Checks if the total results count is greater than 0.
       if (searchPagedResponse.getPage().getResponse().getTotalResultsCount() > 0) {
         // Iterates over all rows in all pages and prints the requested field values for the
         // campaigns and labels in each row. The results include the campaign and label
