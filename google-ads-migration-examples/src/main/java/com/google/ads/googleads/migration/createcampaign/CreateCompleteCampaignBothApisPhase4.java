@@ -21,7 +21,7 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.migration.utils.ArgumentNames;
 import com.google.ads.googleads.migration.utils.CodeSampleParams;
-import com.google.ads.googleads.v0.utils.ResourceNames;
+import com.google.ads.googleads.v1.utils.ResourceNames;
 import com.google.ads.googleads.v1.common.ExpandedTextAdInfo;
 import com.google.ads.googleads.v1.common.ManualCpc;
 import com.google.ads.googleads.v1.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
