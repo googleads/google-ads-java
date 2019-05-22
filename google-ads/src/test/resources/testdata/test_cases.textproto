@@ -93,8 +93,6 @@ test_cases {
   expected_mask {
     # List of all fields of foo
     paths: "foo.num"
-    paths: "foo.bar"
-    paths: "foo.bars"
   }
 }
 
@@ -167,9 +165,6 @@ test_cases {
     }
   }
   expected_mask {
-    paths: "foo.num"
-    paths: "foo.bar.num"
     paths: "foo.bar.nested_wrapper"
-    paths: "foo.bars"
   }
 }
