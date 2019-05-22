@@ -50,6 +50,14 @@ public final class Version implements Comparable<Version> {
         versionName.matches("v[0-9]+"), "Invalid version name: %", versionName);
   }
 
+  /**
+   * Returns the version name, e.g. "v1".
+   * @return the version name
+   */
+  public String getVersionName() {
+    return versionName;
+  }
+
   /** Allows sorting of versions, higher version numbers have lower sorting rank, as in v1 < v0. */
   @Override
   public int compareTo(Version o) {
