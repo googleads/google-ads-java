@@ -40,7 +40,7 @@ import java.util.List;
 
 /**
  * Handle RateExceededError in your application. To trigger the rate
- * exceeded error, this code example runs 100 threads in parallel, each
+ * exceeded error, this code example runs 500 threads in parallel, each
  * thread attempting to validate 100 keywords in a single request. Note
  * that spawning 100 parallel threads is for illustrative purposes only,
  * you shouldn't do this in your application.
@@ -55,13 +55,13 @@ public class HandleRateExceededError {
     private Long adGroupId;
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws InterruptedException {
     HandleRateExceededErrorParams params = new HandleRateExceededErrorParams();
     if (!params.parseArguments(args)) {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
-      params.adGroupId = Long.parseLong("INSERT_CAMPAIGN_ID_HERE");
+      params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
     }
 
     GoogleAdsClient googleAdsClient;
@@ -101,31 +101,32 @@ public class HandleRateExceededError {
    * @param customerId the client customer ID.
    * @param adGroupId the ID of the ad group to which keywords are added.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
-    final int NUM_THREADS = 100;
-
-    // Increase the maximum number of parallel HTTP connections that .NET
-    // framework allows. By default, this is set to 2 by the .NET framework.
+  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId)
+    throws InterruptedException {
+    final int NUM_THREADS = 500;
 
     List<Thread> threads = new ArrayList<>();
 
+    // Adds 500 threads that validate keywords to a list.
     for (int i = 0; i < NUM_THREADS; i++) {
-      Thread thread = new Thread(new KeywordsThread(googleAdsClient, customerId, adGroupId, i)
-        .run());
+      KeywordsThread keywordsThread = new KeywordsThread(googleAdsClient, customerId, adGroupId, i);
+      Thread thread = new Thread(keywordsThread);
       threads.add(thread);
     }
 
+    // Starts the threads.
     for (Thread thread : threads) {
       thread.start();
     }
 
+    // Ensures the calling thread waits until all threads of terminated.
     for (Thread thread : threads) {
       thread.join();
     }
   }
 
   /** Thread class for validating keywords */
-  private static class KeywordsThread {
+  private static class KeywordsThread implements Runnable {
     // Number of keywords to be validated in each API call.
     private final int NUM_KEYWORDS = 100;
 
@@ -149,7 +150,7 @@ public class HandleRateExceededError {
      * @param adGroupId the ID of the ad group to which keywords are added.
      * @param threadIndex the index of the thread.
      */
-    KeywordsThread(GoogleAdsClient googleAdsClient, long customerId, long adGroupId,
+    public KeywordsThread(GoogleAdsClient googleAdsClient, long customerId, long adGroupId,
                           int threadIndex) {
       this.googleAdsClient = googleAdsClient;
       this.customerId = customerId;
@@ -161,7 +162,6 @@ public class HandleRateExceededError {
      * Main method for the thread.
      */
     public void run() {
-      // Creates the operations.
       List<AdGroupCriterionOperation> operations = new ArrayList<>();
 
       for (int i = 0; i < NUM_KEYWORDS; i++) {
@@ -197,13 +197,13 @@ public class HandleRateExceededError {
              googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
 
         int retryCount = 0;
-        int retrySeconds = 5;
+        int retrySeconds = 10;
         final int NUM_RETRIES = 3;
 
         try {
           while (retryCount < NUM_RETRIES) {
             try {
-              // Makes the mutate request.
+              // Makes the validateOnly mutate request.
               MutateAdGroupCriteriaResponse response =
                 adGroupCriterionServiceClient.mutateAdGroupCriteria(
                   Long.toString(customerId), operations, false, true);
@@ -212,27 +212,32 @@ public class HandleRateExceededError {
               for (MutateAdGroupCriterionResult result : response.getResultsList()) {
                 System.out.println(result.getResourceName());
               }
+              break;
             } catch (GoogleAdsException gae) {
               for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
+                // Checks if any of the errors are QuotaError.RESOURCE_EXHAUSTED or
+                // QuotaError.RESOURCE_TEMPORARILY_EXHAUSTED.
                 if (googleAdsError.getErrorCode().getQuotaError() ==
-                  QuotaError.RESOURCE_EXHAUSTED || googleAdsError.getErrorCode().getQuotaError() ==
+                  QuotaError.RESOURCE_EXHAUSTED ||
+                  googleAdsError.getErrorCode().getQuotaError() ==
                   QuotaError.RESOURCE_TEMPORARILY_EXHAUSTED) {
                   System.err.printf("Received rate exceeded error, retry after %d seconds.%n",
                     retrySeconds);
                   Thread.sleep(retrySeconds * 1000);
                   retryCount++;
+                  // Uses an exponential backoff policy to avoid polling too aggressively.
                   retrySeconds *= 2;
                 }
               }
             } finally {
               if (retryCount == NUM_RETRIES) {
-                throw new Exception(String.format("Could not recover after making %d attempts.",
+                throw new Exception(String.format("Could not recover after making %d attempts.%n",
                   retryCount));
               }
             }
           }
         } catch (Exception e) {
-          System.err.printf("Failed to validate keywords.", e);
+          System.err.printf("Failed to validate keywords.%n", e);
           return;
         }
       }
