@@ -68,7 +68,7 @@ import java.util.Collections;
  *
  * <p>Prerequisite: You need to have access to a Merchant Center account. You can find instructions
  * to create a Merchant Center account here: https://support.google.com/merchants/answer/188924.
- * This account must be linked to your AdWords account. The integration instructions can be found
+ * This account must be linked to your Google Ads account. The integration instructions can be found
  * at: https://developers.google.com/adwords/shopping/full-automation/articles/t15.
  */
 public class AddShoppingSmartAd {
