@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 package com.google.ads.googleads.examples.errorhandling;
 
 import com.beust.jcommander.Parameter;
@@ -32,18 +31,16 @@ import com.google.ads.googleads.v1.services.MutateAdGroupCriteriaResponse;
 import com.google.ads.googleads.v1.services.MutateAdGroupCriterionResult;
 import com.google.ads.googleads.v1.utils.ResourceNames;
 import com.google.protobuf.StringValue;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Handle RateExceededError in your application. To trigger the rate
- * exceeded error, this code example runs 500 threads in parallel, each
- * thread attempting to validate 100 keywords in a single request. Note
- * that spawning 100 parallel threads is for illustrative purposes only,
- * you shouldn't do this in your application.
+ * Handle RateExceededError in your application. To trigger the rate exceeded error, this code
+ * example runs 500 threads in parallel, each thread attempting to validate 100 keywords in a single
+ * request. Note that spawning 100 parallel threads is for illustrative purposes only, you shouldn't
+ * do this in your application.
  */
 public class HandleRateExceededError {
   private static class HandleRateExceededErrorParams extends CodeSampleParams {
@@ -69,7 +66,7 @@ public class HandleRateExceededError {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -77,16 +74,16 @@ public class HandleRateExceededError {
     }
 
     try {
-      new HandleRateExceededError().runExample(
-        googleAdsClient, params.customerId, params.adGroupId);
+      new HandleRateExceededError()
+          .runExample(googleAdsClient, params.customerId, params.adGroupId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -102,7 +99,7 @@ public class HandleRateExceededError {
    * @param adGroupId the ID of the ad group to which keywords are added.
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId)
-    throws InterruptedException {
+      throws InterruptedException {
     final int NUM_THREADS = 500;
 
     List<Thread> threads = new ArrayList<>();
@@ -150,51 +147,53 @@ public class HandleRateExceededError {
      * @param adGroupId the ID of the ad group to which keywords are added.
      * @param threadIndex the index of the thread.
      */
-    public KeywordsThread(GoogleAdsClient googleAdsClient, long customerId, long adGroupId,
-                          int threadIndex) {
+    public KeywordsThread(
+        GoogleAdsClient googleAdsClient, long customerId, long adGroupId, int threadIndex) {
       this.googleAdsClient = googleAdsClient;
       this.customerId = customerId;
       this.adGroupId = adGroupId;
       this.threadIndex = threadIndex;
     }
 
-    /**
-     * Main method for the thread.
-     */
+    /** Main method for the thread. */
     public void run() {
       List<AdGroupCriterionOperation> operations = new ArrayList<>();
 
       for (int i = 0; i < NUM_KEYWORDS; i++) {
         // Configures the keywordText text and match type settings.
         KeywordInfo keywordInfo =
-          KeywordInfo.newBuilder()
-            .setText(StringValue.of("mars cruise thread " + String.valueOf(threadIndex) + " seed " +
-              "" + String.valueOf(i)))
-            .setMatchType(KeywordMatchType.EXACT)
-            .build();
+            KeywordInfo.newBuilder()
+                .setText(
+                    StringValue.of(
+                        "mars cruise thread "
+                            + String.valueOf(threadIndex)
+                            + " seed "
+                            + ""
+                            + String.valueOf(i)))
+                .setMatchType(KeywordMatchType.EXACT)
+                .build();
 
         String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
         // Constructs an ad group criterion using the keywordText configuration above.
         AdGroupCriterion criterion =
-          AdGroupCriterion.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
-            .setStatus(AdGroupCriterionStatus.ENABLED)
-            .setKeyword(keywordInfo)
-            .build();
+            AdGroupCriterion.newBuilder()
+                .setAdGroup(StringValue.of(adGroupResourceName))
+                .setStatus(AdGroupCriterionStatus.ENABLED)
+                .setKeyword(keywordInfo)
+                .build();
 
         // Creates the operation.
         AdGroupCriterionOperation operation =
-          AdGroupCriterionOperation.newBuilder().setCreate(criterion).build();
+            AdGroupCriterionOperation.newBuilder().setCreate(criterion).build();
 
         operations.add(operation);
-
       }
 
       // Gets the AdGroupCriterionService. This should be done within the thread, since a service
       // can only handle one outgoing HTTP request at a time.
       try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
-             googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
+          googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
 
         int retryCount = 0;
         int retrySeconds = 10;
@@ -205,8 +204,8 @@ public class HandleRateExceededError {
             try {
               // Makes the validateOnly mutate request.
               MutateAdGroupCriteriaResponse response =
-                adGroupCriterionServiceClient.mutateAdGroupCriteria(
-                  Long.toString(customerId), operations, false, true);
+                  adGroupCriterionServiceClient.mutateAdGroupCriteria(
+                      Long.toString(customerId), operations, false, true);
 
               System.out.printf("Added %d ad group criteria:%n", response.getResultsCount());
               for (MutateAdGroupCriterionResult result : response.getResultsList()) {
@@ -217,12 +216,11 @@ public class HandleRateExceededError {
               for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
                 // Checks if any of the errors are QuotaError.RESOURCE_EXHAUSTED or
                 // QuotaError.RESOURCE_TEMPORARILY_EXHAUSTED.
-                if (googleAdsError.getErrorCode().getQuotaError() ==
-                  QuotaError.RESOURCE_EXHAUSTED ||
-                  googleAdsError.getErrorCode().getQuotaError() ==
-                  QuotaError.RESOURCE_TEMPORARILY_EXHAUSTED) {
-                  System.err.printf("Received rate exceeded error, retry after %d seconds.%n",
-                    retrySeconds);
+                if (googleAdsError.getErrorCode().getQuotaError() == QuotaError.RESOURCE_EXHAUSTED
+                    || googleAdsError.getErrorCode().getQuotaError()
+                        == QuotaError.RESOURCE_TEMPORARILY_EXHAUSTED) {
+                  System.err.printf(
+                      "Received rate exceeded error, retry after %d seconds.%n", retrySeconds);
                   Thread.sleep(retrySeconds * 1000);
                   retryCount++;
                   // Uses an exponential backoff policy to avoid polling too aggressively.
@@ -231,8 +229,8 @@ public class HandleRateExceededError {
               }
             } finally {
               if (retryCount == NUM_RETRIES) {
-                throw new Exception(String.format("Could not recover after making %d attempts.%n",
-                  retryCount));
+                throw new Exception(
+                    String.format("Could not recover after making %d attempts.%n", retryCount));
               }
             }
           }
