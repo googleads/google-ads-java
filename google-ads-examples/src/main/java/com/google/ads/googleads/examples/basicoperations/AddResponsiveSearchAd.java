@@ -33,7 +33,6 @@ import com.google.ads.googleads.v1.services.MutateAdGroupAdsResponse;
 import com.google.ads.googleads.v1.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.StringValue;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -63,7 +62,7 @@ public class AddResponsiveSearchAd {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -78,8 +77,8 @@ public class AddResponsiveSearchAd {
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -102,49 +101,49 @@ public class AddResponsiveSearchAd {
     // pinning is set, then headlines and descriptions will be rotated and the ones that
     // perform best will be used more often.
     AdTextAsset pinnedHeadline =
-      AdTextAsset.newBuilder()
-        .setText(StringValue.of("Cruise to Mars #" + System.currentTimeMillis()))
-        .setPinnedField(ServedAssetFieldType.HEADLINE_1)
-        .build();
+        AdTextAsset.newBuilder()
+            .setText(StringValue.of("Cruise to Mars #" + System.currentTimeMillis()))
+            .setPinnedField(ServedAssetFieldType.HEADLINE_1)
+            .build();
 
     // Creates the responsive search ad info.
     ResponsiveSearchAdInfo responsiveSearchAdInfo =
-      ResponsiveSearchAdInfo.newBuilder()
-        .addHeadlines(pinnedHeadline)
-        .addHeadlines(createAdTextAsset("Best Space Cruise Line"))
-        .addHeadlines(createAdTextAsset("Experience the Stars"))
-        .addDescriptions(createAdTextAsset("Buy your tickets now"))
-        .addDescriptions(createAdTextAsset("Visit the Red Planet"))
-        .setPath1(StringValue.of("all-inclusive"))
-        .setPath2(StringValue.of("deals"))
-        .build();
+        ResponsiveSearchAdInfo.newBuilder()
+            .addHeadlines(pinnedHeadline)
+            .addHeadlines(createAdTextAsset("Best Space Cruise Line"))
+            .addHeadlines(createAdTextAsset("Experience the Stars"))
+            .addDescriptions(createAdTextAsset("Buy your tickets now"))
+            .addDescriptions(createAdTextAsset("Visit the Red Planet"))
+            .setPath1(StringValue.of("all-inclusive"))
+            .setPath2(StringValue.of("deals"))
+            .build();
 
     // Wraps the info in an Ad object.
     Ad ad =
-      Ad.newBuilder()
-        .setResponsiveSearchAd(responsiveSearchAdInfo)
-        .addFinalUrls(StringValue.of("http://www.example.com"))
-        .build();
+        Ad.newBuilder()
+            .setResponsiveSearchAd(responsiveSearchAdInfo)
+            .addFinalUrls(StringValue.of("http://www.example.com"))
+            .build();
 
     // Builds the final ad group ad representation.
     AdGroupAd adGroupAd =
-      AdGroupAd.newBuilder()
-        .setAdGroup(StringValue.of(adGroupResourceName))
-        .setStatus(AdGroupAdStatus.PAUSED)
-        .setAd(ad)
-        .build();
+        AdGroupAd.newBuilder()
+            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setStatus(AdGroupAdStatus.PAUSED)
+            .setAd(ad)
+            .build();
 
     // Creates the operation.
     AdGroupAdOperation operation = AdGroupAdOperation.newBuilder().setCreate(adGroupAd).build();
 
     try (AdGroupAdServiceClient adGroupAdServiceClient =
-           googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
+        googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
       MutateAdGroupAdsResponse response =
-        adGroupAdServiceClient.mutateAdGroupAds(Long.toString(customerId),
-          ImmutableList.of(operation));
+          adGroupAdServiceClient.mutateAdGroupAds(
+              Long.toString(customerId), ImmutableList.of(operation));
       for (MutateAdGroupAdResult result : response.getResultsList()) {
         System.out.printf(
-          "Responsive search ad created with resource name: %s.%n", result.getResourceName());
+            "Responsive search ad created with resource name: %s.%n", result.getResourceName());
       }
     }
   }
@@ -156,8 +155,6 @@ public class AddResponsiveSearchAd {
    * @return AdTextAsset.
    */
   private AdTextAsset createAdTextAsset(String text) {
-    return AdTextAsset.newBuilder()
-      .setText(StringValue.of(text))
-      .build();
+    return AdTextAsset.newBuilder().setText(StringValue.of(text)).build();
   }
 }
