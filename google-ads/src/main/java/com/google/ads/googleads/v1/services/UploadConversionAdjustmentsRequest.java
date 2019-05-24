@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     customerId_ = "";
     conversionAdjustments_ = java.util.Collections.emptyList();
     partialFailure_ = false;
+    validateOnly_ = false;
   }
 
   @java.lang.Override
@@ -68,6 +69,11 @@ private static final long serialVersionUID = 0L;
           case 24: {
 
             partialFailure_ = input.readBool();
+            break;
+          }
+          case 32: {
+
+            validateOnly_ = input.readBool();
             break;
           }
           default: {
@@ -219,6 +225,20 @@ private static final long serialVersionUID = 0L;
     return partialFailure_;
   }
 
+  public static final int VALIDATE_ONLY_FIELD_NUMBER = 4;
+  private boolean validateOnly_;
+  /**
+   * <pre>
+   * If true, the request is validated but not executed. Only errors are
+   * returned, not results.
+   * </pre>
+   *
+   * <code>bool validate_only = 4;</code>
+   */
+  public boolean getValidateOnly() {
+    return validateOnly_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -242,6 +262,9 @@ private static final long serialVersionUID = 0L;
     if (partialFailure_ != false) {
       output.writeBool(3, partialFailure_);
     }
+    if (validateOnly_ != false) {
+      output.writeBool(4, validateOnly_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -261,6 +284,10 @@ private static final long serialVersionUID = 0L;
     if (partialFailure_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, partialFailure_);
+    }
+    if (validateOnly_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, validateOnly_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -284,6 +311,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getConversionAdjustmentsList());
     result = result && (getPartialFailure()
         == other.getPartialFailure());
+    result = result && (getValidateOnly()
+        == other.getValidateOnly());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -304,6 +333,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PARTIAL_FAILURE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getPartialFailure());
+    hash = (37 * hash) + VALIDATE_ONLY_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getValidateOnly());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -453,6 +485,8 @@ private static final long serialVersionUID = 0L;
       }
       partialFailure_ = false;
 
+      validateOnly_ = false;
+
       return this;
     }
 
@@ -492,6 +526,7 @@ private static final long serialVersionUID = 0L;
         result.conversionAdjustments_ = conversionAdjustmentsBuilder_.build();
       }
       result.partialFailure_ = partialFailure_;
+      result.validateOnly_ = validateOnly_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -573,6 +608,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getPartialFailure() != false) {
         setPartialFailure(other.getPartialFailure());
+      }
+      if (other.getValidateOnly() != false) {
+        setValidateOnly(other.getValidateOnly());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1048,6 +1086,47 @@ private static final long serialVersionUID = 0L;
     public Builder clearPartialFailure() {
       
       partialFailure_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean validateOnly_ ;
+    /**
+     * <pre>
+     * If true, the request is validated but not executed. Only errors are
+     * returned, not results.
+     * </pre>
+     *
+     * <code>bool validate_only = 4;</code>
+     */
+    public boolean getValidateOnly() {
+      return validateOnly_;
+    }
+    /**
+     * <pre>
+     * If true, the request is validated but not executed. Only errors are
+     * returned, not results.
+     * </pre>
+     *
+     * <code>bool validate_only = 4;</code>
+     */
+    public Builder setValidateOnly(boolean value) {
+      
+      validateOnly_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If true, the request is validated but not executed. Only errors are
+     * returned, not results.
+     * </pre>
+     *
+     * <code>bool validate_only = 4;</code>
+     */
+    public Builder clearValidateOnly() {
+      
+      validateOnly_ = false;
       onChanged();
       return this;
     }

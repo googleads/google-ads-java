@@ -186,6 +186,31 @@ public interface ExtensionFeedItemOrBuilder extends
 
   /**
    * <pre>
+   * The targeted geo target constant.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+   */
+  boolean hasTargetedGeoTargetConstant();
+  /**
+   * <pre>
+   * The targeted geo target constant.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+   */
+  com.google.protobuf.StringValue getTargetedGeoTargetConstant();
+  /**
+   * <pre>
+   * The targeted geo target constant.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getTargetedGeoTargetConstantOrBuilder();
+
+  /**
+   * <pre>
    * Status of the feed item.
    * This field is read-only.
    * </pre>
@@ -462,5 +487,57 @@ public interface ExtensionFeedItemOrBuilder extends
    */
   com.google.ads.googleads.v1.common.AffiliateLocationFeedItemOrBuilder getAffiliateLocationFeedItemOrBuilder();
 
+  /**
+   * <pre>
+   * The targeted campaign.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+   */
+  boolean hasTargetedCampaign();
+  /**
+   * <pre>
+   * The targeted campaign.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+   */
+  com.google.protobuf.StringValue getTargetedCampaign();
+  /**
+   * <pre>
+   * The targeted campaign.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getTargetedCampaignOrBuilder();
+
+  /**
+   * <pre>
+   * The targeted ad group.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+   */
+  boolean hasTargetedAdGroup();
+  /**
+   * <pre>
+   * The targeted ad group.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+   */
+  com.google.protobuf.StringValue getTargetedAdGroup();
+  /**
+   * <pre>
+   * The targeted ad group.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getTargetedAdGroupOrBuilder();
+
   public com.google.ads.googleads.v1.resources.ExtensionFeedItem.ExtensionCase getExtensionCase();
+
+  public com.google.ads.googleads.v1.resources.ExtensionFeedItem.ServingResourceTargetingCase getServingResourceTargetingCase();
 }

@@ -269,7 +269,7 @@ private static final long serialVersionUID = 0L;
     INVALID_DOMAIN_NAME(33),
     /**
      * <pre>
-     * The field is not compatible with payment mode.
+     * The field is not compatible with the payment mode.
      * </pre>
      *
      * <code>NOT_COMPATIBLE_WITH_PAYMENT_MODE = 34;</code>
@@ -277,12 +277,20 @@ private static final long serialVersionUID = 0L;
     NOT_COMPATIBLE_WITH_PAYMENT_MODE(34),
     /**
      * <pre>
-     * Bidding strategy is incompatible with the budget type.
+     * The field is not compatible with the budget type.
      * </pre>
      *
      * <code>NOT_COMPATIBLE_WITH_BUDGET_TYPE = 35;</code>
      */
     NOT_COMPATIBLE_WITH_BUDGET_TYPE(35),
+    /**
+     * <pre>
+     * The field is not compatible with the bidding strategy type.
+     * </pre>
+     *
+     * <code>NOT_COMPATIBLE_WITH_BIDDING_STRATEGY_TYPE = 36;</code>
+     */
+    NOT_COMPATIBLE_WITH_BIDDING_STRATEGY_TYPE(36),
     UNRECOGNIZED(-1),
     ;
 
@@ -469,7 +477,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_DOMAIN_NAME_VALUE = 33;
     /**
      * <pre>
-     * The field is not compatible with payment mode.
+     * The field is not compatible with the payment mode.
      * </pre>
      *
      * <code>NOT_COMPATIBLE_WITH_PAYMENT_MODE = 34;</code>
@@ -477,12 +485,20 @@ private static final long serialVersionUID = 0L;
     public static final int NOT_COMPATIBLE_WITH_PAYMENT_MODE_VALUE = 34;
     /**
      * <pre>
-     * Bidding strategy is incompatible with the budget type.
+     * The field is not compatible with the budget type.
      * </pre>
      *
      * <code>NOT_COMPATIBLE_WITH_BUDGET_TYPE = 35;</code>
      */
     public static final int NOT_COMPATIBLE_WITH_BUDGET_TYPE_VALUE = 35;
+    /**
+     * <pre>
+     * The field is not compatible with the bidding strategy type.
+     * </pre>
+     *
+     * <code>NOT_COMPATIBLE_WITH_BIDDING_STRATEGY_TYPE = 36;</code>
+     */
+    public static final int NOT_COMPATIBLE_WITH_BIDDING_STRATEGY_TYPE_VALUE = 36;
 
 
     public final int getNumber() {
@@ -527,6 +543,7 @@ private static final long serialVersionUID = 0L;
         case 33: return INVALID_DOMAIN_NAME;
         case 34: return NOT_COMPATIBLE_WITH_PAYMENT_MODE;
         case 35: return NOT_COMPATIBLE_WITH_BUDGET_TYPE;
+        case 36: return NOT_COMPATIBLE_WITH_BIDDING_STRATEGY_TYPE;
         default: return null;
       }
     }

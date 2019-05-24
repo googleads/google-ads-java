@@ -1335,6 +1335,23 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for the campaign draft error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+   */
+  int getCampaignDraftErrorValue();
+  /**
+   * <pre>
+   * The reasons for the campaign draft error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+   */
+  com.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError getCampaignDraftError();
+
+  /**
+   * <pre>
    * The reasons for the feed item error
    * </pre>
    *
@@ -1505,6 +1522,23 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for the campaign experiment error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+   */
+  int getCampaignExperimentErrorValue();
+  /**
+   * <pre>
+   * The reasons for the campaign experiment error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+   */
+  com.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError getCampaignExperimentError();
+
+  /**
+   * <pre>
    * The reasons for the extension feed item error
    * </pre>
    *
@@ -1672,6 +1706,40 @@ public interface ErrorCodeOrBuilder extends
    * <code>.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError size_limit_error = 118;</code>
    */
   com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError getSizeLimitError();
+
+  /**
+   * <pre>
+   * The reasons for the not whitelisted error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+   */
+  int getNotWhitelistedErrorValue();
+  /**
+   * <pre>
+   * The reasons for the not whitelisted error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+   */
+  com.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError getNotWhitelistedError();
+
+  /**
+   * <pre>
+   * The reasons for the manager link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+   */
+  int getManagerLinkErrorValue();
+  /**
+   * <pre>
+   * The reasons for the manager link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+   */
+  com.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError getManagerLinkError();
 
   public com.google.ads.googleads.v1.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

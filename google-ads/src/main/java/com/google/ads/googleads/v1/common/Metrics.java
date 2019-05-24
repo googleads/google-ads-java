@@ -1941,8 +1941,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue allConversionsFromClickToCall_;
   /**
    * <pre>
-   * The number of times people clicked the “Call” button to call a store during
-   * or after clicking an ad. This number doesn’t include whether or not calls
+   * The number of times people clicked the "Call" button to call a store during
+   * or after clicking an ad. This number doesn't include whether or not calls
    * were connected, or the duration of any calls.
    * This metric applies to feed items only.
    * </pre>
@@ -1954,8 +1954,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of times people clicked the “Call” button to call a store during
-   * or after clicking an ad. This number doesn’t include whether or not calls
+   * The number of times people clicked the "Call" button to call a store during
+   * or after clicking an ad. This number doesn't include whether or not calls
    * were connected, or the duration of any calls.
    * This metric applies to feed items only.
    * </pre>
@@ -1967,8 +1967,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of times people clicked the “Call” button to call a store during
-   * or after clicking an ad. This number doesn’t include whether or not calls
+   * The number of times people clicked the "Call" button to call a store during
+   * or after clicking an ad. This number doesn't include whether or not calls
    * were connected, or the duration of any calls.
    * This metric applies to feed items only.
    * </pre>
@@ -1983,7 +1983,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue allConversionsFromDirections_;
   /**
    * <pre>
-   * The number of times people clicked a “Get directions” button to navigate to
+   * The number of times people clicked a "Get directions" button to navigate to
    * a store after clicking an ad.
    * This metric applies to feed items only.
    * </pre>
@@ -1995,7 +1995,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of times people clicked a “Get directions” button to navigate to
+   * The number of times people clicked a "Get directions" button to navigate to
    * a store after clicking an ad.
    * This metric applies to feed items only.
    * </pre>
@@ -2007,7 +2007,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of times people clicked a “Get directions” button to navigate to
+   * The number of times people clicked a "Get directions" button to navigate to
    * a store after clicking an ad.
    * This metric applies to feed items only.
    * </pre>
@@ -2058,7 +2058,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue allConversionsFromMenu_;
   /**
    * <pre>
-   * The number of times people clicked a link to view a store’s menu after
+   * The number of times people clicked a link to view a store's menu after
    * clicking an ad.
    * This metric applies to feed items only.
    * </pre>
@@ -2070,7 +2070,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of times people clicked a link to view a store’s menu after
+   * The number of times people clicked a link to view a store's menu after
    * clicking an ad.
    * This metric applies to feed items only.
    * </pre>
@@ -2082,7 +2082,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The number of times people clicked a link to view a store’s menu after
+   * The number of times people clicked a link to view a store's menu after
    * clicking an ad.
    * This metric applies to feed items only.
    * </pre>
@@ -11137,8 +11137,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromClickToCallBuilder_;
     /**
      * <pre>
-     * The number of times people clicked the “Call” button to call a store during
-     * or after clicking an ad. This number doesn’t include whether or not calls
+     * The number of times people clicked the "Call" button to call a store during
+     * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
      * This metric applies to feed items only.
      * </pre>
@@ -11150,8 +11150,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked the “Call” button to call a store during
-     * or after clicking an ad. This number doesn’t include whether or not calls
+     * The number of times people clicked the "Call" button to call a store during
+     * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
      * This metric applies to feed items only.
      * </pre>
@@ -11167,8 +11167,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked the “Call” button to call a store during
-     * or after clicking an ad. This number doesn’t include whether or not calls
+     * The number of times people clicked the "Call" button to call a store during
+     * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
      * This metric applies to feed items only.
      * </pre>
@@ -11190,8 +11190,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked the “Call” button to call a store during
-     * or after clicking an ad. This number doesn’t include whether or not calls
+     * The number of times people clicked the "Call" button to call a store during
+     * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
      * This metric applies to feed items only.
      * </pre>
@@ -11211,8 +11211,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked the “Call” button to call a store during
-     * or after clicking an ad. This number doesn’t include whether or not calls
+     * The number of times people clicked the "Call" button to call a store during
+     * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
      * This metric applies to feed items only.
      * </pre>
@@ -11236,8 +11236,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked the “Call” button to call a store during
-     * or after clicking an ad. This number doesn’t include whether or not calls
+     * The number of times people clicked the "Call" button to call a store during
+     * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
      * This metric applies to feed items only.
      * </pre>
@@ -11257,8 +11257,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked the “Call” button to call a store during
-     * or after clicking an ad. This number doesn’t include whether or not calls
+     * The number of times people clicked the "Call" button to call a store during
+     * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
      * This metric applies to feed items only.
      * </pre>
@@ -11272,8 +11272,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked the “Call” button to call a store during
-     * or after clicking an ad. This number doesn’t include whether or not calls
+     * The number of times people clicked the "Call" button to call a store during
+     * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
      * This metric applies to feed items only.
      * </pre>
@@ -11290,8 +11290,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked the “Call” button to call a store during
-     * or after clicking an ad. This number doesn’t include whether or not calls
+     * The number of times people clicked the "Call" button to call a store during
+     * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
      * This metric applies to feed items only.
      * </pre>
@@ -11317,7 +11317,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromDirectionsBuilder_;
     /**
      * <pre>
-     * The number of times people clicked a “Get directions” button to navigate to
+     * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11329,7 +11329,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a “Get directions” button to navigate to
+     * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11345,7 +11345,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a “Get directions” button to navigate to
+     * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11367,7 +11367,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a “Get directions” button to navigate to
+     * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11387,7 +11387,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a “Get directions” button to navigate to
+     * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11411,7 +11411,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a “Get directions” button to navigate to
+     * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11431,7 +11431,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a “Get directions” button to navigate to
+     * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11445,7 +11445,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a “Get directions” button to navigate to
+     * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11462,7 +11462,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a “Get directions” button to navigate to
+     * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11650,7 +11650,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromMenuBuilder_;
     /**
      * <pre>
-     * The number of times people clicked a link to view a store’s menu after
+     * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11662,7 +11662,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a link to view a store’s menu after
+     * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11678,7 +11678,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a link to view a store’s menu after
+     * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11700,7 +11700,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a link to view a store’s menu after
+     * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11720,7 +11720,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a link to view a store’s menu after
+     * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11744,7 +11744,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a link to view a store’s menu after
+     * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11764,7 +11764,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a link to view a store’s menu after
+     * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11778,7 +11778,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a link to view a store’s menu after
+     * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
      * This metric applies to feed items only.
      * </pre>
@@ -11795,7 +11795,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of times people clicked a link to view a store’s menu after
+     * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
      * This metric applies to feed items only.
      * </pre>

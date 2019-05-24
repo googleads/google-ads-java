@@ -30,8 +30,8 @@ public final class FeedErrorProto {
     java.lang.String[] descriptorData = {
       "\n/google/ads/googleads/v1/errors/feed_er" +
       "ror.proto\022\036google.ads.googleads.v1.error" +
-      "s\032\034google/api/annotations.proto\"\336\005\n\rFeed" +
-      "ErrorEnum\"\314\005\n\tFeedError\022\017\n\013UNSPECIFIED\020\000" +
+      "s\032\034google/api/annotations.proto\"\371\005\n\rFeed" +
+      "ErrorEnum\"\347\005\n\tFeedError\022\017\n\013UNSPECIFIED\020\000" +
       "\022\013\n\007UNKNOWN\020\001\022\036\n\032ATTRIBUTE_NAMES_NOT_UNI" +
       "QUE\020\002\022/\n+ATTRIBUTES_DO_NOT_MATCH_EXISTIN" +
       "G_ATTRIBUTES\020\003\022.\n*CANNOT_SPECIFY_USER_OR" +
@@ -49,13 +49,13 @@ public final class FeedErrorProto {
       "_ATTRIBUTES\020\021\022\034\n\030INVALID_BUSINESS_ACCOUN" +
       "T\020\022\0223\n/BUSINESS_ACCOUNT_CANNOT_ACCESS_LO" +
       "CATION_ACCOUNT\020\023\022\036\n\032INVALID_AFFILIATE_CH" +
-      "AIN_ID\020\024B\351\001\n\"com.google.ads.googleads.v1" +
-      ".errorsB\016FeedErrorProtoP\001ZDgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "1/errors;errors\242\002\003GAA\252\002\036Google.Ads.Googl" +
-      "eAds.V1.Errors\312\002\036Google\\Ads\\GoogleAds\\V1" +
-      "\\Errors\352\002\"Google::Ads::GoogleAds::V1::Er" +
-      "rorsb\006proto3"
+      "AIN_ID\020\024\022\031\n\025DUPLICATE_SYSTEM_FEED\020\025B\351\001\n\"" +
+      "com.google.ads.googleads.v1.errorsB\016Feed" +
+      "ErrorProtoP\001ZDgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v1/errors;erro" +
+      "rs\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1.Error" +
+      "s\312\002\036Google\\Ads\\GoogleAds\\V1\\Errors\352\002\"Goo" +
+      "gle::Ads::GoogleAds::V1::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

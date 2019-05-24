@@ -141,11 +141,11 @@ public class HandlePartialFailure {
       // Finds the failed operations by looping through the results.
       int operationIndex = 0;
       for (MutateAdGroupResult result : response.getResultsList()) {
-        if (ErrorUtils.isPartialFailureResult(result)) {
+        if (ErrorUtils.getInstance().isPartialFailureResult(result)) {
           // May throw on this line. Most likely this means the wrong version of the ErrorUtils
           // class has been used.
           for (GoogleAdsError error :
-              ErrorUtils.getGoogleAdsErrors(operationIndex, response.getPartialFailureError())) {
+              ErrorUtils.getInstance().getGoogleAdsErrors(operationIndex, response.getPartialFailureError())) {
             System.out.printf("Operation %d failed with error: %s%n", operationIndex, error);
           }
         } else {

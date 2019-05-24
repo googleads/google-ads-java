@@ -157,6 +157,23 @@ public interface CampaignCriterionOrBuilder extends
 
   /**
    * <pre>
+   * The status of the criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus status = 35;</code>
+   */
+  int getStatusValue();
+  /**
+   * <pre>
+   * The status of the criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus status = 35;</code>
+   */
+  com.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus getStatus();
+
+  /**
+   * <pre>
    * Keyword.
    * </pre>
    *

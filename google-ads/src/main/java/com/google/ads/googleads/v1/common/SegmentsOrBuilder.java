@@ -459,6 +459,31 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Resource name of the geo target constant that represents a province.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+   */
+  boolean hasGeoTargetProvince();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a province.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+   */
+  com.google.protobuf.StringValue getGeoTargetProvince();
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a province.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getGeoTargetProvinceOrBuilder();
+
+  /**
+   * <pre>
    * Resource name of the geo target constant that represents a region.
    * </pre>
    *
@@ -715,6 +740,48 @@ public interface SegmentsOrBuilder extends
    * <code>.google.protobuf.Int32Value hotel_length_of_stay = 14;</code>
    */
   com.google.protobuf.Int32ValueOrBuilder getHotelLengthOfStayOrBuilder();
+
+  /**
+   * <pre>
+   * Hotel rate rule ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+   */
+  boolean hasHotelRateRuleId();
+  /**
+   * <pre>
+   * Hotel rate rule ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+   */
+  com.google.protobuf.StringValue getHotelRateRuleId();
+  /**
+   * <pre>
+   * Hotel rate rule ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getHotelRateRuleIdOrBuilder();
+
+  /**
+   * <pre>
+   * Hotel rate type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+   */
+  int getHotelRateTypeValue();
+  /**
+   * <pre>
+   * Hotel rate type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+   */
+  com.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType getHotelRateType();
 
   /**
    * <pre>

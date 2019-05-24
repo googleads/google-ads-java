@@ -384,6 +384,56 @@ public interface MutateOperationResponseOrBuilder extends
 
   /**
    * <pre>
+   * The result for the campaign draft mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+   */
+  boolean hasCampaignDraftResult();
+  /**
+   * <pre>
+   * The result for the campaign draft mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+   */
+  com.google.ads.googleads.v1.services.MutateCampaignDraftResult getCampaignDraftResult();
+  /**
+   * <pre>
+   * The result for the campaign draft mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+   */
+  com.google.ads.googleads.v1.services.MutateCampaignDraftResultOrBuilder getCampaignDraftResultOrBuilder();
+
+  /**
+   * <pre>
+   * The result for the campaign experiment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+   */
+  boolean hasCampaignExperimentResult();
+  /**
+   * <pre>
+   * The result for the campaign experiment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+   */
+  com.google.ads.googleads.v1.services.MutateCampaignExperimentResult getCampaignExperimentResult();
+  /**
+   * <pre>
+   * The result for the campaign experiment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+   */
+  com.google.ads.googleads.v1.services.MutateCampaignExperimentResultOrBuilder getCampaignExperimentResultOrBuilder();
+
+  /**
+   * <pre>
    * The result for the campaign extension setting mutate.
    * </pre>
    *

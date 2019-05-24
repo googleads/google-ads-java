@@ -30,16 +30,16 @@ public final class DeviceProto {
     java.lang.String[] descriptorData = {
       "\n*google/ads/googleads/v1/enums/device.p" +
       "roto\022\035google.ads.googleads.v1.enums\032\034goo" +
-      "gle/api/annotations.proto\"d\n\nDeviceEnum\"" +
-      "V\n\006Device\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
-      "\n\n\006MOBILE\020\002\022\n\n\006TABLET\020\003\022\013\n\007DESKTOP\020\004\022\t\n\005" +
-      "OTHER\020\005B\340\001\n!com.google.ads.googleads.v1." +
-      "enumsB\013DeviceProtoP\001ZBgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v1/enu" +
-      "ms;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V1" +
-      ".Enums\312\002\035Google\\Ads\\GoogleAds\\V1\\Enums\352\002" +
-      "!Google::Ads::GoogleAds::V1::Enumsb\006prot" +
-      "o3"
+      "gle/api/annotations.proto\"v\n\nDeviceEnum\"" +
+      "h\n\006Device\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
+      "\n\n\006MOBILE\020\002\022\n\n\006TABLET\020\003\022\013\n\007DESKTOP\020\004\022\020\n\014" +
+      "CONNECTED_TV\020\006\022\t\n\005OTHER\020\005B\340\001\n!com.google" +
+      ".ads.googleads.v1.enumsB\013DeviceProtoP\001ZB" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v1/enums;enums\242\002\003GAA\252\002\035Googl" +
+      "e.Ads.GoogleAds.V1.Enums\312\002\035Google\\Ads\\Go" +
+      "ogleAds\\V1\\Enums\352\002!Google::Ads::GoogleAd" +
+      "s::V1::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -183,7 +183,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
 
   /**
    * <pre>
-   * Parameters to use when applying call extension recommendation.
+   * Parameters to use when applying sitelink extension recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -191,7 +191,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
   boolean hasSitelinkExtension();
   /**
    * <pre>
-   * Parameters to use when applying call extension recommendation.
+   * Parameters to use when applying sitelink extension recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -199,7 +199,7 @@ public interface ApplyRecommendationOperationOrBuilder extends
   com.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters getSitelinkExtension();
   /**
    * <pre>
-   * Parameters to use when applying call extension recommendation.
+   * Parameters to use when applying sitelink extension recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>

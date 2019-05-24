@@ -202,6 +202,14 @@ private static final long serialVersionUID = 0L;
      * <code>APP_CAMPAIGN_FOR_ENGAGEMENT = 13;</code>
      */
     APP_CAMPAIGN_FOR_ENGAGEMENT(13),
+    /**
+     * <pre>
+     * Shopping Comparison Listing campaigns.
+     * </pre>
+     *
+     * <code>SHOPPING_COMPARISON_LISTING_ADS = 15;</code>
+     */
+    SHOPPING_COMPARISON_LISTING_ADS(15),
     UNRECOGNIZED(-1),
     ;
 
@@ -321,6 +329,14 @@ private static final long serialVersionUID = 0L;
      * <code>APP_CAMPAIGN_FOR_ENGAGEMENT = 13;</code>
      */
     public static final int APP_CAMPAIGN_FOR_ENGAGEMENT_VALUE = 13;
+    /**
+     * <pre>
+     * Shopping Comparison Listing campaigns.
+     * </pre>
+     *
+     * <code>SHOPPING_COMPARISON_LISTING_ADS = 15;</code>
+     */
+    public static final int SHOPPING_COMPARISON_LISTING_ADS_VALUE = 15;
 
 
     public final int getNumber() {
@@ -355,6 +371,7 @@ private static final long serialVersionUID = 0L;
         case 11: return VIDEO_NON_SKIPPABLE;
         case 12: return APP_CAMPAIGN;
         case 13: return APP_CAMPAIGN_FOR_ENGAGEMENT;
+        case 15: return SHOPPING_COMPARISON_LISTING_ADS;
         default: return null;
       }
     }

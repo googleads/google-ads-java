@@ -63,6 +63,8 @@ public class DomainCategoryServiceClientTest {
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
   private static MockCampaignCriterionSimulationService mockCampaignCriterionSimulationService;
+  private static MockCampaignDraftService mockCampaignDraftService;
+  private static MockCampaignExperimentService mockCampaignExperimentService;
   private static MockCampaignExtensionSettingService mockCampaignExtensionSettingService;
   private static MockCampaignFeedService mockCampaignFeedService;
   private static MockCampaignLabelService mockCampaignLabelService;
@@ -170,6 +172,8 @@ public class DomainCategoryServiceClientTest {
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
     mockCampaignCriterionSimulationService = new MockCampaignCriterionSimulationService();
+    mockCampaignDraftService = new MockCampaignDraftService();
+    mockCampaignExperimentService = new MockCampaignExperimentService();
     mockCampaignExtensionSettingService = new MockCampaignExtensionSettingService();
     mockCampaignFeedService = new MockCampaignFeedService();
     mockCampaignLabelService = new MockCampaignLabelService();
@@ -272,6 +276,8 @@ public class DomainCategoryServiceClientTest {
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
                 mockCampaignCriterionSimulationService,
+                mockCampaignDraftService,
+                mockCampaignExperimentService,
                 mockCampaignExtensionSettingService,
                 mockCampaignFeedService,
                 mockCampaignLabelService,

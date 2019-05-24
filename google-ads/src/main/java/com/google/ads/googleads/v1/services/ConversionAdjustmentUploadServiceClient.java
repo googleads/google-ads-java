@@ -38,7 +38,8 @@ import javax.annotation.Generated;
  *   String customerId = "";
  *   List&lt;ConversionAdjustment&gt; conversionAdjustments = new ArrayList&lt;&gt;();
  *   boolean partialFailure = false;
- *   UploadConversionAdjustmentsResponse response = conversionAdjustmentUploadServiceClient.uploadConversionAdjustments(customerId, conversionAdjustments, partialFailure);
+ *   boolean validateOnly = false;
+ *   UploadConversionAdjustmentsResponse response = conversionAdjustmentUploadServiceClient.uploadConversionAdjustments(customerId, conversionAdjustments, partialFailure, validateOnly);
  * }
  * </code>
  * </pre>
@@ -164,7 +165,8 @@ public class ConversionAdjustmentUploadServiceClient implements BackgroundResour
    *   String customerId = "";
    *   List&lt;ConversionAdjustment&gt; conversionAdjustments = new ArrayList&lt;&gt;();
    *   boolean partialFailure = false;
-   *   UploadConversionAdjustmentsResponse response = conversionAdjustmentUploadServiceClient.uploadConversionAdjustments(customerId, conversionAdjustments, partialFailure);
+   *   boolean validateOnly = false;
+   *   UploadConversionAdjustmentsResponse response = conversionAdjustmentUploadServiceClient.uploadConversionAdjustments(customerId, conversionAdjustments, partialFailure, validateOnly);
    * }
    * </code></pre>
    *
@@ -173,16 +175,22 @@ public class ConversionAdjustmentUploadServiceClient implements BackgroundResour
    * @param partialFailure If true, successful operations will be carried out and invalid operations
    *     will return errors. If false, all operations will be carried out in one transaction if and
    *     only if they are all valid. This should always be set to true.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UploadConversionAdjustmentsResponse uploadConversionAdjustments(
-      String customerId, List<ConversionAdjustment> conversionAdjustments, boolean partialFailure) {
+      String customerId,
+      List<ConversionAdjustment> conversionAdjustments,
+      boolean partialFailure,
+      boolean validateOnly) {
 
     UploadConversionAdjustmentsRequest request =
         UploadConversionAdjustmentsRequest.newBuilder()
             .setCustomerId(customerId)
             .addAllConversionAdjustments(conversionAdjustments)
             .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
             .build();
     return uploadConversionAdjustments(request);
   }

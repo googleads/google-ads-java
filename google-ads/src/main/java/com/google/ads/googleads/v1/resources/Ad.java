@@ -420,6 +420,20 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(com.google.ads.googleads.v1.common.FinalAppUrl.parser(), extensionRegistry));
             break;
           }
+          case 290: {
+            com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 36) {
+              subBuilder = ((com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 36;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -489,6 +503,7 @@ private static final long serialVersionUID = 0L;
     RESPONSIVE_DISPLAY_AD(31),
     DISPLAY_UPLOAD_AD(33),
     APP_ENGAGEMENT_AD(34),
+    SHOPPING_COMPARISON_LISTING_AD(36),
     ADDATA_NOT_SET(0);
     private final int value;
     private AdDataCase(int value) {
@@ -521,6 +536,7 @@ private static final long serialVersionUID = 0L;
         case 31: return RESPONSIVE_DISPLAY_AD;
         case 33: return DISPLAY_UPLOAD_AD;
         case 34: return APP_ENGAGEMENT_AD;
+        case 36: return SHOPPING_COMPARISON_LISTING_AD;
         case 0: return ADDATA_NOT_SET;
         default: return null;
       }
@@ -1758,6 +1774,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.common.AppEngagementAdInfo.getDefaultInstance();
   }
 
+  public static final int SHOPPING_COMPARISON_LISTING_AD_FIELD_NUMBER = 36;
+  /**
+   * <pre>
+   * Details pertaining to a Shopping Comparison Listing ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+   */
+  public boolean hasShoppingComparisonListingAd() {
+    return adDataCase_ == 36;
+  }
+  /**
+   * <pre>
+   * Details pertaining to a Shopping Comparison Listing ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+   */
+  public com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo getShoppingComparisonListingAd() {
+    if (adDataCase_ == 36) {
+       return (com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to a Shopping Comparison Listing ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+   */
+  public com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfoOrBuilder getShoppingComparisonListingAdOrBuilder() {
+    if (adDataCase_ == 36) {
+       return (com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1861,6 +1915,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < finalAppUrls_.size(); i++) {
       output.writeMessage(35, finalAppUrls_.get(i));
+    }
+    if (adDataCase_ == 36) {
+      output.writeMessage(36, (com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo) adData_);
     }
     unknownFields.writeTo(output);
   }
@@ -1991,6 +2048,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(35, finalAppUrls_.get(i));
     }
+    if (adDataCase_ == 36) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(36, (com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo) adData_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2116,6 +2177,10 @@ private static final long serialVersionUID = 0L;
       case 34:
         result = result && getAppEngagementAd()
             .equals(other.getAppEngagementAd());
+        break;
+      case 36:
+        result = result && getShoppingComparisonListingAd()
+            .equals(other.getShoppingComparisonListingAd());
         break;
       case 0:
       default:
@@ -2245,6 +2310,10 @@ private static final long serialVersionUID = 0L;
       case 34:
         hash = (37 * hash) + APP_ENGAGEMENT_AD_FIELD_NUMBER;
         hash = (53 * hash) + getAppEngagementAd().hashCode();
+        break;
+      case 36:
+        hash = (37 * hash) + SHOPPING_COMPARISON_LISTING_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingComparisonListingAd().hashCode();
         break;
       case 0:
       default:
@@ -2679,6 +2748,13 @@ private static final long serialVersionUID = 0L;
           result.adData_ = appEngagementAdBuilder_.build();
         }
       }
+      if (adDataCase_ == 36) {
+        if (shoppingComparisonListingAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = shoppingComparisonListingAdBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.adDataCase_ = adDataCase_;
       onBuilt();
@@ -2950,6 +3026,10 @@ private static final long serialVersionUID = 0L;
         }
         case APP_ENGAGEMENT_AD: {
           mergeAppEngagementAd(other.getAppEngagementAd());
+          break;
+        }
+        case SHOPPING_COMPARISON_LISTING_AD: {
+          mergeShoppingComparisonListingAd(other.getShoppingComparisonListingAd());
           break;
         }
         case ADDATA_NOT_SET: {
@@ -8635,6 +8715,178 @@ private static final long serialVersionUID = 0L;
       adDataCase_ = 34;
       onChanged();;
       return appEngagementAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo, com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.Builder, com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfoOrBuilder> shoppingComparisonListingAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to a Shopping Comparison Listing ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+     */
+    public boolean hasShoppingComparisonListingAd() {
+      return adDataCase_ == 36;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping Comparison Listing ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+     */
+    public com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo getShoppingComparisonListingAd() {
+      if (shoppingComparisonListingAdBuilder_ == null) {
+        if (adDataCase_ == 36) {
+          return (com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 36) {
+          return shoppingComparisonListingAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping Comparison Listing ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+     */
+    public Builder setShoppingComparisonListingAd(com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo value) {
+      if (shoppingComparisonListingAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        shoppingComparisonListingAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 36;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping Comparison Listing ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+     */
+    public Builder setShoppingComparisonListingAd(
+        com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.Builder builderForValue) {
+      if (shoppingComparisonListingAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingComparisonListingAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 36;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping Comparison Listing ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+     */
+    public Builder mergeShoppingComparisonListingAd(com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo value) {
+      if (shoppingComparisonListingAdBuilder_ == null) {
+        if (adDataCase_ == 36 &&
+            adData_ != com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.newBuilder((com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 36) {
+          shoppingComparisonListingAdBuilder_.mergeFrom(value);
+        }
+        shoppingComparisonListingAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 36;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping Comparison Listing ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+     */
+    public Builder clearShoppingComparisonListingAd() {
+      if (shoppingComparisonListingAdBuilder_ == null) {
+        if (adDataCase_ == 36) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 36) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        shoppingComparisonListingAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping Comparison Listing ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+     */
+    public com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.Builder getShoppingComparisonListingAdBuilder() {
+      return getShoppingComparisonListingAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping Comparison Listing ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+     */
+    public com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfoOrBuilder getShoppingComparisonListingAdOrBuilder() {
+      if ((adDataCase_ == 36) && (shoppingComparisonListingAdBuilder_ != null)) {
+        return shoppingComparisonListingAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 36) {
+          return (com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a Shopping Comparison Listing ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo, com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.Builder, com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfoOrBuilder> 
+        getShoppingComparisonListingAdFieldBuilder() {
+      if (shoppingComparisonListingAdBuilder_ == null) {
+        if (!(adDataCase_ == 36)) {
+          adData_ = com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.getDefaultInstance();
+        }
+        shoppingComparisonListingAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo, com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo.Builder, com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfoOrBuilder>(
+                (com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 36;
+      onChanged();;
+      return shoppingComparisonListingAdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

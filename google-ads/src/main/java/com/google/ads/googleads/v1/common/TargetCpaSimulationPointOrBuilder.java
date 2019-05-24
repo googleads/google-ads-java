@@ -9,7 +9,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
 
   /**
    * <pre>
-   * The simulated target cpa upon which projected metrics are based.
+   * The simulated target CPA upon which projected metrics are based.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
@@ -17,7 +17,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
   boolean hasTargetCpaMicros();
   /**
    * <pre>
-   * The simulated target cpa upon which projected metrics are based.
+   * The simulated target CPA upon which projected metrics are based.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
@@ -25,7 +25,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
   com.google.protobuf.Int64Value getTargetCpaMicros();
   /**
    * <pre>
-   * The simulated target cpa upon which projected metrics are based.
+   * The simulated target CPA upon which projected metrics are based.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>

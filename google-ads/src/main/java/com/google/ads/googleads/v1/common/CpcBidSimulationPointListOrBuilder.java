@@ -9,7 +9,7 @@ public interface CpcBidSimulationPointListOrBuilder extends
 
   /**
    * <pre>
-   * Projected metrics for a series of cpc bid amounts.
+   * Projected metrics for a series of CPC bid amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.CpcBidSimulationPoint points = 1;</code>
@@ -18,7 +18,7 @@ public interface CpcBidSimulationPointListOrBuilder extends
       getPointsList();
   /**
    * <pre>
-   * Projected metrics for a series of cpc bid amounts.
+   * Projected metrics for a series of CPC bid amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.CpcBidSimulationPoint points = 1;</code>
@@ -26,7 +26,7 @@ public interface CpcBidSimulationPointListOrBuilder extends
   com.google.ads.googleads.v1.common.CpcBidSimulationPoint getPoints(int index);
   /**
    * <pre>
-   * Projected metrics for a series of cpc bid amounts.
+   * Projected metrics for a series of CPC bid amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.CpcBidSimulationPoint points = 1;</code>
@@ -34,7 +34,7 @@ public interface CpcBidSimulationPointListOrBuilder extends
   int getPointsCount();
   /**
    * <pre>
-   * Projected metrics for a series of cpc bid amounts.
+   * Projected metrics for a series of CPC bid amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.CpcBidSimulationPoint points = 1;</code>
@@ -43,7 +43,7 @@ public interface CpcBidSimulationPointListOrBuilder extends
       getPointsOrBuilderList();
   /**
    * <pre>
-   * Projected metrics for a series of cpc bid amounts.
+   * Projected metrics for a series of CPC bid amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.CpcBidSimulationPoint points = 1;</code>

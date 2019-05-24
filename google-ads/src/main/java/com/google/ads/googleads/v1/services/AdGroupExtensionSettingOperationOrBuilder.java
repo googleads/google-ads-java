@@ -92,7 +92,7 @@ public interface AdGroupExtensionSettingOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group extension
    * setting is expected, in this format:
-   * `customers/{customer_id}/adGroupExtensionSettings/{feed_id}`
+   * `customers/{customer_id}/adGroupExtensionSettings/{ad_group_id}~{extension_type}`
    * </pre>
    *
    * <code>string remove = 3;</code>
@@ -102,7 +102,7 @@ public interface AdGroupExtensionSettingOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group extension
    * setting is expected, in this format:
-   * `customers/{customer_id}/adGroupExtensionSettings/{feed_id}`
+   * `customers/{customer_id}/adGroupExtensionSettings/{ad_group_id}~{extension_type}`
    * </pre>
    *
    * <code>string remove = 3;</code>

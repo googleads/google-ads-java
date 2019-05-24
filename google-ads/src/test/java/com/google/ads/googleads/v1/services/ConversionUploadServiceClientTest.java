@@ -63,6 +63,8 @@ public class ConversionUploadServiceClientTest {
   private static MockCampaignBudgetService mockCampaignBudgetService;
   private static MockCampaignCriterionService mockCampaignCriterionService;
   private static MockCampaignCriterionSimulationService mockCampaignCriterionSimulationService;
+  private static MockCampaignDraftService mockCampaignDraftService;
+  private static MockCampaignExperimentService mockCampaignExperimentService;
   private static MockCampaignExtensionSettingService mockCampaignExtensionSettingService;
   private static MockCampaignFeedService mockCampaignFeedService;
   private static MockCampaignLabelService mockCampaignLabelService;
@@ -170,6 +172,8 @@ public class ConversionUploadServiceClientTest {
     mockCampaignBudgetService = new MockCampaignBudgetService();
     mockCampaignCriterionService = new MockCampaignCriterionService();
     mockCampaignCriterionSimulationService = new MockCampaignCriterionSimulationService();
+    mockCampaignDraftService = new MockCampaignDraftService();
+    mockCampaignExperimentService = new MockCampaignExperimentService();
     mockCampaignExtensionSettingService = new MockCampaignExtensionSettingService();
     mockCampaignFeedService = new MockCampaignFeedService();
     mockCampaignLabelService = new MockCampaignLabelService();
@@ -272,6 +276,8 @@ public class ConversionUploadServiceClientTest {
                 mockCampaignBudgetService,
                 mockCampaignCriterionService,
                 mockCampaignCriterionSimulationService,
+                mockCampaignDraftService,
+                mockCampaignExperimentService,
                 mockCampaignExtensionSettingService,
                 mockCampaignFeedService,
                 mockCampaignLabelService,
@@ -380,9 +386,10 @@ public class ConversionUploadServiceClientTest {
     String customerId = "customerId-1772061412";
     List<ClickConversion> conversions = new ArrayList<>();
     boolean partialFailure = true;
+    boolean validateOnly = false;
 
     UploadClickConversionsResponse actualResponse =
-        client.uploadClickConversions(customerId, conversions, partialFailure);
+        client.uploadClickConversions(customerId, conversions, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
     List<GeneratedMessageV3> actualRequests = mockConversionUploadService.getRequests();
@@ -393,6 +400,7 @@ public class ConversionUploadServiceClientTest {
     Assert.assertEquals(customerId, actualRequest.getCustomerId());
     Assert.assertEquals(conversions, actualRequest.getConversionsList());
     Assert.assertEquals(partialFailure, actualRequest.getPartialFailure());
+    Assert.assertEquals(validateOnly, actualRequest.getValidateOnly());
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -409,8 +417,9 @@ public class ConversionUploadServiceClientTest {
       String customerId = "customerId-1772061412";
       List<ClickConversion> conversions = new ArrayList<>();
       boolean partialFailure = true;
+      boolean validateOnly = false;
 
-      client.uploadClickConversions(customerId, conversions, partialFailure);
+      client.uploadClickConversions(customerId, conversions, partialFailure, validateOnly);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception
@@ -471,9 +480,10 @@ public class ConversionUploadServiceClientTest {
     String customerId = "customerId-1772061412";
     List<CallConversion> conversions = new ArrayList<>();
     boolean partialFailure = true;
+    boolean validateOnly = false;
 
     UploadCallConversionsResponse actualResponse =
-        client.uploadCallConversions(customerId, conversions, partialFailure);
+        client.uploadCallConversions(customerId, conversions, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
     List<GeneratedMessageV3> actualRequests = mockConversionUploadService.getRequests();
@@ -484,6 +494,7 @@ public class ConversionUploadServiceClientTest {
     Assert.assertEquals(customerId, actualRequest.getCustomerId());
     Assert.assertEquals(conversions, actualRequest.getConversionsList());
     Assert.assertEquals(partialFailure, actualRequest.getPartialFailure());
+    Assert.assertEquals(validateOnly, actualRequest.getValidateOnly());
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -500,8 +511,9 @@ public class ConversionUploadServiceClientTest {
       String customerId = "customerId-1772061412";
       List<CallConversion> conversions = new ArrayList<>();
       boolean partialFailure = true;
+      boolean validateOnly = false;
 
-      client.uploadCallConversions(customerId, conversions, partialFailure);
+      client.uploadCallConversions(customerId, conversions, partialFailure, validateOnly);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception

@@ -31,6 +31,7 @@ private static final long serialVersionUID = 0L;
     externalConversionSource_ = 0;
     hotelCheckInDayOfWeek_ = 0;
     hotelDateSelectionType_ = 0;
+    hotelRateType_ = 0;
     monthOfYear_ = 0;
     placeholderType_ = 0;
     productChannel_ = 0;
@@ -870,6 +871,38 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 586: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (hotelRateRuleId_ != null) {
+              subBuilder = hotelRateRuleId_.toBuilder();
+            }
+            hotelRateRuleId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelRateRuleId_);
+              hotelRateRuleId_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 592: {
+            int rawValue = input.readEnum();
+
+            hotelRateType_ = rawValue;
+            break;
+          }
+          case 602: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (geoTargetProvince_ != null) {
+              subBuilder = geoTargetProvince_.toBuilder();
+            }
+            geoTargetProvince_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(geoTargetProvince_);
+              geoTargetProvince_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1512,6 +1545,39 @@ private static final long serialVersionUID = 0L;
     return getGeoTargetPostalCode();
   }
 
+  public static final int GEO_TARGET_PROVINCE_FIELD_NUMBER = 75;
+  private com.google.protobuf.StringValue geoTargetProvince_;
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a province.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+   */
+  public boolean hasGeoTargetProvince() {
+    return geoTargetProvince_ != null;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a province.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+   */
+  public com.google.protobuf.StringValue getGeoTargetProvince() {
+    return geoTargetProvince_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetProvince_;
+  }
+  /**
+   * <pre>
+   * Resource name of the geo target constant that represents a province.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getGeoTargetProvinceOrBuilder() {
+    return getGeoTargetProvince();
+  }
+
   public static final int GEO_TARGET_REGION_FIELD_NUMBER = 64;
   private com.google.protobuf.StringValue geoTargetRegion_;
   /**
@@ -1857,6 +1923,64 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.Int32ValueOrBuilder getHotelLengthOfStayOrBuilder() {
     return getHotelLengthOfStay();
+  }
+
+  public static final int HOTEL_RATE_RULE_ID_FIELD_NUMBER = 73;
+  private com.google.protobuf.StringValue hotelRateRuleId_;
+  /**
+   * <pre>
+   * Hotel rate rule ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+   */
+  public boolean hasHotelRateRuleId() {
+    return hotelRateRuleId_ != null;
+  }
+  /**
+   * <pre>
+   * Hotel rate rule ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+   */
+  public com.google.protobuf.StringValue getHotelRateRuleId() {
+    return hotelRateRuleId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelRateRuleId_;
+  }
+  /**
+   * <pre>
+   * Hotel rate rule ID.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getHotelRateRuleIdOrBuilder() {
+    return getHotelRateRuleId();
+  }
+
+  public static final int HOTEL_RATE_TYPE_FIELD_NUMBER = 74;
+  private int hotelRateType_;
+  /**
+   * <pre>
+   * Hotel rate type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+   */
+  public int getHotelRateTypeValue() {
+    return hotelRateType_;
+  }
+  /**
+   * <pre>
+   * Hotel rate type.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+   */
+  public com.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType getHotelRateType() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType result = com.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType.valueOf(hotelRateType_);
+    return result == null ? com.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType.UNRECOGNIZED : result;
   }
 
   public static final int HOTEL_STATE_FIELD_NUMBER = 15;
@@ -3399,6 +3523,15 @@ private static final long serialVersionUID = 0L;
     if (geoTargetMostSpecificLocation_ != null) {
       output.writeMessage(72, getGeoTargetMostSpecificLocation());
     }
+    if (hotelRateRuleId_ != null) {
+      output.writeMessage(73, getHotelRateRuleId());
+    }
+    if (hotelRateType_ != com.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType.UNSPECIFIED.getNumber()) {
+      output.writeEnum(74, hotelRateType_);
+    }
+    if (geoTargetProvince_ != null) {
+      output.writeMessage(75, getGeoTargetProvince());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -3696,6 +3829,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(72, getGeoTargetMostSpecificLocation());
     }
+    if (hotelRateRuleId_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(73, getHotelRateRuleId());
+    }
+    if (hotelRateType_ != com.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(74, hotelRateType_);
+    }
+    if (geoTargetProvince_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(75, getGeoTargetProvince());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3776,6 +3921,11 @@ private static final long serialVersionUID = 0L;
       result = result && getGeoTargetPostalCode()
           .equals(other.getGeoTargetPostalCode());
     }
+    result = result && (hasGeoTargetProvince() == other.hasGeoTargetProvince());
+    if (hasGeoTargetProvince()) {
+      result = result && getGeoTargetProvince()
+          .equals(other.getGeoTargetProvince());
+    }
     result = result && (hasGeoTargetRegion() == other.hasGeoTargetRegion());
     if (hasGeoTargetRegion()) {
       result = result && getGeoTargetRegion()
@@ -3823,6 +3973,12 @@ private static final long serialVersionUID = 0L;
       result = result && getHotelLengthOfStay()
           .equals(other.getHotelLengthOfStay());
     }
+    result = result && (hasHotelRateRuleId() == other.hasHotelRateRuleId());
+    if (hasHotelRateRuleId()) {
+      result = result && getHotelRateRuleId()
+          .equals(other.getHotelRateRuleId());
+    }
+    result = result && hotelRateType_ == other.hotelRateType_;
     result = result && (hasHotelState() == other.hasHotelState());
     if (hasHotelState()) {
       result = result && getHotelState()
@@ -4069,6 +4225,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + GEO_TARGET_POSTAL_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getGeoTargetPostalCode().hashCode();
     }
+    if (hasGeoTargetProvince()) {
+      hash = (37 * hash) + GEO_TARGET_PROVINCE_FIELD_NUMBER;
+      hash = (53 * hash) + getGeoTargetProvince().hashCode();
+    }
     if (hasGeoTargetRegion()) {
       hash = (37 * hash) + GEO_TARGET_REGION_FIELD_NUMBER;
       hash = (53 * hash) + getGeoTargetRegion().hashCode();
@@ -4109,6 +4269,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HOTEL_LENGTH_OF_STAY_FIELD_NUMBER;
       hash = (53 * hash) + getHotelLengthOfStay().hashCode();
     }
+    if (hasHotelRateRuleId()) {
+      hash = (37 * hash) + HOTEL_RATE_RULE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelRateRuleId().hashCode();
+    }
+    hash = (37 * hash) + HOTEL_RATE_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + hotelRateType_;
     if (hasHotelState()) {
       hash = (37 * hash) + HOTEL_STATE_FIELD_NUMBER;
       hash = (53 * hash) + getHotelState().hashCode();
@@ -4478,6 +4644,12 @@ private static final long serialVersionUID = 0L;
         geoTargetPostalCode_ = null;
         geoTargetPostalCodeBuilder_ = null;
       }
+      if (geoTargetProvinceBuilder_ == null) {
+        geoTargetProvince_ = null;
+      } else {
+        geoTargetProvince_ = null;
+        geoTargetProvinceBuilder_ = null;
+      }
       if (geoTargetRegionBuilder_ == null) {
         geoTargetRegion_ = null;
       } else {
@@ -4536,6 +4708,14 @@ private static final long serialVersionUID = 0L;
         hotelLengthOfStay_ = null;
         hotelLengthOfStayBuilder_ = null;
       }
+      if (hotelRateRuleIdBuilder_ == null) {
+        hotelRateRuleId_ = null;
+      } else {
+        hotelRateRuleId_ = null;
+        hotelRateRuleIdBuilder_ = null;
+      }
+      hotelRateType_ = 0;
+
       if (hotelStateBuilder_ == null) {
         hotelState_ = null;
       } else {
@@ -4840,6 +5020,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.geoTargetPostalCode_ = geoTargetPostalCodeBuilder_.build();
       }
+      if (geoTargetProvinceBuilder_ == null) {
+        result.geoTargetProvince_ = geoTargetProvince_;
+      } else {
+        result.geoTargetProvince_ = geoTargetProvinceBuilder_.build();
+      }
       if (geoTargetRegionBuilder_ == null) {
         result.geoTargetRegion_ = geoTargetRegion_;
       } else {
@@ -4887,6 +5072,12 @@ private static final long serialVersionUID = 0L;
       } else {
         result.hotelLengthOfStay_ = hotelLengthOfStayBuilder_.build();
       }
+      if (hotelRateRuleIdBuilder_ == null) {
+        result.hotelRateRuleId_ = hotelRateRuleId_;
+      } else {
+        result.hotelRateRuleId_ = hotelRateRuleIdBuilder_.build();
+      }
+      result.hotelRateType_ = hotelRateType_;
       if (hotelStateBuilder_ == null) {
         result.hotelState_ = hotelState_;
       } else {
@@ -5168,6 +5359,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasGeoTargetPostalCode()) {
         mergeGeoTargetPostalCode(other.getGeoTargetPostalCode());
       }
+      if (other.hasGeoTargetProvince()) {
+        mergeGeoTargetProvince(other.getGeoTargetProvince());
+      }
       if (other.hasGeoTargetRegion()) {
         mergeGeoTargetRegion(other.getGeoTargetRegion());
       }
@@ -5200,6 +5394,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasHotelLengthOfStay()) {
         mergeHotelLengthOfStay(other.getHotelLengthOfStay());
+      }
+      if (other.hasHotelRateRuleId()) {
+        mergeHotelRateRuleId(other.getHotelRateRuleId());
+      }
+      if (other.hotelRateType_ != 0) {
+        setHotelRateTypeValue(other.getHotelRateTypeValue());
       }
       if (other.hasHotelState()) {
         mergeHotelState(other.getHotelState());
@@ -7685,6 +7885,159 @@ private static final long serialVersionUID = 0L;
       return geoTargetPostalCodeBuilder_;
     }
 
+    private com.google.protobuf.StringValue geoTargetProvince_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetProvinceBuilder_;
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a province.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+     */
+    public boolean hasGeoTargetProvince() {
+      return geoTargetProvinceBuilder_ != null || geoTargetProvince_ != null;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a province.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+     */
+    public com.google.protobuf.StringValue getGeoTargetProvince() {
+      if (geoTargetProvinceBuilder_ == null) {
+        return geoTargetProvince_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetProvince_;
+      } else {
+        return geoTargetProvinceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a province.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+     */
+    public Builder setGeoTargetProvince(com.google.protobuf.StringValue value) {
+      if (geoTargetProvinceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        geoTargetProvince_ = value;
+        onChanged();
+      } else {
+        geoTargetProvinceBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a province.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+     */
+    public Builder setGeoTargetProvince(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (geoTargetProvinceBuilder_ == null) {
+        geoTargetProvince_ = builderForValue.build();
+        onChanged();
+      } else {
+        geoTargetProvinceBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a province.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+     */
+    public Builder mergeGeoTargetProvince(com.google.protobuf.StringValue value) {
+      if (geoTargetProvinceBuilder_ == null) {
+        if (geoTargetProvince_ != null) {
+          geoTargetProvince_ =
+            com.google.protobuf.StringValue.newBuilder(geoTargetProvince_).mergeFrom(value).buildPartial();
+        } else {
+          geoTargetProvince_ = value;
+        }
+        onChanged();
+      } else {
+        geoTargetProvinceBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a province.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+     */
+    public Builder clearGeoTargetProvince() {
+      if (geoTargetProvinceBuilder_ == null) {
+        geoTargetProvince_ = null;
+        onChanged();
+      } else {
+        geoTargetProvince_ = null;
+        geoTargetProvinceBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a province.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getGeoTargetProvinceBuilder() {
+      
+      onChanged();
+      return getGeoTargetProvinceFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a province.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getGeoTargetProvinceOrBuilder() {
+      if (geoTargetProvinceBuilder_ != null) {
+        return geoTargetProvinceBuilder_.getMessageOrBuilder();
+      } else {
+        return geoTargetProvince_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : geoTargetProvince_;
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the geo target constant that represents a province.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getGeoTargetProvinceFieldBuilder() {
+      if (geoTargetProvinceBuilder_ == null) {
+        geoTargetProvinceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getGeoTargetProvince(),
+                getParentForChildren(),
+                isClean());
+        geoTargetProvince_ = null;
+      }
+      return geoTargetProvinceBuilder_;
+    }
+
     private com.google.protobuf.StringValue geoTargetRegion_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetRegionBuilder_;
@@ -9190,6 +9543,224 @@ private static final long serialVersionUID = 0L;
         hotelLengthOfStay_ = null;
       }
       return hotelLengthOfStayBuilder_;
+    }
+
+    private com.google.protobuf.StringValue hotelRateRuleId_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelRateRuleIdBuilder_;
+    /**
+     * <pre>
+     * Hotel rate rule ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+     */
+    public boolean hasHotelRateRuleId() {
+      return hotelRateRuleIdBuilder_ != null || hotelRateRuleId_ != null;
+    }
+    /**
+     * <pre>
+     * Hotel rate rule ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+     */
+    public com.google.protobuf.StringValue getHotelRateRuleId() {
+      if (hotelRateRuleIdBuilder_ == null) {
+        return hotelRateRuleId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelRateRuleId_;
+      } else {
+        return hotelRateRuleIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Hotel rate rule ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+     */
+    public Builder setHotelRateRuleId(com.google.protobuf.StringValue value) {
+      if (hotelRateRuleIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelRateRuleId_ = value;
+        onChanged();
+      } else {
+        hotelRateRuleIdBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel rate rule ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+     */
+    public Builder setHotelRateRuleId(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (hotelRateRuleIdBuilder_ == null) {
+        hotelRateRuleId_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelRateRuleIdBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel rate rule ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+     */
+    public Builder mergeHotelRateRuleId(com.google.protobuf.StringValue value) {
+      if (hotelRateRuleIdBuilder_ == null) {
+        if (hotelRateRuleId_ != null) {
+          hotelRateRuleId_ =
+            com.google.protobuf.StringValue.newBuilder(hotelRateRuleId_).mergeFrom(value).buildPartial();
+        } else {
+          hotelRateRuleId_ = value;
+        }
+        onChanged();
+      } else {
+        hotelRateRuleIdBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel rate rule ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+     */
+    public Builder clearHotelRateRuleId() {
+      if (hotelRateRuleIdBuilder_ == null) {
+        hotelRateRuleId_ = null;
+        onChanged();
+      } else {
+        hotelRateRuleId_ = null;
+        hotelRateRuleIdBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel rate rule ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getHotelRateRuleIdBuilder() {
+      
+      onChanged();
+      return getHotelRateRuleIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Hotel rate rule ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getHotelRateRuleIdOrBuilder() {
+      if (hotelRateRuleIdBuilder_ != null) {
+        return hotelRateRuleIdBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelRateRuleId_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : hotelRateRuleId_;
+      }
+    }
+    /**
+     * <pre>
+     * Hotel rate rule ID.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getHotelRateRuleIdFieldBuilder() {
+      if (hotelRateRuleIdBuilder_ == null) {
+        hotelRateRuleIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getHotelRateRuleId(),
+                getParentForChildren(),
+                isClean());
+        hotelRateRuleId_ = null;
+      }
+      return hotelRateRuleIdBuilder_;
+    }
+
+    private int hotelRateType_ = 0;
+    /**
+     * <pre>
+     * Hotel rate type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+     */
+    public int getHotelRateTypeValue() {
+      return hotelRateType_;
+    }
+    /**
+     * <pre>
+     * Hotel rate type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+     */
+    public Builder setHotelRateTypeValue(int value) {
+      hotelRateType_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel rate type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+     */
+    public com.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType getHotelRateType() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType result = com.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType.valueOf(hotelRateType_);
+      return result == null ? com.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Hotel rate type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+     */
+    public Builder setHotelRateType(com.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      hotelRateType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel rate type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+     */
+    public Builder clearHotelRateType() {
+      
+      hotelRateType_ = 0;
+      onChanged();
+      return this;
     }
 
     private com.google.protobuf.StringValue hotelState_ = null;

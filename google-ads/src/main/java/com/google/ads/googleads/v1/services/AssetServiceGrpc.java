@@ -17,7 +17,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Service to manage assets.
+ * Service to manage assets. Asset types can be created with AssetService are
+ * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
+ * created with Ad inline.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -130,7 +132,9 @@ public final class AssetServiceGrpc {
 
   /**
    * <pre>
-   * Service to manage assets.
+   * Service to manage assets. Asset types can be created with AssetService are
+   * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
+   * created with Ad inline.
    * </pre>
    */
   public static abstract class AssetServiceImplBase implements io.grpc.BindableService {
@@ -177,7 +181,9 @@ public final class AssetServiceGrpc {
 
   /**
    * <pre>
-   * Service to manage assets.
+   * Service to manage assets. Asset types can be created with AssetService are
+   * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
+   * created with Ad inline.
    * </pre>
    */
   public static final class AssetServiceStub extends io.grpc.stub.AbstractStub<AssetServiceStub> {
@@ -221,7 +227,9 @@ public final class AssetServiceGrpc {
 
   /**
    * <pre>
-   * Service to manage assets.
+   * Service to manage assets. Asset types can be created with AssetService are
+   * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
+   * created with Ad inline.
    * </pre>
    */
   public static final class AssetServiceBlockingStub extends io.grpc.stub.AbstractStub<AssetServiceBlockingStub> {
@@ -263,7 +271,9 @@ public final class AssetServiceGrpc {
 
   /**
    * <pre>
-   * Service to manage assets.
+   * Service to manage assets. Asset types can be created with AssetService are
+   * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
+   * created with Ad inline.
    * </pre>
    */
   public static final class AssetServiceFutureStub extends io.grpc.stub.AbstractStub<AssetServiceFutureStub> {

@@ -292,7 +292,9 @@
  *
  * ================== AssetServiceClient ==================
  *
- * <p>Service Description: Service to manage assets.
+ * <p>Service Description: Service to manage assets. Asset types can be created with AssetService
+ * are YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be created with Ad
+ * inline.
  *
  * <p>Sample for AssetServiceClient:
  *
@@ -417,6 +419,44 @@
  * try (CampaignCriterionSimulationServiceClient campaignCriterionSimulationServiceClient = CampaignCriterionSimulationServiceClient.create()) {
  *   String formattedResourceName = CampaignCriterionSimulationServiceClient.formatCampaignCriterionSimulationName("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
  *   CampaignCriterionSimulation response = campaignCriterionSimulationServiceClient.getCampaignCriterionSimulation(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ========================== CampaignDraftServiceClient ==========================
+ *
+ * <p>Service Description: Service to manage campaign drafts.
+ *
+ * <p>Sample for CampaignDraftServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
+ *   String formattedResourceName = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+ *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * =============================== CampaignExperimentServiceClient ===============================
+ *
+ * <p>Service Description: CampaignExperimentService manages the life cycle of campaign experiments.
+ * It is used to create new experiments from drafts, modify experiment properties, promote changes
+ * in an experiment back to its base campaign, graduate experiments into new stand-alone campaigns,
+ * and to remove an experiment.
+ *
+ * <p>An experiment consists of two variants or arms - the base campaign and the experiment
+ * campaign, directing a fixed share of traffic to each arm. A campaign experiment is created from a
+ * draft of changes to the base campaign and will be a snapshot of changes in the draft at the time
+ * of creation.
+ *
+ * <p>Sample for CampaignExperimentServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
+ *   String formattedResourceName = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+ *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(formattedResourceName);
  * }
  * </code>
  * </pre>
@@ -570,7 +610,8 @@
  *   String customerId = "";
  *   List&lt;ConversionAdjustment&gt; conversionAdjustments = new ArrayList&lt;&gt;();
  *   boolean partialFailure = false;
- *   UploadConversionAdjustmentsResponse response = conversionAdjustmentUploadServiceClient.uploadConversionAdjustments(customerId, conversionAdjustments, partialFailure);
+ *   boolean validateOnly = false;
+ *   UploadConversionAdjustmentsResponse response = conversionAdjustmentUploadServiceClient.uploadConversionAdjustments(customerId, conversionAdjustments, partialFailure, validateOnly);
  * }
  * </code>
  * </pre>
@@ -587,7 +628,8 @@
  *   String customerId = "";
  *   List&lt;ClickConversion&gt; conversions = new ArrayList&lt;&gt;();
  *   boolean partialFailure = false;
- *   UploadClickConversionsResponse response = conversionUploadServiceClient.uploadClickConversions(customerId, conversions, partialFailure);
+ *   boolean validateOnly = false;
+ *   UploadClickConversionsResponse response = conversionUploadServiceClient.uploadClickConversions(customerId, conversions, partialFailure, validateOnly);
  * }
  * </code>
  * </pre>

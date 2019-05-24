@@ -25,6 +25,11 @@ public final class SimulationProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v1_common_CpcBidSimulationPointList_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v1_common_CpvBidSimulationPointList_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v1_common_CpvBidSimulationPointList_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v1_common_TargetCpaSimulationPointList_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -39,6 +44,11 @@ public final class SimulationProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v1_common_CpcBidSimulationPoint_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v1_common_CpvBidSimulationPoint_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v1_common_CpvBidSimulationPoint_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v1_common_TargetCpaSimulationPoint_descriptor;
   static final 
@@ -61,47 +71,63 @@ public final class SimulationProto {
       "le.ads.googleads.v1.common.BidModifierSi" +
       "mulationPoint\"b\n\031CpcBidSimulationPointLi" +
       "st\022E\n\006points\030\001 \003(\01325.google.ads.googlead" +
-      "s.v1.common.CpcBidSimulationPoint\"h\n\034Tar" +
-      "getCpaSimulationPointList\022H\n\006points\030\001 \003(" +
-      "\01328.google.ads.googleads.v1.common.Targe" +
-      "tCpaSimulationPoint\"\232\003\n\032BidModifierSimul" +
-      "ationPoint\0222\n\014bid_modifier\030\001 \001(\0132\034.googl" +
-      "e.protobuf.DoubleValue\022:\n\024biddable_conve" +
-      "rsions\030\002 \001(\0132\034.google.protobuf.DoubleVal" +
-      "ue\022@\n\032biddable_conversions_value\030\003 \001(\0132\034" +
-      ".google.protobuf.DoubleValue\022+\n\006clicks\030\004" +
-      " \001(\0132\033.google.protobuf.Int64Value\0220\n\013cos" +
-      "t_micros\030\005 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\0220\n\013impressions\030\006 \001(\0132\033.google.protob" +
-      "uf.Int64Value\0229\n\024top_slot_impressions\030\007 " +
-      "\001(\0132\033.google.protobuf.Int64Value\"\226\003\n\025Cpc" +
-      "BidSimulationPoint\0223\n\016cpc_bid_micros\030\001 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022:\n\024bidda" +
-      "ble_conversions\030\002 \001(\0132\034.google.protobuf." +
-      "DoubleValue\022@\n\032biddable_conversions_valu" +
-      "e\030\003 \001(\0132\034.google.protobuf.DoubleValue\022+\n" +
-      "\006clicks\030\004 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\0220\n\013cost_micros\030\005 \001(\0132\033.google.protobu" +
-      "f.Int64Value\0220\n\013impressions\030\006 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\0229\n\024top_slot_impre" +
-      "ssions\030\007 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\"\234\003\n\030TargetCpaSimulationPoint\0226\n\021target" +
-      "_cpa_micros\030\001 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022:\n\024biddable_conversions\030\002 \001(\0132\034.g" +
-      "oogle.protobuf.DoubleValue\022@\n\032biddable_c" +
-      "onversions_value\030\003 \001(\0132\034.google.protobuf" +
-      ".DoubleValue\022+\n\006clicks\030\004 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\0220\n\013cost_micros\030\005 \001(\0132\033" +
-      ".google.protobuf.Int64Value\0220\n\013impressio" +
-      "ns\030\006 \001(\0132\033.google.protobuf.Int64Value\0229\n" +
-      "\024top_slot_impressions\030\007 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\352\001\n\"com.google.ads.goog" +
-      "leads.v1.commonB\017SimulationProtoP\001ZDgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v1/common;common\242\002\003GAA\252\002\036Google." +
-      "Ads.GoogleAds.V1.Common\312\002\036Google\\Ads\\Goo" +
-      "gleAds\\V1\\Common\352\002\"Google::Ads::GoogleAd" +
-      "s::V1::Commonb\006proto3"
+      "s.v1.common.CpcBidSimulationPoint\"b\n\031Cpv" +
+      "BidSimulationPointList\022E\n\006points\030\001 \003(\01325" +
+      ".google.ads.googleads.v1.common.CpvBidSi" +
+      "mulationPoint\"h\n\034TargetCpaSimulationPoin" +
+      "tList\022H\n\006points\030\001 \003(\01328.google.ads.googl" +
+      "eads.v1.common.TargetCpaSimulationPoint\"" +
+      "\216\006\n\032BidModifierSimulationPoint\0222\n\014bid_mo" +
+      "difier\030\001 \001(\0132\034.google.protobuf.DoubleVal" +
+      "ue\022:\n\024biddable_conversions\030\002 \001(\0132\034.googl" +
+      "e.protobuf.DoubleValue\022@\n\032biddable_conve" +
+      "rsions_value\030\003 \001(\0132\034.google.protobuf.Dou" +
+      "bleValue\022+\n\006clicks\030\004 \001(\0132\033.google.protob" +
+      "uf.Int64Value\0220\n\013cost_micros\030\005 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\0220\n\013impressions\030\006" +
+      " \001(\0132\033.google.protobuf.Int64Value\0229\n\024top" +
+      "_slot_impressions\030\007 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022A\n\033parent_biddable_conversi" +
+      "ons\030\010 \001(\0132\034.google.protobuf.DoubleValue\022" +
+      "G\n!parent_biddable_conversions_value\030\t \001" +
+      "(\0132\034.google.protobuf.DoubleValue\0222\n\rpare" +
+      "nt_clicks\030\n \001(\0132\033.google.protobuf.Int64V" +
+      "alue\0227\n\022parent_cost_micros\030\013 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\0227\n\022parent_impressi" +
+      "ons\030\014 \001(\0132\033.google.protobuf.Int64Value\022@" +
+      "\n\033parent_top_slot_impressions\030\r \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\"\226\003\n\025CpcBidSimul" +
+      "ationPoint\0223\n\016cpc_bid_micros\030\001 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022:\n\024biddable_conv" +
+      "ersions\030\002 \001(\0132\034.google.protobuf.DoubleVa" +
+      "lue\022@\n\032biddable_conversions_value\030\003 \001(\0132" +
+      "\034.google.protobuf.DoubleValue\022+\n\006clicks\030" +
+      "\004 \001(\0132\033.google.protobuf.Int64Value\0220\n\013co" +
+      "st_micros\030\005 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\0220\n\013impressions\030\006 \001(\0132\033.google.proto" +
+      "buf.Int64Value\0229\n\024top_slot_impressions\030\007" +
+      " \001(\0132\033.google.protobuf.Int64Value\"\260\001\n\025Cp" +
+      "vBidSimulationPoint\0223\n\016cpv_bid_micros\030\001 " +
+      "\001(\0132\033.google.protobuf.Int64Value\0220\n\013cost" +
+      "_micros\030\002 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\0220\n\013impressions\030\003 \001(\0132\033.google.protobu" +
+      "f.Int64Value\"\234\003\n\030TargetCpaSimulationPoin" +
+      "t\0226\n\021target_cpa_micros\030\001 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022:\n\024biddable_conversion" +
+      "s\030\002 \001(\0132\034.google.protobuf.DoubleValue\022@\n" +
+      "\032biddable_conversions_value\030\003 \001(\0132\034.goog" +
+      "le.protobuf.DoubleValue\022+\n\006clicks\030\004 \001(\0132" +
+      "\033.google.protobuf.Int64Value\0220\n\013cost_mic" +
+      "ros\030\005 \001(\0132\033.google.protobuf.Int64Value\0220" +
+      "\n\013impressions\030\006 \001(\0132\033.google.protobuf.In" +
+      "t64Value\0229\n\024top_slot_impressions\030\007 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\352\001\n\"com.goog" +
+      "le.ads.googleads.v1.commonB\017SimulationPr" +
+      "otoP\001ZDgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v1/common;common\242\002\003GA" +
+      "A\252\002\036Google.Ads.GoogleAds.V1.Common\312\002\036Goo" +
+      "gle\\Ads\\GoogleAds\\V1\\Common\352\002\"Google::Ad" +
+      "s::GoogleAds::V1::Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -129,26 +155,38 @@ public final class SimulationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_CpcBidSimulationPointList_descriptor,
         new java.lang.String[] { "Points", });
-    internal_static_google_ads_googleads_v1_common_TargetCpaSimulationPointList_descriptor =
+    internal_static_google_ads_googleads_v1_common_CpvBidSimulationPointList_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_google_ads_googleads_v1_common_CpvBidSimulationPointList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v1_common_CpvBidSimulationPointList_descriptor,
+        new java.lang.String[] { "Points", });
+    internal_static_google_ads_googleads_v1_common_TargetCpaSimulationPointList_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_google_ads_googleads_v1_common_TargetCpaSimulationPointList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_TargetCpaSimulationPointList_descriptor,
         new java.lang.String[] { "Points", });
     internal_static_google_ads_googleads_v1_common_BidModifierSimulationPoint_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_google_ads_googleads_v1_common_BidModifierSimulationPoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_BidModifierSimulationPoint_descriptor,
-        new java.lang.String[] { "BidModifier", "BiddableConversions", "BiddableConversionsValue", "Clicks", "CostMicros", "Impressions", "TopSlotImpressions", });
+        new java.lang.String[] { "BidModifier", "BiddableConversions", "BiddableConversionsValue", "Clicks", "CostMicros", "Impressions", "TopSlotImpressions", "ParentBiddableConversions", "ParentBiddableConversionsValue", "ParentClicks", "ParentCostMicros", "ParentImpressions", "ParentTopSlotImpressions", });
     internal_static_google_ads_googleads_v1_common_CpcBidSimulationPoint_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_google_ads_googleads_v1_common_CpcBidSimulationPoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_CpcBidSimulationPoint_descriptor,
         new java.lang.String[] { "CpcBidMicros", "BiddableConversions", "BiddableConversionsValue", "Clicks", "CostMicros", "Impressions", "TopSlotImpressions", });
+    internal_static_google_ads_googleads_v1_common_CpvBidSimulationPoint_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_google_ads_googleads_v1_common_CpvBidSimulationPoint_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v1_common_CpvBidSimulationPoint_descriptor,
+        new java.lang.String[] { "CpvBidMicros", "CostMicros", "Impressions", });
     internal_static_google_ads_googleads_v1_common_TargetCpaSimulationPoint_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_google_ads_googleads_v1_common_TargetCpaSimulationPoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_TargetCpaSimulationPoint_descriptor,

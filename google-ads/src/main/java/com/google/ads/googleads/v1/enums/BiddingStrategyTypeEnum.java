@@ -104,6 +104,15 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
+     * Commission is an automatic bidding strategy in which the advertiser pays
+     * a certain portion of the conversion value.
+     * </pre>
+     *
+     * <code>COMMISSION = 16;</code>
+     */
+    COMMISSION(16),
+    /**
+     * <pre>
      * Enhanced CPC is a bidding strategy that raises bids for clicks
      * that seem more likely to lead to a conversion and lowers
      * them for clicks where they seem less likely.
@@ -251,6 +260,15 @@ private static final long serialVersionUID = 0L;
      * <code>UNKNOWN = 1;</code>
      */
     public static final int UNKNOWN_VALUE = 1;
+    /**
+     * <pre>
+     * Commission is an automatic bidding strategy in which the advertiser pays
+     * a certain portion of the conversion value.
+     * </pre>
+     *
+     * <code>COMMISSION = 16;</code>
+     */
+    public static final int COMMISSION_VALUE = 16;
     /**
      * <pre>
      * Enhanced CPC is a bidding strategy that raises bids for clicks
@@ -403,6 +421,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 0: return UNSPECIFIED;
         case 1: return UNKNOWN;
+        case 16: return COMMISSION;
         case 2: return ENHANCED_CPC;
         case 3: return MANUAL_CPC;
         case 4: return MANUAL_CPM;

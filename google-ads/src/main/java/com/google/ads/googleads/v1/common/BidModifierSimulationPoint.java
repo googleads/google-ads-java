@@ -137,6 +137,84 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 66: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (parentBiddableConversions_ != null) {
+              subBuilder = parentBiddableConversions_.toBuilder();
+            }
+            parentBiddableConversions_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(parentBiddableConversions_);
+              parentBiddableConversions_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 74: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (parentBiddableConversionsValue_ != null) {
+              subBuilder = parentBiddableConversionsValue_.toBuilder();
+            }
+            parentBiddableConversionsValue_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(parentBiddableConversionsValue_);
+              parentBiddableConversionsValue_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 82: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (parentClicks_ != null) {
+              subBuilder = parentClicks_.toBuilder();
+            }
+            parentClicks_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(parentClicks_);
+              parentClicks_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 90: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (parentCostMicros_ != null) {
+              subBuilder = parentCostMicros_.toBuilder();
+            }
+            parentCostMicros_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(parentCostMicros_);
+              parentCostMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 98: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (parentImpressions_ != null) {
+              subBuilder = parentImpressions_.toBuilder();
+            }
+            parentImpressions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(parentImpressions_);
+              parentImpressions_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 106: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (parentTopSlotImpressions_ != null) {
+              subBuilder = parentTopSlotImpressions_.toBuilder();
+            }
+            parentTopSlotImpressions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(parentTopSlotImpressions_);
+              parentTopSlotImpressions_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -400,6 +478,204 @@ private static final long serialVersionUID = 0L;
     return getTopSlotImpressions();
   }
 
+  public static final int PARENT_BIDDABLE_CONVERSIONS_FIELD_NUMBER = 8;
+  private com.google.protobuf.DoubleValue parentBiddableConversions_;
+  /**
+   * <pre>
+   * Projected number of biddable conversions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+   */
+  public boolean hasParentBiddableConversions() {
+    return parentBiddableConversions_ != null;
+  }
+  /**
+   * <pre>
+   * Projected number of biddable conversions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+   */
+  public com.google.protobuf.DoubleValue getParentBiddableConversions() {
+    return parentBiddableConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : parentBiddableConversions_;
+  }
+  /**
+   * <pre>
+   * Projected number of biddable conversions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getParentBiddableConversionsOrBuilder() {
+    return getParentBiddableConversions();
+  }
+
+  public static final int PARENT_BIDDABLE_CONVERSIONS_VALUE_FIELD_NUMBER = 9;
+  private com.google.protobuf.DoubleValue parentBiddableConversionsValue_;
+  /**
+   * <pre>
+   * Projected total value of biddable conversions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+   */
+  public boolean hasParentBiddableConversionsValue() {
+    return parentBiddableConversionsValue_ != null;
+  }
+  /**
+   * <pre>
+   * Projected total value of biddable conversions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+   */
+  public com.google.protobuf.DoubleValue getParentBiddableConversionsValue() {
+    return parentBiddableConversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : parentBiddableConversionsValue_;
+  }
+  /**
+   * <pre>
+   * Projected total value of biddable conversions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getParentBiddableConversionsValueOrBuilder() {
+    return getParentBiddableConversionsValue();
+  }
+
+  public static final int PARENT_CLICKS_FIELD_NUMBER = 10;
+  private com.google.protobuf.Int64Value parentClicks_;
+  /**
+   * <pre>
+   * Projected number of clicks for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+   */
+  public boolean hasParentClicks() {
+    return parentClicks_ != null;
+  }
+  /**
+   * <pre>
+   * Projected number of clicks for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+   */
+  public com.google.protobuf.Int64Value getParentClicks() {
+    return parentClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentClicks_;
+  }
+  /**
+   * <pre>
+   * Projected number of clicks for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getParentClicksOrBuilder() {
+    return getParentClicks();
+  }
+
+  public static final int PARENT_COST_MICROS_FIELD_NUMBER = 11;
+  private com.google.protobuf.Int64Value parentCostMicros_;
+  /**
+   * <pre>
+   * Projected cost in micros for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+   */
+  public boolean hasParentCostMicros() {
+    return parentCostMicros_ != null;
+  }
+  /**
+   * <pre>
+   * Projected cost in micros for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+   */
+  public com.google.protobuf.Int64Value getParentCostMicros() {
+    return parentCostMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentCostMicros_;
+  }
+  /**
+   * <pre>
+   * Projected cost in micros for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getParentCostMicrosOrBuilder() {
+    return getParentCostMicros();
+  }
+
+  public static final int PARENT_IMPRESSIONS_FIELD_NUMBER = 12;
+  private com.google.protobuf.Int64Value parentImpressions_;
+  /**
+   * <pre>
+   * Projected number of impressions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+   */
+  public boolean hasParentImpressions() {
+    return parentImpressions_ != null;
+  }
+  /**
+   * <pre>
+   * Projected number of impressions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+   */
+  public com.google.protobuf.Int64Value getParentImpressions() {
+    return parentImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentImpressions_;
+  }
+  /**
+   * <pre>
+   * Projected number of impressions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getParentImpressionsOrBuilder() {
+    return getParentImpressions();
+  }
+
+  public static final int PARENT_TOP_SLOT_IMPRESSIONS_FIELD_NUMBER = 13;
+  private com.google.protobuf.Int64Value parentTopSlotImpressions_;
+  /**
+   * <pre>
+   * Projected number of top slot impressions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+   */
+  public boolean hasParentTopSlotImpressions() {
+    return parentTopSlotImpressions_ != null;
+  }
+  /**
+   * <pre>
+   * Projected number of top slot impressions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+   */
+  public com.google.protobuf.Int64Value getParentTopSlotImpressions() {
+    return parentTopSlotImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentTopSlotImpressions_;
+  }
+  /**
+   * <pre>
+   * Projected number of top slot impressions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getParentTopSlotImpressionsOrBuilder() {
+    return getParentTopSlotImpressions();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -434,6 +710,24 @@ private static final long serialVersionUID = 0L;
     }
     if (topSlotImpressions_ != null) {
       output.writeMessage(7, getTopSlotImpressions());
+    }
+    if (parentBiddableConversions_ != null) {
+      output.writeMessage(8, getParentBiddableConversions());
+    }
+    if (parentBiddableConversionsValue_ != null) {
+      output.writeMessage(9, getParentBiddableConversionsValue());
+    }
+    if (parentClicks_ != null) {
+      output.writeMessage(10, getParentClicks());
+    }
+    if (parentCostMicros_ != null) {
+      output.writeMessage(11, getParentCostMicros());
+    }
+    if (parentImpressions_ != null) {
+      output.writeMessage(12, getParentImpressions());
+    }
+    if (parentTopSlotImpressions_ != null) {
+      output.writeMessage(13, getParentTopSlotImpressions());
     }
     unknownFields.writeTo(output);
   }
@@ -471,6 +765,30 @@ private static final long serialVersionUID = 0L;
     if (topSlotImpressions_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getTopSlotImpressions());
+    }
+    if (parentBiddableConversions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getParentBiddableConversions());
+    }
+    if (parentBiddableConversionsValue_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getParentBiddableConversionsValue());
+    }
+    if (parentClicks_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getParentClicks());
+    }
+    if (parentCostMicros_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getParentCostMicros());
+    }
+    if (parentImpressions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, getParentImpressions());
+    }
+    if (parentTopSlotImpressions_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, getParentTopSlotImpressions());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -523,6 +841,36 @@ private static final long serialVersionUID = 0L;
       result = result && getTopSlotImpressions()
           .equals(other.getTopSlotImpressions());
     }
+    result = result && (hasParentBiddableConversions() == other.hasParentBiddableConversions());
+    if (hasParentBiddableConversions()) {
+      result = result && getParentBiddableConversions()
+          .equals(other.getParentBiddableConversions());
+    }
+    result = result && (hasParentBiddableConversionsValue() == other.hasParentBiddableConversionsValue());
+    if (hasParentBiddableConversionsValue()) {
+      result = result && getParentBiddableConversionsValue()
+          .equals(other.getParentBiddableConversionsValue());
+    }
+    result = result && (hasParentClicks() == other.hasParentClicks());
+    if (hasParentClicks()) {
+      result = result && getParentClicks()
+          .equals(other.getParentClicks());
+    }
+    result = result && (hasParentCostMicros() == other.hasParentCostMicros());
+    if (hasParentCostMicros()) {
+      result = result && getParentCostMicros()
+          .equals(other.getParentCostMicros());
+    }
+    result = result && (hasParentImpressions() == other.hasParentImpressions());
+    if (hasParentImpressions()) {
+      result = result && getParentImpressions()
+          .equals(other.getParentImpressions());
+    }
+    result = result && (hasParentTopSlotImpressions() == other.hasParentTopSlotImpressions());
+    if (hasParentTopSlotImpressions()) {
+      result = result && getParentTopSlotImpressions()
+          .equals(other.getParentTopSlotImpressions());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -561,6 +909,30 @@ private static final long serialVersionUID = 0L;
     if (hasTopSlotImpressions()) {
       hash = (37 * hash) + TOP_SLOT_IMPRESSIONS_FIELD_NUMBER;
       hash = (53 * hash) + getTopSlotImpressions().hashCode();
+    }
+    if (hasParentBiddableConversions()) {
+      hash = (37 * hash) + PARENT_BIDDABLE_CONVERSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getParentBiddableConversions().hashCode();
+    }
+    if (hasParentBiddableConversionsValue()) {
+      hash = (37 * hash) + PARENT_BIDDABLE_CONVERSIONS_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getParentBiddableConversionsValue().hashCode();
+    }
+    if (hasParentClicks()) {
+      hash = (37 * hash) + PARENT_CLICKS_FIELD_NUMBER;
+      hash = (53 * hash) + getParentClicks().hashCode();
+    }
+    if (hasParentCostMicros()) {
+      hash = (37 * hash) + PARENT_COST_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + getParentCostMicros().hashCode();
+    }
+    if (hasParentImpressions()) {
+      hash = (37 * hash) + PARENT_IMPRESSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getParentImpressions().hashCode();
+    }
+    if (hasParentTopSlotImpressions()) {
+      hash = (37 * hash) + PARENT_TOP_SLOT_IMPRESSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getParentTopSlotImpressions().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -741,6 +1113,42 @@ private static final long serialVersionUID = 0L;
         topSlotImpressions_ = null;
         topSlotImpressionsBuilder_ = null;
       }
+      if (parentBiddableConversionsBuilder_ == null) {
+        parentBiddableConversions_ = null;
+      } else {
+        parentBiddableConversions_ = null;
+        parentBiddableConversionsBuilder_ = null;
+      }
+      if (parentBiddableConversionsValueBuilder_ == null) {
+        parentBiddableConversionsValue_ = null;
+      } else {
+        parentBiddableConversionsValue_ = null;
+        parentBiddableConversionsValueBuilder_ = null;
+      }
+      if (parentClicksBuilder_ == null) {
+        parentClicks_ = null;
+      } else {
+        parentClicks_ = null;
+        parentClicksBuilder_ = null;
+      }
+      if (parentCostMicrosBuilder_ == null) {
+        parentCostMicros_ = null;
+      } else {
+        parentCostMicros_ = null;
+        parentCostMicrosBuilder_ = null;
+      }
+      if (parentImpressionsBuilder_ == null) {
+        parentImpressions_ = null;
+      } else {
+        parentImpressions_ = null;
+        parentImpressionsBuilder_ = null;
+      }
+      if (parentTopSlotImpressionsBuilder_ == null) {
+        parentTopSlotImpressions_ = null;
+      } else {
+        parentTopSlotImpressions_ = null;
+        parentTopSlotImpressionsBuilder_ = null;
+      }
       return this;
     }
 
@@ -801,6 +1209,36 @@ private static final long serialVersionUID = 0L;
         result.topSlotImpressions_ = topSlotImpressions_;
       } else {
         result.topSlotImpressions_ = topSlotImpressionsBuilder_.build();
+      }
+      if (parentBiddableConversionsBuilder_ == null) {
+        result.parentBiddableConversions_ = parentBiddableConversions_;
+      } else {
+        result.parentBiddableConversions_ = parentBiddableConversionsBuilder_.build();
+      }
+      if (parentBiddableConversionsValueBuilder_ == null) {
+        result.parentBiddableConversionsValue_ = parentBiddableConversionsValue_;
+      } else {
+        result.parentBiddableConversionsValue_ = parentBiddableConversionsValueBuilder_.build();
+      }
+      if (parentClicksBuilder_ == null) {
+        result.parentClicks_ = parentClicks_;
+      } else {
+        result.parentClicks_ = parentClicksBuilder_.build();
+      }
+      if (parentCostMicrosBuilder_ == null) {
+        result.parentCostMicros_ = parentCostMicros_;
+      } else {
+        result.parentCostMicros_ = parentCostMicrosBuilder_.build();
+      }
+      if (parentImpressionsBuilder_ == null) {
+        result.parentImpressions_ = parentImpressions_;
+      } else {
+        result.parentImpressions_ = parentImpressionsBuilder_.build();
+      }
+      if (parentTopSlotImpressionsBuilder_ == null) {
+        result.parentTopSlotImpressions_ = parentTopSlotImpressions_;
+      } else {
+        result.parentTopSlotImpressions_ = parentTopSlotImpressionsBuilder_.build();
       }
       onBuilt();
       return result;
@@ -870,6 +1308,24 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasTopSlotImpressions()) {
         mergeTopSlotImpressions(other.getTopSlotImpressions());
+      }
+      if (other.hasParentBiddableConversions()) {
+        mergeParentBiddableConversions(other.getParentBiddableConversions());
+      }
+      if (other.hasParentBiddableConversionsValue()) {
+        mergeParentBiddableConversionsValue(other.getParentBiddableConversionsValue());
+      }
+      if (other.hasParentClicks()) {
+        mergeParentClicks(other.getParentClicks());
+      }
+      if (other.hasParentCostMicros()) {
+        mergeParentCostMicros(other.getParentCostMicros());
+      }
+      if (other.hasParentImpressions()) {
+        mergeParentImpressions(other.getParentImpressions());
+      }
+      if (other.hasParentTopSlotImpressions()) {
+        mergeParentTopSlotImpressions(other.getParentTopSlotImpressions());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1969,6 +2425,924 @@ private static final long serialVersionUID = 0L;
         topSlotImpressions_ = null;
       }
       return topSlotImpressionsBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue parentBiddableConversions_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> parentBiddableConversionsBuilder_;
+    /**
+     * <pre>
+     * Projected number of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+     */
+    public boolean hasParentBiddableConversions() {
+      return parentBiddableConversionsBuilder_ != null || parentBiddableConversions_ != null;
+    }
+    /**
+     * <pre>
+     * Projected number of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+     */
+    public com.google.protobuf.DoubleValue getParentBiddableConversions() {
+      if (parentBiddableConversionsBuilder_ == null) {
+        return parentBiddableConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : parentBiddableConversions_;
+      } else {
+        return parentBiddableConversionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Projected number of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+     */
+    public Builder setParentBiddableConversions(com.google.protobuf.DoubleValue value) {
+      if (parentBiddableConversionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        parentBiddableConversions_ = value;
+        onChanged();
+      } else {
+        parentBiddableConversionsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+     */
+    public Builder setParentBiddableConversions(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (parentBiddableConversionsBuilder_ == null) {
+        parentBiddableConversions_ = builderForValue.build();
+        onChanged();
+      } else {
+        parentBiddableConversionsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+     */
+    public Builder mergeParentBiddableConversions(com.google.protobuf.DoubleValue value) {
+      if (parentBiddableConversionsBuilder_ == null) {
+        if (parentBiddableConversions_ != null) {
+          parentBiddableConversions_ =
+            com.google.protobuf.DoubleValue.newBuilder(parentBiddableConversions_).mergeFrom(value).buildPartial();
+        } else {
+          parentBiddableConversions_ = value;
+        }
+        onChanged();
+      } else {
+        parentBiddableConversionsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+     */
+    public Builder clearParentBiddableConversions() {
+      if (parentBiddableConversionsBuilder_ == null) {
+        parentBiddableConversions_ = null;
+        onChanged();
+      } else {
+        parentBiddableConversions_ = null;
+        parentBiddableConversionsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getParentBiddableConversionsBuilder() {
+      
+      onChanged();
+      return getParentBiddableConversionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Projected number of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getParentBiddableConversionsOrBuilder() {
+      if (parentBiddableConversionsBuilder_ != null) {
+        return parentBiddableConversionsBuilder_.getMessageOrBuilder();
+      } else {
+        return parentBiddableConversions_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : parentBiddableConversions_;
+      }
+    }
+    /**
+     * <pre>
+     * Projected number of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getParentBiddableConversionsFieldBuilder() {
+      if (parentBiddableConversionsBuilder_ == null) {
+        parentBiddableConversionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getParentBiddableConversions(),
+                getParentForChildren(),
+                isClean());
+        parentBiddableConversions_ = null;
+      }
+      return parentBiddableConversionsBuilder_;
+    }
+
+    private com.google.protobuf.DoubleValue parentBiddableConversionsValue_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> parentBiddableConversionsValueBuilder_;
+    /**
+     * <pre>
+     * Projected total value of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+     */
+    public boolean hasParentBiddableConversionsValue() {
+      return parentBiddableConversionsValueBuilder_ != null || parentBiddableConversionsValue_ != null;
+    }
+    /**
+     * <pre>
+     * Projected total value of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+     */
+    public com.google.protobuf.DoubleValue getParentBiddableConversionsValue() {
+      if (parentBiddableConversionsValueBuilder_ == null) {
+        return parentBiddableConversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : parentBiddableConversionsValue_;
+      } else {
+        return parentBiddableConversionsValueBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Projected total value of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+     */
+    public Builder setParentBiddableConversionsValue(com.google.protobuf.DoubleValue value) {
+      if (parentBiddableConversionsValueBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        parentBiddableConversionsValue_ = value;
+        onChanged();
+      } else {
+        parentBiddableConversionsValueBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected total value of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+     */
+    public Builder setParentBiddableConversionsValue(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (parentBiddableConversionsValueBuilder_ == null) {
+        parentBiddableConversionsValue_ = builderForValue.build();
+        onChanged();
+      } else {
+        parentBiddableConversionsValueBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected total value of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+     */
+    public Builder mergeParentBiddableConversionsValue(com.google.protobuf.DoubleValue value) {
+      if (parentBiddableConversionsValueBuilder_ == null) {
+        if (parentBiddableConversionsValue_ != null) {
+          parentBiddableConversionsValue_ =
+            com.google.protobuf.DoubleValue.newBuilder(parentBiddableConversionsValue_).mergeFrom(value).buildPartial();
+        } else {
+          parentBiddableConversionsValue_ = value;
+        }
+        onChanged();
+      } else {
+        parentBiddableConversionsValueBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected total value of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+     */
+    public Builder clearParentBiddableConversionsValue() {
+      if (parentBiddableConversionsValueBuilder_ == null) {
+        parentBiddableConversionsValue_ = null;
+        onChanged();
+      } else {
+        parentBiddableConversionsValue_ = null;
+        parentBiddableConversionsValueBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected total value of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getParentBiddableConversionsValueBuilder() {
+      
+      onChanged();
+      return getParentBiddableConversionsValueFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Projected total value of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getParentBiddableConversionsValueOrBuilder() {
+      if (parentBiddableConversionsValueBuilder_ != null) {
+        return parentBiddableConversionsValueBuilder_.getMessageOrBuilder();
+      } else {
+        return parentBiddableConversionsValue_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : parentBiddableConversionsValue_;
+      }
+    }
+    /**
+     * <pre>
+     * Projected total value of biddable conversions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getParentBiddableConversionsValueFieldBuilder() {
+      if (parentBiddableConversionsValueBuilder_ == null) {
+        parentBiddableConversionsValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getParentBiddableConversionsValue(),
+                getParentForChildren(),
+                isClean());
+        parentBiddableConversionsValue_ = null;
+      }
+      return parentBiddableConversionsValueBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value parentClicks_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> parentClicksBuilder_;
+    /**
+     * <pre>
+     * Projected number of clicks for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+     */
+    public boolean hasParentClicks() {
+      return parentClicksBuilder_ != null || parentClicks_ != null;
+    }
+    /**
+     * <pre>
+     * Projected number of clicks for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+     */
+    public com.google.protobuf.Int64Value getParentClicks() {
+      if (parentClicksBuilder_ == null) {
+        return parentClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentClicks_;
+      } else {
+        return parentClicksBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Projected number of clicks for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+     */
+    public Builder setParentClicks(com.google.protobuf.Int64Value value) {
+      if (parentClicksBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        parentClicks_ = value;
+        onChanged();
+      } else {
+        parentClicksBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of clicks for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+     */
+    public Builder setParentClicks(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (parentClicksBuilder_ == null) {
+        parentClicks_ = builderForValue.build();
+        onChanged();
+      } else {
+        parentClicksBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of clicks for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+     */
+    public Builder mergeParentClicks(com.google.protobuf.Int64Value value) {
+      if (parentClicksBuilder_ == null) {
+        if (parentClicks_ != null) {
+          parentClicks_ =
+            com.google.protobuf.Int64Value.newBuilder(parentClicks_).mergeFrom(value).buildPartial();
+        } else {
+          parentClicks_ = value;
+        }
+        onChanged();
+      } else {
+        parentClicksBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of clicks for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+     */
+    public Builder clearParentClicks() {
+      if (parentClicksBuilder_ == null) {
+        parentClicks_ = null;
+        onChanged();
+      } else {
+        parentClicks_ = null;
+        parentClicksBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of clicks for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getParentClicksBuilder() {
+      
+      onChanged();
+      return getParentClicksFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Projected number of clicks for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getParentClicksOrBuilder() {
+      if (parentClicksBuilder_ != null) {
+        return parentClicksBuilder_.getMessageOrBuilder();
+      } else {
+        return parentClicks_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : parentClicks_;
+      }
+    }
+    /**
+     * <pre>
+     * Projected number of clicks for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getParentClicksFieldBuilder() {
+      if (parentClicksBuilder_ == null) {
+        parentClicksBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getParentClicks(),
+                getParentForChildren(),
+                isClean());
+        parentClicks_ = null;
+      }
+      return parentClicksBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value parentCostMicros_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> parentCostMicrosBuilder_;
+    /**
+     * <pre>
+     * Projected cost in micros for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+     */
+    public boolean hasParentCostMicros() {
+      return parentCostMicrosBuilder_ != null || parentCostMicros_ != null;
+    }
+    /**
+     * <pre>
+     * Projected cost in micros for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+     */
+    public com.google.protobuf.Int64Value getParentCostMicros() {
+      if (parentCostMicrosBuilder_ == null) {
+        return parentCostMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentCostMicros_;
+      } else {
+        return parentCostMicrosBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Projected cost in micros for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+     */
+    public Builder setParentCostMicros(com.google.protobuf.Int64Value value) {
+      if (parentCostMicrosBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        parentCostMicros_ = value;
+        onChanged();
+      } else {
+        parentCostMicrosBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected cost in micros for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+     */
+    public Builder setParentCostMicros(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (parentCostMicrosBuilder_ == null) {
+        parentCostMicros_ = builderForValue.build();
+        onChanged();
+      } else {
+        parentCostMicrosBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected cost in micros for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+     */
+    public Builder mergeParentCostMicros(com.google.protobuf.Int64Value value) {
+      if (parentCostMicrosBuilder_ == null) {
+        if (parentCostMicros_ != null) {
+          parentCostMicros_ =
+            com.google.protobuf.Int64Value.newBuilder(parentCostMicros_).mergeFrom(value).buildPartial();
+        } else {
+          parentCostMicros_ = value;
+        }
+        onChanged();
+      } else {
+        parentCostMicrosBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected cost in micros for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+     */
+    public Builder clearParentCostMicros() {
+      if (parentCostMicrosBuilder_ == null) {
+        parentCostMicros_ = null;
+        onChanged();
+      } else {
+        parentCostMicros_ = null;
+        parentCostMicrosBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected cost in micros for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getParentCostMicrosBuilder() {
+      
+      onChanged();
+      return getParentCostMicrosFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Projected cost in micros for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getParentCostMicrosOrBuilder() {
+      if (parentCostMicrosBuilder_ != null) {
+        return parentCostMicrosBuilder_.getMessageOrBuilder();
+      } else {
+        return parentCostMicros_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : parentCostMicros_;
+      }
+    }
+    /**
+     * <pre>
+     * Projected cost in micros for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getParentCostMicrosFieldBuilder() {
+      if (parentCostMicrosBuilder_ == null) {
+        parentCostMicrosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getParentCostMicros(),
+                getParentForChildren(),
+                isClean());
+        parentCostMicros_ = null;
+      }
+      return parentCostMicrosBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value parentImpressions_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> parentImpressionsBuilder_;
+    /**
+     * <pre>
+     * Projected number of impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+     */
+    public boolean hasParentImpressions() {
+      return parentImpressionsBuilder_ != null || parentImpressions_ != null;
+    }
+    /**
+     * <pre>
+     * Projected number of impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+     */
+    public com.google.protobuf.Int64Value getParentImpressions() {
+      if (parentImpressionsBuilder_ == null) {
+        return parentImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentImpressions_;
+      } else {
+        return parentImpressionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Projected number of impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+     */
+    public Builder setParentImpressions(com.google.protobuf.Int64Value value) {
+      if (parentImpressionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        parentImpressions_ = value;
+        onChanged();
+      } else {
+        parentImpressionsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+     */
+    public Builder setParentImpressions(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (parentImpressionsBuilder_ == null) {
+        parentImpressions_ = builderForValue.build();
+        onChanged();
+      } else {
+        parentImpressionsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+     */
+    public Builder mergeParentImpressions(com.google.protobuf.Int64Value value) {
+      if (parentImpressionsBuilder_ == null) {
+        if (parentImpressions_ != null) {
+          parentImpressions_ =
+            com.google.protobuf.Int64Value.newBuilder(parentImpressions_).mergeFrom(value).buildPartial();
+        } else {
+          parentImpressions_ = value;
+        }
+        onChanged();
+      } else {
+        parentImpressionsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+     */
+    public Builder clearParentImpressions() {
+      if (parentImpressionsBuilder_ == null) {
+        parentImpressions_ = null;
+        onChanged();
+      } else {
+        parentImpressions_ = null;
+        parentImpressionsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getParentImpressionsBuilder() {
+      
+      onChanged();
+      return getParentImpressionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Projected number of impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getParentImpressionsOrBuilder() {
+      if (parentImpressionsBuilder_ != null) {
+        return parentImpressionsBuilder_.getMessageOrBuilder();
+      } else {
+        return parentImpressions_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : parentImpressions_;
+      }
+    }
+    /**
+     * <pre>
+     * Projected number of impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getParentImpressionsFieldBuilder() {
+      if (parentImpressionsBuilder_ == null) {
+        parentImpressionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getParentImpressions(),
+                getParentForChildren(),
+                isClean());
+        parentImpressions_ = null;
+      }
+      return parentImpressionsBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value parentTopSlotImpressions_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> parentTopSlotImpressionsBuilder_;
+    /**
+     * <pre>
+     * Projected number of top slot impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+     */
+    public boolean hasParentTopSlotImpressions() {
+      return parentTopSlotImpressionsBuilder_ != null || parentTopSlotImpressions_ != null;
+    }
+    /**
+     * <pre>
+     * Projected number of top slot impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+     */
+    public com.google.protobuf.Int64Value getParentTopSlotImpressions() {
+      if (parentTopSlotImpressionsBuilder_ == null) {
+        return parentTopSlotImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentTopSlotImpressions_;
+      } else {
+        return parentTopSlotImpressionsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Projected number of top slot impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+     */
+    public Builder setParentTopSlotImpressions(com.google.protobuf.Int64Value value) {
+      if (parentTopSlotImpressionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        parentTopSlotImpressions_ = value;
+        onChanged();
+      } else {
+        parentTopSlotImpressionsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of top slot impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+     */
+    public Builder setParentTopSlotImpressions(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (parentTopSlotImpressionsBuilder_ == null) {
+        parentTopSlotImpressions_ = builderForValue.build();
+        onChanged();
+      } else {
+        parentTopSlotImpressionsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of top slot impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+     */
+    public Builder mergeParentTopSlotImpressions(com.google.protobuf.Int64Value value) {
+      if (parentTopSlotImpressionsBuilder_ == null) {
+        if (parentTopSlotImpressions_ != null) {
+          parentTopSlotImpressions_ =
+            com.google.protobuf.Int64Value.newBuilder(parentTopSlotImpressions_).mergeFrom(value).buildPartial();
+        } else {
+          parentTopSlotImpressions_ = value;
+        }
+        onChanged();
+      } else {
+        parentTopSlotImpressionsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of top slot impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+     */
+    public Builder clearParentTopSlotImpressions() {
+      if (parentTopSlotImpressionsBuilder_ == null) {
+        parentTopSlotImpressions_ = null;
+        onChanged();
+      } else {
+        parentTopSlotImpressions_ = null;
+        parentTopSlotImpressionsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Projected number of top slot impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getParentTopSlotImpressionsBuilder() {
+      
+      onChanged();
+      return getParentTopSlotImpressionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Projected number of top slot impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getParentTopSlotImpressionsOrBuilder() {
+      if (parentTopSlotImpressionsBuilder_ != null) {
+        return parentTopSlotImpressionsBuilder_.getMessageOrBuilder();
+      } else {
+        return parentTopSlotImpressions_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : parentTopSlotImpressions_;
+      }
+    }
+    /**
+     * <pre>
+     * Projected number of top slot impressions for the parent resource.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getParentTopSlotImpressionsFieldBuilder() {
+      if (parentTopSlotImpressionsBuilder_ == null) {
+        parentTopSlotImpressionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getParentTopSlotImpressions(),
+                getParentForChildren(),
+                isClean());
+        parentTopSlotImpressions_ = null;
+      }
+      return parentTopSlotImpressionsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

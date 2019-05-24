@@ -50,155 +50,161 @@ public final class SegmentsProto {
       "leads/v1/enums/device.proto\032>google/ads/" +
       "googleads/v1/enums/external_conversion_s" +
       "ource.proto\032=google/ads/googleads/v1/enu" +
-      "ms/hotel_date_selection_type.proto\0321goog" +
-      "le/ads/googleads/v1/enums/month_of_year." +
-      "proto\0324google/ads/googleads/v1/enums/pla" +
-      "ceholder_type.proto\0323google/ads/googlead" +
-      "s/v1/enums/product_channel.proto\032?google" +
-      "/ads/googleads/v1/enums/product_channel_" +
-      "exclusivity.proto\0325google/ads/googleads/" +
-      "v1/enums/product_condition.proto\032Cgoogle" +
-      "/ads/googleads/v1/enums/search_engine_re" +
-      "sults_page_type.proto\032:google/ads/google" +
-      "ads/v1/enums/search_term_match_type.prot" +
-      "o\032(google/ads/googleads/v1/enums/slot.pr" +
-      "oto\032\036google/protobuf/wrappers.proto\032\034goo" +
-      "gle/api/annotations.proto\"\216\'\n\010Segments\022W" +
-      "\n\017ad_network_type\030\003 \001(\0162>.google.ads.goo" +
-      "gleads.v1.enums.AdNetworkTypeEnum.AdNetw" +
-      "orkType\022J\n\nclick_type\030\032 \001(\01626.google.ads" +
-      ".googleads.v1.enums.ClickTypeEnum.ClickT" +
-      "ype\0227\n\021conversion_action\0304 \001(\0132\034.google." +
-      "protobuf.StringValue\022x\n\032conversion_actio" +
-      "n_category\0305 \001(\0162T.google.ads.googleads." +
-      "v1.enums.ConversionActionCategoryEnum.Co" +
-      "nversionActionCategory\022<\n\026conversion_act" +
-      "ion_name\0306 \001(\0132\034.google.protobuf.StringV" +
-      "alue\0229\n\025conversion_adjustment\030\033 \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\022\213\001\n!conversion_a" +
-      "ttribution_event_type\030\002 \001(\0162`.google.ads" +
-      ".googleads.v1.enums.ConversionAttributio" +
-      "nEventTypeEnum.ConversionAttributionEven" +
-      "tType\022i\n\025conversion_lag_bucket\0302 \001(\0162J.g" +
-      "oogle.ads.googleads.v1.enums.ConversionL" +
-      "agBucketEnum.ConversionLagBucket\022\217\001\n#con" +
-      "version_or_adjustment_lag_bucket\0303 \001(\0162b" +
-      ".google.ads.googleads.v1.enums.Conversio" +
-      "nOrAdjustmentLagBucketEnum.ConversionOrA" +
-      "djustmentLagBucket\022*\n\004date\030\004 \001(\0132\034.googl" +
-      "e.protobuf.StringValue\022K\n\013day_of_week\030\005 " +
-      "\001(\01626.google.ads.googleads.v1.enums.DayO" +
-      "fWeekEnum.DayOfWeek\022@\n\006device\030\001 \001(\01620.go" +
-      "ogle.ads.googleads.v1.enums.DeviceEnum.D" +
-      "evice\022x\n\032external_conversion_source\0307 \001(" +
-      "\0162T.google.ads.googleads.v1.enums.Extern" +
-      "alConversionSourceEnum.ExternalConversio" +
-      "nSource\0228\n\022geo_target_airport\030A \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\0225\n\017geo_target_" +
-      "city\030> \001(\0132\034.google.protobuf.StringValue" +
-      "\0227\n\021geo_target_county\030D \001(\0132\034.google.pro" +
-      "tobuf.StringValue\0229\n\023geo_target_district" +
-      "\030E \001(\0132\034.google.protobuf.StringValue\0226\n\020" +
-      "geo_target_metro\030? \001(\0132\034.google.protobuf" +
-      ".StringValue\022G\n!geo_target_most_specific" +
-      "_location\030H \001(\0132\034.google.protobuf.String" +
-      "Value\022<\n\026geo_target_postal_code\030G \001(\0132\034." +
-      "google.protobuf.StringValue\0227\n\021geo_targe" +
-      "t_region\030@ \001(\0132\034.google.protobuf.StringV" +
-      "alue\0226\n\020geo_target_state\030C \001(\0132\034.google." +
-      "protobuf.StringValue\022>\n\031hotel_booking_wi" +
-      "ndow_days\030\006 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\0224\n\017hotel_center_id\030\007 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\0229\n\023hotel_check_in_dat" +
-      "e\030\010 \001(\0132\034.google.protobuf.StringValue\022Z\n" +
-      "\032hotel_check_in_day_of_week\030\t \001(\01626.goog" +
-      "le.ads.googleads.v1.enums.DayOfWeekEnum." +
-      "DayOfWeek\0220\n\nhotel_city\030\n \001(\0132\034.google.p" +
-      "rotobuf.StringValue\0220\n\013hotel_class\030\013 \001(\013" +
-      "2\033.google.protobuf.Int32Value\0223\n\rhotel_c" +
-      "ountry\030\014 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022s\n\031hotel_date_selection_type\030\r \001(\0162P." +
-      "google.ads.googleads.v1.enums.HotelDateS" +
-      "electionTypeEnum.HotelDateSelectionType\022" +
-      "9\n\024hotel_length_of_stay\030\016 \001(\0132\033.google.p" +
-      "rotobuf.Int32Value\0221\n\013hotel_state\030\017 \001(\0132" +
-      "\034.google.protobuf.StringValue\022)\n\004hour\030\020 " +
-      "\001(\0132\033.google.protobuf.Int32Value\022A\n\035inte" +
-      "raction_on_this_extension\0301 \001(\0132\032.google" +
-      ".protobuf.BoolValue\0228\n\007keyword\030= \001(\0132\'.g" +
-      "oogle.ads.googleads.v1.common.Keyword\022+\n" +
-      "\005month\030\021 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022Q\n\rmonth_of_year\030\022 \001(\0162:.google.ads.g" +
-      "oogleads.v1.enums.MonthOfYearEnum.MonthO" +
-      "fYear\0226\n\020partner_hotel_id\030\023 \001(\0132\034.google" +
-      ".protobuf.StringValue\022\\\n\020placeholder_typ" +
-      "e\030\024 \001(\0162B.google.ads.googleads.v1.enums." +
-      "PlaceholderTypeEnum.PlaceholderType\022;\n\025p" +
-      "roduct_aggregator_id\030\034 \001(\0132\034.google.prot" +
-      "obuf.UInt64Value\022E\n\037product_bidding_cate" +
-      "gory_level1\0308 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022E\n\037product_bidding_category_leve" +
-      "l2\0309 \001(\0132\034.google.protobuf.StringValue\022E" +
-      "\n\037product_bidding_category_level3\030: \001(\0132" +
-      "\034.google.protobuf.StringValue\022E\n\037product" +
-      "_bidding_category_level4\030; \001(\0132\034.google." +
-      "protobuf.StringValue\022E\n\037product_bidding_" +
-      "category_level5\030< \001(\0132\034.google.protobuf." +
-      "StringValue\0223\n\rproduct_brand\030\035 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022Y\n\017product_chan" +
-      "nel\030\036 \001(\0162@.google.ads.googleads.v1.enum" +
-      "s.ProductChannelEnum.ProductChannel\022{\n\033p" +
-      "roduct_channel_exclusivity\030\037 \001(\0162V.googl" +
-      "e.ads.googleads.v1.enums.ProductChannelE" +
-      "xclusivityEnum.ProductChannelExclusivity" +
-      "\022_\n\021product_condition\030  \001(\0162D.google.ads" +
-      ".googleads.v1.enums.ProductConditionEnum" +
-      ".ProductCondition\0225\n\017product_country\030! \001" +
-      "(\0132\034.google.protobuf.StringValue\022?\n\031prod" +
-      "uct_custom_attribute0\030\" \001(\0132\034.google.pro" +
-      "tobuf.StringValue\022?\n\031product_custom_attr" +
-      "ibute1\030# \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022?\n\031product_custom_attribute2\030$ \001(\0132\034." +
-      "google.protobuf.StringValue\022?\n\031product_c" +
-      "ustom_attribute3\030% \001(\0132\034.google.protobuf" +
-      ".StringValue\022?\n\031product_custom_attribute" +
-      "4\030& \001(\0132\034.google.protobuf.StringValue\0225\n" +
-      "\017product_item_id\030\' \001(\0132\034.google.protobuf" +
-      ".StringValue\0226\n\020product_language\030( \001(\0132\034" +
-      ".google.protobuf.StringValue\0229\n\023product_" +
-      "merchant_id\030) \001(\0132\034.google.protobuf.UInt" +
-      "64Value\0226\n\020product_store_id\030* \001(\0132\034.goog" +
-      "le.protobuf.StringValue\0223\n\rproduct_title" +
-      "\030+ \001(\0132\034.google.protobuf.StringValue\0225\n\017" +
-      "product_type_l1\030, \001(\0132\034.google.protobuf." +
-      "StringValue\0225\n\017product_type_l2\030- \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\0225\n\017product_ty" +
-      "pe_l3\030. \001(\0132\034.google.protobuf.StringValu" +
-      "e\0225\n\017product_type_l4\030/ \001(\0132\034.google.prot" +
-      "obuf.StringValue\0225\n\017product_type_l5\0300 \001(" +
-      "\0132\034.google.protobuf.StringValue\022-\n\007quart" +
-      "er\030\025 \001(\0132\034.google.protobuf.StringValue\022\203" +
-      "\001\n\037search_engine_results_page_type\030F \001(\016" +
-      "2Z.google.ads.googleads.v1.enums.SearchE" +
-      "ngineResultsPageTypeEnum.SearchEngineRes" +
-      "ultsPageType\022j\n\026search_term_match_type\030\026" +
-      " \001(\0162J.google.ads.googleads.v1.enums.Sea" +
-      "rchTermMatchTypeEnum.SearchTermMatchType" +
-      "\022:\n\004slot\030\027 \001(\0162,.google.ads.googleads.v1" +
-      ".enums.SlotEnum.Slot\022-\n\007webpage\030B \001(\0132\034." +
-      "google.protobuf.StringValue\022*\n\004week\030\030 \001(" +
-      "\0132\034.google.protobuf.StringValue\022)\n\004year\030" +
-      "\031 \001(\0132\033.google.protobuf.Int32Value\"~\n\007Ke" +
-      "yword\0228\n\022ad_group_criterion\030\001 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\0229\n\004info\030\002 \001(\0132+." +
-      "google.ads.googleads.v1.common.KeywordIn" +
-      "foB\350\001\n\"com.google.ads.googleads.v1.commo" +
-      "nB\rSegmentsProtoP\001ZDgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v1/commo" +
-      "n;common\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1" +
-      ".Common\312\002\036Google\\Ads\\GoogleAds\\V1\\Common" +
-      "\352\002\"Google::Ads::GoogleAds::V1::Commonb\006p" +
-      "roto3"
+      "ms/hotel_date_selection_type.proto\0323goog" +
+      "le/ads/googleads/v1/enums/hotel_rate_typ" +
+      "e.proto\0321google/ads/googleads/v1/enums/m" +
+      "onth_of_year.proto\0324google/ads/googleads" +
+      "/v1/enums/placeholder_type.proto\0323google" +
+      "/ads/googleads/v1/enums/product_channel." +
+      "proto\032?google/ads/googleads/v1/enums/pro" +
+      "duct_channel_exclusivity.proto\0325google/a" +
+      "ds/googleads/v1/enums/product_condition." +
+      "proto\032Cgoogle/ads/googleads/v1/enums/sea" +
+      "rch_engine_results_page_type.proto\032:goog" +
+      "le/ads/googleads/v1/enums/search_term_ma" +
+      "tch_type.proto\032(google/ads/googleads/v1/" +
+      "enums/slot.proto\032\036google/protobuf/wrappe" +
+      "rs.proto\032\034google/api/annotations.proto\"\334" +
+      "(\n\010Segments\022W\n\017ad_network_type\030\003 \001(\0162>.g" +
+      "oogle.ads.googleads.v1.enums.AdNetworkTy" +
+      "peEnum.AdNetworkType\022J\n\nclick_type\030\032 \001(\016" +
+      "26.google.ads.googleads.v1.enums.ClickTy" +
+      "peEnum.ClickType\0227\n\021conversion_action\0304 " +
+      "\001(\0132\034.google.protobuf.StringValue\022x\n\032con" +
+      "version_action_category\0305 \001(\0162T.google.a" +
+      "ds.googleads.v1.enums.ConversionActionCa" +
+      "tegoryEnum.ConversionActionCategory\022<\n\026c" +
+      "onversion_action_name\0306 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\0229\n\025conversion_adjustme" +
+      "nt\030\033 \001(\0132\032.google.protobuf.BoolValue\022\213\001\n" +
+      "!conversion_attribution_event_type\030\002 \001(\016" +
+      "2`.google.ads.googleads.v1.enums.Convers" +
+      "ionAttributionEventTypeEnum.ConversionAt" +
+      "tributionEventType\022i\n\025conversion_lag_buc" +
+      "ket\0302 \001(\0162J.google.ads.googleads.v1.enum" +
+      "s.ConversionLagBucketEnum.ConversionLagB" +
+      "ucket\022\217\001\n#conversion_or_adjustment_lag_b" +
+      "ucket\0303 \001(\0162b.google.ads.googleads.v1.en" +
+      "ums.ConversionOrAdjustmentLagBucketEnum." +
+      "ConversionOrAdjustmentLagBucket\022*\n\004date\030" +
+      "\004 \001(\0132\034.google.protobuf.StringValue\022K\n\013d" +
+      "ay_of_week\030\005 \001(\01626.google.ads.googleads." +
+      "v1.enums.DayOfWeekEnum.DayOfWeek\022@\n\006devi" +
+      "ce\030\001 \001(\01620.google.ads.googleads.v1.enums" +
+      ".DeviceEnum.Device\022x\n\032external_conversio" +
+      "n_source\0307 \001(\0162T.google.ads.googleads.v1" +
+      ".enums.ExternalConversionSourceEnum.Exte" +
+      "rnalConversionSource\0228\n\022geo_target_airpo" +
+      "rt\030A \001(\0132\034.google.protobuf.StringValue\0225" +
+      "\n\017geo_target_city\030> \001(\0132\034.google.protobu" +
+      "f.StringValue\0227\n\021geo_target_county\030D \001(\013" +
+      "2\034.google.protobuf.StringValue\0229\n\023geo_ta" +
+      "rget_district\030E \001(\0132\034.google.protobuf.St" +
+      "ringValue\0226\n\020geo_target_metro\030? \001(\0132\034.go" +
+      "ogle.protobuf.StringValue\022G\n!geo_target_" +
+      "most_specific_location\030H \001(\0132\034.google.pr" +
+      "otobuf.StringValue\022<\n\026geo_target_postal_" +
+      "code\030G \001(\0132\034.google.protobuf.StringValue" +
+      "\0229\n\023geo_target_province\030K \001(\0132\034.google.p" +
+      "rotobuf.StringValue\0227\n\021geo_target_region" +
+      "\030@ \001(\0132\034.google.protobuf.StringValue\0226\n\020" +
+      "geo_target_state\030C \001(\0132\034.google.protobuf" +
+      ".StringValue\022>\n\031hotel_booking_window_day" +
+      "s\030\006 \001(\0132\033.google.protobuf.Int64Value\0224\n\017" +
+      "hotel_center_id\030\007 \001(\0132\033.google.protobuf." +
+      "Int64Value\0229\n\023hotel_check_in_date\030\010 \001(\0132" +
+      "\034.google.protobuf.StringValue\022Z\n\032hotel_c" +
+      "heck_in_day_of_week\030\t \001(\01626.google.ads.g" +
+      "oogleads.v1.enums.DayOfWeekEnum.DayOfWee" +
+      "k\0220\n\nhotel_city\030\n \001(\0132\034.google.protobuf." +
+      "StringValue\0220\n\013hotel_class\030\013 \001(\0132\033.googl" +
+      "e.protobuf.Int32Value\0223\n\rhotel_country\030\014" +
+      " \001(\0132\034.google.protobuf.StringValue\022s\n\031ho" +
+      "tel_date_selection_type\030\r \001(\0162P.google.a" +
+      "ds.googleads.v1.enums.HotelDateSelection" +
+      "TypeEnum.HotelDateSelectionType\0229\n\024hotel" +
+      "_length_of_stay\030\016 \001(\0132\033.google.protobuf." +
+      "Int32Value\0228\n\022hotel_rate_rule_id\030I \001(\0132\034" +
+      ".google.protobuf.StringValue\022W\n\017hotel_ra" +
+      "te_type\030J \001(\0162>.google.ads.googleads.v1." +
+      "enums.HotelRateTypeEnum.HotelRateType\0221\n" +
+      "\013hotel_state\030\017 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022)\n\004hour\030\020 \001(\0132\033.google.protobuf" +
+      ".Int32Value\022A\n\035interaction_on_this_exten" +
+      "sion\0301 \001(\0132\032.google.protobuf.BoolValue\0228" +
+      "\n\007keyword\030= \001(\0132\'.google.ads.googleads.v" +
+      "1.common.Keyword\022+\n\005month\030\021 \001(\0132\034.google" +
+      ".protobuf.StringValue\022Q\n\rmonth_of_year\030\022" +
+      " \001(\0162:.google.ads.googleads.v1.enums.Mon" +
+      "thOfYearEnum.MonthOfYear\0226\n\020partner_hote" +
+      "l_id\030\023 \001(\0132\034.google.protobuf.StringValue" +
+      "\022\\\n\020placeholder_type\030\024 \001(\0162B.google.ads." +
+      "googleads.v1.enums.PlaceholderTypeEnum.P" +
+      "laceholderType\022;\n\025product_aggregator_id\030" +
+      "\034 \001(\0132\034.google.protobuf.UInt64Value\022E\n\037p" +
+      "roduct_bidding_category_level1\0308 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\022E\n\037product_bi" +
+      "dding_category_level2\0309 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022E\n\037product_bidding_cat" +
+      "egory_level3\030: \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022E\n\037product_bidding_category_lev" +
+      "el4\030; \001(\0132\034.google.protobuf.StringValue\022" +
+      "E\n\037product_bidding_category_level5\030< \001(\013" +
+      "2\034.google.protobuf.StringValue\0223\n\rproduc" +
+      "t_brand\030\035 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\022Y\n\017product_channel\030\036 \001(\0162@.google.ad" +
+      "s.googleads.v1.enums.ProductChannelEnum." +
+      "ProductChannel\022{\n\033product_channel_exclus" +
+      "ivity\030\037 \001(\0162V.google.ads.googleads.v1.en" +
+      "ums.ProductChannelExclusivityEnum.Produc" +
+      "tChannelExclusivity\022_\n\021product_condition" +
+      "\030  \001(\0162D.google.ads.googleads.v1.enums.P" +
+      "roductConditionEnum.ProductCondition\0225\n\017" +
+      "product_country\030! \001(\0132\034.google.protobuf." +
+      "StringValue\022?\n\031product_custom_attribute0" +
+      "\030\" \001(\0132\034.google.protobuf.StringValue\022?\n\031" +
+      "product_custom_attribute1\030# \001(\0132\034.google" +
+      ".protobuf.StringValue\022?\n\031product_custom_" +
+      "attribute2\030$ \001(\0132\034.google.protobuf.Strin" +
+      "gValue\022?\n\031product_custom_attribute3\030% \001(" +
+      "\0132\034.google.protobuf.StringValue\022?\n\031produ" +
+      "ct_custom_attribute4\030& \001(\0132\034.google.prot" +
+      "obuf.StringValue\0225\n\017product_item_id\030\' \001(" +
+      "\0132\034.google.protobuf.StringValue\0226\n\020produ" +
+      "ct_language\030( \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\0229\n\023product_merchant_id\030) \001(\0132\034.g" +
+      "oogle.protobuf.UInt64Value\0226\n\020product_st" +
+      "ore_id\030* \001(\0132\034.google.protobuf.StringVal" +
+      "ue\0223\n\rproduct_title\030+ \001(\0132\034.google.proto" +
+      "buf.StringValue\0225\n\017product_type_l1\030, \001(\013" +
+      "2\034.google.protobuf.StringValue\0225\n\017produc" +
+      "t_type_l2\030- \001(\0132\034.google.protobuf.String" +
+      "Value\0225\n\017product_type_l3\030. \001(\0132\034.google." +
+      "protobuf.StringValue\0225\n\017product_type_l4\030" +
+      "/ \001(\0132\034.google.protobuf.StringValue\0225\n\017p" +
+      "roduct_type_l5\0300 \001(\0132\034.google.protobuf.S" +
+      "tringValue\022-\n\007quarter\030\025 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022\203\001\n\037search_engine_resu" +
+      "lts_page_type\030F \001(\0162Z.google.ads.googlea" +
+      "ds.v1.enums.SearchEngineResultsPageTypeE" +
+      "num.SearchEngineResultsPageType\022j\n\026searc" +
+      "h_term_match_type\030\026 \001(\0162J.google.ads.goo" +
+      "gleads.v1.enums.SearchTermMatchTypeEnum." +
+      "SearchTermMatchType\022:\n\004slot\030\027 \001(\0162,.goog" +
+      "le.ads.googleads.v1.enums.SlotEnum.Slot\022" +
+      "-\n\007webpage\030B \001(\0132\034.google.protobuf.Strin" +
+      "gValue\022*\n\004week\030\030 \001(\0132\034.google.protobuf.S" +
+      "tringValue\022)\n\004year\030\031 \001(\0132\033.google.protob" +
+      "uf.Int32Value\"~\n\007Keyword\0228\n\022ad_group_cri" +
+      "terion\030\001 \001(\0132\034.google.protobuf.StringVal" +
+      "ue\0229\n\004info\030\002 \001(\0132+.google.ads.googleads." +
+      "v1.common.KeywordInfoB\350\001\n\"com.google.ads" +
+      ".googleads.v1.commonB\rSegmentsProtoP\001ZDg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v1/common;common\242\002\003GAA\252\002\036Goog" +
+      "le.Ads.GoogleAds.V1.Common\312\002\036Google\\Ads\\" +
+      "GoogleAds\\V1\\Common\352\002\"Google::Ads::Googl" +
+      "eAds::V1::Commonb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -222,6 +228,7 @@ public final class SegmentsProto {
           com.google.ads.googleads.v1.enums.DeviceProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.ExternalConversionSourceProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.HotelDateSelectionTypeProto.getDescriptor(),
+          com.google.ads.googleads.v1.enums.HotelRateTypeProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.MonthOfYearProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.PlaceholderTypeProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.ProductChannelProto.getDescriptor(),
@@ -238,7 +245,7 @@ public final class SegmentsProto {
     internal_static_google_ads_googleads_v1_common_Segments_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_common_Segments_descriptor,
-        new java.lang.String[] { "AdNetworkType", "ClickType", "ConversionAction", "ConversionActionCategory", "ConversionActionName", "ConversionAdjustment", "ConversionAttributionEventType", "ConversionLagBucket", "ConversionOrAdjustmentLagBucket", "Date", "DayOfWeek", "Device", "ExternalConversionSource", "GeoTargetAirport", "GeoTargetCity", "GeoTargetCounty", "GeoTargetDistrict", "GeoTargetMetro", "GeoTargetMostSpecificLocation", "GeoTargetPostalCode", "GeoTargetRegion", "GeoTargetState", "HotelBookingWindowDays", "HotelCenterId", "HotelCheckInDate", "HotelCheckInDayOfWeek", "HotelCity", "HotelClass", "HotelCountry", "HotelDateSelectionType", "HotelLengthOfStay", "HotelState", "Hour", "InteractionOnThisExtension", "Keyword", "Month", "MonthOfYear", "PartnerHotelId", "PlaceholderType", "ProductAggregatorId", "ProductBiddingCategoryLevel1", "ProductBiddingCategoryLevel2", "ProductBiddingCategoryLevel3", "ProductBiddingCategoryLevel4", "ProductBiddingCategoryLevel5", "ProductBrand", "ProductChannel", "ProductChannelExclusivity", "ProductCondition", "ProductCountry", "ProductCustomAttribute0", "ProductCustomAttribute1", "ProductCustomAttribute2", "ProductCustomAttribute3", "ProductCustomAttribute4", "ProductItemId", "ProductLanguage", "ProductMerchantId", "ProductStoreId", "ProductTitle", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Quarter", "SearchEngineResultsPageType", "SearchTermMatchType", "Slot", "Webpage", "Week", "Year", });
+        new java.lang.String[] { "AdNetworkType", "ClickType", "ConversionAction", "ConversionActionCategory", "ConversionActionName", "ConversionAdjustment", "ConversionAttributionEventType", "ConversionLagBucket", "ConversionOrAdjustmentLagBucket", "Date", "DayOfWeek", "Device", "ExternalConversionSource", "GeoTargetAirport", "GeoTargetCity", "GeoTargetCounty", "GeoTargetDistrict", "GeoTargetMetro", "GeoTargetMostSpecificLocation", "GeoTargetPostalCode", "GeoTargetProvince", "GeoTargetRegion", "GeoTargetState", "HotelBookingWindowDays", "HotelCenterId", "HotelCheckInDate", "HotelCheckInDayOfWeek", "HotelCity", "HotelClass", "HotelCountry", "HotelDateSelectionType", "HotelLengthOfStay", "HotelRateRuleId", "HotelRateType", "HotelState", "Hour", "InteractionOnThisExtension", "Keyword", "Month", "MonthOfYear", "PartnerHotelId", "PlaceholderType", "ProductAggregatorId", "ProductBiddingCategoryLevel1", "ProductBiddingCategoryLevel2", "ProductBiddingCategoryLevel3", "ProductBiddingCategoryLevel4", "ProductBiddingCategoryLevel5", "ProductBrand", "ProductChannel", "ProductChannelExclusivity", "ProductCondition", "ProductCountry", "ProductCustomAttribute0", "ProductCustomAttribute1", "ProductCustomAttribute2", "ProductCustomAttribute3", "ProductCustomAttribute4", "ProductItemId", "ProductLanguage", "ProductMerchantId", "ProductStoreId", "ProductTitle", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Quarter", "SearchEngineResultsPageType", "SearchTermMatchType", "Slot", "Webpage", "Week", "Year", });
     internal_static_google_ads_googleads_v1_common_Keyword_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v1_common_Keyword_fieldAccessorTable = new
@@ -256,6 +263,7 @@ public final class SegmentsProto {
     com.google.ads.googleads.v1.enums.DeviceProto.getDescriptor();
     com.google.ads.googleads.v1.enums.ExternalConversionSourceProto.getDescriptor();
     com.google.ads.googleads.v1.enums.HotelDateSelectionTypeProto.getDescriptor();
+    com.google.ads.googleads.v1.enums.HotelRateTypeProto.getDescriptor();
     com.google.ads.googleads.v1.enums.MonthOfYearProto.getDescriptor();
     com.google.ads.googleads.v1.enums.PlaceholderTypeProto.getDescriptor();
     com.google.ads.googleads.v1.enums.ProductChannelProto.getDescriptor();

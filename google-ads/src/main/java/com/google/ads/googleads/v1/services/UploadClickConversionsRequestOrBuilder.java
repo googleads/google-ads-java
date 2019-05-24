@@ -80,4 +80,14 @@ public interface UploadClickConversionsRequestOrBuilder extends
    * <code>bool partial_failure = 3;</code>
    */
   boolean getPartialFailure();
+
+  /**
+   * <pre>
+   * If true, the request is validated but not executed. Only errors are
+   * returned, not results.
+   * </pre>
+   *
+   * <code>bool validate_only = 4;</code>
+   */
+  boolean getValidateOnly();
 }

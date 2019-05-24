@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
     AFTER_MAXIMUM_ALLOWABLE_DATE(5),
     /**
      * <pre>
-     * Trying to change start date on a campaign that has started.
+     * Trying to change start date on a resource that has started.
      * </pre>
      *
      * <code>CANNOT_MODIFY_START_DATE_IF_ALREADY_STARTED = 6;</code>
@@ -195,7 +195,7 @@ private static final long serialVersionUID = 0L;
     public static final int AFTER_MAXIMUM_ALLOWABLE_DATE_VALUE = 5;
     /**
      * <pre>
-     * Trying to change start date on a campaign that has started.
+     * Trying to change start date on a resource that has started.
      * </pre>
      *
      * <code>CANNOT_MODIFY_START_DATE_IF_ALREADY_STARTED = 6;</code>

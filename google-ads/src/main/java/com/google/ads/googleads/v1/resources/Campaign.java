@@ -27,6 +27,7 @@ private static final long serialVersionUID = 0L;
     advertisingChannelType_ = 0;
     advertisingChannelSubType_ = 0;
     urlCustomParameters_ = java.util.Collections.emptyList();
+    labels_ = java.util.Collections.emptyList();
     experimentType_ = 0;
     biddingStrategyType_ = 0;
     frequencyCaps_ = java.util.Collections.emptyList();
@@ -426,9 +427,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 322: {
-            if (!((mutable_bitField0_ & 0x02000000) == 0x02000000)) {
+            if (!((mutable_bitField0_ & 0x04000000) == 0x04000000)) {
               frequencyCaps_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.FrequencyCapEntry>();
-              mutable_bitField0_ |= 0x02000000;
+              mutable_bitField0_ |= 0x04000000;
             }
             frequencyCaps_.add(
                 input.readMessage(com.google.ads.googleads.v1.common.FrequencyCapEntry.parser(), extensionRegistry));
@@ -566,6 +567,15 @@ private static final long serialVersionUID = 0L;
             paymentMode_ = rawValue;
             break;
           }
+          case 426: {
+            if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+              labels_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+              mutable_bitField0_ |= 0x00040000;
+            }
+            labels_.add(
+                input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -584,8 +594,11 @@ private static final long serialVersionUID = 0L;
       if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
-      if (((mutable_bitField0_ & 0x02000000) == 0x02000000)) {
+      if (((mutable_bitField0_ & 0x04000000) == 0x04000000)) {
         frequencyCaps_ = java.util.Collections.unmodifiableList(frequencyCaps_);
+      }
+      if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+        labels_ = java.util.Collections.unmodifiableList(labels_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -2756,6 +2769,681 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v1.resources.Campaign.HotelSettingInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TrackingSettingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     */
+    boolean hasTrackingUrl();
+    /**
+     * <pre>
+     * The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     */
+    com.google.protobuf.StringValue getTrackingUrl();
+    /**
+     * <pre>
+     * The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder();
+  }
+  /**
+   * <pre>
+   * Campaign level settings for tracking information.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.TrackingSetting}
+   */
+  public  static final class TrackingSetting extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
+      TrackingSettingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TrackingSetting.newBuilder() to construct.
+    private TrackingSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TrackingSetting() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TrackingSetting(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (trackingUrl_ != null) {
+                subBuilder = trackingUrl_.toBuilder();
+              }
+              trackingUrl_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(trackingUrl_);
+                trackingUrl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.class, com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.Builder.class);
+    }
+
+    public static final int TRACKING_URL_FIELD_NUMBER = 1;
+    private com.google.protobuf.StringValue trackingUrl_;
+    /**
+     * <pre>
+     * The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     */
+    public boolean hasTrackingUrl() {
+      return trackingUrl_ != null;
+    }
+    /**
+     * <pre>
+     * The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     */
+    public com.google.protobuf.StringValue getTrackingUrl() {
+      return trackingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
+    }
+    /**
+     * <pre>
+     * The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder() {
+      return getTrackingUrl();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (trackingUrl_ != null) {
+        output.writeMessage(1, getTrackingUrl());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (trackingUrl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTrackingUrl());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v1.resources.Campaign.TrackingSetting)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v1.resources.Campaign.TrackingSetting other = (com.google.ads.googleads.v1.resources.Campaign.TrackingSetting) obj;
+
+      boolean result = true;
+      result = result && (hasTrackingUrl() == other.hasTrackingUrl());
+      if (hasTrackingUrl()) {
+        result = result && getTrackingUrl()
+            .equals(other.getTrackingUrl());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTrackingUrl()) {
+        hash = (37 * hash) + TRACKING_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getTrackingUrl().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v1.resources.Campaign.TrackingSetting prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Campaign level settings for tracking information.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.TrackingSetting}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
+        com.google.ads.googleads.v1.resources.Campaign.TrackingSettingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.class, com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (trackingUrlBuilder_ == null) {
+          trackingUrl_ = null;
+        } else {
+          trackingUrl_ = null;
+          trackingUrlBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
+        return com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting build() {
+        com.google.ads.googleads.v1.resources.Campaign.TrackingSetting result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting buildPartial() {
+        com.google.ads.googleads.v1.resources.Campaign.TrackingSetting result = new com.google.ads.googleads.v1.resources.Campaign.TrackingSetting(this);
+        if (trackingUrlBuilder_ == null) {
+          result.trackingUrl_ = trackingUrl_;
+        } else {
+          result.trackingUrl_ = trackingUrlBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v1.resources.Campaign.TrackingSetting) {
+          return mergeFrom((com.google.ads.googleads.v1.resources.Campaign.TrackingSetting)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v1.resources.Campaign.TrackingSetting other) {
+        if (other == com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.getDefaultInstance()) return this;
+        if (other.hasTrackingUrl()) {
+          mergeTrackingUrl(other.getTrackingUrl());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v1.resources.Campaign.TrackingSetting) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.StringValue trackingUrl_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> trackingUrlBuilder_;
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public boolean hasTrackingUrl() {
+        return trackingUrlBuilder_ != null || trackingUrl_ != null;
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public com.google.protobuf.StringValue getTrackingUrl() {
+        if (trackingUrlBuilder_ == null) {
+          return trackingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
+        } else {
+          return trackingUrlBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public Builder setTrackingUrl(com.google.protobuf.StringValue value) {
+        if (trackingUrlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          trackingUrl_ = value;
+          onChanged();
+        } else {
+          trackingUrlBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public Builder setTrackingUrl(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (trackingUrlBuilder_ == null) {
+          trackingUrl_ = builderForValue.build();
+          onChanged();
+        } else {
+          trackingUrlBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public Builder mergeTrackingUrl(com.google.protobuf.StringValue value) {
+        if (trackingUrlBuilder_ == null) {
+          if (trackingUrl_ != null) {
+            trackingUrl_ =
+              com.google.protobuf.StringValue.newBuilder(trackingUrl_).mergeFrom(value).buildPartial();
+          } else {
+            trackingUrl_ = value;
+          }
+          onChanged();
+        } else {
+          trackingUrlBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public Builder clearTrackingUrl() {
+        if (trackingUrlBuilder_ == null) {
+          trackingUrl_ = null;
+          onChanged();
+        } else {
+          trackingUrl_ = null;
+          trackingUrlBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getTrackingUrlBuilder() {
+        
+        onChanged();
+        return getTrackingUrlFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder() {
+        if (trackingUrlBuilder_ != null) {
+          return trackingUrlBuilder_.getMessageOrBuilder();
+        } else {
+          return trackingUrl_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
+        }
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getTrackingUrlFieldBuilder() {
+        if (trackingUrlBuilder_ == null) {
+          trackingUrlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getTrackingUrl(),
+                  getParentForChildren(),
+                  isClean());
+          trackingUrl_ = null;
+        }
+        return trackingUrlBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
+    private static final com.google.ads.googleads.v1.resources.Campaign.TrackingSetting DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v1.resources.Campaign.TrackingSetting();
+    }
+
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TrackingSetting>
+        PARSER = new com.google.protobuf.AbstractParser<TrackingSetting>() {
+      @java.lang.Override
+      public TrackingSetting parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TrackingSetting(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TrackingSetting> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrackingSetting> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6029,681 +6717,6 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TrackingSettingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The url used for dynamic tracking.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-     */
-    boolean hasTrackingUrl();
-    /**
-     * <pre>
-     * The url used for dynamic tracking.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-     */
-    com.google.protobuf.StringValue getTrackingUrl();
-    /**
-     * <pre>
-     * The url used for dynamic tracking.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder();
-  }
-  /**
-   * <pre>
-   * Campaign level settings for tracking information.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.TrackingSetting}
-   */
-  public  static final class TrackingSetting extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
-      TrackingSettingOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TrackingSetting.newBuilder() to construct.
-    private TrackingSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private TrackingSetting() {
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TrackingSetting(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (trackingUrl_ != null) {
-                subBuilder = trackingUrl_.toBuilder();
-              }
-              trackingUrl_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(trackingUrl_);
-                trackingUrl_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.class, com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.Builder.class);
-    }
-
-    public static final int TRACKING_URL_FIELD_NUMBER = 1;
-    private com.google.protobuf.StringValue trackingUrl_;
-    /**
-     * <pre>
-     * The url used for dynamic tracking.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-     */
-    public boolean hasTrackingUrl() {
-      return trackingUrl_ != null;
-    }
-    /**
-     * <pre>
-     * The url used for dynamic tracking.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-     */
-    public com.google.protobuf.StringValue getTrackingUrl() {
-      return trackingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
-    }
-    /**
-     * <pre>
-     * The url used for dynamic tracking.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder() {
-      return getTrackingUrl();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (trackingUrl_ != null) {
-        output.writeMessage(1, getTrackingUrl());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (trackingUrl_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getTrackingUrl());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v1.resources.Campaign.TrackingSetting)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v1.resources.Campaign.TrackingSetting other = (com.google.ads.googleads.v1.resources.Campaign.TrackingSetting) obj;
-
-      boolean result = true;
-      result = result && (hasTrackingUrl() == other.hasTrackingUrl());
-      if (hasTrackingUrl()) {
-        result = result && getTrackingUrl()
-            .equals(other.getTrackingUrl());
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasTrackingUrl()) {
-        hash = (37 * hash) + TRACKING_URL_FIELD_NUMBER;
-        hash = (53 * hash) + getTrackingUrl().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v1.resources.Campaign.TrackingSetting prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Campaign level settings for tracking information.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.TrackingSetting}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
-        com.google.ads.googleads.v1.resources.Campaign.TrackingSettingOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.class, com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (trackingUrlBuilder_ == null) {
-          trackingUrl_ = null;
-        } else {
-          trackingUrl_ = null;
-          trackingUrlBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
-        return com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting build() {
-        com.google.ads.googleads.v1.resources.Campaign.TrackingSetting result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting buildPartial() {
-        com.google.ads.googleads.v1.resources.Campaign.TrackingSetting result = new com.google.ads.googleads.v1.resources.Campaign.TrackingSetting(this);
-        if (trackingUrlBuilder_ == null) {
-          result.trackingUrl_ = trackingUrl_;
-        } else {
-          result.trackingUrl_ = trackingUrlBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v1.resources.Campaign.TrackingSetting) {
-          return mergeFrom((com.google.ads.googleads.v1.resources.Campaign.TrackingSetting)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v1.resources.Campaign.TrackingSetting other) {
-        if (other == com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.getDefaultInstance()) return this;
-        if (other.hasTrackingUrl()) {
-          mergeTrackingUrl(other.getTrackingUrl());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v1.resources.Campaign.TrackingSetting) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.google.protobuf.StringValue trackingUrl_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> trackingUrlBuilder_;
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public boolean hasTrackingUrl() {
-        return trackingUrlBuilder_ != null || trackingUrl_ != null;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public com.google.protobuf.StringValue getTrackingUrl() {
-        if (trackingUrlBuilder_ == null) {
-          return trackingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
-        } else {
-          return trackingUrlBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public Builder setTrackingUrl(com.google.protobuf.StringValue value) {
-        if (trackingUrlBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          trackingUrl_ = value;
-          onChanged();
-        } else {
-          trackingUrlBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public Builder setTrackingUrl(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (trackingUrlBuilder_ == null) {
-          trackingUrl_ = builderForValue.build();
-          onChanged();
-        } else {
-          trackingUrlBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public Builder mergeTrackingUrl(com.google.protobuf.StringValue value) {
-        if (trackingUrlBuilder_ == null) {
-          if (trackingUrl_ != null) {
-            trackingUrl_ =
-              com.google.protobuf.StringValue.newBuilder(trackingUrl_).mergeFrom(value).buildPartial();
-          } else {
-            trackingUrl_ = value;
-          }
-          onChanged();
-        } else {
-          trackingUrlBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public Builder clearTrackingUrl() {
-        if (trackingUrlBuilder_ == null) {
-          trackingUrl_ = null;
-          onChanged();
-        } else {
-          trackingUrl_ = null;
-          trackingUrlBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getTrackingUrlBuilder() {
-        
-        onChanged();
-        return getTrackingUrlFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder() {
-        if (trackingUrlBuilder_ != null) {
-          return trackingUrlBuilder_.getMessageOrBuilder();
-        } else {
-          return trackingUrl_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
-        }
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getTrackingUrlFieldBuilder() {
-        if (trackingUrlBuilder_ == null) {
-          trackingUrlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getTrackingUrl(),
-                  getParentForChildren(),
-                  isClean());
-          trackingUrl_ = null;
-        }
-        return trackingUrlBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
-    private static final com.google.ads.googleads.v1.resources.Campaign.TrackingSetting DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v1.resources.Campaign.TrackingSetting();
-    }
-
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<TrackingSetting>
-        PARSER = new com.google.protobuf.AbstractParser<TrackingSetting>() {
-      @java.lang.Override
-      public TrackingSetting parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TrackingSetting(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<TrackingSetting> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TrackingSetting> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10617,6 +10630,61 @@ private static final long serialVersionUID = 0L;
     return getAppCampaignSetting();
   }
 
+  public static final int LABELS_FIELD_NUMBER = 53;
+  private java.util.List<com.google.protobuf.StringValue> labels_;
+  /**
+   * <pre>
+   * The resource names of labels attached to this campaign.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   */
+  public java.util.List<com.google.protobuf.StringValue> getLabelsList() {
+    return labels_;
+  }
+  /**
+   * <pre>
+   * The resource names of labels attached to this campaign.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   */
+  public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+      getLabelsOrBuilderList() {
+    return labels_;
+  }
+  /**
+   * <pre>
+   * The resource names of labels attached to this campaign.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   */
+  public int getLabelsCount() {
+    return labels_.size();
+  }
+  /**
+   * <pre>
+   * The resource names of labels attached to this campaign.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   */
+  public com.google.protobuf.StringValue getLabels(int index) {
+    return labels_.get(index);
+  }
+  /**
+   * <pre>
+   * The resource names of labels attached to this campaign.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getLabelsOrBuilder(
+      int index) {
+    return labels_.get(index);
+  }
+
   public static final int EXPERIMENT_TYPE_FIELD_NUMBER = 17;
   private int experimentType_;
   /**
@@ -11741,6 +11809,9 @@ private static final long serialVersionUID = 0L;
     if (paymentMode_ != com.google.ads.googleads.v1.enums.PaymentModeEnum.PaymentMode.UNSPECIFIED.getNumber()) {
       output.writeEnum(52, paymentMode_);
     }
+    for (int i = 0; i < labels_.size(); i++) {
+      output.writeMessage(53, labels_.get(i));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -11925,6 +11996,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(52, paymentMode_);
     }
+    for (int i = 0; i < labels_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(53, labels_.get(i));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -12005,6 +12080,8 @@ private static final long serialVersionUID = 0L;
       result = result && getAppCampaignSetting()
           .equals(other.getAppCampaignSetting());
     }
+    result = result && getLabelsList()
+        .equals(other.getLabelsList());
     result = result && experimentType_ == other.experimentType_;
     result = result && (hasBaseCampaign() == other.hasBaseCampaign());
     if (hasBaseCampaign()) {
@@ -12180,6 +12257,10 @@ private static final long serialVersionUID = 0L;
     if (hasAppCampaignSetting()) {
       hash = (37 * hash) + APP_CAMPAIGN_SETTING_FIELD_NUMBER;
       hash = (53 * hash) + getAppCampaignSetting().hashCode();
+    }
+    if (getLabelsCount() > 0) {
+      hash = (37 * hash) + LABELS_FIELD_NUMBER;
+      hash = (53 * hash) + getLabelsList().hashCode();
     }
     hash = (37 * hash) + EXPERIMENT_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + experimentType_;
@@ -12414,6 +12495,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getUrlCustomParametersFieldBuilder();
+        getLabelsFieldBuilder();
         getFrequencyCapsFieldBuilder();
       }
     }
@@ -12504,6 +12586,12 @@ private static final long serialVersionUID = 0L;
         appCampaignSetting_ = null;
         appCampaignSettingBuilder_ = null;
       }
+      if (labelsBuilder_ == null) {
+        labels_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00040000);
+      } else {
+        labelsBuilder_.clear();
+      }
       experimentType_ = 0;
 
       if (baseCampaignBuilder_ == null) {
@@ -12540,7 +12628,7 @@ private static final long serialVersionUID = 0L;
       }
       if (frequencyCapsBuilder_ == null) {
         frequencyCaps_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x04000000);
       } else {
         frequencyCapsBuilder_.clear();
       }
@@ -12668,6 +12756,15 @@ private static final long serialVersionUID = 0L;
       } else {
         result.appCampaignSetting_ = appCampaignSettingBuilder_.build();
       }
+      if (labelsBuilder_ == null) {
+        if (((bitField0_ & 0x00040000) == 0x00040000)) {
+          labels_ = java.util.Collections.unmodifiableList(labels_);
+          bitField0_ = (bitField0_ & ~0x00040000);
+        }
+        result.labels_ = labels_;
+      } else {
+        result.labels_ = labelsBuilder_.build();
+      }
       result.experimentType_ = experimentType_;
       if (baseCampaignBuilder_ == null) {
         result.baseCampaign_ = baseCampaign_;
@@ -12696,9 +12793,9 @@ private static final long serialVersionUID = 0L;
         result.finalUrlSuffix_ = finalUrlSuffixBuilder_.build();
       }
       if (frequencyCapsBuilder_ == null) {
-        if (((bitField0_ & 0x02000000) == 0x02000000)) {
+        if (((bitField0_ & 0x04000000) == 0x04000000)) {
           frequencyCaps_ = java.util.Collections.unmodifiableList(frequencyCaps_);
-          bitField0_ = (bitField0_ & ~0x02000000);
+          bitField0_ = (bitField0_ & ~0x04000000);
         }
         result.frequencyCaps_ = frequencyCaps_;
       } else {
@@ -12941,6 +13038,32 @@ private static final long serialVersionUID = 0L;
       if (other.hasAppCampaignSetting()) {
         mergeAppCampaignSetting(other.getAppCampaignSetting());
       }
+      if (labelsBuilder_ == null) {
+        if (!other.labels_.isEmpty()) {
+          if (labels_.isEmpty()) {
+            labels_ = other.labels_;
+            bitField0_ = (bitField0_ & ~0x00040000);
+          } else {
+            ensureLabelsIsMutable();
+            labels_.addAll(other.labels_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.labels_.isEmpty()) {
+          if (labelsBuilder_.isEmpty()) {
+            labelsBuilder_.dispose();
+            labelsBuilder_ = null;
+            labels_ = other.labels_;
+            bitField0_ = (bitField0_ & ~0x00040000);
+            labelsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getLabelsFieldBuilder() : null;
+          } else {
+            labelsBuilder_.addAllMessages(other.labels_);
+          }
+        }
+      }
       if (other.experimentType_ != 0) {
         setExperimentTypeValue(other.getExperimentTypeValue());
       }
@@ -12966,7 +13089,7 @@ private static final long serialVersionUID = 0L;
         if (!other.frequencyCaps_.isEmpty()) {
           if (frequencyCaps_.isEmpty()) {
             frequencyCaps_ = other.frequencyCaps_;
-            bitField0_ = (bitField0_ & ~0x02000000);
+            bitField0_ = (bitField0_ & ~0x04000000);
           } else {
             ensureFrequencyCapsIsMutable();
             frequencyCaps_.addAll(other.frequencyCaps_);
@@ -12979,7 +13102,7 @@ private static final long serialVersionUID = 0L;
             frequencyCapsBuilder_.dispose();
             frequencyCapsBuilder_ = null;
             frequencyCaps_ = other.frequencyCaps_;
-            bitField0_ = (bitField0_ & ~0x02000000);
+            bitField0_ = (bitField0_ & ~0x04000000);
             frequencyCapsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFrequencyCapsFieldBuilder() : null;
@@ -15633,6 +15756,318 @@ private static final long serialVersionUID = 0L;
       return appCampaignSettingBuilder_;
     }
 
+    private java.util.List<com.google.protobuf.StringValue> labels_ =
+      java.util.Collections.emptyList();
+    private void ensureLabelsIsMutable() {
+      if (!((bitField0_ & 0x00040000) == 0x00040000)) {
+        labels_ = new java.util.ArrayList<com.google.protobuf.StringValue>(labels_);
+        bitField0_ |= 0x00040000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> labelsBuilder_;
+
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getLabelsList() {
+      if (labelsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(labels_);
+      } else {
+        return labelsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public int getLabelsCount() {
+      if (labelsBuilder_ == null) {
+        return labels_.size();
+      } else {
+        return labelsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public com.google.protobuf.StringValue getLabels(int index) {
+      if (labelsBuilder_ == null) {
+        return labels_.get(index);
+      } else {
+        return labelsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public Builder setLabels(
+        int index, com.google.protobuf.StringValue value) {
+      if (labelsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLabelsIsMutable();
+        labels_.set(index, value);
+        onChanged();
+      } else {
+        labelsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public Builder setLabels(
+        int index, com.google.protobuf.StringValue.Builder builderForValue) {
+      if (labelsBuilder_ == null) {
+        ensureLabelsIsMutable();
+        labels_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        labelsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public Builder addLabels(com.google.protobuf.StringValue value) {
+      if (labelsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLabelsIsMutable();
+        labels_.add(value);
+        onChanged();
+      } else {
+        labelsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public Builder addLabels(
+        int index, com.google.protobuf.StringValue value) {
+      if (labelsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLabelsIsMutable();
+        labels_.add(index, value);
+        onChanged();
+      } else {
+        labelsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public Builder addLabels(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (labelsBuilder_ == null) {
+        ensureLabelsIsMutable();
+        labels_.add(builderForValue.build());
+        onChanged();
+      } else {
+        labelsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public Builder addLabels(
+        int index, com.google.protobuf.StringValue.Builder builderForValue) {
+      if (labelsBuilder_ == null) {
+        ensureLabelsIsMutable();
+        labels_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        labelsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public Builder addAllLabels(
+        java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+      if (labelsBuilder_ == null) {
+        ensureLabelsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, labels_);
+        onChanged();
+      } else {
+        labelsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public Builder clearLabels() {
+      if (labelsBuilder_ == null) {
+        labels_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00040000);
+        onChanged();
+      } else {
+        labelsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public Builder removeLabels(int index) {
+      if (labelsBuilder_ == null) {
+        ensureLabelsIsMutable();
+        labels_.remove(index);
+        onChanged();
+      } else {
+        labelsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getLabelsBuilder(
+        int index) {
+      return getLabelsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getLabelsOrBuilder(
+        int index) {
+      if (labelsBuilder_ == null) {
+        return labels_.get(index);  } else {
+        return labelsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+         getLabelsOrBuilderList() {
+      if (labelsBuilder_ != null) {
+        return labelsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(labels_);
+      }
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public com.google.protobuf.StringValue.Builder addLabelsBuilder() {
+      return getLabelsFieldBuilder().addBuilder(
+          com.google.protobuf.StringValue.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public com.google.protobuf.StringValue.Builder addLabelsBuilder(
+        int index) {
+      return getLabelsFieldBuilder().addBuilder(
+          index, com.google.protobuf.StringValue.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The resource names of labels attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue.Builder> 
+         getLabelsBuilderList() {
+      return getLabelsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getLabelsFieldBuilder() {
+      if (labelsBuilder_ == null) {
+        labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                labels_,
+                ((bitField0_ & 0x00040000) == 0x00040000),
+                getParentForChildren(),
+                isClean());
+        labels_ = null;
+      }
+      return labelsBuilder_;
+    }
+
     private int experimentType_ = 0;
     /**
      * <pre>
@@ -16596,9 +17031,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.FrequencyCapEntry> frequencyCaps_ =
       java.util.Collections.emptyList();
     private void ensureFrequencyCapsIsMutable() {
-      if (!((bitField0_ & 0x02000000) == 0x02000000)) {
+      if (!((bitField0_ & 0x04000000) == 0x04000000)) {
         frequencyCaps_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.FrequencyCapEntry>(frequencyCaps_);
-        bitField0_ |= 0x02000000;
+        bitField0_ |= 0x04000000;
        }
     }
 
@@ -16792,7 +17227,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFrequencyCaps() {
       if (frequencyCapsBuilder_ == null) {
         frequencyCaps_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x04000000);
         onChanged();
       } else {
         frequencyCapsBuilder_.clear();
@@ -16897,7 +17332,7 @@ private static final long serialVersionUID = 0L;
         frequencyCapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.FrequencyCapEntry, com.google.ads.googleads.v1.common.FrequencyCapEntry.Builder, com.google.ads.googleads.v1.common.FrequencyCapEntryOrBuilder>(
                 frequencyCaps_,
-                ((bitField0_ & 0x02000000) == 0x02000000),
+                ((bitField0_ & 0x04000000) == 0x04000000),
                 getParentForChildren(),
                 isClean());
         frequencyCaps_ = null;

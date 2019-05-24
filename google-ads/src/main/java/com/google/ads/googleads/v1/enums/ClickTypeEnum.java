@@ -518,6 +518,14 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL_BOOK_ON_GOOGLE_ROOM_SELECTION = 55;</code>
      */
     HOTEL_BOOK_ON_GOOGLE_ROOM_SELECTION(55),
+    /**
+     * <pre>
+     * Shopping - Comparison Listing.
+     * </pre>
+     *
+     * <code>SHOPPING_COMPARISON_LISTING = 56;</code>
+     */
+    SHOPPING_COMPARISON_LISTING(56),
     UNRECOGNIZED(-1),
     ;
 
@@ -953,6 +961,14 @@ private static final long serialVersionUID = 0L;
      * <code>HOTEL_BOOK_ON_GOOGLE_ROOM_SELECTION = 55;</code>
      */
     public static final int HOTEL_BOOK_ON_GOOGLE_ROOM_SELECTION_VALUE = 55;
+    /**
+     * <pre>
+     * Shopping - Comparison Listing.
+     * </pre>
+     *
+     * <code>SHOPPING_COMPARISON_LISTING = 56;</code>
+     */
+    public static final int SHOPPING_COMPARISON_LISTING_VALUE = 56;
 
 
     public final int getNumber() {
@@ -1027,6 +1043,7 @@ private static final long serialVersionUID = 0L;
         case 53: return HOTEL_PRICE;
         case 54: return PRICE_EXTENSION;
         case 55: return HOTEL_BOOK_ON_GOOGLE_ROOM_SELECTION;
+        case 56: return SHOPPING_COMPARISON_LISTING;
         default: return null;
       }
     }

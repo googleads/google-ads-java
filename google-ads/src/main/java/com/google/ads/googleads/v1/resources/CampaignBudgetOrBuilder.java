@@ -113,7 +113,7 @@ public interface CampaignBudgetOrBuilder extends
    * <pre>
    * The amount of the budget, in the local currency for the account.
    * Amount is specified in micros, where one million is equivalent to one
-   * currency unit.
+   * currency unit. Monthly spend is capped at 30.4 times this amount.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value amount_micros = 5;</code>
@@ -123,7 +123,7 @@ public interface CampaignBudgetOrBuilder extends
    * <pre>
    * The amount of the budget, in the local currency for the account.
    * Amount is specified in micros, where one million is equivalent to one
-   * currency unit.
+   * currency unit. Monthly spend is capped at 30.4 times this amount.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value amount_micros = 5;</code>
@@ -133,7 +133,7 @@ public interface CampaignBudgetOrBuilder extends
    * <pre>
    * The amount of the budget, in the local currency for the account.
    * Amount is specified in micros, where one million is equivalent to one
-   * currency unit.
+   * currency unit. Monthly spend is capped at 30.4 times this amount.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value amount_micros = 5;</code>

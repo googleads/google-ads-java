@@ -135,6 +135,15 @@ private static final long serialVersionUID = 0L;
      * <code>ASSET_DATA_IS_MISSING = 5;</code>
      */
     ASSET_DATA_IS_MISSING(5),
+    /**
+     * <pre>
+     * The asset has a name which is different from an existing duplicate that
+     * represents the same content.
+     * </pre>
+     *
+     * <code>CANNOT_MODIFY_ASSET_NAME = 6;</code>
+     */
+    CANNOT_MODIFY_ASSET_NAME(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -187,6 +196,15 @@ private static final long serialVersionUID = 0L;
      * <code>ASSET_DATA_IS_MISSING = 5;</code>
      */
     public static final int ASSET_DATA_IS_MISSING_VALUE = 5;
+    /**
+     * <pre>
+     * The asset has a name which is different from an existing duplicate that
+     * represents the same content.
+     * </pre>
+     *
+     * <code>CANNOT_MODIFY_ASSET_NAME = 6;</code>
+     */
+    public static final int CANNOT_MODIFY_ASSET_NAME_VALUE = 6;
 
 
     public final int getNumber() {
@@ -213,6 +231,7 @@ private static final long serialVersionUID = 0L;
         case 3: return DUPLICATE_ASSET;
         case 4: return DUPLICATE_ASSET_NAME;
         case 5: return ASSET_DATA_IS_MISSING;
+        case 6: return CANNOT_MODIFY_ASSET_NAME;
         default: return null;
       }
     }

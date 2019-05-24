@@ -92,7 +92,7 @@ public interface CampaignExtensionSettingOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed campaign extension
    * setting is expected, in this format:
-   * `customers/{customer_id}/campaignExtensionSettings/{feed_id}`
+   * `customers/{customer_id}/campaignExtensionSettings/{campaign_id}~{extension_type}`
    * </pre>
    *
    * <code>string remove = 3;</code>
@@ -102,7 +102,7 @@ public interface CampaignExtensionSettingOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed campaign extension
    * setting is expected, in this format:
-   * `customers/{customer_id}/campaignExtensionSettings/{feed_id}`
+   * `customers/{customer_id}/campaignExtensionSettings/{campaign_id}~{extension_type}`
    * </pre>
    *
    * <code>string remove = 3;</code>

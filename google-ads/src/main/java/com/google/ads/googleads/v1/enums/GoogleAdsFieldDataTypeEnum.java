@@ -195,6 +195,15 @@ private static final long serialVersionUID = 0L;
      * <code>STRING = 11;</code>
      */
     STRING(11),
+    /**
+     * <pre>
+     * Maps to google.protobuf.UInt64Value
+     * Applicable operators:  =, !=, &lt;, &gt;, &lt;=, &gt;=, BETWEEN, IN, NOT IN
+     * </pre>
+     *
+     * <code>UINT64 = 12;</code>
+     */
+    UINT64(12),
     UNRECOGNIZED(-1),
     ;
 
@@ -307,6 +316,15 @@ private static final long serialVersionUID = 0L;
      * <code>STRING = 11;</code>
      */
     public static final int STRING_VALUE = 11;
+    /**
+     * <pre>
+     * Maps to google.protobuf.UInt64Value
+     * Applicable operators:  =, !=, &lt;, &gt;, &lt;=, &gt;=, BETWEEN, IN, NOT IN
+     * </pre>
+     *
+     * <code>UINT64 = 12;</code>
+     */
+    public static final int UINT64_VALUE = 12;
 
 
     public final int getNumber() {
@@ -339,6 +357,7 @@ private static final long serialVersionUID = 0L;
         case 9: return MESSAGE;
         case 10: return RESOURCE_NAME;
         case 11: return STRING;
+        case 12: return UINT64;
         default: return null;
       }
     }

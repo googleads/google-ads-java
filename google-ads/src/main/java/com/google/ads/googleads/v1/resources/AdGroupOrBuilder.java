@@ -147,6 +147,43 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
+   * For draft or experiment ad groups, this field is the resource name of the
+   * base ad group from which this ad group was created. If a draft or
+   * experiment ad group does not have a base ad group, then this field is null.
+   * For base ad groups, this field equals the ad group resource name.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+   */
+  boolean hasBaseAdGroup();
+  /**
+   * <pre>
+   * For draft or experiment ad groups, this field is the resource name of the
+   * base ad group from which this ad group was created. If a draft or
+   * experiment ad group does not have a base ad group, then this field is null.
+   * For base ad groups, this field equals the ad group resource name.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+   */
+  com.google.protobuf.StringValue getBaseAdGroup();
+  /**
+   * <pre>
+   * For draft or experiment ad groups, this field is the resource name of the
+   * base ad group from which this ad group was created. If a draft or
+   * experiment ad group does not have a base ad group, then this field is null.
+   * For base ad groups, this field equals the ad group resource name.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder();
+
+  /**
+   * <pre>
    * The URL template for constructing a tracking URL.
    * </pre>
    *
