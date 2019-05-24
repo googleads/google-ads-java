@@ -93,9 +93,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 50: {
-            if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+            if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.CustomParameter>();
-              mutable_bitField0_ |= 0x00000080;
+              mutable_bitField0_ |= 0x00000100;
             }
             urlCustomParameters_.add(
                 input.readMessage(com.google.ads.googleads.v1.common.CustomParameter.parser(), extensionRegistry));
@@ -168,6 +168,19 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(cpvBidMicros_);
               cpvBidMicros_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 146: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (baseAdGroup_ != null) {
+              subBuilder = baseAdGroup_.toBuilder();
+            }
+            baseAdGroup_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(baseAdGroup_);
+              baseAdGroup_ = subBuilder.buildPartial();
             }
 
             break;
@@ -328,7 +341,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
       this.unknownFields = unknownFields.build();
@@ -549,6 +562,51 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode result = com.google.ads.googleads.v1.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.valueOf(adRotationMode_);
     return result == null ? com.google.ads.googleads.v1.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.UNRECOGNIZED : result;
+  }
+
+  public static final int BASE_AD_GROUP_FIELD_NUMBER = 18;
+  private com.google.protobuf.StringValue baseAdGroup_;
+  /**
+   * <pre>
+   * For draft or experiment ad groups, this field is the resource name of the
+   * base ad group from which this ad group was created. If a draft or
+   * experiment ad group does not have a base ad group, then this field is null.
+   * For base ad groups, this field equals the ad group resource name.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+   */
+  public boolean hasBaseAdGroup() {
+    return baseAdGroup_ != null;
+  }
+  /**
+   * <pre>
+   * For draft or experiment ad groups, this field is the resource name of the
+   * base ad group from which this ad group was created. If a draft or
+   * experiment ad group does not have a base ad group, then this field is null.
+   * For base ad groups, this field equals the ad group resource name.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+   */
+  public com.google.protobuf.StringValue getBaseAdGroup() {
+    return baseAdGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : baseAdGroup_;
+  }
+  /**
+   * <pre>
+   * For draft or experiment ad groups, this field is the resource name of the
+   * base ad group from which this ad group was created. If a draft or
+   * experiment ad group does not have a base ad group, then this field is null.
+   * For base ad groups, this field equals the ad group resource name.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder() {
+    return getBaseAdGroup();
   }
 
   public static final int TRACKING_URL_TEMPLATE_FIELD_NUMBER = 13;
@@ -1227,6 +1285,9 @@ private static final long serialVersionUID = 0L;
     if (cpvBidMicros_ != null) {
       output.writeMessage(17, getCpvBidMicros());
     }
+    if (baseAdGroup_ != null) {
+      output.writeMessage(18, getBaseAdGroup());
+    }
     if (percentCpcBidMicros_ != null) {
       output.writeMessage(20, getPercentCpcBidMicros());
     }
@@ -1318,6 +1379,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, getCpvBidMicros());
     }
+    if (baseAdGroup_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, getBaseAdGroup());
+    }
     if (percentCpcBidMicros_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getPercentCpcBidMicros());
@@ -1401,6 +1466,11 @@ private static final long serialVersionUID = 0L;
     result = result && status_ == other.status_;
     result = result && type_ == other.type_;
     result = result && adRotationMode_ == other.adRotationMode_;
+    result = result && (hasBaseAdGroup() == other.hasBaseAdGroup());
+    if (hasBaseAdGroup()) {
+      result = result && getBaseAdGroup()
+          .equals(other.getBaseAdGroup());
+    }
     result = result && (hasTrackingUrlTemplate() == other.hasTrackingUrlTemplate());
     if (hasTrackingUrlTemplate()) {
       result = result && getTrackingUrlTemplate()
@@ -1503,6 +1573,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + type_;
     hash = (37 * hash) + AD_ROTATION_MODE_FIELD_NUMBER;
     hash = (53 * hash) + adRotationMode_;
+    if (hasBaseAdGroup()) {
+      hash = (37 * hash) + BASE_AD_GROUP_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseAdGroup().hashCode();
+    }
     if (hasTrackingUrlTemplate()) {
       hash = (37 * hash) + TRACKING_URL_TEMPLATE_FIELD_NUMBER;
       hash = (53 * hash) + getTrackingUrlTemplate().hashCode();
@@ -1727,6 +1801,12 @@ private static final long serialVersionUID = 0L;
 
       adRotationMode_ = 0;
 
+      if (baseAdGroupBuilder_ == null) {
+        baseAdGroup_ = null;
+      } else {
+        baseAdGroup_ = null;
+        baseAdGroupBuilder_ = null;
+      }
       if (trackingUrlTemplateBuilder_ == null) {
         trackingUrlTemplate_ = null;
       } else {
@@ -1735,7 +1815,7 @@ private static final long serialVersionUID = 0L;
       }
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
       } else {
         urlCustomParametersBuilder_.clear();
       }
@@ -1865,15 +1945,20 @@ private static final long serialVersionUID = 0L;
       result.status_ = status_;
       result.type_ = type_;
       result.adRotationMode_ = adRotationMode_;
+      if (baseAdGroupBuilder_ == null) {
+        result.baseAdGroup_ = baseAdGroup_;
+      } else {
+        result.baseAdGroup_ = baseAdGroupBuilder_.build();
+      }
       if (trackingUrlTemplateBuilder_ == null) {
         result.trackingUrlTemplate_ = trackingUrlTemplate_;
       } else {
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000100);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
@@ -2015,6 +2100,9 @@ private static final long serialVersionUID = 0L;
       if (other.adRotationMode_ != 0) {
         setAdRotationModeValue(other.getAdRotationModeValue());
       }
+      if (other.hasBaseAdGroup()) {
+        mergeBaseAdGroup(other.getBaseAdGroup());
+      }
       if (other.hasTrackingUrlTemplate()) {
         mergeTrackingUrlTemplate(other.getTrackingUrlTemplate());
       }
@@ -2022,7 +2110,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000100);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -2035,7 +2123,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000100);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -2767,6 +2855,195 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.StringValue baseAdGroup_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> baseAdGroupBuilder_;
+    /**
+     * <pre>
+     * For draft or experiment ad groups, this field is the resource name of the
+     * base ad group from which this ad group was created. If a draft or
+     * experiment ad group does not have a base ad group, then this field is null.
+     * For base ad groups, this field equals the ad group resource name.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     */
+    public boolean hasBaseAdGroup() {
+      return baseAdGroupBuilder_ != null || baseAdGroup_ != null;
+    }
+    /**
+     * <pre>
+     * For draft or experiment ad groups, this field is the resource name of the
+     * base ad group from which this ad group was created. If a draft or
+     * experiment ad group does not have a base ad group, then this field is null.
+     * For base ad groups, this field equals the ad group resource name.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     */
+    public com.google.protobuf.StringValue getBaseAdGroup() {
+      if (baseAdGroupBuilder_ == null) {
+        return baseAdGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : baseAdGroup_;
+      } else {
+        return baseAdGroupBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * For draft or experiment ad groups, this field is the resource name of the
+     * base ad group from which this ad group was created. If a draft or
+     * experiment ad group does not have a base ad group, then this field is null.
+     * For base ad groups, this field equals the ad group resource name.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     */
+    public Builder setBaseAdGroup(com.google.protobuf.StringValue value) {
+      if (baseAdGroupBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        baseAdGroup_ = value;
+        onChanged();
+      } else {
+        baseAdGroupBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * For draft or experiment ad groups, this field is the resource name of the
+     * base ad group from which this ad group was created. If a draft or
+     * experiment ad group does not have a base ad group, then this field is null.
+     * For base ad groups, this field equals the ad group resource name.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     */
+    public Builder setBaseAdGroup(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (baseAdGroupBuilder_ == null) {
+        baseAdGroup_ = builderForValue.build();
+        onChanged();
+      } else {
+        baseAdGroupBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * For draft or experiment ad groups, this field is the resource name of the
+     * base ad group from which this ad group was created. If a draft or
+     * experiment ad group does not have a base ad group, then this field is null.
+     * For base ad groups, this field equals the ad group resource name.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     */
+    public Builder mergeBaseAdGroup(com.google.protobuf.StringValue value) {
+      if (baseAdGroupBuilder_ == null) {
+        if (baseAdGroup_ != null) {
+          baseAdGroup_ =
+            com.google.protobuf.StringValue.newBuilder(baseAdGroup_).mergeFrom(value).buildPartial();
+        } else {
+          baseAdGroup_ = value;
+        }
+        onChanged();
+      } else {
+        baseAdGroupBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * For draft or experiment ad groups, this field is the resource name of the
+     * base ad group from which this ad group was created. If a draft or
+     * experiment ad group does not have a base ad group, then this field is null.
+     * For base ad groups, this field equals the ad group resource name.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     */
+    public Builder clearBaseAdGroup() {
+      if (baseAdGroupBuilder_ == null) {
+        baseAdGroup_ = null;
+        onChanged();
+      } else {
+        baseAdGroup_ = null;
+        baseAdGroupBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * For draft or experiment ad groups, this field is the resource name of the
+     * base ad group from which this ad group was created. If a draft or
+     * experiment ad group does not have a base ad group, then this field is null.
+     * For base ad groups, this field equals the ad group resource name.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getBaseAdGroupBuilder() {
+      
+      onChanged();
+      return getBaseAdGroupFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * For draft or experiment ad groups, this field is the resource name of the
+     * base ad group from which this ad group was created. If a draft or
+     * experiment ad group does not have a base ad group, then this field is null.
+     * For base ad groups, this field equals the ad group resource name.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder() {
+      if (baseAdGroupBuilder_ != null) {
+        return baseAdGroupBuilder_.getMessageOrBuilder();
+      } else {
+        return baseAdGroup_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : baseAdGroup_;
+      }
+    }
+    /**
+     * <pre>
+     * For draft or experiment ad groups, this field is the resource name of the
+     * base ad group from which this ad group was created. If a draft or
+     * experiment ad group does not have a base ad group, then this field is null.
+     * For base ad groups, this field equals the ad group resource name.
+     * This field is read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getBaseAdGroupFieldBuilder() {
+      if (baseAdGroupBuilder_ == null) {
+        baseAdGroupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getBaseAdGroup(),
+                getParentForChildren(),
+                isClean());
+        baseAdGroup_ = null;
+      }
+      return baseAdGroupBuilder_;
+    }
+
     private com.google.protobuf.StringValue trackingUrlTemplate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> trackingUrlTemplateBuilder_;
@@ -2923,9 +3200,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (!((bitField0_ & 0x00000100) == 0x00000100)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
        }
     }
 
@@ -3130,7 +3407,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -3242,7 +3519,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.CustomParameter, com.google.ads.googleads.v1.common.CustomParameter.Builder, com.google.ads.googleads.v1.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000080) == 0x00000080),
+                ((bitField0_ & 0x00000100) == 0x00000100),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;

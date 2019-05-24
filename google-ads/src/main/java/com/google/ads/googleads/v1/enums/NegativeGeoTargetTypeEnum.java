@@ -104,9 +104,8 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Specifies that a user is excluded from seeing the ad if either their
-     * Area of Interest (AOI) or their Location of Presence (LOP) matches the
-     * geo target.
+     * Specifies that a user is excluded from seeing the ad if they
+     * are in, or show interest in, advertiser's excluded locations.
      * </pre>
      *
      * <code>DONT_CARE = 2;</code>
@@ -114,8 +113,8 @@ private static final long serialVersionUID = 0L;
     DONT_CARE(2),
     /**
      * <pre>
-     * Specifies that a user is excluded from seeing the ad
-     * only if their Location of Presence (LOP) matches the geo target.
+     * Specifies that a user is excluded from seeing the ad if they
+     * are in advertiser's excluded locations.
      * </pre>
      *
      * <code>LOCATION_OF_PRESENCE = 3;</code>
@@ -142,9 +141,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Specifies that a user is excluded from seeing the ad if either their
-     * Area of Interest (AOI) or their Location of Presence (LOP) matches the
-     * geo target.
+     * Specifies that a user is excluded from seeing the ad if they
+     * are in, or show interest in, advertiser's excluded locations.
      * </pre>
      *
      * <code>DONT_CARE = 2;</code>
@@ -152,8 +150,8 @@ private static final long serialVersionUID = 0L;
     public static final int DONT_CARE_VALUE = 2;
     /**
      * <pre>
-     * Specifies that a user is excluded from seeing the ad
-     * only if their Location of Presence (LOP) matches the geo target.
+     * Specifies that a user is excluded from seeing the ad if they
+     * are in advertiser's excluded locations.
      * </pre>
      *
      * <code>LOCATION_OF_PRESENCE = 3;</code>

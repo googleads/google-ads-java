@@ -5,7 +5,10 @@ package com.google.ads.googleads.v1.resources;
 
 /**
  * <pre>
- * An ad group criterion simulation.
+ * An ad group criterion simulation. Supported combinations of advertising
+ * channel type, criterion type, simulation type, and simulation modification
+ * method are detailed below respectively.
+ * SEARCH  KEYWORD  CPC_BID  UNIFORM
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.AdGroupCriterionSimulation}
@@ -734,7 +737,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An ad group criterion simulation.
+   * An ad group criterion simulation. Supported combinations of advertising
+   * channel type, criterion type, simulation type, and simulation modification
+   * method are detailed below respectively.
+   * SEARCH  KEYWORD  CPC_BID  UNIFORM
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.resources.AdGroupCriterionSimulation}

@@ -149,7 +149,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Returned for successfully processed conversions. Proto will be empty for
-   * rows that received an error.
+   * rows that received an error. Results are not returned when validate_only is
+   * true.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -160,7 +161,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Returned for successfully processed conversions. Proto will be empty for
-   * rows that received an error.
+   * rows that received an error. Results are not returned when validate_only is
+   * true.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -172,7 +174,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Returned for successfully processed conversions. Proto will be empty for
-   * rows that received an error.
+   * rows that received an error. Results are not returned when validate_only is
+   * true.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -183,7 +186,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Returned for successfully processed conversions. Proto will be empty for
-   * rows that received an error.
+   * rows that received an error. Results are not returned when validate_only is
+   * true.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -194,7 +198,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Returned for successfully processed conversions. Proto will be empty for
-   * rows that received an error.
+   * rows that received an error. Results are not returned when validate_only is
+   * true.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -769,7 +774,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -784,7 +790,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -799,7 +806,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -814,7 +822,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -836,7 +845,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -855,7 +865,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -876,7 +887,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -898,7 +910,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -917,7 +930,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -936,7 +950,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -956,7 +971,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -974,7 +990,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -992,7 +1009,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -1004,7 +1022,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -1019,7 +1038,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -1035,7 +1055,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -1047,7 +1068,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>
@@ -1060,7 +1082,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Returned for successfully processed conversions. Proto will be empty for
-     * rows that received an error.
+     * rows that received an error. Results are not returned when validate_only is
+     * true.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.services.ClickConversionResult results = 2;</code>

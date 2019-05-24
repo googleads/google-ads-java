@@ -255,6 +255,14 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_AFFILIATE_CHAIN_ID = 20;</code>
      */
     INVALID_AFFILIATE_CHAIN_ID(20),
+    /**
+     * <pre>
+     * There is already a feed with the given system feed generation data.
+     * </pre>
+     *
+     * <code>DUPLICATE_SYSTEM_FEED = 21;</code>
+     */
+    DUPLICATE_SYSTEM_FEED(21),
     UNRECOGNIZED(-1),
     ;
 
@@ -427,6 +435,14 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_AFFILIATE_CHAIN_ID = 20;</code>
      */
     public static final int INVALID_AFFILIATE_CHAIN_ID_VALUE = 20;
+    /**
+     * <pre>
+     * There is already a feed with the given system feed generation data.
+     * </pre>
+     *
+     * <code>DUPLICATE_SYSTEM_FEED = 21;</code>
+     */
+    public static final int DUPLICATE_SYSTEM_FEED_VALUE = 21;
 
 
     public final int getNumber() {
@@ -468,6 +484,7 @@ private static final long serialVersionUID = 0L;
         case 18: return INVALID_BUSINESS_ACCOUNT;
         case 19: return BUSINESS_ACCOUNT_CANNOT_ACCESS_LOCATION_ACCOUNT;
         case 20: return INVALID_AFFILIATE_CHAIN_ID;
+        case 21: return DUPLICATE_SYSTEM_FEED;
         default: return null;
       }
     }

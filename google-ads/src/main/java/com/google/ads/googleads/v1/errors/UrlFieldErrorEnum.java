@@ -525,6 +525,14 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_HOST = 56;</code>
      */
     MISSING_HOST(56),
+    /**
+     * <pre>
+     * Custom parameter value cannot be null.
+     * </pre>
+     *
+     * <code>NULL_CUSTOM_PARAMETER_VALUE = 57;</code>
+     */
+    NULL_CUSTOM_PARAMETER_VALUE(57),
     UNRECOGNIZED(-1),
     ;
 
@@ -967,6 +975,14 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_HOST = 56;</code>
      */
     public static final int MISSING_HOST_VALUE = 56;
+    /**
+     * <pre>
+     * Custom parameter value cannot be null.
+     * </pre>
+     *
+     * <code>NULL_CUSTOM_PARAMETER_VALUE = 57;</code>
+     */
+    public static final int NULL_CUSTOM_PARAMETER_VALUE_VALUE = 57;
 
 
     public final int getNumber() {
@@ -1040,6 +1056,7 @@ private static final long serialVersionUID = 0L;
         case 54: return MALFORMED_TOP_LEVEL_DOMAIN;
         case 55: return MALFORMED_URL;
         case 56: return MISSING_HOST;
+        case 57: return NULL_CUSTOM_PARAMETER_VALUE;
         default: return null;
       }
     }

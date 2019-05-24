@@ -181,4 +181,154 @@ public interface BidModifierSimulationPointOrBuilder extends
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getTopSlotImpressionsOrBuilder();
+
+  /**
+   * <pre>
+   * Projected number of biddable conversions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+   */
+  boolean hasParentBiddableConversions();
+  /**
+   * <pre>
+   * Projected number of biddable conversions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+   */
+  com.google.protobuf.DoubleValue getParentBiddableConversions();
+  /**
+   * <pre>
+   * Projected number of biddable conversions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getParentBiddableConversionsOrBuilder();
+
+  /**
+   * <pre>
+   * Projected total value of biddable conversions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+   */
+  boolean hasParentBiddableConversionsValue();
+  /**
+   * <pre>
+   * Projected total value of biddable conversions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+   */
+  com.google.protobuf.DoubleValue getParentBiddableConversionsValue();
+  /**
+   * <pre>
+   * Projected total value of biddable conversions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getParentBiddableConversionsValueOrBuilder();
+
+  /**
+   * <pre>
+   * Projected number of clicks for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+   */
+  boolean hasParentClicks();
+  /**
+   * <pre>
+   * Projected number of clicks for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+   */
+  com.google.protobuf.Int64Value getParentClicks();
+  /**
+   * <pre>
+   * Projected number of clicks for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getParentClicksOrBuilder();
+
+  /**
+   * <pre>
+   * Projected cost in micros for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+   */
+  boolean hasParentCostMicros();
+  /**
+   * <pre>
+   * Projected cost in micros for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+   */
+  com.google.protobuf.Int64Value getParentCostMicros();
+  /**
+   * <pre>
+   * Projected cost in micros for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getParentCostMicrosOrBuilder();
+
+  /**
+   * <pre>
+   * Projected number of impressions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+   */
+  boolean hasParentImpressions();
+  /**
+   * <pre>
+   * Projected number of impressions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+   */
+  com.google.protobuf.Int64Value getParentImpressions();
+  /**
+   * <pre>
+   * Projected number of impressions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getParentImpressionsOrBuilder();
+
+  /**
+   * <pre>
+   * Projected number of top slot impressions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+   */
+  boolean hasParentTopSlotImpressions();
+  /**
+   * <pre>
+   * Projected number of top slot impressions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+   */
+  com.google.protobuf.Int64Value getParentTopSlotImpressions();
+  /**
+   * <pre>
+   * Projected number of top slot impressions for the parent resource.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getParentTopSlotImpressionsOrBuilder();
 }

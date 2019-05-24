@@ -5,7 +5,9 @@ package com.google.ads.googleads.v1.services;
 
 /**
  * <pre>
- * A single operation to create an asset.
+ * A single operation to create an asset. Supported asset types are
+ * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
+ * created with Ad inline.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v1.services.AssetOperation}
@@ -339,7 +341,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A single operation to create an asset.
+   * A single operation to create an asset. Supported asset types are
+   * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
+   * created with Ad inline.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.services.AssetOperation}

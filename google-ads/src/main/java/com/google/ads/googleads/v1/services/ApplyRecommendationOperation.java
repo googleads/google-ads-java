@@ -5450,7 +5450,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Parameters to use when applying call extension recommendation.
+   * Parameters to use when applying sitelink extension recommendation.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters}
@@ -5751,7 +5751,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying call extension recommendation.
+     * Parameters to use when applying sitelink extension recommendation.
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters}
@@ -7321,7 +7321,7 @@ private static final long serialVersionUID = 0L;
   public static final int SITELINK_EXTENSION_FIELD_NUMBER = 8;
   /**
    * <pre>
-   * Parameters to use when applying call extension recommendation.
+   * Parameters to use when applying sitelink extension recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -7331,7 +7331,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Parameters to use when applying call extension recommendation.
+   * Parameters to use when applying sitelink extension recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -7344,7 +7344,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Parameters to use when applying call extension recommendation.
+   * Parameters to use when applying sitelink extension recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -9087,7 +9087,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters, com.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters.Builder, com.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParametersOrBuilder> sitelinkExtensionBuilder_;
     /**
      * <pre>
-     * Parameters to use when applying call extension recommendation.
+     * Parameters to use when applying sitelink extension recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -9097,7 +9097,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying call extension recommendation.
+     * Parameters to use when applying sitelink extension recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -9117,7 +9117,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying call extension recommendation.
+     * Parameters to use when applying sitelink extension recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -9137,7 +9137,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying call extension recommendation.
+     * Parameters to use when applying sitelink extension recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -9155,7 +9155,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying call extension recommendation.
+     * Parameters to use when applying sitelink extension recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -9181,7 +9181,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying call extension recommendation.
+     * Parameters to use when applying sitelink extension recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -9204,7 +9204,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying call extension recommendation.
+     * Parameters to use when applying sitelink extension recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -9214,7 +9214,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying call extension recommendation.
+     * Parameters to use when applying sitelink extension recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -9231,7 +9231,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying call extension recommendation.
+     * Parameters to use when applying sitelink extension recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>

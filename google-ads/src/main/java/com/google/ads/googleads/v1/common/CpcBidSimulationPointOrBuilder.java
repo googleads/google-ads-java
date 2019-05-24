@@ -9,7 +9,7 @@ public interface CpcBidSimulationPointOrBuilder extends
 
   /**
    * <pre>
-   * The simulated cpc bid upon which projected metrics are based.
+   * The simulated CPC bid upon which projected metrics are based.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -17,7 +17,7 @@ public interface CpcBidSimulationPointOrBuilder extends
   boolean hasCpcBidMicros();
   /**
    * <pre>
-   * The simulated cpc bid upon which projected metrics are based.
+   * The simulated CPC bid upon which projected metrics are based.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -25,7 +25,7 @@ public interface CpcBidSimulationPointOrBuilder extends
   com.google.protobuf.Int64Value getCpcBidMicros();
   /**
    * <pre>
-   * The simulated cpc bid upon which projected metrics are based.
+   * The simulated CPC bid upon which projected metrics are based.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>

@@ -105,6 +105,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Budget type for standard Google Ads usage.
+     * Caps daily spend at two times the specified budget amount.
+     * Full details: https://support.google.com/google-ads/answer/6385083
      * </pre>
      *
      * <code>STANDARD = 2;</code>
@@ -113,6 +115,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Budget type for Hotels Ads commission program.
+     * Full details: https://support.google.com/google-ads/answer/9243945
+     * This type is only supported by campaigns with
+     * AdvertisingChannelType.HOTEL, BiddingStrategyType.COMMISSION and
+     * PaymentMode.CONVERSION_VALUE.
      * </pre>
      *
      * <code>HOTEL_ADS_COMMISSION = 3;</code>
@@ -120,7 +126,12 @@ private static final long serialVersionUID = 0L;
     HOTEL_ADS_COMMISSION(3),
     /**
      * <pre>
-     * Budget type with a fixed cost-per-acquisition.
+     * Budget type with a fixed cost-per-acquisition (conversion).
+     * Full details: https://support.google.com/google-ads/answer/7528254
+     * This type is only supported by campaigns with
+     * AdvertisingChannelType.DISPLAY (excluding
+     * AdvertisingChannelSubType.DISPLAY_GMAIL),
+     * BiddingStrategyType.TARGET_CPA and PaymentMode.CONVERSIONS.
      * </pre>
      *
      * <code>FIXED_CPA = 4;</code>
@@ -148,6 +159,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Budget type for standard Google Ads usage.
+     * Caps daily spend at two times the specified budget amount.
+     * Full details: https://support.google.com/google-ads/answer/6385083
      * </pre>
      *
      * <code>STANDARD = 2;</code>
@@ -156,6 +169,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Budget type for Hotels Ads commission program.
+     * Full details: https://support.google.com/google-ads/answer/9243945
+     * This type is only supported by campaigns with
+     * AdvertisingChannelType.HOTEL, BiddingStrategyType.COMMISSION and
+     * PaymentMode.CONVERSION_VALUE.
      * </pre>
      *
      * <code>HOTEL_ADS_COMMISSION = 3;</code>
@@ -163,7 +180,12 @@ private static final long serialVersionUID = 0L;
     public static final int HOTEL_ADS_COMMISSION_VALUE = 3;
     /**
      * <pre>
-     * Budget type with a fixed cost-per-acquisition.
+     * Budget type with a fixed cost-per-acquisition (conversion).
+     * Full details: https://support.google.com/google-ads/answer/7528254
+     * This type is only supported by campaigns with
+     * AdvertisingChannelType.DISPLAY (excluding
+     * AdvertisingChannelSubType.DISPLAY_GMAIL),
+     * BiddingStrategyType.TARGET_CPA and PaymentMode.CONVERSIONS.
      * </pre>
      *
      * <code>FIXED_CPA = 4;</code>

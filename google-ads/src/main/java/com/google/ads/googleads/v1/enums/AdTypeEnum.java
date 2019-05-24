@@ -248,6 +248,14 @@ private static final long serialVersionUID = 0L;
      * <code>APP_ENGAGEMENT_AD = 23;</code>
      */
     APP_ENGAGEMENT_AD(23),
+    /**
+     * <pre>
+     * The ad is a Shopping Comparison Listing ad.
+     * </pre>
+     *
+     * <code>SHOPPING_COMPARISON_LISTING_AD = 24;</code>
+     */
+    SHOPPING_COMPARISON_LISTING_AD(24),
     UNRECOGNIZED(-1),
     ;
 
@@ -413,6 +421,14 @@ private static final long serialVersionUID = 0L;
      * <code>APP_ENGAGEMENT_AD = 23;</code>
      */
     public static final int APP_ENGAGEMENT_AD_VALUE = 23;
+    /**
+     * <pre>
+     * The ad is a Shopping Comparison Listing ad.
+     * </pre>
+     *
+     * <code>SHOPPING_COMPARISON_LISTING_AD = 24;</code>
+     */
+    public static final int SHOPPING_COMPARISON_LISTING_AD_VALUE = 24;
 
 
     public final int getNumber() {
@@ -453,6 +469,7 @@ private static final long serialVersionUID = 0L;
         case 21: return HTML5_UPLOAD_AD;
         case 22: return DYNAMIC_HTML5_AD;
         case 23: return APP_ENGAGEMENT_AD;
+        case 24: return SHOPPING_COMPARISON_LISTING_AD;
         default: return null;
       }
     }

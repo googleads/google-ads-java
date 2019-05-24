@@ -104,8 +104,8 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Specifies that either Area of Interest (AOI) or
-     * Location of Presence (LOP) may trigger the ad.
+     * Specifies that an ad is triggered if the user is in,
+     * or shows interest in, advertiser's targeted locations.
      * </pre>
      *
      * <code>DONT_CARE = 2;</code>
@@ -113,8 +113,8 @@ private static final long serialVersionUID = 0L;
     DONT_CARE(2),
     /**
      * <pre>
-     * Specifies that the ad is triggered only if the user's Area of Interest
-     * (AOI) matches.
+     * Specifies that an ad is triggered if the user
+     * searches for advertiser's targeted locations.
      * </pre>
      *
      * <code>AREA_OF_INTEREST = 3;</code>
@@ -122,8 +122,8 @@ private static final long serialVersionUID = 0L;
     AREA_OF_INTEREST(3),
     /**
      * <pre>
-     * Specifies that the ad is triggered only if the user's
-     * Location of Presence (LOP) matches.
+     * Specifies that an ad is triggered if the user is in
+     * or regularly in advertiser's targeted locations.
      * </pre>
      *
      * <code>LOCATION_OF_PRESENCE = 4;</code>
@@ -150,8 +150,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Specifies that either Area of Interest (AOI) or
-     * Location of Presence (LOP) may trigger the ad.
+     * Specifies that an ad is triggered if the user is in,
+     * or shows interest in, advertiser's targeted locations.
      * </pre>
      *
      * <code>DONT_CARE = 2;</code>
@@ -159,8 +159,8 @@ private static final long serialVersionUID = 0L;
     public static final int DONT_CARE_VALUE = 2;
     /**
      * <pre>
-     * Specifies that the ad is triggered only if the user's Area of Interest
-     * (AOI) matches.
+     * Specifies that an ad is triggered if the user
+     * searches for advertiser's targeted locations.
      * </pre>
      *
      * <code>AREA_OF_INTEREST = 3;</code>
@@ -168,8 +168,8 @@ private static final long serialVersionUID = 0L;
     public static final int AREA_OF_INTEREST_VALUE = 3;
     /**
      * <pre>
-     * Specifies that the ad is triggered only if the user's
-     * Location of Presence (LOP) matches.
+     * Specifies that an ad is triggered if the user is in
+     * or regularly in advertiser's targeted locations.
      * </pre>
      *
      * <code>LOCATION_OF_PRESENCE = 4;</code>

@@ -36,7 +36,7 @@ public final class AdGroupSimulationProto {
       "_method.proto\0323google/ads/googleads/v1/e" +
       "nums/simulation_type.proto\032\036google/proto" +
       "buf/wrappers.proto\032\034google/api/annotatio" +
-      "ns.proto\"\317\004\n\021AdGroupSimulation\022\025\n\rresour" +
+      "ns.proto\"\250\005\n\021AdGroupSimulation\022\025\n\rresour" +
       "ce_name\030\001 \001(\t\0220\n\013ad_group_id\030\002 \001(\0132\033.goo" +
       "gle.protobuf.Int64Value\022N\n\004type\030\003 \001(\0162@." +
       "google.ads.googleads.v1.enums.Simulation" +
@@ -48,16 +48,19 @@ public final class AdGroupSimulationProto {
       "end_date\030\006 \001(\0132\034.google.protobuf.StringV" +
       "alue\022W\n\022cpc_bid_point_list\030\010 \001(\01329.googl" +
       "e.ads.googleads.v1.common.CpcBidSimulati" +
-      "onPointListH\000\022]\n\025target_cpa_point_list\030\t" +
-      " \001(\0132<.google.ads.googleads.v1.common.Ta" +
-      "rgetCpaSimulationPointListH\000B\014\n\npoint_li" +
-      "stB\203\002\n%com.google.ads.googleads.v1.resou" +
-      "rcesB\026AdGroupSimulationProtoP\001ZJgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v1/resources;resources\242\002\003GAA\252\002!Googl" +
-      "e.Ads.GoogleAds.V1.Resources\312\002!Google\\Ad" +
-      "s\\GoogleAds\\V1\\Resources\352\002%Google::Ads::" +
-      "GoogleAds::V1::Resourcesb\006proto3"
+      "onPointListH\000\022W\n\022cpv_bid_point_list\030\n \001(" +
+      "\01329.google.ads.googleads.v1.common.CpvBi" +
+      "dSimulationPointListH\000\022]\n\025target_cpa_poi" +
+      "nt_list\030\t \001(\0132<.google.ads.googleads.v1." +
+      "common.TargetCpaSimulationPointListH\000B\014\n" +
+      "\npoint_listB\203\002\n%com.google.ads.googleads" +
+      ".v1.resourcesB\026AdGroupSimulationProtoP\001Z" +
+      "Jgoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v1/resources;resources\242\002\003GA" +
+      "A\252\002!Google.Ads.GoogleAds.V1.Resources\312\002!" +
+      "Google\\Ads\\GoogleAds\\V1\\Resources\352\002%Goog" +
+      "le::Ads::GoogleAds::V1::Resourcesb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -81,7 +84,7 @@ public final class AdGroupSimulationProto {
     internal_static_google_ads_googleads_v1_resources_AdGroupSimulation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_AdGroupSimulation_descriptor,
-        new java.lang.String[] { "ResourceName", "AdGroupId", "Type", "ModificationMethod", "StartDate", "EndDate", "CpcBidPointList", "TargetCpaPointList", "PointList", });
+        new java.lang.String[] { "ResourceName", "AdGroupId", "Type", "ModificationMethod", "StartDate", "EndDate", "CpcBidPointList", "CpvBidPointList", "TargetCpaPointList", "PointList", });
     com.google.ads.googleads.v1.common.SimulationProto.getDescriptor();
     com.google.ads.googleads.v1.enums.SimulationModificationMethodProto.getDescriptor();
     com.google.ads.googleads.v1.enums.SimulationTypeProto.getDescriptor();

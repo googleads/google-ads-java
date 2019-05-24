@@ -339,8 +339,8 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number of times people clicked the “Call” button to call a store during
-   * or after clicking an ad. This number doesn’t include whether or not calls
+   * The number of times people clicked the "Call" button to call a store during
+   * or after clicking an ad. This number doesn't include whether or not calls
    * were connected, or the duration of any calls.
    * This metric applies to feed items only.
    * </pre>
@@ -350,8 +350,8 @@ public interface MetricsOrBuilder extends
   boolean hasAllConversionsFromClickToCall();
   /**
    * <pre>
-   * The number of times people clicked the “Call” button to call a store during
-   * or after clicking an ad. This number doesn’t include whether or not calls
+   * The number of times people clicked the "Call" button to call a store during
+   * or after clicking an ad. This number doesn't include whether or not calls
    * were connected, or the duration of any calls.
    * This metric applies to feed items only.
    * </pre>
@@ -361,8 +361,8 @@ public interface MetricsOrBuilder extends
   com.google.protobuf.DoubleValue getAllConversionsFromClickToCall();
   /**
    * <pre>
-   * The number of times people clicked the “Call” button to call a store during
-   * or after clicking an ad. This number doesn’t include whether or not calls
+   * The number of times people clicked the "Call" button to call a store during
+   * or after clicking an ad. This number doesn't include whether or not calls
    * were connected, or the duration of any calls.
    * This metric applies to feed items only.
    * </pre>
@@ -373,7 +373,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number of times people clicked a “Get directions” button to navigate to
+   * The number of times people clicked a "Get directions" button to navigate to
    * a store after clicking an ad.
    * This metric applies to feed items only.
    * </pre>
@@ -383,7 +383,7 @@ public interface MetricsOrBuilder extends
   boolean hasAllConversionsFromDirections();
   /**
    * <pre>
-   * The number of times people clicked a “Get directions” button to navigate to
+   * The number of times people clicked a "Get directions" button to navigate to
    * a store after clicking an ad.
    * This metric applies to feed items only.
    * </pre>
@@ -393,7 +393,7 @@ public interface MetricsOrBuilder extends
   com.google.protobuf.DoubleValue getAllConversionsFromDirections();
   /**
    * <pre>
-   * The number of times people clicked a “Get directions” button to navigate to
+   * The number of times people clicked a "Get directions" button to navigate to
    * a store after clicking an ad.
    * This metric applies to feed items only.
    * </pre>
@@ -432,7 +432,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The number of times people clicked a link to view a store’s menu after
+   * The number of times people clicked a link to view a store's menu after
    * clicking an ad.
    * This metric applies to feed items only.
    * </pre>
@@ -442,7 +442,7 @@ public interface MetricsOrBuilder extends
   boolean hasAllConversionsFromMenu();
   /**
    * <pre>
-   * The number of times people clicked a link to view a store’s menu after
+   * The number of times people clicked a link to view a store's menu after
    * clicking an ad.
    * This metric applies to feed items only.
    * </pre>
@@ -452,7 +452,7 @@ public interface MetricsOrBuilder extends
   com.google.protobuf.DoubleValue getAllConversionsFromMenu();
   /**
    * <pre>
-   * The number of times people clicked a link to view a store’s menu after
+   * The number of times people clicked a link to view a store's menu after
    * clicking an ad.
    * This metric applies to feed items only.
    * </pre>

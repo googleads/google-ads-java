@@ -5,7 +5,7 @@ package com.google.ads.googleads.v1.common;
 
 /**
  * <pre>
- * Projected metrics for a specific cpc bid amount.
+ * Projected metrics for a specific CPC bid amount.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v1.common.CpcBidSimulationPoint}
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value cpcBidMicros_;
   /**
    * <pre>
-   * The simulated cpc bid upon which projected metrics are based.
+   * The simulated CPC bid upon which projected metrics are based.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -183,7 +183,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The simulated cpc bid upon which projected metrics are based.
+   * The simulated CPC bid upon which projected metrics are based.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -193,7 +193,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The simulated cpc bid upon which projected metrics are based.
+   * The simulated CPC bid upon which projected metrics are based.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -662,7 +662,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Projected metrics for a specific cpc bid amount.
+   * Projected metrics for a specific CPC bid amount.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.common.CpcBidSimulationPoint}
@@ -908,7 +908,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> cpcBidMicrosBuilder_;
     /**
      * <pre>
-     * The simulated cpc bid upon which projected metrics are based.
+     * The simulated CPC bid upon which projected metrics are based.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -918,7 +918,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The simulated cpc bid upon which projected metrics are based.
+     * The simulated CPC bid upon which projected metrics are based.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -932,7 +932,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The simulated cpc bid upon which projected metrics are based.
+     * The simulated CPC bid upon which projected metrics are based.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -952,7 +952,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The simulated cpc bid upon which projected metrics are based.
+     * The simulated CPC bid upon which projected metrics are based.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The simulated cpc bid upon which projected metrics are based.
+     * The simulated CPC bid upon which projected metrics are based.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -992,7 +992,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The simulated cpc bid upon which projected metrics are based.
+     * The simulated CPC bid upon which projected metrics are based.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -1010,7 +1010,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The simulated cpc bid upon which projected metrics are based.
+     * The simulated CPC bid upon which projected metrics are based.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -1022,7 +1022,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The simulated cpc bid upon which projected metrics are based.
+     * The simulated CPC bid upon which projected metrics are based.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>
@@ -1037,7 +1037,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The simulated cpc bid upon which projected metrics are based.
+     * The simulated CPC bid upon which projected metrics are based.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 1;</code>

@@ -112,7 +112,9 @@ private static final long serialVersionUID = 0L;
     CLICKS(4),
     /**
      * <pre>
-     * Pay per conversion value.
+     * Pay per conversion value. This mode is only supported by campaigns with
+     * AdvertisingChannelType.HOTEL, BiddingStrategyType.COMMISSION, and
+     * BudgetType.HOTEL_ADS_COMMISSION.
      * </pre>
      *
      * <code>CONVERSION_VALUE = 5;</code>
@@ -120,7 +122,11 @@ private static final long serialVersionUID = 0L;
     CONVERSION_VALUE(5),
     /**
      * <pre>
-     * Pay per conversion.
+     * Pay per conversion. This mode is only supported by campaigns with
+     * AdvertisingChannelType.DISPLAY (excluding
+     * AdvertisingChannelSubType.DISPLAY_GMAIL), BiddingStrategyType.TARGET_CPA,
+     * and BudgetType.FIXED_CPA. The customer must also be eligible for this
+     * mode. See Customer.eligibility_failure_reasons for details.
      * </pre>
      *
      * <code>CONVERSIONS = 6;</code>
@@ -155,7 +161,9 @@ private static final long serialVersionUID = 0L;
     public static final int CLICKS_VALUE = 4;
     /**
      * <pre>
-     * Pay per conversion value.
+     * Pay per conversion value. This mode is only supported by campaigns with
+     * AdvertisingChannelType.HOTEL, BiddingStrategyType.COMMISSION, and
+     * BudgetType.HOTEL_ADS_COMMISSION.
      * </pre>
      *
      * <code>CONVERSION_VALUE = 5;</code>
@@ -163,7 +171,11 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSION_VALUE_VALUE = 5;
     /**
      * <pre>
-     * Pay per conversion.
+     * Pay per conversion. This mode is only supported by campaigns with
+     * AdvertisingChannelType.DISPLAY (excluding
+     * AdvertisingChannelSubType.DISPLAY_GMAIL), BiddingStrategyType.TARGET_CPA,
+     * and BudgetType.FIXED_CPA. The customer must also be eligible for this
+     * mode. See Customer.eligibility_failure_reasons for details.
      * </pre>
      *
      * <code>CONVERSIONS = 6;</code>

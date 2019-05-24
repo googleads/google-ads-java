@@ -31,16 +31,17 @@ public final class MediaUploadErrorProto {
       "\n7google/ads/googleads/v1/errors/media_u" +
       "pload_error.proto\022\036google.ads.googleads." +
       "v1.errors\032\034google/api/annotations.proto\"" +
-      "\221\001\n\024MediaUploadErrorEnum\"y\n\020MediaUploadE" +
-      "rror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014FI" +
-      "LE_TOO_BIG\020\002\022\025\n\021UNPARSEABLE_IMAGE\020\003\022\036\n\032A" +
-      "NIMATED_IMAGE_NOT_ALLOWED\020\004B\360\001\n\"com.goog" +
-      "le.ads.googleads.v1.errorsB\025MediaUploadE" +
-      "rrorProtoP\001ZDgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v1/errors;error" +
-      "s\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1.Errors" +
-      "\312\002\036Google\\Ads\\GoogleAds\\V1\\Errors\352\002\"Goog" +
-      "le::Ads::GoogleAds::V1::Errorsb\006proto3"
+      "\252\001\n\024MediaUploadErrorEnum\"\221\001\n\020MediaUpload" +
+      "Error\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014F" +
+      "ILE_TOO_BIG\020\002\022\025\n\021UNPARSEABLE_IMAGE\020\003\022\036\n\032" +
+      "ANIMATED_IMAGE_NOT_ALLOWED\020\004\022\026\n\022FORMAT_N" +
+      "OT_ALLOWED\020\005B\360\001\n\"com.google.ads.googlead" +
+      "s.v1.errorsB\025MediaUploadErrorProtoP\001ZDgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v1/errors;errors\242\002\003GAA\252\002\036Googl" +
+      "e.Ads.GoogleAds.V1.Errors\312\002\036Google\\Ads\\G" +
+      "oogleAds\\V1\\Errors\352\002\"Google::Ads::Google" +
+      "Ads::V1::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -5,7 +5,17 @@ package com.google.ads.googleads.v1.resources;
 
 /**
  * <pre>
- * An ad group simulation.
+ * An ad group simulation. Supported combinations of advertising
+ * channel type, simulation type and simulation modification method is
+ * detailed below respectively.
+ * SEARCH   CPC_BID     DEFAULT
+ * SEARCH   CPC_BID     UNIFORM
+ * SEARCH   TARGET_CPA  UNIFORM
+ * DISPLAY  CPC_BID     DEFAULT
+ * DISPLAY  CPC_BID     UNIFORM
+ * DISPLAY  TARGET_CPA  UNIFORM
+ * VIDEO    CPV_BID     DEFAULT
+ * VIDEO    CPV_BID     UNIFORM
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.AdGroupSimulation}
@@ -134,6 +144,20 @@ private static final long serialVersionUID = 0L;
             pointListCase_ = 9;
             break;
           }
+          case 82: {
+            com.google.ads.googleads.v1.common.CpvBidSimulationPointList.Builder subBuilder = null;
+            if (pointListCase_ == 10) {
+              subBuilder = ((com.google.ads.googleads.v1.common.CpvBidSimulationPointList) pointList_).toBuilder();
+            }
+            pointList_ =
+                input.readMessage(com.google.ads.googleads.v1.common.CpvBidSimulationPointList.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.common.CpvBidSimulationPointList) pointList_);
+              pointList_ = subBuilder.buildPartial();
+            }
+            pointListCase_ = 10;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -171,6 +195,7 @@ private static final long serialVersionUID = 0L;
   public enum PointListCase
       implements com.google.protobuf.Internal.EnumLite {
     CPC_BID_POINT_LIST(8),
+    CPV_BID_POINT_LIST(10),
     TARGET_CPA_POINT_LIST(9),
     POINTLIST_NOT_SET(0);
     private final int value;
@@ -188,6 +213,7 @@ private static final long serialVersionUID = 0L;
     public static PointListCase forNumber(int value) {
       switch (value) {
         case 8: return CPC_BID_POINT_LIST;
+        case 10: return CPV_BID_POINT_LIST;
         case 9: return TARGET_CPA_POINT_LIST;
         case 0: return POINTLIST_NOT_SET;
         default: return null;
@@ -437,6 +463,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.common.CpcBidSimulationPointList.getDefaultInstance();
   }
 
+  public static final int CPV_BID_POINT_LIST_FIELD_NUMBER = 10;
+  /**
+   * <pre>
+   * Simulation points if the simulation type is CPV_BID.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+   */
+  public boolean hasCpvBidPointList() {
+    return pointListCase_ == 10;
+  }
+  /**
+   * <pre>
+   * Simulation points if the simulation type is CPV_BID.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+   */
+  public com.google.ads.googleads.v1.common.CpvBidSimulationPointList getCpvBidPointList() {
+    if (pointListCase_ == 10) {
+       return (com.google.ads.googleads.v1.common.CpvBidSimulationPointList) pointList_;
+    }
+    return com.google.ads.googleads.v1.common.CpvBidSimulationPointList.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Simulation points if the simulation type is CPV_BID.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+   */
+  public com.google.ads.googleads.v1.common.CpvBidSimulationPointListOrBuilder getCpvBidPointListOrBuilder() {
+    if (pointListCase_ == 10) {
+       return (com.google.ads.googleads.v1.common.CpvBidSimulationPointList) pointList_;
+    }
+    return com.google.ads.googleads.v1.common.CpvBidSimulationPointList.getDefaultInstance();
+  }
+
   public static final int TARGET_CPA_POINT_LIST_FIELD_NUMBER = 9;
   /**
    * <pre>
@@ -513,6 +577,9 @@ private static final long serialVersionUID = 0L;
     if (pointListCase_ == 9) {
       output.writeMessage(9, (com.google.ads.googleads.v1.common.TargetCpaSimulationPointList) pointList_);
     }
+    if (pointListCase_ == 10) {
+      output.writeMessage(10, (com.google.ads.googleads.v1.common.CpvBidSimulationPointList) pointList_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -552,6 +619,10 @@ private static final long serialVersionUID = 0L;
     if (pointListCase_ == 9) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, (com.google.ads.googleads.v1.common.TargetCpaSimulationPointList) pointList_);
+    }
+    if (pointListCase_ == 10) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, (com.google.ads.googleads.v1.common.CpvBidSimulationPointList) pointList_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -596,6 +667,10 @@ private static final long serialVersionUID = 0L;
         result = result && getCpcBidPointList()
             .equals(other.getCpcBidPointList());
         break;
+      case 10:
+        result = result && getCpvBidPointList()
+            .equals(other.getCpvBidPointList());
+        break;
       case 9:
         result = result && getTargetCpaPointList()
             .equals(other.getTargetCpaPointList());
@@ -636,6 +711,10 @@ private static final long serialVersionUID = 0L;
       case 8:
         hash = (37 * hash) + CPC_BID_POINT_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getCpcBidPointList().hashCode();
+        break;
+      case 10:
+        hash = (37 * hash) + CPV_BID_POINT_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getCpvBidPointList().hashCode();
         break;
       case 9:
         hash = (37 * hash) + TARGET_CPA_POINT_LIST_FIELD_NUMBER;
@@ -741,7 +820,17 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An ad group simulation.
+   * An ad group simulation. Supported combinations of advertising
+   * channel type, simulation type and simulation modification method is
+   * detailed below respectively.
+   * SEARCH   CPC_BID     DEFAULT
+   * SEARCH   CPC_BID     UNIFORM
+   * SEARCH   TARGET_CPA  UNIFORM
+   * DISPLAY  CPC_BID     DEFAULT
+   * DISPLAY  CPC_BID     UNIFORM
+   * DISPLAY  TARGET_CPA  UNIFORM
+   * VIDEO    CPV_BID     DEFAULT
+   * VIDEO    CPV_BID     UNIFORM
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.resources.AdGroupSimulation}
@@ -858,6 +947,13 @@ private static final long serialVersionUID = 0L;
           result.pointList_ = cpcBidPointListBuilder_.build();
         }
       }
+      if (pointListCase_ == 10) {
+        if (cpvBidPointListBuilder_ == null) {
+          result.pointList_ = pointList_;
+        } else {
+          result.pointList_ = cpvBidPointListBuilder_.build();
+        }
+      }
       if (pointListCase_ == 9) {
         if (targetCpaPointListBuilder_ == null) {
           result.pointList_ = pointList_;
@@ -936,6 +1032,10 @@ private static final long serialVersionUID = 0L;
       switch (other.getPointListCase()) {
         case CPC_BID_POINT_LIST: {
           mergeCpcBidPointList(other.getCpcBidPointList());
+          break;
+        }
+        case CPV_BID_POINT_LIST: {
+          mergeCpvBidPointList(other.getCpvBidPointList());
           break;
         }
         case TARGET_CPA_POINT_LIST: {
@@ -1848,6 +1948,178 @@ private static final long serialVersionUID = 0L;
       pointListCase_ = 8;
       onChanged();;
       return cpcBidPointListBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.CpvBidSimulationPointList, com.google.ads.googleads.v1.common.CpvBidSimulationPointList.Builder, com.google.ads.googleads.v1.common.CpvBidSimulationPointListOrBuilder> cpvBidPointListBuilder_;
+    /**
+     * <pre>
+     * Simulation points if the simulation type is CPV_BID.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     */
+    public boolean hasCpvBidPointList() {
+      return pointListCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Simulation points if the simulation type is CPV_BID.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     */
+    public com.google.ads.googleads.v1.common.CpvBidSimulationPointList getCpvBidPointList() {
+      if (cpvBidPointListBuilder_ == null) {
+        if (pointListCase_ == 10) {
+          return (com.google.ads.googleads.v1.common.CpvBidSimulationPointList) pointList_;
+        }
+        return com.google.ads.googleads.v1.common.CpvBidSimulationPointList.getDefaultInstance();
+      } else {
+        if (pointListCase_ == 10) {
+          return cpvBidPointListBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.common.CpvBidSimulationPointList.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Simulation points if the simulation type is CPV_BID.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     */
+    public Builder setCpvBidPointList(com.google.ads.googleads.v1.common.CpvBidSimulationPointList value) {
+      if (cpvBidPointListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        pointList_ = value;
+        onChanged();
+      } else {
+        cpvBidPointListBuilder_.setMessage(value);
+      }
+      pointListCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * Simulation points if the simulation type is CPV_BID.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     */
+    public Builder setCpvBidPointList(
+        com.google.ads.googleads.v1.common.CpvBidSimulationPointList.Builder builderForValue) {
+      if (cpvBidPointListBuilder_ == null) {
+        pointList_ = builderForValue.build();
+        onChanged();
+      } else {
+        cpvBidPointListBuilder_.setMessage(builderForValue.build());
+      }
+      pointListCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * Simulation points if the simulation type is CPV_BID.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     */
+    public Builder mergeCpvBidPointList(com.google.ads.googleads.v1.common.CpvBidSimulationPointList value) {
+      if (cpvBidPointListBuilder_ == null) {
+        if (pointListCase_ == 10 &&
+            pointList_ != com.google.ads.googleads.v1.common.CpvBidSimulationPointList.getDefaultInstance()) {
+          pointList_ = com.google.ads.googleads.v1.common.CpvBidSimulationPointList.newBuilder((com.google.ads.googleads.v1.common.CpvBidSimulationPointList) pointList_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          pointList_ = value;
+        }
+        onChanged();
+      } else {
+        if (pointListCase_ == 10) {
+          cpvBidPointListBuilder_.mergeFrom(value);
+        }
+        cpvBidPointListBuilder_.setMessage(value);
+      }
+      pointListCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * Simulation points if the simulation type is CPV_BID.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     */
+    public Builder clearCpvBidPointList() {
+      if (cpvBidPointListBuilder_ == null) {
+        if (pointListCase_ == 10) {
+          pointListCase_ = 0;
+          pointList_ = null;
+          onChanged();
+        }
+      } else {
+        if (pointListCase_ == 10) {
+          pointListCase_ = 0;
+          pointList_ = null;
+        }
+        cpvBidPointListBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Simulation points if the simulation type is CPV_BID.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     */
+    public com.google.ads.googleads.v1.common.CpvBidSimulationPointList.Builder getCpvBidPointListBuilder() {
+      return getCpvBidPointListFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Simulation points if the simulation type is CPV_BID.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     */
+    public com.google.ads.googleads.v1.common.CpvBidSimulationPointListOrBuilder getCpvBidPointListOrBuilder() {
+      if ((pointListCase_ == 10) && (cpvBidPointListBuilder_ != null)) {
+        return cpvBidPointListBuilder_.getMessageOrBuilder();
+      } else {
+        if (pointListCase_ == 10) {
+          return (com.google.ads.googleads.v1.common.CpvBidSimulationPointList) pointList_;
+        }
+        return com.google.ads.googleads.v1.common.CpvBidSimulationPointList.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Simulation points if the simulation type is CPV_BID.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.common.CpvBidSimulationPointList, com.google.ads.googleads.v1.common.CpvBidSimulationPointList.Builder, com.google.ads.googleads.v1.common.CpvBidSimulationPointListOrBuilder> 
+        getCpvBidPointListFieldBuilder() {
+      if (cpvBidPointListBuilder_ == null) {
+        if (!(pointListCase_ == 10)) {
+          pointList_ = com.google.ads.googleads.v1.common.CpvBidSimulationPointList.getDefaultInstance();
+        }
+        cpvBidPointListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.common.CpvBidSimulationPointList, com.google.ads.googleads.v1.common.CpvBidSimulationPointList.Builder, com.google.ads.googleads.v1.common.CpvBidSimulationPointListOrBuilder>(
+                (com.google.ads.googleads.v1.common.CpvBidSimulationPointList) pointList_,
+                getParentForChildren(),
+                isClean());
+        pointList_ = null;
+      }
+      pointListCase_ = 10;
+      onChanged();;
+      return cpvBidPointListBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

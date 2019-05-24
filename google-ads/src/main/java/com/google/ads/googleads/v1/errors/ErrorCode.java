@@ -463,6 +463,12 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 656: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 82;
+            errorCode_ = rawValue;
+            break;
+          }
           case 664: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 83;
@@ -532,6 +538,12 @@ private static final long serialVersionUID = 0L;
           case 776: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 97;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 784: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 98;
             errorCode_ = rawValue;
             break;
           }
@@ -634,6 +646,18 @@ private static final long serialVersionUID = 0L;
           case 944: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 118;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 960: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 120;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 968: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 121;
             errorCode_ = rawValue;
             break;
           }
@@ -751,6 +775,7 @@ private static final long serialVersionUID = 0L;
     CHANGE_STATUS_ERROR(79),
     FEED_ERROR(80),
     GEO_TARGET_CONSTANT_SUGGESTION_ERROR(81),
+    CAMPAIGN_DRAFT_ERROR(82),
     FEED_ITEM_ERROR(83),
     LABEL_ERROR(84),
     BILLING_SETUP_ERROR(87),
@@ -761,6 +786,7 @@ private static final long serialVersionUID = 0L;
     AD_GROUP_FEED_ERROR(94),
     CAMPAIGN_FEED_ERROR(96),
     CUSTOM_INTEREST_ERROR(97),
+    CAMPAIGN_EXPERIMENT_ERROR(98),
     EXTENSION_FEED_ITEM_ERROR(100),
     AD_PARAMETER_ERROR(101),
     FEED_ITEM_VALIDATION_ERROR(102),
@@ -771,6 +797,8 @@ private static final long serialVersionUID = 0L;
     PARTIAL_FAILURE_ERROR(112),
     POLICY_VALIDATION_PARAMETER_ERROR(114),
     SIZE_LIMIT_ERROR(118),
+    NOT_WHITELISTED_ERROR(120),
+    MANAGER_LINK_ERROR(121),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -864,6 +892,7 @@ private static final long serialVersionUID = 0L;
         case 79: return CHANGE_STATUS_ERROR;
         case 80: return FEED_ERROR;
         case 81: return GEO_TARGET_CONSTANT_SUGGESTION_ERROR;
+        case 82: return CAMPAIGN_DRAFT_ERROR;
         case 83: return FEED_ITEM_ERROR;
         case 84: return LABEL_ERROR;
         case 87: return BILLING_SETUP_ERROR;
@@ -874,6 +903,7 @@ private static final long serialVersionUID = 0L;
         case 94: return AD_GROUP_FEED_ERROR;
         case 96: return CAMPAIGN_FEED_ERROR;
         case 97: return CUSTOM_INTEREST_ERROR;
+        case 98: return CAMPAIGN_EXPERIMENT_ERROR;
         case 100: return EXTENSION_FEED_ITEM_ERROR;
         case 101: return AD_PARAMETER_ERROR;
         case 102: return FEED_ITEM_VALIDATION_ERROR;
@@ -884,6 +914,8 @@ private static final long serialVersionUID = 0L;
         case 112: return PARTIAL_FAILURE_ERROR;
         case 114: return POLICY_VALIDATION_PARAMETER_ERROR;
         case 118: return SIZE_LIMIT_ERROR;
+        case 120: return NOT_WHITELISTED_ERROR;
+        case 121: return MANAGER_LINK_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -3317,6 +3349,37 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError.UNSPECIFIED;
   }
 
+  public static final int CAMPAIGN_DRAFT_ERROR_FIELD_NUMBER = 82;
+  /**
+   * <pre>
+   * The reasons for the campaign draft error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+   */
+  public int getCampaignDraftErrorValue() {
+    if (errorCodeCase_ == 82) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the campaign draft error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+   */
+  public com.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError getCampaignDraftError() {
+    if (errorCodeCase_ == 82) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError result = com.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError.UNSPECIFIED;
+  }
+
   public static final int FEED_ITEM_ERROR_FIELD_NUMBER = 83;
   /**
    * <pre>
@@ -3625,6 +3688,37 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.ads.googleads.v1.errors.CustomInterestErrorEnum.CustomInterestError.UNRECOGNIZED : result;
     }
     return com.google.ads.googleads.v1.errors.CustomInterestErrorEnum.CustomInterestError.UNSPECIFIED;
+  }
+
+  public static final int CAMPAIGN_EXPERIMENT_ERROR_FIELD_NUMBER = 98;
+  /**
+   * <pre>
+   * The reasons for the campaign experiment error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+   */
+  public int getCampaignExperimentErrorValue() {
+    if (errorCodeCase_ == 98) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the campaign experiment error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+   */
+  public com.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError getCampaignExperimentError() {
+    if (errorCodeCase_ == 98) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError result = com.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError.UNSPECIFIED;
   }
 
   public static final int EXTENSION_FEED_ITEM_ERROR_FIELD_NUMBER = 100;
@@ -3937,6 +4031,68 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.errors.SizeLimitErrorEnum.SizeLimitError.UNSPECIFIED;
   }
 
+  public static final int NOT_WHITELISTED_ERROR_FIELD_NUMBER = 120;
+  /**
+   * <pre>
+   * The reasons for the not whitelisted error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+   */
+  public int getNotWhitelistedErrorValue() {
+    if (errorCodeCase_ == 120) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the not whitelisted error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+   */
+  public com.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError getNotWhitelistedError() {
+    if (errorCodeCase_ == 120) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError result = com.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError.UNSPECIFIED;
+  }
+
+  public static final int MANAGER_LINK_ERROR_FIELD_NUMBER = 121;
+  /**
+   * <pre>
+   * The reasons for the manager link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+   */
+  public int getManagerLinkErrorValue() {
+    if (errorCodeCase_ == 121) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the manager link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+   */
+  public com.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError getManagerLinkError() {
+    if (errorCodeCase_ == 121) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError result = com.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4158,6 +4314,9 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 81) {
       output.writeEnum(81, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 82) {
+      output.writeEnum(82, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 83) {
       output.writeEnum(83, ((java.lang.Integer) errorCode_));
     }
@@ -4193,6 +4352,9 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 97) {
       output.writeEnum(97, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 98) {
+      output.writeEnum(98, ((java.lang.Integer) errorCode_));
     }
     if (errorCodeCase_ == 100) {
       output.writeEnum(100, ((java.lang.Integer) errorCode_));
@@ -4244,6 +4406,12 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 118) {
       output.writeEnum(118, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 120) {
+      output.writeEnum(120, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 121) {
+      output.writeEnum(121, ((java.lang.Integer) errorCode_));
     }
     unknownFields.writeTo(output);
   }
@@ -4530,6 +4698,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(81, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 82) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(82, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 83) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(83, ((java.lang.Integer) errorCode_));
@@ -4577,6 +4749,10 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 97) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(97, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 98) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(98, ((java.lang.Integer) errorCode_));
     }
     if (errorCodeCase_ == 100) {
       size += com.google.protobuf.CodedOutputStream
@@ -4645,6 +4821,14 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 118) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(118, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 120) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(120, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 121) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(121, ((java.lang.Integer) errorCode_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -4978,6 +5162,10 @@ private static final long serialVersionUID = 0L;
         result = result && getGeoTargetConstantSuggestionErrorValue()
             == other.getGeoTargetConstantSuggestionErrorValue();
         break;
+      case 82:
+        result = result && getCampaignDraftErrorValue()
+            == other.getCampaignDraftErrorValue();
+        break;
       case 83:
         result = result && getFeedItemErrorValue()
             == other.getFeedItemErrorValue();
@@ -5018,6 +5206,10 @@ private static final long serialVersionUID = 0L;
         result = result && getCustomInterestErrorValue()
             == other.getCustomInterestErrorValue();
         break;
+      case 98:
+        result = result && getCampaignExperimentErrorValue()
+            == other.getCampaignExperimentErrorValue();
+        break;
       case 100:
         result = result && getExtensionFeedItemErrorValue()
             == other.getExtensionFeedItemErrorValue();
@@ -5057,6 +5249,14 @@ private static final long serialVersionUID = 0L;
       case 118:
         result = result && getSizeLimitErrorValue()
             == other.getSizeLimitErrorValue();
+        break;
+      case 120:
+        result = result && getNotWhitelistedErrorValue()
+            == other.getNotWhitelistedErrorValue();
+        break;
+      case 121:
+        result = result && getManagerLinkErrorValue()
+            == other.getManagerLinkErrorValue();
         break;
       case 0:
       default:
@@ -5385,6 +5585,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + GEO_TARGET_CONSTANT_SUGGESTION_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getGeoTargetConstantSuggestionErrorValue();
         break;
+      case 82:
+        hash = (37 * hash) + CAMPAIGN_DRAFT_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignDraftErrorValue();
+        break;
       case 83:
         hash = (37 * hash) + FEED_ITEM_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getFeedItemErrorValue();
@@ -5425,6 +5629,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CUSTOM_INTEREST_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getCustomInterestErrorValue();
         break;
+      case 98:
+        hash = (37 * hash) + CAMPAIGN_EXPERIMENT_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignExperimentErrorValue();
+        break;
       case 100:
         hash = (37 * hash) + EXTENSION_FEED_ITEM_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getExtensionFeedItemErrorValue();
@@ -5464,6 +5672,14 @@ private static final long serialVersionUID = 0L;
       case 118:
         hash = (37 * hash) + SIZE_LIMIT_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getSizeLimitErrorValue();
+        break;
+      case 120:
+        hash = (37 * hash) + NOT_WHITELISTED_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getNotWhitelistedErrorValue();
+        break;
+      case 121:
+        hash = (37 * hash) + MANAGER_LINK_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getManagerLinkErrorValue();
         break;
       case 0:
       default:
@@ -5867,6 +6083,9 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 81) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 82) {
+        result.errorCode_ = errorCode_;
+      }
       if (errorCodeCase_ == 83) {
         result.errorCode_ = errorCode_;
       }
@@ -5897,6 +6116,9 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 97) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 98) {
+        result.errorCode_ = errorCode_;
+      }
       if (errorCodeCase_ == 100) {
         result.errorCode_ = errorCode_;
       }
@@ -5925,6 +6147,12 @@ private static final long serialVersionUID = 0L;
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 118) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 120) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 121) {
         result.errorCode_ = errorCode_;
       }
       result.errorCodeCase_ = errorCodeCase_;
@@ -6289,6 +6517,10 @@ private static final long serialVersionUID = 0L;
           setGeoTargetConstantSuggestionErrorValue(other.getGeoTargetConstantSuggestionErrorValue());
           break;
         }
+        case CAMPAIGN_DRAFT_ERROR: {
+          setCampaignDraftErrorValue(other.getCampaignDraftErrorValue());
+          break;
+        }
         case FEED_ITEM_ERROR: {
           setFeedItemErrorValue(other.getFeedItemErrorValue());
           break;
@@ -6329,6 +6561,10 @@ private static final long serialVersionUID = 0L;
           setCustomInterestErrorValue(other.getCustomInterestErrorValue());
           break;
         }
+        case CAMPAIGN_EXPERIMENT_ERROR: {
+          setCampaignExperimentErrorValue(other.getCampaignExperimentErrorValue());
+          break;
+        }
         case EXTENSION_FEED_ITEM_ERROR: {
           setExtensionFeedItemErrorValue(other.getExtensionFeedItemErrorValue());
           break;
@@ -6367,6 +6603,14 @@ private static final long serialVersionUID = 0L;
         }
         case SIZE_LIMIT_ERROR: {
           setSizeLimitErrorValue(other.getSizeLimitErrorValue());
+          break;
+        }
+        case NOT_WHITELISTED_ERROR: {
+          setNotWhitelistedErrorValue(other.getNotWhitelistedErrorValue());
+          break;
+        }
+        case MANAGER_LINK_ERROR: {
+          setManagerLinkErrorValue(other.getManagerLinkErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -12191,6 +12435,80 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * The reasons for the campaign draft error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+     */
+    public int getCampaignDraftErrorValue() {
+      if (errorCodeCase_ == 82) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign draft error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+     */
+    public Builder setCampaignDraftErrorValue(int value) {
+      errorCodeCase_ = 82;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign draft error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+     */
+    public com.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError getCampaignDraftError() {
+      if (errorCodeCase_ == 82) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError result = com.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign draft error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+     */
+    public Builder setCampaignDraftError(com.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 82;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign draft error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.CampaignDraftErrorEnum.CampaignDraftError campaign_draft_error = 82;</code>
+     */
+    public Builder clearCampaignDraftError() {
+      if (errorCodeCase_ == 82) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
      * The reasons for the feed item error
      * </pre>
      *
@@ -12931,6 +13249,80 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * The reasons for the campaign experiment error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+     */
+    public int getCampaignExperimentErrorValue() {
+      if (errorCodeCase_ == 98) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign experiment error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+     */
+    public Builder setCampaignExperimentErrorValue(int value) {
+      errorCodeCase_ = 98;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign experiment error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+     */
+    public com.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError getCampaignExperimentError() {
+      if (errorCodeCase_ == 98) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError result = com.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign experiment error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+     */
+    public Builder setCampaignExperimentError(com.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 98;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign experiment error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.CampaignExperimentErrorEnum.CampaignExperimentError campaign_experiment_error = 98;</code>
+     */
+    public Builder clearCampaignExperimentError() {
+      if (errorCodeCase_ == 98) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
      * The reasons for the extension feed item error
      * </pre>
      *
@@ -13662,6 +14054,154 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSizeLimitError() {
       if (errorCodeCase_ == 118) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the not whitelisted error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+     */
+    public int getNotWhitelistedErrorValue() {
+      if (errorCodeCase_ == 120) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the not whitelisted error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+     */
+    public Builder setNotWhitelistedErrorValue(int value) {
+      errorCodeCase_ = 120;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the not whitelisted error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+     */
+    public com.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError getNotWhitelistedError() {
+      if (errorCodeCase_ == 120) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError result = com.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the not whitelisted error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+     */
+    public Builder setNotWhitelistedError(com.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 120;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the not whitelisted error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.NotWhitelistedErrorEnum.NotWhitelistedError not_whitelisted_error = 120;</code>
+     */
+    public Builder clearNotWhitelistedError() {
+      if (errorCodeCase_ == 120) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the manager link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+     */
+    public int getManagerLinkErrorValue() {
+      if (errorCodeCase_ == 121) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the manager link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+     */
+    public Builder setManagerLinkErrorValue(int value) {
+      errorCodeCase_ = 121;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the manager link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+     */
+    public com.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError getManagerLinkError() {
+      if (errorCodeCase_ == 121) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError result = com.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the manager link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+     */
+    public Builder setManagerLinkError(com.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 121;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the manager link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.errors.ManagerLinkErrorEnum.ManagerLinkError manager_link_error = 121;</code>
+     */
+    public Builder clearManagerLinkError() {
+      if (errorCodeCase_ == 121) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

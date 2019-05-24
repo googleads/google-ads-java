@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v1.common.TargetCpaSimulationPoint> points_;
   /**
    * <pre>
-   * Projected metrics for a series of target cpa amounts.
+   * Projected metrics for a series of target CPA amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -105,7 +105,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Projected metrics for a series of target cpa amounts.
+   * Projected metrics for a series of target CPA amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Projected metrics for a series of target cpa amounts.
+   * Projected metrics for a series of target CPA amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -126,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Projected metrics for a series of target cpa amounts.
+   * Projected metrics for a series of target CPA amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Projected metrics for a series of target cpa amounts.
+   * Projected metrics for a series of target CPA amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -521,7 +521,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -535,7 +535,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -570,7 +570,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -588,7 +588,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -608,7 +608,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -647,7 +647,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -665,7 +665,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -684,7 +684,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -701,7 +701,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -718,7 +718,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -729,7 +729,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -769,7 +769,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -781,7 +781,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Projected metrics for a series of target cpa amounts.
+     * Projected metrics for a series of target CPA amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>

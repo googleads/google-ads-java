@@ -42,6 +42,9 @@ public interface GoogleAdsVersion {
   @ServiceClientDescriptor(settingsClass = AdGroupExtensionSettingServiceSettings.class)
   AdGroupExtensionSettingServiceClient createAdGroupExtensionSettingServiceClient();
 
+  @ServiceClientDescriptor(settingsClass = CampaignExperimentServiceSettings.class)
+  CampaignExperimentServiceClient createCampaignExperimentServiceClient();
+
   @ServiceClientDescriptor(settingsClass = DynamicSearchAdsSearchTermViewServiceSettings.class)
   DynamicSearchAdsSearchTermViewServiceClient createDynamicSearchAdsSearchTermViewServiceClient();
 
@@ -215,6 +218,9 @@ public interface GoogleAdsVersion {
 
   @ServiceClientDescriptor(settingsClass = ParentalStatusViewServiceSettings.class)
   ParentalStatusViewServiceClient createParentalStatusViewServiceClient();
+
+  @ServiceClientDescriptor(settingsClass = CampaignDraftServiceSettings.class)
+  CampaignDraftServiceClient createCampaignDraftServiceClient();
 
   @ServiceClientDescriptor(settingsClass = CustomerClientServiceSettings.class)
   CustomerClientServiceClient createCustomerClientServiceClient();

@@ -193,6 +193,14 @@ private static final long serialVersionUID = 0L;
      * <code>SEARCH_DYNAMIC_ADS = 13;</code>
      */
     SEARCH_DYNAMIC_ADS(13),
+    /**
+     * <pre>
+     * The type for ad groups in Shopping Comparison Listing campaigns.
+     * </pre>
+     *
+     * <code>SHOPPING_COMPARISON_LISTING_ADS = 14;</code>
+     */
+    SHOPPING_COMPARISON_LISTING_ADS(14),
     UNRECOGNIZED(-1),
     ;
 
@@ -301,6 +309,14 @@ private static final long serialVersionUID = 0L;
      * <code>SEARCH_DYNAMIC_ADS = 13;</code>
      */
     public static final int SEARCH_DYNAMIC_ADS_VALUE = 13;
+    /**
+     * <pre>
+     * The type for ad groups in Shopping Comparison Listing campaigns.
+     * </pre>
+     *
+     * <code>SHOPPING_COMPARISON_LISTING_ADS = 14;</code>
+     */
+    public static final int SHOPPING_COMPARISON_LISTING_ADS_VALUE = 14;
 
 
     public final int getNumber() {
@@ -334,6 +350,7 @@ private static final long serialVersionUID = 0L;
         case 11: return VIDEO_NON_SKIPPABLE_IN_STREAM;
         case 12: return VIDEO_OUTSTREAM;
         case 13: return SEARCH_DYNAMIC_ADS;
+        case 14: return SHOPPING_COMPARISON_LISTING_ADS;
         default: return null;
       }
     }

@@ -684,6 +684,56 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The campaign draft referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.CampaignDraft campaign_draft = 49;</code>
+   */
+  boolean hasCampaignDraft();
+  /**
+   * <pre>
+   * The campaign draft referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.CampaignDraft campaign_draft = 49;</code>
+   */
+  com.google.ads.googleads.v1.resources.CampaignDraft getCampaignDraft();
+  /**
+   * <pre>
+   * The campaign draft referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.CampaignDraft campaign_draft = 49;</code>
+   */
+  com.google.ads.googleads.v1.resources.CampaignDraftOrBuilder getCampaignDraftOrBuilder();
+
+  /**
+   * <pre>
+   * The campaign experiment referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 84;</code>
+   */
+  boolean hasCampaignExperiment();
+  /**
+   * <pre>
+   * The campaign experiment referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 84;</code>
+   */
+  com.google.ads.googleads.v1.resources.CampaignExperiment getCampaignExperiment();
+  /**
+   * <pre>
+   * The campaign experiment referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 84;</code>
+   */
+  com.google.ads.googleads.v1.resources.CampaignExperimentOrBuilder getCampaignExperimentOrBuilder();
+
+  /**
+   * <pre>
    * The campaign extension setting referenced in the query.
    * </pre>
    *

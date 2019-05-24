@@ -9,7 +9,7 @@ public interface TargetCpaSimulationPointListOrBuilder extends
 
   /**
    * <pre>
-   * Projected metrics for a series of target cpa amounts.
+   * Projected metrics for a series of target CPA amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -18,7 +18,7 @@ public interface TargetCpaSimulationPointListOrBuilder extends
       getPointsList();
   /**
    * <pre>
-   * Projected metrics for a series of target cpa amounts.
+   * Projected metrics for a series of target CPA amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -26,7 +26,7 @@ public interface TargetCpaSimulationPointListOrBuilder extends
   com.google.ads.googleads.v1.common.TargetCpaSimulationPoint getPoints(int index);
   /**
    * <pre>
-   * Projected metrics for a series of target cpa amounts.
+   * Projected metrics for a series of target CPA amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -34,7 +34,7 @@ public interface TargetCpaSimulationPointListOrBuilder extends
   int getPointsCount();
   /**
    * <pre>
-   * Projected metrics for a series of target cpa amounts.
+   * Projected metrics for a series of target CPA amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>
@@ -43,7 +43,7 @@ public interface TargetCpaSimulationPointListOrBuilder extends
       getPointsOrBuilderList();
   /**
    * <pre>
-   * Projected metrics for a series of target cpa amounts.
+   * Projected metrics for a series of target CPA amounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.common.TargetCpaSimulationPoint points = 1;</code>

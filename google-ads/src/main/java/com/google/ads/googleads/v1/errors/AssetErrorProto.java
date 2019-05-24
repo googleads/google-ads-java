@@ -30,18 +30,19 @@ public final class AssetErrorProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v1/errors/asset_e" +
       "rror.proto\022\036google.ads.googleads.v1.erro" +
-      "rs\032\034google/api/annotations.proto\"\264\001\n\016Ass" +
-      "etErrorEnum\"\241\001\n\nAssetError\022\017\n\013UNSPECIFIE" +
+      "rs\032\034google/api/annotations.proto\"\322\001\n\016Ass" +
+      "etErrorEnum\"\277\001\n\nAssetError\022\017\n\013UNSPECIFIE" +
       "D\020\000\022\013\n\007UNKNOWN\020\001\022+\n\'CUSTOMER_NOT_WHITELI" +
       "STED_FOR_ASSET_TYPE\020\002\022\023\n\017DUPLICATE_ASSET" +
       "\020\003\022\030\n\024DUPLICATE_ASSET_NAME\020\004\022\031\n\025ASSET_DA" +
-      "TA_IS_MISSING\020\005B\352\001\n\"com.google.ads.googl" +
-      "eads.v1.errorsB\017AssetErrorProtoP\001ZDgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v1/errors;errors\242\002\003GAA\252\002\036Google.A" +
-      "ds.GoogleAds.V1.Errors\312\002\036Google\\Ads\\Goog" +
-      "leAds\\V1\\Errors\352\002\"Google::Ads::GoogleAds" +
-      "::V1::Errorsb\006proto3"
+      "TA_IS_MISSING\020\005\022\034\n\030CANNOT_MODIFY_ASSET_N" +
+      "AME\020\006B\352\001\n\"com.google.ads.googleads.v1.er" +
+      "rorsB\017AssetErrorProtoP\001ZDgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v1/" +
+      "errors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
+      "ds.V1.Errors\312\002\036Google\\Ads\\GoogleAds\\V1\\E" +
+      "rrors\352\002\"Google::Ads::GoogleAds::V1::Erro" +
+      "rsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

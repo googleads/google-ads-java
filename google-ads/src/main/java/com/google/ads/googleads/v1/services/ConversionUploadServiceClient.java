@@ -38,7 +38,8 @@ import javax.annotation.Generated;
  *   String customerId = "";
  *   List&lt;ClickConversion&gt; conversions = new ArrayList&lt;&gt;();
  *   boolean partialFailure = false;
- *   UploadClickConversionsResponse response = conversionUploadServiceClient.uploadClickConversions(customerId, conversions, partialFailure);
+ *   boolean validateOnly = false;
+ *   UploadClickConversionsResponse response = conversionUploadServiceClient.uploadClickConversions(customerId, conversions, partialFailure, validateOnly);
  * }
  * </code>
  * </pre>
@@ -160,7 +161,8 @@ public class ConversionUploadServiceClient implements BackgroundResource {
    *   String customerId = "";
    *   List&lt;ClickConversion&gt; conversions = new ArrayList&lt;&gt;();
    *   boolean partialFailure = false;
-   *   UploadClickConversionsResponse response = conversionUploadServiceClient.uploadClickConversions(customerId, conversions, partialFailure);
+   *   boolean validateOnly = false;
+   *   UploadClickConversionsResponse response = conversionUploadServiceClient.uploadClickConversions(customerId, conversions, partialFailure, validateOnly);
    * }
    * </code></pre>
    *
@@ -169,16 +171,22 @@ public class ConversionUploadServiceClient implements BackgroundResource {
    * @param partialFailure If true, successful operations will be carried out and invalid operations
    *     will return errors. If false, all operations will be carried out in one transaction if and
    *     only if they are all valid. This should always be set to true.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UploadClickConversionsResponse uploadClickConversions(
-      String customerId, List<ClickConversion> conversions, boolean partialFailure) {
+      String customerId,
+      List<ClickConversion> conversions,
+      boolean partialFailure,
+      boolean validateOnly) {
 
     UploadClickConversionsRequest request =
         UploadClickConversionsRequest.newBuilder()
             .setCustomerId(customerId)
             .addAllConversions(conversions)
             .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
             .build();
     return uploadClickConversions(request);
   }
@@ -274,7 +282,8 @@ public class ConversionUploadServiceClient implements BackgroundResource {
    *   String customerId = "";
    *   List&lt;CallConversion&gt; conversions = new ArrayList&lt;&gt;();
    *   boolean partialFailure = false;
-   *   UploadCallConversionsResponse response = conversionUploadServiceClient.uploadCallConversions(customerId, conversions, partialFailure);
+   *   boolean validateOnly = false;
+   *   UploadCallConversionsResponse response = conversionUploadServiceClient.uploadCallConversions(customerId, conversions, partialFailure, validateOnly);
    * }
    * </code></pre>
    *
@@ -283,16 +292,22 @@ public class ConversionUploadServiceClient implements BackgroundResource {
    * @param partialFailure If true, successful operations will be carried out and invalid operations
    *     will return errors. If false, all operations will be carried out in one transaction if and
    *     only if they are all valid. This should always be set to true.
+   * @param validateOnly If true, the request is validated but not executed. Only errors are
+   *     returned, not results.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UploadCallConversionsResponse uploadCallConversions(
-      String customerId, List<CallConversion> conversions, boolean partialFailure) {
+      String customerId,
+      List<CallConversion> conversions,
+      boolean partialFailure,
+      boolean validateOnly) {
 
     UploadCallConversionsRequest request =
         UploadCallConversionsRequest.newBuilder()
             .setCustomerId(customerId)
             .addAllConversions(conversions)
             .setPartialFailure(partialFailure)
+            .setValidateOnly(validateOnly)
             .build();
     return uploadCallConversions(request);
   }

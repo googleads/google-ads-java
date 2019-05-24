@@ -128,6 +128,14 @@ private static final long serialVersionUID = 0L;
     DESKTOP(4),
     /**
      * <pre>
+     * Smart TVs and game consoles.
+     * </pre>
+     *
+     * <code>CONNECTED_TV = 6;</code>
+     */
+    CONNECTED_TV(6),
+    /**
+     * <pre>
      * Other device types.
      * </pre>
      *
@@ -179,6 +187,14 @@ private static final long serialVersionUID = 0L;
     public static final int DESKTOP_VALUE = 4;
     /**
      * <pre>
+     * Smart TVs and game consoles.
+     * </pre>
+     *
+     * <code>CONNECTED_TV = 6;</code>
+     */
+    public static final int CONNECTED_TV_VALUE = 6;
+    /**
+     * <pre>
      * Other device types.
      * </pre>
      *
@@ -210,6 +226,7 @@ private static final long serialVersionUID = 0L;
         case 2: return MOBILE;
         case 3: return TABLET;
         case 4: return DESKTOP;
+        case 6: return CONNECTED_TV;
         case 5: return OTHER;
         default: return null;
       }

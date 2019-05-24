@@ -341,6 +341,34 @@ private static final long serialVersionUID = 0L;
             responseCase_ = 23;
             break;
           }
+          case 194: {
+            com.google.ads.googleads.v1.services.MutateCampaignDraftResult.Builder subBuilder = null;
+            if (responseCase_ == 24) {
+              subBuilder = ((com.google.ads.googleads.v1.services.MutateCampaignDraftResult) response_).toBuilder();
+            }
+            response_ =
+                input.readMessage(com.google.ads.googleads.v1.services.MutateCampaignDraftResult.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.services.MutateCampaignDraftResult) response_);
+              response_ = subBuilder.buildPartial();
+            }
+            responseCase_ = 24;
+            break;
+          }
+          case 202: {
+            com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.Builder subBuilder = null;
+            if (responseCase_ == 25) {
+              subBuilder = ((com.google.ads.googleads.v1.services.MutateCampaignExperimentResult) response_).toBuilder();
+            }
+            response_ =
+                input.readMessage(com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v1.services.MutateCampaignExperimentResult) response_);
+              response_ = subBuilder.buildPartial();
+            }
+            responseCase_ = 25;
+            break;
+          }
           case 210: {
             com.google.ads.googleads.v1.services.MutateCampaignExtensionSettingResult.Builder subBuilder = null;
             if (responseCase_ == 26) {
@@ -616,6 +644,8 @@ private static final long serialVersionUID = 0L;
     CAMPAIGN_BID_MODIFIER_RESULT(7),
     CAMPAIGN_BUDGET_RESULT(8),
     CAMPAIGN_CRITERION_RESULT(13),
+    CAMPAIGN_DRAFT_RESULT(24),
+    CAMPAIGN_EXPERIMENT_RESULT(25),
     CAMPAIGN_EXTENSION_SETTING_RESULT(26),
     CAMPAIGN_FEED_RESULT(27),
     CAMPAIGN_LABEL_RESULT(28),
@@ -668,6 +698,8 @@ private static final long serialVersionUID = 0L;
         case 7: return CAMPAIGN_BID_MODIFIER_RESULT;
         case 8: return CAMPAIGN_BUDGET_RESULT;
         case 13: return CAMPAIGN_CRITERION_RESULT;
+        case 24: return CAMPAIGN_DRAFT_RESULT;
+        case 25: return CAMPAIGN_EXPERIMENT_RESULT;
         case 26: return CAMPAIGN_EXTENSION_SETTING_RESULT;
         case 27: return CAMPAIGN_FEED_RESULT;
         case 28: return CAMPAIGN_LABEL_RESULT;
@@ -1273,6 +1305,82 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v1.services.MutateCampaignCriterionResult) response_;
     }
     return com.google.ads.googleads.v1.services.MutateCampaignCriterionResult.getDefaultInstance();
+  }
+
+  public static final int CAMPAIGN_DRAFT_RESULT_FIELD_NUMBER = 24;
+  /**
+   * <pre>
+   * The result for the campaign draft mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+   */
+  public boolean hasCampaignDraftResult() {
+    return responseCase_ == 24;
+  }
+  /**
+   * <pre>
+   * The result for the campaign draft mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+   */
+  public com.google.ads.googleads.v1.services.MutateCampaignDraftResult getCampaignDraftResult() {
+    if (responseCase_ == 24) {
+       return (com.google.ads.googleads.v1.services.MutateCampaignDraftResult) response_;
+    }
+    return com.google.ads.googleads.v1.services.MutateCampaignDraftResult.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The result for the campaign draft mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+   */
+  public com.google.ads.googleads.v1.services.MutateCampaignDraftResultOrBuilder getCampaignDraftResultOrBuilder() {
+    if (responseCase_ == 24) {
+       return (com.google.ads.googleads.v1.services.MutateCampaignDraftResult) response_;
+    }
+    return com.google.ads.googleads.v1.services.MutateCampaignDraftResult.getDefaultInstance();
+  }
+
+  public static final int CAMPAIGN_EXPERIMENT_RESULT_FIELD_NUMBER = 25;
+  /**
+   * <pre>
+   * The result for the campaign experiment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+   */
+  public boolean hasCampaignExperimentResult() {
+    return responseCase_ == 25;
+  }
+  /**
+   * <pre>
+   * The result for the campaign experiment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+   */
+  public com.google.ads.googleads.v1.services.MutateCampaignExperimentResult getCampaignExperimentResult() {
+    if (responseCase_ == 25) {
+       return (com.google.ads.googleads.v1.services.MutateCampaignExperimentResult) response_;
+    }
+    return com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The result for the campaign experiment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+   */
+  public com.google.ads.googleads.v1.services.MutateCampaignExperimentResultOrBuilder getCampaignExperimentResultOrBuilder() {
+    if (responseCase_ == 25) {
+       return (com.google.ads.googleads.v1.services.MutateCampaignExperimentResult) response_;
+    }
+    return com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.getDefaultInstance();
   }
 
   public static final int CAMPAIGN_EXTENSION_SETTING_RESULT_FIELD_NUMBER = 26;
@@ -2188,6 +2296,12 @@ private static final long serialVersionUID = 0L;
     if (responseCase_ == 23) {
       output.writeMessage(23, (com.google.ads.googleads.v1.services.MutateAssetResult) response_);
     }
+    if (responseCase_ == 24) {
+      output.writeMessage(24, (com.google.ads.googleads.v1.services.MutateCampaignDraftResult) response_);
+    }
+    if (responseCase_ == 25) {
+      output.writeMessage(25, (com.google.ads.googleads.v1.services.MutateCampaignExperimentResult) response_);
+    }
     if (responseCase_ == 26) {
       output.writeMessage(26, (com.google.ads.googleads.v1.services.MutateCampaignExtensionSettingResult) response_);
     }
@@ -2328,6 +2442,14 @@ private static final long serialVersionUID = 0L;
     if (responseCase_ == 23) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(23, (com.google.ads.googleads.v1.services.MutateAssetResult) response_);
+    }
+    if (responseCase_ == 24) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(24, (com.google.ads.googleads.v1.services.MutateCampaignDraftResult) response_);
+    }
+    if (responseCase_ == 25) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(25, (com.google.ads.googleads.v1.services.MutateCampaignExperimentResult) response_);
     }
     if (responseCase_ == 26) {
       size += com.google.protobuf.CodedOutputStream
@@ -2472,6 +2594,14 @@ private static final long serialVersionUID = 0L;
       case 13:
         result = result && getCampaignCriterionResult()
             .equals(other.getCampaignCriterionResult());
+        break;
+      case 24:
+        result = result && getCampaignDraftResult()
+            .equals(other.getCampaignDraftResult());
+        break;
+      case 25:
+        result = result && getCampaignExperimentResult()
+            .equals(other.getCampaignExperimentResult());
         break;
       case 26:
         result = result && getCampaignExtensionSettingResult()
@@ -2635,6 +2765,14 @@ private static final long serialVersionUID = 0L;
       case 13:
         hash = (37 * hash) + CAMPAIGN_CRITERION_RESULT_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignCriterionResult().hashCode();
+        break;
+      case 24:
+        hash = (37 * hash) + CAMPAIGN_DRAFT_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignDraftResult().hashCode();
+        break;
+      case 25:
+        hash = (37 * hash) + CAMPAIGN_EXPERIMENT_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignExperimentResult().hashCode();
         break;
       case 26:
         hash = (37 * hash) + CAMPAIGN_EXTENSION_SETTING_RESULT_FIELD_NUMBER;
@@ -2997,6 +3135,20 @@ private static final long serialVersionUID = 0L;
           result.response_ = campaignCriterionResultBuilder_.build();
         }
       }
+      if (responseCase_ == 24) {
+        if (campaignDraftResultBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = campaignDraftResultBuilder_.build();
+        }
+      }
+      if (responseCase_ == 25) {
+        if (campaignExperimentResultBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = campaignExperimentResultBuilder_.build();
+        }
+      }
       if (responseCase_ == 26) {
         if (campaignExtensionSettingResultBuilder_ == null) {
           result.response_ = response_;
@@ -3259,6 +3411,14 @@ private static final long serialVersionUID = 0L;
         }
         case CAMPAIGN_CRITERION_RESULT: {
           mergeCampaignCriterionResult(other.getCampaignCriterionResult());
+          break;
+        }
+        case CAMPAIGN_DRAFT_RESULT: {
+          mergeCampaignDraftResult(other.getCampaignDraftResult());
+          break;
+        }
+        case CAMPAIGN_EXPERIMENT_RESULT: {
+          mergeCampaignExperimentResult(other.getCampaignExperimentResult());
           break;
         }
         case CAMPAIGN_EXTENSION_SETTING_RESULT: {
@@ -5975,6 +6135,350 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 13;
       onChanged();;
       return campaignCriterionResultBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.services.MutateCampaignDraftResult, com.google.ads.googleads.v1.services.MutateCampaignDraftResult.Builder, com.google.ads.googleads.v1.services.MutateCampaignDraftResultOrBuilder> campaignDraftResultBuilder_;
+    /**
+     * <pre>
+     * The result for the campaign draft mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+     */
+    public boolean hasCampaignDraftResult() {
+      return responseCase_ == 24;
+    }
+    /**
+     * <pre>
+     * The result for the campaign draft mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+     */
+    public com.google.ads.googleads.v1.services.MutateCampaignDraftResult getCampaignDraftResult() {
+      if (campaignDraftResultBuilder_ == null) {
+        if (responseCase_ == 24) {
+          return (com.google.ads.googleads.v1.services.MutateCampaignDraftResult) response_;
+        }
+        return com.google.ads.googleads.v1.services.MutateCampaignDraftResult.getDefaultInstance();
+      } else {
+        if (responseCase_ == 24) {
+          return campaignDraftResultBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.services.MutateCampaignDraftResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the campaign draft mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+     */
+    public Builder setCampaignDraftResult(com.google.ads.googleads.v1.services.MutateCampaignDraftResult value) {
+      if (campaignDraftResultBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        response_ = value;
+        onChanged();
+      } else {
+        campaignDraftResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 24;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign draft mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+     */
+    public Builder setCampaignDraftResult(
+        com.google.ads.googleads.v1.services.MutateCampaignDraftResult.Builder builderForValue) {
+      if (campaignDraftResultBuilder_ == null) {
+        response_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignDraftResultBuilder_.setMessage(builderForValue.build());
+      }
+      responseCase_ = 24;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign draft mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+     */
+    public Builder mergeCampaignDraftResult(com.google.ads.googleads.v1.services.MutateCampaignDraftResult value) {
+      if (campaignDraftResultBuilder_ == null) {
+        if (responseCase_ == 24 &&
+            response_ != com.google.ads.googleads.v1.services.MutateCampaignDraftResult.getDefaultInstance()) {
+          response_ = com.google.ads.googleads.v1.services.MutateCampaignDraftResult.newBuilder((com.google.ads.googleads.v1.services.MutateCampaignDraftResult) response_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          response_ = value;
+        }
+        onChanged();
+      } else {
+        if (responseCase_ == 24) {
+          campaignDraftResultBuilder_.mergeFrom(value);
+        }
+        campaignDraftResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 24;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign draft mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+     */
+    public Builder clearCampaignDraftResult() {
+      if (campaignDraftResultBuilder_ == null) {
+        if (responseCase_ == 24) {
+          responseCase_ = 0;
+          response_ = null;
+          onChanged();
+        }
+      } else {
+        if (responseCase_ == 24) {
+          responseCase_ = 0;
+          response_ = null;
+        }
+        campaignDraftResultBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign draft mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+     */
+    public com.google.ads.googleads.v1.services.MutateCampaignDraftResult.Builder getCampaignDraftResultBuilder() {
+      return getCampaignDraftResultFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The result for the campaign draft mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+     */
+    public com.google.ads.googleads.v1.services.MutateCampaignDraftResultOrBuilder getCampaignDraftResultOrBuilder() {
+      if ((responseCase_ == 24) && (campaignDraftResultBuilder_ != null)) {
+        return campaignDraftResultBuilder_.getMessageOrBuilder();
+      } else {
+        if (responseCase_ == 24) {
+          return (com.google.ads.googleads.v1.services.MutateCampaignDraftResult) response_;
+        }
+        return com.google.ads.googleads.v1.services.MutateCampaignDraftResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the campaign draft mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.services.MutateCampaignDraftResult, com.google.ads.googleads.v1.services.MutateCampaignDraftResult.Builder, com.google.ads.googleads.v1.services.MutateCampaignDraftResultOrBuilder> 
+        getCampaignDraftResultFieldBuilder() {
+      if (campaignDraftResultBuilder_ == null) {
+        if (!(responseCase_ == 24)) {
+          response_ = com.google.ads.googleads.v1.services.MutateCampaignDraftResult.getDefaultInstance();
+        }
+        campaignDraftResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.services.MutateCampaignDraftResult, com.google.ads.googleads.v1.services.MutateCampaignDraftResult.Builder, com.google.ads.googleads.v1.services.MutateCampaignDraftResultOrBuilder>(
+                (com.google.ads.googleads.v1.services.MutateCampaignDraftResult) response_,
+                getParentForChildren(),
+                isClean());
+        response_ = null;
+      }
+      responseCase_ = 24;
+      onChanged();;
+      return campaignDraftResultBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.services.MutateCampaignExperimentResult, com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.Builder, com.google.ads.googleads.v1.services.MutateCampaignExperimentResultOrBuilder> campaignExperimentResultBuilder_;
+    /**
+     * <pre>
+     * The result for the campaign experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+     */
+    public boolean hasCampaignExperimentResult() {
+      return responseCase_ == 25;
+    }
+    /**
+     * <pre>
+     * The result for the campaign experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+     */
+    public com.google.ads.googleads.v1.services.MutateCampaignExperimentResult getCampaignExperimentResult() {
+      if (campaignExperimentResultBuilder_ == null) {
+        if (responseCase_ == 25) {
+          return (com.google.ads.googleads.v1.services.MutateCampaignExperimentResult) response_;
+        }
+        return com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.getDefaultInstance();
+      } else {
+        if (responseCase_ == 25) {
+          return campaignExperimentResultBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the campaign experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+     */
+    public Builder setCampaignExperimentResult(com.google.ads.googleads.v1.services.MutateCampaignExperimentResult value) {
+      if (campaignExperimentResultBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        response_ = value;
+        onChanged();
+      } else {
+        campaignExperimentResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 25;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+     */
+    public Builder setCampaignExperimentResult(
+        com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.Builder builderForValue) {
+      if (campaignExperimentResultBuilder_ == null) {
+        response_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignExperimentResultBuilder_.setMessage(builderForValue.build());
+      }
+      responseCase_ = 25;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+     */
+    public Builder mergeCampaignExperimentResult(com.google.ads.googleads.v1.services.MutateCampaignExperimentResult value) {
+      if (campaignExperimentResultBuilder_ == null) {
+        if (responseCase_ == 25 &&
+            response_ != com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.getDefaultInstance()) {
+          response_ = com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.newBuilder((com.google.ads.googleads.v1.services.MutateCampaignExperimentResult) response_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          response_ = value;
+        }
+        onChanged();
+      } else {
+        if (responseCase_ == 25) {
+          campaignExperimentResultBuilder_.mergeFrom(value);
+        }
+        campaignExperimentResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 25;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+     */
+    public Builder clearCampaignExperimentResult() {
+      if (campaignExperimentResultBuilder_ == null) {
+        if (responseCase_ == 25) {
+          responseCase_ = 0;
+          response_ = null;
+          onChanged();
+        }
+      } else {
+        if (responseCase_ == 25) {
+          responseCase_ = 0;
+          response_ = null;
+        }
+        campaignExperimentResultBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+     */
+    public com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.Builder getCampaignExperimentResultBuilder() {
+      return getCampaignExperimentResultFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The result for the campaign experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+     */
+    public com.google.ads.googleads.v1.services.MutateCampaignExperimentResultOrBuilder getCampaignExperimentResultOrBuilder() {
+      if ((responseCase_ == 25) && (campaignExperimentResultBuilder_ != null)) {
+        return campaignExperimentResultBuilder_.getMessageOrBuilder();
+      } else {
+        if (responseCase_ == 25) {
+          return (com.google.ads.googleads.v1.services.MutateCampaignExperimentResult) response_;
+        }
+        return com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the campaign experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v1.services.MutateCampaignExperimentResult, com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.Builder, com.google.ads.googleads.v1.services.MutateCampaignExperimentResultOrBuilder> 
+        getCampaignExperimentResultFieldBuilder() {
+      if (campaignExperimentResultBuilder_ == null) {
+        if (!(responseCase_ == 25)) {
+          response_ = com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.getDefaultInstance();
+        }
+        campaignExperimentResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v1.services.MutateCampaignExperimentResult, com.google.ads.googleads.v1.services.MutateCampaignExperimentResult.Builder, com.google.ads.googleads.v1.services.MutateCampaignExperimentResultOrBuilder>(
+                (com.google.ads.googleads.v1.services.MutateCampaignExperimentResult) response_,
+                getParentForChildren(),
+                isClean());
+        response_ = null;
+      }
+      responseCase_ = 25;
+      onChanged();;
+      return campaignExperimentResultBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

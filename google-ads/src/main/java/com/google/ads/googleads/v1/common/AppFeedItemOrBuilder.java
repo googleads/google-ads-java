@@ -10,7 +10,8 @@ public interface AppFeedItemOrBuilder extends
   /**
    * <pre>
    * The visible text displayed when the link is rendered in an ad.
-   * The length of this string should be between 1 and 25, inclusive.
+   * This string must not be empty, and the length of this string should
+   * be between 1 and 25, inclusive.
    * </pre>
    *
    * <code>.google.protobuf.StringValue link_text = 1;</code>
@@ -19,7 +20,8 @@ public interface AppFeedItemOrBuilder extends
   /**
    * <pre>
    * The visible text displayed when the link is rendered in an ad.
-   * The length of this string should be between 1 and 25, inclusive.
+   * This string must not be empty, and the length of this string should
+   * be between 1 and 25, inclusive.
    * </pre>
    *
    * <code>.google.protobuf.StringValue link_text = 1;</code>
@@ -28,7 +30,8 @@ public interface AppFeedItemOrBuilder extends
   /**
    * <pre>
    * The visible text displayed when the link is rendered in an ad.
-   * The length of this string should be between 1 and 25, inclusive.
+   * This string must not be empty, and the length of this string should
+   * be between 1 and 25, inclusive.
    * </pre>
    *
    * <code>.google.protobuf.StringValue link_text = 1;</code>
@@ -66,6 +69,7 @@ public interface AppFeedItemOrBuilder extends
   /**
    * <pre>
    * The application store that the target application belongs to.
+   * This field is required.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.AppStoreEnum.AppStore app_store = 3;</code>
@@ -74,6 +78,7 @@ public interface AppFeedItemOrBuilder extends
   /**
    * <pre>
    * The application store that the target application belongs to.
+   * This field is required.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.AppStoreEnum.AppStore app_store = 3;</code>
@@ -83,6 +88,7 @@ public interface AppFeedItemOrBuilder extends
   /**
    * <pre>
    * A list of possible final URLs after all cross domain redirects.
+   * This list must not be empty.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
@@ -92,6 +98,7 @@ public interface AppFeedItemOrBuilder extends
   /**
    * <pre>
    * A list of possible final URLs after all cross domain redirects.
+   * This list must not be empty.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
@@ -100,6 +107,7 @@ public interface AppFeedItemOrBuilder extends
   /**
    * <pre>
    * A list of possible final URLs after all cross domain redirects.
+   * This list must not be empty.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
@@ -108,6 +116,7 @@ public interface AppFeedItemOrBuilder extends
   /**
    * <pre>
    * A list of possible final URLs after all cross domain redirects.
+   * This list must not be empty.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
@@ -117,6 +126,7 @@ public interface AppFeedItemOrBuilder extends
   /**
    * <pre>
    * A list of possible final URLs after all cross domain redirects.
+   * This list must not be empty.
    * </pre>
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>

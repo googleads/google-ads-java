@@ -384,6 +384,56 @@ public interface MutateOperationOrBuilder extends
 
   /**
    * <pre>
+   * A campaign draft mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.CampaignDraftOperation campaign_draft_operation = 24;</code>
+   */
+  boolean hasCampaignDraftOperation();
+  /**
+   * <pre>
+   * A campaign draft mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.CampaignDraftOperation campaign_draft_operation = 24;</code>
+   */
+  com.google.ads.googleads.v1.services.CampaignDraftOperation getCampaignDraftOperation();
+  /**
+   * <pre>
+   * A campaign draft mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.CampaignDraftOperation campaign_draft_operation = 24;</code>
+   */
+  com.google.ads.googleads.v1.services.CampaignDraftOperationOrBuilder getCampaignDraftOperationOrBuilder();
+
+  /**
+   * <pre>
+   * A campaign experiment mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.CampaignExperimentOperation campaign_experiment_operation = 25;</code>
+   */
+  boolean hasCampaignExperimentOperation();
+  /**
+   * <pre>
+   * A campaign experiment mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.CampaignExperimentOperation campaign_experiment_operation = 25;</code>
+   */
+  com.google.ads.googleads.v1.services.CampaignExperimentOperation getCampaignExperimentOperation();
+  /**
+   * <pre>
+   * A campaign experiment mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.services.CampaignExperimentOperation campaign_experiment_operation = 25;</code>
+   */
+  com.google.ads.googleads.v1.services.CampaignExperimentOperationOrBuilder getCampaignExperimentOperationOrBuilder();
+
+  /**
+   * <pre>
    * A campaign extension setting mutate operation.
    * </pre>
    *

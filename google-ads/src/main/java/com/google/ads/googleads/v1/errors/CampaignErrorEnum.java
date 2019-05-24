@@ -410,6 +410,24 @@ private static final long serialVersionUID = 0L;
      * <code>APP_NOT_FOUND = 41;</code>
      */
     APP_NOT_FOUND(41),
+    /**
+     * <pre>
+     * Campaign.shopping_setting.enable_local is not supported for the specified
+     * campaign type.
+     * </pre>
+     *
+     * <code>SHOPPING_ENABLE_LOCAL_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE = 42;</code>
+     */
+    SHOPPING_ENABLE_LOCAL_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE(42),
+    /**
+     * <pre>
+     * The merchant does not support the creation of campaigns for Shopping
+     * Comparison Listing Ads.
+     * </pre>
+     *
+     * <code>MERCHANT_NOT_ALLOWED_FOR_COMPARISON_LISTING_ADS = 43;</code>
+     */
+    MERCHANT_NOT_ALLOWED_FOR_COMPARISON_LISTING_ADS(43),
     UNRECOGNIZED(-1),
     ;
 
@@ -737,6 +755,24 @@ private static final long serialVersionUID = 0L;
      * <code>APP_NOT_FOUND = 41;</code>
      */
     public static final int APP_NOT_FOUND_VALUE = 41;
+    /**
+     * <pre>
+     * Campaign.shopping_setting.enable_local is not supported for the specified
+     * campaign type.
+     * </pre>
+     *
+     * <code>SHOPPING_ENABLE_LOCAL_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE = 42;</code>
+     */
+    public static final int SHOPPING_ENABLE_LOCAL_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE_VALUE = 42;
+    /**
+     * <pre>
+     * The merchant does not support the creation of campaigns for Shopping
+     * Comparison Listing Ads.
+     * </pre>
+     *
+     * <code>MERCHANT_NOT_ALLOWED_FOR_COMPARISON_LISTING_ADS = 43;</code>
+     */
+    public static final int MERCHANT_NOT_ALLOWED_FOR_COMPARISON_LISTING_ADS_VALUE = 43;
 
 
     public final int getNumber() {
@@ -796,6 +832,8 @@ private static final long serialVersionUID = 0L;
         case 39: return MISSING_HOTEL_SETTING;
         case 40: return CANNOT_USE_SHARED_CAMPAIGN_BUDGET_WHILE_PART_OF_CAMPAIGN_GROUP;
         case 41: return APP_NOT_FOUND;
+        case 42: return SHOPPING_ENABLE_LOCAL_NOT_SUPPORTED_FOR_CAMPAIGN_TYPE;
+        case 43: return MERCHANT_NOT_ALLOWED_FOR_COMPARISON_LISTING_ADS;
         default: return null;
       }
     }

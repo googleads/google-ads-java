@@ -30,8 +30,8 @@ public final class UrlFieldErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v1/errors/url_fie" +
       "ld_error.proto\022\036google.ads.googleads.v1." +
-      "errors\032\034google/api/annotations.proto\"\225\016\n" +
-      "\021UrlFieldErrorEnum\"\377\r\n\rUrlFieldError\022\017\n\013" +
+      "errors\032\034google/api/annotations.proto\"\266\016\n" +
+      "\021UrlFieldErrorEnum\"\240\016\n\rUrlFieldError\022\017\n\013" +
       "UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022!\n\035INVALID_TR" +
       "ACKING_URL_TEMPLATE\020\002\022(\n$INVALID_TAG_IN_" +
       "TRACKING_URL_TEMPLATE\020\003\022%\n!MISSING_TRACK" +
@@ -76,13 +76,14 @@ public final class UrlFieldErrorProto {
       "INVALID_TAG_IN_FINAL_URL_SUFFIX\0203\022\034\n\030INV" +
       "ALID_TOP_LEVEL_DOMAIN\0205\022\036\n\032MALFORMED_TOP" +
       "_LEVEL_DOMAIN\0206\022\021\n\rMALFORMED_URL\0207\022\020\n\014MI" +
-      "SSING_HOST\0208B\355\001\n\"com.google.ads.googlead" +
-      "s.v1.errorsB\022UrlFieldErrorProtoP\001ZDgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v1/errors;errors\242\002\003GAA\252\002\036Google.A" +
-      "ds.GoogleAds.V1.Errors\312\002\036Google\\Ads\\Goog" +
-      "leAds\\V1\\Errors\352\002\"Google::Ads::GoogleAds" +
-      "::V1::Errorsb\006proto3"
+      "SSING_HOST\0208\022\037\n\033NULL_CUSTOM_PARAMETER_VA" +
+      "LUE\0209B\355\001\n\"com.google.ads.googleads.v1.er" +
+      "rorsB\022UrlFieldErrorProtoP\001ZDgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v1/errors;errors\242\002\003GAA\252\002\036Google.Ads.Goog" +
+      "leAds.V1.Errors\312\002\036Google\\Ads\\GoogleAds\\V" +
+      "1\\Errors\352\002\"Google::Ads::GoogleAds::V1::E" +
+      "rrorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

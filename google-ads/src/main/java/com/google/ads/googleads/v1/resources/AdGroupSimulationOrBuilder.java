@@ -165,6 +165,31 @@ public interface AdGroupSimulationOrBuilder extends
 
   /**
    * <pre>
+   * Simulation points if the simulation type is CPV_BID.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+   */
+  boolean hasCpvBidPointList();
+  /**
+   * <pre>
+   * Simulation points if the simulation type is CPV_BID.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+   */
+  com.google.ads.googleads.v1.common.CpvBidSimulationPointList getCpvBidPointList();
+  /**
+   * <pre>
+   * Simulation points if the simulation type is CPV_BID.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+   */
+  com.google.ads.googleads.v1.common.CpvBidSimulationPointListOrBuilder getCpvBidPointListOrBuilder();
+
+  /**
+   * <pre>
    * Simulation points if the simulation type is TARGET_CPA.
    * </pre>
    *

@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private CampaignCriterion() {
     resourceName_ = "";
     type_ = 0;
+    status_ = 0;
   }
 
   @java.lang.Override
@@ -38,6 +39,7 @@ private static final long serialVersionUID = 0L;
       throw new java.lang.NullPointerException();
     }
     int mutable_bitField0_ = 0;
+    int mutable_bitField1_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -476,6 +478,12 @@ private static final long serialVersionUID = 0L;
             criterionCase_ = 34;
             break;
           }
+          case 280: {
+            int rawValue = input.readEnum();
+
+            status_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -804,6 +812,31 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.CriterionTypeEnum.CriterionType result = com.google.ads.googleads.v1.enums.CriterionTypeEnum.CriterionType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v1.enums.CriterionTypeEnum.CriterionType.UNRECOGNIZED : result;
+  }
+
+  public static final int STATUS_FIELD_NUMBER = 35;
+  private int status_;
+  /**
+   * <pre>
+   * The status of the criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus status = 35;</code>
+   */
+  public int getStatusValue() {
+    return status_;
+  }
+  /**
+   * <pre>
+   * The status of the criterion.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus status = 35;</code>
+   */
+  public com.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus getStatus() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus result = com.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.valueOf(status_);
+    return result == null ? com.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.UNRECOGNIZED : result;
   }
 
   public static final int KEYWORD_FIELD_NUMBER = 8;
@@ -1904,6 +1937,9 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 34) {
       output.writeMessage(34, (com.google.ads.googleads.v1.common.LocationGroupInfo) criterion_);
     }
+    if (status_ != com.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.UNSPECIFIED.getNumber()) {
+      output.writeEnum(35, status_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2040,6 +2076,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(34, (com.google.ads.googleads.v1.common.LocationGroupInfo) criterion_);
     }
+    if (status_ != com.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(35, status_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2079,6 +2119,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getNegative());
     }
     result = result && type_ == other.type_;
+    result = result && status_ == other.status_;
     result = result && getCriterionCase().equals(
         other.getCriterionCase());
     if (!result) return false;
@@ -2221,6 +2262,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + type_;
+    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + status_;
     switch (criterionCase_) {
       case 8:
         hash = (37 * hash) + KEYWORD_FIELD_NUMBER;
@@ -2494,6 +2537,8 @@ private static final long serialVersionUID = 0L;
       }
       type_ = 0;
 
+      status_ = 0;
+
       criterionCase_ = 0;
       criterion_ = null;
       return this;
@@ -2544,6 +2589,7 @@ private static final long serialVersionUID = 0L;
         result.negative_ = negativeBuilder_.build();
       }
       result.type_ = type_;
+      result.status_ = status_;
       if (criterionCase_ == 8) {
         if (keywordBuilder_ == null) {
           result.criterion_ = criterion_;
@@ -2793,6 +2839,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.type_ != 0) {
         setTypeValue(other.getTypeValue());
+      }
+      if (other.status_ != 0) {
+        setStatusValue(other.getStatusValue());
       }
       switch (other.getCriterionCase()) {
         case KEYWORD: {
@@ -3746,6 +3795,71 @@ private static final long serialVersionUID = 0L;
     public Builder clearType() {
       
       type_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int status_ = 0;
+    /**
+     * <pre>
+     * The status of the criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus status = 35;</code>
+     */
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * The status of the criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus status = 35;</code>
+     */
+    public Builder setStatusValue(int value) {
+      status_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The status of the criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus status = 35;</code>
+     */
+    public com.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus result = com.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.valueOf(status_);
+      return result == null ? com.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The status of the criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus status = 35;</code>
+     */
+    public Builder setStatus(com.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      status_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The status of the criterion.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus status = 35;</code>
+     */
+    public Builder clearStatus() {
+      
+      status_ = 0;
       onChanged();
       return this;
     }

@@ -889,5 +889,30 @@ public interface AdOrBuilder extends
    */
   com.google.ads.googleads.v1.common.AppEngagementAdInfoOrBuilder getAppEngagementAdOrBuilder();
 
+  /**
+   * <pre>
+   * Details pertaining to a Shopping Comparison Listing ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+   */
+  boolean hasShoppingComparisonListingAd();
+  /**
+   * <pre>
+   * Details pertaining to a Shopping Comparison Listing ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+   */
+  com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo getShoppingComparisonListingAd();
+  /**
+   * <pre>
+   * Details pertaining to a Shopping Comparison Listing ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+   */
+  com.google.ads.googleads.v1.common.ShoppingComparisonListingAdInfoOrBuilder getShoppingComparisonListingAdOrBuilder();
+
   public com.google.ads.googleads.v1.resources.Ad.AdDataCase getAdDataCase();
 }

@@ -5,7 +5,11 @@ package com.google.ads.googleads.v1.resources;
 
 /**
  * <pre>
- * A campaign criterion simulation.
+ * A campaign criterion simulation. Supported combinations of advertising
+ * channel type, criterion ids, simulation type and simulation modification
+ * method is detailed below respectively.
+ * SEARCH   30000,30001,30002  BID_MODIFIER  UNIFORM
+ * DISPLAY  30001              BID_MODIFIER  UNIFORM
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.CampaignCriterionSimulation}
@@ -734,7 +738,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A campaign criterion simulation.
+   * A campaign criterion simulation. Supported combinations of advertising
+   * channel type, criterion ids, simulation type and simulation modification
+   * method is detailed below respectively.
+   * SEARCH   30000,30001,30002  BID_MODIFIER  UNIFORM
+   * DISPLAY  30001              BID_MODIFIER  UNIFORM
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v1.resources.CampaignCriterionSimulation}

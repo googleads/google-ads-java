@@ -101,562 +101,582 @@ public final class GoogleAdsServiceProto {
       "gle/ads/googleads/v1/resources/campaign_" +
       "criterion.proto\032Egoogle/ads/googleads/v1" +
       "/resources/campaign_criterion_simulation" +
-      ".proto\032Bgoogle/ads/googleads/v1/resource" +
-      "s/campaign_extension_setting.proto\0325goog" +
-      "le/ads/googleads/v1/resources/campaign_f" +
-      "eed.proto\0326google/ads/googleads/v1/resou" +
-      "rces/campaign_label.proto\032;google/ads/go" +
-      "ogleads/v1/resources/campaign_shared_set" +
-      ".proto\0328google/ads/googleads/v1/resource" +
-      "s/carrier_constant.proto\0325google/ads/goo" +
-      "gleads/v1/resources/change_status.proto\032" +
-      "2google/ads/googleads/v1/resources/click" +
-      "_view.proto\0329google/ads/googleads/v1/res" +
-      "ources/conversion_action.proto\0327google/a" +
-      "ds/googleads/v1/resources/custom_interes" +
-      "t.proto\0320google/ads/googleads/v1/resourc" +
-      "es/customer.proto\0327google/ads/googleads/" +
-      "v1/resources/customer_client.proto\032<goog" +
-      "le/ads/googleads/v1/resources/customer_c" +
-      "lient_link.proto\032Bgoogle/ads/googleads/v" +
-      "1/resources/customer_extension_setting.p" +
-      "roto\0325google/ads/googleads/v1/resources/" +
-      "customer_feed.proto\0326google/ads/googlead" +
-      "s/v1/resources/customer_label.proto\032=goo" +
-      "gle/ads/googleads/v1/resources/customer_" +
-      "manager_link.proto\032Cgoogle/ads/googleads" +
-      "/v1/resources/customer_negative_criterio" +
-      "n.proto\032=google/ads/googleads/v1/resourc" +
-      "es/detail_placement_view.proto\032<google/a" +
-      "ds/googleads/v1/resources/display_keywor" +
-      "d_view.proto\0327google/ads/googleads/v1/re" +
-      "sources/domain_category.proto\032Kgoogle/ad" +
-      "s/googleads/v1/resources/dynamic_search_" +
-      "ads_search_term_view.proto\032Bgoogle/ads/g" +
-      "oogleads/v1/resources/expanded_landing_p" +
-      "age_view.proto\032;google/ads/googleads/v1/" +
-      "resources/extension_feed_item.proto\032,goo" +
-      "gle/ads/googleads/v1/resources/feed.prot" +
-      "o\0321google/ads/googleads/v1/resources/fee" +
-      "d_item.proto\0328google/ads/googleads/v1/re" +
-      "sources/feed_item_target.proto\0324google/a" +
-      "ds/googleads/v1/resources/feed_mapping.p" +
+      ".proto\0326google/ads/googleads/v1/resource" +
+      "s/campaign_draft.proto\032;google/ads/googl" +
+      "eads/v1/resources/campaign_experiment.pr" +
+      "oto\032Bgoogle/ads/googleads/v1/resources/c" +
+      "ampaign_extension_setting.proto\0325google/" +
+      "ads/googleads/v1/resources/campaign_feed" +
+      ".proto\0326google/ads/googleads/v1/resource" +
+      "s/campaign_label.proto\032;google/ads/googl" +
+      "eads/v1/resources/campaign_shared_set.pr" +
+      "oto\0328google/ads/googleads/v1/resources/c" +
+      "arrier_constant.proto\0325google/ads/google" +
+      "ads/v1/resources/change_status.proto\0322go" +
+      "ogle/ads/googleads/v1/resources/click_vi" +
+      "ew.proto\0329google/ads/googleads/v1/resour" +
+      "ces/conversion_action.proto\0327google/ads/" +
+      "googleads/v1/resources/custom_interest.p" +
+      "roto\0320google/ads/googleads/v1/resources/" +
+      "customer.proto\0327google/ads/googleads/v1/" +
+      "resources/customer_client.proto\032<google/" +
+      "ads/googleads/v1/resources/customer_clie" +
+      "nt_link.proto\032Bgoogle/ads/googleads/v1/r" +
+      "esources/customer_extension_setting.prot" +
+      "o\0325google/ads/googleads/v1/resources/cus" +
+      "tomer_feed.proto\0326google/ads/googleads/v" +
+      "1/resources/customer_label.proto\032=google" +
+      "/ads/googleads/v1/resources/customer_man" +
+      "ager_link.proto\032Cgoogle/ads/googleads/v1" +
+      "/resources/customer_negative_criterion.p" +
       "roto\032=google/ads/googleads/v1/resources/" +
-      "feed_placeholder_view.proto\0323google/ads/" +
-      "googleads/v1/resources/gender_view.proto" +
-      "\032;google/ads/googleads/v1/resources/geo_" +
-      "target_constant.proto\0327google/ads/google" +
-      "ads/v1/resources/geographic_view.proto\032<" +
-      "google/ads/googleads/v1/resources/group_" +
-      "placement_view.proto\0328google/ads/googlea" +
-      "ds/v1/resources/hotel_group_view.proto\032>" +
-      "google/ads/googleads/v1/resources/hotel_" +
-      "performance_view.proto\0324google/ads/googl" +
-      "eads/v1/resources/keyword_plan.proto\032=go" +
-      "ogle/ads/googleads/v1/resources/keyword_" +
-      "plan_ad_group.proto\032=google/ads/googlead" +
-      "s/v1/resources/keyword_plan_campaign.pro" +
-      "to\032<google/ads/googleads/v1/resources/ke" +
-      "yword_plan_keyword.proto\032Egoogle/ads/goo" +
-      "gleads/v1/resources/keyword_plan_negativ" +
-      "e_keyword.proto\0324google/ads/googleads/v1" +
-      "/resources/keyword_view.proto\032-google/ad" +
-      "s/googleads/v1/resources/label.proto\0329go" +
-      "ogle/ads/googleads/v1/resources/landing_" +
-      "page_view.proto\0329google/ads/googleads/v1" +
-      "/resources/language_constant.proto\0325goog" +
-      "le/ads/googleads/v1/resources/location_v" +
-      "iew.proto\032>google/ads/googleads/v1/resou" +
-      "rces/managed_placement_view.proto\0322googl" +
-      "e/ads/googleads/v1/resources/media_file." +
-      "proto\032Dgoogle/ads/googleads/v1/resources" +
-      "/mobile_app_category_constant.proto\032>goo" +
-      "gle/ads/googleads/v1/resources/mobile_de" +
-      "vice_constant.proto\0322google/ads/googlead" +
-      "s/v1/resources/mutate_job.proto\032Igoogle/" +
-      "ads/googleads/v1/resources/operating_sys" +
-      "tem_version_constant.proto\032Egoogle/ads/g" +
-      "oogleads/v1/resources/paid_organic_searc" +
-      "h_term_view.proto\032<google/ads/googleads/" +
-      "v1/resources/parental_status_view.proto\032" +
-      "Igoogle/ads/googleads/v1/resources/produ" +
-      "ct_bidding_category_constant.proto\032:goog" +
-      "le/ads/googleads/v1/resources/product_gr" +
-      "oup_view.proto\0326google/ads/googleads/v1/" +
-      "resources/recommendation.proto\032:google/a" +
-      "ds/googleads/v1/resources/remarketing_ac" +
-      "tion.proto\0328google/ads/googleads/v1/reso" +
-      "urces/search_term_view.proto\0328google/ads" +
-      "/googleads/v1/resources/shared_criterion" +
-      ".proto\0322google/ads/googleads/v1/resource" +
-      "s/shared_set.proto\032Agoogle/ads/googleads" +
-      "/v1/resources/shopping_performance_view." +
-      "proto\0326google/ads/googleads/v1/resources" +
-      "/topic_constant.proto\0322google/ads/google" +
-      "ads/v1/resources/topic_view.proto\0325googl" +
-      "e/ads/googleads/v1/resources/user_intere" +
-      "st.proto\0321google/ads/googleads/v1/resour" +
-      "ces/user_list.proto\032-google/ads/googlead" +
-      "s/v1/resources/video.proto\032@google/ads/g" +
-      "oogleads/v1/services/ad_group_ad_label_s" +
-      "ervice.proto\032:google/ads/googleads/v1/se" +
-      "rvices/ad_group_ad_service.proto\032Dgoogle" +
-      "/ads/googleads/v1/services/ad_group_bid_" +
-      "modifier_service.proto\032Ggoogle/ads/googl" +
-      "eads/v1/services/ad_group_criterion_labe" +
-      "l_service.proto\032Agoogle/ads/googleads/v1" +
-      "/services/ad_group_criterion_service.pro" +
-      "to\032Igoogle/ads/googleads/v1/services/ad_" +
-      "group_extension_setting_service.proto\032<g" +
-      "oogle/ads/googleads/v1/services/ad_group" +
-      "_feed_service.proto\032=google/ads/googlead" +
-      "s/v1/services/ad_group_label_service.pro" +
-      "to\0327google/ads/googleads/v1/services/ad_" +
-      "group_service.proto\032;google/ads/googlead" +
-      "s/v1/services/ad_parameter_service.proto" +
-      "\0324google/ads/googleads/v1/services/asset" +
-      "_service.proto\032?google/ads/googleads/v1/" +
-      "services/bidding_strategy_service.proto\032" +
-      "Dgoogle/ads/googleads/v1/services/campai" +
-      "gn_bid_modifier_service.proto\032>google/ad" +
-      "s/googleads/v1/services/campaign_budget_" +
-      "service.proto\032Agoogle/ads/googleads/v1/s" +
-      "ervices/campaign_criterion_service.proto" +
-      "\032Igoogle/ads/googleads/v1/services/campa" +
-      "ign_extension_setting_service.proto\032<goo" +
-      "gle/ads/googleads/v1/services/campaign_f" +
-      "eed_service.proto\032=google/ads/googleads/" +
-      "v1/services/campaign_label_service.proto" +
-      "\0327google/ads/googleads/v1/services/campa" +
-      "ign_service.proto\032Bgoogle/ads/googleads/" +
-      "v1/services/campaign_shared_set_service." +
-      "proto\032@google/ads/googleads/v1/services/" +
-      "conversion_action_service.proto\032Igoogle/" +
-      "ads/googleads/v1/services/customer_exten" +
-      "sion_setting_service.proto\032<google/ads/g" +
-      "oogleads/v1/services/customer_feed_servi" +
-      "ce.proto\032=google/ads/googleads/v1/servic" +
-      "es/customer_label_service.proto\032Jgoogle/" +
-      "ads/googleads/v1/services/customer_negat" +
-      "ive_criterion_service.proto\0327google/ads/" +
-      "googleads/v1/services/customer_service.p" +
-      "roto\032Bgoogle/ads/googleads/v1/services/e" +
-      "xtension_feed_item_service.proto\0328google" +
-      "/ads/googleads/v1/services/feed_item_ser" +
-      "vice.proto\032?google/ads/googleads/v1/serv" +
-      "ices/feed_item_target_service.proto\032;goo" +
-      "gle/ads/googleads/v1/services/feed_mappi" +
-      "ng_service.proto\0323google/ads/googleads/v" +
-      "1/services/feed_service.proto\0324google/ad" +
-      "s/googleads/v1/services/label_service.pr" +
-      "oto\0329google/ads/googleads/v1/services/me" +
-      "dia_file_service.proto\032Agoogle/ads/googl" +
-      "eads/v1/services/remarketing_action_serv" +
-      "ice.proto\032?google/ads/googleads/v1/servi" +
-      "ces/shared_criterion_service.proto\0329goog" +
-      "le/ads/googleads/v1/services/shared_set_" +
-      "service.proto\0328google/ads/googleads/v1/s" +
-      "ervices/user_list_service.proto\032\034google/" +
-      "api/annotations.proto\032 google/protobuf/f" +
-      "ield_mask.proto\032\027google/rpc/status.proto" +
-      "\"z\n\026SearchGoogleAdsRequest\022\023\n\013customer_i" +
-      "d\030\001 \001(\t\022\r\n\005query\030\002 \001(\t\022\022\n\npage_token\030\003 \001" +
-      "(\t\022\021\n\tpage_size\030\004 \001(\005\022\025\n\rvalidate_only\030\005" +
-      " \001(\010\"\300\001\n\027SearchGoogleAdsResponse\022?\n\007resu" +
-      "lts\030\001 \003(\0132..google.ads.googleads.v1.serv" +
-      "ices.GoogleAdsRow\022\027\n\017next_page_token\030\002 \001" +
-      "(\t\022\033\n\023total_results_count\030\003 \001(\003\022.\n\nfield" +
-      "_mask\030\005 \001(\0132\032.google.protobuf.FieldMask\"" +
-      "\3729\n\014GoogleAdsRow\022H\n\016account_budget\030* \001(\013" +
-      "20.google.ads.googleads.v1.resources.Acc" +
-      "ountBudget\022Y\n\027account_budget_proposal\030+ " +
-      "\001(\01328.google.ads.googleads.v1.resources." +
-      "AccountBudgetProposal\022<\n\010ad_group\030\003 \001(\0132" +
-      "*.google.ads.googleads.v1.resources.AdGr" +
-      "oup\022A\n\013ad_group_ad\030\020 \001(\0132,.google.ads.go" +
-      "ogleads.v1.resources.AdGroupAd\022L\n\021ad_gro" +
-      "up_ad_label\030x \001(\01321.google.ads.googleads" +
-      ".v1.resources.AdGroupAdLabel\022V\n\026ad_group" +
-      "_audience_view\0309 \001(\01326.google.ads.google" +
-      "ads.v1.resources.AdGroupAudienceView\022T\n\025" +
-      "ad_group_bid_modifier\030\030 \001(\01325.google.ads" +
-      ".googleads.v1.resources.AdGroupBidModifi" +
-      "er\022O\n\022ad_group_criterion\030\021 \001(\01323.google." +
-      "ads.googleads.v1.resources.AdGroupCriter" +
-      "ion\022Z\n\030ad_group_criterion_label\030y \001(\01328." +
-      "google.ads.googleads.v1.resources.AdGrou" +
-      "pCriterionLabel\022d\n\035ad_group_criterion_si" +
-      "mulation\030n \001(\0132=.google.ads.googleads.v1" +
-      ".resources.AdGroupCriterionSimulation\022^\n" +
-      "\032ad_group_extension_setting\030p \001(\0132:.goog" +
-      "le.ads.googleads.v1.resources.AdGroupExt" +
-      "ensionSetting\022E\n\rad_group_feed\030C \001(\0132..g" +
+      "detail_placement_view.proto\032<google/ads/" +
+      "googleads/v1/resources/display_keyword_v" +
+      "iew.proto\0327google/ads/googleads/v1/resou" +
+      "rces/domain_category.proto\032Kgoogle/ads/g" +
+      "oogleads/v1/resources/dynamic_search_ads" +
+      "_search_term_view.proto\032Bgoogle/ads/goog" +
+      "leads/v1/resources/expanded_landing_page" +
+      "_view.proto\032;google/ads/googleads/v1/res" +
+      "ources/extension_feed_item.proto\032,google" +
+      "/ads/googleads/v1/resources/feed.proto\0321" +
+      "google/ads/googleads/v1/resources/feed_i" +
+      "tem.proto\0328google/ads/googleads/v1/resou" +
+      "rces/feed_item_target.proto\0324google/ads/" +
+      "googleads/v1/resources/feed_mapping.prot" +
+      "o\032=google/ads/googleads/v1/resources/fee" +
+      "d_placeholder_view.proto\0323google/ads/goo" +
+      "gleads/v1/resources/gender_view.proto\032;g" +
+      "oogle/ads/googleads/v1/resources/geo_tar" +
+      "get_constant.proto\0327google/ads/googleads" +
+      "/v1/resources/geographic_view.proto\032<goo" +
+      "gle/ads/googleads/v1/resources/group_pla" +
+      "cement_view.proto\0328google/ads/googleads/" +
+      "v1/resources/hotel_group_view.proto\032>goo" +
+      "gle/ads/googleads/v1/resources/hotel_per" +
+      "formance_view.proto\0324google/ads/googlead" +
+      "s/v1/resources/keyword_plan.proto\032=googl" +
+      "e/ads/googleads/v1/resources/keyword_pla" +
+      "n_ad_group.proto\032=google/ads/googleads/v" +
+      "1/resources/keyword_plan_campaign.proto\032" +
+      "<google/ads/googleads/v1/resources/keywo" +
+      "rd_plan_keyword.proto\032Egoogle/ads/google" +
+      "ads/v1/resources/keyword_plan_negative_k" +
+      "eyword.proto\0324google/ads/googleads/v1/re" +
+      "sources/keyword_view.proto\032-google/ads/g" +
+      "oogleads/v1/resources/label.proto\0329googl" +
+      "e/ads/googleads/v1/resources/landing_pag" +
+      "e_view.proto\0329google/ads/googleads/v1/re" +
+      "sources/language_constant.proto\0325google/" +
+      "ads/googleads/v1/resources/location_view" +
+      ".proto\032>google/ads/googleads/v1/resource" +
+      "s/managed_placement_view.proto\0322google/a" +
+      "ds/googleads/v1/resources/media_file.pro" +
+      "to\032Dgoogle/ads/googleads/v1/resources/mo" +
+      "bile_app_category_constant.proto\032>google" +
+      "/ads/googleads/v1/resources/mobile_devic" +
+      "e_constant.proto\0322google/ads/googleads/v" +
+      "1/resources/mutate_job.proto\032Igoogle/ads" +
+      "/googleads/v1/resources/operating_system" +
+      "_version_constant.proto\032Egoogle/ads/goog" +
+      "leads/v1/resources/paid_organic_search_t" +
+      "erm_view.proto\032<google/ads/googleads/v1/" +
+      "resources/parental_status_view.proto\032Igo" +
+      "ogle/ads/googleads/v1/resources/product_" +
+      "bidding_category_constant.proto\032:google/" +
+      "ads/googleads/v1/resources/product_group" +
+      "_view.proto\0326google/ads/googleads/v1/res" +
+      "ources/recommendation.proto\032:google/ads/" +
+      "googleads/v1/resources/remarketing_actio" +
+      "n.proto\0328google/ads/googleads/v1/resourc" +
+      "es/search_term_view.proto\0328google/ads/go" +
+      "ogleads/v1/resources/shared_criterion.pr" +
+      "oto\0322google/ads/googleads/v1/resources/s" +
+      "hared_set.proto\032Agoogle/ads/googleads/v1" +
+      "/resources/shopping_performance_view.pro" +
+      "to\0326google/ads/googleads/v1/resources/to" +
+      "pic_constant.proto\0322google/ads/googleads" +
+      "/v1/resources/topic_view.proto\0325google/a" +
+      "ds/googleads/v1/resources/user_interest." +
+      "proto\0321google/ads/googleads/v1/resources" +
+      "/user_list.proto\032-google/ads/googleads/v" +
+      "1/resources/video.proto\032@google/ads/goog" +
+      "leads/v1/services/ad_group_ad_label_serv" +
+      "ice.proto\032:google/ads/googleads/v1/servi" +
+      "ces/ad_group_ad_service.proto\032Dgoogle/ad" +
+      "s/googleads/v1/services/ad_group_bid_mod" +
+      "ifier_service.proto\032Ggoogle/ads/googlead" +
+      "s/v1/services/ad_group_criterion_label_s" +
+      "ervice.proto\032Agoogle/ads/googleads/v1/se" +
+      "rvices/ad_group_criterion_service.proto\032" +
+      "Igoogle/ads/googleads/v1/services/ad_gro" +
+      "up_extension_setting_service.proto\032<goog" +
+      "le/ads/googleads/v1/services/ad_group_fe" +
+      "ed_service.proto\032=google/ads/googleads/v" +
+      "1/services/ad_group_label_service.proto\032" +
+      "7google/ads/googleads/v1/services/ad_gro" +
+      "up_service.proto\032;google/ads/googleads/v" +
+      "1/services/ad_parameter_service.proto\0324g" +
+      "oogle/ads/googleads/v1/services/asset_se" +
+      "rvice.proto\032?google/ads/googleads/v1/ser" +
+      "vices/bidding_strategy_service.proto\032Dgo" +
+      "ogle/ads/googleads/v1/services/campaign_" +
+      "bid_modifier_service.proto\032>google/ads/g" +
+      "oogleads/v1/services/campaign_budget_ser" +
+      "vice.proto\032Agoogle/ads/googleads/v1/serv" +
+      "ices/campaign_criterion_service.proto\032=g" +
+      "oogle/ads/googleads/v1/services/campaign" +
+      "_draft_service.proto\032Bgoogle/ads/googlea" +
+      "ds/v1/services/campaign_experiment_servi" +
+      "ce.proto\032Igoogle/ads/googleads/v1/servic" +
+      "es/campaign_extension_setting_service.pr" +
+      "oto\032<google/ads/googleads/v1/services/ca" +
+      "mpaign_feed_service.proto\032=google/ads/go" +
+      "ogleads/v1/services/campaign_label_servi" +
+      "ce.proto\0327google/ads/googleads/v1/servic" +
+      "es/campaign_service.proto\032Bgoogle/ads/go" +
+      "ogleads/v1/services/campaign_shared_set_" +
+      "service.proto\032@google/ads/googleads/v1/s" +
+      "ervices/conversion_action_service.proto\032" +
+      "Igoogle/ads/googleads/v1/services/custom" +
+      "er_extension_setting_service.proto\032<goog" +
+      "le/ads/googleads/v1/services/customer_fe" +
+      "ed_service.proto\032=google/ads/googleads/v" +
+      "1/services/customer_label_service.proto\032" +
+      "Jgoogle/ads/googleads/v1/services/custom" +
+      "er_negative_criterion_service.proto\0327goo" +
+      "gle/ads/googleads/v1/services/customer_s" +
+      "ervice.proto\032Bgoogle/ads/googleads/v1/se" +
+      "rvices/extension_feed_item_service.proto" +
+      "\0328google/ads/googleads/v1/services/feed_" +
+      "item_service.proto\032?google/ads/googleads" +
+      "/v1/services/feed_item_target_service.pr" +
+      "oto\032;google/ads/googleads/v1/services/fe" +
+      "ed_mapping_service.proto\0323google/ads/goo" +
+      "gleads/v1/services/feed_service.proto\0324g" +
+      "oogle/ads/googleads/v1/services/label_se" +
+      "rvice.proto\0329google/ads/googleads/v1/ser" +
+      "vices/media_file_service.proto\032Agoogle/a" +
+      "ds/googleads/v1/services/remarketing_act" +
+      "ion_service.proto\032?google/ads/googleads/" +
+      "v1/services/shared_criterion_service.pro" +
+      "to\0329google/ads/googleads/v1/services/sha" +
+      "red_set_service.proto\0328google/ads/google" +
+      "ads/v1/services/user_list_service.proto\032" +
+      "\034google/api/annotations.proto\032 google/pr" +
+      "otobuf/field_mask.proto\032\027google/rpc/stat" +
+      "us.proto\"z\n\026SearchGoogleAdsRequest\022\023\n\013cu" +
+      "stomer_id\030\001 \001(\t\022\r\n\005query\030\002 \001(\t\022\022\n\npage_t" +
+      "oken\030\003 \001(\t\022\021\n\tpage_size\030\004 \001(\005\022\025\n\rvalidat" +
+      "e_only\030\005 \001(\010\"\300\001\n\027SearchGoogleAdsResponse" +
+      "\022?\n\007results\030\001 \003(\0132..google.ads.googleads" +
+      ".v1.services.GoogleAdsRow\022\027\n\017next_page_t" +
+      "oken\030\002 \001(\t\022\033\n\023total_results_count\030\003 \001(\003\022" +
+      ".\n\nfield_mask\030\005 \001(\0132\032.google.protobuf.Fi" +
+      "eldMask\"\230;\n\014GoogleAdsRow\022H\n\016account_budg" +
+      "et\030* \001(\01320.google.ads.googleads.v1.resou" +
+      "rces.AccountBudget\022Y\n\027account_budget_pro" +
+      "posal\030+ \001(\01328.google.ads.googleads.v1.re" +
+      "sources.AccountBudgetProposal\022<\n\010ad_grou" +
+      "p\030\003 \001(\0132*.google.ads.googleads.v1.resour" +
+      "ces.AdGroup\022A\n\013ad_group_ad\030\020 \001(\0132,.googl" +
+      "e.ads.googleads.v1.resources.AdGroupAd\022L" +
+      "\n\021ad_group_ad_label\030x \001(\01321.google.ads.g" +
+      "oogleads.v1.resources.AdGroupAdLabel\022V\n\026" +
+      "ad_group_audience_view\0309 \001(\01326.google.ad" +
+      "s.googleads.v1.resources.AdGroupAudience" +
+      "View\022T\n\025ad_group_bid_modifier\030\030 \001(\01325.go" +
+      "ogle.ads.googleads.v1.resources.AdGroupB" +
+      "idModifier\022O\n\022ad_group_criterion\030\021 \001(\01323" +
+      ".google.ads.googleads.v1.resources.AdGro" +
+      "upCriterion\022Z\n\030ad_group_criterion_label\030" +
+      "y \001(\01328.google.ads.googleads.v1.resource" +
+      "s.AdGroupCriterionLabel\022d\n\035ad_group_crit" +
+      "erion_simulation\030n \001(\0132=.google.ads.goog" +
+      "leads.v1.resources.AdGroupCriterionSimul" +
+      "ation\022^\n\032ad_group_extension_setting\030p \001(" +
+      "\0132:.google.ads.googleads.v1.resources.Ad" +
+      "GroupExtensionSetting\022E\n\rad_group_feed\030C" +
+      " \001(\0132..google.ads.googleads.v1.resources" +
+      ".AdGroupFeed\022G\n\016ad_group_label\030s \001(\0132/.g" +
       "oogle.ads.googleads.v1.resources.AdGroup" +
-      "Feed\022G\n\016ad_group_label\030s \001(\0132/.google.ad" +
-      "s.googleads.v1.resources.AdGroupLabel\022Q\n" +
-      "\023ad_group_simulation\030k \001(\01324.google.ads." +
-      "googleads.v1.resources.AdGroupSimulation" +
-      "\022E\n\014ad_parameter\030\202\001 \001(\0132..google.ads.goo" +
-      "gleads.v1.resources.AdParameter\022G\n\016age_r" +
-      "ange_view\0300 \001(\0132/.google.ads.googleads.v" +
-      "1.resources.AgeRangeView\022K\n\020ad_schedule_" +
-      "view\030Y \001(\01321.google.ads.googleads.v1.res" +
-      "ources.AdScheduleView\022J\n\017domain_category" +
-      "\030[ \001(\01321.google.ads.googleads.v1.resourc" +
-      "es.DomainCategory\0227\n\005asset\030i \001(\0132(.googl" +
-      "e.ads.googleads.v1.resources.Asset\022L\n\020bi" +
-      "dding_strategy\030\022 \001(\01322.google.ads.google" +
-      "ads.v1.resources.BiddingStrategy\022F\n\rbill" +
-      "ing_setup\030) \001(\0132/.google.ads.googleads.v" +
-      "1.resources.BillingSetup\022J\n\017campaign_bud" +
-      "get\030\023 \001(\01321.google.ads.googleads.v1.reso" +
-      "urces.CampaignBudget\022=\n\010campaign\030\002 \001(\0132+" +
-      ".google.ads.googleads.v1.resources.Campa" +
-      "ign\022W\n\026campaign_audience_view\030E \001(\01327.go" +
-      "ogle.ads.googleads.v1.resources.Campaign" +
-      "AudienceView\022U\n\025campaign_bid_modifier\030\032 " +
-      "\001(\01326.google.ads.googleads.v1.resources." +
-      "CampaignBidModifier\022P\n\022campaign_criterio" +
-      "n\030\024 \001(\01324.google.ads.googleads.v1.resour" +
-      "ces.CampaignCriterion\022e\n\035campaign_criter" +
-      "ion_simulation\030o \001(\0132>.google.ads.google" +
-      "ads.v1.resources.CampaignCriterionSimula" +
-      "tion\022_\n\032campaign_extension_setting\030q \001(\013" +
-      "2;.google.ads.googleads.v1.resources.Cam" +
-      "paignExtensionSetting\022F\n\rcampaign_feed\030?" +
-      " \001(\0132/.google.ads.googleads.v1.resources" +
-      ".CampaignFeed\022H\n\016campaign_label\030l \001(\01320." +
-      "google.ads.googleads.v1.resources.Campai" +
-      "gnLabel\022Q\n\023campaign_shared_set\030\036 \001(\01324.g" +
+      "Label\022Q\n\023ad_group_simulation\030k \001(\01324.goo" +
+      "gle.ads.googleads.v1.resources.AdGroupSi" +
+      "mulation\022E\n\014ad_parameter\030\202\001 \001(\0132..google" +
+      ".ads.googleads.v1.resources.AdParameter\022" +
+      "G\n\016age_range_view\0300 \001(\0132/.google.ads.goo" +
+      "gleads.v1.resources.AgeRangeView\022K\n\020ad_s" +
+      "chedule_view\030Y \001(\01321.google.ads.googlead" +
+      "s.v1.resources.AdScheduleView\022J\n\017domain_" +
+      "category\030[ \001(\01321.google.ads.googleads.v1" +
+      ".resources.DomainCategory\0227\n\005asset\030i \001(\013" +
+      "2(.google.ads.googleads.v1.resources.Ass" +
+      "et\022L\n\020bidding_strategy\030\022 \001(\01322.google.ad" +
+      "s.googleads.v1.resources.BiddingStrategy" +
+      "\022F\n\rbilling_setup\030) \001(\0132/.google.ads.goo" +
+      "gleads.v1.resources.BillingSetup\022J\n\017camp" +
+      "aign_budget\030\023 \001(\01321.google.ads.googleads" +
+      ".v1.resources.CampaignBudget\022=\n\010campaign" +
+      "\030\002 \001(\0132+.google.ads.googleads.v1.resourc" +
+      "es.Campaign\022W\n\026campaign_audience_view\030E " +
+      "\001(\01327.google.ads.googleads.v1.resources." +
+      "CampaignAudienceView\022U\n\025campaign_bid_mod" +
+      "ifier\030\032 \001(\01326.google.ads.googleads.v1.re" +
+      "sources.CampaignBidModifier\022P\n\022campaign_" +
+      "criterion\030\024 \001(\01324.google.ads.googleads.v" +
+      "1.resources.CampaignCriterion\022e\n\035campaig" +
+      "n_criterion_simulation\030o \001(\0132>.google.ad" +
+      "s.googleads.v1.resources.CampaignCriteri" +
+      "onSimulation\022H\n\016campaign_draft\0301 \001(\01320.g" +
       "oogle.ads.googleads.v1.resources.Campaig" +
-      "nSharedSet\022L\n\020carrier_constant\030B \001(\01322.g" +
-      "oogle.ads.googleads.v1.resources.Carrier" +
-      "Constant\022F\n\rchange_status\030% \001(\0132/.google" +
-      ".ads.googleads.v1.resources.ChangeStatus" +
-      "\022N\n\021conversion_action\030g \001(\01323.google.ads" +
-      ".googleads.v1.resources.ConversionAction" +
-      "\022@\n\nclick_view\030z \001(\0132,.google.ads.google" +
-      "ads.v1.resources.ClickView\022J\n\017custom_int" +
-      "erest\030h \001(\01321.google.ads.googleads.v1.re" +
-      "sources.CustomInterest\022=\n\010customer\030\001 \001(\013" +
-      "2+.google.ads.googleads.v1.resources.Cus" +
-      "tomer\022U\n\025customer_manager_link\030= \001(\01326.g" +
-      "oogle.ads.googleads.v1.resources.Custome" +
-      "rManagerLink\022S\n\024customer_client_link\030> \001" +
-      "(\01325.google.ads.googleads.v1.resources.C" +
-      "ustomerClientLink\022J\n\017customer_client\030F \001" +
-      "(\01321.google.ads.googleads.v1.resources.C" +
-      "ustomerClient\022_\n\032customer_extension_sett" +
-      "ing\030r \001(\0132;.google.ads.googleads.v1.reso" +
-      "urces.CustomerExtensionSetting\022F\n\rcustom" +
-      "er_feed\030@ \001(\0132/.google.ads.googleads.v1." +
-      "resources.CustomerFeed\022H\n\016customer_label" +
-      "\030| \001(\01320.google.ads.googleads.v1.resourc" +
-      "es.CustomerLabel\022a\n\033customer_negative_cr" +
-      "iterion\030X \001(\0132<.google.ads.googleads.v1." +
-      "resources.CustomerNegativeCriterion\022U\n\025d" +
-      "etail_placement_view\030v \001(\01326.google.ads." +
-      "googleads.v1.resources.DetailPlacementVi" +
-      "ew\022S\n\024display_keyword_view\030/ \001(\01325.googl" +
-      "e.ads.googleads.v1.resources.DisplayKeyw" +
-      "ordView\022n\n#dynamic_search_ads_search_ter" +
-      "m_view\030j \001(\0132A.google.ads.googleads.v1.r" +
-      "esources.DynamicSearchAdsSearchTermView\022" +
-      "_\n\032expanded_landing_page_view\030\200\001 \001(\0132:.g" +
-      "oogle.ads.googleads.v1.resources.Expande" +
-      "dLandingPageView\022Q\n\023extension_feed_item\030" +
-      "U \001(\01324.google.ads.googleads.v1.resource" +
-      "s.ExtensionFeedItem\0225\n\004feed\030. \001(\0132\'.goog" +
-      "le.ads.googleads.v1.resources.Feed\022>\n\tfe" +
-      "ed_item\0302 \001(\0132+.google.ads.googleads.v1." +
-      "resources.FeedItem\022K\n\020feed_item_target\030t" +
-      " \001(\01321.google.ads.googleads.v1.resources" +
-      ".FeedItemTarget\022D\n\014feed_mapping\030: \001(\0132.." +
-      "google.ads.googleads.v1.resources.FeedMa" +
-      "pping\022U\n\025feed_placeholder_view\030a \001(\01326.g" +
-      "oogle.ads.googleads.v1.resources.FeedPla" +
-      "ceholderView\022B\n\013gender_view\030( \001(\0132-.goog" +
-      "le.ads.googleads.v1.resources.GenderView" +
-      "\022Q\n\023geo_target_constant\030\027 \001(\01324.google.a" +
-      "ds.googleads.v1.resources.GeoTargetConst" +
-      "ant\022J\n\017geographic_view\030} \001(\01321.google.ad" +
-      "s.googleads.v1.resources.GeographicView\022" +
-      "S\n\024group_placement_view\030w \001(\01325.google.a" +
-      "ds.googleads.v1.resources.GroupPlacement" +
-      "View\022K\n\020hotel_group_view\0303 \001(\01321.google." +
-      "ads.googleads.v1.resources.HotelGroupVie" +
-      "w\022W\n\026hotel_performance_view\030G \001(\01327.goog" +
-      "le.ads.googleads.v1.resources.HotelPerfo" +
-      "rmanceView\022D\n\014keyword_view\030\025 \001(\0132..googl" +
-      "e.ads.googleads.v1.resources.KeywordView" +
-      "\022D\n\014keyword_plan\030  \001(\0132..google.ads.goog" +
-      "leads.v1.resources.KeywordPlan\022U\n\025keywor" +
-      "d_plan_campaign\030! \001(\01326.google.ads.googl" +
-      "eads.v1.resources.KeywordPlanCampaign\022d\n" +
-      "\035keyword_plan_negative_keyword\030\" \001(\0132=.g" +
-      "oogle.ads.googleads.v1.resources.Keyword" +
-      "PlanNegativeKeyword\022T\n\025keyword_plan_ad_g" +
-      "roup\030# \001(\01325.google.ads.googleads.v1.res" +
-      "ources.KeywordPlanAdGroup\022S\n\024keyword_pla" +
-      "n_keyword\030$ \001(\01325.google.ads.googleads.v" +
-      "1.resources.KeywordPlanKeyword\0227\n\005label\030" +
-      "4 \001(\0132(.google.ads.googleads.v1.resource" +
-      "s.Label\022M\n\021landing_page_view\030~ \001(\01322.goo" +
-      "gle.ads.googleads.v1.resources.LandingPa" +
-      "geView\022N\n\021language_constant\0307 \001(\01323.goog" +
-      "le.ads.googleads.v1.resources.LanguageCo" +
-      "nstant\022F\n\rlocation_view\030{ \001(\0132/.google.a" +
-      "ds.googleads.v1.resources.LocationView\022W" +
-      "\n\026managed_placement_view\0305 \001(\01327.google." +
-      "ads.googleads.v1.resources.ManagedPlacem" +
-      "entView\022@\n\nmedia_file\030Z \001(\0132,.google.ads" +
-      ".googleads.v1.resources.MediaFile\022b\n\034mob" +
-      "ile_app_category_constant\030W \001(\0132<.google" +
-      ".ads.googleads.v1.resources.MobileAppCat" +
-      "egoryConstant\022W\n\026mobile_device_constant\030" +
-      "b \001(\01327.google.ads.googleads.v1.resource" +
-      "s.MobileDeviceConstant\022@\n\nmutate_job\030\177 \001" +
-      "(\0132,.google.ads.googleads.v1.resources.M" +
-      "utateJob\022l\n!operating_system_version_con" +
-      "stant\030V \001(\0132A.google.ads.googleads.v1.re" +
-      "sources.OperatingSystemVersionConstant\022d" +
-      "\n\035paid_organic_search_term_view\030\201\001 \001(\0132<" +
-      ".google.ads.googleads.v1.resources.PaidO" +
-      "rganicSearchTermView\022S\n\024parental_status_" +
-      "view\030- \001(\01325.google.ads.googleads.v1.res" +
-      "ources.ParentalStatusView\022l\n!product_bid" +
-      "ding_category_constant\030m \001(\0132A.google.ad" +
-      "s.googleads.v1.resources.ProductBiddingC" +
-      "ategoryConstant\022O\n\022product_group_view\0306 " +
-      "\001(\01323.google.ads.googleads.v1.resources." +
-      "ProductGroupView\022I\n\016recommendation\030\026 \001(\013" +
-      "21.google.ads.googleads.v1.resources.Rec" +
-      "ommendation\022K\n\020search_term_view\030D \001(\01321." +
-      "google.ads.googleads.v1.resources.Search" +
-      "TermView\022L\n\020shared_criterion\030\035 \001(\01322.goo" +
-      "gle.ads.googleads.v1.resources.SharedCri" +
-      "terion\022@\n\nshared_set\030\033 \001(\0132,.google.ads." +
-      "googleads.v1.resources.SharedSet\022]\n\031shop" +
-      "ping_performance_view\030u \001(\0132:.google.ads" +
-      ".googleads.v1.resources.ShoppingPerforma" +
-      "nceView\022@\n\ntopic_view\030, \001(\0132,.google.ads" +
-      ".googleads.v1.resources.TopicView\022F\n\ruse" +
-      "r_interest\030; \001(\0132/.google.ads.googleads." +
-      "v1.resources.UserInterest\022>\n\tuser_list\030&" +
-      " \001(\0132+.google.ads.googleads.v1.resources" +
-      ".UserList\022P\n\022remarketing_action\030< \001(\01324." +
-      "google.ads.googleads.v1.resources.Remark" +
-      "etingAction\022H\n\016topic_constant\030\037 \001(\01320.go" +
-      "ogle.ads.googleads.v1.resources.TopicCon" +
-      "stant\0227\n\005video\030\' \001(\0132(.google.ads.google" +
-      "ads.v1.resources.Video\0228\n\007metrics\030\004 \001(\0132" +
-      "\'.google.ads.googleads.v1.common.Metrics" +
-      "\022:\n\010segments\030f \001(\0132(.google.ads.googlead" +
-      "s.v1.common.Segments\"\253\001\n\026MutateGoogleAds" +
-      "Request\022\023\n\013customer_id\030\001 \001(\t\022L\n\021mutate_o" +
-      "perations\030\002 \003(\01321.google.ads.googleads.v" +
-      "1.services.MutateOperation\022\027\n\017partial_fa" +
-      "ilure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\253\001\n\027M" +
-      "utateGoogleAdsResponse\0221\n\025partial_failur",
-      "e_error\030\003 \001(\0132\022.google.rpc.Status\022]\n\032mut" +
-      "ate_operation_responses\030\001 \003(\01329.google.a" +
-      "ds.googleads.v1.services.MutateOperation" +
-      "Response\"\352\033\n\017MutateOperation\022`\n\033ad_group" +
-      "_ad_label_operation\030\021 \001(\01329.google.ads.g" +
-      "oogleads.v1.services.AdGroupAdLabelOpera" +
-      "tionH\000\022U\n\025ad_group_ad_operation\030\001 \001(\01324." +
-      "google.ads.googleads.v1.services.AdGroup" +
-      "AdOperationH\000\022h\n\037ad_group_bid_modifier_o" +
-      "peration\030\002 \001(\0132=.google.ads.googleads.v1" +
-      ".services.AdGroupBidModifierOperationH\000\022" +
-      "n\n\"ad_group_criterion_label_operation\030\022 " +
-      "\001(\0132@.google.ads.googleads.v1.services.A" +
-      "dGroupCriterionLabelOperationH\000\022c\n\034ad_gr" +
-      "oup_criterion_operation\030\003 \001(\0132;.google.a" +
-      "ds.googleads.v1.services.AdGroupCriterio" +
-      "nOperationH\000\022r\n$ad_group_extension_setti" +
-      "ng_operation\030\023 \001(\0132B.google.ads.googlead" +
-      "s.v1.services.AdGroupExtensionSettingOpe" +
-      "rationH\000\022Y\n\027ad_group_feed_operation\030\024 \001(" +
-      "\01326.google.ads.googleads.v1.services.AdG" +
-      "roupFeedOperationH\000\022[\n\030ad_group_label_op" +
-      "eration\030\025 \001(\01327.google.ads.googleads.v1." +
-      "services.AdGroupLabelOperationH\000\022P\n\022ad_g" +
-      "roup_operation\030\005 \001(\01322.google.ads.google" +
-      "ads.v1.services.AdGroupOperationH\000\022X\n\026ad" +
-      "_parameter_operation\030\026 \001(\01326.google.ads." +
-      "googleads.v1.services.AdParameterOperati" +
-      "onH\000\022K\n\017asset_operation\030\027 \001(\01320.google.a" +
-      "ds.googleads.v1.services.AssetOperationH" +
-      "\000\022`\n\032bidding_strategy_operation\030\006 \001(\0132:." +
-      "google.ads.googleads.v1.services.Bidding" +
-      "StrategyOperationH\000\022i\n\037campaign_bid_modi" +
-      "fier_operation\030\007 \001(\0132>.google.ads.google" +
-      "ads.v1.services.CampaignBidModifierOpera" +
-      "tionH\000\022^\n\031campaign_budget_operation\030\010 \001(" +
-      "\01329.google.ads.googleads.v1.services.Cam" +
-      "paignBudgetOperationH\000\022d\n\034campaign_crite" +
-      "rion_operation\030\r \001(\0132<.google.ads.google" +
-      "ads.v1.services.CampaignCriterionOperati" +
-      "onH\000\022s\n$campaign_extension_setting_opera" +
-      "tion\030\032 \001(\0132C.google.ads.googleads.v1.ser" +
-      "vices.CampaignExtensionSettingOperationH" +
-      "\000\022Z\n\027campaign_feed_operation\030\033 \001(\01327.goo" +
-      "gle.ads.googleads.v1.services.CampaignFe" +
-      "edOperationH\000\022\\\n\030campaign_label_operatio" +
-      "n\030\034 \001(\01328.google.ads.googleads.v1.servic" +
-      "es.CampaignLabelOperationH\000\022Q\n\022campaign_" +
-      "operation\030\n \001(\01323.google.ads.googleads.v" +
-      "1.services.CampaignOperationH\000\022e\n\035campai" +
-      "gn_shared_set_operation\030\013 \001(\0132<.google.a" +
-      "ds.googleads.v1.services.CampaignSharedS" +
-      "etOperationH\000\022b\n\033conversion_action_opera" +
-      "tion\030\014 \001(\0132;.google.ads.googleads.v1.ser" +
-      "vices.ConversionActionOperationH\000\022s\n$cus" +
-      "tomer_extension_setting_operation\030\036 \001(\0132" +
-      "C.google.ads.googleads.v1.services.Custo" +
-      "merExtensionSettingOperationH\000\022Z\n\027custom" +
-      "er_feed_operation\030\037 \001(\01327.google.ads.goo" +
-      "gleads.v1.services.CustomerFeedOperation" +
-      "H\000\022\\\n\030customer_label_operation\030  \001(\01328.g" +
-      "oogle.ads.googleads.v1.services.Customer" +
-      "LabelOperationH\000\022u\n%customer_negative_cr" +
-      "iterion_operation\030\" \001(\0132D.google.ads.goo" +
-      "gleads.v1.services.CustomerNegativeCrite" +
-      "rionOperationH\000\022Q\n\022customer_operation\030# " +
-      "\001(\01323.google.ads.googleads.v1.services.C" +
-      "ustomerOperationH\000\022e\n\035extension_feed_ite" +
-      "m_operation\030$ \001(\0132<.google.ads.googleads" +
-      ".v1.services.ExtensionFeedItemOperationH" +
-      "\000\022R\n\023feed_item_operation\030% \001(\01323.google." +
-      "ads.googleads.v1.services.FeedItemOperat" +
-      "ionH\000\022_\n\032feed_item_target_operation\030& \001(" +
-      "\01329.google.ads.googleads.v1.services.Fee" +
-      "dItemTargetOperationH\000\022X\n\026feed_mapping_o" +
-      "peration\030\' \001(\01326.google.ads.googleads.v1" +
-      ".services.FeedMappingOperationH\000\022I\n\016feed" +
-      "_operation\030( \001(\0132/.google.ads.googleads." +
-      "v1.services.FeedOperationH\000\022K\n\017label_ope" +
-      "ration\030) \001(\01320.google.ads.googleads.v1.s" +
-      "ervices.LabelOperationH\000\022T\n\024media_file_o" +
-      "peration\030* \001(\01324.google.ads.googleads.v1" +
-      ".services.MediaFileOperationH\000\022d\n\034remark" +
-      "eting_action_operation\030+ \001(\0132<.google.ad" +
-      "s.googleads.v1.services.RemarketingActio" +
-      "nOperationH\000\022`\n\032shared_criterion_operati" +
-      "on\030\016 \001(\0132:.google.ads.googleads.v1.servi" +
-      "ces.SharedCriterionOperationH\000\022T\n\024shared" +
-      "_set_operation\030\017 \001(\01324.google.ads.google" +
-      "ads.v1.services.SharedSetOperationH\000\022R\n\023" +
-      "user_list_operation\030\020 \001(\01323.google.ads.g" +
-      "oogleads.v1.services.UserListOperationH\000" +
-      "B\013\n\toperation\"\360\033\n\027MutateOperationRespons" +
-      "e\022`\n\030ad_group_ad_label_result\030\021 \001(\0132<.go" +
-      "ogle.ads.googleads.v1.services.MutateAdG" +
-      "roupAdLabelResultH\000\022U\n\022ad_group_ad_resul" +
-      "t\030\001 \001(\01327.google.ads.googleads.v1.servic" +
-      "es.MutateAdGroupAdResultH\000\022h\n\034ad_group_b" +
-      "id_modifier_result\030\002 \001(\0132@.google.ads.go" +
-      "ogleads.v1.services.MutateAdGroupBidModi" +
-      "fierResultH\000\022n\n\037ad_group_criterion_label" +
-      "_result\030\022 \001(\0132C.google.ads.googleads.v1." +
-      "services.MutateAdGroupCriterionLabelResu" +
-      "ltH\000\022c\n\031ad_group_criterion_result\030\003 \001(\0132" +
-      ">.google.ads.googleads.v1.services.Mutat" +
-      "eAdGroupCriterionResultH\000\022r\n!ad_group_ex" +
-      "tension_setting_result\030\023 \001(\0132E.google.ad" +
-      "s.googleads.v1.services.MutateAdGroupExt" +
-      "ensionSettingResultH\000\022Y\n\024ad_group_feed_r" +
-      "esult\030\024 \001(\01329.google.ads.googleads.v1.se" +
-      "rvices.MutateAdGroupFeedResultH\000\022[\n\025ad_g" +
-      "roup_label_result\030\025 \001(\0132:.google.ads.goo" +
-      "gleads.v1.services.MutateAdGroupLabelRes" +
-      "ultH\000\022P\n\017ad_group_result\030\005 \001(\01325.google." +
-      "ads.googleads.v1.services.MutateAdGroupR" +
-      "esultH\000\022X\n\023ad_parameter_result\030\026 \001(\01329.g" +
-      "oogle.ads.googleads.v1.services.MutateAd" +
-      "ParameterResultH\000\022K\n\014asset_result\030\027 \001(\0132" +
-      "3.google.ads.googleads.v1.services.Mutat" +
-      "eAssetResultH\000\022`\n\027bidding_strategy_resul" +
-      "t\030\006 \001(\0132=.google.ads.googleads.v1.servic" +
-      "es.MutateBiddingStrategyResultH\000\022i\n\034camp" +
-      "aign_bid_modifier_result\030\007 \001(\0132A.google." +
-      "ads.googleads.v1.services.MutateCampaign" +
-      "BidModifierResultH\000\022^\n\026campaign_budget_r" +
-      "esult\030\010 \001(\0132<.google.ads.googleads.v1.se" +
-      "rvices.MutateCampaignBudgetResultH\000\022d\n\031c" +
-      "ampaign_criterion_result\030\r \001(\0132?.google." +
-      "ads.googleads.v1.services.MutateCampaign" +
-      "CriterionResultH\000\022s\n!campaign_extension_" +
-      "setting_result\030\032 \001(\0132F.google.ads.google" +
-      "ads.v1.services.MutateCampaignExtensionS" +
-      "ettingResultH\000\022Z\n\024campaign_feed_result\030\033" +
-      " \001(\0132:.google.ads.googleads.v1.services." +
-      "MutateCampaignFeedResultH\000\022\\\n\025campaign_l" +
-      "abel_result\030\034 \001(\0132;.google.ads.googleads" +
-      ".v1.services.MutateCampaignLabelResultH\000" +
-      "\022Q\n\017campaign_result\030\n \001(\01326.google.ads.g" +
-      "oogleads.v1.services.MutateCampaignResul" +
-      "tH\000\022e\n\032campaign_shared_set_result\030\013 \001(\0132" +
+      "nDraft\022R\n\023campaign_experiment\030T \001(\01325.go" +
+      "ogle.ads.googleads.v1.resources.Campaign" +
+      "Experiment\022_\n\032campaign_extension_setting" +
+      "\030q \001(\0132;.google.ads.googleads.v1.resourc" +
+      "es.CampaignExtensionSetting\022F\n\rcampaign_" +
+      "feed\030? \001(\0132/.google.ads.googleads.v1.res" +
+      "ources.CampaignFeed\022H\n\016campaign_label\030l " +
+      "\001(\01320.google.ads.googleads.v1.resources." +
+      "CampaignLabel\022Q\n\023campaign_shared_set\030\036 \001" +
+      "(\01324.google.ads.googleads.v1.resources.C" +
+      "ampaignSharedSet\022L\n\020carrier_constant\030B \001" +
+      "(\01322.google.ads.googleads.v1.resources.C" +
+      "arrierConstant\022F\n\rchange_status\030% \001(\0132/." +
+      "google.ads.googleads.v1.resources.Change" +
+      "Status\022N\n\021conversion_action\030g \001(\01323.goog" +
+      "le.ads.googleads.v1.resources.Conversion" +
+      "Action\022@\n\nclick_view\030z \001(\0132,.google.ads." +
+      "googleads.v1.resources.ClickView\022J\n\017cust" +
+      "om_interest\030h \001(\01321.google.ads.googleads" +
+      ".v1.resources.CustomInterest\022=\n\010customer" +
+      "\030\001 \001(\0132+.google.ads.googleads.v1.resourc" +
+      "es.Customer\022U\n\025customer_manager_link\030= \001" +
+      "(\01326.google.ads.googleads.v1.resources.C" +
+      "ustomerManagerLink\022S\n\024customer_client_li" +
+      "nk\030> \001(\01325.google.ads.googleads.v1.resou" +
+      "rces.CustomerClientLink\022J\n\017customer_clie" +
+      "nt\030F \001(\01321.google.ads.googleads.v1.resou" +
+      "rces.CustomerClient\022_\n\032customer_extensio" +
+      "n_setting\030r \001(\0132;.google.ads.googleads.v" +
+      "1.resources.CustomerExtensionSetting\022F\n\r" +
+      "customer_feed\030@ \001(\0132/.google.ads.googlea" +
+      "ds.v1.resources.CustomerFeed\022H\n\016customer" +
+      "_label\030| \001(\01320.google.ads.googleads.v1.r" +
+      "esources.CustomerLabel\022a\n\033customer_negat" +
+      "ive_criterion\030X \001(\0132<.google.ads.googlea" +
+      "ds.v1.resources.CustomerNegativeCriterio" +
+      "n\022U\n\025detail_placement_view\030v \001(\01326.googl" +
+      "e.ads.googleads.v1.resources.DetailPlace" +
+      "mentView\022S\n\024display_keyword_view\030/ \001(\01325" +
+      ".google.ads.googleads.v1.resources.Displ" +
+      "ayKeywordView\022n\n#dynamic_search_ads_sear" +
+      "ch_term_view\030j \001(\0132A.google.ads.googlead" +
+      "s.v1.resources.DynamicSearchAdsSearchTer" +
+      "mView\022_\n\032expanded_landing_page_view\030\200\001 \001" +
+      "(\0132:.google.ads.googleads.v1.resources.E" +
+      "xpandedLandingPageView\022Q\n\023extension_feed" +
+      "_item\030U \001(\01324.google.ads.googleads.v1.re" +
+      "sources.ExtensionFeedItem\0225\n\004feed\030. \001(\0132" +
+      "\'.google.ads.googleads.v1.resources.Feed" +
+      "\022>\n\tfeed_item\0302 \001(\0132+.google.ads.googlea" +
+      "ds.v1.resources.FeedItem\022K\n\020feed_item_ta" +
+      "rget\030t \001(\01321.google.ads.googleads.v1.res" +
+      "ources.FeedItemTarget\022D\n\014feed_mapping\030: " +
+      "\001(\0132..google.ads.googleads.v1.resources." +
+      "FeedMapping\022U\n\025feed_placeholder_view\030a \001" +
+      "(\01326.google.ads.googleads.v1.resources.F" +
+      "eedPlaceholderView\022B\n\013gender_view\030( \001(\0132" +
+      "-.google.ads.googleads.v1.resources.Gend" +
+      "erView\022Q\n\023geo_target_constant\030\027 \001(\01324.go" +
+      "ogle.ads.googleads.v1.resources.GeoTarge" +
+      "tConstant\022J\n\017geographic_view\030} \001(\01321.goo" +
+      "gle.ads.googleads.v1.resources.Geographi" +
+      "cView\022S\n\024group_placement_view\030w \001(\01325.go" +
+      "ogle.ads.googleads.v1.resources.GroupPla" +
+      "cementView\022K\n\020hotel_group_view\0303 \001(\01321.g" +
+      "oogle.ads.googleads.v1.resources.HotelGr" +
+      "oupView\022W\n\026hotel_performance_view\030G \001(\0132" +
+      "7.google.ads.googleads.v1.resources.Hote" +
+      "lPerformanceView\022D\n\014keyword_view\030\025 \001(\0132." +
+      ".google.ads.googleads.v1.resources.Keywo" +
+      "rdView\022D\n\014keyword_plan\030  \001(\0132..google.ad" +
+      "s.googleads.v1.resources.KeywordPlan\022U\n\025" +
+      "keyword_plan_campaign\030! \001(\01326.google.ads" +
+      ".googleads.v1.resources.KeywordPlanCampa" +
+      "ign\022d\n\035keyword_plan_negative_keyword\030\" \001" +
+      "(\0132=.google.ads.googleads.v1.resources.K" +
+      "eywordPlanNegativeKeyword\022T\n\025keyword_pla" +
+      "n_ad_group\030# \001(\01325.google.ads.googleads." +
+      "v1.resources.KeywordPlanAdGroup\022S\n\024keywo" +
+      "rd_plan_keyword\030$ \001(\01325.google.ads.googl" +
+      "eads.v1.resources.KeywordPlanKeyword\0227\n\005" +
+      "label\0304 \001(\0132(.google.ads.googleads.v1.re" +
+      "sources.Label\022M\n\021landing_page_view\030~ \001(\013" +
+      "22.google.ads.googleads.v1.resources.Lan" +
+      "dingPageView\022N\n\021language_constant\0307 \001(\0132" +
+      "3.google.ads.googleads.v1.resources.Lang" +
+      "uageConstant\022F\n\rlocation_view\030{ \001(\0132/.go" +
+      "ogle.ads.googleads.v1.resources.Location" +
+      "View\022W\n\026managed_placement_view\0305 \001(\01327.g" +
+      "oogle.ads.googleads.v1.resources.Managed" +
+      "PlacementView\022@\n\nmedia_file\030Z \001(\0132,.goog" +
+      "le.ads.googleads.v1.resources.MediaFile\022" +
+      "b\n\034mobile_app_category_constant\030W \001(\0132<." +
+      "google.ads.googleads.v1.resources.Mobile" +
+      "AppCategoryConstant\022W\n\026mobile_device_con" +
+      "stant\030b \001(\01327.google.ads.googleads.v1.re" +
+      "sources.MobileDeviceConstant\022@\n\nmutate_j" +
+      "ob\030\177 \001(\0132,.google.ads.googleads.v1.resou" +
+      "rces.MutateJob\022l\n!operating_system_versi" +
+      "on_constant\030V \001(\0132A.google.ads.googleads" +
+      ".v1.resources.OperatingSystemVersionCons" +
+      "tant\022d\n\035paid_organic_search_term_view\030\201\001" +
+      " \001(\0132<.google.ads.googleads.v1.resources" +
+      ".PaidOrganicSearchTermView\022S\n\024parental_s" +
+      "tatus_view\030- \001(\01325.google.ads.googleads." +
+      "v1.resources.ParentalStatusView\022l\n!produ" +
+      "ct_bidding_category_constant\030m \001(\0132A.goo" +
+      "gle.ads.googleads.v1.resources.ProductBi" +
+      "ddingCategoryConstant\022O\n\022product_group_v" +
+      "iew\0306 \001(\01323.google.ads.googleads.v1.reso" +
+      "urces.ProductGroupView\022I\n\016recommendation" +
+      "\030\026 \001(\01321.google.ads.googleads.v1.resourc" +
+      "es.Recommendation\022K\n\020search_term_view\030D " +
+      "\001(\01321.google.ads.googleads.v1.resources." +
+      "SearchTermView\022L\n\020shared_criterion\030\035 \001(\013" +
+      "22.google.ads.googleads.v1.resources.Sha" +
+      "redCriterion\022@\n\nshared_set\030\033 \001(\0132,.googl" +
+      "e.ads.googleads.v1.resources.SharedSet\022]" +
+      "\n\031shopping_performance_view\030u \001(\0132:.goog" +
+      "le.ads.googleads.v1.resources.ShoppingPe" +
+      "rformanceView\022@\n\ntopic_view\030, \001(\0132,.goog" +
+      "le.ads.googleads.v1.resources.TopicView\022" +
+      "F\n\ruser_interest\030; \001(\0132/.google.ads.goog" +
+      "leads.v1.resources.UserInterest\022>\n\tuser_" +
+      "list\030& \001(\0132+.google.ads.googleads.v1.res" +
+      "ources.UserList\022P\n\022remarketing_action\030< " +
+      "\001(\01324.google.ads.googleads.v1.resources." +
+      "RemarketingAction\022H\n\016topic_constant\030\037 \001(" +
+      "\01320.google.ads.googleads.v1.resources.To",
+      "picConstant\0227\n\005video\030\' \001(\0132(.google.ads." +
+      "googleads.v1.resources.Video\0228\n\007metrics\030" +
+      "\004 \001(\0132\'.google.ads.googleads.v1.common.M" +
+      "etrics\022:\n\010segments\030f \001(\0132(.google.ads.go" +
+      "ogleads.v1.common.Segments\"\253\001\n\026MutateGoo" +
+      "gleAdsRequest\022\023\n\013customer_id\030\001 \001(\t\022L\n\021mu" +
+      "tate_operations\030\002 \003(\01321.google.ads.googl" +
+      "eads.v1.services.MutateOperation\022\027\n\017part" +
+      "ial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010" +
+      "\"\253\001\n\027MutateGoogleAdsResponse\0221\n\025partial_" +
+      "failure_error\030\003 \001(\0132\022.google.rpc.Status\022" +
+      "]\n\032mutate_operation_responses\030\001 \003(\01329.go" +
+      "ogle.ads.googleads.v1.services.MutateOpe" +
+      "rationResponse\"\260\035\n\017MutateOperation\022`\n\033ad" +
+      "_group_ad_label_operation\030\021 \001(\01329.google" +
+      ".ads.googleads.v1.services.AdGroupAdLabe" +
+      "lOperationH\000\022U\n\025ad_group_ad_operation\030\001 " +
+      "\001(\01324.google.ads.googleads.v1.services.A" +
+      "dGroupAdOperationH\000\022h\n\037ad_group_bid_modi" +
+      "fier_operation\030\002 \001(\0132=.google.ads.google" +
+      "ads.v1.services.AdGroupBidModifierOperat" +
+      "ionH\000\022n\n\"ad_group_criterion_label_operat" +
+      "ion\030\022 \001(\0132@.google.ads.googleads.v1.serv" +
+      "ices.AdGroupCriterionLabelOperationH\000\022c\n" +
+      "\034ad_group_criterion_operation\030\003 \001(\0132;.go" +
+      "ogle.ads.googleads.v1.services.AdGroupCr" +
+      "iterionOperationH\000\022r\n$ad_group_extension" +
+      "_setting_operation\030\023 \001(\0132B.google.ads.go" +
+      "ogleads.v1.services.AdGroupExtensionSett" +
+      "ingOperationH\000\022Y\n\027ad_group_feed_operatio" +
+      "n\030\024 \001(\01326.google.ads.googleads.v1.servic" +
+      "es.AdGroupFeedOperationH\000\022[\n\030ad_group_la" +
+      "bel_operation\030\025 \001(\01327.google.ads.googlea" +
+      "ds.v1.services.AdGroupLabelOperationH\000\022P" +
+      "\n\022ad_group_operation\030\005 \001(\01322.google.ads." +
+      "googleads.v1.services.AdGroupOperationH\000" +
+      "\022X\n\026ad_parameter_operation\030\026 \001(\01326.googl" +
+      "e.ads.googleads.v1.services.AdParameterO" +
+      "perationH\000\022K\n\017asset_operation\030\027 \001(\01320.go" +
+      "ogle.ads.googleads.v1.services.AssetOper" +
+      "ationH\000\022`\n\032bidding_strategy_operation\030\006 " +
+      "\001(\0132:.google.ads.googleads.v1.services.B" +
+      "iddingStrategyOperationH\000\022i\n\037campaign_bi" +
+      "d_modifier_operation\030\007 \001(\0132>.google.ads." +
+      "googleads.v1.services.CampaignBidModifie" +
+      "rOperationH\000\022^\n\031campaign_budget_operatio" +
+      "n\030\010 \001(\01329.google.ads.googleads.v1.servic" +
+      "es.CampaignBudgetOperationH\000\022d\n\034campaign" +
+      "_criterion_operation\030\r \001(\0132<.google.ads." +
+      "googleads.v1.services.CampaignCriterionO" +
+      "perationH\000\022\\\n\030campaign_draft_operation\030\030" +
+      " \001(\01328.google.ads.googleads.v1.services." +
+      "CampaignDraftOperationH\000\022f\n\035campaign_exp" +
+      "eriment_operation\030\031 \001(\0132=.google.ads.goo" +
+      "gleads.v1.services.CampaignExperimentOpe" +
+      "rationH\000\022s\n$campaign_extension_setting_o" +
+      "peration\030\032 \001(\0132C.google.ads.googleads.v1" +
+      ".services.CampaignExtensionSettingOperat" +
+      "ionH\000\022Z\n\027campaign_feed_operation\030\033 \001(\01327" +
+      ".google.ads.googleads.v1.services.Campai" +
+      "gnFeedOperationH\000\022\\\n\030campaign_label_oper" +
+      "ation\030\034 \001(\01328.google.ads.googleads.v1.se" +
+      "rvices.CampaignLabelOperationH\000\022Q\n\022campa" +
+      "ign_operation\030\n \001(\01323.google.ads.googlea" +
+      "ds.v1.services.CampaignOperationH\000\022e\n\035ca" +
+      "mpaign_shared_set_operation\030\013 \001(\0132<.goog" +
+      "le.ads.googleads.v1.services.CampaignSha" +
+      "redSetOperationH\000\022b\n\033conversion_action_o" +
+      "peration\030\014 \001(\0132;.google.ads.googleads.v1" +
+      ".services.ConversionActionOperationH\000\022s\n" +
+      "$customer_extension_setting_operation\030\036 " +
+      "\001(\0132C.google.ads.googleads.v1.services.C" +
+      "ustomerExtensionSettingOperationH\000\022Z\n\027cu" +
+      "stomer_feed_operation\030\037 \001(\01327.google.ads" +
+      ".googleads.v1.services.CustomerFeedOpera" +
+      "tionH\000\022\\\n\030customer_label_operation\030  \001(\013" +
+      "28.google.ads.googleads.v1.services.Cust" +
+      "omerLabelOperationH\000\022u\n%customer_negativ" +
+      "e_criterion_operation\030\" \001(\0132D.google.ads" +
+      ".googleads.v1.services.CustomerNegativeC" +
+      "riterionOperationH\000\022Q\n\022customer_operatio" +
+      "n\030# \001(\01323.google.ads.googleads.v1.servic" +
+      "es.CustomerOperationH\000\022e\n\035extension_feed" +
+      "_item_operation\030$ \001(\0132<.google.ads.googl" +
+      "eads.v1.services.ExtensionFeedItemOperat" +
+      "ionH\000\022R\n\023feed_item_operation\030% \001(\01323.goo" +
+      "gle.ads.googleads.v1.services.FeedItemOp" +
+      "erationH\000\022_\n\032feed_item_target_operation\030" +
+      "& \001(\01329.google.ads.googleads.v1.services" +
+      ".FeedItemTargetOperationH\000\022X\n\026feed_mappi" +
+      "ng_operation\030\' \001(\01326.google.ads.googlead" +
+      "s.v1.services.FeedMappingOperationH\000\022I\n\016" +
+      "feed_operation\030( \001(\0132/.google.ads.google" +
+      "ads.v1.services.FeedOperationH\000\022K\n\017label" +
+      "_operation\030) \001(\01320.google.ads.googleads." +
+      "v1.services.LabelOperationH\000\022T\n\024media_fi" +
+      "le_operation\030* \001(\01324.google.ads.googlead" +
+      "s.v1.services.MediaFileOperationH\000\022d\n\034re" +
+      "marketing_action_operation\030+ \001(\0132<.googl" +
+      "e.ads.googleads.v1.services.RemarketingA" +
+      "ctionOperationH\000\022`\n\032shared_criterion_ope" +
+      "ration\030\016 \001(\0132:.google.ads.googleads.v1.s" +
+      "ervices.SharedCriterionOperationH\000\022T\n\024sh" +
+      "ared_set_operation\030\017 \001(\01324.google.ads.go" +
+      "ogleads.v1.services.SharedSetOperationH\000" +
+      "\022R\n\023user_list_operation\030\020 \001(\01323.google.a" +
+      "ds.googleads.v1.services.UserListOperati" +
+      "onH\000B\013\n\toperation\"\266\035\n\027MutateOperationRes" +
+      "ponse\022`\n\030ad_group_ad_label_result\030\021 \001(\0132" +
+      "<.google.ads.googleads.v1.services.Mutat" +
+      "eAdGroupAdLabelResultH\000\022U\n\022ad_group_ad_r" +
+      "esult\030\001 \001(\01327.google.ads.googleads.v1.se" +
+      "rvices.MutateAdGroupAdResultH\000\022h\n\034ad_gro" +
+      "up_bid_modifier_result\030\002 \001(\0132@.google.ad" +
+      "s.googleads.v1.services.MutateAdGroupBid" +
+      "ModifierResultH\000\022n\n\037ad_group_criterion_l" +
+      "abel_result\030\022 \001(\0132C.google.ads.googleads" +
+      ".v1.services.MutateAdGroupCriterionLabel" +
+      "ResultH\000\022c\n\031ad_group_criterion_result\030\003 " +
+      "\001(\0132>.google.ads.googleads.v1.services.M" +
+      "utateAdGroupCriterionResultH\000\022r\n!ad_grou" +
+      "p_extension_setting_result\030\023 \001(\0132E.googl" +
+      "e.ads.googleads.v1.services.MutateAdGrou" +
+      "pExtensionSettingResultH\000\022Y\n\024ad_group_fe" +
+      "ed_result\030\024 \001(\01329.google.ads.googleads.v" +
+      "1.services.MutateAdGroupFeedResultH\000\022[\n\025" +
+      "ad_group_label_result\030\025 \001(\0132:.google.ads" +
+      ".googleads.v1.services.MutateAdGroupLabe" +
+      "lResultH\000\022P\n\017ad_group_result\030\005 \001(\01325.goo" +
+      "gle.ads.googleads.v1.services.MutateAdGr" +
+      "oupResultH\000\022X\n\023ad_parameter_result\030\026 \001(\013" +
+      "29.google.ads.googleads.v1.services.Muta" +
+      "teAdParameterResultH\000\022K\n\014asset_result\030\027 " +
+      "\001(\01323.google.ads.googleads.v1.services.M" +
+      "utateAssetResultH\000\022`\n\027bidding_strategy_r" +
+      "esult\030\006 \001(\0132=.google.ads.googleads.v1.se" +
+      "rvices.MutateBiddingStrategyResultH\000\022i\n\034" +
+      "campaign_bid_modifier_result\030\007 \001(\0132A.goo" +
+      "gle.ads.googleads.v1.services.MutateCamp" +
+      "aignBidModifierResultH\000\022^\n\026campaign_budg" +
+      "et_result\030\010 \001(\0132<.google.ads.googleads.v" +
+      "1.services.MutateCampaignBudgetResultH\000\022" +
+      "d\n\031campaign_criterion_result\030\r \001(\0132?.goo" +
+      "gle.ads.googleads.v1.services.MutateCamp" +
+      "aignCriterionResultH\000\022\\\n\025campaign_draft_" +
+      "result\030\030 \001(\0132;.google.ads.googleads.v1.s" +
+      "ervices.MutateCampaignDraftResultH\000\022f\n\032c" +
+      "ampaign_experiment_result\030\031 \001(\0132@.google" +
+      ".ads.googleads.v1.services.MutateCampaig" +
+      "nExperimentResultH\000\022s\n!campaign_extensio" +
+      "n_setting_result\030\032 \001(\0132F.google.ads.goog" +
+      "leads.v1.services.MutateCampaignExtensio" +
+      "nSettingResultH\000\022Z\n\024campaign_feed_result" +
+      "\030\033 \001(\0132:.google.ads.googleads.v1.service" +
+      "s.MutateCampaignFeedResultH\000\022\\\n\025campaign" +
+      "_label_result\030\034 \001(\0132;.google.ads.googlea" +
+      "ds.v1.services.MutateCampaignLabelResult" +
+      "H\000\022Q\n\017campaign_result\030\n \001(\01326.google.ads" +
+      ".googleads.v1.services.MutateCampaignRes" +
+      "ultH\000\022e\n\032campaign_shared_set_result\030\013 \001(" +
+      "\0132?.google.ads.googleads.v1.services.Mut" +
+      "ateCampaignSharedSetResultH\000\022b\n\030conversi" +
+      "on_action_result\030\014 \001(\0132>.google.ads.goog" +
+      "leads.v1.services.MutateConversionAction" +
+      "ResultH\000\022s\n!customer_extension_setting_r" +
+      "esult\030\036 \001(\0132F.google.ads.googleads.v1.se" +
+      "rvices.MutateCustomerExtensionSettingRes" +
+      "ultH\000\022Z\n\024customer_feed_result\030\037 \001(\0132:.go" +
+      "ogle.ads.googleads.v1.services.MutateCus" +
+      "tomerFeedResultH\000\022\\\n\025customer_label_resu" +
+      "lt\030  \001(\0132;.google.ads.googleads.v1.servi" +
+      "ces.MutateCustomerLabelResultH\000\022t\n\"custo" +
+      "mer_negative_criterion_result\030\" \001(\0132F.go" +
+      "ogle.ads.googleads.v1.services.MutateCus" +
+      "tomerNegativeCriteriaResultH\000\022Q\n\017custome" +
+      "r_result\030# \001(\01326.google.ads.googleads.v1" +
+      ".services.MutateCustomerResultH\000\022e\n\032exte" +
+      "nsion_feed_item_result\030$ \001(\0132?.google.ad" +
+      "s.googleads.v1.services.MutateExtensionF" +
+      "eedItemResultH\000\022R\n\020feed_item_result\030% \001(" +
+      "\01326.google.ads.googleads.v1.services.Mut" +
+      "ateFeedItemResultH\000\022_\n\027feed_item_target_" +
+      "result\030& \001(\0132<.google.ads.googleads.v1.s" +
+      "ervices.MutateFeedItemTargetResultH\000\022X\n\023" +
+      "feed_mapping_result\030\' \001(\01329.google.ads.g" +
+      "oogleads.v1.services.MutateFeedMappingRe" +
+      "sultH\000\022I\n\013feed_result\030( \001(\01322.google.ads" +
+      ".googleads.v1.services.MutateFeedResultH" +
+      "\000\022K\n\014label_result\030) \001(\01323.google.ads.goo" +
+      "gleads.v1.services.MutateLabelResultH\000\022T" +
+      "\n\021media_file_result\030* \001(\01327.google.ads.g" +
+      "oogleads.v1.services.MutateMediaFileResu" +
+      "ltH\000\022d\n\031remarketing_action_result\030+ \001(\0132" +
       "?.google.ads.googleads.v1.services.Mutat" +
-      "eCampaignSharedSetResultH\000\022b\n\030conversion" +
-      "_action_result\030\014 \001(\0132>.google.ads.google" +
-      "ads.v1.services.MutateConversionActionRe" +
-      "sultH\000\022s\n!customer_extension_setting_res" +
-      "ult\030\036 \001(\0132F.google.ads.googleads.v1.serv" +
-      "ices.MutateCustomerExtensionSettingResul" +
-      "tH\000\022Z\n\024customer_feed_result\030\037 \001(\0132:.goog" +
-      "le.ads.googleads.v1.services.MutateCusto" +
-      "merFeedResultH\000\022\\\n\025customer_label_result" +
-      "\030  \001(\0132;.google.ads.googleads.v1.service" +
-      "s.MutateCustomerLabelResultH\000\022t\n\"custome" +
-      "r_negative_criterion_result\030\" \001(\0132F.goog" +
-      "le.ads.googleads.v1.services.MutateCusto" +
-      "merNegativeCriteriaResultH\000\022Q\n\017customer_" +
-      "result\030# \001(\01326.google.ads.googleads.v1.s" +
-      "ervices.MutateCustomerResultH\000\022e\n\032extens" +
-      "ion_feed_item_result\030$ \001(\0132?.google.ads." +
-      "googleads.v1.services.MutateExtensionFee" +
-      "dItemResultH\000\022R\n\020feed_item_result\030% \001(\0132" +
-      "6.google.ads.googleads.v1.services.Mutat" +
-      "eFeedItemResultH\000\022_\n\027feed_item_target_re" +
-      "sult\030& \001(\0132<.google.ads.googleads.v1.ser" +
-      "vices.MutateFeedItemTargetResultH\000\022X\n\023fe" +
-      "ed_mapping_result\030\' \001(\01329.google.ads.goo" +
-      "gleads.v1.services.MutateFeedMappingResu" +
-      "ltH\000\022I\n\013feed_result\030( \001(\01322.google.ads.g" +
-      "oogleads.v1.services.MutateFeedResultH\000\022" +
-      "K\n\014label_result\030) \001(\01323.google.ads.googl" +
-      "eads.v1.services.MutateLabelResultH\000\022T\n\021" +
-      "media_file_result\030* \001(\01327.google.ads.goo" +
-      "gleads.v1.services.MutateMediaFileResult" +
-      "H\000\022d\n\031remarketing_action_result\030+ \001(\0132?." +
-      "google.ads.googleads.v1.services.MutateR" +
-      "emarketingActionResultH\000\022`\n\027shared_crite" +
-      "rion_result\030\016 \001(\0132=.google.ads.googleads" +
-      ".v1.services.MutateSharedCriterionResult" +
-      "H\000\022T\n\021shared_set_result\030\017 \001(\01327.google.a" +
-      "ds.googleads.v1.services.MutateSharedSet" +
-      "ResultH\000\022R\n\020user_list_result\030\020 \001(\01326.goo" +
-      "gle.ads.googleads.v1.services.MutateUser" +
-      "ListResultH\000B\n\n\010response2\210\003\n\020GoogleAdsSe" +
-      "rvice\022\270\001\n\006Search\0228.google.ads.googleads." +
-      "v1.services.SearchGoogleAdsRequest\0329.goo" +
-      "gle.ads.googleads.v1.services.SearchGoog" +
-      "leAdsResponse\"9\202\323\344\223\0023\"./v1/customers/{cu" +
-      "stomer_id=*}/googleAds:search:\001*\022\270\001\n\006Mut" +
-      "ate\0228.google.ads.googleads.v1.services.M" +
-      "utateGoogleAdsRequest\0329.google.ads.googl" +
-      "eads.v1.services.MutateGoogleAdsResponse" +
-      "\"9\202\323\344\223\0023\"./v1/customers/{customer_id=*}/" +
-      "googleAds:mutate:\001*B\374\001\n$com.google.ads.g" +
-      "oogleads.v1.servicesB\025GoogleAdsServicePr" +
-      "otoP\001ZHgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v1/services;services\242" +
-      "\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Services" +
-      "\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$Go" +
-      "ogle::Ads::GoogleAds::V1::Servicesb\006prot" +
-      "o3"
+      "eRemarketingActionResultH\000\022`\n\027shared_cri" +
+      "terion_result\030\016 \001(\0132=.google.ads.googlea" +
+      "ds.v1.services.MutateSharedCriterionResu" +
+      "ltH\000\022T\n\021shared_set_result\030\017 \001(\01327.google" +
+      ".ads.googleads.v1.services.MutateSharedS" +
+      "etResultH\000\022R\n\020user_list_result\030\020 \001(\01326.g" +
+      "oogle.ads.googleads.v1.services.MutateUs" +
+      "erListResultH\000B\n\n\010response2\210\003\n\020GoogleAds" +
+      "Service\022\270\001\n\006Search\0228.google.ads.googlead" +
+      "s.v1.services.SearchGoogleAdsRequest\0329.g" +
+      "oogle.ads.googleads.v1.services.SearchGo" +
+      "ogleAdsResponse\"9\202\323\344\223\0023\"./v1/customers/{" +
+      "customer_id=*}/googleAds:search:\001*\022\270\001\n\006M" +
+      "utate\0228.google.ads.googleads.v1.services" +
+      ".MutateGoogleAdsRequest\0329.google.ads.goo" +
+      "gleads.v1.services.MutateGoogleAdsRespon" +
+      "se\"9\202\323\344\223\0023\"./v1/customers/{customer_id=*" +
+      "}/googleAds:mutate:\001*B\374\001\n$com.google.ads" +
+      ".googleads.v1.servicesB\025GoogleAdsService" +
+      "ProtoP\001ZHgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v1/services;service" +
+      "s\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Servic" +
+      "es\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$" +
+      "Google::Ads::GoogleAds::V1::Servicesb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -697,6 +717,8 @@ public final class GoogleAdsServiceProto {
           com.google.ads.googleads.v1.resources.CampaignBudgetProto.getDescriptor(),
           com.google.ads.googleads.v1.resources.CampaignCriterionProto.getDescriptor(),
           com.google.ads.googleads.v1.resources.CampaignCriterionSimulationProto.getDescriptor(),
+          com.google.ads.googleads.v1.resources.CampaignDraftProto.getDescriptor(),
+          com.google.ads.googleads.v1.resources.CampaignExperimentProto.getDescriptor(),
           com.google.ads.googleads.v1.resources.CampaignExtensionSettingProto.getDescriptor(),
           com.google.ads.googleads.v1.resources.CampaignFeedProto.getDescriptor(),
           com.google.ads.googleads.v1.resources.CampaignLabelProto.getDescriptor(),
@@ -777,6 +799,8 @@ public final class GoogleAdsServiceProto {
           com.google.ads.googleads.v1.services.CampaignBidModifierServiceProto.getDescriptor(),
           com.google.ads.googleads.v1.services.CampaignBudgetServiceProto.getDescriptor(),
           com.google.ads.googleads.v1.services.CampaignCriterionServiceProto.getDescriptor(),
+          com.google.ads.googleads.v1.services.CampaignDraftServiceProto.getDescriptor(),
+          com.google.ads.googleads.v1.services.CampaignExperimentServiceProto.getDescriptor(),
           com.google.ads.googleads.v1.services.CampaignExtensionSettingServiceProto.getDescriptor(),
           com.google.ads.googleads.v1.services.CampaignFeedServiceProto.getDescriptor(),
           com.google.ads.googleads.v1.services.CampaignLabelServiceProto.getDescriptor(),
@@ -820,7 +844,7 @@ public final class GoogleAdsServiceProto {
     internal_static_google_ads_googleads_v1_services_GoogleAdsRow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_services_GoogleAdsRow_descriptor,
-        new java.lang.String[] { "AccountBudget", "AccountBudgetProposal", "AdGroup", "AdGroupAd", "AdGroupAdLabel", "AdGroupAudienceView", "AdGroupBidModifier", "AdGroupCriterion", "AdGroupCriterionLabel", "AdGroupCriterionSimulation", "AdGroupExtensionSetting", "AdGroupFeed", "AdGroupLabel", "AdGroupSimulation", "AdParameter", "AgeRangeView", "AdScheduleView", "DomainCategory", "Asset", "BiddingStrategy", "BillingSetup", "CampaignBudget", "Campaign", "CampaignAudienceView", "CampaignBidModifier", "CampaignCriterion", "CampaignCriterionSimulation", "CampaignExtensionSetting", "CampaignFeed", "CampaignLabel", "CampaignSharedSet", "CarrierConstant", "ChangeStatus", "ConversionAction", "ClickView", "CustomInterest", "Customer", "CustomerManagerLink", "CustomerClientLink", "CustomerClient", "CustomerExtensionSetting", "CustomerFeed", "CustomerLabel", "CustomerNegativeCriterion", "DetailPlacementView", "DisplayKeywordView", "DynamicSearchAdsSearchTermView", "ExpandedLandingPageView", "ExtensionFeedItem", "Feed", "FeedItem", "FeedItemTarget", "FeedMapping", "FeedPlaceholderView", "GenderView", "GeoTargetConstant", "GeographicView", "GroupPlacementView", "HotelGroupView", "HotelPerformanceView", "KeywordView", "KeywordPlan", "KeywordPlanCampaign", "KeywordPlanNegativeKeyword", "KeywordPlanAdGroup", "KeywordPlanKeyword", "Label", "LandingPageView", "LanguageConstant", "LocationView", "ManagedPlacementView", "MediaFile", "MobileAppCategoryConstant", "MobileDeviceConstant", "MutateJob", "OperatingSystemVersionConstant", "PaidOrganicSearchTermView", "ParentalStatusView", "ProductBiddingCategoryConstant", "ProductGroupView", "Recommendation", "SearchTermView", "SharedCriterion", "SharedSet", "ShoppingPerformanceView", "TopicView", "UserInterest", "UserList", "RemarketingAction", "TopicConstant", "Video", "Metrics", "Segments", });
+        new java.lang.String[] { "AccountBudget", "AccountBudgetProposal", "AdGroup", "AdGroupAd", "AdGroupAdLabel", "AdGroupAudienceView", "AdGroupBidModifier", "AdGroupCriterion", "AdGroupCriterionLabel", "AdGroupCriterionSimulation", "AdGroupExtensionSetting", "AdGroupFeed", "AdGroupLabel", "AdGroupSimulation", "AdParameter", "AgeRangeView", "AdScheduleView", "DomainCategory", "Asset", "BiddingStrategy", "BillingSetup", "CampaignBudget", "Campaign", "CampaignAudienceView", "CampaignBidModifier", "CampaignCriterion", "CampaignCriterionSimulation", "CampaignDraft", "CampaignExperiment", "CampaignExtensionSetting", "CampaignFeed", "CampaignLabel", "CampaignSharedSet", "CarrierConstant", "ChangeStatus", "ConversionAction", "ClickView", "CustomInterest", "Customer", "CustomerManagerLink", "CustomerClientLink", "CustomerClient", "CustomerExtensionSetting", "CustomerFeed", "CustomerLabel", "CustomerNegativeCriterion", "DetailPlacementView", "DisplayKeywordView", "DynamicSearchAdsSearchTermView", "ExpandedLandingPageView", "ExtensionFeedItem", "Feed", "FeedItem", "FeedItemTarget", "FeedMapping", "FeedPlaceholderView", "GenderView", "GeoTargetConstant", "GeographicView", "GroupPlacementView", "HotelGroupView", "HotelPerformanceView", "KeywordView", "KeywordPlan", "KeywordPlanCampaign", "KeywordPlanNegativeKeyword", "KeywordPlanAdGroup", "KeywordPlanKeyword", "Label", "LandingPageView", "LanguageConstant", "LocationView", "ManagedPlacementView", "MediaFile", "MobileAppCategoryConstant", "MobileDeviceConstant", "MutateJob", "OperatingSystemVersionConstant", "PaidOrganicSearchTermView", "ParentalStatusView", "ProductBiddingCategoryConstant", "ProductGroupView", "Recommendation", "SearchTermView", "SharedCriterion", "SharedSet", "ShoppingPerformanceView", "TopicView", "UserInterest", "UserList", "RemarketingAction", "TopicConstant", "Video", "Metrics", "Segments", });
     internal_static_google_ads_googleads_v1_services_MutateGoogleAdsRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_google_ads_googleads_v1_services_MutateGoogleAdsRequest_fieldAccessorTable = new
@@ -838,13 +862,13 @@ public final class GoogleAdsServiceProto {
     internal_static_google_ads_googleads_v1_services_MutateOperation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_services_MutateOperation_descriptor,
-        new java.lang.String[] { "AdGroupAdLabelOperation", "AdGroupAdOperation", "AdGroupBidModifierOperation", "AdGroupCriterionLabelOperation", "AdGroupCriterionOperation", "AdGroupExtensionSettingOperation", "AdGroupFeedOperation", "AdGroupLabelOperation", "AdGroupOperation", "AdParameterOperation", "AssetOperation", "BiddingStrategyOperation", "CampaignBidModifierOperation", "CampaignBudgetOperation", "CampaignCriterionOperation", "CampaignExtensionSettingOperation", "CampaignFeedOperation", "CampaignLabelOperation", "CampaignOperation", "CampaignSharedSetOperation", "ConversionActionOperation", "CustomerExtensionSettingOperation", "CustomerFeedOperation", "CustomerLabelOperation", "CustomerNegativeCriterionOperation", "CustomerOperation", "ExtensionFeedItemOperation", "FeedItemOperation", "FeedItemTargetOperation", "FeedMappingOperation", "FeedOperation", "LabelOperation", "MediaFileOperation", "RemarketingActionOperation", "SharedCriterionOperation", "SharedSetOperation", "UserListOperation", "Operation", });
+        new java.lang.String[] { "AdGroupAdLabelOperation", "AdGroupAdOperation", "AdGroupBidModifierOperation", "AdGroupCriterionLabelOperation", "AdGroupCriterionOperation", "AdGroupExtensionSettingOperation", "AdGroupFeedOperation", "AdGroupLabelOperation", "AdGroupOperation", "AdParameterOperation", "AssetOperation", "BiddingStrategyOperation", "CampaignBidModifierOperation", "CampaignBudgetOperation", "CampaignCriterionOperation", "CampaignDraftOperation", "CampaignExperimentOperation", "CampaignExtensionSettingOperation", "CampaignFeedOperation", "CampaignLabelOperation", "CampaignOperation", "CampaignSharedSetOperation", "ConversionActionOperation", "CustomerExtensionSettingOperation", "CustomerFeedOperation", "CustomerLabelOperation", "CustomerNegativeCriterionOperation", "CustomerOperation", "ExtensionFeedItemOperation", "FeedItemOperation", "FeedItemTargetOperation", "FeedMappingOperation", "FeedOperation", "LabelOperation", "MediaFileOperation", "RemarketingActionOperation", "SharedCriterionOperation", "SharedSetOperation", "UserListOperation", "Operation", });
     internal_static_google_ads_googleads_v1_services_MutateOperationResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_google_ads_googleads_v1_services_MutateOperationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_services_MutateOperationResponse_descriptor,
-        new java.lang.String[] { "AdGroupAdLabelResult", "AdGroupAdResult", "AdGroupBidModifierResult", "AdGroupCriterionLabelResult", "AdGroupCriterionResult", "AdGroupExtensionSettingResult", "AdGroupFeedResult", "AdGroupLabelResult", "AdGroupResult", "AdParameterResult", "AssetResult", "BiddingStrategyResult", "CampaignBidModifierResult", "CampaignBudgetResult", "CampaignCriterionResult", "CampaignExtensionSettingResult", "CampaignFeedResult", "CampaignLabelResult", "CampaignResult", "CampaignSharedSetResult", "ConversionActionResult", "CustomerExtensionSettingResult", "CustomerFeedResult", "CustomerLabelResult", "CustomerNegativeCriterionResult", "CustomerResult", "ExtensionFeedItemResult", "FeedItemResult", "FeedItemTargetResult", "FeedMappingResult", "FeedResult", "LabelResult", "MediaFileResult", "RemarketingActionResult", "SharedCriterionResult", "SharedSetResult", "UserListResult", "Response", });
+        new java.lang.String[] { "AdGroupAdLabelResult", "AdGroupAdResult", "AdGroupBidModifierResult", "AdGroupCriterionLabelResult", "AdGroupCriterionResult", "AdGroupExtensionSettingResult", "AdGroupFeedResult", "AdGroupLabelResult", "AdGroupResult", "AdParameterResult", "AssetResult", "BiddingStrategyResult", "CampaignBidModifierResult", "CampaignBudgetResult", "CampaignCriterionResult", "CampaignDraftResult", "CampaignExperimentResult", "CampaignExtensionSettingResult", "CampaignFeedResult", "CampaignLabelResult", "CampaignResult", "CampaignSharedSetResult", "ConversionActionResult", "CustomerExtensionSettingResult", "CustomerFeedResult", "CustomerLabelResult", "CustomerNegativeCriterionResult", "CustomerResult", "ExtensionFeedItemResult", "FeedItemResult", "FeedItemTargetResult", "FeedMappingResult", "FeedResult", "LabelResult", "MediaFileResult", "RemarketingActionResult", "SharedCriterionResult", "SharedSetResult", "UserListResult", "Response", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -878,6 +902,8 @@ public final class GoogleAdsServiceProto {
     com.google.ads.googleads.v1.resources.CampaignBudgetProto.getDescriptor();
     com.google.ads.googleads.v1.resources.CampaignCriterionProto.getDescriptor();
     com.google.ads.googleads.v1.resources.CampaignCriterionSimulationProto.getDescriptor();
+    com.google.ads.googleads.v1.resources.CampaignDraftProto.getDescriptor();
+    com.google.ads.googleads.v1.resources.CampaignExperimentProto.getDescriptor();
     com.google.ads.googleads.v1.resources.CampaignExtensionSettingProto.getDescriptor();
     com.google.ads.googleads.v1.resources.CampaignFeedProto.getDescriptor();
     com.google.ads.googleads.v1.resources.CampaignLabelProto.getDescriptor();
@@ -958,6 +984,8 @@ public final class GoogleAdsServiceProto {
     com.google.ads.googleads.v1.services.CampaignBidModifierServiceProto.getDescriptor();
     com.google.ads.googleads.v1.services.CampaignBudgetServiceProto.getDescriptor();
     com.google.ads.googleads.v1.services.CampaignCriterionServiceProto.getDescriptor();
+    com.google.ads.googleads.v1.services.CampaignDraftServiceProto.getDescriptor();
+    com.google.ads.googleads.v1.services.CampaignExperimentServiceProto.getDescriptor();
     com.google.ads.googleads.v1.services.CampaignExtensionSettingServiceProto.getDescriptor();
     com.google.ads.googleads.v1.services.CampaignFeedServiceProto.getDescriptor();
     com.google.ads.googleads.v1.services.CampaignLabelServiceProto.getDescriptor();

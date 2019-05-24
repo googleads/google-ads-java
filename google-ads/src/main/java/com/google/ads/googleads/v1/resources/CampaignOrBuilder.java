@@ -473,6 +473,50 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * The resource names of labels attached to this campaign.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   */
+  java.util.List<com.google.protobuf.StringValue> 
+      getLabelsList();
+  /**
+   * <pre>
+   * The resource names of labels attached to this campaign.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   */
+  com.google.protobuf.StringValue getLabels(int index);
+  /**
+   * <pre>
+   * The resource names of labels attached to this campaign.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   */
+  int getLabelsCount();
+  /**
+   * <pre>
+   * The resource names of labels attached to this campaign.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   */
+  java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+      getLabelsOrBuilderList();
+  /**
+   * <pre>
+   * The resource names of labels attached to this campaign.
+   * </pre>
+   *
+   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getLabelsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    * The type of campaign: normal, draft, or experiment.
    * </pre>
    *

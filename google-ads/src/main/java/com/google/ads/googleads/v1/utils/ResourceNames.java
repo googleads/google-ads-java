@@ -45,6 +45,8 @@ import com.google.ads.googleads.v1.resources.CampaignBidModifierName;
 import com.google.ads.googleads.v1.resources.CampaignBudgetName;
 import com.google.ads.googleads.v1.resources.CampaignCriteriaName;
 import com.google.ads.googleads.v1.resources.CampaignCriterionSimulationName;
+import com.google.ads.googleads.v1.resources.CampaignDraftName;
+import com.google.ads.googleads.v1.resources.CampaignExperimentName;
 import com.google.ads.googleads.v1.resources.CampaignExtensionSettingName;
 import com.google.ads.googleads.v1.resources.CampaignFeedName;
 import com.google.ads.googleads.v1.resources.CampaignLabelName;
@@ -290,7 +292,6 @@ public class ResourceNames {
     return CampaignCriteriaName.format(
         String.valueOf(customerId), concatIdentifiers(campaignId, criterionId));
   }
-
   /** Returns the Campaign Criterion Simulation resource name for the specified components. */
   public static String campaignCriterionSimulation(
       long customerId,
@@ -302,6 +303,18 @@ public class ResourceNames {
     return CampaignCriterionSimulationName.format(
         String.valueOf(customerId),
         concatIdentifiers(campaignId, type, method, startDate, endDate));
+  }
+
+  /** Returns the Campaign Draft resource name for the specified components. */
+  public static String campaignDraft(long customerId, long baseCampaignId, long draftId) {
+    return CampaignDraftName.format(
+        String.valueOf(customerId), concatIdentifiers(baseCampaignId, draftId));
+  }
+  
+  /** Returns the Campaign Experiment resource name for the specified components. */
+  public static String campaignExperiment(long customerId, long campaignExperimentId) {
+    return CampaignExperimentName.format(
+        String.valueOf(customerId), concatIdentifiers(campaignExperimentId));
   }
 
   /** Returns the campaign extension setting for the specified components. */

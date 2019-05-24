@@ -30,8 +30,8 @@ public final class ClickTypeProto {
     java.lang.String[] descriptorData = {
       "\n.google/ads/googleads/v1/enums/click_ty" +
       "pe.proto\022\035google.ads.googleads.v1.enums\032" +
-      "\034google/api/annotations.proto\"\205\014\n\rClickT" +
-      "ypeEnum\"\363\013\n\tClickType\022\017\n\013UNSPECIFIED\020\000\022\013" +
+      "\034google/api/annotations.proto\"\246\014\n\rClickT" +
+      "ypeEnum\"\224\014\n\tClickType\022\017\n\013UNSPECIFIED\020\000\022\013" +
       "\n\007UNKNOWN\020\001\022\020\n\014APP_DEEPLINK\020\002\022\017\n\013BREADCR" +
       "UMBS\020\003\022\022\n\016BROADBAND_PLAN\020\004\022\021\n\rCALL_TRACK" +
       "ING\020\005\022\t\n\005CALLS\020\006\022\032\n\026CLICK_ON_ENGAGEMENT_" +
@@ -69,13 +69,14 @@ public final class ClickTypeProto {
       "ITELINK_FOUR\0203\022&\n\"SWIPEABLE_GALLERY_AD_S" +
       "ITELINK_FIVE\0204\022\017\n\013HOTEL_PRICE\0205\022\023\n\017PRICE" +
       "_EXTENSION\0206\022\'\n#HOTEL_BOOK_ON_GOOGLE_ROO" +
-      "M_SELECTION\0207B\343\001\n!com.google.ads.googlea" +
-      "ds.v1.enumsB\016ClickTypeProtoP\001ZBgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v1/enums;enums\242\002\003GAA\252\002\035Google.Ads.Goo" +
-      "gleAds.V1.Enums\312\002\035Google\\Ads\\GoogleAds\\V" +
-      "1\\Enums\352\002!Google::Ads::GoogleAds::V1::En" +
-      "umsb\006proto3"
+      "M_SELECTION\0207\022\037\n\033SHOPPING_COMPARISON_LIS" +
+      "TING\0208B\343\001\n!com.google.ads.googleads.v1.e" +
+      "numsB\016ClickTypeProtoP\001ZBgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v1/e" +
+      "nums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds." +
+      "V1.Enums\312\002\035Google\\Ads\\GoogleAds\\V1\\Enums" +
+      "\352\002!Google::Ads::GoogleAds::V1::Enumsb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

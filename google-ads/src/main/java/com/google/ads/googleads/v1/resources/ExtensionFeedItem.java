@@ -250,6 +250,47 @@ private static final long serialVersionUID = 0L;
             device_ = rawValue;
             break;
           }
+          case 146: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (servingResourceTargetingCase_ == 18) {
+              subBuilder = ((com.google.protobuf.StringValue) servingResourceTargeting_).toBuilder();
+            }
+            servingResourceTargeting_ =
+                input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.protobuf.StringValue) servingResourceTargeting_);
+              servingResourceTargeting_ = subBuilder.buildPartial();
+            }
+            servingResourceTargetingCase_ = 18;
+            break;
+          }
+          case 154: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (servingResourceTargetingCase_ == 19) {
+              subBuilder = ((com.google.protobuf.StringValue) servingResourceTargeting_).toBuilder();
+            }
+            servingResourceTargeting_ =
+                input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.protobuf.StringValue) servingResourceTargeting_);
+              servingResourceTargeting_ = subBuilder.buildPartial();
+            }
+            servingResourceTargetingCase_ = 19;
+            break;
+          }
+          case 162: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (targetedGeoTargetConstant_ != null) {
+              subBuilder = targetedGeoTargetConstant_.toBuilder();
+            }
+            targetedGeoTargetConstant_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(targetedGeoTargetConstant_);
+              targetedGeoTargetConstant_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -338,6 +379,44 @@ private static final long serialVersionUID = 0L;
   getExtensionCase() {
     return ExtensionCase.forNumber(
         extensionCase_);
+  }
+
+  private int servingResourceTargetingCase_ = 0;
+  private java.lang.Object servingResourceTargeting_;
+  public enum ServingResourceTargetingCase
+      implements com.google.protobuf.Internal.EnumLite {
+    TARGETED_CAMPAIGN(18),
+    TARGETED_AD_GROUP(19),
+    SERVINGRESOURCETARGETING_NOT_SET(0);
+    private final int value;
+    private ServingResourceTargetingCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ServingResourceTargetingCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ServingResourceTargetingCase forNumber(int value) {
+      switch (value) {
+        case 18: return TARGETED_CAMPAIGN;
+        case 19: return TARGETED_AD_GROUP;
+        case 0: return SERVINGRESOURCETARGETING_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public ServingResourceTargetingCase
+  getServingResourceTargetingCase() {
+    return ServingResourceTargetingCase.forNumber(
+        servingResourceTargetingCase_);
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
@@ -582,6 +661,39 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice result = com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.valueOf(device_);
     return result == null ? com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.UNRECOGNIZED : result;
+  }
+
+  public static final int TARGETED_GEO_TARGET_CONSTANT_FIELD_NUMBER = 20;
+  private com.google.protobuf.StringValue targetedGeoTargetConstant_;
+  /**
+   * <pre>
+   * The targeted geo target constant.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+   */
+  public boolean hasTargetedGeoTargetConstant() {
+    return targetedGeoTargetConstant_ != null;
+  }
+  /**
+   * <pre>
+   * The targeted geo target constant.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+   */
+  public com.google.protobuf.StringValue getTargetedGeoTargetConstant() {
+    return targetedGeoTargetConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : targetedGeoTargetConstant_;
+  }
+  /**
+   * <pre>
+   * The targeted geo target constant.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getTargetedGeoTargetConstantOrBuilder() {
+    return getTargetedGeoTargetConstant();
   }
 
   public static final int STATUS_FIELD_NUMBER = 4;
@@ -1000,6 +1112,82 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v1.common.AffiliateLocationFeedItem.getDefaultInstance();
   }
 
+  public static final int TARGETED_CAMPAIGN_FIELD_NUMBER = 18;
+  /**
+   * <pre>
+   * The targeted campaign.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+   */
+  public boolean hasTargetedCampaign() {
+    return servingResourceTargetingCase_ == 18;
+  }
+  /**
+   * <pre>
+   * The targeted campaign.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+   */
+  public com.google.protobuf.StringValue getTargetedCampaign() {
+    if (servingResourceTargetingCase_ == 18) {
+       return (com.google.protobuf.StringValue) servingResourceTargeting_;
+    }
+    return com.google.protobuf.StringValue.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The targeted campaign.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getTargetedCampaignOrBuilder() {
+    if (servingResourceTargetingCase_ == 18) {
+       return (com.google.protobuf.StringValue) servingResourceTargeting_;
+    }
+    return com.google.protobuf.StringValue.getDefaultInstance();
+  }
+
+  public static final int TARGETED_AD_GROUP_FIELD_NUMBER = 19;
+  /**
+   * <pre>
+   * The targeted ad group.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+   */
+  public boolean hasTargetedAdGroup() {
+    return servingResourceTargetingCase_ == 19;
+  }
+  /**
+   * <pre>
+   * The targeted ad group.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+   */
+  public com.google.protobuf.StringValue getTargetedAdGroup() {
+    if (servingResourceTargetingCase_ == 19) {
+       return (com.google.protobuf.StringValue) servingResourceTargeting_;
+    }
+    return com.google.protobuf.StringValue.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The targeted ad group.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getTargetedAdGroupOrBuilder() {
+    if (servingResourceTargetingCase_ == 19) {
+       return (com.google.protobuf.StringValue) servingResourceTargeting_;
+    }
+    return com.google.protobuf.StringValue.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1064,6 +1252,15 @@ private static final long serialVersionUID = 0L;
     }
     if (device_ != com.google.ads.googleads.v1.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.UNSPECIFIED.getNumber()) {
       output.writeEnum(17, device_);
+    }
+    if (servingResourceTargetingCase_ == 18) {
+      output.writeMessage(18, (com.google.protobuf.StringValue) servingResourceTargeting_);
+    }
+    if (servingResourceTargetingCase_ == 19) {
+      output.writeMessage(19, (com.google.protobuf.StringValue) servingResourceTargeting_);
+    }
+    if (targetedGeoTargetConstant_ != null) {
+      output.writeMessage(20, getTargetedGeoTargetConstant());
     }
     unknownFields.writeTo(output);
   }
@@ -1141,6 +1338,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(17, device_);
     }
+    if (servingResourceTargetingCase_ == 18) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, (com.google.protobuf.StringValue) servingResourceTargeting_);
+    }
+    if (servingResourceTargetingCase_ == 19) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, (com.google.protobuf.StringValue) servingResourceTargeting_);
+    }
+    if (targetedGeoTargetConstant_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, getTargetedGeoTargetConstant());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1173,6 +1382,11 @@ private static final long serialVersionUID = 0L;
     result = result && getAdSchedulesList()
         .equals(other.getAdSchedulesList());
     result = result && device_ == other.device_;
+    result = result && (hasTargetedGeoTargetConstant() == other.hasTargetedGeoTargetConstant());
+    if (hasTargetedGeoTargetConstant()) {
+      result = result && getTargetedGeoTargetConstant()
+          .equals(other.getTargetedGeoTargetConstant());
+    }
     result = result && status_ == other.status_;
     result = result && getExtensionCase().equals(
         other.getExtensionCase());
@@ -1221,6 +1435,21 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
+    result = result && getServingResourceTargetingCase().equals(
+        other.getServingResourceTargetingCase());
+    if (!result) return false;
+    switch (servingResourceTargetingCase_) {
+      case 18:
+        result = result && getTargetedCampaign()
+            .equals(other.getTargetedCampaign());
+        break;
+      case 19:
+        result = result && getTargetedAdGroup()
+            .equals(other.getTargetedAdGroup());
+        break;
+      case 0:
+      default:
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -1250,6 +1479,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + DEVICE_FIELD_NUMBER;
     hash = (53 * hash) + device_;
+    if (hasTargetedGeoTargetConstant()) {
+      hash = (37 * hash) + TARGETED_GEO_TARGET_CONSTANT_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetedGeoTargetConstant().hashCode();
+    }
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
     switch (extensionCase_) {
@@ -1292,6 +1525,18 @@ private static final long serialVersionUID = 0L;
       case 15:
         hash = (37 * hash) + AFFILIATE_LOCATION_FEED_ITEM_FIELD_NUMBER;
         hash = (53 * hash) + getAffiliateLocationFeedItem().hashCode();
+        break;
+      case 0:
+      default:
+    }
+    switch (servingResourceTargetingCase_) {
+      case 18:
+        hash = (37 * hash) + TARGETED_CAMPAIGN_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetedCampaign().hashCode();
+        break;
+      case 19:
+        hash = (37 * hash) + TARGETED_AD_GROUP_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetedAdGroup().hashCode();
         break;
       case 0:
       default:
@@ -1458,10 +1703,18 @@ private static final long serialVersionUID = 0L;
       }
       device_ = 0;
 
+      if (targetedGeoTargetConstantBuilder_ == null) {
+        targetedGeoTargetConstant_ = null;
+      } else {
+        targetedGeoTargetConstant_ = null;
+        targetedGeoTargetConstantBuilder_ = null;
+      }
       status_ = 0;
 
       extensionCase_ = 0;
       extension_ = null;
+      servingResourceTargetingCase_ = 0;
+      servingResourceTargeting_ = null;
       return this;
     }
 
@@ -1512,6 +1765,11 @@ private static final long serialVersionUID = 0L;
         result.adSchedules_ = adSchedulesBuilder_.build();
       }
       result.device_ = device_;
+      if (targetedGeoTargetConstantBuilder_ == null) {
+        result.targetedGeoTargetConstant_ = targetedGeoTargetConstant_;
+      } else {
+        result.targetedGeoTargetConstant_ = targetedGeoTargetConstantBuilder_.build();
+      }
       result.status_ = status_;
       if (extensionCase_ == 2) {
         if (sitelinkFeedItemBuilder_ == null) {
@@ -1583,8 +1841,23 @@ private static final long serialVersionUID = 0L;
           result.extension_ = affiliateLocationFeedItemBuilder_.build();
         }
       }
+      if (servingResourceTargetingCase_ == 18) {
+        if (targetedCampaignBuilder_ == null) {
+          result.servingResourceTargeting_ = servingResourceTargeting_;
+        } else {
+          result.servingResourceTargeting_ = targetedCampaignBuilder_.build();
+        }
+      }
+      if (servingResourceTargetingCase_ == 19) {
+        if (targetedAdGroupBuilder_ == null) {
+          result.servingResourceTargeting_ = servingResourceTargeting_;
+        } else {
+          result.servingResourceTargeting_ = targetedAdGroupBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.extensionCase_ = extensionCase_;
+      result.servingResourceTargetingCase_ = servingResourceTargetingCase_;
       onBuilt();
       return result;
     }
@@ -1675,6 +1948,9 @@ private static final long serialVersionUID = 0L;
       if (other.device_ != 0) {
         setDeviceValue(other.getDeviceValue());
       }
+      if (other.hasTargetedGeoTargetConstant()) {
+        mergeTargetedGeoTargetConstant(other.getTargetedGeoTargetConstant());
+      }
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
@@ -1723,6 +1999,19 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
+      switch (other.getServingResourceTargetingCase()) {
+        case TARGETED_CAMPAIGN: {
+          mergeTargetedCampaign(other.getTargetedCampaign());
+          break;
+        }
+        case TARGETED_AD_GROUP: {
+          mergeTargetedAdGroup(other.getTargetedAdGroup());
+          break;
+        }
+        case SERVINGRESOURCETARGETING_NOT_SET: {
+          break;
+        }
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -1762,6 +2051,21 @@ private static final long serialVersionUID = 0L;
     public Builder clearExtension() {
       extensionCase_ = 0;
       extension_ = null;
+      onChanged();
+      return this;
+    }
+
+    private int servingResourceTargetingCase_ = 0;
+    private java.lang.Object servingResourceTargeting_;
+    public ServingResourceTargetingCase
+        getServingResourceTargetingCase() {
+      return ServingResourceTargetingCase.forNumber(
+          servingResourceTargetingCase_);
+    }
+
+    public Builder clearServingResourceTargeting() {
+      servingResourceTargetingCase_ = 0;
+      servingResourceTargeting_ = null;
       onChanged();
       return this;
     }
@@ -2699,6 +3003,159 @@ private static final long serialVersionUID = 0L;
       device_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.StringValue targetedGeoTargetConstant_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> targetedGeoTargetConstantBuilder_;
+    /**
+     * <pre>
+     * The targeted geo target constant.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     */
+    public boolean hasTargetedGeoTargetConstant() {
+      return targetedGeoTargetConstantBuilder_ != null || targetedGeoTargetConstant_ != null;
+    }
+    /**
+     * <pre>
+     * The targeted geo target constant.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     */
+    public com.google.protobuf.StringValue getTargetedGeoTargetConstant() {
+      if (targetedGeoTargetConstantBuilder_ == null) {
+        return targetedGeoTargetConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : targetedGeoTargetConstant_;
+      } else {
+        return targetedGeoTargetConstantBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The targeted geo target constant.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     */
+    public Builder setTargetedGeoTargetConstant(com.google.protobuf.StringValue value) {
+      if (targetedGeoTargetConstantBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        targetedGeoTargetConstant_ = value;
+        onChanged();
+      } else {
+        targetedGeoTargetConstantBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted geo target constant.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     */
+    public Builder setTargetedGeoTargetConstant(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (targetedGeoTargetConstantBuilder_ == null) {
+        targetedGeoTargetConstant_ = builderForValue.build();
+        onChanged();
+      } else {
+        targetedGeoTargetConstantBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted geo target constant.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     */
+    public Builder mergeTargetedGeoTargetConstant(com.google.protobuf.StringValue value) {
+      if (targetedGeoTargetConstantBuilder_ == null) {
+        if (targetedGeoTargetConstant_ != null) {
+          targetedGeoTargetConstant_ =
+            com.google.protobuf.StringValue.newBuilder(targetedGeoTargetConstant_).mergeFrom(value).buildPartial();
+        } else {
+          targetedGeoTargetConstant_ = value;
+        }
+        onChanged();
+      } else {
+        targetedGeoTargetConstantBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted geo target constant.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     */
+    public Builder clearTargetedGeoTargetConstant() {
+      if (targetedGeoTargetConstantBuilder_ == null) {
+        targetedGeoTargetConstant_ = null;
+        onChanged();
+      } else {
+        targetedGeoTargetConstant_ = null;
+        targetedGeoTargetConstantBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted geo target constant.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getTargetedGeoTargetConstantBuilder() {
+      
+      onChanged();
+      return getTargetedGeoTargetConstantFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The targeted geo target constant.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getTargetedGeoTargetConstantOrBuilder() {
+      if (targetedGeoTargetConstantBuilder_ != null) {
+        return targetedGeoTargetConstantBuilder_.getMessageOrBuilder();
+      } else {
+        return targetedGeoTargetConstant_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : targetedGeoTargetConstant_;
+      }
+    }
+    /**
+     * <pre>
+     * The targeted geo target constant.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getTargetedGeoTargetConstantFieldBuilder() {
+      if (targetedGeoTargetConstantBuilder_ == null) {
+        targetedGeoTargetConstantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getTargetedGeoTargetConstant(),
+                getParentForChildren(),
+                isClean());
+        targetedGeoTargetConstant_ = null;
+      }
+      return targetedGeoTargetConstantBuilder_;
     }
 
     private int status_ = 0;
@@ -4516,6 +4973,350 @@ private static final long serialVersionUID = 0L;
       extensionCase_ = 15;
       onChanged();;
       return affiliateLocationFeedItemBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> targetedCampaignBuilder_;
+    /**
+     * <pre>
+     * The targeted campaign.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     */
+    public boolean hasTargetedCampaign() {
+      return servingResourceTargetingCase_ == 18;
+    }
+    /**
+     * <pre>
+     * The targeted campaign.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     */
+    public com.google.protobuf.StringValue getTargetedCampaign() {
+      if (targetedCampaignBuilder_ == null) {
+        if (servingResourceTargetingCase_ == 18) {
+          return (com.google.protobuf.StringValue) servingResourceTargeting_;
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
+      } else {
+        if (servingResourceTargetingCase_ == 18) {
+          return targetedCampaignBuilder_.getMessage();
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The targeted campaign.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     */
+    public Builder setTargetedCampaign(com.google.protobuf.StringValue value) {
+      if (targetedCampaignBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        servingResourceTargeting_ = value;
+        onChanged();
+      } else {
+        targetedCampaignBuilder_.setMessage(value);
+      }
+      servingResourceTargetingCase_ = 18;
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted campaign.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     */
+    public Builder setTargetedCampaign(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (targetedCampaignBuilder_ == null) {
+        servingResourceTargeting_ = builderForValue.build();
+        onChanged();
+      } else {
+        targetedCampaignBuilder_.setMessage(builderForValue.build());
+      }
+      servingResourceTargetingCase_ = 18;
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted campaign.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     */
+    public Builder mergeTargetedCampaign(com.google.protobuf.StringValue value) {
+      if (targetedCampaignBuilder_ == null) {
+        if (servingResourceTargetingCase_ == 18 &&
+            servingResourceTargeting_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          servingResourceTargeting_ = com.google.protobuf.StringValue.newBuilder((com.google.protobuf.StringValue) servingResourceTargeting_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          servingResourceTargeting_ = value;
+        }
+        onChanged();
+      } else {
+        if (servingResourceTargetingCase_ == 18) {
+          targetedCampaignBuilder_.mergeFrom(value);
+        }
+        targetedCampaignBuilder_.setMessage(value);
+      }
+      servingResourceTargetingCase_ = 18;
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted campaign.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     */
+    public Builder clearTargetedCampaign() {
+      if (targetedCampaignBuilder_ == null) {
+        if (servingResourceTargetingCase_ == 18) {
+          servingResourceTargetingCase_ = 0;
+          servingResourceTargeting_ = null;
+          onChanged();
+        }
+      } else {
+        if (servingResourceTargetingCase_ == 18) {
+          servingResourceTargetingCase_ = 0;
+          servingResourceTargeting_ = null;
+        }
+        targetedCampaignBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted campaign.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getTargetedCampaignBuilder() {
+      return getTargetedCampaignFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The targeted campaign.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getTargetedCampaignOrBuilder() {
+      if ((servingResourceTargetingCase_ == 18) && (targetedCampaignBuilder_ != null)) {
+        return targetedCampaignBuilder_.getMessageOrBuilder();
+      } else {
+        if (servingResourceTargetingCase_ == 18) {
+          return (com.google.protobuf.StringValue) servingResourceTargeting_;
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The targeted campaign.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getTargetedCampaignFieldBuilder() {
+      if (targetedCampaignBuilder_ == null) {
+        if (!(servingResourceTargetingCase_ == 18)) {
+          servingResourceTargeting_ = com.google.protobuf.StringValue.getDefaultInstance();
+        }
+        targetedCampaignBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                (com.google.protobuf.StringValue) servingResourceTargeting_,
+                getParentForChildren(),
+                isClean());
+        servingResourceTargeting_ = null;
+      }
+      servingResourceTargetingCase_ = 18;
+      onChanged();;
+      return targetedCampaignBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> targetedAdGroupBuilder_;
+    /**
+     * <pre>
+     * The targeted ad group.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     */
+    public boolean hasTargetedAdGroup() {
+      return servingResourceTargetingCase_ == 19;
+    }
+    /**
+     * <pre>
+     * The targeted ad group.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     */
+    public com.google.protobuf.StringValue getTargetedAdGroup() {
+      if (targetedAdGroupBuilder_ == null) {
+        if (servingResourceTargetingCase_ == 19) {
+          return (com.google.protobuf.StringValue) servingResourceTargeting_;
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
+      } else {
+        if (servingResourceTargetingCase_ == 19) {
+          return targetedAdGroupBuilder_.getMessage();
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The targeted ad group.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     */
+    public Builder setTargetedAdGroup(com.google.protobuf.StringValue value) {
+      if (targetedAdGroupBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        servingResourceTargeting_ = value;
+        onChanged();
+      } else {
+        targetedAdGroupBuilder_.setMessage(value);
+      }
+      servingResourceTargetingCase_ = 19;
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted ad group.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     */
+    public Builder setTargetedAdGroup(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (targetedAdGroupBuilder_ == null) {
+        servingResourceTargeting_ = builderForValue.build();
+        onChanged();
+      } else {
+        targetedAdGroupBuilder_.setMessage(builderForValue.build());
+      }
+      servingResourceTargetingCase_ = 19;
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted ad group.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     */
+    public Builder mergeTargetedAdGroup(com.google.protobuf.StringValue value) {
+      if (targetedAdGroupBuilder_ == null) {
+        if (servingResourceTargetingCase_ == 19 &&
+            servingResourceTargeting_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          servingResourceTargeting_ = com.google.protobuf.StringValue.newBuilder((com.google.protobuf.StringValue) servingResourceTargeting_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          servingResourceTargeting_ = value;
+        }
+        onChanged();
+      } else {
+        if (servingResourceTargetingCase_ == 19) {
+          targetedAdGroupBuilder_.mergeFrom(value);
+        }
+        targetedAdGroupBuilder_.setMessage(value);
+      }
+      servingResourceTargetingCase_ = 19;
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted ad group.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     */
+    public Builder clearTargetedAdGroup() {
+      if (targetedAdGroupBuilder_ == null) {
+        if (servingResourceTargetingCase_ == 19) {
+          servingResourceTargetingCase_ = 0;
+          servingResourceTargeting_ = null;
+          onChanged();
+        }
+      } else {
+        if (servingResourceTargetingCase_ == 19) {
+          servingResourceTargetingCase_ = 0;
+          servingResourceTargeting_ = null;
+        }
+        targetedAdGroupBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The targeted ad group.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getTargetedAdGroupBuilder() {
+      return getTargetedAdGroupFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The targeted ad group.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getTargetedAdGroupOrBuilder() {
+      if ((servingResourceTargetingCase_ == 19) && (targetedAdGroupBuilder_ != null)) {
+        return targetedAdGroupBuilder_.getMessageOrBuilder();
+      } else {
+        if (servingResourceTargetingCase_ == 19) {
+          return (com.google.protobuf.StringValue) servingResourceTargeting_;
+        }
+        return com.google.protobuf.StringValue.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The targeted ad group.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getTargetedAdGroupFieldBuilder() {
+      if (targetedAdGroupBuilder_ == null) {
+        if (!(servingResourceTargetingCase_ == 19)) {
+          servingResourceTargeting_ = com.google.protobuf.StringValue.getDefaultInstance();
+        }
+        targetedAdGroupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                (com.google.protobuf.StringValue) servingResourceTargeting_,
+                getParentForChildren(),
+                isClean());
+        servingResourceTargeting_ = null;
+      }
+      servingResourceTargetingCase_ = 19;
+      onChanged();;
+      return targetedAdGroupBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

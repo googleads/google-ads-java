@@ -38,7 +38,7 @@ public final class ExtensionFeedItemProto {
       "_item_status.proto\032;google/ads/googleads" +
       "/v1/enums/feed_item_target_device.proto\032" +
       "\036google/protobuf/wrappers.proto\032\034google/" +
-      "api/annotations.proto\"\246\n\n\021ExtensionFeedI" +
+      "api/annotations.proto\"\376\013\n\021ExtensionFeedI" +
       "tem\022\025\n\rresource_name\030\001 \001(\t\022V\n\016extension_" +
       "type\030\r \001(\0162>.google.ads.googleads.v1.enu" +
       "ms.ExtensionTypeEnum.ExtensionType\0225\n\017st" +
@@ -48,37 +48,42 @@ public final class ExtensionFeedItemProto {
       " \003(\0132..google.ads.googleads.v1.common.Ad" +
       "ScheduleInfo\022\\\n\006device\030\021 \001(\0162L.google.ad" +
       "s.googleads.v1.enums.FeedItemTargetDevic" +
-      "eEnum.FeedItemTargetDevice\022P\n\006status\030\004 \001" +
-      "(\0162@.google.ads.googleads.v1.enums.FeedI" +
-      "temStatusEnum.FeedItemStatus\022N\n\022sitelink" +
-      "_feed_item\030\002 \001(\01320.google.ads.googleads." +
-      "v1.common.SitelinkFeedItemH\000\022a\n\034structur" +
-      "ed_snippet_feed_item\030\003 \001(\01329.google.ads." +
-      "googleads.v1.common.StructuredSnippetFee" +
-      "dItemH\000\022D\n\rapp_feed_item\030\007 \001(\0132+.google." +
-      "ads.googleads.v1.common.AppFeedItemH\000\022F\n" +
-      "\016call_feed_item\030\010 \001(\0132,.google.ads.googl" +
-      "eads.v1.common.CallFeedItemH\000\022L\n\021callout" +
-      "_feed_item\030\t \001(\0132/.google.ads.googleads." +
-      "v1.common.CalloutFeedItemH\000\022U\n\026text_mess" +
-      "age_feed_item\030\n \001(\01323.google.ads.googlea" +
-      "ds.v1.common.TextMessageFeedItemH\000\022H\n\017pr" +
-      "ice_feed_item\030\013 \001(\0132-.google.ads.googlea" +
-      "ds.v1.common.PriceFeedItemH\000\022P\n\023promotio" +
-      "n_feed_item\030\014 \001(\01321.google.ads.googleads" +
-      ".v1.common.PromotionFeedItemH\000\022N\n\022locati" +
-      "on_feed_item\030\016 \001(\01320.google.ads.googlead" +
-      "s.v1.common.LocationFeedItemH\000\022a\n\034affili" +
-      "ate_location_feed_item\030\017 \001(\01329.google.ad" +
-      "s.googleads.v1.common.AffiliateLocationF" +
-      "eedItemH\000B\013\n\textensionB\203\002\n%com.google.ad" +
-      "s.googleads.v1.resourcesB\026ExtensionFeedI" +
-      "temProtoP\001ZJgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v1/resources;res" +
-      "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1.R" +
-      "esources\312\002!Google\\Ads\\GoogleAds\\V1\\Resou" +
-      "rces\352\002%Google::Ads::GoogleAds::V1::Resou" +
-      "rcesb\006proto3"
+      "eEnum.FeedItemTargetDevice\022B\n\034targeted_g" +
+      "eo_target_constant\030\024 \001(\0132\034.google.protob" +
+      "uf.StringValue\022P\n\006status\030\004 \001(\0162@.google." +
+      "ads.googleads.v1.enums.FeedItemStatusEnu" +
+      "m.FeedItemStatus\022N\n\022sitelink_feed_item\030\002" +
+      " \001(\01320.google.ads.googleads.v1.common.Si" +
+      "telinkFeedItemH\000\022a\n\034structured_snippet_f" +
+      "eed_item\030\003 \001(\01329.google.ads.googleads.v1" +
+      ".common.StructuredSnippetFeedItemH\000\022D\n\ra" +
+      "pp_feed_item\030\007 \001(\0132+.google.ads.googlead" +
+      "s.v1.common.AppFeedItemH\000\022F\n\016call_feed_i" +
+      "tem\030\010 \001(\0132,.google.ads.googleads.v1.comm" +
+      "on.CallFeedItemH\000\022L\n\021callout_feed_item\030\t" +
+      " \001(\0132/.google.ads.googleads.v1.common.Ca" +
+      "lloutFeedItemH\000\022U\n\026text_message_feed_ite" +
+      "m\030\n \001(\01323.google.ads.googleads.v1.common" +
+      ".TextMessageFeedItemH\000\022H\n\017price_feed_ite" +
+      "m\030\013 \001(\0132-.google.ads.googleads.v1.common" +
+      ".PriceFeedItemH\000\022P\n\023promotion_feed_item\030" +
+      "\014 \001(\01321.google.ads.googleads.v1.common.P" +
+      "romotionFeedItemH\000\022N\n\022location_feed_item" +
+      "\030\016 \001(\01320.google.ads.googleads.v1.common." +
+      "LocationFeedItemH\000\022a\n\034affiliate_location" +
+      "_feed_item\030\017 \001(\01329.google.ads.googleads." +
+      "v1.common.AffiliateLocationFeedItemH\000\0229\n" +
+      "\021targeted_campaign\030\022 \001(\0132\034.google.protob" +
+      "uf.StringValueH\001\0229\n\021targeted_ad_group\030\023 " +
+      "\001(\0132\034.google.protobuf.StringValueH\001B\013\n\te" +
+      "xtensionB\034\n\032serving_resource_targetingB\203" +
+      "\002\n%com.google.ads.googleads.v1.resources" +
+      "B\026ExtensionFeedItemProtoP\001ZJgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v1/resources;resources\242\002\003GAA\252\002!Google.Ad" +
+      "s.GoogleAds.V1.Resources\312\002!Google\\Ads\\Go" +
+      "ogleAds\\V1\\Resources\352\002%Google::Ads::Goog" +
+      "leAds::V1::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -104,7 +109,7 @@ public final class ExtensionFeedItemProto {
     internal_static_google_ads_googleads_v1_resources_ExtensionFeedItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_ExtensionFeedItem_descriptor,
-        new java.lang.String[] { "ResourceName", "ExtensionType", "StartDateTime", "EndDateTime", "AdSchedules", "Device", "Status", "SitelinkFeedItem", "StructuredSnippetFeedItem", "AppFeedItem", "CallFeedItem", "CalloutFeedItem", "TextMessageFeedItem", "PriceFeedItem", "PromotionFeedItem", "LocationFeedItem", "AffiliateLocationFeedItem", "Extension", });
+        new java.lang.String[] { "ResourceName", "ExtensionType", "StartDateTime", "EndDateTime", "AdSchedules", "Device", "TargetedGeoTargetConstant", "Status", "SitelinkFeedItem", "StructuredSnippetFeedItem", "AppFeedItem", "CallFeedItem", "CalloutFeedItem", "TextMessageFeedItem", "PriceFeedItem", "PromotionFeedItem", "LocationFeedItem", "AffiliateLocationFeedItem", "TargetedCampaign", "TargetedAdGroup", "Extension", "ServingResourceTargeting", });
     com.google.ads.googleads.v1.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v1.common.ExtensionsProto.getDescriptor();
     com.google.ads.googleads.v1.enums.ExtensionTypeProto.getDescriptor();

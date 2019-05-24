@@ -126,6 +126,14 @@ private static final long serialVersionUID = 0L;
      * <code>ANIMATED_IMAGE_NOT_ALLOWED = 4;</code>
      */
     ANIMATED_IMAGE_NOT_ALLOWED(4),
+    /**
+     * <pre>
+     * The image or media bundle format is not allowed.
+     * </pre>
+     *
+     * <code>FORMAT_NOT_ALLOWED = 5;</code>
+     */
+    FORMAT_NOT_ALLOWED(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -169,6 +177,14 @@ private static final long serialVersionUID = 0L;
      * <code>ANIMATED_IMAGE_NOT_ALLOWED = 4;</code>
      */
     public static final int ANIMATED_IMAGE_NOT_ALLOWED_VALUE = 4;
+    /**
+     * <pre>
+     * The image or media bundle format is not allowed.
+     * </pre>
+     *
+     * <code>FORMAT_NOT_ALLOWED = 5;</code>
+     */
+    public static final int FORMAT_NOT_ALLOWED_VALUE = 5;
 
 
     public final int getNumber() {
@@ -194,6 +210,7 @@ private static final long serialVersionUID = 0L;
         case 2: return FILE_TOO_BIG;
         case 3: return UNPARSEABLE_IMAGE;
         case 4: return ANIMATED_IMAGE_NOT_ALLOWED;
+        case 5: return FORMAT_NOT_ALLOWED;
         default: return null;
       }
     }

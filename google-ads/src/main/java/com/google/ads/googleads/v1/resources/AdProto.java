@@ -40,7 +40,7 @@ public final class AdProto {
       "1/enums/device.proto\032@google/ads/googlea" +
       "ds/v1/enums/system_managed_entity_source" +
       ".proto\032\036google/protobuf/wrappers.proto\032\034" +
-      "google/api/annotations.proto\"\240\021\n\002Ad\022\'\n\002i" +
+      "google/api/annotations.proto\"\213\022\n\002Ad\022\'\n\002i" +
       "d\030\001 \001(\0132\033.google.protobuf.Int64Value\0220\n\n" +
       "final_urls\030\002 \003(\0132\034.google.protobuf.Strin" +
       "gValue\022C\n\016final_app_urls\030# \003(\0132+.google." +
@@ -95,14 +95,17 @@ public final class AdProto {
       "ad_ad\030! \001(\01323.google.ads.googleads.v1.co" +
       "mmon.DisplayUploadAdInfoH\000\022P\n\021app_engage" +
       "ment_ad\030\" \001(\01323.google.ads.googleads.v1." +
-      "common.AppEngagementAdInfoH\000B\t\n\007ad_dataB" +
-      "\364\001\n%com.google.ads.googleads.v1.resource" +
-      "sB\007AdProtoP\001ZJgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v1/resources;r" +
-      "esources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1" +
-      ".Resources\312\002!Google\\Ads\\GoogleAds\\V1\\Res" +
-      "ources\352\002%Google::Ads::GoogleAds::V1::Res" +
-      "ourcesb\006proto3"
+      "common.AppEngagementAdInfoH\000\022i\n\036shopping" +
+      "_comparison_listing_ad\030$ \001(\0132?.google.ad" +
+      "s.googleads.v1.common.ShoppingComparison" +
+      "ListingAdInfoH\000B\t\n\007ad_dataB\364\001\n%com.googl" +
+      "e.ads.googleads.v1.resourcesB\007AdProtoP\001Z" +
+      "Jgoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v1/resources;resources\242\002\003GA" +
+      "A\252\002!Google.Ads.GoogleAds.V1.Resources\312\002!" +
+      "Google\\Ads\\GoogleAds\\V1\\Resources\352\002%Goog" +
+      "le::Ads::GoogleAds::V1::Resourcesb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -130,7 +133,7 @@ public final class AdProto {
     internal_static_google_ads_googleads_v1_resources_Ad_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_Ad_descriptor,
-        new java.lang.String[] { "Id", "FinalUrls", "FinalAppUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "UrlCollections", "Name", "SystemManagedResourceSource", "TextAd", "ExpandedTextAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "GmailAd", "ImageAd", "VideoAd", "ResponsiveSearchAd", "LegacyResponsiveDisplayAd", "AppAd", "LegacyAppInstallAd", "ResponsiveDisplayAd", "DisplayUploadAd", "AppEngagementAd", "AdData", });
+        new java.lang.String[] { "Id", "FinalUrls", "FinalAppUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "UrlCollections", "Name", "SystemManagedResourceSource", "TextAd", "ExpandedTextAd", "CallOnlyAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "GmailAd", "ImageAd", "VideoAd", "ResponsiveSearchAd", "LegacyResponsiveDisplayAd", "AppAd", "LegacyAppInstallAd", "ResponsiveDisplayAd", "DisplayUploadAd", "AppEngagementAd", "ShoppingComparisonListingAd", "AdData", });
     com.google.ads.googleads.v1.common.AdTypeInfosProto.getDescriptor();
     com.google.ads.googleads.v1.common.CustomParameterProto.getDescriptor();
     com.google.ads.googleads.v1.common.FinalAppUrlProto.getDescriptor();
