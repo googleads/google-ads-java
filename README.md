@@ -263,6 +263,10 @@ headers.
 | SUMMARY  | com.google.ads.googleads.lib.request.summary | INFO          | WARN          |
 | DETAIL   | com.google.ads.googleads.lib.request.detail  | DEBUG         | INFO          |
 
+**Caveat**: Partial failures does not cause the entire request to fail if some of its operations fail.
+Therefore, partial failure logs are always logged at Success level, not at Failure level as 
+may be expected.
+
 #### Detail Log Truncation
 
 The detailed logs are truncated by default to avoid creating large logs. To change the length at
