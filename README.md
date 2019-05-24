@@ -263,8 +263,9 @@ headers.
 | SUMMARY  | com.google.ads.googleads.lib.request.summary | INFO          | WARN          |
 | DETAIL   | com.google.ads.googleads.lib.request.detail  | DEBUG         | INFO          |
 
-**Caveat**: [Partial failure](https://developers.google.com/google-ads/api/docs/samples/handle-partial-failure)
-does not cause the entire request to fail if some of its operations fail. Therefore, partial failure logs are always logged at Success level, not at Failure level as may be expected.
+**Caveat**: Mutate requests where [Partial failure](https://developers.google.com/google-ads/api/docs/samples/handle-partial-failure) 
+is true do not cause the entire request to fail. Therefore, partial failure logs are always logged
+at Success level, not at Failure level as may be expected.
 
 #### Detail Log Truncation
 
