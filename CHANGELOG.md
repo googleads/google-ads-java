@@ -1,3 +1,9 @@
+3.0.0 - 2019-05-24
+------------------
+- Added support for Google Ads API v1_3.
+- Refactored ErrorUtils to extract base class. Callers need update to use ErrorUtils.getInstance()
+rather than static methods.
+
 2.0.0 - 2019-05-01
 ------------------
 - Added support for Google Ads API v1_2.
