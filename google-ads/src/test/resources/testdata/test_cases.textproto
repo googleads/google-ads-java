@@ -91,7 +91,6 @@ test_cases {
     }
   }
   expected_mask {
-    # List of all fields of foo
     paths: "foo.num"
   }
 }
