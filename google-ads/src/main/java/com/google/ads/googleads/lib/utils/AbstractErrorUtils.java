@@ -103,7 +103,8 @@ public abstract class AbstractErrorUtils<
     List<GoogleAdsErrorT> result = new ArrayList();
     // Searches all the errors for one relating to the specified operation.
     for (ErrorPath<GoogleAdsErrorT> path : getErrorPaths(googleAdsFailure)) {
-      if ("operations".equals(path.getFieldName())
+      if (("operations".equals(path.getFieldName())
+              || "mutate_operations".equals(path.getFieldName()))
           && path.getIndex().isPresent()
           && path.getIndex().get() == operationIndex) {
         GoogleAdsErrorT error = path.getError();
