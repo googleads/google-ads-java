@@ -90,7 +90,7 @@ public class AddDynamicSearchAds {
     }
 
     try {
-      new AddDynamicSearchAds().runExample(googleAdsClient, params.customerId);
+      new AddDynamicSearchAds().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -110,15 +110,17 @@ public class AddDynamicSearchAds {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private static void runExample(GoogleAdsClient googleAdsClient, long customerId) {
-    String budgetResourceName = addCampaignBudget(googleAdsClient, customerId);
-    String campaignResourceName = addCampaign(googleAdsClient, customerId, budgetResourceName);
-    String adGroupResourceName = addAdGroup(googleAdsClient, customerId, campaignResourceName);
-    addExpandedDSA(googleAdsClient, customerId, adGroupResourceName);
-    addWebPageCriteria(googleAdsClient, customerId, adGroupResourceName);
+  public void runExample(GoogleAdsClient googleAdsClient, AddDynamicSearchAdsParams params) {
+    String budgetResourceName = addCampaignBudget(googleAdsClient, params.customerId);
+    String campaignResourceName =
+        addCampaign(googleAdsClient, params.customerId, budgetResourceName);
+    String adGroupResourceName =
+        addAdGroup(googleAdsClient, params.customerId, campaignResourceName);
+    addExpandedDSA(googleAdsClient, params.customerId, adGroupResourceName);
+    addWebPageCriteria(googleAdsClient, params.customerId, adGroupResourceName);
   }
 
   /**

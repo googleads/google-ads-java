@@ -29,10 +29,7 @@ import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- * Deletes an ad group using the 'REMOVE' operation. To get ad groups, run
- * GetAdGroups.java.
- */
+/** Deletes an ad group using the 'REMOVE' operation. To get ad groups, run GetAdGroups.java. */
 public class RemoveAdGroup {
 
   private static class RemoveAdGroupParams extends CodeSampleParams {
@@ -67,7 +64,7 @@ public class RemoveAdGroup {
     }
 
     try {
-      new RemoveAdGroup().runExample(googleAdsClient, params.customerId, params.adGroupId);
+      new RemoveAdGroup().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -87,21 +84,21 @@ public class RemoveAdGroup {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupId the ID of the ad group to remove.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
+  public void runExample(GoogleAdsClient googleAdsClient, RemoveAdGroupParams params) {
 
-    try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
-      String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
+    try (AdGroupServiceClient adGroupServiceClient =
+        googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
+      String adGroupResourceName = ResourceNames.adGroup(params.customerId, params.adGroupId);
       // Constructs an operation that will remove the ad group with the specified resource name.
       AdGroupOperation operation =
           AdGroupOperation.newBuilder().setRemove(adGroupResourceName).build();
       // Sends the operation in a mutate request.
       MutateAdGroupsResponse response =
           adGroupServiceClient.mutateAdGroups(
-              Long.toString(customerId), ImmutableList.of(operation));
+              Long.toString(params.customerId), ImmutableList.of(operation));
       // Prints the resource name of each removed object.
       for (MutateAdGroupResult mutateAdGroupResult : response.getResultsList()) {
         System.out.printf(

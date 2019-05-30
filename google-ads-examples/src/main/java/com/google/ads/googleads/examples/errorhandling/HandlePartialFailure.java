@@ -76,7 +76,7 @@ public class HandlePartialFailure {
     }
 
     try {
-      new HandlePartialFailure().runExample(googleAdsClient, params.customerId, params.campaignId);
+      new HandlePartialFailure().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -93,9 +93,10 @@ public class HandlePartialFailure {
   }
 
   /** Runs the example. */
-  public void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId)
+  public void runExample(GoogleAdsClient googleAdsClient, HandlePartialFailureParams params)
       throws InvalidProtocolBufferException {
-    MutateAdGroupsResponse response = createAdGroups(googleAdsClient, customerId, campaignId);
+    MutateAdGroupsResponse response =
+        createAdGroups(googleAdsClient, params.customerId, params.campaignId);
 
     // Checks for existence of any partial failures in the response.
     if (checkIfPartialFailureErrorExists(response)) {
@@ -118,7 +119,8 @@ public class HandlePartialFailure {
     // This AdGroup should be created successfully - assuming the campaign in the params exists.
     AdGroup group1 =
         AdGroup.newBuilder()
-            .setCampaign(StringValue.of(ResourceNames.campaign(customerId, campaignId)))
+            .setCampaign(
+                StringValue.of(ResourceNames.campaign(customerId, campaignId)))
             .setName(StringValue.of("Valid AdGroup: " + System.currentTimeMillis()))
             .build();
     // This AdGroup will always fail - campaign ID 0 in resource names is never valid.
@@ -130,7 +132,8 @@ public class HandlePartialFailure {
     // This AdGroup will always fail - duplicate ad group names are not allowed.
     AdGroup group3 =
         AdGroup.newBuilder()
-            .setCampaign(StringValue.of(ResourceNames.campaign(customerId, campaignId)))
+            .setCampaign(
+                StringValue.of(ResourceNames.campaign(customerId, campaignId)))
             .setName(group1.getName())
             .build();
 

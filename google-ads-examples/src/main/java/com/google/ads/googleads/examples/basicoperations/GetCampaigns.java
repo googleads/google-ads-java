@@ -60,7 +60,7 @@ public class GetCampaigns {
     }
 
     try {
-      new GetCampaigns().runExample(googleAdsClient, params.customerId);
+      new GetCampaigns().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -80,18 +80,19 @@ public class GetCampaigns {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  private void runExample(GoogleAdsClient googleAdsClient, GetCampaignsWithStatsParams params) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Creates a request that will retrieve all campaigns using pages of the specified page size.
       SearchGoogleAdsRequest request =
           SearchGoogleAdsRequest.newBuilder()
-              .setCustomerId(Long.toString(customerId))
+              .setCustomerId(Long.toString(params.customerId))
               .setPageSize(PAGE_SIZE)
-              .setQuery("SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id")
+              .setQuery(
+                  "SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id LIMIT 10")
               .build();
       // Issues the search request.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);

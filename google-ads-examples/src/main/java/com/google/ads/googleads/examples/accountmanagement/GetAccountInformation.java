@@ -27,12 +27,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Lists basic information about an advertising account. For instance, the name,
- * currency, time zone etc.
+ * Lists basic information about an advertising account. For instance, the name, currency, time zone
+ * etc.
  */
 public class GetAccountInformation {
 
-  private static class GetAccountInformationParams extends CodeSampleParams {
+  public static class GetAccountInformationParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -60,7 +60,7 @@ public class GetAccountInformation {
     }
 
     try {
-      new GetAccountInformation().runExample(googleAdsClient, params.customerId);
+      new GetAccountInformation().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -80,12 +80,13 @@ public class GetAccountInformation {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
+   * @param params the client customer ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
-    try (CustomerServiceClient customerServiceClient = googleAdsClient.getLatestVersion().createCustomerServiceClient()) {
-      String customerResourceName = ResourceNames.customer(customerId);
+  public void runExample(GoogleAdsClient googleAdsClient, GetAccountInformationParams params) {
+    try (CustomerServiceClient customerServiceClient =
+        googleAdsClient.getLatestVersion().createCustomerServiceClient()) {
+      String customerResourceName = ResourceNames.customer(params.customerId);
       Customer customer = customerServiceClient.getCustomer(customerResourceName);
       // Prints account information.
       System.out.printf(

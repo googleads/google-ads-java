@@ -30,8 +30,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Deletes a keyword as an ad group criterion using the 'REMOVE' operation. To get
- * keyword, run GetKeywords.java.
+ * Deletes a keyword as an ad group criterion using the 'REMOVE' operation. To get keyword, run
+ * GetKeywords.java.
  */
 public class RemoveKeyword {
 
@@ -71,8 +71,7 @@ public class RemoveKeyword {
     }
 
     try {
-      new RemoveKeyword()
-          .runExample(googleAdsClient, params.customerId, params.adGroupId, params.criterionId);
+      new RemoveKeyword().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -92,16 +91,14 @@ public class RemoveKeyword {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupId the ID of the ad group for the keyword criterion.
-   * @param criterionId the ID of the keyword criterion to remove.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, long adGroupId, long criterionId) {
+  public void runExample(GoogleAdsClient googleAdsClient, RemoveKeywordParams params) {
     try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
         googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
-      String adGroupCriterionResourceName = ResourceNames.adGroupCriterion(customerId, adGroupId, criterionId);
+      String adGroupCriterionResourceName =
+          ResourceNames.adGroupCriterion(params.customerId, params.adGroupId, params.criterionId);
 
       // Constructs an operation that will remove the keyword with the specified resource name.
       AdGroupCriterionOperation operation =
@@ -109,7 +106,7 @@ public class RemoveKeyword {
       // Sends the operation in a mutate request.
       MutateAdGroupCriteriaResponse response =
           adGroupCriterionServiceClient.mutateAdGroupCriteria(
-              Long.toString(customerId), Lists.newArrayList(operation));
+              Long.toString(params.customerId), Lists.newArrayList(operation));
       // Prints the resource name of each removed object.
       for (MutateAdGroupCriterionResult mutateAdGroupCriterionResult : response.getResultsList()) {
         System.out.printf(

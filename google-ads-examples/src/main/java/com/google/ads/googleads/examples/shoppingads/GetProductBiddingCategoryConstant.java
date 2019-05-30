@@ -65,7 +65,7 @@ public class GetProductBiddingCategoryConstant {
     }
 
     try {
-      new GetProductBiddingCategoryConstant().runExample(googleAdsClient, params.customerId);
+      new GetProductBiddingCategoryConstant().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -85,9 +85,10 @@ public class GetProductBiddingCategoryConstant {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
+   * @param params the ads entities to use when running the example.
    */
-  private static void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  public void runExample(
+      GoogleAdsClient googleAdsClient, GetProductBiddingCategoryConstantParams params) {
     // Creates the query.
     String query =
         "SELECT "
@@ -104,7 +105,7 @@ public class GetProductBiddingCategoryConstant {
     SearchGoogleAdsRequest request =
         SearchGoogleAdsRequest.newBuilder()
             .setPageSize(PAGE_SIZE)
-            .setCustomerId(Long.toString(customerId))
+            .setCustomerId(Long.toString(params.customerId))
             .setQuery(query)
             .build();
 
@@ -163,8 +164,7 @@ public class GetProductBiddingCategoryConstant {
     for (CategoryNode category : categories) {
       System.out.printf("%s%s [%s]%n", prefix, category.localizedName, category.resourceName);
       displayCategories(
-        category.children,
-        String.format("%s%s > ", prefix, category.localizedName));
+          category.children, String.format("%s%s > ", prefix, category.localizedName));
     }
   }
 

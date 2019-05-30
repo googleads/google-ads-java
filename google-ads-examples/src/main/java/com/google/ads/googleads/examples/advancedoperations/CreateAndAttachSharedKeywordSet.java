@@ -45,10 +45,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Creates a shared list of negative broad match keywords. It then attaches them to a
- * campaign.
- */
+/** Creates a shared list of negative broad match keywords. It then attaches them to a campaign. */
 public class CreateAndAttachSharedKeywordSet {
 
   private static class CreateAndAttachSharedKeywordSetParams extends CodeSampleParams {
@@ -83,8 +80,7 @@ public class CreateAndAttachSharedKeywordSet {
     }
 
     try {
-      new CreateAndAttachSharedKeywordSet()
-          .runExample(googleAdsClient, params.customerId, params.campaignId);
+      new CreateAndAttachSharedKeywordSet().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -104,11 +100,11 @@ public class CreateAndAttachSharedKeywordSet {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param campaignId the campaign ID.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
+  public void runExample(
+      GoogleAdsClient googleAdsClient, CreateAndAttachSharedKeywordSetParams params) {
 
     // Creates a keywords list to create a shared set of.
     List<String> keywords = Arrays.asList("mars cruise", "mars hotels");
@@ -127,7 +123,7 @@ public class CreateAndAttachSharedKeywordSet {
         googleAdsClient.getLatestVersion().createSharedSetServiceClient()) {
       MutateSharedSetsResponse response =
           sharedSetServiceClient.mutateSharedSets(
-              Long.toString(customerId), ImmutableList.of(operation));
+              Long.toString(params.customerId), ImmutableList.of(operation));
       sharedSetResourceName = response.getResults(0).getResourceName();
       System.out.printf("Created shared set %s%n", sharedSetResourceName);
     }
@@ -153,7 +149,7 @@ public class CreateAndAttachSharedKeywordSet {
         googleAdsClient.getLatestVersion().createSharedCriterionServiceClient()) {
       MutateSharedCriteriaResponse response =
           sharedCriterionServiceClient.mutateSharedCriteria(
-              Long.toString(customerId), sharedCriterionOperations);
+              Long.toString(params.customerId), sharedCriterionOperations);
       System.out.printf("Added %d shared criteria:%n", response.getResultsCount());
       for (MutateSharedCriterionResult result : response.getResultsList()) {
         System.out.printf("\t%s%n", result.getResourceName());
@@ -161,7 +157,7 @@ public class CreateAndAttachSharedKeywordSet {
     }
 
     String campaignResourceName =
-        CampaignName.format(Long.toString(customerId), Long.toString(campaignId));
+        CampaignName.format(Long.toString(params.customerId), Long.toString(params.campaignId));
     CampaignSharedSet campaignSharedSet =
         CampaignSharedSet.newBuilder()
             .setCampaign(StringValue.of(campaignResourceName))
@@ -175,7 +171,7 @@ public class CreateAndAttachSharedKeywordSet {
         googleAdsClient.getLatestVersion().createCampaignSharedSetServiceClient()) {
       MutateCampaignSharedSetsResponse response =
           campaignSharedSetServiceClient.mutateCampaignSharedSets(
-              Long.toString(customerId), ImmutableList.of(campaignSharedSetOperation));
+              Long.toString(params.customerId), ImmutableList.of(campaignSharedSetOperation));
       String campaignSharedSetResourceName = response.getResults(0).getResourceName();
       System.out.printf("Created campaign shared set %s%n", campaignSharedSetResourceName);
     }

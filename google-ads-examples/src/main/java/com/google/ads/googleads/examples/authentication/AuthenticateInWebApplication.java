@@ -43,8 +43,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Creates an OAuth2 refresh token for the Google Ads API using the Web application
- * flow.
+ * Creates an OAuth2 refresh token for the Google Ads API using the Web application flow.
  *
  * <p>This example will start a basic server that listens for requests at {@code
  * http://localhost:PORT}, where {@code PORT} is dynamically assigned.

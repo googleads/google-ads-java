@@ -73,8 +73,7 @@ public class AddCampaignBidModifier {
     }
 
     try {
-      new AddCampaignBidModifier()
-          .runExample(googleAdsClient, params.customerId, params.campaignId, params.bidModifier);
+      new AddCampaignBidModifier().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -94,15 +93,12 @@ public class AddCampaignBidModifier {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param campaignId the ID of the campaign where the bid modifier will be added.
-   * @param bidModifier the value of the bid modifier to add.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, long campaignId, double bidModifier) {
+  public void runExample(GoogleAdsClient googleAdsClient, AddCampaignBidModifierParams params) {
 
-    String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
+    String campaignResourceName = ResourceNames.campaign(params.customerId, params.campaignId);
 
     // Constructs a campaign bid modifier.
     CampaignBidModifier campaignBidModifier =
@@ -112,7 +108,7 @@ public class AddCampaignBidModifier {
             .setInteractionType(
                 InteractionTypeInfo.newBuilder().setType(InteractionTypeEnum.InteractionType.CALLS))
             // Uses the specified bid modifier value.
-            .setBidModifier(DoubleValue.of(bidModifier))
+            .setBidModifier(DoubleValue.of(params.bidModifier))
             .build();
 
     // Constructs an operation to create the campaign bid modifier.
@@ -124,7 +120,7 @@ public class AddCampaignBidModifier {
         googleAdsClient.getLatestVersion().createCampaignBidModifierServiceClient()) {
       MutateCampaignBidModifiersResponse response =
           agcServiceClient.mutateCampaignBidModifiers(
-              Long.toString(customerId), ImmutableList.of(op));
+              Long.toString(params.customerId), ImmutableList.of(op));
       System.out.printf("Added %d campaign bid modifiers:%n", response.getResultsCount());
       for (MutateCampaignBidModifierResult result : response.getResultsList()) {
         System.out.printf("\t%s%n", result.getResourceName());

@@ -32,8 +32,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Gets keyword performance statistics for the 50 keywords with the most impressions
- * over the last 7 days.
+ * Gets keyword performance statistics for the 50 keywords with the most impressions over the last 7
+ * days.
  */
 public class GetKeywordStats {
 
@@ -45,7 +45,7 @@ public class GetKeywordStats {
     private Long customerId;
   }
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) {
     GetKeywordStatsParams params = new GetKeywordStatsParams();
     if (!params.parseArguments(args)) {
 
@@ -67,7 +67,7 @@ public class GetKeywordStats {
     }
 
     try {
-      new GetKeywordStats().runExample(googleAdsClient, params.customerId);
+      new GetKeywordStats().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -87,10 +87,10 @@ public class GetKeywordStats {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  public void runExample(GoogleAdsClient googleAdsClient, GetKeywordStatsParams params) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       String searchQuery =
@@ -117,7 +117,7 @@ public class GetKeywordStats {
       // page size.
       SearchGoogleAdsRequest request =
           SearchGoogleAdsRequest.newBuilder()
-              .setCustomerId(Long.toString(customerId))
+              .setCustomerId(Long.toString(params.customerId))
               .setPageSize(PAGE_SIZE)
               .setQuery(searchQuery)
               .build();

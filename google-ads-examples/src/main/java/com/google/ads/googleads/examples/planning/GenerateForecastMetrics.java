@@ -29,8 +29,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Creates a keyword plan, which can be reused for retrieving forecast metrics and
- * historic metrics.
+ * Creates a keyword plan, which can be reused for retrieving forecast metrics and historic metrics.
  */
 public class GenerateForecastMetrics {
 
@@ -69,8 +68,7 @@ public class GenerateForecastMetrics {
     }
 
     try {
-      new GenerateForecastMetrics()
-          .runExample(googleAdsClient, params.customerId, params.keywordPlanId);
+      new GenerateForecastMetrics().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -90,11 +88,10 @@ public class GenerateForecastMetrics {
    * Runs the code example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param planId the plan ID.
+   * @param params the ads entities to use when running the example.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, Long customerId, Long planId) {
-    String planResourceName = ResourceNames.keywordPlan(customerId, planId);
+  public void runExample(GoogleAdsClient googleAdsClient, GenerateForecastMetricParams params) {
+    String planResourceName = ResourceNames.keywordPlan(params.customerId, params.keywordPlanId);
 
     try (KeywordPlanServiceClient client =
         googleAdsClient.getLatestVersion().createKeywordPlanServiceClient()) {

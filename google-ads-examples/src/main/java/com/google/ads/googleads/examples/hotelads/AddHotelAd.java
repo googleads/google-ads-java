@@ -101,12 +101,7 @@ public class AddHotelAd {
     }
 
     try {
-      new AddHotelAd()
-          .runExample(
-              googleAdsClient,
-              params.customerId,
-              params.hotelCenterAccountId,
-              params.cpcBidCeilingMicroAmount);
+      new AddHotelAd().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -126,35 +121,29 @@ public class AddHotelAd {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param hotelCenterAccountId the Hotel Center account ID.
-   * @param cpcBidCeilingMicroAmount the maximum bid limit that can be set when creating a campaign
-   *     using the Percent CPC bidding strategy.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient,
-      long customerId,
-      long hotelCenterAccountId,
-      long cpcBidCeilingMicroAmount) {
+  public void runExample(GoogleAdsClient googleAdsClient, AddHotelAdParams params) {
 
     // Creates a budget to be used by the campaign that will be created below.
-    String budgetResourceName = addCampaignBudget(googleAdsClient, customerId);
+    String budgetResourceName = addCampaignBudget(googleAdsClient, params.customerId);
 
     // Creates a hotel campaign.
     String campaignResourceName =
         addHotelCampaign(
             googleAdsClient,
-            customerId,
+            params.customerId,
             budgetResourceName,
-            hotelCenterAccountId,
-            cpcBidCeilingMicroAmount);
+            params.hotelCenterAccountId,
+            params.cpcBidCeilingMicroAmount);
 
     // Creates a hotel ad group.
-    String adGroupResourceName = addHotelAdGroup(googleAdsClient, customerId, campaignResourceName);
+    String adGroupResourceName =
+        addHotelAdGroup(googleAdsClient, params.customerId, campaignResourceName);
 
     // Creates a hotel ad group ad.
-    addHotelAdGroupAd(googleAdsClient, customerId, adGroupResourceName);
+    addHotelAdGroupAd(googleAdsClient, params.customerId, adGroupResourceName);
   }
 
   /**
@@ -242,7 +231,8 @@ public class AddHotelAd {
     CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();
 
     // Issues a mutate request to add the campaign.
-    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+    try (CampaignServiceClient campaignServiceClient =
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       MutateCampaignsResponse response =
           campaignServiceClient.mutateCampaigns(
               Long.toString(customerId), Collections.singletonList(operation));
@@ -280,7 +270,8 @@ public class AddHotelAd {
     AdGroupOperation operation = AdGroupOperation.newBuilder().setCreate(adGroup).build();
 
     // Issues a mutate request to add an ad group.
-    try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
+    try (AdGroupServiceClient adGroupServiceClient =
+        googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       MutateAdGroupResult mutateAdGroupResult =
           adGroupServiceClient
               .mutateAdGroups(Long.toString(customerId), Collections.singletonList(operation))

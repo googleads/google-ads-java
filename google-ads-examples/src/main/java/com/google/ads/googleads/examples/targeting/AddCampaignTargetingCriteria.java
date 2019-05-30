@@ -93,13 +93,7 @@ public class AddCampaignTargetingCriteria {
     }
 
     try {
-      new AddCampaignTargetingCriteria()
-          .runExample(
-              googleAdsClient,
-              params.customerId,
-              params.campaignId,
-              params.keywordText,
-              params.locationId);
+      new AddCampaignTargetingCriteria().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -119,37 +113,31 @@ public class AddCampaignTargetingCriteria {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
-   * @param campaignId the campaign ID in which to create criterion.
-   * @param keywordText the keyword text for which to add a criterion.
-   * @param locationId the locationId for which to add a criterion.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient,
-      long customerId,
-      long campaignId,
-      String keywordText,
-      long locationId) {
+  public void runExample(
+      GoogleAdsClient googleAdsClient, AddCampaignTargetingCriteriaParams params) {
     String campaignResourceName =
-        CampaignName.format(Long.toString(customerId), Long.toString(campaignId));
+        CampaignName.format(Long.toString(params.customerId), Long.toString(params.campaignId));
 
     List<CampaignCriterionOperation> operations =
         ImmutableList.of(
             CampaignCriterionOperation.newBuilder()
-                .setCreate(buildNegativeKeywordCriterion(keywordText, campaignResourceName))
+                .setCreate(buildNegativeKeywordCriterion(params.keywordText, campaignResourceName))
                 .build(),
             CampaignCriterionOperation.newBuilder()
-                .setCreate(buildLocationIdCriterion(locationId, campaignResourceName))
+                .setCreate(buildLocationIdCriterion(params.locationId, campaignResourceName))
                 .build(),
             CampaignCriterionOperation.newBuilder()
-                .setCreate(buildProximityLocation(campaignResourceName)).build());
+                .setCreate(buildProximityLocation(campaignResourceName))
+                .build());
 
     try (CampaignCriterionServiceClient campaignCriterionServiceClient =
         googleAdsClient.getLatestVersion().createCampaignCriterionServiceClient()) {
       MutateCampaignCriteriaResponse response =
           campaignCriterionServiceClient.mutateCampaignCriteria(
-              Long.toString(customerId), operations);
+              Long.toString(params.customerId), operations);
       System.out.printf("Added %d campaign criteria:%n", response.getResultsCount());
       for (MutateCampaignCriterionResult result : response.getResultsList()) {
         System.out.println(result.getResourceName());

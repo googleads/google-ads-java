@@ -63,7 +63,7 @@ public class GetAccountBudgetProposals {
     }
 
     try {
-      new GetAccountBudgetProposals().runExample(googleAdsClient, params.customerId);
+      new GetAccountBudgetProposals().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -81,10 +81,11 @@ public class GetAccountBudgetProposals {
 
   /**
    * Runs the example.
-   * @param googleAdsClient the Google Ads API client.
-   * @param customerId the customer ID for which to retrieve AccountBudgetProposals.
+   *
+   * @param googleAdsClient the Google Ads API client
+   * @param params the ads entities to use when running the example.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  public void runExample(GoogleAdsClient googleAdsClient, GetAccountBudgetProposalsParams params) {
     // Constructs a GAQL query which will retrieve AccountBudgetProposals.
     String queryString =
         "SELECT account_budget_proposal.id, "
@@ -103,7 +104,7 @@ public class GetAccountBudgetProposals {
     // specified page size.
     SearchGoogleAdsRequest request =
         SearchGoogleAdsRequest.newBuilder()
-            .setCustomerId(Long.toString(customerId))
+            .setCustomerId(Long.toString(params.customerId))
             .setPageSize(PAGE_SIZE)
             .setQuery(queryString)
             .build();

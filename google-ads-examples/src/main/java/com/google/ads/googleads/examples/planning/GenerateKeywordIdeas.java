@@ -33,7 +33,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.annotation.Nullable;
 
 /** Generates keyword ideas from a list of seed keywords. */
 public class GenerateKeywordIdeas {
@@ -70,7 +69,7 @@ public class GenerateKeywordIdeas {
     private String pageUrl;
   }
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) {
     GenerateKeywordIdeasParams params = new GenerateKeywordIdeasParams();
     if (!params.parseArguments(args)) {
       // Either pass the required parameters for this example on the command line, or insert them
@@ -99,14 +98,7 @@ public class GenerateKeywordIdeas {
     }
 
     try {
-      new GenerateKeywordIdeas()
-          .runExample(
-              googleAdsClient,
-              params.customerId,
-              params.languageId,
-              params.locationIds,
-              params.keywords,
-              params.pageUrl);
+      new GenerateKeywordIdeas().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -126,60 +118,52 @@ public class GenerateKeywordIdeas {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param languageId the language ID.
-   * @param locationIds the location IDs.
-   * @param keywords the list of keywords to use as a seed for ideas.
-   * @param pageUrl optional URL related to your business to use as a seed for ideas.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    * @throws IllegalArgumentException if {@code keywords} is empty and {@code pageUrl} is null.
    * @throws Exception if the example failed due to other errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient,
-      long customerId,
-      long languageId,
-      List<Long> locationIds,
-      List<String> keywords,
-      @Nullable String pageUrl) {
+  public void runExample(GoogleAdsClient googleAdsClient, GenerateKeywordIdeasParams params) {
     try (KeywordPlanIdeaServiceClient keywordPlanServiceClient =
         googleAdsClient.getLatestVersion().createKeywordPlanIdeaServiceClient()) {
       GenerateKeywordIdeasRequest.Builder requestBuilder =
           GenerateKeywordIdeasRequest.newBuilder()
-              .setCustomerId(Long.toString(customerId))
+              .setCustomerId(Long.toString(params.customerId))
               // Sets the language resource using the provided language ID.
-              .setLanguage(StringValue.of(ResourceNames.languageConstant(languageId)))
+              .setLanguage(StringValue.of(ResourceNames.languageConstant(params.languageId)))
               // Sets the network. To restrict to only Google Search, change the parameter below to
               // KeywordPlanNetwork.GOOGLE_SEARCH.
               .setKeywordPlanNetwork(KeywordPlanNetwork.GOOGLE_SEARCH_AND_PARTNERS);
 
       // Adds the resource name of each location ID to the request.
-      for (Long locationId : locationIds) {
+      for (Long locationId : params.locationIds) {
         requestBuilder.addGeoTargetConstants(
             StringValue.of(ResourceNames.geoTargetConstant(locationId)));
       }
 
       // Makes sure that keywords and/or page URL were specified. The request must have exactly one
       // of urlSeed, keywordSeed, or keywordAndUrlSeed set.
-      if (keywords.isEmpty() && pageUrl == null) {
+      if (params.keywords.isEmpty() && params.pageUrl == null) {
         throw new IllegalArgumentException(
             "At least one of keywords or page URL is required, but neither was specified.");
       }
 
-      if (keywords.isEmpty()) {
+      if (params.keywords.isEmpty()) {
         // Only page URL was specified, so use a UrlSeed.
-        requestBuilder.getUrlSeedBuilder().setUrl(StringValue.of(pageUrl));
-      } else if (pageUrl == null) {
+        requestBuilder.getUrlSeedBuilder().setUrl(StringValue.of(params.pageUrl));
+      } else if (params.pageUrl == null) {
         // Only keywords were specified, so use a KeywordSeed.
         requestBuilder
             .getKeywordSeedBuilder()
-            .addAllKeywords(keywords.stream().map(StringValue::of).collect(Collectors.toList()));
+            .addAllKeywords(
+                params.keywords.stream().map(StringValue::of).collect(Collectors.toList()));
       } else {
         // Both page URL and keywords were specified, so use a KeywordAndUrlSeed.
         requestBuilder
             .getKeywordAndUrlSeedBuilder()
-            .setUrl(StringValue.of(pageUrl))
-            .addAllKeywords(keywords.stream().map(StringValue::of).collect(Collectors.toList()));
+            .setUrl(StringValue.of(params.pageUrl))
+            .addAllKeywords(
+                params.keywords.stream().map(StringValue::of).collect(Collectors.toList()));
       }
 
       // Sends the keyword ideas request.

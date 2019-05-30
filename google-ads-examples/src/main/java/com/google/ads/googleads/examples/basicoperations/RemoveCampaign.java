@@ -29,10 +29,7 @@ import com.google.common.collect.Lists;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- * Deletes a campaign using the 'REMOVE' operation. To get campaigns, run
- * GetCampaigns.java.
- */
+/** Deletes a campaign using the 'REMOVE' operation. To get campaigns, run GetCampaigns.java. */
 public class RemoveCampaign {
 
   private static class RemoveCampaignParams extends CodeSampleParams {
@@ -67,7 +64,7 @@ public class RemoveCampaign {
     }
 
     try {
-      new RemoveCampaign().runExample(googleAdsClient, params.customerId, params.campaignId);
+      new RemoveCampaign().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -87,20 +84,20 @@ public class RemoveCampaign {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param campaignId the ID of the campaign to remove.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
-    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
-      String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
+  public void runExample(GoogleAdsClient googleAdsClient, RemoveCampaignParams params) {
+    try (CampaignServiceClient campaignServiceClient =
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+      String campaignResourceName = ResourceNames.campaign(params.customerId, params.campaignId);
       // Constructs an operation that will remove the campaign with the specified resource name.
       CampaignOperation operation =
           CampaignOperation.newBuilder().setRemove(campaignResourceName).build();
       // Sends the operation in a mutate request.
       MutateCampaignsResponse response =
           campaignServiceClient.mutateCampaigns(
-              Long.toString(customerId), Lists.newArrayList(operation));
+              Long.toString(params.customerId), Lists.newArrayList(operation));
       // Prints the resource name of each removed object.
       for (MutateCampaignResult mutateCampaignResult : response.getResultsList()) {
         System.out.printf(

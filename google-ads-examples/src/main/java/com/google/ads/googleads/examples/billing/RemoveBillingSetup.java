@@ -65,8 +65,7 @@ public class RemoveBillingSetup {
     }
 
     try {
-      new RemoveBillingSetup()
-          .runExample(googleAdsClient, params.customerId, params.billingSetupId);
+      new RemoveBillingSetup().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -86,25 +85,26 @@ public class RemoveBillingSetup {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the customer ID containing the BillingSetup to remove.
-   * @param billingSetupId the BillingSetup ID to remove.
+   * @param params the ads entities to use when running the example.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long billingSetupId) {
+  public void runExample(GoogleAdsClient googleAdsClient, RemoveBillingSetupParams params) {
     // Formats the customerId and billingSetupId into a resource name.
-    String billingSetupResourceName = ResourceNames.billingSetup(customerId, billingSetupId);
+    String billingSetupResourceName =
+        ResourceNames.billingSetup(params.customerId, params.billingSetupId);
 
     // Constructs an operation that will remove the billing setup.
-    BillingSetupOperation operation = BillingSetupOperation.newBuilder()
-        .setRemove(billingSetupResourceName)
-        .build();
+    BillingSetupOperation operation =
+        BillingSetupOperation.newBuilder().setRemove(billingSetupResourceName).build();
 
-    try (BillingSetupServiceClient billingSetupServiceClient = googleAdsClient.getLatestVersion()
-        .createBillingSetupServiceClient()) {
+    try (BillingSetupServiceClient billingSetupServiceClient =
+        googleAdsClient.getLatestVersion().createBillingSetupServiceClient()) {
       // Sends the operation in a mutate request.
-      MutateBillingSetupResponse response = billingSetupServiceClient
-          .mutateBillingSetup(String.valueOf(customerId), operation);
+      MutateBillingSetupResponse response =
+          billingSetupServiceClient.mutateBillingSetup(
+              String.valueOf(params.customerId), operation);
 
-      System.out.printf("Removed billing setup with resource name '%s'.%n",
+      System.out.printf(
+          "Removed billing setup with resource name '%s'.%n",
           response.getResult().getResourceName());
     }
   }

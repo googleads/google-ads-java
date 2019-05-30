@@ -58,7 +58,7 @@ public class GetAllImageAssets {
     }
 
     try {
-      new GetAllImageAssets().runExample(googleAdsClient, params.customerId);
+      new GetAllImageAssets().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -78,10 +78,10 @@ public class GetAllImageAssets {
    * Runs this example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private static void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  public void runExample(GoogleAdsClient googleAdsClient, GetAllImageAssetsParams params) {
     // Creates the search query.
     String searchQuery =
         "SELECT "
@@ -98,7 +98,7 @@ public class GetAllImageAssets {
     // Creates the request.
     SearchGoogleAdsRequest request =
         SearchGoogleAdsRequest.newBuilder()
-            .setCustomerId(Long.toString(customerId))
+            .setCustomerId(Long.toString(params.customerId))
             .setPageSize(PAGE_SIZE)
             .setQuery(searchQuery)
             .build();

@@ -17,6 +17,7 @@ package com.google.ads.googleads.examples.utils;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import java.io.PrintStream;
+import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 
 /**
  * A base class for all code examples to handle command line argument parsing and usage printing.
@@ -47,5 +48,10 @@ public abstract class CodeSampleParams {
     }
 
     return true;
+  }
+
+  @Override
+  public String toString() {
+    return ReflectionToStringBuilder.toString(this);
   }
 }

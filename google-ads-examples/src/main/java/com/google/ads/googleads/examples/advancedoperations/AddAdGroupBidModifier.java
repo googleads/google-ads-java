@@ -35,8 +35,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Demonstrates how to add an ad group bid modifier for mobile devices. To get ad group
- * bid modifiers, see advancedoperations/GetAdGroupBidModifiers.java.
+ * Demonstrates how to add an ad group bid modifier for mobile devices. To get ad group bid
+ * modifiers, see advancedoperations/GetAdGroupBidModifiers.java.
  */
 public class AddAdGroupBidModifier {
 
@@ -79,9 +79,7 @@ public class AddAdGroupBidModifier {
     }
 
     try {
-      new AddAdGroupBidModifier()
-          .runExample(
-              googleAdsClient, params.customerId, params.adGroupId, params.bidModifier);
+      new AddAdGroupBidModifier().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -101,13 +99,10 @@ public class AddAdGroupBidModifier {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupId the ID of the ad group.
-   * @param bidModifier the bid modifier value to set
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, long adGroupId, double bidModifier) {
+  public void runExample(GoogleAdsClient googleAdsClient, AddAdGroupBidModifierParams params) {
 
     // Creates an ad group bid modifier for mobile devices with the specified ad group ID and
     // bid modifier value.
@@ -115,8 +110,9 @@ public class AddAdGroupBidModifier {
         AdGroupBidModifier.newBuilder()
             .setAdGroup(
                 StringValue.of(
-                    AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId))))
-            .setBidModifier(DoubleValue.of(bidModifier))
+                    AdGroupName.format(
+                        Long.toString(params.customerId), Long.toString(params.adGroupId))))
+            .setBidModifier(DoubleValue.of(params.bidModifier))
             .setDevice(DeviceInfo.newBuilder().setType(Device.MOBILE))
             .build();
 
@@ -129,7 +125,7 @@ public class AddAdGroupBidModifier {
         googleAdsClient.getLatestVersion().createAdGroupBidModifierServiceClient()) {
       MutateAdGroupBidModifiersResponse response =
           adGroupBidModifierServiceClient.mutateAdGroupBidModifiers(
-              Long.toString(customerId), ImmutableList.of(adGroupBidModifierOperation));
+              Long.toString(params.customerId), ImmutableList.of(adGroupBidModifierOperation));
 
       System.out.printf("Added %d ad group bid modifiers:%n", response.getResultsCount());
       for (MutateAdGroupBidModifierResult mutateAdGroupBidModifierResult :

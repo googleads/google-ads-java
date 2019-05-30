@@ -35,8 +35,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Adds various types of negative criteria as exclusions at the customer level. These
- * criteria will be applied to all campaigns for the customer.
+ * Adds various types of negative criteria as exclusions at the customer level. These criteria will
+ * be applied to all campaigns for the customer.
  */
 public class AddCustomerNegativeCriteria {
 
@@ -68,7 +68,7 @@ public class AddCustomerNegativeCriteria {
     }
 
     try {
-      new AddCustomerNegativeCriteria().runExample(googleAdsClient, params.customerId);
+      new AddCustomerNegativeCriteria().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -88,10 +88,11 @@ public class AddCustomerNegativeCriteria {
    * Creates customer negative criteria.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  public static void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  public void runExample(
+      GoogleAdsClient googleAdsClient, AddCustomerNegativeCriteriaParams params) {
     try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient =
         googleAdsClient.getLatestVersion().createCustomerNegativeCriterionServiceClient()) {
 
@@ -123,7 +124,7 @@ public class AddCustomerNegativeCriteria {
       // Adds the negative customer criteria.
       MutateCustomerNegativeCriteriaResponse response =
           customerNegativeCriterionServiceClient.mutateCustomerNegativeCriteria(
-              Long.toString(customerId), operations);
+              Long.toString(params.customerId), operations);
 
       // Displays the results.
       System.out.printf("Created %d new negative customer criteria.%n", response.getResultsCount());

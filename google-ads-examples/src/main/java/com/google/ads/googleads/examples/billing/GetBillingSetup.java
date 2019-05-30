@@ -27,9 +27,7 @@ import com.google.ads.googleads.v2.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- * Gets all BillingSetup objects available for the specified customerId.
- */
+/** Gets all BillingSetup objects available for the specified customerId. */
 public class GetBillingSetup {
 
   private static final int PAGE_SIZE = 1_000;
@@ -62,7 +60,7 @@ public class GetBillingSetup {
     }
 
     try {
-      new GetBillingSetup().runExample(googleAdsClient, params.customerId);
+      new GetBillingSetup().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -82,28 +80,32 @@ public class GetBillingSetup {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the customer ID for which to retrieve BillingSetups.
+   * @param params the ads entities to use when running the example.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  public void runExample(GoogleAdsClient googleAdsClient, GetBillingSetupParams params) {
     // Defines a GAQL query to retrieve all billing setup information.
-    String searchQuery = "SELECT billing_setup.id, "
-        + "  billing_setup.status, "
-        + "  billing_setup.payments_account, "
-        + "  billing_setup.payments_account_info.payments_account_id, "
-        + "  billing_setup.payments_account_info.payments_account_name, "
-        + "  billing_setup.payments_account_info.payments_profile_id, "
-        + "  billing_setup.payments_account_info.payments_profile_name, "
-        + "  billing_setup.payments_account_info.secondary_payments_profile_id "
-        + "FROM billing_setup";
+    String searchQuery =
+        "SELECT billing_setup.id, "
+            + "  billing_setup.status, "
+            + "  billing_setup.payments_account, "
+            + "  billing_setup.payments_account_info.payments_account_id, "
+            + "  billing_setup.payments_account_info.payments_account_name, "
+            + "  billing_setup.payments_account_info.payments_profile_id, "
+            + "  billing_setup.payments_account_info.payments_profile_name, "
+            + "  billing_setup.payments_account_info.secondary_payments_profile_id "
+            + "FROM billing_setup";
 
     // Creates a request that will retrieve all billing setups using pages of the specified
     // page size.
-    SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
-        .setCustomerId(String.valueOf(customerId)).setPageSize(PAGE_SIZE).setQuery(
-            searchQuery).build();
+    SearchGoogleAdsRequest request =
+        SearchGoogleAdsRequest.newBuilder()
+            .setCustomerId(String.valueOf(params.customerId))
+            .setPageSize(PAGE_SIZE)
+            .setQuery(searchQuery)
+            .build();
 
-    try (GoogleAdsServiceClient googleAdsServiceClient = googleAdsClient.getLatestVersion()
-        .createGoogleAdsServiceClient()) {
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Issues the search request.
       SearchPagedResponse response = googleAdsServiceClient.search(request);
 

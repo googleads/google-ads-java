@@ -33,15 +33,15 @@ import java.time.format.DateTimeFormatter;
 /**
  * Creates a new customer under a given manager account.
  *
- * Note: this example must be run using the credentials of a Google Ads manager account. By default,
- * the new account will only be accessible via the manager account.
+ * <p>Note: this example must be run using the credentials of a Google Ads manager account. By
+ * default, the new account will only be accessible via the manager account.
  */
 public class CreateCustomer {
 
   private static class CreateCustomerParams extends CodeSampleParams {
 
     @Parameter(
-        names = ArgumentNames.CUSTOMER_ID,
+        names = ArgumentNames.MANAGER_ID,
         description = "Manager account to own the new customer.")
     public Long managerAccountId;
   }
@@ -67,7 +67,7 @@ public class CreateCustomer {
     }
 
     try {
-      new CreateCustomer().runExample(googleAdsClient, params.managerAccountId);
+      new CreateCustomer().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -83,32 +83,33 @@ public class CreateCustomer {
     }
   }
 
-  private void runExample(GoogleAdsClient googleAdsClient, Long managerId) {
+  public void runExample(GoogleAdsClient googleAdsClient, CreateCustomerParams params) {
     // Formats the current date/time to use as a timestamp in the new customer description.
     String dateTime = ZonedDateTime.now().format(DateTimeFormatter.RFC_1123_DATE_TIME);
 
     // Initializes a Customer object to be created.
-    Customer customer = Customer.newBuilder()
-        .setDescriptiveName(
-            StringValue.of("Account created with CustomerService on '" + dateTime + "'"))
-        .setCurrencyCode(StringValue.of("USD"))
-        .setTimeZone(StringValue.of("America/New_York"))
-        // Optional: Sets additional attributes of the customer.
-        .setTrackingUrlTemplate(StringValue.of("{lpurl}?device={device}"))
-        .setFinalUrlSuffix(
-            StringValue.of("keyword={keyword}&matchtype={matchtype}&adgroupid={adgroupid}"))
-        .setHasPartnersBadge(BoolValue.of(false))
-        .build();
+    Customer customer =
+        Customer.newBuilder()
+            .setDescriptiveName(
+                StringValue.of("Account created with CustomerService on '" + dateTime + "'"))
+            .setCurrencyCode(StringValue.of("USD"))
+            .setTimeZone(StringValue.of("America/New_York"))
+            // Optional: Sets additional attributes of the customer.
+            .setTrackingUrlTemplate(StringValue.of("{lpurl}?device={device}"))
+            .setFinalUrlSuffix(
+                StringValue.of("keyword={keyword}&matchtype={matchtype}&adgroupid={adgroupid}"))
+            .setHasPartnersBadge(BoolValue.of(false))
+            .build();
 
     // Sends the request to create the customer.
     try (CustomerServiceClient client =
         googleAdsClient.getLatestVersion().createCustomerServiceClient()) {
       CreateCustomerClientResponse response =
-          client.createCustomerClient(managerId.toString(), customer);
+          client.createCustomerClient(params.managerAccountId.toString(), customer);
       System.out.printf(
           "Created a customer with resource name '%s' under the manager account with"
               + " customer ID '%d'.%n",
-          response.getResourceName(), managerId);
+          response.getResourceName(), params.managerAccountId);
     }
   }
 }

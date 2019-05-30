@@ -39,7 +39,7 @@ import java.io.IOException;
  */
 public class UpdateKeyword {
 
-  private static class UpdateAdGroupParams extends CodeSampleParams {
+  private static class UpdateKeywordParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -52,7 +52,7 @@ public class UpdateKeyword {
   }
 
   public static void main(String[] args) {
-    UpdateAdGroupParams params = new UpdateAdGroupParams();
+    UpdateKeywordParams params = new UpdateKeywordParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -75,8 +75,7 @@ public class UpdateKeyword {
     }
 
     try {
-      new UpdateKeyword()
-          .runExample(googleAdsClient, params.customerId, params.adGroupId, params.criterionId);
+      new UpdateKeyword().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -96,19 +95,18 @@ public class UpdateKeyword {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupId the ID of the ad group that the criterionId belongs to.
-   * @param criterionId the ID of criterion to update.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, long adGroupId, long criterionId) {
+  public void runExample(GoogleAdsClient googleAdsClient, UpdateKeywordParams params) {
     try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
         googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
       // Creates an ad group criterion object with the proper resource name and any other changes.
       AdGroupCriterion adGroupCriterion =
           AdGroupCriterion.newBuilder()
-              .setResourceName(ResourceNames.adGroupCriterion(customerId, adGroupId, criterionId))
+              .setResourceName(
+                  ResourceNames.adGroupCriterion(
+                      params.customerId, params.adGroupId, params.criterionId))
               .setStatus(AdGroupCriterionStatus.ENABLED)
               .addFinalUrls(StringValue.of("https://www.example.com"))
               .build();
@@ -123,7 +121,7 @@ public class UpdateKeyword {
       // Sends the operation in a mutate request.
       MutateAdGroupCriteriaResponse response =
           adGroupCriterionServiceClient.mutateAdGroupCriteria(
-              Long.toString(customerId), ImmutableList.of(operation));
+              Long.toString(params.customerId), ImmutableList.of(operation));
       // Prints the resource name of each updated object.
       for (MutateAdGroupCriterionResult mutateAdGroupCriterionResult : response.getResultsList()) {
         System.out.printf(

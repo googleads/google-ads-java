@@ -42,6 +42,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import org.joda.time.DateTime;
 
 /** Adds new campaigns to a client account. */
@@ -78,7 +79,7 @@ public class AddCampaigns {
     }
 
     try {
-      new AddCampaigns().runExample(googleAdsClient, params.customerId);
+      new AddCampaigns().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -127,13 +128,13 @@ public class AddCampaigns {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  public void runExample(GoogleAdsClient googleAdsClient, AddCampaignsParams params) {
 
     // Creates a single shared budget to be used by the campaigns added below.
-    String budgetResourceName = addCampaignBudget(googleAdsClient, customerId);
+    String budgetResourceName = addCampaignBudget(googleAdsClient, params.customerId);
 
     List<CampaignOperation> operations = new ArrayList<>(NUMBER_OF_CAMPAIGNS_TO_ADD);
 
@@ -150,7 +151,7 @@ public class AddCampaigns {
       // Creates the campaign.
       Campaign campaign =
           Campaign.newBuilder()
-              .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
+              .setName(StringValue.of("Interplanetary Cruise #" + UUID.randomUUID()))
               .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
               // Recommendation: Set the campaign to PAUSED when creating it to prevent
               // the ads from immediately serving. Set to ENABLED once you've added
@@ -170,9 +171,10 @@ public class AddCampaigns {
       operations.add(op);
     }
 
-    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+    try (CampaignServiceClient campaignServiceClient =
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       MutateCampaignsResponse response =
-          campaignServiceClient.mutateCampaigns(Long.toString(customerId), operations);
+          campaignServiceClient.mutateCampaigns(Long.toString(params.customerId), operations);
       System.out.printf("Added %d campaigns:%n", response.getResultsCount());
       for (MutateCampaignResult result : response.getResultsList()) {
         System.out.println(result.getResourceName());

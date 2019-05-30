@@ -37,7 +37,7 @@ public class GetAllVideosAndImages {
     private Long customerId;
   }
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) {
     GetAllVideosAndImagesParams params = new GetAllVideosAndImagesParams();
     if (!params.parseArguments(args)) {
 
@@ -51,7 +51,7 @@ public class GetAllVideosAndImages {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -59,15 +59,15 @@ public class GetAllVideosAndImages {
     }
 
     try {
-      new GetAllVideosAndImages().runExample(googleAdsClient, params.customerId);
+      new GetAllVideosAndImages().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -79,31 +79,33 @@ public class GetAllVideosAndImages {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  public void runExample(GoogleAdsClient googleAdsClient, GetAllVideosAndImagesParams params) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
-           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Creates a request that will retrieve all video and image files using pages of the
       // specified page size.
       SearchGoogleAdsRequest request =
-        SearchGoogleAdsRequest.newBuilder()
-          .setCustomerId(Long.toString(customerId))
-          .setPageSize(PAGE_SIZE)
-          .setQuery("SELECT media_file.id, media_file.name, media_file.type " +
-            "FROM media_file ORDER BY media_file.id")
-          .build();
+          SearchGoogleAdsRequest.newBuilder()
+              .setCustomerId(Long.toString(params.customerId))
+              .setPageSize(PAGE_SIZE)
+              .setQuery(
+                  "SELECT media_file.id, media_file.name, media_file.type "
+                      + "FROM media_file ORDER BY media_file.id")
+              .build();
       // Issues the search request.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
-      // Iterates over all rows in all pages and prints the requested field values for the media file
+      // Iterates over all rows in all pages and prints the requested field values for the media
+      // file
       // in each row.
       for (GoogleAdsRow googleAdsRow : searchPagedResponse.iterateAll()) {
         System.out.printf(
-          "Media file with ID %d, name '%s', and type '%s' was found.%n",
-          googleAdsRow.getMediaFile().getId().getValue(),
-          googleAdsRow.getMediaFile().getName().getValue(),
-          googleAdsRow.getMediaFile().getType());
+            "Media file with ID %d, name '%s', and type '%s' was found.%n",
+            googleAdsRow.getMediaFile().getId().getValue(),
+            googleAdsRow.getMediaFile().getName().getValue(),
+            googleAdsRow.getMediaFile().getType());
       }
     }
   }

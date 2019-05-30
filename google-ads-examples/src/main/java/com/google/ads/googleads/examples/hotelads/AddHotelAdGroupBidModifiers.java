@@ -38,8 +38,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Adds ad group bid modifiers to a hotel ad group based on hotel check-in
- * day and hotel length of stay.
+ * Adds ad group bid modifiers to a hotel ad group based on hotel check-in day and hotel length of
+ * stay.
  */
 public class AddHotelAdGroupBidModifiers {
 
@@ -78,8 +78,7 @@ public class AddHotelAdGroupBidModifiers {
     }
 
     try {
-      new AddHotelAdGroupBidModifiers()
-          .runExample(googleAdsClient, params.customerId, params.adGroupId);
+      new AddHotelAdGroupBidModifiers().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -99,15 +98,15 @@ public class AddHotelAdGroupBidModifiers {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupId the ID of the ad group.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
+  public void runExample(
+      GoogleAdsClient googleAdsClient, AddHotelAdGroupBidModifiersParams params) {
     List<AdGroupBidModifierOperation> operations = new ArrayList<>();
 
     // Constructs the ad group resource name to use for each bid modifier.
-    String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
+    String adGroupResourceName = ResourceNames.adGroup(params.customerId, params.adGroupId);
 
     // 1) Creates an ad group bid modifier based on the hotel check-in day.
     AdGroupBidModifier checkInDayAdGroupBidModifier =
@@ -144,7 +143,7 @@ public class AddHotelAdGroupBidModifiers {
         googleAdsClient.getLatestVersion().createAdGroupBidModifierServiceClient()) {
       MutateAdGroupBidModifiersResponse response =
           adGroupBidModifierServiceClient.mutateAdGroupBidModifiers(
-              Long.toString(customerId), operations);
+              Long.toString(params.customerId), operations);
 
       // Prints the resource names of the added ad group bid modifiers.
       System.out.printf("Added %d hotel ad group bid modifiers:%n", response.getResultsCount());

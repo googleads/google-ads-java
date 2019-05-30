@@ -23,10 +23,8 @@ import com.google.ads.googleads.v2.errors.GoogleAdsError;
 import com.google.ads.googleads.v2.resources.GoogleAdsField;
 import com.google.ads.googleads.v2.services.GoogleAdsFieldServiceClient;
 import com.google.ads.googleads.v2.services.GoogleAdsFieldServiceClient.SearchGoogleAdsFieldsPagedResponse;
-import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import com.google.protobuf.BoolValue;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -34,10 +32,10 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Gets the metadata, such as whether the artifact is selectable, filterable and
- * sortable, of an artifact. The artifact can be either a resource (such as customer, campaign) or a
- * field (such as metrics.impressions, campaign.id). It'll also show the data type and artifacts
- * that are selectable with the artifact.
+ * Gets the metadata, such as whether the artifact is selectable, filterable and sortable, of an
+ * artifact. The artifact can be either a resource (such as customer, campaign) or a field (such as
+ * metrics.impressions, campaign.id). It'll also show the data type and artifacts that are
+ * selectable with the artifact.
  */
 public class GetArtifactMetadata {
 
@@ -69,7 +67,7 @@ public class GetArtifactMetadata {
     }
 
     try {
-      new GetArtifactMetadata().runExample(googleAdsClient, params.artifactName);
+      new GetArtifactMetadata().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -89,10 +87,10 @@ public class GetArtifactMetadata {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param artifactName the name of artifact to get its metadata.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, String artifactName) {
+  private void runExample(GoogleAdsClient googleAdsClient, GetArtifactMetadataParams params) {
     try (GoogleAdsFieldServiceClient googleAdsFieldServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsFieldServiceClient()) {
       // Searches for an artifact whose name is the same as the specified artifactName.
@@ -101,7 +99,7 @@ public class GetArtifactMetadata {
               String.format(
                   "SELECT name, category, selectable, filterable, sortable, selectable_with, "
                       + "data_type, is_repeated WHERE name = '%s'",
-                  artifactName));
+                  params.artifactName));
 
       // Gets all returned artifacts and prints out their metadata.
       List<GoogleAdsField> googleAdsFields =
@@ -124,12 +122,7 @@ public class GetArtifactMetadata {
             new ArrayList<>(
                 Lists.transform(
                     googleAdsField.getSelectableWithList(),
-                    new Function<StringValue, String>() {
-                      @Override
-                      public String apply(StringValue selectableWithField) {
-                        return selectableWithField.getValue();
-                      }
-                    }));
+                    selectableWithField -> selectableWithField.getValue()));
         Collections.sort(selectableArtifacts);
 
         System.out.println("The artifact can be selected with the following artifacts:");
@@ -139,7 +132,7 @@ public class GetArtifactMetadata {
       }
 
       if (googleAdsFields.isEmpty()) {
-        System.err.printf("The specified artifact '%s' doesn't exist.%n", artifactName);
+        System.err.printf("The specified artifact '%s' doesn't exist.%n", params.artifactName);
       }
     }
   }

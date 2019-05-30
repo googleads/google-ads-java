@@ -71,7 +71,7 @@ public class PauseAd {
     }
 
     try {
-      new PauseAd().runExample(googleAdsClient, params.customerId, params.adGroupId, params.adId);
+      new PauseAd().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -91,15 +91,13 @@ public class PauseAd {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupId the ad group ID.
-   * @param adId the ID of the ad to pause.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, long adGroupId, long adId) {
+  public void runExample(GoogleAdsClient googleAdsClient, PauseAdParams params) {
 
-    String adGroupAdResourceName = ResourceNames.adGroupAd(customerId, adGroupId, adId);
+    String adGroupAdResourceName =
+        ResourceNames.adGroupAd(params.customerId, params.adGroupId, params.adId);
 
     // Creates an ad representation with its status set to PAUSED.
     AdGroupAd adGroupAd =
@@ -117,7 +115,8 @@ public class PauseAd {
     try (AdGroupAdServiceClient adGroupAdServiceClient =
         googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
       MutateAdGroupAdsResponse response =
-          adGroupAdServiceClient.mutateAdGroupAds(Long.toString(customerId), ImmutableList.of(op));
+          adGroupAdServiceClient.mutateAdGroupAds(
+              Long.toString(params.customerId), ImmutableList.of(op));
       for (MutateAdGroupAdResult result : response.getResultsList()) {
         System.out.printf("Ad with resource name '%s' is paused.%n", result.getResourceName());
       }

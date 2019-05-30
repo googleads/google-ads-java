@@ -32,8 +32,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Creates an account budget proposal using the 'CREATE' operation. To get account
- * budget proposals, run GetAccountBudgetProposals.java.
+ * Creates an account budget proposal using the 'CREATE' operation. To get account budget proposals,
+ * run GetAccountBudgetProposals.java.
  */
 public class AddAccountBudgetProposal {
 
@@ -69,8 +69,7 @@ public class AddAccountBudgetProposal {
     }
 
     try {
-      new AddAccountBudgetProposal()
-          .runExample(googleAdsClient, params.customerId, params.billingSetupId);
+      new AddAccountBudgetProposal().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -86,12 +85,14 @@ public class AddAccountBudgetProposal {
     }
   }
 
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long billingSetupId) {
+  public void runExample(GoogleAdsClient googleAdsClient, AddAccountBudgetProposalParams params) {
     // Creates an AccountBudgetProposal. This will be reviewed offline by Google Ads, and if
     // approved will become an AccountBudget.
     AccountBudgetProposal proposal =
         AccountBudgetProposal.newBuilder()
-            .setBillingSetup(StringValue.of(ResourceNames.billingSetup(customerId, billingSetupId)))
+            .setBillingSetup(
+                StringValue.of(
+                    ResourceNames.billingSetup(params.customerId, params.billingSetupId)))
             .setProposalType(AccountBudgetProposalType.CREATE)
             .setProposedName(StringValue.of("Account Budget (example)"))
 
@@ -121,15 +122,15 @@ public class AddAccountBudgetProposal {
             .build();
 
     // Creates an operation which will add the new AccountBudgetProposal.
-    AccountBudgetProposalOperation operation = AccountBudgetProposalOperation.newBuilder()
-        .setCreate(proposal).build();
+    AccountBudgetProposalOperation operation =
+        AccountBudgetProposalOperation.newBuilder().setCreate(proposal).build();
 
     try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient =
         googleAdsClient.getLatestVersion().createAccountBudgetProposalServiceClient()) {
       // Sends the request to the Account Budget Proposal Service.
       MutateAccountBudgetProposalResponse response =
           accountBudgetProposalServiceClient.mutateAccountBudgetProposal(
-              String.valueOf(customerId), operation);
+              String.valueOf(params.customerId), operation);
 
       System.out.printf(
           "Account budget proposal created: %s.%n", response.getResult().getResourceName());

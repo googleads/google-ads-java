@@ -29,7 +29,6 @@ import com.google.ads.googleads.v2.services.GoogleAdsServiceClient.SearchPagedRe
 import com.google.ads.googleads.v2.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import javax.annotation.Nullable;
 
 /** Gets keywords from ad group criteria. */
 public class GetKeywords {
@@ -70,7 +69,7 @@ public class GetKeywords {
     }
 
     try {
-      new GetKeywords().runExample(googleAdsClient, params.customerId, params.adGroupId);
+      new GetKeywords().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -90,14 +89,11 @@ public class GetKeywords {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupId the ad group ID for which keywords will be retrieved. If {@code null}, returns
-   *     from all ad groups.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    * @throws Exception if the example failed due to other errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, @Nullable Long adGroupId) {
+  public void runExample(GoogleAdsClient googleAdsClient, GetKeywordsParams params) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       String searchQuery =
@@ -108,14 +104,14 @@ public class GetKeywords {
               + "ad_group_criterion.keyword.match_type "
               + "FROM ad_group_criterion "
               + "WHERE ad_group_criterion.type = KEYWORD ";
-      if (adGroupId != null) {
-        searchQuery += String.format("AND ad_group.id = %d", adGroupId);
+      if (params.adGroupId != null) {
+        searchQuery += String.format("AND ad_group.id = %d", params.adGroupId);
       }
 
       // Creates a request that will retrieve all keywords using pages of the specified page size.
       SearchGoogleAdsRequest request =
           SearchGoogleAdsRequest.newBuilder()
-              .setCustomerId(Long.toString(customerId))
+              .setCustomerId(Long.toString(params.customerId))
               .setPageSize(PAGE_SIZE)
               .setQuery(searchQuery)
               .build();

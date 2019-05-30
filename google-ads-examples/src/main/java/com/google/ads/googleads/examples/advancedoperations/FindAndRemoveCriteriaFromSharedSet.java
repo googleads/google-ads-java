@@ -38,8 +38,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Demonstrates how to find shared sets, how to find shared set criteria, and how to
- * remove shared set criteria.
+ * Demonstrates how to find shared sets, how to find shared set criteria, and how to remove shared
+ * set criteria.
  */
 public class FindAndRemoveCriteriaFromSharedSet {
 
@@ -78,8 +78,7 @@ public class FindAndRemoveCriteriaFromSharedSet {
     }
 
     try {
-      new FindAndRemoveCriteriaFromSharedSet()
-          .runExample(googleAdsClient, params.customerId, params.campaignId);
+      new FindAndRemoveCriteriaFromSharedSet().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -99,11 +98,11 @@ public class FindAndRemoveCriteriaFromSharedSet {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param campaignId the campaign ID.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
+  public void runExample(
+      GoogleAdsClient googleAdsClient, FindAndRemoveCriteriaFromSharedSetParams params) {
 
     List<Long> sharedSetIds = new ArrayList<>();
     List<String> criterionResourceNames = new ArrayList<>();
@@ -115,11 +114,11 @@ public class FindAndRemoveCriteriaFromSharedSet {
           String.format(
               "SELECT shared_set.id, shared_set.name FROM campaign_shared_set WHERE "
                   + "campaign.id = %d",
-              campaignId);
+              params.campaignId);
 
       SearchGoogleAdsRequest request =
           SearchGoogleAdsRequest.newBuilder()
-              .setCustomerId(Long.toString(customerId))
+              .setCustomerId(Long.toString(params.customerId))
               .setPageSize(PAGE_SIZE)
               .setQuery(searchQuery)
               .build();
@@ -146,7 +145,7 @@ public class FindAndRemoveCriteriaFromSharedSet {
 
       SearchGoogleAdsRequest request =
           SearchGoogleAdsRequest.newBuilder()
-              .setCustomerId(Long.toString(customerId))
+              .setCustomerId(Long.toString(params.customerId))
               .setPageSize(PAGE_SIZE)
               .setQuery(searchQuery)
               .build();
@@ -180,7 +179,8 @@ public class FindAndRemoveCriteriaFromSharedSet {
       }
       // Sends the operation in a mutate request.
       MutateSharedCriteriaResponse response =
-          sharedCriterionServiceClient.mutateSharedCriteria(Long.toString(customerId), operations);
+          sharedCriterionServiceClient.mutateSharedCriteria(
+              Long.toString(params.customerId), operations);
       // Prints the resource name of each removed object.
       for (MutateSharedCriterionResult mutateSharedCriterionResult : response.getResultsList()) {
         System.out.printf(

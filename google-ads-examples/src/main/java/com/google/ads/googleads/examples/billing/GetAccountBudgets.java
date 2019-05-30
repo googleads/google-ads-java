@@ -57,7 +57,7 @@ public class GetAccountBudgets {
     }
 
     try {
-      new GetAccountBudgets().runExample(googleAdsClient, params.customerId);
+      new GetAccountBudgets().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -77,9 +77,9 @@ public class GetAccountBudgets {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the customer ID for which to retrieve account budgets.
+   * @param params the ads entities to use when running the example.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  public void runExample(GoogleAdsClient googleAdsClient, GetAccountBudgetParams params) {
     String query =
         "SELECT "
             + "account_budget.status, "
@@ -99,7 +99,7 @@ public class GetAccountBudgets {
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Issues the search request.
       SearchPagedResponse searchPagedResponse =
-          googleAdsServiceClient.search(Long.toString(customerId), query);
+          googleAdsServiceClient.search(Long.toString(params.customerId), query);
 
       // Iterates over all rows in all pages and prints the requested field values for the account
       // budget in each row.

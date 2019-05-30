@@ -31,7 +31,7 @@ import java.util.Optional;
 /** Gets the changes in the account made in the last 7 days. */
 public class GetAccountChanges {
 
-  private static class GetAccountChangesParams extends CodeSampleParams {
+  public static class GetAccountChangesParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -59,7 +59,7 @@ public class GetAccountChanges {
     }
 
     try {
-      new GetAccountChanges().runExample(googleAdsClient, params.customerId);
+      new GetAccountChanges().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -79,9 +79,9 @@ public class GetAccountChanges {
    * Runs the example.
    *
    * @param googleAdsClient the client instance.
-   * @param customerId the customerId for which to retrieve change status.
+   * @param params the ads entities to use when running the example.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  public void runExample(GoogleAdsClient googleAdsClient, GetAccountChangesParams params) {
     String query =
         "SELECT change_status.resource_name, "
             + "change_status.last_change_date_time, "
@@ -96,8 +96,9 @@ public class GetAccountChanges {
             + "WHERE change_status.last_change_date_time DURING LAST_7_DAYS "
             + "ORDER BY change_status.last_change_date_time";
 
-    try (GoogleAdsServiceClient client = googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
-      SearchPagedResponse response = client.search(String.valueOf(customerId), query);
+    try (GoogleAdsServiceClient client =
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+      SearchPagedResponse response = client.search(String.valueOf(params.customerId), query);
 
       for (GoogleAdsRow row : response.iterateAll()) {
         Optional<String> resourceNameOfChangedEntity =

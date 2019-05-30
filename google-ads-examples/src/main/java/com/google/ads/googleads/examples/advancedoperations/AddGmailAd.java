@@ -84,7 +84,7 @@ public class AddGmailAd {
     }
 
     try {
-      new AddGmailAd().runExample(googleAdsClient, params.customerId, params.adGroupId);
+      new AddGmailAd().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -104,15 +104,14 @@ public class AddGmailAd {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupId the ad group ID.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    * @throws IOException if there is an error opening the image files.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId)
+  public void runExample(GoogleAdsClient googleAdsClient, AddGmailAdParams params)
       throws IOException {
-    Map<String, String> mediaFiles = addMediaFiles(googleAdsClient, customerId);
-    addGmailAd(googleAdsClient, customerId, adGroupId, mediaFiles);
+    Map<String, String> mediaFiles = addMediaFiles(googleAdsClient, params.customerId);
+    addGmailAd(googleAdsClient, params.customerId, params.adGroupId, mediaFiles);
   }
 
   /**
@@ -191,7 +190,7 @@ public class AddGmailAd {
    * @param customerId the client customer ID.
    * @param adGroupId the ad group ID.
    * @param mediaFiles a map with keys of unique string identifiers and values of media file
-   *                   resource names.
+   *     resource names.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    * @throws IOException if there is an error opening the image files.
    */

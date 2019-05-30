@@ -46,8 +46,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Adds a shopping listing group tree to a shopping ad group. The example
- * will clear an existing listing group tree and rebuild it include the following tree structure:
+ * Adds a shopping listing group tree to a shopping ad group. The example will clear an existing
+ * listing group tree and rebuild it include the following tree structure:
  *
  * <pre>
  * ProductCanonicalCondition NEW $0.20
@@ -62,7 +62,7 @@ public class AddShoppingProductListingGroupTree {
 
   private static final int PAGE_SIZE = 1_000;
 
-  private static class AddShoppingListingGroupParams extends CodeSampleParams {
+  private static class AddShoppingProductListingGroupTreeParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -75,7 +75,8 @@ public class AddShoppingProductListingGroupTree {
   }
 
   public static void main(String[] args) {
-    AddShoppingListingGroupParams params = new AddShoppingListingGroupParams();
+    AddShoppingProductListingGroupTreeParams params =
+        new AddShoppingProductListingGroupTreeParams();
     if (!params.parseArguments(args)) {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
@@ -100,9 +101,7 @@ public class AddShoppingProductListingGroupTree {
     }
 
     try {
-      new AddShoppingProductListingGroupTree()
-          .runExample(
-              googleAdsClient, params.customerId, params.adGroupId, params.replaceExistingTree);
+      new AddShoppingProductListingGroupTree().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -122,21 +121,14 @@ public class AddShoppingProductListingGroupTree {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupId the ID of the ad group.
-   * @param replaceExistingTree replace the existing listing group tree on the ad group, if it
-   *     already exists. The example will throw a 'LISTING_GROUP_ALREADY_EXISTS' error if listing
-   *     group tree already exists and this option is not set to true.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient,
-      long customerId,
-      long adGroupId,
-      boolean replaceExistingTree) {
+  public void runExample(
+      GoogleAdsClient googleAdsClient, AddShoppingProductListingGroupTreeParams params) {
     // 1) Optional: Removes the existing listing group tree, if it already exists on the ad group.
-    if (replaceExistingTree) {
-      removeListingGroupTree(googleAdsClient, customerId, adGroupId);
+    if (params.replaceExistingTree) {
+      removeListingGroupTree(googleAdsClient, params.customerId, params.adGroupId);
     }
     // Creates a list of ad group criterion to add.q
     List<AdGroupCriterionOperation> operations = new ArrayList<>();
@@ -145,7 +137,7 @@ public class AddShoppingProductListingGroupTree {
 
     // Subdivision node: (Root node)
     AdGroupCriterion adGroupCriterionRoot =
-        createListingGroupSubdivisionRoot(customerId, adGroupId, -1L);
+        createListingGroupSubdivisionRoot(params.customerId, params.adGroupId, -1L);
     // Get the resource name that will be used for the root node.
     // This resource has not been created yet and will include the temporary ID as part of the
     // criterion ID.
@@ -159,8 +151,8 @@ public class AddShoppingProductListingGroupTree {
     // * CPC bid: $0.20
     AdGroupCriterion adGroupCriterionConditionNew =
         createListingGroupUnitBiddable(
-            customerId,
-            adGroupId,
+            params.customerId,
+            params.adGroupId,
             adGroupCriterionResourceNameRoot,
             ListingDimensionInfo.newBuilder()
                 .setProductCondition(
@@ -175,8 +167,8 @@ public class AddShoppingProductListingGroupTree {
     // * CPC bid: $0.10
     AdGroupCriterion adGroupCriterionConditionUsed =
         createListingGroupUnitBiddable(
-            customerId,
-            adGroupId,
+            params.customerId,
+            params.adGroupId,
             adGroupCriterionResourceNameRoot,
             ListingDimensionInfo.newBuilder()
                 .setProductCondition(
@@ -190,8 +182,8 @@ public class AddShoppingProductListingGroupTree {
     // * Product Condition: (not specified)
     AdGroupCriterion adGroupCriterionConditionOther =
         createListingGroupSubdivision(
-            customerId,
-            adGroupId,
+            params.customerId,
+            params.adGroupId,
             -2L,
             adGroupCriterionResourceNameRoot,
             ListingDimensionInfo.newBuilder()
@@ -215,8 +207,8 @@ public class AddShoppingProductListingGroupTree {
     // * CPC bid: $0.90
     AdGroupCriterion adGroupCriterionBrandCoolBrand =
         createListingGroupUnitBiddable(
-            customerId,
-            adGroupId,
+            params.customerId,
+            params.adGroupId,
             adGroupCriterionResourceNameConditionOther,
             ListingDimensionInfo.newBuilder()
                 .setListingBrand(
@@ -231,8 +223,8 @@ public class AddShoppingProductListingGroupTree {
     // * CPC bid: $0.01
     AdGroupCriterion adGroupCriterionBrandCheapBrand =
         createListingGroupUnitBiddable(
-            customerId,
-            adGroupId,
+            params.customerId,
+            params.adGroupId,
             adGroupCriterionResourceNameConditionOther,
             ListingDimensionInfo.newBuilder()
                 .setListingBrand(
@@ -247,8 +239,8 @@ public class AddShoppingProductListingGroupTree {
     // * CPC bid: $0.01
     AdGroupCriterion adGroupCriterionBrandOther =
         createListingGroupUnitBiddable(
-            customerId,
-            adGroupId,
+            params.customerId,
+            params.adGroupId,
             adGroupCriterionResourceNameConditionOther,
             ListingDimensionInfo.newBuilder()
                 .setListingBrand(ListingBrandInfo.newBuilder().build())
@@ -262,7 +254,7 @@ public class AddShoppingProductListingGroupTree {
         googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
       List<MutateAdGroupCriterionResult> mutateAdGroupCriteriaResults =
           adGroupCriterionServiceClient
-              .mutateAdGroupCriteria(Long.toString(customerId), operations)
+              .mutateAdGroupCriteria(Long.toString(params.customerId), operations)
               .getResultsList();
       for (MutateAdGroupCriterionResult mutateAdGroupCriterionResult :
           mutateAdGroupCriteriaResults) {

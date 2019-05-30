@@ -33,10 +33,7 @@ import com.google.protobuf.Int64Value;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- * Updates the CPC bid and status for a given ad group. To get ad groups, run
- * GetAdGroups.java.
- */
+/** Updates the CPC bid and status for a given ad group. To get ad groups, run GetAdGroups.java. */
 public class UpdateAdGroup {
 
   private static class UpdateAdGroupParams extends CodeSampleParams {
@@ -75,9 +72,7 @@ public class UpdateAdGroup {
     }
 
     try {
-      new UpdateAdGroup()
-          .runExample(
-              googleAdsClient, params.customerId, params.adGroupId, params.cpcBidMicroAmount);
+      new UpdateAdGroup().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -97,19 +92,17 @@ public class UpdateAdGroup {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupId the ID of the ad group to update.
-   * @param bidMicroAmount the bid amount in micros to use for the ad group bid.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, long adGroupId, long bidMicroAmount) {
-    try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
+  public void runExample(GoogleAdsClient googleAdsClient, UpdateAdGroupParams params) {
+    try (AdGroupServiceClient adGroupServiceClient =
+        googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       // Creates an ad group object with the proper resource name and any other changes.
       AdGroup adGroup =
           AdGroup.newBuilder()
-              .setResourceName(ResourceNames.adGroup(customerId, adGroupId))
-              .setCpcBidMicros(Int64Value.of(bidMicroAmount))
+              .setResourceName(ResourceNames.adGroup(params.customerId, params.adGroupId))
+              .setCpcBidMicros(Int64Value.of(params.cpcBidMicroAmount))
               .setStatus(AdGroupStatus.PAUSED)
               .build();
       // Constructs an operation that will update the ad group, using the FieldMasks utility to
@@ -123,7 +116,7 @@ public class UpdateAdGroup {
       // Sends the operation in a mutate request.
       MutateAdGroupsResponse response =
           adGroupServiceClient.mutateAdGroups(
-              Long.toString(customerId), ImmutableList.of(operation));
+              Long.toString(params.customerId), ImmutableList.of(operation));
       // Prints the resource name of each updated object.
       for (MutateAdGroupResult mutateAdGroupResult : response.getResultsList()) {
         System.out.printf(

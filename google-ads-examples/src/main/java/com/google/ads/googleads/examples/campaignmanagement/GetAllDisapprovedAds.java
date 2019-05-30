@@ -71,7 +71,7 @@ public class GetAllDisapprovedAds {
     }
 
     try {
-      new GetAllDisapprovedAds().runExample(googleAdsClient, params.customerId, params.campaignId);
+      new GetAllDisapprovedAds().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -91,11 +91,10 @@ public class GetAllDisapprovedAds {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param campaignId the campaign ID for which ads will be retrieved.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, Long campaignId) {
+  public void runExample(GoogleAdsClient googleAdsClient, GetAllDisapprovedAdsParams params) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       String searchQuery =
@@ -105,11 +104,11 @@ public class GetAllDisapprovedAds {
                   + "ad_group_ad.policy_summary "
                   + "FROM ad_group_ad "
                   + "WHERE campaign.id = %d",
-              campaignId);
+              params.campaignId);
       // Creates a request that will retrieve all ads using pages of the specified page size.
       SearchGoogleAdsRequest request =
           SearchGoogleAdsRequest.newBuilder()
-              .setCustomerId(Long.toString(customerId))
+              .setCustomerId(Long.toString(params.customerId))
               .setPageSize(PAGE_SIZE)
               .setQuery(searchQuery)
               .build();

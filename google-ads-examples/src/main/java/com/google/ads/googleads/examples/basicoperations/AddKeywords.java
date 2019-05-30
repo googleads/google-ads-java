@@ -82,8 +82,7 @@ public class AddKeywords {
     }
 
     try {
-      new AddKeywords()
-          .runExample(googleAdsClient, params.customerId, params.adGroupId, params.keywordText);
+      new AddKeywords().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -103,22 +102,18 @@ public class AddKeywords {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupId the ad group ID.
-   * @param keywordText the keyword text to add.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, long adGroupId, String keywordText) {
-
+  public void runExample(GoogleAdsClient googleAdsClient, AddKeywordsParams params) {
     // Configures the keywordText text and match type settings.
     KeywordInfo keywordInfo =
         KeywordInfo.newBuilder()
-            .setText(StringValue.of(keywordText))
+            .setText(StringValue.of(params.keywordText))
             .setMatchType(KeywordMatchType.EXACT)
             .build();
 
-    String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
+    String adGroupResourceName = ResourceNames.adGroup(params.customerId, params.adGroupId);
 
     // Constructs an ad group criterion using the keywordText configuration above.
     AdGroupCriterion criterion =
@@ -134,7 +129,8 @@ public class AddKeywords {
     try (AdGroupCriterionServiceClient agcServiceClient =
         googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
       MutateAdGroupCriteriaResponse response =
-          agcServiceClient.mutateAdGroupCriteria(Long.toString(customerId), ImmutableList.of(op));
+          agcServiceClient.mutateAdGroupCriteria(
+              Long.toString(params.customerId), ImmutableList.of(op));
       System.out.printf("Added %d ad group criteria:%n", response.getResultsCount());
       for (MutateAdGroupCriterionResult result : response.getResultsList()) {
         System.out.println(result.getResourceName());

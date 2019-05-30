@@ -63,8 +63,8 @@ import java.io.IOException;
 import java.util.Collections;
 
 /**
- * Creates a Smart Shopping campaign, a Smart Shopping ad group, a Smart Shopping ad
- * group ad and a listing group for "All products".
+ * Creates a Smart Shopping campaign, a Smart Shopping ad group, a Smart Shopping ad group ad and a
+ * listing group for "All products".
  *
  * <p>Prerequisite: You need to have access to a Merchant Center account. You can find instructions
  * to create a Merchant Center account here: https://support.google.com/merchants/answer/188924.
@@ -110,12 +110,7 @@ public class AddShoppingSmartAd {
     }
 
     try {
-      new AddShoppingSmartAd()
-          .runExample(
-              googleAdsClient,
-              params.customerId,
-              params.merchantCenterAccountId,
-              params.createDefaultListingGroup);
+      new AddShoppingSmartAd().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -135,38 +130,31 @@ public class AddShoppingSmartAd {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param merchantCenterAccountId the Merchant Center account ID.
-   * @param createDefaultListingGroup the boolean to indicate if a default listing group should be
-   *     created for the ad group. Set to false if the listing group will be constructed elsewhere.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient,
-      long customerId,
-      long merchantCenterAccountId,
-      boolean createDefaultListingGroup) {
+  public void runExample(GoogleAdsClient googleAdsClient, AddShoppingSmartAdParams params) {
 
     // Creates a budget to be used by the campaign that will be created below.
-    String budgetResourceName = addCampaignBudget(googleAdsClient, customerId);
+    String budgetResourceName = addCampaignBudget(googleAdsClient, params.customerId);
 
     // Creates a Smart Shopping campaign.
     String campaignResourceName =
         addSmartShoppingCampaign(
-            googleAdsClient, customerId, budgetResourceName, merchantCenterAccountId);
+            googleAdsClient, params.customerId, budgetResourceName, params.merchantCenterAccountId);
 
     // Creates a Smart Shopping ad group.
     String adGroupResourceName =
-        addSmartShoppingAdGroup(googleAdsClient, customerId, campaignResourceName);
+        addSmartShoppingAdGroup(googleAdsClient, params.customerId, campaignResourceName);
 
     // Creates a Smart Shopping ad group ad.
-    addSmartShoppingAdGroupAd(googleAdsClient, customerId, adGroupResourceName);
+    addSmartShoppingAdGroupAd(googleAdsClient, params.customerId, adGroupResourceName);
 
-    if (createDefaultListingGroup) {
+    if (params.createDefaultListingGroup) {
       // A product group is a subset of inventory. Listing groups are the equivalent of product
       // groups in the API and allow you to bid on the chosen group or exclude a group from bidding.
       // This method creates an ad group criterion containing a listing group.
-      addShoppingListingGroup(googleAdsClient, customerId, adGroupResourceName);
+      addShoppingListingGroup(googleAdsClient, params.customerId, adGroupResourceName);
     }
   }
 
@@ -263,7 +251,8 @@ public class AddShoppingSmartAd {
     CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();
 
     // Issues a mutate request to add the campaign.
-    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+    try (CampaignServiceClient campaignServiceClient =
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       MutateCampaignResult result =
           campaignServiceClient
               .mutateCampaigns(Long.toString(customerId), Collections.singletonList(operation))
@@ -300,7 +289,8 @@ public class AddShoppingSmartAd {
     AdGroupOperation operation = AdGroupOperation.newBuilder().setCreate(adGroup).build();
 
     // Issues a mutate request to add an ad group.
-    try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
+    try (AdGroupServiceClient adGroupServiceClient =
+        googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       MutateAdGroupResult mutateAdGroupResult =
           adGroupServiceClient
               .mutateAdGroups(Long.toString(customerId), Collections.singletonList(operation))

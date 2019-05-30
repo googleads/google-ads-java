@@ -28,9 +28,9 @@ import com.google.ads.googleads.v2.services.MutateMediaFileResult;
 import com.google.ads.googleads.v2.errors.GoogleAdsError;
 import com.google.ads.googleads.v2.errors.GoogleAdsException;
 import com.google.common.io.ByteStreams;
-import com.google.protobuf.StringValue;
-import com.google.protobuf.BytesValue;
 import com.google.protobuf.ByteString;
+import com.google.protobuf.BytesValue;
+import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -39,14 +39,14 @@ import java.util.Arrays;
 /** Uploads an image. */
 public class UploadImage {
 
-  private static class AddAdGroupParams extends CodeSampleParams {
+  private static class UploadImageParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
   }
 
   public static void main(String[] args) throws IOException {
-    AddAdGroupParams params = new AddAdGroupParams();
+    UploadImageParams params = new UploadImageParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -59,7 +59,7 @@ public class UploadImage {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -67,15 +67,15 @@ public class UploadImage {
     }
 
     try {
-      new UploadImage().runExample(googleAdsClient, params.customerId);
+      new UploadImage().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -87,32 +87,32 @@ public class UploadImage {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) throws IOException {
+  public void runExample(GoogleAdsClient googleAdsClient, UploadImageParams params)
+      throws IOException {
 
     byte[] imageData = ByteStreams.toByteArray(new URL("https://goo.gl/3b9Wfh").openStream());
 
     MediaImage image =
-      MediaImage.newBuilder()
-        .setData(BytesValue.of(ByteString.copyFrom(imageData)))
-        .build();
+        MediaImage.newBuilder().setData(BytesValue.of(ByteString.copyFrom(imageData))).build();
 
     MediaFile file =
-      MediaFile.newBuilder()
-        .setName(StringValue.of("Ad Image"))
-        .setType(MediaType.IMAGE)
-        .setSourceUrl(StringValue.of("https://goo.gl/3b9Wfh"))
-        .setImage(image)
-        .build();
+        MediaFile.newBuilder()
+            .setName(StringValue.of("Ad Image"))
+            .setType(MediaType.IMAGE)
+            .setSourceUrl(StringValue.of("https://goo.gl/3b9Wfh"))
+            .setImage(image)
+            .build();
 
     MediaFileOperation op = MediaFileOperation.newBuilder().setCreate(file).build();
 
     try (MediaFileServiceClient mediaFileServiceClient =
         googleAdsClient.getLatestVersion().createMediaFileServiceClient()) {
       MutateMediaFilesResponse response =
-        mediaFileServiceClient.mutateMediaFiles(Long.toString(customerId), Arrays.asList(op));
+          mediaFileServiceClient.mutateMediaFiles(
+              Long.toString(params.customerId), Arrays.asList(op));
       System.out.printf("Added %d images:%n", response.getResultsCount());
       for (MutateMediaFileResult result : response.getResultsList()) {
         System.out.println(result.getResourceName());

@@ -44,7 +44,7 @@ public class ApplyRecommendation {
     private String recommendationId;
   }
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) {
     ApplyRecommendation.ApplyRecommendationParams params =
         new ApplyRecommendation.ApplyRecommendationParams();
     if (!params.parseArguments(args)) {
@@ -73,8 +73,7 @@ public class ApplyRecommendation {
     }
 
     try {
-      new ApplyRecommendation()
-          .runExample(googleAdsClient, params.customerId, params.recommendationId);
+      new ApplyRecommendation().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -94,13 +93,12 @@ public class ApplyRecommendation {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param recommendationId the recommendation ID.
+   * @param params the ads entities to use when running the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, String recommendationId) {
-    String recommendationResourceName = ResourceNames.recommendation(customerId, recommendationId);
+  public void runExample(GoogleAdsClient googleAdsClient, ApplyRecommendationParams params) {
+    String recommendationResourceName =
+        ResourceNames.recommendation(params.customerId, params.recommendationId);
 
     ApplyRecommendationOperation.Builder operationBuilder =
         ApplyRecommendationOperation.newBuilder().setResourceName(recommendationResourceName);
@@ -123,7 +121,7 @@ public class ApplyRecommendation {
         googleAdsClient.getLatestVersion().createRecommendationServiceClient()) {
       ApplyRecommendationResponse response =
           recommendationServiceClient.applyRecommendation(
-              Long.toString(customerId), operations);
+              Long.toString(params.customerId), operations);
       System.out.printf("Applied %d recommendation:%n", response.getResultsCount());
       for (ApplyRecommendationResult result : response.getResultsList()) {
         System.out.println(result.getResourceName());

@@ -57,8 +57,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Creates a keyword plan, which can be reused for retrieving forecast metrics and
- * historic metrics.
+ * Creates a keyword plan, which can be reused for retrieving forecast metrics and historic metrics.
  */
 public class AddKeywordPlan {
 
@@ -90,7 +89,7 @@ public class AddKeywordPlan {
     }
 
     try {
-      new AddKeywordPlan().runExample(googleAdsClient, params.customerId);
+      new AddKeywordPlan().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -110,16 +109,16 @@ public class AddKeywordPlan {
    * Runs the code example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
+   * @param params the ads entities to use when running the example.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, Long customerId) {
-    String keywordPlanResource = createKeywordPlan(googleAdsClient, customerId);
+  public void runExample(GoogleAdsClient googleAdsClient, AddKeywordPlanParams params) {
+    String keywordPlanResource = createKeywordPlan(googleAdsClient, params.customerId);
     String planCampaignResource =
-        createKeywordPlanCampaign(googleAdsClient, customerId, keywordPlanResource);
+        createKeywordPlanCampaign(googleAdsClient, params.customerId, keywordPlanResource);
     String planAdGroupResource =
-        createKeywordPlanAdGroup(googleAdsClient, customerId, planCampaignResource);
-    createKeywordPlanKeywords(googleAdsClient, customerId, planAdGroupResource);
-    createKeywordPlanNegativeKeywords(googleAdsClient, customerId, planCampaignResource);
+        createKeywordPlanAdGroup(googleAdsClient, params.customerId, planCampaignResource);
+    createKeywordPlanKeywords(googleAdsClient, params.customerId, planAdGroupResource);
+    createKeywordPlanNegativeKeywords(googleAdsClient, params.customerId, planCampaignResource);
   }
 
   /**
@@ -232,14 +231,13 @@ public class AddKeywordPlan {
     }
   }
 
-
   /**
    * Creates keywords for the keyword plan.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param planAdGroupResource plan ad group resource name.
-   * */
+   */
   private static void createKeywordPlanKeywords(
       GoogleAdsClient googleAdsClient, Long customerId, String planAdGroupResource) {
     // Creates the keywords for keyword plan.
@@ -289,7 +287,7 @@ public class AddKeywordPlan {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param planCampaignResource plan campaign resource name.
-   * */
+   */
   private void createKeywordPlanNegativeKeywords(
       GoogleAdsClient googleAdsClient, Long customerId, String planCampaignResource) {
     KeywordPlanNegativeKeyword negativeKeyword =

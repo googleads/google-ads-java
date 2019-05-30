@@ -64,9 +64,9 @@ public class ListAccessibleCustomers {
   /**
    * Runs the example.
    *
-   * @param client the GoogleAdsClient instance to use.
+   * @param googleAdsClient the GoogleAdsClient instance to use.
    */
-  private void runExample(GoogleAdsClient client) {
+  public void runExample(GoogleAdsClient googleAdsClient) {
     // Optional: Change credentials to use a different refresh token, to retrieve customers
     //           available for a specific user.
     //
@@ -80,7 +80,7 @@ public class ListAccessibleCustomers {
     // client = client.toBuilder().setCredentials(credentials).build();
 
     try (CustomerServiceClient customerService =
-        client.getLatestVersion().createCustomerServiceClient()) {
+        googleAdsClient.getLatestVersion().createCustomerServiceClient()) {
       ListAccessibleCustomersResponse response =
           customerService.listAccessibleCustomers(
               ListAccessibleCustomersRequest.newBuilder().build());
