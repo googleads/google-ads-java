@@ -39,13 +39,12 @@ import com.google.ads.googleads.v1.services.MutateFeedsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.StringValue;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class AddGoogleMyBusinessLocationExtensions {
   // The required scope for setting the OAuth info.
-  private  final String GOOGLE_ADS_SCOPE = "https://www.googleapis.com/auth/adwords";
+  private final String GOOGLE_ADS_SCOPE = "https://www.googleapis.com/auth/adwords";
 
   // The maximum number of CustomerFeed ADD operation attempts to make before throwing an exception.
   private static final int MAX_CUSTOMER_FEED_ADD_ATTEMPTS = 10;
@@ -67,7 +66,7 @@ public class AddGoogleMyBusinessLocationExtensions {
 
   public static void main(String[] args) throws InterruptedException, IOException {
     AddGoogleMyBusinessLocationExtensionsParams params =
-      new AddGoogleMyBusinessLocationExtensionsParams();
+        new AddGoogleMyBusinessLocationExtensionsParams();
 
     if (!params.parseArguments(args)) {
 
@@ -84,7 +83,7 @@ public class AddGoogleMyBusinessLocationExtensions {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -92,16 +91,21 @@ public class AddGoogleMyBusinessLocationExtensions {
     }
 
     try {
-      new AddGoogleMyBusinessLocationExtensions().runExample(googleAdsClient, params.customerId,
-        params.gmbEmailAddress, params.businessAccountIdentifier, params.gmbAccessToken);
+      new AddGoogleMyBusinessLocationExtensions()
+          .runExample(
+              googleAdsClient,
+              params.customerId,
+              params.gmbEmailAddress,
+              params.businessAccountIdentifier,
+              params.gmbAccessToken);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -116,75 +120,82 @@ public class AddGoogleMyBusinessLocationExtensions {
    * @param customerId the client customer ID.
    * @param gmbEmailAddress email address associated with the GMB account.
    * @param businessAccountIdentifier the account number of the GMB account.
-   * @param gmbAccessToken the access token created using the 'AdWords' scope and the client ID
-   *                       and client secret of with the cloud project associated with the GMB
-   *                       account.
+   * @param gmbAccessToken the access token created using the 'AdWords' scope and the client ID and
+   *     client secret of with the cloud project associated with the GMB account.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
-    GoogleAdsClient googleAdsClient,
-    long customerId,
-    String gmbEmailAddress,
-    String businessAccountIdentifier,
-    String gmbAccessToken)
-    throws InterruptedException {
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      String gmbEmailAddress,
+      String businessAccountIdentifier,
+      String gmbAccessToken)
+      throws InterruptedException {
     // Creates a feed that will sync to the Google My Business account specified by
     // gmbEmailAddress. Do not add FeedAttributes to this object as Google Ads will add them
     // automatically because this will be a system generated feed.
-    Feed gmbFeed = Feed.newBuilder()
-      .setName(StringValue.of("Google My Business feed #" + System.currentTimeMillis()))
-      // Configures the location feed populated from Google My Business Locations.
-      .setPlacesLocationFeedData(PlacesLocationFeedData.newBuilder()
-        .setEmailAddress(StringValue.of(gmbEmailAddress))
-        .setBusinessAccountId(StringValue.of(businessAccountIdentifier))
-        .addLabelFilters(StringValue.of("Stores in New York"))
-        // Sets the authentication info to be able to connect Google Ads to the GMB account.
-        .setOauthInfo(OAuthInfo.newBuilder()
-          .setHttpMethod(StringValue.of("GET"))
-          .setHttpRequestUrl(StringValue.of(GOOGLE_ADS_SCOPE))
-          .setHttpAuthorizationHeader(StringValue.of("Bearer " + gmbAccessToken))
-          .build())
-        .build())
-      // Since this feed's feed items will be managed by Google,
-      // you must set its origin to GOOGLE.
-      .setOrigin(FeedOrigin.GOOGLE)
-      .build();
+    Feed gmbFeed =
+        Feed.newBuilder()
+            .setName(StringValue.of("Google My Business feed #" + System.currentTimeMillis()))
+            // Configures the location feed populated from Google My Business Locations.
+            .setPlacesLocationFeedData(
+                PlacesLocationFeedData.newBuilder()
+                    .setEmailAddress(StringValue.of(gmbEmailAddress))
+                    .setBusinessAccountId(StringValue.of(businessAccountIdentifier))
+                    .addLabelFilters(StringValue.of("Stores in New York"))
+                    // Sets the authentication info to be able to connect Google Ads to the GMB
+                    // account.
+                    .setOauthInfo(
+                        OAuthInfo.newBuilder()
+                            .setHttpMethod(StringValue.of("GET"))
+                            .setHttpRequestUrl(StringValue.of(GOOGLE_ADS_SCOPE))
+                            .setHttpAuthorizationHeader(StringValue.of("Bearer " + gmbAccessToken))
+                            .build())
+                    .build())
+            // Since this feed's feed items will be managed by Google,
+            // you must set its origin to GOOGLE.
+            .setOrigin(FeedOrigin.GOOGLE)
+            .build();
 
     FeedOperation operation = FeedOperation.newBuilder().setCreate(gmbFeed).build();
 
     try (FeedServiceClient feedServiceClient =
-           googleAdsClient.getLatestVersion().createFeedServiceClient()) {
+        googleAdsClient.getLatestVersion().createFeedServiceClient()) {
       // Adds the feed. Since it is a system generated feed, Google will automatically:
       // 1. Set up the FeedAttributes on the feed.
       // 2. Set up a FeedMapping that associates the FeedAttributes of the feed
       // with the placeholder fields of the LOCATION placeholder type.
-      MutateFeedsResponse response = feedServiceClient.mutateFeeds(Long.toString(customerId),
-        ImmutableList.of(operation));
+      MutateFeedsResponse response =
+          feedServiceClient.mutateFeeds(Long.toString(customerId), ImmutableList.of(operation));
       String gmbFeedResourceName = response.getResults(0).getResourceName();
       System.out.printf("GMB feed created with resource name: %s%n", gmbFeedResourceName);
 
       // Adds a CustomerFeed that associates the feed with this customer for
       // the LOCATION placeholder type.
-      CustomerFeed customerFeed = CustomerFeed.newBuilder()
-        .setFeed(StringValue.of(gmbFeedResourceName))
-        .addPlaceholderTypes(PlaceholderType.LOCATION)
-        // Creates a matching function that will always evaluate to true.
-        .setMatchingFunction(MatchingFunction.newBuilder()
-          .addLeftOperands(Operand.newBuilder()
-            .setConstantOperand(ConstantOperand.newBuilder()
-              .setBooleanValue(BoolValue.of(true))
-              .build())
-            .build())
-          .setFunctionString(StringValue.of("IDENTITY(true)"))
-          .setOperator(MatchingFunctionOperator.IDENTITY)
-          .build())
-        .build();
+      CustomerFeed customerFeed =
+          CustomerFeed.newBuilder()
+              .setFeed(StringValue.of(gmbFeedResourceName))
+              .addPlaceholderTypes(PlaceholderType.LOCATION)
+              // Creates a matching function that will always evaluate to true.
+              .setMatchingFunction(
+                  MatchingFunction.newBuilder()
+                      .addLeftOperands(
+                          Operand.newBuilder()
+                              .setConstantOperand(
+                                  ConstantOperand.newBuilder()
+                                      .setBooleanValue(BoolValue.of(true))
+                                      .build())
+                              .build())
+                      .setFunctionString(StringValue.of("IDENTITY(true)"))
+                      .setOperator(MatchingFunctionOperator.IDENTITY)
+                      .build())
+              .build();
 
       CustomerFeedOperation customerFeedOperation =
-        CustomerFeedOperation.newBuilder().setCreate(customerFeed).build();
+          CustomerFeedOperation.newBuilder().setCreate(customerFeed).build();
 
       try (CustomerFeedServiceClient customerFeedServiceClient =
-             googleAdsClient.getLatestVersion().createCustomerFeedServiceClient()) {
+          googleAdsClient.getLatestVersion().createCustomerFeedServiceClient()) {
 
         // After the completion of the Feed ADD operation above the added feed will not be available
         // for usage in a CustomerFeed until the sync between the Google Ads and GMB accounts
@@ -196,25 +207,27 @@ public class AddGoogleMyBusinessLocationExtensions {
           numberOfAttempts++;
           try {
             MutateCustomerFeedsResponse customerFeedsResponse =
-              customerFeedServiceClient.mutateCustomerFeeds(
-                Long.toString(customerId),
-                ImmutableList.of(customerFeedOperation));
+                customerFeedServiceClient.mutateCustomerFeeds(
+                    Long.toString(customerId), ImmutableList.of(customerFeedOperation));
             addedCustomerFeed = customerFeedsResponse.getResults(0).getResourceName();
-            System.out.printf("Customer feed created with resource name: %s%n",
-              addedCustomerFeed);
+            System.out.printf("Customer feed created with resource name: %s%n", addedCustomerFeed);
           } catch (Exception e) {
             // Waits using exponential backoff policy.
             long sleepSeconds = (long) Math.scalb(5, numberOfAttempts);
-            System.out.printf("Attempt #%d to add the CustomerFeed was not successful. "
-              + "Waiting %d seconds before trying again.%n", numberOfAttempts, sleepSeconds);
+            System.out.printf(
+                "Attempt #%d to add the CustomerFeed was not successful. "
+                    + "Waiting %d seconds before trying again.%n",
+                numberOfAttempts, sleepSeconds);
             Thread.sleep(sleepSeconds * 1000);
           }
         } while (numberOfAttempts < MAX_CUSTOMER_FEED_ADD_ATTEMPTS && addedCustomerFeed == null);
 
         if (addedCustomerFeed == null) {
-          throw new RuntimeException("Could not create the CustomerFeed after "
-            + MAX_CUSTOMER_FEED_ADD_ATTEMPTS + " attempts. Please retry "
-            + "the CustomerFeed ADD operation later.");
+          throw new RuntimeException(
+              "Could not create the CustomerFeed after "
+                  + MAX_CUSTOMER_FEED_ADD_ATTEMPTS
+                  + " attempts. Please retry "
+                  + "the CustomerFeed ADD operation later.");
         }
 
         // OPTIONAL: Create a CampaignFeed to specify which FeedItems to use at the Campaign
