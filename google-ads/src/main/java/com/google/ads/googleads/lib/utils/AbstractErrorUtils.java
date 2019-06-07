@@ -76,6 +76,11 @@ public abstract class AbstractErrorUtils<
    * A single {@link GoogleAdsErrorT} instance would be returned for operation index 1 and 2, and an
    * empty list otherwise.
    *
+   * <p>This method supports <code>XXXService.mutate(request)</code> where the request contains a
+   * list of operations named "operations". It also supports
+   * <code>GoogleAdsService.mutateGoogleAds(request)</code>, where the request contains a list of
+   * <code>MutateOperation</code>s named "mutate_operations".
+   *
    * @param operationIndex the index of the operation, starting from 0.
    * @param partialFailureStatus a partialFailure status, with the detail list containing {@link
    *     GoogleAdsFailureT} instances.
@@ -103,7 +108,8 @@ public abstract class AbstractErrorUtils<
     List<GoogleAdsErrorT> result = new ArrayList();
     // Searches all the errors for one relating to the specified operation.
     for (ErrorPath<GoogleAdsErrorT> path : getErrorPaths(googleAdsFailure)) {
-      if ("operations".equals(path.getFieldName())
+      if (("operations".equals(path.getFieldName())
+              || "mutate_operations".equals(path.getFieldName()))
           && path.getIndex().isPresent()
           && path.getIndex().get() == operationIndex) {
         GoogleAdsErrorT error = path.getError();

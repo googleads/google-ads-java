@@ -27,19 +27,29 @@ import java.util.List;
 import java.util.Optional;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
+import org.junit.runners.Parameterized;
 
-@RunWith(JUnit4.class)
+@RunWith(Parameterized.class)
 public class AbstractErrorUtilsTest {
 
-  private TestImpl impl = new TestImpl();
+  private final String operationsFieldName;
+  private final TestImpl impl = new TestImpl();
+
+  public AbstractErrorUtilsTest(String operationsFieldName) {
+    this.operationsFieldName = operationsFieldName;
+  }
+
+  @Parameterized.Parameters
+  public static String[] parameters() {
+    return new String[] {"operations", "mutate_operations"};
+  }
 
   @Test
   public void getGoogleAdsErrors_includesWhen_operationSet() throws InvalidProtocolBufferException {
     MockPath path =
         MockPath.newBuilder()
             .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName("operations")
+            .setFieldName(operationsFieldName)
             .build();
     MockError error = MockError.newBuilder().addLocation(path).build();
     MockFailure failure = MockFailure.newBuilder().addErrors(error).build();
@@ -61,7 +71,7 @@ public class AbstractErrorUtilsTest {
 
   @Test
   public void getGoogleAdsErrors_omitsWhen_missingIndex() throws InvalidProtocolBufferException {
-    MockPath path = MockPath.newBuilder().setFieldName("operations").build();
+    MockPath path = MockPath.newBuilder().setFieldName(operationsFieldName).build();
     MockError error = MockError.newBuilder().addLocation(path).build();
     MockFailure failure = MockFailure.newBuilder().addErrors(error).build();
     Status status = Status.newBuilder().addDetails(Any.pack(failure)).build();
@@ -88,7 +98,7 @@ public class AbstractErrorUtilsTest {
     MockPath path1 =
         MockPath.newBuilder()
             .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName("operations")
+            .setFieldName(operationsFieldName)
             .build();
     MockError error = MockError.newBuilder().addLocation(path0).addLocation(path1).build();
     MockFailure failure = MockFailure.newBuilder().addErrors(error).build();
@@ -103,12 +113,12 @@ public class AbstractErrorUtilsTest {
     MockPath path0 =
         MockPath.newBuilder()
             .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName("operations")
+            .setFieldName(operationsFieldName)
             .build();
     MockPath path1 =
         MockPath.newBuilder()
             .setIndex(Int64Value.newBuilder().setValue(1))
-            .setFieldName("operations")
+            .setFieldName(operationsFieldName)
             .build();
     MockError error0 = MockError.newBuilder().addLocation(path0).build();
     MockError error1 = MockError.newBuilder().addLocation(path1).build();
@@ -125,12 +135,12 @@ public class AbstractErrorUtilsTest {
     MockPath path0 =
         MockPath.newBuilder()
             .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName("operations")
+            .setFieldName(operationsFieldName)
             .build();
     MockPath path1 =
         MockPath.newBuilder()
             .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName("operations")
+            .setFieldName(operationsFieldName)
             .build();
     MockError error0 = MockError.newBuilder().addLocation(path0).build();
     MockError error1 = MockError.newBuilder().addLocation(path1).build();
@@ -147,12 +157,12 @@ public class AbstractErrorUtilsTest {
     MockPath path0 =
         MockPath.newBuilder()
             .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName("operations")
+            .setFieldName(operationsFieldName)
             .build();
     MockPath path1 =
         MockPath.newBuilder()
             .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName("operations")
+            .setFieldName(operationsFieldName)
             .build();
     MockPath path2 = MockPath.newBuilder().setFieldName("somethingelse").build();
     MockError error0 = MockError.newBuilder().addLocation(path0).build();
