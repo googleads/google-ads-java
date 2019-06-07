@@ -134,7 +134,14 @@ This project hosts the Java client library for the Google Ads API.
 
     To ensure that the credentials in that file are valid, run the
     [GetCampaigns example](https://github.com/googleads/google-ads-java/tree/master/google-ads-examples/src/main/java/com/google/ads/googleads/examples/basicoperations/GetCampaigns.java),
-    either via your IDE or from the command line using Maven. This example
+    either via your IDE or from the command line using Maven.
+
+    First, navigate into the `google-ads-examples` directory.
+    ```
+    $ cd google-ads-examples
+    ```
+
+    This example
     requires a `--customerId` parameter where the value is your Google Ads
     account's customer ID without dashes. Here's how you can pass that
     information if you are using Maven from the command line.
