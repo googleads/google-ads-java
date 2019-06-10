@@ -93,7 +93,7 @@ public class HandlePartialFailure {
   }
 
   /** Runs the example. */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId)
+  public void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId)
       throws InvalidProtocolBufferException {
     MutateAdGroupsResponse response = createAdGroups(googleAdsClient, customerId, campaignId);
 
@@ -106,7 +106,7 @@ public class HandlePartialFailure {
     }
 
     // Finds the failed operations by looping through the results.
-    printResult(response);
+    printResults(response);
   }
 
   /**
@@ -157,7 +157,7 @@ public class HandlePartialFailure {
   }
 
   /** Displays the result from the mutate operation. */
-  private void printResult(MutateAdGroupsResponse response) throws InvalidProtocolBufferException {
+  private void printResults(MutateAdGroupsResponse response) throws InvalidProtocolBufferException {
     int operationIndex = 0;
     for (MutateAdGroupResult result : response.getResultsList()) {
       if (ErrorUtils.getInstance().isPartialFailureResult(result)) {
