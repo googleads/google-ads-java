@@ -85,10 +85,6 @@ public class FieldMasks {
               if (isWrapperType(field.getMessageType())) {
                 // For wrapper types, just emit the field name.
                 mask.addPaths(fieldName);
-              } else if (!original.hasField(field)) {
-                // New value? Emit the field names for all known fields in the message,
-                // recursing for nested messages.
-                addNewFields(mask, fieldName, (Message) modifiedValue);
               } else if (!modified.hasField(field)) {
                 // Just emit the deleted field name
                 mask.addPaths(fieldName);
@@ -127,31 +123,6 @@ public class FieldMasks {
       return field.getName();
     } else {
       return currentField + "." + field.getName();
-    }
-  }
-
-  /**
-   * Recursively add field names for a new message. Repeated fields, primitive fields and
-   * unpopulated single message fields are included just by name; populated single message fields
-   * are processed recursively, only including leaf nodes. For wrapper types, the 'value' leaf
-   * node is excluded.
-   */
-  private static void addNewFields(FieldMask.Builder mask, String currentField, Message message) {
-    Descriptor descriptor = message.getDescriptorForType();
-    if (isWrapperType(descriptor)) {
-      // For wrapper types, don't recurse over the fields of the message.
-      mask.addPaths(currentField);
-    } else {
-      for (FieldDescriptor field : descriptor.getFields()) {
-        String name = getFieldName(currentField, field);
-        // For single message fields, recurse if there's a value; otherwise just add the field name.
-        if (!field.isRepeated() && field.getType() == Type.MESSAGE && message.hasField(field)) {
-          Message value = (Message) message.getField(field);
-          addNewFields(mask, name, value);
-        } else {
-          mask.addPaths(name);
-        }
-      }
     }
   }
 
