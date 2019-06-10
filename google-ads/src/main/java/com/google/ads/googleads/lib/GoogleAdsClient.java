@@ -79,6 +79,8 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
             // Issue 131: inbound headers may exceed default (8kb) max header size.
             // Sets max header size to 16MB, which should be more than necessary.
             .setMaxInboundMetadataSize(16 * 1024 * 1024)
+            // Sets max response size to 64MB, since large responses will often exceed the default
+            .setMaxInboundMessageSize(64 * 1024 * 1024)
             .build();
     clientBuilder
         .setEndpoint(DEFAULT_ENDPOINT)
