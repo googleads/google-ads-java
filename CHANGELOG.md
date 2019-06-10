@@ -1,3 +1,11 @@
+3.0.1 - 2019-06-10
+------------------
+- Increased max inbound header (i.e. metadata) size to 16MB, see #132.
+- Increased default deadline to 20 mins and added automatic retry support for
+  GoogleAdsService.search(), see #130.
+- Added support for GoogleAdsService.mutate() to ErrorUtils, see #126.
+- Fixed bug in FieldMasks utility, see #116.
+
 3.0.0 - 2019-05-24
 ------------------
 - Added support for Google Ads API v1_3.
