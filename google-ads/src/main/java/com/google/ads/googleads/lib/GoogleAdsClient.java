@@ -76,6 +76,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
                             new RequestLogger(),
                             clientBuilder.getHeaders(),
                             clientBuilder.getEndpoint())))
+            .setMaxInboundMetadataSize(Integer.MAX_VALUE)
             .build();
     clientBuilder
         .setEndpoint(DEFAULT_ENDPOINT)
