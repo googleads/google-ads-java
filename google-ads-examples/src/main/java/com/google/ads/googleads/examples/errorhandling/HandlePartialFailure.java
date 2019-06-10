@@ -95,6 +95,26 @@ public class HandlePartialFailure {
   /** Runs the example. */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId)
       throws InvalidProtocolBufferException {
+    MutateAdGroupsResponse response = createAdGroups(googleAdsClient, customerId, campaignId);
+
+    // Checks for existence of any partial failures in the response.
+    if (checkIfPartialFailureErrorExists(response)) {
+      System.out.println("Partial failures occurred. Details will be shown below.");
+    } else {
+      System.out.println("All operations completed successfully. No partial failures to show.");
+      return;
+    }
+
+    // Finds the failed operations by looping through the results.
+    printResult(response);
+  }
+
+  /**
+   * Attempts to create 3 ad groups with partial failure enabled. One of the ad groups will succeed,
+   * while the other will fail.
+   */
+  private MutateAdGroupsResponse createAdGroups(
+      GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // This AdGroup should be created successfully - assuming the campaign in the params exists.
     AdGroup group1 =
         AdGroup.newBuilder()
@@ -121,38 +141,37 @@ public class HandlePartialFailure {
     try (AdGroupServiceClient service =
         googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       // Issues the mutate request, setting partialFailure=true.
-      MutateAdGroupsResponse response =
-          service.mutateAdGroups(
-              String.valueOf(customerId),
-              Arrays.asList(op1, op2, op3),
-              // Sets partial failure to true.
-              true,
-              // Sets validate only to false.
-              false);
+      return service.mutateAdGroups(
+          String.valueOf(customerId),
+          Arrays.asList(op1, op2, op3),
+          // Sets partial failure to true.
+          true,
+          // Sets validate only to false.
+          false);
+    }
+  }
 
-      // Checks for existence of any partial failures in the response.
-      if (response.hasPartialFailureError()) {
-        System.out.println("Partial failures occurred. Details will be shown below.");
-      } else {
-        System.out.println("All operations completed successfully. No partial failures to show.");
-        return;
-      }
+  /** Inspects a response to check for presence of partial failure errors. */
+  private boolean checkIfPartialFailureErrorExists(MutateAdGroupsResponse response) {
+    return response.hasPartialFailureError();
+  }
 
-      // Finds the failed operations by looping through the results.
-      int operationIndex = 0;
-      for (MutateAdGroupResult result : response.getResultsList()) {
-        if (ErrorUtils.getInstance().isPartialFailureResult(result)) {
-          // May throw on this line. Most likely this means the wrong version of the ErrorUtils
-          // class has been used.
-          for (GoogleAdsError error :
-              ErrorUtils.getInstance().getGoogleAdsErrors(operationIndex, response.getPartialFailureError())) {
-            System.out.printf("Operation %d failed with error: %s%n", operationIndex, error);
-          }
-        } else {
-          System.out.printf("Operation %d succeeded.%n", operationIndex);
+  /** Displays the result from the mutate operation. */
+  private void printResult(MutateAdGroupsResponse response) throws InvalidProtocolBufferException {
+    int operationIndex = 0;
+    for (MutateAdGroupResult result : response.getResultsList()) {
+      if (ErrorUtils.getInstance().isPartialFailureResult(result)) {
+        // May throw on this line. Most likely this means the wrong version of the ErrorUtils
+        // class has been used.
+        for (GoogleAdsError error :
+            ErrorUtils.getInstance()
+                .getGoogleAdsErrors(operationIndex, response.getPartialFailureError())) {
+          System.out.printf("Operation %d failed with error: %s%n", operationIndex, error);
         }
-        ++operationIndex;
+      } else {
+        System.out.printf("Operation %d succeeded.%n", operationIndex);
       }
+      ++operationIndex;
     }
   }
 }
