@@ -1,5 +1,6 @@
 3.0.1 - 2019-06-10
 ------------------
+- Increased max inbound message size to 64MB, see #136.
 - Increased max inbound header (i.e. metadata) size to 16MB, see #132.
 - Increased default deadline to 20 mins and added automatic retry support for
   GoogleAdsService.search(), see #130.
