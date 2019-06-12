@@ -434,9 +434,7 @@ public class AddShoppingProductListingGroupTree {
       long customerId, long adGroupId, long adGroupCriterionId) {
 
     String adGroupCriterionResourceName =
-        AdGroupCriteriaName.format(
-            Long.toString(customerId),
-            String.format("%s_%s", Long.toString(adGroupId), Long.toString(adGroupCriterionId)));
+        ResourceNames.adGroupCriterion(customerId, adGroupId, adGroupCriterionId);
     AdGroupCriterion adGroupCriterion =
         AdGroupCriterion.newBuilder()
             // The resource name the criterion will be created with. This will define the ID for the
