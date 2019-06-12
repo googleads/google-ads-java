@@ -18,8 +18,6 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v1.errors.GoogleAdsException;
-import com.google.ads.googleads.v1.utils.ResourceNames;
 import com.google.ads.googleads.v1.common.ListingBrandInfo;
 import com.google.ads.googleads.v1.common.ListingDimensionInfo;
 import com.google.ads.googleads.v1.common.ListingGroupInfo;
@@ -28,6 +26,7 @@ import com.google.ads.googleads.v1.enums.AdGroupCriterionStatusEnum.AdGroupCrite
 import com.google.ads.googleads.v1.enums.ListingGroupTypeEnum.ListingGroupType;
 import com.google.ads.googleads.v1.enums.ProductConditionEnum.ProductCondition;
 import com.google.ads.googleads.v1.errors.GoogleAdsError;
+import com.google.ads.googleads.v1.errors.GoogleAdsException;
 import com.google.ads.googleads.v1.resources.AdGroupCriteriaName;
 import com.google.ads.googleads.v1.resources.AdGroupCriterion;
 import com.google.ads.googleads.v1.services.AdGroupCriterionOperation;
@@ -38,6 +37,7 @@ import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedRe
 import com.google.ads.googleads.v1.services.MutateAdGroupCriteriaResponse;
 import com.google.ads.googleads.v1.services.MutateAdGroupCriterionResult;
 import com.google.ads.googleads.v1.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v1.utils.ResourceNames;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -397,9 +397,7 @@ public class AddShoppingProductListingGroupTree {
       ListingDimensionInfo listingDimensionInfo) {
 
     String adGroupCriterionResourceName =
-        AdGroupCriteriaName.format(
-            Long.toString(customerId),
-            String.format("%s_%s", Long.toString(adGroupId), Long.toString(adGroupCriterionId)));
+        ResourceNames.adGroupCriterion(customerId, adGroupId, adGroupCriterionId);
     AdGroupCriterion adGroupCriterion =
         AdGroupCriterion.newBuilder()
             // The resource name the criterion will be created with. This will define the ID for the
