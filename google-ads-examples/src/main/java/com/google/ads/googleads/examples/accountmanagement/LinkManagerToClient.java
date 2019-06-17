@@ -59,7 +59,6 @@ public class LinkManagerToClient {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
-
       params.managerId = Long.parseLong("INSERT_MANAGER_ID_HERE");
     }
 
