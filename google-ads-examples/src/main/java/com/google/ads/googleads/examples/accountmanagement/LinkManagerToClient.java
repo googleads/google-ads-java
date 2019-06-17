@@ -38,8 +38,8 @@ import java.io.IOException;
 import java.util.Arrays;
 
 /**
- * This example demonstrates how to link an existing Google Ads manager customer to an existing
- * Google Ads client customer.
+ * Demonstrates how to link an existing Google Ads manager customer to an existing Google Ads client
+ * customer.
  */
 public class LinkManagerToClient {
 
@@ -97,8 +97,10 @@ public class LinkManagerToClient {
     // This example assumes that the same credentials will work for both customers, but that may not
     // be the case. If you need to use different credentials for each customer, then you may either
     // update the client configuration or instantiate two clients, one for each set of credentials.
-    // Always make sure to update the configuration before fetching any services you need to use.
+    // Always make sure you use a GoogleAdsClient with the proper credentials to fetch any services
+    // you need to use.
 
+    // Extend an invitation to the client while authenticating as the manager.
     googleAdsClient = googleAdsClient.toBuilder().setLoginCustomerId(managerId).build();
 
     CustomerClientLinkOperation.Builder clientLinkOp = CustomerClientLinkOperation.newBuilder();
@@ -140,6 +142,7 @@ public class LinkManagerToClient {
       managerLinkId = result.getCustomerClientLink().getManagerLinkId().getValue();
     }
 
+    // Accept the link using the client account.
     CustomerManagerLinkOperation.Builder managerLinkOp = CustomerManagerLinkOperation.newBuilder();
     managerLinkOp
         .getUpdateBuilder()
