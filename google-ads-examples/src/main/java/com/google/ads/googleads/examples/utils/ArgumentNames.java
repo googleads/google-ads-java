@@ -38,4 +38,6 @@ public final class ArgumentNames {
   public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
   public static final String PAGE_URL = "--pageUrl";
   public static final String LABEL_ID = "--labelId";
+  public static final String FEED_ID = "--feedId";
+  public static final String FEED_ITEM_ID = "--feedItemId";
 }
