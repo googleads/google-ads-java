@@ -61,7 +61,6 @@ import com.google.protobuf.BytesValue;
 import com.google.protobuf.Int32Value;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -99,7 +98,7 @@ public class MerchantCenterDynamicRemarketing {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -107,20 +106,21 @@ public class MerchantCenterDynamicRemarketing {
     }
 
     try {
-      new MerchantCenterDynamicRemarketing().runExample(
-        googleAdsClient,
-        params.customerId,
-        params.merchantCenterAccountId,
-        params.campaignBudgetId,
-        params.userListId);
+      new MerchantCenterDynamicRemarketing()
+          .runExample(
+              googleAdsClient,
+              params.customerId,
+              params.merchantCenterAccountId,
+              params.campaignBudgetId,
+              params.userListId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -136,16 +136,17 @@ public class MerchantCenterDynamicRemarketing {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
-    GoogleAdsClient googleAdsClient,
-    long customerId,
-    long merchantCenterId,
-    long budgetId,
-    long userListId) throws IOException {
-      String campaignResourceName = createCampaign(
-        googleAdsClient, customerId, merchantCenterId, budgetId);
-      String adGroupResourceName = createAdGroup(googleAdsClient, customerId, campaignResourceName);
-      createAd(googleAdsClient, customerId, adGroupResourceName);
-      attachUserList(googleAdsClient, customerId, adGroupResourceName, userListId);
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      long merchantCenterId,
+      long budgetId,
+      long userListId)
+      throws IOException {
+    String campaignResourceName =
+        createCampaign(googleAdsClient, customerId, merchantCenterId, budgetId);
+    String adGroupResourceName = createAdGroup(googleAdsClient, customerId, campaignResourceName);
+    createAd(googleAdsClient, customerId, adGroupResourceName);
+    attachUserList(googleAdsClient, customerId, adGroupResourceName, userListId);
   }
 
   /**
@@ -158,38 +159,38 @@ public class MerchantCenterDynamicRemarketing {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private String createCampaign(
-    GoogleAdsClient googleAdsClient,
-    long customerId,
-    long merchantCenterId,
-    long budgetId) {
+      GoogleAdsClient googleAdsClient, long customerId, long merchantCenterId, long budgetId) {
     String budgetResourceName = ResourceNames.campaignBudget(customerId, budgetId);
 
     // Creates the campaign.
-    Campaign campaign = Campaign.newBuilder()
-      .setName(StringValue.of("Shopping campaign #" + System.currentTimeMillis()))
-      .setAdvertisingChannelType(AdvertisingChannelType.DISPLAY)
-      .setStatus(CampaignStatus.PAUSED)
-      .setCampaignBudget(StringValue.of(budgetResourceName))
-      .setManualCpc(ManualCpc.newBuilder().build())
-      // The settings for the shopping campaign.
-      // This connects the campaign to the merchant center account.
-      .setShoppingSetting(ShoppingSetting.newBuilder()
-        .setCampaignPriority(Int32Value.of(0))
-        .setMerchantId(Int64Value.of(merchantCenterId))
-        .setSalesCountry(StringValue.of("ZZ"))
-        .setEnableLocal(BoolValue.of(true))
-        .build())
-      .build();
+    Campaign campaign =
+        Campaign.newBuilder()
+            .setName(StringValue.of("Shopping campaign #" + System.currentTimeMillis()))
+            .setAdvertisingChannelType(AdvertisingChannelType.DISPLAY)
+            .setStatus(CampaignStatus.PAUSED)
+            .setCampaignBudget(StringValue.of(budgetResourceName))
+            .setManualCpc(ManualCpc.newBuilder().build())
+            // The settings for the shopping campaign.
+            // This connects the campaign to the merchant center account.
+            .setShoppingSetting(
+                ShoppingSetting.newBuilder()
+                    .setCampaignPriority(Int32Value.of(0))
+                    .setMerchantId(Int64Value.of(merchantCenterId))
+                    .setSalesCountry(StringValue.of("ZZ"))
+                    .setEnableLocal(BoolValue.of(true))
+                    .build())
+            .build();
 
     // Creates the campaign operation.
     CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();
 
     // Creates the campaign service client.
     try (CampaignServiceClient campaignServiceClient =
-           googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       // Adds the campaign.
-      MutateCampaignsResponse response = campaignServiceClient.mutateCampaigns(
-        Long.toString(customerId), ImmutableList.of(operation));
+      MutateCampaignsResponse response =
+          campaignServiceClient.mutateCampaigns(
+              Long.toString(customerId), ImmutableList.of(operation));
       String campaignResourceName = response.getResults(0).getResourceName();
       System.out.printf("Created campaign with resource name '%s'.%n", campaignResourceName);
       return campaignResourceName;
@@ -205,25 +206,25 @@ public class MerchantCenterDynamicRemarketing {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private String createAdGroup(
-    GoogleAdsClient googleAdsClient,
-    long customerId,
-    String campaignResourceName) {
+      GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     // Creates the ad group.
-    AdGroup adGroup = AdGroup.newBuilder()
-      .setName(StringValue.of("Dynamic remarketing ad group"))
-      .setCampaign(StringValue.of(campaignResourceName))
-      .setStatus(AdGroupStatus.ENABLED)
-      .build();
+    AdGroup adGroup =
+        AdGroup.newBuilder()
+            .setName(StringValue.of("Dynamic remarketing ad group"))
+            .setCampaign(StringValue.of(campaignResourceName))
+            .setStatus(AdGroupStatus.ENABLED)
+            .build();
 
     // Creates the ad group operation.
     AdGroupOperation operation = AdGroupOperation.newBuilder().setCreate(adGroup).build();
 
     // Creates the ad group service client.
     try (AdGroupServiceClient adGroupServiceClient =
-           googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
+        googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       // Adds the ad group.
       MutateAdGroupsResponse response =
-        adGroupServiceClient.mutateAdGroups(Long.toString(customerId), ImmutableList.of(operation));
+          adGroupServiceClient.mutateAdGroups(
+              Long.toString(customerId), ImmutableList.of(operation));
       String adGroupResourceName = response.getResults(0).getResourceName();
       System.out.printf("Created ad group with resource name '%s'.%n", adGroupResourceName);
       return adGroupResourceName;
@@ -239,107 +240,108 @@ public class MerchantCenterDynamicRemarketing {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void createAd(
-    GoogleAdsClient googleAdsClient,
-    long customerId,
-    String adGroupResourceName) throws IOException {
+      GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName)
+      throws IOException {
     String marketingImageUrl = "https://goo.gl/3b9Wfh";
     String marketingImageName = "Marketing Image";
     String marketingImageResourceName =
-      uploadAsset(googleAdsClient, customerId, marketingImageUrl, marketingImageName);
+        uploadAsset(googleAdsClient, customerId, marketingImageUrl, marketingImageName);
     String logoImageName = "Logo Image";
     String logoImageUrl = "https://goo.gl/mtt54n";
     String logoImageResourceName =
-      uploadAsset(googleAdsClient, customerId, logoImageUrl, logoImageName);
+        uploadAsset(googleAdsClient, customerId, logoImageUrl, logoImageName);
 
     // Creates the responsive display ad info object.
-    ResponsiveDisplayAdInfo responsiveDisplayAdInfo = ResponsiveDisplayAdInfo.newBuilder()
-      .addMarketingImages(AdImageAsset.newBuilder()
-        .setAsset(StringValue.of(marketingImageResourceName))
-        .build())
-      .addSquareMarketingImages(AdImageAsset.newBuilder()
-        .setAsset(StringValue.of(logoImageResourceName))
-        .build())
-      .addHeadlines(AdTextAsset.newBuilder().setText(StringValue.of("Travel")).build())
-      .setLongHeadline(
-        AdTextAsset.newBuilder().setText(StringValue.of("Travel the World")).build())
-      .addDescriptions(
-        AdTextAsset.newBuilder().setText(StringValue.of("Take to the air!")).build())
-      .setBusinessName(StringValue.of("Interplanetary Cruises"))
-      // Optional: Call to action text.
-      // Valid texts: https://support.google.com/adwords/answer/7005917
-      .setCallToActionText(StringValue.of("Apply Now"))
-      // Optional: Creates a logo image and set it to the ad.
-      .addLogoImages(
-        AdImageAsset.newBuilder().setAsset(StringValue.of(logoImageResourceName)).build())
-      // Optional: Creates a logo image and set it to the ad.
-      .addSquareLogoImages(
-        AdImageAsset.newBuilder().setAsset(StringValue.of(logoImageResourceName)).build())
-      // Whitelisted accounts only: Sets color settings using hexadecimal values.
-      // Sets allowFlexibleColor to false if you want your ads to render by always
-      // using your colors strictly.
-      /*
-      .setMainColor(StringValue.of("#0000ff"))
-      .setAccentColor(StringValue.of("#ffff00"))
-      .setAllowFlexibleColor(BoolValue.of(false))
-      */
-      // Whitelisted accounts only: Sets the format setting that the ad will be
-      // served in.
-      /*
-      .setFormatSetting(DisplayAdFormatSetting.NON_NATIVE)
-      */
-      .build();
+    ResponsiveDisplayAdInfo responsiveDisplayAdInfo =
+        ResponsiveDisplayAdInfo.newBuilder()
+            .addMarketingImages(
+                AdImageAsset.newBuilder()
+                    .setAsset(StringValue.of(marketingImageResourceName))
+                    .build())
+            .addSquareMarketingImages(
+                AdImageAsset.newBuilder().setAsset(StringValue.of(logoImageResourceName)).build())
+            .addHeadlines(AdTextAsset.newBuilder().setText(StringValue.of("Travel")).build())
+            .setLongHeadline(
+                AdTextAsset.newBuilder().setText(StringValue.of("Travel the World")).build())
+            .addDescriptions(
+                AdTextAsset.newBuilder().setText(StringValue.of("Take to the air!")).build())
+            .setBusinessName(StringValue.of("Interplanetary Cruises"))
+            // Optional: Call to action text.
+            // Valid texts: https://support.google.com/adwords/answer/7005917
+            .setCallToActionText(StringValue.of("Apply Now"))
+            // Optional: Creates a logo image and set it to the ad.
+            .addLogoImages(
+                AdImageAsset.newBuilder().setAsset(StringValue.of(logoImageResourceName)).build())
+            // Optional: Creates a logo image and set it to the ad.
+            .addSquareLogoImages(
+                AdImageAsset.newBuilder().setAsset(StringValue.of(logoImageResourceName)).build())
+            // Whitelisted accounts only: Sets color settings using hexadecimal values.
+            // Sets allowFlexibleColor to false if you want your ads to render by always
+            // using your colors strictly.
+            /*
+            .setMainColor(StringValue.of("#0000ff"))
+            .setAccentColor(StringValue.of("#ffff00"))
+            .setAllowFlexibleColor(BoolValue.of(false))
+            */
+            // Whitelisted accounts only: Sets the format setting that the ad will be
+            // served in.
+            /*
+            .setFormatSetting(DisplayAdFormatSetting.NON_NATIVE)
+            */
+            .build();
 
     // Creates the ad.
-    Ad ad = Ad.newBuilder()
-      .setResponsiveDisplayAd(responsiveDisplayAdInfo)
-      .addFinalUrls(StringValue.of("http://www.example.com/"))
-      .build();
+    Ad ad =
+        Ad.newBuilder()
+            .setResponsiveDisplayAd(responsiveDisplayAdInfo)
+            .addFinalUrls(StringValue.of("http://www.example.com/"))
+            .build();
 
     // Creates the ad group ad.
-    AdGroupAd adGroupAd = AdGroupAd.newBuilder()
-      .setAdGroup(StringValue.of(adGroupResourceName))
-      .setAd(ad)
-      .build();
+    AdGroupAd adGroupAd =
+        AdGroupAd.newBuilder().setAdGroup(StringValue.of(adGroupResourceName)).setAd(ad).build();
 
     // Creates the ad group ad operation.
     AdGroupAdOperation operation = AdGroupAdOperation.newBuilder().setCreate(adGroupAd).build();
 
     // Creates the ad group ad service client.
     try (AdGroupAdServiceClient adGroupAdServiceClient =
-           googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
+        googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
       // Adds the ad group ad.
-      MutateAdGroupAdsResponse response = adGroupAdServiceClient.mutateAdGroupAds(Long.toString
-        (customerId), ImmutableList.of(operation));
-      System.out.printf("Created ad group ad with resource name '%s'.%n",
-        response.getResults(0).getResourceName());
+      MutateAdGroupAdsResponse response =
+          adGroupAdServiceClient.mutateAdGroupAds(
+              Long.toString(customerId), ImmutableList.of(operation));
+      System.out.printf(
+          "Created ad group ad with resource name '%s'.%n",
+          response.getResults(0).getResourceName());
     }
   }
 
-  private String uploadAsset(GoogleAdsClient googleAdsClient,
-                             long customerId,
-                             String imageUrl,
-                             String assetName)
-    throws IOException {
+  private String uploadAsset(
+      GoogleAdsClient googleAdsClient, long customerId, String imageUrl, String assetName)
+      throws IOException {
     byte[] imageData = ByteStreams.toByteArray(new URL(imageUrl).openStream());
 
     // Creates the image asset.
-    Asset asset = Asset.newBuilder()
-      .setName(StringValue.of(assetName))
-      .setType(AssetType.IMAGE)
-      .setImageAsset(ImageAsset.newBuilder()
-        .setData(BytesValue.of(ByteString.copyFrom(imageData)))
-        .build())
-      .build();
+    Asset asset =
+        Asset.newBuilder()
+            .setName(StringValue.of(assetName))
+            .setType(AssetType.IMAGE)
+            .setImageAsset(
+                ImageAsset.newBuilder()
+                    .setData(BytesValue.of(ByteString.copyFrom(imageData)))
+                    .build())
+            .build();
 
     // Creates the asset operation.
     AssetOperation operation = AssetOperation.newBuilder().setCreate(asset).build();
 
     // Creates the asset service client.
     try (AssetServiceClient assetServiceClient =
-           googleAdsClient.getLatestVersion().createAssetServiceClient()) {
+        googleAdsClient.getLatestVersion().createAssetServiceClient()) {
       // Adds the image asset.
       MutateAssetsResponse response =
-        assetServiceClient.mutateAssets(Long.toString(customerId), ImmutableList.of(operation));
+          assetServiceClient.mutateAssets(Long.toString(customerId), ImmutableList.of(operation));
       String imageResourceName = response.getResults(0).getResourceName();
       System.out.printf("Created image asset with resource name '%s'.%n", imageResourceName);
       return imageResourceName;
@@ -355,30 +357,33 @@ public class MerchantCenterDynamicRemarketing {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void attachUserList(
-    GoogleAdsClient googleAdsClient,
-    long customerId,
-    String adGroupResourceName,
-    long userListId) {
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      String adGroupResourceName,
+      long userListId) {
     String userListResourceName = ResourceNames.userList(customerId, userListId);
     // Creates the ad group criterion that targets the user list.
-    AdGroupCriterion adGroupCriterion = AdGroupCriterion.newBuilder()
-      .setAdGroup(StringValue.of(adGroupResourceName))
-      .setUserList(
-        UserListInfo.newBuilder().setUserList(StringValue.of(userListResourceName)).build())
-      .build();
+    AdGroupCriterion adGroupCriterion =
+        AdGroupCriterion.newBuilder()
+            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setUserList(
+                UserListInfo.newBuilder().setUserList(StringValue.of(userListResourceName)).build())
+            .build();
 
     // Creates the ad group criterion operation.
     AdGroupCriterionOperation operation =
-      AdGroupCriterionOperation.newBuilder().setCreate(adGroupCriterion).build();
+        AdGroupCriterionOperation.newBuilder().setCreate(adGroupCriterion).build();
 
     // Creates the ad group criterion service client.
     try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
-           googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
+        googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
       // Adds the ad group criterion.
-      MutateAdGroupCriteriaResponse response = adGroupCriterionServiceClient
-        .mutateAdGroupCriteria(Long.toString(customerId), ImmutableList.of(operation));
-      System.out.printf("Created ad group criterion with resource name '%s'.%n",
-        response.getResults(0).getResourceName());
+      MutateAdGroupCriteriaResponse response =
+          adGroupCriterionServiceClient.mutateAdGroupCriteria(
+              Long.toString(customerId), ImmutableList.of(operation));
+      System.out.printf(
+          "Created ad group criterion with resource name '%s'.%n",
+          response.getResults(0).getResourceName());
     }
   }
 }
