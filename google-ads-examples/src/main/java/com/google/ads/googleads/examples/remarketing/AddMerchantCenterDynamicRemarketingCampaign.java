@@ -65,8 +65,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 
-public class MerchantCenterDynamicRemarketing {
-  private static class MerchantCenterDynamicRemarketingParams extends CodeSampleParams {
+/**
+ *  Creates a shopping campaign associated with an existing merchant center account, along with a
+ *  related ad group and dynamic display ad, and targets a user list for remarketing purposes.
+ */
+public class AddMerchantCenterDynamicRemarketingCampaign {
+  private static class AddMerchantCenterDynamicRemarketingCampaignParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private long customerId;
@@ -82,7 +86,8 @@ public class MerchantCenterDynamicRemarketing {
   }
 
   public static void main(String[] args) throws IOException {
-    MerchantCenterDynamicRemarketingParams params = new MerchantCenterDynamicRemarketingParams();
+    AddMerchantCenterDynamicRemarketingCampaignParams params =
+      new AddMerchantCenterDynamicRemarketingCampaignParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -106,7 +111,7 @@ public class MerchantCenterDynamicRemarketing {
     }
 
     try {
-      new MerchantCenterDynamicRemarketing()
+      new AddMerchantCenterDynamicRemarketingCampaign()
           .runExample(
               googleAdsClient,
               params.customerId,
@@ -142,10 +147,14 @@ public class MerchantCenterDynamicRemarketing {
       long budgetId,
       long userListId)
       throws IOException {
+    // Creates a shopping campaign associated with a given merchant center account.
     String campaignResourceName =
         createCampaign(googleAdsClient, customerId, merchantCenterId, budgetId);
+    // Creates an ad group for the campaign.
     String adGroupResourceName = createAdGroup(googleAdsClient, customerId, campaignResourceName);
+    // Creates a dynamic display ad in the ad group.
     createAd(googleAdsClient, customerId, adGroupResourceName);
+    // Targets a specific user list for remarketing.
     attachUserList(googleAdsClient, customerId, adGroupResourceName, userListId);
   }
 
@@ -317,6 +326,15 @@ public class MerchantCenterDynamicRemarketing {
     }
   }
 
+  /**
+   * Adds an image to the Google Ads account.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @param customerId the client customer ID in which to create criterion.
+   * @param imageUrl the url of the image.
+   * @param assetName the name of the asset.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
   private String uploadAsset(
       GoogleAdsClient googleAdsClient, long customerId, String imageUrl, String assetName)
       throws IOException {
@@ -354,6 +372,7 @@ public class MerchantCenterDynamicRemarketing {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID in which to create criterion.
    * @param adGroupResourceName the campaign resource name.
+   * @param userListId ID of the user list.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void attachUserList(
