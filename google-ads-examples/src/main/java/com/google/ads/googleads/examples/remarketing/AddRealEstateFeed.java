@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.examples.advancedoperations;
+package com.google.ads.googleads.examples.remarketing;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
@@ -49,12 +49,11 @@ import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/** Adds a real estate feed, creates the feed mapping, and adds items to the feed. */
 public class AddRealEstateFeed {
   private static final int PAGE_SIZE = 1_000;
 
@@ -110,21 +109,24 @@ public class AddRealEstateFeed {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
-    // Gets the page feed details. This code example creates a new feed, but you can
-    // fetch and re-use an existing feed.
+    // Creates a new feed, but you can fetch and re-use an existing feed by skipping the
+    // createFeed method and inserting the feed resource name of the existing feed into the
+    // getFeed method.
     String feedResourceName = createFeed(googleAdsClient, customerId);
+    // Gets the page feed details.
     Map<RealEstatePlaceholderField, FeedAttribute> feedAttributes =
         getFeed(googleAdsClient, customerId, feedResourceName);
+    // Creates the feed mapping.
     createFeedMapping(googleAdsClient, customerId, feedAttributes, feedResourceName);
+    // Creates feed items and adds them to the feed.
     createFeedItems(googleAdsClient, customerId, feedAttributes, feedResourceName);
-    removeFeedItems(googleAdsClient, customerId);
   }
 
   /**
    * Creates a feed.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param customerId the client customer ID.
    * @return a String of the feed resource name.
    */
   private String createFeed(GoogleAdsClient googleAdsClient, long customerId) {
@@ -156,7 +158,7 @@ public class AddRealEstateFeed {
             .setName(StringValue.of("Image URL"))
             .build();
 
-    // Creates an Contextual Keywords attribute
+    // Creates a Contextual Keywords attribute
     FeedAttribute contextualKeywordsAttribute =
         FeedAttribute.newBuilder()
             .setType(FeedAttributeType.STRING_LIST)
@@ -191,12 +193,16 @@ public class AddRealEstateFeed {
   }
 
   /**
-   * Retrieves details about a feed.
+   * Retrieves details about a feed. The initial query retrieves the FeedAttributes, or columns, of
+   * the feed. Each FeedAttribute will also include the FeedAttributeId, which will be used in a
+   * subsequent step. The example then inserts a new key, value pair into a map for each
+   * FeedAttribute, which is the return value of the method. The keys are the placeholder types
+   * that the columns will be. The values are the FeedAttributes.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param customerId the client customer ID.
    * @param feedResourceName the resource name of the feed.
-   * @return a Map containing the DsaPageFeedCriterionField and FeedAttribute.
+   * @return a Map containing the RealEstatePlaceholderField and FeedAttribute.
    */
   private Map<RealEstatePlaceholderField, FeedAttribute> getFeed(
       GoogleAdsClient googleAdsClient, long customerId, String feedResourceName) {
@@ -221,74 +227,38 @@ public class AddRealEstateFeed {
       // Gets the attributes list from the feed and creates a map with keys of each attribute and
       // values of each corresponding ID.
       List<FeedAttribute> feedAttributeList = googleAdsRow.getFeed().getAttributesList();
-      Map<String, Long> feedAttributeMap = new HashMap<>();
+      Map<String, FeedAttribute> feedAttributeMap = new HashMap<>();
       for (FeedAttribute feedAttribute : feedAttributeList) {
-        feedAttributeMap.put(feedAttribute.getName().getValue(), feedAttribute.getId().getValue());
+        feedAttributeMap.put(feedAttribute.getName().getValue(), feedAttribute);
       }
 
       // Creates a map to return.
       Map<RealEstatePlaceholderField, FeedAttribute> feedAttributes = new HashMap<>();
 
-      String listingIdName = "Listing ID";
-      // Creates a FeedAttribute for the Listing ID.
-      FeedAttribute listingIdAttribute =
-          FeedAttribute.newBuilder()
-              .setId(Int64Value.of(feedAttributeMap.get(listingIdName)))
-              .setName(StringValue.of(listingIdName))
-              .setType(FeedAttributeType.STRING)
-              .build();
-
       // Adds the Listing ID attribute to the map.
-      feedAttributes.put(RealEstatePlaceholderField.LISTING_ID, listingIdAttribute);
-
-      String listingNameName = "Listing Name";
-      // Creates a FeedAttribute for the Listing Name.
-      FeedAttribute listingNameAttribute =
-          FeedAttribute.newBuilder()
-              .setId(Int64Value.of(feedAttributeMap.get(listingNameName)))
-              .setName(StringValue.of(listingNameName))
-              .setType(FeedAttributeType.STRING)
-              .build();
-
-      // Adds the Listing Name attribute to the map.
-      feedAttributes.put(RealEstatePlaceholderField.LISTING_NAME, listingNameAttribute);
-
-      String finalUrlsName = "Final URLs";
-      // Creates a FeedAttribute for the Final URLs.
-      FeedAttribute finalUrlsAttribute =
-          FeedAttribute.newBuilder()
-              .setId(Int64Value.of(feedAttributeMap.get(finalUrlsName)))
-              .setName(StringValue.of(finalUrlsName))
-              .setType(FeedAttributeType.URL_LIST)
-              .build();
-
-      // Adds the Listing Name attribute to the map.
-      feedAttributes.put(RealEstatePlaceholderField.FINAL_URLS, finalUrlsAttribute);
-
-      String ImageUrlName = "Image URL";
-      // Creates a FeedAttribute for the Final URLs.
-      FeedAttribute ImageUrlAttribute =
-          FeedAttribute.newBuilder()
-              .setId(Int64Value.of(feedAttributeMap.get(ImageUrlName)))
-              .setName(StringValue.of(ImageUrlName))
-              .setType(FeedAttributeType.URL)
-              .build();
-
-      // Adds the Listing Name attribute to the map.
-      feedAttributes.put(RealEstatePlaceholderField.IMAGE_URL, ImageUrlAttribute);
-
-      String contextualKeywordsName = "Contextual Keywords";
-      // Creates a FeedAttribute for the Final URLs.
-      FeedAttribute contextualKeywordsAttribute =
-          FeedAttribute.newBuilder()
-              .setId(Int64Value.of(feedAttributeMap.get(contextualKeywordsName)))
-              .setName(StringValue.of(contextualKeywordsName))
-              .setType(FeedAttributeType.STRING_LIST)
-              .build();
-
-      // Adds the Listing Name attribute to the map.
+      String listingIdName = "Listing ID";
       feedAttributes.put(
-          RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS, contextualKeywordsAttribute);
+          RealEstatePlaceholderField.LISTING_ID, feedAttributeMap.get(listingIdName));
+
+      // Adds the Listing Name attribute to the map.
+      String listingNameName = "Listing Name";
+      feedAttributes.put(
+          RealEstatePlaceholderField.LISTING_NAME, feedAttributeMap.get(listingNameName));
+
+      // Adds the Listing Name attribute to the map.
+      String finalUrlsName = "Final URLs";
+      feedAttributes.put(
+          RealEstatePlaceholderField.FINAL_URLS, feedAttributeMap.get(finalUrlsName));
+
+      // Adds the Listing Name attribute to the map.
+      String ImageUrlName = "Image URL";
+      feedAttributes.put(RealEstatePlaceholderField.IMAGE_URL, feedAttributeMap.get(ImageUrlName));
+
+      // Adds the Listing Name attribute to the map.
+      String contextualKeywordsName = "Contextual Keywords";
+      feedAttributes.put(
+          RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS,
+          feedAttributeMap.get(contextualKeywordsName));
 
       return feedAttributes;
     }
@@ -298,7 +268,7 @@ public class AddRealEstateFeed {
    * Creates a feed mapping for a given feed.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param customerId the client customer ID.
    * @param feedAttributes the feed attributes.
    * @param feedResourceName the feed resource name.
    */
@@ -307,7 +277,13 @@ public class AddRealEstateFeed {
       long customerId,
       Map<RealEstatePlaceholderField, FeedAttribute> feedAttributes,
       String feedResourceName) {
-    // Maps the FeedAttributeIds to the fieldId constants.
+    // Maps the FeedAttributeIds to the placeholder values. The FeedAttributeId is the ID of the
+    // FeedAttribute created in the createdFeed method. This can be thought of as the generic ID of
+    // the column of the new feed. The placeholder value specifies the type of column this is in
+    // the context of a real estate feed (e.g. a LISTING_ID or LISTING_NAME). The FeedMapping
+    // associates the feed column by ID to this type.
+    // See https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v1.enums#google.ads.googleads.v1.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField
+    // for the full list of placeholder values.
     AttributeFieldMapping listingIdMapping =
         AttributeFieldMapping.newBuilder()
             .setFeedAttributeId(
@@ -382,7 +358,7 @@ public class AddRealEstateFeed {
    * Adds the new items to the feed.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param customerId the client customer ID.
    * @param feedAttributes the feed attributes.
    * @param feedResourceName the feed resource name.
    */
@@ -466,41 +442,6 @@ public class AddRealEstateFeed {
               Long.toString(customerId), ImmutableList.of(operation));
       for (MutateFeedItemResult result : response.getResultsList()) {
         System.out.printf("Created feed item with resource name '%s'.%n", result.getResourceName());
-      }
-    }
-  }
-
-  /**
-   * Removes items from the feed.
-   *
-   * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
-   */
-  private void removeFeedItems(GoogleAdsClient googleAdsClient, long customerId) {
-    // Creates list of feed item resource names to remove.
-    List<String> feedItems =
-        new ArrayList<>(
-            Arrays.asList(
-                // feed item 1 resource name,
-                // feed item 2 resource name,
-                // feed item 3 resource name,
-                ));
-
-    List<FeedItemOperation> operations = new ArrayList<>();
-    // Creates the remove operations.
-    for (String feedItem : feedItems) {
-      FeedItemOperation operation = FeedItemOperation.newBuilder().setRemove(feedItem).build();
-      operations.add(operation);
-    }
-
-    // Creates the feed item service client.
-    try (FeedItemServiceClient feedItemServiceClient =
-        googleAdsClient.getLatestVersion().createFeedItemServiceClient()) {
-      // Issues the mutate request.
-      MutateFeedItemsResponse response =
-          feedItemServiceClient.mutateFeedItems(Long.toString(customerId), operations);
-      for (MutateFeedItemResult result : response.getResultsList()) {
-        System.out.printf("Removed feed item with resource name '%s'.%n", result.getResourceName());
       }
     }
   }
