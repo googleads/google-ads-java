@@ -184,10 +184,10 @@ public class RemoveFeedItemAttributeValue {
     // Retrieves the feed item and its associated attributes based on its resource name.
     FeedItem feedItem = getFeedItem(googleAdsClient, customerId, feedItemResourceName);
     // Creates the FeedItemAttributeValue that will be updated.
-    FeedItemAttributeValue removeSalesPriceFeedItemAttributeValue =
+    FeedItemAttributeValue feedItemAttributeValue =
         FeedItemAttributeValue.newBuilder().setFeedAttributeId(Int64Value.of(attributeId)).build();
     // Gets the index of the attribute value that will be removed.
-    int attributeIndex = getAttributeIndex(feedItem, removeSalesPriceFeedItemAttributeValue);
+    int attributeIndex = getAttributeIndex(feedItem, feedItemAttributeValue);
 
     // Returns the feed item with the removed FeedItemAttributeValue. Any FeedItemAttributeValues
     // that are not included in the updated FeedItem will be removed from the FeedItem, which is
