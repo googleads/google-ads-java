@@ -2,7 +2,7 @@
 ------------------
 - Increased max inbound message size to 64MB, see #136.
 - Increased max inbound header (i.e. metadata) size to 16MB, see #132.
-- Increased default deadline to 20 mins and added automatic retry support for
+- Increased default deadline to 60 mins and added automatic retry support for
   GoogleAdsService.search(), see #130.
 - Added support for GoogleAdsService.mutate() to ErrorUtils, see #126.
 - Fixed bug in FieldMasks utility, see #116.
