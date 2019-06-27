@@ -102,19 +102,34 @@ public class LabelServiceClient implements BackgroundResource {
   private static final PathTemplate LABEL_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/labels/{label}");
 
-  /** Formats a string containing the fully-qualified path to represent a label resource. */
+  /**
+   * Formats a string containing the fully-qualified path to represent a label resource.
+   *
+   * @deprecated Use the {@link LabelName} class instead.
+   */
+  @Deprecated
   public static final String formatLabelName(String customer, String label) {
     return LABEL_PATH_TEMPLATE.instantiate(
         "customer", customer,
         "label", label);
   }
 
-  /** Parses the customer from the given fully-qualified path which represents a label resource. */
+  /**
+   * Parses the customer from the given fully-qualified path which represents a label resource.
+   *
+   * @deprecated Use the {@link LabelName} class instead.
+   */
+  @Deprecated
   public static final String parseCustomerFromLabelName(String labelName) {
     return LABEL_PATH_TEMPLATE.parse(labelName).get("customer");
   }
 
-  /** Parses the label from the given fully-qualified path which represents a label resource. */
+  /**
+   * Parses the label from the given fully-qualified path which represents a label resource.
+   *
+   * @deprecated Use the {@link LabelName} class instead.
+   */
+  @Deprecated
   public static final String parseLabelFromLabelName(String labelName) {
     return LABEL_PATH_TEMPLATE.parse(labelName).get("label");
   }

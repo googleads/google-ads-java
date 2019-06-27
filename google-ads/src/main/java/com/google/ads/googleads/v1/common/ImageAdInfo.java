@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -746,64 +746,61 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.ImageAdInfo other = (com.google.ads.googleads.v1.common.ImageAdInfo) obj;
 
-    boolean result = true;
-    result = result && (hasPixelWidth() == other.hasPixelWidth());
+    if (hasPixelWidth() != other.hasPixelWidth()) return false;
     if (hasPixelWidth()) {
-      result = result && getPixelWidth()
-          .equals(other.getPixelWidth());
+      if (!getPixelWidth()
+          .equals(other.getPixelWidth())) return false;
     }
-    result = result && (hasPixelHeight() == other.hasPixelHeight());
+    if (hasPixelHeight() != other.hasPixelHeight()) return false;
     if (hasPixelHeight()) {
-      result = result && getPixelHeight()
-          .equals(other.getPixelHeight());
+      if (!getPixelHeight()
+          .equals(other.getPixelHeight())) return false;
     }
-    result = result && (hasImageUrl() == other.hasImageUrl());
+    if (hasImageUrl() != other.hasImageUrl()) return false;
     if (hasImageUrl()) {
-      result = result && getImageUrl()
-          .equals(other.getImageUrl());
+      if (!getImageUrl()
+          .equals(other.getImageUrl())) return false;
     }
-    result = result && (hasPreviewPixelWidth() == other.hasPreviewPixelWidth());
+    if (hasPreviewPixelWidth() != other.hasPreviewPixelWidth()) return false;
     if (hasPreviewPixelWidth()) {
-      result = result && getPreviewPixelWidth()
-          .equals(other.getPreviewPixelWidth());
+      if (!getPreviewPixelWidth()
+          .equals(other.getPreviewPixelWidth())) return false;
     }
-    result = result && (hasPreviewPixelHeight() == other.hasPreviewPixelHeight());
+    if (hasPreviewPixelHeight() != other.hasPreviewPixelHeight()) return false;
     if (hasPreviewPixelHeight()) {
-      result = result && getPreviewPixelHeight()
-          .equals(other.getPreviewPixelHeight());
+      if (!getPreviewPixelHeight()
+          .equals(other.getPreviewPixelHeight())) return false;
     }
-    result = result && (hasPreviewImageUrl() == other.hasPreviewImageUrl());
+    if (hasPreviewImageUrl() != other.hasPreviewImageUrl()) return false;
     if (hasPreviewImageUrl()) {
-      result = result && getPreviewImageUrl()
-          .equals(other.getPreviewImageUrl());
+      if (!getPreviewImageUrl()
+          .equals(other.getPreviewImageUrl())) return false;
     }
-    result = result && mimeType_ == other.mimeType_;
-    result = result && (hasName() == other.hasName());
+    if (mimeType_ != other.mimeType_) return false;
+    if (hasName() != other.hasName()) return false;
     if (hasName()) {
-      result = result && getName()
-          .equals(other.getName());
+      if (!getName()
+          .equals(other.getName())) return false;
     }
-    result = result && getImageCase().equals(
-        other.getImageCase());
-    if (!result) return false;
+    if (!getImageCase().equals(other.getImageCase())) return false;
     switch (imageCase_) {
       case 1:
-        result = result && getMediaFile()
-            .equals(other.getMediaFile());
+        if (!getMediaFile()
+            .equals(other.getMediaFile())) return false;
         break;
       case 2:
-        result = result && getData()
-            .equals(other.getData());
+        if (!getData()
+            .equals(other.getData())) return false;
         break;
       case 3:
-        result = result && getAdIdToCopyImageFrom()
-            .equals(other.getAdIdToCopyImageFrom());
+        if (!getAdIdToCopyImageFrom()
+            .equals(other.getAdIdToCopyImageFrom())) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1132,35 +1129,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1259,7 +1256,7 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    private com.google.protobuf.Int64Value pixelWidth_ = null;
+    private com.google.protobuf.Int64Value pixelWidth_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> pixelWidthBuilder_;
     /**
@@ -1412,7 +1409,7 @@ private static final long serialVersionUID = 0L;
       return pixelWidthBuilder_;
     }
 
-    private com.google.protobuf.Int64Value pixelHeight_ = null;
+    private com.google.protobuf.Int64Value pixelHeight_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> pixelHeightBuilder_;
     /**
@@ -1565,7 +1562,7 @@ private static final long serialVersionUID = 0L;
       return pixelHeightBuilder_;
     }
 
-    private com.google.protobuf.StringValue imageUrl_ = null;
+    private com.google.protobuf.StringValue imageUrl_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> imageUrlBuilder_;
     /**
@@ -1718,7 +1715,7 @@ private static final long serialVersionUID = 0L;
       return imageUrlBuilder_;
     }
 
-    private com.google.protobuf.Int64Value previewPixelWidth_ = null;
+    private com.google.protobuf.Int64Value previewPixelWidth_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> previewPixelWidthBuilder_;
     /**
@@ -1871,7 +1868,7 @@ private static final long serialVersionUID = 0L;
       return previewPixelWidthBuilder_;
     }
 
-    private com.google.protobuf.Int64Value previewPixelHeight_ = null;
+    private com.google.protobuf.Int64Value previewPixelHeight_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> previewPixelHeightBuilder_;
     /**
@@ -2024,7 +2021,7 @@ private static final long serialVersionUID = 0L;
       return previewPixelHeightBuilder_;
     }
 
-    private com.google.protobuf.StringValue previewImageUrl_ = null;
+    private com.google.protobuf.StringValue previewImageUrl_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> previewImageUrlBuilder_;
     /**
@@ -2242,7 +2239,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue name_ = null;
+    private com.google.protobuf.StringValue name_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
@@ -2922,7 +2919,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

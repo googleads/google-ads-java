@@ -106,7 +106,10 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a geo_target_constant
    * resource.
+   *
+   * @deprecated Use the {@link GeoTargetConstantName} class instead.
    */
+  @Deprecated
   public static final String formatGeoTargetConstantName(String geoTargetConstant) {
     return GEO_TARGET_CONSTANT_PATH_TEMPLATE.instantiate("geo_target_constant", geoTargetConstant);
   }
@@ -114,7 +117,10 @@ public class GeoTargetConstantServiceClient implements BackgroundResource {
   /**
    * Parses the geo_target_constant from the given fully-qualified path which represents a
    * geo_target_constant resource.
+   *
+   * @deprecated Use the {@link GeoTargetConstantName} class instead.
    */
+  @Deprecated
   public static final String parseGeoTargetConstantFromGeoTargetConstantName(
       String geoTargetConstantName) {
     return GEO_TARGET_CONSTANT_PATH_TEMPLATE

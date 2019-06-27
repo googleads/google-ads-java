@@ -106,7 +106,10 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a ad_group_simulation
    * resource.
+   *
+   * @deprecated Use the {@link AdGroupSimulationName} class instead.
    */
+  @Deprecated
   public static final String formatAdGroupSimulationName(
       String customer, String adGroupSimulation) {
     return AD_GROUP_SIMULATION_PATH_TEMPLATE.instantiate(
@@ -117,7 +120,10 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a ad_group_simulation
    * resource.
+   *
+   * @deprecated Use the {@link AdGroupSimulationName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromAdGroupSimulationName(String adGroupSimulationName) {
     return AD_GROUP_SIMULATION_PATH_TEMPLATE.parse(adGroupSimulationName).get("customer");
   }
@@ -125,7 +131,10 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
   /**
    * Parses the ad_group_simulation from the given fully-qualified path which represents a
    * ad_group_simulation resource.
+   *
+   * @deprecated Use the {@link AdGroupSimulationName} class instead.
    */
+  @Deprecated
   public static final String parseAdGroupSimulationFromAdGroupSimulationName(
       String adGroupSimulationName) {
     return AD_GROUP_SIMULATION_PATH_TEMPLATE

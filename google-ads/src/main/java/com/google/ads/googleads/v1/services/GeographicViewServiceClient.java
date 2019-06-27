@@ -105,7 +105,10 @@ public class GeographicViewServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a geographic_view resource.
+   *
+   * @deprecated Use the {@link GeographicViewName} class instead.
    */
+  @Deprecated
   public static final String formatGeographicViewName(String customer, String geographicView) {
     return GEOGRAPHIC_VIEW_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -115,7 +118,10 @@ public class GeographicViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a geographic_view
    * resource.
+   *
+   * @deprecated Use the {@link GeographicViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromGeographicViewName(String geographicViewName) {
     return GEOGRAPHIC_VIEW_PATH_TEMPLATE.parse(geographicViewName).get("customer");
   }
@@ -123,7 +129,10 @@ public class GeographicViewServiceClient implements BackgroundResource {
   /**
    * Parses the geographic_view from the given fully-qualified path which represents a
    * geographic_view resource.
+   *
+   * @deprecated Use the {@link GeographicViewName} class instead.
    */
+  @Deprecated
   public static final String parseGeographicViewFromGeographicViewName(String geographicViewName) {
     return GEOGRAPHIC_VIEW_PATH_TEMPLATE.parse(geographicViewName).get("geographic_view");
   }

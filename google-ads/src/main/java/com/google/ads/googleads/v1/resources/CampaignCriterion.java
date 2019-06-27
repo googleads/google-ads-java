@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -2095,144 +2095,141 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.CampaignCriterion other = (com.google.ads.googleads.v1.resources.CampaignCriterion) obj;
 
-    boolean result = true;
-    result = result && getResourceName()
-        .equals(other.getResourceName());
-    result = result && (hasCampaign() == other.hasCampaign());
+    if (!getResourceName()
+        .equals(other.getResourceName())) return false;
+    if (hasCampaign() != other.hasCampaign()) return false;
     if (hasCampaign()) {
-      result = result && getCampaign()
-          .equals(other.getCampaign());
+      if (!getCampaign()
+          .equals(other.getCampaign())) return false;
     }
-    result = result && (hasCriterionId() == other.hasCriterionId());
+    if (hasCriterionId() != other.hasCriterionId()) return false;
     if (hasCriterionId()) {
-      result = result && getCriterionId()
-          .equals(other.getCriterionId());
+      if (!getCriterionId()
+          .equals(other.getCriterionId())) return false;
     }
-    result = result && (hasBidModifier() == other.hasBidModifier());
+    if (hasBidModifier() != other.hasBidModifier()) return false;
     if (hasBidModifier()) {
-      result = result && getBidModifier()
-          .equals(other.getBidModifier());
+      if (!getBidModifier()
+          .equals(other.getBidModifier())) return false;
     }
-    result = result && (hasNegative() == other.hasNegative());
+    if (hasNegative() != other.hasNegative()) return false;
     if (hasNegative()) {
-      result = result && getNegative()
-          .equals(other.getNegative());
+      if (!getNegative()
+          .equals(other.getNegative())) return false;
     }
-    result = result && type_ == other.type_;
-    result = result && status_ == other.status_;
-    result = result && getCriterionCase().equals(
-        other.getCriterionCase());
-    if (!result) return false;
+    if (type_ != other.type_) return false;
+    if (status_ != other.status_) return false;
+    if (!getCriterionCase().equals(other.getCriterionCase())) return false;
     switch (criterionCase_) {
       case 8:
-        result = result && getKeyword()
-            .equals(other.getKeyword());
+        if (!getKeyword()
+            .equals(other.getKeyword())) return false;
         break;
       case 9:
-        result = result && getPlacement()
-            .equals(other.getPlacement());
+        if (!getPlacement()
+            .equals(other.getPlacement())) return false;
         break;
       case 10:
-        result = result && getMobileAppCategory()
-            .equals(other.getMobileAppCategory());
+        if (!getMobileAppCategory()
+            .equals(other.getMobileAppCategory())) return false;
         break;
       case 11:
-        result = result && getMobileApplication()
-            .equals(other.getMobileApplication());
+        if (!getMobileApplication()
+            .equals(other.getMobileApplication())) return false;
         break;
       case 12:
-        result = result && getLocation()
-            .equals(other.getLocation());
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
         break;
       case 13:
-        result = result && getDevice()
-            .equals(other.getDevice());
+        if (!getDevice()
+            .equals(other.getDevice())) return false;
         break;
       case 15:
-        result = result && getAdSchedule()
-            .equals(other.getAdSchedule());
+        if (!getAdSchedule()
+            .equals(other.getAdSchedule())) return false;
         break;
       case 16:
-        result = result && getAgeRange()
-            .equals(other.getAgeRange());
+        if (!getAgeRange()
+            .equals(other.getAgeRange())) return false;
         break;
       case 17:
-        result = result && getGender()
-            .equals(other.getGender());
+        if (!getGender()
+            .equals(other.getGender())) return false;
         break;
       case 18:
-        result = result && getIncomeRange()
-            .equals(other.getIncomeRange());
+        if (!getIncomeRange()
+            .equals(other.getIncomeRange())) return false;
         break;
       case 19:
-        result = result && getParentalStatus()
-            .equals(other.getParentalStatus());
+        if (!getParentalStatus()
+            .equals(other.getParentalStatus())) return false;
         break;
       case 22:
-        result = result && getUserList()
-            .equals(other.getUserList());
+        if (!getUserList()
+            .equals(other.getUserList())) return false;
         break;
       case 20:
-        result = result && getYoutubeVideo()
-            .equals(other.getYoutubeVideo());
+        if (!getYoutubeVideo()
+            .equals(other.getYoutubeVideo())) return false;
         break;
       case 21:
-        result = result && getYoutubeChannel()
-            .equals(other.getYoutubeChannel());
+        if (!getYoutubeChannel()
+            .equals(other.getYoutubeChannel())) return false;
         break;
       case 23:
-        result = result && getProximity()
-            .equals(other.getProximity());
+        if (!getProximity()
+            .equals(other.getProximity())) return false;
         break;
       case 24:
-        result = result && getTopic()
-            .equals(other.getTopic());
+        if (!getTopic()
+            .equals(other.getTopic())) return false;
         break;
       case 25:
-        result = result && getListingScope()
-            .equals(other.getListingScope());
+        if (!getListingScope()
+            .equals(other.getListingScope())) return false;
         break;
       case 26:
-        result = result && getLanguage()
-            .equals(other.getLanguage());
+        if (!getLanguage()
+            .equals(other.getLanguage())) return false;
         break;
       case 27:
-        result = result && getIpBlock()
-            .equals(other.getIpBlock());
+        if (!getIpBlock()
+            .equals(other.getIpBlock())) return false;
         break;
       case 28:
-        result = result && getContentLabel()
-            .equals(other.getContentLabel());
+        if (!getContentLabel()
+            .equals(other.getContentLabel())) return false;
         break;
       case 29:
-        result = result && getCarrier()
-            .equals(other.getCarrier());
+        if (!getCarrier()
+            .equals(other.getCarrier())) return false;
         break;
       case 30:
-        result = result && getUserInterest()
-            .equals(other.getUserInterest());
+        if (!getUserInterest()
+            .equals(other.getUserInterest())) return false;
         break;
       case 31:
-        result = result && getWebpage()
-            .equals(other.getWebpage());
+        if (!getWebpage()
+            .equals(other.getWebpage())) return false;
         break;
       case 32:
-        result = result && getOperatingSystemVersion()
-            .equals(other.getOperatingSystemVersion());
+        if (!getOperatingSystemVersion()
+            .equals(other.getOperatingSystemVersion())) return false;
         break;
       case 33:
-        result = result && getMobileDevice()
-            .equals(other.getMobileDevice());
+        if (!getMobileDevice()
+            .equals(other.getMobileDevice())) return false;
         break;
       case 34:
-        result = result && getLocationGroup()
-            .equals(other.getLocationGroup());
+        if (!getLocationGroup()
+            .equals(other.getLocationGroup())) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -2779,35 +2776,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3095,7 +3092,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue campaign_ = null;
+    private com.google.protobuf.StringValue campaign_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignBuilder_;
     /**
@@ -3248,7 +3245,7 @@ private static final long serialVersionUID = 0L;
       return campaignBuilder_;
     }
 
-    private com.google.protobuf.Int64Value criterionId_ = null;
+    private com.google.protobuf.Int64Value criterionId_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> criterionIdBuilder_;
     /**
@@ -3410,7 +3407,7 @@ private static final long serialVersionUID = 0L;
       return criterionIdBuilder_;
     }
 
-    private com.google.protobuf.FloatValue bidModifier_ = null;
+    private com.google.protobuf.FloatValue bidModifier_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> bidModifierBuilder_;
     /**
@@ -3581,7 +3578,7 @@ private static final long serialVersionUID = 0L;
       return bidModifierBuilder_;
     }
 
-    private com.google.protobuf.BoolValue negative_ = null;
+    private com.google.protobuf.BoolValue negative_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> negativeBuilder_;
     /**
@@ -8338,7 +8335,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

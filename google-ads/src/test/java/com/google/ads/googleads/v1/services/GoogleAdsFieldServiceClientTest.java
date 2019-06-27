@@ -26,7 +26,7 @@ import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
 import com.google.common.collect.Lists;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -393,7 +393,7 @@ public class GoogleAdsFieldServiceClientTest {
     GoogleAdsField actualResponse = client.getGoogleAdsField(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockGoogleAdsFieldService.getRequests();
+    List<AbstractMessage> actualRequests = mockGoogleAdsFieldService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetGoogleAdsFieldRequest actualRequest = (GetGoogleAdsFieldRequest) actualRequests.get(0);
 
@@ -444,7 +444,7 @@ public class GoogleAdsFieldServiceClientTest {
     Assert.assertEquals(1, resources.size());
     Assert.assertEquals(expectedResponse.getResultsList().get(0), resources.get(0));
 
-    List<GeneratedMessageV3> actualRequests = mockGoogleAdsFieldService.getRequests();
+    List<AbstractMessage> actualRequests = mockGoogleAdsFieldService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     SearchGoogleAdsFieldsRequest actualRequest =
         (SearchGoogleAdsFieldsRequest) actualRequests.get(0);

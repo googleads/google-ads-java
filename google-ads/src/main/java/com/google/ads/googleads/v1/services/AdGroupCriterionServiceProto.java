@@ -56,45 +56,46 @@ public final class AdGroupCriterionServiceProto {
       ".proto\032\034google/api/annotations.proto\032 go" +
       "ogle/protobuf/field_mask.proto\032\036google/p" +
       "rotobuf/wrappers.proto\032\027google/rpc/statu" +
-      "s.proto\"3\n\032GetAdGroupCriterionRequest\022\025\n" +
-      "\rresource_name\030\001 \001(\t\"\264\001\n\034MutateAdGroupCr" +
-      "iteriaRequest\022\023\n\013customer_id\030\001 \001(\t\022O\n\nop" +
-      "erations\030\002 \003(\0132;.google.ads.googleads.v1" +
-      ".services.AdGroupCriterionOperation\022\027\n\017p" +
-      "artial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 " +
-      "\001(\010\"\323\002\n\031AdGroupCriterionOperation\022/\n\013upd" +
-      "ate_mask\030\004 \001(\0132\032.google.protobuf.FieldMa" +
-      "sk\022X\n\034exempt_policy_violation_keys\030\005 \003(\013" +
-      "22.google.ads.googleads.v1.common.Policy" +
-      "ViolationKey\022E\n\006create\030\001 \001(\01323.google.ad" +
-      "s.googleads.v1.resources.AdGroupCriterio" +
-      "nH\000\022E\n\006update\030\002 \001(\01323.google.ads.googlea" +
-      "ds.v1.resources.AdGroupCriterionH\000\022\020\n\006re" +
-      "move\030\003 \001(\tH\000B\013\n\toperation\"\243\001\n\035MutateAdGr" +
-      "oupCriteriaResponse\0221\n\025partial_failure_e" +
-      "rror\030\003 \001(\0132\022.google.rpc.Status\022O\n\007result" +
-      "s\030\002 \003(\0132>.google.ads.googleads.v1.servic" +
-      "es.MutateAdGroupCriterionResult\"5\n\034Mutat" +
-      "eAdGroupCriterionResult\022\025\n\rresource_name" +
-      "\030\001 \001(\t2\273\003\n\027AdGroupCriterionService\022\303\001\n\023G" +
-      "etAdGroupCriterion\022<.google.ads.googlead" +
-      "s.v1.services.GetAdGroupCriterionRequest" +
-      "\0323.google.ads.googleads.v1.resources.AdG" +
-      "roupCriterion\"9\202\323\344\223\0023\0221/v1/{resource_nam" +
-      "e=customers/*/adGroupCriteria/*}\022\331\001\n\025Mut" +
-      "ateAdGroupCriteria\022>.google.ads.googlead" +
-      "s.v1.services.MutateAdGroupCriteriaReque" +
-      "st\032?.google.ads.googleads.v1.services.Mu" +
-      "tateAdGroupCriteriaResponse\"?\202\323\344\223\0029\"4/v1" +
-      "/customers/{customer_id=*}/adGroupCriter" +
-      "ia:mutate:\001*B\203\002\n$com.google.ads.googlead" +
-      "s.v1.servicesB\034AdGroupCriterionServicePr" +
-      "otoP\001ZHgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v1/services;services\242" +
-      "\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Services" +
-      "\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$Go" +
-      "ogle::Ads::GoogleAds::V1::Servicesb\006prot" +
-      "o3"
+      "s.proto\032\027google/api/client.proto\"3\n\032GetA" +
+      "dGroupCriterionRequest\022\025\n\rresource_name\030" +
+      "\001 \001(\t\"\264\001\n\034MutateAdGroupCriteriaRequest\022\023" +
+      "\n\013customer_id\030\001 \001(\t\022O\n\noperations\030\002 \003(\0132" +
+      ";.google.ads.googleads.v1.services.AdGro" +
+      "upCriterionOperation\022\027\n\017partial_failure\030" +
+      "\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\323\002\n\031AdGroup" +
+      "CriterionOperation\022/\n\013update_mask\030\004 \001(\0132" +
+      "\032.google.protobuf.FieldMask\022X\n\034exempt_po" +
+      "licy_violation_keys\030\005 \003(\01322.google.ads.g" +
+      "oogleads.v1.common.PolicyViolationKey\022E\n" +
+      "\006create\030\001 \001(\01323.google.ads.googleads.v1." +
+      "resources.AdGroupCriterionH\000\022E\n\006update\030\002" +
+      " \001(\01323.google.ads.googleads.v1.resources" +
+      ".AdGroupCriterionH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n" +
+      "\toperation\"\243\001\n\035MutateAdGroupCriteriaResp" +
+      "onse\0221\n\025partial_failure_error\030\003 \001(\0132\022.go" +
+      "ogle.rpc.Status\022O\n\007results\030\002 \003(\0132>.googl" +
+      "e.ads.googleads.v1.services.MutateAdGrou" +
+      "pCriterionResult\"5\n\034MutateAdGroupCriteri" +
+      "onResult\022\025\n\rresource_name\030\001 \001(\t2\330\003\n\027AdGr" +
+      "oupCriterionService\022\303\001\n\023GetAdGroupCriter" +
+      "ion\022<.google.ads.googleads.v1.services.G" +
+      "etAdGroupCriterionRequest\0323.google.ads.g" +
+      "oogleads.v1.resources.AdGroupCriterion\"9" +
+      "\202\323\344\223\0023\0221/v1/{resource_name=customers/*/a" +
+      "dGroupCriteria/*}\022\331\001\n\025MutateAdGroupCrite" +
+      "ria\022>.google.ads.googleads.v1.services.M" +
+      "utateAdGroupCriteriaRequest\032?.google.ads" +
+      ".googleads.v1.services.MutateAdGroupCrit" +
+      "eriaResponse\"?\202\323\344\223\0029\"4/v1/customers/{cus" +
+      "tomer_id=*}/adGroupCriteria:mutate:\001*\032\033\312" +
+      "A\030googleads.googleapis.comB\203\002\n$com.googl" +
+      "e.ads.googleads.v1.servicesB\034AdGroupCrit" +
+      "erionServiceProtoP\001ZHgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v1/serv" +
+      "ices;services\242\002\003GAA\252\002 Google.Ads.GoogleA" +
+      "ds.V1.Services\312\002 Google\\Ads\\GoogleAds\\V1" +
+      "\\Services\352\002$Google::Ads::GoogleAds::V1::" +
+      "Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -113,6 +114,7 @@ public final class AdGroupCriterionServiceProto {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetAdGroupCriterionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -146,6 +148,7 @@ public final class AdGroupCriterionServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -155,6 +158,7 @@ public final class AdGroupCriterionServiceProto {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

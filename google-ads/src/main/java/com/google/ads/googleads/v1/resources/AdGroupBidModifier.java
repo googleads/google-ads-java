@@ -197,7 +197,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -847,63 +847,60 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.AdGroupBidModifier other = (com.google.ads.googleads.v1.resources.AdGroupBidModifier) obj;
 
-    boolean result = true;
-    result = result && getResourceName()
-        .equals(other.getResourceName());
-    result = result && (hasAdGroup() == other.hasAdGroup());
+    if (!getResourceName()
+        .equals(other.getResourceName())) return false;
+    if (hasAdGroup() != other.hasAdGroup()) return false;
     if (hasAdGroup()) {
-      result = result && getAdGroup()
-          .equals(other.getAdGroup());
+      if (!getAdGroup()
+          .equals(other.getAdGroup())) return false;
     }
-    result = result && (hasCriterionId() == other.hasCriterionId());
+    if (hasCriterionId() != other.hasCriterionId()) return false;
     if (hasCriterionId()) {
-      result = result && getCriterionId()
-          .equals(other.getCriterionId());
+      if (!getCriterionId()
+          .equals(other.getCriterionId())) return false;
     }
-    result = result && (hasBidModifier() == other.hasBidModifier());
+    if (hasBidModifier() != other.hasBidModifier()) return false;
     if (hasBidModifier()) {
-      result = result && getBidModifier()
-          .equals(other.getBidModifier());
+      if (!getBidModifier()
+          .equals(other.getBidModifier())) return false;
     }
-    result = result && (hasBaseAdGroup() == other.hasBaseAdGroup());
+    if (hasBaseAdGroup() != other.hasBaseAdGroup()) return false;
     if (hasBaseAdGroup()) {
-      result = result && getBaseAdGroup()
-          .equals(other.getBaseAdGroup());
+      if (!getBaseAdGroup()
+          .equals(other.getBaseAdGroup())) return false;
     }
-    result = result && bidModifierSource_ == other.bidModifierSource_;
-    result = result && getCriterionCase().equals(
-        other.getCriterionCase());
-    if (!result) return false;
+    if (bidModifierSource_ != other.bidModifierSource_) return false;
+    if (!getCriterionCase().equals(other.getCriterionCase())) return false;
     switch (criterionCase_) {
       case 5:
-        result = result && getHotelDateSelectionType()
-            .equals(other.getHotelDateSelectionType());
+        if (!getHotelDateSelectionType()
+            .equals(other.getHotelDateSelectionType())) return false;
         break;
       case 6:
-        result = result && getHotelAdvanceBookingWindow()
-            .equals(other.getHotelAdvanceBookingWindow());
+        if (!getHotelAdvanceBookingWindow()
+            .equals(other.getHotelAdvanceBookingWindow())) return false;
         break;
       case 7:
-        result = result && getHotelLengthOfStay()
-            .equals(other.getHotelLengthOfStay());
+        if (!getHotelLengthOfStay()
+            .equals(other.getHotelLengthOfStay())) return false;
         break;
       case 8:
-        result = result && getHotelCheckInDay()
-            .equals(other.getHotelCheckInDay());
+        if (!getHotelCheckInDay()
+            .equals(other.getHotelCheckInDay())) return false;
         break;
       case 11:
-        result = result && getDevice()
-            .equals(other.getDevice());
+        if (!getDevice()
+            .equals(other.getDevice())) return false;
         break;
       case 12:
-        result = result && getPreferredContent()
-            .equals(other.getPreferredContent());
+        if (!getPreferredContent()
+            .equals(other.getPreferredContent())) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1225,35 +1222,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1458,7 +1455,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue adGroup_ = null;
+    private com.google.protobuf.StringValue adGroup_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupBuilder_;
     /**
@@ -1611,7 +1608,7 @@ private static final long serialVersionUID = 0L;
       return adGroupBuilder_;
     }
 
-    private com.google.protobuf.Int64Value criterionId_ = null;
+    private com.google.protobuf.Int64Value criterionId_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> criterionIdBuilder_;
     /**
@@ -1773,7 +1770,7 @@ private static final long serialVersionUID = 0L;
       return criterionIdBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue bidModifier_ = null;
+    private com.google.protobuf.DoubleValue bidModifier_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> bidModifierBuilder_;
     /**
@@ -1944,7 +1941,7 @@ private static final long serialVersionUID = 0L;
       return bidModifierBuilder_;
     }
 
-    private com.google.protobuf.StringValue baseAdGroup_ = null;
+    private com.google.protobuf.StringValue baseAdGroup_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> baseAdGroupBuilder_;
     /**
@@ -3232,7 +3229,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

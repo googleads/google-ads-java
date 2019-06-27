@@ -237,7 +237,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -925,80 +925,79 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.LegacyResponsiveDisplayAdInfo other = (com.google.ads.googleads.v1.common.LegacyResponsiveDisplayAdInfo) obj;
 
-    boolean result = true;
-    result = result && (hasShortHeadline() == other.hasShortHeadline());
+    if (hasShortHeadline() != other.hasShortHeadline()) return false;
     if (hasShortHeadline()) {
-      result = result && getShortHeadline()
-          .equals(other.getShortHeadline());
+      if (!getShortHeadline()
+          .equals(other.getShortHeadline())) return false;
     }
-    result = result && (hasLongHeadline() == other.hasLongHeadline());
+    if (hasLongHeadline() != other.hasLongHeadline()) return false;
     if (hasLongHeadline()) {
-      result = result && getLongHeadline()
-          .equals(other.getLongHeadline());
+      if (!getLongHeadline()
+          .equals(other.getLongHeadline())) return false;
     }
-    result = result && (hasDescription() == other.hasDescription());
+    if (hasDescription() != other.hasDescription()) return false;
     if (hasDescription()) {
-      result = result && getDescription()
-          .equals(other.getDescription());
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
     }
-    result = result && (hasBusinessName() == other.hasBusinessName());
+    if (hasBusinessName() != other.hasBusinessName()) return false;
     if (hasBusinessName()) {
-      result = result && getBusinessName()
-          .equals(other.getBusinessName());
+      if (!getBusinessName()
+          .equals(other.getBusinessName())) return false;
     }
-    result = result && (hasAllowFlexibleColor() == other.hasAllowFlexibleColor());
+    if (hasAllowFlexibleColor() != other.hasAllowFlexibleColor()) return false;
     if (hasAllowFlexibleColor()) {
-      result = result && getAllowFlexibleColor()
-          .equals(other.getAllowFlexibleColor());
+      if (!getAllowFlexibleColor()
+          .equals(other.getAllowFlexibleColor())) return false;
     }
-    result = result && (hasAccentColor() == other.hasAccentColor());
+    if (hasAccentColor() != other.hasAccentColor()) return false;
     if (hasAccentColor()) {
-      result = result && getAccentColor()
-          .equals(other.getAccentColor());
+      if (!getAccentColor()
+          .equals(other.getAccentColor())) return false;
     }
-    result = result && (hasMainColor() == other.hasMainColor());
+    if (hasMainColor() != other.hasMainColor()) return false;
     if (hasMainColor()) {
-      result = result && getMainColor()
-          .equals(other.getMainColor());
+      if (!getMainColor()
+          .equals(other.getMainColor())) return false;
     }
-    result = result && (hasCallToActionText() == other.hasCallToActionText());
+    if (hasCallToActionText() != other.hasCallToActionText()) return false;
     if (hasCallToActionText()) {
-      result = result && getCallToActionText()
-          .equals(other.getCallToActionText());
+      if (!getCallToActionText()
+          .equals(other.getCallToActionText())) return false;
     }
-    result = result && (hasLogoImage() == other.hasLogoImage());
+    if (hasLogoImage() != other.hasLogoImage()) return false;
     if (hasLogoImage()) {
-      result = result && getLogoImage()
-          .equals(other.getLogoImage());
+      if (!getLogoImage()
+          .equals(other.getLogoImage())) return false;
     }
-    result = result && (hasSquareLogoImage() == other.hasSquareLogoImage());
+    if (hasSquareLogoImage() != other.hasSquareLogoImage()) return false;
     if (hasSquareLogoImage()) {
-      result = result && getSquareLogoImage()
-          .equals(other.getSquareLogoImage());
+      if (!getSquareLogoImage()
+          .equals(other.getSquareLogoImage())) return false;
     }
-    result = result && (hasMarketingImage() == other.hasMarketingImage());
+    if (hasMarketingImage() != other.hasMarketingImage()) return false;
     if (hasMarketingImage()) {
-      result = result && getMarketingImage()
-          .equals(other.getMarketingImage());
+      if (!getMarketingImage()
+          .equals(other.getMarketingImage())) return false;
     }
-    result = result && (hasSquareMarketingImage() == other.hasSquareMarketingImage());
+    if (hasSquareMarketingImage() != other.hasSquareMarketingImage()) return false;
     if (hasSquareMarketingImage()) {
-      result = result && getSquareMarketingImage()
-          .equals(other.getSquareMarketingImage());
+      if (!getSquareMarketingImage()
+          .equals(other.getSquareMarketingImage())) return false;
     }
-    result = result && formatSetting_ == other.formatSetting_;
-    result = result && (hasPricePrefix() == other.hasPricePrefix());
+    if (formatSetting_ != other.formatSetting_) return false;
+    if (hasPricePrefix() != other.hasPricePrefix()) return false;
     if (hasPricePrefix()) {
-      result = result && getPricePrefix()
-          .equals(other.getPricePrefix());
+      if (!getPricePrefix()
+          .equals(other.getPricePrefix())) return false;
     }
-    result = result && (hasPromoText() == other.hasPromoText());
+    if (hasPromoText() != other.hasPromoText()) return false;
     if (hasPromoText()) {
-      result = result && getPromoText()
-          .equals(other.getPromoText());
+      if (!getPromoText()
+          .equals(other.getPromoText())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1393,35 +1392,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1509,7 +1508,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue shortHeadline_ = null;
+    private com.google.protobuf.StringValue shortHeadline_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> shortHeadlineBuilder_;
     /**
@@ -1662,7 +1661,7 @@ private static final long serialVersionUID = 0L;
       return shortHeadlineBuilder_;
     }
 
-    private com.google.protobuf.StringValue longHeadline_ = null;
+    private com.google.protobuf.StringValue longHeadline_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> longHeadlineBuilder_;
     /**
@@ -1815,7 +1814,7 @@ private static final long serialVersionUID = 0L;
       return longHeadlineBuilder_;
     }
 
-    private com.google.protobuf.StringValue description_ = null;
+    private com.google.protobuf.StringValue description_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> descriptionBuilder_;
     /**
@@ -1968,7 +1967,7 @@ private static final long serialVersionUID = 0L;
       return descriptionBuilder_;
     }
 
-    private com.google.protobuf.StringValue businessName_ = null;
+    private com.google.protobuf.StringValue businessName_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> businessNameBuilder_;
     /**
@@ -2121,7 +2120,7 @@ private static final long serialVersionUID = 0L;
       return businessNameBuilder_;
     }
 
-    private com.google.protobuf.BoolValue allowFlexibleColor_ = null;
+    private com.google.protobuf.BoolValue allowFlexibleColor_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> allowFlexibleColorBuilder_;
     /**
@@ -2310,7 +2309,7 @@ private static final long serialVersionUID = 0L;
       return allowFlexibleColorBuilder_;
     }
 
-    private com.google.protobuf.StringValue accentColor_ = null;
+    private com.google.protobuf.StringValue accentColor_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> accentColorBuilder_;
     /**
@@ -2481,7 +2480,7 @@ private static final long serialVersionUID = 0L;
       return accentColorBuilder_;
     }
 
-    private com.google.protobuf.StringValue mainColor_ = null;
+    private com.google.protobuf.StringValue mainColor_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> mainColorBuilder_;
     /**
@@ -2652,7 +2651,7 @@ private static final long serialVersionUID = 0L;
       return mainColorBuilder_;
     }
 
-    private com.google.protobuf.StringValue callToActionText_ = null;
+    private com.google.protobuf.StringValue callToActionText_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> callToActionTextBuilder_;
     /**
@@ -2805,7 +2804,7 @@ private static final long serialVersionUID = 0L;
       return callToActionTextBuilder_;
     }
 
-    private com.google.protobuf.StringValue logoImage_ = null;
+    private com.google.protobuf.StringValue logoImage_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> logoImageBuilder_;
     /**
@@ -2958,7 +2957,7 @@ private static final long serialVersionUID = 0L;
       return logoImageBuilder_;
     }
 
-    private com.google.protobuf.StringValue squareLogoImage_ = null;
+    private com.google.protobuf.StringValue squareLogoImage_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> squareLogoImageBuilder_;
     /**
@@ -3111,7 +3110,7 @@ private static final long serialVersionUID = 0L;
       return squareLogoImageBuilder_;
     }
 
-    private com.google.protobuf.StringValue marketingImage_ = null;
+    private com.google.protobuf.StringValue marketingImage_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> marketingImageBuilder_;
     /**
@@ -3264,7 +3263,7 @@ private static final long serialVersionUID = 0L;
       return marketingImageBuilder_;
     }
 
-    private com.google.protobuf.StringValue squareMarketingImage_ = null;
+    private com.google.protobuf.StringValue squareMarketingImage_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> squareMarketingImageBuilder_;
     /**
@@ -3482,7 +3481,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue pricePrefix_ = null;
+    private com.google.protobuf.StringValue pricePrefix_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> pricePrefixBuilder_;
     /**
@@ -3635,7 +3634,7 @@ private static final long serialVersionUID = 0L;
       return pricePrefixBuilder_;
     }
 
-    private com.google.protobuf.StringValue promoText_ = null;
+    private com.google.protobuf.StringValue promoText_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> promoTextBuilder_;
     /**
@@ -3799,7 +3798,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

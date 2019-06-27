@@ -103,7 +103,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -265,7 +265,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 countries_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraint>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -274,7 +274,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -288,7 +288,7 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           countries_ = java.util.Collections.unmodifiableList(countries_);
         }
         this.unknownFields = unknownFields.build();
@@ -449,16 +449,15 @@ private static final long serialVersionUID = 0L;
       }
       com.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraintList other = (com.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraintList) obj;
 
-      boolean result = true;
-      result = result && (hasTotalTargetedCountries() == other.hasTotalTargetedCountries());
+      if (hasTotalTargetedCountries() != other.hasTotalTargetedCountries()) return false;
       if (hasTotalTargetedCountries()) {
-        result = result && getTotalTargetedCountries()
-            .equals(other.getTotalTargetedCountries());
+        if (!getTotalTargetedCountries()
+            .equals(other.getTotalTargetedCountries())) return false;
       }
-      result = result && getCountriesList()
-          .equals(other.getCountriesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCountriesList()
+          .equals(other.getCountriesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -660,7 +659,7 @@ private static final long serialVersionUID = 0L;
           result.totalTargetedCountries_ = totalTargetedCountriesBuilder_.build();
         }
         if (countriesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             countries_ = java.util.Collections.unmodifiableList(countries_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -675,35 +674,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -776,7 +775,7 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private com.google.protobuf.Int32Value totalTargetedCountries_ = null;
+      private com.google.protobuf.Int32Value totalTargetedCountries_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> totalTargetedCountriesBuilder_;
       /**
@@ -932,7 +931,7 @@ private static final long serialVersionUID = 0L;
       private java.util.List<com.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraint> countries_ =
         java.util.Collections.emptyList();
       private void ensureCountriesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           countries_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraint>(countries_);
           bitField0_ |= 0x00000002;
          }
@@ -1233,7 +1232,7 @@ private static final long serialVersionUID = 0L;
           countriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraint, com.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraint.Builder, com.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraintOrBuilder>(
                   countries_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           countries_ = null;
@@ -1243,7 +1242,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1341,7 +1340,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1410,9 +1409,8 @@ private static final long serialVersionUID = 0L;
       }
       com.google.ads.googleads.v1.common.PolicyTopicConstraint.ResellerConstraint other = (com.google.ads.googleads.v1.common.PolicyTopicConstraint.ResellerConstraint) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1592,35 +1590,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1665,7 +1663,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1805,7 +1803,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1917,14 +1915,13 @@ private static final long serialVersionUID = 0L;
       }
       com.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraint other = (com.google.ads.googleads.v1.common.PolicyTopicConstraint.CountryConstraint) obj;
 
-      boolean result = true;
-      result = result && (hasCountryCriterion() == other.hasCountryCriterion());
+      if (hasCountryCriterion() != other.hasCountryCriterion()) return false;
       if (hasCountryCriterion()) {
-        result = result && getCountryCriterion()
-            .equals(other.getCountryCriterion());
+        if (!getCountryCriterion()
+            .equals(other.getCountryCriterion())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2119,35 +2116,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2193,7 +2190,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.google.protobuf.StringValue countryCriterion_ = null;
+      private com.google.protobuf.StringValue countryCriterion_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> countryCriterionBuilder_;
       /**
@@ -2357,7 +2354,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2670,32 +2667,29 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.PolicyTopicConstraint other = (com.google.ads.googleads.v1.common.PolicyTopicConstraint) obj;
 
-    boolean result = true;
-    result = result && getValueCase().equals(
-        other.getValueCase());
-    if (!result) return false;
+    if (!getValueCase().equals(other.getValueCase())) return false;
     switch (valueCase_) {
       case 1:
-        result = result && getCountryConstraintList()
-            .equals(other.getCountryConstraintList());
+        if (!getCountryConstraintList()
+            .equals(other.getCountryConstraintList())) return false;
         break;
       case 2:
-        result = result && getResellerConstraint()
-            .equals(other.getResellerConstraint());
+        if (!getResellerConstraint()
+            .equals(other.getResellerConstraint())) return false;
         break;
       case 3:
-        result = result && getCertificateMissingInCountryList()
-            .equals(other.getCertificateMissingInCountryList());
+        if (!getCertificateMissingInCountryList()
+            .equals(other.getCertificateMissingInCountryList())) return false;
         break;
       case 4:
-        result = result && getCertificateDomainMismatchInCountryList()
-            .equals(other.getCertificateDomainMismatchInCountryList());
+        if (!getCertificateDomainMismatchInCountryList()
+            .equals(other.getCertificateDomainMismatchInCountryList())) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -2925,35 +2919,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3731,7 +3725,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

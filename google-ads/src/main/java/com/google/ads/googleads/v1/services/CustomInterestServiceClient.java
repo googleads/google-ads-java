@@ -106,7 +106,10 @@ public class CustomInterestServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a custom_interest resource.
+   *
+   * @deprecated Use the {@link CustomInterestName} class instead.
    */
+  @Deprecated
   public static final String formatCustomInterestName(String customer, String customInterest) {
     return CUSTOM_INTEREST_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -116,7 +119,10 @@ public class CustomInterestServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a custom_interest
    * resource.
+   *
+   * @deprecated Use the {@link CustomInterestName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromCustomInterestName(String customInterestName) {
     return CUSTOM_INTEREST_PATH_TEMPLATE.parse(customInterestName).get("customer");
   }
@@ -124,7 +130,10 @@ public class CustomInterestServiceClient implements BackgroundResource {
   /**
    * Parses the custom_interest from the given fully-qualified path which represents a
    * custom_interest resource.
+   *
+   * @deprecated Use the {@link CustomInterestName} class instead.
    */
+  @Deprecated
   public static final String parseCustomInterestFromCustomInterestName(String customInterestName) {
     return CUSTOM_INTEREST_PATH_TEMPLATE.parse(customInterestName).get("custom_interest");
   }

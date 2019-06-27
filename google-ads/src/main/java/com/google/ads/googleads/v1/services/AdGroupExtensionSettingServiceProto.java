@@ -55,46 +55,48 @@ public final class AdGroupExtensionSettingServiceProto {
       "ion_setting.proto\032\034google/api/annotation" +
       "s.proto\032 google/protobuf/field_mask.prot" +
       "o\032\036google/protobuf/wrappers.proto\032\027googl" +
-      "e/rpc/status.proto\":\n!GetAdGroupExtensio" +
-      "nSettingRequest\022\025\n\rresource_name\030\001 \001(\t\"\304" +
-      "\001\n%MutateAdGroupExtensionSettingsRequest" +
-      "\022\023\n\013customer_id\030\001 \001(\t\022V\n\noperations\030\002 \003(" +
-      "\0132B.google.ads.googleads.v1.services.AdG" +
-      "roupExtensionSettingOperation\022\027\n\017partial" +
-      "_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\216\002" +
-      "\n AdGroupExtensionSettingOperation\022/\n\013up" +
-      "date_mask\030\004 \001(\0132\032.google.protobuf.FieldM" +
-      "ask\022L\n\006create\030\001 \001(\0132:.google.ads.googlea" +
-      "ds.v1.resources.AdGroupExtensionSettingH" +
-      "\000\022L\n\006update\030\002 \001(\0132:.google.ads.googleads" +
-      ".v1.resources.AdGroupExtensionSettingH\000\022" +
-      "\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\263\001\n&Mutat" +
-      "eAdGroupExtensionSettingsResponse\0221\n\025par" +
-      "tial_failure_error\030\003 \001(\0132\022.google.rpc.St" +
-      "atus\022V\n\007results\030\002 \003(\0132E.google.ads.googl" +
-      "eads.v1.services.MutateAdGroupExtensionS" +
-      "ettingResult\"<\n#MutateAdGroupExtensionSe" +
-      "ttingResult\022\025\n\rresource_name\030\001 \001(\t2\204\004\n\036A" +
-      "dGroupExtensionSettingService\022\341\001\n\032GetAdG" +
-      "roupExtensionSetting\022C.google.ads.google" +
-      "ads.v1.services.GetAdGroupExtensionSetti" +
-      "ngRequest\032:.google.ads.googleads.v1.reso" +
-      "urces.AdGroupExtensionSetting\"B\202\323\344\223\002<\022:/" +
-      "v1/{resource_name=customers/*/adGroupExt" +
-      "ensionSettings/*}\022\375\001\n\036MutateAdGroupExten" +
-      "sionSettings\022G.google.ads.googleads.v1.s" +
-      "ervices.MutateAdGroupExtensionSettingsRe" +
-      "quest\032H.google.ads.googleads.v1.services" +
-      ".MutateAdGroupExtensionSettingsResponse\"" +
-      "H\202\323\344\223\002B\"=/v1/customers/{customer_id=*}/a" +
-      "dGroupExtensionSettings:mutate:\001*B\212\002\n$co" +
-      "m.google.ads.googleads.v1.servicesB#AdGr" +
-      "oupExtensionSettingServiceProtoP\001ZHgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v1/services;services\242\002\003GAA\252\002 Goog" +
-      "le.Ads.GoogleAds.V1.Services\312\002 Google\\Ad" +
-      "s\\GoogleAds\\V1\\Services\352\002$Google::Ads::G" +
-      "oogleAds::V1::Servicesb\006proto3"
+      "e/rpc/status.proto\032\027google/api/client.pr" +
+      "oto\":\n!GetAdGroupExtensionSettingRequest" +
+      "\022\025\n\rresource_name\030\001 \001(\t\"\304\001\n%MutateAdGrou" +
+      "pExtensionSettingsRequest\022\023\n\013customer_id" +
+      "\030\001 \001(\t\022V\n\noperations\030\002 \003(\0132B.google.ads." +
+      "googleads.v1.services.AdGroupExtensionSe" +
+      "ttingOperation\022\027\n\017partial_failure\030\003 \001(\010\022" +
+      "\025\n\rvalidate_only\030\004 \001(\010\"\216\002\n AdGroupExtens" +
+      "ionSettingOperation\022/\n\013update_mask\030\004 \001(\013" +
+      "2\032.google.protobuf.FieldMask\022L\n\006create\030\001" +
+      " \001(\0132:.google.ads.googleads.v1.resources" +
+      ".AdGroupExtensionSettingH\000\022L\n\006update\030\002 \001" +
+      "(\0132:.google.ads.googleads.v1.resources.A" +
+      "dGroupExtensionSettingH\000\022\020\n\006remove\030\003 \001(\t" +
+      "H\000B\013\n\toperation\"\263\001\n&MutateAdGroupExtensi" +
+      "onSettingsResponse\0221\n\025partial_failure_er" +
+      "ror\030\003 \001(\0132\022.google.rpc.Status\022V\n\007results" +
+      "\030\002 \003(\0132E.google.ads.googleads.v1.service" +
+      "s.MutateAdGroupExtensionSettingResult\"<\n" +
+      "#MutateAdGroupExtensionSettingResult\022\025\n\r" +
+      "resource_name\030\001 \001(\t2\241\004\n\036AdGroupExtension" +
+      "SettingService\022\341\001\n\032GetAdGroupExtensionSe" +
+      "tting\022C.google.ads.googleads.v1.services" +
+      ".GetAdGroupExtensionSettingRequest\032:.goo" +
+      "gle.ads.googleads.v1.resources.AdGroupEx" +
+      "tensionSetting\"B\202\323\344\223\002<\022:/v1/{resource_na" +
+      "me=customers/*/adGroupExtensionSettings/" +
+      "*}\022\375\001\n\036MutateAdGroupExtensionSettings\022G." +
+      "google.ads.googleads.v1.services.MutateA" +
+      "dGroupExtensionSettingsRequest\032H.google." +
+      "ads.googleads.v1.services.MutateAdGroupE" +
+      "xtensionSettingsResponse\"H\202\323\344\223\002B\"=/v1/cu" +
+      "stomers/{customer_id=*}/adGroupExtension" +
+      "Settings:mutate:\001*\032\033\312A\030googleads.googlea" +
+      "pis.comB\212\002\n$com.google.ads.googleads.v1." +
+      "servicesB#AdGroupExtensionSettingService" +
+      "ProtoP\001ZHgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v1/services;service" +
+      "s\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Servic" +
+      "es\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$" +
+      "Google::Ads::GoogleAds::V1::Servicesb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -112,6 +114,7 @@ public final class AdGroupExtensionSettingServiceProto {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetAdGroupExtensionSettingRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -145,6 +148,7 @@ public final class AdGroupExtensionSettingServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -153,6 +157,7 @@ public final class AdGroupExtensionSettingServiceProto {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

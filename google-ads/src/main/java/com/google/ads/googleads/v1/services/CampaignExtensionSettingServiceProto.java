@@ -55,47 +55,48 @@ public final class CampaignExtensionSettingServiceProto {
       "ion_setting.proto\032\034google/api/annotation" +
       "s.proto\032 google/protobuf/field_mask.prot" +
       "o\032\036google/protobuf/wrappers.proto\032\027googl" +
-      "e/rpc/status.proto\";\n\"GetCampaignExtensi" +
-      "onSettingRequest\022\025\n\rresource_name\030\001 \001(\t\"" +
-      "\306\001\n&MutateCampaignExtensionSettingsReque" +
-      "st\022\023\n\013customer_id\030\001 \001(\t\022W\n\noperations\030\002 " +
-      "\003(\0132C.google.ads.googleads.v1.services.C" +
-      "ampaignExtensionSettingOperation\022\027\n\017part" +
-      "ial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010" +
-      "\"\221\002\n!CampaignExtensionSettingOperation\022/" +
-      "\n\013update_mask\030\004 \001(\0132\032.google.protobuf.Fi" +
-      "eldMask\022M\n\006create\030\001 \001(\0132;.google.ads.goo" +
-      "gleads.v1.resources.CampaignExtensionSet" +
-      "tingH\000\022M\n\006update\030\002 \001(\0132;.google.ads.goog" +
-      "leads.v1.resources.CampaignExtensionSett" +
-      "ingH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\265\001\n" +
-      "\'MutateCampaignExtensionSettingsResponse" +
-      "\0221\n\025partial_failure_error\030\003 \001(\0132\022.google" +
-      ".rpc.Status\022W\n\007results\030\002 \003(\0132F.google.ad" +
-      "s.googleads.v1.services.MutateCampaignEx" +
-      "tensionSettingResult\"=\n$MutateCampaignEx" +
-      "tensionSettingResult\022\025\n\rresource_name\030\001 " +
-      "\001(\t2\215\004\n\037CampaignExtensionSettingService\022" +
-      "\345\001\n\033GetCampaignExtensionSetting\022D.google" +
-      ".ads.googleads.v1.services.GetCampaignEx" +
-      "tensionSettingRequest\032;.google.ads.googl" +
-      "eads.v1.resources.CampaignExtensionSetti" +
-      "ng\"C\202\323\344\223\002=\022;/v1/{resource_name=customers" +
-      "/*/campaignExtensionSettings/*}\022\201\002\n\037Muta" +
-      "teCampaignExtensionSettings\022H.google.ads" +
-      ".googleads.v1.services.MutateCampaignExt" +
-      "ensionSettingsRequest\032I.google.ads.googl" +
-      "eads.v1.services.MutateCampaignExtension" +
-      "SettingsResponse\"I\202\323\344\223\002C\">/v1/customers/" +
-      "{customer_id=*}/campaignExtensionSetting" +
-      "s:mutate:\001*B\213\002\n$com.google.ads.googleads" +
-      ".v1.servicesB$CampaignExtensionSettingSe" +
-      "rviceProtoP\001ZHgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v1/services;se" +
-      "rvices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.S" +
-      "ervices\312\002 Google\\Ads\\GoogleAds\\V1\\Servic" +
-      "es\352\002$Google::Ads::GoogleAds::V1::Service" +
-      "sb\006proto3"
+      "e/rpc/status.proto\032\027google/api/client.pr" +
+      "oto\";\n\"GetCampaignExtensionSettingReques" +
+      "t\022\025\n\rresource_name\030\001 \001(\t\"\306\001\n&MutateCampa" +
+      "ignExtensionSettingsRequest\022\023\n\013customer_" +
+      "id\030\001 \001(\t\022W\n\noperations\030\002 \003(\0132C.google.ad" +
+      "s.googleads.v1.services.CampaignExtensio" +
+      "nSettingOperation\022\027\n\017partial_failure\030\003 \001" +
+      "(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\221\002\n!CampaignEx" +
+      "tensionSettingOperation\022/\n\013update_mask\030\004" +
+      " \001(\0132\032.google.protobuf.FieldMask\022M\n\006crea" +
+      "te\030\001 \001(\0132;.google.ads.googleads.v1.resou" +
+      "rces.CampaignExtensionSettingH\000\022M\n\006updat" +
+      "e\030\002 \001(\0132;.google.ads.googleads.v1.resour" +
+      "ces.CampaignExtensionSettingH\000\022\020\n\006remove" +
+      "\030\003 \001(\tH\000B\013\n\toperation\"\265\001\n\'MutateCampaign" +
+      "ExtensionSettingsResponse\0221\n\025partial_fai" +
+      "lure_error\030\003 \001(\0132\022.google.rpc.Status\022W\n\007" +
+      "results\030\002 \003(\0132F.google.ads.googleads.v1." +
+      "services.MutateCampaignExtensionSettingR" +
+      "esult\"=\n$MutateCampaignExtensionSettingR" +
+      "esult\022\025\n\rresource_name\030\001 \001(\t2\252\004\n\037Campaig" +
+      "nExtensionSettingService\022\345\001\n\033GetCampaign" +
+      "ExtensionSetting\022D.google.ads.googleads." +
+      "v1.services.GetCampaignExtensionSettingR" +
+      "equest\032;.google.ads.googleads.v1.resourc" +
+      "es.CampaignExtensionSetting\"C\202\323\344\223\002=\022;/v1" +
+      "/{resource_name=customers/*/campaignExte" +
+      "nsionSettings/*}\022\201\002\n\037MutateCampaignExten" +
+      "sionSettings\022H.google.ads.googleads.v1.s" +
+      "ervices.MutateCampaignExtensionSettingsR" +
+      "equest\032I.google.ads.googleads.v1.service" +
+      "s.MutateCampaignExtensionSettingsRespons" +
+      "e\"I\202\323\344\223\002C\">/v1/customers/{customer_id=*}" +
+      "/campaignExtensionSettings:mutate:\001*\032\033\312A" +
+      "\030googleads.googleapis.comB\213\002\n$com.google" +
+      ".ads.googleads.v1.servicesB$CampaignExte" +
+      "nsionSettingServiceProtoP\001ZHgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v1/services;services\242\002\003GAA\252\002 Google.Ads." +
+      "GoogleAds.V1.Services\312\002 Google\\Ads\\Googl" +
+      "eAds\\V1\\Services\352\002$Google::Ads::GoogleAd" +
+      "s::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -113,6 +114,7 @@ public final class CampaignExtensionSettingServiceProto {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetCampaignExtensionSettingRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -146,6 +148,7 @@ public final class CampaignExtensionSettingServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -154,6 +157,7 @@ public final class CampaignExtensionSettingServiceProto {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -27,10 +27,13 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.common.collect.ImmutableMap;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -115,10 +118,28 @@ public class GrpcGoogleAdsServiceStub extends GoogleAdsServiceStub {
     GrpcCallSettings<SearchGoogleAdsRequest, SearchGoogleAdsResponse> searchTransportSettings =
         GrpcCallSettings.<SearchGoogleAdsRequest, SearchGoogleAdsResponse>newBuilder()
             .setMethodDescriptor(searchMethodDescriptor)
+            .setParamsExtractor(
+                new RequestParamsExtractor<SearchGoogleAdsRequest>() {
+                  @Override
+                  public Map<String, String> extract(SearchGoogleAdsRequest request) {
+                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("customer_id", String.valueOf(request.getCustomerId()));
+                    return params.build();
+                  }
+                })
             .build();
     GrpcCallSettings<MutateGoogleAdsRequest, MutateGoogleAdsResponse> mutateTransportSettings =
         GrpcCallSettings.<MutateGoogleAdsRequest, MutateGoogleAdsResponse>newBuilder()
             .setMethodDescriptor(mutateMethodDescriptor)
+            .setParamsExtractor(
+                new RequestParamsExtractor<MutateGoogleAdsRequest>() {
+                  @Override
+                  public Map<String, String> extract(MutateGoogleAdsRequest request) {
+                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("customer_id", String.valueOf(request.getCustomerId()));
+                    return params.build();
+                  }
+                })
             .build();
 
     this.searchCallable =

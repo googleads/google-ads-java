@@ -105,7 +105,10 @@ public class HotelPerformanceViewServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a hotel_performance_view
    * resource.
+   *
+   * @deprecated Use the {@link HotelPerformanceViewName} class instead.
    */
+  @Deprecated
   public static final String formatHotelPerformanceViewName(String customer) {
     return HOTEL_PERFORMANCE_VIEW_PATH_TEMPLATE.instantiate("customer", customer);
   }
@@ -113,7 +116,10 @@ public class HotelPerformanceViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * hotel_performance_view resource.
+   *
+   * @deprecated Use the {@link HotelPerformanceViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromHotelPerformanceViewName(
       String hotelPerformanceViewName) {
     return HOTEL_PERFORMANCE_VIEW_PATH_TEMPLATE.parse(hotelPerformanceViewName).get("customer");

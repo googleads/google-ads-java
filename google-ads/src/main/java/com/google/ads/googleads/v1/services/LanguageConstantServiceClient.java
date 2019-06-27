@@ -104,7 +104,10 @@ public class LanguageConstantServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a language_constant resource.
+   *
+   * @deprecated Use the {@link LanguageConstantName} class instead.
    */
+  @Deprecated
   public static final String formatLanguageConstantName(String languageConstant) {
     return LANGUAGE_CONSTANT_PATH_TEMPLATE.instantiate("language_constant", languageConstant);
   }
@@ -112,7 +115,10 @@ public class LanguageConstantServiceClient implements BackgroundResource {
   /**
    * Parses the language_constant from the given fully-qualified path which represents a
    * language_constant resource.
+   *
+   * @deprecated Use the {@link LanguageConstantName} class instead.
    */
+  @Deprecated
   public static final String parseLanguageConstantFromLanguageConstantName(
       String languageConstantName) {
     return LANGUAGE_CONSTANT_PATH_TEMPLATE.parse(languageConstantName).get("language_constant");

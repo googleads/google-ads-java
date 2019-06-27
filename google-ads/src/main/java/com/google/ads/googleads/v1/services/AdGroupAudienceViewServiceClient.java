@@ -106,7 +106,10 @@ public class AdGroupAudienceViewServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a ad_group_audience_view
    * resource.
+   *
+   * @deprecated Use the {@link AdGroupAudienceViewName} class instead.
    */
+  @Deprecated
   public static final String formatAdGroupAudienceViewName(
       String customer, String adGroupAudienceView) {
     return AD_GROUP_AUDIENCE_VIEW_PATH_TEMPLATE.instantiate(
@@ -117,7 +120,10 @@ public class AdGroupAudienceViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * ad_group_audience_view resource.
+   *
+   * @deprecated Use the {@link AdGroupAudienceViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromAdGroupAudienceViewName(
       String adGroupAudienceViewName) {
     return AD_GROUP_AUDIENCE_VIEW_PATH_TEMPLATE.parse(adGroupAudienceViewName).get("customer");
@@ -126,7 +132,10 @@ public class AdGroupAudienceViewServiceClient implements BackgroundResource {
   /**
    * Parses the ad_group_audience_view from the given fully-qualified path which represents a
    * ad_group_audience_view resource.
+   *
+   * @deprecated Use the {@link AdGroupAudienceViewName} class instead.
    */
+  @Deprecated
   public static final String parseAdGroupAudienceViewFromAdGroupAudienceViewName(
       String adGroupAudienceViewName) {
     return AD_GROUP_AUDIENCE_VIEW_PATH_TEMPLATE

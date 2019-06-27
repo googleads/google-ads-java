@@ -101,90 +101,92 @@ public final class KeywordPlanServiceProto {
       "n.proto\032\034google/api/annotations.proto\032 g" +
       "oogle/protobuf/field_mask.proto\032\036google/" +
       "protobuf/wrappers.proto\032\027google/rpc/stat" +
-      "us.proto\".\n\025GetKeywordPlanRequest\022\025\n\rres" +
-      "ource_name\030\001 \001(\t\"\254\001\n\031MutateKeywordPlansR" +
-      "equest\022\023\n\013customer_id\030\001 \001(\t\022J\n\noperation" +
-      "s\030\002 \003(\01326.google.ads.googleads.v1.servic" +
-      "es.KeywordPlanOperation\022\027\n\017partial_failu" +
-      "re\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\352\001\n\024Keyw" +
-      "ordPlanOperation\022/\n\013update_mask\030\004 \001(\0132\032." +
-      "google.protobuf.FieldMask\022@\n\006create\030\001 \001(" +
-      "\0132..google.ads.googleads.v1.resources.Ke" +
-      "ywordPlanH\000\022@\n\006update\030\002 \001(\0132..google.ads" +
-      ".googleads.v1.resources.KeywordPlanH\000\022\020\n" +
-      "\006remove\030\003 \001(\tH\000B\013\n\toperation\"\234\001\n\032MutateK" +
-      "eywordPlansResponse\0221\n\025partial_failure_e" +
-      "rror\030\003 \001(\0132\022.google.rpc.Status\022K\n\007result" +
-      "s\030\002 \003(\0132:.google.ads.googleads.v1.servic" +
-      "es.MutateKeywordPlansResult\"1\n\030MutateKey" +
-      "wordPlansResult\022\025\n\rresource_name\030\001 \001(\t\"6" +
-      "\n\036GenerateForecastMetricsRequest\022\024\n\014keyw" +
-      "ord_plan\030\001 \001(\t\"\257\002\n\037GenerateForecastMetri" +
-      "csResponse\022Y\n\022campaign_forecasts\030\001 \003(\0132=" +
-      ".google.ads.googleads.v1.services.Keywor" +
-      "dPlanCampaignForecast\022X\n\022ad_group_foreca" +
-      "sts\030\002 \003(\0132<.google.ads.googleads.v1.serv" +
-      "ices.KeywordPlanAdGroupForecast\022W\n\021keywo" +
-      "rd_forecasts\030\003 \003(\0132<.google.ads.googlead" +
-      "s.v1.services.KeywordPlanKeywordForecast" +
-      "\"\250\001\n\033KeywordPlanCampaignForecast\022;\n\025keyw" +
-      "ord_plan_campaign\030\001 \001(\0132\034.google.protobu" +
-      "f.StringValue\022L\n\021campaign_forecast\030\002 \001(\013" +
-      "21.google.ads.googleads.v1.services.Fore" +
-      "castMetrics\"\247\001\n\032KeywordPlanAdGroupForeca" +
-      "st\022;\n\025keyword_plan_ad_group\030\001 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\022L\n\021ad_group_fore" +
-      "cast\030\002 \001(\01321.google.ads.googleads.v1.ser" +
-      "vices.ForecastMetrics\"\256\001\n\032KeywordPlanKey" +
-      "wordForecast\022C\n\035keyword_plan_ad_group_ke" +
-      "yword\030\001 \001(\0132\034.google.protobuf.StringValu" +
-      "e\022K\n\020keyword_forecast\030\002 \001(\01321.google.ads" +
-      ".googleads.v1.services.ForecastMetrics\"\201" +
-      "\002\n\017ForecastMetrics\0221\n\013impressions\030\001 \001(\0132" +
-      "\034.google.protobuf.DoubleValue\022)\n\003ctr\030\002 \001" +
-      "(\0132\034.google.protobuf.DoubleValue\0220\n\013aver" +
-      "age_cpc\030\003 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022,\n\006clicks\030\005 \001(\0132\034.google.protobuf.Dou" +
-      "bleValue\0220\n\013cost_micros\030\006 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\"8\n GenerateHistorical" +
-      "MetricsRequest\022\024\n\014keyword_plan\030\001 \001(\t\"{\n!" +
-      "GenerateHistoricalMetricsResponse\022V\n\007met" +
-      "rics\030\001 \003(\0132E.google.ads.googleads.v1.ser" +
-      "vices.KeywordPlanKeywordHistoricalMetric" +
-      "s\"\260\001\n#KeywordPlanKeywordHistoricalMetric" +
-      "s\0222\n\014search_query\030\001 \001(\0132\034.google.protobu" +
-      "f.StringValue\022U\n\017keyword_metrics\030\002 \001(\0132<" +
-      ".google.ads.googleads.v1.common.KeywordP" +
-      "lanHistoricalMetrics2\206\007\n\022KeywordPlanServ" +
-      "ice\022\261\001\n\016GetKeywordPlan\0227.google.ads.goog" +
-      "leads.v1.services.GetKeywordPlanRequest\032" +
-      "..google.ads.googleads.v1.resources.Keyw" +
-      "ordPlan\"6\202\323\344\223\0020\022./v1/{resource_name=cust" +
-      "omers/*/keywordPlans/*}\022\315\001\n\022MutateKeywor" +
-      "dPlans\022;.google.ads.googleads.v1.service" +
-      "s.MutateKeywordPlansRequest\032<.google.ads" +
-      ".googleads.v1.services.MutateKeywordPlan" +
-      "sResponse\"<\202\323\344\223\0026\"1/v1/customers/{custom" +
-      "er_id=*}/keywordPlans:mutate:\001*\022\360\001\n\027Gene" +
-      "rateForecastMetrics\022@.google.ads.googlea" +
-      "ds.v1.services.GenerateForecastMetricsRe" +
-      "quest\032A.google.ads.googleads.v1.services" +
-      ".GenerateForecastMetricsResponse\"P\202\323\344\223\002J" +
-      "\"E/v1/{keyword_plan=customers/*/keywordP" +
-      "lans/*}:generateForecastMetrics:\001*\022\370\001\n\031G" +
-      "enerateHistoricalMetrics\022B.google.ads.go" +
-      "ogleads.v1.services.GenerateHistoricalMe" +
-      "tricsRequest\032C.google.ads.googleads.v1.s" +
-      "ervices.GenerateHistoricalMetricsRespons" +
-      "e\"R\202\323\344\223\002L\"G/v1/{keyword_plan=customers/*" +
-      "/keywordPlans/*}:generateHistoricalMetri" +
-      "cs:\001*B\376\001\n$com.google.ads.googleads.v1.se" +
-      "rvicesB\027KeywordPlanServiceProtoP\001ZHgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v1/services;services\242\002\003GAA\252\002 Goog" +
-      "le.Ads.GoogleAds.V1.Services\312\002 Google\\Ad" +
-      "s\\GoogleAds\\V1\\Services\352\002$Google::Ads::G" +
-      "oogleAds::V1::Servicesb\006proto3"
+      "us.proto\032\027google/api/client.proto\".\n\025Get" +
+      "KeywordPlanRequest\022\025\n\rresource_name\030\001 \001(" +
+      "\t\"\254\001\n\031MutateKeywordPlansRequest\022\023\n\013custo" +
+      "mer_id\030\001 \001(\t\022J\n\noperations\030\002 \003(\01326.googl" +
+      "e.ads.googleads.v1.services.KeywordPlanO" +
+      "peration\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rval" +
+      "idate_only\030\004 \001(\010\"\352\001\n\024KeywordPlanOperatio" +
+      "n\022/\n\013update_mask\030\004 \001(\0132\032.google.protobuf" +
+      ".FieldMask\022@\n\006create\030\001 \001(\0132..google.ads." +
+      "googleads.v1.resources.KeywordPlanH\000\022@\n\006" +
+      "update\030\002 \001(\0132..google.ads.googleads.v1.r" +
+      "esources.KeywordPlanH\000\022\020\n\006remove\030\003 \001(\tH\000" +
+      "B\013\n\toperation\"\234\001\n\032MutateKeywordPlansResp" +
+      "onse\0221\n\025partial_failure_error\030\003 \001(\0132\022.go" +
+      "ogle.rpc.Status\022K\n\007results\030\002 \003(\0132:.googl" +
+      "e.ads.googleads.v1.services.MutateKeywor" +
+      "dPlansResult\"1\n\030MutateKeywordPlansResult" +
+      "\022\025\n\rresource_name\030\001 \001(\t\"6\n\036GenerateForec" +
+      "astMetricsRequest\022\024\n\014keyword_plan\030\001 \001(\t\"" +
+      "\257\002\n\037GenerateForecastMetricsResponse\022Y\n\022c" +
+      "ampaign_forecasts\030\001 \003(\0132=.google.ads.goo" +
+      "gleads.v1.services.KeywordPlanCampaignFo" +
+      "recast\022X\n\022ad_group_forecasts\030\002 \003(\0132<.goo" +
+      "gle.ads.googleads.v1.services.KeywordPla" +
+      "nAdGroupForecast\022W\n\021keyword_forecasts\030\003 " +
+      "\003(\0132<.google.ads.googleads.v1.services.K" +
+      "eywordPlanKeywordForecast\"\250\001\n\033KeywordPla" +
+      "nCampaignForecast\022;\n\025keyword_plan_campai" +
+      "gn\030\001 \001(\0132\034.google.protobuf.StringValue\022L" +
+      "\n\021campaign_forecast\030\002 \001(\01321.google.ads.g" +
+      "oogleads.v1.services.ForecastMetrics\"\247\001\n" +
+      "\032KeywordPlanAdGroupForecast\022;\n\025keyword_p" +
+      "lan_ad_group\030\001 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022L\n\021ad_group_forecast\030\002 \001(\01321.go" +
+      "ogle.ads.googleads.v1.services.ForecastM" +
+      "etrics\"\256\001\n\032KeywordPlanKeywordForecast\022C\n" +
+      "\035keyword_plan_ad_group_keyword\030\001 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\022K\n\020keyword_fo" +
+      "recast\030\002 \001(\01321.google.ads.googleads.v1.s" +
+      "ervices.ForecastMetrics\"\201\002\n\017ForecastMetr" +
+      "ics\0221\n\013impressions\030\001 \001(\0132\034.google.protob" +
+      "uf.DoubleValue\022)\n\003ctr\030\002 \001(\0132\034.google.pro" +
+      "tobuf.DoubleValue\0220\n\013average_cpc\030\003 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022,\n\006clicks\030\005 " +
+      "\001(\0132\034.google.protobuf.DoubleValue\0220\n\013cos" +
+      "t_micros\030\006 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\"8\n GenerateHistoricalMetricsRequest\022" +
+      "\024\n\014keyword_plan\030\001 \001(\t\"{\n!GenerateHistori" +
+      "calMetricsResponse\022V\n\007metrics\030\001 \003(\0132E.go" +
+      "ogle.ads.googleads.v1.services.KeywordPl" +
+      "anKeywordHistoricalMetrics\"\260\001\n#KeywordPl" +
+      "anKeywordHistoricalMetrics\0222\n\014search_que" +
+      "ry\030\001 \001(\0132\034.google.protobuf.StringValue\022U" +
+      "\n\017keyword_metrics\030\002 \001(\0132<.google.ads.goo" +
+      "gleads.v1.common.KeywordPlanHistoricalMe" +
+      "trics2\243\007\n\022KeywordPlanService\022\261\001\n\016GetKeyw" +
+      "ordPlan\0227.google.ads.googleads.v1.servic" +
+      "es.GetKeywordPlanRequest\032..google.ads.go" +
+      "ogleads.v1.resources.KeywordPlan\"6\202\323\344\223\0020" +
+      "\022./v1/{resource_name=customers/*/keyword" +
+      "Plans/*}\022\315\001\n\022MutateKeywordPlans\022;.google" +
+      ".ads.googleads.v1.services.MutateKeyword" +
+      "PlansRequest\032<.google.ads.googleads.v1.s" +
+      "ervices.MutateKeywordPlansResponse\"<\202\323\344\223" +
+      "\0026\"1/v1/customers/{customer_id=*}/keywor" +
+      "dPlans:mutate:\001*\022\360\001\n\027GenerateForecastMet" +
+      "rics\022@.google.ads.googleads.v1.services." +
+      "GenerateForecastMetricsRequest\032A.google." +
+      "ads.googleads.v1.services.GenerateForeca" +
+      "stMetricsResponse\"P\202\323\344\223\002J\"E/v1/{keyword_" +
+      "plan=customers/*/keywordPlans/*}:generat" +
+      "eForecastMetrics:\001*\022\370\001\n\031GenerateHistoric" +
+      "alMetrics\022B.google.ads.googleads.v1.serv" +
+      "ices.GenerateHistoricalMetricsRequest\032C." +
+      "google.ads.googleads.v1.services.Generat" +
+      "eHistoricalMetricsResponse\"R\202\323\344\223\002L\"G/v1/" +
+      "{keyword_plan=customers/*/keywordPlans/*" +
+      "}:generateHistoricalMetrics:\001*\032\033\312A\030googl" +
+      "eads.googleapis.comB\376\001\n$com.google.ads.g" +
+      "oogleads.v1.servicesB\027KeywordPlanService" +
+      "ProtoP\001ZHgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v1/services;service" +
+      "s\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Servic" +
+      "es\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$" +
+      "Google::Ads::GoogleAds::V1::Servicesb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -203,6 +205,7 @@ public final class KeywordPlanServiceProto {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetKeywordPlanRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -290,6 +293,7 @@ public final class KeywordPlanServiceProto {
         new java.lang.String[] { "SearchQuery", "KeywordMetrics", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -299,6 +303,7 @@ public final class KeywordPlanServiceProto {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

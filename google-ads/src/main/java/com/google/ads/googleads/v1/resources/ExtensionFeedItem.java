@@ -236,7 +236,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 130: {
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               adSchedules_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.AdScheduleInfo>();
               mutable_bitField0_ |= 0x00000010;
             }
@@ -292,7 +292,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -306,7 +306,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
         adSchedules_ = java.util.Collections.unmodifiableList(adSchedules_);
       }
       this.unknownFields = unknownFields.build();
@@ -1365,93 +1365,88 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.ExtensionFeedItem other = (com.google.ads.googleads.v1.resources.ExtensionFeedItem) obj;
 
-    boolean result = true;
-    result = result && getResourceName()
-        .equals(other.getResourceName());
-    result = result && extensionType_ == other.extensionType_;
-    result = result && (hasStartDateTime() == other.hasStartDateTime());
+    if (!getResourceName()
+        .equals(other.getResourceName())) return false;
+    if (extensionType_ != other.extensionType_) return false;
+    if (hasStartDateTime() != other.hasStartDateTime()) return false;
     if (hasStartDateTime()) {
-      result = result && getStartDateTime()
-          .equals(other.getStartDateTime());
+      if (!getStartDateTime()
+          .equals(other.getStartDateTime())) return false;
     }
-    result = result && (hasEndDateTime() == other.hasEndDateTime());
+    if (hasEndDateTime() != other.hasEndDateTime()) return false;
     if (hasEndDateTime()) {
-      result = result && getEndDateTime()
-          .equals(other.getEndDateTime());
+      if (!getEndDateTime()
+          .equals(other.getEndDateTime())) return false;
     }
-    result = result && getAdSchedulesList()
-        .equals(other.getAdSchedulesList());
-    result = result && device_ == other.device_;
-    result = result && (hasTargetedGeoTargetConstant() == other.hasTargetedGeoTargetConstant());
+    if (!getAdSchedulesList()
+        .equals(other.getAdSchedulesList())) return false;
+    if (device_ != other.device_) return false;
+    if (hasTargetedGeoTargetConstant() != other.hasTargetedGeoTargetConstant()) return false;
     if (hasTargetedGeoTargetConstant()) {
-      result = result && getTargetedGeoTargetConstant()
-          .equals(other.getTargetedGeoTargetConstant());
+      if (!getTargetedGeoTargetConstant()
+          .equals(other.getTargetedGeoTargetConstant())) return false;
     }
-    result = result && status_ == other.status_;
-    result = result && getExtensionCase().equals(
-        other.getExtensionCase());
-    if (!result) return false;
+    if (status_ != other.status_) return false;
+    if (!getExtensionCase().equals(other.getExtensionCase())) return false;
     switch (extensionCase_) {
       case 2:
-        result = result && getSitelinkFeedItem()
-            .equals(other.getSitelinkFeedItem());
+        if (!getSitelinkFeedItem()
+            .equals(other.getSitelinkFeedItem())) return false;
         break;
       case 3:
-        result = result && getStructuredSnippetFeedItem()
-            .equals(other.getStructuredSnippetFeedItem());
+        if (!getStructuredSnippetFeedItem()
+            .equals(other.getStructuredSnippetFeedItem())) return false;
         break;
       case 7:
-        result = result && getAppFeedItem()
-            .equals(other.getAppFeedItem());
+        if (!getAppFeedItem()
+            .equals(other.getAppFeedItem())) return false;
         break;
       case 8:
-        result = result && getCallFeedItem()
-            .equals(other.getCallFeedItem());
+        if (!getCallFeedItem()
+            .equals(other.getCallFeedItem())) return false;
         break;
       case 9:
-        result = result && getCalloutFeedItem()
-            .equals(other.getCalloutFeedItem());
+        if (!getCalloutFeedItem()
+            .equals(other.getCalloutFeedItem())) return false;
         break;
       case 10:
-        result = result && getTextMessageFeedItem()
-            .equals(other.getTextMessageFeedItem());
+        if (!getTextMessageFeedItem()
+            .equals(other.getTextMessageFeedItem())) return false;
         break;
       case 11:
-        result = result && getPriceFeedItem()
-            .equals(other.getPriceFeedItem());
+        if (!getPriceFeedItem()
+            .equals(other.getPriceFeedItem())) return false;
         break;
       case 12:
-        result = result && getPromotionFeedItem()
-            .equals(other.getPromotionFeedItem());
+        if (!getPromotionFeedItem()
+            .equals(other.getPromotionFeedItem())) return false;
         break;
       case 14:
-        result = result && getLocationFeedItem()
-            .equals(other.getLocationFeedItem());
+        if (!getLocationFeedItem()
+            .equals(other.getLocationFeedItem())) return false;
         break;
       case 15:
-        result = result && getAffiliateLocationFeedItem()
-            .equals(other.getAffiliateLocationFeedItem());
+        if (!getAffiliateLocationFeedItem()
+            .equals(other.getAffiliateLocationFeedItem())) return false;
         break;
       case 0:
       default:
     }
-    result = result && getServingResourceTargetingCase().equals(
-        other.getServingResourceTargetingCase());
-    if (!result) return false;
+    if (!getServingResourceTargetingCase().equals(other.getServingResourceTargetingCase())) return false;
     switch (servingResourceTargetingCase_) {
       case 18:
-        result = result && getTargetedCampaign()
-            .equals(other.getTargetedCampaign());
+        if (!getTargetedCampaign()
+            .equals(other.getTargetedCampaign())) return false;
         break;
       case 19:
-        result = result && getTargetedAdGroup()
-            .equals(other.getTargetedAdGroup());
+        if (!getTargetedAdGroup()
+            .equals(other.getTargetedAdGroup())) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1756,7 +1751,7 @@ private static final long serialVersionUID = 0L;
         result.endDateTime_ = endDateTimeBuilder_.build();
       }
       if (adSchedulesBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           adSchedules_ = java.util.Collections.unmodifiableList(adSchedules_);
           bitField0_ = (bitField0_ & ~0x00000010);
         }
@@ -1864,35 +1859,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2241,7 +2236,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue startDateTime_ = null;
+    private com.google.protobuf.StringValue startDateTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> startDateTimeBuilder_;
     /**
@@ -2412,7 +2407,7 @@ private static final long serialVersionUID = 0L;
       return startDateTimeBuilder_;
     }
 
-    private com.google.protobuf.StringValue endDateTime_ = null;
+    private com.google.protobuf.StringValue endDateTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> endDateTimeBuilder_;
     /**
@@ -2595,7 +2590,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.AdScheduleInfo> adSchedules_ =
       java.util.Collections.emptyList();
     private void ensureAdSchedulesIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         adSchedules_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.AdScheduleInfo>(adSchedules_);
         bitField0_ |= 0x00000010;
        }
@@ -2932,7 +2927,7 @@ private static final long serialVersionUID = 0L;
         adSchedulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.AdScheduleInfo, com.google.ads.googleads.v1.common.AdScheduleInfo.Builder, com.google.ads.googleads.v1.common.AdScheduleInfoOrBuilder>(
                 adSchedules_,
-                ((bitField0_ & 0x00000010) == 0x00000010),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         adSchedules_ = null;
@@ -3005,7 +3000,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue targetedGeoTargetConstant_ = null;
+    private com.google.protobuf.StringValue targetedGeoTargetConstant_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> targetedGeoTargetConstantBuilder_;
     /**
@@ -5321,7 +5316,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

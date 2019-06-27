@@ -103,7 +103,12 @@ public class SharedSetServiceClient implements BackgroundResource {
   private static final PathTemplate SHARED_SET_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/sharedSets/{shared_set}");
 
-  /** Formats a string containing the fully-qualified path to represent a shared_set resource. */
+  /**
+   * Formats a string containing the fully-qualified path to represent a shared_set resource.
+   *
+   * @deprecated Use the {@link SharedSetName} class instead.
+   */
+  @Deprecated
   public static final String formatSharedSetName(String customer, String sharedSet) {
     return SHARED_SET_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -112,7 +117,10 @@ public class SharedSetServiceClient implements BackgroundResource {
 
   /**
    * Parses the customer from the given fully-qualified path which represents a shared_set resource.
+   *
+   * @deprecated Use the {@link SharedSetName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromSharedSetName(String sharedSetName) {
     return SHARED_SET_PATH_TEMPLATE.parse(sharedSetName).get("customer");
   }
@@ -120,7 +128,10 @@ public class SharedSetServiceClient implements BackgroundResource {
   /**
    * Parses the shared_set from the given fully-qualified path which represents a shared_set
    * resource.
+   *
+   * @deprecated Use the {@link SharedSetName} class instead.
    */
+  @Deprecated
   public static final String parseSharedSetFromSharedSetName(String sharedSetName) {
     return SHARED_SET_PATH_TEMPLATE.parse(sharedSetName).get("shared_set");
   }

@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -390,7 +390,7 @@ public class AdGroupFeedServiceClientTest {
     AdGroupFeed actualResponse = client.getAdGroupFeed(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockAdGroupFeedService.getRequests();
+    List<AbstractMessage> actualRequests = mockAdGroupFeedService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetAdGroupFeedRequest actualRequest = (GetAdGroupFeedRequest) actualRequests.get(0);
 
@@ -433,7 +433,7 @@ public class AdGroupFeedServiceClientTest {
         client.mutateAdGroupFeeds(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockAdGroupFeedService.getRequests();
+    List<AbstractMessage> actualRequests = mockAdGroupFeedService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateAdGroupFeedsRequest actualRequest = (MutateAdGroupFeedsRequest) actualRequests.get(0);
 
@@ -478,7 +478,7 @@ public class AdGroupFeedServiceClientTest {
     MutateAdGroupFeedsResponse actualResponse = client.mutateAdGroupFeeds(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockAdGroupFeedService.getRequests();
+    List<AbstractMessage> actualRequests = mockAdGroupFeedService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateAdGroupFeedsRequest actualRequest = (MutateAdGroupFeedsRequest) actualRequests.get(0);
 

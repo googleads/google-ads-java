@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -388,7 +388,7 @@ public class CustomerServiceClientTest {
     Customer actualResponse = client.getCustomer(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCustomerService.getRequests();
+    List<AbstractMessage> actualRequests = mockCustomerService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetCustomerRequest actualRequest = (GetCustomerRequest) actualRequests.get(0);
 
@@ -429,7 +429,7 @@ public class CustomerServiceClientTest {
         client.mutateCustomer(customerId, operation, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCustomerService.getRequests();
+    List<AbstractMessage> actualRequests = mockCustomerService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCustomerRequest actualRequest = (MutateCustomerRequest) actualRequests.get(0);
 
@@ -472,7 +472,7 @@ public class CustomerServiceClientTest {
     MutateCustomerResponse actualResponse = client.mutateCustomer(customerId, operation);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCustomerService.getRequests();
+    List<AbstractMessage> actualRequests = mockCustomerService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCustomerRequest actualRequest = (MutateCustomerRequest) actualRequests.get(0);
 
@@ -516,7 +516,7 @@ public class CustomerServiceClientTest {
         client.createCustomerClient(customerId, customerClient);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCustomerService.getRequests();
+    List<AbstractMessage> actualRequests = mockCustomerService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     CreateCustomerClientRequest actualRequest = (CreateCustomerClientRequest) actualRequests.get(0);
 

@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -391,7 +391,7 @@ public class CustomerLabelServiceClientTest {
     CustomerLabel actualResponse = client.getCustomerLabel(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCustomerLabelService.getRequests();
+    List<AbstractMessage> actualRequests = mockCustomerLabelService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetCustomerLabelRequest actualRequest = (GetCustomerLabelRequest) actualRequests.get(0);
 
@@ -435,7 +435,7 @@ public class CustomerLabelServiceClientTest {
         client.mutateCustomerLabels(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCustomerLabelService.getRequests();
+    List<AbstractMessage> actualRequests = mockCustomerLabelService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCustomerLabelsRequest actualRequest = (MutateCustomerLabelsRequest) actualRequests.get(0);
 
@@ -482,7 +482,7 @@ public class CustomerLabelServiceClientTest {
         client.mutateCustomerLabels(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCustomerLabelService.getRequests();
+    List<AbstractMessage> actualRequests = mockCustomerLabelService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCustomerLabelsRequest actualRequest = (MutateCustomerLabelsRequest) actualRequests.get(0);
 

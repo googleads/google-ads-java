@@ -106,7 +106,10 @@ public class OperatingSystemVersionConstantServiceClient implements BackgroundRe
   /**
    * Formats a string containing the fully-qualified path to represent a
    * operating_system_version_constant resource.
+   *
+   * @deprecated Use the {@link OperatingSystemVersionConstantName} class instead.
    */
+  @Deprecated
   public static final String formatOperatingSystemVersionConstantName(
       String operatingSystemVersionConstant) {
     return OPERATING_SYSTEM_VERSION_CONSTANT_PATH_TEMPLATE.instantiate(
@@ -116,7 +119,10 @@ public class OperatingSystemVersionConstantServiceClient implements BackgroundRe
   /**
    * Parses the operating_system_version_constant from the given fully-qualified path which
    * represents a operating_system_version_constant resource.
+   *
+   * @deprecated Use the {@link OperatingSystemVersionConstantName} class instead.
    */
+  @Deprecated
   public static final String
       parseOperatingSystemVersionConstantFromOperatingSystemVersionConstantName(
           String operatingSystemVersionConstantName) {

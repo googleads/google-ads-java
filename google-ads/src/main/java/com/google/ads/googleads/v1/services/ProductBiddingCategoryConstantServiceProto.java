@@ -33,23 +33,24 @@ public final class ProductBiddingCategoryConstantServiceProto {
       "to\022 google.ads.googleads.v1.services\032Igo" +
       "ogle/ads/googleads/v1/resources/product_" +
       "bidding_category_constant.proto\032\034google/" +
-      "api/annotations.proto\"A\n(GetProductBiddi" +
-      "ngCategoryConstantRequest\022\025\n\rresource_na" +
-      "me\030\001 \001(\t2\233\002\n%ProductBiddingCategoryConst" +
-      "antService\022\361\001\n!GetProductBiddingCategory" +
-      "Constant\022J.google.ads.googleads.v1.servi" +
-      "ces.GetProductBiddingCategoryConstantReq" +
-      "uest\032A.google.ads.googleads.v1.resources" +
-      ".ProductBiddingCategoryConstant\"=\202\323\344\223\0027\022" +
-      "5/v1/{resource_name=productBiddingCatego" +
-      "ryConstants/*}B\221\002\n$com.google.ads.google" +
-      "ads.v1.servicesB*ProductBiddingCategoryC" +
-      "onstantServiceProtoP\001ZHgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v1/se" +
-      "rvices;services\242\002\003GAA\252\002 Google.Ads.Googl" +
-      "eAds.V1.Services\312\002 Google\\Ads\\GoogleAds\\" +
-      "V1\\Services\352\002$Google::Ads::GoogleAds::V1" +
-      "::Servicesb\006proto3"
+      "api/annotations.proto\032\027google/api/client" +
+      ".proto\"A\n(GetProductBiddingCategoryConst" +
+      "antRequest\022\025\n\rresource_name\030\001 \001(\t2\270\002\n%Pr" +
+      "oductBiddingCategoryConstantService\022\361\001\n!" +
+      "GetProductBiddingCategoryConstant\022J.goog" +
+      "le.ads.googleads.v1.services.GetProductB" +
+      "iddingCategoryConstantRequest\032A.google.a" +
+      "ds.googleads.v1.resources.ProductBidding" +
+      "CategoryConstant\"=\202\323\344\223\0027\0225/v1/{resource_" +
+      "name=productBiddingCategoryConstants/*}\032" +
+      "\033\312A\030googleads.googleapis.comB\221\002\n$com.goo" +
+      "gle.ads.googleads.v1.servicesB*ProductBi" +
+      "ddingCategoryConstantServiceProtoP\001ZHgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v1/services;services\242\002\003GAA\252\002 Go" +
+      "ogle.Ads.GoogleAds.V1.Services\312\002 Google\\" +
+      "Ads\\GoogleAds\\V1\\Services\352\002$Google::Ads:" +
+      ":GoogleAds::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -64,6 +65,7 @@ public final class ProductBiddingCategoryConstantServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstantProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetProductBiddingCategoryConstantRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -73,11 +75,13 @@ public final class ProductBiddingCategoryConstantServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstantProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

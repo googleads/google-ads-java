@@ -106,7 +106,10 @@ public class CampaignCriterionSimulationServiceClient implements BackgroundResou
   /**
    * Formats a string containing the fully-qualified path to represent a
    * campaign_criterion_simulation resource.
+   *
+   * @deprecated Use the {@link CampaignCriterionSimulationName} class instead.
    */
+  @Deprecated
   public static final String formatCampaignCriterionSimulationName(
       String customer, String campaignCriterionSimulation) {
     return CAMPAIGN_CRITERION_SIMULATION_PATH_TEMPLATE.instantiate(
@@ -117,7 +120,10 @@ public class CampaignCriterionSimulationServiceClient implements BackgroundResou
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * campaign_criterion_simulation resource.
+   *
+   * @deprecated Use the {@link CampaignCriterionSimulationName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromCampaignCriterionSimulationName(
       String campaignCriterionSimulationName) {
     return CAMPAIGN_CRITERION_SIMULATION_PATH_TEMPLATE
@@ -128,7 +134,10 @@ public class CampaignCriterionSimulationServiceClient implements BackgroundResou
   /**
    * Parses the campaign_criterion_simulation from the given fully-qualified path which represents a
    * campaign_criterion_simulation resource.
+   *
+   * @deprecated Use the {@link CampaignCriterionSimulationName} class instead.
    */
+  @Deprecated
   public static final String parseCampaignCriterionSimulationFromCampaignCriterionSimulationName(
       String campaignCriterionSimulationName) {
     return CAMPAIGN_CRITERION_SIMULATION_PATH_TEMPLATE

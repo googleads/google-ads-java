@@ -107,7 +107,10 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a customer_manager_link
    * resource.
+   *
+   * @deprecated Use the {@link CustomerManagerLinkName} class instead.
    */
+  @Deprecated
   public static final String formatCustomerManagerLinkName(
       String customer, String customerManagerLink) {
     return CUSTOMER_MANAGER_LINK_PATH_TEMPLATE.instantiate(
@@ -118,7 +121,10 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * customer_manager_link resource.
+   *
+   * @deprecated Use the {@link CustomerManagerLinkName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromCustomerManagerLinkName(
       String customerManagerLinkName) {
     return CUSTOMER_MANAGER_LINK_PATH_TEMPLATE.parse(customerManagerLinkName).get("customer");
@@ -127,7 +133,10 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
   /**
    * Parses the customer_manager_link from the given fully-qualified path which represents a
    * customer_manager_link resource.
+   *
+   * @deprecated Use the {@link CustomerManagerLinkName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerManagerLinkFromCustomerManagerLinkName(
       String customerManagerLinkName) {
     return CUSTOMER_MANAGER_LINK_PATH_TEMPLATE

@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -392,7 +392,7 @@ public class ConversionActionServiceClientTest {
     ConversionAction actualResponse = client.getConversionAction(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockConversionActionService.getRequests();
+    List<AbstractMessage> actualRequests = mockConversionActionService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetConversionActionRequest actualRequest = (GetConversionActionRequest) actualRequests.get(0);
 
@@ -437,7 +437,7 @@ public class ConversionActionServiceClientTest {
         client.mutateConversionActions(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockConversionActionService.getRequests();
+    List<AbstractMessage> actualRequests = mockConversionActionService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateConversionActionsRequest actualRequest =
         (MutateConversionActionsRequest) actualRequests.get(0);
@@ -485,7 +485,7 @@ public class ConversionActionServiceClientTest {
         client.mutateConversionActions(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockConversionActionService.getRequests();
+    List<AbstractMessage> actualRequests = mockConversionActionService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateConversionActionsRequest actualRequest =
         (MutateConversionActionsRequest) actualRequests.get(0);

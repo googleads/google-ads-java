@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -391,7 +391,7 @@ public class DetailPlacementViewServiceClientTest {
     DetailPlacementView actualResponse = client.getDetailPlacementView(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockDetailPlacementViewService.getRequests();
+    List<AbstractMessage> actualRequests = mockDetailPlacementViewService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetDetailPlacementViewRequest actualRequest =
         (GetDetailPlacementViewRequest) actualRequests.get(0);

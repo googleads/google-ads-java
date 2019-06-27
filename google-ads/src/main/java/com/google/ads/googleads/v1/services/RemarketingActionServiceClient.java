@@ -107,7 +107,10 @@ public class RemarketingActionServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a remarketing_action
    * resource.
+   *
+   * @deprecated Use the {@link RemarketingActionName} class instead.
    */
+  @Deprecated
   public static final String formatRemarketingActionName(
       String customer, String remarketingAction) {
     return REMARKETING_ACTION_PATH_TEMPLATE.instantiate(
@@ -118,7 +121,10 @@ public class RemarketingActionServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a remarketing_action
    * resource.
+   *
+   * @deprecated Use the {@link RemarketingActionName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromRemarketingActionName(String remarketingActionName) {
     return REMARKETING_ACTION_PATH_TEMPLATE.parse(remarketingActionName).get("customer");
   }
@@ -126,7 +132,10 @@ public class RemarketingActionServiceClient implements BackgroundResource {
   /**
    * Parses the remarketing_action from the given fully-qualified path which represents a
    * remarketing_action resource.
+   *
+   * @deprecated Use the {@link RemarketingActionName} class instead.
    */
+  @Deprecated
   public static final String parseRemarketingActionFromRemarketingActionName(
       String remarketingActionName) {
     return REMARKETING_ACTION_PATH_TEMPLATE.parse(remarketingActionName).get("remarketing_action");

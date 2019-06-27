@@ -105,7 +105,10 @@ public class HotelGroupViewServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a hotel_group_view resource.
+   *
+   * @deprecated Use the {@link HotelGroupViewName} class instead.
    */
+  @Deprecated
   public static final String formatHotelGroupViewName(String customer, String hotelGroupView) {
     return HOTEL_GROUP_VIEW_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -115,7 +118,10 @@ public class HotelGroupViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a hotel_group_view
    * resource.
+   *
+   * @deprecated Use the {@link HotelGroupViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromHotelGroupViewName(String hotelGroupViewName) {
     return HOTEL_GROUP_VIEW_PATH_TEMPLATE.parse(hotelGroupViewName).get("customer");
   }
@@ -123,7 +129,10 @@ public class HotelGroupViewServiceClient implements BackgroundResource {
   /**
    * Parses the hotel_group_view from the given fully-qualified path which represents a
    * hotel_group_view resource.
+   *
+   * @deprecated Use the {@link HotelGroupViewName} class instead.
    */
+  @Deprecated
   public static final String parseHotelGroupViewFromHotelGroupViewName(String hotelGroupViewName) {
     return HOTEL_GROUP_VIEW_PATH_TEMPLATE.parse(hotelGroupViewName).get("hotel_group_view");
   }

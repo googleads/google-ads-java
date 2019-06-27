@@ -160,7 +160,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of top slot impressions.
-   * Display network does not support this field at the ad group level.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -169,7 +169,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of top slot impressions.
-   * Display network does not support this field at the ad group level.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -178,7 +178,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of top slot impressions.
-   * Display network does not support this field at the ad group level.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>

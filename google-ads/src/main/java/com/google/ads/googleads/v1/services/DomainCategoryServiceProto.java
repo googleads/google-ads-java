@@ -32,21 +32,22 @@ public final class DomainCategoryServiceProto {
       "n_category_service.proto\022 google.ads.goo" +
       "gleads.v1.services\0327google/ads/googleads" +
       "/v1/resources/domain_category.proto\032\034goo" +
-      "gle/api/annotations.proto\"1\n\030GetDomainCa" +
-      "tegoryRequest\022\025\n\rresource_name\030\001 \001(\t2\330\001\n" +
-      "\025DomainCategoryService\022\276\001\n\021GetDomainCate" +
-      "gory\022:.google.ads.googleads.v1.services." +
-      "GetDomainCategoryRequest\0321.google.ads.go" +
-      "ogleads.v1.resources.DomainCategory\":\202\323\344" +
-      "\223\0024\0222/v1/{resource_name=customers/*/doma" +
-      "inCategories/*}B\201\002\n$com.google.ads.googl" +
-      "eads.v1.servicesB\032DomainCategoryServiceP" +
-      "rotoP\001ZHgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v1/services;services" +
-      "\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Service" +
-      "s\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$G" +
-      "oogle::Ads::GoogleAds::V1::Servicesb\006pro" +
-      "to3"
+      "gle/api/annotations.proto\032\027google/api/cl" +
+      "ient.proto\"1\n\030GetDomainCategoryRequest\022\025" +
+      "\n\rresource_name\030\001 \001(\t2\365\001\n\025DomainCategory" +
+      "Service\022\276\001\n\021GetDomainCategory\022:.google.a" +
+      "ds.googleads.v1.services.GetDomainCatego" +
+      "ryRequest\0321.google.ads.googleads.v1.reso" +
+      "urces.DomainCategory\":\202\323\344\223\0024\0222/v1/{resou" +
+      "rce_name=customers/*/domainCategories/*}" +
+      "\032\033\312A\030googleads.googleapis.comB\201\002\n$com.go" +
+      "ogle.ads.googleads.v1.servicesB\032DomainCa" +
+      "tegoryServiceProtoP\001ZHgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v1/ser" +
+      "vices;services\242\002\003GAA\252\002 Google.Ads.Google" +
+      "Ads.V1.Services\312\002 Google\\Ads\\GoogleAds\\V" +
+      "1\\Services\352\002$Google::Ads::GoogleAds::V1:" +
+      ":Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -61,6 +62,7 @@ public final class DomainCategoryServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.DomainCategoryProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetDomainCategoryRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -70,11 +72,13 @@ public final class DomainCategoryServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.DomainCategoryProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -392,7 +392,7 @@ public class KeywordPlanCampaignServiceClientTest {
     KeywordPlanCampaign actualResponse = client.getKeywordPlanCampaign(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockKeywordPlanCampaignService.getRequests();
+    List<AbstractMessage> actualRequests = mockKeywordPlanCampaignService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetKeywordPlanCampaignRequest actualRequest =
         (GetKeywordPlanCampaignRequest) actualRequests.get(0);
@@ -438,7 +438,7 @@ public class KeywordPlanCampaignServiceClientTest {
         client.mutateKeywordPlanCampaigns(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockKeywordPlanCampaignService.getRequests();
+    List<AbstractMessage> actualRequests = mockKeywordPlanCampaignService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateKeywordPlanCampaignsRequest actualRequest =
         (MutateKeywordPlanCampaignsRequest) actualRequests.get(0);
@@ -486,7 +486,7 @@ public class KeywordPlanCampaignServiceClientTest {
         client.mutateKeywordPlanCampaigns(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockKeywordPlanCampaignService.getRequests();
+    List<AbstractMessage> actualRequests = mockKeywordPlanCampaignService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateKeywordPlanCampaignsRequest actualRequest =
         (MutateKeywordPlanCampaignsRequest) actualRequests.get(0);

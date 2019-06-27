@@ -35,6 +35,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of biddable conversions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -43,6 +44,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of biddable conversions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -51,6 +53,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of biddable conversions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -60,6 +63,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected total value of biddable conversions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -68,6 +72,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected total value of biddable conversions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -76,6 +81,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected total value of biddable conversions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -160,6 +166,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of top slot impressions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -168,6 +175,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of top slot impressions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -176,6 +184,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of top slot impressions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -185,6 +194,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of biddable conversions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -193,6 +203,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of biddable conversions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -201,6 +212,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of biddable conversions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -210,6 +222,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected total value of biddable conversions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -218,6 +231,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected total value of biddable conversions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -226,6 +240,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected total value of biddable conversions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -310,6 +325,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of top slot impressions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -318,6 +334,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of top slot impressions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -326,6 +343,7 @@ public interface BidModifierSimulationPointOrBuilder extends
   /**
    * <pre>
    * Projected number of top slot impressions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>

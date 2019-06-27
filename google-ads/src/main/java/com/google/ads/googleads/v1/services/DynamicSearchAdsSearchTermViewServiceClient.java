@@ -106,7 +106,10 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
   /**
    * Formats a string containing the fully-qualified path to represent a
    * dynamic_search_ads_search_term_view resource.
+   *
+   * @deprecated Use the {@link DynamicSearchAdsSearchTermViewName} class instead.
    */
+  @Deprecated
   public static final String formatDynamicSearchAdsSearchTermViewName(
       String customer, String dynamicSearchAdsSearchTermView) {
     return DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW_PATH_TEMPLATE.instantiate(
@@ -117,7 +120,10 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * dynamic_search_ads_search_term_view resource.
+   *
+   * @deprecated Use the {@link DynamicSearchAdsSearchTermViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromDynamicSearchAdsSearchTermViewName(
       String dynamicSearchAdsSearchTermViewName) {
     return DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW_PATH_TEMPLATE
@@ -128,7 +134,10 @@ public class DynamicSearchAdsSearchTermViewServiceClient implements BackgroundRe
   /**
    * Parses the dynamic_search_ads_search_term_view from the given fully-qualified path which
    * represents a dynamic_search_ads_search_term_view resource.
+   *
+   * @deprecated Use the {@link DynamicSearchAdsSearchTermViewName} class instead.
    */
+  @Deprecated
   public static final String
       parseDynamicSearchAdsSearchTermViewFromDynamicSearchAdsSearchTermViewName(
           String dynamicSearchAdsSearchTermViewName) {

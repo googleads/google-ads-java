@@ -104,7 +104,10 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a age_range_view resource.
+   *
+   * @deprecated Use the {@link AgeRangeViewName} class instead.
    */
+  @Deprecated
   public static final String formatAgeRangeViewName(String customer, String ageRangeView) {
     return AGE_RANGE_VIEW_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -114,7 +117,10 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a age_range_view
    * resource.
+   *
+   * @deprecated Use the {@link AgeRangeViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromAgeRangeViewName(String ageRangeViewName) {
     return AGE_RANGE_VIEW_PATH_TEMPLATE.parse(ageRangeViewName).get("customer");
   }
@@ -122,7 +128,10 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
   /**
    * Parses the age_range_view from the given fully-qualified path which represents a age_range_view
    * resource.
+   *
+   * @deprecated Use the {@link AgeRangeViewName} class instead.
    */
+  @Deprecated
   public static final String parseAgeRangeViewFromAgeRangeViewName(String ageRangeViewName) {
     return AGE_RANGE_VIEW_PATH_TEMPLATE.parse(ageRangeViewName).get("age_range_view");
   }

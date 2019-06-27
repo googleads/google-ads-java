@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -390,7 +390,7 @@ public class HotelPerformanceViewServiceClientTest {
     HotelPerformanceView actualResponse = client.getHotelPerformanceView(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockHotelPerformanceViewService.getRequests();
+    List<AbstractMessage> actualRequests = mockHotelPerformanceViewService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetHotelPerformanceViewRequest actualRequest =
         (GetHotelPerformanceViewRequest) actualRequests.get(0);

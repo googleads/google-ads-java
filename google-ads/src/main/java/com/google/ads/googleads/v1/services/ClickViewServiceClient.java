@@ -102,7 +102,12 @@ public class ClickViewServiceClient implements BackgroundResource {
   private static final PathTemplate CLICK_VIEW_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/clickViews/{click_view}");
 
-  /** Formats a string containing the fully-qualified path to represent a click_view resource. */
+  /**
+   * Formats a string containing the fully-qualified path to represent a click_view resource.
+   *
+   * @deprecated Use the {@link ClickViewName} class instead.
+   */
+  @Deprecated
   public static final String formatClickViewName(String customer, String clickView) {
     return CLICK_VIEW_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -111,7 +116,10 @@ public class ClickViewServiceClient implements BackgroundResource {
 
   /**
    * Parses the customer from the given fully-qualified path which represents a click_view resource.
+   *
+   * @deprecated Use the {@link ClickViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromClickViewName(String clickViewName) {
     return CLICK_VIEW_PATH_TEMPLATE.parse(clickViewName).get("customer");
   }
@@ -119,7 +127,10 @@ public class ClickViewServiceClient implements BackgroundResource {
   /**
    * Parses the click_view from the given fully-qualified path which represents a click_view
    * resource.
+   *
+   * @deprecated Use the {@link ClickViewName} class instead.
    */
+  @Deprecated
   public static final String parseClickViewFromClickViewName(String clickViewName) {
     return CLICK_VIEW_PATH_TEMPLATE.parse(clickViewName).get("click_view");
   }

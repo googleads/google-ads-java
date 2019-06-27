@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -391,7 +391,7 @@ public class AccountBudgetProposalServiceClientTest {
     AccountBudgetProposal actualResponse = client.getAccountBudgetProposal(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockAccountBudgetProposalService.getRequests();
+    List<AbstractMessage> actualRequests = mockAccountBudgetProposalService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetAccountBudgetProposalRequest actualRequest =
         (GetAccountBudgetProposalRequest) actualRequests.get(0);
@@ -436,7 +436,7 @@ public class AccountBudgetProposalServiceClientTest {
         client.mutateAccountBudgetProposal(customerId, operation, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockAccountBudgetProposalService.getRequests();
+    List<AbstractMessage> actualRequests = mockAccountBudgetProposalService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateAccountBudgetProposalRequest actualRequest =
         (MutateAccountBudgetProposalRequest) actualRequests.get(0);
@@ -483,7 +483,7 @@ public class AccountBudgetProposalServiceClientTest {
         client.mutateAccountBudgetProposal(customerId, operation);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockAccountBudgetProposalService.getRequests();
+    List<AbstractMessage> actualRequests = mockAccountBudgetProposalService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateAccountBudgetProposalRequest actualRequest =
         (MutateAccountBudgetProposalRequest) actualRequests.get(0);

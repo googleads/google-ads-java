@@ -54,41 +54,42 @@ public final class AdGroupFeedServiceProto {
       "1/resources/ad_group_feed.proto\032\034google/" +
       "api/annotations.proto\032 google/protobuf/f" +
       "ield_mask.proto\032\036google/protobuf/wrapper" +
-      "s.proto\032\027google/rpc/status.proto\".\n\025GetA" +
-      "dGroupFeedRequest\022\025\n\rresource_name\030\001 \001(\t" +
-      "\"\254\001\n\031MutateAdGroupFeedsRequest\022\023\n\013custom" +
-      "er_id\030\001 \001(\t\022J\n\noperations\030\002 \003(\01326.google" +
-      ".ads.googleads.v1.services.AdGroupFeedOp" +
-      "eration\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvali" +
-      "date_only\030\004 \001(\010\"\352\001\n\024AdGroupFeedOperation" +
-      "\022/\n\013update_mask\030\004 \001(\0132\032.google.protobuf." +
-      "FieldMask\022@\n\006create\030\001 \001(\0132..google.ads.g" +
-      "oogleads.v1.resources.AdGroupFeedH\000\022@\n\006u" +
-      "pdate\030\002 \001(\0132..google.ads.googleads.v1.re" +
-      "sources.AdGroupFeedH\000\022\020\n\006remove\030\003 \001(\tH\000B" +
-      "\013\n\toperation\"\233\001\n\032MutateAdGroupFeedsRespo" +
-      "nse\0221\n\025partial_failure_error\030\003 \001(\0132\022.goo" +
-      "gle.rpc.Status\022J\n\007results\030\002 \003(\01329.google" +
+      "s.proto\032\027google/rpc/status.proto\032\027google" +
+      "/api/client.proto\".\n\025GetAdGroupFeedReque" +
+      "st\022\025\n\rresource_name\030\001 \001(\t\"\254\001\n\031MutateAdGr" +
+      "oupFeedsRequest\022\023\n\013customer_id\030\001 \001(\t\022J\n\n" +
+      "operations\030\002 \003(\01326.google.ads.googleads." +
+      "v1.services.AdGroupFeedOperation\022\027\n\017part" +
+      "ial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010" +
+      "\"\352\001\n\024AdGroupFeedOperation\022/\n\013update_mask" +
+      "\030\004 \001(\0132\032.google.protobuf.FieldMask\022@\n\006cr" +
+      "eate\030\001 \001(\0132..google.ads.googleads.v1.res" +
+      "ources.AdGroupFeedH\000\022@\n\006update\030\002 \001(\0132..g" +
+      "oogle.ads.googleads.v1.resources.AdGroup" +
+      "FeedH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\233\001" +
+      "\n\032MutateAdGroupFeedsResponse\0221\n\025partial_" +
+      "failure_error\030\003 \001(\0132\022.google.rpc.Status\022" +
+      "J\n\007results\030\002 \003(\01329.google.ads.googleads." +
+      "v1.services.MutateAdGroupFeedResult\"0\n\027M" +
+      "utateAdGroupFeedResult\022\025\n\rresource_name\030" +
+      "\001 \001(\t2\265\003\n\022AdGroupFeedService\022\261\001\n\016GetAdGr" +
+      "oupFeed\0227.google.ads.googleads.v1.servic" +
+      "es.GetAdGroupFeedRequest\032..google.ads.go" +
+      "ogleads.v1.resources.AdGroupFeed\"6\202\323\344\223\0020" +
+      "\022./v1/{resource_name=customers/*/adGroup" +
+      "Feeds/*}\022\315\001\n\022MutateAdGroupFeeds\022;.google" +
       ".ads.googleads.v1.services.MutateAdGroup" +
-      "FeedResult\"0\n\027MutateAdGroupFeedResult\022\025\n" +
-      "\rresource_name\030\001 \001(\t2\230\003\n\022AdGroupFeedServ" +
-      "ice\022\261\001\n\016GetAdGroupFeed\0227.google.ads.goog" +
-      "leads.v1.services.GetAdGroupFeedRequest\032" +
-      "..google.ads.googleads.v1.resources.AdGr" +
-      "oupFeed\"6\202\323\344\223\0020\022./v1/{resource_name=cust" +
-      "omers/*/adGroupFeeds/*}\022\315\001\n\022MutateAdGrou" +
-      "pFeeds\022;.google.ads.googleads.v1.service" +
-      "s.MutateAdGroupFeedsRequest\032<.google.ads" +
-      ".googleads.v1.services.MutateAdGroupFeed" +
-      "sResponse\"<\202\323\344\223\0026\"1/v1/customers/{custom" +
-      "er_id=*}/adGroupFeeds:mutate:\001*B\376\001\n$com." +
-      "google.ads.googleads.v1.servicesB\027AdGrou" +
-      "pFeedServiceProtoP\001ZHgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v1/serv" +
-      "ices;services\242\002\003GAA\252\002 Google.Ads.GoogleA" +
-      "ds.V1.Services\312\002 Google\\Ads\\GoogleAds\\V1" +
-      "\\Services\352\002$Google::Ads::GoogleAds::V1::" +
-      "Servicesb\006proto3"
+      "FeedsRequest\032<.google.ads.googleads.v1.s" +
+      "ervices.MutateAdGroupFeedsResponse\"<\202\323\344\223" +
+      "\0026\"1/v1/customers/{customer_id=*}/adGrou" +
+      "pFeeds:mutate:\001*\032\033\312A\030googleads.googleapi" +
+      "s.comB\376\001\n$com.google.ads.googleads.v1.se" +
+      "rvicesB\027AdGroupFeedServiceProtoP\001ZHgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v1/services;services\242\002\003GAA\252\002 Goog" +
+      "le.Ads.GoogleAds.V1.Services\312\002 Google\\Ad" +
+      "s\\GoogleAds\\V1\\Services\352\002$Google::Ads::G" +
+      "oogleAds::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -106,6 +107,7 @@ public final class AdGroupFeedServiceProto {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetAdGroupFeedRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -139,6 +141,7 @@ public final class AdGroupFeedServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -147,6 +150,7 @@ public final class AdGroupFeedServiceProto {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

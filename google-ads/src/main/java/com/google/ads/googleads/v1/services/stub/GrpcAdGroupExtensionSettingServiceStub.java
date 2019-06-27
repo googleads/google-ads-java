@@ -25,10 +25,13 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.common.collect.ImmutableMap;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -126,6 +129,16 @@ public class GrpcAdGroupExtensionSettingServiceStub extends AdGroupExtensionSett
             GrpcCallSettings
                 .<GetAdGroupExtensionSettingRequest, AdGroupExtensionSetting>newBuilder()
                 .setMethodDescriptor(getAdGroupExtensionSettingMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<GetAdGroupExtensionSettingRequest>() {
+                      @Override
+                      public Map<String, String> extract(
+                          GetAdGroupExtensionSettingRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("resource_name", String.valueOf(request.getResourceName()));
+                        return params.build();
+                      }
+                    })
                 .build();
     GrpcCallSettings<MutateAdGroupExtensionSettingsRequest, MutateAdGroupExtensionSettingsResponse>
         mutateAdGroupExtensionSettingsTransportSettings =
@@ -133,6 +146,16 @@ public class GrpcAdGroupExtensionSettingServiceStub extends AdGroupExtensionSett
                 .<MutateAdGroupExtensionSettingsRequest, MutateAdGroupExtensionSettingsResponse>
                     newBuilder()
                 .setMethodDescriptor(mutateAdGroupExtensionSettingsMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<MutateAdGroupExtensionSettingsRequest>() {
+                      @Override
+                      public Map<String, String> extract(
+                          MutateAdGroupExtensionSettingsRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("customer_id", String.valueOf(request.getCustomerId()));
+                        return params.build();
+                      }
+                    })
                 .build();
 
     this.getAdGroupExtensionSettingCallable =

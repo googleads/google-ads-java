@@ -23,10 +23,13 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.common.collect.ImmutableMap;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -108,6 +111,16 @@ public class GrpcPaidOrganicSearchTermViewServiceStub extends PaidOrganicSearchT
             GrpcCallSettings
                 .<GetPaidOrganicSearchTermViewRequest, PaidOrganicSearchTermView>newBuilder()
                 .setMethodDescriptor(getPaidOrganicSearchTermViewMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<GetPaidOrganicSearchTermViewRequest>() {
+                      @Override
+                      public Map<String, String> extract(
+                          GetPaidOrganicSearchTermViewRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("resource_name", String.valueOf(request.getResourceName()));
+                        return params.build();
+                      }
+                    })
                 .build();
 
     this.getPaidOrganicSearchTermViewCallable =

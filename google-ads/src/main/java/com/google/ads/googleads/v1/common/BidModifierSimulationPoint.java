@@ -216,7 +216,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -285,6 +285,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of biddable conversions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -295,6 +296,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of biddable conversions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -305,6 +307,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of biddable conversions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -318,6 +321,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected total value of biddable conversions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -328,6 +332,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected total value of biddable conversions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -338,6 +343,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected total value of biddable conversions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -450,6 +456,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of top slot impressions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -460,6 +467,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of top slot impressions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -470,6 +478,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of top slot impressions.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -483,6 +492,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of biddable conversions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -493,6 +503,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of biddable conversions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -503,6 +514,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of biddable conversions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -516,6 +528,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected total value of biddable conversions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -526,6 +539,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected total value of biddable conversions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -536,6 +550,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected total value of biddable conversions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -648,6 +663,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of top slot impressions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -658,6 +674,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of top slot impressions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -668,6 +685,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of top slot impressions for the parent resource.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -805,74 +823,73 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.BidModifierSimulationPoint other = (com.google.ads.googleads.v1.common.BidModifierSimulationPoint) obj;
 
-    boolean result = true;
-    result = result && (hasBidModifier() == other.hasBidModifier());
+    if (hasBidModifier() != other.hasBidModifier()) return false;
     if (hasBidModifier()) {
-      result = result && getBidModifier()
-          .equals(other.getBidModifier());
+      if (!getBidModifier()
+          .equals(other.getBidModifier())) return false;
     }
-    result = result && (hasBiddableConversions() == other.hasBiddableConversions());
+    if (hasBiddableConversions() != other.hasBiddableConversions()) return false;
     if (hasBiddableConversions()) {
-      result = result && getBiddableConversions()
-          .equals(other.getBiddableConversions());
+      if (!getBiddableConversions()
+          .equals(other.getBiddableConversions())) return false;
     }
-    result = result && (hasBiddableConversionsValue() == other.hasBiddableConversionsValue());
+    if (hasBiddableConversionsValue() != other.hasBiddableConversionsValue()) return false;
     if (hasBiddableConversionsValue()) {
-      result = result && getBiddableConversionsValue()
-          .equals(other.getBiddableConversionsValue());
+      if (!getBiddableConversionsValue()
+          .equals(other.getBiddableConversionsValue())) return false;
     }
-    result = result && (hasClicks() == other.hasClicks());
+    if (hasClicks() != other.hasClicks()) return false;
     if (hasClicks()) {
-      result = result && getClicks()
-          .equals(other.getClicks());
+      if (!getClicks()
+          .equals(other.getClicks())) return false;
     }
-    result = result && (hasCostMicros() == other.hasCostMicros());
+    if (hasCostMicros() != other.hasCostMicros()) return false;
     if (hasCostMicros()) {
-      result = result && getCostMicros()
-          .equals(other.getCostMicros());
+      if (!getCostMicros()
+          .equals(other.getCostMicros())) return false;
     }
-    result = result && (hasImpressions() == other.hasImpressions());
+    if (hasImpressions() != other.hasImpressions()) return false;
     if (hasImpressions()) {
-      result = result && getImpressions()
-          .equals(other.getImpressions());
+      if (!getImpressions()
+          .equals(other.getImpressions())) return false;
     }
-    result = result && (hasTopSlotImpressions() == other.hasTopSlotImpressions());
+    if (hasTopSlotImpressions() != other.hasTopSlotImpressions()) return false;
     if (hasTopSlotImpressions()) {
-      result = result && getTopSlotImpressions()
-          .equals(other.getTopSlotImpressions());
+      if (!getTopSlotImpressions()
+          .equals(other.getTopSlotImpressions())) return false;
     }
-    result = result && (hasParentBiddableConversions() == other.hasParentBiddableConversions());
+    if (hasParentBiddableConversions() != other.hasParentBiddableConversions()) return false;
     if (hasParentBiddableConversions()) {
-      result = result && getParentBiddableConversions()
-          .equals(other.getParentBiddableConversions());
+      if (!getParentBiddableConversions()
+          .equals(other.getParentBiddableConversions())) return false;
     }
-    result = result && (hasParentBiddableConversionsValue() == other.hasParentBiddableConversionsValue());
+    if (hasParentBiddableConversionsValue() != other.hasParentBiddableConversionsValue()) return false;
     if (hasParentBiddableConversionsValue()) {
-      result = result && getParentBiddableConversionsValue()
-          .equals(other.getParentBiddableConversionsValue());
+      if (!getParentBiddableConversionsValue()
+          .equals(other.getParentBiddableConversionsValue())) return false;
     }
-    result = result && (hasParentClicks() == other.hasParentClicks());
+    if (hasParentClicks() != other.hasParentClicks()) return false;
     if (hasParentClicks()) {
-      result = result && getParentClicks()
-          .equals(other.getParentClicks());
+      if (!getParentClicks()
+          .equals(other.getParentClicks())) return false;
     }
-    result = result && (hasParentCostMicros() == other.hasParentCostMicros());
+    if (hasParentCostMicros() != other.hasParentCostMicros()) return false;
     if (hasParentCostMicros()) {
-      result = result && getParentCostMicros()
-          .equals(other.getParentCostMicros());
+      if (!getParentCostMicros()
+          .equals(other.getParentCostMicros())) return false;
     }
-    result = result && (hasParentImpressions() == other.hasParentImpressions());
+    if (hasParentImpressions() != other.hasParentImpressions()) return false;
     if (hasParentImpressions()) {
-      result = result && getParentImpressions()
-          .equals(other.getParentImpressions());
+      if (!getParentImpressions()
+          .equals(other.getParentImpressions())) return false;
     }
-    result = result && (hasParentTopSlotImpressions() == other.hasParentTopSlotImpressions());
+    if (hasParentTopSlotImpressions() != other.hasParentTopSlotImpressions()) return false;
     if (hasParentTopSlotImpressions()) {
-      result = result && getParentTopSlotImpressions()
-          .equals(other.getParentTopSlotImpressions());
+      if (!getParentTopSlotImpressions()
+          .equals(other.getParentTopSlotImpressions())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1246,35 +1263,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1356,7 +1373,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.DoubleValue bidModifier_ = null;
+    private com.google.protobuf.DoubleValue bidModifier_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> bidModifierBuilder_;
     /**
@@ -1509,12 +1526,13 @@ private static final long serialVersionUID = 0L;
       return bidModifierBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue biddableConversions_ = null;
+    private com.google.protobuf.DoubleValue biddableConversions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> biddableConversionsBuilder_;
     /**
      * <pre>
      * Projected number of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -1525,6 +1543,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -1539,6 +1558,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -1559,6 +1579,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -1577,6 +1598,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -1599,6 +1621,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -1617,6 +1640,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -1629,6 +1653,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -1644,6 +1669,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
@@ -1662,12 +1688,13 @@ private static final long serialVersionUID = 0L;
       return biddableConversionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue biddableConversionsValue_ = null;
+    private com.google.protobuf.DoubleValue biddableConversionsValue_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> biddableConversionsValueBuilder_;
     /**
      * <pre>
      * Projected total value of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -1678,6 +1705,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -1692,6 +1720,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -1712,6 +1741,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -1730,6 +1760,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -1752,6 +1783,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -1770,6 +1802,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -1782,6 +1815,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -1797,6 +1831,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
@@ -1815,7 +1850,7 @@ private static final long serialVersionUID = 0L;
       return biddableConversionsValueBuilder_;
     }
 
-    private com.google.protobuf.Int64Value clicks_ = null;
+    private com.google.protobuf.Int64Value clicks_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> clicksBuilder_;
     /**
@@ -1968,7 +2003,7 @@ private static final long serialVersionUID = 0L;
       return clicksBuilder_;
     }
 
-    private com.google.protobuf.Int64Value costMicros_ = null;
+    private com.google.protobuf.Int64Value costMicros_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> costMicrosBuilder_;
     /**
@@ -2121,7 +2156,7 @@ private static final long serialVersionUID = 0L;
       return costMicrosBuilder_;
     }
 
-    private com.google.protobuf.Int64Value impressions_ = null;
+    private com.google.protobuf.Int64Value impressions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> impressionsBuilder_;
     /**
@@ -2274,12 +2309,13 @@ private static final long serialVersionUID = 0L;
       return impressionsBuilder_;
     }
 
-    private com.google.protobuf.Int64Value topSlotImpressions_ = null;
+    private com.google.protobuf.Int64Value topSlotImpressions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> topSlotImpressionsBuilder_;
     /**
      * <pre>
      * Projected number of top slot impressions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -2290,6 +2326,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -2304,6 +2341,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -2324,6 +2362,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -2342,6 +2381,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -2364,6 +2404,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -2382,6 +2423,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -2394,6 +2436,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -2409,6 +2452,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -2427,12 +2471,13 @@ private static final long serialVersionUID = 0L;
       return topSlotImpressionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue parentBiddableConversions_ = null;
+    private com.google.protobuf.DoubleValue parentBiddableConversions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> parentBiddableConversionsBuilder_;
     /**
      * <pre>
      * Projected number of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -2443,6 +2488,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -2457,6 +2503,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -2477,6 +2524,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -2495,6 +2543,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -2517,6 +2566,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -2535,6 +2585,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -2547,6 +2598,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -2562,6 +2614,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
@@ -2580,12 +2633,13 @@ private static final long serialVersionUID = 0L;
       return parentBiddableConversionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue parentBiddableConversionsValue_ = null;
+    private com.google.protobuf.DoubleValue parentBiddableConversionsValue_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> parentBiddableConversionsValueBuilder_;
     /**
      * <pre>
      * Projected total value of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -2596,6 +2650,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -2610,6 +2665,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -2630,6 +2686,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -2648,6 +2705,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -2670,6 +2728,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -2688,6 +2747,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -2700,6 +2760,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -2715,6 +2776,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected total value of biddable conversions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
@@ -2733,7 +2795,7 @@ private static final long serialVersionUID = 0L;
       return parentBiddableConversionsValueBuilder_;
     }
 
-    private com.google.protobuf.Int64Value parentClicks_ = null;
+    private com.google.protobuf.Int64Value parentClicks_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> parentClicksBuilder_;
     /**
@@ -2886,7 +2948,7 @@ private static final long serialVersionUID = 0L;
       return parentClicksBuilder_;
     }
 
-    private com.google.protobuf.Int64Value parentCostMicros_ = null;
+    private com.google.protobuf.Int64Value parentCostMicros_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> parentCostMicrosBuilder_;
     /**
@@ -3039,7 +3101,7 @@ private static final long serialVersionUID = 0L;
       return parentCostMicrosBuilder_;
     }
 
-    private com.google.protobuf.Int64Value parentImpressions_ = null;
+    private com.google.protobuf.Int64Value parentImpressions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> parentImpressionsBuilder_;
     /**
@@ -3192,12 +3254,13 @@ private static final long serialVersionUID = 0L;
       return parentImpressionsBuilder_;
     }
 
-    private com.google.protobuf.Int64Value parentTopSlotImpressions_ = null;
+    private com.google.protobuf.Int64Value parentTopSlotImpressions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> parentTopSlotImpressionsBuilder_;
     /**
      * <pre>
      * Projected number of top slot impressions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -3208,6 +3271,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -3222,6 +3286,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -3242,6 +3307,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -3260,6 +3326,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -3282,6 +3349,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -3300,6 +3368,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -3312,6 +3381,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -3327,6 +3397,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions for the parent resource.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
@@ -3347,7 +3418,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

@@ -106,7 +106,10 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a campaign_criteria resource.
+   *
+   * @deprecated Use the {@link CampaignCriteriaName} class instead.
    */
+  @Deprecated
   public static final String formatCampaignCriteriaName(String customer, String campaignCriteria) {
     return CAMPAIGN_CRITERIA_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -116,7 +119,10 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a campaign_criteria
    * resource.
+   *
+   * @deprecated Use the {@link CampaignCriteriaName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromCampaignCriteriaName(String campaignCriteriaName) {
     return CAMPAIGN_CRITERIA_PATH_TEMPLATE.parse(campaignCriteriaName).get("customer");
   }
@@ -124,7 +130,10 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
   /**
    * Parses the campaign_criteria from the given fully-qualified path which represents a
    * campaign_criteria resource.
+   *
+   * @deprecated Use the {@link CampaignCriteriaName} class instead.
    */
+  @Deprecated
   public static final String parseCampaignCriteriaFromCampaignCriteriaName(
       String campaignCriteriaName) {
     return CAMPAIGN_CRITERIA_PATH_TEMPLATE.parse(campaignCriteriaName).get("campaign_criteria");

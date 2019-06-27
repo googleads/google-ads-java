@@ -103,7 +103,12 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
   private static final PathTemplate AD_GROUP_FEED_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/adGroupFeeds/{ad_group_feed}");
 
-  /** Formats a string containing the fully-qualified path to represent a ad_group_feed resource. */
+  /**
+   * Formats a string containing the fully-qualified path to represent a ad_group_feed resource.
+   *
+   * @deprecated Use the {@link AdGroupFeedName} class instead.
+   */
+  @Deprecated
   public static final String formatAdGroupFeedName(String customer, String adGroupFeed) {
     return AD_GROUP_FEED_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -113,7 +118,10 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a ad_group_feed
    * resource.
+   *
+   * @deprecated Use the {@link AdGroupFeedName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromAdGroupFeedName(String adGroupFeedName) {
     return AD_GROUP_FEED_PATH_TEMPLATE.parse(adGroupFeedName).get("customer");
   }
@@ -121,7 +129,10 @@ public class AdGroupFeedServiceClient implements BackgroundResource {
   /**
    * Parses the ad_group_feed from the given fully-qualified path which represents a ad_group_feed
    * resource.
+   *
+   * @deprecated Use the {@link AdGroupFeedName} class instead.
    */
+  @Deprecated
   public static final String parseAdGroupFeedFromAdGroupFeedName(String adGroupFeedName) {
     return AD_GROUP_FEED_PATH_TEMPLATE.parse(adGroupFeedName).get("ad_group_feed");
   }

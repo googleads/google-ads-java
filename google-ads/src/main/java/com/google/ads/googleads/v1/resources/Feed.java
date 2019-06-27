@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
               attributes_ = new java.util.ArrayList<com.google.ads.googleads.v1.resources.FeedAttribute>();
               mutable_bitField0_ |= 0x00000008;
             }
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 74: {
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               attributeOperations_ = new java.util.ArrayList<com.google.ads.googleads.v1.resources.FeedAttributeOperation>();
               mutable_bitField0_ |= 0x00000010;
             }
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -156,10 +156,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
         attributes_ = java.util.Collections.unmodifiableList(attributes_);
       }
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
         attributeOperations_ = java.util.Collections.unmodifiableList(attributeOperations_);
       }
       this.unknownFields = unknownFields.build();
@@ -511,7 +511,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 categoryFilters_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 labelFilters_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00000020;
               }
@@ -542,7 +542,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -556,10 +556,10 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
           categoryFilters_ = java.util.Collections.unmodifiableList(categoryFilters_);
         }
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           labelFilters_ = java.util.Collections.unmodifiableList(labelFilters_);
         }
         this.unknownFields = unknownFields.build();
@@ -741,7 +741,7 @@ private static final long serialVersionUID = 0L;
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -930,24 +930,23 @@ private static final long serialVersionUID = 0L;
         }
         com.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData.OAuthInfo other = (com.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData.OAuthInfo) obj;
 
-        boolean result = true;
-        result = result && (hasHttpMethod() == other.hasHttpMethod());
+        if (hasHttpMethod() != other.hasHttpMethod()) return false;
         if (hasHttpMethod()) {
-          result = result && getHttpMethod()
-              .equals(other.getHttpMethod());
+          if (!getHttpMethod()
+              .equals(other.getHttpMethod())) return false;
         }
-        result = result && (hasHttpRequestUrl() == other.hasHttpRequestUrl());
+        if (hasHttpRequestUrl() != other.hasHttpRequestUrl()) return false;
         if (hasHttpRequestUrl()) {
-          result = result && getHttpRequestUrl()
-              .equals(other.getHttpRequestUrl());
+          if (!getHttpRequestUrl()
+              .equals(other.getHttpRequestUrl())) return false;
         }
-        result = result && (hasHttpAuthorizationHeader() == other.hasHttpAuthorizationHeader());
+        if (hasHttpAuthorizationHeader() != other.hasHttpAuthorizationHeader()) return false;
         if (hasHttpAuthorizationHeader()) {
-          result = result && getHttpAuthorizationHeader()
-              .equals(other.getHttpAuthorizationHeader());
+          if (!getHttpAuthorizationHeader()
+              .equals(other.getHttpAuthorizationHeader())) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -1171,35 +1170,35 @@ private static final long serialVersionUID = 0L;
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1251,7 +1250,7 @@ private static final long serialVersionUID = 0L;
           return this;
         }
 
-        private com.google.protobuf.StringValue httpMethod_ = null;
+        private com.google.protobuf.StringValue httpMethod_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> httpMethodBuilder_;
         /**
@@ -1404,7 +1403,7 @@ private static final long serialVersionUID = 0L;
           return httpMethodBuilder_;
         }
 
-        private com.google.protobuf.StringValue httpRequestUrl_ = null;
+        private com.google.protobuf.StringValue httpRequestUrl_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> httpRequestUrlBuilder_;
         /**
@@ -1557,7 +1556,7 @@ private static final long serialVersionUID = 0L;
           return httpRequestUrlBuilder_;
         }
 
-        private com.google.protobuf.StringValue httpAuthorizationHeader_ = null;
+        private com.google.protobuf.StringValue httpAuthorizationHeader_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> httpAuthorizationHeaderBuilder_;
         /**
@@ -1712,7 +1711,7 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -2139,33 +2138,32 @@ private static final long serialVersionUID = 0L;
       }
       com.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData other = (com.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData) obj;
 
-      boolean result = true;
-      result = result && (hasOauthInfo() == other.hasOauthInfo());
+      if (hasOauthInfo() != other.hasOauthInfo()) return false;
       if (hasOauthInfo()) {
-        result = result && getOauthInfo()
-            .equals(other.getOauthInfo());
+        if (!getOauthInfo()
+            .equals(other.getOauthInfo())) return false;
       }
-      result = result && (hasEmailAddress() == other.hasEmailAddress());
+      if (hasEmailAddress() != other.hasEmailAddress()) return false;
       if (hasEmailAddress()) {
-        result = result && getEmailAddress()
-            .equals(other.getEmailAddress());
+        if (!getEmailAddress()
+            .equals(other.getEmailAddress())) return false;
       }
-      result = result && (hasBusinessAccountId() == other.hasBusinessAccountId());
+      if (hasBusinessAccountId() != other.hasBusinessAccountId()) return false;
       if (hasBusinessAccountId()) {
-        result = result && getBusinessAccountId()
-            .equals(other.getBusinessAccountId());
+        if (!getBusinessAccountId()
+            .equals(other.getBusinessAccountId())) return false;
       }
-      result = result && (hasBusinessNameFilter() == other.hasBusinessNameFilter());
+      if (hasBusinessNameFilter() != other.hasBusinessNameFilter()) return false;
       if (hasBusinessNameFilter()) {
-        result = result && getBusinessNameFilter()
-            .equals(other.getBusinessNameFilter());
+        if (!getBusinessNameFilter()
+            .equals(other.getBusinessNameFilter())) return false;
       }
-      result = result && getCategoryFiltersList()
-          .equals(other.getCategoryFiltersList());
-      result = result && getLabelFiltersList()
-          .equals(other.getLabelFiltersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCategoryFiltersList()
+          .equals(other.getCategoryFiltersList())) return false;
+      if (!getLabelFiltersList()
+          .equals(other.getLabelFiltersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2424,7 +2422,7 @@ private static final long serialVersionUID = 0L;
           result.businessNameFilter_ = businessNameFilterBuilder_.build();
         }
         if (categoryFiltersBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             categoryFilters_ = java.util.Collections.unmodifiableList(categoryFilters_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
@@ -2433,7 +2431,7 @@ private static final long serialVersionUID = 0L;
           result.categoryFilters_ = categoryFiltersBuilder_.build();
         }
         if (labelFiltersBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             labelFilters_ = java.util.Collections.unmodifiableList(labelFilters_);
             bitField0_ = (bitField0_ & ~0x00000020);
           }
@@ -2448,35 +2446,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2584,7 +2582,7 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private com.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData.OAuthInfo oauthInfo_ = null;
+      private com.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData.OAuthInfo oauthInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData.OAuthInfo, com.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData.OAuthInfo.Builder, com.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData.OAuthInfoOrBuilder> oauthInfoBuilder_;
       /**
@@ -2755,7 +2753,7 @@ private static final long serialVersionUID = 0L;
         return oauthInfoBuilder_;
       }
 
-      private com.google.protobuf.StringValue emailAddress_ = null;
+      private com.google.protobuf.StringValue emailAddress_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> emailAddressBuilder_;
       /**
@@ -2917,7 +2915,7 @@ private static final long serialVersionUID = 0L;
         return emailAddressBuilder_;
       }
 
-      private com.google.protobuf.StringValue businessAccountId_ = null;
+      private com.google.protobuf.StringValue businessAccountId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> businessAccountIdBuilder_;
       /**
@@ -3097,7 +3095,7 @@ private static final long serialVersionUID = 0L;
         return businessAccountIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue businessNameFilter_ = null;
+      private com.google.protobuf.StringValue businessNameFilter_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> businessNameFilterBuilder_;
       /**
@@ -3271,7 +3269,7 @@ private static final long serialVersionUID = 0L;
       private java.util.List<com.google.protobuf.StringValue> categoryFilters_ =
         java.util.Collections.emptyList();
       private void ensureCategoryFiltersIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           categoryFilters_ = new java.util.ArrayList<com.google.protobuf.StringValue>(categoryFilters_);
           bitField0_ |= 0x00000010;
          }
@@ -3626,7 +3624,7 @@ private static final long serialVersionUID = 0L;
           categoryFiltersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   categoryFilters_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           categoryFilters_ = null;
@@ -3637,7 +3635,7 @@ private static final long serialVersionUID = 0L;
       private java.util.List<com.google.protobuf.StringValue> labelFilters_ =
         java.util.Collections.emptyList();
       private void ensureLabelFiltersIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           labelFilters_ = new java.util.ArrayList<com.google.protobuf.StringValue>(labelFilters_);
           bitField0_ |= 0x00000020;
          }
@@ -3992,7 +3990,7 @@ private static final long serialVersionUID = 0L;
           labelFiltersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   labelFilters_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           labelFilters_ = null;
@@ -4002,7 +4000,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4169,7 +4167,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 chainIds_ = new java.util.ArrayList<com.google.protobuf.Int64Value>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -4184,7 +4182,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4198,7 +4196,7 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           chainIds_ = java.util.Collections.unmodifiableList(chainIds_);
         }
         this.unknownFields = unknownFields.build();
@@ -4356,12 +4354,11 @@ private static final long serialVersionUID = 0L;
       }
       com.google.ads.googleads.v1.resources.Feed.AffiliateLocationFeedData other = (com.google.ads.googleads.v1.resources.Feed.AffiliateLocationFeedData) obj;
 
-      boolean result = true;
-      result = result && getChainIdsList()
-          .equals(other.getChainIdsList());
-      result = result && relationshipType_ == other.relationshipType_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getChainIdsList()
+          .equals(other.getChainIdsList())) return false;
+      if (relationshipType_ != other.relationshipType_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4553,7 +4550,7 @@ private static final long serialVersionUID = 0L;
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (chainIdsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             chainIds_ = java.util.Collections.unmodifiableList(chainIds_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -4569,35 +4566,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4673,7 +4670,7 @@ private static final long serialVersionUID = 0L;
       private java.util.List<com.google.protobuf.Int64Value> chainIds_ =
         java.util.Collections.emptyList();
       private void ensureChainIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           chainIds_ = new java.util.ArrayList<com.google.protobuf.Int64Value>(chainIds_);
           bitField0_ |= 0x00000001;
          }
@@ -4992,7 +4989,7 @@ private static final long serialVersionUID = 0L;
           chainIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
                   chainIds_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           chainIds_ = null;
@@ -5067,7 +5064,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5625,42 +5622,39 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.Feed other = (com.google.ads.googleads.v1.resources.Feed) obj;
 
-    boolean result = true;
-    result = result && getResourceName()
-        .equals(other.getResourceName());
-    result = result && (hasId() == other.hasId());
+    if (!getResourceName()
+        .equals(other.getResourceName())) return false;
+    if (hasId() != other.hasId()) return false;
     if (hasId()) {
-      result = result && getId()
-          .equals(other.getId());
+      if (!getId()
+          .equals(other.getId())) return false;
     }
-    result = result && (hasName() == other.hasName());
+    if (hasName() != other.hasName()) return false;
     if (hasName()) {
-      result = result && getName()
-          .equals(other.getName());
+      if (!getName()
+          .equals(other.getName())) return false;
     }
-    result = result && getAttributesList()
-        .equals(other.getAttributesList());
-    result = result && getAttributeOperationsList()
-        .equals(other.getAttributeOperationsList());
-    result = result && origin_ == other.origin_;
-    result = result && status_ == other.status_;
-    result = result && getSystemFeedGenerationDataCase().equals(
-        other.getSystemFeedGenerationDataCase());
-    if (!result) return false;
+    if (!getAttributesList()
+        .equals(other.getAttributesList())) return false;
+    if (!getAttributeOperationsList()
+        .equals(other.getAttributeOperationsList())) return false;
+    if (origin_ != other.origin_) return false;
+    if (status_ != other.status_) return false;
+    if (!getSystemFeedGenerationDataCase().equals(other.getSystemFeedGenerationDataCase())) return false;
     switch (systemFeedGenerationDataCase_) {
       case 6:
-        result = result && getPlacesLocationFeedData()
-            .equals(other.getPlacesLocationFeedData());
+        if (!getPlacesLocationFeedData()
+            .equals(other.getPlacesLocationFeedData())) return false;
         break;
       case 7:
-        result = result && getAffiliateLocationFeedData()
-            .equals(other.getAffiliateLocationFeedData());
+        if (!getAffiliateLocationFeedData()
+            .equals(other.getAffiliateLocationFeedData())) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -5915,7 +5909,7 @@ private static final long serialVersionUID = 0L;
         result.name_ = nameBuilder_.build();
       }
       if (attributesBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           attributes_ = java.util.Collections.unmodifiableList(attributes_);
           bitField0_ = (bitField0_ & ~0x00000008);
         }
@@ -5924,7 +5918,7 @@ private static final long serialVersionUID = 0L;
         result.attributes_ = attributesBuilder_.build();
       }
       if (attributeOperationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           attributeOperations_ = java.util.Collections.unmodifiableList(attributeOperations_);
           bitField0_ = (bitField0_ & ~0x00000010);
         }
@@ -5956,35 +5950,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6223,7 +6217,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value id_ = null;
+    private com.google.protobuf.Int64Value id_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
@@ -6385,7 +6379,7 @@ private static final long serialVersionUID = 0L;
       return idBuilder_;
     }
 
-    private com.google.protobuf.StringValue name_ = null;
+    private com.google.protobuf.StringValue name_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
@@ -6541,7 +6535,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.resources.FeedAttribute> attributes_ =
       java.util.Collections.emptyList();
     private void ensureAttributesIsMutable() {
-      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         attributes_ = new java.util.ArrayList<com.google.ads.googleads.v1.resources.FeedAttribute>(attributes_);
         bitField0_ |= 0x00000008;
        }
@@ -6860,7 +6854,7 @@ private static final long serialVersionUID = 0L;
         attributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.resources.FeedAttribute, com.google.ads.googleads.v1.resources.FeedAttribute.Builder, com.google.ads.googleads.v1.resources.FeedAttributeOrBuilder>(
                 attributes_,
-                ((bitField0_ & 0x00000008) == 0x00000008),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         attributes_ = null;
@@ -6871,7 +6865,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.resources.FeedAttributeOperation> attributeOperations_ =
       java.util.Collections.emptyList();
     private void ensureAttributeOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         attributeOperations_ = new java.util.ArrayList<com.google.ads.googleads.v1.resources.FeedAttributeOperation>(attributeOperations_);
         bitField0_ |= 0x00000010;
        }
@@ -7190,7 +7184,7 @@ private static final long serialVersionUID = 0L;
         attributeOperationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.resources.FeedAttributeOperation, com.google.ads.googleads.v1.resources.FeedAttributeOperation.Builder, com.google.ads.googleads.v1.resources.FeedAttributeOperationOrBuilder>(
                 attributeOperations_,
-                ((bitField0_ & 0x00000010) == 0x00000010),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         attributeOperations_ = null;
@@ -7697,7 +7691,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

@@ -107,7 +107,10 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a ad_group_bid_modifier
    * resource.
+   *
+   * @deprecated Use the {@link AdGroupBidModifierName} class instead.
    */
+  @Deprecated
   public static final String formatAdGroupBidModifierName(
       String customer, String adGroupBidModifier) {
     return AD_GROUP_BID_MODIFIER_PATH_TEMPLATE.instantiate(
@@ -118,7 +121,10 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * ad_group_bid_modifier resource.
+   *
+   * @deprecated Use the {@link AdGroupBidModifierName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromAdGroupBidModifierName(
       String adGroupBidModifierName) {
     return AD_GROUP_BID_MODIFIER_PATH_TEMPLATE.parse(adGroupBidModifierName).get("customer");
@@ -127,7 +133,10 @@ public class AdGroupBidModifierServiceClient implements BackgroundResource {
   /**
    * Parses the ad_group_bid_modifier from the given fully-qualified path which represents a
    * ad_group_bid_modifier resource.
+   *
+   * @deprecated Use the {@link AdGroupBidModifierName} class instead.
    */
+  @Deprecated
   public static final String parseAdGroupBidModifierFromAdGroupBidModifierName(
       String adGroupBidModifierName) {
     return AD_GROUP_BID_MODIFIER_PATH_TEMPLATE

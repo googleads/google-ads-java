@@ -106,7 +106,10 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a detail_placement_view
    * resource.
+   *
+   * @deprecated Use the {@link DetailPlacementViewName} class instead.
    */
+  @Deprecated
   public static final String formatDetailPlacementViewName(
       String customer, String detailPlacementView) {
     return DETAIL_PLACEMENT_VIEW_PATH_TEMPLATE.instantiate(
@@ -117,7 +120,10 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * detail_placement_view resource.
+   *
+   * @deprecated Use the {@link DetailPlacementViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromDetailPlacementViewName(
       String detailPlacementViewName) {
     return DETAIL_PLACEMENT_VIEW_PATH_TEMPLATE.parse(detailPlacementViewName).get("customer");
@@ -126,7 +132,10 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
   /**
    * Parses the detail_placement_view from the given fully-qualified path which represents a
    * detail_placement_view resource.
+   *
+   * @deprecated Use the {@link DetailPlacementViewName} class instead.
    */
+  @Deprecated
   public static final String parseDetailPlacementViewFromDetailPlacementViewName(
       String detailPlacementViewName) {
     return DETAIL_PLACEMENT_VIEW_PATH_TEMPLATE

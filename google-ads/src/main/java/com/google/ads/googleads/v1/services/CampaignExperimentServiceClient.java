@@ -130,7 +130,10 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a campaign_experiment
    * resource.
+   *
+   * @deprecated Use the {@link CampaignExperimentName} class instead.
    */
+  @Deprecated
   public static final String formatCampaignExperimentName(
       String customer, String campaignExperiment) {
     return CAMPAIGN_EXPERIMENT_PATH_TEMPLATE.instantiate(
@@ -141,7 +144,10 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a campaign_experiment
    * resource.
+   *
+   * @deprecated Use the {@link CampaignExperimentName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromCampaignExperimentName(
       String campaignExperimentName) {
     return CAMPAIGN_EXPERIMENT_PATH_TEMPLATE.parse(campaignExperimentName).get("customer");
@@ -150,7 +156,10 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
   /**
    * Parses the campaign_experiment from the given fully-qualified path which represents a
    * campaign_experiment resource.
+   *
+   * @deprecated Use the {@link CampaignExperimentName} class instead.
    */
+  @Deprecated
   public static final String parseCampaignExperimentFromCampaignExperimentName(
       String campaignExperimentName) {
     return CAMPAIGN_EXPERIMENT_PATH_TEMPLATE

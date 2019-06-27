@@ -72,77 +72,78 @@ public final class ConversionUploadServiceProto {
       "rsion_upload_service.proto\022 google.ads.g" +
       "oogleads.v1.services\032\034google/api/annotat" +
       "ions.proto\032\036google/protobuf/wrappers.pro" +
-      "to\032\027google/rpc/status.proto\"\254\001\n\035UploadCl" +
-      "ickConversionsRequest\022\023\n\013customer_id\030\001 \001" +
-      "(\t\022F\n\013conversions\030\002 \003(\01321.google.ads.goo" +
-      "gleads.v1.services.ClickConversion\022\027\n\017pa" +
-      "rtial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001" +
-      "(\010\"\235\001\n\036UploadClickConversionsResponse\0221\n" +
-      "\025partial_failure_error\030\001 \001(\0132\022.google.rp" +
-      "c.Status\022H\n\007results\030\002 \003(\01327.google.ads.g" +
-      "oogleads.v1.services.ClickConversionResu" +
-      "lt\"\252\001\n\034UploadCallConversionsRequest\022\023\n\013c" +
-      "ustomer_id\030\001 \001(\t\022E\n\013conversions\030\002 \003(\01320." +
-      "google.ads.googleads.v1.services.CallCon" +
-      "version\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvali" +
-      "date_only\030\004 \001(\010\"\233\001\n\035UploadCallConversion" +
-      "sResponse\0221\n\025partial_failure_error\030\001 \001(\013" +
-      "2\022.google.rpc.Status\022G\n\007results\030\002 \003(\01326." +
-      "google.ads.googleads.v1.services.CallCon" +
-      "versionResult\"\256\003\n\017ClickConversion\022+\n\005gcl" +
-      "id\030\001 \001(\0132\034.google.protobuf.StringValue\0227" +
-      "\n\021conversion_action\030\002 \001(\0132\034.google.proto" +
-      "buf.StringValue\022:\n\024conversion_date_time\030" +
-      "\003 \001(\0132\034.google.protobuf.StringValue\0226\n\020c" +
-      "onversion_value\030\004 \001(\0132\034.google.protobuf." +
-      "DoubleValue\0223\n\rcurrency_code\030\005 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022.\n\010order_id\030\006 \001" +
-      "(\0132\034.google.protobuf.StringValue\022\\\n\031exte" +
-      "rnal_attribution_data\030\007 \001(\01329.google.ads" +
-      ".googleads.v1.services.ExternalAttributi" +
-      "onData\"\337\002\n\016CallConversion\022/\n\tcaller_id\030\001" +
-      " \001(\0132\034.google.protobuf.StringValue\022:\n\024ca" +
-      "ll_start_date_time\030\002 \001(\0132\034.google.protob" +
-      "uf.StringValue\0227\n\021conversion_action\030\003 \001(" +
-      "\0132\034.google.protobuf.StringValue\022:\n\024conve" +
-      "rsion_date_time\030\004 \001(\0132\034.google.protobuf." +
-      "StringValue\0226\n\020conversion_value\030\005 \001(\0132\034." +
-      "google.protobuf.DoubleValue\0223\n\rcurrency_" +
-      "code\030\006 \001(\0132\034.google.protobuf.StringValue" +
-      "\"\236\001\n\027ExternalAttributionData\022A\n\033external" +
-      "_attribution_credit\030\001 \001(\0132\034.google.proto" +
-      "buf.DoubleValue\022@\n\032external_attribution_" +
-      "model\030\002 \001(\0132\034.google.protobuf.StringValu" +
-      "e\"\271\001\n\025ClickConversionResult\022+\n\005gclid\030\001 \001" +
-      "(\0132\034.google.protobuf.StringValue\0227\n\021conv" +
-      "ersion_action\030\002 \001(\0132\034.google.protobuf.St" +
-      "ringValue\022:\n\024conversion_date_time\030\003 \001(\0132" +
-      "\034.google.protobuf.StringValue\"\370\001\n\024CallCo" +
-      "nversionResult\022/\n\tcaller_id\030\001 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\022:\n\024call_start_da" +
-      "te_time\030\002 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\0227\n\021conversion_action\030\003 \001(\0132\034.google." +
-      "protobuf.StringValue\022:\n\024conversion_date_" +
-      "time\030\004 \001(\0132\034.google.protobuf.StringValue" +
-      "2\323\003\n\027ConversionUploadService\022\334\001\n\026UploadC" +
-      "lickConversions\022?.google.ads.googleads.v" +
-      "1.services.UploadClickConversionsRequest" +
-      "\032@.google.ads.googleads.v1.services.Uplo" +
-      "adClickConversionsResponse\"?\202\323\344\223\0029\"4/v1/" +
-      "customers/{customer_id=*}:uploadClickCon" +
-      "versions:\001*\022\330\001\n\025UploadCallConversions\022>." +
-      "google.ads.googleads.v1.services.UploadC" +
-      "allConversionsRequest\032?.google.ads.googl" +
-      "eads.v1.services.UploadCallConversionsRe" +
-      "sponse\">\202\323\344\223\0028\"3/v1/customers/{customer_" +
-      "id=*}:uploadCallConversions:\001*B\203\002\n$com.g" +
-      "oogle.ads.googleads.v1.servicesB\034Convers" +
-      "ionUploadServiceProtoP\001ZHgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v1/" +
-      "services;services\242\002\003GAA\252\002 Google.Ads.Goo" +
-      "gleAds.V1.Services\312\002 Google\\Ads\\GoogleAd" +
-      "s\\V1\\Services\352\002$Google::Ads::GoogleAds::" +
-      "V1::Servicesb\006proto3"
+      "to\032\027google/rpc/status.proto\032\027google/api/" +
+      "client.proto\"\254\001\n\035UploadClickConversionsR" +
+      "equest\022\023\n\013customer_id\030\001 \001(\t\022F\n\013conversio" +
+      "ns\030\002 \003(\01321.google.ads.googleads.v1.servi" +
+      "ces.ClickConversion\022\027\n\017partial_failure\030\003" +
+      " \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\235\001\n\036UploadCl" +
+      "ickConversionsResponse\0221\n\025partial_failur" +
+      "e_error\030\001 \001(\0132\022.google.rpc.Status\022H\n\007res" +
+      "ults\030\002 \003(\01327.google.ads.googleads.v1.ser" +
+      "vices.ClickConversionResult\"\252\001\n\034UploadCa" +
+      "llConversionsRequest\022\023\n\013customer_id\030\001 \001(" +
+      "\t\022E\n\013conversions\030\002 \003(\01320.google.ads.goog" +
+      "leads.v1.services.CallConversion\022\027\n\017part" +
+      "ial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010" +
+      "\"\233\001\n\035UploadCallConversionsResponse\0221\n\025pa" +
+      "rtial_failure_error\030\001 \001(\0132\022.google.rpc.S" +
+      "tatus\022G\n\007results\030\002 \003(\01326.google.ads.goog" +
+      "leads.v1.services.CallConversionResult\"\256" +
+      "\003\n\017ClickConversion\022+\n\005gclid\030\001 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\0227\n\021conversion_ac" +
+      "tion\030\002 \001(\0132\034.google.protobuf.StringValue" +
+      "\022:\n\024conversion_date_time\030\003 \001(\0132\034.google." +
+      "protobuf.StringValue\0226\n\020conversion_value" +
+      "\030\004 \001(\0132\034.google.protobuf.DoubleValue\0223\n\r" +
+      "currency_code\030\005 \001(\0132\034.google.protobuf.St" +
+      "ringValue\022.\n\010order_id\030\006 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022\\\n\031external_attributio" +
+      "n_data\030\007 \001(\01329.google.ads.googleads.v1.s" +
+      "ervices.ExternalAttributionData\"\337\002\n\016Call" +
+      "Conversion\022/\n\tcaller_id\030\001 \001(\0132\034.google.p" +
+      "rotobuf.StringValue\022:\n\024call_start_date_t" +
+      "ime\030\002 \001(\0132\034.google.protobuf.StringValue\022" +
+      "7\n\021conversion_action\030\003 \001(\0132\034.google.prot" +
+      "obuf.StringValue\022:\n\024conversion_date_time" +
+      "\030\004 \001(\0132\034.google.protobuf.StringValue\0226\n\020" +
+      "conversion_value\030\005 \001(\0132\034.google.protobuf" +
+      ".DoubleValue\0223\n\rcurrency_code\030\006 \001(\0132\034.go" +
+      "ogle.protobuf.StringValue\"\236\001\n\027ExternalAt" +
+      "tributionData\022A\n\033external_attribution_cr" +
+      "edit\030\001 \001(\0132\034.google.protobuf.DoubleValue" +
+      "\022@\n\032external_attribution_model\030\002 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\"\271\001\n\025ClickConv" +
+      "ersionResult\022+\n\005gclid\030\001 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\0227\n\021conversion_action\030\002" +
+      " \001(\0132\034.google.protobuf.StringValue\022:\n\024co" +
+      "nversion_date_time\030\003 \001(\0132\034.google.protob" +
+      "uf.StringValue\"\370\001\n\024CallConversionResult\022" +
+      "/\n\tcaller_id\030\001 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022:\n\024call_start_date_time\030\002 \001(\0132\034" +
+      ".google.protobuf.StringValue\0227\n\021conversi" +
+      "on_action\030\003 \001(\0132\034.google.protobuf.String" +
+      "Value\022:\n\024conversion_date_time\030\004 \001(\0132\034.go" +
+      "ogle.protobuf.StringValue2\360\003\n\027Conversion" +
+      "UploadService\022\334\001\n\026UploadClickConversions" +
+      "\022?.google.ads.googleads.v1.services.Uplo" +
+      "adClickConversionsRequest\032@.google.ads.g" +
+      "oogleads.v1.services.UploadClickConversi" +
+      "onsResponse\"?\202\323\344\223\0029\"4/v1/customers/{cust" +
+      "omer_id=*}:uploadClickConversions:\001*\022\330\001\n" +
+      "\025UploadCallConversions\022>.google.ads.goog" +
+      "leads.v1.services.UploadCallConversionsR" +
+      "equest\032?.google.ads.googleads.v1.service" +
+      "s.UploadCallConversionsResponse\">\202\323\344\223\0028\"" +
+      "3/v1/customers/{customer_id=*}:uploadCal" +
+      "lConversions:\001*\032\033\312A\030googleads.googleapis" +
+      ".comB\203\002\n$com.google.ads.googleads.v1.ser" +
+      "vicesB\034ConversionUploadServiceProtoP\001ZHg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v1/services;services\242\002\003GAA\252\002 " +
+      "Google.Ads.GoogleAds.V1.Services\312\002 Googl" +
+      "e\\Ads\\GoogleAds\\V1\\Services\352\002$Google::Ad" +
+      "s::GoogleAds::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -158,6 +159,7 @@ public final class ConversionUploadServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_UploadClickConversionsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -215,12 +217,14 @@ public final class ConversionUploadServiceProto {
         new java.lang.String[] { "CallerId", "CallStartDateTime", "ConversionAction", "ConversionDateTime", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

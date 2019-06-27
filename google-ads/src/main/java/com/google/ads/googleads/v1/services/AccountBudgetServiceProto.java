@@ -32,20 +32,22 @@ public final class AccountBudgetServiceProto {
       "nt_budget_service.proto\022 google.ads.goog" +
       "leads.v1.services\0326google/ads/googleads/" +
       "v1/resources/account_budget.proto\032\034googl" +
-      "e/api/annotations.proto\"0\n\027GetAccountBud" +
-      "getRequest\022\025\n\rresource_name\030\001 \001(\t2\322\001\n\024Ac" +
-      "countBudgetService\022\271\001\n\020GetAccountBudget\022" +
-      "9.google.ads.googleads.v1.services.GetAc" +
-      "countBudgetRequest\0320.google.ads.googlead" +
-      "s.v1.resources.AccountBudget\"8\202\323\344\223\0022\0220/v" +
-      "1/{resource_name=customers/*/accountBudg" +
-      "ets/*}B\200\002\n$com.google.ads.googleads.v1.s" +
-      "ervicesB\031AccountBudgetServiceProtoP\001ZHgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v1/services;services\242\002\003GAA\252\002 G" +
-      "oogle.Ads.GoogleAds.V1.Services\312\002 Google" +
-      "\\Ads\\GoogleAds\\V1\\Services\352\002$Google::Ads" +
-      "::GoogleAds::V1::Servicesb\006proto3"
+      "e/api/annotations.proto\032\027google/api/clie" +
+      "nt.proto\"0\n\027GetAccountBudgetRequest\022\025\n\rr" +
+      "esource_name\030\001 \001(\t2\357\001\n\024AccountBudgetServ" +
+      "ice\022\271\001\n\020GetAccountBudget\0229.google.ads.go" +
+      "ogleads.v1.services.GetAccountBudgetRequ" +
+      "est\0320.google.ads.googleads.v1.resources." +
+      "AccountBudget\"8\202\323\344\223\0022\0220/v1/{resource_nam" +
+      "e=customers/*/accountBudgets/*}\032\033\312A\030goog" +
+      "leads.googleapis.comB\200\002\n$com.google.ads." +
+      "googleads.v1.servicesB\031AccountBudgetServ" +
+      "iceProtoP\001ZHgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v1/services;serv" +
+      "ices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Ser" +
+      "vices\312\002 Google\\Ads\\GoogleAds\\V1\\Services" +
+      "\352\002$Google::Ads::GoogleAds::V1::Servicesb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -60,6 +62,7 @@ public final class AccountBudgetServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.AccountBudgetProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetAccountBudgetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -69,11 +72,13 @@ public final class AccountBudgetServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.AccountBudgetProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

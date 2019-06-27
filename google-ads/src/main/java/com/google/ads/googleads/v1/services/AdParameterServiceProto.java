@@ -54,41 +54,42 @@ public final class AdParameterServiceProto {
       "/resources/ad_parameter.proto\032\034google/ap" +
       "i/annotations.proto\032 google/protobuf/fie" +
       "ld_mask.proto\032\036google/protobuf/wrappers." +
-      "proto\032\027google/rpc/status.proto\".\n\025GetAdP" +
-      "arameterRequest\022\025\n\rresource_name\030\001 \001(\t\"\254" +
-      "\001\n\031MutateAdParametersRequest\022\023\n\013customer" +
-      "_id\030\001 \001(\t\022J\n\noperations\030\002 \003(\01326.google.a" +
-      "ds.googleads.v1.services.AdParameterOper" +
-      "ation\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalida" +
-      "te_only\030\004 \001(\010\"\352\001\n\024AdParameterOperation\022/" +
-      "\n\013update_mask\030\004 \001(\0132\032.google.protobuf.Fi" +
-      "eldMask\022@\n\006create\030\001 \001(\0132..google.ads.goo" +
-      "gleads.v1.resources.AdParameterH\000\022@\n\006upd" +
-      "ate\030\002 \001(\0132..google.ads.googleads.v1.reso" +
-      "urces.AdParameterH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n" +
-      "\toperation\"\233\001\n\032MutateAdParametersRespons" +
-      "e\0221\n\025partial_failure_error\030\003 \001(\0132\022.googl" +
-      "e.rpc.Status\022J\n\007results\030\002 \003(\01329.google.a" +
+      "proto\032\027google/rpc/status.proto\032\027google/a" +
+      "pi/client.proto\".\n\025GetAdParameterRequest" +
+      "\022\025\n\rresource_name\030\001 \001(\t\"\254\001\n\031MutateAdPara" +
+      "metersRequest\022\023\n\013customer_id\030\001 \001(\t\022J\n\nop" +
+      "erations\030\002 \003(\01326.google.ads.googleads.v1" +
+      ".services.AdParameterOperation\022\027\n\017partia" +
+      "l_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\352" +
+      "\001\n\024AdParameterOperation\022/\n\013update_mask\030\004" +
+      " \001(\0132\032.google.protobuf.FieldMask\022@\n\006crea" +
+      "te\030\001 \001(\0132..google.ads.googleads.v1.resou" +
+      "rces.AdParameterH\000\022@\n\006update\030\002 \001(\0132..goo" +
+      "gle.ads.googleads.v1.resources.AdParamet" +
+      "erH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\233\001\n\032" +
+      "MutateAdParametersResponse\0221\n\025partial_fa" +
+      "ilure_error\030\003 \001(\0132\022.google.rpc.Status\022J\n" +
+      "\007results\030\002 \003(\01329.google.ads.googleads.v1" +
+      ".services.MutateAdParameterResult\"0\n\027Mut" +
+      "ateAdParameterResult\022\025\n\rresource_name\030\001 " +
+      "\001(\t2\265\003\n\022AdParameterService\022\261\001\n\016GetAdPara" +
+      "meter\0227.google.ads.googleads.v1.services" +
+      ".GetAdParameterRequest\032..google.ads.goog" +
+      "leads.v1.resources.AdParameter\"6\202\323\344\223\0020\022." +
+      "/v1/{resource_name=customers/*/adParamet" +
+      "ers/*}\022\315\001\n\022MutateAdParameters\022;.google.a" +
       "ds.googleads.v1.services.MutateAdParamet" +
-      "erResult\"0\n\027MutateAdParameterResult\022\025\n\rr" +
-      "esource_name\030\001 \001(\t2\230\003\n\022AdParameterServic" +
-      "e\022\261\001\n\016GetAdParameter\0227.google.ads.google" +
-      "ads.v1.services.GetAdParameterRequest\032.." +
-      "google.ads.googleads.v1.resources.AdPara" +
-      "meter\"6\202\323\344\223\0020\022./v1/{resource_name=custom" +
-      "ers/*/adParameters/*}\022\315\001\n\022MutateAdParame" +
-      "ters\022;.google.ads.googleads.v1.services." +
-      "MutateAdParametersRequest\032<.google.ads.g" +
-      "oogleads.v1.services.MutateAdParametersR" +
-      "esponse\"<\202\323\344\223\0026\"1/v1/customers/{customer" +
-      "_id=*}/adParameters:mutate:\001*B\376\001\n$com.go" +
-      "ogle.ads.googleads.v1.servicesB\027AdParame" +
-      "terServiceProtoP\001ZHgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v1/servic" +
-      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
-      ".V1.Services\312\002 Google\\Ads\\GoogleAds\\V1\\S" +
-      "ervices\352\002$Google::Ads::GoogleAds::V1::Se" +
-      "rvicesb\006proto3"
+      "ersRequest\032<.google.ads.googleads.v1.ser" +
+      "vices.MutateAdParametersResponse\"<\202\323\344\223\0026" +
+      "\"1/v1/customers/{customer_id=*}/adParame" +
+      "ters:mutate:\001*\032\033\312A\030googleads.googleapis." +
+      "comB\376\001\n$com.google.ads.googleads.v1.serv" +
+      "icesB\027AdParameterServiceProtoP\001ZHgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v1/services;services\242\002\003GAA\252\002 Google" +
+      ".Ads.GoogleAds.V1.Services\312\002 Google\\Ads\\" +
+      "GoogleAds\\V1\\Services\352\002$Google::Ads::Goo" +
+      "gleAds::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -106,6 +107,7 @@ public final class AdParameterServiceProto {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetAdParameterRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -139,6 +141,7 @@ public final class AdParameterServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -147,6 +150,7 @@ public final class AdParameterServiceProto {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

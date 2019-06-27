@@ -55,43 +55,44 @@ public final class CampaignCriterionServiceProto {
       "o\032\034google/api/annotations.proto\032 google/" +
       "protobuf/field_mask.proto\032\036google/protob" +
       "uf/wrappers.proto\032\027google/rpc/status.pro" +
-      "to\"4\n\033GetCampaignCriterionRequest\022\025\n\rres" +
-      "ource_name\030\001 \001(\t\"\266\001\n\035MutateCampaignCrite" +
-      "riaRequest\022\023\n\013customer_id\030\001 \001(\t\022P\n\nopera" +
-      "tions\030\002 \003(\0132<.google.ads.googleads.v1.se" +
-      "rvices.CampaignCriterionOperation\022\027\n\017par" +
-      "tial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(" +
-      "\010\"\374\001\n\032CampaignCriterionOperation\022/\n\013upda" +
-      "te_mask\030\004 \001(\0132\032.google.protobuf.FieldMas" +
-      "k\022F\n\006create\030\001 \001(\01324.google.ads.googleads" +
-      ".v1.resources.CampaignCriterionH\000\022F\n\006upd" +
-      "ate\030\002 \001(\01324.google.ads.googleads.v1.reso" +
-      "urces.CampaignCriterionH\000\022\020\n\006remove\030\003 \001(" +
-      "\tH\000B\013\n\toperation\"\245\001\n\036MutateCampaignCrite" +
-      "riaResponse\0221\n\025partial_failure_error\030\003 \001" +
-      "(\0132\022.google.rpc.Status\022P\n\007results\030\002 \003(\0132" +
-      "?.google.ads.googleads.v1.services.Mutat" +
-      "eCampaignCriterionResult\"6\n\035MutateCampai" +
-      "gnCriterionResult\022\025\n\rresource_name\030\001 \001(\t" +
-      "2\304\003\n\030CampaignCriterionService\022\307\001\n\024GetCam" +
-      "paignCriterion\022=.google.ads.googleads.v1" +
-      ".services.GetCampaignCriterionRequest\0324." +
-      "google.ads.googleads.v1.resources.Campai" +
-      "gnCriterion\":\202\323\344\223\0024\0222/v1/{resource_name=" +
-      "customers/*/campaignCriteria/*}\022\335\001\n\026Muta" +
-      "teCampaignCriteria\022?.google.ads.googlead" +
-      "s.v1.services.MutateCampaignCriteriaRequ" +
-      "est\032@.google.ads.googleads.v1.services.M" +
-      "utateCampaignCriteriaResponse\"@\202\323\344\223\002:\"5/" +
-      "v1/customers/{customer_id=*}/campaignCri" +
-      "teria:mutate:\001*B\204\002\n$com.google.ads.googl" +
-      "eads.v1.servicesB\035CampaignCriterionServi" +
-      "ceProtoP\001ZHgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v1/services;servi" +
-      "ces\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Serv" +
-      "ices\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352" +
-      "\002$Google::Ads::GoogleAds::V1::Servicesb\006" +
-      "proto3"
+      "to\032\027google/api/client.proto\"4\n\033GetCampai" +
+      "gnCriterionRequest\022\025\n\rresource_name\030\001 \001(" +
+      "\t\"\266\001\n\035MutateCampaignCriteriaRequest\022\023\n\013c" +
+      "ustomer_id\030\001 \001(\t\022P\n\noperations\030\002 \003(\0132<.g" +
+      "oogle.ads.googleads.v1.services.Campaign" +
+      "CriterionOperation\022\027\n\017partial_failure\030\003 " +
+      "\001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\374\001\n\032CampaignC" +
+      "riterionOperation\022/\n\013update_mask\030\004 \001(\0132\032" +
+      ".google.protobuf.FieldMask\022F\n\006create\030\001 \001" +
+      "(\01324.google.ads.googleads.v1.resources.C" +
+      "ampaignCriterionH\000\022F\n\006update\030\002 \001(\01324.goo" +
+      "gle.ads.googleads.v1.resources.CampaignC" +
+      "riterionH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperatio" +
+      "n\"\245\001\n\036MutateCampaignCriteriaResponse\0221\n\025" +
+      "partial_failure_error\030\003 \001(\0132\022.google.rpc" +
+      ".Status\022P\n\007results\030\002 \003(\0132?.google.ads.go" +
+      "ogleads.v1.services.MutateCampaignCriter" +
+      "ionResult\"6\n\035MutateCampaignCriterionResu" +
+      "lt\022\025\n\rresource_name\030\001 \001(\t2\341\003\n\030CampaignCr" +
+      "iterionService\022\307\001\n\024GetCampaignCriterion\022" +
+      "=.google.ads.googleads.v1.services.GetCa" +
+      "mpaignCriterionRequest\0324.google.ads.goog" +
+      "leads.v1.resources.CampaignCriterion\":\202\323" +
+      "\344\223\0024\0222/v1/{resource_name=customers/*/cam" +
+      "paignCriteria/*}\022\335\001\n\026MutateCampaignCrite" +
+      "ria\022?.google.ads.googleads.v1.services.M" +
+      "utateCampaignCriteriaRequest\032@.google.ad" +
+      "s.googleads.v1.services.MutateCampaignCr" +
+      "iteriaResponse\"@\202\323\344\223\002:\"5/v1/customers/{c" +
+      "ustomer_id=*}/campaignCriteria:mutate:\001*" +
+      "\032\033\312A\030googleads.googleapis.comB\204\002\n$com.go" +
+      "ogle.ads.googleads.v1.servicesB\035Campaign" +
+      "CriterionServiceProtoP\001ZHgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v1/" +
+      "services;services\242\002\003GAA\252\002 Google.Ads.Goo" +
+      "gleAds.V1.Services\312\002 Google\\Ads\\GoogleAd" +
+      "s\\V1\\Services\352\002$Google::Ads::GoogleAds::" +
+      "V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -109,6 +110,7 @@ public final class CampaignCriterionServiceProto {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetCampaignCriterionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -142,6 +144,7 @@ public final class CampaignCriterionServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -150,6 +153,7 @@ public final class CampaignCriterionServiceProto {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -372,7 +372,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of top slot impressions.
-   * Display network does not support this field at the ad group level.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -383,7 +383,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of top slot impressions.
-   * Display network does not support this field at the ad group level.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -394,7 +394,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Projected number of top slot impressions.
-   * Display network does not support this field at the ad group level.
+   * Only search advertising channel type supports this field.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -490,44 +490,43 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.TargetCpaSimulationPoint other = (com.google.ads.googleads.v1.common.TargetCpaSimulationPoint) obj;
 
-    boolean result = true;
-    result = result && (hasTargetCpaMicros() == other.hasTargetCpaMicros());
+    if (hasTargetCpaMicros() != other.hasTargetCpaMicros()) return false;
     if (hasTargetCpaMicros()) {
-      result = result && getTargetCpaMicros()
-          .equals(other.getTargetCpaMicros());
+      if (!getTargetCpaMicros()
+          .equals(other.getTargetCpaMicros())) return false;
     }
-    result = result && (hasBiddableConversions() == other.hasBiddableConversions());
+    if (hasBiddableConversions() != other.hasBiddableConversions()) return false;
     if (hasBiddableConversions()) {
-      result = result && getBiddableConversions()
-          .equals(other.getBiddableConversions());
+      if (!getBiddableConversions()
+          .equals(other.getBiddableConversions())) return false;
     }
-    result = result && (hasBiddableConversionsValue() == other.hasBiddableConversionsValue());
+    if (hasBiddableConversionsValue() != other.hasBiddableConversionsValue()) return false;
     if (hasBiddableConversionsValue()) {
-      result = result && getBiddableConversionsValue()
-          .equals(other.getBiddableConversionsValue());
+      if (!getBiddableConversionsValue()
+          .equals(other.getBiddableConversionsValue())) return false;
     }
-    result = result && (hasClicks() == other.hasClicks());
+    if (hasClicks() != other.hasClicks()) return false;
     if (hasClicks()) {
-      result = result && getClicks()
-          .equals(other.getClicks());
+      if (!getClicks()
+          .equals(other.getClicks())) return false;
     }
-    result = result && (hasCostMicros() == other.hasCostMicros());
+    if (hasCostMicros() != other.hasCostMicros()) return false;
     if (hasCostMicros()) {
-      result = result && getCostMicros()
-          .equals(other.getCostMicros());
+      if (!getCostMicros()
+          .equals(other.getCostMicros())) return false;
     }
-    result = result && (hasImpressions() == other.hasImpressions());
+    if (hasImpressions() != other.hasImpressions()) return false;
     if (hasImpressions()) {
-      result = result && getImpressions()
-          .equals(other.getImpressions());
+      if (!getImpressions()
+          .equals(other.getImpressions())) return false;
     }
-    result = result && (hasTopSlotImpressions() == other.hasTopSlotImpressions());
+    if (hasTopSlotImpressions() != other.hasTopSlotImpressions()) return false;
     if (hasTopSlotImpressions()) {
-      result = result && getTopSlotImpressions()
-          .equals(other.getTopSlotImpressions());
+      if (!getTopSlotImpressions()
+          .equals(other.getTopSlotImpressions())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -811,35 +810,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -903,7 +902,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value targetCpaMicros_ = null;
+    private com.google.protobuf.Int64Value targetCpaMicros_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> targetCpaMicrosBuilder_;
     /**
@@ -1056,7 +1055,7 @@ private static final long serialVersionUID = 0L;
       return targetCpaMicrosBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue biddableConversions_ = null;
+    private com.google.protobuf.DoubleValue biddableConversions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> biddableConversionsBuilder_;
     /**
@@ -1209,7 +1208,7 @@ private static final long serialVersionUID = 0L;
       return biddableConversionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue biddableConversionsValue_ = null;
+    private com.google.protobuf.DoubleValue biddableConversionsValue_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> biddableConversionsValueBuilder_;
     /**
@@ -1362,7 +1361,7 @@ private static final long serialVersionUID = 0L;
       return biddableConversionsValueBuilder_;
     }
 
-    private com.google.protobuf.Int64Value clicks_ = null;
+    private com.google.protobuf.Int64Value clicks_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> clicksBuilder_;
     /**
@@ -1515,7 +1514,7 @@ private static final long serialVersionUID = 0L;
       return clicksBuilder_;
     }
 
-    private com.google.protobuf.Int64Value costMicros_ = null;
+    private com.google.protobuf.Int64Value costMicros_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> costMicrosBuilder_;
     /**
@@ -1668,7 +1667,7 @@ private static final long serialVersionUID = 0L;
       return costMicrosBuilder_;
     }
 
-    private com.google.protobuf.Int64Value impressions_ = null;
+    private com.google.protobuf.Int64Value impressions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> impressionsBuilder_;
     /**
@@ -1821,13 +1820,13 @@ private static final long serialVersionUID = 0L;
       return impressionsBuilder_;
     }
 
-    private com.google.protobuf.Int64Value topSlotImpressions_ = null;
+    private com.google.protobuf.Int64Value topSlotImpressions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> topSlotImpressionsBuilder_;
     /**
      * <pre>
      * Projected number of top slot impressions.
-     * Display network does not support this field at the ad group level.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -1838,7 +1837,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
-     * Display network does not support this field at the ad group level.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -1853,7 +1852,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
-     * Display network does not support this field at the ad group level.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -1874,7 +1873,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
-     * Display network does not support this field at the ad group level.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -1893,7 +1892,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
-     * Display network does not support this field at the ad group level.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -1916,7 +1915,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
-     * Display network does not support this field at the ad group level.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -1935,7 +1934,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
-     * Display network does not support this field at the ad group level.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -1948,7 +1947,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
-     * Display network does not support this field at the ad group level.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -1964,7 +1963,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Projected number of top slot impressions.
-     * Display network does not support this field at the ad group level.
+     * Only search advertising channel type supports this field.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
@@ -1985,7 +1984,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

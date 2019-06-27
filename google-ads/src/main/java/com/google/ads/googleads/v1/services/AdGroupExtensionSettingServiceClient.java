@@ -107,7 +107,10 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
   /**
    * Formats a string containing the fully-qualified path to represent a ad_group_extension_setting
    * resource.
+   *
+   * @deprecated Use the {@link AdGroupExtensionSettingName} class instead.
    */
+  @Deprecated
   public static final String formatAdGroupExtensionSettingName(
       String customer, String adGroupExtensionSetting) {
     return AD_GROUP_EXTENSION_SETTING_PATH_TEMPLATE.instantiate(
@@ -118,7 +121,10 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * ad_group_extension_setting resource.
+   *
+   * @deprecated Use the {@link AdGroupExtensionSettingName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromAdGroupExtensionSettingName(
       String adGroupExtensionSettingName) {
     return AD_GROUP_EXTENSION_SETTING_PATH_TEMPLATE
@@ -129,7 +135,10 @@ public class AdGroupExtensionSettingServiceClient implements BackgroundResource 
   /**
    * Parses the ad_group_extension_setting from the given fully-qualified path which represents a
    * ad_group_extension_setting resource.
+   *
+   * @deprecated Use the {@link AdGroupExtensionSettingName} class instead.
    */
+  @Deprecated
   public static final String parseAdGroupExtensionSettingFromAdGroupExtensionSettingName(
       String adGroupExtensionSettingName) {
     return AD_GROUP_EXTENSION_SETTING_PATH_TEMPLATE

@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 98: {
-            if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+            if (!((mutable_bitField0_ & 0x00000200) != 0)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.CustomParameter>();
               mutable_bitField0_ |= 0x00000200;
             }
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 322: {
-            if (!((mutable_bitField0_ & 0x04000000) == 0x04000000)) {
+            if (!((mutable_bitField0_ & 0x04000000) != 0)) {
               frequencyCaps_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.FrequencyCapEntry>();
               mutable_bitField0_ |= 0x04000000;
             }
@@ -568,7 +568,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 426: {
-            if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+            if (!((mutable_bitField0_ & 0x00040000) != 0)) {
               labels_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
               mutable_bitField0_ |= 0x00040000;
             }
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -591,13 +591,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+      if (((mutable_bitField0_ & 0x00000200) != 0)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
-      if (((mutable_bitField0_ & 0x04000000) == 0x04000000)) {
+      if (((mutable_bitField0_ & 0x04000000) != 0)) {
         frequencyCaps_ = java.util.Collections.unmodifiableList(frequencyCaps_);
       }
-      if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+      if (((mutable_bitField0_ & 0x00040000) != 0)) {
         labels_ = java.util.Collections.unmodifiableList(labels_);
       }
       this.unknownFields = unknownFields.build();
@@ -826,7 +826,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1064,29 +1064,28 @@ private static final long serialVersionUID = 0L;
       }
       com.google.ads.googleads.v1.resources.Campaign.NetworkSettings other = (com.google.ads.googleads.v1.resources.Campaign.NetworkSettings) obj;
 
-      boolean result = true;
-      result = result && (hasTargetGoogleSearch() == other.hasTargetGoogleSearch());
+      if (hasTargetGoogleSearch() != other.hasTargetGoogleSearch()) return false;
       if (hasTargetGoogleSearch()) {
-        result = result && getTargetGoogleSearch()
-            .equals(other.getTargetGoogleSearch());
+        if (!getTargetGoogleSearch()
+            .equals(other.getTargetGoogleSearch())) return false;
       }
-      result = result && (hasTargetSearchNetwork() == other.hasTargetSearchNetwork());
+      if (hasTargetSearchNetwork() != other.hasTargetSearchNetwork()) return false;
       if (hasTargetSearchNetwork()) {
-        result = result && getTargetSearchNetwork()
-            .equals(other.getTargetSearchNetwork());
+        if (!getTargetSearchNetwork()
+            .equals(other.getTargetSearchNetwork())) return false;
       }
-      result = result && (hasTargetContentNetwork() == other.hasTargetContentNetwork());
+      if (hasTargetContentNetwork() != other.hasTargetContentNetwork()) return false;
       if (hasTargetContentNetwork()) {
-        result = result && getTargetContentNetwork()
-            .equals(other.getTargetContentNetwork());
+        if (!getTargetContentNetwork()
+            .equals(other.getTargetContentNetwork())) return false;
       }
-      result = result && (hasTargetPartnerSearchNetwork() == other.hasTargetPartnerSearchNetwork());
+      if (hasTargetPartnerSearchNetwork() != other.hasTargetPartnerSearchNetwork()) return false;
       if (hasTargetPartnerSearchNetwork()) {
-        result = result && getTargetPartnerSearchNetwork()
-            .equals(other.getTargetPartnerSearchNetwork());
+        if (!getTargetPartnerSearchNetwork()
+            .equals(other.getTargetPartnerSearchNetwork())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1325,35 +1324,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1408,7 +1407,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.google.protobuf.BoolValue targetGoogleSearch_ = null;
+      private com.google.protobuf.BoolValue targetGoogleSearch_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> targetGoogleSearchBuilder_;
       /**
@@ -1561,7 +1560,7 @@ private static final long serialVersionUID = 0L;
         return targetGoogleSearchBuilder_;
       }
 
-      private com.google.protobuf.BoolValue targetSearchNetwork_ = null;
+      private com.google.protobuf.BoolValue targetSearchNetwork_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> targetSearchNetworkBuilder_;
       /**
@@ -1723,7 +1722,7 @@ private static final long serialVersionUID = 0L;
         return targetSearchNetworkBuilder_;
       }
 
-      private com.google.protobuf.BoolValue targetContentNetwork_ = null;
+      private com.google.protobuf.BoolValue targetContentNetwork_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> targetContentNetworkBuilder_;
       /**
@@ -1885,7 +1884,7 @@ private static final long serialVersionUID = 0L;
         return targetContentNetworkBuilder_;
       }
 
-      private com.google.protobuf.BoolValue targetPartnerSearchNetwork_ = null;
+      private com.google.protobuf.BoolValue targetPartnerSearchNetwork_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> targetPartnerSearchNetworkBuilder_;
       /**
@@ -2049,7 +2048,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2185,7 +2184,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2294,14 +2293,13 @@ private static final long serialVersionUID = 0L;
       }
       com.google.ads.googleads.v1.resources.Campaign.HotelSettingInfo other = (com.google.ads.googleads.v1.resources.Campaign.HotelSettingInfo) obj;
 
-      boolean result = true;
-      result = result && (hasHotelCenterId() == other.hasHotelCenterId());
+      if (hasHotelCenterId() != other.hasHotelCenterId()) return false;
       if (hasHotelCenterId()) {
-        result = result && getHotelCenterId()
-            .equals(other.getHotelCenterId());
+        if (!getHotelCenterId()
+            .equals(other.getHotelCenterId())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2495,35 +2493,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2569,7 +2567,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.google.protobuf.Int64Value hotelCenterId_ = null;
+      private com.google.protobuf.Int64Value hotelCenterId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> hotelCenterIdBuilder_;
       /**
@@ -2724,7 +2722,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2769,4644 +2767,6 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v1.resources.Campaign.HotelSettingInfo getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface VanityPharmaOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v1.resources.Campaign.VanityPharma)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-     */
-    int getVanityPharmaDisplayUrlModeValue();
-    /**
-     * <pre>
-     * The display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-     */
-    com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode getVanityPharmaDisplayUrlMode();
-
-    /**
-     * <pre>
-     * The text that will be displayed in display URL of the text ad when
-     * website description is the selected display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-     */
-    int getVanityPharmaTextValue();
-    /**
-     * <pre>
-     * The text that will be displayed in display URL of the text ad when
-     * website description is the selected display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-     */
-    com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText getVanityPharmaText();
-  }
-  /**
-   * <pre>
-   * Describes how unbranded pharma ads will be displayed.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.VanityPharma}
-   */
-  public  static final class VanityPharma extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.Campaign.VanityPharma)
-      VanityPharmaOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use VanityPharma.newBuilder() to construct.
-    private VanityPharma(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private VanityPharma() {
-      vanityPharmaDisplayUrlMode_ = 0;
-      vanityPharmaText_ = 0;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private VanityPharma(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              vanityPharmaDisplayUrlMode_ = rawValue;
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              vanityPharmaText_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_VanityPharma_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_VanityPharma_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v1.resources.Campaign.VanityPharma.class, com.google.ads.googleads.v1.resources.Campaign.VanityPharma.Builder.class);
-    }
-
-    public static final int VANITY_PHARMA_DISPLAY_URL_MODE_FIELD_NUMBER = 1;
-    private int vanityPharmaDisplayUrlMode_;
-    /**
-     * <pre>
-     * The display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-     */
-    public int getVanityPharmaDisplayUrlModeValue() {
-      return vanityPharmaDisplayUrlMode_;
-    }
-    /**
-     * <pre>
-     * The display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-     */
-    public com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode getVanityPharmaDisplayUrlMode() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode result = com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.valueOf(vanityPharmaDisplayUrlMode_);
-      return result == null ? com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNRECOGNIZED : result;
-    }
-
-    public static final int VANITY_PHARMA_TEXT_FIELD_NUMBER = 2;
-    private int vanityPharmaText_;
-    /**
-     * <pre>
-     * The text that will be displayed in display URL of the text ad when
-     * website description is the selected display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-     */
-    public int getVanityPharmaTextValue() {
-      return vanityPharmaText_;
-    }
-    /**
-     * <pre>
-     * The text that will be displayed in display URL of the text ad when
-     * website description is the selected display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-     */
-    public com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText getVanityPharmaText() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText result = com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText.valueOf(vanityPharmaText_);
-      return result == null ? com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText.UNRECOGNIZED : result;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (vanityPharmaDisplayUrlMode_ != com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNSPECIFIED.getNumber()) {
-        output.writeEnum(1, vanityPharmaDisplayUrlMode_);
-      }
-      if (vanityPharmaText_ != com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText.UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, vanityPharmaText_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (vanityPharmaDisplayUrlMode_ != com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, vanityPharmaDisplayUrlMode_);
-      }
-      if (vanityPharmaText_ != com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText.UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, vanityPharmaText_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v1.resources.Campaign.VanityPharma)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v1.resources.Campaign.VanityPharma other = (com.google.ads.googleads.v1.resources.Campaign.VanityPharma) obj;
-
-      boolean result = true;
-      result = result && vanityPharmaDisplayUrlMode_ == other.vanityPharmaDisplayUrlMode_;
-      result = result && vanityPharmaText_ == other.vanityPharmaText_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VANITY_PHARMA_DISPLAY_URL_MODE_FIELD_NUMBER;
-      hash = (53 * hash) + vanityPharmaDisplayUrlMode_;
-      hash = (37 * hash) + VANITY_PHARMA_TEXT_FIELD_NUMBER;
-      hash = (53 * hash) + vanityPharmaText_;
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v1.resources.Campaign.VanityPharma prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Describes how unbranded pharma ads will be displayed.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.VanityPharma}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v1.resources.Campaign.VanityPharma)
-        com.google.ads.googleads.v1.resources.Campaign.VanityPharmaOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_VanityPharma_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_VanityPharma_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v1.resources.Campaign.VanityPharma.class, com.google.ads.googleads.v1.resources.Campaign.VanityPharma.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v1.resources.Campaign.VanityPharma.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        vanityPharmaDisplayUrlMode_ = 0;
-
-        vanityPharmaText_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_VanityPharma_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.VanityPharma getDefaultInstanceForType() {
-        return com.google.ads.googleads.v1.resources.Campaign.VanityPharma.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.VanityPharma build() {
-        com.google.ads.googleads.v1.resources.Campaign.VanityPharma result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.VanityPharma buildPartial() {
-        com.google.ads.googleads.v1.resources.Campaign.VanityPharma result = new com.google.ads.googleads.v1.resources.Campaign.VanityPharma(this);
-        result.vanityPharmaDisplayUrlMode_ = vanityPharmaDisplayUrlMode_;
-        result.vanityPharmaText_ = vanityPharmaText_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v1.resources.Campaign.VanityPharma) {
-          return mergeFrom((com.google.ads.googleads.v1.resources.Campaign.VanityPharma)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v1.resources.Campaign.VanityPharma other) {
-        if (other == com.google.ads.googleads.v1.resources.Campaign.VanityPharma.getDefaultInstance()) return this;
-        if (other.vanityPharmaDisplayUrlMode_ != 0) {
-          setVanityPharmaDisplayUrlModeValue(other.getVanityPharmaDisplayUrlModeValue());
-        }
-        if (other.vanityPharmaText_ != 0) {
-          setVanityPharmaTextValue(other.getVanityPharmaTextValue());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v1.resources.Campaign.VanityPharma parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v1.resources.Campaign.VanityPharma) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int vanityPharmaDisplayUrlMode_ = 0;
-      /**
-       * <pre>
-       * The display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-       */
-      public int getVanityPharmaDisplayUrlModeValue() {
-        return vanityPharmaDisplayUrlMode_;
-      }
-      /**
-       * <pre>
-       * The display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-       */
-      public Builder setVanityPharmaDisplayUrlModeValue(int value) {
-        vanityPharmaDisplayUrlMode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-       */
-      public com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode getVanityPharmaDisplayUrlMode() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode result = com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.valueOf(vanityPharmaDisplayUrlMode_);
-        return result == null ? com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * The display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-       */
-      public Builder setVanityPharmaDisplayUrlMode(com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        vanityPharmaDisplayUrlMode_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-       */
-      public Builder clearVanityPharmaDisplayUrlMode() {
-        
-        vanityPharmaDisplayUrlMode_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int vanityPharmaText_ = 0;
-      /**
-       * <pre>
-       * The text that will be displayed in display URL of the text ad when
-       * website description is the selected display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-       */
-      public int getVanityPharmaTextValue() {
-        return vanityPharmaText_;
-      }
-      /**
-       * <pre>
-       * The text that will be displayed in display URL of the text ad when
-       * website description is the selected display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-       */
-      public Builder setVanityPharmaTextValue(int value) {
-        vanityPharmaText_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The text that will be displayed in display URL of the text ad when
-       * website description is the selected display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-       */
-      public com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText getVanityPharmaText() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText result = com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText.valueOf(vanityPharmaText_);
-        return result == null ? com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * The text that will be displayed in display URL of the text ad when
-       * website description is the selected display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-       */
-      public Builder setVanityPharmaText(com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        vanityPharmaText_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The text that will be displayed in display URL of the text ad when
-       * website description is the selected display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-       */
-      public Builder clearVanityPharmaText() {
-        
-        vanityPharmaText_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v1.resources.Campaign.VanityPharma)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v1.resources.Campaign.VanityPharma)
-    private static final com.google.ads.googleads.v1.resources.Campaign.VanityPharma DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v1.resources.Campaign.VanityPharma();
-    }
-
-    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<VanityPharma>
-        PARSER = new com.google.protobuf.AbstractParser<VanityPharma>() {
-      @java.lang.Override
-      public VanityPharma parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new VanityPharma(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<VanityPharma> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<VanityPharma> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v1.resources.Campaign.VanityPharma getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface DynamicSearchAdsSettingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The Internet domain name that this setting represents, e.g., "google.com"
-     * or "www.google.com".
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue domain_name = 1;</code>
-     */
-    boolean hasDomainName();
-    /**
-     * <pre>
-     * The Internet domain name that this setting represents, e.g., "google.com"
-     * or "www.google.com".
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue domain_name = 1;</code>
-     */
-    com.google.protobuf.StringValue getDomainName();
-    /**
-     * <pre>
-     * The Internet domain name that this setting represents, e.g., "google.com"
-     * or "www.google.com".
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue domain_name = 1;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getDomainNameOrBuilder();
-
-    /**
-     * <pre>
-     * The language code specifying the language of the domain, e.g., "en".
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue language_code = 2;</code>
-     */
-    boolean hasLanguageCode();
-    /**
-     * <pre>
-     * The language code specifying the language of the domain, e.g., "en".
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue language_code = 2;</code>
-     */
-    com.google.protobuf.StringValue getLanguageCode();
-    /**
-     * <pre>
-     * The language code specifying the language of the domain, e.g., "en".
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue language_code = 2;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder();
-
-    /**
-     * <pre>
-     * Whether the campaign uses advertiser supplied URLs exclusively.
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-     */
-    boolean hasUseSuppliedUrlsOnly();
-    /**
-     * <pre>
-     * Whether the campaign uses advertiser supplied URLs exclusively.
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-     */
-    com.google.protobuf.BoolValue getUseSuppliedUrlsOnly();
-    /**
-     * <pre>
-     * Whether the campaign uses advertiser supplied URLs exclusively.
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-     */
-    com.google.protobuf.BoolValueOrBuilder getUseSuppliedUrlsOnlyOrBuilder();
-
-    /**
-     * <pre>
-     * The list of page feeds associated with the campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-     */
-    java.util.List<com.google.protobuf.StringValue> 
-        getFeedsList();
-    /**
-     * <pre>
-     * The list of page feeds associated with the campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-     */
-    com.google.protobuf.StringValue getFeeds(int index);
-    /**
-     * <pre>
-     * The list of page feeds associated with the campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-     */
-    int getFeedsCount();
-    /**
-     * <pre>
-     * The list of page feeds associated with the campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-     */
-    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
-        getFeedsOrBuilderList();
-    /**
-     * <pre>
-     * The list of page feeds associated with the campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getFeedsOrBuilder(
-        int index);
-  }
-  /**
-   * <pre>
-   * The setting for controlling Dynamic Search Ads (DSA).
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting}
-   */
-  public  static final class DynamicSearchAdsSetting extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)
-      DynamicSearchAdsSettingOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DynamicSearchAdsSetting.newBuilder() to construct.
-    private DynamicSearchAdsSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private DynamicSearchAdsSetting() {
-      feeds_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private DynamicSearchAdsSetting(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (domainName_ != null) {
-                subBuilder = domainName_.toBuilder();
-              }
-              domainName_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(domainName_);
-                domainName_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (languageCode_ != null) {
-                subBuilder = languageCode_.toBuilder();
-              }
-              languageCode_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(languageCode_);
-                languageCode_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              com.google.protobuf.BoolValue.Builder subBuilder = null;
-              if (useSuppliedUrlsOnly_ != null) {
-                subBuilder = useSuppliedUrlsOnly_.toBuilder();
-              }
-              useSuppliedUrlsOnly_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(useSuppliedUrlsOnly_);
-                useSuppliedUrlsOnly_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                feeds_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              feeds_.add(
-                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-          feeds_ = java.util.Collections.unmodifiableList(feeds_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_DynamicSearchAdsSetting_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_DynamicSearchAdsSetting_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.class, com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int DOMAIN_NAME_FIELD_NUMBER = 1;
-    private com.google.protobuf.StringValue domainName_;
-    /**
-     * <pre>
-     * The Internet domain name that this setting represents, e.g., "google.com"
-     * or "www.google.com".
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue domain_name = 1;</code>
-     */
-    public boolean hasDomainName() {
-      return domainName_ != null;
-    }
-    /**
-     * <pre>
-     * The Internet domain name that this setting represents, e.g., "google.com"
-     * or "www.google.com".
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue domain_name = 1;</code>
-     */
-    public com.google.protobuf.StringValue getDomainName() {
-      return domainName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : domainName_;
-    }
-    /**
-     * <pre>
-     * The Internet domain name that this setting represents, e.g., "google.com"
-     * or "www.google.com".
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue domain_name = 1;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getDomainNameOrBuilder() {
-      return getDomainName();
-    }
-
-    public static final int LANGUAGE_CODE_FIELD_NUMBER = 2;
-    private com.google.protobuf.StringValue languageCode_;
-    /**
-     * <pre>
-     * The language code specifying the language of the domain, e.g., "en".
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue language_code = 2;</code>
-     */
-    public boolean hasLanguageCode() {
-      return languageCode_ != null;
-    }
-    /**
-     * <pre>
-     * The language code specifying the language of the domain, e.g., "en".
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue language_code = 2;</code>
-     */
-    public com.google.protobuf.StringValue getLanguageCode() {
-      return languageCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
-    }
-    /**
-     * <pre>
-     * The language code specifying the language of the domain, e.g., "en".
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue language_code = 2;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
-      return getLanguageCode();
-    }
-
-    public static final int USE_SUPPLIED_URLS_ONLY_FIELD_NUMBER = 3;
-    private com.google.protobuf.BoolValue useSuppliedUrlsOnly_;
-    /**
-     * <pre>
-     * Whether the campaign uses advertiser supplied URLs exclusively.
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-     */
-    public boolean hasUseSuppliedUrlsOnly() {
-      return useSuppliedUrlsOnly_ != null;
-    }
-    /**
-     * <pre>
-     * Whether the campaign uses advertiser supplied URLs exclusively.
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-     */
-    public com.google.protobuf.BoolValue getUseSuppliedUrlsOnly() {
-      return useSuppliedUrlsOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useSuppliedUrlsOnly_;
-    }
-    /**
-     * <pre>
-     * Whether the campaign uses advertiser supplied URLs exclusively.
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-     */
-    public com.google.protobuf.BoolValueOrBuilder getUseSuppliedUrlsOnlyOrBuilder() {
-      return getUseSuppliedUrlsOnly();
-    }
-
-    public static final int FEEDS_FIELD_NUMBER = 5;
-    private java.util.List<com.google.protobuf.StringValue> feeds_;
-    /**
-     * <pre>
-     * The list of page feeds associated with the campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-     */
-    public java.util.List<com.google.protobuf.StringValue> getFeedsList() {
-      return feeds_;
-    }
-    /**
-     * <pre>
-     * The list of page feeds associated with the campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-     */
-    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
-        getFeedsOrBuilderList() {
-      return feeds_;
-    }
-    /**
-     * <pre>
-     * The list of page feeds associated with the campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-     */
-    public int getFeedsCount() {
-      return feeds_.size();
-    }
-    /**
-     * <pre>
-     * The list of page feeds associated with the campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-     */
-    public com.google.protobuf.StringValue getFeeds(int index) {
-      return feeds_.get(index);
-    }
-    /**
-     * <pre>
-     * The list of page feeds associated with the campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getFeedsOrBuilder(
-        int index) {
-      return feeds_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (domainName_ != null) {
-        output.writeMessage(1, getDomainName());
-      }
-      if (languageCode_ != null) {
-        output.writeMessage(2, getLanguageCode());
-      }
-      if (useSuppliedUrlsOnly_ != null) {
-        output.writeMessage(3, getUseSuppliedUrlsOnly());
-      }
-      for (int i = 0; i < feeds_.size(); i++) {
-        output.writeMessage(5, feeds_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (domainName_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getDomainName());
-      }
-      if (languageCode_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getLanguageCode());
-      }
-      if (useSuppliedUrlsOnly_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getUseSuppliedUrlsOnly());
-      }
-      for (int i = 0; i < feeds_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, feeds_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting other = (com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting) obj;
-
-      boolean result = true;
-      result = result && (hasDomainName() == other.hasDomainName());
-      if (hasDomainName()) {
-        result = result && getDomainName()
-            .equals(other.getDomainName());
-      }
-      result = result && (hasLanguageCode() == other.hasLanguageCode());
-      if (hasLanguageCode()) {
-        result = result && getLanguageCode()
-            .equals(other.getLanguageCode());
-      }
-      result = result && (hasUseSuppliedUrlsOnly() == other.hasUseSuppliedUrlsOnly());
-      if (hasUseSuppliedUrlsOnly()) {
-        result = result && getUseSuppliedUrlsOnly()
-            .equals(other.getUseSuppliedUrlsOnly());
-      }
-      result = result && getFeedsList()
-          .equals(other.getFeedsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasDomainName()) {
-        hash = (37 * hash) + DOMAIN_NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getDomainName().hashCode();
-      }
-      if (hasLanguageCode()) {
-        hash = (37 * hash) + LANGUAGE_CODE_FIELD_NUMBER;
-        hash = (53 * hash) + getLanguageCode().hashCode();
-      }
-      if (hasUseSuppliedUrlsOnly()) {
-        hash = (37 * hash) + USE_SUPPLIED_URLS_ONLY_FIELD_NUMBER;
-        hash = (53 * hash) + getUseSuppliedUrlsOnly().hashCode();
-      }
-      if (getFeedsCount() > 0) {
-        hash = (37 * hash) + FEEDS_FIELD_NUMBER;
-        hash = (53 * hash) + getFeedsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * The setting for controlling Dynamic Search Ads (DSA).
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)
-        com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSettingOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_DynamicSearchAdsSetting_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_DynamicSearchAdsSetting_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.class, com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFeedsFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (domainNameBuilder_ == null) {
-          domainName_ = null;
-        } else {
-          domainName_ = null;
-          domainNameBuilder_ = null;
-        }
-        if (languageCodeBuilder_ == null) {
-          languageCode_ = null;
-        } else {
-          languageCode_ = null;
-          languageCodeBuilder_ = null;
-        }
-        if (useSuppliedUrlsOnlyBuilder_ == null) {
-          useSuppliedUrlsOnly_ = null;
-        } else {
-          useSuppliedUrlsOnly_ = null;
-          useSuppliedUrlsOnlyBuilder_ = null;
-        }
-        if (feedsBuilder_ == null) {
-          feeds_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        } else {
-          feedsBuilder_.clear();
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_DynamicSearchAdsSetting_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting getDefaultInstanceForType() {
-        return com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting build() {
-        com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting buildPartial() {
-        com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting result = new com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (domainNameBuilder_ == null) {
-          result.domainName_ = domainName_;
-        } else {
-          result.domainName_ = domainNameBuilder_.build();
-        }
-        if (languageCodeBuilder_ == null) {
-          result.languageCode_ = languageCode_;
-        } else {
-          result.languageCode_ = languageCodeBuilder_.build();
-        }
-        if (useSuppliedUrlsOnlyBuilder_ == null) {
-          result.useSuppliedUrlsOnly_ = useSuppliedUrlsOnly_;
-        } else {
-          result.useSuppliedUrlsOnly_ = useSuppliedUrlsOnlyBuilder_.build();
-        }
-        if (feedsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
-            feeds_ = java.util.Collections.unmodifiableList(feeds_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.feeds_ = feeds_;
-        } else {
-          result.feeds_ = feedsBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting) {
-          return mergeFrom((com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting other) {
-        if (other == com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.getDefaultInstance()) return this;
-        if (other.hasDomainName()) {
-          mergeDomainName(other.getDomainName());
-        }
-        if (other.hasLanguageCode()) {
-          mergeLanguageCode(other.getLanguageCode());
-        }
-        if (other.hasUseSuppliedUrlsOnly()) {
-          mergeUseSuppliedUrlsOnly(other.getUseSuppliedUrlsOnly());
-        }
-        if (feedsBuilder_ == null) {
-          if (!other.feeds_.isEmpty()) {
-            if (feeds_.isEmpty()) {
-              feeds_ = other.feeds_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureFeedsIsMutable();
-              feeds_.addAll(other.feeds_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.feeds_.isEmpty()) {
-            if (feedsBuilder_.isEmpty()) {
-              feedsBuilder_.dispose();
-              feedsBuilder_ = null;
-              feeds_ = other.feeds_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              feedsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getFeedsFieldBuilder() : null;
-            } else {
-              feedsBuilder_.addAllMessages(other.feeds_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.StringValue domainName_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> domainNameBuilder_;
-      /**
-       * <pre>
-       * The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue domain_name = 1;</code>
-       */
-      public boolean hasDomainName() {
-        return domainNameBuilder_ != null || domainName_ != null;
-      }
-      /**
-       * <pre>
-       * The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue domain_name = 1;</code>
-       */
-      public com.google.protobuf.StringValue getDomainName() {
-        if (domainNameBuilder_ == null) {
-          return domainName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : domainName_;
-        } else {
-          return domainNameBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue domain_name = 1;</code>
-       */
-      public Builder setDomainName(com.google.protobuf.StringValue value) {
-        if (domainNameBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          domainName_ = value;
-          onChanged();
-        } else {
-          domainNameBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue domain_name = 1;</code>
-       */
-      public Builder setDomainName(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (domainNameBuilder_ == null) {
-          domainName_ = builderForValue.build();
-          onChanged();
-        } else {
-          domainNameBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue domain_name = 1;</code>
-       */
-      public Builder mergeDomainName(com.google.protobuf.StringValue value) {
-        if (domainNameBuilder_ == null) {
-          if (domainName_ != null) {
-            domainName_ =
-              com.google.protobuf.StringValue.newBuilder(domainName_).mergeFrom(value).buildPartial();
-          } else {
-            domainName_ = value;
-          }
-          onChanged();
-        } else {
-          domainNameBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue domain_name = 1;</code>
-       */
-      public Builder clearDomainName() {
-        if (domainNameBuilder_ == null) {
-          domainName_ = null;
-          onChanged();
-        } else {
-          domainName_ = null;
-          domainNameBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue domain_name = 1;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getDomainNameBuilder() {
-        
-        onChanged();
-        return getDomainNameFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue domain_name = 1;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getDomainNameOrBuilder() {
-        if (domainNameBuilder_ != null) {
-          return domainNameBuilder_.getMessageOrBuilder();
-        } else {
-          return domainName_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : domainName_;
-        }
-      }
-      /**
-       * <pre>
-       * The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue domain_name = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getDomainNameFieldBuilder() {
-        if (domainNameBuilder_ == null) {
-          domainNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getDomainName(),
-                  getParentForChildren(),
-                  isClean());
-          domainName_ = null;
-        }
-        return domainNameBuilder_;
-      }
-
-      private com.google.protobuf.StringValue languageCode_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> languageCodeBuilder_;
-      /**
-       * <pre>
-       * The language code specifying the language of the domain, e.g., "en".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue language_code = 2;</code>
-       */
-      public boolean hasLanguageCode() {
-        return languageCodeBuilder_ != null || languageCode_ != null;
-      }
-      /**
-       * <pre>
-       * The language code specifying the language of the domain, e.g., "en".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue language_code = 2;</code>
-       */
-      public com.google.protobuf.StringValue getLanguageCode() {
-        if (languageCodeBuilder_ == null) {
-          return languageCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
-        } else {
-          return languageCodeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The language code specifying the language of the domain, e.g., "en".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue language_code = 2;</code>
-       */
-      public Builder setLanguageCode(com.google.protobuf.StringValue value) {
-        if (languageCodeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          languageCode_ = value;
-          onChanged();
-        } else {
-          languageCodeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The language code specifying the language of the domain, e.g., "en".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue language_code = 2;</code>
-       */
-      public Builder setLanguageCode(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (languageCodeBuilder_ == null) {
-          languageCode_ = builderForValue.build();
-          onChanged();
-        } else {
-          languageCodeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The language code specifying the language of the domain, e.g., "en".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue language_code = 2;</code>
-       */
-      public Builder mergeLanguageCode(com.google.protobuf.StringValue value) {
-        if (languageCodeBuilder_ == null) {
-          if (languageCode_ != null) {
-            languageCode_ =
-              com.google.protobuf.StringValue.newBuilder(languageCode_).mergeFrom(value).buildPartial();
-          } else {
-            languageCode_ = value;
-          }
-          onChanged();
-        } else {
-          languageCodeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The language code specifying the language of the domain, e.g., "en".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue language_code = 2;</code>
-       */
-      public Builder clearLanguageCode() {
-        if (languageCodeBuilder_ == null) {
-          languageCode_ = null;
-          onChanged();
-        } else {
-          languageCode_ = null;
-          languageCodeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The language code specifying the language of the domain, e.g., "en".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue language_code = 2;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getLanguageCodeBuilder() {
-        
-        onChanged();
-        return getLanguageCodeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The language code specifying the language of the domain, e.g., "en".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue language_code = 2;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
-        if (languageCodeBuilder_ != null) {
-          return languageCodeBuilder_.getMessageOrBuilder();
-        } else {
-          return languageCode_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
-        }
-      }
-      /**
-       * <pre>
-       * The language code specifying the language of the domain, e.g., "en".
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue language_code = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getLanguageCodeFieldBuilder() {
-        if (languageCodeBuilder_ == null) {
-          languageCodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getLanguageCode(),
-                  getParentForChildren(),
-                  isClean());
-          languageCode_ = null;
-        }
-        return languageCodeBuilder_;
-      }
-
-      private com.google.protobuf.BoolValue useSuppliedUrlsOnly_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> useSuppliedUrlsOnlyBuilder_;
-      /**
-       * <pre>
-       * Whether the campaign uses advertiser supplied URLs exclusively.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-       */
-      public boolean hasUseSuppliedUrlsOnly() {
-        return useSuppliedUrlsOnlyBuilder_ != null || useSuppliedUrlsOnly_ != null;
-      }
-      /**
-       * <pre>
-       * Whether the campaign uses advertiser supplied URLs exclusively.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-       */
-      public com.google.protobuf.BoolValue getUseSuppliedUrlsOnly() {
-        if (useSuppliedUrlsOnlyBuilder_ == null) {
-          return useSuppliedUrlsOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useSuppliedUrlsOnly_;
-        } else {
-          return useSuppliedUrlsOnlyBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Whether the campaign uses advertiser supplied URLs exclusively.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-       */
-      public Builder setUseSuppliedUrlsOnly(com.google.protobuf.BoolValue value) {
-        if (useSuppliedUrlsOnlyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          useSuppliedUrlsOnly_ = value;
-          onChanged();
-        } else {
-          useSuppliedUrlsOnlyBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Whether the campaign uses advertiser supplied URLs exclusively.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-       */
-      public Builder setUseSuppliedUrlsOnly(
-          com.google.protobuf.BoolValue.Builder builderForValue) {
-        if (useSuppliedUrlsOnlyBuilder_ == null) {
-          useSuppliedUrlsOnly_ = builderForValue.build();
-          onChanged();
-        } else {
-          useSuppliedUrlsOnlyBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Whether the campaign uses advertiser supplied URLs exclusively.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-       */
-      public Builder mergeUseSuppliedUrlsOnly(com.google.protobuf.BoolValue value) {
-        if (useSuppliedUrlsOnlyBuilder_ == null) {
-          if (useSuppliedUrlsOnly_ != null) {
-            useSuppliedUrlsOnly_ =
-              com.google.protobuf.BoolValue.newBuilder(useSuppliedUrlsOnly_).mergeFrom(value).buildPartial();
-          } else {
-            useSuppliedUrlsOnly_ = value;
-          }
-          onChanged();
-        } else {
-          useSuppliedUrlsOnlyBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Whether the campaign uses advertiser supplied URLs exclusively.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-       */
-      public Builder clearUseSuppliedUrlsOnly() {
-        if (useSuppliedUrlsOnlyBuilder_ == null) {
-          useSuppliedUrlsOnly_ = null;
-          onChanged();
-        } else {
-          useSuppliedUrlsOnly_ = null;
-          useSuppliedUrlsOnlyBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Whether the campaign uses advertiser supplied URLs exclusively.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-       */
-      public com.google.protobuf.BoolValue.Builder getUseSuppliedUrlsOnlyBuilder() {
-        
-        onChanged();
-        return getUseSuppliedUrlsOnlyFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Whether the campaign uses advertiser supplied URLs exclusively.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-       */
-      public com.google.protobuf.BoolValueOrBuilder getUseSuppliedUrlsOnlyOrBuilder() {
-        if (useSuppliedUrlsOnlyBuilder_ != null) {
-          return useSuppliedUrlsOnlyBuilder_.getMessageOrBuilder();
-        } else {
-          return useSuppliedUrlsOnly_ == null ?
-              com.google.protobuf.BoolValue.getDefaultInstance() : useSuppliedUrlsOnly_;
-        }
-      }
-      /**
-       * <pre>
-       * Whether the campaign uses advertiser supplied URLs exclusively.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
-          getUseSuppliedUrlsOnlyFieldBuilder() {
-        if (useSuppliedUrlsOnlyBuilder_ == null) {
-          useSuppliedUrlsOnlyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
-                  getUseSuppliedUrlsOnly(),
-                  getParentForChildren(),
-                  isClean());
-          useSuppliedUrlsOnly_ = null;
-        }
-        return useSuppliedUrlsOnlyBuilder_;
-      }
-
-      private java.util.List<com.google.protobuf.StringValue> feeds_ =
-        java.util.Collections.emptyList();
-      private void ensureFeedsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          feeds_ = new java.util.ArrayList<com.google.protobuf.StringValue>(feeds_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> feedsBuilder_;
-
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public java.util.List<com.google.protobuf.StringValue> getFeedsList() {
-        if (feedsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(feeds_);
-        } else {
-          return feedsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public int getFeedsCount() {
-        if (feedsBuilder_ == null) {
-          return feeds_.size();
-        } else {
-          return feedsBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public com.google.protobuf.StringValue getFeeds(int index) {
-        if (feedsBuilder_ == null) {
-          return feeds_.get(index);
-        } else {
-          return feedsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public Builder setFeeds(
-          int index, com.google.protobuf.StringValue value) {
-        if (feedsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFeedsIsMutable();
-          feeds_.set(index, value);
-          onChanged();
-        } else {
-          feedsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public Builder setFeeds(
-          int index, com.google.protobuf.StringValue.Builder builderForValue) {
-        if (feedsBuilder_ == null) {
-          ensureFeedsIsMutable();
-          feeds_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          feedsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public Builder addFeeds(com.google.protobuf.StringValue value) {
-        if (feedsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFeedsIsMutable();
-          feeds_.add(value);
-          onChanged();
-        } else {
-          feedsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public Builder addFeeds(
-          int index, com.google.protobuf.StringValue value) {
-        if (feedsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFeedsIsMutable();
-          feeds_.add(index, value);
-          onChanged();
-        } else {
-          feedsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public Builder addFeeds(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (feedsBuilder_ == null) {
-          ensureFeedsIsMutable();
-          feeds_.add(builderForValue.build());
-          onChanged();
-        } else {
-          feedsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public Builder addFeeds(
-          int index, com.google.protobuf.StringValue.Builder builderForValue) {
-        if (feedsBuilder_ == null) {
-          ensureFeedsIsMutable();
-          feeds_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          feedsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public Builder addAllFeeds(
-          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
-        if (feedsBuilder_ == null) {
-          ensureFeedsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, feeds_);
-          onChanged();
-        } else {
-          feedsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public Builder clearFeeds() {
-        if (feedsBuilder_ == null) {
-          feeds_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          feedsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public Builder removeFeeds(int index) {
-        if (feedsBuilder_ == null) {
-          ensureFeedsIsMutable();
-          feeds_.remove(index);
-          onChanged();
-        } else {
-          feedsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getFeedsBuilder(
-          int index) {
-        return getFeedsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getFeedsOrBuilder(
-          int index) {
-        if (feedsBuilder_ == null) {
-          return feeds_.get(index);  } else {
-          return feedsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
-           getFeedsOrBuilderList() {
-        if (feedsBuilder_ != null) {
-          return feedsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(feeds_);
-        }
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public com.google.protobuf.StringValue.Builder addFeedsBuilder() {
-        return getFeedsFieldBuilder().addBuilder(
-            com.google.protobuf.StringValue.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public com.google.protobuf.StringValue.Builder addFeedsBuilder(
-          int index) {
-        return getFeedsFieldBuilder().addBuilder(
-            index, com.google.protobuf.StringValue.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * The list of page feeds associated with the campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
-       */
-      public java.util.List<com.google.protobuf.StringValue.Builder> 
-           getFeedsBuilderList() {
-        return getFeedsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getFeedsFieldBuilder() {
-        if (feedsBuilder_ == null) {
-          feedsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  feeds_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
-                  getParentForChildren(),
-                  isClean());
-          feeds_ = null;
-        }
-        return feedsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)
-    private static final com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting();
-    }
-
-    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<DynamicSearchAdsSetting>
-        PARSER = new com.google.protobuf.AbstractParser<DynamicSearchAdsSetting>() {
-      @java.lang.Override
-      public DynamicSearchAdsSetting parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DynamicSearchAdsSetting(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<DynamicSearchAdsSetting> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DynamicSearchAdsSetting> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ShoppingSettingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v1.resources.Campaign.ShoppingSetting)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * ID of the Merchant Center account.
-     * This field is required for create operations. This field is immutable for
-     * Shopping campaigns.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-     */
-    boolean hasMerchantId();
-    /**
-     * <pre>
-     * ID of the Merchant Center account.
-     * This field is required for create operations. This field is immutable for
-     * Shopping campaigns.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-     */
-    com.google.protobuf.Int64Value getMerchantId();
-    /**
-     * <pre>
-     * ID of the Merchant Center account.
-     * This field is required for create operations. This field is immutable for
-     * Shopping campaigns.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getMerchantIdOrBuilder();
-
-    /**
-     * <pre>
-     * Sales country of products to include in the campaign.
-     * This field is required for Shopping campaigns. This field is immutable.
-     * This field is optional for non-Shopping campaigns, but it must be equal
-     * to 'ZZ' if set.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue sales_country = 2;</code>
-     */
-    boolean hasSalesCountry();
-    /**
-     * <pre>
-     * Sales country of products to include in the campaign.
-     * This field is required for Shopping campaigns. This field is immutable.
-     * This field is optional for non-Shopping campaigns, but it must be equal
-     * to 'ZZ' if set.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue sales_country = 2;</code>
-     */
-    com.google.protobuf.StringValue getSalesCountry();
-    /**
-     * <pre>
-     * Sales country of products to include in the campaign.
-     * This field is required for Shopping campaigns. This field is immutable.
-     * This field is optional for non-Shopping campaigns, but it must be equal
-     * to 'ZZ' if set.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue sales_country = 2;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getSalesCountryOrBuilder();
-
-    /**
-     * <pre>
-     * Priority of the campaign. Campaigns with numerically higher priorities
-     * take precedence over those with lower priorities.
-     * This field is required for Shopping campaigns, with values between 0 and
-     * 2, inclusive.
-     * This field is optional for Smart Shopping campaigns, but must be equal to
-     * 3 if set.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-     */
-    boolean hasCampaignPriority();
-    /**
-     * <pre>
-     * Priority of the campaign. Campaigns with numerically higher priorities
-     * take precedence over those with lower priorities.
-     * This field is required for Shopping campaigns, with values between 0 and
-     * 2, inclusive.
-     * This field is optional for Smart Shopping campaigns, but must be equal to
-     * 3 if set.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-     */
-    com.google.protobuf.Int32Value getCampaignPriority();
-    /**
-     * <pre>
-     * Priority of the campaign. Campaigns with numerically higher priorities
-     * take precedence over those with lower priorities.
-     * This field is required for Shopping campaigns, with values between 0 and
-     * 2, inclusive.
-     * This field is optional for Smart Shopping campaigns, but must be equal to
-     * 3 if set.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-     */
-    com.google.protobuf.Int32ValueOrBuilder getCampaignPriorityOrBuilder();
-
-    /**
-     * <pre>
-     * Whether to include local products.
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-     */
-    boolean hasEnableLocal();
-    /**
-     * <pre>
-     * Whether to include local products.
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-     */
-    com.google.protobuf.BoolValue getEnableLocal();
-    /**
-     * <pre>
-     * Whether to include local products.
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-     */
-    com.google.protobuf.BoolValueOrBuilder getEnableLocalOrBuilder();
-  }
-  /**
-   * <pre>
-   * The setting for Shopping campaigns. Defines the universe of products that
-   * can be advertised by the campaign, and how this campaign interacts with
-   * other Shopping campaigns.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.ShoppingSetting}
-   */
-  public  static final class ShoppingSetting extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.Campaign.ShoppingSetting)
-      ShoppingSettingOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ShoppingSetting.newBuilder() to construct.
-    private ShoppingSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ShoppingSetting() {
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ShoppingSetting(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.Int64Value.Builder subBuilder = null;
-              if (merchantId_ != null) {
-                subBuilder = merchantId_.toBuilder();
-              }
-              merchantId_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(merchantId_);
-                merchantId_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (salesCountry_ != null) {
-                subBuilder = salesCountry_.toBuilder();
-              }
-              salesCountry_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(salesCountry_);
-                salesCountry_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              com.google.protobuf.Int32Value.Builder subBuilder = null;
-              if (campaignPriority_ != null) {
-                subBuilder = campaignPriority_.toBuilder();
-              }
-              campaignPriority_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(campaignPriority_);
-                campaignPriority_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              com.google.protobuf.BoolValue.Builder subBuilder = null;
-              if (enableLocal_ != null) {
-                subBuilder = enableLocal_.toBuilder();
-              }
-              enableLocal_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(enableLocal_);
-                enableLocal_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_ShoppingSetting_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_ShoppingSetting_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.class, com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.Builder.class);
-    }
-
-    public static final int MERCHANT_ID_FIELD_NUMBER = 1;
-    private com.google.protobuf.Int64Value merchantId_;
-    /**
-     * <pre>
-     * ID of the Merchant Center account.
-     * This field is required for create operations. This field is immutable for
-     * Shopping campaigns.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-     */
-    public boolean hasMerchantId() {
-      return merchantId_ != null;
-    }
-    /**
-     * <pre>
-     * ID of the Merchant Center account.
-     * This field is required for create operations. This field is immutable for
-     * Shopping campaigns.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-     */
-    public com.google.protobuf.Int64Value getMerchantId() {
-      return merchantId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : merchantId_;
-    }
-    /**
-     * <pre>
-     * ID of the Merchant Center account.
-     * This field is required for create operations. This field is immutable for
-     * Shopping campaigns.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-     */
-    public com.google.protobuf.Int64ValueOrBuilder getMerchantIdOrBuilder() {
-      return getMerchantId();
-    }
-
-    public static final int SALES_COUNTRY_FIELD_NUMBER = 2;
-    private com.google.protobuf.StringValue salesCountry_;
-    /**
-     * <pre>
-     * Sales country of products to include in the campaign.
-     * This field is required for Shopping campaigns. This field is immutable.
-     * This field is optional for non-Shopping campaigns, but it must be equal
-     * to 'ZZ' if set.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue sales_country = 2;</code>
-     */
-    public boolean hasSalesCountry() {
-      return salesCountry_ != null;
-    }
-    /**
-     * <pre>
-     * Sales country of products to include in the campaign.
-     * This field is required for Shopping campaigns. This field is immutable.
-     * This field is optional for non-Shopping campaigns, but it must be equal
-     * to 'ZZ' if set.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue sales_country = 2;</code>
-     */
-    public com.google.protobuf.StringValue getSalesCountry() {
-      return salesCountry_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : salesCountry_;
-    }
-    /**
-     * <pre>
-     * Sales country of products to include in the campaign.
-     * This field is required for Shopping campaigns. This field is immutable.
-     * This field is optional for non-Shopping campaigns, but it must be equal
-     * to 'ZZ' if set.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue sales_country = 2;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getSalesCountryOrBuilder() {
-      return getSalesCountry();
-    }
-
-    public static final int CAMPAIGN_PRIORITY_FIELD_NUMBER = 3;
-    private com.google.protobuf.Int32Value campaignPriority_;
-    /**
-     * <pre>
-     * Priority of the campaign. Campaigns with numerically higher priorities
-     * take precedence over those with lower priorities.
-     * This field is required for Shopping campaigns, with values between 0 and
-     * 2, inclusive.
-     * This field is optional for Smart Shopping campaigns, but must be equal to
-     * 3 if set.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-     */
-    public boolean hasCampaignPriority() {
-      return campaignPriority_ != null;
-    }
-    /**
-     * <pre>
-     * Priority of the campaign. Campaigns with numerically higher priorities
-     * take precedence over those with lower priorities.
-     * This field is required for Shopping campaigns, with values between 0 and
-     * 2, inclusive.
-     * This field is optional for Smart Shopping campaigns, but must be equal to
-     * 3 if set.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-     */
-    public com.google.protobuf.Int32Value getCampaignPriority() {
-      return campaignPriority_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : campaignPriority_;
-    }
-    /**
-     * <pre>
-     * Priority of the campaign. Campaigns with numerically higher priorities
-     * take precedence over those with lower priorities.
-     * This field is required for Shopping campaigns, with values between 0 and
-     * 2, inclusive.
-     * This field is optional for Smart Shopping campaigns, but must be equal to
-     * 3 if set.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-     */
-    public com.google.protobuf.Int32ValueOrBuilder getCampaignPriorityOrBuilder() {
-      return getCampaignPriority();
-    }
-
-    public static final int ENABLE_LOCAL_FIELD_NUMBER = 4;
-    private com.google.protobuf.BoolValue enableLocal_;
-    /**
-     * <pre>
-     * Whether to include local products.
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-     */
-    public boolean hasEnableLocal() {
-      return enableLocal_ != null;
-    }
-    /**
-     * <pre>
-     * Whether to include local products.
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-     */
-    public com.google.protobuf.BoolValue getEnableLocal() {
-      return enableLocal_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableLocal_;
-    }
-    /**
-     * <pre>
-     * Whether to include local products.
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-     */
-    public com.google.protobuf.BoolValueOrBuilder getEnableLocalOrBuilder() {
-      return getEnableLocal();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (merchantId_ != null) {
-        output.writeMessage(1, getMerchantId());
-      }
-      if (salesCountry_ != null) {
-        output.writeMessage(2, getSalesCountry());
-      }
-      if (campaignPriority_ != null) {
-        output.writeMessage(3, getCampaignPriority());
-      }
-      if (enableLocal_ != null) {
-        output.writeMessage(4, getEnableLocal());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (merchantId_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMerchantId());
-      }
-      if (salesCountry_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getSalesCountry());
-      }
-      if (campaignPriority_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getCampaignPriority());
-      }
-      if (enableLocal_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getEnableLocal());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting other = (com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting) obj;
-
-      boolean result = true;
-      result = result && (hasMerchantId() == other.hasMerchantId());
-      if (hasMerchantId()) {
-        result = result && getMerchantId()
-            .equals(other.getMerchantId());
-      }
-      result = result && (hasSalesCountry() == other.hasSalesCountry());
-      if (hasSalesCountry()) {
-        result = result && getSalesCountry()
-            .equals(other.getSalesCountry());
-      }
-      result = result && (hasCampaignPriority() == other.hasCampaignPriority());
-      if (hasCampaignPriority()) {
-        result = result && getCampaignPriority()
-            .equals(other.getCampaignPriority());
-      }
-      result = result && (hasEnableLocal() == other.hasEnableLocal());
-      if (hasEnableLocal()) {
-        result = result && getEnableLocal()
-            .equals(other.getEnableLocal());
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasMerchantId()) {
-        hash = (37 * hash) + MERCHANT_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getMerchantId().hashCode();
-      }
-      if (hasSalesCountry()) {
-        hash = (37 * hash) + SALES_COUNTRY_FIELD_NUMBER;
-        hash = (53 * hash) + getSalesCountry().hashCode();
-      }
-      if (hasCampaignPriority()) {
-        hash = (37 * hash) + CAMPAIGN_PRIORITY_FIELD_NUMBER;
-        hash = (53 * hash) + getCampaignPriority().hashCode();
-      }
-      if (hasEnableLocal()) {
-        hash = (37 * hash) + ENABLE_LOCAL_FIELD_NUMBER;
-        hash = (53 * hash) + getEnableLocal().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * The setting for Shopping campaigns. Defines the universe of products that
-     * can be advertised by the campaign, and how this campaign interacts with
-     * other Shopping campaigns.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.ShoppingSetting}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v1.resources.Campaign.ShoppingSetting)
-        com.google.ads.googleads.v1.resources.Campaign.ShoppingSettingOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_ShoppingSetting_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_ShoppingSetting_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.class, com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (merchantIdBuilder_ == null) {
-          merchantId_ = null;
-        } else {
-          merchantId_ = null;
-          merchantIdBuilder_ = null;
-        }
-        if (salesCountryBuilder_ == null) {
-          salesCountry_ = null;
-        } else {
-          salesCountry_ = null;
-          salesCountryBuilder_ = null;
-        }
-        if (campaignPriorityBuilder_ == null) {
-          campaignPriority_ = null;
-        } else {
-          campaignPriority_ = null;
-          campaignPriorityBuilder_ = null;
-        }
-        if (enableLocalBuilder_ == null) {
-          enableLocal_ = null;
-        } else {
-          enableLocal_ = null;
-          enableLocalBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_ShoppingSetting_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting getDefaultInstanceForType() {
-        return com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting build() {
-        com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting buildPartial() {
-        com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting result = new com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting(this);
-        if (merchantIdBuilder_ == null) {
-          result.merchantId_ = merchantId_;
-        } else {
-          result.merchantId_ = merchantIdBuilder_.build();
-        }
-        if (salesCountryBuilder_ == null) {
-          result.salesCountry_ = salesCountry_;
-        } else {
-          result.salesCountry_ = salesCountryBuilder_.build();
-        }
-        if (campaignPriorityBuilder_ == null) {
-          result.campaignPriority_ = campaignPriority_;
-        } else {
-          result.campaignPriority_ = campaignPriorityBuilder_.build();
-        }
-        if (enableLocalBuilder_ == null) {
-          result.enableLocal_ = enableLocal_;
-        } else {
-          result.enableLocal_ = enableLocalBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting) {
-          return mergeFrom((com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting other) {
-        if (other == com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.getDefaultInstance()) return this;
-        if (other.hasMerchantId()) {
-          mergeMerchantId(other.getMerchantId());
-        }
-        if (other.hasSalesCountry()) {
-          mergeSalesCountry(other.getSalesCountry());
-        }
-        if (other.hasCampaignPriority()) {
-          mergeCampaignPriority(other.getCampaignPriority());
-        }
-        if (other.hasEnableLocal()) {
-          mergeEnableLocal(other.getEnableLocal());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.google.protobuf.Int64Value merchantId_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> merchantIdBuilder_;
-      /**
-       * <pre>
-       * ID of the Merchant Center account.
-       * This field is required for create operations. This field is immutable for
-       * Shopping campaigns.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-       */
-      public boolean hasMerchantId() {
-        return merchantIdBuilder_ != null || merchantId_ != null;
-      }
-      /**
-       * <pre>
-       * ID of the Merchant Center account.
-       * This field is required for create operations. This field is immutable for
-       * Shopping campaigns.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-       */
-      public com.google.protobuf.Int64Value getMerchantId() {
-        if (merchantIdBuilder_ == null) {
-          return merchantId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : merchantId_;
-        } else {
-          return merchantIdBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * ID of the Merchant Center account.
-       * This field is required for create operations. This field is immutable for
-       * Shopping campaigns.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-       */
-      public Builder setMerchantId(com.google.protobuf.Int64Value value) {
-        if (merchantIdBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          merchantId_ = value;
-          onChanged();
-        } else {
-          merchantIdBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the Merchant Center account.
-       * This field is required for create operations. This field is immutable for
-       * Shopping campaigns.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-       */
-      public Builder setMerchantId(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (merchantIdBuilder_ == null) {
-          merchantId_ = builderForValue.build();
-          onChanged();
-        } else {
-          merchantIdBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the Merchant Center account.
-       * This field is required for create operations. This field is immutable for
-       * Shopping campaigns.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-       */
-      public Builder mergeMerchantId(com.google.protobuf.Int64Value value) {
-        if (merchantIdBuilder_ == null) {
-          if (merchantId_ != null) {
-            merchantId_ =
-              com.google.protobuf.Int64Value.newBuilder(merchantId_).mergeFrom(value).buildPartial();
-          } else {
-            merchantId_ = value;
-          }
-          onChanged();
-        } else {
-          merchantIdBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the Merchant Center account.
-       * This field is required for create operations. This field is immutable for
-       * Shopping campaigns.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-       */
-      public Builder clearMerchantId() {
-        if (merchantIdBuilder_ == null) {
-          merchantId_ = null;
-          onChanged();
-        } else {
-          merchantId_ = null;
-          merchantIdBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the Merchant Center account.
-       * This field is required for create operations. This field is immutable for
-       * Shopping campaigns.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getMerchantIdBuilder() {
-        
-        onChanged();
-        return getMerchantIdFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * ID of the Merchant Center account.
-       * This field is required for create operations. This field is immutable for
-       * Shopping campaigns.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getMerchantIdOrBuilder() {
-        if (merchantIdBuilder_ != null) {
-          return merchantIdBuilder_.getMessageOrBuilder();
-        } else {
-          return merchantId_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : merchantId_;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the Merchant Center account.
-       * This field is required for create operations. This field is immutable for
-       * Shopping campaigns.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getMerchantIdFieldBuilder() {
-        if (merchantIdBuilder_ == null) {
-          merchantIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getMerchantId(),
-                  getParentForChildren(),
-                  isClean());
-          merchantId_ = null;
-        }
-        return merchantIdBuilder_;
-      }
-
-      private com.google.protobuf.StringValue salesCountry_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> salesCountryBuilder_;
-      /**
-       * <pre>
-       * Sales country of products to include in the campaign.
-       * This field is required for Shopping campaigns. This field is immutable.
-       * This field is optional for non-Shopping campaigns, but it must be equal
-       * to 'ZZ' if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
-       */
-      public boolean hasSalesCountry() {
-        return salesCountryBuilder_ != null || salesCountry_ != null;
-      }
-      /**
-       * <pre>
-       * Sales country of products to include in the campaign.
-       * This field is required for Shopping campaigns. This field is immutable.
-       * This field is optional for non-Shopping campaigns, but it must be equal
-       * to 'ZZ' if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
-       */
-      public com.google.protobuf.StringValue getSalesCountry() {
-        if (salesCountryBuilder_ == null) {
-          return salesCountry_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : salesCountry_;
-        } else {
-          return salesCountryBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Sales country of products to include in the campaign.
-       * This field is required for Shopping campaigns. This field is immutable.
-       * This field is optional for non-Shopping campaigns, but it must be equal
-       * to 'ZZ' if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
-       */
-      public Builder setSalesCountry(com.google.protobuf.StringValue value) {
-        if (salesCountryBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          salesCountry_ = value;
-          onChanged();
-        } else {
-          salesCountryBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Sales country of products to include in the campaign.
-       * This field is required for Shopping campaigns. This field is immutable.
-       * This field is optional for non-Shopping campaigns, but it must be equal
-       * to 'ZZ' if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
-       */
-      public Builder setSalesCountry(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (salesCountryBuilder_ == null) {
-          salesCountry_ = builderForValue.build();
-          onChanged();
-        } else {
-          salesCountryBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Sales country of products to include in the campaign.
-       * This field is required for Shopping campaigns. This field is immutable.
-       * This field is optional for non-Shopping campaigns, but it must be equal
-       * to 'ZZ' if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
-       */
-      public Builder mergeSalesCountry(com.google.protobuf.StringValue value) {
-        if (salesCountryBuilder_ == null) {
-          if (salesCountry_ != null) {
-            salesCountry_ =
-              com.google.protobuf.StringValue.newBuilder(salesCountry_).mergeFrom(value).buildPartial();
-          } else {
-            salesCountry_ = value;
-          }
-          onChanged();
-        } else {
-          salesCountryBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Sales country of products to include in the campaign.
-       * This field is required for Shopping campaigns. This field is immutable.
-       * This field is optional for non-Shopping campaigns, but it must be equal
-       * to 'ZZ' if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
-       */
-      public Builder clearSalesCountry() {
-        if (salesCountryBuilder_ == null) {
-          salesCountry_ = null;
-          onChanged();
-        } else {
-          salesCountry_ = null;
-          salesCountryBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Sales country of products to include in the campaign.
-       * This field is required for Shopping campaigns. This field is immutable.
-       * This field is optional for non-Shopping campaigns, but it must be equal
-       * to 'ZZ' if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getSalesCountryBuilder() {
-        
-        onChanged();
-        return getSalesCountryFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Sales country of products to include in the campaign.
-       * This field is required for Shopping campaigns. This field is immutable.
-       * This field is optional for non-Shopping campaigns, but it must be equal
-       * to 'ZZ' if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getSalesCountryOrBuilder() {
-        if (salesCountryBuilder_ != null) {
-          return salesCountryBuilder_.getMessageOrBuilder();
-        } else {
-          return salesCountry_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : salesCountry_;
-        }
-      }
-      /**
-       * <pre>
-       * Sales country of products to include in the campaign.
-       * This field is required for Shopping campaigns. This field is immutable.
-       * This field is optional for non-Shopping campaigns, but it must be equal
-       * to 'ZZ' if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getSalesCountryFieldBuilder() {
-        if (salesCountryBuilder_ == null) {
-          salesCountryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getSalesCountry(),
-                  getParentForChildren(),
-                  isClean());
-          salesCountry_ = null;
-        }
-        return salesCountryBuilder_;
-      }
-
-      private com.google.protobuf.Int32Value campaignPriority_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> campaignPriorityBuilder_;
-      /**
-       * <pre>
-       * Priority of the campaign. Campaigns with numerically higher priorities
-       * take precedence over those with lower priorities.
-       * This field is required for Shopping campaigns, with values between 0 and
-       * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-       */
-      public boolean hasCampaignPriority() {
-        return campaignPriorityBuilder_ != null || campaignPriority_ != null;
-      }
-      /**
-       * <pre>
-       * Priority of the campaign. Campaigns with numerically higher priorities
-       * take precedence over those with lower priorities.
-       * This field is required for Shopping campaigns, with values between 0 and
-       * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-       */
-      public com.google.protobuf.Int32Value getCampaignPriority() {
-        if (campaignPriorityBuilder_ == null) {
-          return campaignPriority_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : campaignPriority_;
-        } else {
-          return campaignPriorityBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Priority of the campaign. Campaigns with numerically higher priorities
-       * take precedence over those with lower priorities.
-       * This field is required for Shopping campaigns, with values between 0 and
-       * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-       */
-      public Builder setCampaignPriority(com.google.protobuf.Int32Value value) {
-        if (campaignPriorityBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          campaignPriority_ = value;
-          onChanged();
-        } else {
-          campaignPriorityBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Priority of the campaign. Campaigns with numerically higher priorities
-       * take precedence over those with lower priorities.
-       * This field is required for Shopping campaigns, with values between 0 and
-       * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-       */
-      public Builder setCampaignPriority(
-          com.google.protobuf.Int32Value.Builder builderForValue) {
-        if (campaignPriorityBuilder_ == null) {
-          campaignPriority_ = builderForValue.build();
-          onChanged();
-        } else {
-          campaignPriorityBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Priority of the campaign. Campaigns with numerically higher priorities
-       * take precedence over those with lower priorities.
-       * This field is required for Shopping campaigns, with values between 0 and
-       * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-       */
-      public Builder mergeCampaignPriority(com.google.protobuf.Int32Value value) {
-        if (campaignPriorityBuilder_ == null) {
-          if (campaignPriority_ != null) {
-            campaignPriority_ =
-              com.google.protobuf.Int32Value.newBuilder(campaignPriority_).mergeFrom(value).buildPartial();
-          } else {
-            campaignPriority_ = value;
-          }
-          onChanged();
-        } else {
-          campaignPriorityBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Priority of the campaign. Campaigns with numerically higher priorities
-       * take precedence over those with lower priorities.
-       * This field is required for Shopping campaigns, with values between 0 and
-       * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-       */
-      public Builder clearCampaignPriority() {
-        if (campaignPriorityBuilder_ == null) {
-          campaignPriority_ = null;
-          onChanged();
-        } else {
-          campaignPriority_ = null;
-          campaignPriorityBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Priority of the campaign. Campaigns with numerically higher priorities
-       * take precedence over those with lower priorities.
-       * This field is required for Shopping campaigns, with values between 0 and
-       * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-       */
-      public com.google.protobuf.Int32Value.Builder getCampaignPriorityBuilder() {
-        
-        onChanged();
-        return getCampaignPriorityFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Priority of the campaign. Campaigns with numerically higher priorities
-       * take precedence over those with lower priorities.
-       * This field is required for Shopping campaigns, with values between 0 and
-       * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-       */
-      public com.google.protobuf.Int32ValueOrBuilder getCampaignPriorityOrBuilder() {
-        if (campaignPriorityBuilder_ != null) {
-          return campaignPriorityBuilder_.getMessageOrBuilder();
-        } else {
-          return campaignPriority_ == null ?
-              com.google.protobuf.Int32Value.getDefaultInstance() : campaignPriority_;
-        }
-      }
-      /**
-       * <pre>
-       * Priority of the campaign. Campaigns with numerically higher priorities
-       * take precedence over those with lower priorities.
-       * This field is required for Shopping campaigns, with values between 0 and
-       * 2, inclusive.
-       * This field is optional for Smart Shopping campaigns, but must be equal to
-       * 3 if set.
-       * </pre>
-       *
-       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
-          getCampaignPriorityFieldBuilder() {
-        if (campaignPriorityBuilder_ == null) {
-          campaignPriorityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
-                  getCampaignPriority(),
-                  getParentForChildren(),
-                  isClean());
-          campaignPriority_ = null;
-        }
-        return campaignPriorityBuilder_;
-      }
-
-      private com.google.protobuf.BoolValue enableLocal_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableLocalBuilder_;
-      /**
-       * <pre>
-       * Whether to include local products.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-       */
-      public boolean hasEnableLocal() {
-        return enableLocalBuilder_ != null || enableLocal_ != null;
-      }
-      /**
-       * <pre>
-       * Whether to include local products.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-       */
-      public com.google.protobuf.BoolValue getEnableLocal() {
-        if (enableLocalBuilder_ == null) {
-          return enableLocal_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableLocal_;
-        } else {
-          return enableLocalBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Whether to include local products.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-       */
-      public Builder setEnableLocal(com.google.protobuf.BoolValue value) {
-        if (enableLocalBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          enableLocal_ = value;
-          onChanged();
-        } else {
-          enableLocalBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Whether to include local products.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-       */
-      public Builder setEnableLocal(
-          com.google.protobuf.BoolValue.Builder builderForValue) {
-        if (enableLocalBuilder_ == null) {
-          enableLocal_ = builderForValue.build();
-          onChanged();
-        } else {
-          enableLocalBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Whether to include local products.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-       */
-      public Builder mergeEnableLocal(com.google.protobuf.BoolValue value) {
-        if (enableLocalBuilder_ == null) {
-          if (enableLocal_ != null) {
-            enableLocal_ =
-              com.google.protobuf.BoolValue.newBuilder(enableLocal_).mergeFrom(value).buildPartial();
-          } else {
-            enableLocal_ = value;
-          }
-          onChanged();
-        } else {
-          enableLocalBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Whether to include local products.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-       */
-      public Builder clearEnableLocal() {
-        if (enableLocalBuilder_ == null) {
-          enableLocal_ = null;
-          onChanged();
-        } else {
-          enableLocal_ = null;
-          enableLocalBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Whether to include local products.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-       */
-      public com.google.protobuf.BoolValue.Builder getEnableLocalBuilder() {
-        
-        onChanged();
-        return getEnableLocalFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Whether to include local products.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-       */
-      public com.google.protobuf.BoolValueOrBuilder getEnableLocalOrBuilder() {
-        if (enableLocalBuilder_ != null) {
-          return enableLocalBuilder_.getMessageOrBuilder();
-        } else {
-          return enableLocal_ == null ?
-              com.google.protobuf.BoolValue.getDefaultInstance() : enableLocal_;
-        }
-      }
-      /**
-       * <pre>
-       * Whether to include local products.
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
-          getEnableLocalFieldBuilder() {
-        if (enableLocalBuilder_ == null) {
-          enableLocalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
-                  getEnableLocal(),
-                  getParentForChildren(),
-                  isClean());
-          enableLocal_ = null;
-        }
-        return enableLocalBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v1.resources.Campaign.ShoppingSetting)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v1.resources.Campaign.ShoppingSetting)
-    private static final com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting();
-    }
-
-    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ShoppingSetting>
-        PARSER = new com.google.protobuf.AbstractParser<ShoppingSetting>() {
-      @java.lang.Override
-      public ShoppingSetting parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ShoppingSetting(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<ShoppingSetting> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ShoppingSetting> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TrackingSettingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The url used for dynamic tracking.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-     */
-    boolean hasTrackingUrl();
-    /**
-     * <pre>
-     * The url used for dynamic tracking.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-     */
-    com.google.protobuf.StringValue getTrackingUrl();
-    /**
-     * <pre>
-     * The url used for dynamic tracking.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder();
-  }
-  /**
-   * <pre>
-   * Campaign level settings for tracking information.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.TrackingSetting}
-   */
-  public  static final class TrackingSetting extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
-      TrackingSettingOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TrackingSetting.newBuilder() to construct.
-    private TrackingSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private TrackingSetting() {
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TrackingSetting(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (trackingUrl_ != null) {
-                subBuilder = trackingUrl_.toBuilder();
-              }
-              trackingUrl_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(trackingUrl_);
-                trackingUrl_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.class, com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.Builder.class);
-    }
-
-    public static final int TRACKING_URL_FIELD_NUMBER = 1;
-    private com.google.protobuf.StringValue trackingUrl_;
-    /**
-     * <pre>
-     * The url used for dynamic tracking.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-     */
-    public boolean hasTrackingUrl() {
-      return trackingUrl_ != null;
-    }
-    /**
-     * <pre>
-     * The url used for dynamic tracking.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-     */
-    public com.google.protobuf.StringValue getTrackingUrl() {
-      return trackingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
-    }
-    /**
-     * <pre>
-     * The url used for dynamic tracking.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder() {
-      return getTrackingUrl();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (trackingUrl_ != null) {
-        output.writeMessage(1, getTrackingUrl());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (trackingUrl_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getTrackingUrl());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v1.resources.Campaign.TrackingSetting)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v1.resources.Campaign.TrackingSetting other = (com.google.ads.googleads.v1.resources.Campaign.TrackingSetting) obj;
-
-      boolean result = true;
-      result = result && (hasTrackingUrl() == other.hasTrackingUrl());
-      if (hasTrackingUrl()) {
-        result = result && getTrackingUrl()
-            .equals(other.getTrackingUrl());
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasTrackingUrl()) {
-        hash = (37 * hash) + TRACKING_URL_FIELD_NUMBER;
-        hash = (53 * hash) + getTrackingUrl().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v1.resources.Campaign.TrackingSetting prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Campaign level settings for tracking information.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.TrackingSetting}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
-        com.google.ads.googleads.v1.resources.Campaign.TrackingSettingOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.class, com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (trackingUrlBuilder_ == null) {
-          trackingUrl_ = null;
-        } else {
-          trackingUrl_ = null;
-          trackingUrlBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
-        return com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting build() {
-        com.google.ads.googleads.v1.resources.Campaign.TrackingSetting result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting buildPartial() {
-        com.google.ads.googleads.v1.resources.Campaign.TrackingSetting result = new com.google.ads.googleads.v1.resources.Campaign.TrackingSetting(this);
-        if (trackingUrlBuilder_ == null) {
-          result.trackingUrl_ = trackingUrl_;
-        } else {
-          result.trackingUrl_ = trackingUrlBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v1.resources.Campaign.TrackingSetting) {
-          return mergeFrom((com.google.ads.googleads.v1.resources.Campaign.TrackingSetting)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v1.resources.Campaign.TrackingSetting other) {
-        if (other == com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.getDefaultInstance()) return this;
-        if (other.hasTrackingUrl()) {
-          mergeTrackingUrl(other.getTrackingUrl());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v1.resources.Campaign.TrackingSetting) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.google.protobuf.StringValue trackingUrl_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> trackingUrlBuilder_;
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public boolean hasTrackingUrl() {
-        return trackingUrlBuilder_ != null || trackingUrl_ != null;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public com.google.protobuf.StringValue getTrackingUrl() {
-        if (trackingUrlBuilder_ == null) {
-          return trackingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
-        } else {
-          return trackingUrlBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public Builder setTrackingUrl(com.google.protobuf.StringValue value) {
-        if (trackingUrlBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          trackingUrl_ = value;
-          onChanged();
-        } else {
-          trackingUrlBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public Builder setTrackingUrl(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (trackingUrlBuilder_ == null) {
-          trackingUrl_ = builderForValue.build();
-          onChanged();
-        } else {
-          trackingUrlBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public Builder mergeTrackingUrl(com.google.protobuf.StringValue value) {
-        if (trackingUrlBuilder_ == null) {
-          if (trackingUrl_ != null) {
-            trackingUrl_ =
-              com.google.protobuf.StringValue.newBuilder(trackingUrl_).mergeFrom(value).buildPartial();
-          } else {
-            trackingUrl_ = value;
-          }
-          onChanged();
-        } else {
-          trackingUrlBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public Builder clearTrackingUrl() {
-        if (trackingUrlBuilder_ == null) {
-          trackingUrl_ = null;
-          onChanged();
-        } else {
-          trackingUrl_ = null;
-          trackingUrlBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getTrackingUrlBuilder() {
-        
-        onChanged();
-        return getTrackingUrlFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder() {
-        if (trackingUrlBuilder_ != null) {
-          return trackingUrlBuilder_.getMessageOrBuilder();
-        } else {
-          return trackingUrl_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
-        }
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getTrackingUrlFieldBuilder() {
-        if (trackingUrlBuilder_ == null) {
-          trackingUrlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getTrackingUrl(),
-                  getParentForChildren(),
-                  isClean());
-          trackingUrl_ = null;
-        }
-        return trackingUrlBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
-    private static final com.google.ads.googleads.v1.resources.Campaign.TrackingSetting DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v1.resources.Campaign.TrackingSetting();
-    }
-
-    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<TrackingSetting>
-        PARSER = new com.google.protobuf.AbstractParser<TrackingSetting>() {
-      @java.lang.Override
-      public TrackingSetting parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TrackingSetting(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<TrackingSetting> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TrackingSetting> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7506,7 +2866,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 conversionActions_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -7515,7 +2875,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7529,7 +2889,7 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           conversionActions_ = java.util.Collections.unmodifiableList(conversionActions_);
         }
         this.unknownFields = unknownFields.build();
@@ -7649,11 +3009,10 @@ private static final long serialVersionUID = 0L;
       }
       com.google.ads.googleads.v1.resources.Campaign.SelectiveOptimization other = (com.google.ads.googleads.v1.resources.Campaign.SelectiveOptimization) obj;
 
-      boolean result = true;
-      result = result && getConversionActionsList()
-          .equals(other.getConversionActionsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getConversionActionsList()
+          .equals(other.getConversionActionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7840,7 +3199,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.resources.Campaign.SelectiveOptimization result = new com.google.ads.googleads.v1.resources.Campaign.SelectiveOptimization(this);
         int from_bitField0_ = bitField0_;
         if (conversionActionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             conversionActions_ = java.util.Collections.unmodifiableList(conversionActions_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -7854,35 +3213,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7955,7 +3314,7 @@ private static final long serialVersionUID = 0L;
       private java.util.List<com.google.protobuf.StringValue> conversionActions_ =
         java.util.Collections.emptyList();
       private void ensureConversionActionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           conversionActions_ = new java.util.ArrayList<com.google.protobuf.StringValue>(conversionActions_);
           bitField0_ |= 0x00000001;
          }
@@ -8256,7 +3615,7 @@ private static final long serialVersionUID = 0L;
           conversionActionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   conversionActions_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           conversionActions_ = null;
@@ -8266,7 +3625,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8311,6 +3670,2361 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v1.resources.Campaign.SelectiveOptimization getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DynamicSearchAdsSettingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The Internet domain name that this setting represents, e.g., "google.com"
+     * or "www.google.com".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue domain_name = 1;</code>
+     */
+    boolean hasDomainName();
+    /**
+     * <pre>
+     * The Internet domain name that this setting represents, e.g., "google.com"
+     * or "www.google.com".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue domain_name = 1;</code>
+     */
+    com.google.protobuf.StringValue getDomainName();
+    /**
+     * <pre>
+     * The Internet domain name that this setting represents, e.g., "google.com"
+     * or "www.google.com".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue domain_name = 1;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDomainNameOrBuilder();
+
+    /**
+     * <pre>
+     * The language code specifying the language of the domain, e.g., "en".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue language_code = 2;</code>
+     */
+    boolean hasLanguageCode();
+    /**
+     * <pre>
+     * The language code specifying the language of the domain, e.g., "en".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue language_code = 2;</code>
+     */
+    com.google.protobuf.StringValue getLanguageCode();
+    /**
+     * <pre>
+     * The language code specifying the language of the domain, e.g., "en".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue language_code = 2;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder();
+
+    /**
+     * <pre>
+     * Whether the campaign uses advertiser supplied URLs exclusively.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+     */
+    boolean hasUseSuppliedUrlsOnly();
+    /**
+     * <pre>
+     * Whether the campaign uses advertiser supplied URLs exclusively.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+     */
+    com.google.protobuf.BoolValue getUseSuppliedUrlsOnly();
+    /**
+     * <pre>
+     * Whether the campaign uses advertiser supplied URLs exclusively.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getUseSuppliedUrlsOnlyOrBuilder();
+
+    /**
+     * <pre>
+     * The list of page feeds associated with the campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getFeedsList();
+    /**
+     * <pre>
+     * The list of page feeds associated with the campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     */
+    com.google.protobuf.StringValue getFeeds(int index);
+    /**
+     * <pre>
+     * The list of page feeds associated with the campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     */
+    int getFeedsCount();
+    /**
+     * <pre>
+     * The list of page feeds associated with the campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getFeedsOrBuilderList();
+    /**
+     * <pre>
+     * The list of page feeds associated with the campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getFeedsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * The setting for controlling Dynamic Search Ads (DSA).
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting}
+   */
+  public  static final class DynamicSearchAdsSetting extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)
+      DynamicSearchAdsSettingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DynamicSearchAdsSetting.newBuilder() to construct.
+    private DynamicSearchAdsSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DynamicSearchAdsSetting() {
+      feeds_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DynamicSearchAdsSetting(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (domainName_ != null) {
+                subBuilder = domainName_.toBuilder();
+              }
+              domainName_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(domainName_);
+                domainName_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (languageCode_ != null) {
+                subBuilder = languageCode_.toBuilder();
+              }
+              languageCode_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(languageCode_);
+                languageCode_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (useSuppliedUrlsOnly_ != null) {
+                subBuilder = useSuppliedUrlsOnly_.toBuilder();
+              }
+              useSuppliedUrlsOnly_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(useSuppliedUrlsOnly_);
+                useSuppliedUrlsOnly_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                feeds_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              feeds_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          feeds_ = java.util.Collections.unmodifiableList(feeds_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_DynamicSearchAdsSetting_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_DynamicSearchAdsSetting_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.class, com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DOMAIN_NAME_FIELD_NUMBER = 1;
+    private com.google.protobuf.StringValue domainName_;
+    /**
+     * <pre>
+     * The Internet domain name that this setting represents, e.g., "google.com"
+     * or "www.google.com".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue domain_name = 1;</code>
+     */
+    public boolean hasDomainName() {
+      return domainName_ != null;
+    }
+    /**
+     * <pre>
+     * The Internet domain name that this setting represents, e.g., "google.com"
+     * or "www.google.com".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue domain_name = 1;</code>
+     */
+    public com.google.protobuf.StringValue getDomainName() {
+      return domainName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : domainName_;
+    }
+    /**
+     * <pre>
+     * The Internet domain name that this setting represents, e.g., "google.com"
+     * or "www.google.com".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue domain_name = 1;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getDomainNameOrBuilder() {
+      return getDomainName();
+    }
+
+    public static final int LANGUAGE_CODE_FIELD_NUMBER = 2;
+    private com.google.protobuf.StringValue languageCode_;
+    /**
+     * <pre>
+     * The language code specifying the language of the domain, e.g., "en".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue language_code = 2;</code>
+     */
+    public boolean hasLanguageCode() {
+      return languageCode_ != null;
+    }
+    /**
+     * <pre>
+     * The language code specifying the language of the domain, e.g., "en".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue language_code = 2;</code>
+     */
+    public com.google.protobuf.StringValue getLanguageCode() {
+      return languageCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
+    }
+    /**
+     * <pre>
+     * The language code specifying the language of the domain, e.g., "en".
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue language_code = 2;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
+      return getLanguageCode();
+    }
+
+    public static final int USE_SUPPLIED_URLS_ONLY_FIELD_NUMBER = 3;
+    private com.google.protobuf.BoolValue useSuppliedUrlsOnly_;
+    /**
+     * <pre>
+     * Whether the campaign uses advertiser supplied URLs exclusively.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+     */
+    public boolean hasUseSuppliedUrlsOnly() {
+      return useSuppliedUrlsOnly_ != null;
+    }
+    /**
+     * <pre>
+     * Whether the campaign uses advertiser supplied URLs exclusively.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+     */
+    public com.google.protobuf.BoolValue getUseSuppliedUrlsOnly() {
+      return useSuppliedUrlsOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useSuppliedUrlsOnly_;
+    }
+    /**
+     * <pre>
+     * Whether the campaign uses advertiser supplied URLs exclusively.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getUseSuppliedUrlsOnlyOrBuilder() {
+      return getUseSuppliedUrlsOnly();
+    }
+
+    public static final int FEEDS_FIELD_NUMBER = 5;
+    private java.util.List<com.google.protobuf.StringValue> feeds_;
+    /**
+     * <pre>
+     * The list of page feeds associated with the campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getFeedsList() {
+      return feeds_;
+    }
+    /**
+     * <pre>
+     * The list of page feeds associated with the campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getFeedsOrBuilderList() {
+      return feeds_;
+    }
+    /**
+     * <pre>
+     * The list of page feeds associated with the campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     */
+    public int getFeedsCount() {
+      return feeds_.size();
+    }
+    /**
+     * <pre>
+     * The list of page feeds associated with the campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     */
+    public com.google.protobuf.StringValue getFeeds(int index) {
+      return feeds_.get(index);
+    }
+    /**
+     * <pre>
+     * The list of page feeds associated with the campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getFeedsOrBuilder(
+        int index) {
+      return feeds_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (domainName_ != null) {
+        output.writeMessage(1, getDomainName());
+      }
+      if (languageCode_ != null) {
+        output.writeMessage(2, getLanguageCode());
+      }
+      if (useSuppliedUrlsOnly_ != null) {
+        output.writeMessage(3, getUseSuppliedUrlsOnly());
+      }
+      for (int i = 0; i < feeds_.size(); i++) {
+        output.writeMessage(5, feeds_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (domainName_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDomainName());
+      }
+      if (languageCode_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getLanguageCode());
+      }
+      if (useSuppliedUrlsOnly_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUseSuppliedUrlsOnly());
+      }
+      for (int i = 0; i < feeds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, feeds_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting other = (com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting) obj;
+
+      if (hasDomainName() != other.hasDomainName()) return false;
+      if (hasDomainName()) {
+        if (!getDomainName()
+            .equals(other.getDomainName())) return false;
+      }
+      if (hasLanguageCode() != other.hasLanguageCode()) return false;
+      if (hasLanguageCode()) {
+        if (!getLanguageCode()
+            .equals(other.getLanguageCode())) return false;
+      }
+      if (hasUseSuppliedUrlsOnly() != other.hasUseSuppliedUrlsOnly()) return false;
+      if (hasUseSuppliedUrlsOnly()) {
+        if (!getUseSuppliedUrlsOnly()
+            .equals(other.getUseSuppliedUrlsOnly())) return false;
+      }
+      if (!getFeedsList()
+          .equals(other.getFeedsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDomainName()) {
+        hash = (37 * hash) + DOMAIN_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getDomainName().hashCode();
+      }
+      if (hasLanguageCode()) {
+        hash = (37 * hash) + LANGUAGE_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getLanguageCode().hashCode();
+      }
+      if (hasUseSuppliedUrlsOnly()) {
+        hash = (37 * hash) + USE_SUPPLIED_URLS_ONLY_FIELD_NUMBER;
+        hash = (53 * hash) + getUseSuppliedUrlsOnly().hashCode();
+      }
+      if (getFeedsCount() > 0) {
+        hash = (37 * hash) + FEEDS_FIELD_NUMBER;
+        hash = (53 * hash) + getFeedsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The setting for controlling Dynamic Search Ads (DSA).
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)
+        com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSettingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_DynamicSearchAdsSetting_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_DynamicSearchAdsSetting_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.class, com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFeedsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (domainNameBuilder_ == null) {
+          domainName_ = null;
+        } else {
+          domainName_ = null;
+          domainNameBuilder_ = null;
+        }
+        if (languageCodeBuilder_ == null) {
+          languageCode_ = null;
+        } else {
+          languageCode_ = null;
+          languageCodeBuilder_ = null;
+        }
+        if (useSuppliedUrlsOnlyBuilder_ == null) {
+          useSuppliedUrlsOnly_ = null;
+        } else {
+          useSuppliedUrlsOnly_ = null;
+          useSuppliedUrlsOnlyBuilder_ = null;
+        }
+        if (feedsBuilder_ == null) {
+          feeds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          feedsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_DynamicSearchAdsSetting_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting getDefaultInstanceForType() {
+        return com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting build() {
+        com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting buildPartial() {
+        com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting result = new com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (domainNameBuilder_ == null) {
+          result.domainName_ = domainName_;
+        } else {
+          result.domainName_ = domainNameBuilder_.build();
+        }
+        if (languageCodeBuilder_ == null) {
+          result.languageCode_ = languageCode_;
+        } else {
+          result.languageCode_ = languageCodeBuilder_.build();
+        }
+        if (useSuppliedUrlsOnlyBuilder_ == null) {
+          result.useSuppliedUrlsOnly_ = useSuppliedUrlsOnly_;
+        } else {
+          result.useSuppliedUrlsOnly_ = useSuppliedUrlsOnlyBuilder_.build();
+        }
+        if (feedsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            feeds_ = java.util.Collections.unmodifiableList(feeds_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.feeds_ = feeds_;
+        } else {
+          result.feeds_ = feedsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting) {
+          return mergeFrom((com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting other) {
+        if (other == com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.getDefaultInstance()) return this;
+        if (other.hasDomainName()) {
+          mergeDomainName(other.getDomainName());
+        }
+        if (other.hasLanguageCode()) {
+          mergeLanguageCode(other.getLanguageCode());
+        }
+        if (other.hasUseSuppliedUrlsOnly()) {
+          mergeUseSuppliedUrlsOnly(other.getUseSuppliedUrlsOnly());
+        }
+        if (feedsBuilder_ == null) {
+          if (!other.feeds_.isEmpty()) {
+            if (feeds_.isEmpty()) {
+              feeds_ = other.feeds_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureFeedsIsMutable();
+              feeds_.addAll(other.feeds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.feeds_.isEmpty()) {
+            if (feedsBuilder_.isEmpty()) {
+              feedsBuilder_.dispose();
+              feedsBuilder_ = null;
+              feeds_ = other.feeds_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              feedsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeedsFieldBuilder() : null;
+            } else {
+              feedsBuilder_.addAllMessages(other.feeds_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.StringValue domainName_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> domainNameBuilder_;
+      /**
+       * <pre>
+       * The Internet domain name that this setting represents, e.g., "google.com"
+       * or "www.google.com".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue domain_name = 1;</code>
+       */
+      public boolean hasDomainName() {
+        return domainNameBuilder_ != null || domainName_ != null;
+      }
+      /**
+       * <pre>
+       * The Internet domain name that this setting represents, e.g., "google.com"
+       * or "www.google.com".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue domain_name = 1;</code>
+       */
+      public com.google.protobuf.StringValue getDomainName() {
+        if (domainNameBuilder_ == null) {
+          return domainName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : domainName_;
+        } else {
+          return domainNameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The Internet domain name that this setting represents, e.g., "google.com"
+       * or "www.google.com".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue domain_name = 1;</code>
+       */
+      public Builder setDomainName(com.google.protobuf.StringValue value) {
+        if (domainNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          domainName_ = value;
+          onChanged();
+        } else {
+          domainNameBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The Internet domain name that this setting represents, e.g., "google.com"
+       * or "www.google.com".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue domain_name = 1;</code>
+       */
+      public Builder setDomainName(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (domainNameBuilder_ == null) {
+          domainName_ = builderForValue.build();
+          onChanged();
+        } else {
+          domainNameBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The Internet domain name that this setting represents, e.g., "google.com"
+       * or "www.google.com".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue domain_name = 1;</code>
+       */
+      public Builder mergeDomainName(com.google.protobuf.StringValue value) {
+        if (domainNameBuilder_ == null) {
+          if (domainName_ != null) {
+            domainName_ =
+              com.google.protobuf.StringValue.newBuilder(domainName_).mergeFrom(value).buildPartial();
+          } else {
+            domainName_ = value;
+          }
+          onChanged();
+        } else {
+          domainNameBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The Internet domain name that this setting represents, e.g., "google.com"
+       * or "www.google.com".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue domain_name = 1;</code>
+       */
+      public Builder clearDomainName() {
+        if (domainNameBuilder_ == null) {
+          domainName_ = null;
+          onChanged();
+        } else {
+          domainName_ = null;
+          domainNameBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The Internet domain name that this setting represents, e.g., "google.com"
+       * or "www.google.com".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue domain_name = 1;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDomainNameBuilder() {
+        
+        onChanged();
+        return getDomainNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The Internet domain name that this setting represents, e.g., "google.com"
+       * or "www.google.com".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue domain_name = 1;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDomainNameOrBuilder() {
+        if (domainNameBuilder_ != null) {
+          return domainNameBuilder_.getMessageOrBuilder();
+        } else {
+          return domainName_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : domainName_;
+        }
+      }
+      /**
+       * <pre>
+       * The Internet domain name that this setting represents, e.g., "google.com"
+       * or "www.google.com".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue domain_name = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDomainNameFieldBuilder() {
+        if (domainNameBuilder_ == null) {
+          domainNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getDomainName(),
+                  getParentForChildren(),
+                  isClean());
+          domainName_ = null;
+        }
+        return domainNameBuilder_;
+      }
+
+      private com.google.protobuf.StringValue languageCode_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> languageCodeBuilder_;
+      /**
+       * <pre>
+       * The language code specifying the language of the domain, e.g., "en".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue language_code = 2;</code>
+       */
+      public boolean hasLanguageCode() {
+        return languageCodeBuilder_ != null || languageCode_ != null;
+      }
+      /**
+       * <pre>
+       * The language code specifying the language of the domain, e.g., "en".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue language_code = 2;</code>
+       */
+      public com.google.protobuf.StringValue getLanguageCode() {
+        if (languageCodeBuilder_ == null) {
+          return languageCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
+        } else {
+          return languageCodeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The language code specifying the language of the domain, e.g., "en".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue language_code = 2;</code>
+       */
+      public Builder setLanguageCode(com.google.protobuf.StringValue value) {
+        if (languageCodeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          languageCode_ = value;
+          onChanged();
+        } else {
+          languageCodeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The language code specifying the language of the domain, e.g., "en".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue language_code = 2;</code>
+       */
+      public Builder setLanguageCode(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (languageCodeBuilder_ == null) {
+          languageCode_ = builderForValue.build();
+          onChanged();
+        } else {
+          languageCodeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The language code specifying the language of the domain, e.g., "en".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue language_code = 2;</code>
+       */
+      public Builder mergeLanguageCode(com.google.protobuf.StringValue value) {
+        if (languageCodeBuilder_ == null) {
+          if (languageCode_ != null) {
+            languageCode_ =
+              com.google.protobuf.StringValue.newBuilder(languageCode_).mergeFrom(value).buildPartial();
+          } else {
+            languageCode_ = value;
+          }
+          onChanged();
+        } else {
+          languageCodeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The language code specifying the language of the domain, e.g., "en".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue language_code = 2;</code>
+       */
+      public Builder clearLanguageCode() {
+        if (languageCodeBuilder_ == null) {
+          languageCode_ = null;
+          onChanged();
+        } else {
+          languageCode_ = null;
+          languageCodeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The language code specifying the language of the domain, e.g., "en".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue language_code = 2;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getLanguageCodeBuilder() {
+        
+        onChanged();
+        return getLanguageCodeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The language code specifying the language of the domain, e.g., "en".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue language_code = 2;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
+        if (languageCodeBuilder_ != null) {
+          return languageCodeBuilder_.getMessageOrBuilder();
+        } else {
+          return languageCode_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
+        }
+      }
+      /**
+       * <pre>
+       * The language code specifying the language of the domain, e.g., "en".
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue language_code = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getLanguageCodeFieldBuilder() {
+        if (languageCodeBuilder_ == null) {
+          languageCodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getLanguageCode(),
+                  getParentForChildren(),
+                  isClean());
+          languageCode_ = null;
+        }
+        return languageCodeBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue useSuppliedUrlsOnly_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> useSuppliedUrlsOnlyBuilder_;
+      /**
+       * <pre>
+       * Whether the campaign uses advertiser supplied URLs exclusively.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+       */
+      public boolean hasUseSuppliedUrlsOnly() {
+        return useSuppliedUrlsOnlyBuilder_ != null || useSuppliedUrlsOnly_ != null;
+      }
+      /**
+       * <pre>
+       * Whether the campaign uses advertiser supplied URLs exclusively.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+       */
+      public com.google.protobuf.BoolValue getUseSuppliedUrlsOnly() {
+        if (useSuppliedUrlsOnlyBuilder_ == null) {
+          return useSuppliedUrlsOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useSuppliedUrlsOnly_;
+        } else {
+          return useSuppliedUrlsOnlyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Whether the campaign uses advertiser supplied URLs exclusively.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+       */
+      public Builder setUseSuppliedUrlsOnly(com.google.protobuf.BoolValue value) {
+        if (useSuppliedUrlsOnlyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          useSuppliedUrlsOnly_ = value;
+          onChanged();
+        } else {
+          useSuppliedUrlsOnlyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the campaign uses advertiser supplied URLs exclusively.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+       */
+      public Builder setUseSuppliedUrlsOnly(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (useSuppliedUrlsOnlyBuilder_ == null) {
+          useSuppliedUrlsOnly_ = builderForValue.build();
+          onChanged();
+        } else {
+          useSuppliedUrlsOnlyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the campaign uses advertiser supplied URLs exclusively.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+       */
+      public Builder mergeUseSuppliedUrlsOnly(com.google.protobuf.BoolValue value) {
+        if (useSuppliedUrlsOnlyBuilder_ == null) {
+          if (useSuppliedUrlsOnly_ != null) {
+            useSuppliedUrlsOnly_ =
+              com.google.protobuf.BoolValue.newBuilder(useSuppliedUrlsOnly_).mergeFrom(value).buildPartial();
+          } else {
+            useSuppliedUrlsOnly_ = value;
+          }
+          onChanged();
+        } else {
+          useSuppliedUrlsOnlyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the campaign uses advertiser supplied URLs exclusively.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+       */
+      public Builder clearUseSuppliedUrlsOnly() {
+        if (useSuppliedUrlsOnlyBuilder_ == null) {
+          useSuppliedUrlsOnly_ = null;
+          onChanged();
+        } else {
+          useSuppliedUrlsOnly_ = null;
+          useSuppliedUrlsOnlyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the campaign uses advertiser supplied URLs exclusively.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getUseSuppliedUrlsOnlyBuilder() {
+        
+        onChanged();
+        return getUseSuppliedUrlsOnlyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Whether the campaign uses advertiser supplied URLs exclusively.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getUseSuppliedUrlsOnlyOrBuilder() {
+        if (useSuppliedUrlsOnlyBuilder_ != null) {
+          return useSuppliedUrlsOnlyBuilder_.getMessageOrBuilder();
+        } else {
+          return useSuppliedUrlsOnly_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : useSuppliedUrlsOnly_;
+        }
+      }
+      /**
+       * <pre>
+       * Whether the campaign uses advertiser supplied URLs exclusively.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getUseSuppliedUrlsOnlyFieldBuilder() {
+        if (useSuppliedUrlsOnlyBuilder_ == null) {
+          useSuppliedUrlsOnlyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getUseSuppliedUrlsOnly(),
+                  getParentForChildren(),
+                  isClean());
+          useSuppliedUrlsOnly_ = null;
+        }
+        return useSuppliedUrlsOnlyBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> feeds_ =
+        java.util.Collections.emptyList();
+      private void ensureFeedsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          feeds_ = new java.util.ArrayList<com.google.protobuf.StringValue>(feeds_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> feedsBuilder_;
+
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getFeedsList() {
+        if (feedsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(feeds_);
+        } else {
+          return feedsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public int getFeedsCount() {
+        if (feedsBuilder_ == null) {
+          return feeds_.size();
+        } else {
+          return feedsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public com.google.protobuf.StringValue getFeeds(int index) {
+        if (feedsBuilder_ == null) {
+          return feeds_.get(index);
+        } else {
+          return feedsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public Builder setFeeds(
+          int index, com.google.protobuf.StringValue value) {
+        if (feedsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeedsIsMutable();
+          feeds_.set(index, value);
+          onChanged();
+        } else {
+          feedsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public Builder setFeeds(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (feedsBuilder_ == null) {
+          ensureFeedsIsMutable();
+          feeds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          feedsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public Builder addFeeds(com.google.protobuf.StringValue value) {
+        if (feedsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeedsIsMutable();
+          feeds_.add(value);
+          onChanged();
+        } else {
+          feedsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public Builder addFeeds(
+          int index, com.google.protobuf.StringValue value) {
+        if (feedsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeedsIsMutable();
+          feeds_.add(index, value);
+          onChanged();
+        } else {
+          feedsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public Builder addFeeds(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (feedsBuilder_ == null) {
+          ensureFeedsIsMutable();
+          feeds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          feedsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public Builder addFeeds(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (feedsBuilder_ == null) {
+          ensureFeedsIsMutable();
+          feeds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          feedsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public Builder addAllFeeds(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (feedsBuilder_ == null) {
+          ensureFeedsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, feeds_);
+          onChanged();
+        } else {
+          feedsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public Builder clearFeeds() {
+        if (feedsBuilder_ == null) {
+          feeds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          feedsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public Builder removeFeeds(int index) {
+        if (feedsBuilder_ == null) {
+          ensureFeedsIsMutable();
+          feeds_.remove(index);
+          onChanged();
+        } else {
+          feedsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getFeedsBuilder(
+          int index) {
+        return getFeedsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getFeedsOrBuilder(
+          int index) {
+        if (feedsBuilder_ == null) {
+          return feeds_.get(index);  } else {
+          return feedsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getFeedsOrBuilderList() {
+        if (feedsBuilder_ != null) {
+          return feedsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(feeds_);
+        }
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addFeedsBuilder() {
+        return getFeedsFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addFeedsBuilder(
+          int index) {
+        return getFeedsFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The list of page feeds associated with the campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getFeedsBuilderList() {
+        return getFeedsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getFeedsFieldBuilder() {
+        if (feedsBuilder_ == null) {
+          feedsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  feeds_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          feeds_ = null;
+        }
+        return feedsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting)
+    private static final com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting();
+    }
+
+    public static com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DynamicSearchAdsSetting>
+        PARSER = new com.google.protobuf.AbstractParser<DynamicSearchAdsSetting>() {
+      @java.lang.Override
+      public DynamicSearchAdsSetting parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DynamicSearchAdsSetting(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DynamicSearchAdsSetting> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DynamicSearchAdsSetting> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TrackingSettingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     */
+    boolean hasTrackingUrl();
+    /**
+     * <pre>
+     * The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     */
+    com.google.protobuf.StringValue getTrackingUrl();
+    /**
+     * <pre>
+     * The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder();
+  }
+  /**
+   * <pre>
+   * Campaign level settings for tracking information.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.TrackingSetting}
+   */
+  public  static final class TrackingSetting extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
+      TrackingSettingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TrackingSetting.newBuilder() to construct.
+    private TrackingSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TrackingSetting() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TrackingSetting(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (trackingUrl_ != null) {
+                subBuilder = trackingUrl_.toBuilder();
+              }
+              trackingUrl_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(trackingUrl_);
+                trackingUrl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.class, com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.Builder.class);
+    }
+
+    public static final int TRACKING_URL_FIELD_NUMBER = 1;
+    private com.google.protobuf.StringValue trackingUrl_;
+    /**
+     * <pre>
+     * The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     */
+    public boolean hasTrackingUrl() {
+      return trackingUrl_ != null;
+    }
+    /**
+     * <pre>
+     * The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     */
+    public com.google.protobuf.StringValue getTrackingUrl() {
+      return trackingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
+    }
+    /**
+     * <pre>
+     * The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder() {
+      return getTrackingUrl();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (trackingUrl_ != null) {
+        output.writeMessage(1, getTrackingUrl());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (trackingUrl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTrackingUrl());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v1.resources.Campaign.TrackingSetting)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v1.resources.Campaign.TrackingSetting other = (com.google.ads.googleads.v1.resources.Campaign.TrackingSetting) obj;
+
+      if (hasTrackingUrl() != other.hasTrackingUrl()) return false;
+      if (hasTrackingUrl()) {
+        if (!getTrackingUrl()
+            .equals(other.getTrackingUrl())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTrackingUrl()) {
+        hash = (37 * hash) + TRACKING_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getTrackingUrl().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v1.resources.Campaign.TrackingSetting prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Campaign level settings for tracking information.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.TrackingSetting}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
+        com.google.ads.googleads.v1.resources.Campaign.TrackingSettingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.class, com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (trackingUrlBuilder_ == null) {
+          trackingUrl_ = null;
+        } else {
+          trackingUrl_ = null;
+          trackingUrlBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_TrackingSetting_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
+        return com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting build() {
+        com.google.ads.googleads.v1.resources.Campaign.TrackingSetting result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting buildPartial() {
+        com.google.ads.googleads.v1.resources.Campaign.TrackingSetting result = new com.google.ads.googleads.v1.resources.Campaign.TrackingSetting(this);
+        if (trackingUrlBuilder_ == null) {
+          result.trackingUrl_ = trackingUrl_;
+        } else {
+          result.trackingUrl_ = trackingUrlBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v1.resources.Campaign.TrackingSetting) {
+          return mergeFrom((com.google.ads.googleads.v1.resources.Campaign.TrackingSetting)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v1.resources.Campaign.TrackingSetting other) {
+        if (other == com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.getDefaultInstance()) return this;
+        if (other.hasTrackingUrl()) {
+          mergeTrackingUrl(other.getTrackingUrl());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v1.resources.Campaign.TrackingSetting parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v1.resources.Campaign.TrackingSetting) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.StringValue trackingUrl_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> trackingUrlBuilder_;
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public boolean hasTrackingUrl() {
+        return trackingUrlBuilder_ != null || trackingUrl_ != null;
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public com.google.protobuf.StringValue getTrackingUrl() {
+        if (trackingUrlBuilder_ == null) {
+          return trackingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
+        } else {
+          return trackingUrlBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public Builder setTrackingUrl(com.google.protobuf.StringValue value) {
+        if (trackingUrlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          trackingUrl_ = value;
+          onChanged();
+        } else {
+          trackingUrlBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public Builder setTrackingUrl(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (trackingUrlBuilder_ == null) {
+          trackingUrl_ = builderForValue.build();
+          onChanged();
+        } else {
+          trackingUrlBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public Builder mergeTrackingUrl(com.google.protobuf.StringValue value) {
+        if (trackingUrlBuilder_ == null) {
+          if (trackingUrl_ != null) {
+            trackingUrl_ =
+              com.google.protobuf.StringValue.newBuilder(trackingUrl_).mergeFrom(value).buildPartial();
+          } else {
+            trackingUrl_ = value;
+          }
+          onChanged();
+        } else {
+          trackingUrlBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public Builder clearTrackingUrl() {
+        if (trackingUrlBuilder_ == null) {
+          trackingUrl_ = null;
+          onChanged();
+        } else {
+          trackingUrl_ = null;
+          trackingUrlBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getTrackingUrlBuilder() {
+        
+        onChanged();
+        return getTrackingUrlFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder() {
+        if (trackingUrlBuilder_ != null) {
+          return trackingUrlBuilder_.getMessageOrBuilder();
+        } else {
+          return trackingUrl_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
+        }
+      }
+      /**
+       * <pre>
+       * The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getTrackingUrlFieldBuilder() {
+        if (trackingUrlBuilder_ == null) {
+          trackingUrlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getTrackingUrl(),
+                  getParentForChildren(),
+                  isClean());
+          trackingUrl_ = null;
+        }
+        return trackingUrlBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v1.resources.Campaign.TrackingSetting)
+    private static final com.google.ads.googleads.v1.resources.Campaign.TrackingSetting DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v1.resources.Campaign.TrackingSetting();
+    }
+
+    public static com.google.ads.googleads.v1.resources.Campaign.TrackingSetting getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TrackingSetting>
+        PARSER = new com.google.protobuf.AbstractParser<TrackingSetting>() {
+      @java.lang.Override
+      public TrackingSetting parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TrackingSetting(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TrackingSetting> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrackingSetting> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v1.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8452,7 +6166,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8627,16 +6341,15 @@ private static final long serialVersionUID = 0L;
       }
       com.google.ads.googleads.v1.resources.Campaign.AppCampaignSetting other = (com.google.ads.googleads.v1.resources.Campaign.AppCampaignSetting) obj;
 
-      boolean result = true;
-      result = result && biddingStrategyGoalType_ == other.biddingStrategyGoalType_;
-      result = result && (hasAppId() == other.hasAppId());
+      if (biddingStrategyGoalType_ != other.biddingStrategyGoalType_) return false;
+      if (hasAppId() != other.hasAppId()) return false;
       if (hasAppId()) {
-        result = result && getAppId()
-            .equals(other.getAppId());
+        if (!getAppId()
+            .equals(other.getAppId())) return false;
       }
-      result = result && appStore_ == other.appStore_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (appStore_ != other.appStore_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8840,35 +6553,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8990,7 +6703,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.google.protobuf.StringValue appId_ = null;
+      private com.google.protobuf.StringValue appId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> appIdBuilder_;
       /**
@@ -9210,7 +6923,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9255,6 +6968,2285 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v1.resources.Campaign.AppCampaignSetting getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VanityPharmaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v1.resources.Campaign.VanityPharma)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The display mode for vanity pharma URLs.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+     */
+    int getVanityPharmaDisplayUrlModeValue();
+    /**
+     * <pre>
+     * The display mode for vanity pharma URLs.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+     */
+    com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode getVanityPharmaDisplayUrlMode();
+
+    /**
+     * <pre>
+     * The text that will be displayed in display URL of the text ad when
+     * website description is the selected display mode for vanity pharma URLs.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+     */
+    int getVanityPharmaTextValue();
+    /**
+     * <pre>
+     * The text that will be displayed in display URL of the text ad when
+     * website description is the selected display mode for vanity pharma URLs.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+     */
+    com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText getVanityPharmaText();
+  }
+  /**
+   * <pre>
+   * Describes how unbranded pharma ads will be displayed.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.VanityPharma}
+   */
+  public  static final class VanityPharma extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.Campaign.VanityPharma)
+      VanityPharmaOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VanityPharma.newBuilder() to construct.
+    private VanityPharma(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VanityPharma() {
+      vanityPharmaDisplayUrlMode_ = 0;
+      vanityPharmaText_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VanityPharma(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              vanityPharmaDisplayUrlMode_ = rawValue;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              vanityPharmaText_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_VanityPharma_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_VanityPharma_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v1.resources.Campaign.VanityPharma.class, com.google.ads.googleads.v1.resources.Campaign.VanityPharma.Builder.class);
+    }
+
+    public static final int VANITY_PHARMA_DISPLAY_URL_MODE_FIELD_NUMBER = 1;
+    private int vanityPharmaDisplayUrlMode_;
+    /**
+     * <pre>
+     * The display mode for vanity pharma URLs.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+     */
+    public int getVanityPharmaDisplayUrlModeValue() {
+      return vanityPharmaDisplayUrlMode_;
+    }
+    /**
+     * <pre>
+     * The display mode for vanity pharma URLs.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+     */
+    public com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode getVanityPharmaDisplayUrlMode() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode result = com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.valueOf(vanityPharmaDisplayUrlMode_);
+      return result == null ? com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNRECOGNIZED : result;
+    }
+
+    public static final int VANITY_PHARMA_TEXT_FIELD_NUMBER = 2;
+    private int vanityPharmaText_;
+    /**
+     * <pre>
+     * The text that will be displayed in display URL of the text ad when
+     * website description is the selected display mode for vanity pharma URLs.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+     */
+    public int getVanityPharmaTextValue() {
+      return vanityPharmaText_;
+    }
+    /**
+     * <pre>
+     * The text that will be displayed in display URL of the text ad when
+     * website description is the selected display mode for vanity pharma URLs.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+     */
+    public com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText getVanityPharmaText() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText result = com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText.valueOf(vanityPharmaText_);
+      return result == null ? com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (vanityPharmaDisplayUrlMode_ != com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, vanityPharmaDisplayUrlMode_);
+      }
+      if (vanityPharmaText_ != com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText.UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, vanityPharmaText_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (vanityPharmaDisplayUrlMode_ != com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, vanityPharmaDisplayUrlMode_);
+      }
+      if (vanityPharmaText_ != com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, vanityPharmaText_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v1.resources.Campaign.VanityPharma)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v1.resources.Campaign.VanityPharma other = (com.google.ads.googleads.v1.resources.Campaign.VanityPharma) obj;
+
+      if (vanityPharmaDisplayUrlMode_ != other.vanityPharmaDisplayUrlMode_) return false;
+      if (vanityPharmaText_ != other.vanityPharmaText_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VANITY_PHARMA_DISPLAY_URL_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + vanityPharmaDisplayUrlMode_;
+      hash = (37 * hash) + VANITY_PHARMA_TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + vanityPharmaText_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v1.resources.Campaign.VanityPharma prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Describes how unbranded pharma ads will be displayed.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.VanityPharma}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v1.resources.Campaign.VanityPharma)
+        com.google.ads.googleads.v1.resources.Campaign.VanityPharmaOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_VanityPharma_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_VanityPharma_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v1.resources.Campaign.VanityPharma.class, com.google.ads.googleads.v1.resources.Campaign.VanityPharma.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v1.resources.Campaign.VanityPharma.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        vanityPharmaDisplayUrlMode_ = 0;
+
+        vanityPharmaText_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_VanityPharma_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.VanityPharma getDefaultInstanceForType() {
+        return com.google.ads.googleads.v1.resources.Campaign.VanityPharma.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.VanityPharma build() {
+        com.google.ads.googleads.v1.resources.Campaign.VanityPharma result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.VanityPharma buildPartial() {
+        com.google.ads.googleads.v1.resources.Campaign.VanityPharma result = new com.google.ads.googleads.v1.resources.Campaign.VanityPharma(this);
+        result.vanityPharmaDisplayUrlMode_ = vanityPharmaDisplayUrlMode_;
+        result.vanityPharmaText_ = vanityPharmaText_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v1.resources.Campaign.VanityPharma) {
+          return mergeFrom((com.google.ads.googleads.v1.resources.Campaign.VanityPharma)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v1.resources.Campaign.VanityPharma other) {
+        if (other == com.google.ads.googleads.v1.resources.Campaign.VanityPharma.getDefaultInstance()) return this;
+        if (other.vanityPharmaDisplayUrlMode_ != 0) {
+          setVanityPharmaDisplayUrlModeValue(other.getVanityPharmaDisplayUrlModeValue());
+        }
+        if (other.vanityPharmaText_ != 0) {
+          setVanityPharmaTextValue(other.getVanityPharmaTextValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v1.resources.Campaign.VanityPharma parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v1.resources.Campaign.VanityPharma) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int vanityPharmaDisplayUrlMode_ = 0;
+      /**
+       * <pre>
+       * The display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+       */
+      public int getVanityPharmaDisplayUrlModeValue() {
+        return vanityPharmaDisplayUrlMode_;
+      }
+      /**
+       * <pre>
+       * The display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+       */
+      public Builder setVanityPharmaDisplayUrlModeValue(int value) {
+        vanityPharmaDisplayUrlMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+       */
+      public com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode getVanityPharmaDisplayUrlMode() {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode result = com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.valueOf(vanityPharmaDisplayUrlMode_);
+        return result == null ? com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+       */
+      public Builder setVanityPharmaDisplayUrlMode(com.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        vanityPharmaDisplayUrlMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+       */
+      public Builder clearVanityPharmaDisplayUrlMode() {
+        
+        vanityPharmaDisplayUrlMode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int vanityPharmaText_ = 0;
+      /**
+       * <pre>
+       * The text that will be displayed in display URL of the text ad when
+       * website description is the selected display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+       */
+      public int getVanityPharmaTextValue() {
+        return vanityPharmaText_;
+      }
+      /**
+       * <pre>
+       * The text that will be displayed in display URL of the text ad when
+       * website description is the selected display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+       */
+      public Builder setVanityPharmaTextValue(int value) {
+        vanityPharmaText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The text that will be displayed in display URL of the text ad when
+       * website description is the selected display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+       */
+      public com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText getVanityPharmaText() {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText result = com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText.valueOf(vanityPharmaText_);
+        return result == null ? com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The text that will be displayed in display URL of the text ad when
+       * website description is the selected display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+       */
+      public Builder setVanityPharmaText(com.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        vanityPharmaText_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The text that will be displayed in display URL of the text ad when
+       * website description is the selected display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v1.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+       */
+      public Builder clearVanityPharmaText() {
+        
+        vanityPharmaText_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v1.resources.Campaign.VanityPharma)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v1.resources.Campaign.VanityPharma)
+    private static final com.google.ads.googleads.v1.resources.Campaign.VanityPharma DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v1.resources.Campaign.VanityPharma();
+    }
+
+    public static com.google.ads.googleads.v1.resources.Campaign.VanityPharma getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VanityPharma>
+        PARSER = new com.google.protobuf.AbstractParser<VanityPharma>() {
+      @java.lang.Override
+      public VanityPharma parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VanityPharma(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VanityPharma> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VanityPharma> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v1.resources.Campaign.VanityPharma getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ShoppingSettingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v1.resources.Campaign.ShoppingSetting)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Merchant Center account.
+     * This field is required for create operations. This field is immutable for
+     * Shopping campaigns.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+     */
+    boolean hasMerchantId();
+    /**
+     * <pre>
+     * ID of the Merchant Center account.
+     * This field is required for create operations. This field is immutable for
+     * Shopping campaigns.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+     */
+    com.google.protobuf.Int64Value getMerchantId();
+    /**
+     * <pre>
+     * ID of the Merchant Center account.
+     * This field is required for create operations. This field is immutable for
+     * Shopping campaigns.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMerchantIdOrBuilder();
+
+    /**
+     * <pre>
+     * Sales country of products to include in the campaign.
+     * This field is required for Shopping campaigns. This field is immutable.
+     * This field is optional for non-Shopping campaigns, but it must be equal
+     * to 'ZZ' if set.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sales_country = 2;</code>
+     */
+    boolean hasSalesCountry();
+    /**
+     * <pre>
+     * Sales country of products to include in the campaign.
+     * This field is required for Shopping campaigns. This field is immutable.
+     * This field is optional for non-Shopping campaigns, but it must be equal
+     * to 'ZZ' if set.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sales_country = 2;</code>
+     */
+    com.google.protobuf.StringValue getSalesCountry();
+    /**
+     * <pre>
+     * Sales country of products to include in the campaign.
+     * This field is required for Shopping campaigns. This field is immutable.
+     * This field is optional for non-Shopping campaigns, but it must be equal
+     * to 'ZZ' if set.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sales_country = 2;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getSalesCountryOrBuilder();
+
+    /**
+     * <pre>
+     * Priority of the campaign. Campaigns with numerically higher priorities
+     * take precedence over those with lower priorities.
+     * This field is required for Shopping campaigns, with values between 0 and
+     * 2, inclusive.
+     * This field is optional for Smart Shopping campaigns, but must be equal to
+     * 3 if set.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+     */
+    boolean hasCampaignPriority();
+    /**
+     * <pre>
+     * Priority of the campaign. Campaigns with numerically higher priorities
+     * take precedence over those with lower priorities.
+     * This field is required for Shopping campaigns, with values between 0 and
+     * 2, inclusive.
+     * This field is optional for Smart Shopping campaigns, but must be equal to
+     * 3 if set.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+     */
+    com.google.protobuf.Int32Value getCampaignPriority();
+    /**
+     * <pre>
+     * Priority of the campaign. Campaigns with numerically higher priorities
+     * take precedence over those with lower priorities.
+     * This field is required for Shopping campaigns, with values between 0 and
+     * 2, inclusive.
+     * This field is optional for Smart Shopping campaigns, but must be equal to
+     * 3 if set.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+     */
+    com.google.protobuf.Int32ValueOrBuilder getCampaignPriorityOrBuilder();
+
+    /**
+     * <pre>
+     * Whether to include local products.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+     */
+    boolean hasEnableLocal();
+    /**
+     * <pre>
+     * Whether to include local products.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+     */
+    com.google.protobuf.BoolValue getEnableLocal();
+    /**
+     * <pre>
+     * Whether to include local products.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getEnableLocalOrBuilder();
+  }
+  /**
+   * <pre>
+   * The setting for Shopping campaigns. Defines the universe of products that
+   * can be advertised by the campaign, and how this campaign interacts with
+   * other Shopping campaigns.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.ShoppingSetting}
+   */
+  public  static final class ShoppingSetting extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.Campaign.ShoppingSetting)
+      ShoppingSettingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShoppingSetting.newBuilder() to construct.
+    private ShoppingSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShoppingSetting() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ShoppingSetting(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (merchantId_ != null) {
+                subBuilder = merchantId_.toBuilder();
+              }
+              merchantId_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(merchantId_);
+                merchantId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (salesCountry_ != null) {
+                subBuilder = salesCountry_.toBuilder();
+              }
+              salesCountry_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(salesCountry_);
+                salesCountry_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int32Value.Builder subBuilder = null;
+              if (campaignPriority_ != null) {
+                subBuilder = campaignPriority_.toBuilder();
+              }
+              campaignPriority_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(campaignPriority_);
+                campaignPriority_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (enableLocal_ != null) {
+                subBuilder = enableLocal_.toBuilder();
+              }
+              enableLocal_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(enableLocal_);
+                enableLocal_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_ShoppingSetting_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_ShoppingSetting_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.class, com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.Builder.class);
+    }
+
+    public static final int MERCHANT_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int64Value merchantId_;
+    /**
+     * <pre>
+     * ID of the Merchant Center account.
+     * This field is required for create operations. This field is immutable for
+     * Shopping campaigns.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+     */
+    public boolean hasMerchantId() {
+      return merchantId_ != null;
+    }
+    /**
+     * <pre>
+     * ID of the Merchant Center account.
+     * This field is required for create operations. This field is immutable for
+     * Shopping campaigns.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+     */
+    public com.google.protobuf.Int64Value getMerchantId() {
+      return merchantId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : merchantId_;
+    }
+    /**
+     * <pre>
+     * ID of the Merchant Center account.
+     * This field is required for create operations. This field is immutable for
+     * Shopping campaigns.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMerchantIdOrBuilder() {
+      return getMerchantId();
+    }
+
+    public static final int SALES_COUNTRY_FIELD_NUMBER = 2;
+    private com.google.protobuf.StringValue salesCountry_;
+    /**
+     * <pre>
+     * Sales country of products to include in the campaign.
+     * This field is required for Shopping campaigns. This field is immutable.
+     * This field is optional for non-Shopping campaigns, but it must be equal
+     * to 'ZZ' if set.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sales_country = 2;</code>
+     */
+    public boolean hasSalesCountry() {
+      return salesCountry_ != null;
+    }
+    /**
+     * <pre>
+     * Sales country of products to include in the campaign.
+     * This field is required for Shopping campaigns. This field is immutable.
+     * This field is optional for non-Shopping campaigns, but it must be equal
+     * to 'ZZ' if set.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sales_country = 2;</code>
+     */
+    public com.google.protobuf.StringValue getSalesCountry() {
+      return salesCountry_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : salesCountry_;
+    }
+    /**
+     * <pre>
+     * Sales country of products to include in the campaign.
+     * This field is required for Shopping campaigns. This field is immutable.
+     * This field is optional for non-Shopping campaigns, but it must be equal
+     * to 'ZZ' if set.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue sales_country = 2;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getSalesCountryOrBuilder() {
+      return getSalesCountry();
+    }
+
+    public static final int CAMPAIGN_PRIORITY_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int32Value campaignPriority_;
+    /**
+     * <pre>
+     * Priority of the campaign. Campaigns with numerically higher priorities
+     * take precedence over those with lower priorities.
+     * This field is required for Shopping campaigns, with values between 0 and
+     * 2, inclusive.
+     * This field is optional for Smart Shopping campaigns, but must be equal to
+     * 3 if set.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+     */
+    public boolean hasCampaignPriority() {
+      return campaignPriority_ != null;
+    }
+    /**
+     * <pre>
+     * Priority of the campaign. Campaigns with numerically higher priorities
+     * take precedence over those with lower priorities.
+     * This field is required for Shopping campaigns, with values between 0 and
+     * 2, inclusive.
+     * This field is optional for Smart Shopping campaigns, but must be equal to
+     * 3 if set.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+     */
+    public com.google.protobuf.Int32Value getCampaignPriority() {
+      return campaignPriority_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : campaignPriority_;
+    }
+    /**
+     * <pre>
+     * Priority of the campaign. Campaigns with numerically higher priorities
+     * take precedence over those with lower priorities.
+     * This field is required for Shopping campaigns, with values between 0 and
+     * 2, inclusive.
+     * This field is optional for Smart Shopping campaigns, but must be equal to
+     * 3 if set.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+     */
+    public com.google.protobuf.Int32ValueOrBuilder getCampaignPriorityOrBuilder() {
+      return getCampaignPriority();
+    }
+
+    public static final int ENABLE_LOCAL_FIELD_NUMBER = 4;
+    private com.google.protobuf.BoolValue enableLocal_;
+    /**
+     * <pre>
+     * Whether to include local products.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+     */
+    public boolean hasEnableLocal() {
+      return enableLocal_ != null;
+    }
+    /**
+     * <pre>
+     * Whether to include local products.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+     */
+    public com.google.protobuf.BoolValue getEnableLocal() {
+      return enableLocal_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableLocal_;
+    }
+    /**
+     * <pre>
+     * Whether to include local products.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getEnableLocalOrBuilder() {
+      return getEnableLocal();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (merchantId_ != null) {
+        output.writeMessage(1, getMerchantId());
+      }
+      if (salesCountry_ != null) {
+        output.writeMessage(2, getSalesCountry());
+      }
+      if (campaignPriority_ != null) {
+        output.writeMessage(3, getCampaignPriority());
+      }
+      if (enableLocal_ != null) {
+        output.writeMessage(4, getEnableLocal());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (merchantId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMerchantId());
+      }
+      if (salesCountry_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSalesCountry());
+      }
+      if (campaignPriority_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCampaignPriority());
+      }
+      if (enableLocal_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getEnableLocal());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting other = (com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting) obj;
+
+      if (hasMerchantId() != other.hasMerchantId()) return false;
+      if (hasMerchantId()) {
+        if (!getMerchantId()
+            .equals(other.getMerchantId())) return false;
+      }
+      if (hasSalesCountry() != other.hasSalesCountry()) return false;
+      if (hasSalesCountry()) {
+        if (!getSalesCountry()
+            .equals(other.getSalesCountry())) return false;
+      }
+      if (hasCampaignPriority() != other.hasCampaignPriority()) return false;
+      if (hasCampaignPriority()) {
+        if (!getCampaignPriority()
+            .equals(other.getCampaignPriority())) return false;
+      }
+      if (hasEnableLocal() != other.hasEnableLocal()) return false;
+      if (hasEnableLocal()) {
+        if (!getEnableLocal()
+            .equals(other.getEnableLocal())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMerchantId()) {
+        hash = (37 * hash) + MERCHANT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getMerchantId().hashCode();
+      }
+      if (hasSalesCountry()) {
+        hash = (37 * hash) + SALES_COUNTRY_FIELD_NUMBER;
+        hash = (53 * hash) + getSalesCountry().hashCode();
+      }
+      if (hasCampaignPriority()) {
+        hash = (37 * hash) + CAMPAIGN_PRIORITY_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignPriority().hashCode();
+      }
+      if (hasEnableLocal()) {
+        hash = (37 * hash) + ENABLE_LOCAL_FIELD_NUMBER;
+        hash = (53 * hash) + getEnableLocal().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The setting for Shopping campaigns. Defines the universe of products that
+     * can be advertised by the campaign, and how this campaign interacts with
+     * other Shopping campaigns.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v1.resources.Campaign.ShoppingSetting}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v1.resources.Campaign.ShoppingSetting)
+        com.google.ads.googleads.v1.resources.Campaign.ShoppingSettingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_ShoppingSetting_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_ShoppingSetting_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.class, com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (merchantIdBuilder_ == null) {
+          merchantId_ = null;
+        } else {
+          merchantId_ = null;
+          merchantIdBuilder_ = null;
+        }
+        if (salesCountryBuilder_ == null) {
+          salesCountry_ = null;
+        } else {
+          salesCountry_ = null;
+          salesCountryBuilder_ = null;
+        }
+        if (campaignPriorityBuilder_ == null) {
+          campaignPriority_ = null;
+        } else {
+          campaignPriority_ = null;
+          campaignPriorityBuilder_ = null;
+        }
+        if (enableLocalBuilder_ == null) {
+          enableLocal_ = null;
+        } else {
+          enableLocal_ = null;
+          enableLocalBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v1.resources.CampaignProto.internal_static_google_ads_googleads_v1_resources_Campaign_ShoppingSetting_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting getDefaultInstanceForType() {
+        return com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting build() {
+        com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting buildPartial() {
+        com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting result = new com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting(this);
+        if (merchantIdBuilder_ == null) {
+          result.merchantId_ = merchantId_;
+        } else {
+          result.merchantId_ = merchantIdBuilder_.build();
+        }
+        if (salesCountryBuilder_ == null) {
+          result.salesCountry_ = salesCountry_;
+        } else {
+          result.salesCountry_ = salesCountryBuilder_.build();
+        }
+        if (campaignPriorityBuilder_ == null) {
+          result.campaignPriority_ = campaignPriority_;
+        } else {
+          result.campaignPriority_ = campaignPriorityBuilder_.build();
+        }
+        if (enableLocalBuilder_ == null) {
+          result.enableLocal_ = enableLocal_;
+        } else {
+          result.enableLocal_ = enableLocalBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting) {
+          return mergeFrom((com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting other) {
+        if (other == com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.getDefaultInstance()) return this;
+        if (other.hasMerchantId()) {
+          mergeMerchantId(other.getMerchantId());
+        }
+        if (other.hasSalesCountry()) {
+          mergeSalesCountry(other.getSalesCountry());
+        }
+        if (other.hasCampaignPriority()) {
+          mergeCampaignPriority(other.getCampaignPriority());
+        }
+        if (other.hasEnableLocal()) {
+          mergeEnableLocal(other.getEnableLocal());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value merchantId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> merchantIdBuilder_;
+      /**
+       * <pre>
+       * ID of the Merchant Center account.
+       * This field is required for create operations. This field is immutable for
+       * Shopping campaigns.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       */
+      public boolean hasMerchantId() {
+        return merchantIdBuilder_ != null || merchantId_ != null;
+      }
+      /**
+       * <pre>
+       * ID of the Merchant Center account.
+       * This field is required for create operations. This field is immutable for
+       * Shopping campaigns.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       */
+      public com.google.protobuf.Int64Value getMerchantId() {
+        if (merchantIdBuilder_ == null) {
+          return merchantId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : merchantId_;
+        } else {
+          return merchantIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Merchant Center account.
+       * This field is required for create operations. This field is immutable for
+       * Shopping campaigns.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       */
+      public Builder setMerchantId(com.google.protobuf.Int64Value value) {
+        if (merchantIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          merchantId_ = value;
+          onChanged();
+        } else {
+          merchantIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Merchant Center account.
+       * This field is required for create operations. This field is immutable for
+       * Shopping campaigns.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       */
+      public Builder setMerchantId(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (merchantIdBuilder_ == null) {
+          merchantId_ = builderForValue.build();
+          onChanged();
+        } else {
+          merchantIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Merchant Center account.
+       * This field is required for create operations. This field is immutable for
+       * Shopping campaigns.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       */
+      public Builder mergeMerchantId(com.google.protobuf.Int64Value value) {
+        if (merchantIdBuilder_ == null) {
+          if (merchantId_ != null) {
+            merchantId_ =
+              com.google.protobuf.Int64Value.newBuilder(merchantId_).mergeFrom(value).buildPartial();
+          } else {
+            merchantId_ = value;
+          }
+          onChanged();
+        } else {
+          merchantIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Merchant Center account.
+       * This field is required for create operations. This field is immutable for
+       * Shopping campaigns.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       */
+      public Builder clearMerchantId() {
+        if (merchantIdBuilder_ == null) {
+          merchantId_ = null;
+          onChanged();
+        } else {
+          merchantId_ = null;
+          merchantIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Merchant Center account.
+       * This field is required for create operations. This field is immutable for
+       * Shopping campaigns.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMerchantIdBuilder() {
+        
+        onChanged();
+        return getMerchantIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * ID of the Merchant Center account.
+       * This field is required for create operations. This field is immutable for
+       * Shopping campaigns.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMerchantIdOrBuilder() {
+        if (merchantIdBuilder_ != null) {
+          return merchantIdBuilder_.getMessageOrBuilder();
+        } else {
+          return merchantId_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : merchantId_;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Merchant Center account.
+       * This field is required for create operations. This field is immutable for
+       * Shopping campaigns.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMerchantIdFieldBuilder() {
+        if (merchantIdBuilder_ == null) {
+          merchantIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMerchantId(),
+                  getParentForChildren(),
+                  isClean());
+          merchantId_ = null;
+        }
+        return merchantIdBuilder_;
+      }
+
+      private com.google.protobuf.StringValue salesCountry_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> salesCountryBuilder_;
+      /**
+       * <pre>
+       * Sales country of products to include in the campaign.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       */
+      public boolean hasSalesCountry() {
+        return salesCountryBuilder_ != null || salesCountry_ != null;
+      }
+      /**
+       * <pre>
+       * Sales country of products to include in the campaign.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       */
+      public com.google.protobuf.StringValue getSalesCountry() {
+        if (salesCountryBuilder_ == null) {
+          return salesCountry_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : salesCountry_;
+        } else {
+          return salesCountryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sales country of products to include in the campaign.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       */
+      public Builder setSalesCountry(com.google.protobuf.StringValue value) {
+        if (salesCountryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          salesCountry_ = value;
+          onChanged();
+        } else {
+          salesCountryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sales country of products to include in the campaign.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       */
+      public Builder setSalesCountry(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (salesCountryBuilder_ == null) {
+          salesCountry_ = builderForValue.build();
+          onChanged();
+        } else {
+          salesCountryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sales country of products to include in the campaign.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       */
+      public Builder mergeSalesCountry(com.google.protobuf.StringValue value) {
+        if (salesCountryBuilder_ == null) {
+          if (salesCountry_ != null) {
+            salesCountry_ =
+              com.google.protobuf.StringValue.newBuilder(salesCountry_).mergeFrom(value).buildPartial();
+          } else {
+            salesCountry_ = value;
+          }
+          onChanged();
+        } else {
+          salesCountryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sales country of products to include in the campaign.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       */
+      public Builder clearSalesCountry() {
+        if (salesCountryBuilder_ == null) {
+          salesCountry_ = null;
+          onChanged();
+        } else {
+          salesCountry_ = null;
+          salesCountryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sales country of products to include in the campaign.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getSalesCountryBuilder() {
+        
+        onChanged();
+        return getSalesCountryFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sales country of products to include in the campaign.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getSalesCountryOrBuilder() {
+        if (salesCountryBuilder_ != null) {
+          return salesCountryBuilder_.getMessageOrBuilder();
+        } else {
+          return salesCountry_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : salesCountry_;
+        }
+      }
+      /**
+       * <pre>
+       * Sales country of products to include in the campaign.
+       * This field is required for Shopping campaigns. This field is immutable.
+       * This field is optional for non-Shopping campaigns, but it must be equal
+       * to 'ZZ' if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getSalesCountryFieldBuilder() {
+        if (salesCountryBuilder_ == null) {
+          salesCountryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getSalesCountry(),
+                  getParentForChildren(),
+                  isClean());
+          salesCountry_ = null;
+        }
+        return salesCountryBuilder_;
+      }
+
+      private com.google.protobuf.Int32Value campaignPriority_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> campaignPriorityBuilder_;
+      /**
+       * <pre>
+       * Priority of the campaign. Campaigns with numerically higher priorities
+       * take precedence over those with lower priorities.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+       */
+      public boolean hasCampaignPriority() {
+        return campaignPriorityBuilder_ != null || campaignPriority_ != null;
+      }
+      /**
+       * <pre>
+       * Priority of the campaign. Campaigns with numerically higher priorities
+       * take precedence over those with lower priorities.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+       */
+      public com.google.protobuf.Int32Value getCampaignPriority() {
+        if (campaignPriorityBuilder_ == null) {
+          return campaignPriority_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : campaignPriority_;
+        } else {
+          return campaignPriorityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Priority of the campaign. Campaigns with numerically higher priorities
+       * take precedence over those with lower priorities.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+       */
+      public Builder setCampaignPriority(com.google.protobuf.Int32Value value) {
+        if (campaignPriorityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          campaignPriority_ = value;
+          onChanged();
+        } else {
+          campaignPriorityBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Priority of the campaign. Campaigns with numerically higher priorities
+       * take precedence over those with lower priorities.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+       */
+      public Builder setCampaignPriority(
+          com.google.protobuf.Int32Value.Builder builderForValue) {
+        if (campaignPriorityBuilder_ == null) {
+          campaignPriority_ = builderForValue.build();
+          onChanged();
+        } else {
+          campaignPriorityBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Priority of the campaign. Campaigns with numerically higher priorities
+       * take precedence over those with lower priorities.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+       */
+      public Builder mergeCampaignPriority(com.google.protobuf.Int32Value value) {
+        if (campaignPriorityBuilder_ == null) {
+          if (campaignPriority_ != null) {
+            campaignPriority_ =
+              com.google.protobuf.Int32Value.newBuilder(campaignPriority_).mergeFrom(value).buildPartial();
+          } else {
+            campaignPriority_ = value;
+          }
+          onChanged();
+        } else {
+          campaignPriorityBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Priority of the campaign. Campaigns with numerically higher priorities
+       * take precedence over those with lower priorities.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+       */
+      public Builder clearCampaignPriority() {
+        if (campaignPriorityBuilder_ == null) {
+          campaignPriority_ = null;
+          onChanged();
+        } else {
+          campaignPriority_ = null;
+          campaignPriorityBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Priority of the campaign. Campaigns with numerically higher priorities
+       * take precedence over those with lower priorities.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+       */
+      public com.google.protobuf.Int32Value.Builder getCampaignPriorityBuilder() {
+        
+        onChanged();
+        return getCampaignPriorityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Priority of the campaign. Campaigns with numerically higher priorities
+       * take precedence over those with lower priorities.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+       */
+      public com.google.protobuf.Int32ValueOrBuilder getCampaignPriorityOrBuilder() {
+        if (campaignPriorityBuilder_ != null) {
+          return campaignPriorityBuilder_.getMessageOrBuilder();
+        } else {
+          return campaignPriority_ == null ?
+              com.google.protobuf.Int32Value.getDefaultInstance() : campaignPriority_;
+        }
+      }
+      /**
+       * <pre>
+       * Priority of the campaign. Campaigns with numerically higher priorities
+       * take precedence over those with lower priorities.
+       * This field is required for Shopping campaigns, with values between 0 and
+       * 2, inclusive.
+       * This field is optional for Smart Shopping campaigns, but must be equal to
+       * 3 if set.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+          getCampaignPriorityFieldBuilder() {
+        if (campaignPriorityBuilder_ == null) {
+          campaignPriorityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                  getCampaignPriority(),
+                  getParentForChildren(),
+                  isClean());
+          campaignPriority_ = null;
+        }
+        return campaignPriorityBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue enableLocal_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableLocalBuilder_;
+      /**
+       * <pre>
+       * Whether to include local products.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+       */
+      public boolean hasEnableLocal() {
+        return enableLocalBuilder_ != null || enableLocal_ != null;
+      }
+      /**
+       * <pre>
+       * Whether to include local products.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+       */
+      public com.google.protobuf.BoolValue getEnableLocal() {
+        if (enableLocalBuilder_ == null) {
+          return enableLocal_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableLocal_;
+        } else {
+          return enableLocalBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Whether to include local products.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+       */
+      public Builder setEnableLocal(com.google.protobuf.BoolValue value) {
+        if (enableLocalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          enableLocal_ = value;
+          onChanged();
+        } else {
+          enableLocalBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether to include local products.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+       */
+      public Builder setEnableLocal(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (enableLocalBuilder_ == null) {
+          enableLocal_ = builderForValue.build();
+          onChanged();
+        } else {
+          enableLocalBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether to include local products.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+       */
+      public Builder mergeEnableLocal(com.google.protobuf.BoolValue value) {
+        if (enableLocalBuilder_ == null) {
+          if (enableLocal_ != null) {
+            enableLocal_ =
+              com.google.protobuf.BoolValue.newBuilder(enableLocal_).mergeFrom(value).buildPartial();
+          } else {
+            enableLocal_ = value;
+          }
+          onChanged();
+        } else {
+          enableLocalBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether to include local products.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+       */
+      public Builder clearEnableLocal() {
+        if (enableLocalBuilder_ == null) {
+          enableLocal_ = null;
+          onChanged();
+        } else {
+          enableLocal_ = null;
+          enableLocalBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether to include local products.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getEnableLocalBuilder() {
+        
+        onChanged();
+        return getEnableLocalFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Whether to include local products.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getEnableLocalOrBuilder() {
+        if (enableLocalBuilder_ != null) {
+          return enableLocalBuilder_.getMessageOrBuilder();
+        } else {
+          return enableLocal_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : enableLocal_;
+        }
+      }
+      /**
+       * <pre>
+       * Whether to include local products.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getEnableLocalFieldBuilder() {
+        if (enableLocalBuilder_ == null) {
+          enableLocalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getEnableLocal(),
+                  getParentForChildren(),
+                  isClean());
+          enableLocal_ = null;
+        }
+        return enableLocalBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v1.resources.Campaign.ShoppingSetting)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v1.resources.Campaign.ShoppingSetting)
+    private static final com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting();
+    }
+
+    public static com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShoppingSetting>
+        PARSER = new com.google.protobuf.AbstractParser<ShoppingSetting>() {
+      @java.lang.Override
+      public ShoppingSetting parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ShoppingSetting(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShoppingSetting> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShoppingSetting> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9356,7 +9348,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9489,11 +9481,10 @@ private static final long serialVersionUID = 0L;
       }
       com.google.ads.googleads.v1.resources.Campaign.GeoTargetTypeSetting other = (com.google.ads.googleads.v1.resources.Campaign.GeoTargetTypeSetting) obj;
 
-      boolean result = true;
-      result = result && positiveGeoTargetType_ == other.positiveGeoTargetType_;
-      result = result && negativeGeoTargetType_ == other.negativeGeoTargetType_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (positiveGeoTargetType_ != other.positiveGeoTargetType_) return false;
+      if (negativeGeoTargetType_ != other.negativeGeoTargetType_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9682,35 +9673,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9891,7 +9882,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -12015,180 +12006,177 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.Campaign other = (com.google.ads.googleads.v1.resources.Campaign) obj;
 
-    boolean result = true;
-    result = result && getResourceName()
-        .equals(other.getResourceName());
-    result = result && (hasId() == other.hasId());
+    if (!getResourceName()
+        .equals(other.getResourceName())) return false;
+    if (hasId() != other.hasId()) return false;
     if (hasId()) {
-      result = result && getId()
-          .equals(other.getId());
+      if (!getId()
+          .equals(other.getId())) return false;
     }
-    result = result && (hasName() == other.hasName());
+    if (hasName() != other.hasName()) return false;
     if (hasName()) {
-      result = result && getName()
-          .equals(other.getName());
+      if (!getName()
+          .equals(other.getName())) return false;
     }
-    result = result && status_ == other.status_;
-    result = result && servingStatus_ == other.servingStatus_;
-    result = result && adServingOptimizationStatus_ == other.adServingOptimizationStatus_;
-    result = result && advertisingChannelType_ == other.advertisingChannelType_;
-    result = result && advertisingChannelSubType_ == other.advertisingChannelSubType_;
-    result = result && (hasTrackingUrlTemplate() == other.hasTrackingUrlTemplate());
+    if (status_ != other.status_) return false;
+    if (servingStatus_ != other.servingStatus_) return false;
+    if (adServingOptimizationStatus_ != other.adServingOptimizationStatus_) return false;
+    if (advertisingChannelType_ != other.advertisingChannelType_) return false;
+    if (advertisingChannelSubType_ != other.advertisingChannelSubType_) return false;
+    if (hasTrackingUrlTemplate() != other.hasTrackingUrlTemplate()) return false;
     if (hasTrackingUrlTemplate()) {
-      result = result && getTrackingUrlTemplate()
-          .equals(other.getTrackingUrlTemplate());
+      if (!getTrackingUrlTemplate()
+          .equals(other.getTrackingUrlTemplate())) return false;
     }
-    result = result && getUrlCustomParametersList()
-        .equals(other.getUrlCustomParametersList());
-    result = result && (hasRealTimeBiddingSetting() == other.hasRealTimeBiddingSetting());
+    if (!getUrlCustomParametersList()
+        .equals(other.getUrlCustomParametersList())) return false;
+    if (hasRealTimeBiddingSetting() != other.hasRealTimeBiddingSetting()) return false;
     if (hasRealTimeBiddingSetting()) {
-      result = result && getRealTimeBiddingSetting()
-          .equals(other.getRealTimeBiddingSetting());
+      if (!getRealTimeBiddingSetting()
+          .equals(other.getRealTimeBiddingSetting())) return false;
     }
-    result = result && (hasNetworkSettings() == other.hasNetworkSettings());
+    if (hasNetworkSettings() != other.hasNetworkSettings()) return false;
     if (hasNetworkSettings()) {
-      result = result && getNetworkSettings()
-          .equals(other.getNetworkSettings());
+      if (!getNetworkSettings()
+          .equals(other.getNetworkSettings())) return false;
     }
-    result = result && (hasHotelSetting() == other.hasHotelSetting());
+    if (hasHotelSetting() != other.hasHotelSetting()) return false;
     if (hasHotelSetting()) {
-      result = result && getHotelSetting()
-          .equals(other.getHotelSetting());
+      if (!getHotelSetting()
+          .equals(other.getHotelSetting())) return false;
     }
-    result = result && (hasDynamicSearchAdsSetting() == other.hasDynamicSearchAdsSetting());
+    if (hasDynamicSearchAdsSetting() != other.hasDynamicSearchAdsSetting()) return false;
     if (hasDynamicSearchAdsSetting()) {
-      result = result && getDynamicSearchAdsSetting()
-          .equals(other.getDynamicSearchAdsSetting());
+      if (!getDynamicSearchAdsSetting()
+          .equals(other.getDynamicSearchAdsSetting())) return false;
     }
-    result = result && (hasShoppingSetting() == other.hasShoppingSetting());
+    if (hasShoppingSetting() != other.hasShoppingSetting()) return false;
     if (hasShoppingSetting()) {
-      result = result && getShoppingSetting()
-          .equals(other.getShoppingSetting());
+      if (!getShoppingSetting()
+          .equals(other.getShoppingSetting())) return false;
     }
-    result = result && (hasTargetingSetting() == other.hasTargetingSetting());
+    if (hasTargetingSetting() != other.hasTargetingSetting()) return false;
     if (hasTargetingSetting()) {
-      result = result && getTargetingSetting()
-          .equals(other.getTargetingSetting());
+      if (!getTargetingSetting()
+          .equals(other.getTargetingSetting())) return false;
     }
-    result = result && (hasGeoTargetTypeSetting() == other.hasGeoTargetTypeSetting());
+    if (hasGeoTargetTypeSetting() != other.hasGeoTargetTypeSetting()) return false;
     if (hasGeoTargetTypeSetting()) {
-      result = result && getGeoTargetTypeSetting()
-          .equals(other.getGeoTargetTypeSetting());
+      if (!getGeoTargetTypeSetting()
+          .equals(other.getGeoTargetTypeSetting())) return false;
     }
-    result = result && (hasAppCampaignSetting() == other.hasAppCampaignSetting());
+    if (hasAppCampaignSetting() != other.hasAppCampaignSetting()) return false;
     if (hasAppCampaignSetting()) {
-      result = result && getAppCampaignSetting()
-          .equals(other.getAppCampaignSetting());
+      if (!getAppCampaignSetting()
+          .equals(other.getAppCampaignSetting())) return false;
     }
-    result = result && getLabelsList()
-        .equals(other.getLabelsList());
-    result = result && experimentType_ == other.experimentType_;
-    result = result && (hasBaseCampaign() == other.hasBaseCampaign());
+    if (!getLabelsList()
+        .equals(other.getLabelsList())) return false;
+    if (experimentType_ != other.experimentType_) return false;
+    if (hasBaseCampaign() != other.hasBaseCampaign()) return false;
     if (hasBaseCampaign()) {
-      result = result && getBaseCampaign()
-          .equals(other.getBaseCampaign());
+      if (!getBaseCampaign()
+          .equals(other.getBaseCampaign())) return false;
     }
-    result = result && (hasCampaignBudget() == other.hasCampaignBudget());
+    if (hasCampaignBudget() != other.hasCampaignBudget()) return false;
     if (hasCampaignBudget()) {
-      result = result && getCampaignBudget()
-          .equals(other.getCampaignBudget());
+      if (!getCampaignBudget()
+          .equals(other.getCampaignBudget())) return false;
     }
-    result = result && biddingStrategyType_ == other.biddingStrategyType_;
-    result = result && (hasStartDate() == other.hasStartDate());
+    if (biddingStrategyType_ != other.biddingStrategyType_) return false;
+    if (hasStartDate() != other.hasStartDate()) return false;
     if (hasStartDate()) {
-      result = result && getStartDate()
-          .equals(other.getStartDate());
+      if (!getStartDate()
+          .equals(other.getStartDate())) return false;
     }
-    result = result && (hasEndDate() == other.hasEndDate());
+    if (hasEndDate() != other.hasEndDate()) return false;
     if (hasEndDate()) {
-      result = result && getEndDate()
-          .equals(other.getEndDate());
+      if (!getEndDate()
+          .equals(other.getEndDate())) return false;
     }
-    result = result && (hasFinalUrlSuffix() == other.hasFinalUrlSuffix());
+    if (hasFinalUrlSuffix() != other.hasFinalUrlSuffix()) return false;
     if (hasFinalUrlSuffix()) {
-      result = result && getFinalUrlSuffix()
-          .equals(other.getFinalUrlSuffix());
+      if (!getFinalUrlSuffix()
+          .equals(other.getFinalUrlSuffix())) return false;
     }
-    result = result && getFrequencyCapsList()
-        .equals(other.getFrequencyCapsList());
-    result = result && videoBrandSafetySuitability_ == other.videoBrandSafetySuitability_;
-    result = result && (hasVanityPharma() == other.hasVanityPharma());
+    if (!getFrequencyCapsList()
+        .equals(other.getFrequencyCapsList())) return false;
+    if (videoBrandSafetySuitability_ != other.videoBrandSafetySuitability_) return false;
+    if (hasVanityPharma() != other.hasVanityPharma()) return false;
     if (hasVanityPharma()) {
-      result = result && getVanityPharma()
-          .equals(other.getVanityPharma());
+      if (!getVanityPharma()
+          .equals(other.getVanityPharma())) return false;
     }
-    result = result && (hasSelectiveOptimization() == other.hasSelectiveOptimization());
+    if (hasSelectiveOptimization() != other.hasSelectiveOptimization()) return false;
     if (hasSelectiveOptimization()) {
-      result = result && getSelectiveOptimization()
-          .equals(other.getSelectiveOptimization());
+      if (!getSelectiveOptimization()
+          .equals(other.getSelectiveOptimization())) return false;
     }
-    result = result && (hasTrackingSetting() == other.hasTrackingSetting());
+    if (hasTrackingSetting() != other.hasTrackingSetting()) return false;
     if (hasTrackingSetting()) {
-      result = result && getTrackingSetting()
-          .equals(other.getTrackingSetting());
+      if (!getTrackingSetting()
+          .equals(other.getTrackingSetting())) return false;
     }
-    result = result && paymentMode_ == other.paymentMode_;
-    result = result && getCampaignBiddingStrategyCase().equals(
-        other.getCampaignBiddingStrategyCase());
-    if (!result) return false;
+    if (paymentMode_ != other.paymentMode_) return false;
+    if (!getCampaignBiddingStrategyCase().equals(other.getCampaignBiddingStrategyCase())) return false;
     switch (campaignBiddingStrategyCase_) {
       case 23:
-        result = result && getBiddingStrategy()
-            .equals(other.getBiddingStrategy());
+        if (!getBiddingStrategy()
+            .equals(other.getBiddingStrategy())) return false;
         break;
       case 49:
-        result = result && getCommission()
-            .equals(other.getCommission());
+        if (!getCommission()
+            .equals(other.getCommission())) return false;
         break;
       case 24:
-        result = result && getManualCpc()
-            .equals(other.getManualCpc());
+        if (!getManualCpc()
+            .equals(other.getManualCpc())) return false;
         break;
       case 25:
-        result = result && getManualCpm()
-            .equals(other.getManualCpm());
+        if (!getManualCpm()
+            .equals(other.getManualCpm())) return false;
         break;
       case 37:
-        result = result && getManualCpv()
-            .equals(other.getManualCpv());
+        if (!getManualCpv()
+            .equals(other.getManualCpv())) return false;
         break;
       case 30:
-        result = result && getMaximizeConversions()
-            .equals(other.getMaximizeConversions());
+        if (!getMaximizeConversions()
+            .equals(other.getMaximizeConversions())) return false;
         break;
       case 31:
-        result = result && getMaximizeConversionValue()
-            .equals(other.getMaximizeConversionValue());
+        if (!getMaximizeConversionValue()
+            .equals(other.getMaximizeConversionValue())) return false;
         break;
       case 26:
-        result = result && getTargetCpa()
-            .equals(other.getTargetCpa());
+        if (!getTargetCpa()
+            .equals(other.getTargetCpa())) return false;
         break;
       case 48:
-        result = result && getTargetImpressionShare()
-            .equals(other.getTargetImpressionShare());
+        if (!getTargetImpressionShare()
+            .equals(other.getTargetImpressionShare())) return false;
         break;
       case 29:
-        result = result && getTargetRoas()
-            .equals(other.getTargetRoas());
+        if (!getTargetRoas()
+            .equals(other.getTargetRoas())) return false;
         break;
       case 27:
-        result = result && getTargetSpend()
-            .equals(other.getTargetSpend());
+        if (!getTargetSpend()
+            .equals(other.getTargetSpend())) return false;
         break;
       case 34:
-        result = result && getPercentCpc()
-            .equals(other.getPercentCpc());
+        if (!getPercentCpc()
+            .equals(other.getPercentCpc())) return false;
         break;
       case 41:
-        result = result && getTargetCpm()
-            .equals(other.getTargetCpm());
+        if (!getTargetCpm()
+            .equals(other.getTargetCpm())) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -12708,7 +12696,7 @@ private static final long serialVersionUID = 0L;
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((bitField0_ & 0x00000200) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
           bitField0_ = (bitField0_ & ~0x00000200);
         }
@@ -12757,7 +12745,7 @@ private static final long serialVersionUID = 0L;
         result.appCampaignSetting_ = appCampaignSettingBuilder_.build();
       }
       if (labelsBuilder_ == null) {
-        if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        if (((bitField0_ & 0x00040000) != 0)) {
           labels_ = java.util.Collections.unmodifiableList(labels_);
           bitField0_ = (bitField0_ & ~0x00040000);
         }
@@ -12793,7 +12781,7 @@ private static final long serialVersionUID = 0L;
         result.finalUrlSuffix_ = finalUrlSuffixBuilder_.build();
       }
       if (frequencyCapsBuilder_ == null) {
-        if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        if (((bitField0_ & 0x04000000) != 0)) {
           frequencyCaps_ = java.util.Collections.unmodifiableList(frequencyCaps_);
           bitField0_ = (bitField0_ & ~0x04000000);
         }
@@ -12918,35 +12906,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13328,7 +13316,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value id_ = null;
+    private com.google.protobuf.Int64Value id_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
@@ -13481,7 +13469,7 @@ private static final long serialVersionUID = 0L;
       return idBuilder_;
     }
 
-    private com.google.protobuf.StringValue name_ = null;
+    private com.google.protobuf.StringValue name_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
@@ -14040,7 +14028,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue trackingUrlTemplate_ = null;
+    private com.google.protobuf.StringValue trackingUrlTemplate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> trackingUrlTemplateBuilder_;
     /**
@@ -14196,7 +14184,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+      if (!((bitField0_ & 0x00000200) != 0)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.CustomParameter>(urlCustomParameters_);
         bitField0_ |= 0x00000200;
        }
@@ -14515,7 +14503,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.CustomParameter, com.google.ads.googleads.v1.common.CustomParameter.Builder, com.google.ads.googleads.v1.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000200) == 0x00000200),
+                ((bitField0_ & 0x00000200) != 0),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -14523,7 +14511,7 @@ private static final long serialVersionUID = 0L;
       return urlCustomParametersBuilder_;
     }
 
-    private com.google.ads.googleads.v1.common.RealTimeBiddingSetting realTimeBiddingSetting_ = null;
+    private com.google.ads.googleads.v1.common.RealTimeBiddingSetting realTimeBiddingSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.RealTimeBiddingSetting, com.google.ads.googleads.v1.common.RealTimeBiddingSetting.Builder, com.google.ads.googleads.v1.common.RealTimeBiddingSettingOrBuilder> realTimeBiddingSettingBuilder_;
     /**
@@ -14685,7 +14673,7 @@ private static final long serialVersionUID = 0L;
       return realTimeBiddingSettingBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Campaign.NetworkSettings networkSettings_ = null;
+    private com.google.ads.googleads.v1.resources.Campaign.NetworkSettings networkSettings_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Campaign.NetworkSettings, com.google.ads.googleads.v1.resources.Campaign.NetworkSettings.Builder, com.google.ads.googleads.v1.resources.Campaign.NetworkSettingsOrBuilder> networkSettingsBuilder_;
     /**
@@ -14838,7 +14826,7 @@ private static final long serialVersionUID = 0L;
       return networkSettingsBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Campaign.HotelSettingInfo hotelSetting_ = null;
+    private com.google.ads.googleads.v1.resources.Campaign.HotelSettingInfo hotelSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Campaign.HotelSettingInfo, com.google.ads.googleads.v1.resources.Campaign.HotelSettingInfo.Builder, com.google.ads.googleads.v1.resources.Campaign.HotelSettingInfoOrBuilder> hotelSettingBuilder_;
     /**
@@ -14991,7 +14979,7 @@ private static final long serialVersionUID = 0L;
       return hotelSettingBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting dynamicSearchAdsSetting_ = null;
+    private com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting dynamicSearchAdsSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting, com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSetting.Builder, com.google.ads.googleads.v1.resources.Campaign.DynamicSearchAdsSettingOrBuilder> dynamicSearchAdsSettingBuilder_;
     /**
@@ -15144,7 +15132,7 @@ private static final long serialVersionUID = 0L;
       return dynamicSearchAdsSettingBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting shoppingSetting_ = null;
+    private com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting shoppingSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting, com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting.Builder, com.google.ads.googleads.v1.resources.Campaign.ShoppingSettingOrBuilder> shoppingSettingBuilder_;
     /**
@@ -15297,7 +15285,7 @@ private static final long serialVersionUID = 0L;
       return shoppingSettingBuilder_;
     }
 
-    private com.google.ads.googleads.v1.common.TargetingSetting targetingSetting_ = null;
+    private com.google.ads.googleads.v1.common.TargetingSetting targetingSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.TargetingSetting, com.google.ads.googleads.v1.common.TargetingSetting.Builder, com.google.ads.googleads.v1.common.TargetingSettingOrBuilder> targetingSettingBuilder_;
     /**
@@ -15450,7 +15438,7 @@ private static final long serialVersionUID = 0L;
       return targetingSettingBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Campaign.GeoTargetTypeSetting geoTargetTypeSetting_ = null;
+    private com.google.ads.googleads.v1.resources.Campaign.GeoTargetTypeSetting geoTargetTypeSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Campaign.GeoTargetTypeSetting, com.google.ads.googleads.v1.resources.Campaign.GeoTargetTypeSetting.Builder, com.google.ads.googleads.v1.resources.Campaign.GeoTargetTypeSettingOrBuilder> geoTargetTypeSettingBuilder_;
     /**
@@ -15603,7 +15591,7 @@ private static final long serialVersionUID = 0L;
       return geoTargetTypeSettingBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Campaign.AppCampaignSetting appCampaignSetting_ = null;
+    private com.google.ads.googleads.v1.resources.Campaign.AppCampaignSetting appCampaignSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Campaign.AppCampaignSetting, com.google.ads.googleads.v1.resources.Campaign.AppCampaignSetting.Builder, com.google.ads.googleads.v1.resources.Campaign.AppCampaignSettingOrBuilder> appCampaignSettingBuilder_;
     /**
@@ -15759,7 +15747,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> labels_ =
       java.util.Collections.emptyList();
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x00040000) == 0x00040000)) {
+      if (!((bitField0_ & 0x00040000) != 0)) {
         labels_ = new java.util.ArrayList<com.google.protobuf.StringValue>(labels_);
         bitField0_ |= 0x00040000;
        }
@@ -16060,7 +16048,7 @@ private static final long serialVersionUID = 0L;
         labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 labels_,
-                ((bitField0_ & 0x00040000) == 0x00040000),
+                ((bitField0_ & 0x00040000) != 0),
                 getParentForChildren(),
                 isClean());
         labels_ = null;
@@ -16133,7 +16121,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue baseCampaign_ = null;
+    private com.google.protobuf.StringValue baseCampaign_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> baseCampaignBuilder_;
     /**
@@ -16304,7 +16292,7 @@ private static final long serialVersionUID = 0L;
       return baseCampaignBuilder_;
     }
 
-    private com.google.protobuf.StringValue campaignBudget_ = null;
+    private com.google.protobuf.StringValue campaignBudget_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignBudgetBuilder_;
     /**
@@ -16542,7 +16530,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue startDate_ = null;
+    private com.google.protobuf.StringValue startDate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> startDateBuilder_;
     /**
@@ -16704,7 +16692,7 @@ private static final long serialVersionUID = 0L;
       return startDateBuilder_;
     }
 
-    private com.google.protobuf.StringValue endDate_ = null;
+    private com.google.protobuf.StringValue endDate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> endDateBuilder_;
     /**
@@ -16866,7 +16854,7 @@ private static final long serialVersionUID = 0L;
       return endDateBuilder_;
     }
 
-    private com.google.protobuf.StringValue finalUrlSuffix_ = null;
+    private com.google.protobuf.StringValue finalUrlSuffix_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> finalUrlSuffixBuilder_;
     /**
@@ -17031,7 +17019,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.FrequencyCapEntry> frequencyCaps_ =
       java.util.Collections.emptyList();
     private void ensureFrequencyCapsIsMutable() {
-      if (!((bitField0_ & 0x04000000) == 0x04000000)) {
+      if (!((bitField0_ & 0x04000000) != 0)) {
         frequencyCaps_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.FrequencyCapEntry>(frequencyCaps_);
         bitField0_ |= 0x04000000;
        }
@@ -17332,7 +17320,7 @@ private static final long serialVersionUID = 0L;
         frequencyCapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.FrequencyCapEntry, com.google.ads.googleads.v1.common.FrequencyCapEntry.Builder, com.google.ads.googleads.v1.common.FrequencyCapEntryOrBuilder>(
                 frequencyCaps_,
-                ((bitField0_ & 0x04000000) == 0x04000000),
+                ((bitField0_ & 0x04000000) != 0),
                 getParentForChildren(),
                 isClean());
         frequencyCaps_ = null;
@@ -17405,7 +17393,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.ads.googleads.v1.resources.Campaign.VanityPharma vanityPharma_ = null;
+    private com.google.ads.googleads.v1.resources.Campaign.VanityPharma vanityPharma_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Campaign.VanityPharma, com.google.ads.googleads.v1.resources.Campaign.VanityPharma.Builder, com.google.ads.googleads.v1.resources.Campaign.VanityPharmaOrBuilder> vanityPharmaBuilder_;
     /**
@@ -17558,7 +17546,7 @@ private static final long serialVersionUID = 0L;
       return vanityPharmaBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Campaign.SelectiveOptimization selectiveOptimization_ = null;
+    private com.google.ads.googleads.v1.resources.Campaign.SelectiveOptimization selectiveOptimization_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Campaign.SelectiveOptimization, com.google.ads.googleads.v1.resources.Campaign.SelectiveOptimization.Builder, com.google.ads.googleads.v1.resources.Campaign.SelectiveOptimizationOrBuilder> selectiveOptimizationBuilder_;
     /**
@@ -17720,7 +17708,7 @@ private static final long serialVersionUID = 0L;
       return selectiveOptimizationBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Campaign.TrackingSetting trackingSetting_ = null;
+    private com.google.ads.googleads.v1.resources.Campaign.TrackingSetting trackingSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Campaign.TrackingSetting, com.google.ads.googleads.v1.resources.Campaign.TrackingSetting.Builder, com.google.ads.googleads.v1.resources.Campaign.TrackingSettingOrBuilder> trackingSettingBuilder_;
     /**
@@ -20293,7 +20281,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

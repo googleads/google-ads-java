@@ -1284,7 +1284,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -5153,484 +5153,483 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.services.GoogleAdsRow other = (com.google.ads.googleads.v1.services.GoogleAdsRow) obj;
 
-    boolean result = true;
-    result = result && (hasAccountBudget() == other.hasAccountBudget());
+    if (hasAccountBudget() != other.hasAccountBudget()) return false;
     if (hasAccountBudget()) {
-      result = result && getAccountBudget()
-          .equals(other.getAccountBudget());
+      if (!getAccountBudget()
+          .equals(other.getAccountBudget())) return false;
     }
-    result = result && (hasAccountBudgetProposal() == other.hasAccountBudgetProposal());
+    if (hasAccountBudgetProposal() != other.hasAccountBudgetProposal()) return false;
     if (hasAccountBudgetProposal()) {
-      result = result && getAccountBudgetProposal()
-          .equals(other.getAccountBudgetProposal());
+      if (!getAccountBudgetProposal()
+          .equals(other.getAccountBudgetProposal())) return false;
     }
-    result = result && (hasAdGroup() == other.hasAdGroup());
+    if (hasAdGroup() != other.hasAdGroup()) return false;
     if (hasAdGroup()) {
-      result = result && getAdGroup()
-          .equals(other.getAdGroup());
+      if (!getAdGroup()
+          .equals(other.getAdGroup())) return false;
     }
-    result = result && (hasAdGroupAd() == other.hasAdGroupAd());
+    if (hasAdGroupAd() != other.hasAdGroupAd()) return false;
     if (hasAdGroupAd()) {
-      result = result && getAdGroupAd()
-          .equals(other.getAdGroupAd());
+      if (!getAdGroupAd()
+          .equals(other.getAdGroupAd())) return false;
     }
-    result = result && (hasAdGroupAdLabel() == other.hasAdGroupAdLabel());
+    if (hasAdGroupAdLabel() != other.hasAdGroupAdLabel()) return false;
     if (hasAdGroupAdLabel()) {
-      result = result && getAdGroupAdLabel()
-          .equals(other.getAdGroupAdLabel());
+      if (!getAdGroupAdLabel()
+          .equals(other.getAdGroupAdLabel())) return false;
     }
-    result = result && (hasAdGroupAudienceView() == other.hasAdGroupAudienceView());
+    if (hasAdGroupAudienceView() != other.hasAdGroupAudienceView()) return false;
     if (hasAdGroupAudienceView()) {
-      result = result && getAdGroupAudienceView()
-          .equals(other.getAdGroupAudienceView());
+      if (!getAdGroupAudienceView()
+          .equals(other.getAdGroupAudienceView())) return false;
     }
-    result = result && (hasAdGroupBidModifier() == other.hasAdGroupBidModifier());
+    if (hasAdGroupBidModifier() != other.hasAdGroupBidModifier()) return false;
     if (hasAdGroupBidModifier()) {
-      result = result && getAdGroupBidModifier()
-          .equals(other.getAdGroupBidModifier());
+      if (!getAdGroupBidModifier()
+          .equals(other.getAdGroupBidModifier())) return false;
     }
-    result = result && (hasAdGroupCriterion() == other.hasAdGroupCriterion());
+    if (hasAdGroupCriterion() != other.hasAdGroupCriterion()) return false;
     if (hasAdGroupCriterion()) {
-      result = result && getAdGroupCriterion()
-          .equals(other.getAdGroupCriterion());
+      if (!getAdGroupCriterion()
+          .equals(other.getAdGroupCriterion())) return false;
     }
-    result = result && (hasAdGroupCriterionLabel() == other.hasAdGroupCriterionLabel());
+    if (hasAdGroupCriterionLabel() != other.hasAdGroupCriterionLabel()) return false;
     if (hasAdGroupCriterionLabel()) {
-      result = result && getAdGroupCriterionLabel()
-          .equals(other.getAdGroupCriterionLabel());
+      if (!getAdGroupCriterionLabel()
+          .equals(other.getAdGroupCriterionLabel())) return false;
     }
-    result = result && (hasAdGroupCriterionSimulation() == other.hasAdGroupCriterionSimulation());
+    if (hasAdGroupCriterionSimulation() != other.hasAdGroupCriterionSimulation()) return false;
     if (hasAdGroupCriterionSimulation()) {
-      result = result && getAdGroupCriterionSimulation()
-          .equals(other.getAdGroupCriterionSimulation());
+      if (!getAdGroupCriterionSimulation()
+          .equals(other.getAdGroupCriterionSimulation())) return false;
     }
-    result = result && (hasAdGroupExtensionSetting() == other.hasAdGroupExtensionSetting());
+    if (hasAdGroupExtensionSetting() != other.hasAdGroupExtensionSetting()) return false;
     if (hasAdGroupExtensionSetting()) {
-      result = result && getAdGroupExtensionSetting()
-          .equals(other.getAdGroupExtensionSetting());
+      if (!getAdGroupExtensionSetting()
+          .equals(other.getAdGroupExtensionSetting())) return false;
     }
-    result = result && (hasAdGroupFeed() == other.hasAdGroupFeed());
+    if (hasAdGroupFeed() != other.hasAdGroupFeed()) return false;
     if (hasAdGroupFeed()) {
-      result = result && getAdGroupFeed()
-          .equals(other.getAdGroupFeed());
+      if (!getAdGroupFeed()
+          .equals(other.getAdGroupFeed())) return false;
     }
-    result = result && (hasAdGroupLabel() == other.hasAdGroupLabel());
+    if (hasAdGroupLabel() != other.hasAdGroupLabel()) return false;
     if (hasAdGroupLabel()) {
-      result = result && getAdGroupLabel()
-          .equals(other.getAdGroupLabel());
+      if (!getAdGroupLabel()
+          .equals(other.getAdGroupLabel())) return false;
     }
-    result = result && (hasAdGroupSimulation() == other.hasAdGroupSimulation());
+    if (hasAdGroupSimulation() != other.hasAdGroupSimulation()) return false;
     if (hasAdGroupSimulation()) {
-      result = result && getAdGroupSimulation()
-          .equals(other.getAdGroupSimulation());
+      if (!getAdGroupSimulation()
+          .equals(other.getAdGroupSimulation())) return false;
     }
-    result = result && (hasAdParameter() == other.hasAdParameter());
+    if (hasAdParameter() != other.hasAdParameter()) return false;
     if (hasAdParameter()) {
-      result = result && getAdParameter()
-          .equals(other.getAdParameter());
+      if (!getAdParameter()
+          .equals(other.getAdParameter())) return false;
     }
-    result = result && (hasAgeRangeView() == other.hasAgeRangeView());
+    if (hasAgeRangeView() != other.hasAgeRangeView()) return false;
     if (hasAgeRangeView()) {
-      result = result && getAgeRangeView()
-          .equals(other.getAgeRangeView());
+      if (!getAgeRangeView()
+          .equals(other.getAgeRangeView())) return false;
     }
-    result = result && (hasAdScheduleView() == other.hasAdScheduleView());
+    if (hasAdScheduleView() != other.hasAdScheduleView()) return false;
     if (hasAdScheduleView()) {
-      result = result && getAdScheduleView()
-          .equals(other.getAdScheduleView());
+      if (!getAdScheduleView()
+          .equals(other.getAdScheduleView())) return false;
     }
-    result = result && (hasDomainCategory() == other.hasDomainCategory());
+    if (hasDomainCategory() != other.hasDomainCategory()) return false;
     if (hasDomainCategory()) {
-      result = result && getDomainCategory()
-          .equals(other.getDomainCategory());
+      if (!getDomainCategory()
+          .equals(other.getDomainCategory())) return false;
     }
-    result = result && (hasAsset() == other.hasAsset());
+    if (hasAsset() != other.hasAsset()) return false;
     if (hasAsset()) {
-      result = result && getAsset()
-          .equals(other.getAsset());
+      if (!getAsset()
+          .equals(other.getAsset())) return false;
     }
-    result = result && (hasBiddingStrategy() == other.hasBiddingStrategy());
+    if (hasBiddingStrategy() != other.hasBiddingStrategy()) return false;
     if (hasBiddingStrategy()) {
-      result = result && getBiddingStrategy()
-          .equals(other.getBiddingStrategy());
+      if (!getBiddingStrategy()
+          .equals(other.getBiddingStrategy())) return false;
     }
-    result = result && (hasBillingSetup() == other.hasBillingSetup());
+    if (hasBillingSetup() != other.hasBillingSetup()) return false;
     if (hasBillingSetup()) {
-      result = result && getBillingSetup()
-          .equals(other.getBillingSetup());
+      if (!getBillingSetup()
+          .equals(other.getBillingSetup())) return false;
     }
-    result = result && (hasCampaignBudget() == other.hasCampaignBudget());
+    if (hasCampaignBudget() != other.hasCampaignBudget()) return false;
     if (hasCampaignBudget()) {
-      result = result && getCampaignBudget()
-          .equals(other.getCampaignBudget());
+      if (!getCampaignBudget()
+          .equals(other.getCampaignBudget())) return false;
     }
-    result = result && (hasCampaign() == other.hasCampaign());
+    if (hasCampaign() != other.hasCampaign()) return false;
     if (hasCampaign()) {
-      result = result && getCampaign()
-          .equals(other.getCampaign());
+      if (!getCampaign()
+          .equals(other.getCampaign())) return false;
     }
-    result = result && (hasCampaignAudienceView() == other.hasCampaignAudienceView());
+    if (hasCampaignAudienceView() != other.hasCampaignAudienceView()) return false;
     if (hasCampaignAudienceView()) {
-      result = result && getCampaignAudienceView()
-          .equals(other.getCampaignAudienceView());
+      if (!getCampaignAudienceView()
+          .equals(other.getCampaignAudienceView())) return false;
     }
-    result = result && (hasCampaignBidModifier() == other.hasCampaignBidModifier());
+    if (hasCampaignBidModifier() != other.hasCampaignBidModifier()) return false;
     if (hasCampaignBidModifier()) {
-      result = result && getCampaignBidModifier()
-          .equals(other.getCampaignBidModifier());
+      if (!getCampaignBidModifier()
+          .equals(other.getCampaignBidModifier())) return false;
     }
-    result = result && (hasCampaignCriterion() == other.hasCampaignCriterion());
+    if (hasCampaignCriterion() != other.hasCampaignCriterion()) return false;
     if (hasCampaignCriterion()) {
-      result = result && getCampaignCriterion()
-          .equals(other.getCampaignCriterion());
+      if (!getCampaignCriterion()
+          .equals(other.getCampaignCriterion())) return false;
     }
-    result = result && (hasCampaignCriterionSimulation() == other.hasCampaignCriterionSimulation());
+    if (hasCampaignCriterionSimulation() != other.hasCampaignCriterionSimulation()) return false;
     if (hasCampaignCriterionSimulation()) {
-      result = result && getCampaignCriterionSimulation()
-          .equals(other.getCampaignCriterionSimulation());
+      if (!getCampaignCriterionSimulation()
+          .equals(other.getCampaignCriterionSimulation())) return false;
     }
-    result = result && (hasCampaignDraft() == other.hasCampaignDraft());
+    if (hasCampaignDraft() != other.hasCampaignDraft()) return false;
     if (hasCampaignDraft()) {
-      result = result && getCampaignDraft()
-          .equals(other.getCampaignDraft());
+      if (!getCampaignDraft()
+          .equals(other.getCampaignDraft())) return false;
     }
-    result = result && (hasCampaignExperiment() == other.hasCampaignExperiment());
+    if (hasCampaignExperiment() != other.hasCampaignExperiment()) return false;
     if (hasCampaignExperiment()) {
-      result = result && getCampaignExperiment()
-          .equals(other.getCampaignExperiment());
+      if (!getCampaignExperiment()
+          .equals(other.getCampaignExperiment())) return false;
     }
-    result = result && (hasCampaignExtensionSetting() == other.hasCampaignExtensionSetting());
+    if (hasCampaignExtensionSetting() != other.hasCampaignExtensionSetting()) return false;
     if (hasCampaignExtensionSetting()) {
-      result = result && getCampaignExtensionSetting()
-          .equals(other.getCampaignExtensionSetting());
+      if (!getCampaignExtensionSetting()
+          .equals(other.getCampaignExtensionSetting())) return false;
     }
-    result = result && (hasCampaignFeed() == other.hasCampaignFeed());
+    if (hasCampaignFeed() != other.hasCampaignFeed()) return false;
     if (hasCampaignFeed()) {
-      result = result && getCampaignFeed()
-          .equals(other.getCampaignFeed());
+      if (!getCampaignFeed()
+          .equals(other.getCampaignFeed())) return false;
     }
-    result = result && (hasCampaignLabel() == other.hasCampaignLabel());
+    if (hasCampaignLabel() != other.hasCampaignLabel()) return false;
     if (hasCampaignLabel()) {
-      result = result && getCampaignLabel()
-          .equals(other.getCampaignLabel());
+      if (!getCampaignLabel()
+          .equals(other.getCampaignLabel())) return false;
     }
-    result = result && (hasCampaignSharedSet() == other.hasCampaignSharedSet());
+    if (hasCampaignSharedSet() != other.hasCampaignSharedSet()) return false;
     if (hasCampaignSharedSet()) {
-      result = result && getCampaignSharedSet()
-          .equals(other.getCampaignSharedSet());
+      if (!getCampaignSharedSet()
+          .equals(other.getCampaignSharedSet())) return false;
     }
-    result = result && (hasCarrierConstant() == other.hasCarrierConstant());
+    if (hasCarrierConstant() != other.hasCarrierConstant()) return false;
     if (hasCarrierConstant()) {
-      result = result && getCarrierConstant()
-          .equals(other.getCarrierConstant());
+      if (!getCarrierConstant()
+          .equals(other.getCarrierConstant())) return false;
     }
-    result = result && (hasChangeStatus() == other.hasChangeStatus());
+    if (hasChangeStatus() != other.hasChangeStatus()) return false;
     if (hasChangeStatus()) {
-      result = result && getChangeStatus()
-          .equals(other.getChangeStatus());
+      if (!getChangeStatus()
+          .equals(other.getChangeStatus())) return false;
     }
-    result = result && (hasConversionAction() == other.hasConversionAction());
+    if (hasConversionAction() != other.hasConversionAction()) return false;
     if (hasConversionAction()) {
-      result = result && getConversionAction()
-          .equals(other.getConversionAction());
+      if (!getConversionAction()
+          .equals(other.getConversionAction())) return false;
     }
-    result = result && (hasClickView() == other.hasClickView());
+    if (hasClickView() != other.hasClickView()) return false;
     if (hasClickView()) {
-      result = result && getClickView()
-          .equals(other.getClickView());
+      if (!getClickView()
+          .equals(other.getClickView())) return false;
     }
-    result = result && (hasCustomInterest() == other.hasCustomInterest());
+    if (hasCustomInterest() != other.hasCustomInterest()) return false;
     if (hasCustomInterest()) {
-      result = result && getCustomInterest()
-          .equals(other.getCustomInterest());
+      if (!getCustomInterest()
+          .equals(other.getCustomInterest())) return false;
     }
-    result = result && (hasCustomer() == other.hasCustomer());
+    if (hasCustomer() != other.hasCustomer()) return false;
     if (hasCustomer()) {
-      result = result && getCustomer()
-          .equals(other.getCustomer());
+      if (!getCustomer()
+          .equals(other.getCustomer())) return false;
     }
-    result = result && (hasCustomerManagerLink() == other.hasCustomerManagerLink());
+    if (hasCustomerManagerLink() != other.hasCustomerManagerLink()) return false;
     if (hasCustomerManagerLink()) {
-      result = result && getCustomerManagerLink()
-          .equals(other.getCustomerManagerLink());
+      if (!getCustomerManagerLink()
+          .equals(other.getCustomerManagerLink())) return false;
     }
-    result = result && (hasCustomerClientLink() == other.hasCustomerClientLink());
+    if (hasCustomerClientLink() != other.hasCustomerClientLink()) return false;
     if (hasCustomerClientLink()) {
-      result = result && getCustomerClientLink()
-          .equals(other.getCustomerClientLink());
+      if (!getCustomerClientLink()
+          .equals(other.getCustomerClientLink())) return false;
     }
-    result = result && (hasCustomerClient() == other.hasCustomerClient());
+    if (hasCustomerClient() != other.hasCustomerClient()) return false;
     if (hasCustomerClient()) {
-      result = result && getCustomerClient()
-          .equals(other.getCustomerClient());
+      if (!getCustomerClient()
+          .equals(other.getCustomerClient())) return false;
     }
-    result = result && (hasCustomerExtensionSetting() == other.hasCustomerExtensionSetting());
+    if (hasCustomerExtensionSetting() != other.hasCustomerExtensionSetting()) return false;
     if (hasCustomerExtensionSetting()) {
-      result = result && getCustomerExtensionSetting()
-          .equals(other.getCustomerExtensionSetting());
+      if (!getCustomerExtensionSetting()
+          .equals(other.getCustomerExtensionSetting())) return false;
     }
-    result = result && (hasCustomerFeed() == other.hasCustomerFeed());
+    if (hasCustomerFeed() != other.hasCustomerFeed()) return false;
     if (hasCustomerFeed()) {
-      result = result && getCustomerFeed()
-          .equals(other.getCustomerFeed());
+      if (!getCustomerFeed()
+          .equals(other.getCustomerFeed())) return false;
     }
-    result = result && (hasCustomerLabel() == other.hasCustomerLabel());
+    if (hasCustomerLabel() != other.hasCustomerLabel()) return false;
     if (hasCustomerLabel()) {
-      result = result && getCustomerLabel()
-          .equals(other.getCustomerLabel());
+      if (!getCustomerLabel()
+          .equals(other.getCustomerLabel())) return false;
     }
-    result = result && (hasCustomerNegativeCriterion() == other.hasCustomerNegativeCriterion());
+    if (hasCustomerNegativeCriterion() != other.hasCustomerNegativeCriterion()) return false;
     if (hasCustomerNegativeCriterion()) {
-      result = result && getCustomerNegativeCriterion()
-          .equals(other.getCustomerNegativeCriterion());
+      if (!getCustomerNegativeCriterion()
+          .equals(other.getCustomerNegativeCriterion())) return false;
     }
-    result = result && (hasDetailPlacementView() == other.hasDetailPlacementView());
+    if (hasDetailPlacementView() != other.hasDetailPlacementView()) return false;
     if (hasDetailPlacementView()) {
-      result = result && getDetailPlacementView()
-          .equals(other.getDetailPlacementView());
+      if (!getDetailPlacementView()
+          .equals(other.getDetailPlacementView())) return false;
     }
-    result = result && (hasDisplayKeywordView() == other.hasDisplayKeywordView());
+    if (hasDisplayKeywordView() != other.hasDisplayKeywordView()) return false;
     if (hasDisplayKeywordView()) {
-      result = result && getDisplayKeywordView()
-          .equals(other.getDisplayKeywordView());
+      if (!getDisplayKeywordView()
+          .equals(other.getDisplayKeywordView())) return false;
     }
-    result = result && (hasDynamicSearchAdsSearchTermView() == other.hasDynamicSearchAdsSearchTermView());
+    if (hasDynamicSearchAdsSearchTermView() != other.hasDynamicSearchAdsSearchTermView()) return false;
     if (hasDynamicSearchAdsSearchTermView()) {
-      result = result && getDynamicSearchAdsSearchTermView()
-          .equals(other.getDynamicSearchAdsSearchTermView());
+      if (!getDynamicSearchAdsSearchTermView()
+          .equals(other.getDynamicSearchAdsSearchTermView())) return false;
     }
-    result = result && (hasExpandedLandingPageView() == other.hasExpandedLandingPageView());
+    if (hasExpandedLandingPageView() != other.hasExpandedLandingPageView()) return false;
     if (hasExpandedLandingPageView()) {
-      result = result && getExpandedLandingPageView()
-          .equals(other.getExpandedLandingPageView());
+      if (!getExpandedLandingPageView()
+          .equals(other.getExpandedLandingPageView())) return false;
     }
-    result = result && (hasExtensionFeedItem() == other.hasExtensionFeedItem());
+    if (hasExtensionFeedItem() != other.hasExtensionFeedItem()) return false;
     if (hasExtensionFeedItem()) {
-      result = result && getExtensionFeedItem()
-          .equals(other.getExtensionFeedItem());
+      if (!getExtensionFeedItem()
+          .equals(other.getExtensionFeedItem())) return false;
     }
-    result = result && (hasFeed() == other.hasFeed());
+    if (hasFeed() != other.hasFeed()) return false;
     if (hasFeed()) {
-      result = result && getFeed()
-          .equals(other.getFeed());
+      if (!getFeed()
+          .equals(other.getFeed())) return false;
     }
-    result = result && (hasFeedItem() == other.hasFeedItem());
+    if (hasFeedItem() != other.hasFeedItem()) return false;
     if (hasFeedItem()) {
-      result = result && getFeedItem()
-          .equals(other.getFeedItem());
+      if (!getFeedItem()
+          .equals(other.getFeedItem())) return false;
     }
-    result = result && (hasFeedItemTarget() == other.hasFeedItemTarget());
+    if (hasFeedItemTarget() != other.hasFeedItemTarget()) return false;
     if (hasFeedItemTarget()) {
-      result = result && getFeedItemTarget()
-          .equals(other.getFeedItemTarget());
+      if (!getFeedItemTarget()
+          .equals(other.getFeedItemTarget())) return false;
     }
-    result = result && (hasFeedMapping() == other.hasFeedMapping());
+    if (hasFeedMapping() != other.hasFeedMapping()) return false;
     if (hasFeedMapping()) {
-      result = result && getFeedMapping()
-          .equals(other.getFeedMapping());
+      if (!getFeedMapping()
+          .equals(other.getFeedMapping())) return false;
     }
-    result = result && (hasFeedPlaceholderView() == other.hasFeedPlaceholderView());
+    if (hasFeedPlaceholderView() != other.hasFeedPlaceholderView()) return false;
     if (hasFeedPlaceholderView()) {
-      result = result && getFeedPlaceholderView()
-          .equals(other.getFeedPlaceholderView());
+      if (!getFeedPlaceholderView()
+          .equals(other.getFeedPlaceholderView())) return false;
     }
-    result = result && (hasGenderView() == other.hasGenderView());
+    if (hasGenderView() != other.hasGenderView()) return false;
     if (hasGenderView()) {
-      result = result && getGenderView()
-          .equals(other.getGenderView());
+      if (!getGenderView()
+          .equals(other.getGenderView())) return false;
     }
-    result = result && (hasGeoTargetConstant() == other.hasGeoTargetConstant());
+    if (hasGeoTargetConstant() != other.hasGeoTargetConstant()) return false;
     if (hasGeoTargetConstant()) {
-      result = result && getGeoTargetConstant()
-          .equals(other.getGeoTargetConstant());
+      if (!getGeoTargetConstant()
+          .equals(other.getGeoTargetConstant())) return false;
     }
-    result = result && (hasGeographicView() == other.hasGeographicView());
+    if (hasGeographicView() != other.hasGeographicView()) return false;
     if (hasGeographicView()) {
-      result = result && getGeographicView()
-          .equals(other.getGeographicView());
+      if (!getGeographicView()
+          .equals(other.getGeographicView())) return false;
     }
-    result = result && (hasGroupPlacementView() == other.hasGroupPlacementView());
+    if (hasGroupPlacementView() != other.hasGroupPlacementView()) return false;
     if (hasGroupPlacementView()) {
-      result = result && getGroupPlacementView()
-          .equals(other.getGroupPlacementView());
+      if (!getGroupPlacementView()
+          .equals(other.getGroupPlacementView())) return false;
     }
-    result = result && (hasHotelGroupView() == other.hasHotelGroupView());
+    if (hasHotelGroupView() != other.hasHotelGroupView()) return false;
     if (hasHotelGroupView()) {
-      result = result && getHotelGroupView()
-          .equals(other.getHotelGroupView());
+      if (!getHotelGroupView()
+          .equals(other.getHotelGroupView())) return false;
     }
-    result = result && (hasHotelPerformanceView() == other.hasHotelPerformanceView());
+    if (hasHotelPerformanceView() != other.hasHotelPerformanceView()) return false;
     if (hasHotelPerformanceView()) {
-      result = result && getHotelPerformanceView()
-          .equals(other.getHotelPerformanceView());
+      if (!getHotelPerformanceView()
+          .equals(other.getHotelPerformanceView())) return false;
     }
-    result = result && (hasKeywordView() == other.hasKeywordView());
+    if (hasKeywordView() != other.hasKeywordView()) return false;
     if (hasKeywordView()) {
-      result = result && getKeywordView()
-          .equals(other.getKeywordView());
+      if (!getKeywordView()
+          .equals(other.getKeywordView())) return false;
     }
-    result = result && (hasKeywordPlan() == other.hasKeywordPlan());
+    if (hasKeywordPlan() != other.hasKeywordPlan()) return false;
     if (hasKeywordPlan()) {
-      result = result && getKeywordPlan()
-          .equals(other.getKeywordPlan());
+      if (!getKeywordPlan()
+          .equals(other.getKeywordPlan())) return false;
     }
-    result = result && (hasKeywordPlanCampaign() == other.hasKeywordPlanCampaign());
+    if (hasKeywordPlanCampaign() != other.hasKeywordPlanCampaign()) return false;
     if (hasKeywordPlanCampaign()) {
-      result = result && getKeywordPlanCampaign()
-          .equals(other.getKeywordPlanCampaign());
+      if (!getKeywordPlanCampaign()
+          .equals(other.getKeywordPlanCampaign())) return false;
     }
-    result = result && (hasKeywordPlanNegativeKeyword() == other.hasKeywordPlanNegativeKeyword());
+    if (hasKeywordPlanNegativeKeyword() != other.hasKeywordPlanNegativeKeyword()) return false;
     if (hasKeywordPlanNegativeKeyword()) {
-      result = result && getKeywordPlanNegativeKeyword()
-          .equals(other.getKeywordPlanNegativeKeyword());
+      if (!getKeywordPlanNegativeKeyword()
+          .equals(other.getKeywordPlanNegativeKeyword())) return false;
     }
-    result = result && (hasKeywordPlanAdGroup() == other.hasKeywordPlanAdGroup());
+    if (hasKeywordPlanAdGroup() != other.hasKeywordPlanAdGroup()) return false;
     if (hasKeywordPlanAdGroup()) {
-      result = result && getKeywordPlanAdGroup()
-          .equals(other.getKeywordPlanAdGroup());
+      if (!getKeywordPlanAdGroup()
+          .equals(other.getKeywordPlanAdGroup())) return false;
     }
-    result = result && (hasKeywordPlanKeyword() == other.hasKeywordPlanKeyword());
+    if (hasKeywordPlanKeyword() != other.hasKeywordPlanKeyword()) return false;
     if (hasKeywordPlanKeyword()) {
-      result = result && getKeywordPlanKeyword()
-          .equals(other.getKeywordPlanKeyword());
+      if (!getKeywordPlanKeyword()
+          .equals(other.getKeywordPlanKeyword())) return false;
     }
-    result = result && (hasLabel() == other.hasLabel());
+    if (hasLabel() != other.hasLabel()) return false;
     if (hasLabel()) {
-      result = result && getLabel()
-          .equals(other.getLabel());
+      if (!getLabel()
+          .equals(other.getLabel())) return false;
     }
-    result = result && (hasLandingPageView() == other.hasLandingPageView());
+    if (hasLandingPageView() != other.hasLandingPageView()) return false;
     if (hasLandingPageView()) {
-      result = result && getLandingPageView()
-          .equals(other.getLandingPageView());
+      if (!getLandingPageView()
+          .equals(other.getLandingPageView())) return false;
     }
-    result = result && (hasLanguageConstant() == other.hasLanguageConstant());
+    if (hasLanguageConstant() != other.hasLanguageConstant()) return false;
     if (hasLanguageConstant()) {
-      result = result && getLanguageConstant()
-          .equals(other.getLanguageConstant());
+      if (!getLanguageConstant()
+          .equals(other.getLanguageConstant())) return false;
     }
-    result = result && (hasLocationView() == other.hasLocationView());
+    if (hasLocationView() != other.hasLocationView()) return false;
     if (hasLocationView()) {
-      result = result && getLocationView()
-          .equals(other.getLocationView());
+      if (!getLocationView()
+          .equals(other.getLocationView())) return false;
     }
-    result = result && (hasManagedPlacementView() == other.hasManagedPlacementView());
+    if (hasManagedPlacementView() != other.hasManagedPlacementView()) return false;
     if (hasManagedPlacementView()) {
-      result = result && getManagedPlacementView()
-          .equals(other.getManagedPlacementView());
+      if (!getManagedPlacementView()
+          .equals(other.getManagedPlacementView())) return false;
     }
-    result = result && (hasMediaFile() == other.hasMediaFile());
+    if (hasMediaFile() != other.hasMediaFile()) return false;
     if (hasMediaFile()) {
-      result = result && getMediaFile()
-          .equals(other.getMediaFile());
+      if (!getMediaFile()
+          .equals(other.getMediaFile())) return false;
     }
-    result = result && (hasMobileAppCategoryConstant() == other.hasMobileAppCategoryConstant());
+    if (hasMobileAppCategoryConstant() != other.hasMobileAppCategoryConstant()) return false;
     if (hasMobileAppCategoryConstant()) {
-      result = result && getMobileAppCategoryConstant()
-          .equals(other.getMobileAppCategoryConstant());
+      if (!getMobileAppCategoryConstant()
+          .equals(other.getMobileAppCategoryConstant())) return false;
     }
-    result = result && (hasMobileDeviceConstant() == other.hasMobileDeviceConstant());
+    if (hasMobileDeviceConstant() != other.hasMobileDeviceConstant()) return false;
     if (hasMobileDeviceConstant()) {
-      result = result && getMobileDeviceConstant()
-          .equals(other.getMobileDeviceConstant());
+      if (!getMobileDeviceConstant()
+          .equals(other.getMobileDeviceConstant())) return false;
     }
-    result = result && (hasMutateJob() == other.hasMutateJob());
+    if (hasMutateJob() != other.hasMutateJob()) return false;
     if (hasMutateJob()) {
-      result = result && getMutateJob()
-          .equals(other.getMutateJob());
+      if (!getMutateJob()
+          .equals(other.getMutateJob())) return false;
     }
-    result = result && (hasOperatingSystemVersionConstant() == other.hasOperatingSystemVersionConstant());
+    if (hasOperatingSystemVersionConstant() != other.hasOperatingSystemVersionConstant()) return false;
     if (hasOperatingSystemVersionConstant()) {
-      result = result && getOperatingSystemVersionConstant()
-          .equals(other.getOperatingSystemVersionConstant());
+      if (!getOperatingSystemVersionConstant()
+          .equals(other.getOperatingSystemVersionConstant())) return false;
     }
-    result = result && (hasPaidOrganicSearchTermView() == other.hasPaidOrganicSearchTermView());
+    if (hasPaidOrganicSearchTermView() != other.hasPaidOrganicSearchTermView()) return false;
     if (hasPaidOrganicSearchTermView()) {
-      result = result && getPaidOrganicSearchTermView()
-          .equals(other.getPaidOrganicSearchTermView());
+      if (!getPaidOrganicSearchTermView()
+          .equals(other.getPaidOrganicSearchTermView())) return false;
     }
-    result = result && (hasParentalStatusView() == other.hasParentalStatusView());
+    if (hasParentalStatusView() != other.hasParentalStatusView()) return false;
     if (hasParentalStatusView()) {
-      result = result && getParentalStatusView()
-          .equals(other.getParentalStatusView());
+      if (!getParentalStatusView()
+          .equals(other.getParentalStatusView())) return false;
     }
-    result = result && (hasProductBiddingCategoryConstant() == other.hasProductBiddingCategoryConstant());
+    if (hasProductBiddingCategoryConstant() != other.hasProductBiddingCategoryConstant()) return false;
     if (hasProductBiddingCategoryConstant()) {
-      result = result && getProductBiddingCategoryConstant()
-          .equals(other.getProductBiddingCategoryConstant());
+      if (!getProductBiddingCategoryConstant()
+          .equals(other.getProductBiddingCategoryConstant())) return false;
     }
-    result = result && (hasProductGroupView() == other.hasProductGroupView());
+    if (hasProductGroupView() != other.hasProductGroupView()) return false;
     if (hasProductGroupView()) {
-      result = result && getProductGroupView()
-          .equals(other.getProductGroupView());
+      if (!getProductGroupView()
+          .equals(other.getProductGroupView())) return false;
     }
-    result = result && (hasRecommendation() == other.hasRecommendation());
+    if (hasRecommendation() != other.hasRecommendation()) return false;
     if (hasRecommendation()) {
-      result = result && getRecommendation()
-          .equals(other.getRecommendation());
+      if (!getRecommendation()
+          .equals(other.getRecommendation())) return false;
     }
-    result = result && (hasSearchTermView() == other.hasSearchTermView());
+    if (hasSearchTermView() != other.hasSearchTermView()) return false;
     if (hasSearchTermView()) {
-      result = result && getSearchTermView()
-          .equals(other.getSearchTermView());
+      if (!getSearchTermView()
+          .equals(other.getSearchTermView())) return false;
     }
-    result = result && (hasSharedCriterion() == other.hasSharedCriterion());
+    if (hasSharedCriterion() != other.hasSharedCriterion()) return false;
     if (hasSharedCriterion()) {
-      result = result && getSharedCriterion()
-          .equals(other.getSharedCriterion());
+      if (!getSharedCriterion()
+          .equals(other.getSharedCriterion())) return false;
     }
-    result = result && (hasSharedSet() == other.hasSharedSet());
+    if (hasSharedSet() != other.hasSharedSet()) return false;
     if (hasSharedSet()) {
-      result = result && getSharedSet()
-          .equals(other.getSharedSet());
+      if (!getSharedSet()
+          .equals(other.getSharedSet())) return false;
     }
-    result = result && (hasShoppingPerformanceView() == other.hasShoppingPerformanceView());
+    if (hasShoppingPerformanceView() != other.hasShoppingPerformanceView()) return false;
     if (hasShoppingPerformanceView()) {
-      result = result && getShoppingPerformanceView()
-          .equals(other.getShoppingPerformanceView());
+      if (!getShoppingPerformanceView()
+          .equals(other.getShoppingPerformanceView())) return false;
     }
-    result = result && (hasTopicView() == other.hasTopicView());
+    if (hasTopicView() != other.hasTopicView()) return false;
     if (hasTopicView()) {
-      result = result && getTopicView()
-          .equals(other.getTopicView());
+      if (!getTopicView()
+          .equals(other.getTopicView())) return false;
     }
-    result = result && (hasUserInterest() == other.hasUserInterest());
+    if (hasUserInterest() != other.hasUserInterest()) return false;
     if (hasUserInterest()) {
-      result = result && getUserInterest()
-          .equals(other.getUserInterest());
+      if (!getUserInterest()
+          .equals(other.getUserInterest())) return false;
     }
-    result = result && (hasUserList() == other.hasUserList());
+    if (hasUserList() != other.hasUserList()) return false;
     if (hasUserList()) {
-      result = result && getUserList()
-          .equals(other.getUserList());
+      if (!getUserList()
+          .equals(other.getUserList())) return false;
     }
-    result = result && (hasRemarketingAction() == other.hasRemarketingAction());
+    if (hasRemarketingAction() != other.hasRemarketingAction()) return false;
     if (hasRemarketingAction()) {
-      result = result && getRemarketingAction()
-          .equals(other.getRemarketingAction());
+      if (!getRemarketingAction()
+          .equals(other.getRemarketingAction())) return false;
     }
-    result = result && (hasTopicConstant() == other.hasTopicConstant());
+    if (hasTopicConstant() != other.hasTopicConstant()) return false;
     if (hasTopicConstant()) {
-      result = result && getTopicConstant()
-          .equals(other.getTopicConstant());
+      if (!getTopicConstant()
+          .equals(other.getTopicConstant())) return false;
     }
-    result = result && (hasVideo() == other.hasVideo());
+    if (hasVideo() != other.hasVideo()) return false;
     if (hasVideo()) {
-      result = result && getVideo()
-          .equals(other.getVideo());
+      if (!getVideo()
+          .equals(other.getVideo())) return false;
     }
-    result = result && (hasMetrics() == other.hasMetrics());
+    if (hasMetrics() != other.hasMetrics()) return false;
     if (hasMetrics()) {
-      result = result && getMetrics()
-          .equals(other.getMetrics());
+      if (!getMetrics()
+          .equals(other.getMetrics())) return false;
     }
-    result = result && (hasSegments() == other.hasSegments());
+    if (hasSegments() != other.hasSegments()) return false;
     if (hasSegments()) {
-      result = result && getSegments()
-          .equals(other.getSegments());
+      if (!getSegments()
+          .equals(other.getSegments())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -7234,35 +7233,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7590,7 +7589,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.ads.googleads.v1.resources.AccountBudget accountBudget_ = null;
+    private com.google.ads.googleads.v1.resources.AccountBudget accountBudget_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AccountBudget, com.google.ads.googleads.v1.resources.AccountBudget.Builder, com.google.ads.googleads.v1.resources.AccountBudgetOrBuilder> accountBudgetBuilder_;
     /**
@@ -7743,7 +7742,7 @@ private static final long serialVersionUID = 0L;
       return accountBudgetBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AccountBudgetProposal accountBudgetProposal_ = null;
+    private com.google.ads.googleads.v1.resources.AccountBudgetProposal accountBudgetProposal_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AccountBudgetProposal, com.google.ads.googleads.v1.resources.AccountBudgetProposal.Builder, com.google.ads.googleads.v1.resources.AccountBudgetProposalOrBuilder> accountBudgetProposalBuilder_;
     /**
@@ -7896,7 +7895,7 @@ private static final long serialVersionUID = 0L;
       return accountBudgetProposalBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdGroup adGroup_ = null;
+    private com.google.ads.googleads.v1.resources.AdGroup adGroup_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroup, com.google.ads.googleads.v1.resources.AdGroup.Builder, com.google.ads.googleads.v1.resources.AdGroupOrBuilder> adGroupBuilder_;
     /**
@@ -8049,7 +8048,7 @@ private static final long serialVersionUID = 0L;
       return adGroupBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdGroupAd adGroupAd_ = null;
+    private com.google.ads.googleads.v1.resources.AdGroupAd adGroupAd_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroupAd, com.google.ads.googleads.v1.resources.AdGroupAd.Builder, com.google.ads.googleads.v1.resources.AdGroupAdOrBuilder> adGroupAdBuilder_;
     /**
@@ -8202,7 +8201,7 @@ private static final long serialVersionUID = 0L;
       return adGroupAdBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdGroupAdLabel adGroupAdLabel_ = null;
+    private com.google.ads.googleads.v1.resources.AdGroupAdLabel adGroupAdLabel_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroupAdLabel, com.google.ads.googleads.v1.resources.AdGroupAdLabel.Builder, com.google.ads.googleads.v1.resources.AdGroupAdLabelOrBuilder> adGroupAdLabelBuilder_;
     /**
@@ -8355,7 +8354,7 @@ private static final long serialVersionUID = 0L;
       return adGroupAdLabelBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdGroupAudienceView adGroupAudienceView_ = null;
+    private com.google.ads.googleads.v1.resources.AdGroupAudienceView adGroupAudienceView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroupAudienceView, com.google.ads.googleads.v1.resources.AdGroupAudienceView.Builder, com.google.ads.googleads.v1.resources.AdGroupAudienceViewOrBuilder> adGroupAudienceViewBuilder_;
     /**
@@ -8508,7 +8507,7 @@ private static final long serialVersionUID = 0L;
       return adGroupAudienceViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdGroupBidModifier adGroupBidModifier_ = null;
+    private com.google.ads.googleads.v1.resources.AdGroupBidModifier adGroupBidModifier_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroupBidModifier, com.google.ads.googleads.v1.resources.AdGroupBidModifier.Builder, com.google.ads.googleads.v1.resources.AdGroupBidModifierOrBuilder> adGroupBidModifierBuilder_;
     /**
@@ -8661,7 +8660,7 @@ private static final long serialVersionUID = 0L;
       return adGroupBidModifierBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdGroupCriterion adGroupCriterion_ = null;
+    private com.google.ads.googleads.v1.resources.AdGroupCriterion adGroupCriterion_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroupCriterion, com.google.ads.googleads.v1.resources.AdGroupCriterion.Builder, com.google.ads.googleads.v1.resources.AdGroupCriterionOrBuilder> adGroupCriterionBuilder_;
     /**
@@ -8814,7 +8813,7 @@ private static final long serialVersionUID = 0L;
       return adGroupCriterionBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdGroupCriterionLabel adGroupCriterionLabel_ = null;
+    private com.google.ads.googleads.v1.resources.AdGroupCriterionLabel adGroupCriterionLabel_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroupCriterionLabel, com.google.ads.googleads.v1.resources.AdGroupCriterionLabel.Builder, com.google.ads.googleads.v1.resources.AdGroupCriterionLabelOrBuilder> adGroupCriterionLabelBuilder_;
     /**
@@ -8967,7 +8966,7 @@ private static final long serialVersionUID = 0L;
       return adGroupCriterionLabelBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation adGroupCriterionSimulation_ = null;
+    private com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation adGroupCriterionSimulation_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation, com.google.ads.googleads.v1.resources.AdGroupCriterionSimulation.Builder, com.google.ads.googleads.v1.resources.AdGroupCriterionSimulationOrBuilder> adGroupCriterionSimulationBuilder_;
     /**
@@ -9120,7 +9119,7 @@ private static final long serialVersionUID = 0L;
       return adGroupCriterionSimulationBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdGroupExtensionSetting adGroupExtensionSetting_ = null;
+    private com.google.ads.googleads.v1.resources.AdGroupExtensionSetting adGroupExtensionSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroupExtensionSetting, com.google.ads.googleads.v1.resources.AdGroupExtensionSetting.Builder, com.google.ads.googleads.v1.resources.AdGroupExtensionSettingOrBuilder> adGroupExtensionSettingBuilder_;
     /**
@@ -9273,7 +9272,7 @@ private static final long serialVersionUID = 0L;
       return adGroupExtensionSettingBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdGroupFeed adGroupFeed_ = null;
+    private com.google.ads.googleads.v1.resources.AdGroupFeed adGroupFeed_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroupFeed, com.google.ads.googleads.v1.resources.AdGroupFeed.Builder, com.google.ads.googleads.v1.resources.AdGroupFeedOrBuilder> adGroupFeedBuilder_;
     /**
@@ -9426,7 +9425,7 @@ private static final long serialVersionUID = 0L;
       return adGroupFeedBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdGroupLabel adGroupLabel_ = null;
+    private com.google.ads.googleads.v1.resources.AdGroupLabel adGroupLabel_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroupLabel, com.google.ads.googleads.v1.resources.AdGroupLabel.Builder, com.google.ads.googleads.v1.resources.AdGroupLabelOrBuilder> adGroupLabelBuilder_;
     /**
@@ -9579,7 +9578,7 @@ private static final long serialVersionUID = 0L;
       return adGroupLabelBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdGroupSimulation adGroupSimulation_ = null;
+    private com.google.ads.googleads.v1.resources.AdGroupSimulation adGroupSimulation_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdGroupSimulation, com.google.ads.googleads.v1.resources.AdGroupSimulation.Builder, com.google.ads.googleads.v1.resources.AdGroupSimulationOrBuilder> adGroupSimulationBuilder_;
     /**
@@ -9732,7 +9731,7 @@ private static final long serialVersionUID = 0L;
       return adGroupSimulationBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdParameter adParameter_ = null;
+    private com.google.ads.googleads.v1.resources.AdParameter adParameter_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdParameter, com.google.ads.googleads.v1.resources.AdParameter.Builder, com.google.ads.googleads.v1.resources.AdParameterOrBuilder> adParameterBuilder_;
     /**
@@ -9885,7 +9884,7 @@ private static final long serialVersionUID = 0L;
       return adParameterBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AgeRangeView ageRangeView_ = null;
+    private com.google.ads.googleads.v1.resources.AgeRangeView ageRangeView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AgeRangeView, com.google.ads.googleads.v1.resources.AgeRangeView.Builder, com.google.ads.googleads.v1.resources.AgeRangeViewOrBuilder> ageRangeViewBuilder_;
     /**
@@ -10038,7 +10037,7 @@ private static final long serialVersionUID = 0L;
       return ageRangeViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.AdScheduleView adScheduleView_ = null;
+    private com.google.ads.googleads.v1.resources.AdScheduleView adScheduleView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.AdScheduleView, com.google.ads.googleads.v1.resources.AdScheduleView.Builder, com.google.ads.googleads.v1.resources.AdScheduleViewOrBuilder> adScheduleViewBuilder_;
     /**
@@ -10191,7 +10190,7 @@ private static final long serialVersionUID = 0L;
       return adScheduleViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.DomainCategory domainCategory_ = null;
+    private com.google.ads.googleads.v1.resources.DomainCategory domainCategory_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.DomainCategory, com.google.ads.googleads.v1.resources.DomainCategory.Builder, com.google.ads.googleads.v1.resources.DomainCategoryOrBuilder> domainCategoryBuilder_;
     /**
@@ -10344,7 +10343,7 @@ private static final long serialVersionUID = 0L;
       return domainCategoryBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Asset asset_ = null;
+    private com.google.ads.googleads.v1.resources.Asset asset_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Asset, com.google.ads.googleads.v1.resources.Asset.Builder, com.google.ads.googleads.v1.resources.AssetOrBuilder> assetBuilder_;
     /**
@@ -10497,7 +10496,7 @@ private static final long serialVersionUID = 0L;
       return assetBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.BiddingStrategy biddingStrategy_ = null;
+    private com.google.ads.googleads.v1.resources.BiddingStrategy biddingStrategy_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.BiddingStrategy, com.google.ads.googleads.v1.resources.BiddingStrategy.Builder, com.google.ads.googleads.v1.resources.BiddingStrategyOrBuilder> biddingStrategyBuilder_;
     /**
@@ -10650,7 +10649,7 @@ private static final long serialVersionUID = 0L;
       return biddingStrategyBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.BillingSetup billingSetup_ = null;
+    private com.google.ads.googleads.v1.resources.BillingSetup billingSetup_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.BillingSetup, com.google.ads.googleads.v1.resources.BillingSetup.Builder, com.google.ads.googleads.v1.resources.BillingSetupOrBuilder> billingSetupBuilder_;
     /**
@@ -10803,7 +10802,7 @@ private static final long serialVersionUID = 0L;
       return billingSetupBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CampaignBudget campaignBudget_ = null;
+    private com.google.ads.googleads.v1.resources.CampaignBudget campaignBudget_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CampaignBudget, com.google.ads.googleads.v1.resources.CampaignBudget.Builder, com.google.ads.googleads.v1.resources.CampaignBudgetOrBuilder> campaignBudgetBuilder_;
     /**
@@ -10956,7 +10955,7 @@ private static final long serialVersionUID = 0L;
       return campaignBudgetBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Campaign campaign_ = null;
+    private com.google.ads.googleads.v1.resources.Campaign campaign_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Campaign, com.google.ads.googleads.v1.resources.Campaign.Builder, com.google.ads.googleads.v1.resources.CampaignOrBuilder> campaignBuilder_;
     /**
@@ -11109,7 +11108,7 @@ private static final long serialVersionUID = 0L;
       return campaignBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CampaignAudienceView campaignAudienceView_ = null;
+    private com.google.ads.googleads.v1.resources.CampaignAudienceView campaignAudienceView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CampaignAudienceView, com.google.ads.googleads.v1.resources.CampaignAudienceView.Builder, com.google.ads.googleads.v1.resources.CampaignAudienceViewOrBuilder> campaignAudienceViewBuilder_;
     /**
@@ -11262,7 +11261,7 @@ private static final long serialVersionUID = 0L;
       return campaignAudienceViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CampaignBidModifier campaignBidModifier_ = null;
+    private com.google.ads.googleads.v1.resources.CampaignBidModifier campaignBidModifier_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CampaignBidModifier, com.google.ads.googleads.v1.resources.CampaignBidModifier.Builder, com.google.ads.googleads.v1.resources.CampaignBidModifierOrBuilder> campaignBidModifierBuilder_;
     /**
@@ -11415,7 +11414,7 @@ private static final long serialVersionUID = 0L;
       return campaignBidModifierBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CampaignCriterion campaignCriterion_ = null;
+    private com.google.ads.googleads.v1.resources.CampaignCriterion campaignCriterion_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CampaignCriterion, com.google.ads.googleads.v1.resources.CampaignCriterion.Builder, com.google.ads.googleads.v1.resources.CampaignCriterionOrBuilder> campaignCriterionBuilder_;
     /**
@@ -11568,7 +11567,7 @@ private static final long serialVersionUID = 0L;
       return campaignCriterionBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaignCriterionSimulation_ = null;
+    private com.google.ads.googleads.v1.resources.CampaignCriterionSimulation campaignCriterionSimulation_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CampaignCriterionSimulation, com.google.ads.googleads.v1.resources.CampaignCriterionSimulation.Builder, com.google.ads.googleads.v1.resources.CampaignCriterionSimulationOrBuilder> campaignCriterionSimulationBuilder_;
     /**
@@ -11721,7 +11720,7 @@ private static final long serialVersionUID = 0L;
       return campaignCriterionSimulationBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CampaignDraft campaignDraft_ = null;
+    private com.google.ads.googleads.v1.resources.CampaignDraft campaignDraft_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CampaignDraft, com.google.ads.googleads.v1.resources.CampaignDraft.Builder, com.google.ads.googleads.v1.resources.CampaignDraftOrBuilder> campaignDraftBuilder_;
     /**
@@ -11874,7 +11873,7 @@ private static final long serialVersionUID = 0L;
       return campaignDraftBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CampaignExperiment campaignExperiment_ = null;
+    private com.google.ads.googleads.v1.resources.CampaignExperiment campaignExperiment_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CampaignExperiment, com.google.ads.googleads.v1.resources.CampaignExperiment.Builder, com.google.ads.googleads.v1.resources.CampaignExperimentOrBuilder> campaignExperimentBuilder_;
     /**
@@ -12027,7 +12026,7 @@ private static final long serialVersionUID = 0L;
       return campaignExperimentBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CampaignExtensionSetting campaignExtensionSetting_ = null;
+    private com.google.ads.googleads.v1.resources.CampaignExtensionSetting campaignExtensionSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CampaignExtensionSetting, com.google.ads.googleads.v1.resources.CampaignExtensionSetting.Builder, com.google.ads.googleads.v1.resources.CampaignExtensionSettingOrBuilder> campaignExtensionSettingBuilder_;
     /**
@@ -12180,7 +12179,7 @@ private static final long serialVersionUID = 0L;
       return campaignExtensionSettingBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CampaignFeed campaignFeed_ = null;
+    private com.google.ads.googleads.v1.resources.CampaignFeed campaignFeed_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CampaignFeed, com.google.ads.googleads.v1.resources.CampaignFeed.Builder, com.google.ads.googleads.v1.resources.CampaignFeedOrBuilder> campaignFeedBuilder_;
     /**
@@ -12333,7 +12332,7 @@ private static final long serialVersionUID = 0L;
       return campaignFeedBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CampaignLabel campaignLabel_ = null;
+    private com.google.ads.googleads.v1.resources.CampaignLabel campaignLabel_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CampaignLabel, com.google.ads.googleads.v1.resources.CampaignLabel.Builder, com.google.ads.googleads.v1.resources.CampaignLabelOrBuilder> campaignLabelBuilder_;
     /**
@@ -12486,7 +12485,7 @@ private static final long serialVersionUID = 0L;
       return campaignLabelBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CampaignSharedSet campaignSharedSet_ = null;
+    private com.google.ads.googleads.v1.resources.CampaignSharedSet campaignSharedSet_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CampaignSharedSet, com.google.ads.googleads.v1.resources.CampaignSharedSet.Builder, com.google.ads.googleads.v1.resources.CampaignSharedSetOrBuilder> campaignSharedSetBuilder_;
     /**
@@ -12639,7 +12638,7 @@ private static final long serialVersionUID = 0L;
       return campaignSharedSetBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CarrierConstant carrierConstant_ = null;
+    private com.google.ads.googleads.v1.resources.CarrierConstant carrierConstant_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CarrierConstant, com.google.ads.googleads.v1.resources.CarrierConstant.Builder, com.google.ads.googleads.v1.resources.CarrierConstantOrBuilder> carrierConstantBuilder_;
     /**
@@ -12792,7 +12791,7 @@ private static final long serialVersionUID = 0L;
       return carrierConstantBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.ChangeStatus changeStatus_ = null;
+    private com.google.ads.googleads.v1.resources.ChangeStatus changeStatus_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.ChangeStatus, com.google.ads.googleads.v1.resources.ChangeStatus.Builder, com.google.ads.googleads.v1.resources.ChangeStatusOrBuilder> changeStatusBuilder_;
     /**
@@ -12945,7 +12944,7 @@ private static final long serialVersionUID = 0L;
       return changeStatusBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.ConversionAction conversionAction_ = null;
+    private com.google.ads.googleads.v1.resources.ConversionAction conversionAction_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.ConversionAction, com.google.ads.googleads.v1.resources.ConversionAction.Builder, com.google.ads.googleads.v1.resources.ConversionActionOrBuilder> conversionActionBuilder_;
     /**
@@ -13098,7 +13097,7 @@ private static final long serialVersionUID = 0L;
       return conversionActionBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.ClickView clickView_ = null;
+    private com.google.ads.googleads.v1.resources.ClickView clickView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.ClickView, com.google.ads.googleads.v1.resources.ClickView.Builder, com.google.ads.googleads.v1.resources.ClickViewOrBuilder> clickViewBuilder_;
     /**
@@ -13251,7 +13250,7 @@ private static final long serialVersionUID = 0L;
       return clickViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CustomInterest customInterest_ = null;
+    private com.google.ads.googleads.v1.resources.CustomInterest customInterest_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CustomInterest, com.google.ads.googleads.v1.resources.CustomInterest.Builder, com.google.ads.googleads.v1.resources.CustomInterestOrBuilder> customInterestBuilder_;
     /**
@@ -13404,7 +13403,7 @@ private static final long serialVersionUID = 0L;
       return customInterestBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Customer customer_ = null;
+    private com.google.ads.googleads.v1.resources.Customer customer_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Customer, com.google.ads.googleads.v1.resources.Customer.Builder, com.google.ads.googleads.v1.resources.CustomerOrBuilder> customerBuilder_;
     /**
@@ -13557,7 +13556,7 @@ private static final long serialVersionUID = 0L;
       return customerBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CustomerManagerLink customerManagerLink_ = null;
+    private com.google.ads.googleads.v1.resources.CustomerManagerLink customerManagerLink_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CustomerManagerLink, com.google.ads.googleads.v1.resources.CustomerManagerLink.Builder, com.google.ads.googleads.v1.resources.CustomerManagerLinkOrBuilder> customerManagerLinkBuilder_;
     /**
@@ -13710,7 +13709,7 @@ private static final long serialVersionUID = 0L;
       return customerManagerLinkBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CustomerClientLink customerClientLink_ = null;
+    private com.google.ads.googleads.v1.resources.CustomerClientLink customerClientLink_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CustomerClientLink, com.google.ads.googleads.v1.resources.CustomerClientLink.Builder, com.google.ads.googleads.v1.resources.CustomerClientLinkOrBuilder> customerClientLinkBuilder_;
     /**
@@ -13863,7 +13862,7 @@ private static final long serialVersionUID = 0L;
       return customerClientLinkBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CustomerClient customerClient_ = null;
+    private com.google.ads.googleads.v1.resources.CustomerClient customerClient_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CustomerClient, com.google.ads.googleads.v1.resources.CustomerClient.Builder, com.google.ads.googleads.v1.resources.CustomerClientOrBuilder> customerClientBuilder_;
     /**
@@ -14016,7 +14015,7 @@ private static final long serialVersionUID = 0L;
       return customerClientBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CustomerExtensionSetting customerExtensionSetting_ = null;
+    private com.google.ads.googleads.v1.resources.CustomerExtensionSetting customerExtensionSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CustomerExtensionSetting, com.google.ads.googleads.v1.resources.CustomerExtensionSetting.Builder, com.google.ads.googleads.v1.resources.CustomerExtensionSettingOrBuilder> customerExtensionSettingBuilder_;
     /**
@@ -14169,7 +14168,7 @@ private static final long serialVersionUID = 0L;
       return customerExtensionSettingBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CustomerFeed customerFeed_ = null;
+    private com.google.ads.googleads.v1.resources.CustomerFeed customerFeed_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CustomerFeed, com.google.ads.googleads.v1.resources.CustomerFeed.Builder, com.google.ads.googleads.v1.resources.CustomerFeedOrBuilder> customerFeedBuilder_;
     /**
@@ -14322,7 +14321,7 @@ private static final long serialVersionUID = 0L;
       return customerFeedBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CustomerLabel customerLabel_ = null;
+    private com.google.ads.googleads.v1.resources.CustomerLabel customerLabel_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CustomerLabel, com.google.ads.googleads.v1.resources.CustomerLabel.Builder, com.google.ads.googleads.v1.resources.CustomerLabelOrBuilder> customerLabelBuilder_;
     /**
@@ -14475,7 +14474,7 @@ private static final long serialVersionUID = 0L;
       return customerLabelBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CustomerNegativeCriterion customerNegativeCriterion_ = null;
+    private com.google.ads.googleads.v1.resources.CustomerNegativeCriterion customerNegativeCriterion_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CustomerNegativeCriterion, com.google.ads.googleads.v1.resources.CustomerNegativeCriterion.Builder, com.google.ads.googleads.v1.resources.CustomerNegativeCriterionOrBuilder> customerNegativeCriterionBuilder_;
     /**
@@ -14628,7 +14627,7 @@ private static final long serialVersionUID = 0L;
       return customerNegativeCriterionBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.DetailPlacementView detailPlacementView_ = null;
+    private com.google.ads.googleads.v1.resources.DetailPlacementView detailPlacementView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.DetailPlacementView, com.google.ads.googleads.v1.resources.DetailPlacementView.Builder, com.google.ads.googleads.v1.resources.DetailPlacementViewOrBuilder> detailPlacementViewBuilder_;
     /**
@@ -14781,7 +14780,7 @@ private static final long serialVersionUID = 0L;
       return detailPlacementViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.DisplayKeywordView displayKeywordView_ = null;
+    private com.google.ads.googleads.v1.resources.DisplayKeywordView displayKeywordView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.DisplayKeywordView, com.google.ads.googleads.v1.resources.DisplayKeywordView.Builder, com.google.ads.googleads.v1.resources.DisplayKeywordViewOrBuilder> displayKeywordViewBuilder_;
     /**
@@ -14934,7 +14933,7 @@ private static final long serialVersionUID = 0L;
       return displayKeywordViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView dynamicSearchAdsSearchTermView_ = null;
+    private com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView dynamicSearchAdsSearchTermView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView, com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView.Builder, com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermViewOrBuilder> dynamicSearchAdsSearchTermViewBuilder_;
     /**
@@ -15087,7 +15086,7 @@ private static final long serialVersionUID = 0L;
       return dynamicSearchAdsSearchTermViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.ExpandedLandingPageView expandedLandingPageView_ = null;
+    private com.google.ads.googleads.v1.resources.ExpandedLandingPageView expandedLandingPageView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.ExpandedLandingPageView, com.google.ads.googleads.v1.resources.ExpandedLandingPageView.Builder, com.google.ads.googleads.v1.resources.ExpandedLandingPageViewOrBuilder> expandedLandingPageViewBuilder_;
     /**
@@ -15240,7 +15239,7 @@ private static final long serialVersionUID = 0L;
       return expandedLandingPageViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.ExtensionFeedItem extensionFeedItem_ = null;
+    private com.google.ads.googleads.v1.resources.ExtensionFeedItem extensionFeedItem_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.ExtensionFeedItem, com.google.ads.googleads.v1.resources.ExtensionFeedItem.Builder, com.google.ads.googleads.v1.resources.ExtensionFeedItemOrBuilder> extensionFeedItemBuilder_;
     /**
@@ -15393,7 +15392,7 @@ private static final long serialVersionUID = 0L;
       return extensionFeedItemBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Feed feed_ = null;
+    private com.google.ads.googleads.v1.resources.Feed feed_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Feed, com.google.ads.googleads.v1.resources.Feed.Builder, com.google.ads.googleads.v1.resources.FeedOrBuilder> feedBuilder_;
     /**
@@ -15546,7 +15545,7 @@ private static final long serialVersionUID = 0L;
       return feedBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.FeedItem feedItem_ = null;
+    private com.google.ads.googleads.v1.resources.FeedItem feedItem_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.FeedItem, com.google.ads.googleads.v1.resources.FeedItem.Builder, com.google.ads.googleads.v1.resources.FeedItemOrBuilder> feedItemBuilder_;
     /**
@@ -15699,7 +15698,7 @@ private static final long serialVersionUID = 0L;
       return feedItemBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.FeedItemTarget feedItemTarget_ = null;
+    private com.google.ads.googleads.v1.resources.FeedItemTarget feedItemTarget_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.FeedItemTarget, com.google.ads.googleads.v1.resources.FeedItemTarget.Builder, com.google.ads.googleads.v1.resources.FeedItemTargetOrBuilder> feedItemTargetBuilder_;
     /**
@@ -15852,7 +15851,7 @@ private static final long serialVersionUID = 0L;
       return feedItemTargetBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.FeedMapping feedMapping_ = null;
+    private com.google.ads.googleads.v1.resources.FeedMapping feedMapping_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.FeedMapping, com.google.ads.googleads.v1.resources.FeedMapping.Builder, com.google.ads.googleads.v1.resources.FeedMappingOrBuilder> feedMappingBuilder_;
     /**
@@ -16005,7 +16004,7 @@ private static final long serialVersionUID = 0L;
       return feedMappingBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.FeedPlaceholderView feedPlaceholderView_ = null;
+    private com.google.ads.googleads.v1.resources.FeedPlaceholderView feedPlaceholderView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.FeedPlaceholderView, com.google.ads.googleads.v1.resources.FeedPlaceholderView.Builder, com.google.ads.googleads.v1.resources.FeedPlaceholderViewOrBuilder> feedPlaceholderViewBuilder_;
     /**
@@ -16158,7 +16157,7 @@ private static final long serialVersionUID = 0L;
       return feedPlaceholderViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.GenderView genderView_ = null;
+    private com.google.ads.googleads.v1.resources.GenderView genderView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.GenderView, com.google.ads.googleads.v1.resources.GenderView.Builder, com.google.ads.googleads.v1.resources.GenderViewOrBuilder> genderViewBuilder_;
     /**
@@ -16311,7 +16310,7 @@ private static final long serialVersionUID = 0L;
       return genderViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.GeoTargetConstant geoTargetConstant_ = null;
+    private com.google.ads.googleads.v1.resources.GeoTargetConstant geoTargetConstant_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.GeoTargetConstant, com.google.ads.googleads.v1.resources.GeoTargetConstant.Builder, com.google.ads.googleads.v1.resources.GeoTargetConstantOrBuilder> geoTargetConstantBuilder_;
     /**
@@ -16464,7 +16463,7 @@ private static final long serialVersionUID = 0L;
       return geoTargetConstantBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.GeographicView geographicView_ = null;
+    private com.google.ads.googleads.v1.resources.GeographicView geographicView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.GeographicView, com.google.ads.googleads.v1.resources.GeographicView.Builder, com.google.ads.googleads.v1.resources.GeographicViewOrBuilder> geographicViewBuilder_;
     /**
@@ -16617,7 +16616,7 @@ private static final long serialVersionUID = 0L;
       return geographicViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.GroupPlacementView groupPlacementView_ = null;
+    private com.google.ads.googleads.v1.resources.GroupPlacementView groupPlacementView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.GroupPlacementView, com.google.ads.googleads.v1.resources.GroupPlacementView.Builder, com.google.ads.googleads.v1.resources.GroupPlacementViewOrBuilder> groupPlacementViewBuilder_;
     /**
@@ -16770,7 +16769,7 @@ private static final long serialVersionUID = 0L;
       return groupPlacementViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.HotelGroupView hotelGroupView_ = null;
+    private com.google.ads.googleads.v1.resources.HotelGroupView hotelGroupView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.HotelGroupView, com.google.ads.googleads.v1.resources.HotelGroupView.Builder, com.google.ads.googleads.v1.resources.HotelGroupViewOrBuilder> hotelGroupViewBuilder_;
     /**
@@ -16923,7 +16922,7 @@ private static final long serialVersionUID = 0L;
       return hotelGroupViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.HotelPerformanceView hotelPerformanceView_ = null;
+    private com.google.ads.googleads.v1.resources.HotelPerformanceView hotelPerformanceView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.HotelPerformanceView, com.google.ads.googleads.v1.resources.HotelPerformanceView.Builder, com.google.ads.googleads.v1.resources.HotelPerformanceViewOrBuilder> hotelPerformanceViewBuilder_;
     /**
@@ -17076,7 +17075,7 @@ private static final long serialVersionUID = 0L;
       return hotelPerformanceViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.KeywordView keywordView_ = null;
+    private com.google.ads.googleads.v1.resources.KeywordView keywordView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.KeywordView, com.google.ads.googleads.v1.resources.KeywordView.Builder, com.google.ads.googleads.v1.resources.KeywordViewOrBuilder> keywordViewBuilder_;
     /**
@@ -17229,7 +17228,7 @@ private static final long serialVersionUID = 0L;
       return keywordViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.KeywordPlan keywordPlan_ = null;
+    private com.google.ads.googleads.v1.resources.KeywordPlan keywordPlan_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.KeywordPlan, com.google.ads.googleads.v1.resources.KeywordPlan.Builder, com.google.ads.googleads.v1.resources.KeywordPlanOrBuilder> keywordPlanBuilder_;
     /**
@@ -17382,7 +17381,7 @@ private static final long serialVersionUID = 0L;
       return keywordPlanBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.KeywordPlanCampaign keywordPlanCampaign_ = null;
+    private com.google.ads.googleads.v1.resources.KeywordPlanCampaign keywordPlanCampaign_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.KeywordPlanCampaign, com.google.ads.googleads.v1.resources.KeywordPlanCampaign.Builder, com.google.ads.googleads.v1.resources.KeywordPlanCampaignOrBuilder> keywordPlanCampaignBuilder_;
     /**
@@ -17535,7 +17534,7 @@ private static final long serialVersionUID = 0L;
       return keywordPlanCampaignBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.KeywordPlanNegativeKeyword keywordPlanNegativeKeyword_ = null;
+    private com.google.ads.googleads.v1.resources.KeywordPlanNegativeKeyword keywordPlanNegativeKeyword_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.KeywordPlanNegativeKeyword, com.google.ads.googleads.v1.resources.KeywordPlanNegativeKeyword.Builder, com.google.ads.googleads.v1.resources.KeywordPlanNegativeKeywordOrBuilder> keywordPlanNegativeKeywordBuilder_;
     /**
@@ -17688,7 +17687,7 @@ private static final long serialVersionUID = 0L;
       return keywordPlanNegativeKeywordBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.KeywordPlanAdGroup keywordPlanAdGroup_ = null;
+    private com.google.ads.googleads.v1.resources.KeywordPlanAdGroup keywordPlanAdGroup_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.KeywordPlanAdGroup, com.google.ads.googleads.v1.resources.KeywordPlanAdGroup.Builder, com.google.ads.googleads.v1.resources.KeywordPlanAdGroupOrBuilder> keywordPlanAdGroupBuilder_;
     /**
@@ -17841,7 +17840,7 @@ private static final long serialVersionUID = 0L;
       return keywordPlanAdGroupBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.KeywordPlanKeyword keywordPlanKeyword_ = null;
+    private com.google.ads.googleads.v1.resources.KeywordPlanKeyword keywordPlanKeyword_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.KeywordPlanKeyword, com.google.ads.googleads.v1.resources.KeywordPlanKeyword.Builder, com.google.ads.googleads.v1.resources.KeywordPlanKeywordOrBuilder> keywordPlanKeywordBuilder_;
     /**
@@ -17994,7 +17993,7 @@ private static final long serialVersionUID = 0L;
       return keywordPlanKeywordBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Label label_ = null;
+    private com.google.ads.googleads.v1.resources.Label label_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Label, com.google.ads.googleads.v1.resources.Label.Builder, com.google.ads.googleads.v1.resources.LabelOrBuilder> labelBuilder_;
     /**
@@ -18147,7 +18146,7 @@ private static final long serialVersionUID = 0L;
       return labelBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.LandingPageView landingPageView_ = null;
+    private com.google.ads.googleads.v1.resources.LandingPageView landingPageView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.LandingPageView, com.google.ads.googleads.v1.resources.LandingPageView.Builder, com.google.ads.googleads.v1.resources.LandingPageViewOrBuilder> landingPageViewBuilder_;
     /**
@@ -18300,7 +18299,7 @@ private static final long serialVersionUID = 0L;
       return landingPageViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.LanguageConstant languageConstant_ = null;
+    private com.google.ads.googleads.v1.resources.LanguageConstant languageConstant_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.LanguageConstant, com.google.ads.googleads.v1.resources.LanguageConstant.Builder, com.google.ads.googleads.v1.resources.LanguageConstantOrBuilder> languageConstantBuilder_;
     /**
@@ -18453,7 +18452,7 @@ private static final long serialVersionUID = 0L;
       return languageConstantBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.LocationView locationView_ = null;
+    private com.google.ads.googleads.v1.resources.LocationView locationView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.LocationView, com.google.ads.googleads.v1.resources.LocationView.Builder, com.google.ads.googleads.v1.resources.LocationViewOrBuilder> locationViewBuilder_;
     /**
@@ -18606,7 +18605,7 @@ private static final long serialVersionUID = 0L;
       return locationViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.ManagedPlacementView managedPlacementView_ = null;
+    private com.google.ads.googleads.v1.resources.ManagedPlacementView managedPlacementView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.ManagedPlacementView, com.google.ads.googleads.v1.resources.ManagedPlacementView.Builder, com.google.ads.googleads.v1.resources.ManagedPlacementViewOrBuilder> managedPlacementViewBuilder_;
     /**
@@ -18759,7 +18758,7 @@ private static final long serialVersionUID = 0L;
       return managedPlacementViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.MediaFile mediaFile_ = null;
+    private com.google.ads.googleads.v1.resources.MediaFile mediaFile_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.MediaFile, com.google.ads.googleads.v1.resources.MediaFile.Builder, com.google.ads.googleads.v1.resources.MediaFileOrBuilder> mediaFileBuilder_;
     /**
@@ -18912,7 +18911,7 @@ private static final long serialVersionUID = 0L;
       return mediaFileBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.MobileAppCategoryConstant mobileAppCategoryConstant_ = null;
+    private com.google.ads.googleads.v1.resources.MobileAppCategoryConstant mobileAppCategoryConstant_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.MobileAppCategoryConstant, com.google.ads.googleads.v1.resources.MobileAppCategoryConstant.Builder, com.google.ads.googleads.v1.resources.MobileAppCategoryConstantOrBuilder> mobileAppCategoryConstantBuilder_;
     /**
@@ -19065,7 +19064,7 @@ private static final long serialVersionUID = 0L;
       return mobileAppCategoryConstantBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.MobileDeviceConstant mobileDeviceConstant_ = null;
+    private com.google.ads.googleads.v1.resources.MobileDeviceConstant mobileDeviceConstant_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.MobileDeviceConstant, com.google.ads.googleads.v1.resources.MobileDeviceConstant.Builder, com.google.ads.googleads.v1.resources.MobileDeviceConstantOrBuilder> mobileDeviceConstantBuilder_;
     /**
@@ -19218,7 +19217,7 @@ private static final long serialVersionUID = 0L;
       return mobileDeviceConstantBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.MutateJob mutateJob_ = null;
+    private com.google.ads.googleads.v1.resources.MutateJob mutateJob_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.MutateJob, com.google.ads.googleads.v1.resources.MutateJob.Builder, com.google.ads.googleads.v1.resources.MutateJobOrBuilder> mutateJobBuilder_;
     /**
@@ -19371,7 +19370,7 @@ private static final long serialVersionUID = 0L;
       return mutateJobBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant operatingSystemVersionConstant_ = null;
+    private com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant operatingSystemVersionConstant_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant, com.google.ads.googleads.v1.resources.OperatingSystemVersionConstant.Builder, com.google.ads.googleads.v1.resources.OperatingSystemVersionConstantOrBuilder> operatingSystemVersionConstantBuilder_;
     /**
@@ -19524,7 +19523,7 @@ private static final long serialVersionUID = 0L;
       return operatingSystemVersionConstantBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paidOrganicSearchTermView_ = null;
+    private com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView paidOrganicSearchTermView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView, com.google.ads.googleads.v1.resources.PaidOrganicSearchTermView.Builder, com.google.ads.googleads.v1.resources.PaidOrganicSearchTermViewOrBuilder> paidOrganicSearchTermViewBuilder_;
     /**
@@ -19677,7 +19676,7 @@ private static final long serialVersionUID = 0L;
       return paidOrganicSearchTermViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.ParentalStatusView parentalStatusView_ = null;
+    private com.google.ads.googleads.v1.resources.ParentalStatusView parentalStatusView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.ParentalStatusView, com.google.ads.googleads.v1.resources.ParentalStatusView.Builder, com.google.ads.googleads.v1.resources.ParentalStatusViewOrBuilder> parentalStatusViewBuilder_;
     /**
@@ -19830,7 +19829,7 @@ private static final long serialVersionUID = 0L;
       return parentalStatusViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant productBiddingCategoryConstant_ = null;
+    private com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant productBiddingCategoryConstant_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant, com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstant.Builder, com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstantOrBuilder> productBiddingCategoryConstantBuilder_;
     /**
@@ -19983,7 +19982,7 @@ private static final long serialVersionUID = 0L;
       return productBiddingCategoryConstantBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.ProductGroupView productGroupView_ = null;
+    private com.google.ads.googleads.v1.resources.ProductGroupView productGroupView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.ProductGroupView, com.google.ads.googleads.v1.resources.ProductGroupView.Builder, com.google.ads.googleads.v1.resources.ProductGroupViewOrBuilder> productGroupViewBuilder_;
     /**
@@ -20136,7 +20135,7 @@ private static final long serialVersionUID = 0L;
       return productGroupViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Recommendation recommendation_ = null;
+    private com.google.ads.googleads.v1.resources.Recommendation recommendation_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Recommendation, com.google.ads.googleads.v1.resources.Recommendation.Builder, com.google.ads.googleads.v1.resources.RecommendationOrBuilder> recommendationBuilder_;
     /**
@@ -20289,7 +20288,7 @@ private static final long serialVersionUID = 0L;
       return recommendationBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.SearchTermView searchTermView_ = null;
+    private com.google.ads.googleads.v1.resources.SearchTermView searchTermView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.SearchTermView, com.google.ads.googleads.v1.resources.SearchTermView.Builder, com.google.ads.googleads.v1.resources.SearchTermViewOrBuilder> searchTermViewBuilder_;
     /**
@@ -20442,7 +20441,7 @@ private static final long serialVersionUID = 0L;
       return searchTermViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.SharedCriterion sharedCriterion_ = null;
+    private com.google.ads.googleads.v1.resources.SharedCriterion sharedCriterion_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.SharedCriterion, com.google.ads.googleads.v1.resources.SharedCriterion.Builder, com.google.ads.googleads.v1.resources.SharedCriterionOrBuilder> sharedCriterionBuilder_;
     /**
@@ -20595,7 +20594,7 @@ private static final long serialVersionUID = 0L;
       return sharedCriterionBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.SharedSet sharedSet_ = null;
+    private com.google.ads.googleads.v1.resources.SharedSet sharedSet_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.SharedSet, com.google.ads.googleads.v1.resources.SharedSet.Builder, com.google.ads.googleads.v1.resources.SharedSetOrBuilder> sharedSetBuilder_;
     /**
@@ -20748,7 +20747,7 @@ private static final long serialVersionUID = 0L;
       return sharedSetBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.ShoppingPerformanceView shoppingPerformanceView_ = null;
+    private com.google.ads.googleads.v1.resources.ShoppingPerformanceView shoppingPerformanceView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.ShoppingPerformanceView, com.google.ads.googleads.v1.resources.ShoppingPerformanceView.Builder, com.google.ads.googleads.v1.resources.ShoppingPerformanceViewOrBuilder> shoppingPerformanceViewBuilder_;
     /**
@@ -20901,7 +20900,7 @@ private static final long serialVersionUID = 0L;
       return shoppingPerformanceViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.TopicView topicView_ = null;
+    private com.google.ads.googleads.v1.resources.TopicView topicView_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.TopicView, com.google.ads.googleads.v1.resources.TopicView.Builder, com.google.ads.googleads.v1.resources.TopicViewOrBuilder> topicViewBuilder_;
     /**
@@ -21054,7 +21053,7 @@ private static final long serialVersionUID = 0L;
       return topicViewBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.UserInterest userInterest_ = null;
+    private com.google.ads.googleads.v1.resources.UserInterest userInterest_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.UserInterest, com.google.ads.googleads.v1.resources.UserInterest.Builder, com.google.ads.googleads.v1.resources.UserInterestOrBuilder> userInterestBuilder_;
     /**
@@ -21207,7 +21206,7 @@ private static final long serialVersionUID = 0L;
       return userInterestBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.UserList userList_ = null;
+    private com.google.ads.googleads.v1.resources.UserList userList_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.UserList, com.google.ads.googleads.v1.resources.UserList.Builder, com.google.ads.googleads.v1.resources.UserListOrBuilder> userListBuilder_;
     /**
@@ -21360,7 +21359,7 @@ private static final long serialVersionUID = 0L;
       return userListBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.RemarketingAction remarketingAction_ = null;
+    private com.google.ads.googleads.v1.resources.RemarketingAction remarketingAction_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.RemarketingAction, com.google.ads.googleads.v1.resources.RemarketingAction.Builder, com.google.ads.googleads.v1.resources.RemarketingActionOrBuilder> remarketingActionBuilder_;
     /**
@@ -21513,7 +21512,7 @@ private static final long serialVersionUID = 0L;
       return remarketingActionBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.TopicConstant topicConstant_ = null;
+    private com.google.ads.googleads.v1.resources.TopicConstant topicConstant_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.TopicConstant, com.google.ads.googleads.v1.resources.TopicConstant.Builder, com.google.ads.googleads.v1.resources.TopicConstantOrBuilder> topicConstantBuilder_;
     /**
@@ -21666,7 +21665,7 @@ private static final long serialVersionUID = 0L;
       return topicConstantBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.Video video_ = null;
+    private com.google.ads.googleads.v1.resources.Video video_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.Video, com.google.ads.googleads.v1.resources.Video.Builder, com.google.ads.googleads.v1.resources.VideoOrBuilder> videoBuilder_;
     /**
@@ -21819,7 +21818,7 @@ private static final long serialVersionUID = 0L;
       return videoBuilder_;
     }
 
-    private com.google.ads.googleads.v1.common.Metrics metrics_ = null;
+    private com.google.ads.googleads.v1.common.Metrics metrics_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.Metrics, com.google.ads.googleads.v1.common.Metrics.Builder, com.google.ads.googleads.v1.common.MetricsOrBuilder> metricsBuilder_;
     /**
@@ -21972,7 +21971,7 @@ private static final long serialVersionUID = 0L;
       return metricsBuilder_;
     }
 
-    private com.google.ads.googleads.v1.common.Segments segments_ = null;
+    private com.google.ads.googleads.v1.common.Segments segments_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.Segments, com.google.ads.googleads.v1.common.Segments.Builder, com.google.ads.googleads.v1.common.SegmentsOrBuilder> segmentsBuilder_;
     /**
@@ -22127,7 +22126,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -392,7 +392,7 @@ public class CampaignCriterionServiceClientTest {
     CampaignCriterion actualResponse = client.getCampaignCriterion(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCampaignCriterionService.getRequests();
+    List<AbstractMessage> actualRequests = mockCampaignCriterionService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetCampaignCriterionRequest actualRequest = (GetCampaignCriterionRequest) actualRequests.get(0);
 
@@ -437,7 +437,7 @@ public class CampaignCriterionServiceClientTest {
         client.mutateCampaignCriteria(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCampaignCriterionService.getRequests();
+    List<AbstractMessage> actualRequests = mockCampaignCriterionService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCampaignCriteriaRequest actualRequest =
         (MutateCampaignCriteriaRequest) actualRequests.get(0);
@@ -485,7 +485,7 @@ public class CampaignCriterionServiceClientTest {
         client.mutateCampaignCriteria(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCampaignCriterionService.getRequests();
+    List<AbstractMessage> actualRequests = mockCampaignCriterionService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCampaignCriteriaRequest actualRequest =
         (MutateCampaignCriteriaRequest) actualRequests.get(0);

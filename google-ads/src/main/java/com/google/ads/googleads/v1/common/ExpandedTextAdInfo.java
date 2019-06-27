@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -487,44 +487,43 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.ExpandedTextAdInfo other = (com.google.ads.googleads.v1.common.ExpandedTextAdInfo) obj;
 
-    boolean result = true;
-    result = result && (hasHeadlinePart1() == other.hasHeadlinePart1());
+    if (hasHeadlinePart1() != other.hasHeadlinePart1()) return false;
     if (hasHeadlinePart1()) {
-      result = result && getHeadlinePart1()
-          .equals(other.getHeadlinePart1());
+      if (!getHeadlinePart1()
+          .equals(other.getHeadlinePart1())) return false;
     }
-    result = result && (hasHeadlinePart2() == other.hasHeadlinePart2());
+    if (hasHeadlinePart2() != other.hasHeadlinePart2()) return false;
     if (hasHeadlinePart2()) {
-      result = result && getHeadlinePart2()
-          .equals(other.getHeadlinePart2());
+      if (!getHeadlinePart2()
+          .equals(other.getHeadlinePart2())) return false;
     }
-    result = result && (hasHeadlinePart3() == other.hasHeadlinePart3());
+    if (hasHeadlinePart3() != other.hasHeadlinePart3()) return false;
     if (hasHeadlinePart3()) {
-      result = result && getHeadlinePart3()
-          .equals(other.getHeadlinePart3());
+      if (!getHeadlinePart3()
+          .equals(other.getHeadlinePart3())) return false;
     }
-    result = result && (hasDescription() == other.hasDescription());
+    if (hasDescription() != other.hasDescription()) return false;
     if (hasDescription()) {
-      result = result && getDescription()
-          .equals(other.getDescription());
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
     }
-    result = result && (hasDescription2() == other.hasDescription2());
+    if (hasDescription2() != other.hasDescription2()) return false;
     if (hasDescription2()) {
-      result = result && getDescription2()
-          .equals(other.getDescription2());
+      if (!getDescription2()
+          .equals(other.getDescription2())) return false;
     }
-    result = result && (hasPath1() == other.hasPath1());
+    if (hasPath1() != other.hasPath1()) return false;
     if (hasPath1()) {
-      result = result && getPath1()
-          .equals(other.getPath1());
+      if (!getPath1()
+          .equals(other.getPath1())) return false;
     }
-    result = result && (hasPath2() == other.hasPath2());
+    if (hasPath2() != other.hasPath2()) return false;
     if (hasPath2()) {
-      result = result && getPath2()
-          .equals(other.getPath2());
+      if (!getPath2()
+          .equals(other.getPath2())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -808,35 +807,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -900,7 +899,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue headlinePart1_ = null;
+    private com.google.protobuf.StringValue headlinePart1_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> headlinePart1Builder_;
     /**
@@ -1053,7 +1052,7 @@ private static final long serialVersionUID = 0L;
       return headlinePart1Builder_;
     }
 
-    private com.google.protobuf.StringValue headlinePart2_ = null;
+    private com.google.protobuf.StringValue headlinePart2_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> headlinePart2Builder_;
     /**
@@ -1206,7 +1205,7 @@ private static final long serialVersionUID = 0L;
       return headlinePart2Builder_;
     }
 
-    private com.google.protobuf.StringValue headlinePart3_ = null;
+    private com.google.protobuf.StringValue headlinePart3_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> headlinePart3Builder_;
     /**
@@ -1359,7 +1358,7 @@ private static final long serialVersionUID = 0L;
       return headlinePart3Builder_;
     }
 
-    private com.google.protobuf.StringValue description_ = null;
+    private com.google.protobuf.StringValue description_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> descriptionBuilder_;
     /**
@@ -1512,7 +1511,7 @@ private static final long serialVersionUID = 0L;
       return descriptionBuilder_;
     }
 
-    private com.google.protobuf.StringValue description2_ = null;
+    private com.google.protobuf.StringValue description2_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> description2Builder_;
     /**
@@ -1665,7 +1664,7 @@ private static final long serialVersionUID = 0L;
       return description2Builder_;
     }
 
-    private com.google.protobuf.StringValue path1_ = null;
+    private com.google.protobuf.StringValue path1_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> path1Builder_;
     /**
@@ -1818,7 +1817,7 @@ private static final long serialVersionUID = 0L;
       return path1Builder_;
     }
 
-    private com.google.protobuf.StringValue path2_ = null;
+    private com.google.protobuf.StringValue path2_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> path2Builder_;
     /**
@@ -1973,7 +1972,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

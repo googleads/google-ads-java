@@ -104,7 +104,10 @@ public class CarrierConstantServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a carrier_constant resource.
+   *
+   * @deprecated Use the {@link CarrierConstantName} class instead.
    */
+  @Deprecated
   public static final String formatCarrierConstantName(String carrierConstant) {
     return CARRIER_CONSTANT_PATH_TEMPLATE.instantiate("carrier_constant", carrierConstant);
   }
@@ -112,7 +115,10 @@ public class CarrierConstantServiceClient implements BackgroundResource {
   /**
    * Parses the carrier_constant from the given fully-qualified path which represents a
    * carrier_constant resource.
+   *
+   * @deprecated Use the {@link CarrierConstantName} class instead.
    */
+  @Deprecated
   public static final String parseCarrierConstantFromCarrierConstantName(
       String carrierConstantName) {
     return CARRIER_CONSTANT_PATH_TEMPLATE.parse(carrierConstantName).get("carrier_constant");
