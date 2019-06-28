@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -391,7 +391,7 @@ public class BiddingStrategyServiceClientTest {
     BiddingStrategy actualResponse = client.getBiddingStrategy(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockBiddingStrategyService.getRequests();
+    List<AbstractMessage> actualRequests = mockBiddingStrategyService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetBiddingStrategyRequest actualRequest = (GetBiddingStrategyRequest) actualRequests.get(0);
 
@@ -436,7 +436,7 @@ public class BiddingStrategyServiceClientTest {
         client.mutateBiddingStrategies(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockBiddingStrategyService.getRequests();
+    List<AbstractMessage> actualRequests = mockBiddingStrategyService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateBiddingStrategiesRequest actualRequest =
         (MutateBiddingStrategiesRequest) actualRequests.get(0);
@@ -484,7 +484,7 @@ public class BiddingStrategyServiceClientTest {
         client.mutateBiddingStrategies(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockBiddingStrategyService.getRequests();
+    List<AbstractMessage> actualRequests = mockBiddingStrategyService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateBiddingStrategiesRequest actualRequest =
         (MutateBiddingStrategiesRequest) actualRequests.get(0);

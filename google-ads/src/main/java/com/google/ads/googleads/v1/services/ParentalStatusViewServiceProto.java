@@ -32,21 +32,23 @@ public final class ParentalStatusViewServiceProto {
       "tal_status_view_service.proto\022 google.ad" +
       "s.googleads.v1.services\032<google/ads/goog" +
       "leads/v1/resources/parental_status_view." +
-      "proto\032\034google/api/annotations.proto\"5\n\034G" +
-      "etParentalStatusViewRequest\022\025\n\rresource_" +
-      "name\030\001 \001(\t2\353\001\n\031ParentalStatusViewService" +
-      "\022\315\001\n\025GetParentalStatusView\022>.google.ads." +
-      "googleads.v1.services.GetParentalStatusV" +
-      "iewRequest\0325.google.ads.googleads.v1.res" +
-      "ources.ParentalStatusView\"=\202\323\344\223\0027\0225/v1/{" +
-      "resource_name=customers/*/parentalStatus" +
-      "Views/*}B\205\002\n$com.google.ads.googleads.v1" +
-      ".servicesB\036ParentalStatusViewServiceProt" +
-      "oP\001ZHgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v1/services;services\242\002\003" +
-      "GAA\252\002 Google.Ads.GoogleAds.V1.Services\312\002" +
-      " Google\\Ads\\GoogleAds\\V1\\Services\352\002$Goog" +
-      "le::Ads::GoogleAds::V1::Servicesb\006proto3"
+      "proto\032\034google/api/annotations.proto\032\027goo" +
+      "gle/api/client.proto\"5\n\034GetParentalStatu" +
+      "sViewRequest\022\025\n\rresource_name\030\001 \001(\t2\210\002\n\031" +
+      "ParentalStatusViewService\022\315\001\n\025GetParenta" +
+      "lStatusView\022>.google.ads.googleads.v1.se" +
+      "rvices.GetParentalStatusViewRequest\0325.go" +
+      "ogle.ads.googleads.v1.resources.Parental" +
+      "StatusView\"=\202\323\344\223\0027\0225/v1/{resource_name=c" +
+      "ustomers/*/parentalStatusViews/*}\032\033\312A\030go" +
+      "ogleads.googleapis.comB\205\002\n$com.google.ad" +
+      "s.googleads.v1.servicesB\036ParentalStatusV" +
+      "iewServiceProtoP\001ZHgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v1/servic" +
+      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
+      ".V1.Services\312\002 Google\\Ads\\GoogleAds\\V1\\S" +
+      "ervices\352\002$Google::Ads::GoogleAds::V1::Se" +
+      "rvicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -61,6 +63,7 @@ public final class ParentalStatusViewServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.ParentalStatusViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetParentalStatusViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -70,11 +73,13 @@ public final class ParentalStatusViewServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.ParentalStatusViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

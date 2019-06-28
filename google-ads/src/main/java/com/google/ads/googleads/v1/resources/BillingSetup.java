@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -435,7 +435,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -728,34 +728,33 @@ private static final long serialVersionUID = 0L;
       }
       com.google.ads.googleads.v1.resources.BillingSetup.PaymentsAccountInfo other = (com.google.ads.googleads.v1.resources.BillingSetup.PaymentsAccountInfo) obj;
 
-      boolean result = true;
-      result = result && (hasPaymentsAccountId() == other.hasPaymentsAccountId());
+      if (hasPaymentsAccountId() != other.hasPaymentsAccountId()) return false;
       if (hasPaymentsAccountId()) {
-        result = result && getPaymentsAccountId()
-            .equals(other.getPaymentsAccountId());
+        if (!getPaymentsAccountId()
+            .equals(other.getPaymentsAccountId())) return false;
       }
-      result = result && (hasPaymentsAccountName() == other.hasPaymentsAccountName());
+      if (hasPaymentsAccountName() != other.hasPaymentsAccountName()) return false;
       if (hasPaymentsAccountName()) {
-        result = result && getPaymentsAccountName()
-            .equals(other.getPaymentsAccountName());
+        if (!getPaymentsAccountName()
+            .equals(other.getPaymentsAccountName())) return false;
       }
-      result = result && (hasPaymentsProfileId() == other.hasPaymentsProfileId());
+      if (hasPaymentsProfileId() != other.hasPaymentsProfileId()) return false;
       if (hasPaymentsProfileId()) {
-        result = result && getPaymentsProfileId()
-            .equals(other.getPaymentsProfileId());
+        if (!getPaymentsProfileId()
+            .equals(other.getPaymentsProfileId())) return false;
       }
-      result = result && (hasPaymentsProfileName() == other.hasPaymentsProfileName());
+      if (hasPaymentsProfileName() != other.hasPaymentsProfileName()) return false;
       if (hasPaymentsProfileName()) {
-        result = result && getPaymentsProfileName()
-            .equals(other.getPaymentsProfileName());
+        if (!getPaymentsProfileName()
+            .equals(other.getPaymentsProfileName())) return false;
       }
-      result = result && (hasSecondaryPaymentsProfileId() == other.hasSecondaryPaymentsProfileId());
+      if (hasSecondaryPaymentsProfileId() != other.hasSecondaryPaymentsProfileId()) return false;
       if (hasSecondaryPaymentsProfileId()) {
-        result = result && getSecondaryPaymentsProfileId()
-            .equals(other.getSecondaryPaymentsProfileId());
+        if (!getSecondaryPaymentsProfileId()
+            .equals(other.getSecondaryPaymentsProfileId())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1009,35 +1008,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1095,7 +1094,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.google.protobuf.StringValue paymentsAccountId_ = null;
+      private com.google.protobuf.StringValue paymentsAccountId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountIdBuilder_;
       /**
@@ -1266,7 +1265,7 @@ private static final long serialVersionUID = 0L;
         return paymentsAccountIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue paymentsAccountName_ = null;
+      private com.google.protobuf.StringValue paymentsAccountName_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountNameBuilder_;
       /**
@@ -1446,7 +1445,7 @@ private static final long serialVersionUID = 0L;
         return paymentsAccountNameBuilder_;
       }
 
-      private com.google.protobuf.StringValue paymentsProfileId_ = null;
+      private com.google.protobuf.StringValue paymentsProfileId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileIdBuilder_;
       /**
@@ -1617,7 +1616,7 @@ private static final long serialVersionUID = 0L;
         return paymentsProfileIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue paymentsProfileName_ = null;
+      private com.google.protobuf.StringValue paymentsProfileName_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileNameBuilder_;
       /**
@@ -1770,7 +1769,7 @@ private static final long serialVersionUID = 0L;
         return paymentsProfileNameBuilder_;
       }
 
-      private com.google.protobuf.StringValue secondaryPaymentsProfileId_ = null;
+      private com.google.protobuf.StringValue secondaryPaymentsProfileId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> secondaryPaymentsProfileIdBuilder_;
       /**
@@ -1934,7 +1933,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2501,57 +2500,52 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.BillingSetup other = (com.google.ads.googleads.v1.resources.BillingSetup) obj;
 
-    boolean result = true;
-    result = result && getResourceName()
-        .equals(other.getResourceName());
-    result = result && (hasId() == other.hasId());
+    if (!getResourceName()
+        .equals(other.getResourceName())) return false;
+    if (hasId() != other.hasId()) return false;
     if (hasId()) {
-      result = result && getId()
-          .equals(other.getId());
+      if (!getId()
+          .equals(other.getId())) return false;
     }
-    result = result && status_ == other.status_;
-    result = result && (hasPaymentsAccount() == other.hasPaymentsAccount());
+    if (status_ != other.status_) return false;
+    if (hasPaymentsAccount() != other.hasPaymentsAccount()) return false;
     if (hasPaymentsAccount()) {
-      result = result && getPaymentsAccount()
-          .equals(other.getPaymentsAccount());
+      if (!getPaymentsAccount()
+          .equals(other.getPaymentsAccount())) return false;
     }
-    result = result && (hasPaymentsAccountInfo() == other.hasPaymentsAccountInfo());
+    if (hasPaymentsAccountInfo() != other.hasPaymentsAccountInfo()) return false;
     if (hasPaymentsAccountInfo()) {
-      result = result && getPaymentsAccountInfo()
-          .equals(other.getPaymentsAccountInfo());
+      if (!getPaymentsAccountInfo()
+          .equals(other.getPaymentsAccountInfo())) return false;
     }
-    result = result && getStartTimeCase().equals(
-        other.getStartTimeCase());
-    if (!result) return false;
+    if (!getStartTimeCase().equals(other.getStartTimeCase())) return false;
     switch (startTimeCase_) {
       case 9:
-        result = result && getStartDateTime()
-            .equals(other.getStartDateTime());
+        if (!getStartDateTime()
+            .equals(other.getStartDateTime())) return false;
         break;
       case 10:
-        result = result && getStartTimeTypeValue()
-            == other.getStartTimeTypeValue();
+        if (getStartTimeTypeValue()
+            != other.getStartTimeTypeValue()) return false;
         break;
       case 0:
       default:
     }
-    result = result && getEndTimeCase().equals(
-        other.getEndTimeCase());
-    if (!result) return false;
+    if (!getEndTimeCase().equals(other.getEndTimeCase())) return false;
     switch (endTimeCase_) {
       case 13:
-        result = result && getEndDateTime()
-            .equals(other.getEndDateTime());
+        if (!getEndDateTime()
+            .equals(other.getEndDateTime())) return false;
         break;
       case 14:
-        result = result && getEndTimeTypeValue()
-            == other.getEndTimeTypeValue();
+        if (getEndTimeTypeValue()
+            != other.getEndTimeTypeValue()) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -2837,35 +2831,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3079,7 +3073,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value id_ = null;
+    private com.google.protobuf.Int64Value id_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
@@ -3297,7 +3291,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue paymentsAccount_ = null;
+    private com.google.protobuf.StringValue paymentsAccount_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountBuilder_;
     /**
@@ -3504,7 +3498,7 @@ private static final long serialVersionUID = 0L;
       return paymentsAccountBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.BillingSetup.PaymentsAccountInfo paymentsAccountInfo_ = null;
+    private com.google.ads.googleads.v1.resources.BillingSetup.PaymentsAccountInfo paymentsAccountInfo_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.BillingSetup.PaymentsAccountInfo, com.google.ads.googleads.v1.resources.BillingSetup.PaymentsAccountInfo.Builder, com.google.ads.googleads.v1.resources.BillingSetup.PaymentsAccountInfoOrBuilder> paymentsAccountInfoBuilder_;
     /**
@@ -4196,7 +4190,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

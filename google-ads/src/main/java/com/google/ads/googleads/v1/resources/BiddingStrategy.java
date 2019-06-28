@@ -218,7 +218,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -971,68 +971,65 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.BiddingStrategy other = (com.google.ads.googleads.v1.resources.BiddingStrategy) obj;
 
-    boolean result = true;
-    result = result && getResourceName()
-        .equals(other.getResourceName());
-    result = result && (hasId() == other.hasId());
+    if (!getResourceName()
+        .equals(other.getResourceName())) return false;
+    if (hasId() != other.hasId()) return false;
     if (hasId()) {
-      result = result && getId()
-          .equals(other.getId());
+      if (!getId()
+          .equals(other.getId())) return false;
     }
-    result = result && (hasName() == other.hasName());
+    if (hasName() != other.hasName()) return false;
     if (hasName()) {
-      result = result && getName()
-          .equals(other.getName());
+      if (!getName()
+          .equals(other.getName())) return false;
     }
-    result = result && status_ == other.status_;
-    result = result && type_ == other.type_;
-    result = result && (hasCampaignCount() == other.hasCampaignCount());
+    if (status_ != other.status_) return false;
+    if (type_ != other.type_) return false;
+    if (hasCampaignCount() != other.hasCampaignCount()) return false;
     if (hasCampaignCount()) {
-      result = result && getCampaignCount()
-          .equals(other.getCampaignCount());
+      if (!getCampaignCount()
+          .equals(other.getCampaignCount())) return false;
     }
-    result = result && (hasNonRemovedCampaignCount() == other.hasNonRemovedCampaignCount());
+    if (hasNonRemovedCampaignCount() != other.hasNonRemovedCampaignCount()) return false;
     if (hasNonRemovedCampaignCount()) {
-      result = result && getNonRemovedCampaignCount()
-          .equals(other.getNonRemovedCampaignCount());
+      if (!getNonRemovedCampaignCount()
+          .equals(other.getNonRemovedCampaignCount())) return false;
     }
-    result = result && getSchemeCase().equals(
-        other.getSchemeCase());
-    if (!result) return false;
+    if (!getSchemeCase().equals(other.getSchemeCase())) return false;
     switch (schemeCase_) {
       case 7:
-        result = result && getEnhancedCpc()
-            .equals(other.getEnhancedCpc());
+        if (!getEnhancedCpc()
+            .equals(other.getEnhancedCpc())) return false;
         break;
       case 8:
-        result = result && getPageOnePromoted()
-            .equals(other.getPageOnePromoted());
+        if (!getPageOnePromoted()
+            .equals(other.getPageOnePromoted())) return false;
         break;
       case 9:
-        result = result && getTargetCpa()
-            .equals(other.getTargetCpa());
+        if (!getTargetCpa()
+            .equals(other.getTargetCpa())) return false;
         break;
       case 48:
-        result = result && getTargetImpressionShare()
-            .equals(other.getTargetImpressionShare());
+        if (!getTargetImpressionShare()
+            .equals(other.getTargetImpressionShare())) return false;
         break;
       case 10:
-        result = result && getTargetOutrankShare()
-            .equals(other.getTargetOutrankShare());
+        if (!getTargetOutrankShare()
+            .equals(other.getTargetOutrankShare())) return false;
         break;
       case 11:
-        result = result && getTargetRoas()
-            .equals(other.getTargetRoas());
+        if (!getTargetRoas()
+            .equals(other.getTargetRoas())) return false;
         break;
       case 12:
-        result = result && getTargetSpend()
-            .equals(other.getTargetSpend());
+        if (!getTargetSpend()
+            .equals(other.getTargetSpend())) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1370,35 +1367,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1610,7 +1607,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value id_ = null;
+    private com.google.protobuf.Int64Value id_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
@@ -1763,7 +1760,7 @@ private static final long serialVersionUID = 0L;
       return idBuilder_;
     }
 
-    private com.google.protobuf.StringValue name_ = null;
+    private com.google.protobuf.StringValue name_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
@@ -2088,7 +2085,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value campaignCount_ = null;
+    private com.google.protobuf.Int64Value campaignCount_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> campaignCountBuilder_;
     /**
@@ -2250,7 +2247,7 @@ private static final long serialVersionUID = 0L;
       return campaignCountBuilder_;
     }
 
-    private com.google.protobuf.Int64Value nonRemovedCampaignCount_ = null;
+    private com.google.protobuf.Int64Value nonRemovedCampaignCount_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> nonRemovedCampaignCountBuilder_;
     /**
@@ -3690,7 +3687,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

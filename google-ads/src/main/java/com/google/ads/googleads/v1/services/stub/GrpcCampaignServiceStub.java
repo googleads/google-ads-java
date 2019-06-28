@@ -25,10 +25,13 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.common.collect.ImmutableMap;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -110,11 +113,29 @@ public class GrpcCampaignServiceStub extends CampaignServiceStub {
     GrpcCallSettings<GetCampaignRequest, Campaign> getCampaignTransportSettings =
         GrpcCallSettings.<GetCampaignRequest, Campaign>newBuilder()
             .setMethodDescriptor(getCampaignMethodDescriptor)
+            .setParamsExtractor(
+                new RequestParamsExtractor<GetCampaignRequest>() {
+                  @Override
+                  public Map<String, String> extract(GetCampaignRequest request) {
+                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("resource_name", String.valueOf(request.getResourceName()));
+                    return params.build();
+                  }
+                })
             .build();
     GrpcCallSettings<MutateCampaignsRequest, MutateCampaignsResponse>
         mutateCampaignsTransportSettings =
             GrpcCallSettings.<MutateCampaignsRequest, MutateCampaignsResponse>newBuilder()
                 .setMethodDescriptor(mutateCampaignsMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<MutateCampaignsRequest>() {
+                      @Override
+                      public Map<String, String> extract(MutateCampaignsRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("customer_id", String.valueOf(request.getCustomerId()));
+                        return params.build();
+                      }
+                    })
                 .build();
 
     this.getCampaignCallable =

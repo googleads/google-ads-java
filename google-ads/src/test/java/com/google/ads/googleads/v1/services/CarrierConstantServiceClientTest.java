@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -390,7 +390,7 @@ public class CarrierConstantServiceClientTest {
     CarrierConstant actualResponse = client.getCarrierConstant(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCarrierConstantService.getRequests();
+    List<AbstractMessage> actualRequests = mockCarrierConstantService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetCarrierConstantRequest actualRequest = (GetCarrierConstantRequest) actualRequests.get(0);
 

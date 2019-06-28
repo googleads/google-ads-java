@@ -32,20 +32,21 @@ public final class LocationViewServiceProto {
       "ion_view_service.proto\022 google.ads.googl" +
       "eads.v1.services\0325google/ads/googleads/v" +
       "1/resources/location_view.proto\032\034google/" +
-      "api/annotations.proto\"/\n\026GetLocationView" +
-      "Request\022\025\n\rresource_name\030\001 \001(\t2\315\001\n\023Locat" +
-      "ionViewService\022\265\001\n\017GetLocationView\0228.goo" +
-      "gle.ads.googleads.v1.services.GetLocatio" +
-      "nViewRequest\032/.google.ads.googleads.v1.r" +
-      "esources.LocationView\"7\202\323\344\223\0021\022//v1/{reso" +
-      "urce_name=customers/*/locationViews/*}B\377" +
-      "\001\n$com.google.ads.googleads.v1.servicesB" +
-      "\030LocationViewServiceProtoP\001ZHgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v1/services;services\242\002\003GAA\252\002 Google.Ads" +
-      ".GoogleAds.V1.Services\312\002 Google\\Ads\\Goog" +
-      "leAds\\V1\\Services\352\002$Google::Ads::GoogleA" +
-      "ds::V1::Servicesb\006proto3"
+      "api/annotations.proto\032\027google/api/client" +
+      ".proto\"/\n\026GetLocationViewRequest\022\025\n\rreso" +
+      "urce_name\030\001 \001(\t2\352\001\n\023LocationViewService\022" +
+      "\265\001\n\017GetLocationView\0228.google.ads.googlea" +
+      "ds.v1.services.GetLocationViewRequest\032/." +
+      "google.ads.googleads.v1.resources.Locati" +
+      "onView\"7\202\323\344\223\0021\022//v1/{resource_name=custo" +
+      "mers/*/locationViews/*}\032\033\312A\030googleads.go" +
+      "ogleapis.comB\377\001\n$com.google.ads.googlead" +
+      "s.v1.servicesB\030LocationViewServiceProtoP" +
+      "\001ZHgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v1/services;services\242\002\003GA" +
+      "A\252\002 Google.Ads.GoogleAds.V1.Services\312\002 G" +
+      "oogle\\Ads\\GoogleAds\\V1\\Services\352\002$Google" +
+      "::Ads::GoogleAds::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -60,6 +61,7 @@ public final class LocationViewServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.LocationViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetLocationViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -69,11 +71,13 @@ public final class LocationViewServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.LocationViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

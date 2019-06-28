@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -493,44 +493,43 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.AddressInfo other = (com.google.ads.googleads.v1.common.AddressInfo) obj;
 
-    boolean result = true;
-    result = result && (hasPostalCode() == other.hasPostalCode());
+    if (hasPostalCode() != other.hasPostalCode()) return false;
     if (hasPostalCode()) {
-      result = result && getPostalCode()
-          .equals(other.getPostalCode());
+      if (!getPostalCode()
+          .equals(other.getPostalCode())) return false;
     }
-    result = result && (hasProvinceCode() == other.hasProvinceCode());
+    if (hasProvinceCode() != other.hasProvinceCode()) return false;
     if (hasProvinceCode()) {
-      result = result && getProvinceCode()
-          .equals(other.getProvinceCode());
+      if (!getProvinceCode()
+          .equals(other.getProvinceCode())) return false;
     }
-    result = result && (hasCountryCode() == other.hasCountryCode());
+    if (hasCountryCode() != other.hasCountryCode()) return false;
     if (hasCountryCode()) {
-      result = result && getCountryCode()
-          .equals(other.getCountryCode());
+      if (!getCountryCode()
+          .equals(other.getCountryCode())) return false;
     }
-    result = result && (hasProvinceName() == other.hasProvinceName());
+    if (hasProvinceName() != other.hasProvinceName()) return false;
     if (hasProvinceName()) {
-      result = result && getProvinceName()
-          .equals(other.getProvinceName());
+      if (!getProvinceName()
+          .equals(other.getProvinceName())) return false;
     }
-    result = result && (hasStreetAddress() == other.hasStreetAddress());
+    if (hasStreetAddress() != other.hasStreetAddress()) return false;
     if (hasStreetAddress()) {
-      result = result && getStreetAddress()
-          .equals(other.getStreetAddress());
+      if (!getStreetAddress()
+          .equals(other.getStreetAddress())) return false;
     }
-    result = result && (hasStreetAddress2() == other.hasStreetAddress2());
+    if (hasStreetAddress2() != other.hasStreetAddress2()) return false;
     if (hasStreetAddress2()) {
-      result = result && getStreetAddress2()
-          .equals(other.getStreetAddress2());
+      if (!getStreetAddress2()
+          .equals(other.getStreetAddress2())) return false;
     }
-    result = result && (hasCityName() == other.hasCityName());
+    if (hasCityName() != other.hasCityName()) return false;
     if (hasCityName()) {
-      result = result && getCityName()
-          .equals(other.getCityName());
+      if (!getCityName()
+          .equals(other.getCityName())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -814,35 +813,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -906,7 +905,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue postalCode_ = null;
+    private com.google.protobuf.StringValue postalCode_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> postalCodeBuilder_;
     /**
@@ -1059,7 +1058,7 @@ private static final long serialVersionUID = 0L;
       return postalCodeBuilder_;
     }
 
-    private com.google.protobuf.StringValue provinceCode_ = null;
+    private com.google.protobuf.StringValue provinceCode_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> provinceCodeBuilder_;
     /**
@@ -1212,7 +1211,7 @@ private static final long serialVersionUID = 0L;
       return provinceCodeBuilder_;
     }
 
-    private com.google.protobuf.StringValue countryCode_ = null;
+    private com.google.protobuf.StringValue countryCode_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> countryCodeBuilder_;
     /**
@@ -1365,7 +1364,7 @@ private static final long serialVersionUID = 0L;
       return countryCodeBuilder_;
     }
 
-    private com.google.protobuf.StringValue provinceName_ = null;
+    private com.google.protobuf.StringValue provinceName_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> provinceNameBuilder_;
     /**
@@ -1518,7 +1517,7 @@ private static final long serialVersionUID = 0L;
       return provinceNameBuilder_;
     }
 
-    private com.google.protobuf.StringValue streetAddress_ = null;
+    private com.google.protobuf.StringValue streetAddress_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> streetAddressBuilder_;
     /**
@@ -1671,7 +1670,7 @@ private static final long serialVersionUID = 0L;
       return streetAddressBuilder_;
     }
 
-    private com.google.protobuf.StringValue streetAddress2_ = null;
+    private com.google.protobuf.StringValue streetAddress2_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> streetAddress2Builder_;
     /**
@@ -1842,7 +1841,7 @@ private static final long serialVersionUID = 0L;
       return streetAddress2Builder_;
     }
 
-    private com.google.protobuf.StringValue cityName_ = null;
+    private com.google.protobuf.StringValue cityName_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> cityNameBuilder_;
     /**
@@ -1997,7 +1996,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

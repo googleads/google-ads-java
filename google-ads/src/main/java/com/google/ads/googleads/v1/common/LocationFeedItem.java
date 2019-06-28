@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -540,49 +540,48 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.LocationFeedItem other = (com.google.ads.googleads.v1.common.LocationFeedItem) obj;
 
-    boolean result = true;
-    result = result && (hasBusinessName() == other.hasBusinessName());
+    if (hasBusinessName() != other.hasBusinessName()) return false;
     if (hasBusinessName()) {
-      result = result && getBusinessName()
-          .equals(other.getBusinessName());
+      if (!getBusinessName()
+          .equals(other.getBusinessName())) return false;
     }
-    result = result && (hasAddressLine1() == other.hasAddressLine1());
+    if (hasAddressLine1() != other.hasAddressLine1()) return false;
     if (hasAddressLine1()) {
-      result = result && getAddressLine1()
-          .equals(other.getAddressLine1());
+      if (!getAddressLine1()
+          .equals(other.getAddressLine1())) return false;
     }
-    result = result && (hasAddressLine2() == other.hasAddressLine2());
+    if (hasAddressLine2() != other.hasAddressLine2()) return false;
     if (hasAddressLine2()) {
-      result = result && getAddressLine2()
-          .equals(other.getAddressLine2());
+      if (!getAddressLine2()
+          .equals(other.getAddressLine2())) return false;
     }
-    result = result && (hasCity() == other.hasCity());
+    if (hasCity() != other.hasCity()) return false;
     if (hasCity()) {
-      result = result && getCity()
-          .equals(other.getCity());
+      if (!getCity()
+          .equals(other.getCity())) return false;
     }
-    result = result && (hasProvince() == other.hasProvince());
+    if (hasProvince() != other.hasProvince()) return false;
     if (hasProvince()) {
-      result = result && getProvince()
-          .equals(other.getProvince());
+      if (!getProvince()
+          .equals(other.getProvince())) return false;
     }
-    result = result && (hasPostalCode() == other.hasPostalCode());
+    if (hasPostalCode() != other.hasPostalCode()) return false;
     if (hasPostalCode()) {
-      result = result && getPostalCode()
-          .equals(other.getPostalCode());
+      if (!getPostalCode()
+          .equals(other.getPostalCode())) return false;
     }
-    result = result && (hasCountryCode() == other.hasCountryCode());
+    if (hasCountryCode() != other.hasCountryCode()) return false;
     if (hasCountryCode()) {
-      result = result && getCountryCode()
-          .equals(other.getCountryCode());
+      if (!getCountryCode()
+          .equals(other.getCountryCode())) return false;
     }
-    result = result && (hasPhoneNumber() == other.hasPhoneNumber());
+    if (hasPhoneNumber() != other.hasPhoneNumber()) return false;
     if (hasPhoneNumber()) {
-      result = result && getPhoneNumber()
-          .equals(other.getPhoneNumber());
+      if (!getPhoneNumber()
+          .equals(other.getPhoneNumber())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -881,35 +880,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -976,7 +975,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue businessName_ = null;
+    private com.google.protobuf.StringValue businessName_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> businessNameBuilder_;
     /**
@@ -1129,7 +1128,7 @@ private static final long serialVersionUID = 0L;
       return businessNameBuilder_;
     }
 
-    private com.google.protobuf.StringValue addressLine1_ = null;
+    private com.google.protobuf.StringValue addressLine1_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> addressLine1Builder_;
     /**
@@ -1282,7 +1281,7 @@ private static final long serialVersionUID = 0L;
       return addressLine1Builder_;
     }
 
-    private com.google.protobuf.StringValue addressLine2_ = null;
+    private com.google.protobuf.StringValue addressLine2_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> addressLine2Builder_;
     /**
@@ -1435,7 +1434,7 @@ private static final long serialVersionUID = 0L;
       return addressLine2Builder_;
     }
 
-    private com.google.protobuf.StringValue city_ = null;
+    private com.google.protobuf.StringValue city_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> cityBuilder_;
     /**
@@ -1588,7 +1587,7 @@ private static final long serialVersionUID = 0L;
       return cityBuilder_;
     }
 
-    private com.google.protobuf.StringValue province_ = null;
+    private com.google.protobuf.StringValue province_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> provinceBuilder_;
     /**
@@ -1741,7 +1740,7 @@ private static final long serialVersionUID = 0L;
       return provinceBuilder_;
     }
 
-    private com.google.protobuf.StringValue postalCode_ = null;
+    private com.google.protobuf.StringValue postalCode_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> postalCodeBuilder_;
     /**
@@ -1894,7 +1893,7 @@ private static final long serialVersionUID = 0L;
       return postalCodeBuilder_;
     }
 
-    private com.google.protobuf.StringValue countryCode_ = null;
+    private com.google.protobuf.StringValue countryCode_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> countryCodeBuilder_;
     /**
@@ -2047,7 +2046,7 @@ private static final long serialVersionUID = 0L;
       return countryCodeBuilder_;
     }
 
-    private com.google.protobuf.StringValue phoneNumber_ = null;
+    private com.google.protobuf.StringValue phoneNumber_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> phoneNumberBuilder_;
     /**
@@ -2202,7 +2201,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

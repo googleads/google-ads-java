@@ -106,7 +106,10 @@ public class AdGroupCriterionSimulationServiceClient implements BackgroundResour
   /**
    * Formats a string containing the fully-qualified path to represent a
    * ad_group_criterion_simulation resource.
+   *
+   * @deprecated Use the {@link AdGroupCriterionSimulationName} class instead.
    */
+  @Deprecated
   public static final String formatAdGroupCriterionSimulationName(
       String customer, String adGroupCriterionSimulation) {
     return AD_GROUP_CRITERION_SIMULATION_PATH_TEMPLATE.instantiate(
@@ -117,7 +120,10 @@ public class AdGroupCriterionSimulationServiceClient implements BackgroundResour
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * ad_group_criterion_simulation resource.
+   *
+   * @deprecated Use the {@link AdGroupCriterionSimulationName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromAdGroupCriterionSimulationName(
       String adGroupCriterionSimulationName) {
     return AD_GROUP_CRITERION_SIMULATION_PATH_TEMPLATE
@@ -128,7 +134,10 @@ public class AdGroupCriterionSimulationServiceClient implements BackgroundResour
   /**
    * Parses the ad_group_criterion_simulation from the given fully-qualified path which represents a
    * ad_group_criterion_simulation resource.
+   *
+   * @deprecated Use the {@link AdGroupCriterionSimulationName} class instead.
    */
+  @Deprecated
   public static final String parseAdGroupCriterionSimulationFromAdGroupCriterionSimulationName(
       String adGroupCriterionSimulationName) {
     return AD_GROUP_CRITERION_SIMULATION_PATH_TEMPLATE

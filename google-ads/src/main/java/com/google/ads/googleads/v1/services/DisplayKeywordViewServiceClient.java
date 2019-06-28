@@ -106,7 +106,10 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a display_keyword_view
    * resource.
+   *
+   * @deprecated Use the {@link DisplayKeywordViewName} class instead.
    */
+  @Deprecated
   public static final String formatDisplayKeywordViewName(
       String customer, String displayKeywordView) {
     return DISPLAY_KEYWORD_VIEW_PATH_TEMPLATE.instantiate(
@@ -117,7 +120,10 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a display_keyword_view
    * resource.
+   *
+   * @deprecated Use the {@link DisplayKeywordViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromDisplayKeywordViewName(
       String displayKeywordViewName) {
     return DISPLAY_KEYWORD_VIEW_PATH_TEMPLATE.parse(displayKeywordViewName).get("customer");
@@ -126,7 +132,10 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
   /**
    * Parses the display_keyword_view from the given fully-qualified path which represents a
    * display_keyword_view resource.
+   *
+   * @deprecated Use the {@link DisplayKeywordViewName} class instead.
    */
+  @Deprecated
   public static final String parseDisplayKeywordViewFromDisplayKeywordViewName(
       String displayKeywordViewName) {
     return DISPLAY_KEYWORD_VIEW_PATH_TEMPLATE

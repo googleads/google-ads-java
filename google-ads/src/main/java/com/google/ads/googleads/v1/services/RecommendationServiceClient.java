@@ -107,7 +107,10 @@ public class RecommendationServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a recommendation resource.
+   *
+   * @deprecated Use the {@link RecommendationName} class instead.
    */
+  @Deprecated
   public static final String formatRecommendationName(String customer, String recommendation) {
     return RECOMMENDATION_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -117,7 +120,10 @@ public class RecommendationServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a recommendation
    * resource.
+   *
+   * @deprecated Use the {@link RecommendationName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromRecommendationName(String recommendationName) {
     return RECOMMENDATION_PATH_TEMPLATE.parse(recommendationName).get("customer");
   }
@@ -125,7 +131,10 @@ public class RecommendationServiceClient implements BackgroundResource {
   /**
    * Parses the recommendation from the given fully-qualified path which represents a recommendation
    * resource.
+   *
+   * @deprecated Use the {@link RecommendationName} class instead.
    */
+  @Deprecated
   public static final String parseRecommendationFromRecommendationName(String recommendationName) {
     return RECOMMENDATION_PATH_TEMPLATE.parse(recommendationName).get("recommendation");
   }

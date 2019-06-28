@@ -106,7 +106,10 @@ public class MobileAppCategoryConstantServiceClient implements BackgroundResourc
   /**
    * Formats a string containing the fully-qualified path to represent a
    * mobile_app_category_constant resource.
+   *
+   * @deprecated Use the {@link MobileAppCategoryConstantName} class instead.
    */
+  @Deprecated
   public static final String formatMobileAppCategoryConstantName(String mobileAppCategoryConstant) {
     return MOBILE_APP_CATEGORY_CONSTANT_PATH_TEMPLATE.instantiate(
         "mobile_app_category_constant", mobileAppCategoryConstant);
@@ -115,7 +118,10 @@ public class MobileAppCategoryConstantServiceClient implements BackgroundResourc
   /**
    * Parses the mobile_app_category_constant from the given fully-qualified path which represents a
    * mobile_app_category_constant resource.
+   *
+   * @deprecated Use the {@link MobileAppCategoryConstantName} class instead.
    */
+  @Deprecated
   public static final String parseMobileAppCategoryConstantFromMobileAppCategoryConstantName(
       String mobileAppCategoryConstantName) {
     return MOBILE_APP_CATEGORY_CONSTANT_PATH_TEMPLATE

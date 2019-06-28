@@ -106,7 +106,10 @@ public class GroupPlacementViewServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a group_placement_view
    * resource.
+   *
+   * @deprecated Use the {@link GroupPlacementViewName} class instead.
    */
+  @Deprecated
   public static final String formatGroupPlacementViewName(
       String customer, String groupPlacementView) {
     return GROUP_PLACEMENT_VIEW_PATH_TEMPLATE.instantiate(
@@ -117,7 +120,10 @@ public class GroupPlacementViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a group_placement_view
    * resource.
+   *
+   * @deprecated Use the {@link GroupPlacementViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromGroupPlacementViewName(
       String groupPlacementViewName) {
     return GROUP_PLACEMENT_VIEW_PATH_TEMPLATE.parse(groupPlacementViewName).get("customer");
@@ -126,7 +132,10 @@ public class GroupPlacementViewServiceClient implements BackgroundResource {
   /**
    * Parses the group_placement_view from the given fully-qualified path which represents a
    * group_placement_view resource.
+   *
+   * @deprecated Use the {@link GroupPlacementViewName} class instead.
    */
+  @Deprecated
   public static final String parseGroupPlacementViewFromGroupPlacementViewName(
       String groupPlacementViewName) {
     return GROUP_PLACEMENT_VIEW_PATH_TEMPLATE

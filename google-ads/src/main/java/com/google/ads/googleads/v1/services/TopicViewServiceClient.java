@@ -102,7 +102,12 @@ public class TopicViewServiceClient implements BackgroundResource {
   private static final PathTemplate TOPIC_VIEW_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/topicViews/{topic_view}");
 
-  /** Formats a string containing the fully-qualified path to represent a topic_view resource. */
+  /**
+   * Formats a string containing the fully-qualified path to represent a topic_view resource.
+   *
+   * @deprecated Use the {@link TopicViewName} class instead.
+   */
+  @Deprecated
   public static final String formatTopicViewName(String customer, String topicView) {
     return TOPIC_VIEW_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -111,7 +116,10 @@ public class TopicViewServiceClient implements BackgroundResource {
 
   /**
    * Parses the customer from the given fully-qualified path which represents a topic_view resource.
+   *
+   * @deprecated Use the {@link TopicViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromTopicViewName(String topicViewName) {
     return TOPIC_VIEW_PATH_TEMPLATE.parse(topicViewName).get("customer");
   }
@@ -119,7 +127,10 @@ public class TopicViewServiceClient implements BackgroundResource {
   /**
    * Parses the topic_view from the given fully-qualified path which represents a topic_view
    * resource.
+   *
+   * @deprecated Use the {@link TopicViewName} class instead.
    */
+  @Deprecated
   public static final String parseTopicViewFromTopicViewName(String topicViewName) {
     return TOPIC_VIEW_PATH_TEMPLATE.parse(topicViewName).get("topic_view");
   }

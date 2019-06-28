@@ -25,7 +25,7 @@ import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
 import com.google.common.collect.Lists;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -404,7 +404,7 @@ public class GoogleAdsServiceClientTest {
     Assert.assertEquals(1, resources.size());
     Assert.assertEquals(expectedResponse.getResultsList().get(0), resources.get(0));
 
-    List<GeneratedMessageV3> actualRequests = mockGoogleAdsService.getRequests();
+    List<AbstractMessage> actualRequests = mockGoogleAdsService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     SearchGoogleAdsRequest actualRequest = (SearchGoogleAdsRequest) actualRequests.get(0);
 
@@ -459,7 +459,7 @@ public class GoogleAdsServiceClientTest {
     Assert.assertEquals(1, resources.size());
     Assert.assertEquals(expectedResponse.getResultsList().get(0), resources.get(0));
 
-    List<GeneratedMessageV3> actualRequests = mockGoogleAdsService.getRequests();
+    List<AbstractMessage> actualRequests = mockGoogleAdsService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     SearchGoogleAdsRequest actualRequest = (SearchGoogleAdsRequest) actualRequests.get(0);
 
@@ -503,7 +503,7 @@ public class GoogleAdsServiceClientTest {
         client.mutate(customerId, mutateOperations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockGoogleAdsService.getRequests();
+    List<AbstractMessage> actualRequests = mockGoogleAdsService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateGoogleAdsRequest actualRequest = (MutateGoogleAdsRequest) actualRequests.get(0);
 
@@ -548,7 +548,7 @@ public class GoogleAdsServiceClientTest {
     MutateGoogleAdsResponse actualResponse = client.mutate(customerId, mutateOperations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockGoogleAdsService.getRequests();
+    List<AbstractMessage> actualRequests = mockGoogleAdsService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateGoogleAdsRequest actualRequest = (MutateGoogleAdsRequest) actualRequests.get(0);
 

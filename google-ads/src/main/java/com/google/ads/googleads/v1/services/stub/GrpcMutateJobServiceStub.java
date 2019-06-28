@@ -34,13 +34,16 @@ import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.OperationCallable;
+import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.Operation;
 import com.google.longrunning.stub.GrpcOperationsStub;
 import com.google.protobuf.Empty;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -168,25 +171,70 @@ public class GrpcMutateJobServiceStub extends MutateJobServiceStub {
         createMutateJobTransportSettings =
             GrpcCallSettings.<CreateMutateJobRequest, CreateMutateJobResponse>newBuilder()
                 .setMethodDescriptor(createMutateJobMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<CreateMutateJobRequest>() {
+                      @Override
+                      public Map<String, String> extract(CreateMutateJobRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("customer_id", String.valueOf(request.getCustomerId()));
+                        return params.build();
+                      }
+                    })
                 .build();
     GrpcCallSettings<GetMutateJobRequest, MutateJob> getMutateJobTransportSettings =
         GrpcCallSettings.<GetMutateJobRequest, MutateJob>newBuilder()
             .setMethodDescriptor(getMutateJobMethodDescriptor)
+            .setParamsExtractor(
+                new RequestParamsExtractor<GetMutateJobRequest>() {
+                  @Override
+                  public Map<String, String> extract(GetMutateJobRequest request) {
+                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("resource_name", String.valueOf(request.getResourceName()));
+                    return params.build();
+                  }
+                })
             .build();
     GrpcCallSettings<ListMutateJobResultsRequest, ListMutateJobResultsResponse>
         listMutateJobResultsTransportSettings =
             GrpcCallSettings.<ListMutateJobResultsRequest, ListMutateJobResultsResponse>newBuilder()
                 .setMethodDescriptor(listMutateJobResultsMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<ListMutateJobResultsRequest>() {
+                      @Override
+                      public Map<String, String> extract(ListMutateJobResultsRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("resource_name", String.valueOf(request.getResourceName()));
+                        return params.build();
+                      }
+                    })
                 .build();
     GrpcCallSettings<RunMutateJobRequest, Operation> runMutateJobTransportSettings =
         GrpcCallSettings.<RunMutateJobRequest, Operation>newBuilder()
             .setMethodDescriptor(runMutateJobMethodDescriptor)
+            .setParamsExtractor(
+                new RequestParamsExtractor<RunMutateJobRequest>() {
+                  @Override
+                  public Map<String, String> extract(RunMutateJobRequest request) {
+                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("resource_name", String.valueOf(request.getResourceName()));
+                    return params.build();
+                  }
+                })
             .build();
     GrpcCallSettings<AddMutateJobOperationsRequest, AddMutateJobOperationsResponse>
         addMutateJobOperationsTransportSettings =
             GrpcCallSettings
                 .<AddMutateJobOperationsRequest, AddMutateJobOperationsResponse>newBuilder()
                 .setMethodDescriptor(addMutateJobOperationsMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<AddMutateJobOperationsRequest>() {
+                      @Override
+                      public Map<String, String> extract(AddMutateJobOperationsRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("resource_name", String.valueOf(request.getResourceName()));
+                        return params.build();
+                      }
+                    })
                 .build();
 
     this.createMutateJobCallable =

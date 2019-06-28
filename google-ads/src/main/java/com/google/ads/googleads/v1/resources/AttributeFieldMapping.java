@@ -199,7 +199,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -1231,110 +1231,107 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.AttributeFieldMapping other = (com.google.ads.googleads.v1.resources.AttributeFieldMapping) obj;
 
-    boolean result = true;
-    result = result && (hasFeedAttributeId() == other.hasFeedAttributeId());
+    if (hasFeedAttributeId() != other.hasFeedAttributeId()) return false;
     if (hasFeedAttributeId()) {
-      result = result && getFeedAttributeId()
-          .equals(other.getFeedAttributeId());
+      if (!getFeedAttributeId()
+          .equals(other.getFeedAttributeId())) return false;
     }
-    result = result && (hasFieldId() == other.hasFieldId());
+    if (hasFieldId() != other.hasFieldId()) return false;
     if (hasFieldId()) {
-      result = result && getFieldId()
-          .equals(other.getFieldId());
+      if (!getFieldId()
+          .equals(other.getFieldId())) return false;
     }
-    result = result && getFieldCase().equals(
-        other.getFieldCase());
-    if (!result) return false;
+    if (!getFieldCase().equals(other.getFieldCase())) return false;
     switch (fieldCase_) {
       case 3:
-        result = result && getSitelinkFieldValue()
-            == other.getSitelinkFieldValue();
+        if (getSitelinkFieldValue()
+            != other.getSitelinkFieldValue()) return false;
         break;
       case 4:
-        result = result && getCallFieldValue()
-            == other.getCallFieldValue();
+        if (getCallFieldValue()
+            != other.getCallFieldValue()) return false;
         break;
       case 5:
-        result = result && getAppFieldValue()
-            == other.getAppFieldValue();
+        if (getAppFieldValue()
+            != other.getAppFieldValue()) return false;
         break;
       case 6:
-        result = result && getLocationFieldValue()
-            == other.getLocationFieldValue();
+        if (getLocationFieldValue()
+            != other.getLocationFieldValue()) return false;
         break;
       case 7:
-        result = result && getAffiliateLocationFieldValue()
-            == other.getAffiliateLocationFieldValue();
+        if (getAffiliateLocationFieldValue()
+            != other.getAffiliateLocationFieldValue()) return false;
         break;
       case 8:
-        result = result && getCalloutFieldValue()
-            == other.getCalloutFieldValue();
+        if (getCalloutFieldValue()
+            != other.getCalloutFieldValue()) return false;
         break;
       case 9:
-        result = result && getStructuredSnippetFieldValue()
-            == other.getStructuredSnippetFieldValue();
+        if (getStructuredSnippetFieldValue()
+            != other.getStructuredSnippetFieldValue()) return false;
         break;
       case 10:
-        result = result && getMessageFieldValue()
-            == other.getMessageFieldValue();
+        if (getMessageFieldValue()
+            != other.getMessageFieldValue()) return false;
         break;
       case 11:
-        result = result && getPriceFieldValue()
-            == other.getPriceFieldValue();
+        if (getPriceFieldValue()
+            != other.getPriceFieldValue()) return false;
         break;
       case 12:
-        result = result && getPromotionFieldValue()
-            == other.getPromotionFieldValue();
+        if (getPromotionFieldValue()
+            != other.getPromotionFieldValue()) return false;
         break;
       case 13:
-        result = result && getAdCustomizerFieldValue()
-            == other.getAdCustomizerFieldValue();
+        if (getAdCustomizerFieldValue()
+            != other.getAdCustomizerFieldValue()) return false;
         break;
       case 14:
-        result = result && getDsaPageFeedFieldValue()
-            == other.getDsaPageFeedFieldValue();
+        if (getDsaPageFeedFieldValue()
+            != other.getDsaPageFeedFieldValue()) return false;
         break;
       case 15:
-        result = result && getLocationExtensionTargetingFieldValue()
-            == other.getLocationExtensionTargetingFieldValue();
+        if (getLocationExtensionTargetingFieldValue()
+            != other.getLocationExtensionTargetingFieldValue()) return false;
         break;
       case 16:
-        result = result && getEducationFieldValue()
-            == other.getEducationFieldValue();
+        if (getEducationFieldValue()
+            != other.getEducationFieldValue()) return false;
         break;
       case 17:
-        result = result && getFlightFieldValue()
-            == other.getFlightFieldValue();
+        if (getFlightFieldValue()
+            != other.getFlightFieldValue()) return false;
         break;
       case 18:
-        result = result && getCustomFieldValue()
-            == other.getCustomFieldValue();
+        if (getCustomFieldValue()
+            != other.getCustomFieldValue()) return false;
         break;
       case 19:
-        result = result && getHotelFieldValue()
-            == other.getHotelFieldValue();
+        if (getHotelFieldValue()
+            != other.getHotelFieldValue()) return false;
         break;
       case 20:
-        result = result && getRealEstateFieldValue()
-            == other.getRealEstateFieldValue();
+        if (getRealEstateFieldValue()
+            != other.getRealEstateFieldValue()) return false;
         break;
       case 21:
-        result = result && getTravelFieldValue()
-            == other.getTravelFieldValue();
+        if (getTravelFieldValue()
+            != other.getTravelFieldValue()) return false;
         break;
       case 22:
-        result = result && getLocalFieldValue()
-            == other.getLocalFieldValue();
+        if (getLocalFieldValue()
+            != other.getLocalFieldValue()) return false;
         break;
       case 23:
-        result = result && getJobFieldValue()
-            == other.getJobFieldValue();
+        if (getJobFieldValue()
+            != other.getJobFieldValue()) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1697,35 +1694,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1878,7 +1875,7 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    private com.google.protobuf.Int64Value feedAttributeId_ = null;
+    private com.google.protobuf.Int64Value feedAttributeId_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> feedAttributeIdBuilder_;
     /**
@@ -2031,7 +2028,7 @@ private static final long serialVersionUID = 0L;
       return feedAttributeIdBuilder_;
     }
 
-    private com.google.protobuf.Int64Value fieldId_ = null;
+    private com.google.protobuf.Int64Value fieldId_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> fieldIdBuilder_;
     /**
@@ -3767,7 +3764,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

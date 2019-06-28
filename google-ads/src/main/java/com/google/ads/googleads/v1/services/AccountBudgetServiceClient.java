@@ -106,7 +106,10 @@ public class AccountBudgetServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a account_budget resource.
+   *
+   * @deprecated Use the {@link AccountBudgetName} class instead.
    */
+  @Deprecated
   public static final String formatAccountBudgetName(String customer, String accountBudget) {
     return ACCOUNT_BUDGET_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -116,7 +119,10 @@ public class AccountBudgetServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a account_budget
    * resource.
+   *
+   * @deprecated Use the {@link AccountBudgetName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromAccountBudgetName(String accountBudgetName) {
     return ACCOUNT_BUDGET_PATH_TEMPLATE.parse(accountBudgetName).get("customer");
   }
@@ -124,7 +130,10 @@ public class AccountBudgetServiceClient implements BackgroundResource {
   /**
    * Parses the account_budget from the given fully-qualified path which represents a account_budget
    * resource.
+   *
+   * @deprecated Use the {@link AccountBudgetName} class instead.
    */
+  @Deprecated
   public static final String parseAccountBudgetFromAccountBudgetName(String accountBudgetName) {
     return ACCOUNT_BUDGET_PATH_TEMPLATE.parse(accountBudgetName).get("account_budget");
   }

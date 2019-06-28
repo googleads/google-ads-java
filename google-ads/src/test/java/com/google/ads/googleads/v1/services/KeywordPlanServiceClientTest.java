@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -390,7 +390,7 @@ public class KeywordPlanServiceClientTest {
     KeywordPlan actualResponse = client.getKeywordPlan(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockKeywordPlanService.getRequests();
+    List<AbstractMessage> actualRequests = mockKeywordPlanService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetKeywordPlanRequest actualRequest = (GetKeywordPlanRequest) actualRequests.get(0);
 
@@ -433,7 +433,7 @@ public class KeywordPlanServiceClientTest {
         client.mutateKeywordPlans(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockKeywordPlanService.getRequests();
+    List<AbstractMessage> actualRequests = mockKeywordPlanService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateKeywordPlansRequest actualRequest = (MutateKeywordPlansRequest) actualRequests.get(0);
 
@@ -478,7 +478,7 @@ public class KeywordPlanServiceClientTest {
     MutateKeywordPlansResponse actualResponse = client.mutateKeywordPlans(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockKeywordPlanService.getRequests();
+    List<AbstractMessage> actualRequests = mockKeywordPlanService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateKeywordPlansRequest actualRequest = (MutateKeywordPlansRequest) actualRequests.get(0);
 
@@ -521,7 +521,7 @@ public class KeywordPlanServiceClientTest {
         client.generateForecastMetrics(formattedKeywordPlan);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockKeywordPlanService.getRequests();
+    List<AbstractMessage> actualRequests = mockKeywordPlanService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GenerateForecastMetricsRequest actualRequest =
         (GenerateForecastMetricsRequest) actualRequests.get(0);
@@ -564,7 +564,7 @@ public class KeywordPlanServiceClientTest {
         client.generateHistoricalMetrics(formattedKeywordPlan);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockKeywordPlanService.getRequests();
+    List<AbstractMessage> actualRequests = mockKeywordPlanService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GenerateHistoricalMetricsRequest actualRequest =
         (GenerateHistoricalMetricsRequest) actualRequests.get(0);

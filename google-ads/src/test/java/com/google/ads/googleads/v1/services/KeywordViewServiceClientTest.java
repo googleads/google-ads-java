@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -389,7 +389,7 @@ public class KeywordViewServiceClientTest {
     KeywordView actualResponse = client.getKeywordView(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockKeywordViewService.getRequests();
+    List<AbstractMessage> actualRequests = mockKeywordViewService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetKeywordViewRequest actualRequest = (GetKeywordViewRequest) actualRequests.get(0);
 

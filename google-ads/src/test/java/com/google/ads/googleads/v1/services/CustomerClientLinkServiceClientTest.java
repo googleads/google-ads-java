@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -391,7 +391,7 @@ public class CustomerClientLinkServiceClientTest {
     CustomerClientLink actualResponse = client.getCustomerClientLink(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCustomerClientLinkService.getRequests();
+    List<AbstractMessage> actualRequests = mockCustomerClientLinkService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetCustomerClientLinkRequest actualRequest =
         (GetCustomerClientLinkRequest) actualRequests.get(0);
@@ -435,7 +435,7 @@ public class CustomerClientLinkServiceClientTest {
         client.mutateCustomerClientLink(customerId, operation);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCustomerClientLinkService.getRequests();
+    List<AbstractMessage> actualRequests = mockCustomerClientLinkService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCustomerClientLinkRequest actualRequest =
         (MutateCustomerClientLinkRequest) actualRequests.get(0);

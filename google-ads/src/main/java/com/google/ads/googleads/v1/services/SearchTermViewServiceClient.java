@@ -105,7 +105,10 @@ public class SearchTermViewServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a search_term_view resource.
+   *
+   * @deprecated Use the {@link SearchTermViewName} class instead.
    */
+  @Deprecated
   public static final String formatSearchTermViewName(String customer, String searchTermView) {
     return SEARCH_TERM_VIEW_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -115,7 +118,10 @@ public class SearchTermViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a search_term_view
    * resource.
+   *
+   * @deprecated Use the {@link SearchTermViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromSearchTermViewName(String searchTermViewName) {
     return SEARCH_TERM_VIEW_PATH_TEMPLATE.parse(searchTermViewName).get("customer");
   }
@@ -123,7 +129,10 @@ public class SearchTermViewServiceClient implements BackgroundResource {
   /**
    * Parses the search_term_view from the given fully-qualified path which represents a
    * search_term_view resource.
+   *
+   * @deprecated Use the {@link SearchTermViewName} class instead.
    */
+  @Deprecated
   public static final String parseSearchTermViewFromSearchTermViewName(String searchTermViewName) {
     return SEARCH_TERM_VIEW_PATH_TEMPLATE.parse(searchTermViewName).get("search_term_view");
   }

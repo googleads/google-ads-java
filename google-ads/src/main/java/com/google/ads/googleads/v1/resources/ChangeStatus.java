@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -840,68 +840,67 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.ChangeStatus other = (com.google.ads.googleads.v1.resources.ChangeStatus) obj;
 
-    boolean result = true;
-    result = result && getResourceName()
-        .equals(other.getResourceName());
-    result = result && (hasLastChangeDateTime() == other.hasLastChangeDateTime());
+    if (!getResourceName()
+        .equals(other.getResourceName())) return false;
+    if (hasLastChangeDateTime() != other.hasLastChangeDateTime()) return false;
     if (hasLastChangeDateTime()) {
-      result = result && getLastChangeDateTime()
-          .equals(other.getLastChangeDateTime());
+      if (!getLastChangeDateTime()
+          .equals(other.getLastChangeDateTime())) return false;
     }
-    result = result && resourceType_ == other.resourceType_;
-    result = result && (hasCampaign() == other.hasCampaign());
+    if (resourceType_ != other.resourceType_) return false;
+    if (hasCampaign() != other.hasCampaign()) return false;
     if (hasCampaign()) {
-      result = result && getCampaign()
-          .equals(other.getCampaign());
+      if (!getCampaign()
+          .equals(other.getCampaign())) return false;
     }
-    result = result && (hasAdGroup() == other.hasAdGroup());
+    if (hasAdGroup() != other.hasAdGroup()) return false;
     if (hasAdGroup()) {
-      result = result && getAdGroup()
-          .equals(other.getAdGroup());
+      if (!getAdGroup()
+          .equals(other.getAdGroup())) return false;
     }
-    result = result && resourceStatus_ == other.resourceStatus_;
-    result = result && (hasAdGroupAd() == other.hasAdGroupAd());
+    if (resourceStatus_ != other.resourceStatus_) return false;
+    if (hasAdGroupAd() != other.hasAdGroupAd()) return false;
     if (hasAdGroupAd()) {
-      result = result && getAdGroupAd()
-          .equals(other.getAdGroupAd());
+      if (!getAdGroupAd()
+          .equals(other.getAdGroupAd())) return false;
     }
-    result = result && (hasAdGroupCriterion() == other.hasAdGroupCriterion());
+    if (hasAdGroupCriterion() != other.hasAdGroupCriterion()) return false;
     if (hasAdGroupCriterion()) {
-      result = result && getAdGroupCriterion()
-          .equals(other.getAdGroupCriterion());
+      if (!getAdGroupCriterion()
+          .equals(other.getAdGroupCriterion())) return false;
     }
-    result = result && (hasCampaignCriterion() == other.hasCampaignCriterion());
+    if (hasCampaignCriterion() != other.hasCampaignCriterion()) return false;
     if (hasCampaignCriterion()) {
-      result = result && getCampaignCriterion()
-          .equals(other.getCampaignCriterion());
+      if (!getCampaignCriterion()
+          .equals(other.getCampaignCriterion())) return false;
     }
-    result = result && (hasFeed() == other.hasFeed());
+    if (hasFeed() != other.hasFeed()) return false;
     if (hasFeed()) {
-      result = result && getFeed()
-          .equals(other.getFeed());
+      if (!getFeed()
+          .equals(other.getFeed())) return false;
     }
-    result = result && (hasFeedItem() == other.hasFeedItem());
+    if (hasFeedItem() != other.hasFeedItem()) return false;
     if (hasFeedItem()) {
-      result = result && getFeedItem()
-          .equals(other.getFeedItem());
+      if (!getFeedItem()
+          .equals(other.getFeedItem())) return false;
     }
-    result = result && (hasAdGroupFeed() == other.hasAdGroupFeed());
+    if (hasAdGroupFeed() != other.hasAdGroupFeed()) return false;
     if (hasAdGroupFeed()) {
-      result = result && getAdGroupFeed()
-          .equals(other.getAdGroupFeed());
+      if (!getAdGroupFeed()
+          .equals(other.getAdGroupFeed())) return false;
     }
-    result = result && (hasCampaignFeed() == other.hasCampaignFeed());
+    if (hasCampaignFeed() != other.hasCampaignFeed()) return false;
     if (hasCampaignFeed()) {
-      result = result && getCampaignFeed()
-          .equals(other.getCampaignFeed());
+      if (!getCampaignFeed()
+          .equals(other.getCampaignFeed())) return false;
     }
-    result = result && (hasAdGroupBidModifier() == other.hasAdGroupBidModifier());
+    if (hasAdGroupBidModifier() != other.hasAdGroupBidModifier()) return false;
     if (hasAdGroupBidModifier()) {
-      result = result && getAdGroupBidModifier()
-          .equals(other.getAdGroupBidModifier());
+      if (!getAdGroupBidModifier()
+          .equals(other.getAdGroupBidModifier())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1260,35 +1259,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1473,7 +1472,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue lastChangeDateTime_ = null;
+    private com.google.protobuf.StringValue lastChangeDateTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> lastChangeDateTimeBuilder_;
     /**
@@ -1701,7 +1700,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue campaign_ = null;
+    private com.google.protobuf.StringValue campaign_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignBuilder_;
     /**
@@ -1854,7 +1853,7 @@ private static final long serialVersionUID = 0L;
       return campaignBuilder_;
     }
 
-    private com.google.protobuf.StringValue adGroup_ = null;
+    private com.google.protobuf.StringValue adGroup_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupBuilder_;
     /**
@@ -2072,7 +2071,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue adGroupAd_ = null;
+    private com.google.protobuf.StringValue adGroupAd_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupAdBuilder_;
     /**
@@ -2225,7 +2224,7 @@ private static final long serialVersionUID = 0L;
       return adGroupAdBuilder_;
     }
 
-    private com.google.protobuf.StringValue adGroupCriterion_ = null;
+    private com.google.protobuf.StringValue adGroupCriterion_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupCriterionBuilder_;
     /**
@@ -2378,7 +2377,7 @@ private static final long serialVersionUID = 0L;
       return adGroupCriterionBuilder_;
     }
 
-    private com.google.protobuf.StringValue campaignCriterion_ = null;
+    private com.google.protobuf.StringValue campaignCriterion_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignCriterionBuilder_;
     /**
@@ -2531,7 +2530,7 @@ private static final long serialVersionUID = 0L;
       return campaignCriterionBuilder_;
     }
 
-    private com.google.protobuf.StringValue feed_ = null;
+    private com.google.protobuf.StringValue feed_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> feedBuilder_;
     /**
@@ -2684,7 +2683,7 @@ private static final long serialVersionUID = 0L;
       return feedBuilder_;
     }
 
-    private com.google.protobuf.StringValue feedItem_ = null;
+    private com.google.protobuf.StringValue feedItem_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> feedItemBuilder_;
     /**
@@ -2837,7 +2836,7 @@ private static final long serialVersionUID = 0L;
       return feedItemBuilder_;
     }
 
-    private com.google.protobuf.StringValue adGroupFeed_ = null;
+    private com.google.protobuf.StringValue adGroupFeed_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupFeedBuilder_;
     /**
@@ -2990,7 +2989,7 @@ private static final long serialVersionUID = 0L;
       return adGroupFeedBuilder_;
     }
 
-    private com.google.protobuf.StringValue campaignFeed_ = null;
+    private com.google.protobuf.StringValue campaignFeed_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignFeedBuilder_;
     /**
@@ -3143,7 +3142,7 @@ private static final long serialVersionUID = 0L;
       return campaignFeedBuilder_;
     }
 
-    private com.google.protobuf.StringValue adGroupBidModifier_ = null;
+    private com.google.protobuf.StringValue adGroupBidModifier_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupBidModifierBuilder_;
     /**
@@ -3298,7 +3297,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

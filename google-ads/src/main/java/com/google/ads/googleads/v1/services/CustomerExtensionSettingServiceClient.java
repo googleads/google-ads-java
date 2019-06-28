@@ -107,7 +107,10 @@ public class CustomerExtensionSettingServiceClient implements BackgroundResource
   /**
    * Formats a string containing the fully-qualified path to represent a customer_extension_setting
    * resource.
+   *
+   * @deprecated Use the {@link CustomerExtensionSettingName} class instead.
    */
+  @Deprecated
   public static final String formatCustomerExtensionSettingName(
       String customer, String customerExtensionSetting) {
     return CUSTOMER_EXTENSION_SETTING_PATH_TEMPLATE.instantiate(
@@ -118,7 +121,10 @@ public class CustomerExtensionSettingServiceClient implements BackgroundResource
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * customer_extension_setting resource.
+   *
+   * @deprecated Use the {@link CustomerExtensionSettingName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromCustomerExtensionSettingName(
       String customerExtensionSettingName) {
     return CUSTOMER_EXTENSION_SETTING_PATH_TEMPLATE
@@ -129,7 +135,10 @@ public class CustomerExtensionSettingServiceClient implements BackgroundResource
   /**
    * Parses the customer_extension_setting from the given fully-qualified path which represents a
    * customer_extension_setting resource.
+   *
+   * @deprecated Use the {@link CustomerExtensionSettingName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerExtensionSettingFromCustomerExtensionSettingName(
       String customerExtensionSettingName) {
     return CUSTOMER_EXTENSION_SETTING_PATH_TEMPLATE

@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -277,20 +277,19 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.CombinedRuleUserListInfo other = (com.google.ads.googleads.v1.common.CombinedRuleUserListInfo) obj;
 
-    boolean result = true;
-    result = result && (hasLeftOperand() == other.hasLeftOperand());
+    if (hasLeftOperand() != other.hasLeftOperand()) return false;
     if (hasLeftOperand()) {
-      result = result && getLeftOperand()
-          .equals(other.getLeftOperand());
+      if (!getLeftOperand()
+          .equals(other.getLeftOperand())) return false;
     }
-    result = result && (hasRightOperand() == other.hasRightOperand());
+    if (hasRightOperand() != other.hasRightOperand()) return false;
     if (hasRightOperand()) {
-      result = result && getRightOperand()
-          .equals(other.getRightOperand());
+      if (!getRightOperand()
+          .equals(other.getRightOperand())) return false;
     }
-    result = result && ruleOperator_ == other.ruleOperator_;
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (ruleOperator_ != other.ruleOperator_) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -506,35 +505,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -586,7 +585,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.ads.googleads.v1.common.UserListRuleInfo leftOperand_ = null;
+    private com.google.ads.googleads.v1.common.UserListRuleInfo leftOperand_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.UserListRuleInfo, com.google.ads.googleads.v1.common.UserListRuleInfo.Builder, com.google.ads.googleads.v1.common.UserListRuleInfoOrBuilder> leftOperandBuilder_;
     /**
@@ -757,7 +756,7 @@ private static final long serialVersionUID = 0L;
       return leftOperandBuilder_;
     }
 
-    private com.google.ads.googleads.v1.common.UserListRuleInfo rightOperand_ = null;
+    private com.google.ads.googleads.v1.common.UserListRuleInfo rightOperand_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.UserListRuleInfo, com.google.ads.googleads.v1.common.UserListRuleInfo.Builder, com.google.ads.googleads.v1.common.UserListRuleInfoOrBuilder> rightOperandBuilder_;
     /**
@@ -1000,7 +999,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

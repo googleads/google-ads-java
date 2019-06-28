@@ -1126,7 +1126,7 @@ private static final long serialVersionUID = 0L;
           }
           case 800: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField2_ & 0x00000100) == 0x00000100)) {
+            if (!((mutable_bitField2_ & 0x00000100) != 0)) {
               interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>();
               mutable_bitField2_ |= 0x00000100;
             }
@@ -1138,7 +1138,7 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField2_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField2_ & 0x00000100) != 0)) {
                 interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField2_ |= 0x00000100;
               }
@@ -1473,7 +1473,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -1487,7 +1487,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField2_ & 0x00000100) == 0x00000100)) {
+      if (((mutable_bitField2_ & 0x00000100) != 0)) {
         interactionEventTypes_ = java.util.Collections.unmodifiableList(interactionEventTypes_);
       }
       this.unknownFields = unknownFields.build();
@@ -6451,543 +6451,542 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.Metrics other = (com.google.ads.googleads.v1.common.Metrics) obj;
 
-    boolean result = true;
-    result = result && (hasAbsoluteTopImpressionPercentage() == other.hasAbsoluteTopImpressionPercentage());
+    if (hasAbsoluteTopImpressionPercentage() != other.hasAbsoluteTopImpressionPercentage()) return false;
     if (hasAbsoluteTopImpressionPercentage()) {
-      result = result && getAbsoluteTopImpressionPercentage()
-          .equals(other.getAbsoluteTopImpressionPercentage());
+      if (!getAbsoluteTopImpressionPercentage()
+          .equals(other.getAbsoluteTopImpressionPercentage())) return false;
     }
-    result = result && (hasActiveViewCpm() == other.hasActiveViewCpm());
+    if (hasActiveViewCpm() != other.hasActiveViewCpm()) return false;
     if (hasActiveViewCpm()) {
-      result = result && getActiveViewCpm()
-          .equals(other.getActiveViewCpm());
+      if (!getActiveViewCpm()
+          .equals(other.getActiveViewCpm())) return false;
     }
-    result = result && (hasActiveViewCtr() == other.hasActiveViewCtr());
+    if (hasActiveViewCtr() != other.hasActiveViewCtr()) return false;
     if (hasActiveViewCtr()) {
-      result = result && getActiveViewCtr()
-          .equals(other.getActiveViewCtr());
+      if (!getActiveViewCtr()
+          .equals(other.getActiveViewCtr())) return false;
     }
-    result = result && (hasActiveViewImpressions() == other.hasActiveViewImpressions());
+    if (hasActiveViewImpressions() != other.hasActiveViewImpressions()) return false;
     if (hasActiveViewImpressions()) {
-      result = result && getActiveViewImpressions()
-          .equals(other.getActiveViewImpressions());
+      if (!getActiveViewImpressions()
+          .equals(other.getActiveViewImpressions())) return false;
     }
-    result = result && (hasActiveViewMeasurability() == other.hasActiveViewMeasurability());
+    if (hasActiveViewMeasurability() != other.hasActiveViewMeasurability()) return false;
     if (hasActiveViewMeasurability()) {
-      result = result && getActiveViewMeasurability()
-          .equals(other.getActiveViewMeasurability());
+      if (!getActiveViewMeasurability()
+          .equals(other.getActiveViewMeasurability())) return false;
     }
-    result = result && (hasActiveViewMeasurableCostMicros() == other.hasActiveViewMeasurableCostMicros());
+    if (hasActiveViewMeasurableCostMicros() != other.hasActiveViewMeasurableCostMicros()) return false;
     if (hasActiveViewMeasurableCostMicros()) {
-      result = result && getActiveViewMeasurableCostMicros()
-          .equals(other.getActiveViewMeasurableCostMicros());
+      if (!getActiveViewMeasurableCostMicros()
+          .equals(other.getActiveViewMeasurableCostMicros())) return false;
     }
-    result = result && (hasActiveViewMeasurableImpressions() == other.hasActiveViewMeasurableImpressions());
+    if (hasActiveViewMeasurableImpressions() != other.hasActiveViewMeasurableImpressions()) return false;
     if (hasActiveViewMeasurableImpressions()) {
-      result = result && getActiveViewMeasurableImpressions()
-          .equals(other.getActiveViewMeasurableImpressions());
+      if (!getActiveViewMeasurableImpressions()
+          .equals(other.getActiveViewMeasurableImpressions())) return false;
     }
-    result = result && (hasActiveViewViewability() == other.hasActiveViewViewability());
+    if (hasActiveViewViewability() != other.hasActiveViewViewability()) return false;
     if (hasActiveViewViewability()) {
-      result = result && getActiveViewViewability()
-          .equals(other.getActiveViewViewability());
+      if (!getActiveViewViewability()
+          .equals(other.getActiveViewViewability())) return false;
     }
-    result = result && (hasAllConversionsFromInteractionsRate() == other.hasAllConversionsFromInteractionsRate());
+    if (hasAllConversionsFromInteractionsRate() != other.hasAllConversionsFromInteractionsRate()) return false;
     if (hasAllConversionsFromInteractionsRate()) {
-      result = result && getAllConversionsFromInteractionsRate()
-          .equals(other.getAllConversionsFromInteractionsRate());
+      if (!getAllConversionsFromInteractionsRate()
+          .equals(other.getAllConversionsFromInteractionsRate())) return false;
     }
-    result = result && (hasAllConversionsValue() == other.hasAllConversionsValue());
+    if (hasAllConversionsValue() != other.hasAllConversionsValue()) return false;
     if (hasAllConversionsValue()) {
-      result = result && getAllConversionsValue()
-          .equals(other.getAllConversionsValue());
+      if (!getAllConversionsValue()
+          .equals(other.getAllConversionsValue())) return false;
     }
-    result = result && (hasAllConversions() == other.hasAllConversions());
+    if (hasAllConversions() != other.hasAllConversions()) return false;
     if (hasAllConversions()) {
-      result = result && getAllConversions()
-          .equals(other.getAllConversions());
+      if (!getAllConversions()
+          .equals(other.getAllConversions())) return false;
     }
-    result = result && (hasAllConversionsValuePerCost() == other.hasAllConversionsValuePerCost());
+    if (hasAllConversionsValuePerCost() != other.hasAllConversionsValuePerCost()) return false;
     if (hasAllConversionsValuePerCost()) {
-      result = result && getAllConversionsValuePerCost()
-          .equals(other.getAllConversionsValuePerCost());
+      if (!getAllConversionsValuePerCost()
+          .equals(other.getAllConversionsValuePerCost())) return false;
     }
-    result = result && (hasAllConversionsFromClickToCall() == other.hasAllConversionsFromClickToCall());
+    if (hasAllConversionsFromClickToCall() != other.hasAllConversionsFromClickToCall()) return false;
     if (hasAllConversionsFromClickToCall()) {
-      result = result && getAllConversionsFromClickToCall()
-          .equals(other.getAllConversionsFromClickToCall());
+      if (!getAllConversionsFromClickToCall()
+          .equals(other.getAllConversionsFromClickToCall())) return false;
     }
-    result = result && (hasAllConversionsFromDirections() == other.hasAllConversionsFromDirections());
+    if (hasAllConversionsFromDirections() != other.hasAllConversionsFromDirections()) return false;
     if (hasAllConversionsFromDirections()) {
-      result = result && getAllConversionsFromDirections()
-          .equals(other.getAllConversionsFromDirections());
+      if (!getAllConversionsFromDirections()
+          .equals(other.getAllConversionsFromDirections())) return false;
     }
-    result = result && (hasAllConversionsFromInteractionsValuePerInteraction() == other.hasAllConversionsFromInteractionsValuePerInteraction());
+    if (hasAllConversionsFromInteractionsValuePerInteraction() != other.hasAllConversionsFromInteractionsValuePerInteraction()) return false;
     if (hasAllConversionsFromInteractionsValuePerInteraction()) {
-      result = result && getAllConversionsFromInteractionsValuePerInteraction()
-          .equals(other.getAllConversionsFromInteractionsValuePerInteraction());
+      if (!getAllConversionsFromInteractionsValuePerInteraction()
+          .equals(other.getAllConversionsFromInteractionsValuePerInteraction())) return false;
     }
-    result = result && (hasAllConversionsFromMenu() == other.hasAllConversionsFromMenu());
+    if (hasAllConversionsFromMenu() != other.hasAllConversionsFromMenu()) return false;
     if (hasAllConversionsFromMenu()) {
-      result = result && getAllConversionsFromMenu()
-          .equals(other.getAllConversionsFromMenu());
+      if (!getAllConversionsFromMenu()
+          .equals(other.getAllConversionsFromMenu())) return false;
     }
-    result = result && (hasAllConversionsFromOrder() == other.hasAllConversionsFromOrder());
+    if (hasAllConversionsFromOrder() != other.hasAllConversionsFromOrder()) return false;
     if (hasAllConversionsFromOrder()) {
-      result = result && getAllConversionsFromOrder()
-          .equals(other.getAllConversionsFromOrder());
+      if (!getAllConversionsFromOrder()
+          .equals(other.getAllConversionsFromOrder())) return false;
     }
-    result = result && (hasAllConversionsFromOtherEngagement() == other.hasAllConversionsFromOtherEngagement());
+    if (hasAllConversionsFromOtherEngagement() != other.hasAllConversionsFromOtherEngagement()) return false;
     if (hasAllConversionsFromOtherEngagement()) {
-      result = result && getAllConversionsFromOtherEngagement()
-          .equals(other.getAllConversionsFromOtherEngagement());
+      if (!getAllConversionsFromOtherEngagement()
+          .equals(other.getAllConversionsFromOtherEngagement())) return false;
     }
-    result = result && (hasAllConversionsFromStoreVisit() == other.hasAllConversionsFromStoreVisit());
+    if (hasAllConversionsFromStoreVisit() != other.hasAllConversionsFromStoreVisit()) return false;
     if (hasAllConversionsFromStoreVisit()) {
-      result = result && getAllConversionsFromStoreVisit()
-          .equals(other.getAllConversionsFromStoreVisit());
+      if (!getAllConversionsFromStoreVisit()
+          .equals(other.getAllConversionsFromStoreVisit())) return false;
     }
-    result = result && (hasAllConversionsFromStoreWebsite() == other.hasAllConversionsFromStoreWebsite());
+    if (hasAllConversionsFromStoreWebsite() != other.hasAllConversionsFromStoreWebsite()) return false;
     if (hasAllConversionsFromStoreWebsite()) {
-      result = result && getAllConversionsFromStoreWebsite()
-          .equals(other.getAllConversionsFromStoreWebsite());
+      if (!getAllConversionsFromStoreWebsite()
+          .equals(other.getAllConversionsFromStoreWebsite())) return false;
     }
-    result = result && (hasAverageCost() == other.hasAverageCost());
+    if (hasAverageCost() != other.hasAverageCost()) return false;
     if (hasAverageCost()) {
-      result = result && getAverageCost()
-          .equals(other.getAverageCost());
+      if (!getAverageCost()
+          .equals(other.getAverageCost())) return false;
     }
-    result = result && (hasAverageCpc() == other.hasAverageCpc());
+    if (hasAverageCpc() != other.hasAverageCpc()) return false;
     if (hasAverageCpc()) {
-      result = result && getAverageCpc()
-          .equals(other.getAverageCpc());
+      if (!getAverageCpc()
+          .equals(other.getAverageCpc())) return false;
     }
-    result = result && (hasAverageCpe() == other.hasAverageCpe());
+    if (hasAverageCpe() != other.hasAverageCpe()) return false;
     if (hasAverageCpe()) {
-      result = result && getAverageCpe()
-          .equals(other.getAverageCpe());
+      if (!getAverageCpe()
+          .equals(other.getAverageCpe())) return false;
     }
-    result = result && (hasAverageCpm() == other.hasAverageCpm());
+    if (hasAverageCpm() != other.hasAverageCpm()) return false;
     if (hasAverageCpm()) {
-      result = result && getAverageCpm()
-          .equals(other.getAverageCpm());
+      if (!getAverageCpm()
+          .equals(other.getAverageCpm())) return false;
     }
-    result = result && (hasAverageCpv() == other.hasAverageCpv());
+    if (hasAverageCpv() != other.hasAverageCpv()) return false;
     if (hasAverageCpv()) {
-      result = result && getAverageCpv()
-          .equals(other.getAverageCpv());
+      if (!getAverageCpv()
+          .equals(other.getAverageCpv())) return false;
     }
-    result = result && (hasAverageFrequency() == other.hasAverageFrequency());
+    if (hasAverageFrequency() != other.hasAverageFrequency()) return false;
     if (hasAverageFrequency()) {
-      result = result && getAverageFrequency()
-          .equals(other.getAverageFrequency());
+      if (!getAverageFrequency()
+          .equals(other.getAverageFrequency())) return false;
     }
-    result = result && (hasAveragePageViews() == other.hasAveragePageViews());
+    if (hasAveragePageViews() != other.hasAveragePageViews()) return false;
     if (hasAveragePageViews()) {
-      result = result && getAveragePageViews()
-          .equals(other.getAveragePageViews());
+      if (!getAveragePageViews()
+          .equals(other.getAveragePageViews())) return false;
     }
-    result = result && (hasAveragePosition() == other.hasAveragePosition());
+    if (hasAveragePosition() != other.hasAveragePosition()) return false;
     if (hasAveragePosition()) {
-      result = result && getAveragePosition()
-          .equals(other.getAveragePosition());
+      if (!getAveragePosition()
+          .equals(other.getAveragePosition())) return false;
     }
-    result = result && (hasAverageTimeOnSite() == other.hasAverageTimeOnSite());
+    if (hasAverageTimeOnSite() != other.hasAverageTimeOnSite()) return false;
     if (hasAverageTimeOnSite()) {
-      result = result && getAverageTimeOnSite()
-          .equals(other.getAverageTimeOnSite());
+      if (!getAverageTimeOnSite()
+          .equals(other.getAverageTimeOnSite())) return false;
     }
-    result = result && (hasBenchmarkAverageMaxCpc() == other.hasBenchmarkAverageMaxCpc());
+    if (hasBenchmarkAverageMaxCpc() != other.hasBenchmarkAverageMaxCpc()) return false;
     if (hasBenchmarkAverageMaxCpc()) {
-      result = result && getBenchmarkAverageMaxCpc()
-          .equals(other.getBenchmarkAverageMaxCpc());
+      if (!getBenchmarkAverageMaxCpc()
+          .equals(other.getBenchmarkAverageMaxCpc())) return false;
     }
-    result = result && (hasBenchmarkCtr() == other.hasBenchmarkCtr());
+    if (hasBenchmarkCtr() != other.hasBenchmarkCtr()) return false;
     if (hasBenchmarkCtr()) {
-      result = result && getBenchmarkCtr()
-          .equals(other.getBenchmarkCtr());
+      if (!getBenchmarkCtr()
+          .equals(other.getBenchmarkCtr())) return false;
     }
-    result = result && (hasBounceRate() == other.hasBounceRate());
+    if (hasBounceRate() != other.hasBounceRate()) return false;
     if (hasBounceRate()) {
-      result = result && getBounceRate()
-          .equals(other.getBounceRate());
+      if (!getBounceRate()
+          .equals(other.getBounceRate())) return false;
     }
-    result = result && (hasClicks() == other.hasClicks());
+    if (hasClicks() != other.hasClicks()) return false;
     if (hasClicks()) {
-      result = result && getClicks()
-          .equals(other.getClicks());
+      if (!getClicks()
+          .equals(other.getClicks())) return false;
     }
-    result = result && (hasCombinedClicks() == other.hasCombinedClicks());
+    if (hasCombinedClicks() != other.hasCombinedClicks()) return false;
     if (hasCombinedClicks()) {
-      result = result && getCombinedClicks()
-          .equals(other.getCombinedClicks());
+      if (!getCombinedClicks()
+          .equals(other.getCombinedClicks())) return false;
     }
-    result = result && (hasCombinedClicksPerQuery() == other.hasCombinedClicksPerQuery());
+    if (hasCombinedClicksPerQuery() != other.hasCombinedClicksPerQuery()) return false;
     if (hasCombinedClicksPerQuery()) {
-      result = result && getCombinedClicksPerQuery()
-          .equals(other.getCombinedClicksPerQuery());
+      if (!getCombinedClicksPerQuery()
+          .equals(other.getCombinedClicksPerQuery())) return false;
     }
-    result = result && (hasCombinedQueries() == other.hasCombinedQueries());
+    if (hasCombinedQueries() != other.hasCombinedQueries()) return false;
     if (hasCombinedQueries()) {
-      result = result && getCombinedQueries()
-          .equals(other.getCombinedQueries());
+      if (!getCombinedQueries()
+          .equals(other.getCombinedQueries())) return false;
     }
-    result = result && (hasContentBudgetLostImpressionShare() == other.hasContentBudgetLostImpressionShare());
+    if (hasContentBudgetLostImpressionShare() != other.hasContentBudgetLostImpressionShare()) return false;
     if (hasContentBudgetLostImpressionShare()) {
-      result = result && getContentBudgetLostImpressionShare()
-          .equals(other.getContentBudgetLostImpressionShare());
+      if (!getContentBudgetLostImpressionShare()
+          .equals(other.getContentBudgetLostImpressionShare())) return false;
     }
-    result = result && (hasContentImpressionShare() == other.hasContentImpressionShare());
+    if (hasContentImpressionShare() != other.hasContentImpressionShare()) return false;
     if (hasContentImpressionShare()) {
-      result = result && getContentImpressionShare()
-          .equals(other.getContentImpressionShare());
+      if (!getContentImpressionShare()
+          .equals(other.getContentImpressionShare())) return false;
     }
-    result = result && (hasConversionLastReceivedRequestDateTime() == other.hasConversionLastReceivedRequestDateTime());
+    if (hasConversionLastReceivedRequestDateTime() != other.hasConversionLastReceivedRequestDateTime()) return false;
     if (hasConversionLastReceivedRequestDateTime()) {
-      result = result && getConversionLastReceivedRequestDateTime()
-          .equals(other.getConversionLastReceivedRequestDateTime());
+      if (!getConversionLastReceivedRequestDateTime()
+          .equals(other.getConversionLastReceivedRequestDateTime())) return false;
     }
-    result = result && (hasConversionLastConversionDate() == other.hasConversionLastConversionDate());
+    if (hasConversionLastConversionDate() != other.hasConversionLastConversionDate()) return false;
     if (hasConversionLastConversionDate()) {
-      result = result && getConversionLastConversionDate()
-          .equals(other.getConversionLastConversionDate());
+      if (!getConversionLastConversionDate()
+          .equals(other.getConversionLastConversionDate())) return false;
     }
-    result = result && (hasContentRankLostImpressionShare() == other.hasContentRankLostImpressionShare());
+    if (hasContentRankLostImpressionShare() != other.hasContentRankLostImpressionShare()) return false;
     if (hasContentRankLostImpressionShare()) {
-      result = result && getContentRankLostImpressionShare()
-          .equals(other.getContentRankLostImpressionShare());
+      if (!getContentRankLostImpressionShare()
+          .equals(other.getContentRankLostImpressionShare())) return false;
     }
-    result = result && (hasConversionsFromInteractionsRate() == other.hasConversionsFromInteractionsRate());
+    if (hasConversionsFromInteractionsRate() != other.hasConversionsFromInteractionsRate()) return false;
     if (hasConversionsFromInteractionsRate()) {
-      result = result && getConversionsFromInteractionsRate()
-          .equals(other.getConversionsFromInteractionsRate());
+      if (!getConversionsFromInteractionsRate()
+          .equals(other.getConversionsFromInteractionsRate())) return false;
     }
-    result = result && (hasConversionsValue() == other.hasConversionsValue());
+    if (hasConversionsValue() != other.hasConversionsValue()) return false;
     if (hasConversionsValue()) {
-      result = result && getConversionsValue()
-          .equals(other.getConversionsValue());
+      if (!getConversionsValue()
+          .equals(other.getConversionsValue())) return false;
     }
-    result = result && (hasConversionsValuePerCost() == other.hasConversionsValuePerCost());
+    if (hasConversionsValuePerCost() != other.hasConversionsValuePerCost()) return false;
     if (hasConversionsValuePerCost()) {
-      result = result && getConversionsValuePerCost()
-          .equals(other.getConversionsValuePerCost());
+      if (!getConversionsValuePerCost()
+          .equals(other.getConversionsValuePerCost())) return false;
     }
-    result = result && (hasConversionsFromInteractionsValuePerInteraction() == other.hasConversionsFromInteractionsValuePerInteraction());
+    if (hasConversionsFromInteractionsValuePerInteraction() != other.hasConversionsFromInteractionsValuePerInteraction()) return false;
     if (hasConversionsFromInteractionsValuePerInteraction()) {
-      result = result && getConversionsFromInteractionsValuePerInteraction()
-          .equals(other.getConversionsFromInteractionsValuePerInteraction());
+      if (!getConversionsFromInteractionsValuePerInteraction()
+          .equals(other.getConversionsFromInteractionsValuePerInteraction())) return false;
     }
-    result = result && (hasConversions() == other.hasConversions());
+    if (hasConversions() != other.hasConversions()) return false;
     if (hasConversions()) {
-      result = result && getConversions()
-          .equals(other.getConversions());
+      if (!getConversions()
+          .equals(other.getConversions())) return false;
     }
-    result = result && (hasCostMicros() == other.hasCostMicros());
+    if (hasCostMicros() != other.hasCostMicros()) return false;
     if (hasCostMicros()) {
-      result = result && getCostMicros()
-          .equals(other.getCostMicros());
+      if (!getCostMicros()
+          .equals(other.getCostMicros())) return false;
     }
-    result = result && (hasCostPerAllConversions() == other.hasCostPerAllConversions());
+    if (hasCostPerAllConversions() != other.hasCostPerAllConversions()) return false;
     if (hasCostPerAllConversions()) {
-      result = result && getCostPerAllConversions()
-          .equals(other.getCostPerAllConversions());
+      if (!getCostPerAllConversions()
+          .equals(other.getCostPerAllConversions())) return false;
     }
-    result = result && (hasCostPerConversion() == other.hasCostPerConversion());
+    if (hasCostPerConversion() != other.hasCostPerConversion()) return false;
     if (hasCostPerConversion()) {
-      result = result && getCostPerConversion()
-          .equals(other.getCostPerConversion());
+      if (!getCostPerConversion()
+          .equals(other.getCostPerConversion())) return false;
     }
-    result = result && (hasCostPerCurrentModelAttributedConversion() == other.hasCostPerCurrentModelAttributedConversion());
+    if (hasCostPerCurrentModelAttributedConversion() != other.hasCostPerCurrentModelAttributedConversion()) return false;
     if (hasCostPerCurrentModelAttributedConversion()) {
-      result = result && getCostPerCurrentModelAttributedConversion()
-          .equals(other.getCostPerCurrentModelAttributedConversion());
+      if (!getCostPerCurrentModelAttributedConversion()
+          .equals(other.getCostPerCurrentModelAttributedConversion())) return false;
     }
-    result = result && (hasCrossDeviceConversions() == other.hasCrossDeviceConversions());
+    if (hasCrossDeviceConversions() != other.hasCrossDeviceConversions()) return false;
     if (hasCrossDeviceConversions()) {
-      result = result && getCrossDeviceConversions()
-          .equals(other.getCrossDeviceConversions());
+      if (!getCrossDeviceConversions()
+          .equals(other.getCrossDeviceConversions())) return false;
     }
-    result = result && (hasCtr() == other.hasCtr());
+    if (hasCtr() != other.hasCtr()) return false;
     if (hasCtr()) {
-      result = result && getCtr()
-          .equals(other.getCtr());
+      if (!getCtr()
+          .equals(other.getCtr())) return false;
     }
-    result = result && (hasCurrentModelAttributedConversions() == other.hasCurrentModelAttributedConversions());
+    if (hasCurrentModelAttributedConversions() != other.hasCurrentModelAttributedConversions()) return false;
     if (hasCurrentModelAttributedConversions()) {
-      result = result && getCurrentModelAttributedConversions()
-          .equals(other.getCurrentModelAttributedConversions());
+      if (!getCurrentModelAttributedConversions()
+          .equals(other.getCurrentModelAttributedConversions())) return false;
     }
-    result = result && (hasCurrentModelAttributedConversionsFromInteractionsRate() == other.hasCurrentModelAttributedConversionsFromInteractionsRate());
+    if (hasCurrentModelAttributedConversionsFromInteractionsRate() != other.hasCurrentModelAttributedConversionsFromInteractionsRate()) return false;
     if (hasCurrentModelAttributedConversionsFromInteractionsRate()) {
-      result = result && getCurrentModelAttributedConversionsFromInteractionsRate()
-          .equals(other.getCurrentModelAttributedConversionsFromInteractionsRate());
+      if (!getCurrentModelAttributedConversionsFromInteractionsRate()
+          .equals(other.getCurrentModelAttributedConversionsFromInteractionsRate())) return false;
     }
-    result = result && (hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() == other.hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction());
+    if (hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() != other.hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction()) return false;
     if (hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction()) {
-      result = result && getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction()
-          .equals(other.getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction());
+      if (!getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction()
+          .equals(other.getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction())) return false;
     }
-    result = result && (hasCurrentModelAttributedConversionsValue() == other.hasCurrentModelAttributedConversionsValue());
+    if (hasCurrentModelAttributedConversionsValue() != other.hasCurrentModelAttributedConversionsValue()) return false;
     if (hasCurrentModelAttributedConversionsValue()) {
-      result = result && getCurrentModelAttributedConversionsValue()
-          .equals(other.getCurrentModelAttributedConversionsValue());
+      if (!getCurrentModelAttributedConversionsValue()
+          .equals(other.getCurrentModelAttributedConversionsValue())) return false;
     }
-    result = result && (hasCurrentModelAttributedConversionsValuePerCost() == other.hasCurrentModelAttributedConversionsValuePerCost());
+    if (hasCurrentModelAttributedConversionsValuePerCost() != other.hasCurrentModelAttributedConversionsValuePerCost()) return false;
     if (hasCurrentModelAttributedConversionsValuePerCost()) {
-      result = result && getCurrentModelAttributedConversionsValuePerCost()
-          .equals(other.getCurrentModelAttributedConversionsValuePerCost());
+      if (!getCurrentModelAttributedConversionsValuePerCost()
+          .equals(other.getCurrentModelAttributedConversionsValuePerCost())) return false;
     }
-    result = result && (hasEngagementRate() == other.hasEngagementRate());
+    if (hasEngagementRate() != other.hasEngagementRate()) return false;
     if (hasEngagementRate()) {
-      result = result && getEngagementRate()
-          .equals(other.getEngagementRate());
+      if (!getEngagementRate()
+          .equals(other.getEngagementRate())) return false;
     }
-    result = result && (hasEngagements() == other.hasEngagements());
+    if (hasEngagements() != other.hasEngagements()) return false;
     if (hasEngagements()) {
-      result = result && getEngagements()
-          .equals(other.getEngagements());
+      if (!getEngagements()
+          .equals(other.getEngagements())) return false;
     }
-    result = result && (hasHotelAverageLeadValueMicros() == other.hasHotelAverageLeadValueMicros());
+    if (hasHotelAverageLeadValueMicros() != other.hasHotelAverageLeadValueMicros()) return false;
     if (hasHotelAverageLeadValueMicros()) {
-      result = result && getHotelAverageLeadValueMicros()
-          .equals(other.getHotelAverageLeadValueMicros());
+      if (!getHotelAverageLeadValueMicros()
+          .equals(other.getHotelAverageLeadValueMicros())) return false;
     }
-    result = result && historicalCreativeQualityScore_ == other.historicalCreativeQualityScore_;
-    result = result && historicalLandingPageQualityScore_ == other.historicalLandingPageQualityScore_;
-    result = result && (hasHistoricalQualityScore() == other.hasHistoricalQualityScore());
+    if (historicalCreativeQualityScore_ != other.historicalCreativeQualityScore_) return false;
+    if (historicalLandingPageQualityScore_ != other.historicalLandingPageQualityScore_) return false;
+    if (hasHistoricalQualityScore() != other.hasHistoricalQualityScore()) return false;
     if (hasHistoricalQualityScore()) {
-      result = result && getHistoricalQualityScore()
-          .equals(other.getHistoricalQualityScore());
+      if (!getHistoricalQualityScore()
+          .equals(other.getHistoricalQualityScore())) return false;
     }
-    result = result && historicalSearchPredictedCtr_ == other.historicalSearchPredictedCtr_;
-    result = result && (hasGmailForwards() == other.hasGmailForwards());
+    if (historicalSearchPredictedCtr_ != other.historicalSearchPredictedCtr_) return false;
+    if (hasGmailForwards() != other.hasGmailForwards()) return false;
     if (hasGmailForwards()) {
-      result = result && getGmailForwards()
-          .equals(other.getGmailForwards());
+      if (!getGmailForwards()
+          .equals(other.getGmailForwards())) return false;
     }
-    result = result && (hasGmailSaves() == other.hasGmailSaves());
+    if (hasGmailSaves() != other.hasGmailSaves()) return false;
     if (hasGmailSaves()) {
-      result = result && getGmailSaves()
-          .equals(other.getGmailSaves());
+      if (!getGmailSaves()
+          .equals(other.getGmailSaves())) return false;
     }
-    result = result && (hasGmailSecondaryClicks() == other.hasGmailSecondaryClicks());
+    if (hasGmailSecondaryClicks() != other.hasGmailSecondaryClicks()) return false;
     if (hasGmailSecondaryClicks()) {
-      result = result && getGmailSecondaryClicks()
-          .equals(other.getGmailSecondaryClicks());
+      if (!getGmailSecondaryClicks()
+          .equals(other.getGmailSecondaryClicks())) return false;
     }
-    result = result && (hasImpressionReach() == other.hasImpressionReach());
+    if (hasImpressionReach() != other.hasImpressionReach()) return false;
     if (hasImpressionReach()) {
-      result = result && getImpressionReach()
-          .equals(other.getImpressionReach());
+      if (!getImpressionReach()
+          .equals(other.getImpressionReach())) return false;
     }
-    result = result && (hasImpressionsFromStoreReach() == other.hasImpressionsFromStoreReach());
+    if (hasImpressionsFromStoreReach() != other.hasImpressionsFromStoreReach()) return false;
     if (hasImpressionsFromStoreReach()) {
-      result = result && getImpressionsFromStoreReach()
-          .equals(other.getImpressionsFromStoreReach());
+      if (!getImpressionsFromStoreReach()
+          .equals(other.getImpressionsFromStoreReach())) return false;
     }
-    result = result && (hasImpressions() == other.hasImpressions());
+    if (hasImpressions() != other.hasImpressions()) return false;
     if (hasImpressions()) {
-      result = result && getImpressions()
-          .equals(other.getImpressions());
+      if (!getImpressions()
+          .equals(other.getImpressions())) return false;
     }
-    result = result && (hasInteractionRate() == other.hasInteractionRate());
+    if (hasInteractionRate() != other.hasInteractionRate()) return false;
     if (hasInteractionRate()) {
-      result = result && getInteractionRate()
-          .equals(other.getInteractionRate());
+      if (!getInteractionRate()
+          .equals(other.getInteractionRate())) return false;
     }
-    result = result && (hasInteractions() == other.hasInteractions());
+    if (hasInteractions() != other.hasInteractions()) return false;
     if (hasInteractions()) {
-      result = result && getInteractions()
-          .equals(other.getInteractions());
+      if (!getInteractions()
+          .equals(other.getInteractions())) return false;
     }
-    result = result && interactionEventTypes_.equals(other.interactionEventTypes_);
-    result = result && (hasInvalidClickRate() == other.hasInvalidClickRate());
+    if (!interactionEventTypes_.equals(other.interactionEventTypes_)) return false;
+    if (hasInvalidClickRate() != other.hasInvalidClickRate()) return false;
     if (hasInvalidClickRate()) {
-      result = result && getInvalidClickRate()
-          .equals(other.getInvalidClickRate());
+      if (!getInvalidClickRate()
+          .equals(other.getInvalidClickRate())) return false;
     }
-    result = result && (hasInvalidClicks() == other.hasInvalidClicks());
+    if (hasInvalidClicks() != other.hasInvalidClicks()) return false;
     if (hasInvalidClicks()) {
-      result = result && getInvalidClicks()
-          .equals(other.getInvalidClicks());
+      if (!getInvalidClicks()
+          .equals(other.getInvalidClicks())) return false;
     }
-    result = result && (hasMobileFriendlyClicksPercentage() == other.hasMobileFriendlyClicksPercentage());
+    if (hasMobileFriendlyClicksPercentage() != other.hasMobileFriendlyClicksPercentage()) return false;
     if (hasMobileFriendlyClicksPercentage()) {
-      result = result && getMobileFriendlyClicksPercentage()
-          .equals(other.getMobileFriendlyClicksPercentage());
+      if (!getMobileFriendlyClicksPercentage()
+          .equals(other.getMobileFriendlyClicksPercentage())) return false;
     }
-    result = result && (hasOrganicClicks() == other.hasOrganicClicks());
+    if (hasOrganicClicks() != other.hasOrganicClicks()) return false;
     if (hasOrganicClicks()) {
-      result = result && getOrganicClicks()
-          .equals(other.getOrganicClicks());
+      if (!getOrganicClicks()
+          .equals(other.getOrganicClicks())) return false;
     }
-    result = result && (hasOrganicClicksPerQuery() == other.hasOrganicClicksPerQuery());
+    if (hasOrganicClicksPerQuery() != other.hasOrganicClicksPerQuery()) return false;
     if (hasOrganicClicksPerQuery()) {
-      result = result && getOrganicClicksPerQuery()
-          .equals(other.getOrganicClicksPerQuery());
+      if (!getOrganicClicksPerQuery()
+          .equals(other.getOrganicClicksPerQuery())) return false;
     }
-    result = result && (hasOrganicImpressions() == other.hasOrganicImpressions());
+    if (hasOrganicImpressions() != other.hasOrganicImpressions()) return false;
     if (hasOrganicImpressions()) {
-      result = result && getOrganicImpressions()
-          .equals(other.getOrganicImpressions());
+      if (!getOrganicImpressions()
+          .equals(other.getOrganicImpressions())) return false;
     }
-    result = result && (hasOrganicImpressionsPerQuery() == other.hasOrganicImpressionsPerQuery());
+    if (hasOrganicImpressionsPerQuery() != other.hasOrganicImpressionsPerQuery()) return false;
     if (hasOrganicImpressionsPerQuery()) {
-      result = result && getOrganicImpressionsPerQuery()
-          .equals(other.getOrganicImpressionsPerQuery());
+      if (!getOrganicImpressionsPerQuery()
+          .equals(other.getOrganicImpressionsPerQuery())) return false;
     }
-    result = result && (hasOrganicQueries() == other.hasOrganicQueries());
+    if (hasOrganicQueries() != other.hasOrganicQueries()) return false;
     if (hasOrganicQueries()) {
-      result = result && getOrganicQueries()
-          .equals(other.getOrganicQueries());
+      if (!getOrganicQueries()
+          .equals(other.getOrganicQueries())) return false;
     }
-    result = result && (hasPercentNewVisitors() == other.hasPercentNewVisitors());
+    if (hasPercentNewVisitors() != other.hasPercentNewVisitors()) return false;
     if (hasPercentNewVisitors()) {
-      result = result && getPercentNewVisitors()
-          .equals(other.getPercentNewVisitors());
+      if (!getPercentNewVisitors()
+          .equals(other.getPercentNewVisitors())) return false;
     }
-    result = result && (hasPhoneCalls() == other.hasPhoneCalls());
+    if (hasPhoneCalls() != other.hasPhoneCalls()) return false;
     if (hasPhoneCalls()) {
-      result = result && getPhoneCalls()
-          .equals(other.getPhoneCalls());
+      if (!getPhoneCalls()
+          .equals(other.getPhoneCalls())) return false;
     }
-    result = result && (hasPhoneImpressions() == other.hasPhoneImpressions());
+    if (hasPhoneImpressions() != other.hasPhoneImpressions()) return false;
     if (hasPhoneImpressions()) {
-      result = result && getPhoneImpressions()
-          .equals(other.getPhoneImpressions());
+      if (!getPhoneImpressions()
+          .equals(other.getPhoneImpressions())) return false;
     }
-    result = result && (hasPhoneThroughRate() == other.hasPhoneThroughRate());
+    if (hasPhoneThroughRate() != other.hasPhoneThroughRate()) return false;
     if (hasPhoneThroughRate()) {
-      result = result && getPhoneThroughRate()
-          .equals(other.getPhoneThroughRate());
+      if (!getPhoneThroughRate()
+          .equals(other.getPhoneThroughRate())) return false;
     }
-    result = result && (hasRelativeCtr() == other.hasRelativeCtr());
+    if (hasRelativeCtr() != other.hasRelativeCtr()) return false;
     if (hasRelativeCtr()) {
-      result = result && getRelativeCtr()
-          .equals(other.getRelativeCtr());
+      if (!getRelativeCtr()
+          .equals(other.getRelativeCtr())) return false;
     }
-    result = result && (hasSearchAbsoluteTopImpressionShare() == other.hasSearchAbsoluteTopImpressionShare());
+    if (hasSearchAbsoluteTopImpressionShare() != other.hasSearchAbsoluteTopImpressionShare()) return false;
     if (hasSearchAbsoluteTopImpressionShare()) {
-      result = result && getSearchAbsoluteTopImpressionShare()
-          .equals(other.getSearchAbsoluteTopImpressionShare());
+      if (!getSearchAbsoluteTopImpressionShare()
+          .equals(other.getSearchAbsoluteTopImpressionShare())) return false;
     }
-    result = result && (hasSearchBudgetLostAbsoluteTopImpressionShare() == other.hasSearchBudgetLostAbsoluteTopImpressionShare());
+    if (hasSearchBudgetLostAbsoluteTopImpressionShare() != other.hasSearchBudgetLostAbsoluteTopImpressionShare()) return false;
     if (hasSearchBudgetLostAbsoluteTopImpressionShare()) {
-      result = result && getSearchBudgetLostAbsoluteTopImpressionShare()
-          .equals(other.getSearchBudgetLostAbsoluteTopImpressionShare());
+      if (!getSearchBudgetLostAbsoluteTopImpressionShare()
+          .equals(other.getSearchBudgetLostAbsoluteTopImpressionShare())) return false;
     }
-    result = result && (hasSearchBudgetLostImpressionShare() == other.hasSearchBudgetLostImpressionShare());
+    if (hasSearchBudgetLostImpressionShare() != other.hasSearchBudgetLostImpressionShare()) return false;
     if (hasSearchBudgetLostImpressionShare()) {
-      result = result && getSearchBudgetLostImpressionShare()
-          .equals(other.getSearchBudgetLostImpressionShare());
+      if (!getSearchBudgetLostImpressionShare()
+          .equals(other.getSearchBudgetLostImpressionShare())) return false;
     }
-    result = result && (hasSearchBudgetLostTopImpressionShare() == other.hasSearchBudgetLostTopImpressionShare());
+    if (hasSearchBudgetLostTopImpressionShare() != other.hasSearchBudgetLostTopImpressionShare()) return false;
     if (hasSearchBudgetLostTopImpressionShare()) {
-      result = result && getSearchBudgetLostTopImpressionShare()
-          .equals(other.getSearchBudgetLostTopImpressionShare());
+      if (!getSearchBudgetLostTopImpressionShare()
+          .equals(other.getSearchBudgetLostTopImpressionShare())) return false;
     }
-    result = result && (hasSearchClickShare() == other.hasSearchClickShare());
+    if (hasSearchClickShare() != other.hasSearchClickShare()) return false;
     if (hasSearchClickShare()) {
-      result = result && getSearchClickShare()
-          .equals(other.getSearchClickShare());
+      if (!getSearchClickShare()
+          .equals(other.getSearchClickShare())) return false;
     }
-    result = result && (hasSearchExactMatchImpressionShare() == other.hasSearchExactMatchImpressionShare());
+    if (hasSearchExactMatchImpressionShare() != other.hasSearchExactMatchImpressionShare()) return false;
     if (hasSearchExactMatchImpressionShare()) {
-      result = result && getSearchExactMatchImpressionShare()
-          .equals(other.getSearchExactMatchImpressionShare());
+      if (!getSearchExactMatchImpressionShare()
+          .equals(other.getSearchExactMatchImpressionShare())) return false;
     }
-    result = result && (hasSearchImpressionShare() == other.hasSearchImpressionShare());
+    if (hasSearchImpressionShare() != other.hasSearchImpressionShare()) return false;
     if (hasSearchImpressionShare()) {
-      result = result && getSearchImpressionShare()
-          .equals(other.getSearchImpressionShare());
+      if (!getSearchImpressionShare()
+          .equals(other.getSearchImpressionShare())) return false;
     }
-    result = result && (hasSearchRankLostAbsoluteTopImpressionShare() == other.hasSearchRankLostAbsoluteTopImpressionShare());
+    if (hasSearchRankLostAbsoluteTopImpressionShare() != other.hasSearchRankLostAbsoluteTopImpressionShare()) return false;
     if (hasSearchRankLostAbsoluteTopImpressionShare()) {
-      result = result && getSearchRankLostAbsoluteTopImpressionShare()
-          .equals(other.getSearchRankLostAbsoluteTopImpressionShare());
+      if (!getSearchRankLostAbsoluteTopImpressionShare()
+          .equals(other.getSearchRankLostAbsoluteTopImpressionShare())) return false;
     }
-    result = result && (hasSearchRankLostImpressionShare() == other.hasSearchRankLostImpressionShare());
+    if (hasSearchRankLostImpressionShare() != other.hasSearchRankLostImpressionShare()) return false;
     if (hasSearchRankLostImpressionShare()) {
-      result = result && getSearchRankLostImpressionShare()
-          .equals(other.getSearchRankLostImpressionShare());
+      if (!getSearchRankLostImpressionShare()
+          .equals(other.getSearchRankLostImpressionShare())) return false;
     }
-    result = result && (hasSearchRankLostTopImpressionShare() == other.hasSearchRankLostTopImpressionShare());
+    if (hasSearchRankLostTopImpressionShare() != other.hasSearchRankLostTopImpressionShare()) return false;
     if (hasSearchRankLostTopImpressionShare()) {
-      result = result && getSearchRankLostTopImpressionShare()
-          .equals(other.getSearchRankLostTopImpressionShare());
+      if (!getSearchRankLostTopImpressionShare()
+          .equals(other.getSearchRankLostTopImpressionShare())) return false;
     }
-    result = result && (hasSearchTopImpressionShare() == other.hasSearchTopImpressionShare());
+    if (hasSearchTopImpressionShare() != other.hasSearchTopImpressionShare()) return false;
     if (hasSearchTopImpressionShare()) {
-      result = result && getSearchTopImpressionShare()
-          .equals(other.getSearchTopImpressionShare());
+      if (!getSearchTopImpressionShare()
+          .equals(other.getSearchTopImpressionShare())) return false;
     }
-    result = result && (hasSpeedScore() == other.hasSpeedScore());
+    if (hasSpeedScore() != other.hasSpeedScore()) return false;
     if (hasSpeedScore()) {
-      result = result && getSpeedScore()
-          .equals(other.getSpeedScore());
+      if (!getSpeedScore()
+          .equals(other.getSpeedScore())) return false;
     }
-    result = result && (hasTopImpressionPercentage() == other.hasTopImpressionPercentage());
+    if (hasTopImpressionPercentage() != other.hasTopImpressionPercentage()) return false;
     if (hasTopImpressionPercentage()) {
-      result = result && getTopImpressionPercentage()
-          .equals(other.getTopImpressionPercentage());
+      if (!getTopImpressionPercentage()
+          .equals(other.getTopImpressionPercentage())) return false;
     }
-    result = result && (hasValidAcceleratedMobilePagesClicksPercentage() == other.hasValidAcceleratedMobilePagesClicksPercentage());
+    if (hasValidAcceleratedMobilePagesClicksPercentage() != other.hasValidAcceleratedMobilePagesClicksPercentage()) return false;
     if (hasValidAcceleratedMobilePagesClicksPercentage()) {
-      result = result && getValidAcceleratedMobilePagesClicksPercentage()
-          .equals(other.getValidAcceleratedMobilePagesClicksPercentage());
+      if (!getValidAcceleratedMobilePagesClicksPercentage()
+          .equals(other.getValidAcceleratedMobilePagesClicksPercentage())) return false;
     }
-    result = result && (hasValuePerAllConversions() == other.hasValuePerAllConversions());
+    if (hasValuePerAllConversions() != other.hasValuePerAllConversions()) return false;
     if (hasValuePerAllConversions()) {
-      result = result && getValuePerAllConversions()
-          .equals(other.getValuePerAllConversions());
+      if (!getValuePerAllConversions()
+          .equals(other.getValuePerAllConversions())) return false;
     }
-    result = result && (hasValuePerConversion() == other.hasValuePerConversion());
+    if (hasValuePerConversion() != other.hasValuePerConversion()) return false;
     if (hasValuePerConversion()) {
-      result = result && getValuePerConversion()
-          .equals(other.getValuePerConversion());
+      if (!getValuePerConversion()
+          .equals(other.getValuePerConversion())) return false;
     }
-    result = result && (hasValuePerCurrentModelAttributedConversion() == other.hasValuePerCurrentModelAttributedConversion());
+    if (hasValuePerCurrentModelAttributedConversion() != other.hasValuePerCurrentModelAttributedConversion()) return false;
     if (hasValuePerCurrentModelAttributedConversion()) {
-      result = result && getValuePerCurrentModelAttributedConversion()
-          .equals(other.getValuePerCurrentModelAttributedConversion());
+      if (!getValuePerCurrentModelAttributedConversion()
+          .equals(other.getValuePerCurrentModelAttributedConversion())) return false;
     }
-    result = result && (hasVideoQuartile100Rate() == other.hasVideoQuartile100Rate());
+    if (hasVideoQuartile100Rate() != other.hasVideoQuartile100Rate()) return false;
     if (hasVideoQuartile100Rate()) {
-      result = result && getVideoQuartile100Rate()
-          .equals(other.getVideoQuartile100Rate());
+      if (!getVideoQuartile100Rate()
+          .equals(other.getVideoQuartile100Rate())) return false;
     }
-    result = result && (hasVideoQuartile25Rate() == other.hasVideoQuartile25Rate());
+    if (hasVideoQuartile25Rate() != other.hasVideoQuartile25Rate()) return false;
     if (hasVideoQuartile25Rate()) {
-      result = result && getVideoQuartile25Rate()
-          .equals(other.getVideoQuartile25Rate());
+      if (!getVideoQuartile25Rate()
+          .equals(other.getVideoQuartile25Rate())) return false;
     }
-    result = result && (hasVideoQuartile50Rate() == other.hasVideoQuartile50Rate());
+    if (hasVideoQuartile50Rate() != other.hasVideoQuartile50Rate()) return false;
     if (hasVideoQuartile50Rate()) {
-      result = result && getVideoQuartile50Rate()
-          .equals(other.getVideoQuartile50Rate());
+      if (!getVideoQuartile50Rate()
+          .equals(other.getVideoQuartile50Rate())) return false;
     }
-    result = result && (hasVideoQuartile75Rate() == other.hasVideoQuartile75Rate());
+    if (hasVideoQuartile75Rate() != other.hasVideoQuartile75Rate()) return false;
     if (hasVideoQuartile75Rate()) {
-      result = result && getVideoQuartile75Rate()
-          .equals(other.getVideoQuartile75Rate());
+      if (!getVideoQuartile75Rate()
+          .equals(other.getVideoQuartile75Rate())) return false;
     }
-    result = result && (hasVideoViewRate() == other.hasVideoViewRate());
+    if (hasVideoViewRate() != other.hasVideoViewRate()) return false;
     if (hasVideoViewRate()) {
-      result = result && getVideoViewRate()
-          .equals(other.getVideoViewRate());
+      if (!getVideoViewRate()
+          .equals(other.getVideoViewRate())) return false;
     }
-    result = result && (hasVideoViews() == other.hasVideoViews());
+    if (hasVideoViews() != other.hasVideoViews()) return false;
     if (hasVideoViews()) {
-      result = result && getVideoViews()
-          .equals(other.getVideoViews());
+      if (!getVideoViews()
+          .equals(other.getVideoViews())) return false;
     }
-    result = result && (hasViewThroughConversions() == other.hasViewThroughConversions());
+    if (hasViewThroughConversions() != other.hasViewThroughConversions()) return false;
     if (hasViewThroughConversions()) {
-      result = result && getViewThroughConversions()
-          .equals(other.getViewThroughConversions());
+      if (!getViewThroughConversions()
+          .equals(other.getViewThroughConversions())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -8594,7 +8593,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.interactions_ = interactionsBuilder_.build();
       }
-      if (((bitField2_ & 0x00000100) == 0x00000100)) {
+      if (((bitField2_ & 0x00000100) != 0)) {
         interactionEventTypes_ = java.util.Collections.unmodifiableList(interactionEventTypes_);
         bitField2_ = (bitField2_ & ~0x00000100);
       }
@@ -8794,35 +8793,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9206,7 +9205,7 @@ private static final long serialVersionUID = 0L;
     private int bitField2_;
     private int bitField3_;
 
-    private com.google.protobuf.DoubleValue absoluteTopImpressionPercentage_ = null;
+    private com.google.protobuf.DoubleValue absoluteTopImpressionPercentage_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> absoluteTopImpressionPercentageBuilder_;
     /**
@@ -9368,7 +9367,7 @@ private static final long serialVersionUID = 0L;
       return absoluteTopImpressionPercentageBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue activeViewCpm_ = null;
+    private com.google.protobuf.DoubleValue activeViewCpm_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> activeViewCpmBuilder_;
     /**
@@ -9521,7 +9520,7 @@ private static final long serialVersionUID = 0L;
       return activeViewCpmBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue activeViewCtr_ = null;
+    private com.google.protobuf.DoubleValue activeViewCtr_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> activeViewCtrBuilder_;
     /**
@@ -9683,7 +9682,7 @@ private static final long serialVersionUID = 0L;
       return activeViewCtrBuilder_;
     }
 
-    private com.google.protobuf.Int64Value activeViewImpressions_ = null;
+    private com.google.protobuf.Int64Value activeViewImpressions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> activeViewImpressionsBuilder_;
     /**
@@ -9845,7 +9844,7 @@ private static final long serialVersionUID = 0L;
       return activeViewImpressionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue activeViewMeasurability_ = null;
+    private com.google.protobuf.DoubleValue activeViewMeasurability_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> activeViewMeasurabilityBuilder_;
     /**
@@ -10007,7 +10006,7 @@ private static final long serialVersionUID = 0L;
       return activeViewMeasurabilityBuilder_;
     }
 
-    private com.google.protobuf.Int64Value activeViewMeasurableCostMicros_ = null;
+    private com.google.protobuf.Int64Value activeViewMeasurableCostMicros_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> activeViewMeasurableCostMicrosBuilder_;
     /**
@@ -10169,7 +10168,7 @@ private static final long serialVersionUID = 0L;
       return activeViewMeasurableCostMicrosBuilder_;
     }
 
-    private com.google.protobuf.Int64Value activeViewMeasurableImpressions_ = null;
+    private com.google.protobuf.Int64Value activeViewMeasurableImpressions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> activeViewMeasurableImpressionsBuilder_;
     /**
@@ -10331,7 +10330,7 @@ private static final long serialVersionUID = 0L;
       return activeViewMeasurableImpressionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue activeViewViewability_ = null;
+    private com.google.protobuf.DoubleValue activeViewViewability_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> activeViewViewabilityBuilder_;
     /**
@@ -10493,7 +10492,7 @@ private static final long serialVersionUID = 0L;
       return activeViewViewabilityBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionsFromInteractionsRate_ = null;
+    private com.google.protobuf.DoubleValue allConversionsFromInteractionsRate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromInteractionsRateBuilder_;
     /**
@@ -10655,7 +10654,7 @@ private static final long serialVersionUID = 0L;
       return allConversionsFromInteractionsRateBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionsValue_ = null;
+    private com.google.protobuf.DoubleValue allConversionsValue_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsValueBuilder_;
     /**
@@ -10808,7 +10807,7 @@ private static final long serialVersionUID = 0L;
       return allConversionsValueBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversions_ = null;
+    private com.google.protobuf.DoubleValue allConversions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsBuilder_;
     /**
@@ -10970,7 +10969,7 @@ private static final long serialVersionUID = 0L;
       return allConversionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionsValuePerCost_ = null;
+    private com.google.protobuf.DoubleValue allConversionsValuePerCost_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsValuePerCostBuilder_;
     /**
@@ -11132,7 +11131,7 @@ private static final long serialVersionUID = 0L;
       return allConversionsValuePerCostBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionsFromClickToCall_ = null;
+    private com.google.protobuf.DoubleValue allConversionsFromClickToCall_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromClickToCallBuilder_;
     /**
@@ -11312,7 +11311,7 @@ private static final long serialVersionUID = 0L;
       return allConversionsFromClickToCallBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionsFromDirections_ = null;
+    private com.google.protobuf.DoubleValue allConversionsFromDirections_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromDirectionsBuilder_;
     /**
@@ -11483,7 +11482,7 @@ private static final long serialVersionUID = 0L;
       return allConversionsFromDirectionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionsFromInteractionsValuePerInteraction_ = null;
+    private com.google.protobuf.DoubleValue allConversionsFromInteractionsValuePerInteraction_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromInteractionsValuePerInteractionBuilder_;
     /**
@@ -11645,7 +11644,7 @@ private static final long serialVersionUID = 0L;
       return allConversionsFromInteractionsValuePerInteractionBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionsFromMenu_ = null;
+    private com.google.protobuf.DoubleValue allConversionsFromMenu_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromMenuBuilder_;
     /**
@@ -11816,7 +11815,7 @@ private static final long serialVersionUID = 0L;
       return allConversionsFromMenuBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionsFromOrder_ = null;
+    private com.google.protobuf.DoubleValue allConversionsFromOrder_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromOrderBuilder_;
     /**
@@ -11978,7 +11977,7 @@ private static final long serialVersionUID = 0L;
       return allConversionsFromOrderBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionsFromOtherEngagement_ = null;
+    private com.google.protobuf.DoubleValue allConversionsFromOtherEngagement_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromOtherEngagementBuilder_;
     /**
@@ -12149,7 +12148,7 @@ private static final long serialVersionUID = 0L;
       return allConversionsFromOtherEngagementBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionsFromStoreVisit_ = null;
+    private com.google.protobuf.DoubleValue allConversionsFromStoreVisit_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromStoreVisitBuilder_;
     /**
@@ -12311,7 +12310,7 @@ private static final long serialVersionUID = 0L;
       return allConversionsFromStoreVisitBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue allConversionsFromStoreWebsite_ = null;
+    private com.google.protobuf.DoubleValue allConversionsFromStoreWebsite_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsFromStoreWebsiteBuilder_;
     /**
@@ -12482,7 +12481,7 @@ private static final long serialVersionUID = 0L;
       return allConversionsFromStoreWebsiteBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue averageCost_ = null;
+    private com.google.protobuf.DoubleValue averageCost_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averageCostBuilder_;
     /**
@@ -12644,7 +12643,7 @@ private static final long serialVersionUID = 0L;
       return averageCostBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue averageCpc_ = null;
+    private com.google.protobuf.DoubleValue averageCpc_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averageCpcBuilder_;
     /**
@@ -12806,7 +12805,7 @@ private static final long serialVersionUID = 0L;
       return averageCpcBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue averageCpe_ = null;
+    private com.google.protobuf.DoubleValue averageCpe_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averageCpeBuilder_;
     /**
@@ -12977,7 +12976,7 @@ private static final long serialVersionUID = 0L;
       return averageCpeBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue averageCpm_ = null;
+    private com.google.protobuf.DoubleValue averageCpm_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averageCpmBuilder_;
     /**
@@ -13130,7 +13129,7 @@ private static final long serialVersionUID = 0L;
       return averageCpmBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue averageCpv_ = null;
+    private com.google.protobuf.DoubleValue averageCpv_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averageCpvBuilder_;
     /**
@@ -13301,7 +13300,7 @@ private static final long serialVersionUID = 0L;
       return averageCpvBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue averageFrequency_ = null;
+    private com.google.protobuf.DoubleValue averageFrequency_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averageFrequencyBuilder_;
     /**
@@ -13463,7 +13462,7 @@ private static final long serialVersionUID = 0L;
       return averageFrequencyBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue averagePageViews_ = null;
+    private com.google.protobuf.DoubleValue averagePageViews_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averagePageViewsBuilder_;
     /**
@@ -13616,7 +13615,7 @@ private static final long serialVersionUID = 0L;
       return averagePageViewsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue averagePosition_ = null;
+    private com.google.protobuf.DoubleValue averagePosition_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averagePositionBuilder_;
     /**
@@ -13769,7 +13768,7 @@ private static final long serialVersionUID = 0L;
       return averagePositionBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue averageTimeOnSite_ = null;
+    private com.google.protobuf.DoubleValue averageTimeOnSite_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> averageTimeOnSiteBuilder_;
     /**
@@ -13931,7 +13930,7 @@ private static final long serialVersionUID = 0L;
       return averageTimeOnSiteBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue benchmarkAverageMaxCpc_ = null;
+    private com.google.protobuf.DoubleValue benchmarkAverageMaxCpc_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> benchmarkAverageMaxCpcBuilder_;
     /**
@@ -14084,7 +14083,7 @@ private static final long serialVersionUID = 0L;
       return benchmarkAverageMaxCpcBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue benchmarkCtr_ = null;
+    private com.google.protobuf.DoubleValue benchmarkCtr_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> benchmarkCtrBuilder_;
     /**
@@ -14246,7 +14245,7 @@ private static final long serialVersionUID = 0L;
       return benchmarkCtrBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue bounceRate_ = null;
+    private com.google.protobuf.DoubleValue bounceRate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> bounceRateBuilder_;
     /**
@@ -14408,7 +14407,7 @@ private static final long serialVersionUID = 0L;
       return bounceRateBuilder_;
     }
 
-    private com.google.protobuf.Int64Value clicks_ = null;
+    private com.google.protobuf.Int64Value clicks_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> clicksBuilder_;
     /**
@@ -14561,7 +14560,7 @@ private static final long serialVersionUID = 0L;
       return clicksBuilder_;
     }
 
-    private com.google.protobuf.Int64Value combinedClicks_ = null;
+    private com.google.protobuf.Int64Value combinedClicks_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> combinedClicksBuilder_;
     /**
@@ -14732,7 +14731,7 @@ private static final long serialVersionUID = 0L;
       return combinedClicksBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue combinedClicksPerQuery_ = null;
+    private com.google.protobuf.DoubleValue combinedClicksPerQuery_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> combinedClicksPerQueryBuilder_;
     /**
@@ -14912,7 +14911,7 @@ private static final long serialVersionUID = 0L;
       return combinedClicksPerQueryBuilder_;
     }
 
-    private com.google.protobuf.Int64Value combinedQueries_ = null;
+    private com.google.protobuf.Int64Value combinedQueries_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> combinedQueriesBuilder_;
     /**
@@ -15083,7 +15082,7 @@ private static final long serialVersionUID = 0L;
       return combinedQueriesBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue contentBudgetLostImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue contentBudgetLostImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> contentBudgetLostImpressionShareBuilder_;
     /**
@@ -15263,7 +15262,7 @@ private static final long serialVersionUID = 0L;
       return contentBudgetLostImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue contentImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue contentImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> contentImpressionShareBuilder_;
     /**
@@ -15443,7 +15442,7 @@ private static final long serialVersionUID = 0L;
       return contentImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.StringValue conversionLastReceivedRequestDateTime_ = null;
+    private com.google.protobuf.StringValue conversionLastReceivedRequestDateTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> conversionLastReceivedRequestDateTimeBuilder_;
     /**
@@ -15632,7 +15631,7 @@ private static final long serialVersionUID = 0L;
       return conversionLastReceivedRequestDateTimeBuilder_;
     }
 
-    private com.google.protobuf.StringValue conversionLastConversionDate_ = null;
+    private com.google.protobuf.StringValue conversionLastConversionDate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> conversionLastConversionDateBuilder_;
     /**
@@ -15794,7 +15793,7 @@ private static final long serialVersionUID = 0L;
       return conversionLastConversionDateBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue contentRankLostImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue contentRankLostImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> contentRankLostImpressionShareBuilder_;
     /**
@@ -15974,7 +15973,7 @@ private static final long serialVersionUID = 0L;
       return contentRankLostImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue conversionsFromInteractionsRate_ = null;
+    private com.google.protobuf.DoubleValue conversionsFromInteractionsRate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsFromInteractionsRateBuilder_;
     /**
@@ -16154,7 +16153,7 @@ private static final long serialVersionUID = 0L;
       return conversionsFromInteractionsRateBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue conversionsValue_ = null;
+    private com.google.protobuf.DoubleValue conversionsValue_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsValueBuilder_;
     /**
@@ -16316,7 +16315,7 @@ private static final long serialVersionUID = 0L;
       return conversionsValueBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue conversionsValuePerCost_ = null;
+    private com.google.protobuf.DoubleValue conversionsValuePerCost_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsValuePerCostBuilder_;
     /**
@@ -16487,7 +16486,7 @@ private static final long serialVersionUID = 0L;
       return conversionsValuePerCostBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue conversionsFromInteractionsValuePerInteraction_ = null;
+    private com.google.protobuf.DoubleValue conversionsFromInteractionsValuePerInteraction_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsFromInteractionsValuePerInteractionBuilder_;
     /**
@@ -16658,7 +16657,7 @@ private static final long serialVersionUID = 0L;
       return conversionsFromInteractionsValuePerInteractionBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue conversions_ = null;
+    private com.google.protobuf.DoubleValue conversions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsBuilder_;
     /**
@@ -16820,7 +16819,7 @@ private static final long serialVersionUID = 0L;
       return conversionsBuilder_;
     }
 
-    private com.google.protobuf.Int64Value costMicros_ = null;
+    private com.google.protobuf.Int64Value costMicros_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> costMicrosBuilder_;
     /**
@@ -16982,7 +16981,7 @@ private static final long serialVersionUID = 0L;
       return costMicrosBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue costPerAllConversions_ = null;
+    private com.google.protobuf.DoubleValue costPerAllConversions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> costPerAllConversionsBuilder_;
     /**
@@ -17135,7 +17134,7 @@ private static final long serialVersionUID = 0L;
       return costPerAllConversionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue costPerConversion_ = null;
+    private com.google.protobuf.DoubleValue costPerConversion_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> costPerConversionBuilder_;
     /**
@@ -17306,7 +17305,7 @@ private static final long serialVersionUID = 0L;
       return costPerConversionBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue costPerCurrentModelAttributedConversion_ = null;
+    private com.google.protobuf.DoubleValue costPerCurrentModelAttributedConversion_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> costPerCurrentModelAttributedConversionBuilder_;
     /**
@@ -17477,7 +17476,7 @@ private static final long serialVersionUID = 0L;
       return costPerCurrentModelAttributedConversionBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue crossDeviceConversions_ = null;
+    private com.google.protobuf.DoubleValue crossDeviceConversions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> crossDeviceConversionsBuilder_;
     /**
@@ -17648,7 +17647,7 @@ private static final long serialVersionUID = 0L;
       return crossDeviceConversionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue ctr_ = null;
+    private com.google.protobuf.DoubleValue ctr_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> ctrBuilder_;
     /**
@@ -17810,7 +17809,7 @@ private static final long serialVersionUID = 0L;
       return ctrBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue currentModelAttributedConversions_ = null;
+    private com.google.protobuf.DoubleValue currentModelAttributedConversions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> currentModelAttributedConversionsBuilder_;
     /**
@@ -17981,7 +17980,7 @@ private static final long serialVersionUID = 0L;
       return currentModelAttributedConversionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue currentModelAttributedConversionsFromInteractionsRate_ = null;
+    private com.google.protobuf.DoubleValue currentModelAttributedConversionsFromInteractionsRate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> currentModelAttributedConversionsFromInteractionsRateBuilder_;
     /**
@@ -18161,7 +18160,7 @@ private static final long serialVersionUID = 0L;
       return currentModelAttributedConversionsFromInteractionsRateBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = null;
+    private com.google.protobuf.DoubleValue currentModelAttributedConversionsFromInteractionsValuePerInteraction_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_;
     /**
@@ -18332,7 +18331,7 @@ private static final long serialVersionUID = 0L;
       return currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue currentModelAttributedConversionsValue_ = null;
+    private com.google.protobuf.DoubleValue currentModelAttributedConversionsValue_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> currentModelAttributedConversionsValueBuilder_;
     /**
@@ -18503,7 +18502,7 @@ private static final long serialVersionUID = 0L;
       return currentModelAttributedConversionsValueBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue currentModelAttributedConversionsValuePerCost_ = null;
+    private com.google.protobuf.DoubleValue currentModelAttributedConversionsValuePerCost_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> currentModelAttributedConversionsValuePerCostBuilder_;
     /**
@@ -18674,7 +18673,7 @@ private static final long serialVersionUID = 0L;
       return currentModelAttributedConversionsValuePerCostBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue engagementRate_ = null;
+    private com.google.protobuf.DoubleValue engagementRate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> engagementRateBuilder_;
     /**
@@ -18836,7 +18835,7 @@ private static final long serialVersionUID = 0L;
       return engagementRateBuilder_;
     }
 
-    private com.google.protobuf.Int64Value engagements_ = null;
+    private com.google.protobuf.Int64Value engagements_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> engagementsBuilder_;
     /**
@@ -19007,7 +19006,7 @@ private static final long serialVersionUID = 0L;
       return engagementsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue hotelAverageLeadValueMicros_ = null;
+    private com.google.protobuf.DoubleValue hotelAverageLeadValueMicros_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> hotelAverageLeadValueMicrosBuilder_;
     /**
@@ -19290,7 +19289,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value historicalQualityScore_ = null;
+    private com.google.protobuf.Int64Value historicalQualityScore_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> historicalQualityScoreBuilder_;
     /**
@@ -19508,7 +19507,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value gmailForwards_ = null;
+    private com.google.protobuf.Int64Value gmailForwards_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gmailForwardsBuilder_;
     /**
@@ -19661,7 +19660,7 @@ private static final long serialVersionUID = 0L;
       return gmailForwardsBuilder_;
     }
 
-    private com.google.protobuf.Int64Value gmailSaves_ = null;
+    private com.google.protobuf.Int64Value gmailSaves_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gmailSavesBuilder_;
     /**
@@ -19823,7 +19822,7 @@ private static final long serialVersionUID = 0L;
       return gmailSavesBuilder_;
     }
 
-    private com.google.protobuf.Int64Value gmailSecondaryClicks_ = null;
+    private com.google.protobuf.Int64Value gmailSecondaryClicks_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gmailSecondaryClicksBuilder_;
     /**
@@ -19985,7 +19984,7 @@ private static final long serialVersionUID = 0L;
       return gmailSecondaryClicksBuilder_;
     }
 
-    private com.google.protobuf.Int64Value impressionReach_ = null;
+    private com.google.protobuf.Int64Value impressionReach_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> impressionReachBuilder_;
     /**
@@ -20147,7 +20146,7 @@ private static final long serialVersionUID = 0L;
       return impressionReachBuilder_;
     }
 
-    private com.google.protobuf.Int64Value impressionsFromStoreReach_ = null;
+    private com.google.protobuf.Int64Value impressionsFromStoreReach_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> impressionsFromStoreReachBuilder_;
     /**
@@ -20309,7 +20308,7 @@ private static final long serialVersionUID = 0L;
       return impressionsFromStoreReachBuilder_;
     }
 
-    private com.google.protobuf.Int64Value impressions_ = null;
+    private com.google.protobuf.Int64Value impressions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> impressionsBuilder_;
     /**
@@ -20471,7 +20470,7 @@ private static final long serialVersionUID = 0L;
       return impressionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue interactionRate_ = null;
+    private com.google.protobuf.DoubleValue interactionRate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> interactionRateBuilder_;
     /**
@@ -20642,7 +20641,7 @@ private static final long serialVersionUID = 0L;
       return interactionRateBuilder_;
     }
 
-    private com.google.protobuf.Int64Value interactions_ = null;
+    private com.google.protobuf.Int64Value interactions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> interactionsBuilder_;
     /**
@@ -20816,7 +20815,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> interactionEventTypes_ =
       java.util.Collections.emptyList();
     private void ensureInteractionEventTypesIsMutable() {
-      if (!((bitField2_ & 0x00000100) == 0x00000100)) {
+      if (!((bitField2_ & 0x00000100) != 0)) {
         interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>(interactionEventTypes_);
         bitField2_ |= 0x00000100;
       }
@@ -20979,7 +20978,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.DoubleValue invalidClickRate_ = null;
+    private com.google.protobuf.DoubleValue invalidClickRate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> invalidClickRateBuilder_;
     /**
@@ -21141,7 +21140,7 @@ private static final long serialVersionUID = 0L;
       return invalidClickRateBuilder_;
     }
 
-    private com.google.protobuf.Int64Value invalidClicks_ = null;
+    private com.google.protobuf.Int64Value invalidClicks_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> invalidClicksBuilder_;
     /**
@@ -21294,7 +21293,7 @@ private static final long serialVersionUID = 0L;
       return invalidClicksBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue mobileFriendlyClicksPercentage_ = null;
+    private com.google.protobuf.DoubleValue mobileFriendlyClicksPercentage_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> mobileFriendlyClicksPercentageBuilder_;
     /**
@@ -21447,7 +21446,7 @@ private static final long serialVersionUID = 0L;
       return mobileFriendlyClicksPercentageBuilder_;
     }
 
-    private com.google.protobuf.Int64Value organicClicks_ = null;
+    private com.google.protobuf.Int64Value organicClicks_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> organicClicksBuilder_;
     /**
@@ -21618,7 +21617,7 @@ private static final long serialVersionUID = 0L;
       return organicClicksBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue organicClicksPerQuery_ = null;
+    private com.google.protobuf.DoubleValue organicClicksPerQuery_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> organicClicksPerQueryBuilder_;
     /**
@@ -21798,7 +21797,7 @@ private static final long serialVersionUID = 0L;
       return organicClicksPerQueryBuilder_;
     }
 
-    private com.google.protobuf.Int64Value organicImpressions_ = null;
+    private com.google.protobuf.Int64Value organicImpressions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> organicImpressionsBuilder_;
     /**
@@ -21969,7 +21968,7 @@ private static final long serialVersionUID = 0L;
       return organicImpressionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue organicImpressionsPerQuery_ = null;
+    private com.google.protobuf.DoubleValue organicImpressionsPerQuery_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> organicImpressionsPerQueryBuilder_;
     /**
@@ -22149,7 +22148,7 @@ private static final long serialVersionUID = 0L;
       return organicImpressionsPerQueryBuilder_;
     }
 
-    private com.google.protobuf.Int64Value organicQueries_ = null;
+    private com.google.protobuf.Int64Value organicQueries_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> organicQueriesBuilder_;
     /**
@@ -22320,7 +22319,7 @@ private static final long serialVersionUID = 0L;
       return organicQueriesBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue percentNewVisitors_ = null;
+    private com.google.protobuf.DoubleValue percentNewVisitors_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> percentNewVisitorsBuilder_;
     /**
@@ -22482,7 +22481,7 @@ private static final long serialVersionUID = 0L;
       return percentNewVisitorsBuilder_;
     }
 
-    private com.google.protobuf.Int64Value phoneCalls_ = null;
+    private com.google.protobuf.Int64Value phoneCalls_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> phoneCallsBuilder_;
     /**
@@ -22635,7 +22634,7 @@ private static final long serialVersionUID = 0L;
       return phoneCallsBuilder_;
     }
 
-    private com.google.protobuf.Int64Value phoneImpressions_ = null;
+    private com.google.protobuf.Int64Value phoneImpressions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> phoneImpressionsBuilder_;
     /**
@@ -22788,7 +22787,7 @@ private static final long serialVersionUID = 0L;
       return phoneImpressionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue phoneThroughRate_ = null;
+    private com.google.protobuf.DoubleValue phoneThroughRate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> phoneThroughRateBuilder_;
     /**
@@ -22950,7 +22949,7 @@ private static final long serialVersionUID = 0L;
       return phoneThroughRateBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue relativeCtr_ = null;
+    private com.google.protobuf.DoubleValue relativeCtr_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> relativeCtrBuilder_;
     /**
@@ -23121,7 +23120,7 @@ private static final long serialVersionUID = 0L;
       return relativeCtrBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue searchAbsoluteTopImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue searchAbsoluteTopImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchAbsoluteTopImpressionShareBuilder_;
     /**
@@ -23301,7 +23300,7 @@ private static final long serialVersionUID = 0L;
       return searchAbsoluteTopImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue searchBudgetLostAbsoluteTopImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue searchBudgetLostAbsoluteTopImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchBudgetLostAbsoluteTopImpressionShareBuilder_;
     /**
@@ -23481,7 +23480,7 @@ private static final long serialVersionUID = 0L;
       return searchBudgetLostAbsoluteTopImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue searchBudgetLostImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue searchBudgetLostImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchBudgetLostImpressionShareBuilder_;
     /**
@@ -23661,7 +23660,7 @@ private static final long serialVersionUID = 0L;
       return searchBudgetLostImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue searchBudgetLostTopImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue searchBudgetLostTopImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchBudgetLostTopImpressionShareBuilder_;
     /**
@@ -23841,7 +23840,7 @@ private static final long serialVersionUID = 0L;
       return searchBudgetLostTopImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue searchClickShare_ = null;
+    private com.google.protobuf.DoubleValue searchClickShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchClickShareBuilder_;
     /**
@@ -24021,7 +24020,7 @@ private static final long serialVersionUID = 0L;
       return searchClickShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue searchExactMatchImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue searchExactMatchImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchExactMatchImpressionShareBuilder_;
     /**
@@ -24219,7 +24218,7 @@ private static final long serialVersionUID = 0L;
       return searchExactMatchImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue searchImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue searchImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchImpressionShareBuilder_;
     /**
@@ -24399,7 +24398,7 @@ private static final long serialVersionUID = 0L;
       return searchImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue searchRankLostAbsoluteTopImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue searchRankLostAbsoluteTopImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchRankLostAbsoluteTopImpressionShareBuilder_;
     /**
@@ -24579,7 +24578,7 @@ private static final long serialVersionUID = 0L;
       return searchRankLostAbsoluteTopImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue searchRankLostImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue searchRankLostImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchRankLostImpressionShareBuilder_;
     /**
@@ -24759,7 +24758,7 @@ private static final long serialVersionUID = 0L;
       return searchRankLostImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue searchRankLostTopImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue searchRankLostTopImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchRankLostTopImpressionShareBuilder_;
     /**
@@ -24939,7 +24938,7 @@ private static final long serialVersionUID = 0L;
       return searchRankLostTopImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue searchTopImpressionShare_ = null;
+    private com.google.protobuf.DoubleValue searchTopImpressionShare_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> searchTopImpressionShareBuilder_;
     /**
@@ -25128,7 +25127,7 @@ private static final long serialVersionUID = 0L;
       return searchTopImpressionShareBuilder_;
     }
 
-    private com.google.protobuf.Int64Value speedScore_ = null;
+    private com.google.protobuf.Int64Value speedScore_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> speedScoreBuilder_;
     /**
@@ -25290,7 +25289,7 @@ private static final long serialVersionUID = 0L;
       return speedScoreBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue topImpressionPercentage_ = null;
+    private com.google.protobuf.DoubleValue topImpressionPercentage_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> topImpressionPercentageBuilder_;
     /**
@@ -25452,7 +25451,7 @@ private static final long serialVersionUID = 0L;
       return topImpressionPercentageBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue validAcceleratedMobilePagesClicksPercentage_ = null;
+    private com.google.protobuf.DoubleValue validAcceleratedMobilePagesClicksPercentage_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> validAcceleratedMobilePagesClicksPercentageBuilder_;
     /**
@@ -25614,7 +25613,7 @@ private static final long serialVersionUID = 0L;
       return validAcceleratedMobilePagesClicksPercentageBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue valuePerAllConversions_ = null;
+    private com.google.protobuf.DoubleValue valuePerAllConversions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> valuePerAllConversionsBuilder_;
     /**
@@ -25767,7 +25766,7 @@ private static final long serialVersionUID = 0L;
       return valuePerAllConversionsBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue valuePerConversion_ = null;
+    private com.google.protobuf.DoubleValue valuePerConversion_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> valuePerConversionBuilder_;
     /**
@@ -25938,7 +25937,7 @@ private static final long serialVersionUID = 0L;
       return valuePerConversionBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue valuePerCurrentModelAttributedConversion_ = null;
+    private com.google.protobuf.DoubleValue valuePerCurrentModelAttributedConversion_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> valuePerCurrentModelAttributedConversionBuilder_;
     /**
@@ -26109,7 +26108,7 @@ private static final long serialVersionUID = 0L;
       return valuePerCurrentModelAttributedConversionBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue videoQuartile100Rate_ = null;
+    private com.google.protobuf.DoubleValue videoQuartile100Rate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> videoQuartile100RateBuilder_;
     /**
@@ -26262,7 +26261,7 @@ private static final long serialVersionUID = 0L;
       return videoQuartile100RateBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue videoQuartile25Rate_ = null;
+    private com.google.protobuf.DoubleValue videoQuartile25Rate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> videoQuartile25RateBuilder_;
     /**
@@ -26415,7 +26414,7 @@ private static final long serialVersionUID = 0L;
       return videoQuartile25RateBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue videoQuartile50Rate_ = null;
+    private com.google.protobuf.DoubleValue videoQuartile50Rate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> videoQuartile50RateBuilder_;
     /**
@@ -26568,7 +26567,7 @@ private static final long serialVersionUID = 0L;
       return videoQuartile50RateBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue videoQuartile75Rate_ = null;
+    private com.google.protobuf.DoubleValue videoQuartile75Rate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> videoQuartile75RateBuilder_;
     /**
@@ -26721,7 +26720,7 @@ private static final long serialVersionUID = 0L;
       return videoQuartile75RateBuilder_;
     }
 
-    private com.google.protobuf.DoubleValue videoViewRate_ = null;
+    private com.google.protobuf.DoubleValue videoViewRate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> videoViewRateBuilder_;
     /**
@@ -26892,7 +26891,7 @@ private static final long serialVersionUID = 0L;
       return videoViewRateBuilder_;
     }
 
-    private com.google.protobuf.Int64Value videoViews_ = null;
+    private com.google.protobuf.Int64Value videoViews_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> videoViewsBuilder_;
     /**
@@ -27045,7 +27044,7 @@ private static final long serialVersionUID = 0L;
       return videoViewsBuilder_;
     }
 
-    private com.google.protobuf.Int64Value viewThroughConversions_ = null;
+    private com.google.protobuf.Int64Value viewThroughConversions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> viewThroughConversionsBuilder_;
     /**
@@ -27227,7 +27226,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

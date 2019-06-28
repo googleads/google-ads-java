@@ -25,10 +25,13 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.common.collect.ImmutableMap;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -119,12 +122,30 @@ public class GrpcKeywordPlanKeywordServiceStub extends KeywordPlanKeywordService
         getKeywordPlanKeywordTransportSettings =
             GrpcCallSettings.<GetKeywordPlanKeywordRequest, KeywordPlanKeyword>newBuilder()
                 .setMethodDescriptor(getKeywordPlanKeywordMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<GetKeywordPlanKeywordRequest>() {
+                      @Override
+                      public Map<String, String> extract(GetKeywordPlanKeywordRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("resource_name", String.valueOf(request.getResourceName()));
+                        return params.build();
+                      }
+                    })
                 .build();
     GrpcCallSettings<MutateKeywordPlanKeywordsRequest, MutateKeywordPlanKeywordsResponse>
         mutateKeywordPlanKeywordsTransportSettings =
             GrpcCallSettings
                 .<MutateKeywordPlanKeywordsRequest, MutateKeywordPlanKeywordsResponse>newBuilder()
                 .setMethodDescriptor(mutateKeywordPlanKeywordsMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<MutateKeywordPlanKeywordsRequest>() {
+                      @Override
+                      public Map<String, String> extract(MutateKeywordPlanKeywordsRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("customer_id", String.valueOf(request.getCustomerId()));
+                        return params.build();
+                      }
+                    })
                 .build();
 
     this.getKeywordPlanKeywordCallable =

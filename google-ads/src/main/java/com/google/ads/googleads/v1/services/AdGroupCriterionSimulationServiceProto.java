@@ -33,22 +33,24 @@ public final class AdGroupCriterionSimulationServiceProto {
       "google.ads.googleads.v1.services\032Egoogle" +
       "/ads/googleads/v1/resources/ad_group_cri" +
       "terion_simulation.proto\032\034google/api/anno" +
-      "tations.proto\"=\n$GetAdGroupCriterionSimu" +
-      "lationRequest\022\025\n\rresource_name\030\001 \001(\t2\223\002\n" +
-      "!AdGroupCriterionSimulationService\022\355\001\n\035G" +
-      "etAdGroupCriterionSimulation\022F.google.ad" +
-      "s.googleads.v1.services.GetAdGroupCriter" +
-      "ionSimulationRequest\032=.google.ads.google" +
-      "ads.v1.resources.AdGroupCriterionSimulat" +
-      "ion\"E\202\323\344\223\002?\022=/v1/{resource_name=customer" +
-      "s/*/adGroupCriterionSimulations/*}B\215\002\n$c" +
-      "om.google.ads.googleads.v1.servicesB&AdG" +
-      "roupCriterionSimulationServiceProtoP\001ZHg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v1/services;services\242\002\003GAA\252\002 " +
-      "Google.Ads.GoogleAds.V1.Services\312\002 Googl" +
-      "e\\Ads\\GoogleAds\\V1\\Services\352\002$Google::Ad" +
-      "s::GoogleAds::V1::Servicesb\006proto3"
+      "tations.proto\032\027google/api/client.proto\"=" +
+      "\n$GetAdGroupCriterionSimulationRequest\022\025" +
+      "\n\rresource_name\030\001 \001(\t2\260\002\n!AdGroupCriteri" +
+      "onSimulationService\022\355\001\n\035GetAdGroupCriter" +
+      "ionSimulation\022F.google.ads.googleads.v1." +
+      "services.GetAdGroupCriterionSimulationRe" +
+      "quest\032=.google.ads.googleads.v1.resource" +
+      "s.AdGroupCriterionSimulation\"E\202\323\344\223\002?\022=/v" +
+      "1/{resource_name=customers/*/adGroupCrit" +
+      "erionSimulations/*}\032\033\312A\030googleads.google" +
+      "apis.comB\215\002\n$com.google.ads.googleads.v1" +
+      ".servicesB&AdGroupCriterionSimulationSer" +
+      "viceProtoP\001ZHgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v1/services;ser" +
+      "vices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Se" +
+      "rvices\312\002 Google\\Ads\\GoogleAds\\V1\\Service" +
+      "s\352\002$Google::Ads::GoogleAds::V1::Services" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -63,6 +65,7 @@ public final class AdGroupCriterionSimulationServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.AdGroupCriterionSimulationProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetAdGroupCriterionSimulationRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -72,11 +75,13 @@ public final class AdGroupCriterionSimulationServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.AdGroupCriterionSimulationProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

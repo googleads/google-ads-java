@@ -106,7 +106,10 @@ public class AdGroupCriterionServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a ad_group_criteria resource.
+   *
+   * @deprecated Use the {@link AdGroupCriteriaName} class instead.
    */
+  @Deprecated
   public static final String formatAdGroupCriteriaName(String customer, String adGroupCriteria) {
     return AD_GROUP_CRITERIA_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -116,7 +119,10 @@ public class AdGroupCriterionServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a ad_group_criteria
    * resource.
+   *
+   * @deprecated Use the {@link AdGroupCriteriaName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromAdGroupCriteriaName(String adGroupCriteriaName) {
     return AD_GROUP_CRITERIA_PATH_TEMPLATE.parse(adGroupCriteriaName).get("customer");
   }
@@ -124,7 +130,10 @@ public class AdGroupCriterionServiceClient implements BackgroundResource {
   /**
    * Parses the ad_group_criteria from the given fully-qualified path which represents a
    * ad_group_criteria resource.
+   *
+   * @deprecated Use the {@link AdGroupCriteriaName} class instead.
    */
+  @Deprecated
   public static final String parseAdGroupCriteriaFromAdGroupCriteriaName(
       String adGroupCriteriaName) {
     return AD_GROUP_CRITERIA_PATH_TEMPLATE.parse(adGroupCriteriaName).get("ad_group_criteria");

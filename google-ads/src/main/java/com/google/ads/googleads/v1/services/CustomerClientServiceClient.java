@@ -105,7 +105,10 @@ public class CustomerClientServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a customer_client resource.
+   *
+   * @deprecated Use the {@link CustomerClientName} class instead.
    */
+  @Deprecated
   public static final String formatCustomerClientName(String customer, String customerClient) {
     return CUSTOMER_CLIENT_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -115,7 +118,10 @@ public class CustomerClientServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a customer_client
    * resource.
+   *
+   * @deprecated Use the {@link CustomerClientName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromCustomerClientName(String customerClientName) {
     return CUSTOMER_CLIENT_PATH_TEMPLATE.parse(customerClientName).get("customer");
   }
@@ -123,7 +129,10 @@ public class CustomerClientServiceClient implements BackgroundResource {
   /**
    * Parses the customer_client from the given fully-qualified path which represents a
    * customer_client resource.
+   *
+   * @deprecated Use the {@link CustomerClientName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerClientFromCustomerClientName(String customerClientName) {
     return CUSTOMER_CLIENT_PATH_TEMPLATE.parse(customerClientName).get("customer_client");
   }

@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -386,31 +386,30 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.errors.GoogleAdsError other = (com.google.ads.googleads.v1.errors.GoogleAdsError) obj;
 
-    boolean result = true;
-    result = result && (hasErrorCode() == other.hasErrorCode());
+    if (hasErrorCode() != other.hasErrorCode()) return false;
     if (hasErrorCode()) {
-      result = result && getErrorCode()
-          .equals(other.getErrorCode());
+      if (!getErrorCode()
+          .equals(other.getErrorCode())) return false;
     }
-    result = result && getMessage()
-        .equals(other.getMessage());
-    result = result && (hasTrigger() == other.hasTrigger());
+    if (!getMessage()
+        .equals(other.getMessage())) return false;
+    if (hasTrigger() != other.hasTrigger()) return false;
     if (hasTrigger()) {
-      result = result && getTrigger()
-          .equals(other.getTrigger());
+      if (!getTrigger()
+          .equals(other.getTrigger())) return false;
     }
-    result = result && (hasLocation() == other.hasLocation());
+    if (hasLocation() != other.hasLocation()) return false;
     if (hasLocation()) {
-      result = result && getLocation()
-          .equals(other.getLocation());
+      if (!getLocation()
+          .equals(other.getLocation())) return false;
     }
-    result = result && (hasDetails() == other.hasDetails());
+    if (hasDetails() != other.hasDetails()) return false;
     if (hasDetails()) {
-      result = result && getDetails()
-          .equals(other.getDetails());
+      if (!getDetails()
+          .equals(other.getDetails())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -654,35 +653,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -741,7 +740,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.ads.googleads.v1.errors.ErrorCode errorCode_ = null;
+    private com.google.ads.googleads.v1.errors.ErrorCode errorCode_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.errors.ErrorCode, com.google.ads.googleads.v1.errors.ErrorCode.Builder, com.google.ads.googleads.v1.errors.ErrorCodeOrBuilder> errorCodeBuilder_;
     /**
@@ -983,7 +982,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.ads.googleads.v1.common.Value trigger_ = null;
+    private com.google.ads.googleads.v1.common.Value trigger_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.Value, com.google.ads.googleads.v1.common.Value.Builder, com.google.ads.googleads.v1.common.ValueOrBuilder> triggerBuilder_;
     /**
@@ -1136,7 +1135,7 @@ private static final long serialVersionUID = 0L;
       return triggerBuilder_;
     }
 
-    private com.google.ads.googleads.v1.errors.ErrorLocation location_ = null;
+    private com.google.ads.googleads.v1.errors.ErrorLocation location_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.errors.ErrorLocation, com.google.ads.googleads.v1.errors.ErrorLocation.Builder, com.google.ads.googleads.v1.errors.ErrorLocationOrBuilder> locationBuilder_;
     /**
@@ -1289,7 +1288,7 @@ private static final long serialVersionUID = 0L;
       return locationBuilder_;
     }
 
-    private com.google.ads.googleads.v1.errors.ErrorDetails details_ = null;
+    private com.google.ads.googleads.v1.errors.ErrorDetails details_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.errors.ErrorDetails, com.google.ads.googleads.v1.errors.ErrorDetails.Builder, com.google.ads.googleads.v1.errors.ErrorDetailsOrBuilder> detailsBuilder_;
     /**
@@ -1453,7 +1452,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

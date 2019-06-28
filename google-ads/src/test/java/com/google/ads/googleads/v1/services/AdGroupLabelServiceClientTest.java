@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -391,7 +391,7 @@ public class AdGroupLabelServiceClientTest {
     AdGroupLabel actualResponse = client.getAdGroupLabel(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockAdGroupLabelService.getRequests();
+    List<AbstractMessage> actualRequests = mockAdGroupLabelService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetAdGroupLabelRequest actualRequest = (GetAdGroupLabelRequest) actualRequests.get(0);
 
@@ -434,7 +434,7 @@ public class AdGroupLabelServiceClientTest {
         client.mutateAdGroupLabels(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockAdGroupLabelService.getRequests();
+    List<AbstractMessage> actualRequests = mockAdGroupLabelService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateAdGroupLabelsRequest actualRequest = (MutateAdGroupLabelsRequest) actualRequests.get(0);
 
@@ -479,7 +479,7 @@ public class AdGroupLabelServiceClientTest {
     MutateAdGroupLabelsResponse actualResponse = client.mutateAdGroupLabels(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockAdGroupLabelService.getRequests();
+    List<AbstractMessage> actualRequests = mockAdGroupLabelService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateAdGroupLabelsRequest actualRequest = (MutateAdGroupLabelsRequest) actualRequests.get(0);
 

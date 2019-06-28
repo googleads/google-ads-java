@@ -106,7 +106,10 @@ public class ProductGroupViewServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a product_group_view
    * resource.
+   *
+   * @deprecated Use the {@link ProductGroupViewName} class instead.
    */
+  @Deprecated
   public static final String formatProductGroupViewName(String customer, String productGroupView) {
     return PRODUCT_GROUP_VIEW_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -116,7 +119,10 @@ public class ProductGroupViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a product_group_view
    * resource.
+   *
+   * @deprecated Use the {@link ProductGroupViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromProductGroupViewName(String productGroupViewName) {
     return PRODUCT_GROUP_VIEW_PATH_TEMPLATE.parse(productGroupViewName).get("customer");
   }
@@ -124,7 +130,10 @@ public class ProductGroupViewServiceClient implements BackgroundResource {
   /**
    * Parses the product_group_view from the given fully-qualified path which represents a
    * product_group_view resource.
+   *
+   * @deprecated Use the {@link ProductGroupViewName} class instead.
    */
+  @Deprecated
   public static final String parseProductGroupViewFromProductGroupViewName(
       String productGroupViewName) {
     return PRODUCT_GROUP_VIEW_PATH_TEMPLATE.parse(productGroupViewName).get("product_group_view");

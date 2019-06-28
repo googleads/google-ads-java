@@ -55,42 +55,44 @@ public final class AdGroupAdServiceProto {
       "s/v1/resources/ad_group_ad.proto\032\034google" +
       "/api/annotations.proto\032 google/protobuf/" +
       "field_mask.proto\032\036google/protobuf/wrappe" +
-      "rs.proto\032\027google/rpc/status.proto\",\n\023Get" +
-      "AdGroupAdRequest\022\025\n\rresource_name\030\001 \001(\t\"" +
-      "\250\001\n\027MutateAdGroupAdsRequest\022\023\n\013customer_" +
-      "id\030\001 \001(\t\022H\n\noperations\030\002 \003(\01324.google.ad" +
-      "s.googleads.v1.services.AdGroupAdOperati" +
-      "on\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_" +
-      "only\030\004 \001(\010\"\304\002\n\022AdGroupAdOperation\022/\n\013upd" +
-      "ate_mask\030\004 \001(\0132\032.google.protobuf.FieldMa" +
-      "sk\022^\n\033policy_validation_parameter\030\005 \001(\0132" +
-      "9.google.ads.googleads.v1.common.PolicyV" +
-      "alidationParameter\022>\n\006create\030\001 \001(\0132,.goo" +
-      "gle.ads.googleads.v1.resources.AdGroupAd" +
-      "H\000\022>\n\006update\030\002 \001(\0132,.google.ads.googlead" +
-      "s.v1.resources.AdGroupAdH\000\022\020\n\006remove\030\003 \001" +
-      "(\tH\000B\013\n\toperation\"\227\001\n\030MutateAdGroupAdsRe" +
-      "sponse\0221\n\025partial_failure_error\030\003 \001(\0132\022." +
-      "google.rpc.Status\022H\n\007results\030\002 \003(\01327.goo" +
-      "gle.ads.googleads.v1.services.MutateAdGr" +
-      "oupAdResult\".\n\025MutateAdGroupAdResult\022\025\n\r" +
-      "resource_name\030\001 \001(\t2\206\003\n\020AdGroupAdService" +
-      "\022\251\001\n\014GetAdGroupAd\0225.google.ads.googleads" +
-      ".v1.services.GetAdGroupAdRequest\032,.googl" +
-      "e.ads.googleads.v1.resources.AdGroupAd\"4" +
-      "\202\323\344\223\002.\022,/v1/{resource_name=customers/*/a" +
-      "dGroupAds/*}\022\305\001\n\020MutateAdGroupAds\0229.goog" +
-      "le.ads.googleads.v1.services.MutateAdGro" +
-      "upAdsRequest\032:.google.ads.googleads.v1.s" +
-      "ervices.MutateAdGroupAdsResponse\":\202\323\344\223\0024" +
-      "\"//v1/customers/{customer_id=*}/adGroupA" +
-      "ds:mutate:\001*B\374\001\n$com.google.ads.googlead" +
-      "s.v1.servicesB\025AdGroupAdServiceProtoP\001ZH" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v1/services;services\242\002\003GAA\252\002" +
-      " Google.Ads.GoogleAds.V1.Services\312\002 Goog" +
-      "le\\Ads\\GoogleAds\\V1\\Services\352\002$Google::A" +
-      "ds::GoogleAds::V1::Servicesb\006proto3"
+      "rs.proto\032\027google/rpc/status.proto\032\027googl" +
+      "e/api/client.proto\",\n\023GetAdGroupAdReques" +
+      "t\022\025\n\rresource_name\030\001 \001(\t\"\250\001\n\027MutateAdGro" +
+      "upAdsRequest\022\023\n\013customer_id\030\001 \001(\t\022H\n\nope" +
+      "rations\030\002 \003(\01324.google.ads.googleads.v1." +
+      "services.AdGroupAdOperation\022\027\n\017partial_f" +
+      "ailure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\304\002\n\022" +
+      "AdGroupAdOperation\022/\n\013update_mask\030\004 \001(\0132" +
+      "\032.google.protobuf.FieldMask\022^\n\033policy_va" +
+      "lidation_parameter\030\005 \001(\01329.google.ads.go" +
+      "ogleads.v1.common.PolicyValidationParame" +
+      "ter\022>\n\006create\030\001 \001(\0132,.google.ads.googlea" +
+      "ds.v1.resources.AdGroupAdH\000\022>\n\006update\030\002 " +
+      "\001(\0132,.google.ads.googleads.v1.resources." +
+      "AdGroupAdH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperati" +
+      "on\"\227\001\n\030MutateAdGroupAdsResponse\0221\n\025parti" +
+      "al_failure_error\030\003 \001(\0132\022.google.rpc.Stat" +
+      "us\022H\n\007results\030\002 \003(\01327.google.ads.googlea" +
+      "ds.v1.services.MutateAdGroupAdResult\".\n\025" +
+      "MutateAdGroupAdResult\022\025\n\rresource_name\030\001" +
+      " \001(\t2\243\003\n\020AdGroupAdService\022\251\001\n\014GetAdGroup" +
+      "Ad\0225.google.ads.googleads.v1.services.Ge" +
+      "tAdGroupAdRequest\032,.google.ads.googleads" +
+      ".v1.resources.AdGroupAd\"4\202\323\344\223\002.\022,/v1/{re" +
+      "source_name=customers/*/adGroupAds/*}\022\305\001" +
+      "\n\020MutateAdGroupAds\0229.google.ads.googlead" +
+      "s.v1.services.MutateAdGroupAdsRequest\032:." +
+      "google.ads.googleads.v1.services.MutateA" +
+      "dGroupAdsResponse\":\202\323\344\223\0024\"//v1/customers" +
+      "/{customer_id=*}/adGroupAds:mutate:\001*\032\033\312" +
+      "A\030googleads.googleapis.comB\374\001\n$com.googl" +
+      "e.ads.googleads.v1.servicesB\025AdGroupAdSe" +
+      "rviceProtoP\001ZHgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v1/services;se" +
+      "rvices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.S" +
+      "ervices\312\002 Google\\Ads\\GoogleAds\\V1\\Servic" +
+      "es\352\002$Google::Ads::GoogleAds::V1::Service" +
+      "sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -109,6 +111,7 @@ public final class AdGroupAdServiceProto {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetAdGroupAdRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -142,6 +145,7 @@ public final class AdGroupAdServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -151,6 +155,7 @@ public final class AdGroupAdServiceProto {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -106,7 +106,10 @@ public class ExpandedLandingPageViewServiceClient implements BackgroundResource 
   /**
    * Formats a string containing the fully-qualified path to represent a expanded_landing_page_view
    * resource.
+   *
+   * @deprecated Use the {@link ExpandedLandingPageViewName} class instead.
    */
+  @Deprecated
   public static final String formatExpandedLandingPageViewName(
       String customer, String expandedLandingPageView) {
     return EXPANDED_LANDING_PAGE_VIEW_PATH_TEMPLATE.instantiate(
@@ -117,7 +120,10 @@ public class ExpandedLandingPageViewServiceClient implements BackgroundResource 
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * expanded_landing_page_view resource.
+   *
+   * @deprecated Use the {@link ExpandedLandingPageViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromExpandedLandingPageViewName(
       String expandedLandingPageViewName) {
     return EXPANDED_LANDING_PAGE_VIEW_PATH_TEMPLATE
@@ -128,7 +134,10 @@ public class ExpandedLandingPageViewServiceClient implements BackgroundResource 
   /**
    * Parses the expanded_landing_page_view from the given fully-qualified path which represents a
    * expanded_landing_page_view resource.
+   *
+   * @deprecated Use the {@link ExpandedLandingPageViewName} class instead.
    */
+  @Deprecated
   public static final String parseExpandedLandingPageViewFromExpandedLandingPageViewName(
       String expandedLandingPageViewName) {
     return EXPANDED_LANDING_PAGE_VIEW_PATH_TEMPLATE

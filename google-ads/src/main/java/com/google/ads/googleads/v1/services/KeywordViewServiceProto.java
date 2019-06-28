@@ -32,20 +32,21 @@ public final class KeywordViewServiceProto {
       "rd_view_service.proto\022 google.ads.google" +
       "ads.v1.services\0324google/ads/googleads/v1" +
       "/resources/keyword_view.proto\032\034google/ap" +
-      "i/annotations.proto\".\n\025GetKeywordViewReq" +
-      "uest\022\025\n\rresource_name\030\001 \001(\t2\310\001\n\022KeywordV" +
-      "iewService\022\261\001\n\016GetKeywordView\0227.google.a" +
-      "ds.googleads.v1.services.GetKeywordViewR" +
-      "equest\032..google.ads.googleads.v1.resourc" +
-      "es.KeywordView\"6\202\323\344\223\0020\022./v1/{resource_na" +
-      "me=customers/*/keywordViews/*}B\376\001\n$com.g" +
-      "oogle.ads.googleads.v1.servicesB\027Keyword" +
-      "ViewServiceProtoP\001ZHgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v1/servi" +
-      "ces;services\242\002\003GAA\252\002 Google.Ads.GoogleAd" +
-      "s.V1.Services\312\002 Google\\Ads\\GoogleAds\\V1\\" +
-      "Services\352\002$Google::Ads::GoogleAds::V1::S" +
-      "ervicesb\006proto3"
+      "i/annotations.proto\032\027google/api/client.p" +
+      "roto\".\n\025GetKeywordViewRequest\022\025\n\rresourc" +
+      "e_name\030\001 \001(\t2\345\001\n\022KeywordViewService\022\261\001\n\016" +
+      "GetKeywordView\0227.google.ads.googleads.v1" +
+      ".services.GetKeywordViewRequest\032..google" +
+      ".ads.googleads.v1.resources.KeywordView\"" +
+      "6\202\323\344\223\0020\022./v1/{resource_name=customers/*/" +
+      "keywordViews/*}\032\033\312A\030googleads.googleapis" +
+      ".comB\376\001\n$com.google.ads.googleads.v1.ser" +
+      "vicesB\027KeywordViewServiceProtoP\001ZHgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v1/services;services\242\002\003GAA\252\002 Googl" +
+      "e.Ads.GoogleAds.V1.Services\312\002 Google\\Ads" +
+      "\\GoogleAds\\V1\\Services\352\002$Google::Ads::Go" +
+      "ogleAds::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -60,6 +61,7 @@ public final class KeywordViewServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.KeywordViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetKeywordViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -69,11 +71,13 @@ public final class KeywordViewServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.KeywordViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

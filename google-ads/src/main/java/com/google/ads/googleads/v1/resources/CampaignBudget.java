@@ -238,7 +238,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -1079,75 +1079,74 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.CampaignBudget other = (com.google.ads.googleads.v1.resources.CampaignBudget) obj;
 
-    boolean result = true;
-    result = result && getResourceName()
-        .equals(other.getResourceName());
-    result = result && (hasId() == other.hasId());
+    if (!getResourceName()
+        .equals(other.getResourceName())) return false;
+    if (hasId() != other.hasId()) return false;
     if (hasId()) {
-      result = result && getId()
-          .equals(other.getId());
+      if (!getId()
+          .equals(other.getId())) return false;
     }
-    result = result && (hasName() == other.hasName());
+    if (hasName() != other.hasName()) return false;
     if (hasName()) {
-      result = result && getName()
-          .equals(other.getName());
+      if (!getName()
+          .equals(other.getName())) return false;
     }
-    result = result && (hasAmountMicros() == other.hasAmountMicros());
+    if (hasAmountMicros() != other.hasAmountMicros()) return false;
     if (hasAmountMicros()) {
-      result = result && getAmountMicros()
-          .equals(other.getAmountMicros());
+      if (!getAmountMicros()
+          .equals(other.getAmountMicros())) return false;
     }
-    result = result && (hasTotalAmountMicros() == other.hasTotalAmountMicros());
+    if (hasTotalAmountMicros() != other.hasTotalAmountMicros()) return false;
     if (hasTotalAmountMicros()) {
-      result = result && getTotalAmountMicros()
-          .equals(other.getTotalAmountMicros());
+      if (!getTotalAmountMicros()
+          .equals(other.getTotalAmountMicros())) return false;
     }
-    result = result && status_ == other.status_;
-    result = result && deliveryMethod_ == other.deliveryMethod_;
-    result = result && (hasExplicitlyShared() == other.hasExplicitlyShared());
+    if (status_ != other.status_) return false;
+    if (deliveryMethod_ != other.deliveryMethod_) return false;
+    if (hasExplicitlyShared() != other.hasExplicitlyShared()) return false;
     if (hasExplicitlyShared()) {
-      result = result && getExplicitlyShared()
-          .equals(other.getExplicitlyShared());
+      if (!getExplicitlyShared()
+          .equals(other.getExplicitlyShared())) return false;
     }
-    result = result && (hasReferenceCount() == other.hasReferenceCount());
+    if (hasReferenceCount() != other.hasReferenceCount()) return false;
     if (hasReferenceCount()) {
-      result = result && getReferenceCount()
-          .equals(other.getReferenceCount());
+      if (!getReferenceCount()
+          .equals(other.getReferenceCount())) return false;
     }
-    result = result && (hasHasRecommendedBudget() == other.hasHasRecommendedBudget());
+    if (hasHasRecommendedBudget() != other.hasHasRecommendedBudget()) return false;
     if (hasHasRecommendedBudget()) {
-      result = result && getHasRecommendedBudget()
-          .equals(other.getHasRecommendedBudget());
+      if (!getHasRecommendedBudget()
+          .equals(other.getHasRecommendedBudget())) return false;
     }
-    result = result && (hasRecommendedBudgetAmountMicros() == other.hasRecommendedBudgetAmountMicros());
+    if (hasRecommendedBudgetAmountMicros() != other.hasRecommendedBudgetAmountMicros()) return false;
     if (hasRecommendedBudgetAmountMicros()) {
-      result = result && getRecommendedBudgetAmountMicros()
-          .equals(other.getRecommendedBudgetAmountMicros());
+      if (!getRecommendedBudgetAmountMicros()
+          .equals(other.getRecommendedBudgetAmountMicros())) return false;
     }
-    result = result && period_ == other.period_;
-    result = result && (hasRecommendedBudgetEstimatedChangeWeeklyClicks() == other.hasRecommendedBudgetEstimatedChangeWeeklyClicks());
+    if (period_ != other.period_) return false;
+    if (hasRecommendedBudgetEstimatedChangeWeeklyClicks() != other.hasRecommendedBudgetEstimatedChangeWeeklyClicks()) return false;
     if (hasRecommendedBudgetEstimatedChangeWeeklyClicks()) {
-      result = result && getRecommendedBudgetEstimatedChangeWeeklyClicks()
-          .equals(other.getRecommendedBudgetEstimatedChangeWeeklyClicks());
+      if (!getRecommendedBudgetEstimatedChangeWeeklyClicks()
+          .equals(other.getRecommendedBudgetEstimatedChangeWeeklyClicks())) return false;
     }
-    result = result && (hasRecommendedBudgetEstimatedChangeWeeklyCostMicros() == other.hasRecommendedBudgetEstimatedChangeWeeklyCostMicros());
+    if (hasRecommendedBudgetEstimatedChangeWeeklyCostMicros() != other.hasRecommendedBudgetEstimatedChangeWeeklyCostMicros()) return false;
     if (hasRecommendedBudgetEstimatedChangeWeeklyCostMicros()) {
-      result = result && getRecommendedBudgetEstimatedChangeWeeklyCostMicros()
-          .equals(other.getRecommendedBudgetEstimatedChangeWeeklyCostMicros());
+      if (!getRecommendedBudgetEstimatedChangeWeeklyCostMicros()
+          .equals(other.getRecommendedBudgetEstimatedChangeWeeklyCostMicros())) return false;
     }
-    result = result && (hasRecommendedBudgetEstimatedChangeWeeklyInteractions() == other.hasRecommendedBudgetEstimatedChangeWeeklyInteractions());
+    if (hasRecommendedBudgetEstimatedChangeWeeklyInteractions() != other.hasRecommendedBudgetEstimatedChangeWeeklyInteractions()) return false;
     if (hasRecommendedBudgetEstimatedChangeWeeklyInteractions()) {
-      result = result && getRecommendedBudgetEstimatedChangeWeeklyInteractions()
-          .equals(other.getRecommendedBudgetEstimatedChangeWeeklyInteractions());
+      if (!getRecommendedBudgetEstimatedChangeWeeklyInteractions()
+          .equals(other.getRecommendedBudgetEstimatedChangeWeeklyInteractions())) return false;
     }
-    result = result && (hasRecommendedBudgetEstimatedChangeWeeklyViews() == other.hasRecommendedBudgetEstimatedChangeWeeklyViews());
+    if (hasRecommendedBudgetEstimatedChangeWeeklyViews() != other.hasRecommendedBudgetEstimatedChangeWeeklyViews()) return false;
     if (hasRecommendedBudgetEstimatedChangeWeeklyViews()) {
-      result = result && getRecommendedBudgetEstimatedChangeWeeklyViews()
-          .equals(other.getRecommendedBudgetEstimatedChangeWeeklyViews());
+      if (!getRecommendedBudgetEstimatedChangeWeeklyViews()
+          .equals(other.getRecommendedBudgetEstimatedChangeWeeklyViews())) return false;
     }
-    result = result && type_ == other.type_;
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (type_ != other.type_) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1531,35 +1530,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1753,7 +1752,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value id_ = null;
+    private com.google.protobuf.Int64Value id_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
@@ -1942,7 +1941,7 @@ private static final long serialVersionUID = 0L;
       return idBuilder_;
     }
 
-    private com.google.protobuf.StringValue name_ = null;
+    private com.google.protobuf.StringValue name_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
@@ -2149,7 +2148,7 @@ private static final long serialVersionUID = 0L;
       return nameBuilder_;
     }
 
-    private com.google.protobuf.Int64Value amountMicros_ = null;
+    private com.google.protobuf.Int64Value amountMicros_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> amountMicrosBuilder_;
     /**
@@ -2320,7 +2319,7 @@ private static final long serialVersionUID = 0L;
       return amountMicrosBuilder_;
     }
 
-    private com.google.protobuf.Int64Value totalAmountMicros_ = null;
+    private com.google.protobuf.Int64Value totalAmountMicros_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> totalAmountMicrosBuilder_;
     /**
@@ -2631,7 +2630,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.BoolValue explicitlyShared_ = null;
+    private com.google.protobuf.BoolValue explicitlyShared_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> explicitlySharedBuilder_;
     /**
@@ -2874,7 +2873,7 @@ private static final long serialVersionUID = 0L;
       return explicitlySharedBuilder_;
     }
 
-    private com.google.protobuf.Int64Value referenceCount_ = null;
+    private com.google.protobuf.Int64Value referenceCount_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> referenceCountBuilder_;
     /**
@@ -3036,7 +3035,7 @@ private static final long serialVersionUID = 0L;
       return referenceCountBuilder_;
     }
 
-    private com.google.protobuf.BoolValue hasRecommendedBudget_ = null;
+    private com.google.protobuf.BoolValue hasRecommendedBudget_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> hasRecommendedBudgetBuilder_;
     /**
@@ -3198,7 +3197,7 @@ private static final long serialVersionUID = 0L;
       return hasRecommendedBudgetBuilder_;
     }
 
-    private com.google.protobuf.Int64Value recommendedBudgetAmountMicros_ = null;
+    private com.google.protobuf.Int64Value recommendedBudgetAmountMicros_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetAmountMicrosBuilder_;
     /**
@@ -3452,7 +3451,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyClicks_ = null;
+    private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyClicks_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetEstimatedChangeWeeklyClicksBuilder_;
     /**
@@ -3614,7 +3613,7 @@ private static final long serialVersionUID = 0L;
       return recommendedBudgetEstimatedChangeWeeklyClicksBuilder_;
     }
 
-    private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyCostMicros_ = null;
+    private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyCostMicros_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_;
     /**
@@ -3785,7 +3784,7 @@ private static final long serialVersionUID = 0L;
       return recommendedBudgetEstimatedChangeWeeklyCostMicrosBuilder_;
     }
 
-    private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyInteractions_ = null;
+    private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyInteractions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_;
     /**
@@ -3956,7 +3955,7 @@ private static final long serialVersionUID = 0L;
       return recommendedBudgetEstimatedChangeWeeklyInteractionsBuilder_;
     }
 
-    private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyViews_ = null;
+    private com.google.protobuf.Int64Value recommendedBudgetEstimatedChangeWeeklyViews_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedBudgetEstimatedChangeWeeklyViewsBuilder_;
     /**
@@ -4185,7 +4184,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

@@ -120,7 +120,10 @@ public class CampaignDraftServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a campaign_draft resource.
+   *
+   * @deprecated Use the {@link CampaignDraftName} class instead.
    */
+  @Deprecated
   public static final String formatCampaignDraftName(String customer, String campaignDraft) {
     return CAMPAIGN_DRAFT_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -130,7 +133,10 @@ public class CampaignDraftServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a campaign_draft
    * resource.
+   *
+   * @deprecated Use the {@link CampaignDraftName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromCampaignDraftName(String campaignDraftName) {
     return CAMPAIGN_DRAFT_PATH_TEMPLATE.parse(campaignDraftName).get("customer");
   }
@@ -138,7 +144,10 @@ public class CampaignDraftServiceClient implements BackgroundResource {
   /**
    * Parses the campaign_draft from the given fully-qualified path which represents a campaign_draft
    * resource.
+   *
+   * @deprecated Use the {@link CampaignDraftName} class instead.
    */
+  @Deprecated
   public static final String parseCampaignDraftFromCampaignDraftName(String campaignDraftName) {
     return CAMPAIGN_DRAFT_PATH_TEMPLATE.parse(campaignDraftName).get("campaign_draft");
   }

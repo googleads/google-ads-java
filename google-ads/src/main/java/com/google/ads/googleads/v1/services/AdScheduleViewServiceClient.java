@@ -105,7 +105,10 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a ad_schedule_view resource.
+   *
+   * @deprecated Use the {@link AdScheduleViewName} class instead.
    */
+  @Deprecated
   public static final String formatAdScheduleViewName(String customer, String adScheduleView) {
     return AD_SCHEDULE_VIEW_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -115,7 +118,10 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a ad_schedule_view
    * resource.
+   *
+   * @deprecated Use the {@link AdScheduleViewName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromAdScheduleViewName(String adScheduleViewName) {
     return AD_SCHEDULE_VIEW_PATH_TEMPLATE.parse(adScheduleViewName).get("customer");
   }
@@ -123,7 +129,10 @@ public class AdScheduleViewServiceClient implements BackgroundResource {
   /**
    * Parses the ad_schedule_view from the given fully-qualified path which represents a
    * ad_schedule_view resource.
+   *
+   * @deprecated Use the {@link AdScheduleViewName} class instead.
    */
+  @Deprecated
   public static final String parseAdScheduleViewFromAdScheduleViewName(String adScheduleViewName) {
     return AD_SCHEDULE_VIEW_PATH_TEMPLATE.parse(adScheduleViewName).get("ad_schedule_view");
   }

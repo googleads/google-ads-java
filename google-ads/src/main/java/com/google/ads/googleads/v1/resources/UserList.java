@@ -303,7 +303,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -1391,95 +1391,92 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.UserList other = (com.google.ads.googleads.v1.resources.UserList) obj;
 
-    boolean result = true;
-    result = result && getResourceName()
-        .equals(other.getResourceName());
-    result = result && (hasId() == other.hasId());
+    if (!getResourceName()
+        .equals(other.getResourceName())) return false;
+    if (hasId() != other.hasId()) return false;
     if (hasId()) {
-      result = result && getId()
-          .equals(other.getId());
+      if (!getId()
+          .equals(other.getId())) return false;
     }
-    result = result && (hasReadOnly() == other.hasReadOnly());
+    if (hasReadOnly() != other.hasReadOnly()) return false;
     if (hasReadOnly()) {
-      result = result && getReadOnly()
-          .equals(other.getReadOnly());
+      if (!getReadOnly()
+          .equals(other.getReadOnly())) return false;
     }
-    result = result && (hasName() == other.hasName());
+    if (hasName() != other.hasName()) return false;
     if (hasName()) {
-      result = result && getName()
-          .equals(other.getName());
+      if (!getName()
+          .equals(other.getName())) return false;
     }
-    result = result && (hasDescription() == other.hasDescription());
+    if (hasDescription() != other.hasDescription()) return false;
     if (hasDescription()) {
-      result = result && getDescription()
-          .equals(other.getDescription());
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
     }
-    result = result && membershipStatus_ == other.membershipStatus_;
-    result = result && (hasIntegrationCode() == other.hasIntegrationCode());
+    if (membershipStatus_ != other.membershipStatus_) return false;
+    if (hasIntegrationCode() != other.hasIntegrationCode()) return false;
     if (hasIntegrationCode()) {
-      result = result && getIntegrationCode()
-          .equals(other.getIntegrationCode());
+      if (!getIntegrationCode()
+          .equals(other.getIntegrationCode())) return false;
     }
-    result = result && (hasMembershipLifeSpan() == other.hasMembershipLifeSpan());
+    if (hasMembershipLifeSpan() != other.hasMembershipLifeSpan()) return false;
     if (hasMembershipLifeSpan()) {
-      result = result && getMembershipLifeSpan()
-          .equals(other.getMembershipLifeSpan());
+      if (!getMembershipLifeSpan()
+          .equals(other.getMembershipLifeSpan())) return false;
     }
-    result = result && (hasSizeForDisplay() == other.hasSizeForDisplay());
+    if (hasSizeForDisplay() != other.hasSizeForDisplay()) return false;
     if (hasSizeForDisplay()) {
-      result = result && getSizeForDisplay()
-          .equals(other.getSizeForDisplay());
+      if (!getSizeForDisplay()
+          .equals(other.getSizeForDisplay())) return false;
     }
-    result = result && sizeRangeForDisplay_ == other.sizeRangeForDisplay_;
-    result = result && (hasSizeForSearch() == other.hasSizeForSearch());
+    if (sizeRangeForDisplay_ != other.sizeRangeForDisplay_) return false;
+    if (hasSizeForSearch() != other.hasSizeForSearch()) return false;
     if (hasSizeForSearch()) {
-      result = result && getSizeForSearch()
-          .equals(other.getSizeForSearch());
+      if (!getSizeForSearch()
+          .equals(other.getSizeForSearch())) return false;
     }
-    result = result && sizeRangeForSearch_ == other.sizeRangeForSearch_;
-    result = result && type_ == other.type_;
-    result = result && closingReason_ == other.closingReason_;
-    result = result && accessReason_ == other.accessReason_;
-    result = result && accountUserListStatus_ == other.accountUserListStatus_;
-    result = result && (hasEligibleForSearch() == other.hasEligibleForSearch());
+    if (sizeRangeForSearch_ != other.sizeRangeForSearch_) return false;
+    if (type_ != other.type_) return false;
+    if (closingReason_ != other.closingReason_) return false;
+    if (accessReason_ != other.accessReason_) return false;
+    if (accountUserListStatus_ != other.accountUserListStatus_) return false;
+    if (hasEligibleForSearch() != other.hasEligibleForSearch()) return false;
     if (hasEligibleForSearch()) {
-      result = result && getEligibleForSearch()
-          .equals(other.getEligibleForSearch());
+      if (!getEligibleForSearch()
+          .equals(other.getEligibleForSearch())) return false;
     }
-    result = result && (hasEligibleForDisplay() == other.hasEligibleForDisplay());
+    if (hasEligibleForDisplay() != other.hasEligibleForDisplay()) return false;
     if (hasEligibleForDisplay()) {
-      result = result && getEligibleForDisplay()
-          .equals(other.getEligibleForDisplay());
+      if (!getEligibleForDisplay()
+          .equals(other.getEligibleForDisplay())) return false;
     }
-    result = result && getUserListCase().equals(
-        other.getUserListCase());
-    if (!result) return false;
+    if (!getUserListCase().equals(other.getUserListCase())) return false;
     switch (userListCase_) {
       case 19:
-        result = result && getCrmBasedUserList()
-            .equals(other.getCrmBasedUserList());
+        if (!getCrmBasedUserList()
+            .equals(other.getCrmBasedUserList())) return false;
         break;
       case 20:
-        result = result && getSimilarUserList()
-            .equals(other.getSimilarUserList());
+        if (!getSimilarUserList()
+            .equals(other.getSimilarUserList())) return false;
         break;
       case 21:
-        result = result && getRuleBasedUserList()
-            .equals(other.getRuleBasedUserList());
+        if (!getRuleBasedUserList()
+            .equals(other.getRuleBasedUserList())) return false;
         break;
       case 22:
-        result = result && getLogicalUserList()
-            .equals(other.getLogicalUserList());
+        if (!getLogicalUserList()
+            .equals(other.getLogicalUserList())) return false;
         break;
       case 23:
-        result = result && getBasicUserList()
-            .equals(other.getBasicUserList());
+        if (!getBasicUserList()
+            .equals(other.getBasicUserList())) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1910,35 +1907,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2175,7 +2172,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value id_ = null;
+    private com.google.protobuf.Int64Value id_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
@@ -2328,7 +2325,7 @@ private static final long serialVersionUID = 0L;
       return idBuilder_;
     }
 
-    private com.google.protobuf.BoolValue readOnly_ = null;
+    private com.google.protobuf.BoolValue readOnly_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> readOnlyBuilder_;
     /**
@@ -2508,7 +2505,7 @@ private static final long serialVersionUID = 0L;
       return readOnlyBuilder_;
     }
 
-    private com.google.protobuf.StringValue name_ = null;
+    private com.google.protobuf.StringValue name_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
@@ -2670,7 +2667,7 @@ private static final long serialVersionUID = 0L;
       return nameBuilder_;
     }
 
-    private com.google.protobuf.StringValue description_ = null;
+    private com.google.protobuf.StringValue description_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> descriptionBuilder_;
     /**
@@ -2898,7 +2895,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue integrationCode_ = null;
+    private com.google.protobuf.StringValue integrationCode_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> integrationCodeBuilder_;
     /**
@@ -3060,7 +3057,7 @@ private static final long serialVersionUID = 0L;
       return integrationCodeBuilder_;
     }
 
-    private com.google.protobuf.Int64Value membershipLifeSpan_ = null;
+    private com.google.protobuf.Int64Value membershipLifeSpan_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> membershipLifeSpanBuilder_;
     /**
@@ -3249,7 +3246,7 @@ private static final long serialVersionUID = 0L;
       return membershipLifeSpanBuilder_;
     }
 
-    private com.google.protobuf.Int64Value sizeForDisplay_ = null;
+    private com.google.protobuf.Int64Value sizeForDisplay_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sizeForDisplayBuilder_;
     /**
@@ -3495,7 +3492,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value sizeForSearch_ = null;
+    private com.google.protobuf.Int64Value sizeForSearch_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sizeForSearchBuilder_;
     /**
@@ -4045,7 +4042,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.BoolValue eligibleForSearch_ = null;
+    private com.google.protobuf.BoolValue eligibleForSearch_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> eligibleForSearchBuilder_;
     /**
@@ -4198,7 +4195,7 @@ private static final long serialVersionUID = 0L;
       return eligibleForSearchBuilder_;
     }
 
-    private com.google.protobuf.BoolValue eligibleForDisplay_ = null;
+    private com.google.protobuf.BoolValue eligibleForDisplay_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> eligibleForDisplayBuilder_;
     /**
@@ -5231,7 +5228,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

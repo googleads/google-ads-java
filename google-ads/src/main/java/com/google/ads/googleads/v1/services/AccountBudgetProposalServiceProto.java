@@ -53,42 +53,43 @@ public final class AccountBudgetProposalServiceProto {
       ".ads.googleads.v1.services\032?google/ads/g" +
       "oogleads/v1/resources/account_budget_pro" +
       "posal.proto\032\034google/api/annotations.prot" +
-      "o\032 google/protobuf/field_mask.proto\"8\n\037G" +
-      "etAccountBudgetProposalRequest\022\025\n\rresour" +
-      "ce_name\030\001 \001(\t\"\245\001\n\"MutateAccountBudgetPro" +
-      "posalRequest\022\023\n\013customer_id\030\001 \001(\t\022S\n\tope" +
-      "ration\030\002 \001(\0132@.google.ads.googleads.v1.s" +
-      "ervices.AccountBudgetProposalOperation\022\025" +
-      "\n\rvalidate_only\030\003 \001(\010\"\274\001\n\036AccountBudgetP" +
-      "roposalOperation\022/\n\013update_mask\030\003 \001(\0132\032." +
-      "google.protobuf.FieldMask\022J\n\006create\030\002 \001(" +
-      "\01328.google.ads.googleads.v1.resources.Ac" +
-      "countBudgetProposalH\000\022\020\n\006remove\030\001 \001(\tH\000B" +
-      "\013\n\toperation\"z\n#MutateAccountBudgetPropo" +
-      "salResponse\022S\n\006result\030\002 \001(\0132C.google.ads" +
-      ".googleads.v1.services.MutateAccountBudg" +
-      "etProposalResult\":\n!MutateAccountBudgetP" +
-      "roposalResult\022\025\n\rresource_name\030\001 \001(\t2\357\003\n" +
-      "\034AccountBudgetProposalService\022\331\001\n\030GetAcc" +
-      "ountBudgetProposal\022A.google.ads.googlead" +
-      "s.v1.services.GetAccountBudgetProposalRe" +
-      "quest\0328.google.ads.googleads.v1.resource" +
-      "s.AccountBudgetProposal\"@\202\323\344\223\002:\0228/v1/{re" +
-      "source_name=customers/*/accountBudgetPro" +
-      "posals/*}\022\362\001\n\033MutateAccountBudgetProposa" +
-      "l\022D.google.ads.googleads.v1.services.Mut" +
-      "ateAccountBudgetProposalRequest\032E.google" +
-      ".ads.googleads.v1.services.MutateAccount" +
-      "BudgetProposalResponse\"F\202\323\344\223\002@\";/v1/cust" +
-      "omers/{customer_id=*}/accountBudgetPropo" +
-      "sals:mutate:\001*B\210\002\n$com.google.ads.google" +
-      "ads.v1.servicesB!AccountBudgetProposalSe" +
-      "rviceProtoP\001ZHgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v1/services;se" +
-      "rvices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.S" +
-      "ervices\312\002 Google\\Ads\\GoogleAds\\V1\\Servic" +
-      "es\352\002$Google::Ads::GoogleAds::V1::Service" +
-      "sb\006proto3"
+      "o\032 google/protobuf/field_mask.proto\032\027goo" +
+      "gle/api/client.proto\"8\n\037GetAccountBudget" +
+      "ProposalRequest\022\025\n\rresource_name\030\001 \001(\t\"\245" +
+      "\001\n\"MutateAccountBudgetProposalRequest\022\023\n" +
+      "\013customer_id\030\001 \001(\t\022S\n\toperation\030\002 \001(\0132@." +
+      "google.ads.googleads.v1.services.Account" +
+      "BudgetProposalOperation\022\025\n\rvalidate_only" +
+      "\030\003 \001(\010\"\274\001\n\036AccountBudgetProposalOperatio" +
+      "n\022/\n\013update_mask\030\003 \001(\0132\032.google.protobuf" +
+      ".FieldMask\022J\n\006create\030\002 \001(\01328.google.ads." +
+      "googleads.v1.resources.AccountBudgetProp" +
+      "osalH\000\022\020\n\006remove\030\001 \001(\tH\000B\013\n\toperation\"z\n" +
+      "#MutateAccountBudgetProposalResponse\022S\n\006" +
+      "result\030\002 \001(\0132C.google.ads.googleads.v1.s" +
+      "ervices.MutateAccountBudgetProposalResul" +
+      "t\":\n!MutateAccountBudgetProposalResult\022\025" +
+      "\n\rresource_name\030\001 \001(\t2\214\004\n\034AccountBudgetP" +
+      "roposalService\022\331\001\n\030GetAccountBudgetPropo" +
+      "sal\022A.google.ads.googleads.v1.services.G" +
+      "etAccountBudgetProposalRequest\0328.google." +
+      "ads.googleads.v1.resources.AccountBudget" +
+      "Proposal\"@\202\323\344\223\002:\0228/v1/{resource_name=cus" +
+      "tomers/*/accountBudgetProposals/*}\022\362\001\n\033M" +
+      "utateAccountBudgetProposal\022D.google.ads." +
+      "googleads.v1.services.MutateAccountBudge" +
+      "tProposalRequest\032E.google.ads.googleads." +
+      "v1.services.MutateAccountBudgetProposalR" +
+      "esponse\"F\202\323\344\223\002@\";/v1/customers/{customer" +
+      "_id=*}/accountBudgetProposals:mutate:\001*\032" +
+      "\033\312A\030googleads.googleapis.comB\210\002\n$com.goo" +
+      "gle.ads.googleads.v1.servicesB!AccountBu" +
+      "dgetProposalServiceProtoP\001ZHgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v1/services;services\242\002\003GAA\252\002 Google.Ads." +
+      "GoogleAds.V1.Services\312\002 Google\\Ads\\Googl" +
+      "eAds\\V1\\Services\352\002$Google::Ads::GoogleAd" +
+      "s::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -104,6 +105,7 @@ public final class AccountBudgetProposalServiceProto {
           com.google.ads.googleads.v1.resources.AccountBudgetProposalProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetAccountBudgetProposalRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -137,12 +139,14 @@ public final class AccountBudgetProposalServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.AccountBudgetProposalProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

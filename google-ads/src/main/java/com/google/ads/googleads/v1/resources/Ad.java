@@ -68,7 +68,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
               mutable_bitField0_ |= 0x00000002;
             }
@@ -124,7 +124,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 82: {
-            if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.CustomParameter>();
               mutable_bitField0_ |= 0x00000020;
             }
@@ -188,7 +188,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 130: {
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
               finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
               mutable_bitField0_ |= 0x00000008;
             }
@@ -313,7 +313,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 210: {
-            if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+            if (!((mutable_bitField0_ & 0x00000400) != 0)) {
               urlCollections_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.UrlCollection>();
               mutable_bitField0_ |= 0x00000400;
             }
@@ -412,7 +412,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 282: {
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               finalAppUrls_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.FinalAppUrl>();
               mutable_bitField0_ |= 0x00000004;
             }
@@ -435,7 +435,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -449,19 +449,19 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
       }
-      if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+      if (((mutable_bitField0_ & 0x00000020) != 0)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
-      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
         finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
       }
-      if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((mutable_bitField0_ & 0x00000400) != 0)) {
         urlCollections_ = java.util.Collections.unmodifiableList(urlCollections_);
       }
-      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         finalAppUrls_ = java.util.Collections.unmodifiableList(finalAppUrls_);
       }
       this.unknownFields = unknownFields.build();
@@ -2067,126 +2067,123 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.Ad other = (com.google.ads.googleads.v1.resources.Ad) obj;
 
-    boolean result = true;
-    result = result && (hasId() == other.hasId());
+    if (hasId() != other.hasId()) return false;
     if (hasId()) {
-      result = result && getId()
-          .equals(other.getId());
+      if (!getId()
+          .equals(other.getId())) return false;
     }
-    result = result && getFinalUrlsList()
-        .equals(other.getFinalUrlsList());
-    result = result && getFinalAppUrlsList()
-        .equals(other.getFinalAppUrlsList());
-    result = result && getFinalMobileUrlsList()
-        .equals(other.getFinalMobileUrlsList());
-    result = result && (hasTrackingUrlTemplate() == other.hasTrackingUrlTemplate());
+    if (!getFinalUrlsList()
+        .equals(other.getFinalUrlsList())) return false;
+    if (!getFinalAppUrlsList()
+        .equals(other.getFinalAppUrlsList())) return false;
+    if (!getFinalMobileUrlsList()
+        .equals(other.getFinalMobileUrlsList())) return false;
+    if (hasTrackingUrlTemplate() != other.hasTrackingUrlTemplate()) return false;
     if (hasTrackingUrlTemplate()) {
-      result = result && getTrackingUrlTemplate()
-          .equals(other.getTrackingUrlTemplate());
+      if (!getTrackingUrlTemplate()
+          .equals(other.getTrackingUrlTemplate())) return false;
     }
-    result = result && getUrlCustomParametersList()
-        .equals(other.getUrlCustomParametersList());
-    result = result && (hasDisplayUrl() == other.hasDisplayUrl());
+    if (!getUrlCustomParametersList()
+        .equals(other.getUrlCustomParametersList())) return false;
+    if (hasDisplayUrl() != other.hasDisplayUrl()) return false;
     if (hasDisplayUrl()) {
-      result = result && getDisplayUrl()
-          .equals(other.getDisplayUrl());
+      if (!getDisplayUrl()
+          .equals(other.getDisplayUrl())) return false;
     }
-    result = result && type_ == other.type_;
-    result = result && (hasAddedByGoogleAds() == other.hasAddedByGoogleAds());
+    if (type_ != other.type_) return false;
+    if (hasAddedByGoogleAds() != other.hasAddedByGoogleAds()) return false;
     if (hasAddedByGoogleAds()) {
-      result = result && getAddedByGoogleAds()
-          .equals(other.getAddedByGoogleAds());
+      if (!getAddedByGoogleAds()
+          .equals(other.getAddedByGoogleAds())) return false;
     }
-    result = result && devicePreference_ == other.devicePreference_;
-    result = result && getUrlCollectionsList()
-        .equals(other.getUrlCollectionsList());
-    result = result && (hasName() == other.hasName());
+    if (devicePreference_ != other.devicePreference_) return false;
+    if (!getUrlCollectionsList()
+        .equals(other.getUrlCollectionsList())) return false;
+    if (hasName() != other.hasName()) return false;
     if (hasName()) {
-      result = result && getName()
-          .equals(other.getName());
+      if (!getName()
+          .equals(other.getName())) return false;
     }
-    result = result && systemManagedResourceSource_ == other.systemManagedResourceSource_;
-    result = result && getAdDataCase().equals(
-        other.getAdDataCase());
-    if (!result) return false;
+    if (systemManagedResourceSource_ != other.systemManagedResourceSource_) return false;
+    if (!getAdDataCase().equals(other.getAdDataCase())) return false;
     switch (adDataCase_) {
       case 6:
-        result = result && getTextAd()
-            .equals(other.getTextAd());
+        if (!getTextAd()
+            .equals(other.getTextAd())) return false;
         break;
       case 7:
-        result = result && getExpandedTextAd()
-            .equals(other.getExpandedTextAd());
+        if (!getExpandedTextAd()
+            .equals(other.getExpandedTextAd())) return false;
         break;
       case 13:
-        result = result && getCallOnlyAd()
-            .equals(other.getCallOnlyAd());
+        if (!getCallOnlyAd()
+            .equals(other.getCallOnlyAd())) return false;
         break;
       case 14:
-        result = result && getExpandedDynamicSearchAd()
-            .equals(other.getExpandedDynamicSearchAd());
+        if (!getExpandedDynamicSearchAd()
+            .equals(other.getExpandedDynamicSearchAd())) return false;
         break;
       case 15:
-        result = result && getHotelAd()
-            .equals(other.getHotelAd());
+        if (!getHotelAd()
+            .equals(other.getHotelAd())) return false;
         break;
       case 17:
-        result = result && getShoppingSmartAd()
-            .equals(other.getShoppingSmartAd());
+        if (!getShoppingSmartAd()
+            .equals(other.getShoppingSmartAd())) return false;
         break;
       case 18:
-        result = result && getShoppingProductAd()
-            .equals(other.getShoppingProductAd());
+        if (!getShoppingProductAd()
+            .equals(other.getShoppingProductAd())) return false;
         break;
       case 21:
-        result = result && getGmailAd()
-            .equals(other.getGmailAd());
+        if (!getGmailAd()
+            .equals(other.getGmailAd())) return false;
         break;
       case 22:
-        result = result && getImageAd()
-            .equals(other.getImageAd());
+        if (!getImageAd()
+            .equals(other.getImageAd())) return false;
         break;
       case 24:
-        result = result && getVideoAd()
-            .equals(other.getVideoAd());
+        if (!getVideoAd()
+            .equals(other.getVideoAd())) return false;
         break;
       case 25:
-        result = result && getResponsiveSearchAd()
-            .equals(other.getResponsiveSearchAd());
+        if (!getResponsiveSearchAd()
+            .equals(other.getResponsiveSearchAd())) return false;
         break;
       case 28:
-        result = result && getLegacyResponsiveDisplayAd()
-            .equals(other.getLegacyResponsiveDisplayAd());
+        if (!getLegacyResponsiveDisplayAd()
+            .equals(other.getLegacyResponsiveDisplayAd())) return false;
         break;
       case 29:
-        result = result && getAppAd()
-            .equals(other.getAppAd());
+        if (!getAppAd()
+            .equals(other.getAppAd())) return false;
         break;
       case 30:
-        result = result && getLegacyAppInstallAd()
-            .equals(other.getLegacyAppInstallAd());
+        if (!getLegacyAppInstallAd()
+            .equals(other.getLegacyAppInstallAd())) return false;
         break;
       case 31:
-        result = result && getResponsiveDisplayAd()
-            .equals(other.getResponsiveDisplayAd());
+        if (!getResponsiveDisplayAd()
+            .equals(other.getResponsiveDisplayAd())) return false;
         break;
       case 33:
-        result = result && getDisplayUploadAd()
-            .equals(other.getDisplayUploadAd());
+        if (!getDisplayUploadAd()
+            .equals(other.getDisplayUploadAd())) return false;
         break;
       case 34:
-        result = result && getAppEngagementAd()
-            .equals(other.getAppEngagementAd());
+        if (!getAppEngagementAd()
+            .equals(other.getAppEngagementAd())) return false;
         break;
       case 36:
-        result = result && getShoppingComparisonListingAd()
-            .equals(other.getShoppingComparisonListingAd());
+        if (!getShoppingComparisonListingAd()
+            .equals(other.getShoppingComparisonListingAd())) return false;
         break;
       case 0:
       default:
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -2562,7 +2559,7 @@ private static final long serialVersionUID = 0L;
         result.id_ = idBuilder_.build();
       }
       if (finalUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
@@ -2571,7 +2568,7 @@ private static final long serialVersionUID = 0L;
         result.finalUrls_ = finalUrlsBuilder_.build();
       }
       if (finalAppUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           finalAppUrls_ = java.util.Collections.unmodifiableList(finalAppUrls_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
@@ -2580,7 +2577,7 @@ private static final long serialVersionUID = 0L;
         result.finalAppUrls_ = finalAppUrlsBuilder_.build();
       }
       if (finalMobileUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
           bitField0_ = (bitField0_ & ~0x00000008);
         }
@@ -2594,7 +2591,7 @@ private static final long serialVersionUID = 0L;
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
           bitField0_ = (bitField0_ & ~0x00000020);
         }
@@ -2615,7 +2612,7 @@ private static final long serialVersionUID = 0L;
       }
       result.devicePreference_ = devicePreference_;
       if (urlCollectionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((bitField0_ & 0x00000400) != 0)) {
           urlCollections_ = java.util.Collections.unmodifiableList(urlCollections_);
           bitField0_ = (bitField0_ & ~0x00000400);
         }
@@ -2763,35 +2760,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3081,7 +3078,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
 
-    private com.google.protobuf.Int64Value id_ = null;
+    private com.google.protobuf.Int64Value id_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
@@ -3237,7 +3234,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalUrls_);
         bitField0_ |= 0x00000002;
        }
@@ -3556,7 +3553,7 @@ private static final long serialVersionUID = 0L;
         finalUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalUrls_,
-                ((bitField0_ & 0x00000002) == 0x00000002),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         finalUrls_ = null;
@@ -3567,7 +3564,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.FinalAppUrl> finalAppUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalAppUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         finalAppUrls_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.FinalAppUrl>(finalAppUrls_);
         bitField0_ |= 0x00000004;
        }
@@ -3886,7 +3883,7 @@ private static final long serialVersionUID = 0L;
         finalAppUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.FinalAppUrl, com.google.ads.googleads.v1.common.FinalAppUrl.Builder, com.google.ads.googleads.v1.common.FinalAppUrlOrBuilder>(
                 finalAppUrls_,
-                ((bitField0_ & 0x00000004) == 0x00000004),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         finalAppUrls_ = null;
@@ -3897,7 +3894,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalMobileUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalMobileUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalMobileUrls_);
         bitField0_ |= 0x00000008;
        }
@@ -4216,7 +4213,7 @@ private static final long serialVersionUID = 0L;
         finalMobileUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalMobileUrls_,
-                ((bitField0_ & 0x00000008) == 0x00000008),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         finalMobileUrls_ = null;
@@ -4224,7 +4221,7 @@ private static final long serialVersionUID = 0L;
       return finalMobileUrlsBuilder_;
     }
 
-    private com.google.protobuf.StringValue trackingUrlTemplate_ = null;
+    private com.google.protobuf.StringValue trackingUrlTemplate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> trackingUrlTemplateBuilder_;
     /**
@@ -4380,7 +4377,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.CustomParameter>(urlCustomParameters_);
         bitField0_ |= 0x00000020;
        }
@@ -4699,7 +4696,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.CustomParameter, com.google.ads.googleads.v1.common.CustomParameter.Builder, com.google.ads.googleads.v1.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000020) == 0x00000020),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -4707,7 +4704,7 @@ private static final long serialVersionUID = 0L;
       return urlCustomParametersBuilder_;
     }
 
-    private com.google.protobuf.StringValue displayUrl_ = null;
+    private com.google.protobuf.StringValue displayUrl_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> displayUrlBuilder_;
     /**
@@ -4925,7 +4922,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.BoolValue addedByGoogleAds_ = null;
+    private com.google.protobuf.BoolValue addedByGoogleAds_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> addedByGoogleAdsBuilder_;
     /**
@@ -5198,7 +5195,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.UrlCollection> urlCollections_ =
       java.util.Collections.emptyList();
     private void ensureUrlCollectionsIsMutable() {
-      if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         urlCollections_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.UrlCollection>(urlCollections_);
         bitField0_ |= 0x00000400;
        }
@@ -5517,7 +5514,7 @@ private static final long serialVersionUID = 0L;
         urlCollectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.UrlCollection, com.google.ads.googleads.v1.common.UrlCollection.Builder, com.google.ads.googleads.v1.common.UrlCollectionOrBuilder>(
                 urlCollections_,
-                ((bitField0_ & 0x00000400) == 0x00000400),
+                ((bitField0_ & 0x00000400) != 0),
                 getParentForChildren(),
                 isClean());
         urlCollections_ = null;
@@ -5525,7 +5522,7 @@ private static final long serialVersionUID = 0L;
       return urlCollectionsBuilder_;
     }
 
-    private com.google.protobuf.StringValue name_ = null;
+    private com.google.protobuf.StringValue name_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
@@ -8891,7 +8888,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

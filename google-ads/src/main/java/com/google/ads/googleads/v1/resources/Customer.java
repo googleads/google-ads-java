@@ -225,7 +225,7 @@ private static final long serialVersionUID = 0L;
           }
           case 128: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+            if (!((mutable_bitField0_ & 0x00004000) != 0)) {
               payPerConversionEligibilityFailureReasons_ = new java.util.ArrayList<java.lang.Integer>();
               mutable_bitField0_ |= 0x00004000;
             }
@@ -237,7 +237,7 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+              if (!((mutable_bitField0_ & 0x00004000) != 0)) {
                 payPerConversionEligibilityFailureReasons_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00004000;
               }
@@ -247,7 +247,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -261,7 +261,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+      if (((mutable_bitField0_ & 0x00004000) != 0)) {
         payPerConversionEligibilityFailureReasons_ = java.util.Collections.unmodifiableList(payPerConversionEligibilityFailureReasons_);
       }
       this.unknownFields = unknownFields.build();
@@ -995,77 +995,76 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.Customer other = (com.google.ads.googleads.v1.resources.Customer) obj;
 
-    boolean result = true;
-    result = result && getResourceName()
-        .equals(other.getResourceName());
-    result = result && (hasId() == other.hasId());
+    if (!getResourceName()
+        .equals(other.getResourceName())) return false;
+    if (hasId() != other.hasId()) return false;
     if (hasId()) {
-      result = result && getId()
-          .equals(other.getId());
+      if (!getId()
+          .equals(other.getId())) return false;
     }
-    result = result && (hasDescriptiveName() == other.hasDescriptiveName());
+    if (hasDescriptiveName() != other.hasDescriptiveName()) return false;
     if (hasDescriptiveName()) {
-      result = result && getDescriptiveName()
-          .equals(other.getDescriptiveName());
+      if (!getDescriptiveName()
+          .equals(other.getDescriptiveName())) return false;
     }
-    result = result && (hasCurrencyCode() == other.hasCurrencyCode());
+    if (hasCurrencyCode() != other.hasCurrencyCode()) return false;
     if (hasCurrencyCode()) {
-      result = result && getCurrencyCode()
-          .equals(other.getCurrencyCode());
+      if (!getCurrencyCode()
+          .equals(other.getCurrencyCode())) return false;
     }
-    result = result && (hasTimeZone() == other.hasTimeZone());
+    if (hasTimeZone() != other.hasTimeZone()) return false;
     if (hasTimeZone()) {
-      result = result && getTimeZone()
-          .equals(other.getTimeZone());
+      if (!getTimeZone()
+          .equals(other.getTimeZone())) return false;
     }
-    result = result && (hasTrackingUrlTemplate() == other.hasTrackingUrlTemplate());
+    if (hasTrackingUrlTemplate() != other.hasTrackingUrlTemplate()) return false;
     if (hasTrackingUrlTemplate()) {
-      result = result && getTrackingUrlTemplate()
-          .equals(other.getTrackingUrlTemplate());
+      if (!getTrackingUrlTemplate()
+          .equals(other.getTrackingUrlTemplate())) return false;
     }
-    result = result && (hasFinalUrlSuffix() == other.hasFinalUrlSuffix());
+    if (hasFinalUrlSuffix() != other.hasFinalUrlSuffix()) return false;
     if (hasFinalUrlSuffix()) {
-      result = result && getFinalUrlSuffix()
-          .equals(other.getFinalUrlSuffix());
+      if (!getFinalUrlSuffix()
+          .equals(other.getFinalUrlSuffix())) return false;
     }
-    result = result && (hasAutoTaggingEnabled() == other.hasAutoTaggingEnabled());
+    if (hasAutoTaggingEnabled() != other.hasAutoTaggingEnabled()) return false;
     if (hasAutoTaggingEnabled()) {
-      result = result && getAutoTaggingEnabled()
-          .equals(other.getAutoTaggingEnabled());
+      if (!getAutoTaggingEnabled()
+          .equals(other.getAutoTaggingEnabled())) return false;
     }
-    result = result && (hasHasPartnersBadge() == other.hasHasPartnersBadge());
+    if (hasHasPartnersBadge() != other.hasHasPartnersBadge()) return false;
     if (hasHasPartnersBadge()) {
-      result = result && getHasPartnersBadge()
-          .equals(other.getHasPartnersBadge());
+      if (!getHasPartnersBadge()
+          .equals(other.getHasPartnersBadge())) return false;
     }
-    result = result && (hasManager() == other.hasManager());
+    if (hasManager() != other.hasManager()) return false;
     if (hasManager()) {
-      result = result && getManager()
-          .equals(other.getManager());
+      if (!getManager()
+          .equals(other.getManager())) return false;
     }
-    result = result && (hasTestAccount() == other.hasTestAccount());
+    if (hasTestAccount() != other.hasTestAccount()) return false;
     if (hasTestAccount()) {
-      result = result && getTestAccount()
-          .equals(other.getTestAccount());
+      if (!getTestAccount()
+          .equals(other.getTestAccount())) return false;
     }
-    result = result && (hasCallReportingSetting() == other.hasCallReportingSetting());
+    if (hasCallReportingSetting() != other.hasCallReportingSetting()) return false;
     if (hasCallReportingSetting()) {
-      result = result && getCallReportingSetting()
-          .equals(other.getCallReportingSetting());
+      if (!getCallReportingSetting()
+          .equals(other.getCallReportingSetting())) return false;
     }
-    result = result && (hasConversionTrackingSetting() == other.hasConversionTrackingSetting());
+    if (hasConversionTrackingSetting() != other.hasConversionTrackingSetting()) return false;
     if (hasConversionTrackingSetting()) {
-      result = result && getConversionTrackingSetting()
-          .equals(other.getConversionTrackingSetting());
+      if (!getConversionTrackingSetting()
+          .equals(other.getConversionTrackingSetting())) return false;
     }
-    result = result && (hasRemarketingSetting() == other.hasRemarketingSetting());
+    if (hasRemarketingSetting() != other.hasRemarketingSetting()) return false;
     if (hasRemarketingSetting()) {
-      result = result && getRemarketingSetting()
-          .equals(other.getRemarketingSetting());
+      if (!getRemarketingSetting()
+          .equals(other.getRemarketingSetting())) return false;
     }
-    result = result && payPerConversionEligibilityFailureReasons_.equals(other.payPerConversionEligibilityFailureReasons_);
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!payPerConversionEligibilityFailureReasons_.equals(other.payPerConversionEligibilityFailureReasons_)) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1446,7 +1445,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.remarketingSetting_ = remarketingSettingBuilder_.build();
       }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+      if (((bitField0_ & 0x00004000) != 0)) {
         payPerConversionEligibilityFailureReasons_ = java.util.Collections.unmodifiableList(payPerConversionEligibilityFailureReasons_);
         bitField0_ = (bitField0_ & ~0x00004000);
       }
@@ -1458,35 +1457,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1682,7 +1681,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value id_ = null;
+    private com.google.protobuf.Int64Value id_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
@@ -1835,7 +1834,7 @@ private static final long serialVersionUID = 0L;
       return idBuilder_;
     }
 
-    private com.google.protobuf.StringValue descriptiveName_ = null;
+    private com.google.protobuf.StringValue descriptiveName_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> descriptiveNameBuilder_;
     /**
@@ -1988,7 +1987,7 @@ private static final long serialVersionUID = 0L;
       return descriptiveNameBuilder_;
     }
 
-    private com.google.protobuf.StringValue currencyCode_ = null;
+    private com.google.protobuf.StringValue currencyCode_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyCodeBuilder_;
     /**
@@ -2159,7 +2158,7 @@ private static final long serialVersionUID = 0L;
       return currencyCodeBuilder_;
     }
 
-    private com.google.protobuf.StringValue timeZone_ = null;
+    private com.google.protobuf.StringValue timeZone_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> timeZoneBuilder_;
     /**
@@ -2312,7 +2311,7 @@ private static final long serialVersionUID = 0L;
       return timeZoneBuilder_;
     }
 
-    private com.google.protobuf.StringValue trackingUrlTemplate_ = null;
+    private com.google.protobuf.StringValue trackingUrlTemplate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> trackingUrlTemplateBuilder_;
     /**
@@ -2465,7 +2464,7 @@ private static final long serialVersionUID = 0L;
       return trackingUrlTemplateBuilder_;
     }
 
-    private com.google.protobuf.StringValue finalUrlSuffix_ = null;
+    private com.google.protobuf.StringValue finalUrlSuffix_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> finalUrlSuffixBuilder_;
     /**
@@ -2618,7 +2617,7 @@ private static final long serialVersionUID = 0L;
       return finalUrlSuffixBuilder_;
     }
 
-    private com.google.protobuf.BoolValue autoTaggingEnabled_ = null;
+    private com.google.protobuf.BoolValue autoTaggingEnabled_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> autoTaggingEnabledBuilder_;
     /**
@@ -2771,7 +2770,7 @@ private static final long serialVersionUID = 0L;
       return autoTaggingEnabledBuilder_;
     }
 
-    private com.google.protobuf.BoolValue hasPartnersBadge_ = null;
+    private com.google.protobuf.BoolValue hasPartnersBadge_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> hasPartnersBadgeBuilder_;
     /**
@@ -2942,7 +2941,7 @@ private static final long serialVersionUID = 0L;
       return hasPartnersBadgeBuilder_;
     }
 
-    private com.google.protobuf.BoolValue manager_ = null;
+    private com.google.protobuf.BoolValue manager_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> managerBuilder_;
     /**
@@ -3095,7 +3094,7 @@ private static final long serialVersionUID = 0L;
       return managerBuilder_;
     }
 
-    private com.google.protobuf.BoolValue testAccount_ = null;
+    private com.google.protobuf.BoolValue testAccount_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> testAccountBuilder_;
     /**
@@ -3248,7 +3247,7 @@ private static final long serialVersionUID = 0L;
       return testAccountBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.CallReportingSetting callReportingSetting_ = null;
+    private com.google.ads.googleads.v1.resources.CallReportingSetting callReportingSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.CallReportingSetting, com.google.ads.googleads.v1.resources.CallReportingSetting.Builder, com.google.ads.googleads.v1.resources.CallReportingSettingOrBuilder> callReportingSettingBuilder_;
     /**
@@ -3401,7 +3400,7 @@ private static final long serialVersionUID = 0L;
       return callReportingSettingBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.ConversionTrackingSetting conversionTrackingSetting_ = null;
+    private com.google.ads.googleads.v1.resources.ConversionTrackingSetting conversionTrackingSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.ConversionTrackingSetting, com.google.ads.googleads.v1.resources.ConversionTrackingSetting.Builder, com.google.ads.googleads.v1.resources.ConversionTrackingSettingOrBuilder> conversionTrackingSettingBuilder_;
     /**
@@ -3554,7 +3553,7 @@ private static final long serialVersionUID = 0L;
       return conversionTrackingSettingBuilder_;
     }
 
-    private com.google.ads.googleads.v1.resources.RemarketingSetting remarketingSetting_ = null;
+    private com.google.ads.googleads.v1.resources.RemarketingSetting remarketingSetting_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.RemarketingSetting, com.google.ads.googleads.v1.resources.RemarketingSetting.Builder, com.google.ads.googleads.v1.resources.RemarketingSettingOrBuilder> remarketingSettingBuilder_;
     /**
@@ -3710,7 +3709,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> payPerConversionEligibilityFailureReasons_ =
       java.util.Collections.emptyList();
     private void ensurePayPerConversionEligibilityFailureReasonsIsMutable() {
-      if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+      if (!((bitField0_ & 0x00004000) != 0)) {
         payPerConversionEligibilityFailureReasons_ = new java.util.ArrayList<java.lang.Integer>(payPerConversionEligibilityFailureReasons_);
         bitField0_ |= 0x00004000;
       }
@@ -3887,7 +3886,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

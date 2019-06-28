@@ -101,19 +101,34 @@ public class VideoServiceClient implements BackgroundResource {
   private static final PathTemplate VIDEO_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/videos/{video}");
 
-  /** Formats a string containing the fully-qualified path to represent a video resource. */
+  /**
+   * Formats a string containing the fully-qualified path to represent a video resource.
+   *
+   * @deprecated Use the {@link VideoName} class instead.
+   */
+  @Deprecated
   public static final String formatVideoName(String customer, String video) {
     return VIDEO_PATH_TEMPLATE.instantiate(
         "customer", customer,
         "video", video);
   }
 
-  /** Parses the customer from the given fully-qualified path which represents a video resource. */
+  /**
+   * Parses the customer from the given fully-qualified path which represents a video resource.
+   *
+   * @deprecated Use the {@link VideoName} class instead.
+   */
+  @Deprecated
   public static final String parseCustomerFromVideoName(String videoName) {
     return VIDEO_PATH_TEMPLATE.parse(videoName).get("customer");
   }
 
-  /** Parses the video from the given fully-qualified path which represents a video resource. */
+  /**
+   * Parses the video from the given fully-qualified path which represents a video resource.
+   *
+   * @deprecated Use the {@link VideoName} class instead.
+   */
+  @Deprecated
   public static final String parseVideoFromVideoName(String videoName) {
     return VIDEO_PATH_TEMPLATE.parse(videoName).get("video");
   }

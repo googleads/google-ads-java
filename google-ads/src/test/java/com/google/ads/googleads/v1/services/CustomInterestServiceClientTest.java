@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -391,7 +391,7 @@ public class CustomInterestServiceClientTest {
     CustomInterest actualResponse = client.getCustomInterest(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCustomInterestService.getRequests();
+    List<AbstractMessage> actualRequests = mockCustomInterestService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetCustomInterestRequest actualRequest = (GetCustomInterestRequest) actualRequests.get(0);
 
@@ -434,7 +434,7 @@ public class CustomInterestServiceClientTest {
         client.mutateCustomInterests(customerId, operations, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCustomInterestService.getRequests();
+    List<AbstractMessage> actualRequests = mockCustomInterestService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCustomInterestsRequest actualRequest =
         (MutateCustomInterestsRequest) actualRequests.get(0);
@@ -480,7 +480,7 @@ public class CustomInterestServiceClientTest {
         client.mutateCustomInterests(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCustomInterestService.getRequests();
+    List<AbstractMessage> actualRequests = mockCustomInterestService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCustomInterestsRequest actualRequest =
         (MutateCustomInterestsRequest) actualRequests.get(0);

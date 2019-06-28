@@ -106,7 +106,10 @@ public class FeedItemTargetServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a feed_item_target resource.
+   *
+   * @deprecated Use the {@link FeedItemTargetName} class instead.
    */
+  @Deprecated
   public static final String formatFeedItemTargetName(String customer, String feedItemTarget) {
     return FEED_ITEM_TARGET_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -116,7 +119,10 @@ public class FeedItemTargetServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a feed_item_target
    * resource.
+   *
+   * @deprecated Use the {@link FeedItemTargetName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromFeedItemTargetName(String feedItemTargetName) {
     return FEED_ITEM_TARGET_PATH_TEMPLATE.parse(feedItemTargetName).get("customer");
   }
@@ -124,7 +130,10 @@ public class FeedItemTargetServiceClient implements BackgroundResource {
   /**
    * Parses the feed_item_target from the given fully-qualified path which represents a
    * feed_item_target resource.
+   *
+   * @deprecated Use the {@link FeedItemTargetName} class instead.
    */
+  @Deprecated
   public static final String parseFeedItemTargetFromFeedItemTargetName(String feedItemTargetName) {
     return FEED_ITEM_TARGET_PATH_TEMPLATE.parse(feedItemTargetName).get("feed_item_target");
   }

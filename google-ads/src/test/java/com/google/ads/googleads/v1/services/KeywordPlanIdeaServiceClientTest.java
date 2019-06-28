@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import com.google.protobuf.StringValue;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
@@ -394,7 +394,7 @@ public class KeywordPlanIdeaServiceClientTest {
         client.generateKeywordIdeas(customerId, language, geoTargetConstants, keywordPlanNetwork);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockKeywordPlanIdeaService.getRequests();
+    List<AbstractMessage> actualRequests = mockKeywordPlanIdeaService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GenerateKeywordIdeasRequest actualRequest = (GenerateKeywordIdeasRequest) actualRequests.get(0);
 

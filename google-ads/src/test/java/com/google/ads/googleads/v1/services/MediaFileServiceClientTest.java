@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.AbstractMessage;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -390,7 +390,7 @@ public class MediaFileServiceClientTest {
     MediaFile actualResponse = client.getMediaFile(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockMediaFileService.getRequests();
+    List<AbstractMessage> actualRequests = mockMediaFileService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetMediaFileRequest actualRequest = (GetMediaFileRequest) actualRequests.get(0);
 
@@ -433,7 +433,7 @@ public class MediaFileServiceClientTest {
         client.mutateMediaFiles(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockMediaFileService.getRequests();
+    List<AbstractMessage> actualRequests = mockMediaFileService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateMediaFilesRequest actualRequest = (MutateMediaFilesRequest) actualRequests.get(0);
 
@@ -478,7 +478,7 @@ public class MediaFileServiceClientTest {
     MutateMediaFilesResponse actualResponse = client.mutateMediaFiles(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockMediaFileService.getRequests();
+    List<AbstractMessage> actualRequests = mockMediaFileService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateMediaFilesRequest actualRequest = (MutateMediaFilesRequest) actualRequests.get(0);
 

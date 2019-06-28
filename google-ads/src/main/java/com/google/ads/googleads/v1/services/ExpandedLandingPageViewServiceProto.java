@@ -33,22 +33,24 @@ public final class ExpandedLandingPageViewServiceProto {
       "gle.ads.googleads.v1.services\032Bgoogle/ad" +
       "s/googleads/v1/resources/expanded_landin" +
       "g_page_view.proto\032\034google/api/annotation" +
-      "s.proto\032\036google/protobuf/wrappers.proto\"" +
-      ":\n!GetExpandedLandingPageViewRequest\022\025\n\r" +
-      "resource_name\030\001 \001(\t2\204\002\n\036ExpandedLandingP" +
-      "ageViewService\022\341\001\n\032GetExpandedLandingPag" +
-      "eView\022C.google.ads.googleads.v1.services" +
-      ".GetExpandedLandingPageViewRequest\032:.goo" +
-      "gle.ads.googleads.v1.resources.ExpandedL" +
-      "andingPageView\"B\202\323\344\223\002<\022:/v1/{resource_na" +
-      "me=customers/*/expandedLandingPageViews/" +
-      "*}B\212\002\n$com.google.ads.googleads.v1.servi" +
-      "cesB#ExpandedLandingPageViewServiceProto" +
-      "P\001ZHgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v1/services;services\242\002\003G" +
-      "AA\252\002 Google.Ads.GoogleAds.V1.Services\312\002 " +
-      "Google\\Ads\\GoogleAds\\V1\\Services\352\002$Googl" +
-      "e::Ads::GoogleAds::V1::Servicesb\006proto3"
+      "s.proto\032\036google/protobuf/wrappers.proto\032" +
+      "\027google/api/client.proto\":\n!GetExpandedL" +
+      "andingPageViewRequest\022\025\n\rresource_name\030\001" +
+      " \001(\t2\241\002\n\036ExpandedLandingPageViewService\022" +
+      "\341\001\n\032GetExpandedLandingPageView\022C.google." +
+      "ads.googleads.v1.services.GetExpandedLan" +
+      "dingPageViewRequest\032:.google.ads.googlea" +
+      "ds.v1.resources.ExpandedLandingPageView\"" +
+      "B\202\323\344\223\002<\022:/v1/{resource_name=customers/*/" +
+      "expandedLandingPageViews/*}\032\033\312A\030googlead" +
+      "s.googleapis.comB\212\002\n$com.google.ads.goog" +
+      "leads.v1.servicesB#ExpandedLandingPageVi" +
+      "ewServiceProtoP\001ZHgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v1/service" +
+      "s;services\242\002\003GAA\252\002 Google.Ads.GoogleAds." +
+      "V1.Services\312\002 Google\\Ads\\GoogleAds\\V1\\Se" +
+      "rvices\352\002$Google::Ads::GoogleAds::V1::Ser" +
+      "vicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -64,6 +66,7 @@ public final class ExpandedLandingPageViewServiceProto {
           com.google.ads.googleads.v1.resources.ExpandedLandingPageViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetExpandedLandingPageViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -73,12 +76,14 @@ public final class ExpandedLandingPageViewServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.ExpandedLandingPageViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -28,9 +28,9 @@ import com.google.api.gax.rpc.InvalidArgumentException;
 import com.google.api.gax.rpc.StatusCode;
 import com.google.common.collect.Lists;
 import com.google.longrunning.Operation;
+import com.google.protobuf.AbstractMessage;
 import com.google.protobuf.Any;
 import com.google.protobuf.Empty;
-import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -400,7 +400,7 @@ public class CampaignExperimentServiceClientTest {
     CampaignExperiment actualResponse = client.getCampaignExperiment(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCampaignExperimentService.getRequests();
+    List<AbstractMessage> actualRequests = mockCampaignExperimentService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetCampaignExperimentRequest actualRequest =
         (GetCampaignExperimentRequest) actualRequests.get(0);
@@ -450,7 +450,7 @@ public class CampaignExperimentServiceClientTest {
         client.createCampaignExperimentAsync(customerId, campaignExperiment, validateOnly).get();
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCampaignExperimentService.getRequests();
+    List<AbstractMessage> actualRequests = mockCampaignExperimentService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     CreateCampaignExperimentRequest actualRequest =
         (CreateCampaignExperimentRequest) actualRequests.get(0);
@@ -503,7 +503,7 @@ public class CampaignExperimentServiceClientTest {
         client.createCampaignExperimentAsync(customerId, campaignExperiment).get();
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCampaignExperimentService.getRequests();
+    List<AbstractMessage> actualRequests = mockCampaignExperimentService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     CreateCampaignExperimentRequest actualRequest =
         (CreateCampaignExperimentRequest) actualRequests.get(0);
@@ -551,7 +551,7 @@ public class CampaignExperimentServiceClientTest {
         client.mutateCampaignExperiments(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCampaignExperimentService.getRequests();
+    List<AbstractMessage> actualRequests = mockCampaignExperimentService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCampaignExperimentsRequest actualRequest =
         (MutateCampaignExperimentsRequest) actualRequests.get(0);
@@ -599,7 +599,7 @@ public class CampaignExperimentServiceClientTest {
         client.mutateCampaignExperiments(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCampaignExperimentService.getRequests();
+    List<AbstractMessage> actualRequests = mockCampaignExperimentService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCampaignExperimentsRequest actualRequest =
         (MutateCampaignExperimentsRequest) actualRequests.get(0);
@@ -648,7 +648,7 @@ public class CampaignExperimentServiceClientTest {
         client.graduateCampaignExperiment(formattedCampaignExperiment, campaignBudget);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCampaignExperimentService.getRequests();
+    List<AbstractMessage> actualRequests = mockCampaignExperimentService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GraduateCampaignExperimentRequest actualRequest =
         (GraduateCampaignExperimentRequest) actualRequests.get(0);
@@ -699,7 +699,7 @@ public class CampaignExperimentServiceClientTest {
     Empty actualResponse = client.promoteCampaignExperimentAsync(formattedCampaignExperiment).get();
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<GeneratedMessageV3> actualRequests = mockCampaignExperimentService.getRequests();
+    List<AbstractMessage> actualRequests = mockCampaignExperimentService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     PromoteCampaignExperimentRequest actualRequest =
         (PromoteCampaignExperimentRequest) actualRequests.get(0);
@@ -743,7 +743,7 @@ public class CampaignExperimentServiceClientTest {
 
     client.endCampaignExperiment(formattedCampaignExperiment);
 
-    List<GeneratedMessageV3> actualRequests = mockCampaignExperimentService.getRequests();
+    List<AbstractMessage> actualRequests = mockCampaignExperimentService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     EndCampaignExperimentRequest actualRequest =
         (EndCampaignExperimentRequest) actualRequests.get(0);
@@ -797,7 +797,7 @@ public class CampaignExperimentServiceClientTest {
     Assert.assertEquals(1, resources.size());
     Assert.assertEquals(expectedResponse.getErrorsList().get(0), resources.get(0));
 
-    List<GeneratedMessageV3> actualRequests = mockCampaignExperimentService.getRequests();
+    List<AbstractMessage> actualRequests = mockCampaignExperimentService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     ListCampaignExperimentAsyncErrorsRequest actualRequest =
         (ListCampaignExperimentAsyncErrorsRequest) actualRequests.get(0);

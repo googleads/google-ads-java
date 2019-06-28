@@ -105,7 +105,10 @@ public class DomainCategoryServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a domain_category resource.
+   *
+   * @deprecated Use the {@link DomainCategoryName} class instead.
    */
+  @Deprecated
   public static final String formatDomainCategoryName(String customer, String domainCategory) {
     return DOMAIN_CATEGORY_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -115,7 +118,10 @@ public class DomainCategoryServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a domain_category
    * resource.
+   *
+   * @deprecated Use the {@link DomainCategoryName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromDomainCategoryName(String domainCategoryName) {
     return DOMAIN_CATEGORY_PATH_TEMPLATE.parse(domainCategoryName).get("customer");
   }
@@ -123,7 +129,10 @@ public class DomainCategoryServiceClient implements BackgroundResource {
   /**
    * Parses the domain_category from the given fully-qualified path which represents a
    * domain_category resource.
+   *
+   * @deprecated Use the {@link DomainCategoryName} class instead.
    */
+  @Deprecated
   public static final String parseDomainCategoryFromDomainCategoryName(String domainCategoryName) {
     return DOMAIN_CATEGORY_PATH_TEMPLATE.parse(domainCategoryName).get("domain_category");
   }

@@ -37,24 +37,25 @@ public final class PaymentsAccountServiceProto {
       "nts_account_service.proto\022 google.ads.go" +
       "ogleads.v1.services\0328google/ads/googlead" +
       "s/v1/resources/payments_account.proto\032\034g" +
-      "oogle/api/annotations.proto\"2\n\033ListPayme" +
-      "ntsAccountsRequest\022\023\n\013customer_id\030\001 \001(\t\"" +
-      "m\n\034ListPaymentsAccountsResponse\022M\n\021payme" +
-      "nts_accounts\030\001 \003(\01322.google.ads.googlead" +
-      "s.v1.resources.PaymentsAccount2\350\001\n\026Payme" +
-      "ntsAccountService\022\315\001\n\024ListPaymentsAccoun" +
-      "ts\022=.google.ads.googleads.v1.services.Li" +
-      "stPaymentsAccountsRequest\032>.google.ads.g" +
-      "oogleads.v1.services.ListPaymentsAccount" +
-      "sResponse\"6\202\323\344\223\0020\022./v1/customers/{custom" +
-      "er_id=*}/paymentsAccountsB\202\002\n$com.google" +
-      ".ads.googleads.v1.servicesB\033PaymentsAcco" +
-      "untServiceProtoP\001ZHgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v1/servic" +
-      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
-      ".V1.Services\312\002 Google\\Ads\\GoogleAds\\V1\\S" +
-      "ervices\352\002$Google::Ads::GoogleAds::V1::Se" +
-      "rvicesb\006proto3"
+      "oogle/api/annotations.proto\032\027google/api/" +
+      "client.proto\"2\n\033ListPaymentsAccountsRequ" +
+      "est\022\023\n\013customer_id\030\001 \001(\t\"m\n\034ListPayments" +
+      "AccountsResponse\022M\n\021payments_accounts\030\001 " +
+      "\003(\01322.google.ads.googleads.v1.resources." +
+      "PaymentsAccount2\205\002\n\026PaymentsAccountServi" +
+      "ce\022\315\001\n\024ListPaymentsAccounts\022=.google.ads" +
+      ".googleads.v1.services.ListPaymentsAccou" +
+      "ntsRequest\032>.google.ads.googleads.v1.ser" +
+      "vices.ListPaymentsAccountsResponse\"6\202\323\344\223" +
+      "\0020\022./v1/customers/{customer_id=*}/paymen" +
+      "tsAccounts\032\033\312A\030googleads.googleapis.comB" +
+      "\202\002\n$com.google.ads.googleads.v1.services" +
+      "B\033PaymentsAccountServiceProtoP\001ZHgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v1/services;services\242\002\003GAA\252\002 Google" +
+      ".Ads.GoogleAds.V1.Services\312\002 Google\\Ads\\" +
+      "GoogleAds\\V1\\Services\352\002$Google::Ads::Goo" +
+      "gleAds::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -69,6 +70,7 @@ public final class PaymentsAccountServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.PaymentsAccountProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_ListPaymentsAccountsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -84,11 +86,13 @@ public final class PaymentsAccountServiceProto {
         new java.lang.String[] { "PaymentsAccounts", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.PaymentsAccountProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

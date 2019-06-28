@@ -27,10 +27,13 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.common.collect.ImmutableMap;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -129,17 +132,44 @@ public class GrpcRecommendationServiceStub extends RecommendationServiceStub {
     GrpcCallSettings<GetRecommendationRequest, Recommendation> getRecommendationTransportSettings =
         GrpcCallSettings.<GetRecommendationRequest, Recommendation>newBuilder()
             .setMethodDescriptor(getRecommendationMethodDescriptor)
+            .setParamsExtractor(
+                new RequestParamsExtractor<GetRecommendationRequest>() {
+                  @Override
+                  public Map<String, String> extract(GetRecommendationRequest request) {
+                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("resource_name", String.valueOf(request.getResourceName()));
+                    return params.build();
+                  }
+                })
             .build();
     GrpcCallSettings<ApplyRecommendationRequest, ApplyRecommendationResponse>
         applyRecommendationTransportSettings =
             GrpcCallSettings.<ApplyRecommendationRequest, ApplyRecommendationResponse>newBuilder()
                 .setMethodDescriptor(applyRecommendationMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<ApplyRecommendationRequest>() {
+                      @Override
+                      public Map<String, String> extract(ApplyRecommendationRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("customer_id", String.valueOf(request.getCustomerId()));
+                        return params.build();
+                      }
+                    })
                 .build();
     GrpcCallSettings<DismissRecommendationRequest, DismissRecommendationResponse>
         dismissRecommendationTransportSettings =
             GrpcCallSettings
                 .<DismissRecommendationRequest, DismissRecommendationResponse>newBuilder()
                 .setMethodDescriptor(dismissRecommendationMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<DismissRecommendationRequest>() {
+                      @Override
+                      public Map<String, String> extract(DismissRecommendationRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("customer_id", String.valueOf(request.getCustomerId()));
+                        return params.build();
+                      }
+                    })
                 .build();
 
     this.getRecommendationCallable =

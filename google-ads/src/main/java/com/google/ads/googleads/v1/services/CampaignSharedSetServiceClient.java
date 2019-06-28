@@ -107,7 +107,10 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a campaign_shared_set
    * resource.
+   *
+   * @deprecated Use the {@link CampaignSharedSetName} class instead.
    */
+  @Deprecated
   public static final String formatCampaignSharedSetName(
       String customer, String campaignSharedSet) {
     return CAMPAIGN_SHARED_SET_PATH_TEMPLATE.instantiate(
@@ -118,7 +121,10 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a campaign_shared_set
    * resource.
+   *
+   * @deprecated Use the {@link CampaignSharedSetName} class instead.
    */
+  @Deprecated
   public static final String parseCustomerFromCampaignSharedSetName(String campaignSharedSetName) {
     return CAMPAIGN_SHARED_SET_PATH_TEMPLATE.parse(campaignSharedSetName).get("customer");
   }
@@ -126,7 +132,10 @@ public class CampaignSharedSetServiceClient implements BackgroundResource {
   /**
    * Parses the campaign_shared_set from the given fully-qualified path which represents a
    * campaign_shared_set resource.
+   *
+   * @deprecated Use the {@link CampaignSharedSetName} class instead.
    */
+  @Deprecated
   public static final String parseCampaignSharedSetFromCampaignSharedSetName(
       String campaignSharedSetName) {
     return CAMPAIGN_SHARED_SET_PATH_TEMPLATE
