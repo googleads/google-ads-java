@@ -1,3 +1,8 @@
+4.0.0 - 2019-06-28
+------------------
+- Added support for Google Ads API v2_0.
+- Fixed resource name creation for ad group criteria, see #141.
+
 3.0.1 - 2019-06-10
 ------------------
 - Increased max inbound message size to 64MB, see #136.
