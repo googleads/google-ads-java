@@ -107,10 +107,7 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a keyword_plan_ad_group
    * resource.
-   *
-   * @deprecated Use the {@link KeywordPlanAdGroupName} class instead.
    */
-  @Deprecated
   public static final String formatKeywordPlanAdGroupName(
       String customer, String keywordPlanAdGroup) {
     return KEYWORD_PLAN_AD_GROUP_PATH_TEMPLATE.instantiate(
@@ -121,10 +118,7 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * keyword_plan_ad_group resource.
-   *
-   * @deprecated Use the {@link KeywordPlanAdGroupName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromKeywordPlanAdGroupName(
       String keywordPlanAdGroupName) {
     return KEYWORD_PLAN_AD_GROUP_PATH_TEMPLATE.parse(keywordPlanAdGroupName).get("customer");
@@ -133,10 +127,7 @@ public class KeywordPlanAdGroupServiceClient implements BackgroundResource {
   /**
    * Parses the keyword_plan_ad_group from the given fully-qualified path which represents a
    * keyword_plan_ad_group resource.
-   *
-   * @deprecated Use the {@link KeywordPlanAdGroupName} class instead.
    */
-  @Deprecated
   public static final String parseKeywordPlanAdGroupFromKeywordPlanAdGroupName(
       String keywordPlanAdGroupName) {
     return KEYWORD_PLAN_AD_GROUP_PATH_TEMPLATE

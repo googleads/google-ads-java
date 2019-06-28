@@ -102,34 +102,19 @@ public class FeedServiceClient implements BackgroundResource {
   private static final PathTemplate FEED_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/feeds/{feed}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a feed resource.
-   *
-   * @deprecated Use the {@link FeedName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a feed resource. */
   public static final String formatFeedName(String customer, String feed) {
     return FEED_PATH_TEMPLATE.instantiate(
         "customer", customer,
         "feed", feed);
   }
 
-  /**
-   * Parses the customer from the given fully-qualified path which represents a feed resource.
-   *
-   * @deprecated Use the {@link FeedName} class instead.
-   */
-  @Deprecated
+  /** Parses the customer from the given fully-qualified path which represents a feed resource. */
   public static final String parseCustomerFromFeedName(String feedName) {
     return FEED_PATH_TEMPLATE.parse(feedName).get("customer");
   }
 
-  /**
-   * Parses the feed from the given fully-qualified path which represents a feed resource.
-   *
-   * @deprecated Use the {@link FeedName} class instead.
-   */
-  @Deprecated
+  /** Parses the feed from the given fully-qualified path which represents a feed resource. */
   public static final String parseFeedFromFeedName(String feedName) {
     return FEED_PATH_TEMPLATE.parse(feedName).get("feed");
   }

@@ -33,25 +33,23 @@ public final class DynamicSearchAdsSearchTermViewServiceProto {
       "roto\022 google.ads.googleads.v1.services\032K" +
       "google/ads/googleads/v1/resources/dynami" +
       "c_search_ads_search_term_view.proto\032\034goo" +
-      "gle/api/annotations.proto\032\027google/api/cl" +
-      "ient.proto\"A\n(GetDynamicSearchAdsSearchT" +
-      "ermViewRequest\022\025\n\rresource_name\030\001 \001(\t2\304\002" +
-      "\n%DynamicSearchAdsSearchTermViewService\022" +
-      "\375\001\n!GetDynamicSearchAdsSearchTermView\022J." +
-      "google.ads.googleads.v1.services.GetDyna" +
-      "micSearchAdsSearchTermViewRequest\032A.goog" +
-      "le.ads.googleads.v1.resources.DynamicSea" +
-      "rchAdsSearchTermView\"I\202\323\344\223\002C\022A/v1/{resou" +
-      "rce_name=customers/*/dynamicSearchAdsSea" +
-      "rchTermViews/*}\032\033\312A\030googleads.googleapis" +
-      ".comB\221\002\n$com.google.ads.googleads.v1.ser" +
-      "vicesB*DynamicSearchAdsSearchTermViewSer" +
-      "viceProtoP\001ZHgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v1/services;ser" +
-      "vices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Se" +
-      "rvices\312\002 Google\\Ads\\GoogleAds\\V1\\Service" +
-      "s\352\002$Google::Ads::GoogleAds::V1::Services" +
-      "b\006proto3"
+      "gle/api/annotations.proto\"A\n(GetDynamicS" +
+      "earchAdsSearchTermViewRequest\022\025\n\rresourc" +
+      "e_name\030\001 \001(\t2\247\002\n%DynamicSearchAdsSearchT" +
+      "ermViewService\022\375\001\n!GetDynamicSearchAdsSe" +
+      "archTermView\022J.google.ads.googleads.v1.s" +
+      "ervices.GetDynamicSearchAdsSearchTermVie" +
+      "wRequest\032A.google.ads.googleads.v1.resou" +
+      "rces.DynamicSearchAdsSearchTermView\"I\202\323\344" +
+      "\223\002C\022A/v1/{resource_name=customers/*/dyna" +
+      "micSearchAdsSearchTermViews/*}B\221\002\n$com.g" +
+      "oogle.ads.googleads.v1.servicesB*Dynamic" +
+      "SearchAdsSearchTermViewServiceProtoP\001ZHg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v1/services;services\242\002\003GAA\252\002 " +
+      "Google.Ads.GoogleAds.V1.Services\312\002 Googl" +
+      "e\\Ads\\GoogleAds\\V1\\Services\352\002$Google::Ad" +
+      "s::GoogleAds::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,7 +64,6 @@ public final class DynamicSearchAdsSearchTermViewServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetDynamicSearchAdsSearchTermViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -76,13 +73,11 @@ public final class DynamicSearchAdsSearchTermViewServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

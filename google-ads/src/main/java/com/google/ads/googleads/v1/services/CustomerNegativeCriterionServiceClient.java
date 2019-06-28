@@ -107,10 +107,7 @@ public class CustomerNegativeCriterionServiceClient implements BackgroundResourc
   /**
    * Formats a string containing the fully-qualified path to represent a customer_negative_criteria
    * resource.
-   *
-   * @deprecated Use the {@link CustomerNegativeCriteriaName} class instead.
    */
-  @Deprecated
   public static final String formatCustomerNegativeCriteriaName(
       String customer, String customerNegativeCriteria) {
     return CUSTOMER_NEGATIVE_CRITERIA_PATH_TEMPLATE.instantiate(
@@ -121,10 +118,7 @@ public class CustomerNegativeCriterionServiceClient implements BackgroundResourc
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * customer_negative_criteria resource.
-   *
-   * @deprecated Use the {@link CustomerNegativeCriteriaName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromCustomerNegativeCriteriaName(
       String customerNegativeCriteriaName) {
     return CUSTOMER_NEGATIVE_CRITERIA_PATH_TEMPLATE
@@ -135,10 +129,7 @@ public class CustomerNegativeCriterionServiceClient implements BackgroundResourc
   /**
    * Parses the customer_negative_criteria from the given fully-qualified path which represents a
    * customer_negative_criteria resource.
-   *
-   * @deprecated Use the {@link CustomerNegativeCriteriaName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerNegativeCriteriaFromCustomerNegativeCriteriaName(
       String customerNegativeCriteriaName) {
     return CUSTOMER_NEGATIVE_CRITERIA_PATH_TEMPLATE

@@ -107,10 +107,7 @@ public class CampaignBidModifierServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a campaign_bid_modifier
    * resource.
-   *
-   * @deprecated Use the {@link CampaignBidModifierName} class instead.
    */
-  @Deprecated
   public static final String formatCampaignBidModifierName(
       String customer, String campaignBidModifier) {
     return CAMPAIGN_BID_MODIFIER_PATH_TEMPLATE.instantiate(
@@ -121,10 +118,7 @@ public class CampaignBidModifierServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * campaign_bid_modifier resource.
-   *
-   * @deprecated Use the {@link CampaignBidModifierName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromCampaignBidModifierName(
       String campaignBidModifierName) {
     return CAMPAIGN_BID_MODIFIER_PATH_TEMPLATE.parse(campaignBidModifierName).get("customer");
@@ -133,10 +127,7 @@ public class CampaignBidModifierServiceClient implements BackgroundResource {
   /**
    * Parses the campaign_bid_modifier from the given fully-qualified path which represents a
    * campaign_bid_modifier resource.
-   *
-   * @deprecated Use the {@link CampaignBidModifierName} class instead.
    */
-  @Deprecated
   public static final String parseCampaignBidModifierFromCampaignBidModifierName(
       String campaignBidModifierName) {
     return CAMPAIGN_BID_MODIFIER_PATH_TEMPLATE

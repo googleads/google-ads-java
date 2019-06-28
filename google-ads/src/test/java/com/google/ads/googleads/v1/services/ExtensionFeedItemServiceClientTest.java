@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -392,7 +392,7 @@ public class ExtensionFeedItemServiceClientTest {
     ExtensionFeedItem actualResponse = client.getExtensionFeedItem(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockExtensionFeedItemService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockExtensionFeedItemService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetExtensionFeedItemRequest actualRequest = (GetExtensionFeedItemRequest) actualRequests.get(0);
 
@@ -436,7 +436,7 @@ public class ExtensionFeedItemServiceClientTest {
         client.mutateExtensionFeedItems(customerId, operations, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockExtensionFeedItemService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockExtensionFeedItemService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateExtensionFeedItemsRequest actualRequest =
         (MutateExtensionFeedItemsRequest) actualRequests.get(0);
@@ -482,7 +482,7 @@ public class ExtensionFeedItemServiceClientTest {
         client.mutateExtensionFeedItems(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockExtensionFeedItemService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockExtensionFeedItemService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateExtensionFeedItemsRequest actualRequest =
         (MutateExtensionFeedItemsRequest) actualRequests.get(0);

@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 82: {
-            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
               finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
               mutable_bitField0_ |= 0x00000020;
             }
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 90: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
               finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
               mutable_bitField0_ |= 0x00000040;
             }
@@ -190,7 +190,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 106: {
-            if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.CustomParameter>();
               mutable_bitField0_ |= 0x00000100;
             }
@@ -225,7 +225,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -239,13 +239,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000020) != 0)) {
+      if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
         finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
       }
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
+      if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
         finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
       }
-      if (((mutable_bitField0_ & 0x00000100) != 0)) {
+      if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
       this.unknownFields = unknownFields.build();
@@ -1085,72 +1085,77 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.PromotionFeedItem other = (com.google.ads.googleads.v1.common.PromotionFeedItem) obj;
 
-    if (hasPromotionTarget() != other.hasPromotionTarget()) return false;
+    boolean result = true;
+    result = result && (hasPromotionTarget() == other.hasPromotionTarget());
     if (hasPromotionTarget()) {
-      if (!getPromotionTarget()
-          .equals(other.getPromotionTarget())) return false;
+      result = result && getPromotionTarget()
+          .equals(other.getPromotionTarget());
     }
-    if (discountModifier_ != other.discountModifier_) return false;
-    if (hasPromotionStartDate() != other.hasPromotionStartDate()) return false;
+    result = result && discountModifier_ == other.discountModifier_;
+    result = result && (hasPromotionStartDate() == other.hasPromotionStartDate());
     if (hasPromotionStartDate()) {
-      if (!getPromotionStartDate()
-          .equals(other.getPromotionStartDate())) return false;
+      result = result && getPromotionStartDate()
+          .equals(other.getPromotionStartDate());
     }
-    if (hasPromotionEndDate() != other.hasPromotionEndDate()) return false;
+    result = result && (hasPromotionEndDate() == other.hasPromotionEndDate());
     if (hasPromotionEndDate()) {
-      if (!getPromotionEndDate()
-          .equals(other.getPromotionEndDate())) return false;
+      result = result && getPromotionEndDate()
+          .equals(other.getPromotionEndDate());
     }
-    if (occasion_ != other.occasion_) return false;
-    if (!getFinalUrlsList()
-        .equals(other.getFinalUrlsList())) return false;
-    if (!getFinalMobileUrlsList()
-        .equals(other.getFinalMobileUrlsList())) return false;
-    if (hasTrackingUrlTemplate() != other.hasTrackingUrlTemplate()) return false;
+    result = result && occasion_ == other.occasion_;
+    result = result && getFinalUrlsList()
+        .equals(other.getFinalUrlsList());
+    result = result && getFinalMobileUrlsList()
+        .equals(other.getFinalMobileUrlsList());
+    result = result && (hasTrackingUrlTemplate() == other.hasTrackingUrlTemplate());
     if (hasTrackingUrlTemplate()) {
-      if (!getTrackingUrlTemplate()
-          .equals(other.getTrackingUrlTemplate())) return false;
+      result = result && getTrackingUrlTemplate()
+          .equals(other.getTrackingUrlTemplate());
     }
-    if (!getUrlCustomParametersList()
-        .equals(other.getUrlCustomParametersList())) return false;
-    if (hasFinalUrlSuffix() != other.hasFinalUrlSuffix()) return false;
+    result = result && getUrlCustomParametersList()
+        .equals(other.getUrlCustomParametersList());
+    result = result && (hasFinalUrlSuffix() == other.hasFinalUrlSuffix());
     if (hasFinalUrlSuffix()) {
-      if (!getFinalUrlSuffix()
-          .equals(other.getFinalUrlSuffix())) return false;
+      result = result && getFinalUrlSuffix()
+          .equals(other.getFinalUrlSuffix());
     }
-    if (hasLanguageCode() != other.hasLanguageCode()) return false;
+    result = result && (hasLanguageCode() == other.hasLanguageCode());
     if (hasLanguageCode()) {
-      if (!getLanguageCode()
-          .equals(other.getLanguageCode())) return false;
+      result = result && getLanguageCode()
+          .equals(other.getLanguageCode());
     }
-    if (!getDiscountTypeCase().equals(other.getDiscountTypeCase())) return false;
+    result = result && getDiscountTypeCase().equals(
+        other.getDiscountTypeCase());
+    if (!result) return false;
     switch (discountTypeCase_) {
       case 3:
-        if (!getPercentOff()
-            .equals(other.getPercentOff())) return false;
+        result = result && getPercentOff()
+            .equals(other.getPercentOff());
         break;
       case 4:
-        if (!getMoneyAmountOff()
-            .equals(other.getMoneyAmountOff())) return false;
+        result = result && getMoneyAmountOff()
+            .equals(other.getMoneyAmountOff());
         break;
       case 0:
       default:
     }
-    if (!getPromotionTriggerCase().equals(other.getPromotionTriggerCase())) return false;
+    result = result && getPromotionTriggerCase().equals(
+        other.getPromotionTriggerCase());
+    if (!result) return false;
     switch (promotionTriggerCase_) {
       case 5:
-        if (!getPromotionCode()
-            .equals(other.getPromotionCode())) return false;
+        result = result && getPromotionCode()
+            .equals(other.getPromotionCode());
         break;
       case 6:
-        if (!getOrdersOverAmount()
-            .equals(other.getOrdersOverAmount())) return false;
+        result = result && getOrdersOverAmount()
+            .equals(other.getOrdersOverAmount());
         break;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -1472,7 +1477,7 @@ private static final long serialVersionUID = 0L;
       }
       result.occasion_ = occasion_;
       if (finalUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0)) {
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
           finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
           bitField0_ = (bitField0_ & ~0x00000020);
         }
@@ -1481,7 +1486,7 @@ private static final long serialVersionUID = 0L;
         result.finalUrls_ = finalUrlsBuilder_.build();
       }
       if (finalMobileUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
           finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
           bitField0_ = (bitField0_ & ~0x00000040);
         }
@@ -1495,7 +1500,7 @@ private static final long serialVersionUID = 0L;
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
           bitField0_ = (bitField0_ & ~0x00000100);
         }
@@ -1550,35 +1555,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1780,7 +1785,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
 
-    private com.google.protobuf.StringValue promotionTarget_;
+    private com.google.protobuf.StringValue promotionTarget_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> promotionTargetBuilder_;
     /**
@@ -2007,7 +2012,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue promotionStartDate_;
+    private com.google.protobuf.StringValue promotionStartDate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> promotionStartDateBuilder_;
     /**
@@ -2160,7 +2165,7 @@ private static final long serialVersionUID = 0L;
       return promotionStartDateBuilder_;
     }
 
-    private com.google.protobuf.StringValue promotionEndDate_;
+    private com.google.protobuf.StringValue promotionEndDate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> promotionEndDateBuilder_;
     /**
@@ -2391,7 +2396,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000020) == 0x00000020)) {
         finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalUrls_);
         bitField0_ |= 0x00000020;
        }
@@ -2710,7 +2715,7 @@ private static final long serialVersionUID = 0L;
         finalUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalUrls_,
-                ((bitField0_ & 0x00000020) != 0),
+                ((bitField0_ & 0x00000020) == 0x00000020),
                 getParentForChildren(),
                 isClean());
         finalUrls_ = null;
@@ -2721,7 +2726,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalMobileUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalMobileUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000040) == 0x00000040)) {
         finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalMobileUrls_);
         bitField0_ |= 0x00000040;
        }
@@ -3022,7 +3027,7 @@ private static final long serialVersionUID = 0L;
         finalMobileUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalMobileUrls_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000040) == 0x00000040),
                 getParentForChildren(),
                 isClean());
         finalMobileUrls_ = null;
@@ -3030,7 +3035,7 @@ private static final long serialVersionUID = 0L;
       return finalMobileUrlsBuilder_;
     }
 
-    private com.google.protobuf.StringValue trackingUrlTemplate_;
+    private com.google.protobuf.StringValue trackingUrlTemplate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> trackingUrlTemplateBuilder_;
     /**
@@ -3186,7 +3191,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000100) == 0x00000100)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.CustomParameter>(urlCustomParameters_);
         bitField0_ |= 0x00000100;
        }
@@ -3505,7 +3510,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.CustomParameter, com.google.ads.googleads.v1.common.CustomParameter.Builder, com.google.ads.googleads.v1.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000100) != 0),
+                ((bitField0_ & 0x00000100) == 0x00000100),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -3513,7 +3518,7 @@ private static final long serialVersionUID = 0L;
       return urlCustomParametersBuilder_;
     }
 
-    private com.google.protobuf.StringValue finalUrlSuffix_;
+    private com.google.protobuf.StringValue finalUrlSuffix_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> finalUrlSuffixBuilder_;
     /**
@@ -3675,7 +3680,7 @@ private static final long serialVersionUID = 0L;
       return finalUrlSuffixBuilder_;
     }
 
-    private com.google.protobuf.StringValue languageCode_;
+    private com.google.protobuf.StringValue languageCode_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> languageCodeBuilder_;
     /**
@@ -4563,7 +4568,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

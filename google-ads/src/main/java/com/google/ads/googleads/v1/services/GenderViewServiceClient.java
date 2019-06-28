@@ -102,12 +102,7 @@ public class GenderViewServiceClient implements BackgroundResource {
   private static final PathTemplate GENDER_VIEW_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/genderViews/{gender_view}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a gender_view resource.
-   *
-   * @deprecated Use the {@link GenderViewName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a gender_view resource. */
   public static final String formatGenderViewName(String customer, String genderView) {
     return GENDER_VIEW_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -117,10 +112,7 @@ public class GenderViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a gender_view
    * resource.
-   *
-   * @deprecated Use the {@link GenderViewName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromGenderViewName(String genderViewName) {
     return GENDER_VIEW_PATH_TEMPLATE.parse(genderViewName).get("customer");
   }
@@ -128,10 +120,7 @@ public class GenderViewServiceClient implements BackgroundResource {
   /**
    * Parses the gender_view from the given fully-qualified path which represents a gender_view
    * resource.
-   *
-   * @deprecated Use the {@link GenderViewName} class instead.
    */
-  @Deprecated
   public static final String parseGenderViewFromGenderViewName(String genderViewName) {
     return GENDER_VIEW_PATH_TEMPLATE.parse(genderViewName).get("gender_view");
   }

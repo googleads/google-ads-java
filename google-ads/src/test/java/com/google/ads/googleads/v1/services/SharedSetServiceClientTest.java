@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -390,7 +390,7 @@ public class SharedSetServiceClientTest {
     SharedSet actualResponse = client.getSharedSet(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockSharedSetService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockSharedSetService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetSharedSetRequest actualRequest = (GetSharedSetRequest) actualRequests.get(0);
 
@@ -433,7 +433,7 @@ public class SharedSetServiceClientTest {
         client.mutateSharedSets(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockSharedSetService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockSharedSetService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateSharedSetsRequest actualRequest = (MutateSharedSetsRequest) actualRequests.get(0);
 
@@ -478,7 +478,7 @@ public class SharedSetServiceClientTest {
     MutateSharedSetsResponse actualResponse = client.mutateSharedSets(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockSharedSetService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockSharedSetService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateSharedSetsRequest actualRequest = (MutateSharedSetsRequest) actualRequests.get(0);
 

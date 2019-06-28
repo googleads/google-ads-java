@@ -32,21 +32,20 @@ public final class ChangeStatusServiceProto {
       "e_status_service.proto\022 google.ads.googl" +
       "eads.v1.services\0325google/ads/googleads/v" +
       "1/resources/change_status.proto\032\034google/" +
-      "api/annotations.proto\032\027google/api/client" +
-      ".proto\"/\n\026GetChangeStatusRequest\022\025\n\rreso" +
-      "urce_name\030\001 \001(\t2\351\001\n\023ChangeStatusService\022" +
-      "\264\001\n\017GetChangeStatus\0228.google.ads.googlea" +
-      "ds.v1.services.GetChangeStatusRequest\032/." +
-      "google.ads.googleads.v1.resources.Change" +
-      "Status\"6\202\323\344\223\0020\022./v1/{resource_name=custo" +
-      "mers/*/changeStatus/*}\032\033\312A\030googleads.goo" +
-      "gleapis.comB\377\001\n$com.google.ads.googleads" +
-      ".v1.servicesB\030ChangeStatusServiceProtoP\001" +
-      "ZHgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v1/services;services\242\002\003GAA" +
-      "\252\002 Google.Ads.GoogleAds.V1.Services\312\002 Go" +
-      "ogle\\Ads\\GoogleAds\\V1\\Services\352\002$Google:" +
-      ":Ads::GoogleAds::V1::Servicesb\006proto3"
+      "api/annotations.proto\"/\n\026GetChangeStatus" +
+      "Request\022\025\n\rresource_name\030\001 \001(\t2\314\001\n\023Chang" +
+      "eStatusService\022\264\001\n\017GetChangeStatus\0228.goo" +
+      "gle.ads.googleads.v1.services.GetChangeS" +
+      "tatusRequest\032/.google.ads.googleads.v1.r" +
+      "esources.ChangeStatus\"6\202\323\344\223\0020\022./v1/{reso" +
+      "urce_name=customers/*/changeStatus/*}B\377\001" +
+      "\n$com.google.ads.googleads.v1.servicesB\030" +
+      "ChangeStatusServiceProtoP\001ZHgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v1/services;services\242\002\003GAA\252\002 Google.Ads." +
+      "GoogleAds.V1.Services\312\002 Google\\Ads\\Googl" +
+      "eAds\\V1\\Services\352\002$Google::Ads::GoogleAd" +
+      "s::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -61,7 +60,6 @@ public final class ChangeStatusServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.ChangeStatusProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetChangeStatusRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -71,13 +69,11 @@ public final class ChangeStatusServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.ChangeStatusProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

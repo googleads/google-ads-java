@@ -36,16 +36,13 @@ import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.OperationCallable;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.Operation;
 import com.google.longrunning.stub.GrpcOperationsStub;
 import com.google.protobuf.Empty;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -215,90 +212,32 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
         getCampaignExperimentTransportSettings =
             GrpcCallSettings.<GetCampaignExperimentRequest, CampaignExperiment>newBuilder()
                 .setMethodDescriptor(getCampaignExperimentMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<GetCampaignExperimentRequest>() {
-                      @Override
-                      public Map<String, String> extract(GetCampaignExperimentRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
-                    })
                 .build();
     GrpcCallSettings<CreateCampaignExperimentRequest, Operation>
         createCampaignExperimentTransportSettings =
             GrpcCallSettings.<CreateCampaignExperimentRequest, Operation>newBuilder()
                 .setMethodDescriptor(createCampaignExperimentMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<CreateCampaignExperimentRequest>() {
-                      @Override
-                      public Map<String, String> extract(CreateCampaignExperimentRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
-                    })
                 .build();
     GrpcCallSettings<MutateCampaignExperimentsRequest, MutateCampaignExperimentsResponse>
         mutateCampaignExperimentsTransportSettings =
             GrpcCallSettings
                 .<MutateCampaignExperimentsRequest, MutateCampaignExperimentsResponse>newBuilder()
                 .setMethodDescriptor(mutateCampaignExperimentsMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCampaignExperimentsRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateCampaignExperimentsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
-                    })
                 .build();
     GrpcCallSettings<GraduateCampaignExperimentRequest, GraduateCampaignExperimentResponse>
         graduateCampaignExperimentTransportSettings =
             GrpcCallSettings
                 .<GraduateCampaignExperimentRequest, GraduateCampaignExperimentResponse>newBuilder()
                 .setMethodDescriptor(graduateCampaignExperimentMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<GraduateCampaignExperimentRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          GraduateCampaignExperimentRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put(
-                            "campaign_experiment", String.valueOf(request.getCampaignExperiment()));
-                        return params.build();
-                      }
-                    })
                 .build();
     GrpcCallSettings<PromoteCampaignExperimentRequest, Operation>
         promoteCampaignExperimentTransportSettings =
             GrpcCallSettings.<PromoteCampaignExperimentRequest, Operation>newBuilder()
                 .setMethodDescriptor(promoteCampaignExperimentMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<PromoteCampaignExperimentRequest>() {
-                      @Override
-                      public Map<String, String> extract(PromoteCampaignExperimentRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put(
-                            "campaign_experiment", String.valueOf(request.getCampaignExperiment()));
-                        return params.build();
-                      }
-                    })
                 .build();
     GrpcCallSettings<EndCampaignExperimentRequest, Empty> endCampaignExperimentTransportSettings =
         GrpcCallSettings.<EndCampaignExperimentRequest, Empty>newBuilder()
             .setMethodDescriptor(endCampaignExperimentMethodDescriptor)
-            .setParamsExtractor(
-                new RequestParamsExtractor<EndCampaignExperimentRequest>() {
-                  @Override
-                  public Map<String, String> extract(EndCampaignExperimentRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put(
-                        "campaign_experiment", String.valueOf(request.getCampaignExperiment()));
-                    return params.build();
-                  }
-                })
             .build();
     GrpcCallSettings<
             ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse>
@@ -308,16 +247,6 @@ public class GrpcCampaignExperimentServiceStub extends CampaignExperimentService
                     ListCampaignExperimentAsyncErrorsResponse>
                     newBuilder()
                 .setMethodDescriptor(listCampaignExperimentAsyncErrorsMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<ListCampaignExperimentAsyncErrorsRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          ListCampaignExperimentAsyncErrorsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
-                    })
                 .build();
 
     this.getCampaignExperimentCallable =

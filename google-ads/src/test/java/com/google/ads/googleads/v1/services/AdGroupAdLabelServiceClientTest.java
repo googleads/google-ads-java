@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -391,7 +391,7 @@ public class AdGroupAdLabelServiceClientTest {
     AdGroupAdLabel actualResponse = client.getAdGroupAdLabel(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockAdGroupAdLabelService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockAdGroupAdLabelService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetAdGroupAdLabelRequest actualRequest = (GetAdGroupAdLabelRequest) actualRequests.get(0);
 
@@ -435,7 +435,7 @@ public class AdGroupAdLabelServiceClientTest {
         client.mutateAdGroupAdLabels(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockAdGroupAdLabelService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockAdGroupAdLabelService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateAdGroupAdLabelsRequest actualRequest =
         (MutateAdGroupAdLabelsRequest) actualRequests.get(0);
@@ -483,7 +483,7 @@ public class AdGroupAdLabelServiceClientTest {
         client.mutateAdGroupAdLabels(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockAdGroupAdLabelService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockAdGroupAdLabelService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateAdGroupAdLabelsRequest actualRequest =
         (MutateAdGroupAdLabelsRequest) actualRequests.get(0);

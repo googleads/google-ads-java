@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -390,7 +390,7 @@ public class AdParameterServiceClientTest {
     AdParameter actualResponse = client.getAdParameter(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockAdParameterService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockAdParameterService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetAdParameterRequest actualRequest = (GetAdParameterRequest) actualRequests.get(0);
 
@@ -433,7 +433,7 @@ public class AdParameterServiceClientTest {
         client.mutateAdParameters(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockAdParameterService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockAdParameterService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateAdParametersRequest actualRequest = (MutateAdParametersRequest) actualRequests.get(0);
 
@@ -478,7 +478,7 @@ public class AdParameterServiceClientTest {
     MutateAdParametersResponse actualResponse = client.mutateAdParameters(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockAdParameterService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockAdParameterService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateAdParametersRequest actualRequest = (MutateAdParametersRequest) actualRequests.get(0);
 

@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -286,23 +286,24 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo other = (com.google.ads.googleads.v1.common.VideoTrueViewInStreamAdInfo) obj;
 
-    if (hasActionButtonLabel() != other.hasActionButtonLabel()) return false;
+    boolean result = true;
+    result = result && (hasActionButtonLabel() == other.hasActionButtonLabel());
     if (hasActionButtonLabel()) {
-      if (!getActionButtonLabel()
-          .equals(other.getActionButtonLabel())) return false;
+      result = result && getActionButtonLabel()
+          .equals(other.getActionButtonLabel());
     }
-    if (hasActionHeadline() != other.hasActionHeadline()) return false;
+    result = result && (hasActionHeadline() == other.hasActionHeadline());
     if (hasActionHeadline()) {
-      if (!getActionHeadline()
-          .equals(other.getActionHeadline())) return false;
+      result = result && getActionHeadline()
+          .equals(other.getActionHeadline());
     }
-    if (hasCompanionBanner() != other.hasCompanionBanner()) return false;
+    result = result && (hasCompanionBanner() == other.hasCompanionBanner());
     if (hasCompanionBanner()) {
-      if (!getCompanionBanner()
-          .equals(other.getCompanionBanner())) return false;
+      result = result && getCompanionBanner()
+          .equals(other.getCompanionBanner());
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -528,35 +529,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -608,7 +609,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue actionButtonLabel_;
+    private com.google.protobuf.StringValue actionButtonLabel_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> actionButtonLabelBuilder_;
     /**
@@ -779,7 +780,7 @@ private static final long serialVersionUID = 0L;
       return actionButtonLabelBuilder_;
     }
 
-    private com.google.protobuf.StringValue actionHeadline_;
+    private com.google.protobuf.StringValue actionHeadline_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> actionHeadlineBuilder_;
     /**
@@ -941,7 +942,7 @@ private static final long serialVersionUID = 0L;
       return actionHeadlineBuilder_;
     }
 
-    private com.google.protobuf.StringValue companionBanner_;
+    private com.google.protobuf.StringValue companionBanner_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> companionBannerBuilder_;
     /**
@@ -1096,7 +1097,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

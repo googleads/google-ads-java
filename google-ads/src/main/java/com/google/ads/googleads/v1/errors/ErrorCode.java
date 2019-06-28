@@ -662,7 +662,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -4845,421 +4845,424 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.errors.ErrorCode other = (com.google.ads.googleads.v1.errors.ErrorCode) obj;
 
-    if (!getErrorCodeCase().equals(other.getErrorCodeCase())) return false;
+    boolean result = true;
+    result = result && getErrorCodeCase().equals(
+        other.getErrorCodeCase());
+    if (!result) return false;
     switch (errorCodeCase_) {
       case 1:
-        if (getRequestErrorValue()
-            != other.getRequestErrorValue()) return false;
+        result = result && getRequestErrorValue()
+            == other.getRequestErrorValue();
         break;
       case 2:
-        if (getBiddingStrategyErrorValue()
-            != other.getBiddingStrategyErrorValue()) return false;
+        result = result && getBiddingStrategyErrorValue()
+            == other.getBiddingStrategyErrorValue();
         break;
       case 3:
-        if (getUrlFieldErrorValue()
-            != other.getUrlFieldErrorValue()) return false;
+        result = result && getUrlFieldErrorValue()
+            == other.getUrlFieldErrorValue();
         break;
       case 4:
-        if (getListOperationErrorValue()
-            != other.getListOperationErrorValue()) return false;
+        result = result && getListOperationErrorValue()
+            == other.getListOperationErrorValue();
         break;
       case 5:
-        if (getQueryErrorValue()
-            != other.getQueryErrorValue()) return false;
+        result = result && getQueryErrorValue()
+            == other.getQueryErrorValue();
         break;
       case 7:
-        if (getMutateErrorValue()
-            != other.getMutateErrorValue()) return false;
+        result = result && getMutateErrorValue()
+            == other.getMutateErrorValue();
         break;
       case 8:
-        if (getFieldMaskErrorValue()
-            != other.getFieldMaskErrorValue()) return false;
+        result = result && getFieldMaskErrorValue()
+            == other.getFieldMaskErrorValue();
         break;
       case 9:
-        if (getAuthorizationErrorValue()
-            != other.getAuthorizationErrorValue()) return false;
+        result = result && getAuthorizationErrorValue()
+            == other.getAuthorizationErrorValue();
         break;
       case 10:
-        if (getInternalErrorValue()
-            != other.getInternalErrorValue()) return false;
+        result = result && getInternalErrorValue()
+            == other.getInternalErrorValue();
         break;
       case 11:
-        if (getQuotaErrorValue()
-            != other.getQuotaErrorValue()) return false;
+        result = result && getQuotaErrorValue()
+            == other.getQuotaErrorValue();
         break;
       case 12:
-        if (getAdErrorValue()
-            != other.getAdErrorValue()) return false;
+        result = result && getAdErrorValue()
+            == other.getAdErrorValue();
         break;
       case 13:
-        if (getAdGroupErrorValue()
-            != other.getAdGroupErrorValue()) return false;
+        result = result && getAdGroupErrorValue()
+            == other.getAdGroupErrorValue();
         break;
       case 14:
-        if (getCampaignBudgetErrorValue()
-            != other.getCampaignBudgetErrorValue()) return false;
+        result = result && getCampaignBudgetErrorValue()
+            == other.getCampaignBudgetErrorValue();
         break;
       case 15:
-        if (getCampaignErrorValue()
-            != other.getCampaignErrorValue()) return false;
+        result = result && getCampaignErrorValue()
+            == other.getCampaignErrorValue();
         break;
       case 17:
-        if (getAuthenticationErrorValue()
-            != other.getAuthenticationErrorValue()) return false;
+        result = result && getAuthenticationErrorValue()
+            == other.getAuthenticationErrorValue();
         break;
       case 18:
-        if (getAdGroupCriterionErrorValue()
-            != other.getAdGroupCriterionErrorValue()) return false;
+        result = result && getAdGroupCriterionErrorValue()
+            == other.getAdGroupCriterionErrorValue();
         break;
       case 19:
-        if (getAdCustomizerErrorValue()
-            != other.getAdCustomizerErrorValue()) return false;
+        result = result && getAdCustomizerErrorValue()
+            == other.getAdCustomizerErrorValue();
         break;
       case 21:
-        if (getAdGroupAdErrorValue()
-            != other.getAdGroupAdErrorValue()) return false;
+        result = result && getAdGroupAdErrorValue()
+            == other.getAdGroupAdErrorValue();
         break;
       case 24:
-        if (getAdSharingErrorValue()
-            != other.getAdSharingErrorValue()) return false;
+        result = result && getAdSharingErrorValue()
+            == other.getAdSharingErrorValue();
         break;
       case 25:
-        if (getAdxErrorValue()
-            != other.getAdxErrorValue()) return false;
+        result = result && getAdxErrorValue()
+            == other.getAdxErrorValue();
         break;
       case 107:
-        if (getAssetErrorValue()
-            != other.getAssetErrorValue()) return false;
+        result = result && getAssetErrorValue()
+            == other.getAssetErrorValue();
         break;
       case 26:
-        if (getBiddingErrorValue()
-            != other.getBiddingErrorValue()) return false;
+        result = result && getBiddingErrorValue()
+            == other.getBiddingErrorValue();
         break;
       case 29:
-        if (getCampaignCriterionErrorValue()
-            != other.getCampaignCriterionErrorValue()) return false;
+        result = result && getCampaignCriterionErrorValue()
+            == other.getCampaignCriterionErrorValue();
         break;
       case 31:
-        if (getCollectionSizeErrorValue()
-            != other.getCollectionSizeErrorValue()) return false;
+        result = result && getCollectionSizeErrorValue()
+            == other.getCollectionSizeErrorValue();
         break;
       case 109:
-        if (getCountryCodeErrorValue()
-            != other.getCountryCodeErrorValue()) return false;
+        result = result && getCountryCodeErrorValue()
+            == other.getCountryCodeErrorValue();
         break;
       case 32:
-        if (getCriterionErrorValue()
-            != other.getCriterionErrorValue()) return false;
+        result = result && getCriterionErrorValue()
+            == other.getCriterionErrorValue();
         break;
       case 90:
-        if (getCustomerErrorValue()
-            != other.getCustomerErrorValue()) return false;
+        result = result && getCustomerErrorValue()
+            == other.getCustomerErrorValue();
         break;
       case 33:
-        if (getDateErrorValue()
-            != other.getDateErrorValue()) return false;
+        result = result && getDateErrorValue()
+            == other.getDateErrorValue();
         break;
       case 34:
-        if (getDateRangeErrorValue()
-            != other.getDateRangeErrorValue()) return false;
+        result = result && getDateRangeErrorValue()
+            == other.getDateRangeErrorValue();
         break;
       case 35:
-        if (getDistinctErrorValue()
-            != other.getDistinctErrorValue()) return false;
+        result = result && getDistinctErrorValue()
+            == other.getDistinctErrorValue();
         break;
       case 36:
-        if (getFeedAttributeReferenceErrorValue()
-            != other.getFeedAttributeReferenceErrorValue()) return false;
+        result = result && getFeedAttributeReferenceErrorValue()
+            == other.getFeedAttributeReferenceErrorValue();
         break;
       case 37:
-        if (getFunctionErrorValue()
-            != other.getFunctionErrorValue()) return false;
+        result = result && getFunctionErrorValue()
+            == other.getFunctionErrorValue();
         break;
       case 38:
-        if (getFunctionParsingErrorValue()
-            != other.getFunctionParsingErrorValue()) return false;
+        result = result && getFunctionParsingErrorValue()
+            == other.getFunctionParsingErrorValue();
         break;
       case 39:
-        if (getIdErrorValue()
-            != other.getIdErrorValue()) return false;
+        result = result && getIdErrorValue()
+            == other.getIdErrorValue();
         break;
       case 40:
-        if (getImageErrorValue()
-            != other.getImageErrorValue()) return false;
+        result = result && getImageErrorValue()
+            == other.getImageErrorValue();
         break;
       case 110:
-        if (getLanguageCodeErrorValue()
-            != other.getLanguageCodeErrorValue()) return false;
+        result = result && getLanguageCodeErrorValue()
+            == other.getLanguageCodeErrorValue();
         break;
       case 42:
-        if (getMediaBundleErrorValue()
-            != other.getMediaBundleErrorValue()) return false;
+        result = result && getMediaBundleErrorValue()
+            == other.getMediaBundleErrorValue();
         break;
       case 116:
-        if (getMediaUploadErrorValue()
-            != other.getMediaUploadErrorValue()) return false;
+        result = result && getMediaUploadErrorValue()
+            == other.getMediaUploadErrorValue();
         break;
       case 86:
-        if (getMediaFileErrorValue()
-            != other.getMediaFileErrorValue()) return false;
+        result = result && getMediaFileErrorValue()
+            == other.getMediaFileErrorValue();
         break;
       case 44:
-        if (getMultiplierErrorValue()
-            != other.getMultiplierErrorValue()) return false;
+        result = result && getMultiplierErrorValue()
+            == other.getMultiplierErrorValue();
         break;
       case 45:
-        if (getNewResourceCreationErrorValue()
-            != other.getNewResourceCreationErrorValue()) return false;
+        result = result && getNewResourceCreationErrorValue()
+            == other.getNewResourceCreationErrorValue();
         break;
       case 46:
-        if (getNotEmptyErrorValue()
-            != other.getNotEmptyErrorValue()) return false;
+        result = result && getNotEmptyErrorValue()
+            == other.getNotEmptyErrorValue();
         break;
       case 47:
-        if (getNullErrorValue()
-            != other.getNullErrorValue()) return false;
+        result = result && getNullErrorValue()
+            == other.getNullErrorValue();
         break;
       case 48:
-        if (getOperatorErrorValue()
-            != other.getOperatorErrorValue()) return false;
+        result = result && getOperatorErrorValue()
+            == other.getOperatorErrorValue();
         break;
       case 49:
-        if (getRangeErrorValue()
-            != other.getRangeErrorValue()) return false;
+        result = result && getRangeErrorValue()
+            == other.getRangeErrorValue();
         break;
       case 58:
-        if (getRecommendationErrorValue()
-            != other.getRecommendationErrorValue()) return false;
+        result = result && getRecommendationErrorValue()
+            == other.getRecommendationErrorValue();
         break;
       case 51:
-        if (getRegionCodeErrorValue()
-            != other.getRegionCodeErrorValue()) return false;
+        result = result && getRegionCodeErrorValue()
+            == other.getRegionCodeErrorValue();
         break;
       case 52:
-        if (getSettingErrorValue()
-            != other.getSettingErrorValue()) return false;
+        result = result && getSettingErrorValue()
+            == other.getSettingErrorValue();
         break;
       case 53:
-        if (getStringFormatErrorValue()
-            != other.getStringFormatErrorValue()) return false;
+        result = result && getStringFormatErrorValue()
+            == other.getStringFormatErrorValue();
         break;
       case 54:
-        if (getStringLengthErrorValue()
-            != other.getStringLengthErrorValue()) return false;
+        result = result && getStringLengthErrorValue()
+            == other.getStringLengthErrorValue();
         break;
       case 55:
-        if (getOperationAccessDeniedErrorValue()
-            != other.getOperationAccessDeniedErrorValue()) return false;
+        result = result && getOperationAccessDeniedErrorValue()
+            == other.getOperationAccessDeniedErrorValue();
         break;
       case 56:
-        if (getResourceAccessDeniedErrorValue()
-            != other.getResourceAccessDeniedErrorValue()) return false;
+        result = result && getResourceAccessDeniedErrorValue()
+            == other.getResourceAccessDeniedErrorValue();
         break;
       case 57:
-        if (getResourceCountLimitExceededErrorValue()
-            != other.getResourceCountLimitExceededErrorValue()) return false;
+        result = result && getResourceCountLimitExceededErrorValue()
+            == other.getResourceCountLimitExceededErrorValue();
         break;
       case 117:
-        if (getYoutubeVideoRegistrationErrorValue()
-            != other.getYoutubeVideoRegistrationErrorValue()) return false;
+        result = result && getYoutubeVideoRegistrationErrorValue()
+            == other.getYoutubeVideoRegistrationErrorValue();
         break;
       case 59:
-        if (getAdGroupBidModifierErrorValue()
-            != other.getAdGroupBidModifierErrorValue()) return false;
+        result = result && getAdGroupBidModifierErrorValue()
+            == other.getAdGroupBidModifierErrorValue();
         break;
       case 60:
-        if (getContextErrorValue()
-            != other.getContextErrorValue()) return false;
+        result = result && getContextErrorValue()
+            == other.getContextErrorValue();
         break;
       case 61:
-        if (getFieldErrorValue()
-            != other.getFieldErrorValue()) return false;
+        result = result && getFieldErrorValue()
+            == other.getFieldErrorValue();
         break;
       case 62:
-        if (getSharedSetErrorValue()
-            != other.getSharedSetErrorValue()) return false;
+        result = result && getSharedSetErrorValue()
+            == other.getSharedSetErrorValue();
         break;
       case 63:
-        if (getSharedCriterionErrorValue()
-            != other.getSharedCriterionErrorValue()) return false;
+        result = result && getSharedCriterionErrorValue()
+            == other.getSharedCriterionErrorValue();
         break;
       case 64:
-        if (getCampaignSharedSetErrorValue()
-            != other.getCampaignSharedSetErrorValue()) return false;
+        result = result && getCampaignSharedSetErrorValue()
+            == other.getCampaignSharedSetErrorValue();
         break;
       case 65:
-        if (getConversionActionErrorValue()
-            != other.getConversionActionErrorValue()) return false;
+        result = result && getConversionActionErrorValue()
+            == other.getConversionActionErrorValue();
         break;
       case 115:
-        if (getConversionAdjustmentUploadErrorValue()
-            != other.getConversionAdjustmentUploadErrorValue()) return false;
+        result = result && getConversionAdjustmentUploadErrorValue()
+            == other.getConversionAdjustmentUploadErrorValue();
         break;
       case 111:
-        if (getConversionUploadErrorValue()
-            != other.getConversionUploadErrorValue()) return false;
+        result = result && getConversionUploadErrorValue()
+            == other.getConversionUploadErrorValue();
         break;
       case 66:
-        if (getHeaderErrorValue()
-            != other.getHeaderErrorValue()) return false;
+        result = result && getHeaderErrorValue()
+            == other.getHeaderErrorValue();
         break;
       case 67:
-        if (getDatabaseErrorValue()
-            != other.getDatabaseErrorValue()) return false;
+        result = result && getDatabaseErrorValue()
+            == other.getDatabaseErrorValue();
         break;
       case 68:
-        if (getPolicyFindingErrorValue()
-            != other.getPolicyFindingErrorValue()) return false;
+        result = result && getPolicyFindingErrorValue()
+            == other.getPolicyFindingErrorValue();
         break;
       case 70:
-        if (getEnumErrorValue()
-            != other.getEnumErrorValue()) return false;
+        result = result && getEnumErrorValue()
+            == other.getEnumErrorValue();
         break;
       case 71:
-        if (getKeywordPlanErrorValue()
-            != other.getKeywordPlanErrorValue()) return false;
+        result = result && getKeywordPlanErrorValue()
+            == other.getKeywordPlanErrorValue();
         break;
       case 72:
-        if (getKeywordPlanCampaignErrorValue()
-            != other.getKeywordPlanCampaignErrorValue()) return false;
+        result = result && getKeywordPlanCampaignErrorValue()
+            == other.getKeywordPlanCampaignErrorValue();
         break;
       case 73:
-        if (getKeywordPlanNegativeKeywordErrorValue()
-            != other.getKeywordPlanNegativeKeywordErrorValue()) return false;
+        result = result && getKeywordPlanNegativeKeywordErrorValue()
+            == other.getKeywordPlanNegativeKeywordErrorValue();
         break;
       case 74:
-        if (getKeywordPlanAdGroupErrorValue()
-            != other.getKeywordPlanAdGroupErrorValue()) return false;
+        result = result && getKeywordPlanAdGroupErrorValue()
+            == other.getKeywordPlanAdGroupErrorValue();
         break;
       case 75:
-        if (getKeywordPlanKeywordErrorValue()
-            != other.getKeywordPlanKeywordErrorValue()) return false;
+        result = result && getKeywordPlanKeywordErrorValue()
+            == other.getKeywordPlanKeywordErrorValue();
         break;
       case 76:
-        if (getKeywordPlanIdeaErrorValue()
-            != other.getKeywordPlanIdeaErrorValue()) return false;
+        result = result && getKeywordPlanIdeaErrorValue()
+            == other.getKeywordPlanIdeaErrorValue();
         break;
       case 77:
-        if (getAccountBudgetProposalErrorValue()
-            != other.getAccountBudgetProposalErrorValue()) return false;
+        result = result && getAccountBudgetProposalErrorValue()
+            == other.getAccountBudgetProposalErrorValue();
         break;
       case 78:
-        if (getUserListErrorValue()
-            != other.getUserListErrorValue()) return false;
+        result = result && getUserListErrorValue()
+            == other.getUserListErrorValue();
         break;
       case 79:
-        if (getChangeStatusErrorValue()
-            != other.getChangeStatusErrorValue()) return false;
+        result = result && getChangeStatusErrorValue()
+            == other.getChangeStatusErrorValue();
         break;
       case 80:
-        if (getFeedErrorValue()
-            != other.getFeedErrorValue()) return false;
+        result = result && getFeedErrorValue()
+            == other.getFeedErrorValue();
         break;
       case 81:
-        if (getGeoTargetConstantSuggestionErrorValue()
-            != other.getGeoTargetConstantSuggestionErrorValue()) return false;
+        result = result && getGeoTargetConstantSuggestionErrorValue()
+            == other.getGeoTargetConstantSuggestionErrorValue();
         break;
       case 82:
-        if (getCampaignDraftErrorValue()
-            != other.getCampaignDraftErrorValue()) return false;
+        result = result && getCampaignDraftErrorValue()
+            == other.getCampaignDraftErrorValue();
         break;
       case 83:
-        if (getFeedItemErrorValue()
-            != other.getFeedItemErrorValue()) return false;
+        result = result && getFeedItemErrorValue()
+            == other.getFeedItemErrorValue();
         break;
       case 84:
-        if (getLabelErrorValue()
-            != other.getLabelErrorValue()) return false;
+        result = result && getLabelErrorValue()
+            == other.getLabelErrorValue();
         break;
       case 87:
-        if (getBillingSetupErrorValue()
-            != other.getBillingSetupErrorValue()) return false;
+        result = result && getBillingSetupErrorValue()
+            == other.getBillingSetupErrorValue();
         break;
       case 88:
-        if (getCustomerClientLinkErrorValue()
-            != other.getCustomerClientLinkErrorValue()) return false;
+        result = result && getCustomerClientLinkErrorValue()
+            == other.getCustomerClientLinkErrorValue();
         break;
       case 91:
-        if (getCustomerManagerLinkErrorValue()
-            != other.getCustomerManagerLinkErrorValue()) return false;
+        result = result && getCustomerManagerLinkErrorValue()
+            == other.getCustomerManagerLinkErrorValue();
         break;
       case 92:
-        if (getFeedMappingErrorValue()
-            != other.getFeedMappingErrorValue()) return false;
+        result = result && getFeedMappingErrorValue()
+            == other.getFeedMappingErrorValue();
         break;
       case 93:
-        if (getCustomerFeedErrorValue()
-            != other.getCustomerFeedErrorValue()) return false;
+        result = result && getCustomerFeedErrorValue()
+            == other.getCustomerFeedErrorValue();
         break;
       case 94:
-        if (getAdGroupFeedErrorValue()
-            != other.getAdGroupFeedErrorValue()) return false;
+        result = result && getAdGroupFeedErrorValue()
+            == other.getAdGroupFeedErrorValue();
         break;
       case 96:
-        if (getCampaignFeedErrorValue()
-            != other.getCampaignFeedErrorValue()) return false;
+        result = result && getCampaignFeedErrorValue()
+            == other.getCampaignFeedErrorValue();
         break;
       case 97:
-        if (getCustomInterestErrorValue()
-            != other.getCustomInterestErrorValue()) return false;
+        result = result && getCustomInterestErrorValue()
+            == other.getCustomInterestErrorValue();
         break;
       case 98:
-        if (getCampaignExperimentErrorValue()
-            != other.getCampaignExperimentErrorValue()) return false;
+        result = result && getCampaignExperimentErrorValue()
+            == other.getCampaignExperimentErrorValue();
         break;
       case 100:
-        if (getExtensionFeedItemErrorValue()
-            != other.getExtensionFeedItemErrorValue()) return false;
+        result = result && getExtensionFeedItemErrorValue()
+            == other.getExtensionFeedItemErrorValue();
         break;
       case 101:
-        if (getAdParameterErrorValue()
-            != other.getAdParameterErrorValue()) return false;
+        result = result && getAdParameterErrorValue()
+            == other.getAdParameterErrorValue();
         break;
       case 102:
-        if (getFeedItemValidationErrorValue()
-            != other.getFeedItemValidationErrorValue()) return false;
+        result = result && getFeedItemValidationErrorValue()
+            == other.getFeedItemValidationErrorValue();
         break;
       case 103:
-        if (getExtensionSettingErrorValue()
-            != other.getExtensionSettingErrorValue()) return false;
+        result = result && getExtensionSettingErrorValue()
+            == other.getExtensionSettingErrorValue();
         break;
       case 104:
-        if (getFeedItemTargetErrorValue()
-            != other.getFeedItemTargetErrorValue()) return false;
+        result = result && getFeedItemTargetErrorValue()
+            == other.getFeedItemTargetErrorValue();
         break;
       case 105:
-        if (getPolicyViolationErrorValue()
-            != other.getPolicyViolationErrorValue()) return false;
+        result = result && getPolicyViolationErrorValue()
+            == other.getPolicyViolationErrorValue();
         break;
       case 108:
-        if (getMutateJobErrorValue()
-            != other.getMutateJobErrorValue()) return false;
+        result = result && getMutateJobErrorValue()
+            == other.getMutateJobErrorValue();
         break;
       case 112:
-        if (getPartialFailureErrorValue()
-            != other.getPartialFailureErrorValue()) return false;
+        result = result && getPartialFailureErrorValue()
+            == other.getPartialFailureErrorValue();
         break;
       case 114:
-        if (getPolicyValidationParameterErrorValue()
-            != other.getPolicyValidationParameterErrorValue()) return false;
+        result = result && getPolicyValidationParameterErrorValue()
+            == other.getPolicyValidationParameterErrorValue();
         break;
       case 118:
-        if (getSizeLimitErrorValue()
-            != other.getSizeLimitErrorValue()) return false;
+        result = result && getSizeLimitErrorValue()
+            == other.getSizeLimitErrorValue();
         break;
       case 120:
-        if (getNotWhitelistedErrorValue()
-            != other.getNotWhitelistedErrorValue()) return false;
+        result = result && getNotWhitelistedErrorValue()
+            == other.getNotWhitelistedErrorValue();
         break;
       case 121:
-        if (getManagerLinkErrorValue()
-            != other.getManagerLinkErrorValue()) return false;
+        result = result && getManagerLinkErrorValue()
+            == other.getManagerLinkErrorValue();
         break;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -6159,35 +6162,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14208,7 +14211,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

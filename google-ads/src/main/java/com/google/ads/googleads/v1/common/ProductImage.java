@@ -86,7 +86,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -281,23 +281,24 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.ProductImage other = (com.google.ads.googleads.v1.common.ProductImage) obj;
 
-    if (hasProductImage() != other.hasProductImage()) return false;
+    boolean result = true;
+    result = result && (hasProductImage() == other.hasProductImage());
     if (hasProductImage()) {
-      if (!getProductImage()
-          .equals(other.getProductImage())) return false;
+      result = result && getProductImage()
+          .equals(other.getProductImage());
     }
-    if (hasDescription() != other.hasDescription()) return false;
+    result = result && (hasDescription() == other.hasDescription());
     if (hasDescription()) {
-      if (!getDescription()
-          .equals(other.getDescription())) return false;
+      result = result && getDescription()
+          .equals(other.getDescription());
     }
-    if (hasDisplayCallToAction() != other.hasDisplayCallToAction()) return false;
+    result = result && (hasDisplayCallToAction() == other.hasDisplayCallToAction());
     if (hasDisplayCallToAction()) {
-      if (!getDisplayCallToAction()
-          .equals(other.getDisplayCallToAction())) return false;
+      result = result && getDisplayCallToAction()
+          .equals(other.getDisplayCallToAction());
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -521,35 +522,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -601,7 +602,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue productImage_;
+    private com.google.protobuf.StringValue productImage_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productImageBuilder_;
     /**
@@ -772,7 +773,7 @@ private static final long serialVersionUID = 0L;
       return productImageBuilder_;
     }
 
-    private com.google.protobuf.StringValue description_;
+    private com.google.protobuf.StringValue description_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> descriptionBuilder_;
     /**
@@ -925,7 +926,7 @@ private static final long serialVersionUID = 0L;
       return descriptionBuilder_;
     }
 
-    private com.google.ads.googleads.v1.common.DisplayCallToAction displayCallToAction_;
+    private com.google.ads.googleads.v1.common.DisplayCallToAction displayCallToAction_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.DisplayCallToAction, com.google.ads.googleads.v1.common.DisplayCallToAction.Builder, com.google.ads.googleads.v1.common.DisplayCallToActionOrBuilder> displayCallToActionBuilder_;
     /**
@@ -1080,7 +1081,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

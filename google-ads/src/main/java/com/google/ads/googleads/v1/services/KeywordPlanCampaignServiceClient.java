@@ -107,10 +107,7 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a keyword_plan_campaign
    * resource.
-   *
-   * @deprecated Use the {@link KeywordPlanCampaignName} class instead.
    */
-  @Deprecated
   public static final String formatKeywordPlanCampaignName(
       String customer, String keywordPlanCampaign) {
     return KEYWORD_PLAN_CAMPAIGN_PATH_TEMPLATE.instantiate(
@@ -121,10 +118,7 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * keyword_plan_campaign resource.
-   *
-   * @deprecated Use the {@link KeywordPlanCampaignName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromKeywordPlanCampaignName(
       String keywordPlanCampaignName) {
     return KEYWORD_PLAN_CAMPAIGN_PATH_TEMPLATE.parse(keywordPlanCampaignName).get("customer");
@@ -133,10 +127,7 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
   /**
    * Parses the keyword_plan_campaign from the given fully-qualified path which represents a
    * keyword_plan_campaign resource.
-   *
-   * @deprecated Use the {@link KeywordPlanCampaignName} class instead.
    */
-  @Deprecated
   public static final String parseKeywordPlanCampaignFromKeywordPlanCampaignName(
       String keywordPlanCampaignName) {
     return KEYWORD_PLAN_CAMPAIGN_PATH_TEMPLATE

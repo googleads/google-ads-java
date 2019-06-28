@@ -22,7 +22,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -393,7 +393,7 @@ public class ConversionAdjustmentUploadServiceClientTest {
             customerId, conversionAdjustments, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockConversionAdjustmentUploadService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockConversionAdjustmentUploadService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     UploadConversionAdjustmentsRequest actualRequest =
         (UploadConversionAdjustmentsRequest) actualRequests.get(0);
@@ -442,7 +442,7 @@ public class ConversionAdjustmentUploadServiceClientTest {
         client.uploadConversionAdjustments(customerId, conversionAdjustments);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockConversionAdjustmentUploadService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockConversionAdjustmentUploadService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     UploadConversionAdjustmentsRequest actualRequest =
         (UploadConversionAdjustmentsRequest) actualRequests.get(0);

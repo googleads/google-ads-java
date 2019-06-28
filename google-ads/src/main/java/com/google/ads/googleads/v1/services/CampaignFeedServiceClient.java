@@ -103,12 +103,7 @@ public class CampaignFeedServiceClient implements BackgroundResource {
   private static final PathTemplate CAMPAIGN_FEED_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/campaignFeeds/{campaign_feed}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a campaign_feed resource.
-   *
-   * @deprecated Use the {@link CampaignFeedName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a campaign_feed resource. */
   public static final String formatCampaignFeedName(String customer, String campaignFeed) {
     return CAMPAIGN_FEED_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -118,10 +113,7 @@ public class CampaignFeedServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a campaign_feed
    * resource.
-   *
-   * @deprecated Use the {@link CampaignFeedName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromCampaignFeedName(String campaignFeedName) {
     return CAMPAIGN_FEED_PATH_TEMPLATE.parse(campaignFeedName).get("customer");
   }
@@ -129,10 +121,7 @@ public class CampaignFeedServiceClient implements BackgroundResource {
   /**
    * Parses the campaign_feed from the given fully-qualified path which represents a campaign_feed
    * resource.
-   *
-   * @deprecated Use the {@link CampaignFeedName} class instead.
    */
-  @Deprecated
   public static final String parseCampaignFeedFromCampaignFeedName(String campaignFeedName) {
     return CAMPAIGN_FEED_PATH_TEMPLATE.parse(campaignFeedName).get("campaign_feed");
   }

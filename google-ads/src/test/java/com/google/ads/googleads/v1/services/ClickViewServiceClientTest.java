@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -389,7 +389,7 @@ public class ClickViewServiceClientTest {
     ClickView actualResponse = client.getClickView(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockClickViewService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockClickViewService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetClickViewRequest actualRequest = (GetClickViewRequest) actualRequests.get(0);
 

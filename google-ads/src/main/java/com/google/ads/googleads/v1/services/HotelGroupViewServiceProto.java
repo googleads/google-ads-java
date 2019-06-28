@@ -32,22 +32,21 @@ public final class HotelGroupViewServiceProto {
       "_group_view_service.proto\022 google.ads.go" +
       "ogleads.v1.services\0328google/ads/googlead" +
       "s/v1/resources/hotel_group_view.proto\032\034g" +
-      "oogle/api/annotations.proto\032\027google/api/" +
-      "client.proto\"1\n\030GetHotelGroupViewRequest" +
-      "\022\025\n\rresource_name\030\001 \001(\t2\364\001\n\025HotelGroupVi" +
-      "ewService\022\275\001\n\021GetHotelGroupView\022:.google" +
-      ".ads.googleads.v1.services.GetHotelGroup" +
-      "ViewRequest\0321.google.ads.googleads.v1.re" +
-      "sources.HotelGroupView\"9\202\323\344\223\0023\0221/v1/{res" +
-      "ource_name=customers/*/hotelGroupViews/*" +
-      "}\032\033\312A\030googleads.googleapis.comB\201\002\n$com.g" +
-      "oogle.ads.googleads.v1.servicesB\032HotelGr" +
-      "oupViewServiceProtoP\001ZHgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v1/se" +
-      "rvices;services\242\002\003GAA\252\002 Google.Ads.Googl" +
-      "eAds.V1.Services\312\002 Google\\Ads\\GoogleAds\\" +
-      "V1\\Services\352\002$Google::Ads::GoogleAds::V1" +
-      "::Servicesb\006proto3"
+      "oogle/api/annotations.proto\"1\n\030GetHotelG" +
+      "roupViewRequest\022\025\n\rresource_name\030\001 \001(\t2\327" +
+      "\001\n\025HotelGroupViewService\022\275\001\n\021GetHotelGro" +
+      "upView\022:.google.ads.googleads.v1.service" +
+      "s.GetHotelGroupViewRequest\0321.google.ads." +
+      "googleads.v1.resources.HotelGroupView\"9\202" +
+      "\323\344\223\0023\0221/v1/{resource_name=customers/*/ho" +
+      "telGroupViews/*}B\201\002\n$com.google.ads.goog" +
+      "leads.v1.servicesB\032HotelGroupViewService" +
+      "ProtoP\001ZHgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v1/services;service" +
+      "s\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Servic" +
+      "es\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$" +
+      "Google::Ads::GoogleAds::V1::Servicesb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -62,7 +61,6 @@ public final class HotelGroupViewServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.HotelGroupViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetHotelGroupViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -72,13 +70,11 @@ public final class HotelGroupViewServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.HotelGroupViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

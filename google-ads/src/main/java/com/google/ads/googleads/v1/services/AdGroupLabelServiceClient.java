@@ -105,10 +105,7 @@ public class AdGroupLabelServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a ad_group_label resource.
-   *
-   * @deprecated Use the {@link AdGroupLabelName} class instead.
    */
-  @Deprecated
   public static final String formatAdGroupLabelName(String customer, String adGroupLabel) {
     return AD_GROUP_LABEL_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -118,10 +115,7 @@ public class AdGroupLabelServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a ad_group_label
    * resource.
-   *
-   * @deprecated Use the {@link AdGroupLabelName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromAdGroupLabelName(String adGroupLabelName) {
     return AD_GROUP_LABEL_PATH_TEMPLATE.parse(adGroupLabelName).get("customer");
   }
@@ -129,10 +123,7 @@ public class AdGroupLabelServiceClient implements BackgroundResource {
   /**
    * Parses the ad_group_label from the given fully-qualified path which represents a ad_group_label
    * resource.
-   *
-   * @deprecated Use the {@link AdGroupLabelName} class instead.
    */
-  @Deprecated
   public static final String parseAdGroupLabelFromAdGroupLabelName(String adGroupLabelName) {
     return AD_GROUP_LABEL_PATH_TEMPLATE.parse(adGroupLabelName).get("ad_group_label");
   }

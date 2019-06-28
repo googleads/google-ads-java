@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -391,7 +391,7 @@ public class MobileDeviceConstantServiceClientTest {
     MobileDeviceConstant actualResponse = client.getMobileDeviceConstant(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockMobileDeviceConstantService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockMobileDeviceConstantService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetMobileDeviceConstantRequest actualRequest =
         (GetMobileDeviceConstantRequest) actualRequests.get(0);

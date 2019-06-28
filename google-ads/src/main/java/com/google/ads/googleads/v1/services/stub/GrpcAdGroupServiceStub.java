@@ -25,13 +25,10 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.common.collect.ImmutableMap;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -112,29 +109,11 @@ public class GrpcAdGroupServiceStub extends AdGroupServiceStub {
     GrpcCallSettings<GetAdGroupRequest, AdGroup> getAdGroupTransportSettings =
         GrpcCallSettings.<GetAdGroupRequest, AdGroup>newBuilder()
             .setMethodDescriptor(getAdGroupMethodDescriptor)
-            .setParamsExtractor(
-                new RequestParamsExtractor<GetAdGroupRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetAdGroupRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
-                })
             .build();
     GrpcCallSettings<MutateAdGroupsRequest, MutateAdGroupsResponse>
         mutateAdGroupsTransportSettings =
             GrpcCallSettings.<MutateAdGroupsRequest, MutateAdGroupsResponse>newBuilder()
                 .setMethodDescriptor(mutateAdGroupsMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<MutateAdGroupsRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateAdGroupsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
-                    })
                 .build();
 
     this.getAdGroupCallable =

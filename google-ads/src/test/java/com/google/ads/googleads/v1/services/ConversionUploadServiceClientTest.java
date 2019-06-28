@@ -22,7 +22,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -392,7 +392,7 @@ public class ConversionUploadServiceClientTest {
         client.uploadClickConversions(customerId, conversions, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockConversionUploadService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockConversionUploadService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     UploadClickConversionsRequest actualRequest =
         (UploadClickConversionsRequest) actualRequests.get(0);
@@ -440,7 +440,7 @@ public class ConversionUploadServiceClientTest {
         client.uploadClickConversions(customerId, conversions);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockConversionUploadService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockConversionUploadService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     UploadClickConversionsRequest actualRequest =
         (UploadClickConversionsRequest) actualRequests.get(0);
@@ -486,7 +486,7 @@ public class ConversionUploadServiceClientTest {
         client.uploadCallConversions(customerId, conversions, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockConversionUploadService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockConversionUploadService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     UploadCallConversionsRequest actualRequest =
         (UploadCallConversionsRequest) actualRequests.get(0);
@@ -534,7 +534,7 @@ public class ConversionUploadServiceClientTest {
         client.uploadCallConversions(customerId, conversions);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockConversionUploadService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockConversionUploadService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     UploadCallConversionsRequest actualRequest =
         (UploadCallConversionsRequest) actualRequests.get(0);

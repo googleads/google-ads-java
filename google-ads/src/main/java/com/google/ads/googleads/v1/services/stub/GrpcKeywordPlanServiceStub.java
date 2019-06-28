@@ -29,13 +29,10 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.common.collect.ImmutableMap;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -151,59 +148,23 @@ public class GrpcKeywordPlanServiceStub extends KeywordPlanServiceStub {
     GrpcCallSettings<GetKeywordPlanRequest, KeywordPlan> getKeywordPlanTransportSettings =
         GrpcCallSettings.<GetKeywordPlanRequest, KeywordPlan>newBuilder()
             .setMethodDescriptor(getKeywordPlanMethodDescriptor)
-            .setParamsExtractor(
-                new RequestParamsExtractor<GetKeywordPlanRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetKeywordPlanRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
-                })
             .build();
     GrpcCallSettings<MutateKeywordPlansRequest, MutateKeywordPlansResponse>
         mutateKeywordPlansTransportSettings =
             GrpcCallSettings.<MutateKeywordPlansRequest, MutateKeywordPlansResponse>newBuilder()
                 .setMethodDescriptor(mutateKeywordPlansMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<MutateKeywordPlansRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateKeywordPlansRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
-                    })
                 .build();
     GrpcCallSettings<GenerateForecastMetricsRequest, GenerateForecastMetricsResponse>
         generateForecastMetricsTransportSettings =
             GrpcCallSettings
                 .<GenerateForecastMetricsRequest, GenerateForecastMetricsResponse>newBuilder()
                 .setMethodDescriptor(generateForecastMetricsMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<GenerateForecastMetricsRequest>() {
-                      @Override
-                      public Map<String, String> extract(GenerateForecastMetricsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("keyword_plan", String.valueOf(request.getKeywordPlan()));
-                        return params.build();
-                      }
-                    })
                 .build();
     GrpcCallSettings<GenerateHistoricalMetricsRequest, GenerateHistoricalMetricsResponse>
         generateHistoricalMetricsTransportSettings =
             GrpcCallSettings
                 .<GenerateHistoricalMetricsRequest, GenerateHistoricalMetricsResponse>newBuilder()
                 .setMethodDescriptor(generateHistoricalMetricsMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<GenerateHistoricalMetricsRequest>() {
-                      @Override
-                      public Map<String, String> extract(GenerateHistoricalMetricsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("keyword_plan", String.valueOf(request.getKeywordPlan()));
-                        return params.build();
-                      }
-                    })
                 .build();
 
     this.getKeywordPlanCallable =

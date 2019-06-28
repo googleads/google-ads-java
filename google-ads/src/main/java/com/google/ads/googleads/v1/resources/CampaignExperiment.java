@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -788,57 +788,58 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.CampaignExperiment other = (com.google.ads.googleads.v1.resources.CampaignExperiment) obj;
 
-    if (!getResourceName()
-        .equals(other.getResourceName())) return false;
-    if (hasId() != other.hasId()) return false;
+    boolean result = true;
+    result = result && getResourceName()
+        .equals(other.getResourceName());
+    result = result && (hasId() == other.hasId());
     if (hasId()) {
-      if (!getId()
-          .equals(other.getId())) return false;
+      result = result && getId()
+          .equals(other.getId());
     }
-    if (hasCampaignDraft() != other.hasCampaignDraft()) return false;
+    result = result && (hasCampaignDraft() == other.hasCampaignDraft());
     if (hasCampaignDraft()) {
-      if (!getCampaignDraft()
-          .equals(other.getCampaignDraft())) return false;
+      result = result && getCampaignDraft()
+          .equals(other.getCampaignDraft());
     }
-    if (hasName() != other.hasName()) return false;
+    result = result && (hasName() == other.hasName());
     if (hasName()) {
-      if (!getName()
-          .equals(other.getName())) return false;
+      result = result && getName()
+          .equals(other.getName());
     }
-    if (hasDescription() != other.hasDescription()) return false;
+    result = result && (hasDescription() == other.hasDescription());
     if (hasDescription()) {
-      if (!getDescription()
-          .equals(other.getDescription())) return false;
+      result = result && getDescription()
+          .equals(other.getDescription());
     }
-    if (hasTrafficSplitPercent() != other.hasTrafficSplitPercent()) return false;
+    result = result && (hasTrafficSplitPercent() == other.hasTrafficSplitPercent());
     if (hasTrafficSplitPercent()) {
-      if (!getTrafficSplitPercent()
-          .equals(other.getTrafficSplitPercent())) return false;
+      result = result && getTrafficSplitPercent()
+          .equals(other.getTrafficSplitPercent());
     }
-    if (trafficSplitType_ != other.trafficSplitType_) return false;
-    if (hasExperimentCampaign() != other.hasExperimentCampaign()) return false;
+    result = result && trafficSplitType_ == other.trafficSplitType_;
+    result = result && (hasExperimentCampaign() == other.hasExperimentCampaign());
     if (hasExperimentCampaign()) {
-      if (!getExperimentCampaign()
-          .equals(other.getExperimentCampaign())) return false;
+      result = result && getExperimentCampaign()
+          .equals(other.getExperimentCampaign());
     }
-    if (status_ != other.status_) return false;
-    if (hasLongRunningOperation() != other.hasLongRunningOperation()) return false;
+    result = result && status_ == other.status_;
+    result = result && (hasLongRunningOperation() == other.hasLongRunningOperation());
     if (hasLongRunningOperation()) {
-      if (!getLongRunningOperation()
-          .equals(other.getLongRunningOperation())) return false;
+      result = result && getLongRunningOperation()
+          .equals(other.getLongRunningOperation());
     }
-    if (hasStartDate() != other.hasStartDate()) return false;
+    result = result && (hasStartDate() == other.hasStartDate());
     if (hasStartDate()) {
-      if (!getStartDate()
-          .equals(other.getStartDate())) return false;
+      result = result && getStartDate()
+          .equals(other.getStartDate());
     }
-    if (hasEndDate() != other.hasEndDate()) return false;
+    result = result && (hasEndDate() == other.hasEndDate());
     if (hasEndDate()) {
-      if (!getEndDate()
-          .equals(other.getEndDate())) return false;
+      result = result && getEndDate()
+          .equals(other.getEndDate());
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -1168,35 +1169,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1375,7 +1376,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value id_;
+    private com.google.protobuf.Int64Value id_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
@@ -1537,7 +1538,7 @@ private static final long serialVersionUID = 0L;
       return idBuilder_;
     }
 
-    private com.google.protobuf.StringValue campaignDraft_;
+    private com.google.protobuf.StringValue campaignDraft_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignDraftBuilder_;
     /**
@@ -1690,7 +1691,7 @@ private static final long serialVersionUID = 0L;
       return campaignDraftBuilder_;
     }
 
-    private com.google.protobuf.StringValue name_;
+    private com.google.protobuf.StringValue name_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
@@ -1888,7 +1889,7 @@ private static final long serialVersionUID = 0L;
       return nameBuilder_;
     }
 
-    private com.google.protobuf.StringValue description_;
+    private com.google.protobuf.StringValue description_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> descriptionBuilder_;
     /**
@@ -2041,7 +2042,7 @@ private static final long serialVersionUID = 0L;
       return descriptionBuilder_;
     }
 
-    private com.google.protobuf.Int64Value trafficSplitPercent_;
+    private com.google.protobuf.Int64Value trafficSplitPercent_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> trafficSplitPercentBuilder_;
     /**
@@ -2277,7 +2278,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue experimentCampaign_;
+    private com.google.protobuf.StringValue experimentCampaign_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> experimentCampaignBuilder_;
     /**
@@ -2495,7 +2496,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue longRunningOperation_;
+    private com.google.protobuf.StringValue longRunningOperation_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> longRunningOperationBuilder_;
     /**
@@ -2666,7 +2667,7 @@ private static final long serialVersionUID = 0L;
       return longRunningOperationBuilder_;
     }
 
-    private com.google.protobuf.StringValue startDate_;
+    private com.google.protobuf.StringValue startDate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> startDateBuilder_;
     /**
@@ -2864,7 +2865,7 @@ private static final long serialVersionUID = 0L;
       return startDateBuilder_;
     }
 
-    private com.google.protobuf.StringValue endDate_;
+    private com.google.protobuf.StringValue endDate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> endDateBuilder_;
     /**
@@ -3055,7 +3056,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

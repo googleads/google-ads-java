@@ -106,10 +106,7 @@ public class FeedPlaceholderViewServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a feed_placeholder_view
    * resource.
-   *
-   * @deprecated Use the {@link FeedPlaceholderViewName} class instead.
    */
-  @Deprecated
   public static final String formatFeedPlaceholderViewName(
       String customer, String feedPlaceholderView) {
     return FEED_PLACEHOLDER_VIEW_PATH_TEMPLATE.instantiate(
@@ -120,10 +117,7 @@ public class FeedPlaceholderViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * feed_placeholder_view resource.
-   *
-   * @deprecated Use the {@link FeedPlaceholderViewName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromFeedPlaceholderViewName(
       String feedPlaceholderViewName) {
     return FEED_PLACEHOLDER_VIEW_PATH_TEMPLATE.parse(feedPlaceholderViewName).get("customer");
@@ -132,10 +126,7 @@ public class FeedPlaceholderViewServiceClient implements BackgroundResource {
   /**
    * Parses the feed_placeholder_view from the given fully-qualified path which represents a
    * feed_placeholder_view resource.
-   *
-   * @deprecated Use the {@link FeedPlaceholderViewName} class instead.
    */
-  @Deprecated
   public static final String parseFeedPlaceholderViewFromFeedPlaceholderViewName(
       String feedPlaceholderViewName) {
     return FEED_PLACEHOLDER_VIEW_PATH_TEMPLATE

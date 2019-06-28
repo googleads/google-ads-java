@@ -106,10 +106,7 @@ public class ParentalStatusViewServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a parental_status_view
    * resource.
-   *
-   * @deprecated Use the {@link ParentalStatusViewName} class instead.
    */
-  @Deprecated
   public static final String formatParentalStatusViewName(
       String customer, String parentalStatusView) {
     return PARENTAL_STATUS_VIEW_PATH_TEMPLATE.instantiate(
@@ -120,10 +117,7 @@ public class ParentalStatusViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a parental_status_view
    * resource.
-   *
-   * @deprecated Use the {@link ParentalStatusViewName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromParentalStatusViewName(
       String parentalStatusViewName) {
     return PARENTAL_STATUS_VIEW_PATH_TEMPLATE.parse(parentalStatusViewName).get("customer");
@@ -132,10 +126,7 @@ public class ParentalStatusViewServiceClient implements BackgroundResource {
   /**
    * Parses the parental_status_view from the given fully-qualified path which represents a
    * parental_status_view resource.
-   *
-   * @deprecated Use the {@link ParentalStatusViewName} class instead.
    */
-  @Deprecated
   public static final String parseParentalStatusViewFromParentalStatusViewName(
       String parentalStatusViewName) {
     return PARENTAL_STATUS_VIEW_PATH_TEMPLATE

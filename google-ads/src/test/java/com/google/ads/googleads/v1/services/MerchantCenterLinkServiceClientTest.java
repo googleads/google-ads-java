@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -388,7 +388,7 @@ public class MerchantCenterLinkServiceClientTest {
     ListMerchantCenterLinksResponse actualResponse = client.listMerchantCenterLinks(customerId);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockMerchantCenterLinkService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockMerchantCenterLinkService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     ListMerchantCenterLinksRequest actualRequest =
         (ListMerchantCenterLinksRequest) actualRequests.get(0);
@@ -431,7 +431,7 @@ public class MerchantCenterLinkServiceClientTest {
     MerchantCenterLink actualResponse = client.getMerchantCenterLink(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockMerchantCenterLinkService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockMerchantCenterLinkService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetMerchantCenterLinkRequest actualRequest =
         (GetMerchantCenterLinkRequest) actualRequests.get(0);
@@ -475,7 +475,7 @@ public class MerchantCenterLinkServiceClientTest {
         client.mutateMerchantCenterLink(customerId, operation);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockMerchantCenterLinkService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockMerchantCenterLinkService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateMerchantCenterLinkRequest actualRequest =
         (MutateMerchantCenterLinkRequest) actualRequests.get(0);

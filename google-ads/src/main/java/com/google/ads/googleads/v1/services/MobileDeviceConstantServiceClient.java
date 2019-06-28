@@ -105,10 +105,7 @@ public class MobileDeviceConstantServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a mobile_device_constant
    * resource.
-   *
-   * @deprecated Use the {@link MobileDeviceConstantName} class instead.
    */
-  @Deprecated
   public static final String formatMobileDeviceConstantName(String mobileDeviceConstant) {
     return MOBILE_DEVICE_CONSTANT_PATH_TEMPLATE.instantiate(
         "mobile_device_constant", mobileDeviceConstant);
@@ -117,10 +114,7 @@ public class MobileDeviceConstantServiceClient implements BackgroundResource {
   /**
    * Parses the mobile_device_constant from the given fully-qualified path which represents a
    * mobile_device_constant resource.
-   *
-   * @deprecated Use the {@link MobileDeviceConstantName} class instead.
    */
-  @Deprecated
   public static final String parseMobileDeviceConstantFromMobileDeviceConstantName(
       String mobileDeviceConstantName) {
     return MOBILE_DEVICE_CONSTANT_PATH_TEMPLATE

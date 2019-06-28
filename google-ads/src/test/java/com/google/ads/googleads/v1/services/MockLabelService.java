@@ -17,7 +17,7 @@ package com.google.ads.googleads.v1.services;
 
 import com.google.api.core.BetaApi;
 import com.google.api.gax.grpc.testing.MockGrpcService;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.ServerServiceDefinition;
 import java.util.List;
 
@@ -31,12 +31,12 @@ public class MockLabelService implements MockGrpcService {
   }
 
   @Override
-  public List<AbstractMessage> getRequests() {
+  public List<GeneratedMessageV3> getRequests() {
     return serviceImpl.getRequests();
   }
 
   @Override
-  public void addResponse(AbstractMessage response) {
+  public void addResponse(GeneratedMessageV3 response) {
     serviceImpl.addResponse(response);
   }
 

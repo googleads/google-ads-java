@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -389,7 +389,7 @@ public class FeedServiceClientTest {
     Feed actualResponse = client.getFeed(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockFeedService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockFeedService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetFeedRequest actualRequest = (GetFeedRequest) actualRequests.get(0);
 
@@ -431,7 +431,7 @@ public class FeedServiceClientTest {
         client.mutateFeeds(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockFeedService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockFeedService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateFeedsRequest actualRequest = (MutateFeedsRequest) actualRequests.get(0);
 
@@ -476,7 +476,7 @@ public class FeedServiceClientTest {
     MutateFeedsResponse actualResponse = client.mutateFeeds(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockFeedService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockFeedService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateFeedsRequest actualRequest = (MutateFeedsRequest) actualRequests.get(0);
 

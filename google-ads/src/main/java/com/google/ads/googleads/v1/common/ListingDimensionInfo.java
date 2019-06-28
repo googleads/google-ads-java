@@ -243,7 +243,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -1004,69 +1004,72 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.ListingDimensionInfo other = (com.google.ads.googleads.v1.common.ListingDimensionInfo) obj;
 
-    if (!getDimensionCase().equals(other.getDimensionCase())) return false;
+    boolean result = true;
+    result = result && getDimensionCase().equals(
+        other.getDimensionCase());
+    if (!result) return false;
     switch (dimensionCase_) {
       case 1:
-        if (!getListingBrand()
-            .equals(other.getListingBrand())) return false;
+        result = result && getListingBrand()
+            .equals(other.getListingBrand());
         break;
       case 2:
-        if (!getHotelId()
-            .equals(other.getHotelId())) return false;
+        result = result && getHotelId()
+            .equals(other.getHotelId());
         break;
       case 3:
-        if (!getHotelClass()
-            .equals(other.getHotelClass())) return false;
+        result = result && getHotelClass()
+            .equals(other.getHotelClass());
         break;
       case 4:
-        if (!getHotelCountryRegion()
-            .equals(other.getHotelCountryRegion())) return false;
+        result = result && getHotelCountryRegion()
+            .equals(other.getHotelCountryRegion());
         break;
       case 5:
-        if (!getHotelState()
-            .equals(other.getHotelState())) return false;
+        result = result && getHotelState()
+            .equals(other.getHotelState());
         break;
       case 6:
-        if (!getHotelCity()
-            .equals(other.getHotelCity())) return false;
+        result = result && getHotelCity()
+            .equals(other.getHotelCity());
         break;
       case 7:
-        if (!getListingCustomAttribute()
-            .equals(other.getListingCustomAttribute())) return false;
+        result = result && getListingCustomAttribute()
+            .equals(other.getListingCustomAttribute());
         break;
       case 13:
-        if (!getProductBiddingCategory()
-            .equals(other.getProductBiddingCategory())) return false;
+        result = result && getProductBiddingCategory()
+            .equals(other.getProductBiddingCategory());
         break;
       case 8:
-        if (!getProductChannel()
-            .equals(other.getProductChannel())) return false;
+        result = result && getProductChannel()
+            .equals(other.getProductChannel());
         break;
       case 9:
-        if (!getProductChannelExclusivity()
-            .equals(other.getProductChannelExclusivity())) return false;
+        result = result && getProductChannelExclusivity()
+            .equals(other.getProductChannelExclusivity());
         break;
       case 10:
-        if (!getProductCondition()
-            .equals(other.getProductCondition())) return false;
+        result = result && getProductCondition()
+            .equals(other.getProductCondition());
         break;
       case 11:
-        if (!getProductItemId()
-            .equals(other.getProductItemId())) return false;
+        result = result && getProductItemId()
+            .equals(other.getProductItemId());
         break;
       case 12:
-        if (!getProductType()
-            .equals(other.getProductType())) return false;
+        result = result && getProductType()
+            .equals(other.getProductType());
         break;
       case 14:
-        if (!getUnknownListingDimension()
-            .equals(other.getUnknownListingDimension())) return false;
+        result = result && getUnknownListingDimension()
+            .equals(other.getUnknownListingDimension());
         break;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -1406,35 +1409,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3963,7 +3966,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

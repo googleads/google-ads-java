@@ -28,9 +28,9 @@ import com.google.api.gax.rpc.InvalidArgumentException;
 import com.google.api.gax.rpc.StatusCode;
 import com.google.common.collect.Lists;
 import com.google.longrunning.Operation;
-import com.google.protobuf.AbstractMessage;
 import com.google.protobuf.Any;
 import com.google.protobuf.Empty;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -398,7 +398,7 @@ public class MutateJobServiceClientTest {
     CreateMutateJobResponse actualResponse = client.createMutateJob(customerId);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockMutateJobService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockMutateJobService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     CreateMutateJobRequest actualRequest = (CreateMutateJobRequest) actualRequests.get(0);
 
@@ -438,7 +438,7 @@ public class MutateJobServiceClientTest {
     MutateJob actualResponse = client.getMutateJob(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockMutateJobService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockMutateJobService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetMutateJobRequest actualRequest = (GetMutateJobRequest) actualRequests.get(0);
 
@@ -489,7 +489,7 @@ public class MutateJobServiceClientTest {
     Assert.assertEquals(1, resources.size());
     Assert.assertEquals(expectedResponse.getResultsList().get(0), resources.get(0));
 
-    List<AbstractMessage> actualRequests = mockMutateJobService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockMutateJobService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     ListMutateJobResultsRequest actualRequest = (ListMutateJobResultsRequest) actualRequests.get(0);
 
@@ -535,7 +535,7 @@ public class MutateJobServiceClientTest {
     Empty actualResponse = client.runMutateJobAsync(formattedResourceName).get();
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockMutateJobService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockMutateJobService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     RunMutateJobRequest actualRequest = (RunMutateJobRequest) actualRequests.get(0);
 
@@ -586,7 +586,7 @@ public class MutateJobServiceClientTest {
         client.addMutateJobOperations(formattedResourceName, sequenceToken, mutateOperations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockMutateJobService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockMutateJobService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     AddMutateJobOperationsRequest actualRequest =
         (AddMutateJobOperationsRequest) actualRequests.get(0);

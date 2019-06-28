@@ -25,13 +25,10 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.common.collect.ImmutableMap;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -125,30 +122,12 @@ public class GrpcCustomerManagerLinkServiceStub extends CustomerManagerLinkServi
         getCustomerManagerLinkTransportSettings =
             GrpcCallSettings.<GetCustomerManagerLinkRequest, CustomerManagerLink>newBuilder()
                 .setMethodDescriptor(getCustomerManagerLinkMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<GetCustomerManagerLinkRequest>() {
-                      @Override
-                      public Map<String, String> extract(GetCustomerManagerLinkRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
-                    })
                 .build();
     GrpcCallSettings<MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>
         mutateCustomerManagerLinkTransportSettings =
             GrpcCallSettings
                 .<MutateCustomerManagerLinkRequest, MutateCustomerManagerLinkResponse>newBuilder()
                 .setMethodDescriptor(mutateCustomerManagerLinkMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCustomerManagerLinkRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateCustomerManagerLinkRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
-                    })
                 .build();
 
     this.getCustomerManagerLinkCallable =

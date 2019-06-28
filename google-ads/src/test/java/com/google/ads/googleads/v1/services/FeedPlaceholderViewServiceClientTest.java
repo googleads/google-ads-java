@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -391,7 +391,7 @@ public class FeedPlaceholderViewServiceClientTest {
     FeedPlaceholderView actualResponse = client.getFeedPlaceholderView(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockFeedPlaceholderViewService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockFeedPlaceholderViewService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetFeedPlaceholderViewRequest actualRequest =
         (GetFeedPlaceholderViewRequest) actualRequests.get(0);

@@ -107,10 +107,7 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a ad_group_criterion_label
    * resource.
-   *
-   * @deprecated Use the {@link AdGroupCriterionLabelName} class instead.
    */
-  @Deprecated
   public static final String formatAdGroupCriterionLabelName(
       String customer, String adGroupCriterionLabel) {
     return AD_GROUP_CRITERION_LABEL_PATH_TEMPLATE.instantiate(
@@ -121,10 +118,7 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * ad_group_criterion_label resource.
-   *
-   * @deprecated Use the {@link AdGroupCriterionLabelName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromAdGroupCriterionLabelName(
       String adGroupCriterionLabelName) {
     return AD_GROUP_CRITERION_LABEL_PATH_TEMPLATE.parse(adGroupCriterionLabelName).get("customer");
@@ -133,10 +127,7 @@ public class AdGroupCriterionLabelServiceClient implements BackgroundResource {
   /**
    * Parses the ad_group_criterion_label from the given fully-qualified path which represents a
    * ad_group_criterion_label resource.
-   *
-   * @deprecated Use the {@link AdGroupCriterionLabelName} class instead.
    */
-  @Deprecated
   public static final String parseAdGroupCriterionLabelFromAdGroupCriterionLabelName(
       String adGroupCriterionLabelName) {
     return AD_GROUP_CRITERION_LABEL_PATH_TEMPLATE

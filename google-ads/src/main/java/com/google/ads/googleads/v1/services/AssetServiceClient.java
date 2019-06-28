@@ -103,34 +103,19 @@ public class AssetServiceClient implements BackgroundResource {
   private static final PathTemplate ASSET_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/assets/{asset}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a asset resource.
-   *
-   * @deprecated Use the {@link AssetName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a asset resource. */
   public static final String formatAssetName(String customer, String asset) {
     return ASSET_PATH_TEMPLATE.instantiate(
         "customer", customer,
         "asset", asset);
   }
 
-  /**
-   * Parses the customer from the given fully-qualified path which represents a asset resource.
-   *
-   * @deprecated Use the {@link AssetName} class instead.
-   */
-  @Deprecated
+  /** Parses the customer from the given fully-qualified path which represents a asset resource. */
   public static final String parseCustomerFromAssetName(String assetName) {
     return ASSET_PATH_TEMPLATE.parse(assetName).get("customer");
   }
 
-  /**
-   * Parses the asset from the given fully-qualified path which represents a asset resource.
-   *
-   * @deprecated Use the {@link AssetName} class instead.
-   */
-  @Deprecated
+  /** Parses the asset from the given fully-qualified path which represents a asset resource. */
   public static final String parseAssetFromAssetName(String assetName) {
     return ASSET_PATH_TEMPLATE.parse(assetName).get("asset");
   }

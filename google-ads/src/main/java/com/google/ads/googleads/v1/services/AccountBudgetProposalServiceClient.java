@@ -115,10 +115,7 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a account_budget_proposal
    * resource.
-   *
-   * @deprecated Use the {@link AccountBudgetProposalName} class instead.
    */
-  @Deprecated
   public static final String formatAccountBudgetProposalName(
       String customer, String accountBudgetProposal) {
     return ACCOUNT_BUDGET_PROPOSAL_PATH_TEMPLATE.instantiate(
@@ -129,10 +126,7 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * account_budget_proposal resource.
-   *
-   * @deprecated Use the {@link AccountBudgetProposalName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromAccountBudgetProposalName(
       String accountBudgetProposalName) {
     return ACCOUNT_BUDGET_PROPOSAL_PATH_TEMPLATE.parse(accountBudgetProposalName).get("customer");
@@ -141,10 +135,7 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
   /**
    * Parses the account_budget_proposal from the given fully-qualified path which represents a
    * account_budget_proposal resource.
-   *
-   * @deprecated Use the {@link AccountBudgetProposalName} class instead.
    */
-  @Deprecated
   public static final String parseAccountBudgetProposalFromAccountBudgetProposalName(
       String accountBudgetProposalName) {
     return ACCOUNT_BUDGET_PROPOSAL_PATH_TEMPLATE

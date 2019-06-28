@@ -106,10 +106,7 @@ public class ManagedPlacementViewServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a managed_placement_view
    * resource.
-   *
-   * @deprecated Use the {@link ManagedPlacementViewName} class instead.
    */
-  @Deprecated
   public static final String formatManagedPlacementViewName(
       String customer, String managedPlacementView) {
     return MANAGED_PLACEMENT_VIEW_PATH_TEMPLATE.instantiate(
@@ -120,10 +117,7 @@ public class ManagedPlacementViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * managed_placement_view resource.
-   *
-   * @deprecated Use the {@link ManagedPlacementViewName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromManagedPlacementViewName(
       String managedPlacementViewName) {
     return MANAGED_PLACEMENT_VIEW_PATH_TEMPLATE.parse(managedPlacementViewName).get("customer");
@@ -132,10 +126,7 @@ public class ManagedPlacementViewServiceClient implements BackgroundResource {
   /**
    * Parses the managed_placement_view from the given fully-qualified path which represents a
    * managed_placement_view resource.
-   *
-   * @deprecated Use the {@link ManagedPlacementViewName} class instead.
    */
-  @Deprecated
   public static final String parseManagedPlacementViewFromManagedPlacementViewName(
       String managedPlacementViewName) {
     return MANAGED_PLACEMENT_VIEW_PATH_TEMPLATE

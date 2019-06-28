@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.StringValue;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
@@ -391,7 +391,7 @@ public class GeoTargetConstantServiceClientTest {
     GeoTargetConstant actualResponse = client.getGeoTargetConstant(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockGeoTargetConstantService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockGeoTargetConstantService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetGeoTargetConstantRequest actualRequest = (GetGeoTargetConstantRequest) actualRequests.get(0);
 
@@ -433,7 +433,7 @@ public class GeoTargetConstantServiceClientTest {
         client.suggestGeoTargetConstants(locale, countryCode);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockGeoTargetConstantService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockGeoTargetConstantService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     SuggestGeoTargetConstantsRequest actualRequest =
         (SuggestGeoTargetConstantsRequest) actualRequests.get(0);

@@ -106,10 +106,7 @@ public class CampaignAudienceViewServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a campaign_audience_view
    * resource.
-   *
-   * @deprecated Use the {@link CampaignAudienceViewName} class instead.
    */
-  @Deprecated
   public static final String formatCampaignAudienceViewName(
       String customer, String campaignAudienceView) {
     return CAMPAIGN_AUDIENCE_VIEW_PATH_TEMPLATE.instantiate(
@@ -120,10 +117,7 @@ public class CampaignAudienceViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * campaign_audience_view resource.
-   *
-   * @deprecated Use the {@link CampaignAudienceViewName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromCampaignAudienceViewName(
       String campaignAudienceViewName) {
     return CAMPAIGN_AUDIENCE_VIEW_PATH_TEMPLATE.parse(campaignAudienceViewName).get("customer");
@@ -132,10 +126,7 @@ public class CampaignAudienceViewServiceClient implements BackgroundResource {
   /**
    * Parses the campaign_audience_view from the given fully-qualified path which represents a
    * campaign_audience_view resource.
-   *
-   * @deprecated Use the {@link CampaignAudienceViewName} class instead.
    */
-  @Deprecated
   public static final String parseCampaignAudienceViewFromCampaignAudienceViewName(
       String campaignAudienceViewName) {
     return CAMPAIGN_AUDIENCE_VIEW_PATH_TEMPLATE

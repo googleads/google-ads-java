@@ -102,12 +102,7 @@ public class AdGroupServiceClient implements BackgroundResource {
   private static final PathTemplate AD_GROUP_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/adGroups/{ad_group}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a ad_group resource.
-   *
-   * @deprecated Use the {@link AdGroupName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a ad_group resource. */
   public static final String formatAdGroupName(String customer, String adGroup) {
     return AD_GROUP_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -116,20 +111,14 @@ public class AdGroupServiceClient implements BackgroundResource {
 
   /**
    * Parses the customer from the given fully-qualified path which represents a ad_group resource.
-   *
-   * @deprecated Use the {@link AdGroupName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromAdGroupName(String adGroupName) {
     return AD_GROUP_PATH_TEMPLATE.parse(adGroupName).get("customer");
   }
 
   /**
    * Parses the ad_group from the given fully-qualified path which represents a ad_group resource.
-   *
-   * @deprecated Use the {@link AdGroupName} class instead.
    */
-  @Deprecated
   public static final String parseAdGroupFromAdGroupName(String adGroupName) {
     return AD_GROUP_PATH_TEMPLATE.parse(adGroupName).get("ad_group");
   }

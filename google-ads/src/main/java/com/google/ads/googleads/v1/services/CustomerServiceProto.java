@@ -73,53 +73,52 @@ public final class CustomerServiceProto {
       "v1.services\0320google/ads/googleads/v1/res" +
       "ources/customer.proto\032\034google/api/annota" +
       "tions.proto\032 google/protobuf/field_mask." +
-      "proto\032\036google/protobuf/wrappers.proto\032\027g" +
-      "oogle/api/client.proto\"+\n\022GetCustomerReq" +
-      "uest\022\025\n\rresource_name\030\001 \001(\t\"\213\001\n\025MutateCu" +
-      "stomerRequest\022\023\n\013customer_id\030\001 \001(\t\022F\n\top" +
-      "eration\030\004 \001(\01323.google.ads.googleads.v1." +
-      "services.CustomerOperation\022\025\n\rvalidate_o" +
-      "nly\030\005 \001(\010\"x\n\033CreateCustomerClientRequest" +
-      "\022\023\n\013customer_id\030\001 \001(\t\022D\n\017customer_client" +
-      "\030\002 \001(\0132+.google.ads.googleads.v1.resourc" +
-      "es.Customer\"\201\001\n\021CustomerOperation\022;\n\006upd" +
-      "ate\030\001 \001(\0132+.google.ads.googleads.v1.reso" +
-      "urces.Customer\022/\n\013update_mask\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMask\"5\n\034CreateCustome" +
-      "rClientResponse\022\025\n\rresource_name\030\002 \001(\t\"`" +
-      "\n\026MutateCustomerResponse\022F\n\006result\030\002 \001(\013" +
-      "26.google.ads.googleads.v1.services.Muta" +
-      "teCustomerResult\"-\n\024MutateCustomerResult" +
-      "\022\025\n\rresource_name\030\001 \001(\t\" \n\036ListAccessibl" +
-      "eCustomersRequest\"9\n\037ListAccessibleCusto" +
-      "mersResponse\022\026\n\016resource_names\030\001 \003(\t2\250\006\n" +
-      "\017CustomerService\022\231\001\n\013GetCustomer\0224.googl" +
-      "e.ads.googleads.v1.services.GetCustomerR" +
-      "equest\032+.google.ads.googleads.v1.resourc" +
-      "es.Customer\"\'\202\323\344\223\002!\022\037/v1/{resource_name=" +
-      "customers/*}\022\264\001\n\016MutateCustomer\0227.google" +
-      ".ads.googleads.v1.services.MutateCustome" +
-      "rRequest\0328.google.ads.googleads.v1.servi" +
-      "ces.MutateCustomerResponse\"/\202\323\344\223\002)\"$/v1/" +
-      "customers/{customer_id=*}:mutate:\001*\022\315\001\n\027" +
-      "ListAccessibleCustomers\022@.google.ads.goo" +
-      "gleads.v1.services.ListAccessibleCustome" +
-      "rsRequest\032A.google.ads.googleads.v1.serv" +
-      "ices.ListAccessibleCustomersResponse\"-\202\323" +
-      "\344\223\002\'\022%/v1/customers:listAccessibleCustom" +
-      "ers\022\324\001\n\024CreateCustomerClient\022=.google.ad" +
-      "s.googleads.v1.services.CreateCustomerCl" +
-      "ientRequest\032>.google.ads.googleads.v1.se" +
-      "rvices.CreateCustomerClientResponse\"=\202\323\344" +
-      "\223\0027\"2/v1/customers/{customer_id=*}:creat" +
-      "eCustomerClient:\001*\032\033\312A\030googleads.googlea" +
-      "pis.comB\373\001\n$com.google.ads.googleads.v1." +
-      "servicesB\024CustomerServiceProtoP\001ZHgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v1/services;services\242\002\003GAA\252\002 Googl" +
-      "e.Ads.GoogleAds.V1.Services\312\002 Google\\Ads" +
-      "\\GoogleAds\\V1\\Services\352\002$Google::Ads::Go" +
-      "ogleAds::V1::Servicesb\006proto3"
+      "proto\032\036google/protobuf/wrappers.proto\"+\n" +
+      "\022GetCustomerRequest\022\025\n\rresource_name\030\001 \001" +
+      "(\t\"\213\001\n\025MutateCustomerRequest\022\023\n\013customer" +
+      "_id\030\001 \001(\t\022F\n\toperation\030\004 \001(\01323.google.ad" +
+      "s.googleads.v1.services.CustomerOperatio" +
+      "n\022\025\n\rvalidate_only\030\005 \001(\010\"x\n\033CreateCustom" +
+      "erClientRequest\022\023\n\013customer_id\030\001 \001(\t\022D\n\017" +
+      "customer_client\030\002 \001(\0132+.google.ads.googl" +
+      "eads.v1.resources.Customer\"\201\001\n\021CustomerO" +
+      "peration\022;\n\006update\030\001 \001(\0132+.google.ads.go" +
+      "ogleads.v1.resources.Customer\022/\n\013update_" +
+      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\"5" +
+      "\n\034CreateCustomerClientResponse\022\025\n\rresour" +
+      "ce_name\030\002 \001(\t\"`\n\026MutateCustomerResponse\022" +
+      "F\n\006result\030\002 \001(\01326.google.ads.googleads.v" +
+      "1.services.MutateCustomerResult\"-\n\024Mutat" +
+      "eCustomerResult\022\025\n\rresource_name\030\001 \001(\t\" " +
+      "\n\036ListAccessibleCustomersRequest\"9\n\037List" +
+      "AccessibleCustomersResponse\022\026\n\016resource_" +
+      "names\030\001 \003(\t2\213\006\n\017CustomerService\022\231\001\n\013GetC" +
+      "ustomer\0224.google.ads.googleads.v1.servic" +
+      "es.GetCustomerRequest\032+.google.ads.googl" +
+      "eads.v1.resources.Customer\"\'\202\323\344\223\002!\022\037/v1/" +
+      "{resource_name=customers/*}\022\264\001\n\016MutateCu" +
+      "stomer\0227.google.ads.googleads.v1.service" +
+      "s.MutateCustomerRequest\0328.google.ads.goo" +
+      "gleads.v1.services.MutateCustomerRespons" +
+      "e\"/\202\323\344\223\002)\"$/v1/customers/{customer_id=*}" +
+      ":mutate:\001*\022\315\001\n\027ListAccessibleCustomers\022@" +
+      ".google.ads.googleads.v1.services.ListAc" +
+      "cessibleCustomersRequest\032A.google.ads.go" +
+      "ogleads.v1.services.ListAccessibleCustom" +
+      "ersResponse\"-\202\323\344\223\002\'\022%/v1/customers:listA" +
+      "ccessibleCustomers\022\324\001\n\024CreateCustomerCli" +
+      "ent\022=.google.ads.googleads.v1.services.C" +
+      "reateCustomerClientRequest\032>.google.ads." +
+      "googleads.v1.services.CreateCustomerClie" +
+      "ntResponse\"=\202\323\344\223\0027\"2/v1/customers/{custo" +
+      "mer_id=*}:createCustomerClient:\001*B\373\001\n$co" +
+      "m.google.ads.googleads.v1.servicesB\024Cust" +
+      "omerServiceProtoP\001ZHgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v1/servi" +
+      "ces;services\242\002\003GAA\252\002 Google.Ads.GoogleAd" +
+      "s.V1.Services\312\002 Google\\Ads\\GoogleAds\\V1\\" +
+      "Services\352\002$Google::Ads::GoogleAds::V1::S" +
+      "ervicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -136,7 +135,6 @@ public final class CustomerServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetCustomerRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -194,7 +192,6 @@ public final class CustomerServiceProto {
         new java.lang.String[] { "ResourceNames", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -202,7 +199,6 @@ public final class CustomerServiceProto {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

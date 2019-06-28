@@ -107,10 +107,7 @@ public class KeywordPlanNegativeKeywordServiceClient implements BackgroundResour
   /**
    * Formats a string containing the fully-qualified path to represent a
    * keyword_plan_negative_keyword resource.
-   *
-   * @deprecated Use the {@link KeywordPlanNegativeKeywordName} class instead.
    */
-  @Deprecated
   public static final String formatKeywordPlanNegativeKeywordName(
       String customer, String keywordPlanNegativeKeyword) {
     return KEYWORD_PLAN_NEGATIVE_KEYWORD_PATH_TEMPLATE.instantiate(
@@ -121,10 +118,7 @@ public class KeywordPlanNegativeKeywordServiceClient implements BackgroundResour
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * keyword_plan_negative_keyword resource.
-   *
-   * @deprecated Use the {@link KeywordPlanNegativeKeywordName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromKeywordPlanNegativeKeywordName(
       String keywordPlanNegativeKeywordName) {
     return KEYWORD_PLAN_NEGATIVE_KEYWORD_PATH_TEMPLATE
@@ -135,10 +129,7 @@ public class KeywordPlanNegativeKeywordServiceClient implements BackgroundResour
   /**
    * Parses the keyword_plan_negative_keyword from the given fully-qualified path which represents a
    * keyword_plan_negative_keyword resource.
-   *
-   * @deprecated Use the {@link KeywordPlanNegativeKeywordName} class instead.
    */
-  @Deprecated
   public static final String parseKeywordPlanNegativeKeywordFromKeywordPlanNegativeKeywordName(
       String keywordPlanNegativeKeywordName) {
     return KEYWORD_PLAN_NEGATIVE_KEYWORD_PATH_TEMPLATE

@@ -107,10 +107,7 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a merchant_center_link
    * resource.
-   *
-   * @deprecated Use the {@link MerchantCenterLinkName} class instead.
    */
-  @Deprecated
   public static final String formatMerchantCenterLinkName(
       String customer, String merchantCenterLink) {
     return MERCHANT_CENTER_LINK_PATH_TEMPLATE.instantiate(
@@ -121,10 +118,7 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a merchant_center_link
    * resource.
-   *
-   * @deprecated Use the {@link MerchantCenterLinkName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromMerchantCenterLinkName(
       String merchantCenterLinkName) {
     return MERCHANT_CENTER_LINK_PATH_TEMPLATE.parse(merchantCenterLinkName).get("customer");
@@ -133,10 +127,7 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
   /**
    * Parses the merchant_center_link from the given fully-qualified path which represents a
    * merchant_center_link resource.
-   *
-   * @deprecated Use the {@link MerchantCenterLinkName} class instead.
    */
-  @Deprecated
   public static final String parseMerchantCenterLinkFromMerchantCenterLinkName(
       String merchantCenterLinkName) {
     return MERCHANT_CENTER_LINK_PATH_TEMPLATE

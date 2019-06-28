@@ -75,7 +75,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
               evidences_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.PolicyTopicEvidence>();
               mutable_bitField0_ |= 0x00000004;
             }
@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
               constraints_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.PolicyTopicConstraint>();
               mutable_bitField0_ |= 0x00000008;
             }
@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -107,10 +107,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
         evidences_ = java.util.Collections.unmodifiableList(evidences_);
       }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
         constraints_ = java.util.Collections.unmodifiableList(constraints_);
       }
       this.unknownFields = unknownFields.build();
@@ -384,18 +384,19 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.PolicyTopicEntry other = (com.google.ads.googleads.v1.common.PolicyTopicEntry) obj;
 
-    if (hasTopic() != other.hasTopic()) return false;
+    boolean result = true;
+    result = result && (hasTopic() == other.hasTopic());
     if (hasTopic()) {
-      if (!getTopic()
-          .equals(other.getTopic())) return false;
+      result = result && getTopic()
+          .equals(other.getTopic());
     }
-    if (type_ != other.type_) return false;
-    if (!getEvidencesList()
-        .equals(other.getEvidencesList())) return false;
-    if (!getConstraintsList()
-        .equals(other.getConstraintsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && type_ == other.type_;
+    result = result && getEvidencesList()
+        .equals(other.getEvidencesList());
+    result = result && getConstraintsList()
+        .equals(other.getConstraintsList());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -619,7 +620,7 @@ private static final long serialVersionUID = 0L;
       }
       result.type_ = type_;
       if (evidencesBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
           evidences_ = java.util.Collections.unmodifiableList(evidences_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
@@ -628,7 +629,7 @@ private static final long serialVersionUID = 0L;
         result.evidences_ = evidencesBuilder_.build();
       }
       if (constraintsBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
           constraints_ = java.util.Collections.unmodifiableList(constraints_);
           bitField0_ = (bitField0_ & ~0x00000008);
         }
@@ -643,35 +644,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -773,7 +774,7 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.StringValue topic_;
+    private com.google.protobuf.StringValue topic_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> topicBuilder_;
     /**
@@ -1021,7 +1022,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.PolicyTopicEvidence> evidences_ =
       java.util.Collections.emptyList();
     private void ensureEvidencesIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
         evidences_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.PolicyTopicEvidence>(evidences_);
         bitField0_ |= 0x00000004;
        }
@@ -1340,7 +1341,7 @@ private static final long serialVersionUID = 0L;
         evidencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.PolicyTopicEvidence, com.google.ads.googleads.v1.common.PolicyTopicEvidence.Builder, com.google.ads.googleads.v1.common.PolicyTopicEvidenceOrBuilder>(
                 evidences_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000004) == 0x00000004),
                 getParentForChildren(),
                 isClean());
         evidences_ = null;
@@ -1351,7 +1352,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.PolicyTopicConstraint> constraints_ =
       java.util.Collections.emptyList();
     private void ensureConstraintsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
         constraints_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.PolicyTopicConstraint>(constraints_);
         bitField0_ |= 0x00000008;
        }
@@ -1670,7 +1671,7 @@ private static final long serialVersionUID = 0L;
         constraintsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.PolicyTopicConstraint, com.google.ads.googleads.v1.common.PolicyTopicConstraint.Builder, com.google.ads.googleads.v1.common.PolicyTopicConstraintOrBuilder>(
                 constraints_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000008) == 0x00000008),
                 getParentForChildren(),
                 isClean());
         constraints_ = null;
@@ -1680,7 +1681,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

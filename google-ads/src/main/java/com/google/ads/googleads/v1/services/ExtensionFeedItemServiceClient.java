@@ -107,10 +107,7 @@ public class ExtensionFeedItemServiceClient implements BackgroundResource {
   /**
    * Formats a string containing the fully-qualified path to represent a extension_feed_item
    * resource.
-   *
-   * @deprecated Use the {@link ExtensionFeedItemName} class instead.
    */
-  @Deprecated
   public static final String formatExtensionFeedItemName(
       String customer, String extensionFeedItem) {
     return EXTENSION_FEED_ITEM_PATH_TEMPLATE.instantiate(
@@ -121,10 +118,7 @@ public class ExtensionFeedItemServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a extension_feed_item
    * resource.
-   *
-   * @deprecated Use the {@link ExtensionFeedItemName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromExtensionFeedItemName(String extensionFeedItemName) {
     return EXTENSION_FEED_ITEM_PATH_TEMPLATE.parse(extensionFeedItemName).get("customer");
   }
@@ -132,10 +126,7 @@ public class ExtensionFeedItemServiceClient implements BackgroundResource {
   /**
    * Parses the extension_feed_item from the given fully-qualified path which represents a
    * extension_feed_item resource.
-   *
-   * @deprecated Use the {@link ExtensionFeedItemName} class instead.
    */
-  @Deprecated
   public static final String parseExtensionFeedItemFromExtensionFeedItemName(
       String extensionFeedItemName) {
     return EXTENSION_FEED_ITEM_PATH_TEMPLATE

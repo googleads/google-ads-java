@@ -113,10 +113,7 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a google_ads_field resource.
-   *
-   * @deprecated Use the {@link GoogleAdsFieldName} class instead.
    */
-  @Deprecated
   public static final String formatGoogleAdsFieldName(String googleAdsField) {
     return GOOGLE_ADS_FIELD_PATH_TEMPLATE.instantiate("google_ads_field", googleAdsField);
   }
@@ -124,10 +121,7 @@ public class GoogleAdsFieldServiceClient implements BackgroundResource {
   /**
    * Parses the google_ads_field from the given fully-qualified path which represents a
    * google_ads_field resource.
-   *
-   * @deprecated Use the {@link GoogleAdsFieldName} class instead.
    */
-  @Deprecated
   public static final String parseGoogleAdsFieldFromGoogleAdsFieldName(String googleAdsFieldName) {
     return GOOGLE_ADS_FIELD_PATH_TEMPLATE.parse(googleAdsFieldName).get("google_ads_field");
   }

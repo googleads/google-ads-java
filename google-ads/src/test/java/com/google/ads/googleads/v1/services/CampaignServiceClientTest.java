@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -390,7 +390,7 @@ public class CampaignServiceClientTest {
     Campaign actualResponse = client.getCampaign(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockCampaignService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockCampaignService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetCampaignRequest actualRequest = (GetCampaignRequest) actualRequests.get(0);
 
@@ -433,7 +433,7 @@ public class CampaignServiceClientTest {
         client.mutateCampaigns(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockCampaignService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockCampaignService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCampaignsRequest actualRequest = (MutateCampaignsRequest) actualRequests.get(0);
 
@@ -478,7 +478,7 @@ public class CampaignServiceClientTest {
     MutateCampaignsResponse actualResponse = client.mutateCampaigns(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockCampaignService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockCampaignService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCampaignsRequest actualRequest = (MutateCampaignsRequest) actualRequests.get(0);
 

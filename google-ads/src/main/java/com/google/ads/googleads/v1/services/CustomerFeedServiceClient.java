@@ -103,12 +103,7 @@ public class CustomerFeedServiceClient implements BackgroundResource {
   private static final PathTemplate CUSTOMER_FEED_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/customerFeeds/{customer_feed}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a customer_feed resource.
-   *
-   * @deprecated Use the {@link CustomerFeedName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a customer_feed resource. */
   public static final String formatCustomerFeedName(String customer, String customerFeed) {
     return CUSTOMER_FEED_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -118,10 +113,7 @@ public class CustomerFeedServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a customer_feed
    * resource.
-   *
-   * @deprecated Use the {@link CustomerFeedName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromCustomerFeedName(String customerFeedName) {
     return CUSTOMER_FEED_PATH_TEMPLATE.parse(customerFeedName).get("customer");
   }
@@ -129,10 +121,7 @@ public class CustomerFeedServiceClient implements BackgroundResource {
   /**
    * Parses the customer_feed from the given fully-qualified path which represents a customer_feed
    * resource.
-   *
-   * @deprecated Use the {@link CustomerFeedName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFeedFromCustomerFeedName(String customerFeedName) {
     return CUSTOMER_FEED_PATH_TEMPLATE.parse(customerFeedName).get("customer_feed");
   }

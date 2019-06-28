@@ -27,13 +27,10 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.common.collect.ImmutableMap;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -140,44 +137,17 @@ public class GrpcMerchantCenterLinkServiceStub extends MerchantCenterLinkService
             GrpcCallSettings
                 .<ListMerchantCenterLinksRequest, ListMerchantCenterLinksResponse>newBuilder()
                 .setMethodDescriptor(listMerchantCenterLinksMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<ListMerchantCenterLinksRequest>() {
-                      @Override
-                      public Map<String, String> extract(ListMerchantCenterLinksRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
-                    })
                 .build();
     GrpcCallSettings<GetMerchantCenterLinkRequest, MerchantCenterLink>
         getMerchantCenterLinkTransportSettings =
             GrpcCallSettings.<GetMerchantCenterLinkRequest, MerchantCenterLink>newBuilder()
                 .setMethodDescriptor(getMerchantCenterLinkMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<GetMerchantCenterLinkRequest>() {
-                      @Override
-                      public Map<String, String> extract(GetMerchantCenterLinkRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
-                    })
                 .build();
     GrpcCallSettings<MutateMerchantCenterLinkRequest, MutateMerchantCenterLinkResponse>
         mutateMerchantCenterLinkTransportSettings =
             GrpcCallSettings
                 .<MutateMerchantCenterLinkRequest, MutateMerchantCenterLinkResponse>newBuilder()
                 .setMethodDescriptor(mutateMerchantCenterLinkMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<MutateMerchantCenterLinkRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateMerchantCenterLinkRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
-                    })
                 .build();
 
     this.listMerchantCenterLinksCallable =

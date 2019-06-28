@@ -102,12 +102,7 @@ public class UserInterestServiceClient implements BackgroundResource {
   private static final PathTemplate USER_INTEREST_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/userInterests/{user_interest}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a user_interest resource.
-   *
-   * @deprecated Use the {@link UserInterestName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a user_interest resource. */
   public static final String formatUserInterestName(String customer, String userInterest) {
     return USER_INTEREST_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -117,10 +112,7 @@ public class UserInterestServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a user_interest
    * resource.
-   *
-   * @deprecated Use the {@link UserInterestName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromUserInterestName(String userInterestName) {
     return USER_INTEREST_PATH_TEMPLATE.parse(userInterestName).get("customer");
   }
@@ -128,10 +120,7 @@ public class UserInterestServiceClient implements BackgroundResource {
   /**
    * Parses the user_interest from the given fully-qualified path which represents a user_interest
    * resource.
-   *
-   * @deprecated Use the {@link UserInterestName} class instead.
    */
-  @Deprecated
   public static final String parseUserInterestFromUserInterestName(String userInterestName) {
     return USER_INTEREST_PATH_TEMPLATE.parse(userInterestName).get("user_interest");
   }

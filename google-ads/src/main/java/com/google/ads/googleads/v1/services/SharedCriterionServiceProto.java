@@ -54,40 +54,39 @@ public final class SharedCriterionServiceProto {
       "s/v1/resources/shared_criterion.proto\032\034g" +
       "oogle/api/annotations.proto\032\036google/prot" +
       "obuf/wrappers.proto\032\027google/rpc/status.p" +
-      "roto\032\027google/api/client.proto\"2\n\031GetShar" +
-      "edCriterionRequest\022\025\n\rresource_name\030\001 \001(" +
-      "\t\"\262\001\n\033MutateSharedCriteriaRequest\022\023\n\013cus" +
-      "tomer_id\030\001 \001(\t\022N\n\noperations\030\002 \003(\0132:.goo" +
-      "gle.ads.googleads.v1.services.SharedCrit" +
-      "erionOperation\022\027\n\017partial_failure\030\003 \001(\010\022" +
-      "\025\n\rvalidate_only\030\004 \001(\010\"\177\n\030SharedCriterio" +
-      "nOperation\022D\n\006create\030\001 \001(\01322.google.ads." +
-      "googleads.v1.resources.SharedCriterionH\000" +
-      "\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\241\001\n\034Muta" +
-      "teSharedCriteriaResponse\0221\n\025partial_fail" +
-      "ure_error\030\003 \001(\0132\022.google.rpc.Status\022N\n\007r" +
-      "esults\030\002 \003(\0132=.google.ads.googleads.v1.s" +
-      "ervices.MutateSharedCriterionResult\"4\n\033M" +
-      "utateSharedCriterionResult\022\025\n\rresource_n" +
-      "ame\030\001 \001(\t2\317\003\n\026SharedCriterionService\022\277\001\n" +
-      "\022GetSharedCriterion\022;.google.ads.googlea" +
-      "ds.v1.services.GetSharedCriterionRequest" +
-      "\0322.google.ads.googleads.v1.resources.Sha" +
-      "redCriterion\"8\202\323\344\223\0022\0220/v1/{resource_name" +
-      "=customers/*/sharedCriteria/*}\022\325\001\n\024Mutat" +
-      "eSharedCriteria\022=.google.ads.googleads.v" +
-      "1.services.MutateSharedCriteriaRequest\032>" +
-      ".google.ads.googleads.v1.services.Mutate" +
-      "SharedCriteriaResponse\">\202\323\344\223\0028\"3/v1/cust" +
-      "omers/{customer_id=*}/sharedCriteria:mut" +
-      "ate:\001*\032\033\312A\030googleads.googleapis.comB\202\002\n$" +
-      "com.google.ads.googleads.v1.servicesB\033Sh" +
-      "aredCriterionServiceProtoP\001ZHgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v1/services;services\242\002\003GAA\252\002 Google.Ads" +
-      ".GoogleAds.V1.Services\312\002 Google\\Ads\\Goog" +
-      "leAds\\V1\\Services\352\002$Google::Ads::GoogleA" +
-      "ds::V1::Servicesb\006proto3"
+      "roto\"2\n\031GetSharedCriterionRequest\022\025\n\rres" +
+      "ource_name\030\001 \001(\t\"\262\001\n\033MutateSharedCriteri" +
+      "aRequest\022\023\n\013customer_id\030\001 \001(\t\022N\n\noperati" +
+      "ons\030\002 \003(\0132:.google.ads.googleads.v1.serv" +
+      "ices.SharedCriterionOperation\022\027\n\017partial" +
+      "_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\177\n" +
+      "\030SharedCriterionOperation\022D\n\006create\030\001 \001(" +
+      "\01322.google.ads.googleads.v1.resources.Sh" +
+      "aredCriterionH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\tope" +
+      "ration\"\241\001\n\034MutateSharedCriteriaResponse\022" +
+      "1\n\025partial_failure_error\030\003 \001(\0132\022.google." +
+      "rpc.Status\022N\n\007results\030\002 \003(\0132=.google.ads" +
+      ".googleads.v1.services.MutateSharedCrite" +
+      "rionResult\"4\n\033MutateSharedCriterionResul" +
+      "t\022\025\n\rresource_name\030\001 \001(\t2\262\003\n\026SharedCrite" +
+      "rionService\022\277\001\n\022GetSharedCriterion\022;.goo" +
+      "gle.ads.googleads.v1.services.GetSharedC" +
+      "riterionRequest\0322.google.ads.googleads.v" +
+      "1.resources.SharedCriterion\"8\202\323\344\223\0022\0220/v1" +
+      "/{resource_name=customers/*/sharedCriter" +
+      "ia/*}\022\325\001\n\024MutateSharedCriteria\022=.google." +
+      "ads.googleads.v1.services.MutateSharedCr" +
+      "iteriaRequest\032>.google.ads.googleads.v1." +
+      "services.MutateSharedCriteriaResponse\">\202" +
+      "\323\344\223\0028\"3/v1/customers/{customer_id=*}/sha" +
+      "redCriteria:mutate:\001*B\202\002\n$com.google.ads" +
+      ".googleads.v1.servicesB\033SharedCriterionS" +
+      "erviceProtoP\001ZHgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v1/services;s" +
+      "ervices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1." +
+      "Services\312\002 Google\\Ads\\GoogleAds\\V1\\Servi" +
+      "ces\352\002$Google::Ads::GoogleAds::V1::Servic" +
+      "esb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -104,7 +103,6 @@ public final class SharedCriterionServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetSharedCriterionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -138,7 +136,6 @@ public final class SharedCriterionServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -146,7 +143,6 @@ public final class SharedCriterionServiceProto {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

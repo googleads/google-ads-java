@@ -105,10 +105,7 @@ public class CustomerLabelServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a customer_label resource.
-   *
-   * @deprecated Use the {@link CustomerLabelName} class instead.
    */
-  @Deprecated
   public static final String formatCustomerLabelName(String customer, String customerLabel) {
     return CUSTOMER_LABEL_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -118,10 +115,7 @@ public class CustomerLabelServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a customer_label
    * resource.
-   *
-   * @deprecated Use the {@link CustomerLabelName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromCustomerLabelName(String customerLabelName) {
     return CUSTOMER_LABEL_PATH_TEMPLATE.parse(customerLabelName).get("customer");
   }
@@ -129,10 +123,7 @@ public class CustomerLabelServiceClient implements BackgroundResource {
   /**
    * Parses the customer_label from the given fully-qualified path which represents a customer_label
    * resource.
-   *
-   * @deprecated Use the {@link CustomerLabelName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerLabelFromCustomerLabelName(String customerLabelName) {
     return CUSTOMER_LABEL_PATH_TEMPLATE.parse(customerLabelName).get("customer_label");
   }

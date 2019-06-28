@@ -103,12 +103,7 @@ public class AdParameterServiceClient implements BackgroundResource {
   private static final PathTemplate AD_PARAMETER_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/adParameters/{ad_parameter}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a ad_parameter resource.
-   *
-   * @deprecated Use the {@link AdParameterName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a ad_parameter resource. */
   public static final String formatAdParameterName(String customer, String adParameter) {
     return AD_PARAMETER_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -118,10 +113,7 @@ public class AdParameterServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a ad_parameter
    * resource.
-   *
-   * @deprecated Use the {@link AdParameterName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromAdParameterName(String adParameterName) {
     return AD_PARAMETER_PATH_TEMPLATE.parse(adParameterName).get("customer");
   }
@@ -129,10 +121,7 @@ public class AdParameterServiceClient implements BackgroundResource {
   /**
    * Parses the ad_parameter from the given fully-qualified path which represents a ad_parameter
    * resource.
-   *
-   * @deprecated Use the {@link AdParameterName} class instead.
    */
-  @Deprecated
   public static final String parseAdParameterFromAdParameterName(String adParameterName) {
     return AD_PARAMETER_PATH_TEMPLATE.parse(adParameterName).get("ad_parameter");
   }

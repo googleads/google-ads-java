@@ -24,7 +24,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -392,7 +392,7 @@ public class RecommendationServiceClientTest {
     Recommendation actualResponse = client.getRecommendation(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockRecommendationService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockRecommendationService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetRecommendationRequest actualRequest = (GetRecommendationRequest) actualRequests.get(0);
 
@@ -434,7 +434,7 @@ public class RecommendationServiceClientTest {
         client.applyRecommendation(customerId, operations, partialFailure);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockRecommendationService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockRecommendationService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     ApplyRecommendationRequest actualRequest = (ApplyRecommendationRequest) actualRequests.get(0);
 
@@ -477,7 +477,7 @@ public class RecommendationServiceClientTest {
     ApplyRecommendationResponse actualResponse = client.applyRecommendation(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockRecommendationService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockRecommendationService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     ApplyRecommendationRequest actualRequest = (ApplyRecommendationRequest) actualRequests.get(0);
 
@@ -522,7 +522,7 @@ public class RecommendationServiceClientTest {
         client.dismissRecommendation(customerId, operations, partialFailure);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockRecommendationService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockRecommendationService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     DismissRecommendationRequest actualRequest =
         (DismissRecommendationRequest) actualRequests.get(0);
@@ -570,7 +570,7 @@ public class RecommendationServiceClientTest {
         client.dismissRecommendation(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockRecommendationService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockRecommendationService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     DismissRecommendationRequest actualRequest =
         (DismissRecommendationRequest) actualRequests.get(0);

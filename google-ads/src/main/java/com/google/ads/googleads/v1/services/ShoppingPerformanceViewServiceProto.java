@@ -33,23 +33,22 @@ public final class ShoppingPerformanceViewServiceProto {
       "le.ads.googleads.v1.services\032Agoogle/ads" +
       "/googleads/v1/resources/shopping_perform" +
       "ance_view.proto\032\034google/api/annotations." +
-      "proto\032\027google/api/client.proto\":\n!GetSho" +
-      "ppingPerformanceViewRequest\022\025\n\rresource_" +
-      "name\030\001 \001(\t2\236\002\n\036ShoppingPerformanceViewSe" +
-      "rvice\022\336\001\n\032GetShoppingPerformanceView\022C.g" +
-      "oogle.ads.googleads.v1.services.GetShopp" +
-      "ingPerformanceViewRequest\032:.google.ads.g" +
-      "oogleads.v1.resources.ShoppingPerformanc" +
-      "eView\"?\202\323\344\223\0029\0227/v1/{resource_name=custom" +
-      "ers/*/shoppingPerformanceView}\032\033\312A\030googl" +
-      "eads.googleapis.comB\212\002\n$com.google.ads.g" +
-      "oogleads.v1.servicesB#ShoppingPerformanc" +
-      "eViewServiceProtoP\001ZHgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v1/serv" +
-      "ices;services\242\002\003GAA\252\002 Google.Ads.GoogleA" +
-      "ds.V1.Services\312\002 Google\\Ads\\GoogleAds\\V1" +
-      "\\Services\352\002$Google::Ads::GoogleAds::V1::" +
-      "Servicesb\006proto3"
+      "proto\":\n!GetShoppingPerformanceViewReque" +
+      "st\022\025\n\rresource_name\030\001 \001(\t2\201\002\n\036ShoppingPe" +
+      "rformanceViewService\022\336\001\n\032GetShoppingPerf" +
+      "ormanceView\022C.google.ads.googleads.v1.se" +
+      "rvices.GetShoppingPerformanceViewRequest" +
+      "\032:.google.ads.googleads.v1.resources.Sho" +
+      "ppingPerformanceView\"?\202\323\344\223\0029\0227/v1/{resou" +
+      "rce_name=customers/*/shoppingPerformance" +
+      "View}B\212\002\n$com.google.ads.googleads.v1.se" +
+      "rvicesB#ShoppingPerformanceViewServicePr" +
+      "otoP\001ZHgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v1/services;services\242" +
+      "\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Services" +
+      "\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$Go" +
+      "ogle::Ads::GoogleAds::V1::Servicesb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -64,7 +63,6 @@ public final class ShoppingPerformanceViewServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.ShoppingPerformanceViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetShoppingPerformanceViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -74,13 +72,11 @@ public final class ShoppingPerformanceViewServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.ShoppingPerformanceViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -291,7 +291,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -1460,122 +1460,133 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.resources.AccountBudgetProposal other = (com.google.ads.googleads.v1.resources.AccountBudgetProposal) obj;
 
-    if (!getResourceName()
-        .equals(other.getResourceName())) return false;
-    if (hasId() != other.hasId()) return false;
+    boolean result = true;
+    result = result && getResourceName()
+        .equals(other.getResourceName());
+    result = result && (hasId() == other.hasId());
     if (hasId()) {
-      if (!getId()
-          .equals(other.getId())) return false;
+      result = result && getId()
+          .equals(other.getId());
     }
-    if (hasBillingSetup() != other.hasBillingSetup()) return false;
+    result = result && (hasBillingSetup() == other.hasBillingSetup());
     if (hasBillingSetup()) {
-      if (!getBillingSetup()
-          .equals(other.getBillingSetup())) return false;
+      result = result && getBillingSetup()
+          .equals(other.getBillingSetup());
     }
-    if (hasAccountBudget() != other.hasAccountBudget()) return false;
+    result = result && (hasAccountBudget() == other.hasAccountBudget());
     if (hasAccountBudget()) {
-      if (!getAccountBudget()
-          .equals(other.getAccountBudget())) return false;
+      result = result && getAccountBudget()
+          .equals(other.getAccountBudget());
     }
-    if (proposalType_ != other.proposalType_) return false;
-    if (status_ != other.status_) return false;
-    if (hasProposedName() != other.hasProposedName()) return false;
+    result = result && proposalType_ == other.proposalType_;
+    result = result && status_ == other.status_;
+    result = result && (hasProposedName() == other.hasProposedName());
     if (hasProposedName()) {
-      if (!getProposedName()
-          .equals(other.getProposedName())) return false;
+      result = result && getProposedName()
+          .equals(other.getProposedName());
     }
-    if (hasApprovedStartDateTime() != other.hasApprovedStartDateTime()) return false;
+    result = result && (hasApprovedStartDateTime() == other.hasApprovedStartDateTime());
     if (hasApprovedStartDateTime()) {
-      if (!getApprovedStartDateTime()
-          .equals(other.getApprovedStartDateTime())) return false;
+      result = result && getApprovedStartDateTime()
+          .equals(other.getApprovedStartDateTime());
     }
-    if (hasProposedPurchaseOrderNumber() != other.hasProposedPurchaseOrderNumber()) return false;
+    result = result && (hasProposedPurchaseOrderNumber() == other.hasProposedPurchaseOrderNumber());
     if (hasProposedPurchaseOrderNumber()) {
-      if (!getProposedPurchaseOrderNumber()
-          .equals(other.getProposedPurchaseOrderNumber())) return false;
+      result = result && getProposedPurchaseOrderNumber()
+          .equals(other.getProposedPurchaseOrderNumber());
     }
-    if (hasProposedNotes() != other.hasProposedNotes()) return false;
+    result = result && (hasProposedNotes() == other.hasProposedNotes());
     if (hasProposedNotes()) {
-      if (!getProposedNotes()
-          .equals(other.getProposedNotes())) return false;
+      result = result && getProposedNotes()
+          .equals(other.getProposedNotes());
     }
-    if (hasCreationDateTime() != other.hasCreationDateTime()) return false;
+    result = result && (hasCreationDateTime() == other.hasCreationDateTime());
     if (hasCreationDateTime()) {
-      if (!getCreationDateTime()
-          .equals(other.getCreationDateTime())) return false;
+      result = result && getCreationDateTime()
+          .equals(other.getCreationDateTime());
     }
-    if (hasApprovalDateTime() != other.hasApprovalDateTime()) return false;
+    result = result && (hasApprovalDateTime() == other.hasApprovalDateTime());
     if (hasApprovalDateTime()) {
-      if (!getApprovalDateTime()
-          .equals(other.getApprovalDateTime())) return false;
+      result = result && getApprovalDateTime()
+          .equals(other.getApprovalDateTime());
     }
-    if (!getProposedStartTimeCase().equals(other.getProposedStartTimeCase())) return false;
+    result = result && getProposedStartTimeCase().equals(
+        other.getProposedStartTimeCase());
+    if (!result) return false;
     switch (proposedStartTimeCase_) {
       case 18:
-        if (!getProposedStartDateTime()
-            .equals(other.getProposedStartDateTime())) return false;
+        result = result && getProposedStartDateTime()
+            .equals(other.getProposedStartDateTime());
         break;
       case 7:
-        if (getProposedStartTimeTypeValue()
-            != other.getProposedStartTimeTypeValue()) return false;
+        result = result && getProposedStartTimeTypeValue()
+            == other.getProposedStartTimeTypeValue();
         break;
       case 0:
       default:
     }
-    if (!getProposedEndTimeCase().equals(other.getProposedEndTimeCase())) return false;
+    result = result && getProposedEndTimeCase().equals(
+        other.getProposedEndTimeCase());
+    if (!result) return false;
     switch (proposedEndTimeCase_) {
       case 19:
-        if (!getProposedEndDateTime()
-            .equals(other.getProposedEndDateTime())) return false;
+        result = result && getProposedEndDateTime()
+            .equals(other.getProposedEndDateTime());
         break;
       case 9:
-        if (getProposedEndTimeTypeValue()
-            != other.getProposedEndTimeTypeValue()) return false;
+        result = result && getProposedEndTimeTypeValue()
+            == other.getProposedEndTimeTypeValue();
         break;
       case 0:
       default:
     }
-    if (!getApprovedEndTimeCase().equals(other.getApprovedEndTimeCase())) return false;
+    result = result && getApprovedEndTimeCase().equals(
+        other.getApprovedEndTimeCase());
+    if (!result) return false;
     switch (approvedEndTimeCase_) {
       case 21:
-        if (!getApprovedEndDateTime()
-            .equals(other.getApprovedEndDateTime())) return false;
+        result = result && getApprovedEndDateTime()
+            .equals(other.getApprovedEndDateTime());
         break;
       case 22:
-        if (getApprovedEndTimeTypeValue()
-            != other.getApprovedEndTimeTypeValue()) return false;
+        result = result && getApprovedEndTimeTypeValue()
+            == other.getApprovedEndTimeTypeValue();
         break;
       case 0:
       default:
     }
-    if (!getProposedSpendingLimitCase().equals(other.getProposedSpendingLimitCase())) return false;
+    result = result && getProposedSpendingLimitCase().equals(
+        other.getProposedSpendingLimitCase());
+    if (!result) return false;
     switch (proposedSpendingLimitCase_) {
       case 10:
-        if (!getProposedSpendingLimitMicros()
-            .equals(other.getProposedSpendingLimitMicros())) return false;
+        result = result && getProposedSpendingLimitMicros()
+            .equals(other.getProposedSpendingLimitMicros());
         break;
       case 11:
-        if (getProposedSpendingLimitTypeValue()
-            != other.getProposedSpendingLimitTypeValue()) return false;
+        result = result && getProposedSpendingLimitTypeValue()
+            == other.getProposedSpendingLimitTypeValue();
         break;
       case 0:
       default:
     }
-    if (!getApprovedSpendingLimitCase().equals(other.getApprovedSpendingLimitCase())) return false;
+    result = result && getApprovedSpendingLimitCase().equals(
+        other.getApprovedSpendingLimitCase());
+    if (!result) return false;
     switch (approvedSpendingLimitCase_) {
       case 23:
-        if (!getApprovedSpendingLimitMicros()
-            .equals(other.getApprovedSpendingLimitMicros())) return false;
+        result = result && getApprovedSpendingLimitMicros()
+            .equals(other.getApprovedSpendingLimitMicros());
         break;
       case 24:
-        if (getApprovedSpendingLimitTypeValue()
-            != other.getApprovedSpendingLimitTypeValue()) return false;
+        result = result && getApprovedSpendingLimitTypeValue()
+            == other.getApprovedSpendingLimitTypeValue();
         break;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -2035,35 +2046,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2382,7 +2393,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value id_;
+    private com.google.protobuf.Int64Value id_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
@@ -2535,7 +2546,7 @@ private static final long serialVersionUID = 0L;
       return idBuilder_;
     }
 
-    private com.google.protobuf.StringValue billingSetup_;
+    private com.google.protobuf.StringValue billingSetup_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> billingSetupBuilder_;
     /**
@@ -2688,7 +2699,7 @@ private static final long serialVersionUID = 0L;
       return billingSetupBuilder_;
     }
 
-    private com.google.protobuf.StringValue accountBudget_;
+    private com.google.protobuf.StringValue accountBudget_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> accountBudgetBuilder_;
     /**
@@ -2990,7 +3001,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue proposedName_;
+    private com.google.protobuf.StringValue proposedName_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> proposedNameBuilder_;
     /**
@@ -3143,7 +3154,7 @@ private static final long serialVersionUID = 0L;
       return proposedNameBuilder_;
     }
 
-    private com.google.protobuf.StringValue approvedStartDateTime_;
+    private com.google.protobuf.StringValue approvedStartDateTime_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> approvedStartDateTimeBuilder_;
     /**
@@ -3296,7 +3307,7 @@ private static final long serialVersionUID = 0L;
       return approvedStartDateTimeBuilder_;
     }
 
-    private com.google.protobuf.StringValue proposedPurchaseOrderNumber_;
+    private com.google.protobuf.StringValue proposedPurchaseOrderNumber_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> proposedPurchaseOrderNumberBuilder_;
     /**
@@ -3458,7 +3469,7 @@ private static final long serialVersionUID = 0L;
       return proposedPurchaseOrderNumberBuilder_;
     }
 
-    private com.google.protobuf.StringValue proposedNotes_;
+    private com.google.protobuf.StringValue proposedNotes_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> proposedNotesBuilder_;
     /**
@@ -3611,7 +3622,7 @@ private static final long serialVersionUID = 0L;
       return proposedNotesBuilder_;
     }
 
-    private com.google.protobuf.StringValue creationDateTime_;
+    private com.google.protobuf.StringValue creationDateTime_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> creationDateTimeBuilder_;
     /**
@@ -3773,7 +3784,7 @@ private static final long serialVersionUID = 0L;
       return creationDateTimeBuilder_;
     }
 
-    private com.google.protobuf.StringValue approvalDateTime_;
+    private com.google.protobuf.StringValue approvalDateTime_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> approvalDateTimeBuilder_;
     /**
@@ -5176,7 +5187,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

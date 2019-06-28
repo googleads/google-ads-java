@@ -109,12 +109,7 @@ public class BillingSetupServiceClient implements BackgroundResource {
   private static final PathTemplate BILLING_SETUP_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/billingSetups/{billing_setup}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a billing_setup resource.
-   *
-   * @deprecated Use the {@link BillingSetupName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a billing_setup resource. */
   public static final String formatBillingSetupName(String customer, String billingSetup) {
     return BILLING_SETUP_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -124,10 +119,7 @@ public class BillingSetupServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a billing_setup
    * resource.
-   *
-   * @deprecated Use the {@link BillingSetupName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromBillingSetupName(String billingSetupName) {
     return BILLING_SETUP_PATH_TEMPLATE.parse(billingSetupName).get("customer");
   }
@@ -135,10 +127,7 @@ public class BillingSetupServiceClient implements BackgroundResource {
   /**
    * Parses the billing_setup from the given fully-qualified path which represents a billing_setup
    * resource.
-   *
-   * @deprecated Use the {@link BillingSetupName} class instead.
    */
-  @Deprecated
   public static final String parseBillingSetupFromBillingSetupName(String billingSetupName) {
     return BILLING_SETUP_PATH_TEMPLATE.parse(billingSetupName).get("billing_setup");
   }

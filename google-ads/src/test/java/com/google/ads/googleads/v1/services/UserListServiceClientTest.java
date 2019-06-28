@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -390,7 +390,7 @@ public class UserListServiceClientTest {
     UserList actualResponse = client.getUserList(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockUserListService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockUserListService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetUserListRequest actualRequest = (GetUserListRequest) actualRequests.get(0);
 
@@ -433,7 +433,7 @@ public class UserListServiceClientTest {
         client.mutateUserLists(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockUserListService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockUserListService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateUserListsRequest actualRequest = (MutateUserListsRequest) actualRequests.get(0);
 
@@ -478,7 +478,7 @@ public class UserListServiceClientTest {
     MutateUserListsResponse actualResponse = client.mutateUserLists(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockUserListService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockUserListService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateUserListsRequest actualRequest = (MutateUserListsRequest) actualRequests.get(0);
 

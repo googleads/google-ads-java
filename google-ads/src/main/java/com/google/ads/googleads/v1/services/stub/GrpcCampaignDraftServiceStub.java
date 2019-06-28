@@ -31,16 +31,13 @@ import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.OperationCallable;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.Operation;
 import com.google.longrunning.stub.GrpcOperationsStub;
 import com.google.protobuf.Empty;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -161,42 +158,15 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
     GrpcCallSettings<GetCampaignDraftRequest, CampaignDraft> getCampaignDraftTransportSettings =
         GrpcCallSettings.<GetCampaignDraftRequest, CampaignDraft>newBuilder()
             .setMethodDescriptor(getCampaignDraftMethodDescriptor)
-            .setParamsExtractor(
-                new RequestParamsExtractor<GetCampaignDraftRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetCampaignDraftRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
-                })
             .build();
     GrpcCallSettings<MutateCampaignDraftsRequest, MutateCampaignDraftsResponse>
         mutateCampaignDraftsTransportSettings =
             GrpcCallSettings.<MutateCampaignDraftsRequest, MutateCampaignDraftsResponse>newBuilder()
                 .setMethodDescriptor(mutateCampaignDraftsMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCampaignDraftsRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateCampaignDraftsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
-                    })
                 .build();
     GrpcCallSettings<PromoteCampaignDraftRequest, Operation> promoteCampaignDraftTransportSettings =
         GrpcCallSettings.<PromoteCampaignDraftRequest, Operation>newBuilder()
             .setMethodDescriptor(promoteCampaignDraftMethodDescriptor)
-            .setParamsExtractor(
-                new RequestParamsExtractor<PromoteCampaignDraftRequest>() {
-                  @Override
-                  public Map<String, String> extract(PromoteCampaignDraftRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("campaign_draft", String.valueOf(request.getCampaignDraft()));
-                    return params.build();
-                  }
-                })
             .build();
     GrpcCallSettings<ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse>
         listCampaignDraftAsyncErrorsTransportSettings =
@@ -204,16 +174,6 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
                 .<ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse>
                     newBuilder()
                 .setMethodDescriptor(listCampaignDraftAsyncErrorsMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<ListCampaignDraftAsyncErrorsRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          ListCampaignDraftAsyncErrorsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
-                    })
                 .build();
 
     this.getCampaignDraftCallable =

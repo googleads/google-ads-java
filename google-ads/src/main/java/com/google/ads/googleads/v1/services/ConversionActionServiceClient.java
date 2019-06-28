@@ -106,10 +106,7 @@ public class ConversionActionServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a conversion_action resource.
-   *
-   * @deprecated Use the {@link ConversionActionName} class instead.
    */
-  @Deprecated
   public static final String formatConversionActionName(String customer, String conversionAction) {
     return CONVERSION_ACTION_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -119,10 +116,7 @@ public class ConversionActionServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a conversion_action
    * resource.
-   *
-   * @deprecated Use the {@link ConversionActionName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromConversionActionName(String conversionActionName) {
     return CONVERSION_ACTION_PATH_TEMPLATE.parse(conversionActionName).get("customer");
   }
@@ -130,10 +124,7 @@ public class ConversionActionServiceClient implements BackgroundResource {
   /**
    * Parses the conversion_action from the given fully-qualified path which represents a
    * conversion_action resource.
-   *
-   * @deprecated Use the {@link ConversionActionName} class instead.
    */
-  @Deprecated
   public static final String parseConversionActionFromConversionActionName(
       String conversionActionName) {
     return CONVERSION_ACTION_PATH_TEMPLATE.parse(conversionActionName).get("conversion_action");

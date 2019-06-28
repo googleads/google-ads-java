@@ -53,39 +53,38 @@ public final class FeedMappingServiceProto {
       "ads.v1.services\0324google/ads/googleads/v1" +
       "/resources/feed_mapping.proto\032\034google/ap" +
       "i/annotations.proto\032\036google/protobuf/wra" +
-      "ppers.proto\032\027google/rpc/status.proto\032\027go" +
-      "ogle/api/client.proto\".\n\025GetFeedMappingR" +
-      "equest\022\025\n\rresource_name\030\001 \001(\t\"\254\001\n\031Mutate" +
-      "FeedMappingsRequest\022\023\n\013customer_id\030\001 \001(\t" +
-      "\022J\n\noperations\030\002 \003(\01326.google.ads.google" +
-      "ads.v1.services.FeedMappingOperation\022\027\n\017" +
-      "partial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004" +
-      " \001(\010\"w\n\024FeedMappingOperation\022@\n\006create\030\001" +
-      " \001(\0132..google.ads.googleads.v1.resources" +
-      ".FeedMappingH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toper" +
-      "ation\"\233\001\n\032MutateFeedMappingsResponse\0221\n\025" +
-      "partial_failure_error\030\003 \001(\0132\022.google.rpc" +
-      ".Status\022J\n\007results\030\002 \003(\01329.google.ads.go" +
-      "ogleads.v1.services.MutateFeedMappingRes" +
-      "ult\"0\n\027MutateFeedMappingResult\022\025\n\rresour" +
-      "ce_name\030\001 \001(\t2\265\003\n\022FeedMappingService\022\261\001\n" +
-      "\016GetFeedMapping\0227.google.ads.googleads.v" +
-      "1.services.GetFeedMappingRequest\032..googl" +
-      "e.ads.googleads.v1.resources.FeedMapping" +
-      "\"6\202\323\344\223\0020\022./v1/{resource_name=customers/*" +
-      "/feedMappings/*}\022\315\001\n\022MutateFeedMappings\022" +
-      ";.google.ads.googleads.v1.services.Mutat" +
-      "eFeedMappingsRequest\032<.google.ads.google" +
-      "ads.v1.services.MutateFeedMappingsRespon" +
-      "se\"<\202\323\344\223\0026\"1/v1/customers/{customer_id=*" +
-      "}/feedMappings:mutate:\001*\032\033\312A\030googleads.g" +
-      "oogleapis.comB\376\001\n$com.google.ads.googlea" +
-      "ds.v1.servicesB\027FeedMappingServiceProtoP" +
-      "\001ZHgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v1/services;services\242\002\003GA" +
-      "A\252\002 Google.Ads.GoogleAds.V1.Services\312\002 G" +
-      "oogle\\Ads\\GoogleAds\\V1\\Services\352\002$Google" +
-      "::Ads::GoogleAds::V1::Servicesb\006proto3"
+      "ppers.proto\032\027google/rpc/status.proto\".\n\025" +
+      "GetFeedMappingRequest\022\025\n\rresource_name\030\001" +
+      " \001(\t\"\254\001\n\031MutateFeedMappingsRequest\022\023\n\013cu" +
+      "stomer_id\030\001 \001(\t\022J\n\noperations\030\002 \003(\01326.go" +
+      "ogle.ads.googleads.v1.services.FeedMappi" +
+      "ngOperation\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\r" +
+      "validate_only\030\004 \001(\010\"w\n\024FeedMappingOperat" +
+      "ion\022@\n\006create\030\001 \001(\0132..google.ads.googlea" +
+      "ds.v1.resources.FeedMappingH\000\022\020\n\006remove\030" +
+      "\003 \001(\tH\000B\013\n\toperation\"\233\001\n\032MutateFeedMappi" +
+      "ngsResponse\0221\n\025partial_failure_error\030\003 \001" +
+      "(\0132\022.google.rpc.Status\022J\n\007results\030\002 \003(\0132" +
+      "9.google.ads.googleads.v1.services.Mutat" +
+      "eFeedMappingResult\"0\n\027MutateFeedMappingR" +
+      "esult\022\025\n\rresource_name\030\001 \001(\t2\230\003\n\022FeedMap" +
+      "pingService\022\261\001\n\016GetFeedMapping\0227.google." +
+      "ads.googleads.v1.services.GetFeedMapping" +
+      "Request\032..google.ads.googleads.v1.resour" +
+      "ces.FeedMapping\"6\202\323\344\223\0020\022./v1/{resource_n" +
+      "ame=customers/*/feedMappings/*}\022\315\001\n\022Muta" +
+      "teFeedMappings\022;.google.ads.googleads.v1" +
+      ".services.MutateFeedMappingsRequest\032<.go" +
+      "ogle.ads.googleads.v1.services.MutateFee" +
+      "dMappingsResponse\"<\202\323\344\223\0026\"1/v1/customers" +
+      "/{customer_id=*}/feedMappings:mutate:\001*B" +
+      "\376\001\n$com.google.ads.googleads.v1.services" +
+      "B\027FeedMappingServiceProtoP\001ZHgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v1/services;services\242\002\003GAA\252\002 Google.Ads" +
+      ".GoogleAds.V1.Services\312\002 Google\\Ads\\Goog" +
+      "leAds\\V1\\Services\352\002$Google::Ads::GoogleA" +
+      "ds::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -102,7 +101,6 @@ public final class FeedMappingServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetFeedMappingRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -136,7 +134,6 @@ public final class FeedMappingServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -144,7 +141,6 @@ public final class FeedMappingServiceProto {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

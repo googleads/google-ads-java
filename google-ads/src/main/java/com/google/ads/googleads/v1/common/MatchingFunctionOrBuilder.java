@@ -17,7 +17,8 @@ public interface MatchingFunctionOrBuilder extends
    * 4) CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
    * 5) AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
    * See
-   * https://developers.google.com/adwords/api/docs/guides/feed-matching-functions
+   * https:
+   * //developers.google.com/adwords/api/docs/guides/feed-matching-functions
    * Note that because multiple strings may represent the same underlying
    * function (whitespace and single versus double quotation marks, for
    * example), the value returned may not be identical to the string sent in a
@@ -37,7 +38,8 @@ public interface MatchingFunctionOrBuilder extends
    * 4) CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
    * 5) AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
    * See
-   * https://developers.google.com/adwords/api/docs/guides/feed-matching-functions
+   * https:
+   * //developers.google.com/adwords/api/docs/guides/feed-matching-functions
    * Note that because multiple strings may represent the same underlying
    * function (whitespace and single versus double quotation marks, for
    * example), the value returned may not be identical to the string sent in a
@@ -57,7 +59,8 @@ public interface MatchingFunctionOrBuilder extends
    * 4) CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
    * 5) AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
    * See
-   * https://developers.google.com/adwords/api/docs/guides/feed-matching-functions
+   * https:
+   * //developers.google.com/adwords/api/docs/guides/feed-matching-functions
    * Note that because multiple strings may represent the same underlying
    * function (whitespace and single versus double quotation marks, for
    * example), the value returned may not be identical to the string sent in a

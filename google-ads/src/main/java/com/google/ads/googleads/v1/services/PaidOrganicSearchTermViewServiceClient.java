@@ -106,10 +106,7 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
   /**
    * Formats a string containing the fully-qualified path to represent a
    * paid_organic_search_term_view resource.
-   *
-   * @deprecated Use the {@link PaidOrganicSearchTermViewName} class instead.
    */
-  @Deprecated
   public static final String formatPaidOrganicSearchTermViewName(
       String customer, String paidOrganicSearchTermView) {
     return PAID_ORGANIC_SEARCH_TERM_VIEW_PATH_TEMPLATE.instantiate(
@@ -120,10 +117,7 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * paid_organic_search_term_view resource.
-   *
-   * @deprecated Use the {@link PaidOrganicSearchTermViewName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromPaidOrganicSearchTermViewName(
       String paidOrganicSearchTermViewName) {
     return PAID_ORGANIC_SEARCH_TERM_VIEW_PATH_TEMPLATE
@@ -134,10 +128,7 @@ public class PaidOrganicSearchTermViewServiceClient implements BackgroundResourc
   /**
    * Parses the paid_organic_search_term_view from the given fully-qualified path which represents a
    * paid_organic_search_term_view resource.
-   *
-   * @deprecated Use the {@link PaidOrganicSearchTermViewName} class instead.
    */
-  @Deprecated
   public static final String parsePaidOrganicSearchTermViewFromPaidOrganicSearchTermViewName(
       String paidOrganicSearchTermViewName) {
     return PAID_ORGANIC_SEARCH_TERM_VIEW_PATH_TEMPLATE

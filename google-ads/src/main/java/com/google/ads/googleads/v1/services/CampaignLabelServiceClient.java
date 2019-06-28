@@ -105,10 +105,7 @@ public class CampaignLabelServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a campaign_label resource.
-   *
-   * @deprecated Use the {@link CampaignLabelName} class instead.
    */
-  @Deprecated
   public static final String formatCampaignLabelName(String customer, String campaignLabel) {
     return CAMPAIGN_LABEL_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -118,10 +115,7 @@ public class CampaignLabelServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a campaign_label
    * resource.
-   *
-   * @deprecated Use the {@link CampaignLabelName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromCampaignLabelName(String campaignLabelName) {
     return CAMPAIGN_LABEL_PATH_TEMPLATE.parse(campaignLabelName).get("customer");
   }
@@ -129,10 +123,7 @@ public class CampaignLabelServiceClient implements BackgroundResource {
   /**
    * Parses the campaign_label from the given fully-qualified path which represents a campaign_label
    * resource.
-   *
-   * @deprecated Use the {@link CampaignLabelName} class instead.
    */
-  @Deprecated
   public static final String parseCampaignLabelFromCampaignLabelName(String campaignLabelName) {
     return CAMPAIGN_LABEL_PATH_TEMPLATE.parse(campaignLabelName).get("campaign_label");
   }

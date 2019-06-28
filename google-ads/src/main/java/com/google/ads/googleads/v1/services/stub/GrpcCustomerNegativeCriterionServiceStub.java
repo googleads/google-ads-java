@@ -25,13 +25,10 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.common.collect.ImmutableMap;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -131,16 +128,6 @@ public class GrpcCustomerNegativeCriterionServiceStub extends CustomerNegativeCr
             GrpcCallSettings
                 .<GetCustomerNegativeCriterionRequest, CustomerNegativeCriterion>newBuilder()
                 .setMethodDescriptor(getCustomerNegativeCriterionMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<GetCustomerNegativeCriterionRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          GetCustomerNegativeCriterionRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
-                    })
                 .build();
     GrpcCallSettings<MutateCustomerNegativeCriteriaRequest, MutateCustomerNegativeCriteriaResponse>
         mutateCustomerNegativeCriteriaTransportSettings =
@@ -148,16 +135,6 @@ public class GrpcCustomerNegativeCriterionServiceStub extends CustomerNegativeCr
                 .<MutateCustomerNegativeCriteriaRequest, MutateCustomerNegativeCriteriaResponse>
                     newBuilder()
                 .setMethodDescriptor(mutateCustomerNegativeCriteriaMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCustomerNegativeCriteriaRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          MutateCustomerNegativeCriteriaRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
-                    })
                 .build();
 
     this.getCustomerNegativeCriterionCallable =

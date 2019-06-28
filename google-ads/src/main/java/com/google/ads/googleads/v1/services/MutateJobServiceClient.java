@@ -118,12 +118,7 @@ public class MutateJobServiceClient implements BackgroundResource {
   private static final PathTemplate MUTATE_JOB_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/mutateJobs/{mutate_job}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a mutate_job resource.
-   *
-   * @deprecated Use the {@link MutateJobName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a mutate_job resource. */
   public static final String formatMutateJobName(String customer, String mutateJob) {
     return MUTATE_JOB_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -132,10 +127,7 @@ public class MutateJobServiceClient implements BackgroundResource {
 
   /**
    * Parses the customer from the given fully-qualified path which represents a mutate_job resource.
-   *
-   * @deprecated Use the {@link MutateJobName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromMutateJobName(String mutateJobName) {
     return MUTATE_JOB_PATH_TEMPLATE.parse(mutateJobName).get("customer");
   }
@@ -143,10 +135,7 @@ public class MutateJobServiceClient implements BackgroundResource {
   /**
    * Parses the mutate_job from the given fully-qualified path which represents a mutate_job
    * resource.
-   *
-   * @deprecated Use the {@link MutateJobName} class instead.
    */
-  @Deprecated
   public static final String parseMutateJobFromMutateJobName(String mutateJobName) {
     return MUTATE_JOB_PATH_TEMPLATE.parse(mutateJobName).get("mutate_job");
   }

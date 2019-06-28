@@ -904,7 +904,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -3856,303 +3856,304 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.Segments other = (com.google.ads.googleads.v1.common.Segments) obj;
 
-    if (adNetworkType_ != other.adNetworkType_) return false;
-    if (clickType_ != other.clickType_) return false;
-    if (hasConversionAction() != other.hasConversionAction()) return false;
+    boolean result = true;
+    result = result && adNetworkType_ == other.adNetworkType_;
+    result = result && clickType_ == other.clickType_;
+    result = result && (hasConversionAction() == other.hasConversionAction());
     if (hasConversionAction()) {
-      if (!getConversionAction()
-          .equals(other.getConversionAction())) return false;
+      result = result && getConversionAction()
+          .equals(other.getConversionAction());
     }
-    if (conversionActionCategory_ != other.conversionActionCategory_) return false;
-    if (hasConversionActionName() != other.hasConversionActionName()) return false;
+    result = result && conversionActionCategory_ == other.conversionActionCategory_;
+    result = result && (hasConversionActionName() == other.hasConversionActionName());
     if (hasConversionActionName()) {
-      if (!getConversionActionName()
-          .equals(other.getConversionActionName())) return false;
+      result = result && getConversionActionName()
+          .equals(other.getConversionActionName());
     }
-    if (hasConversionAdjustment() != other.hasConversionAdjustment()) return false;
+    result = result && (hasConversionAdjustment() == other.hasConversionAdjustment());
     if (hasConversionAdjustment()) {
-      if (!getConversionAdjustment()
-          .equals(other.getConversionAdjustment())) return false;
+      result = result && getConversionAdjustment()
+          .equals(other.getConversionAdjustment());
     }
-    if (conversionAttributionEventType_ != other.conversionAttributionEventType_) return false;
-    if (conversionLagBucket_ != other.conversionLagBucket_) return false;
-    if (conversionOrAdjustmentLagBucket_ != other.conversionOrAdjustmentLagBucket_) return false;
-    if (hasDate() != other.hasDate()) return false;
+    result = result && conversionAttributionEventType_ == other.conversionAttributionEventType_;
+    result = result && conversionLagBucket_ == other.conversionLagBucket_;
+    result = result && conversionOrAdjustmentLagBucket_ == other.conversionOrAdjustmentLagBucket_;
+    result = result && (hasDate() == other.hasDate());
     if (hasDate()) {
-      if (!getDate()
-          .equals(other.getDate())) return false;
+      result = result && getDate()
+          .equals(other.getDate());
     }
-    if (dayOfWeek_ != other.dayOfWeek_) return false;
-    if (device_ != other.device_) return false;
-    if (externalConversionSource_ != other.externalConversionSource_) return false;
-    if (hasGeoTargetAirport() != other.hasGeoTargetAirport()) return false;
+    result = result && dayOfWeek_ == other.dayOfWeek_;
+    result = result && device_ == other.device_;
+    result = result && externalConversionSource_ == other.externalConversionSource_;
+    result = result && (hasGeoTargetAirport() == other.hasGeoTargetAirport());
     if (hasGeoTargetAirport()) {
-      if (!getGeoTargetAirport()
-          .equals(other.getGeoTargetAirport())) return false;
+      result = result && getGeoTargetAirport()
+          .equals(other.getGeoTargetAirport());
     }
-    if (hasGeoTargetCity() != other.hasGeoTargetCity()) return false;
+    result = result && (hasGeoTargetCity() == other.hasGeoTargetCity());
     if (hasGeoTargetCity()) {
-      if (!getGeoTargetCity()
-          .equals(other.getGeoTargetCity())) return false;
+      result = result && getGeoTargetCity()
+          .equals(other.getGeoTargetCity());
     }
-    if (hasGeoTargetCounty() != other.hasGeoTargetCounty()) return false;
+    result = result && (hasGeoTargetCounty() == other.hasGeoTargetCounty());
     if (hasGeoTargetCounty()) {
-      if (!getGeoTargetCounty()
-          .equals(other.getGeoTargetCounty())) return false;
+      result = result && getGeoTargetCounty()
+          .equals(other.getGeoTargetCounty());
     }
-    if (hasGeoTargetDistrict() != other.hasGeoTargetDistrict()) return false;
+    result = result && (hasGeoTargetDistrict() == other.hasGeoTargetDistrict());
     if (hasGeoTargetDistrict()) {
-      if (!getGeoTargetDistrict()
-          .equals(other.getGeoTargetDistrict())) return false;
+      result = result && getGeoTargetDistrict()
+          .equals(other.getGeoTargetDistrict());
     }
-    if (hasGeoTargetMetro() != other.hasGeoTargetMetro()) return false;
+    result = result && (hasGeoTargetMetro() == other.hasGeoTargetMetro());
     if (hasGeoTargetMetro()) {
-      if (!getGeoTargetMetro()
-          .equals(other.getGeoTargetMetro())) return false;
+      result = result && getGeoTargetMetro()
+          .equals(other.getGeoTargetMetro());
     }
-    if (hasGeoTargetMostSpecificLocation() != other.hasGeoTargetMostSpecificLocation()) return false;
+    result = result && (hasGeoTargetMostSpecificLocation() == other.hasGeoTargetMostSpecificLocation());
     if (hasGeoTargetMostSpecificLocation()) {
-      if (!getGeoTargetMostSpecificLocation()
-          .equals(other.getGeoTargetMostSpecificLocation())) return false;
+      result = result && getGeoTargetMostSpecificLocation()
+          .equals(other.getGeoTargetMostSpecificLocation());
     }
-    if (hasGeoTargetPostalCode() != other.hasGeoTargetPostalCode()) return false;
+    result = result && (hasGeoTargetPostalCode() == other.hasGeoTargetPostalCode());
     if (hasGeoTargetPostalCode()) {
-      if (!getGeoTargetPostalCode()
-          .equals(other.getGeoTargetPostalCode())) return false;
+      result = result && getGeoTargetPostalCode()
+          .equals(other.getGeoTargetPostalCode());
     }
-    if (hasGeoTargetProvince() != other.hasGeoTargetProvince()) return false;
+    result = result && (hasGeoTargetProvince() == other.hasGeoTargetProvince());
     if (hasGeoTargetProvince()) {
-      if (!getGeoTargetProvince()
-          .equals(other.getGeoTargetProvince())) return false;
+      result = result && getGeoTargetProvince()
+          .equals(other.getGeoTargetProvince());
     }
-    if (hasGeoTargetRegion() != other.hasGeoTargetRegion()) return false;
+    result = result && (hasGeoTargetRegion() == other.hasGeoTargetRegion());
     if (hasGeoTargetRegion()) {
-      if (!getGeoTargetRegion()
-          .equals(other.getGeoTargetRegion())) return false;
+      result = result && getGeoTargetRegion()
+          .equals(other.getGeoTargetRegion());
     }
-    if (hasGeoTargetState() != other.hasGeoTargetState()) return false;
+    result = result && (hasGeoTargetState() == other.hasGeoTargetState());
     if (hasGeoTargetState()) {
-      if (!getGeoTargetState()
-          .equals(other.getGeoTargetState())) return false;
+      result = result && getGeoTargetState()
+          .equals(other.getGeoTargetState());
     }
-    if (hasHotelBookingWindowDays() != other.hasHotelBookingWindowDays()) return false;
+    result = result && (hasHotelBookingWindowDays() == other.hasHotelBookingWindowDays());
     if (hasHotelBookingWindowDays()) {
-      if (!getHotelBookingWindowDays()
-          .equals(other.getHotelBookingWindowDays())) return false;
+      result = result && getHotelBookingWindowDays()
+          .equals(other.getHotelBookingWindowDays());
     }
-    if (hasHotelCenterId() != other.hasHotelCenterId()) return false;
+    result = result && (hasHotelCenterId() == other.hasHotelCenterId());
     if (hasHotelCenterId()) {
-      if (!getHotelCenterId()
-          .equals(other.getHotelCenterId())) return false;
+      result = result && getHotelCenterId()
+          .equals(other.getHotelCenterId());
     }
-    if (hasHotelCheckInDate() != other.hasHotelCheckInDate()) return false;
+    result = result && (hasHotelCheckInDate() == other.hasHotelCheckInDate());
     if (hasHotelCheckInDate()) {
-      if (!getHotelCheckInDate()
-          .equals(other.getHotelCheckInDate())) return false;
+      result = result && getHotelCheckInDate()
+          .equals(other.getHotelCheckInDate());
     }
-    if (hotelCheckInDayOfWeek_ != other.hotelCheckInDayOfWeek_) return false;
-    if (hasHotelCity() != other.hasHotelCity()) return false;
+    result = result && hotelCheckInDayOfWeek_ == other.hotelCheckInDayOfWeek_;
+    result = result && (hasHotelCity() == other.hasHotelCity());
     if (hasHotelCity()) {
-      if (!getHotelCity()
-          .equals(other.getHotelCity())) return false;
+      result = result && getHotelCity()
+          .equals(other.getHotelCity());
     }
-    if (hasHotelClass() != other.hasHotelClass()) return false;
+    result = result && (hasHotelClass() == other.hasHotelClass());
     if (hasHotelClass()) {
-      if (!getHotelClass()
-          .equals(other.getHotelClass())) return false;
+      result = result && getHotelClass()
+          .equals(other.getHotelClass());
     }
-    if (hasHotelCountry() != other.hasHotelCountry()) return false;
+    result = result && (hasHotelCountry() == other.hasHotelCountry());
     if (hasHotelCountry()) {
-      if (!getHotelCountry()
-          .equals(other.getHotelCountry())) return false;
+      result = result && getHotelCountry()
+          .equals(other.getHotelCountry());
     }
-    if (hotelDateSelectionType_ != other.hotelDateSelectionType_) return false;
-    if (hasHotelLengthOfStay() != other.hasHotelLengthOfStay()) return false;
+    result = result && hotelDateSelectionType_ == other.hotelDateSelectionType_;
+    result = result && (hasHotelLengthOfStay() == other.hasHotelLengthOfStay());
     if (hasHotelLengthOfStay()) {
-      if (!getHotelLengthOfStay()
-          .equals(other.getHotelLengthOfStay())) return false;
+      result = result && getHotelLengthOfStay()
+          .equals(other.getHotelLengthOfStay());
     }
-    if (hasHotelRateRuleId() != other.hasHotelRateRuleId()) return false;
+    result = result && (hasHotelRateRuleId() == other.hasHotelRateRuleId());
     if (hasHotelRateRuleId()) {
-      if (!getHotelRateRuleId()
-          .equals(other.getHotelRateRuleId())) return false;
+      result = result && getHotelRateRuleId()
+          .equals(other.getHotelRateRuleId());
     }
-    if (hotelRateType_ != other.hotelRateType_) return false;
-    if (hasHotelState() != other.hasHotelState()) return false;
+    result = result && hotelRateType_ == other.hotelRateType_;
+    result = result && (hasHotelState() == other.hasHotelState());
     if (hasHotelState()) {
-      if (!getHotelState()
-          .equals(other.getHotelState())) return false;
+      result = result && getHotelState()
+          .equals(other.getHotelState());
     }
-    if (hasHour() != other.hasHour()) return false;
+    result = result && (hasHour() == other.hasHour());
     if (hasHour()) {
-      if (!getHour()
-          .equals(other.getHour())) return false;
+      result = result && getHour()
+          .equals(other.getHour());
     }
-    if (hasInteractionOnThisExtension() != other.hasInteractionOnThisExtension()) return false;
+    result = result && (hasInteractionOnThisExtension() == other.hasInteractionOnThisExtension());
     if (hasInteractionOnThisExtension()) {
-      if (!getInteractionOnThisExtension()
-          .equals(other.getInteractionOnThisExtension())) return false;
+      result = result && getInteractionOnThisExtension()
+          .equals(other.getInteractionOnThisExtension());
     }
-    if (hasKeyword() != other.hasKeyword()) return false;
+    result = result && (hasKeyword() == other.hasKeyword());
     if (hasKeyword()) {
-      if (!getKeyword()
-          .equals(other.getKeyword())) return false;
+      result = result && getKeyword()
+          .equals(other.getKeyword());
     }
-    if (hasMonth() != other.hasMonth()) return false;
+    result = result && (hasMonth() == other.hasMonth());
     if (hasMonth()) {
-      if (!getMonth()
-          .equals(other.getMonth())) return false;
+      result = result && getMonth()
+          .equals(other.getMonth());
     }
-    if (monthOfYear_ != other.monthOfYear_) return false;
-    if (hasPartnerHotelId() != other.hasPartnerHotelId()) return false;
+    result = result && monthOfYear_ == other.monthOfYear_;
+    result = result && (hasPartnerHotelId() == other.hasPartnerHotelId());
     if (hasPartnerHotelId()) {
-      if (!getPartnerHotelId()
-          .equals(other.getPartnerHotelId())) return false;
+      result = result && getPartnerHotelId()
+          .equals(other.getPartnerHotelId());
     }
-    if (placeholderType_ != other.placeholderType_) return false;
-    if (hasProductAggregatorId() != other.hasProductAggregatorId()) return false;
+    result = result && placeholderType_ == other.placeholderType_;
+    result = result && (hasProductAggregatorId() == other.hasProductAggregatorId());
     if (hasProductAggregatorId()) {
-      if (!getProductAggregatorId()
-          .equals(other.getProductAggregatorId())) return false;
+      result = result && getProductAggregatorId()
+          .equals(other.getProductAggregatorId());
     }
-    if (hasProductBiddingCategoryLevel1() != other.hasProductBiddingCategoryLevel1()) return false;
+    result = result && (hasProductBiddingCategoryLevel1() == other.hasProductBiddingCategoryLevel1());
     if (hasProductBiddingCategoryLevel1()) {
-      if (!getProductBiddingCategoryLevel1()
-          .equals(other.getProductBiddingCategoryLevel1())) return false;
+      result = result && getProductBiddingCategoryLevel1()
+          .equals(other.getProductBiddingCategoryLevel1());
     }
-    if (hasProductBiddingCategoryLevel2() != other.hasProductBiddingCategoryLevel2()) return false;
+    result = result && (hasProductBiddingCategoryLevel2() == other.hasProductBiddingCategoryLevel2());
     if (hasProductBiddingCategoryLevel2()) {
-      if (!getProductBiddingCategoryLevel2()
-          .equals(other.getProductBiddingCategoryLevel2())) return false;
+      result = result && getProductBiddingCategoryLevel2()
+          .equals(other.getProductBiddingCategoryLevel2());
     }
-    if (hasProductBiddingCategoryLevel3() != other.hasProductBiddingCategoryLevel3()) return false;
+    result = result && (hasProductBiddingCategoryLevel3() == other.hasProductBiddingCategoryLevel3());
     if (hasProductBiddingCategoryLevel3()) {
-      if (!getProductBiddingCategoryLevel3()
-          .equals(other.getProductBiddingCategoryLevel3())) return false;
+      result = result && getProductBiddingCategoryLevel3()
+          .equals(other.getProductBiddingCategoryLevel3());
     }
-    if (hasProductBiddingCategoryLevel4() != other.hasProductBiddingCategoryLevel4()) return false;
+    result = result && (hasProductBiddingCategoryLevel4() == other.hasProductBiddingCategoryLevel4());
     if (hasProductBiddingCategoryLevel4()) {
-      if (!getProductBiddingCategoryLevel4()
-          .equals(other.getProductBiddingCategoryLevel4())) return false;
+      result = result && getProductBiddingCategoryLevel4()
+          .equals(other.getProductBiddingCategoryLevel4());
     }
-    if (hasProductBiddingCategoryLevel5() != other.hasProductBiddingCategoryLevel5()) return false;
+    result = result && (hasProductBiddingCategoryLevel5() == other.hasProductBiddingCategoryLevel5());
     if (hasProductBiddingCategoryLevel5()) {
-      if (!getProductBiddingCategoryLevel5()
-          .equals(other.getProductBiddingCategoryLevel5())) return false;
+      result = result && getProductBiddingCategoryLevel5()
+          .equals(other.getProductBiddingCategoryLevel5());
     }
-    if (hasProductBrand() != other.hasProductBrand()) return false;
+    result = result && (hasProductBrand() == other.hasProductBrand());
     if (hasProductBrand()) {
-      if (!getProductBrand()
-          .equals(other.getProductBrand())) return false;
+      result = result && getProductBrand()
+          .equals(other.getProductBrand());
     }
-    if (productChannel_ != other.productChannel_) return false;
-    if (productChannelExclusivity_ != other.productChannelExclusivity_) return false;
-    if (productCondition_ != other.productCondition_) return false;
-    if (hasProductCountry() != other.hasProductCountry()) return false;
+    result = result && productChannel_ == other.productChannel_;
+    result = result && productChannelExclusivity_ == other.productChannelExclusivity_;
+    result = result && productCondition_ == other.productCondition_;
+    result = result && (hasProductCountry() == other.hasProductCountry());
     if (hasProductCountry()) {
-      if (!getProductCountry()
-          .equals(other.getProductCountry())) return false;
+      result = result && getProductCountry()
+          .equals(other.getProductCountry());
     }
-    if (hasProductCustomAttribute0() != other.hasProductCustomAttribute0()) return false;
+    result = result && (hasProductCustomAttribute0() == other.hasProductCustomAttribute0());
     if (hasProductCustomAttribute0()) {
-      if (!getProductCustomAttribute0()
-          .equals(other.getProductCustomAttribute0())) return false;
+      result = result && getProductCustomAttribute0()
+          .equals(other.getProductCustomAttribute0());
     }
-    if (hasProductCustomAttribute1() != other.hasProductCustomAttribute1()) return false;
+    result = result && (hasProductCustomAttribute1() == other.hasProductCustomAttribute1());
     if (hasProductCustomAttribute1()) {
-      if (!getProductCustomAttribute1()
-          .equals(other.getProductCustomAttribute1())) return false;
+      result = result && getProductCustomAttribute1()
+          .equals(other.getProductCustomAttribute1());
     }
-    if (hasProductCustomAttribute2() != other.hasProductCustomAttribute2()) return false;
+    result = result && (hasProductCustomAttribute2() == other.hasProductCustomAttribute2());
     if (hasProductCustomAttribute2()) {
-      if (!getProductCustomAttribute2()
-          .equals(other.getProductCustomAttribute2())) return false;
+      result = result && getProductCustomAttribute2()
+          .equals(other.getProductCustomAttribute2());
     }
-    if (hasProductCustomAttribute3() != other.hasProductCustomAttribute3()) return false;
+    result = result && (hasProductCustomAttribute3() == other.hasProductCustomAttribute3());
     if (hasProductCustomAttribute3()) {
-      if (!getProductCustomAttribute3()
-          .equals(other.getProductCustomAttribute3())) return false;
+      result = result && getProductCustomAttribute3()
+          .equals(other.getProductCustomAttribute3());
     }
-    if (hasProductCustomAttribute4() != other.hasProductCustomAttribute4()) return false;
+    result = result && (hasProductCustomAttribute4() == other.hasProductCustomAttribute4());
     if (hasProductCustomAttribute4()) {
-      if (!getProductCustomAttribute4()
-          .equals(other.getProductCustomAttribute4())) return false;
+      result = result && getProductCustomAttribute4()
+          .equals(other.getProductCustomAttribute4());
     }
-    if (hasProductItemId() != other.hasProductItemId()) return false;
+    result = result && (hasProductItemId() == other.hasProductItemId());
     if (hasProductItemId()) {
-      if (!getProductItemId()
-          .equals(other.getProductItemId())) return false;
+      result = result && getProductItemId()
+          .equals(other.getProductItemId());
     }
-    if (hasProductLanguage() != other.hasProductLanguage()) return false;
+    result = result && (hasProductLanguage() == other.hasProductLanguage());
     if (hasProductLanguage()) {
-      if (!getProductLanguage()
-          .equals(other.getProductLanguage())) return false;
+      result = result && getProductLanguage()
+          .equals(other.getProductLanguage());
     }
-    if (hasProductMerchantId() != other.hasProductMerchantId()) return false;
+    result = result && (hasProductMerchantId() == other.hasProductMerchantId());
     if (hasProductMerchantId()) {
-      if (!getProductMerchantId()
-          .equals(other.getProductMerchantId())) return false;
+      result = result && getProductMerchantId()
+          .equals(other.getProductMerchantId());
     }
-    if (hasProductStoreId() != other.hasProductStoreId()) return false;
+    result = result && (hasProductStoreId() == other.hasProductStoreId());
     if (hasProductStoreId()) {
-      if (!getProductStoreId()
-          .equals(other.getProductStoreId())) return false;
+      result = result && getProductStoreId()
+          .equals(other.getProductStoreId());
     }
-    if (hasProductTitle() != other.hasProductTitle()) return false;
+    result = result && (hasProductTitle() == other.hasProductTitle());
     if (hasProductTitle()) {
-      if (!getProductTitle()
-          .equals(other.getProductTitle())) return false;
+      result = result && getProductTitle()
+          .equals(other.getProductTitle());
     }
-    if (hasProductTypeL1() != other.hasProductTypeL1()) return false;
+    result = result && (hasProductTypeL1() == other.hasProductTypeL1());
     if (hasProductTypeL1()) {
-      if (!getProductTypeL1()
-          .equals(other.getProductTypeL1())) return false;
+      result = result && getProductTypeL1()
+          .equals(other.getProductTypeL1());
     }
-    if (hasProductTypeL2() != other.hasProductTypeL2()) return false;
+    result = result && (hasProductTypeL2() == other.hasProductTypeL2());
     if (hasProductTypeL2()) {
-      if (!getProductTypeL2()
-          .equals(other.getProductTypeL2())) return false;
+      result = result && getProductTypeL2()
+          .equals(other.getProductTypeL2());
     }
-    if (hasProductTypeL3() != other.hasProductTypeL3()) return false;
+    result = result && (hasProductTypeL3() == other.hasProductTypeL3());
     if (hasProductTypeL3()) {
-      if (!getProductTypeL3()
-          .equals(other.getProductTypeL3())) return false;
+      result = result && getProductTypeL3()
+          .equals(other.getProductTypeL3());
     }
-    if (hasProductTypeL4() != other.hasProductTypeL4()) return false;
+    result = result && (hasProductTypeL4() == other.hasProductTypeL4());
     if (hasProductTypeL4()) {
-      if (!getProductTypeL4()
-          .equals(other.getProductTypeL4())) return false;
+      result = result && getProductTypeL4()
+          .equals(other.getProductTypeL4());
     }
-    if (hasProductTypeL5() != other.hasProductTypeL5()) return false;
+    result = result && (hasProductTypeL5() == other.hasProductTypeL5());
     if (hasProductTypeL5()) {
-      if (!getProductTypeL5()
-          .equals(other.getProductTypeL5())) return false;
+      result = result && getProductTypeL5()
+          .equals(other.getProductTypeL5());
     }
-    if (hasQuarter() != other.hasQuarter()) return false;
+    result = result && (hasQuarter() == other.hasQuarter());
     if (hasQuarter()) {
-      if (!getQuarter()
-          .equals(other.getQuarter())) return false;
+      result = result && getQuarter()
+          .equals(other.getQuarter());
     }
-    if (searchEngineResultsPageType_ != other.searchEngineResultsPageType_) return false;
-    if (searchTermMatchType_ != other.searchTermMatchType_) return false;
-    if (slot_ != other.slot_) return false;
-    if (hasWebpage() != other.hasWebpage()) return false;
+    result = result && searchEngineResultsPageType_ == other.searchEngineResultsPageType_;
+    result = result && searchTermMatchType_ == other.searchTermMatchType_;
+    result = result && slot_ == other.slot_;
+    result = result && (hasWebpage() == other.hasWebpage());
     if (hasWebpage()) {
-      if (!getWebpage()
-          .equals(other.getWebpage())) return false;
+      result = result && getWebpage()
+          .equals(other.getWebpage());
     }
-    if (hasWeek() != other.hasWeek()) return false;
+    result = result && (hasWeek() == other.hasWeek());
     if (hasWeek()) {
-      if (!getWeek()
-          .equals(other.getWeek())) return false;
+      result = result && getWeek()
+          .equals(other.getWeek());
     }
-    if (hasYear() != other.hasYear()) return false;
+    result = result && (hasYear() == other.hasYear());
     if (hasYear()) {
-      if (!getYear()
-          .equals(other.getYear())) return false;
+      result = result && getYear()
+          .equals(other.getYear());
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -5256,35 +5257,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5682,7 +5683,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue conversionAction_;
+    private com.google.protobuf.StringValue conversionAction_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> conversionActionBuilder_;
     /**
@@ -5900,7 +5901,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue conversionActionName_;
+    private com.google.protobuf.StringValue conversionActionName_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> conversionActionNameBuilder_;
     /**
@@ -6053,7 +6054,7 @@ private static final long serialVersionUID = 0L;
       return conversionActionNameBuilder_;
     }
 
-    private com.google.protobuf.BoolValue conversionAdjustment_;
+    private com.google.protobuf.BoolValue conversionAdjustment_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> conversionAdjustmentBuilder_;
     /**
@@ -6447,7 +6448,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue date_;
+    private com.google.protobuf.StringValue date_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> dateBuilder_;
     /**
@@ -6804,7 +6805,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue geoTargetAirport_;
+    private com.google.protobuf.StringValue geoTargetAirport_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetAirportBuilder_;
     /**
@@ -6957,7 +6958,7 @@ private static final long serialVersionUID = 0L;
       return geoTargetAirportBuilder_;
     }
 
-    private com.google.protobuf.StringValue geoTargetCity_;
+    private com.google.protobuf.StringValue geoTargetCity_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetCityBuilder_;
     /**
@@ -7110,7 +7111,7 @@ private static final long serialVersionUID = 0L;
       return geoTargetCityBuilder_;
     }
 
-    private com.google.protobuf.StringValue geoTargetCounty_;
+    private com.google.protobuf.StringValue geoTargetCounty_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetCountyBuilder_;
     /**
@@ -7263,7 +7264,7 @@ private static final long serialVersionUID = 0L;
       return geoTargetCountyBuilder_;
     }
 
-    private com.google.protobuf.StringValue geoTargetDistrict_;
+    private com.google.protobuf.StringValue geoTargetDistrict_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetDistrictBuilder_;
     /**
@@ -7416,7 +7417,7 @@ private static final long serialVersionUID = 0L;
       return geoTargetDistrictBuilder_;
     }
 
-    private com.google.protobuf.StringValue geoTargetMetro_;
+    private com.google.protobuf.StringValue geoTargetMetro_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetMetroBuilder_;
     /**
@@ -7569,7 +7570,7 @@ private static final long serialVersionUID = 0L;
       return geoTargetMetroBuilder_;
     }
 
-    private com.google.protobuf.StringValue geoTargetMostSpecificLocation_;
+    private com.google.protobuf.StringValue geoTargetMostSpecificLocation_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetMostSpecificLocationBuilder_;
     /**
@@ -7731,7 +7732,7 @@ private static final long serialVersionUID = 0L;
       return geoTargetMostSpecificLocationBuilder_;
     }
 
-    private com.google.protobuf.StringValue geoTargetPostalCode_;
+    private com.google.protobuf.StringValue geoTargetPostalCode_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetPostalCodeBuilder_;
     /**
@@ -7884,7 +7885,7 @@ private static final long serialVersionUID = 0L;
       return geoTargetPostalCodeBuilder_;
     }
 
-    private com.google.protobuf.StringValue geoTargetProvince_;
+    private com.google.protobuf.StringValue geoTargetProvince_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetProvinceBuilder_;
     /**
@@ -8037,7 +8038,7 @@ private static final long serialVersionUID = 0L;
       return geoTargetProvinceBuilder_;
     }
 
-    private com.google.protobuf.StringValue geoTargetRegion_;
+    private com.google.protobuf.StringValue geoTargetRegion_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetRegionBuilder_;
     /**
@@ -8190,7 +8191,7 @@ private static final long serialVersionUID = 0L;
       return geoTargetRegionBuilder_;
     }
 
-    private com.google.protobuf.StringValue geoTargetState_;
+    private com.google.protobuf.StringValue geoTargetState_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetStateBuilder_;
     /**
@@ -8343,7 +8344,7 @@ private static final long serialVersionUID = 0L;
       return geoTargetStateBuilder_;
     }
 
-    private com.google.protobuf.Int64Value hotelBookingWindowDays_;
+    private com.google.protobuf.Int64Value hotelBookingWindowDays_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> hotelBookingWindowDaysBuilder_;
     /**
@@ -8496,7 +8497,7 @@ private static final long serialVersionUID = 0L;
       return hotelBookingWindowDaysBuilder_;
     }
 
-    private com.google.protobuf.Int64Value hotelCenterId_;
+    private com.google.protobuf.Int64Value hotelCenterId_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> hotelCenterIdBuilder_;
     /**
@@ -8649,7 +8650,7 @@ private static final long serialVersionUID = 0L;
       return hotelCenterIdBuilder_;
     }
 
-    private com.google.protobuf.StringValue hotelCheckInDate_;
+    private com.google.protobuf.StringValue hotelCheckInDate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelCheckInDateBuilder_;
     /**
@@ -8867,7 +8868,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue hotelCity_;
+    private com.google.protobuf.StringValue hotelCity_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelCityBuilder_;
     /**
@@ -9020,7 +9021,7 @@ private static final long serialVersionUID = 0L;
       return hotelCityBuilder_;
     }
 
-    private com.google.protobuf.Int32Value hotelClass_;
+    private com.google.protobuf.Int32Value hotelClass_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> hotelClassBuilder_;
     /**
@@ -9173,7 +9174,7 @@ private static final long serialVersionUID = 0L;
       return hotelClassBuilder_;
     }
 
-    private com.google.protobuf.StringValue hotelCountry_;
+    private com.google.protobuf.StringValue hotelCountry_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelCountryBuilder_;
     /**
@@ -9391,7 +9392,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int32Value hotelLengthOfStay_;
+    private com.google.protobuf.Int32Value hotelLengthOfStay_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> hotelLengthOfStayBuilder_;
     /**
@@ -9544,7 +9545,7 @@ private static final long serialVersionUID = 0L;
       return hotelLengthOfStayBuilder_;
     }
 
-    private com.google.protobuf.StringValue hotelRateRuleId_;
+    private com.google.protobuf.StringValue hotelRateRuleId_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelRateRuleIdBuilder_;
     /**
@@ -9762,7 +9763,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue hotelState_;
+    private com.google.protobuf.StringValue hotelState_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> hotelStateBuilder_;
     /**
@@ -9915,7 +9916,7 @@ private static final long serialVersionUID = 0L;
       return hotelStateBuilder_;
     }
 
-    private com.google.protobuf.Int32Value hour_;
+    private com.google.protobuf.Int32Value hour_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> hourBuilder_;
     /**
@@ -10068,7 +10069,7 @@ private static final long serialVersionUID = 0L;
       return hourBuilder_;
     }
 
-    private com.google.protobuf.BoolValue interactionOnThisExtension_;
+    private com.google.protobuf.BoolValue interactionOnThisExtension_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> interactionOnThisExtensionBuilder_;
     /**
@@ -10239,7 +10240,7 @@ private static final long serialVersionUID = 0L;
       return interactionOnThisExtensionBuilder_;
     }
 
-    private com.google.ads.googleads.v1.common.Keyword keyword_;
+    private com.google.ads.googleads.v1.common.Keyword keyword_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.Keyword, com.google.ads.googleads.v1.common.Keyword.Builder, com.google.ads.googleads.v1.common.KeywordOrBuilder> keywordBuilder_;
     /**
@@ -10392,7 +10393,7 @@ private static final long serialVersionUID = 0L;
       return keywordBuilder_;
     }
 
-    private com.google.protobuf.StringValue month_;
+    private com.google.protobuf.StringValue month_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> monthBuilder_;
     /**
@@ -10619,7 +10620,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue partnerHotelId_;
+    private com.google.protobuf.StringValue partnerHotelId_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> partnerHotelIdBuilder_;
     /**
@@ -10837,7 +10838,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.UInt64Value productAggregatorId_;
+    private com.google.protobuf.UInt64Value productAggregatorId_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.UInt64Value, com.google.protobuf.UInt64Value.Builder, com.google.protobuf.UInt64ValueOrBuilder> productAggregatorIdBuilder_;
     /**
@@ -10990,7 +10991,7 @@ private static final long serialVersionUID = 0L;
       return productAggregatorIdBuilder_;
     }
 
-    private com.google.protobuf.StringValue productBiddingCategoryLevel1_;
+    private com.google.protobuf.StringValue productBiddingCategoryLevel1_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productBiddingCategoryLevel1Builder_;
     /**
@@ -11143,7 +11144,7 @@ private static final long serialVersionUID = 0L;
       return productBiddingCategoryLevel1Builder_;
     }
 
-    private com.google.protobuf.StringValue productBiddingCategoryLevel2_;
+    private com.google.protobuf.StringValue productBiddingCategoryLevel2_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productBiddingCategoryLevel2Builder_;
     /**
@@ -11296,7 +11297,7 @@ private static final long serialVersionUID = 0L;
       return productBiddingCategoryLevel2Builder_;
     }
 
-    private com.google.protobuf.StringValue productBiddingCategoryLevel3_;
+    private com.google.protobuf.StringValue productBiddingCategoryLevel3_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productBiddingCategoryLevel3Builder_;
     /**
@@ -11449,7 +11450,7 @@ private static final long serialVersionUID = 0L;
       return productBiddingCategoryLevel3Builder_;
     }
 
-    private com.google.protobuf.StringValue productBiddingCategoryLevel4_;
+    private com.google.protobuf.StringValue productBiddingCategoryLevel4_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productBiddingCategoryLevel4Builder_;
     /**
@@ -11602,7 +11603,7 @@ private static final long serialVersionUID = 0L;
       return productBiddingCategoryLevel4Builder_;
     }
 
-    private com.google.protobuf.StringValue productBiddingCategoryLevel5_;
+    private com.google.protobuf.StringValue productBiddingCategoryLevel5_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productBiddingCategoryLevel5Builder_;
     /**
@@ -11755,7 +11756,7 @@ private static final long serialVersionUID = 0L;
       return productBiddingCategoryLevel5Builder_;
     }
 
-    private com.google.protobuf.StringValue productBrand_;
+    private com.google.protobuf.StringValue productBrand_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productBrandBuilder_;
     /**
@@ -12103,7 +12104,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue productCountry_;
+    private com.google.protobuf.StringValue productCountry_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productCountryBuilder_;
     /**
@@ -12265,7 +12266,7 @@ private static final long serialVersionUID = 0L;
       return productCountryBuilder_;
     }
 
-    private com.google.protobuf.StringValue productCustomAttribute0_;
+    private com.google.protobuf.StringValue productCustomAttribute0_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productCustomAttribute0Builder_;
     /**
@@ -12418,7 +12419,7 @@ private static final long serialVersionUID = 0L;
       return productCustomAttribute0Builder_;
     }
 
-    private com.google.protobuf.StringValue productCustomAttribute1_;
+    private com.google.protobuf.StringValue productCustomAttribute1_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productCustomAttribute1Builder_;
     /**
@@ -12571,7 +12572,7 @@ private static final long serialVersionUID = 0L;
       return productCustomAttribute1Builder_;
     }
 
-    private com.google.protobuf.StringValue productCustomAttribute2_;
+    private com.google.protobuf.StringValue productCustomAttribute2_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productCustomAttribute2Builder_;
     /**
@@ -12724,7 +12725,7 @@ private static final long serialVersionUID = 0L;
       return productCustomAttribute2Builder_;
     }
 
-    private com.google.protobuf.StringValue productCustomAttribute3_;
+    private com.google.protobuf.StringValue productCustomAttribute3_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productCustomAttribute3Builder_;
     /**
@@ -12877,7 +12878,7 @@ private static final long serialVersionUID = 0L;
       return productCustomAttribute3Builder_;
     }
 
-    private com.google.protobuf.StringValue productCustomAttribute4_;
+    private com.google.protobuf.StringValue productCustomAttribute4_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productCustomAttribute4Builder_;
     /**
@@ -13030,7 +13031,7 @@ private static final long serialVersionUID = 0L;
       return productCustomAttribute4Builder_;
     }
 
-    private com.google.protobuf.StringValue productItemId_;
+    private com.google.protobuf.StringValue productItemId_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productItemIdBuilder_;
     /**
@@ -13183,7 +13184,7 @@ private static final long serialVersionUID = 0L;
       return productItemIdBuilder_;
     }
 
-    private com.google.protobuf.StringValue productLanguage_;
+    private com.google.protobuf.StringValue productLanguage_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productLanguageBuilder_;
     /**
@@ -13336,7 +13337,7 @@ private static final long serialVersionUID = 0L;
       return productLanguageBuilder_;
     }
 
-    private com.google.protobuf.UInt64Value productMerchantId_;
+    private com.google.protobuf.UInt64Value productMerchantId_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.UInt64Value, com.google.protobuf.UInt64Value.Builder, com.google.protobuf.UInt64ValueOrBuilder> productMerchantIdBuilder_;
     /**
@@ -13489,7 +13490,7 @@ private static final long serialVersionUID = 0L;
       return productMerchantIdBuilder_;
     }
 
-    private com.google.protobuf.StringValue productStoreId_;
+    private com.google.protobuf.StringValue productStoreId_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productStoreIdBuilder_;
     /**
@@ -13642,7 +13643,7 @@ private static final long serialVersionUID = 0L;
       return productStoreIdBuilder_;
     }
 
-    private com.google.protobuf.StringValue productTitle_;
+    private com.google.protobuf.StringValue productTitle_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productTitleBuilder_;
     /**
@@ -13795,7 +13796,7 @@ private static final long serialVersionUID = 0L;
       return productTitleBuilder_;
     }
 
-    private com.google.protobuf.StringValue productTypeL1_;
+    private com.google.protobuf.StringValue productTypeL1_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productTypeL1Builder_;
     /**
@@ -13948,7 +13949,7 @@ private static final long serialVersionUID = 0L;
       return productTypeL1Builder_;
     }
 
-    private com.google.protobuf.StringValue productTypeL2_;
+    private com.google.protobuf.StringValue productTypeL2_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productTypeL2Builder_;
     /**
@@ -14101,7 +14102,7 @@ private static final long serialVersionUID = 0L;
       return productTypeL2Builder_;
     }
 
-    private com.google.protobuf.StringValue productTypeL3_;
+    private com.google.protobuf.StringValue productTypeL3_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productTypeL3Builder_;
     /**
@@ -14254,7 +14255,7 @@ private static final long serialVersionUID = 0L;
       return productTypeL3Builder_;
     }
 
-    private com.google.protobuf.StringValue productTypeL4_;
+    private com.google.protobuf.StringValue productTypeL4_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productTypeL4Builder_;
     /**
@@ -14407,7 +14408,7 @@ private static final long serialVersionUID = 0L;
       return productTypeL4Builder_;
     }
 
-    private com.google.protobuf.StringValue productTypeL5_;
+    private com.google.protobuf.StringValue productTypeL5_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productTypeL5Builder_;
     /**
@@ -14560,7 +14561,7 @@ private static final long serialVersionUID = 0L;
       return productTypeL5Builder_;
     }
 
-    private com.google.protobuf.StringValue quarter_;
+    private com.google.protobuf.StringValue quarter_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> quarterBuilder_;
     /**
@@ -14926,7 +14927,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue webpage_;
+    private com.google.protobuf.StringValue webpage_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> webpageBuilder_;
     /**
@@ -15079,7 +15080,7 @@ private static final long serialVersionUID = 0L;
       return webpageBuilder_;
     }
 
-    private com.google.protobuf.StringValue week_;
+    private com.google.protobuf.StringValue week_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> weekBuilder_;
     /**
@@ -15241,7 +15242,7 @@ private static final long serialVersionUID = 0L;
       return weekBuilder_;
     }
 
-    private com.google.protobuf.Int32Value year_;
+    private com.google.protobuf.Int32Value year_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> yearBuilder_;
     /**
@@ -15396,7 +15397,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

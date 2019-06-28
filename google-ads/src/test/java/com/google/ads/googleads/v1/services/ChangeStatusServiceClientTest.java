@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -390,7 +390,7 @@ public class ChangeStatusServiceClientTest {
     ChangeStatus actualResponse = client.getChangeStatus(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockChangeStatusService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockChangeStatusService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetChangeStatusRequest actualRequest = (GetChangeStatusRequest) actualRequests.get(0);
 

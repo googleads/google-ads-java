@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -447,34 +447,37 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.VideoAdInfo other = (com.google.ads.googleads.v1.common.VideoAdInfo) obj;
 
-    if (hasMediaFile() != other.hasMediaFile()) return false;
+    boolean result = true;
+    result = result && (hasMediaFile() == other.hasMediaFile());
     if (hasMediaFile()) {
-      if (!getMediaFile()
-          .equals(other.getMediaFile())) return false;
+      result = result && getMediaFile()
+          .equals(other.getMediaFile());
     }
-    if (!getFormatCase().equals(other.getFormatCase())) return false;
+    result = result && getFormatCase().equals(
+        other.getFormatCase());
+    if (!result) return false;
     switch (formatCase_) {
       case 2:
-        if (!getInStream()
-            .equals(other.getInStream())) return false;
+        result = result && getInStream()
+            .equals(other.getInStream());
         break;
       case 3:
-        if (!getBumper()
-            .equals(other.getBumper())) return false;
+        result = result && getBumper()
+            .equals(other.getBumper());
         break;
       case 4:
-        if (!getOutStream()
-            .equals(other.getOutStream())) return false;
+        result = result && getOutStream()
+            .equals(other.getOutStream());
         break;
       case 5:
-        if (!getNonSkippable()
-            .equals(other.getNonSkippable())) return false;
+        result = result && getNonSkippable()
+            .equals(other.getNonSkippable());
         break;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -719,35 +722,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -829,7 +832,7 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    private com.google.protobuf.StringValue mediaFile_;
+    private com.google.protobuf.StringValue mediaFile_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> mediaFileBuilder_;
     /**
@@ -1672,7 +1675,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

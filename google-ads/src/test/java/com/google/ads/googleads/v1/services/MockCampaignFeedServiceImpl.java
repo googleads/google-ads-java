@@ -18,7 +18,7 @@ package com.google.ads.googleads.v1.services;
 import com.google.ads.googleads.v1.resources.CampaignFeed;
 import com.google.ads.googleads.v1.services.CampaignFeedServiceGrpc.CampaignFeedServiceImplBase;
 import com.google.api.core.BetaApi;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.stub.StreamObserver;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -28,7 +28,7 @@ import java.util.Queue;
 @javax.annotation.Generated("by GAPIC")
 @BetaApi
 public class MockCampaignFeedServiceImpl extends CampaignFeedServiceImplBase {
-  private List<AbstractMessage> requests;
+  private ArrayList<GeneratedMessageV3> requests;
   private Queue<Object> responses;
 
   public MockCampaignFeedServiceImpl() {
@@ -36,15 +36,15 @@ public class MockCampaignFeedServiceImpl extends CampaignFeedServiceImplBase {
     responses = new LinkedList<>();
   }
 
-  public List<AbstractMessage> getRequests() {
+  public List<GeneratedMessageV3> getRequests() {
     return requests;
   }
 
-  public void addResponse(AbstractMessage response) {
+  public void addResponse(GeneratedMessageV3 response) {
     responses.add(response);
   }
 
-  public void setResponses(List<AbstractMessage> responses) {
+  public void setResponses(List<GeneratedMessageV3> responses) {
     this.responses = new LinkedList<Object>(responses);
   }
 

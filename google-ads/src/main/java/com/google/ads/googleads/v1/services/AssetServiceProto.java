@@ -52,33 +52,32 @@ public final class AssetServiceProto {
       "_service.proto\022 google.ads.googleads.v1." +
       "services\032-google/ads/googleads/v1/resour" +
       "ces/asset.proto\032\034google/api/annotations." +
-      "proto\032\027google/api/client.proto\"(\n\017GetAss" +
-      "etRequest\022\025\n\rresource_name\030\001 \001(\t\"p\n\023Muta" +
-      "teAssetsRequest\022\023\n\013customer_id\030\001 \001(\t\022D\n\n" +
-      "operations\030\002 \003(\01320.google.ads.googleads." +
-      "v1.services.AssetOperation\"Y\n\016AssetOpera" +
-      "tion\022:\n\006create\030\001 \001(\0132(.google.ads.google" +
-      "ads.v1.resources.AssetH\000B\013\n\toperation\"\\\n" +
-      "\024MutateAssetsResponse\022D\n\007results\030\002 \003(\01323" +
-      ".google.ads.googleads.v1.services.Mutate" +
-      "AssetResult\"*\n\021MutateAssetResult\022\025\n\rreso" +
-      "urce_name\030\001 \001(\t2\377\002\n\014AssetService\022\231\001\n\010Get" +
-      "Asset\0221.google.ads.googleads.v1.services" +
-      ".GetAssetRequest\032(.google.ads.googleads." +
-      "v1.resources.Asset\"0\202\323\344\223\002*\022(/v1/{resourc" +
-      "e_name=customers/*/assets/*}\022\265\001\n\014MutateA" +
-      "ssets\0225.google.ads.googleads.v1.services" +
-      ".MutateAssetsRequest\0326.google.ads.google" +
-      "ads.v1.services.MutateAssetsResponse\"6\202\323" +
-      "\344\223\0020\"+/v1/customers/{customer_id=*}/asse" +
-      "ts:mutate:\001*\032\033\312A\030googleads.googleapis.co" +
-      "mB\370\001\n$com.google.ads.googleads.v1.servic" +
-      "esB\021AssetServiceProtoP\001ZHgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v1/" +
-      "services;services\242\002\003GAA\252\002 Google.Ads.Goo" +
-      "gleAds.V1.Services\312\002 Google\\Ads\\GoogleAd" +
-      "s\\V1\\Services\352\002$Google::Ads::GoogleAds::" +
-      "V1::Servicesb\006proto3"
+      "proto\"(\n\017GetAssetRequest\022\025\n\rresource_nam" +
+      "e\030\001 \001(\t\"p\n\023MutateAssetsRequest\022\023\n\013custom" +
+      "er_id\030\001 \001(\t\022D\n\noperations\030\002 \003(\01320.google" +
+      ".ads.googleads.v1.services.AssetOperatio" +
+      "n\"Y\n\016AssetOperation\022:\n\006create\030\001 \001(\0132(.go" +
+      "ogle.ads.googleads.v1.resources.AssetH\000B" +
+      "\013\n\toperation\"\\\n\024MutateAssetsResponse\022D\n\007" +
+      "results\030\002 \003(\01323.google.ads.googleads.v1." +
+      "services.MutateAssetResult\"*\n\021MutateAsse" +
+      "tResult\022\025\n\rresource_name\030\001 \001(\t2\342\002\n\014Asset" +
+      "Service\022\231\001\n\010GetAsset\0221.google.ads.google" +
+      "ads.v1.services.GetAssetRequest\032(.google" +
+      ".ads.googleads.v1.resources.Asset\"0\202\323\344\223\002" +
+      "*\022(/v1/{resource_name=customers/*/assets" +
+      "/*}\022\265\001\n\014MutateAssets\0225.google.ads.google" +
+      "ads.v1.services.MutateAssetsRequest\0326.go" +
+      "ogle.ads.googleads.v1.services.MutateAss" +
+      "etsResponse\"6\202\323\344\223\0020\"+/v1/customers/{cust" +
+      "omer_id=*}/assets:mutate:\001*B\370\001\n$com.goog" +
+      "le.ads.googleads.v1.servicesB\021AssetServi" +
+      "ceProtoP\001ZHgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v1/services;servi" +
+      "ces\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Serv" +
+      "ices\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352" +
+      "\002$Google::Ads::GoogleAds::V1::Servicesb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -93,7 +92,6 @@ public final class AssetServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.AssetProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetAssetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -127,13 +125,11 @@ public final class AssetServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.AssetProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

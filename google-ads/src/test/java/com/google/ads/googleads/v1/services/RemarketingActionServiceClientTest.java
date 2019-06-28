@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -392,7 +392,7 @@ public class RemarketingActionServiceClientTest {
     RemarketingAction actualResponse = client.getRemarketingAction(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockRemarketingActionService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockRemarketingActionService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetRemarketingActionRequest actualRequest = (GetRemarketingActionRequest) actualRequests.get(0);
 
@@ -437,7 +437,7 @@ public class RemarketingActionServiceClientTest {
         client.mutateRemarketingActions(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockRemarketingActionService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockRemarketingActionService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateRemarketingActionsRequest actualRequest =
         (MutateRemarketingActionsRequest) actualRequests.get(0);
@@ -485,7 +485,7 @@ public class RemarketingActionServiceClientTest {
         client.mutateRemarketingActions(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockRemarketingActionService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockRemarketingActionService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateRemarketingActionsRequest actualRequest =
         (MutateRemarketingActionsRequest) actualRequests.get(0);

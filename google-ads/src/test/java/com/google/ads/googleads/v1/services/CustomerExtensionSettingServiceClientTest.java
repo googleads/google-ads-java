@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -393,7 +393,7 @@ public class CustomerExtensionSettingServiceClientTest {
         client.getCustomerExtensionSetting(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockCustomerExtensionSettingService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockCustomerExtensionSettingService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetCustomerExtensionSettingRequest actualRequest =
         (GetCustomerExtensionSettingRequest) actualRequests.get(0);
@@ -440,7 +440,7 @@ public class CustomerExtensionSettingServiceClientTest {
             customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockCustomerExtensionSettingService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockCustomerExtensionSettingService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCustomerExtensionSettingsRequest actualRequest =
         (MutateCustomerExtensionSettingsRequest) actualRequests.get(0);
@@ -488,7 +488,7 @@ public class CustomerExtensionSettingServiceClientTest {
         client.mutateCustomerExtensionSettings(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockCustomerExtensionSettingService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockCustomerExtensionSettingService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCustomerExtensionSettingsRequest actualRequest =
         (MutateCustomerExtensionSettingsRequest) actualRequests.get(0);

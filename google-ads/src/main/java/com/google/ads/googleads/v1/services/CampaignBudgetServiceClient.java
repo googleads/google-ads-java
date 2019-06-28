@@ -106,10 +106,7 @@ public class CampaignBudgetServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a campaign_budget resource.
-   *
-   * @deprecated Use the {@link CampaignBudgetName} class instead.
    */
-  @Deprecated
   public static final String formatCampaignBudgetName(String customer, String campaignBudget) {
     return CAMPAIGN_BUDGET_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -119,10 +116,7 @@ public class CampaignBudgetServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a campaign_budget
    * resource.
-   *
-   * @deprecated Use the {@link CampaignBudgetName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromCampaignBudgetName(String campaignBudgetName) {
     return CAMPAIGN_BUDGET_PATH_TEMPLATE.parse(campaignBudgetName).get("customer");
   }
@@ -130,10 +124,7 @@ public class CampaignBudgetServiceClient implements BackgroundResource {
   /**
    * Parses the campaign_budget from the given fully-qualified path which represents a
    * campaign_budget resource.
-   *
-   * @deprecated Use the {@link CampaignBudgetName} class instead.
    */
-  @Deprecated
   public static final String parseCampaignBudgetFromCampaignBudgetName(String campaignBudgetName) {
     return CAMPAIGN_BUDGET_PATH_TEMPLATE.parse(campaignBudgetName).get("campaign_budget");
   }

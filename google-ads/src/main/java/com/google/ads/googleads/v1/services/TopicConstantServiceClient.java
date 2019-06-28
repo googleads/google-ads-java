@@ -104,10 +104,7 @@ public class TopicConstantServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a topic_constant resource.
-   *
-   * @deprecated Use the {@link TopicConstantName} class instead.
    */
-  @Deprecated
   public static final String formatTopicConstantName(String topicConstant) {
     return TOPIC_CONSTANT_PATH_TEMPLATE.instantiate("topic_constant", topicConstant);
   }
@@ -115,10 +112,7 @@ public class TopicConstantServiceClient implements BackgroundResource {
   /**
    * Parses the topic_constant from the given fully-qualified path which represents a topic_constant
    * resource.
-   *
-   * @deprecated Use the {@link TopicConstantName} class instead.
    */
-  @Deprecated
   public static final String parseTopicConstantFromTopicConstantName(String topicConstantName) {
     return TOPIC_CONSTANT_PATH_TEMPLATE.parse(topicConstantName).get("topic_constant");
   }

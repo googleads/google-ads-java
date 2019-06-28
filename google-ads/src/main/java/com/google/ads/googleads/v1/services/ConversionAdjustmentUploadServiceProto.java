@@ -59,61 +59,59 @@ public final class ConversionAdjustmentUploadServiceProto {
       "ads/googleads/v1/enums/conversion_adjust" +
       "ment_type.proto\032\034google/api/annotations." +
       "proto\032\036google/protobuf/wrappers.proto\032\027g" +
-      "oogle/rpc/status.proto\032\027google/api/clien" +
-      "t.proto\"\301\001\n\"UploadConversionAdjustmentsR" +
-      "equest\022\023\n\013customer_id\030\001 \001(\t\022V\n\026conversio" +
-      "n_adjustments\030\002 \003(\01326.google.ads.googlea" +
-      "ds.v1.services.ConversionAdjustment\022\027\n\017p" +
-      "artial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 " +
-      "\001(\010\"\247\001\n#UploadConversionAdjustmentsRespo" +
-      "nse\0221\n\025partial_failure_error\030\001 \001(\0132\022.goo" +
-      "gle.rpc.Status\022M\n\007results\030\002 \003(\0132<.google" +
-      ".ads.googleads.v1.services.ConversionAdj" +
-      "ustmentResult\"\351\003\n\024ConversionAdjustment\0227" +
-      "\n\021conversion_action\030\003 \001(\0132\034.google.proto" +
-      "buf.StringValue\022:\n\024adjustment_date_time\030" +
-      "\004 \001(\0132\034.google.protobuf.StringValue\022m\n\017a" +
-      "djustment_type\030\005 \001(\0162T.google.ads.google" +
-      "ads.v1.enums.ConversionAdjustmentTypeEnu" +
-      "m.ConversionAdjustmentType\022M\n\021restatemen" +
-      "t_value\030\006 \001(\01322.google.ads.googleads.v1." +
-      "services.RestatementValue\022S\n\024gclid_date_" +
-      "time_pair\030\001 \001(\01323.google.ads.googleads.v" +
-      "1.services.GclidDateTimePairH\000\0220\n\010order_" +
-      "id\030\002 \001(\0132\034.google.protobuf.StringValueH\000" +
-      "B\027\n\025conversion_identifier\"}\n\020Restatement" +
-      "Value\0224\n\016adjusted_value\030\001 \001(\0132\034.google.p" +
-      "rotobuf.DoubleValue\0223\n\rcurrency_code\030\002 \001" +
-      "(\0132\034.google.protobuf.StringValue\"|\n\021Gcli" +
-      "dDateTimePair\022+\n\005gclid\030\001 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\022:\n\024conversion_date_ti" +
-      "me\030\002 \001(\0132\034.google.protobuf.StringValue\"\240" +
-      "\003\n\032ConversionAdjustmentResult\0227\n\021convers" +
-      "ion_action\030\003 \001(\0132\034.google.protobuf.Strin" +
-      "gValue\022:\n\024adjustment_date_time\030\004 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\022m\n\017adjustment" +
-      "_type\030\005 \001(\0162T.google.ads.googleads.v1.en" +
-      "ums.ConversionAdjustmentTypeEnum.Convers" +
-      "ionAdjustmentType\022S\n\024gclid_date_time_pai" +
-      "r\030\001 \001(\01323.google.ads.googleads.v1.servic" +
-      "es.GclidDateTimePairH\000\0220\n\010order_id\030\002 \001(\013" +
-      "2\034.google.protobuf.StringValueH\000B\027\n\025conv" +
-      "ersion_identifier2\263\002\n!ConversionAdjustme" +
-      "ntUploadService\022\360\001\n\033UploadConversionAdju" +
-      "stments\022D.google.ads.googleads.v1.servic" +
-      "es.UploadConversionAdjustmentsRequest\032E." +
-      "google.ads.googleads.v1.services.UploadC" +
-      "onversionAdjustmentsResponse\"D\202\323\344\223\002>\"9/v" +
-      "1/customers/{customer_id=*}:uploadConver" +
-      "sionAdjustments:\001*\032\033\312A\030googleads.googlea" +
-      "pis.comB\215\002\n$com.google.ads.googleads.v1." +
-      "servicesB&ConversionAdjustmentUploadServ" +
-      "iceProtoP\001ZHgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v1/services;serv" +
-      "ices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Ser" +
-      "vices\312\002 Google\\Ads\\GoogleAds\\V1\\Services" +
-      "\352\002$Google::Ads::GoogleAds::V1::Servicesb" +
-      "\006proto3"
+      "oogle/rpc/status.proto\"\301\001\n\"UploadConvers" +
+      "ionAdjustmentsRequest\022\023\n\013customer_id\030\001 \001" +
+      "(\t\022V\n\026conversion_adjustments\030\002 \003(\01326.goo" +
+      "gle.ads.googleads.v1.services.Conversion" +
+      "Adjustment\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rv" +
+      "alidate_only\030\004 \001(\010\"\247\001\n#UploadConversionA" +
+      "djustmentsResponse\0221\n\025partial_failure_er" +
+      "ror\030\001 \001(\0132\022.google.rpc.Status\022M\n\007results" +
+      "\030\002 \003(\0132<.google.ads.googleads.v1.service" +
+      "s.ConversionAdjustmentResult\"\351\003\n\024Convers" +
+      "ionAdjustment\0227\n\021conversion_action\030\003 \001(\013" +
+      "2\034.google.protobuf.StringValue\022:\n\024adjust" +
+      "ment_date_time\030\004 \001(\0132\034.google.protobuf.S" +
+      "tringValue\022m\n\017adjustment_type\030\005 \001(\0162T.go" +
+      "ogle.ads.googleads.v1.enums.ConversionAd" +
+      "justmentTypeEnum.ConversionAdjustmentTyp" +
+      "e\022M\n\021restatement_value\030\006 \001(\01322.google.ad" +
+      "s.googleads.v1.services.RestatementValue" +
+      "\022S\n\024gclid_date_time_pair\030\001 \001(\01323.google." +
+      "ads.googleads.v1.services.GclidDateTimeP" +
+      "airH\000\0220\n\010order_id\030\002 \001(\0132\034.google.protobu" +
+      "f.StringValueH\000B\027\n\025conversion_identifier" +
+      "\"}\n\020RestatementValue\0224\n\016adjusted_value\030\001" +
+      " \001(\0132\034.google.protobuf.DoubleValue\0223\n\rcu" +
+      "rrency_code\030\002 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\"|\n\021GclidDateTimePair\022+\n\005gclid\030\001 " +
+      "\001(\0132\034.google.protobuf.StringValue\022:\n\024con" +
+      "version_date_time\030\002 \001(\0132\034.google.protobu" +
+      "f.StringValue\"\240\003\n\032ConversionAdjustmentRe" +
+      "sult\0227\n\021conversion_action\030\003 \001(\0132\034.google" +
+      ".protobuf.StringValue\022:\n\024adjustment_date" +
+      "_time\030\004 \001(\0132\034.google.protobuf.StringValu" +
+      "e\022m\n\017adjustment_type\030\005 \001(\0162T.google.ads." +
+      "googleads.v1.enums.ConversionAdjustmentT" +
+      "ypeEnum.ConversionAdjustmentType\022S\n\024gcli" +
+      "d_date_time_pair\030\001 \001(\01323.google.ads.goog" +
+      "leads.v1.services.GclidDateTimePairH\000\0220\n" +
+      "\010order_id\030\002 \001(\0132\034.google.protobuf.String" +
+      "ValueH\000B\027\n\025conversion_identifier2\226\002\n!Con" +
+      "versionAdjustmentUploadService\022\360\001\n\033Uploa" +
+      "dConversionAdjustments\022D.google.ads.goog" +
+      "leads.v1.services.UploadConversionAdjust" +
+      "mentsRequest\032E.google.ads.googleads.v1.s" +
+      "ervices.UploadConversionAdjustmentsRespo" +
+      "nse\"D\202\323\344\223\002>\"9/v1/customers/{customer_id=" +
+      "*}:uploadConversionAdjustments:\001*B\215\002\n$co" +
+      "m.google.ads.googleads.v1.servicesB&Conv" +
+      "ersionAdjustmentUploadServiceProtoP\001ZHgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v1/services;services\242\002\003GAA\252\002 G" +
+      "oogle.Ads.GoogleAds.V1.Services\312\002 Google" +
+      "\\Ads\\GoogleAds\\V1\\Services\352\002$Google::Ads" +
+      "::GoogleAds::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -130,7 +128,6 @@ public final class ConversionAdjustmentUploadServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_UploadConversionAdjustmentsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -170,7 +167,6 @@ public final class ConversionAdjustmentUploadServiceProto {
         new java.lang.String[] { "ConversionAction", "AdjustmentDateTime", "AdjustmentType", "GclidDateTimePair", "OrderId", "ConversionIdentifier", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -178,7 +174,6 @@ public final class ConversionAdjustmentUploadServiceProto {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

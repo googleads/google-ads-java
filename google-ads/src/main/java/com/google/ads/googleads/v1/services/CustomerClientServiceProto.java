@@ -32,22 +32,21 @@ public final class CustomerClientServiceProto {
       "mer_client_service.proto\022 google.ads.goo" +
       "gleads.v1.services\0327google/ads/googleads" +
       "/v1/resources/customer_client.proto\032\034goo" +
-      "gle/api/annotations.proto\032\027google/api/cl" +
-      "ient.proto\"1\n\030GetCustomerClientRequest\022\025" +
-      "\n\rresource_name\030\001 \001(\t2\364\001\n\025CustomerClient" +
-      "Service\022\275\001\n\021GetCustomerClient\022:.google.a" +
-      "ds.googleads.v1.services.GetCustomerClie" +
-      "ntRequest\0321.google.ads.googleads.v1.reso" +
-      "urces.CustomerClient\"9\202\323\344\223\0023\0221/v1/{resou" +
-      "rce_name=customers/*/customerClients/*}\032" +
-      "\033\312A\030googleads.googleapis.comB\201\002\n$com.goo" +
-      "gle.ads.googleads.v1.servicesB\032CustomerC" +
-      "lientServiceProtoP\001ZHgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v1/serv" +
-      "ices;services\242\002\003GAA\252\002 Google.Ads.GoogleA" +
-      "ds.V1.Services\312\002 Google\\Ads\\GoogleAds\\V1" +
-      "\\Services\352\002$Google::Ads::GoogleAds::V1::" +
-      "Servicesb\006proto3"
+      "gle/api/annotations.proto\"1\n\030GetCustomer" +
+      "ClientRequest\022\025\n\rresource_name\030\001 \001(\t2\327\001\n" +
+      "\025CustomerClientService\022\275\001\n\021GetCustomerCl" +
+      "ient\022:.google.ads.googleads.v1.services." +
+      "GetCustomerClientRequest\0321.google.ads.go" +
+      "ogleads.v1.resources.CustomerClient\"9\202\323\344" +
+      "\223\0023\0221/v1/{resource_name=customers/*/cust" +
+      "omerClients/*}B\201\002\n$com.google.ads.google" +
+      "ads.v1.servicesB\032CustomerClientServicePr" +
+      "otoP\001ZHgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v1/services;services\242" +
+      "\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Services" +
+      "\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$Go" +
+      "ogle::Ads::GoogleAds::V1::Servicesb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -62,7 +61,6 @@ public final class CustomerClientServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.CustomerClientProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetCustomerClientRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -72,13 +70,11 @@ public final class CustomerClientServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.CustomerClientProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

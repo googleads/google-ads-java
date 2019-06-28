@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -442,34 +442,35 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.CallFeedItem other = (com.google.ads.googleads.v1.common.CallFeedItem) obj;
 
-    if (hasPhoneNumber() != other.hasPhoneNumber()) return false;
+    boolean result = true;
+    result = result && (hasPhoneNumber() == other.hasPhoneNumber());
     if (hasPhoneNumber()) {
-      if (!getPhoneNumber()
-          .equals(other.getPhoneNumber())) return false;
+      result = result && getPhoneNumber()
+          .equals(other.getPhoneNumber());
     }
-    if (hasCountryCode() != other.hasCountryCode()) return false;
+    result = result && (hasCountryCode() == other.hasCountryCode());
     if (hasCountryCode()) {
-      if (!getCountryCode()
-          .equals(other.getCountryCode())) return false;
+      result = result && getCountryCode()
+          .equals(other.getCountryCode());
     }
-    if (hasCallTrackingEnabled() != other.hasCallTrackingEnabled()) return false;
+    result = result && (hasCallTrackingEnabled() == other.hasCallTrackingEnabled());
     if (hasCallTrackingEnabled()) {
-      if (!getCallTrackingEnabled()
-          .equals(other.getCallTrackingEnabled())) return false;
+      result = result && getCallTrackingEnabled()
+          .equals(other.getCallTrackingEnabled());
     }
-    if (hasCallConversionAction() != other.hasCallConversionAction()) return false;
+    result = result && (hasCallConversionAction() == other.hasCallConversionAction());
     if (hasCallConversionAction()) {
-      if (!getCallConversionAction()
-          .equals(other.getCallConversionAction())) return false;
+      result = result && getCallConversionAction()
+          .equals(other.getCallConversionAction());
     }
-    if (hasCallConversionTrackingDisabled() != other.hasCallConversionTrackingDisabled()) return false;
+    result = result && (hasCallConversionTrackingDisabled() == other.hasCallConversionTrackingDisabled());
     if (hasCallConversionTrackingDisabled()) {
-      if (!getCallConversionTrackingDisabled()
-          .equals(other.getCallConversionTrackingDisabled())) return false;
+      result = result && getCallConversionTrackingDisabled()
+          .equals(other.getCallConversionTrackingDisabled());
     }
-    if (callConversionReportingState_ != other.callConversionReportingState_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && callConversionReportingState_ == other.callConversionReportingState_;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -728,35 +729,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -817,7 +818,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue phoneNumber_;
+    private com.google.protobuf.StringValue phoneNumber_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> phoneNumberBuilder_;
     /**
@@ -979,7 +980,7 @@ private static final long serialVersionUID = 0L;
       return phoneNumberBuilder_;
     }
 
-    private com.google.protobuf.StringValue countryCode_;
+    private com.google.protobuf.StringValue countryCode_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> countryCodeBuilder_;
     /**
@@ -1141,7 +1142,7 @@ private static final long serialVersionUID = 0L;
       return countryCodeBuilder_;
     }
 
-    private com.google.protobuf.BoolValue callTrackingEnabled_;
+    private com.google.protobuf.BoolValue callTrackingEnabled_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> callTrackingEnabledBuilder_;
     /**
@@ -1303,7 +1304,7 @@ private static final long serialVersionUID = 0L;
       return callTrackingEnabledBuilder_;
     }
 
-    private com.google.protobuf.StringValue callConversionAction_;
+    private com.google.protobuf.StringValue callConversionAction_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> callConversionActionBuilder_;
     /**
@@ -1474,7 +1475,7 @@ private static final long serialVersionUID = 0L;
       return callConversionActionBuilder_;
     }
 
-    private com.google.protobuf.BoolValue callConversionTrackingDisabled_;
+    private com.google.protobuf.BoolValue callConversionTrackingDisabled_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> callConversionTrackingDisabledBuilder_;
     /**
@@ -1713,7 +1714,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

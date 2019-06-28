@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               exemptPolicyViolationKeys_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.PolicyViolationKey>();
               mutable_bitField0_ |= 0x00000002;
             }
@@ -104,7 +104,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         exemptPolicyViolationKeys_ = java.util.Collections.unmodifiableList(exemptPolicyViolationKeys_);
       }
       this.unknownFields = unknownFields.build();
@@ -508,32 +508,35 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.services.AdGroupCriterionOperation other = (com.google.ads.googleads.v1.services.AdGroupCriterionOperation) obj;
 
-    if (hasUpdateMask() != other.hasUpdateMask()) return false;
+    boolean result = true;
+    result = result && (hasUpdateMask() == other.hasUpdateMask());
     if (hasUpdateMask()) {
-      if (!getUpdateMask()
-          .equals(other.getUpdateMask())) return false;
+      result = result && getUpdateMask()
+          .equals(other.getUpdateMask());
     }
-    if (!getExemptPolicyViolationKeysList()
-        .equals(other.getExemptPolicyViolationKeysList())) return false;
-    if (!getOperationCase().equals(other.getOperationCase())) return false;
+    result = result && getExemptPolicyViolationKeysList()
+        .equals(other.getExemptPolicyViolationKeysList());
+    result = result && getOperationCase().equals(
+        other.getOperationCase());
+    if (!result) return false;
     switch (operationCase_) {
       case 1:
-        if (!getCreate()
-            .equals(other.getCreate())) return false;
+        result = result && getCreate()
+            .equals(other.getCreate());
         break;
       case 2:
-        if (!getUpdate()
-            .equals(other.getUpdate())) return false;
+        result = result && getUpdate()
+            .equals(other.getUpdate());
         break;
       case 3:
-        if (!getRemove()
-            .equals(other.getRemove())) return false;
+        result = result && getRemove()
+            .equals(other.getRemove());
         break;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -753,7 +756,7 @@ private static final long serialVersionUID = 0L;
         result.updateMask_ = updateMaskBuilder_.build();
       }
       if (exemptPolicyViolationKeysBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
           exemptPolicyViolationKeys_ = java.util.Collections.unmodifiableList(exemptPolicyViolationKeys_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
@@ -786,35 +789,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -921,7 +924,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
 
-    private com.google.protobuf.FieldMask updateMask_;
+    private com.google.protobuf.FieldMask updateMask_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
     /**
@@ -1077,7 +1080,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.PolicyViolationKey> exemptPolicyViolationKeys_ =
       java.util.Collections.emptyList();
     private void ensureExemptPolicyViolationKeysIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
         exemptPolicyViolationKeys_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.PolicyViolationKey>(exemptPolicyViolationKeys_);
         bitField0_ |= 0x00000002;
        }
@@ -1504,7 +1507,7 @@ private static final long serialVersionUID = 0L;
         exemptPolicyViolationKeysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.PolicyViolationKey, com.google.ads.googleads.v1.common.PolicyViolationKey.Builder, com.google.ads.googleads.v1.common.PolicyViolationKeyOrBuilder>(
                 exemptPolicyViolationKeys_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
                 isClean());
         exemptPolicyViolationKeys_ = null;
@@ -1977,7 +1980,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

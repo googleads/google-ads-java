@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -391,7 +391,7 @@ public class ParentalStatusViewServiceClientTest {
     ParentalStatusView actualResponse = client.getParentalStatusView(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockParentalStatusViewService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockParentalStatusViewService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetParentalStatusViewRequest actualRequest =
         (GetParentalStatusViewRequest) actualRequests.get(0);

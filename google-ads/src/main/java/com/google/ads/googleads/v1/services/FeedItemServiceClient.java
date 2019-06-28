@@ -103,12 +103,7 @@ public class FeedItemServiceClient implements BackgroundResource {
   private static final PathTemplate FEED_ITEM_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/feedItems/{feed_item}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a feed_item resource.
-   *
-   * @deprecated Use the {@link FeedItemName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a feed_item resource. */
   public static final String formatFeedItemName(String customer, String feedItem) {
     return FEED_ITEM_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -117,20 +112,14 @@ public class FeedItemServiceClient implements BackgroundResource {
 
   /**
    * Parses the customer from the given fully-qualified path which represents a feed_item resource.
-   *
-   * @deprecated Use the {@link FeedItemName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromFeedItemName(String feedItemName) {
     return FEED_ITEM_PATH_TEMPLATE.parse(feedItemName).get("customer");
   }
 
   /**
    * Parses the feed_item from the given fully-qualified path which represents a feed_item resource.
-   *
-   * @deprecated Use the {@link FeedItemName} class instead.
    */
-  @Deprecated
   public static final String parseFeedItemFromFeedItemName(String feedItemName) {
     return FEED_ITEM_PATH_TEMPLATE.parse(feedItemName).get("feed_item");
   }

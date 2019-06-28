@@ -103,12 +103,7 @@ public class UserListServiceClient implements BackgroundResource {
   private static final PathTemplate USER_LIST_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/userLists/{user_list}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a user_list resource.
-   *
-   * @deprecated Use the {@link UserListName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a user_list resource. */
   public static final String formatUserListName(String customer, String userList) {
     return USER_LIST_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -117,20 +112,14 @@ public class UserListServiceClient implements BackgroundResource {
 
   /**
    * Parses the customer from the given fully-qualified path which represents a user_list resource.
-   *
-   * @deprecated Use the {@link UserListName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromUserListName(String userListName) {
     return USER_LIST_PATH_TEMPLATE.parse(userListName).get("customer");
   }
 
   /**
    * Parses the user_list from the given fully-qualified path which represents a user_list resource.
-   *
-   * @deprecated Use the {@link UserListName} class instead.
    */
-  @Deprecated
   public static final String parseUserListFromUserListName(String userListName) {
     return USER_LIST_PATH_TEMPLATE.parse(userListName).get("user_list");
   }

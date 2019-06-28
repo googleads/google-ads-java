@@ -102,12 +102,7 @@ public class LocationViewServiceClient implements BackgroundResource {
   private static final PathTemplate LOCATION_VIEW_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/locationViews/{location_view}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a location_view resource.
-   *
-   * @deprecated Use the {@link LocationViewName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a location_view resource. */
   public static final String formatLocationViewName(String customer, String locationView) {
     return LOCATION_VIEW_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -117,10 +112,7 @@ public class LocationViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a location_view
    * resource.
-   *
-   * @deprecated Use the {@link LocationViewName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromLocationViewName(String locationViewName) {
     return LOCATION_VIEW_PATH_TEMPLATE.parse(locationViewName).get("customer");
   }
@@ -128,10 +120,7 @@ public class LocationViewServiceClient implements BackgroundResource {
   /**
    * Parses the location_view from the given fully-qualified path which represents a location_view
    * resource.
-   *
-   * @deprecated Use the {@link LocationViewName} class instead.
    */
-  @Deprecated
   public static final String parseLocationViewFromLocationViewName(String locationViewName) {
     return LOCATION_VIEW_PATH_TEMPLATE.parse(locationViewName).get("location_view");
   }

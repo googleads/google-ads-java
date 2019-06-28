@@ -103,12 +103,7 @@ public class CampaignServiceClient implements BackgroundResource {
   private static final PathTemplate CAMPAIGN_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/campaigns/{campaign}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a campaign resource.
-   *
-   * @deprecated Use the {@link CampaignName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a campaign resource. */
   public static final String formatCampaignName(String customer, String campaign) {
     return CAMPAIGN_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -117,20 +112,14 @@ public class CampaignServiceClient implements BackgroundResource {
 
   /**
    * Parses the customer from the given fully-qualified path which represents a campaign resource.
-   *
-   * @deprecated Use the {@link CampaignName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromCampaignName(String campaignName) {
     return CAMPAIGN_PATH_TEMPLATE.parse(campaignName).get("customer");
   }
 
   /**
    * Parses the campaign from the given fully-qualified path which represents a campaign resource.
-   *
-   * @deprecated Use the {@link CampaignName} class instead.
    */
-  @Deprecated
   public static final String parseCampaignFromCampaignName(String campaignName) {
     return CAMPAIGN_PATH_TEMPLATE.parse(campaignName).get("campaign");
   }

@@ -103,12 +103,7 @@ public class MediaFileServiceClient implements BackgroundResource {
   private static final PathTemplate MEDIA_FILE_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/mediaFiles/{media_file}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a media_file resource.
-   *
-   * @deprecated Use the {@link MediaFileName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a media_file resource. */
   public static final String formatMediaFileName(String customer, String mediaFile) {
     return MEDIA_FILE_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -117,10 +112,7 @@ public class MediaFileServiceClient implements BackgroundResource {
 
   /**
    * Parses the customer from the given fully-qualified path which represents a media_file resource.
-   *
-   * @deprecated Use the {@link MediaFileName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromMediaFileName(String mediaFileName) {
     return MEDIA_FILE_PATH_TEMPLATE.parse(mediaFileName).get("customer");
   }
@@ -128,10 +120,7 @@ public class MediaFileServiceClient implements BackgroundResource {
   /**
    * Parses the media_file from the given fully-qualified path which represents a media_file
    * resource.
-   *
-   * @deprecated Use the {@link MediaFileName} class instead.
    */
-  @Deprecated
   public static final String parseMediaFileFromMediaFileName(String mediaFileName) {
     return MEDIA_FILE_PATH_TEMPLATE.parse(mediaFileName).get("media_file");
   }

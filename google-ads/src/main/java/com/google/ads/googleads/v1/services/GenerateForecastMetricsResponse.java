@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
               campaignForecasts_ = new java.util.ArrayList<com.google.ads.googleads.v1.services.KeywordPlanCampaignForecast>();
               mutable_bitField0_ |= 0x00000001;
             }
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               adGroupForecasts_ = new java.util.ArrayList<com.google.ads.googleads.v1.services.KeywordPlanAdGroupForecast>();
               mutable_bitField0_ |= 0x00000002;
             }
@@ -68,7 +68,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
               keywordForecasts_ = new java.util.ArrayList<com.google.ads.googleads.v1.services.KeywordPlanKeywordForecast>();
               mutable_bitField0_ |= 0x00000004;
             }
@@ -77,7 +77,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -91,13 +91,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
         campaignForecasts_ = java.util.Collections.unmodifiableList(campaignForecasts_);
       }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         adGroupForecasts_ = java.util.Collections.unmodifiableList(adGroupForecasts_);
       }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
         keywordForecasts_ = java.util.Collections.unmodifiableList(keywordForecasts_);
       }
       this.unknownFields = unknownFields.build();
@@ -346,14 +346,15 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.services.GenerateForecastMetricsResponse other = (com.google.ads.googleads.v1.services.GenerateForecastMetricsResponse) obj;
 
-    if (!getCampaignForecastsList()
-        .equals(other.getCampaignForecastsList())) return false;
-    if (!getAdGroupForecastsList()
-        .equals(other.getAdGroupForecastsList())) return false;
-    if (!getKeywordForecastsList()
-        .equals(other.getKeywordForecastsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    boolean result = true;
+    result = result && getCampaignForecastsList()
+        .equals(other.getCampaignForecastsList());
+    result = result && getAdGroupForecastsList()
+        .equals(other.getAdGroupForecastsList());
+    result = result && getKeywordForecastsList()
+        .equals(other.getKeywordForecastsList());
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -561,7 +562,7 @@ private static final long serialVersionUID = 0L;
       com.google.ads.googleads.v1.services.GenerateForecastMetricsResponse result = new com.google.ads.googleads.v1.services.GenerateForecastMetricsResponse(this);
       int from_bitField0_ = bitField0_;
       if (campaignForecastsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
           campaignForecasts_ = java.util.Collections.unmodifiableList(campaignForecasts_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
@@ -570,7 +571,7 @@ private static final long serialVersionUID = 0L;
         result.campaignForecasts_ = campaignForecastsBuilder_.build();
       }
       if (adGroupForecastsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
           adGroupForecasts_ = java.util.Collections.unmodifiableList(adGroupForecasts_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
@@ -579,7 +580,7 @@ private static final long serialVersionUID = 0L;
         result.adGroupForecasts_ = adGroupForecastsBuilder_.build();
       }
       if (keywordForecastsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
           keywordForecasts_ = java.util.Collections.unmodifiableList(keywordForecasts_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
@@ -593,35 +594,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -746,7 +747,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.services.KeywordPlanCampaignForecast> campaignForecasts_ =
       java.util.Collections.emptyList();
     private void ensureCampaignForecastsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
         campaignForecasts_ = new java.util.ArrayList<com.google.ads.googleads.v1.services.KeywordPlanCampaignForecast>(campaignForecasts_);
         bitField0_ |= 0x00000001;
        }
@@ -1065,7 +1066,7 @@ private static final long serialVersionUID = 0L;
         campaignForecastsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.services.KeywordPlanCampaignForecast, com.google.ads.googleads.v1.services.KeywordPlanCampaignForecast.Builder, com.google.ads.googleads.v1.services.KeywordPlanCampaignForecastOrBuilder>(
                 campaignForecasts_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),
                 isClean());
         campaignForecasts_ = null;
@@ -1076,7 +1077,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.services.KeywordPlanAdGroupForecast> adGroupForecasts_ =
       java.util.Collections.emptyList();
     private void ensureAdGroupForecastsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
         adGroupForecasts_ = new java.util.ArrayList<com.google.ads.googleads.v1.services.KeywordPlanAdGroupForecast>(adGroupForecasts_);
         bitField0_ |= 0x00000002;
        }
@@ -1377,7 +1378,7 @@ private static final long serialVersionUID = 0L;
         adGroupForecastsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.services.KeywordPlanAdGroupForecast, com.google.ads.googleads.v1.services.KeywordPlanAdGroupForecast.Builder, com.google.ads.googleads.v1.services.KeywordPlanAdGroupForecastOrBuilder>(
                 adGroupForecasts_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
                 isClean());
         adGroupForecasts_ = null;
@@ -1388,7 +1389,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.services.KeywordPlanKeywordForecast> keywordForecasts_ =
       java.util.Collections.emptyList();
     private void ensureKeywordForecastsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
         keywordForecasts_ = new java.util.ArrayList<com.google.ads.googleads.v1.services.KeywordPlanKeywordForecast>(keywordForecasts_);
         bitField0_ |= 0x00000004;
        }
@@ -1689,7 +1690,7 @@ private static final long serialVersionUID = 0L;
         keywordForecastsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.services.KeywordPlanKeywordForecast, com.google.ads.googleads.v1.services.KeywordPlanKeywordForecast.Builder, com.google.ads.googleads.v1.services.KeywordPlanKeywordForecastOrBuilder>(
                 keywordForecasts_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000004) == 0x00000004),
                 getParentForChildren(),
                 isClean());
         keywordForecasts_ = null;
@@ -1699,7 +1700,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

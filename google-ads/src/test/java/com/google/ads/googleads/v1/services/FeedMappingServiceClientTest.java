@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -390,7 +390,7 @@ public class FeedMappingServiceClientTest {
     FeedMapping actualResponse = client.getFeedMapping(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockFeedMappingService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockFeedMappingService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetFeedMappingRequest actualRequest = (GetFeedMappingRequest) actualRequests.get(0);
 
@@ -433,7 +433,7 @@ public class FeedMappingServiceClientTest {
         client.mutateFeedMappings(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockFeedMappingService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockFeedMappingService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateFeedMappingsRequest actualRequest = (MutateFeedMappingsRequest) actualRequests.get(0);
 
@@ -478,7 +478,7 @@ public class FeedMappingServiceClientTest {
     MutateFeedMappingsResponse actualResponse = client.mutateFeedMappings(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockFeedMappingService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockFeedMappingService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateFeedMappingsRequest actualRequest = (MutateFeedMappingsRequest) actualRequests.get(0);
 

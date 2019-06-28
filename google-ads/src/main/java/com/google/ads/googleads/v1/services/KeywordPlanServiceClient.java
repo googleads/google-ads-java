@@ -103,12 +103,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
   private static final PathTemplate KEYWORD_PLAN_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/keywordPlans/{keyword_plan}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a keyword_plan resource.
-   *
-   * @deprecated Use the {@link KeywordPlanName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a keyword_plan resource. */
   public static final String formatKeywordPlanName(String customer, String keywordPlan) {
     return KEYWORD_PLAN_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -118,10 +113,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a keyword_plan
    * resource.
-   *
-   * @deprecated Use the {@link KeywordPlanName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromKeywordPlanName(String keywordPlanName) {
     return KEYWORD_PLAN_PATH_TEMPLATE.parse(keywordPlanName).get("customer");
   }
@@ -129,10 +121,7 @@ public class KeywordPlanServiceClient implements BackgroundResource {
   /**
    * Parses the keyword_plan from the given fully-qualified path which represents a keyword_plan
    * resource.
-   *
-   * @deprecated Use the {@link KeywordPlanName} class instead.
    */
-  @Deprecated
   public static final String parseKeywordPlanFromKeywordPlanName(String keywordPlanName) {
     return KEYWORD_PLAN_PATH_TEMPLATE.parse(keywordPlanName).get("keyword_plan");
   }

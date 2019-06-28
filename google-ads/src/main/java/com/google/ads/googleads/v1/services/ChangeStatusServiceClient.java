@@ -102,12 +102,7 @@ public class ChangeStatusServiceClient implements BackgroundResource {
   private static final PathTemplate CHANGE_STATUS_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/changeStatus/{change_status}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a change_status resource.
-   *
-   * @deprecated Use the {@link ChangeStatusName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a change_status resource. */
   public static final String formatChangeStatusName(String customer, String changeStatus) {
     return CHANGE_STATUS_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -117,10 +112,7 @@ public class ChangeStatusServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a change_status
    * resource.
-   *
-   * @deprecated Use the {@link ChangeStatusName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromChangeStatusName(String changeStatusName) {
     return CHANGE_STATUS_PATH_TEMPLATE.parse(changeStatusName).get("customer");
   }
@@ -128,10 +120,7 @@ public class ChangeStatusServiceClient implements BackgroundResource {
   /**
    * Parses the change_status from the given fully-qualified path which represents a change_status
    * resource.
-   *
-   * @deprecated Use the {@link ChangeStatusName} class instead.
    */
-  @Deprecated
   public static final String parseChangeStatusFromChangeStatusName(String changeStatusName) {
     return CHANGE_STATUS_PATH_TEMPLATE.parse(changeStatusName).get("change_status");
   }

@@ -106,10 +106,7 @@ public class ProductBiddingCategoryConstantServiceClient implements BackgroundRe
   /**
    * Formats a string containing the fully-qualified path to represent a
    * product_bidding_category_constant resource.
-   *
-   * @deprecated Use the {@link ProductBiddingCategoryConstantName} class instead.
    */
-  @Deprecated
   public static final String formatProductBiddingCategoryConstantName(
       String productBiddingCategoryConstant) {
     return PRODUCT_BIDDING_CATEGORY_CONSTANT_PATH_TEMPLATE.instantiate(
@@ -119,10 +116,7 @@ public class ProductBiddingCategoryConstantServiceClient implements BackgroundRe
   /**
    * Parses the product_bidding_category_constant from the given fully-qualified path which
    * represents a product_bidding_category_constant resource.
-   *
-   * @deprecated Use the {@link ProductBiddingCategoryConstantName} class instead.
    */
-  @Deprecated
   public static final String
       parseProductBiddingCategoryConstantFromProductBiddingCategoryConstantName(
           String productBiddingCategoryConstantName) {

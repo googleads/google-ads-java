@@ -23,7 +23,7 @@ import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
@@ -391,7 +391,7 @@ public class CustomerFeedServiceClientTest {
     CustomerFeed actualResponse = client.getCustomerFeed(formattedResourceName);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockCustomerFeedService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockCustomerFeedService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     GetCustomerFeedRequest actualRequest = (GetCustomerFeedRequest) actualRequests.get(0);
 
@@ -434,7 +434,7 @@ public class CustomerFeedServiceClientTest {
         client.mutateCustomerFeeds(customerId, operations, partialFailure, validateOnly);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockCustomerFeedService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockCustomerFeedService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCustomerFeedsRequest actualRequest = (MutateCustomerFeedsRequest) actualRequests.get(0);
 
@@ -479,7 +479,7 @@ public class CustomerFeedServiceClientTest {
     MutateCustomerFeedsResponse actualResponse = client.mutateCustomerFeeds(customerId, operations);
     Assert.assertEquals(expectedResponse, actualResponse);
 
-    List<AbstractMessage> actualRequests = mockCustomerFeedService.getRequests();
+    List<GeneratedMessageV3> actualRequests = mockCustomerFeedService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     MutateCustomerFeedsRequest actualRequest = (MutateCustomerFeedsRequest) actualRequests.get(0);
 

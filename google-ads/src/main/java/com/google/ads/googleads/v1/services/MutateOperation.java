@@ -594,7 +594,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -2530,169 +2530,172 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.services.MutateOperation other = (com.google.ads.googleads.v1.services.MutateOperation) obj;
 
-    if (!getOperationCase().equals(other.getOperationCase())) return false;
+    boolean result = true;
+    result = result && getOperationCase().equals(
+        other.getOperationCase());
+    if (!result) return false;
     switch (operationCase_) {
       case 17:
-        if (!getAdGroupAdLabelOperation()
-            .equals(other.getAdGroupAdLabelOperation())) return false;
+        result = result && getAdGroupAdLabelOperation()
+            .equals(other.getAdGroupAdLabelOperation());
         break;
       case 1:
-        if (!getAdGroupAdOperation()
-            .equals(other.getAdGroupAdOperation())) return false;
+        result = result && getAdGroupAdOperation()
+            .equals(other.getAdGroupAdOperation());
         break;
       case 2:
-        if (!getAdGroupBidModifierOperation()
-            .equals(other.getAdGroupBidModifierOperation())) return false;
+        result = result && getAdGroupBidModifierOperation()
+            .equals(other.getAdGroupBidModifierOperation());
         break;
       case 18:
-        if (!getAdGroupCriterionLabelOperation()
-            .equals(other.getAdGroupCriterionLabelOperation())) return false;
+        result = result && getAdGroupCriterionLabelOperation()
+            .equals(other.getAdGroupCriterionLabelOperation());
         break;
       case 3:
-        if (!getAdGroupCriterionOperation()
-            .equals(other.getAdGroupCriterionOperation())) return false;
+        result = result && getAdGroupCriterionOperation()
+            .equals(other.getAdGroupCriterionOperation());
         break;
       case 19:
-        if (!getAdGroupExtensionSettingOperation()
-            .equals(other.getAdGroupExtensionSettingOperation())) return false;
+        result = result && getAdGroupExtensionSettingOperation()
+            .equals(other.getAdGroupExtensionSettingOperation());
         break;
       case 20:
-        if (!getAdGroupFeedOperation()
-            .equals(other.getAdGroupFeedOperation())) return false;
+        result = result && getAdGroupFeedOperation()
+            .equals(other.getAdGroupFeedOperation());
         break;
       case 21:
-        if (!getAdGroupLabelOperation()
-            .equals(other.getAdGroupLabelOperation())) return false;
+        result = result && getAdGroupLabelOperation()
+            .equals(other.getAdGroupLabelOperation());
         break;
       case 5:
-        if (!getAdGroupOperation()
-            .equals(other.getAdGroupOperation())) return false;
+        result = result && getAdGroupOperation()
+            .equals(other.getAdGroupOperation());
         break;
       case 22:
-        if (!getAdParameterOperation()
-            .equals(other.getAdParameterOperation())) return false;
+        result = result && getAdParameterOperation()
+            .equals(other.getAdParameterOperation());
         break;
       case 23:
-        if (!getAssetOperation()
-            .equals(other.getAssetOperation())) return false;
+        result = result && getAssetOperation()
+            .equals(other.getAssetOperation());
         break;
       case 6:
-        if (!getBiddingStrategyOperation()
-            .equals(other.getBiddingStrategyOperation())) return false;
+        result = result && getBiddingStrategyOperation()
+            .equals(other.getBiddingStrategyOperation());
         break;
       case 7:
-        if (!getCampaignBidModifierOperation()
-            .equals(other.getCampaignBidModifierOperation())) return false;
+        result = result && getCampaignBidModifierOperation()
+            .equals(other.getCampaignBidModifierOperation());
         break;
       case 8:
-        if (!getCampaignBudgetOperation()
-            .equals(other.getCampaignBudgetOperation())) return false;
+        result = result && getCampaignBudgetOperation()
+            .equals(other.getCampaignBudgetOperation());
         break;
       case 13:
-        if (!getCampaignCriterionOperation()
-            .equals(other.getCampaignCriterionOperation())) return false;
+        result = result && getCampaignCriterionOperation()
+            .equals(other.getCampaignCriterionOperation());
         break;
       case 24:
-        if (!getCampaignDraftOperation()
-            .equals(other.getCampaignDraftOperation())) return false;
+        result = result && getCampaignDraftOperation()
+            .equals(other.getCampaignDraftOperation());
         break;
       case 25:
-        if (!getCampaignExperimentOperation()
-            .equals(other.getCampaignExperimentOperation())) return false;
+        result = result && getCampaignExperimentOperation()
+            .equals(other.getCampaignExperimentOperation());
         break;
       case 26:
-        if (!getCampaignExtensionSettingOperation()
-            .equals(other.getCampaignExtensionSettingOperation())) return false;
+        result = result && getCampaignExtensionSettingOperation()
+            .equals(other.getCampaignExtensionSettingOperation());
         break;
       case 27:
-        if (!getCampaignFeedOperation()
-            .equals(other.getCampaignFeedOperation())) return false;
+        result = result && getCampaignFeedOperation()
+            .equals(other.getCampaignFeedOperation());
         break;
       case 28:
-        if (!getCampaignLabelOperation()
-            .equals(other.getCampaignLabelOperation())) return false;
+        result = result && getCampaignLabelOperation()
+            .equals(other.getCampaignLabelOperation());
         break;
       case 10:
-        if (!getCampaignOperation()
-            .equals(other.getCampaignOperation())) return false;
+        result = result && getCampaignOperation()
+            .equals(other.getCampaignOperation());
         break;
       case 11:
-        if (!getCampaignSharedSetOperation()
-            .equals(other.getCampaignSharedSetOperation())) return false;
+        result = result && getCampaignSharedSetOperation()
+            .equals(other.getCampaignSharedSetOperation());
         break;
       case 12:
-        if (!getConversionActionOperation()
-            .equals(other.getConversionActionOperation())) return false;
+        result = result && getConversionActionOperation()
+            .equals(other.getConversionActionOperation());
         break;
       case 30:
-        if (!getCustomerExtensionSettingOperation()
-            .equals(other.getCustomerExtensionSettingOperation())) return false;
+        result = result && getCustomerExtensionSettingOperation()
+            .equals(other.getCustomerExtensionSettingOperation());
         break;
       case 31:
-        if (!getCustomerFeedOperation()
-            .equals(other.getCustomerFeedOperation())) return false;
+        result = result && getCustomerFeedOperation()
+            .equals(other.getCustomerFeedOperation());
         break;
       case 32:
-        if (!getCustomerLabelOperation()
-            .equals(other.getCustomerLabelOperation())) return false;
+        result = result && getCustomerLabelOperation()
+            .equals(other.getCustomerLabelOperation());
         break;
       case 34:
-        if (!getCustomerNegativeCriterionOperation()
-            .equals(other.getCustomerNegativeCriterionOperation())) return false;
+        result = result && getCustomerNegativeCriterionOperation()
+            .equals(other.getCustomerNegativeCriterionOperation());
         break;
       case 35:
-        if (!getCustomerOperation()
-            .equals(other.getCustomerOperation())) return false;
+        result = result && getCustomerOperation()
+            .equals(other.getCustomerOperation());
         break;
       case 36:
-        if (!getExtensionFeedItemOperation()
-            .equals(other.getExtensionFeedItemOperation())) return false;
+        result = result && getExtensionFeedItemOperation()
+            .equals(other.getExtensionFeedItemOperation());
         break;
       case 37:
-        if (!getFeedItemOperation()
-            .equals(other.getFeedItemOperation())) return false;
+        result = result && getFeedItemOperation()
+            .equals(other.getFeedItemOperation());
         break;
       case 38:
-        if (!getFeedItemTargetOperation()
-            .equals(other.getFeedItemTargetOperation())) return false;
+        result = result && getFeedItemTargetOperation()
+            .equals(other.getFeedItemTargetOperation());
         break;
       case 39:
-        if (!getFeedMappingOperation()
-            .equals(other.getFeedMappingOperation())) return false;
+        result = result && getFeedMappingOperation()
+            .equals(other.getFeedMappingOperation());
         break;
       case 40:
-        if (!getFeedOperation()
-            .equals(other.getFeedOperation())) return false;
+        result = result && getFeedOperation()
+            .equals(other.getFeedOperation());
         break;
       case 41:
-        if (!getLabelOperation()
-            .equals(other.getLabelOperation())) return false;
+        result = result && getLabelOperation()
+            .equals(other.getLabelOperation());
         break;
       case 42:
-        if (!getMediaFileOperation()
-            .equals(other.getMediaFileOperation())) return false;
+        result = result && getMediaFileOperation()
+            .equals(other.getMediaFileOperation());
         break;
       case 43:
-        if (!getRemarketingActionOperation()
-            .equals(other.getRemarketingActionOperation())) return false;
+        result = result && getRemarketingActionOperation()
+            .equals(other.getRemarketingActionOperation());
         break;
       case 14:
-        if (!getSharedCriterionOperation()
-            .equals(other.getSharedCriterionOperation())) return false;
+        result = result && getSharedCriterionOperation()
+            .equals(other.getSharedCriterionOperation());
         break;
       case 15:
-        if (!getSharedSetOperation()
-            .equals(other.getSharedSetOperation())) return false;
+        result = result && getSharedSetOperation()
+            .equals(other.getSharedSetOperation());
         break;
       case 16:
-        if (!getUserListOperation()
-            .equals(other.getUserListOperation())) return false;
+        result = result && getUserListOperation()
+            .equals(other.getUserListOperation());
         break;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -3307,35 +3310,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10264,7 +10267,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

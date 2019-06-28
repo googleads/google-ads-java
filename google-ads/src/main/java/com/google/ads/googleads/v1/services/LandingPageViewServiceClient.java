@@ -105,10 +105,7 @@ public class LandingPageViewServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a landing_page_view resource.
-   *
-   * @deprecated Use the {@link LandingPageViewName} class instead.
    */
-  @Deprecated
   public static final String formatLandingPageViewName(String customer, String landingPageView) {
     return LANDING_PAGE_VIEW_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -118,10 +115,7 @@ public class LandingPageViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a landing_page_view
    * resource.
-   *
-   * @deprecated Use the {@link LandingPageViewName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromLandingPageViewName(String landingPageViewName) {
     return LANDING_PAGE_VIEW_PATH_TEMPLATE.parse(landingPageViewName).get("customer");
   }
@@ -129,10 +123,7 @@ public class LandingPageViewServiceClient implements BackgroundResource {
   /**
    * Parses the landing_page_view from the given fully-qualified path which represents a
    * landing_page_view resource.
-   *
-   * @deprecated Use the {@link LandingPageViewName} class instead.
    */
-  @Deprecated
   public static final String parseLandingPageViewFromLandingPageViewName(
       String landingPageViewName) {
     return LANDING_PAGE_VIEW_PATH_TEMPLATE.parse(landingPageViewName).get("landing_page_view");

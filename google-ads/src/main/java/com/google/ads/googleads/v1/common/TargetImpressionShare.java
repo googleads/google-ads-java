@@ -83,7 +83,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -273,19 +273,20 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.TargetImpressionShare other = (com.google.ads.googleads.v1.common.TargetImpressionShare) obj;
 
-    if (location_ != other.location_) return false;
-    if (hasLocationFractionMicros() != other.hasLocationFractionMicros()) return false;
+    boolean result = true;
+    result = result && location_ == other.location_;
+    result = result && (hasLocationFractionMicros() == other.hasLocationFractionMicros());
     if (hasLocationFractionMicros()) {
-      if (!getLocationFractionMicros()
-          .equals(other.getLocationFractionMicros())) return false;
+      result = result && getLocationFractionMicros()
+          .equals(other.getLocationFractionMicros());
     }
-    if (hasCpcBidCeilingMicros() != other.hasCpcBidCeilingMicros()) return false;
+    result = result && (hasCpcBidCeilingMicros() == other.hasCpcBidCeilingMicros());
     if (hasCpcBidCeilingMicros()) {
-      if (!getCpcBidCeilingMicros()
-          .equals(other.getCpcBidCeilingMicros())) return false;
+      result = result && getCpcBidCeilingMicros()
+          .equals(other.getCpcBidCeilingMicros());
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -502,35 +503,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -647,7 +648,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value locationFractionMicros_;
+    private com.google.protobuf.Int64Value locationFractionMicros_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> locationFractionMicrosBuilder_;
     /**
@@ -809,7 +810,7 @@ private static final long serialVersionUID = 0L;
       return locationFractionMicrosBuilder_;
     }
 
-    private com.google.protobuf.Int64Value cpcBidCeilingMicros_;
+    private com.google.protobuf.Int64Value cpcBidCeilingMicros_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> cpcBidCeilingMicrosBuilder_;
     /**
@@ -982,7 +983,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

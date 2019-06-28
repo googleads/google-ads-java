@@ -102,12 +102,7 @@ public class KeywordViewServiceClient implements BackgroundResource {
   private static final PathTemplate KEYWORD_VIEW_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/keywordViews/{keyword_view}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a keyword_view resource.
-   *
-   * @deprecated Use the {@link KeywordViewName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a keyword_view resource. */
   public static final String formatKeywordViewName(String customer, String keywordView) {
     return KEYWORD_VIEW_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -117,10 +112,7 @@ public class KeywordViewServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a keyword_view
    * resource.
-   *
-   * @deprecated Use the {@link KeywordViewName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromKeywordViewName(String keywordViewName) {
     return KEYWORD_VIEW_PATH_TEMPLATE.parse(keywordViewName).get("customer");
   }
@@ -128,10 +120,7 @@ public class KeywordViewServiceClient implements BackgroundResource {
   /**
    * Parses the keyword_view from the given fully-qualified path which represents a keyword_view
    * resource.
-   *
-   * @deprecated Use the {@link KeywordViewName} class instead.
    */
-  @Deprecated
   public static final String parseKeywordViewFromKeywordViewName(String keywordViewName) {
     return KEYWORD_VIEW_PATH_TEMPLATE.parse(keywordViewName).get("keyword_view");
   }

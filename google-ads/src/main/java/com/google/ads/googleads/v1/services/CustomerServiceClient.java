@@ -102,22 +102,14 @@ public class CustomerServiceClient implements BackgroundResource {
   private static final PathTemplate CUSTOMER_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a customer resource.
-   *
-   * @deprecated Use the {@link CustomerName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a customer resource. */
   public static final String formatCustomerName(String customer) {
     return CUSTOMER_PATH_TEMPLATE.instantiate("customer", customer);
   }
 
   /**
    * Parses the customer from the given fully-qualified path which represents a customer resource.
-   *
-   * @deprecated Use the {@link CustomerName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromCustomerName(String customerName) {
     return CUSTOMER_PATH_TEMPLATE.parse(customerName).get("customer");
   }

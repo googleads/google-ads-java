@@ -32,23 +32,22 @@ public final class FeedPlaceholderViewServiceProto {
       "placeholder_view_service.proto\022 google.a" +
       "ds.googleads.v1.services\032=google/ads/goo" +
       "gleads/v1/resources/feed_placeholder_vie" +
-      "w.proto\032\034google/api/annotations.proto\032\027g" +
-      "oogle/api/client.proto\"6\n\035GetFeedPlaceho" +
-      "lderViewRequest\022\025\n\rresource_name\030\001 \001(\t2\215" +
-      "\002\n\032FeedPlaceholderViewService\022\321\001\n\026GetFee" +
-      "dPlaceholderView\022?.google.ads.googleads." +
-      "v1.services.GetFeedPlaceholderViewReques" +
-      "t\0326.google.ads.googleads.v1.resources.Fe" +
-      "edPlaceholderView\">\202\323\344\223\0028\0226/v1/{resource" +
-      "_name=customers/*/feedPlaceholderViews/*" +
-      "}\032\033\312A\030googleads.googleapis.comB\206\002\n$com.g" +
-      "oogle.ads.googleads.v1.servicesB\037FeedPla" +
-      "ceholderViewServiceProtoP\001ZHgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v1/services;services\242\002\003GAA\252\002 Google.Ads." +
-      "GoogleAds.V1.Services\312\002 Google\\Ads\\Googl" +
-      "eAds\\V1\\Services\352\002$Google::Ads::GoogleAd" +
-      "s::V1::Servicesb\006proto3"
+      "w.proto\032\034google/api/annotations.proto\"6\n" +
+      "\035GetFeedPlaceholderViewRequest\022\025\n\rresour" +
+      "ce_name\030\001 \001(\t2\360\001\n\032FeedPlaceholderViewSer" +
+      "vice\022\321\001\n\026GetFeedPlaceholderView\022?.google" +
+      ".ads.googleads.v1.services.GetFeedPlaceh" +
+      "olderViewRequest\0326.google.ads.googleads." +
+      "v1.resources.FeedPlaceholderView\">\202\323\344\223\0028" +
+      "\0226/v1/{resource_name=customers/*/feedPla" +
+      "ceholderViews/*}B\206\002\n$com.google.ads.goog" +
+      "leads.v1.servicesB\037FeedPlaceholderViewSe" +
+      "rviceProtoP\001ZHgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v1/services;se" +
+      "rvices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.S" +
+      "ervices\312\002 Google\\Ads\\GoogleAds\\V1\\Servic" +
+      "es\352\002$Google::Ads::GoogleAds::V1::Service" +
+      "sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -63,7 +62,6 @@ public final class FeedPlaceholderViewServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.FeedPlaceholderViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetFeedPlaceholderViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -73,13 +71,11 @@ public final class FeedPlaceholderViewServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.FeedPlaceholderViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

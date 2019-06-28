@@ -54,42 +54,41 @@ public final class CustomerClientLinkServiceProto {
       "leads/v1/resources/customer_client_link." +
       "proto\032\034google/api/annotations.proto\032 goo" +
       "gle/protobuf/field_mask.proto\032\036google/pr" +
-      "otobuf/wrappers.proto\032\027google/api/client" +
-      ".proto\"5\n\034GetCustomerClientLinkRequest\022\025" +
-      "\n\rresource_name\030\001 \001(\t\"\210\001\n\037MutateCustomer" +
-      "ClientLinkRequest\022\023\n\013customer_id\030\001 \001(\t\022P" +
-      "\n\toperation\030\002 \001(\0132=.google.ads.googleads" +
-      ".v1.services.CustomerClientLinkOperation" +
-      "\"\355\001\n\033CustomerClientLinkOperation\022/\n\013upda" +
-      "te_mask\030\004 \001(\0132\032.google.protobuf.FieldMas" +
-      "k\022G\n\006create\030\001 \001(\01325.google.ads.googleads" +
-      ".v1.resources.CustomerClientLinkH\000\022G\n\006up" +
-      "date\030\002 \001(\01325.google.ads.googleads.v1.res" +
-      "ources.CustomerClientLinkH\000B\013\n\toperation" +
-      "\"t\n MutateCustomerClientLinkResponse\022P\n\006" +
-      "result\030\001 \001(\0132@.google.ads.googleads.v1.s" +
-      "ervices.MutateCustomerClientLinkResult\"7" +
-      "\n\036MutateCustomerClientLinkResult\022\025\n\rreso" +
-      "urce_name\030\001 \001(\t2\361\003\n\031CustomerClientLinkSe" +
-      "rvice\022\315\001\n\025GetCustomerClientLink\022>.google" +
-      ".ads.googleads.v1.services.GetCustomerCl" +
-      "ientLinkRequest\0325.google.ads.googleads.v" +
-      "1.resources.CustomerClientLink\"=\202\323\344\223\0027\0225" +
-      "/v1/{resource_name=customers/*/customerC" +
-      "lientLinks/*}\022\346\001\n\030MutateCustomerClientLi" +
-      "nk\022A.google.ads.googleads.v1.services.Mu" +
-      "tateCustomerClientLinkRequest\032B.google.a" +
-      "ds.googleads.v1.services.MutateCustomerC" +
-      "lientLinkResponse\"C\202\323\344\223\002=\"8/v1/customers" +
-      "/{customer_id=*}/customerClientLinks:mut" +
-      "ate:\001*\032\033\312A\030googleads.googleapis.comB\205\002\n$" +
-      "com.google.ads.googleads.v1.servicesB\036Cu" +
-      "stomerClientLinkServiceProtoP\001ZHgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v1/services;services\242\002\003GAA\252\002 Google." +
-      "Ads.GoogleAds.V1.Services\312\002 Google\\Ads\\G" +
-      "oogleAds\\V1\\Services\352\002$Google::Ads::Goog" +
-      "leAds::V1::Servicesb\006proto3"
+      "otobuf/wrappers.proto\"5\n\034GetCustomerClie" +
+      "ntLinkRequest\022\025\n\rresource_name\030\001 \001(\t\"\210\001\n" +
+      "\037MutateCustomerClientLinkRequest\022\023\n\013cust" +
+      "omer_id\030\001 \001(\t\022P\n\toperation\030\002 \001(\0132=.googl" +
+      "e.ads.googleads.v1.services.CustomerClie" +
+      "ntLinkOperation\"\355\001\n\033CustomerClientLinkOp" +
+      "eration\022/\n\013update_mask\030\004 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\022G\n\006create\030\001 \001(\01325.googl" +
+      "e.ads.googleads.v1.resources.CustomerCli" +
+      "entLinkH\000\022G\n\006update\030\002 \001(\01325.google.ads.g" +
+      "oogleads.v1.resources.CustomerClientLink" +
+      "H\000B\013\n\toperation\"t\n MutateCustomerClientL" +
+      "inkResponse\022P\n\006result\030\001 \001(\0132@.google.ads" +
+      ".googleads.v1.services.MutateCustomerCli" +
+      "entLinkResult\"7\n\036MutateCustomerClientLin" +
+      "kResult\022\025\n\rresource_name\030\001 \001(\t2\324\003\n\031Custo" +
+      "merClientLinkService\022\315\001\n\025GetCustomerClie" +
+      "ntLink\022>.google.ads.googleads.v1.service" +
+      "s.GetCustomerClientLinkRequest\0325.google." +
+      "ads.googleads.v1.resources.CustomerClien" +
+      "tLink\"=\202\323\344\223\0027\0225/v1/{resource_name=custom" +
+      "ers/*/customerClientLinks/*}\022\346\001\n\030MutateC" +
+      "ustomerClientLink\022A.google.ads.googleads" +
+      ".v1.services.MutateCustomerClientLinkReq" +
+      "uest\032B.google.ads.googleads.v1.services." +
+      "MutateCustomerClientLinkResponse\"C\202\323\344\223\002=" +
+      "\"8/v1/customers/{customer_id=*}/customer" +
+      "ClientLinks:mutate:\001*B\205\002\n$com.google.ads" +
+      ".googleads.v1.servicesB\036CustomerClientLi" +
+      "nkServiceProtoP\001ZHgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v1/service" +
+      "s;services\242\002\003GAA\252\002 Google.Ads.GoogleAds." +
+      "V1.Services\312\002 Google\\Ads\\GoogleAds\\V1\\Se" +
+      "rvices\352\002$Google::Ads::GoogleAds::V1::Ser" +
+      "vicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -106,7 +105,6 @@ public final class CustomerClientLinkServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetCustomerClientLinkRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -140,7 +138,6 @@ public final class CustomerClientLinkServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -148,7 +145,6 @@ public final class CustomerClientLinkServiceProto {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -283,23 +283,24 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.DisplayCallToAction other = (com.google.ads.googleads.v1.common.DisplayCallToAction) obj;
 
-    if (hasText() != other.hasText()) return false;
+    boolean result = true;
+    result = result && (hasText() == other.hasText());
     if (hasText()) {
-      if (!getText()
-          .equals(other.getText())) return false;
+      result = result && getText()
+          .equals(other.getText());
     }
-    if (hasTextColor() != other.hasTextColor()) return false;
+    result = result && (hasTextColor() == other.hasTextColor());
     if (hasTextColor()) {
-      if (!getTextColor()
-          .equals(other.getTextColor())) return false;
+      result = result && getTextColor()
+          .equals(other.getTextColor());
     }
-    if (hasUrlCollectionId() != other.hasUrlCollectionId()) return false;
+    result = result && (hasUrlCollectionId() == other.hasUrlCollectionId());
     if (hasUrlCollectionId()) {
-      if (!getUrlCollectionId()
-          .equals(other.getUrlCollectionId())) return false;
+      result = result && getUrlCollectionId()
+          .equals(other.getUrlCollectionId());
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -525,35 +526,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -605,7 +606,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue text_;
+    private com.google.protobuf.StringValue text_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> textBuilder_;
     /**
@@ -758,7 +759,7 @@ private static final long serialVersionUID = 0L;
       return textBuilder_;
     }
 
-    private com.google.protobuf.StringValue textColor_;
+    private com.google.protobuf.StringValue textColor_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> textColorBuilder_;
     /**
@@ -920,7 +921,7 @@ private static final long serialVersionUID = 0L;
       return textColorBuilder_;
     }
 
-    private com.google.protobuf.StringValue urlCollectionId_;
+    private com.google.protobuf.StringValue urlCollectionId_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> urlCollectionIdBuilder_;
     /**
@@ -1084,7 +1085,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

@@ -19,7 +19,7 @@ import com.google.ads.googleads.v1.resources.CampaignDraft;
 import com.google.ads.googleads.v1.services.CampaignDraftServiceGrpc.CampaignDraftServiceImplBase;
 import com.google.api.core.BetaApi;
 import com.google.longrunning.Operation;
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf.GeneratedMessageV3;
 import io.grpc.stub.StreamObserver;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -29,7 +29,7 @@ import java.util.Queue;
 @javax.annotation.Generated("by GAPIC")
 @BetaApi
 public class MockCampaignDraftServiceImpl extends CampaignDraftServiceImplBase {
-  private List<AbstractMessage> requests;
+  private ArrayList<GeneratedMessageV3> requests;
   private Queue<Object> responses;
 
   public MockCampaignDraftServiceImpl() {
@@ -37,15 +37,15 @@ public class MockCampaignDraftServiceImpl extends CampaignDraftServiceImplBase {
     responses = new LinkedList<>();
   }
 
-  public List<AbstractMessage> getRequests() {
+  public List<GeneratedMessageV3> getRequests() {
     return requests;
   }
 
-  public void addResponse(AbstractMessage response) {
+  public void addResponse(GeneratedMessageV3 response) {
     responses.add(response);
   }
 
-  public void setResponses(List<AbstractMessage> responses) {
+  public void setResponses(List<GeneratedMessageV3> responses) {
     this.responses = new LinkedList<Object>(responses);
   }
 

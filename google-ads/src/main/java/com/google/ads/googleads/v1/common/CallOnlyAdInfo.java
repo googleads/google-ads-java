@@ -197,7 +197,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -758,64 +758,65 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v1.common.CallOnlyAdInfo other = (com.google.ads.googleads.v1.common.CallOnlyAdInfo) obj;
 
-    if (hasCountryCode() != other.hasCountryCode()) return false;
+    boolean result = true;
+    result = result && (hasCountryCode() == other.hasCountryCode());
     if (hasCountryCode()) {
-      if (!getCountryCode()
-          .equals(other.getCountryCode())) return false;
+      result = result && getCountryCode()
+          .equals(other.getCountryCode());
     }
-    if (hasPhoneNumber() != other.hasPhoneNumber()) return false;
+    result = result && (hasPhoneNumber() == other.hasPhoneNumber());
     if (hasPhoneNumber()) {
-      if (!getPhoneNumber()
-          .equals(other.getPhoneNumber())) return false;
+      result = result && getPhoneNumber()
+          .equals(other.getPhoneNumber());
     }
-    if (hasBusinessName() != other.hasBusinessName()) return false;
+    result = result && (hasBusinessName() == other.hasBusinessName());
     if (hasBusinessName()) {
-      if (!getBusinessName()
-          .equals(other.getBusinessName())) return false;
+      result = result && getBusinessName()
+          .equals(other.getBusinessName());
     }
-    if (hasHeadline1() != other.hasHeadline1()) return false;
+    result = result && (hasHeadline1() == other.hasHeadline1());
     if (hasHeadline1()) {
-      if (!getHeadline1()
-          .equals(other.getHeadline1())) return false;
+      result = result && getHeadline1()
+          .equals(other.getHeadline1());
     }
-    if (hasHeadline2() != other.hasHeadline2()) return false;
+    result = result && (hasHeadline2() == other.hasHeadline2());
     if (hasHeadline2()) {
-      if (!getHeadline2()
-          .equals(other.getHeadline2())) return false;
+      result = result && getHeadline2()
+          .equals(other.getHeadline2());
     }
-    if (hasDescription1() != other.hasDescription1()) return false;
+    result = result && (hasDescription1() == other.hasDescription1());
     if (hasDescription1()) {
-      if (!getDescription1()
-          .equals(other.getDescription1())) return false;
+      result = result && getDescription1()
+          .equals(other.getDescription1());
     }
-    if (hasDescription2() != other.hasDescription2()) return false;
+    result = result && (hasDescription2() == other.hasDescription2());
     if (hasDescription2()) {
-      if (!getDescription2()
-          .equals(other.getDescription2())) return false;
+      result = result && getDescription2()
+          .equals(other.getDescription2());
     }
-    if (hasCallTracked() != other.hasCallTracked()) return false;
+    result = result && (hasCallTracked() == other.hasCallTracked());
     if (hasCallTracked()) {
-      if (!getCallTracked()
-          .equals(other.getCallTracked())) return false;
+      result = result && getCallTracked()
+          .equals(other.getCallTracked());
     }
-    if (hasDisableCallConversion() != other.hasDisableCallConversion()) return false;
+    result = result && (hasDisableCallConversion() == other.hasDisableCallConversion());
     if (hasDisableCallConversion()) {
-      if (!getDisableCallConversion()
-          .equals(other.getDisableCallConversion())) return false;
+      result = result && getDisableCallConversion()
+          .equals(other.getDisableCallConversion());
     }
-    if (hasPhoneNumberVerificationUrl() != other.hasPhoneNumberVerificationUrl()) return false;
+    result = result && (hasPhoneNumberVerificationUrl() == other.hasPhoneNumberVerificationUrl());
     if (hasPhoneNumberVerificationUrl()) {
-      if (!getPhoneNumberVerificationUrl()
-          .equals(other.getPhoneNumberVerificationUrl())) return false;
+      result = result && getPhoneNumberVerificationUrl()
+          .equals(other.getPhoneNumberVerificationUrl());
     }
-    if (hasConversionAction() != other.hasConversionAction()) return false;
+    result = result && (hasConversionAction() == other.hasConversionAction());
     if (hasConversionAction()) {
-      if (!getConversionAction()
-          .equals(other.getConversionAction())) return false;
+      result = result && getConversionAction()
+          .equals(other.getConversionAction());
     }
-    if (conversionReportingState_ != other.conversionReportingState_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
-    return true;
+    result = result && conversionReportingState_ == other.conversionReportingState_;
+    result = result && unknownFields.equals(other.unknownFields);
+    return result;
   }
 
   @java.lang.Override
@@ -1164,35 +1165,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return super.clone();
+      return (Builder) super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.setField(field, value);
+      return (Builder) super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return super.clearField(field);
+      return (Builder) super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return super.clearOneof(oneof);
+      return (Builder) super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return super.setRepeatedField(field, index, value);
+      return (Builder) super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return super.addRepeatedField(field, value);
+      return (Builder) super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1271,7 +1272,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue countryCode_;
+    private com.google.protobuf.StringValue countryCode_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> countryCodeBuilder_;
     /**
@@ -1424,7 +1425,7 @@ private static final long serialVersionUID = 0L;
       return countryCodeBuilder_;
     }
 
-    private com.google.protobuf.StringValue phoneNumber_;
+    private com.google.protobuf.StringValue phoneNumber_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> phoneNumberBuilder_;
     /**
@@ -1577,7 +1578,7 @@ private static final long serialVersionUID = 0L;
       return phoneNumberBuilder_;
     }
 
-    private com.google.protobuf.StringValue businessName_;
+    private com.google.protobuf.StringValue businessName_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> businessNameBuilder_;
     /**
@@ -1730,7 +1731,7 @@ private static final long serialVersionUID = 0L;
       return businessNameBuilder_;
     }
 
-    private com.google.protobuf.StringValue headline1_;
+    private com.google.protobuf.StringValue headline1_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> headline1Builder_;
     /**
@@ -1883,7 +1884,7 @@ private static final long serialVersionUID = 0L;
       return headline1Builder_;
     }
 
-    private com.google.protobuf.StringValue headline2_;
+    private com.google.protobuf.StringValue headline2_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> headline2Builder_;
     /**
@@ -2036,7 +2037,7 @@ private static final long serialVersionUID = 0L;
       return headline2Builder_;
     }
 
-    private com.google.protobuf.StringValue description1_;
+    private com.google.protobuf.StringValue description1_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> description1Builder_;
     /**
@@ -2189,7 +2190,7 @@ private static final long serialVersionUID = 0L;
       return description1Builder_;
     }
 
-    private com.google.protobuf.StringValue description2_;
+    private com.google.protobuf.StringValue description2_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> description2Builder_;
     /**
@@ -2342,7 +2343,7 @@ private static final long serialVersionUID = 0L;
       return description2Builder_;
     }
 
-    private com.google.protobuf.BoolValue callTracked_;
+    private com.google.protobuf.BoolValue callTracked_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> callTrackedBuilder_;
     /**
@@ -2504,7 +2505,7 @@ private static final long serialVersionUID = 0L;
       return callTrackedBuilder_;
     }
 
-    private com.google.protobuf.BoolValue disableCallConversion_;
+    private com.google.protobuf.BoolValue disableCallConversion_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> disableCallConversionBuilder_;
     /**
@@ -2684,7 +2685,7 @@ private static final long serialVersionUID = 0L;
       return disableCallConversionBuilder_;
     }
 
-    private com.google.protobuf.StringValue phoneNumberVerificationUrl_;
+    private com.google.protobuf.StringValue phoneNumberVerificationUrl_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> phoneNumberVerificationUrlBuilder_;
     /**
@@ -2837,7 +2838,7 @@ private static final long serialVersionUID = 0L;
       return phoneNumberVerificationUrlBuilder_;
     }
 
-    private com.google.protobuf.StringValue conversionAction_;
+    private com.google.protobuf.StringValue conversionAction_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> conversionActionBuilder_;
     /**
@@ -3080,7 +3081,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

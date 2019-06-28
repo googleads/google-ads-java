@@ -103,12 +103,7 @@ public class FeedMappingServiceClient implements BackgroundResource {
   private static final PathTemplate FEED_MAPPING_PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding("customers/{customer}/feedMappings/{feed_mapping}");
 
-  /**
-   * Formats a string containing the fully-qualified path to represent a feed_mapping resource.
-   *
-   * @deprecated Use the {@link FeedMappingName} class instead.
-   */
-  @Deprecated
+  /** Formats a string containing the fully-qualified path to represent a feed_mapping resource. */
   public static final String formatFeedMappingName(String customer, String feedMapping) {
     return FEED_MAPPING_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -118,10 +113,7 @@ public class FeedMappingServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a feed_mapping
    * resource.
-   *
-   * @deprecated Use the {@link FeedMappingName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromFeedMappingName(String feedMappingName) {
     return FEED_MAPPING_PATH_TEMPLATE.parse(feedMappingName).get("customer");
   }
@@ -129,10 +121,7 @@ public class FeedMappingServiceClient implements BackgroundResource {
   /**
    * Parses the feed_mapping from the given fully-qualified path which represents a feed_mapping
    * resource.
-   *
-   * @deprecated Use the {@link FeedMappingName} class instead.
    */
-  @Deprecated
   public static final String parseFeedMappingFromFeedMappingName(String feedMappingName) {
     return FEED_MAPPING_PATH_TEMPLATE.parse(feedMappingName).get("feed_mapping");
   }

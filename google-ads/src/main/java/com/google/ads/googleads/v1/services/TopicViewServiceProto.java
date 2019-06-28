@@ -32,21 +32,19 @@ public final class TopicViewServiceProto {
       "_view_service.proto\022 google.ads.googlead" +
       "s.v1.services\0322google/ads/googleads/v1/r" +
       "esources/topic_view.proto\032\034google/api/an" +
-      "notations.proto\032\027google/api/client.proto" +
-      "\",\n\023GetTopicViewRequest\022\025\n\rresource_name" +
-      "\030\001 \001(\t2\333\001\n\020TopicViewService\022\251\001\n\014GetTopic" +
-      "View\0225.google.ads.googleads.v1.services." +
-      "GetTopicViewRequest\032,.google.ads.googlea" +
-      "ds.v1.resources.TopicView\"4\202\323\344\223\002.\022,/v1/{" +
-      "resource_name=customers/*/topicViews/*}\032" +
-      "\033\312A\030googleads.googleapis.comB\374\001\n$com.goo" +
-      "gle.ads.googleads.v1.servicesB\025TopicView" +
-      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v1/services;" +
-      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1" +
-      ".Services\312\002 Google\\Ads\\GoogleAds\\V1\\Serv" +
-      "ices\352\002$Google::Ads::GoogleAds::V1::Servi" +
-      "cesb\006proto3"
+      "notations.proto\",\n\023GetTopicViewRequest\022\025" +
+      "\n\rresource_name\030\001 \001(\t2\276\001\n\020TopicViewServi" +
+      "ce\022\251\001\n\014GetTopicView\0225.google.ads.googlea" +
+      "ds.v1.services.GetTopicViewRequest\032,.goo" +
+      "gle.ads.googleads.v1.resources.TopicView" +
+      "\"4\202\323\344\223\002.\022,/v1/{resource_name=customers/*" +
+      "/topicViews/*}B\374\001\n$com.google.ads.google" +
+      "ads.v1.servicesB\025TopicViewServiceProtoP\001" +
+      "ZHgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v1/services;services\242\002\003GAA" +
+      "\252\002 Google.Ads.GoogleAds.V1.Services\312\002 Go" +
+      "ogle\\Ads\\GoogleAds\\V1\\Services\352\002$Google:" +
+      ":Ads::GoogleAds::V1::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -61,7 +59,6 @@ public final class TopicViewServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.TopicViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetTopicViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -71,13 +68,11 @@ public final class TopicViewServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.TopicViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

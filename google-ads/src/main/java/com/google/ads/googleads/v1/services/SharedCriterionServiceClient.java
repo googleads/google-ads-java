@@ -106,10 +106,7 @@ public class SharedCriterionServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a shared_criteria resource.
-   *
-   * @deprecated Use the {@link SharedCriteriaName} class instead.
    */
-  @Deprecated
   public static final String formatSharedCriteriaName(String customer, String sharedCriteria) {
     return SHARED_CRITERIA_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -119,10 +116,7 @@ public class SharedCriterionServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a shared_criteria
    * resource.
-   *
-   * @deprecated Use the {@link SharedCriteriaName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromSharedCriteriaName(String sharedCriteriaName) {
     return SHARED_CRITERIA_PATH_TEMPLATE.parse(sharedCriteriaName).get("customer");
   }
@@ -130,10 +124,7 @@ public class SharedCriterionServiceClient implements BackgroundResource {
   /**
    * Parses the shared_criteria from the given fully-qualified path which represents a
    * shared_criteria resource.
-   *
-   * @deprecated Use the {@link SharedCriteriaName} class instead.
    */
-  @Deprecated
   public static final String parseSharedCriteriaFromSharedCriteriaName(String sharedCriteriaName) {
     return SHARED_CRITERIA_PATH_TEMPLATE.parse(sharedCriteriaName).get("shared_criteria");
   }

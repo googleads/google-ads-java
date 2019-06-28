@@ -55,45 +55,44 @@ public final class KeywordPlanKeywordServiceProto {
       "proto\032\034google/api/annotations.proto\032 goo" +
       "gle/protobuf/field_mask.proto\032\036google/pr" +
       "otobuf/wrappers.proto\032\027google/rpc/status" +
-      ".proto\032\027google/api/client.proto\"5\n\034GetKe" +
-      "ywordPlanKeywordRequest\022\025\n\rresource_name" +
-      "\030\001 \001(\t\"\272\001\n MutateKeywordPlanKeywordsRequ" +
-      "est\022\023\n\013customer_id\030\001 \001(\t\022Q\n\noperations\030\002" +
-      " \003(\0132=.google.ads.googleads.v1.services." +
-      "KeywordPlanKeywordOperation\022\027\n\017partial_f" +
-      "ailure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\377\001\n\033" +
-      "KeywordPlanKeywordOperation\022/\n\013update_ma" +
-      "sk\030\004 \001(\0132\032.google.protobuf.FieldMask\022G\n\006" +
-      "create\030\001 \001(\01325.google.ads.googleads.v1.r" +
-      "esources.KeywordPlanKeywordH\000\022G\n\006update\030" +
-      "\002 \001(\01325.google.ads.googleads.v1.resource" +
-      "s.KeywordPlanKeywordH\000\022\020\n\006remove\030\003 \001(\tH\000" +
-      "B\013\n\toperation\"\251\001\n!MutateKeywordPlanKeywo" +
-      "rdsResponse\0221\n\025partial_failure_error\030\003 \001" +
-      "(\0132\022.google.rpc.Status\022Q\n\007results\030\002 \003(\0132" +
-      "@.google.ads.googleads.v1.services.Mutat" +
-      "eKeywordPlanKeywordResult\"7\n\036MutateKeywo" +
-      "rdPlanKeywordResult\022\025\n\rresource_name\030\001 \001" +
-      "(\t2\364\003\n\031KeywordPlanKeywordService\022\315\001\n\025Get" +
-      "KeywordPlanKeyword\022>.google.ads.googlead" +
-      "s.v1.services.GetKeywordPlanKeywordReque" +
-      "st\0325.google.ads.googleads.v1.resources.K" +
-      "eywordPlanKeyword\"=\202\323\344\223\0027\0225/v1/{resource" +
-      "_name=customers/*/keywordPlanKeywords/*}" +
-      "\022\351\001\n\031MutateKeywordPlanKeywords\022B.google." +
-      "ads.googleads.v1.services.MutateKeywordP" +
-      "lanKeywordsRequest\032C.google.ads.googlead" +
-      "s.v1.services.MutateKeywordPlanKeywordsR" +
-      "esponse\"C\202\323\344\223\002=\"8/v1/customers/{customer" +
-      "_id=*}/keywordPlanKeywords:mutate:\001*\032\033\312A" +
-      "\030googleads.googleapis.comB\205\002\n$com.google" +
-      ".ads.googleads.v1.servicesB\036KeywordPlanK" +
-      "eywordServiceProtoP\001ZHgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v1/ser" +
-      "vices;services\242\002\003GAA\252\002 Google.Ads.Google" +
-      "Ads.V1.Services\312\002 Google\\Ads\\GoogleAds\\V" +
-      "1\\Services\352\002$Google::Ads::GoogleAds::V1:" +
-      ":Servicesb\006proto3"
+      ".proto\"5\n\034GetKeywordPlanKeywordRequest\022\025" +
+      "\n\rresource_name\030\001 \001(\t\"\272\001\n MutateKeywordP" +
+      "lanKeywordsRequest\022\023\n\013customer_id\030\001 \001(\t\022" +
+      "Q\n\noperations\030\002 \003(\0132=.google.ads.googlea" +
+      "ds.v1.services.KeywordPlanKeywordOperati" +
+      "on\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_" +
+      "only\030\004 \001(\010\"\377\001\n\033KeywordPlanKeywordOperati" +
+      "on\022/\n\013update_mask\030\004 \001(\0132\032.google.protobu" +
+      "f.FieldMask\022G\n\006create\030\001 \001(\01325.google.ads" +
+      ".googleads.v1.resources.KeywordPlanKeywo" +
+      "rdH\000\022G\n\006update\030\002 \001(\01325.google.ads.google" +
+      "ads.v1.resources.KeywordPlanKeywordH\000\022\020\n" +
+      "\006remove\030\003 \001(\tH\000B\013\n\toperation\"\251\001\n!MutateK" +
+      "eywordPlanKeywordsResponse\0221\n\025partial_fa" +
+      "ilure_error\030\003 \001(\0132\022.google.rpc.Status\022Q\n" +
+      "\007results\030\002 \003(\0132@.google.ads.googleads.v1" +
+      ".services.MutateKeywordPlanKeywordResult" +
+      "\"7\n\036MutateKeywordPlanKeywordResult\022\025\n\rre" +
+      "source_name\030\001 \001(\t2\327\003\n\031KeywordPlanKeyword" +
+      "Service\022\315\001\n\025GetKeywordPlanKeyword\022>.goog" +
+      "le.ads.googleads.v1.services.GetKeywordP" +
+      "lanKeywordRequest\0325.google.ads.googleads" +
+      ".v1.resources.KeywordPlanKeyword\"=\202\323\344\223\0027" +
+      "\0225/v1/{resource_name=customers/*/keyword" +
+      "PlanKeywords/*}\022\351\001\n\031MutateKeywordPlanKey" +
+      "words\022B.google.ads.googleads.v1.services" +
+      ".MutateKeywordPlanKeywordsRequest\032C.goog" +
+      "le.ads.googleads.v1.services.MutateKeywo" +
+      "rdPlanKeywordsResponse\"C\202\323\344\223\002=\"8/v1/cust" +
+      "omers/{customer_id=*}/keywordPlanKeyword" +
+      "s:mutate:\001*B\205\002\n$com.google.ads.googleads" +
+      ".v1.servicesB\036KeywordPlanKeywordServiceP" +
+      "rotoP\001ZHgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v1/services;services" +
+      "\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Service" +
+      "s\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$G" +
+      "oogle::Ads::GoogleAds::V1::Servicesb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -111,7 +110,6 @@ public final class KeywordPlanKeywordServiceProto {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v1_services_GetKeywordPlanKeywordRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -145,7 +143,6 @@ public final class KeywordPlanKeywordServiceProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -154,7 +151,6 @@ public final class KeywordPlanKeywordServiceProto {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

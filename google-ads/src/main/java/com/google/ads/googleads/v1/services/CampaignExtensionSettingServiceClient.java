@@ -107,10 +107,7 @@ public class CampaignExtensionSettingServiceClient implements BackgroundResource
   /**
    * Formats a string containing the fully-qualified path to represent a campaign_extension_setting
    * resource.
-   *
-   * @deprecated Use the {@link CampaignExtensionSettingName} class instead.
    */
-  @Deprecated
   public static final String formatCampaignExtensionSettingName(
       String customer, String campaignExtensionSetting) {
     return CAMPAIGN_EXTENSION_SETTING_PATH_TEMPLATE.instantiate(
@@ -121,10 +118,7 @@ public class CampaignExtensionSettingServiceClient implements BackgroundResource
   /**
    * Parses the customer from the given fully-qualified path which represents a
    * campaign_extension_setting resource.
-   *
-   * @deprecated Use the {@link CampaignExtensionSettingName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromCampaignExtensionSettingName(
       String campaignExtensionSettingName) {
     return CAMPAIGN_EXTENSION_SETTING_PATH_TEMPLATE
@@ -135,10 +129,7 @@ public class CampaignExtensionSettingServiceClient implements BackgroundResource
   /**
    * Parses the campaign_extension_setting from the given fully-qualified path which represents a
    * campaign_extension_setting resource.
-   *
-   * @deprecated Use the {@link CampaignExtensionSettingName} class instead.
    */
-  @Deprecated
   public static final String parseCampaignExtensionSettingFromCampaignExtensionSettingName(
       String campaignExtensionSettingName) {
     return CAMPAIGN_EXTENSION_SETTING_PATH_TEMPLATE

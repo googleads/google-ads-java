@@ -106,10 +106,7 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
 
   /**
    * Formats a string containing the fully-qualified path to represent a bidding_strategy resource.
-   *
-   * @deprecated Use the {@link BiddingStrategyName} class instead.
    */
-  @Deprecated
   public static final String formatBiddingStrategyName(String customer, String biddingStrategy) {
     return BIDDING_STRATEGY_PATH_TEMPLATE.instantiate(
         "customer", customer,
@@ -119,10 +116,7 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
   /**
    * Parses the customer from the given fully-qualified path which represents a bidding_strategy
    * resource.
-   *
-   * @deprecated Use the {@link BiddingStrategyName} class instead.
    */
-  @Deprecated
   public static final String parseCustomerFromBiddingStrategyName(String biddingStrategyName) {
     return BIDDING_STRATEGY_PATH_TEMPLATE.parse(biddingStrategyName).get("customer");
   }
@@ -130,10 +124,7 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
   /**
    * Parses the bidding_strategy from the given fully-qualified path which represents a
    * bidding_strategy resource.
-   *
-   * @deprecated Use the {@link BiddingStrategyName} class instead.
    */
-  @Deprecated
   public static final String parseBiddingStrategyFromBiddingStrategyName(
       String biddingStrategyName) {
     return BIDDING_STRATEGY_PATH_TEMPLATE.parse(biddingStrategyName).get("bidding_strategy");
