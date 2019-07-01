@@ -1,4 +1,4 @@
-3.1.0 - 2019-06-28
+4.0.0 - 2019-07-01
 ------------------
 - Added support for Google Ads API v2_0.
 - Fixed resource name creation for ad group criteria, see #141.
