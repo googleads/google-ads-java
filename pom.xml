@@ -133,7 +133,7 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.0.1</version>
         <configuration>
-          <maxmemory>1024m</maxmemory>
+          <maxmemory>5g</maxmemory>
           <reportOutputDirectory>.</reportOutputDirectory>
           <destDir>javadocs</destDir>
           <!-- Disable doclint. See http://blog.joda.org/2014/02/turning-off-doclint-in-jdk-8-javadoc.html -->
