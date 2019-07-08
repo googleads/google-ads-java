@@ -105,7 +105,7 @@ public class AddRealEstateFeed {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param params for the example.
+   * @param params the AddRealEstateFeedParams for the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(GoogleAdsClient googleAdsClient, AddRealEstateFeedParams params) {
@@ -234,17 +234,22 @@ public class AddRealEstateFeed {
         switch(feedAttribute.getName().getValue()) {
           case "Listing ID":
             feedAttributes.put(RealEstatePlaceholderField.LISTING_ID, feedAttribute);
+            break;
           case "Listing Name":
-            feedAttributes.put(RealEstatePlaceholderField.LISTING_NAME, feedAttribute);
+          feedAttributes.put(RealEstatePlaceholderField.LISTING_NAME, feedAttribute);
+            break;
           case "Final URLs":
-            feedAttributes.put(RealEstatePlaceholderField.FINAL_URLS, feedAttribute);
+          feedAttributes.put(RealEstatePlaceholderField.FINAL_URLS, feedAttribute);
+            break;
           case "Image URL":
-            feedAttributes.put(RealEstatePlaceholderField.IMAGE_URL, feedAttribute);
+          feedAttributes.put(RealEstatePlaceholderField.IMAGE_URL, feedAttribute);
+            break;
           case "Contextual Keywords":
-            feedAttributes.put(RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS, feedAttribute);
+          feedAttributes.put(RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS, feedAttribute);
+            break;
           // Optionally add other RealEstatePlaceholderFields.
           default:
-            feedAttributes.put(RealEstatePlaceholderField.UNSPECIFIED, feedAttribute);
+            throw new Error("Invalid attribute name.");
         }
       }
       return feedAttributes;

@@ -92,7 +92,7 @@ public class RemoveFeedItems {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param params the params for the example.
+   * @param params the RemoveFeedItemsParams for the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(GoogleAdsClient googleAdsClient, RemoveFeedItemsParams params) {
