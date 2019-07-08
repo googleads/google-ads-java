@@ -85,7 +85,7 @@ public class AddFlightsFeed {
     }
 
     try {
-      new AddFlightsFeed().runExample(googleAdsClient, params.customerId);
+      new AddFlightsFeed().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -105,19 +105,20 @@ public class AddFlightsFeed {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param params the AddFlightsFeedParams for the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  private void runExample(GoogleAdsClient googleAdsClient, AddFlightsFeedParams params) {
     // Creates a new flights feed.
-    String feedResourceName = createFeed(googleAdsClient, customerId);
-    // Get the newly creates feed's attributes and packages them into a map.
+    String feedResourceName = createFeed(googleAdsClient, params.customerId);
+    // Get the newly creates feed's attributes and packages them into a map. This read operation
+    // is required to retrieve the attribute IDs.
     Map<FlightPlaceholderField, FeedAttribute> feedAttributes =
-        getFeed(googleAdsClient, customerId, feedResourceName);
+        getFeed(googleAdsClient, params.customerId, feedResourceName);
     // Creates the feed mapping.
-    createFeedMapping(googleAdsClient, customerId, feedAttributes, feedResourceName);
+    createFeedMapping(googleAdsClient, params.customerId, feedAttributes, feedResourceName);
     // Creates a feed item.
-    createFeedItem(googleAdsClient, customerId, feedAttributes, feedResourceName);
+    createFeedItem(googleAdsClient, params.customerId, feedAttributes, feedResourceName);
   }
 
   /**
@@ -221,37 +222,32 @@ public class AddFlightsFeed {
       // Gets the attributes list from the feed and creates a map with keys of each attribute and
       // values of each corresponding ID.
       List<FeedAttribute> feedAttributeList = googleAdsRow.getFeed().getAttributesList();
-      Map<String, FeedAttribute> feedAttributeMap = new HashMap<>();
-      for (FeedAttribute feedAttribute : feedAttributeList) {
-        feedAttributeMap.put(feedAttribute.getName().getValue(), feedAttribute);
-      }
-
       // Creates a map to return.
       Map<FlightPlaceholderField, FeedAttribute> feedAttributes = new HashMap<>();
-
-      // Adds the Flight Description attribute to the map.
-      String flightDescriptionName = "Flight Description";
-      feedAttributes.put(
-          FlightPlaceholderField.FLIGHT_DESCRIPTION, feedAttributeMap.get(flightDescriptionName));
-      // Adds the Destination ID attribute to the map.
-      String destinationIdName = "Destination ID";
-      feedAttributes.put(
-          FlightPlaceholderField.DESTINATION_ID, feedAttributeMap.get(destinationIdName));
-      // Adds the Flight Price attribute to the map.
-      String flightPriceName = "Flight Price";
-      feedAttributes.put(
-          FlightPlaceholderField.FLIGHT_PRICE, feedAttributeMap.get(flightPriceName));
-      // Adds the Flight Sale Price attribute to the map.
-      String flightSalePriceName = "Flight Sale Price";
-      feedAttributes.put(
-          FlightPlaceholderField.FLIGHT_SALE_PRICE, feedAttributeMap.get(flightSalePriceName));
-      // Adds the Final URLs attribute to the map.
-      String finalUrlsName = "Final URLs";
-      feedAttributes.put(FlightPlaceholderField.FINAL_URLS, feedAttributeMap.get(finalUrlsName));
-
-      // The full list of FlightPlaceholderFields can be found here
-      // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v1.enums#flightplaceholderfieldenum.
-
+      // Loops through the feed attributes to populate the map.
+      for (FeedAttribute feedAttribute : feedAttributeList) {
+        switch (feedAttribute.getName().getValue()) {
+          case "Flight Description":
+            feedAttributes.put(FlightPlaceholderField.FLIGHT_DESCRIPTION, feedAttribute);
+            break;
+          case "Destination ID":
+            feedAttributes.put(FlightPlaceholderField.DESTINATION_ID, feedAttribute);
+            break;
+          case "Flight Price":
+            feedAttributes.put(FlightPlaceholderField.FLIGHT_PRICE, feedAttribute);
+            break;
+          case "Flight Sale Price":
+            feedAttributes.put(FlightPlaceholderField.FLIGHT_SALE_PRICE, feedAttribute);
+            break;
+          case "Final URLs":
+            feedAttributes.put(FlightPlaceholderField.FINAL_URLS, feedAttribute);
+            break;
+          // The full list of FlightPlaceholderFields can be found here
+          // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.[INSERT_VERSION].enums#flightplaceholderfieldenum.
+          default:
+            throw new Error("Invalid attribute name.");
+        }
+      }
       return feedAttributes;
     }
   }

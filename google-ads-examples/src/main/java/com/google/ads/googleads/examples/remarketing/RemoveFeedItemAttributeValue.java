@@ -85,7 +85,7 @@ public class RemoveFeedItemAttributeValue {
 
     try {
       new RemoveFeedItemAttributeValue()
-          .runExample(googleAdsClient, params.customerId, params.feedId, params.feedItemId);
+          .runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -105,14 +105,12 @@ public class RemoveFeedItemAttributeValue {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
-   * @param feedId the ID of the feed on which the feedItemAttribute value will be removed.
-   * @param feedItemId the ID of the feed item on which the feedItemAttribute value will be removed.
+   * @param params the RemoveFeedItemAttributeValueParams for the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, long feedId, long feedItemId) {
-    updateFeedItem(googleAdsClient, customerId, feedId, feedItemId);
+      GoogleAdsClient googleAdsClient, RemoveFeedItemAttributeValueParams params) {
+    updateFeedItem(googleAdsClient, params.customerId, params.feedId, params.feedItemId);
   }
 
   /**
@@ -137,7 +135,7 @@ public class RemoveFeedItemAttributeValue {
     String feedItemResourceName = ResourceNames.feedItem(customerId, feedId, feedItemId);
     // Removes the attribute from the feed item.
     FeedItem feedItem =
-        removeAttributeValue(
+        removeAttributeValueFromFeedItem(
             googleAdsClient,
             customerId,
             feedAttributes,
@@ -172,7 +170,7 @@ public class RemoveFeedItemAttributeValue {
    * @param feedItemResourceName the resource name of the feedItem to be updated.
    * @param flightPlaceholderField the placeholder type for the attribute to be removed.
    */
-  private FeedItem removeAttributeValue(
+  private FeedItem removeAttributeValueFromFeedItem(
       GoogleAdsClient googleAdsClient,
       long customerId,
       Map<FlightPlaceholderField, FeedAttribute> feedAttributes,
@@ -240,16 +238,21 @@ public class RemoveFeedItemAttributeValue {
    */
   private int getAttributeIndex(
       FeedItem feedItem, FeedItemAttributeValue newFeedItemAttributeValue) {
-    int attributeIndex = 0;
+    int attributeIndex = -1;
 
     // Loops through attribute values to find the index of the FeedItemAttributeValue to update
     for (FeedItemAttributeValue feedItemAttributeValue : feedItem.getAttributeValuesList()) {
+      attributeIndex++;
       // Checks if the current feedItemAttributeValue is the one we are updating
       if (feedItemAttributeValue.getFeedAttributeId().getValue()
           == newFeedItemAttributeValue.getFeedAttributeId().getValue()) {
         break;
       }
-      attributeIndex++;
+    }
+
+    // Throws an exception if the attribute value is not found.
+    if (attributeIndex < 0) {
+      throw new RuntimeException("Invalid attribute index");
     }
 
     return attributeIndex;

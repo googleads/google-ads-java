@@ -86,7 +86,7 @@ public class UpdateFeedItemAttributeValue {
 
     try {
       new UpdateFeedItemAttributeValue()
-          .runExample(googleAdsClient, params.customerId, params.feedId, params.feedItemId);
+          .runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -106,14 +106,12 @@ public class UpdateFeedItemAttributeValue {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
-   * @param feedId the ID of the feed on which the feedItemAttribute value will be updated.
-   * @param feedItemId the ID of the feed item on which the feedItemAttribute value will be updated.
+   * @param params the UpdateFeedItemAttributeValueParams for the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, long feedId, long feedItemId) {
-    updateFeedItem(googleAdsClient, customerId, feedId, feedItemId);
+      GoogleAdsClient googleAdsClient, UpdateFeedItemAttributeValueParams params) {
+    updateFeedItem(googleAdsClient, params);
   }
 
   /**
@@ -121,32 +119,31 @@ public class UpdateFeedItemAttributeValue {
    * update the FeedItem.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
-   * @param feedId the ID of the feed on which the feedItemAttribute value will be updated.
-   * @param feedItemId the ID of the feed item on which the feedItemAttribute value will be updated.
+   * @param params the UpdateFeedItemAttributeValueParams for the example.
    */
   private void updateFeedItem(
-      GoogleAdsClient googleAdsClient, long customerId, long feedId, long feedItemId) {
+      GoogleAdsClient googleAdsClient, UpdateFeedItemAttributeValueParams params) {
     // Gets the feed resource name.
-    String feedResourceName = ResourceNames.feed(customerId, feedId);
+    String feedResourceName = ResourceNames.feed(params.customerId, params.feedId);
 
     // Gets a map of the placeholder values and feed attributes.
     Map<FlightPlaceholderField, FeedAttribute> feedAttributes =
-        AddFlightsFeed.getFeed(googleAdsClient, customerId, feedResourceName);
+        AddFlightsFeed.getFeed(googleAdsClient, params.customerId, feedResourceName);
 
     // Gets the ID of the flight price attribute. This is needed to specify which
     // FeedItemAttributeValue will be updated in the given FeedItem.
     int flightPriceId =
         (int) feedAttributes.get(FlightPlaceholderField.FLIGHT_PRICE).getId().getValue();
     // Gets the feed item resource name.
-    String feedItemResourceName = ResourceNames.feedItem(customerId, feedId, feedItemId);
+    String feedItemResourceName =
+      ResourceNames.feedItem(params.customerId, params.feedId, params.feedItemId);
     // Retrieves the feed item and its associated attributes based on its resource name.
-    FeedItem feedItem = getFeedItem(googleAdsClient, customerId, feedItemResourceName);
+    FeedItem feedItem = getFeedItem(googleAdsClient, params.customerId, feedItemResourceName);
     // Creates the updated FeedItemAttributeValue.
     FeedItemAttributeValue feedItemAttributeValue =
         FeedItemAttributeValue.newBuilder()
             .setFeedAttributeId(Int64Value.of(flightPriceId))
-            .setStringValue(StringValue.of("499.99 USD"))
+            .setStringValue(StringValue.of("699.99 USD"))
             .build();
     // Creates a new FeedItem from the existing FeedItem. Any FeedItemAttributeValues that are
     // not included in the updated FeedItem will be removed from the FeedItem, which is why you
@@ -174,7 +171,7 @@ public class UpdateFeedItemAttributeValue {
       // Updates the feed item.
       MutateFeedItemsResponse response =
           feedItemServiceClient.mutateFeedItems(
-              Long.toString(customerId), ImmutableList.of(operation));
+              Long.toString(params.customerId), ImmutableList.of(operation));
       for (MutateFeedItemResult result : response.getResultsList()) {
         System.out.printf("Updated feed item with resource name '%s'.%n", result.getResourceName());
       }
