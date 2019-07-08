@@ -227,7 +227,6 @@ public class AddRealEstateFeed {
       // Gets the attributes list from the feed and creates a map with keys of each attribute and
       // values of each corresponding ID.
       List<FeedAttribute> feedAttributeList = googleAdsRow.getFeed().getAttributesList();
-
       // Creates a map to return.
       Map<RealEstatePlaceholderField, FeedAttribute> feedAttributes = new HashMap<>();
       // Loops through each of the feed attributes and populates the map.
