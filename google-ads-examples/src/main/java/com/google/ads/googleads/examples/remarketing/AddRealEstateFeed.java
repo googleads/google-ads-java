@@ -18,32 +18,32 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v1.enums.FeedAttributeTypeEnum.FeedAttributeType;
-import com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType;
-import com.google.ads.googleads.v1.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField;
-import com.google.ads.googleads.v1.errors.GoogleAdsError;
-import com.google.ads.googleads.v1.errors.GoogleAdsException;
-import com.google.ads.googleads.v1.resources.AttributeFieldMapping;
-import com.google.ads.googleads.v1.resources.Feed;
-import com.google.ads.googleads.v1.resources.FeedAttribute;
-import com.google.ads.googleads.v1.resources.FeedItem;
-import com.google.ads.googleads.v1.resources.FeedItemAttributeValue;
-import com.google.ads.googleads.v1.resources.FeedMapping;
-import com.google.ads.googleads.v1.services.FeedItemOperation;
-import com.google.ads.googleads.v1.services.FeedItemServiceClient;
-import com.google.ads.googleads.v1.services.FeedMappingOperation;
-import com.google.ads.googleads.v1.services.FeedMappingServiceClient;
-import com.google.ads.googleads.v1.services.FeedOperation;
-import com.google.ads.googleads.v1.services.FeedServiceClient;
-import com.google.ads.googleads.v1.services.GoogleAdsRow;
-import com.google.ads.googleads.v1.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v1.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v1.services.MutateFeedItemResult;
-import com.google.ads.googleads.v1.services.MutateFeedItemsResponse;
-import com.google.ads.googleads.v1.services.MutateFeedMappingResult;
-import com.google.ads.googleads.v1.services.MutateFeedMappingsResponse;
-import com.google.ads.googleads.v1.services.MutateFeedsResponse;
-import com.google.ads.googleads.v1.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v2.enums.FeedAttributeTypeEnum.FeedAttributeType;
+import com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType;
+import com.google.ads.googleads.v2.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField;
+import com.google.ads.googleads.v2.errors.GoogleAdsError;
+import com.google.ads.googleads.v2.errors.GoogleAdsException;
+import com.google.ads.googleads.v2.resources.AttributeFieldMapping;
+import com.google.ads.googleads.v2.resources.Feed;
+import com.google.ads.googleads.v2.resources.FeedAttribute;
+import com.google.ads.googleads.v2.resources.FeedItem;
+import com.google.ads.googleads.v2.resources.FeedItemAttributeValue;
+import com.google.ads.googleads.v2.resources.FeedMapping;
+import com.google.ads.googleads.v2.services.FeedItemOperation;
+import com.google.ads.googleads.v2.services.FeedItemServiceClient;
+import com.google.ads.googleads.v2.services.FeedMappingOperation;
+import com.google.ads.googleads.v2.services.FeedMappingServiceClient;
+import com.google.ads.googleads.v2.services.FeedOperation;
+import com.google.ads.googleads.v2.services.FeedServiceClient;
+import com.google.ads.googleads.v2.services.GoogleAdsRow;
+import com.google.ads.googleads.v2.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v2.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v2.services.MutateFeedItemResult;
+import com.google.ads.googleads.v2.services.MutateFeedItemsResponse;
+import com.google.ads.googleads.v2.services.MutateFeedMappingResult;
+import com.google.ads.googleads.v2.services.MutateFeedMappingsResponse;
+import com.google.ads.googleads.v2.services.MutateFeedsResponse;
+import com.google.ads.googleads.v2.services.SearchGoogleAdsRequest;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
@@ -85,7 +85,7 @@ public class AddRealEstateFeed {
     }
 
     try {
-      new AddRealEstateFeed().runExample(googleAdsClient, params.customerId);
+      new AddRealEstateFeed().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -105,21 +105,21 @@ public class AddRealEstateFeed {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param params for the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
+  private void runExample(GoogleAdsClient googleAdsClient, AddRealEstateFeedParams params) {
     // Creates a new feed, but you can fetch and re-use an existing feed by skipping the
     // createFeed method and inserting the feed resource name of the existing feed into the
     // getFeed method.
-    String feedResourceName = createFeed(googleAdsClient, customerId);
+    String feedResourceName = createFeed(googleAdsClient, params.customerId);
     // Gets the page feed details.
     Map<RealEstatePlaceholderField, FeedAttribute> feedAttributes =
-        getFeed(googleAdsClient, customerId, feedResourceName);
+        getFeed(googleAdsClient, params.customerId, feedResourceName);
     // Creates the feed mapping.
-    createFeedMapping(googleAdsClient, customerId, feedAttributes, feedResourceName);
+    createFeedMapping(googleAdsClient, params.customerId, feedAttributes, feedResourceName);
     // Creates feed items and adds them to the feed.
-    createFeedItems(googleAdsClient, customerId, feedAttributes, feedResourceName);
+    createFeedItems(googleAdsClient, params.customerId, feedAttributes, feedResourceName);
   }
 
   /**
@@ -227,39 +227,27 @@ public class AddRealEstateFeed {
       // Gets the attributes list from the feed and creates a map with keys of each attribute and
       // values of each corresponding ID.
       List<FeedAttribute> feedAttributeList = googleAdsRow.getFeed().getAttributesList();
-      Map<String, FeedAttribute> feedAttributeMap = new HashMap<>();
-      for (FeedAttribute feedAttribute : feedAttributeList) {
-        feedAttributeMap.put(feedAttribute.getName().getValue(), feedAttribute);
-      }
 
       // Creates a map to return.
       Map<RealEstatePlaceholderField, FeedAttribute> feedAttributes = new HashMap<>();
-
-      // Adds the Listing ID attribute to the map.
-      String listingIdName = "Listing ID";
-      feedAttributes.put(
-          RealEstatePlaceholderField.LISTING_ID, feedAttributeMap.get(listingIdName));
-
-      // Adds the Listing Name attribute to the map.
-      String listingNameName = "Listing Name";
-      feedAttributes.put(
-          RealEstatePlaceholderField.LISTING_NAME, feedAttributeMap.get(listingNameName));
-
-      // Adds the Listing Name attribute to the map.
-      String finalUrlsName = "Final URLs";
-      feedAttributes.put(
-          RealEstatePlaceholderField.FINAL_URLS, feedAttributeMap.get(finalUrlsName));
-
-      // Adds the Listing Name attribute to the map.
-      String ImageUrlName = "Image URL";
-      feedAttributes.put(RealEstatePlaceholderField.IMAGE_URL, feedAttributeMap.get(ImageUrlName));
-
-      // Adds the Listing Name attribute to the map.
-      String contextualKeywordsName = "Contextual Keywords";
-      feedAttributes.put(
-          RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS,
-          feedAttributeMap.get(contextualKeywordsName));
-
+      // Loops through each of the feed attributes and populates the map.
+      for (FeedAttribute feedAttribute : feedAttributeList) {
+        switch(feedAttribute.getName().getValue()) {
+          case "Listing ID":
+            feedAttributes.put(RealEstatePlaceholderField.LISTING_ID, feedAttribute);
+          case "Listing Name":
+            feedAttributes.put(RealEstatePlaceholderField.LISTING_NAME, feedAttribute);
+          case "Final URLs":
+            feedAttributes.put(RealEstatePlaceholderField.FINAL_URLS, feedAttribute);
+          case "Image URL":
+            feedAttributes.put(RealEstatePlaceholderField.IMAGE_URL, feedAttribute);
+          case "Contextual Keywords":
+            feedAttributes.put(RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS, feedAttribute);
+          // Optionally add other RealEstatePlaceholderFields.
+          default:
+            feedAttributes.put(RealEstatePlaceholderField.UNSPECIFIED, feedAttribute);
+        }
+      }
       return feedAttributes;
     }
   }
@@ -281,7 +269,8 @@ public class AddRealEstateFeed {
     // FeedAttribute created in the createdFeed method. This can be thought of as the generic ID of
     // the column of the new feed. The placeholder value specifies the type of column this is in
     // the context of a real estate feed (e.g. a LISTING_ID or LISTING_NAME). The FeedMapping
-    // associates the feed column by ID to this type.
+    // associates the feed column by ID to this type and controls how the feed attributes are
+    // presented in dynamic content.
     // See https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v1.enums#google.ads.googleads.v1.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField
     // for the full list of placeholder values.
     AttributeFieldMapping listingIdMapping =
