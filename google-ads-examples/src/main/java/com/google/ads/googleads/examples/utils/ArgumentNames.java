@@ -29,7 +29,7 @@ public final class ArgumentNames {
   public static final String ARTIFACT_NAME = "--artifactName";
   public static final String FEED_ID = "--feedId";
   public static final String FEED_ITEM_ID = "--feedItemId";
-  public static final String FEED_ITEM_IDS = "--feedItemId";
+  public static final String FEED_ITEM_IDS = "--feedItemIds";
   public static final String KEYWORD_PLAN_ID = "--keywordPlanId";
   public static final String KEYWORD_TEXT = "--keywordText";
   public static final String LANGUAGE_ID = "--languageId";

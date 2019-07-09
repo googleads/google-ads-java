@@ -18,7 +18,7 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v2.utils.ResourceNames;
 import com.google.ads.googleads.v2.errors.GoogleAdsError;
 import com.google.ads.googleads.v2.errors.GoogleAdsException;
 import com.google.ads.googleads.v2.services.FeedItemOperation;
@@ -54,9 +54,9 @@ public class RemoveFeedItems {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.feedId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.feedItemIds = new ArrayList<>(Arrays.asList(
-        Long.parseLong("INSERT_FEED_1_ID_HERE"),
-        Long.parseLong("INSERT_FEED_2_ID_HERE"),
-        Long.parseLong("INSERT_FEED_3_ID_HERE")));
+        Long.parseLong("INSERT_FEED_ITEM_1_ID_HERE"),
+        Long.parseLong("INSERT_FEED_ITEM_2_ID_HERE"),
+        Long.parseLong("INSERT_FEED_ITEM_3_ID_HERE")));
     }
 
     GoogleAdsClient googleAdsClient;
