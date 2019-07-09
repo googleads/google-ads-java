@@ -18,30 +18,34 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v1.common.MatchingFunction;
-import com.google.ads.googleads.v1.common.Operand;
-import com.google.ads.googleads.v1.common.Operand.ConstantOperand;
-import com.google.ads.googleads.v1.enums.FeedOriginEnum.FeedOrigin;
-import com.google.ads.googleads.v1.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator;
-import com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType;
-import com.google.ads.googleads.v1.errors.GoogleAdsError;
-import com.google.ads.googleads.v1.errors.GoogleAdsException;
-import com.google.ads.googleads.v1.resources.CustomerFeed;
-import com.google.ads.googleads.v1.resources.Feed;
-import com.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData;
-import com.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData.OAuthInfo;
-import com.google.ads.googleads.v1.services.CustomerFeedOperation;
-import com.google.ads.googleads.v1.services.CustomerFeedServiceClient;
-import com.google.ads.googleads.v1.services.FeedOperation;
-import com.google.ads.googleads.v1.services.FeedServiceClient;
-import com.google.ads.googleads.v1.services.MutateCustomerFeedsResponse;
-import com.google.ads.googleads.v1.services.MutateFeedsResponse;
+import com.google.ads.googleads.v2.common.MatchingFunction;
+import com.google.ads.googleads.v2.common.Operand;
+import com.google.ads.googleads.v2.common.Operand.ConstantOperand;
+import com.google.ads.googleads.v2.enums.FeedOriginEnum.FeedOrigin;
+import com.google.ads.googleads.v2.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator;
+import com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType;
+import com.google.ads.googleads.v2.errors.GoogleAdsError;
+import com.google.ads.googleads.v2.errors.GoogleAdsException;
+import com.google.ads.googleads.v2.resources.CustomerFeed;
+import com.google.ads.googleads.v2.resources.Feed;
+import com.google.ads.googleads.v2.resources.Feed.PlacesLocationFeedData;
+import com.google.ads.googleads.v2.resources.Feed.PlacesLocationFeedData.OAuthInfo;
+import com.google.ads.googleads.v2.services.CustomerFeedOperation;
+import com.google.ads.googleads.v2.services.CustomerFeedServiceClient;
+import com.google.ads.googleads.v2.services.FeedOperation;
+import com.google.ads.googleads.v2.services.FeedServiceClient;
+import com.google.ads.googleads.v2.services.MutateCustomerFeedsResponse;
+import com.google.ads.googleads.v2.services.MutateFeedsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * Adds a feed that syncs feed items from a Google
+ * My Business (GMB) account and associates the feed with a customer.
+ */
 public class AddGoogleMyBusinessLocationExtensions {
   // The required scope for setting the OAuth info.
   private final String GOOGLE_ADS_SCOPE = "https://www.googleapis.com/auth/adwords";
@@ -57,7 +61,7 @@ public class AddGoogleMyBusinessLocationExtensions {
     @Parameter(names = ArgumentNames.GMB_EMAIL_ADDRESS, required = true)
     private String gmbEmailAddress;
 
-    @Parameter(names = ArgumentNames.BUSINESS_ACCOUNT_IDENTIFIER, required = true)
+    @Parameter(names = ArgumentNames.BUSINESS_ACCOUNT_IDENTIFIER)
     private String businessAccountIdentifier;
 
     @Parameter(names = ArgumentNames.GMB_ACCESS_TOKEN, required = true)
@@ -123,6 +127,7 @@ public class AddGoogleMyBusinessLocationExtensions {
    * @param gmbAccessToken the access token created using the 'AdWords' scope and the client ID and
    *     client secret of with the cloud project associated with the GMB account.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
+   * @throws InterruptedException if the Thread.sleep operation requires an interrupt.
    */
   private void runExample(
       GoogleAdsClient googleAdsClient,
@@ -142,6 +147,10 @@ public class AddGoogleMyBusinessLocationExtensions {
                 PlacesLocationFeedData.newBuilder()
                     .setEmailAddress(StringValue.of(gmbEmailAddress))
                     .setBusinessAccountId(StringValue.of(businessAccountIdentifier))
+                    // Used to filter Google My Business listings by labels. If entries exist in
+                    // label_filters, only listings that has any of the labels set are candidates
+                    // to be synchronized into FeedItems. If no entries exist in label_filters,
+                    // then all listings are candidates for syncing.
                     .addLabelFilters(StringValue.of("Stores in New York"))
                     // Sets the authentication info to be able to connect Google Ads to the GMB
                     // account.
@@ -161,7 +170,7 @@ public class AddGoogleMyBusinessLocationExtensions {
 
     try (FeedServiceClient feedServiceClient =
         googleAdsClient.getLatestVersion().createFeedServiceClient()) {
-      // Adds the feed. Since it is a system generated feed, Google will automatically:
+      // Adds the feed. Since it is a system generated feed, Google Ads will automatically:
       // 1. Set up the FeedAttributes on the feed.
       // 2. Set up a FeedMapping that associates the FeedAttributes of the feed
       // with the placeholder fields of the LOCATION placeholder type.
@@ -211,7 +220,7 @@ public class AddGoogleMyBusinessLocationExtensions {
                     Long.toString(customerId), ImmutableList.of(customerFeedOperation));
             addedCustomerFeed = customerFeedsResponse.getResults(0).getResourceName();
             System.out.printf("Customer feed created with resource name: %s%n", addedCustomerFeed);
-          } catch (Exception e) {
+          } catch (GoogleAdsException gae) {
             // Waits using exponential backoff policy.
             long sleepSeconds = (long) Math.scalb(5, numberOfAttempts);
             System.out.printf(
