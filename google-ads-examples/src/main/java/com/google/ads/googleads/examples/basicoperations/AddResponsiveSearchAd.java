@@ -18,24 +18,28 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v1.common.AdTextAsset;
-import com.google.ads.googleads.v1.common.ResponsiveSearchAdInfo;
-import com.google.ads.googleads.v1.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v1.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType;
-import com.google.ads.googleads.v1.errors.GoogleAdsError;
-import com.google.ads.googleads.v1.errors.GoogleAdsException;
-import com.google.ads.googleads.v1.resources.Ad;
-import com.google.ads.googleads.v1.resources.AdGroupAd;
-import com.google.ads.googleads.v1.services.AdGroupAdOperation;
-import com.google.ads.googleads.v1.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v1.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v1.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v2.common.AdTextAsset;
+import com.google.ads.googleads.v2.common.ResponsiveSearchAdInfo;
+import com.google.ads.googleads.v2.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v2.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType;
+import com.google.ads.googleads.v2.errors.GoogleAdsError;
+import com.google.ads.googleads.v2.errors.GoogleAdsException;
+import com.google.ads.googleads.v2.resources.Ad;
+import com.google.ads.googleads.v2.resources.AdGroupAd;
+import com.google.ads.googleads.v2.services.AdGroupAdOperation;
+import com.google.ads.googleads.v2.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v2.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v2.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v2.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ *  Adds an image representing the ad using the MediaService and then adds a responsive
+ *  display ad to a given ad group. To get ad groups, run GetAdGroups.java.
+ */
 public class AddResponsiveSearchAd {
 
   private static class AddResponsiveSearchAdParams extends CodeSampleParams {
@@ -136,8 +140,10 @@ public class AddResponsiveSearchAd {
     // Creates the operation.
     AdGroupAdOperation operation = AdGroupAdOperation.newBuilder().setCreate(adGroupAd).build();
 
+    // Creates the AdGroupAdServiceClient.
     try (AdGroupAdServiceClient adGroupAdServiceClient =
         googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
+      // Adds the AdGroup.
       MutateAdGroupAdsResponse response =
           adGroupAdServiceClient.mutateAdGroupAds(
               Long.toString(customerId), ImmutableList.of(operation));
