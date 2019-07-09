@@ -18,41 +18,41 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v1.common.AdImageAsset;
-import com.google.ads.googleads.v1.common.AdTextAsset;
-import com.google.ads.googleads.v1.common.ImageAsset;
-import com.google.ads.googleads.v1.common.ManualCpc;
-import com.google.ads.googleads.v1.common.ResponsiveDisplayAdInfo;
-import com.google.ads.googleads.v1.common.UserListInfo;
-import com.google.ads.googleads.v1.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v1.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v1.enums.AssetTypeEnum.AssetType;
-import com.google.ads.googleads.v1.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v1.errors.GoogleAdsError;
-import com.google.ads.googleads.v1.errors.GoogleAdsException;
-import com.google.ads.googleads.v1.resources.Ad;
-import com.google.ads.googleads.v1.resources.AdGroup;
-import com.google.ads.googleads.v1.resources.AdGroupAd;
-import com.google.ads.googleads.v1.resources.AdGroupCriterion;
-import com.google.ads.googleads.v1.resources.Asset;
-import com.google.ads.googleads.v1.resources.Campaign;
-import com.google.ads.googleads.v1.resources.Campaign.ShoppingSetting;
-import com.google.ads.googleads.v1.services.AdGroupAdOperation;
-import com.google.ads.googleads.v1.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v1.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v1.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v1.services.AdGroupOperation;
-import com.google.ads.googleads.v1.services.AdGroupServiceClient;
-import com.google.ads.googleads.v1.services.AssetOperation;
-import com.google.ads.googleads.v1.services.AssetServiceClient;
-import com.google.ads.googleads.v1.services.CampaignOperation;
-import com.google.ads.googleads.v1.services.CampaignServiceClient;
-import com.google.ads.googleads.v1.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v1.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v1.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v1.services.MutateAssetsResponse;
-import com.google.ads.googleads.v1.services.MutateCampaignsResponse;
-import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v2.common.AdImageAsset;
+import com.google.ads.googleads.v2.common.AdTextAsset;
+import com.google.ads.googleads.v2.common.ImageAsset;
+import com.google.ads.googleads.v2.common.ManualCpc;
+import com.google.ads.googleads.v2.common.ResponsiveDisplayAdInfo;
+import com.google.ads.googleads.v2.common.UserListInfo;
+import com.google.ads.googleads.v2.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v2.enums.AssetTypeEnum.AssetType;
+import com.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v2.errors.GoogleAdsError;
+import com.google.ads.googleads.v2.errors.GoogleAdsException;
+import com.google.ads.googleads.v2.resources.Ad;
+import com.google.ads.googleads.v2.resources.AdGroup;
+import com.google.ads.googleads.v2.resources.AdGroupAd;
+import com.google.ads.googleads.v2.resources.AdGroupCriterion;
+import com.google.ads.googleads.v2.resources.Asset;
+import com.google.ads.googleads.v2.resources.Campaign;
+import com.google.ads.googleads.v2.resources.Campaign.ShoppingSetting;
+import com.google.ads.googleads.v2.services.AdGroupAdOperation;
+import com.google.ads.googleads.v2.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v2.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v2.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v2.services.AdGroupOperation;
+import com.google.ads.googleads.v2.services.AdGroupServiceClient;
+import com.google.ads.googleads.v2.services.AssetOperation;
+import com.google.ads.googleads.v2.services.AssetServiceClient;
+import com.google.ads.googleads.v2.services.CampaignOperation;
+import com.google.ads.googleads.v2.services.CampaignServiceClient;
+import com.google.ads.googleads.v2.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v2.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v2.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v2.services.MutateAssetsResponse;
+import com.google.ads.googleads.v2.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v2.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.BoolValue;
@@ -111,13 +111,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
     }
 
     try {
-      new AddMerchantCenterDynamicRemarketingCampaign()
-          .runExample(
-              googleAdsClient,
-              params.customerId,
-              params.merchantCenterAccountId,
-              params.campaignBudgetId,
-              params.userListId);
+      new AddMerchantCenterDynamicRemarketingCampaign().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -137,44 +131,49 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param params the AddMerchantCenterDynamicRemarketingCampaignParams for the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
       GoogleAdsClient googleAdsClient,
-      long customerId,
-      long merchantCenterId,
-      long budgetId,
-      long userListId)
+      AddMerchantCenterDynamicRemarketingCampaignParams params)
       throws IOException {
     // Creates a shopping campaign associated with a given merchant center account.
-    String campaignResourceName =
-        createCampaign(googleAdsClient, customerId, merchantCenterId, budgetId);
+    String campaignResourceName = createCampaign(
+        googleAdsClient,
+        params.customerId,
+        params.merchantCenterAccountId,
+        params.campaignBudgetId);
     // Creates an ad group for the campaign.
-    String adGroupResourceName = createAdGroup(googleAdsClient, customerId, campaignResourceName);
+    String adGroupResourceName = createAdGroup(googleAdsClient, params.customerId,
+      campaignResourceName);
     // Creates a dynamic display ad in the ad group.
-    createAd(googleAdsClient, customerId, adGroupResourceName);
+    createAd(googleAdsClient, params.customerId, adGroupResourceName);
     // Targets a specific user list for remarketing.
-    attachUserList(googleAdsClient, customerId, adGroupResourceName, userListId);
+    attachUserList(googleAdsClient, params.customerId, adGroupResourceName, params.userListId);
   }
 
   /**
    * Creates a campaign linked to a Merchant Center product feed.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
-   * @param merchantCenterId the merchant center account ID.
-   * @param budgetId the campaign budget ID.
+   * @param customerId the client customer ID.
+   * @param merchantCenterAccountId the Merchant Center account ID.
+   * @param campaignBudgetId the campaign budget ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private String createCampaign(
-      GoogleAdsClient googleAdsClient, long customerId, long merchantCenterId, long budgetId) {
-    String budgetResourceName = ResourceNames.campaignBudget(customerId, budgetId);
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      long merchantCenterAccountId,
+      long campaignBudgetId) {
+    String budgetResourceName = ResourceNames.campaignBudget(customerId, campaignBudgetId);
 
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
             .setName(StringValue.of("Shopping campaign #" + System.currentTimeMillis()))
+            // Dynamic remarketing campaigns are only available on the Google Display Network.
             .setAdvertisingChannelType(AdvertisingChannelType.DISPLAY)
             .setStatus(CampaignStatus.PAUSED)
             .setCampaignBudget(StringValue.of(budgetResourceName))
@@ -184,7 +183,11 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
             .setShoppingSetting(
                 ShoppingSetting.newBuilder()
                     .setCampaignPriority(Int32Value.of(0))
-                    .setMerchantId(Int64Value.of(merchantCenterId))
+                    .setMerchantId(Int64Value.of(merchantCenterAccountId))
+                    // Display Network campaigns do not support partition by country. The only
+                    // supported value is "ZZ". This signals that products from all countries are
+                    // available in the campaign. The actual products which serve are based on
+                    // the products tagged in the user list entry.
                     .setSalesCountry(StringValue.of("ZZ"))
                     .setEnableLocal(BoolValue.of(true))
                     .build())
@@ -210,7 +213,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
    * Creates an ad group for the remarketing campaign.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param customerId the client customer ID.
    * @param campaignResourceName the campaign resource name.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
@@ -244,7 +247,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
    * Creates the responsive display ad.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param customerId the client customer ID.
    * @param adGroupResourceName the campaign resource name.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
@@ -330,7 +333,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
    * Adds an image to the Google Ads account.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param customerId the client customer ID.
    * @param imageUrl the url of the image.
    * @param assetName the name of the asset.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
@@ -370,7 +373,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
    * Targets a user list.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param customerId the client customer ID.
    * @param adGroupResourceName the campaign resource name.
    * @param userListId ID of the user list.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
