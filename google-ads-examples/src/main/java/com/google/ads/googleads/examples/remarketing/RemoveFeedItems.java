@@ -18,12 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v1.errors.GoogleAdsError;
-import com.google.ads.googleads.v1.errors.GoogleAdsException;
-import com.google.ads.googleads.v1.services.FeedItemOperation;
-import com.google.ads.googleads.v1.services.FeedItemServiceClient;
-import com.google.ads.googleads.v1.services.MutateFeedItemResult;
-import com.google.ads.googleads.v1.services.MutateFeedItemsResponse;
+import com.google.ads.googleads.v1.utils.ResourceNames;
+import com.google.ads.googleads.v2.errors.GoogleAdsError;
+import com.google.ads.googleads.v2.errors.GoogleAdsException;
+import com.google.ads.googleads.v2.services.FeedItemOperation;
+import com.google.ads.googleads.v2.services.FeedItemServiceClient;
+import com.google.ads.googleads.v2.services.MutateFeedItemResult;
+import com.google.ads.googleads.v2.services.MutateFeedItemsResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,6 +37,12 @@ public class RemoveFeedItems {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private long customerId;
+
+    @Parameter(names = ArgumentNames.FEED_ID, required = true)
+    private long feedId;
+
+    @Parameter(names = ArgumentNames.FEED_ITEM_IDS, required = true)
+    private List<Long> feedItemIds;
   }
 
   public static void main(String[] args) {
@@ -45,6 +52,11 @@ public class RemoveFeedItems {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
+      params.feedId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
+      params.feedItemIds = new ArrayList<>(Arrays.asList(
+        Long.parseLong("INSERT_FEED_1_ID_HERE"),
+        Long.parseLong("INSERT_FEED_2_ID_HERE"),
+        Long.parseLong("INSERT_FEED_3_ID_HERE")));
     }
 
     GoogleAdsClient googleAdsClient;
@@ -60,7 +72,7 @@ public class RemoveFeedItems {
     }
 
     try {
-      new RemoveFeedItems().runExample(googleAdsClient, params.customerId);
+      new RemoveFeedItems().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -83,31 +95,11 @@ public class RemoveFeedItems {
    * @param params the RemoveFeedItemsParams for the example.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
-    // Creates list of feed item resource names to remove.
-    List<String> feedItems =
-      new ArrayList<>(
-        Arrays.asList(
-          // INSERT_FEED_ITEM_1_RESOURCE_NAME,
-          // INSERT_FEED_ITEM_2_RESOURCE_NAME,
-          // INSERT_FEED_ITEM_3_RESOURCE_NAME,
-        ));
-
-    removeFeedItems(googleAdsClient, customerId, feedItems);
-  }
-
-  /**
-   * Removes items from the feed.
-   *
-   * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   */
-  private void removeFeedItems(GoogleAdsClient googleAdsClient,
-                               long customerId,
-                               List<String> feedItems) {
+  private void runExample(GoogleAdsClient googleAdsClient, RemoveFeedItemsParams params) {
     List<FeedItemOperation> operations = new ArrayList<>();
     // Creates the remove operations.
-    for (String feedItem : feedItems) {
+    for (long feedItemId : params.feedItemIds) {
+      String feedItem = ResourceNames.feedItem(params.customerId, params.feedId, feedItemId);
       FeedItemOperation operation = FeedItemOperation.newBuilder().setRemove(feedItem).build();
       operations.add(operation);
     }
@@ -117,7 +109,7 @@ public class RemoveFeedItems {
            googleAdsClient.getLatestVersion().createFeedItemServiceClient()) {
       // Issues the mutate request.
       MutateFeedItemsResponse response =
-        feedItemServiceClient.mutateFeedItems(Long.toString(customerId), operations);
+        feedItemServiceClient.mutateFeedItems(Long.toString(params.customerId), operations);
       for (MutateFeedItemResult result : response.getResultsList()) {
         System.out.printf("Removed feed item with resource name '%s'.%n", result.getResourceName());
       }
