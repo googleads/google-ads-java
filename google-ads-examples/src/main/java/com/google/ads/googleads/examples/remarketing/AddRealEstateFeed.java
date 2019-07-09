@@ -275,7 +275,7 @@ public class AddRealEstateFeed {
     // the context of a real estate feed (e.g. a LISTING_ID or LISTING_NAME). The FeedMapping
     // associates the feed column by ID to this type and controls how the feed attributes are
     // presented in dynamic content.
-    // See https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v1.enums#google.ads.googleads.v1.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField
+    // See https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v2.enums#google.ads.googleads.v2.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField
     // for the full list of placeholder values.
     AttributeFieldMapping listingIdMapping =
         AttributeFieldMapping.newBuilder()
