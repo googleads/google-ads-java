@@ -632,10 +632,10 @@ public class ResourceNames {
 
   /** Returns the payments account resource name for the specified components. */
   public static String paymentsAccount(
-      long customerId, long paymentsProfileId, long paymentsAccountId) {
+      long customerId, long paymentsAccountId) {
     return String.format(
         "customers/%s/paymentsAccounts/%s",
-        String.valueOf(customerId), concatIdentifiers(paymentsProfileId, paymentsAccountId));
+        String.valueOf(customerId), paymentsAccountId);
   }
 
   /** Returns the product bidding category constant for the specified components. */
