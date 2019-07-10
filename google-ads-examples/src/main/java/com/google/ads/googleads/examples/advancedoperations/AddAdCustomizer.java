@@ -317,9 +317,9 @@ public class AddAdCustomizer {
           feedMappingServiceClient.mutateFeedMappings(
               Long.toString(customerId), ImmutableList.of(feedMappingOperation));
 
-      String feedMappingResourceName = response.getResults(0).getResourceName();
-
-      System.out.printf("Added feed mapping with resource name %s.%n", feedMappingResourceName);
+      System.out.printf(
+          "Added feed mapping with resource name %s.%n",
+          response.getResults(0).getResourceName());
     }
   }
 
