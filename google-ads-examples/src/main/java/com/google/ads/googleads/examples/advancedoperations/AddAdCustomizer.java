@@ -233,7 +233,7 @@ public class AddAdCustomizer {
       GoogleAdsClient googleAdsClient, long customerId, String feedResourceName) {
     String query =
         String.format(
-            "SELECT feed.attributes, feed.name from feed where feed.resource_name = '%s'",
+            "SELECT feed.attributes, feed.name FROM feed WHERE feed.resource_name = '%s'",
             feedResourceName);
 
     SearchGoogleAdsRequest request =
@@ -251,10 +251,10 @@ public class AddAdCustomizer {
       Feed feed = searchPagedResponse.iterateAll().iterator().next().getFeed();
 
       System.out.printf(
-          "Found the following attributes for feed with name %s:%n", feed.getName().getValue());
+          "Found the following attributes for feed with name '%s':%n", feed.getName().getValue());
       for (FeedAttribute feedAttribute : feed.getAttributesList()) {
         System.out.printf(
-            "\t\"%s\" with id %d and type %s%n",
+            "\t'%s' with id %d and type '%s'%n",
             feedAttribute.getName().getValue(),
             feedAttribute.getId().getValue(),
             feedAttribute.getType());
@@ -265,7 +265,7 @@ public class AddAdCustomizer {
   }
 
   /**
-   * Creates a feed mapping to set the feed as an ad customizer feed.
+   * Creates a feed mapping and sets the feed as an ad customizer feed.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
@@ -279,6 +279,7 @@ public class AddAdCustomizer {
       Map<String, FeedAttribute> feedAttributes) {
 
     // Map the feed attributes to ad customizer placeholder fields.
+    // For a full list of ad customizer placeholder fields, see https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v2.enums#google.ads.googleads.v2.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField
     AttributeFieldMapping nameFieldMapping =
         AttributeFieldMapping.newBuilder()
             .setFeedAttributeId(feedAttributes.get("Name").getId())
@@ -300,7 +301,7 @@ public class AddAdCustomizer {
     FeedMapping feedMapping =
         FeedMapping.newBuilder()
             .setFeed(StringValue.of(feedResourceName))
-            // Map the feed to the AD_CUSTOMIZER placeholder type
+            // Sets the feed to the AD_CUSTOMIZER placeholder type.
             .setPlaceholderType(PlaceholderType.AD_CUSTOMIZER)
             .addAttributeFieldMappings(nameFieldMapping)
             .addAttributeFieldMappings(priceFieldMapping)
@@ -436,9 +437,11 @@ public class AddAdCustomizer {
       List<Long> adGroupIds,
       List<String> feedItemResourceNames) {
 
-    for (int i = 0; i < adGroupIds.size(); i++) {
-      Long adGroupId = adGroupIds.get(i);
+    // Bind each feed item to a specific ad group to make sure it will only be used to customize
+    // ads inside that ad group; using the feed item elsewhere will result in an error.
+    for (int i = 0; i < feedItemResourceNames.size(); i++) {
       String feedItemResourceName = feedItemResourceNames.get(i);
+      Long adGroupId = adGroupIds.get(i);
 
       FeedItemTarget feedItemTarget =
           FeedItemTarget.newBuilder()
@@ -458,7 +461,7 @@ public class AddAdCustomizer {
 
         String feedItemTargetResourceName = response.getResults(0).getResourceName();
         System.out.printf(
-            "Added feed item target with resource name %s.%n", feedItemTargetResourceName);
+            "Added feed item target with resource name '%s'.%n", feedItemTargetResourceName);
       }
     }
   }
@@ -468,7 +471,7 @@ public class AddAdCustomizer {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
-   * @param adGroupIds the ad group IDs to bind the feed items to.
+   * @param adGroupIds the ad group IDs in which to create the ads.
    * @param feedName the name of the feed.
    */
   private void createAdsWithCustomizations(
@@ -492,7 +495,7 @@ public class AddAdCustomizer {
 
     List<AdGroupAdOperation> adGroupAdOperations = new ArrayList<>();
 
-    // Creates the same ad in both ad groups. When they serve, they will show different values,
+    // Creates the same ad in all ad groups. When they serve, they will show different values,
     // since they match different feed items.
     for (Long adGroupId : adGroupIds) {
       AdGroupAd adGroupAd =
@@ -515,7 +518,7 @@ public class AddAdCustomizer {
 
       System.out.printf("Added %d ads:%n", response.getResultsCount());
       for (MutateAdGroupAdResult result : response.getResultsList()) {
-        System.out.printf("Added an ad with resource name %s.%n", result.getResourceName());
+        System.out.printf("Added an ad with resource name '%s'.%n", result.getResourceName());
       }
     }
   }
