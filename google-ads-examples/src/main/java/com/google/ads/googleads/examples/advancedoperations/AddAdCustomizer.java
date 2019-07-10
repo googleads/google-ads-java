@@ -133,6 +133,11 @@ public class AddAdCustomizer {
    */
   private void runExample(GoogleAdsClient googleAdsClient, AddAdCustomizerParams params) {
 
+    if (params.adGroupIds.size() != 2) {
+      throw new IllegalArgumentException(
+          "Please pass exactly two ad group IDs in the adGroupId parameter.");
+    }
+
     String feedName = "Ad Customizer example feed " + System.currentTimeMillis();
 
     // Create a feed to be used as the ad customizer.
@@ -279,7 +284,8 @@ public class AddAdCustomizer {
       Map<String, FeedAttribute> feedAttributes) {
 
     // Map the feed attributes to ad customizer placeholder fields.
-    // For a full list of ad customizer placeholder fields, see https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v2.enums#google.ads.googleads.v2.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField
+    // For a full list of ad customizer placeholder fields, see
+    // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v2.enums#google.ads.googleads.v2.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField
     AttributeFieldMapping nameFieldMapping =
         AttributeFieldMapping.newBuilder()
             .setFeedAttributeId(feedAttributes.get("Name").getId())
@@ -319,8 +325,7 @@ public class AddAdCustomizer {
               Long.toString(customerId), ImmutableList.of(feedMappingOperation));
 
       System.out.printf(
-          "Added feed mapping with resource name %s.%n",
-          response.getResults(0).getResourceName());
+          "Added feed mapping with resource name %s.%n", response.getResults(0).getResourceName());
     }
   }
 
