@@ -127,7 +127,7 @@ public class AddGoogleMyBusinessLocationExtensions {
    * @param gmbAccessToken the access token created using the 'AdWords' scope and the client ID and
    *     client secret of with the cloud project associated with the GMB account.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
-   * @throws InterruptedException if the Thread.sleep operation requires an interrupt.
+   * @throws InterruptedException if the Thread.sleep operation is interrupted.
    */
   private void runExample(
       GoogleAdsClient googleAdsClient,
@@ -148,9 +148,9 @@ public class AddGoogleMyBusinessLocationExtensions {
                     .setEmailAddress(StringValue.of(gmbEmailAddress))
                     .setBusinessAccountId(StringValue.of(businessAccountIdentifier))
                     // Used to filter Google My Business listings by labels. If entries exist in
-                    // label_filters, only listings that has any of the labels set are candidates
-                    // to be synchronized into FeedItems. If no entries exist in label_filters,
-                    // then all listings are candidates for syncing.
+                    // label_filters, only listings that have at least one of the labels set are
+                    // candidates to be synchronized into FeedItems. If no entries exist in
+                    // label_filters, then all listings are candidates for syncing.
                     .addLabelFilters(StringValue.of("Stores in New York"))
                     // Sets the authentication info to be able to connect Google Ads to the GMB
                     // account.
