@@ -99,7 +99,7 @@ public class HandlePartialFailure {
 
     // Checks for existence of any partial failures in the response.
     if (checkIfPartialFailureErrorExists(response)) {
-      System.out.println("Partial failures occurred. Details will be shown below.");
+      System.out.println("Partial failures occurred.");
     } else {
       System.out.println("All operations completed successfully. No partial failures to show.");
       return;
