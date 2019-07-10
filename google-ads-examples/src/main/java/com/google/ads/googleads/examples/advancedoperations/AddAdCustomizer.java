@@ -65,8 +65,10 @@ import java.util.List;
 import java.util.Map;
 import org.joda.time.DateTime;
 
-/** Adds an ad customizer feed and associates it with the customer. Then it adds an ad
- * that uses the feed to populate dynamic data. */
+/**
+ * Adds an ad customizer feed and associates it with the customer. Then it adds an ad that uses the
+ * feed to populate dynamic data.
+ */
 public class AddAdCustomizer {
 
   /** We're doing only searches by resource_name in this example, we can set page size = 1. */
@@ -79,9 +81,6 @@ public class AddAdCustomizer {
 
     @Parameter(names = ArgumentNames.AD_GROUP_ID, required = true)
     private List<Long> adGroupIds;
-
-    @Parameter(names = ArgumentNames.FEED_NAME, required = true)
-    private String feedName;
   }
 
   public static void main(String[] args) throws IOException {
@@ -91,10 +90,9 @@ public class AddAdCustomizer {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
-      params.adGroupIds = Arrays.asList(
-          Long.parseLong("INSERT_AD_GROUP_ID_HERE"),
-          Long.parseLong("INSERT_AD_GROUP_ID_HERE"));
-      params.feedName = "INSERT_FEED_NAME_HERE";
+      params.adGroupIds =
+          Arrays.asList(
+              Long.parseLong("INSERT_AD_GROUP_ID_HERE"), Long.parseLong("INSERT_AD_GROUP_ID_HERE"));
     }
 
     GoogleAdsClient googleAdsClient;
@@ -110,8 +108,7 @@ public class AddAdCustomizer {
     }
 
     try {
-      new AddAdCustomizer().runExample(
-          googleAdsClient, params.customerId, params.adGroupIds, params.feedName);
+      new AddAdCustomizer().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -131,32 +128,43 @@ public class AddAdCustomizer {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID.
-   * @param adGroupIds the ad group IDs.
-   * @param feedName the name of the feed to create.
+   * @param params the example parameters.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, List<Long> adGroupIds, String feedName) {
+  private void runExample(GoogleAdsClient googleAdsClient, AddAdCustomizerParams params) {
 
-    // Makes sure the feed name is not duplicated.
-    feedName = feedName + System.currentTimeMillis();
+    String feedName = "Ad Customizer example feed " + System.currentTimeMillis();
 
+    // Create a feed to be used as the ad customizer.
     String adCustomizerFeedResourceName =
-        createAdCustomizerFeed(googleAdsClient, customerId, feedName);
+        createAdCustomizerFeed(googleAdsClient, params.customerId, feedName);
 
-    Map<String, FeedAttribute> adCustomizerFeedAttributes = getFeedAttributes(
-        googleAdsClient, customerId, adCustomizerFeedResourceName);
+    // Retrieve the attributes for the newly created feed.
+    Map<String, FeedAttribute> adCustomizerFeedAttributes =
+        getFeedAttributes(googleAdsClient, params.customerId, adCustomizerFeedResourceName);
 
+    // Map the feed to the ad customizer placeholder type to mark it as an ad customizer.
     createAdCustomizerMapping(
-        googleAdsClient, customerId, adCustomizerFeedResourceName, adCustomizerFeedAttributes);
+        googleAdsClient,
+        params.customerId,
+        adCustomizerFeedResourceName,
+        adCustomizerFeedAttributes);
 
-    List<String> feedItemResourceNames = createFeedItems(
-        googleAdsClient, customerId, adCustomizerFeedResourceName, adCustomizerFeedAttributes);
+    // Create the feed items that will fill the placeholders in the ads customized by the feed.
+    List<String> feedItemResourceNames =
+        createFeedItems(
+            googleAdsClient,
+            params.customerId,
+            adCustomizerFeedResourceName,
+            adCustomizerFeedAttributes);
 
-    createFeedItemTargets(googleAdsClient, customerId, adGroupIds, feedItemResourceNames);
+    // Create a feed item targeting to associate the feed items with specific ad groups to
+    // prevent them from being used in other ways.
+    createFeedItemTargets(
+        googleAdsClient, params.customerId, params.adGroupIds, feedItemResourceNames);
 
-    createAdsWithCustomizations(googleAdsClient, customerId, adGroupIds, feedName);
+    // Create ads with the customizations provided by the feed items.
+    createAdsWithCustomizations(googleAdsClient, params.customerId, params.adGroupIds, feedName);
   }
 
   /**
@@ -167,27 +175,28 @@ public class AddAdCustomizer {
    * @param feedName the name of the feed to create.
    * @return the resource name of the newly created feed.
    */
-  private String createAdCustomizerFeed(GoogleAdsClient googleAdsClient, long customerId,
-      String feedName) {
+  private String createAdCustomizerFeed(
+      GoogleAdsClient googleAdsClient, long customerId, String feedName) {
 
-    // Creates three feed attributes: a name, a price and a date.
+    // Creates three feed attributes: a name, a price and a date. The attribute names are arbitrary
+    // choices and will be used as placeholders in the ad text fields.
     FeedAttribute nameAttribute =
         FeedAttribute.newBuilder()
             .setName(StringValue.of("Name"))
             .setType(FeedAttributeType.STRING)
-        .build();
+            .build();
 
     FeedAttribute priceAttribute =
         FeedAttribute.newBuilder()
             .setName(StringValue.of("Price"))
             .setType(FeedAttributeType.STRING)
-        .build();
+            .build();
 
     FeedAttribute dateAttribute =
         FeedAttribute.newBuilder()
             .setName(StringValue.of("Date"))
             .setType(FeedAttributeType.DATE_TIME)
-        .build();
+            .build();
 
     Feed adCustomizerFeed =
         Feed.newBuilder()
@@ -195,12 +204,9 @@ public class AddAdCustomizer {
             .addAttributes(nameAttribute)
             .addAttributes(priceAttribute)
             .addAttributes(dateAttribute)
-        .build();
+            .build();
 
-    FeedOperation feedOperation =
-        FeedOperation.newBuilder()
-            .setCreate(adCustomizerFeed)
-        .build();
+    FeedOperation feedOperation = FeedOperation.newBuilder().setCreate(adCustomizerFeed).build();
 
     try (FeedServiceClient feedServiceClient =
         googleAdsClient.getLatestVersion().createFeedServiceClient()) {
@@ -225,9 +231,10 @@ public class AddAdCustomizer {
    */
   private Map<String, FeedAttribute> getFeedAttributes(
       GoogleAdsClient googleAdsClient, long customerId, String feedResourceName) {
-    String query = String.format(
-        "SELECT feed.attributes, feed.name from feed where feed.resource_name = '%s'",
-        feedResourceName);
+    String query =
+        String.format(
+            "SELECT feed.attributes, feed.name from feed where feed.resource_name = '%s'",
+            feedResourceName);
 
     SearchGoogleAdsRequest request =
         SearchGoogleAdsRequest.newBuilder()
@@ -244,9 +251,8 @@ public class AddAdCustomizer {
       Feed feed = searchPagedResponse.iterateAll().iterator().next().getFeed();
 
       System.out.printf(
-          "Found the following attributes for feed with name %s:%n",
-          feed.getName().getValue());
-      for(FeedAttribute feedAttribute : feed.getAttributesList()) {
+          "Found the following attributes for feed with name %s:%n", feed.getName().getValue());
+      for (FeedAttribute feedAttribute : feed.getAttributesList()) {
         System.out.printf(
             "\t\"%s\" with id %d and type %s%n",
             feedAttribute.getName().getValue(),
@@ -267,43 +273,49 @@ public class AddAdCustomizer {
    * @param feedAttributes the attributes of the feed.
    */
   private void createAdCustomizerMapping(
-      GoogleAdsClient googleAdsClient, long customerId, String feedResourceName,
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      String feedResourceName,
       Map<String, FeedAttribute> feedAttributes) {
 
     // Map the feed attributes to ad customizer placeholder fields.
-    AttributeFieldMapping nameFieldMapping = AttributeFieldMapping.newBuilder()
-        .setFeedAttributeId(feedAttributes.get("Name").getId())
-        .setAdCustomizerField(AdCustomizerPlaceholderField.STRING)
-        .build();
+    AttributeFieldMapping nameFieldMapping =
+        AttributeFieldMapping.newBuilder()
+            .setFeedAttributeId(feedAttributes.get("Name").getId())
+            .setAdCustomizerField(AdCustomizerPlaceholderField.STRING)
+            .build();
 
-    AttributeFieldMapping priceFieldMapping = AttributeFieldMapping.newBuilder()
-        .setFeedAttributeId(feedAttributes.get("Price").getId())
-        .setAdCustomizerField(AdCustomizerPlaceholderField.PRICE)
-        .build();
+    AttributeFieldMapping priceFieldMapping =
+        AttributeFieldMapping.newBuilder()
+            .setFeedAttributeId(feedAttributes.get("Price").getId())
+            .setAdCustomizerField(AdCustomizerPlaceholderField.PRICE)
+            .build();
 
-    AttributeFieldMapping dateFieldMapping = AttributeFieldMapping.newBuilder()
-        .setFeedAttributeId(feedAttributes.get("Date").getId())
-        .setAdCustomizerField(AdCustomizerPlaceholderField.DATE)
-        .build();
+    AttributeFieldMapping dateFieldMapping =
+        AttributeFieldMapping.newBuilder()
+            .setFeedAttributeId(feedAttributes.get("Date").getId())
+            .setAdCustomizerField(AdCustomizerPlaceholderField.DATE)
+            .build();
 
-    FeedMapping feedMapping = FeedMapping.newBuilder()
-        .setFeed(StringValue.of(feedResourceName))
-        // Map the feed to the AD_CUSTOMIZER placeholder type
-        .setPlaceholderType(PlaceholderType.AD_CUSTOMIZER)
-        .addAttributeFieldMappings(nameFieldMapping)
-        .addAttributeFieldMappings(priceFieldMapping)
-        .addAttributeFieldMappings(dateFieldMapping)
-        .build();
+    FeedMapping feedMapping =
+        FeedMapping.newBuilder()
+            .setFeed(StringValue.of(feedResourceName))
+            // Map the feed to the AD_CUSTOMIZER placeholder type
+            .setPlaceholderType(PlaceholderType.AD_CUSTOMIZER)
+            .addAttributeFieldMappings(nameFieldMapping)
+            .addAttributeFieldMappings(priceFieldMapping)
+            .addAttributeFieldMappings(dateFieldMapping)
+            .build();
 
-    FeedMappingOperation feedMappingOperation = FeedMappingOperation.newBuilder()
-        .setCreate(feedMapping)
-        .build();
+    FeedMappingOperation feedMappingOperation =
+        FeedMappingOperation.newBuilder().setCreate(feedMapping).build();
 
     try (FeedMappingServiceClient feedMappingServiceClient =
         googleAdsClient.getLatestVersion().createFeedMappingServiceClient()) {
 
-      MutateFeedMappingsResponse response = feedMappingServiceClient.mutateFeedMappings(
-          Long.toString(customerId), ImmutableList.of(feedMappingOperation));
+      MutateFeedMappingsResponse response =
+          feedMappingServiceClient.mutateFeedMappings(
+              Long.toString(customerId), ImmutableList.of(feedMappingOperation));
 
       String feedMappingResourceName = response.getResults(0).getResourceName();
 
@@ -321,7 +333,9 @@ public class AddAdCustomizer {
    * @return the resource names of the feed items.
    */
   private List<String> createFeedItems(
-      GoogleAdsClient googleAdsClient, long customerId, String feedResourceName,
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      String feedResourceName,
       Map<String, FeedAttribute> feedAttributes) {
 
     List<FeedItemOperation> feedItemOperations = new ArrayList<>();
@@ -329,29 +343,33 @@ public class AddAdCustomizer {
     DateTime marsDate = DateTime.now().withDayOfMonth(1).withHourOfDay(0).withMinuteOfHour(0);
     feedItemOperations.add(
         createFeedItemOperation(
-            "Mars", "$1234.56", marsDate.toString("yyyyMMdd HHmmss"),
-            feedResourceName, feedAttributes));
+            "Mars",
+            "$1234.56",
+            marsDate.toString("yyyyMMdd HHmmss"),
+            feedResourceName,
+            feedAttributes));
 
     DateTime venusDate = DateTime.now().withDayOfMonth(15).withHourOfDay(0).withMinuteOfHour(0);
     feedItemOperations.add(
         createFeedItemOperation(
-            "Venus", "$1450.00", venusDate.toString("yyyyMMdd HHmmss"),
-            feedResourceName, feedAttributes));
+            "Venus",
+            "$1450.00",
+            venusDate.toString("yyyyMMdd HHmmss"),
+            feedResourceName,
+            feedAttributes));
 
     try (FeedItemServiceClient feedItemServiceClient =
         googleAdsClient.getLatestVersion().createFeedItemServiceClient()) {
-
-      MutateFeedItemsResponse response =
-          feedItemServiceClient.mutateFeedItems(
-              Long.toString(customerId), feedItemOperations);
-
       List<String> feedItemResourceNames = new ArrayList<>();
+      MutateFeedItemsResponse response =
+          feedItemServiceClient.mutateFeedItems(Long.toString(customerId), feedItemOperations);
+
       System.out.printf("Added %d feed items:%n", response.getResultsCount());
 
-      for(MutateFeedItemResult result : response.getResultsList()) {
+      for (MutateFeedItemResult result : response.getResultsList()) {
         String feedItemResourceName = result.getResourceName();
         feedItemResourceNames.add(feedItemResourceName);
-        System.out.println(feedItemResourceName);
+        System.out.printf("Added feed item with resource name %s.%n", feedItemResourceName);
       }
       return feedItemResourceNames;
     }
@@ -368,40 +386,44 @@ public class AddAdCustomizer {
    * @return a FeedItemOperation to create a feed item.
    */
   private FeedItemOperation createFeedItemOperation(
-      String name, String price, String date, String feedResourceName,
+      String name,
+      String price,
+      String date,
+      String feedResourceName,
       Map<String, FeedAttribute> feedAttributes) {
-    FeedItemAttributeValue nameAttributeValue = FeedItemAttributeValue.newBuilder()
-        .setFeedAttributeId(feedAttributes.get("Name").getId())
-        .setStringValue(StringValue.of(name))
-        .build();
+    FeedItemAttributeValue nameAttributeValue =
+        FeedItemAttributeValue.newBuilder()
+            .setFeedAttributeId(feedAttributes.get("Name").getId())
+            .setStringValue(StringValue.of(name))
+            .build();
 
-    FeedItemAttributeValue priceAttributeValue = FeedItemAttributeValue.newBuilder()
-        .setFeedAttributeId(feedAttributes.get("Price").getId())
-        .setStringValue(StringValue.of(price))
-        .build();
+    FeedItemAttributeValue priceAttributeValue =
+        FeedItemAttributeValue.newBuilder()
+            .setFeedAttributeId(feedAttributes.get("Price").getId())
+            .setStringValue(StringValue.of(price))
+            .build();
 
+    FeedItemAttributeValue dateAttributeValue =
+        FeedItemAttributeValue.newBuilder()
+            .setFeedAttributeId(feedAttributes.get("Date").getId())
+            .setStringValue(StringValue.of(date))
+            .build();
 
-    FeedItemAttributeValue dateAttributeValue = FeedItemAttributeValue.newBuilder()
-        .setFeedAttributeId(feedAttributes.get("Date").getId())
-        .setStringValue(StringValue.of(date))
-        .build();
+    FeedItem feedItem =
+        FeedItem.newBuilder()
+            .setFeed(StringValue.of(feedResourceName))
+            .addAttributeValues(nameAttributeValue)
+            .addAttributeValues(priceAttributeValue)
+            .addAttributeValues(dateAttributeValue)
+            .build();
 
-    FeedItem feedItem = FeedItem.newBuilder()
-        .setFeed(StringValue.of(feedResourceName))
-        .addAttributeValues(nameAttributeValue)
-        .addAttributeValues(priceAttributeValue)
-        .addAttributeValues(dateAttributeValue)
-        .build();
-
-    return FeedItemOperation.newBuilder()
-        .setCreate(feedItem)
-        .build();
+    return FeedItemOperation.newBuilder().setCreate(feedItem).build();
   }
 
   /**
    * Restricts the feed items to work only with a specific ad group; this prevents the feed items
-   * from being used elsewhere and makes sure they are used only for customizing a specific
-   * ad group.
+   * from being used elsewhere and makes sure they are used only for customizing a specific ad
+   * group.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
@@ -409,21 +431,23 @@ public class AddAdCustomizer {
    * @param feedItemResourceNames the resource names of the feed items.
    */
   private void createFeedItemTargets(
-      GoogleAdsClient googleAdsClient, long customerId, List<Long> adGroupIds,
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      List<Long> adGroupIds,
       List<String> feedItemResourceNames) {
 
-    for(int i = 0; i < adGroupIds.size(); i++) {
+    for (int i = 0; i < adGroupIds.size(); i++) {
       Long adGroupId = adGroupIds.get(i);
       String feedItemResourceName = feedItemResourceNames.get(i);
 
-      FeedItemTarget feedItemTarget = FeedItemTarget.newBuilder()
-          .setAdGroup(StringValue.of(ResourceNames.adGroup(customerId, adGroupId)))
-          .setFeedItem(StringValue.of(feedItemResourceName))
-          .build();
+      FeedItemTarget feedItemTarget =
+          FeedItemTarget.newBuilder()
+              .setAdGroup(StringValue.of(ResourceNames.adGroup(customerId, adGroupId)))
+              .setFeedItem(StringValue.of(feedItemResourceName))
+              .build();
 
-      FeedItemTargetOperation feedItemTargetOperation = FeedItemTargetOperation.newBuilder()
-          .setCreate(feedItemTarget)
-          .build();
+      FeedItemTargetOperation feedItemTargetOperation =
+          FeedItemTargetOperation.newBuilder().setCreate(feedItemTarget).build();
 
       try (FeedItemTargetServiceClient feedItemTargetServiceClient =
           googleAdsClient.getLatestVersion().createFeedItemTargetServiceClient()) {
@@ -451,31 +475,34 @@ public class AddAdCustomizer {
       GoogleAdsClient googleAdsClient, long customerId, List<Long> adGroupIds, String feedName) {
 
     // Creates an expanded text ad using the feed attribute names as placeholders.
-    ExpandedTextAdInfo expandedTextAdInfo = ExpandedTextAdInfo.newBuilder()
-        .setHeadlinePart1(StringValue.of(String.format("Luxury cruise to {=%s.Name}", feedName)))
-        .setHeadlinePart2(StringValue.of(String.format("Only {=%s.Price}", feedName)))
-        .setDescription(StringValue.of(String.format(
-            "Offer ends in {=countdown(%s.Date)}!", feedName)))
-        .build();
+    ExpandedTextAdInfo expandedTextAdInfo =
+        ExpandedTextAdInfo.newBuilder()
+            .setHeadlinePart1(
+                StringValue.of(String.format("Luxury cruise to {=%s.Name}", feedName)))
+            .setHeadlinePart2(StringValue.of(String.format("Only {=%s.Price}", feedName)))
+            .setDescription(
+                StringValue.of(String.format("Offer ends in {=countdown(%s.Date)}!", feedName)))
+            .build();
 
-    Ad ad = Ad.newBuilder()
-        .setExpandedTextAd(expandedTextAdInfo)
-        .addFinalUrls(StringValue.of("http://www.example.com"))
-        .build();
+    Ad ad =
+        Ad.newBuilder()
+            .setExpandedTextAd(expandedTextAdInfo)
+            .addFinalUrls(StringValue.of("http://www.example.com"))
+            .build();
 
     List<AdGroupAdOperation> adGroupAdOperations = new ArrayList<>();
 
     // Creates the same ad in both ad groups. When they serve, they will show different values,
     // since they match different feed items.
-    for(Long adGroupId : adGroupIds) {
-      AdGroupAd adGroupAd = AdGroupAd.newBuilder()
-          .setAd(ad)
-          .setAdGroup(StringValue.of(ResourceNames.adGroup(customerId, adGroupId)))
-          .build();
+    for (Long adGroupId : adGroupIds) {
+      AdGroupAd adGroupAd =
+          AdGroupAd.newBuilder()
+              .setAd(ad)
+              .setAdGroup(StringValue.of(ResourceNames.adGroup(customerId, adGroupId)))
+              .build();
 
-      AdGroupAdOperation adGroupAdOperation = AdGroupAdOperation.newBuilder()
-          .setCreate(adGroupAd)
-          .build();
+      AdGroupAdOperation adGroupAdOperation =
+          AdGroupAdOperation.newBuilder().setCreate(adGroupAd).build();
 
       adGroupAdOperations.add(adGroupAdOperation);
     }
@@ -483,16 +510,13 @@ public class AddAdCustomizer {
     try (AdGroupAdServiceClient adGroupAdServiceClient =
         googleAdsClient.getLatestVersion().createAdGroupAdServiceClient()) {
 
-      MutateAdGroupAdsResponse response = adGroupAdServiceClient.mutateAdGroupAds(
-          Long.toString(customerId), adGroupAdOperations);
+      MutateAdGroupAdsResponse response =
+          adGroupAdServiceClient.mutateAdGroupAds(Long.toString(customerId), adGroupAdOperations);
 
       System.out.printf("Added %d ads:%n", response.getResultsCount());
-      for(MutateAdGroupAdResult result : response.getResultsList()) {
-        System.out.println(result.getResourceName());
+      for (MutateAdGroupAdResult result : response.getResultsList()) {
+        System.out.printf("Added an ad with resource name %s.%n", result.getResourceName());
       }
     }
-
-
-
   }
 }
