@@ -71,8 +71,11 @@ import org.joda.time.DateTime;
  */
 public class AddAdCustomizer {
 
-  /** We're doing only searches by resource_name in this example, we can set page size = 1. */
+  // We're doing only searches by resource_name in this example, we can set page size = 1.
   private static final int PAGE_SIZE = 1;
+
+  // We're creating two different ad groups to be dynamically populated by the same feed.
+  private static final int NUMBER_OF_AD_GROUPS = 2;
 
   private static class AddAdCustomizerParams extends CodeSampleParams {
 
@@ -133,7 +136,7 @@ public class AddAdCustomizer {
    */
   private void runExample(GoogleAdsClient googleAdsClient, AddAdCustomizerParams params) {
 
-    if (params.adGroupIds.size() != 2) {
+    if (params.adGroupIds.size() != NUMBER_OF_AD_GROUPS) {
       throw new IllegalArgumentException(
           "Please pass exactly two ad group IDs in the adGroupId parameter.");
     }
