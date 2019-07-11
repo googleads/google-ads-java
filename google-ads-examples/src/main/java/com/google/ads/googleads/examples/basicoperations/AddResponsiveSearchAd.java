@@ -37,8 +37,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- *  Adds an image representing the ad using the MediaService and then adds a responsive
- *  display ad to a given ad group. To get ad groups, run GetAdGroups.java.
+ * Adds a responsive search ad to a given ad group. To get ad groups, run
+ * GetAdGroups.java.
  */
 public class AddResponsiveSearchAd {
 
