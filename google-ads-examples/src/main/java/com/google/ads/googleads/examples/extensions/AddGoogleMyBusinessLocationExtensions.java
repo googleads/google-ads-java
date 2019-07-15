@@ -125,7 +125,7 @@ public class AddGoogleMyBusinessLocationExtensions {
    * @param gmbEmailAddress email address associated with the GMB account.
    * @param businessAccountIdentifier the account number of the GMB account.
    * @param gmbAccessToken the access token created using the 'AdWords' scope and the client ID and
-   *     client secret of with the cloud project associated with the GMB account.
+   *     client secret of with the Cloud project associated with the GMB account.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    * @throws InterruptedException if the Thread.sleep operation is interrupted.
    */
@@ -223,6 +223,13 @@ public class AddGoogleMyBusinessLocationExtensions {
           } catch (GoogleAdsException gae) {
             // Waits using exponential backoff policy.
             long sleepSeconds = (long) Math.scalb(5, numberOfAttempts);
+
+            // Exits the loop early if sleepSeconds grows too large in the event that
+            // MAX_CUSTOMER_FEED_ADD_ATTEMPTS is set too high.
+            if (sleepSeconds > (long) Math.scalb(5, 10)) {
+              break;
+            }
+
             System.out.printf(
                 "Attempt #%d to add the CustomerFeed was not successful. "
                     + "Waiting %d seconds before trying again.%n",
