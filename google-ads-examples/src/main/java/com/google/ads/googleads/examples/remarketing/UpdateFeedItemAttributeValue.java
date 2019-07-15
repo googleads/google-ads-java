@@ -150,7 +150,7 @@ public class UpdateFeedItemAttributeValue {
     // must create the FeedItem from the existing FeedItem and set the field(s) that will be
     // updated.
     feedItem =
-        FeedItem.newBuilder(feedItem)
+        feedItem.toBuilder()
             // Sets the attribute value of the FeedItem given its index relative to other attributes
             // in the FeedItem.
             .setAttributeValues(
