@@ -43,6 +43,9 @@ public final class ArgumentNames {
   public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
   public static final String PAGE_URL = "--pageUrl";
   public static final String LABEL_ID = "--labelId";
+  public static final String GMB_EMAIL_ADDRESS = "--gmbEmailAddress";
+  public static final String BUSINESS_ACCOUNT_IDENTIFIER = "--businessAccountIdentifier";
+  public static final String GMB_ACCESS_TOKEN = "--gmbAccessToken";
   public static final String USER_LIST_ID = "--userListId";
   public static final String MANAGER_ID = "--managerId";
 }
