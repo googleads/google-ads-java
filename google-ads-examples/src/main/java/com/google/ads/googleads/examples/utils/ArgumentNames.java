@@ -16,6 +16,7 @@ package com.google.ads.googleads.examples.utils;
 
 /** Contains command line argument formats for example code. */
 public final class ArgumentNames {
+  public static final String ATTRIBUTE_VALUE = "--attributeValue";
   public static final String BILLING_SETUP_ID = "--billingSetupId";
   public static final String CUSTOMER_ID = "--customerId";
   public static final String CAMPAIGN_ID = "--campaignId";
@@ -29,6 +30,7 @@ public final class ArgumentNames {
   public static final String ARTIFACT_NAME = "--artifactName";
   public static final String FEED_ID = "--feedId";
   public static final String FEED_ITEM_ID = "--feedItemId";
+  public static final String FLIGHT_PLACEHOLDER_FIELD = "--flightPlaceholderField";
   public static final String FEED_ITEM_IDS = "--feedItemIds";
   public static final String KEYWORD_PLAN_ID = "--keywordPlanId";
   public static final String KEYWORD_TEXT = "--keywordText";
