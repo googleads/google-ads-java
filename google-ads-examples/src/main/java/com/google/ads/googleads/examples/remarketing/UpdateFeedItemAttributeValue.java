@@ -43,7 +43,8 @@ import java.util.Map;
 /**
  * Updates a FeedItemAttributeValue in a flights feed. To create a flights feed,
  * run the AddFlightsFeed example. This example is specific to feeds of type DYNAMIC_FLIGHT.
- * The attribute you are updating must be present on the feed.
+ * The attribute you are updating must be present on the feed. This example is
+ * specifically for updating the StringValue of an attribute.
  */
 public class UpdateFeedItemAttributeValue {
   private static final int PAGE_SIZE = 1_000;
@@ -92,7 +93,13 @@ public class UpdateFeedItemAttributeValue {
     }
 
     try {
-      new UpdateFeedItemAttributeValue().runExample(googleAdsClient, params);
+      new UpdateFeedItemAttributeValue().runExample(
+        googleAdsClient,
+        params.customerId,
+        params.feedId,
+        params.feedItemId,
+        params.flightPlaceholderField,
+        params.attributeValue);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -112,12 +119,22 @@ public class UpdateFeedItemAttributeValue {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param params the UpdateFeedItemAttributeValueParams for the example.
+   * @param customerId the client customer ID in which to create criterion.
+   * @param feedId ID of the feed containing the feed item to be updated.
+   * @param feedItemId ID of the feed item to be updated.
+   * @param flightPlaceholderField the placeholder type for the attribute to be removed.
+   * @param attributeValue String value with which to update the FeedAttributeValue.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
-      GoogleAdsClient googleAdsClient, UpdateFeedItemAttributeValueParams params) {
-    updateFeedItem(googleAdsClient, params);
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      long feedId,
+      long feedItemId,
+      String flightPlaceholderField,
+      String attributeValue) {
+    updateFeedItem(
+      googleAdsClient, customerId, feedId, feedItemId, flightPlaceholderField, attributeValue);
   }
 
   /**
@@ -125,33 +142,42 @@ public class UpdateFeedItemAttributeValue {
    * update the FeedItem.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param params the UpdateFeedItemAttributeValueParams for the example.
+   * @param customerId the client customer ID in which to create criterion.
+   * @param feedId ID of the feed containing the feed item to be updated.
+   * @param feedItemId ID of the feed item to be updated.
+   * @param flightPlaceholderField the placeholder type for the attribute to be removed.
+   * @param attributeValue String value with which to update the FeedAttributeValue.
    */
   private void updateFeedItem(
-      GoogleAdsClient googleAdsClient, UpdateFeedItemAttributeValueParams params) {
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      long feedId,
+      long feedItemId,
+      String flightPlaceholderField,
+      String attributeValue) {
     // Gets the feed resource name.
-    String feedResourceName = ResourceNames.feed(params.customerId, params.feedId);
+    String feedResourceName = ResourceNames.feed(customerId, feedId);
 
     // Gets a map of the placeholder values and feed attributes.
     Map<FlightPlaceholderField, FeedAttribute> feedAttributes =
-        AddFlightsFeed.getFeed(googleAdsClient, params.customerId, feedResourceName);
+        AddFlightsFeed.getFeed(googleAdsClient, customerId, feedResourceName);
 
     // Gets the ID of the attribute to update. This is needed to specify which
     // FeedItemAttributeValue will be updated in the given FeedItem.
     long attributeId = feedAttributes
-      .get(FlightPlaceholderField.valueOf(params.flightPlaceholderField.toUpperCase()))
+      .get(FlightPlaceholderField.valueOf(flightPlaceholderField.toUpperCase()))
       .getId()
       .getValue();
     // Gets the feed item resource name.
     String feedItemResourceName =
-      ResourceNames.feedItem(params.customerId, params.feedId, params.feedItemId);
+      ResourceNames.feedItem(customerId, feedId, feedItemId);
     // Retrieves the feed item and its associated attributes based on its resource name.
-    FeedItem feedItem = getFeedItem(googleAdsClient, params.customerId, feedItemResourceName);
+    FeedItem feedItem = getFeedItem(googleAdsClient, customerId, feedItemResourceName);
     // Creates the updated FeedItemAttributeValue.
     FeedItemAttributeValue feedItemAttributeValue =
         FeedItemAttributeValue.newBuilder()
             .setFeedAttributeId(Int64Value.of(attributeId))
-            .setStringValue(StringValue.of(params.attributeValue))
+            .setStringValue(StringValue.of(attributeValue))
             .build();
     // Creates a new FeedItem from the existing FeedItem. Any FeedItemAttributeValues that are
     // not included in the updated FeedItem will be removed from the FeedItem, which is why you
@@ -179,7 +205,7 @@ public class UpdateFeedItemAttributeValue {
       // Updates the feed item.
       MutateFeedItemsResponse response =
           feedItemServiceClient.mutateFeedItems(
-              Long.toString(params.customerId), ImmutableList.of(operation));
+              Long.toString(customerId), ImmutableList.of(operation));
       for (MutateFeedItemResult result : response.getResultsList()) {
         System.out.printf("Updated feed item with resource name '%s'.%n", result.getResourceName());
       }
@@ -244,7 +270,7 @@ public class UpdateFeedItemAttributeValue {
 
     // Throws an exception if the attribute value is not found.
     if (attributeIndex == null) {
-      throw new RuntimeException("Invalid attribute index");
+      throw new IllegalArgumentException("Invalid attribute index");
     }
 
     return attributeIndex;

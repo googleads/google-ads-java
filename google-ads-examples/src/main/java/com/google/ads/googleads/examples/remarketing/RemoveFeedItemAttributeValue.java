@@ -40,7 +40,7 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * Removes a FeedItemAttributeValue in a flights feed. To create a flights
+ * Removes a FeedItemAttributeValue of a FeedItem in a flights Feed. To create a flights
  * feed, run the AddFlightsFeed example. This example is specific to feeds of type
  * DYNAMIC_FLIGHT. The attribute you are removing must be present on the feed.
  */
@@ -88,7 +88,12 @@ public class RemoveFeedItemAttributeValue {
 
     try {
       new RemoveFeedItemAttributeValue()
-          .runExample(googleAdsClient, params);
+          .runExample(
+            googleAdsClient,
+            params.customerId,
+            params.feedId,
+            params.feedItemId,
+            params.flightPlaceholderField);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -108,12 +113,20 @@ public class RemoveFeedItemAttributeValue {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param params the RemoveFeedItemAttributeValueParams for the example.
+   * @param customerId the client customer ID in which to create criterion.
+   * @param feedId ID of the feed containing the feed item to be updated.
+   * @param feedItemId ID of the feed item to be updated.
+   * @param flightPlaceholderField the placeholder type for the attribute to be removed.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
-      GoogleAdsClient googleAdsClient, RemoveFeedItemAttributeValueParams params) {
-    removeAttributeFromFeedItem(googleAdsClient, params);
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      long feedId,
+      long feedItemId,
+      String flightPlaceholderField) {
+    removeAttributeFromFeedItem(
+      googleAdsClient, customerId, feedId, feedItemId, flightPlaceholderField);
   }
 
   /**
@@ -121,28 +134,35 @@ public class RemoveFeedItemAttributeValue {
    * FeedItemAttributeValue you must update the FeedItem.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param params the RemoveFeedItemAttributeValueParams for the example.
+   * @param customerId the client customer ID in which to create criterion.
+   * @param feedId ID of the feed containing the feed item to be updated.
+   * @param feedItemId ID of the feed item to be updated.
+   * @param flightPlaceholderField the placeholder type for the attribute to be removed.
    */
   private void removeAttributeFromFeedItem(
-      GoogleAdsClient googleAdsClient, RemoveFeedItemAttributeValueParams params) {
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      long feedId,
+      long feedItemId,
+      String flightPlaceholderField) {
     // Gets the feed resource name.
-    String feedResourceName = ResourceNames.feed(params.customerId, params.feedId);
+    String feedResourceName = ResourceNames.feed(customerId, feedId);
 
     // Gets a map of the placeholder values and feed attributes.
     Map<FlightPlaceholderField, FeedAttribute> feedAttributes =
-        AddFlightsFeed.getFeed(googleAdsClient, params.customerId, feedResourceName);
+        AddFlightsFeed.getFeed(googleAdsClient, customerId, feedResourceName);
 
     // Gets the feed item resource name.
-    String feedItemResourceName = ResourceNames.feedItem(params.customerId, params.feedId,
-      params.feedItemId);
+    String feedItemResourceName = ResourceNames.feedItem(customerId, feedId,
+      feedItemId);
     // Removes the attribute from the feed item.
     FeedItem feedItem =
         removeAttributeValueFromFeedItem(
             googleAdsClient,
-            params.customerId,
+            customerId,
             feedAttributes,
             feedItemResourceName,
-            FlightPlaceholderField.valueOf(params.flightPlaceholderField.toUpperCase()));
+            FlightPlaceholderField.valueOf(flightPlaceholderField.toUpperCase()));
 
     // Creates the operation.
     FeedItemOperation operation =
@@ -157,7 +177,7 @@ public class RemoveFeedItemAttributeValue {
       // Updates the feed item.
       MutateFeedItemsResponse response =
           feedItemServiceClient.mutateFeedItems(
-              Long.toString(params.customerId), ImmutableList.of(operation));
+              Long.toString(customerId), ImmutableList.of(operation));
       for (MutateFeedItemResult result : response.getResultsList()) {
         System.out.printf("Updated feed item with resource name '%s'.%n", result.getResourceName());
       }
@@ -169,6 +189,7 @@ public class RemoveFeedItemAttributeValue {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID in which to create criterion.
+   * @param feedAttributes a Map containing the FlightPlaceholderField and FeedAttribute.
    * @param feedItemResourceName the resource name of the feedItem to be updated.
    * @param flightPlaceholderField the placeholder type for the attribute to be removed.
    */
@@ -255,7 +276,7 @@ public class RemoveFeedItemAttributeValue {
 
     // Throws an exception if the attribute value is not found.
     if (attributeIndex == null) {
-      throw new RuntimeException("Invalid attribute index");
+      throw new IllegalArgumentException("Invalid attribute index");
     }
 
     return attributeIndex;
