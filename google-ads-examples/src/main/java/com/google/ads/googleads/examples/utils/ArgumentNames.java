@@ -31,6 +31,7 @@ public final class ArgumentNames {
   public static final String FEED_ID = "--feedId";
   public static final String FEED_ITEM_ID = "--feedItemId";
   public static final String FLIGHT_PLACEHOLDER_FIELD = "--flightPlaceholderField";
+  public static final String FEED_ITEM_IDS = "--feedItemIds";
   public static final String KEYWORD_PLAN_ID = "--keywordPlanId";
   public static final String KEYWORD_TEXT = "--keywordText";
   public static final String LANGUAGE_ID = "--languageId";
@@ -42,4 +43,6 @@ public final class ArgumentNames {
   public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
   public static final String PAGE_URL = "--pageUrl";
   public static final String LABEL_ID = "--labelId";
+  public static final String USER_LIST_ID = "--userListId";
+  public static final String MANAGER_ID = "--managerId";
 }
