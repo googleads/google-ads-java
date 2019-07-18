@@ -153,7 +153,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     abstract TransportChannelProvider getTransportChannelProvider();
 
     /** Sets the TransportChannelProvider to use. */
-    @VisibleForTesting
     abstract Builder setTransportChannelProvider(TransportChannelProvider transportChannelProvider);
 
     /** Returns the developer token currently configured. */
