@@ -41,10 +41,9 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * Updates a the FLIGHT_PRICE FeedItemAttributeValue in a flights feed. To create a flights feed,
- * run the AddFlightsFeed.java example. This example is specific to feeds of type DYNAMIC_FLIGHT,
- * and specifically updates the FLIGHT_PRICE attribute, so the FLIGHT_PRICE attribute must be
- * present on the feed.
+ * Updates a FeedItemAttributeValue in a flights feed. To create a flights feed,
+ * run the AddFlightsFeed example. This example is specific to feeds of type DYNAMIC_FLIGHT.
+ * The attribute you are updating must be present on the feed.
  */
 public class UpdateFeedItemAttributeValue {
   private static final int PAGE_SIZE = 1_000;
@@ -59,6 +58,12 @@ public class UpdateFeedItemAttributeValue {
 
     @Parameter(names = ArgumentNames.FEED_ITEM_ID, required = true)
     private long feedItemId;
+
+    @Parameter(names = ArgumentNames.FLIGHT_PLACEHOLDER_FIELD, required = true)
+    private String flightPlaceholderField;
+
+    @Parameter(names = ArgumentNames.ATTRIBUTE_VALUE, required = true)
+    private String attributeValue;
   }
 
   public static void main(String[] args) {
@@ -70,6 +75,8 @@ public class UpdateFeedItemAttributeValue {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.feedId = Long.parseLong("INSERT_FEED_ID_HERE");
       params.feedItemId = Long.parseLong("INSERT_FEED_ITEM_ID_HERE");
+      params.flightPlaceholderField = "INSERT_FLIGHT_PLACEHOLDER_FIELD_HERE";
+      params.attributeValue = "INSERT_ATTRIBUTE_VALUE_HERE";
     }
 
     GoogleAdsClient googleAdsClient;
@@ -85,8 +92,7 @@ public class UpdateFeedItemAttributeValue {
     }
 
     try {
-      new UpdateFeedItemAttributeValue()
-          .runExample(googleAdsClient, params);
+      new UpdateFeedItemAttributeValue().runExample(googleAdsClient, params);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -115,7 +121,7 @@ public class UpdateFeedItemAttributeValue {
   }
 
   /**
-   * Updates flight price of the feed item. In order to update a FeedItemAttributeValue you must
+   * Updates attribute value of the feed item. In order to update a FeedItemAttributeValue you must
    * update the FeedItem.
    *
    * @param googleAdsClient the Google Ads API client.
@@ -130,10 +136,12 @@ public class UpdateFeedItemAttributeValue {
     Map<FlightPlaceholderField, FeedAttribute> feedAttributes =
         AddFlightsFeed.getFeed(googleAdsClient, params.customerId, feedResourceName);
 
-    // Gets the ID of the flight price attribute. This is needed to specify which
+    // Gets the ID of the attribute to update. This is needed to specify which
     // FeedItemAttributeValue will be updated in the given FeedItem.
-    int flightPriceId =
-        (int) feedAttributes.get(FlightPlaceholderField.FLIGHT_PRICE).getId().getValue();
+    long attributeId = feedAttributes
+      .get(FlightPlaceholderField.valueOf(params.flightPlaceholderField.toUpperCase()))
+      .getId()
+      .getValue();
     // Gets the feed item resource name.
     String feedItemResourceName =
       ResourceNames.feedItem(params.customerId, params.feedId, params.feedItemId);
@@ -142,8 +150,8 @@ public class UpdateFeedItemAttributeValue {
     // Creates the updated FeedItemAttributeValue.
     FeedItemAttributeValue feedItemAttributeValue =
         FeedItemAttributeValue.newBuilder()
-            .setFeedAttributeId(Int64Value.of(flightPriceId))
-            .setStringValue(StringValue.of("699.99 USD"))
+            .setFeedAttributeId(Int64Value.of(attributeId))
+            .setStringValue(StringValue.of(params.attributeValue))
             .build();
     // Creates a new FeedItem from the existing FeedItem. Any FeedItemAttributeValues that are
     // not included in the updated FeedItem will be removed from the FeedItem, which is why you
@@ -213,25 +221,30 @@ public class UpdateFeedItemAttributeValue {
   }
 
   /**
-   * Gets the ID of the flight price attribute. This is needed to specify which
+   * Gets the ID of the attribute. This is needed to specify which
    * FeedItemAttributeValue will be updated in the given FeedItem.
    *
    * @param feedItem the FeedItem that will be updated.
    * @param newFeedItemAttributeValue the new FeedItemAttributeValue that will be updated.
-   * @return Int the index of the attribute.
+   * @return int the index of the attribute.
    */
   private int getAttributeIndex(
-      FeedItem feedItem, FeedItemAttributeValue newFeedItemAttributeValue) {
-    int attributeIndex = 0;
+    FeedItem feedItem, FeedItemAttributeValue newFeedItemAttributeValue) {
+    Integer attributeIndex = null;
 
     // Loops through attribute values to find the index of the FeedItemAttributeValue to update
     for (FeedItemAttributeValue feedItemAttributeValue : feedItem.getAttributeValuesList()) {
+      attributeIndex = (attributeIndex != null) ? attributeIndex + 1 : 0;
       // Checks if the current feedItemAttributeValue is the one we are updating
       if (feedItemAttributeValue.getFeedAttributeId().getValue()
-          == newFeedItemAttributeValue.getFeedAttributeId().getValue()) {
+        == newFeedItemAttributeValue.getFeedAttributeId().getValue()) {
         break;
       }
-      attributeIndex++;
+    }
+
+    // Throws an exception if the attribute value is not found.
+    if (attributeIndex == null) {
+      throw new RuntimeException("Invalid attribute index");
     }
 
     return attributeIndex;
