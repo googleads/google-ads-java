@@ -343,7 +343,7 @@ public class AddFlightsFeed {
    * Adds a new item to the feed.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param customerId the client customer ID.
    * @param feedAttributes the feed attributes.
    * @param feedResourceName the feed resource name.
    */

@@ -119,7 +119,7 @@ public class UpdateFeedItemAttributeValue {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param customerId the client customer ID.
    * @param feedId ID of the feed containing the feed item to be updated.
    * @param feedItemId ID of the feed item to be updated.
    * @param flightPlaceholderField the placeholder type for the attribute to be removed.
@@ -142,7 +142,7 @@ public class UpdateFeedItemAttributeValue {
    * update the FeedItem.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param customerId the client customer ID.
    * @param feedId ID of the feed containing the feed item to be updated.
    * @param feedItemId ID of the feed item to be updated.
    * @param flightPlaceholderField the placeholder type for the attribute to be removed.
@@ -216,7 +216,7 @@ public class UpdateFeedItemAttributeValue {
    * Retrieves a feed item and its attribute values given a resource name.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer ID in which to create criterion.
+   * @param customerId the client customer ID.
    * @param feedItemResourceName feed item resource name.
    * @return FeedItem with the given resource name.
    */
@@ -270,7 +270,8 @@ public class UpdateFeedItemAttributeValue {
 
     // Throws an exception if the attribute value is not found.
     if (attributeIndex == null) {
-      throw new IllegalArgumentException("Invalid attribute index");
+      new IllegalArgumentException(
+        "No matching feed attribute for feed item attribute value: " + newFeedItemAttributeValue);
     }
 
     return attributeIndex;
