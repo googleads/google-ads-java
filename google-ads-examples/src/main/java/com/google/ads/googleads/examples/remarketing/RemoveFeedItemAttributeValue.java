@@ -214,7 +214,6 @@ public class RemoveFeedItemAttributeValue {
     // that are not included in the updated FeedItem will be removed from the FeedItem, which is
     // why you must create the FeedItem from the existing FeedItem and set the field(s) that will
     // be removed.
-//    return FeedItem.newBuilder(feedItem).removeAttributeValues(attributeIndex).build();
     return feedItem.toBuilder().removeAttributeValues(attributeIndex).build();
   }
 
