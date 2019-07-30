@@ -37,10 +37,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Handle RateExceededError in your application. To trigger the rate exceeded error, this code
- * example runs 500 threads in parallel, each thread attempting to validate 100 keywords in a single
- * request. Note that spawning 100 parallel threads is for illustrative purposes only, you shouldn't
- * do this in your application.
+ * Handles RateExceededError in an application. This code example runs 5 threads in parallel,
+ * each thread attempting to validate 100 keywords in a single request. While spanning 5
+ * parallel threads is unlikely to trigger a rate exceeded error, substantially increasing the
+ * number of threads may have that effect. Note that this example is for illustrative purposes
+ * only, and you shouldn't intentionally try to trigger a rate exceed error in your application.
  */
 public class HandleRateExceededError {
   private static class HandleRateExceededErrorParams extends CodeSampleParams {
@@ -100,11 +101,11 @@ public class HandleRateExceededError {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId)
       throws InterruptedException {
-    final int NUM_THREADS = 500;
+    final int NUM_THREADS = 5;
 
     List<Thread> threads = new ArrayList<>();
 
-    // Adds 500 threads that validate keywords to a list.
+    // Adds 5 threads that validate keywords to a list.
     for (int i = 0; i < NUM_THREADS; i++) {
       KeywordsThread keywordsThread = new KeywordsThread(googleAdsClient, customerId, adGroupId, i);
       Thread thread = new Thread(keywordsThread);
