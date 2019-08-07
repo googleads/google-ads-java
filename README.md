@@ -15,11 +15,30 @@ This project hosts the Java client library for the Google Ads API.
 
 ## Maven artifacts
 
+The default maven artifact is `google-ads` at the latest version. The following dependency may be
+added to include the Google Ads Java library.
+
     <dependency>
       <groupId>com.google.api-ads</groupId>
       <artifactId>google-ads</artifactId>
       <version>4.0.0</version>
     </dependency>
+
+If you encounter dependency resolution issues, swapping `google-ads` for
+`google-ads-shaded` may help resolve issues arising from this library.
+
+    <dependency>
+      <groupId>com.google.api-ads</groupId>
+      <artifactId>google-ads-shaded</artifactId>
+      <version>1.1.0</version>
+    </dependency>
+
+The [shaded](https://maven.apache.org/plugins/maven-shade-plugin/) version relocates our
+dependencies under `com.google.ads.googleads.shaded` and removes these from the POM. You can
+therefore depend on multiple versions of libraries such as Guava and Protobuf.
+
+Note that if using the shaded version, the imports of common protocol buffers (StringValue etc.)
+will need to be updated to `com.google.ads.googleads.shaded.protobuf.StringValue`.
 
 ## Getting started
 
