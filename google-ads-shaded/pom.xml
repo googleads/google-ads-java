@@ -20,7 +20,7 @@ limitations under the License.
   <parent>
     <artifactId>google-ads-parent</artifactId>
     <groupId>com.google.api-ads</groupId>
-    <version>2.0.1-SNAPSHOT</version>
+      <version>4.0.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
@@ -268,7 +268,7 @@ limitations under the License.
     <dependency>
       <groupId>com.google.api-ads</groupId>
       <artifactId>google-ads</artifactId>
-      <version>1.1.1-SNAPSHOT</version>
+      <version>${project.version}</version>
       <exclusions>
         <!-- Exclude grpc-netty-shaded and reshade. Shade plugin duplicates the shadedPattern when
              pattern is found twice in classname. -->
@@ -281,7 +281,7 @@ limitations under the License.
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-netty</artifactId>
-      <version>1.16.1</version>
+      <version>${grpc.version}</version>
     </dependency>
 
     <!-- Test dependencies -->

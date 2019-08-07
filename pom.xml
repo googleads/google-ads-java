@@ -28,6 +28,15 @@ limitations under the License.
     Parent POM of the Google Ads API client library for Java.
   </description>
 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <auto-value.version>1.4</auto-value.version>
+    <gax.version>1.45.0</gax.version>
+    <grpc.version>1.21.0</grpc.version>
+    <protobuf.version>3.5.1</protobuf.version>
+  </properties>
+
   <issueManagement>
     <system>github.com</system>
     <url>
@@ -70,11 +79,6 @@ limitations under the License.
       <timezone>-5</timezone>
     </developer>
   </developers>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
 
   <build>
     <plugins>
