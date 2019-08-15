@@ -142,6 +142,7 @@ public class MutateJobServiceClientTest {
   private static MockProductBiddingCategoryConstantService
       mockProductBiddingCategoryConstantService;
   private static MockProductGroupViewService mockProductGroupViewService;
+  private static MockReachPlanService mockReachPlanService;
   private static MockRecommendationService mockRecommendationService;
   private static MockRemarketingActionService mockRemarketingActionService;
   private static MockSearchTermViewService mockSearchTermViewService;
@@ -252,6 +253,7 @@ public class MutateJobServiceClientTest {
     mockPaymentsAccountService = new MockPaymentsAccountService();
     mockProductBiddingCategoryConstantService = new MockProductBiddingCategoryConstantService();
     mockProductGroupViewService = new MockProductGroupViewService();
+    mockReachPlanService = new MockReachPlanService();
     mockRecommendationService = new MockRecommendationService();
     mockRemarketingActionService = new MockRemarketingActionService();
     mockSearchTermViewService = new MockSearchTermViewService();
@@ -360,6 +362,7 @@ public class MutateJobServiceClientTest {
                 mockPaymentsAccountService,
                 mockProductBiddingCategoryConstantService,
                 mockProductGroupViewService,
+                mockReachPlanService,
                 mockRecommendationService,
                 mockRemarketingActionService,
                 mockSearchTermViewService,

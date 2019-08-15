@@ -673,6 +673,12 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 1000: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 125;
+            errorCode_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -813,6 +819,7 @@ private static final long serialVersionUID = 0L;
     MANAGER_LINK_ERROR(121),
     CURRENCY_CODE_ERROR(122),
     ACCESS_INVITATION_ERROR(124),
+    REACH_PLAN_ERROR(125),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -932,6 +939,7 @@ private static final long serialVersionUID = 0L;
         case 121: return MANAGER_LINK_ERROR;
         case 122: return CURRENCY_CODE_ERROR;
         case 124: return ACCESS_INVITATION_ERROR;
+        case 125: return REACH_PLAN_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -4171,6 +4179,37 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v2.errors.AccessInvitationErrorEnum.AccessInvitationError.UNSPECIFIED;
   }
 
+  public static final int REACH_PLAN_ERROR_FIELD_NUMBER = 125;
+  /**
+   * <pre>
+   * The reasons for the reach plan error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+   */
+  public int getReachPlanErrorValue() {
+    if (errorCodeCase_ == 125) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the reach plan error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+   */
+  public com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError getReachPlanError() {
+    if (errorCodeCase_ == 125) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError result = com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4496,6 +4535,9 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 124) {
       output.writeEnum(124, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 125) {
+      output.writeEnum(125, ((java.lang.Integer) errorCode_));
     }
     unknownFields.writeTo(output);
   }
@@ -4921,6 +4963,10 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 124) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(124, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 125) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(125, ((java.lang.Integer) errorCode_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -5355,6 +5401,10 @@ private static final long serialVersionUID = 0L;
         if (getAccessInvitationErrorValue()
             != other.getAccessInvitationErrorValue()) return false;
         break;
+      case 125:
+        if (getReachPlanErrorValue()
+            != other.getReachPlanErrorValue()) return false;
+        break;
       case 0:
       default:
     }
@@ -5785,6 +5835,10 @@ private static final long serialVersionUID = 0L;
       case 124:
         hash = (37 * hash) + ACCESS_INVITATION_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getAccessInvitationErrorValue();
+        break;
+      case 125:
+        hash = (37 * hash) + REACH_PLAN_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getReachPlanErrorValue();
         break;
       case 0:
       default:
@@ -6266,6 +6320,9 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 124) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 125) {
+        result.errorCode_ = errorCode_;
+      }
       result.errorCodeCase_ = errorCodeCase_;
       onBuilt();
       return result;
@@ -6730,6 +6787,10 @@ private static final long serialVersionUID = 0L;
         }
         case ACCESS_INVITATION_ERROR: {
           setAccessInvitationErrorValue(other.getAccessInvitationErrorValue());
+          break;
+        }
+        case REACH_PLAN_ERROR: {
+          setReachPlanErrorValue(other.getReachPlanErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -14469,6 +14530,80 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAccessInvitationError() {
       if (errorCodeCase_ == 124) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the reach plan error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+     */
+    public int getReachPlanErrorValue() {
+      if (errorCodeCase_ == 125) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the reach plan error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+     */
+    public Builder setReachPlanErrorValue(int value) {
+      errorCodeCase_ = 125;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the reach plan error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+     */
+    public com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError getReachPlanError() {
+      if (errorCodeCase_ == 125) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError result = com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the reach plan error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+     */
+    public Builder setReachPlanError(com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 125;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the reach plan error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+     */
+    public Builder clearReachPlanError() {
+      if (errorCodeCase_ == 125) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

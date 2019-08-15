@@ -484,6 +484,20 @@ private static final long serialVersionUID = 0L;
             status_ = rawValue;
             break;
           }
+          case 290: {
+            com.google.ads.googleads.v2.common.CustomAffinityInfo.Builder subBuilder = null;
+            if (criterionCase_ == 36) {
+              subBuilder = ((com.google.ads.googleads.v2.common.CustomAffinityInfo) criterion_).toBuilder();
+            }
+            criterion_ =
+                input.readMessage(com.google.ads.googleads.v2.common.CustomAffinityInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v2.common.CustomAffinityInfo) criterion_);
+              criterion_ = subBuilder.buildPartial();
+            }
+            criterionCase_ = 36;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -546,6 +560,7 @@ private static final long serialVersionUID = 0L;
     OPERATING_SYSTEM_VERSION(32),
     MOBILE_DEVICE(33),
     LOCATION_GROUP(34),
+    CUSTOM_AFFINITY(36),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -587,6 +602,7 @@ private static final long serialVersionUID = 0L;
         case 32: return OPERATING_SYSTEM_VERSION;
         case 33: return MOBILE_DEVICE;
         case 34: return LOCATION_GROUP;
+        case 36: return CUSTOM_AFFINITY;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -1827,6 +1843,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v2.common.LocationGroupInfo.getDefaultInstance();
   }
 
+  public static final int CUSTOM_AFFINITY_FIELD_NUMBER = 36;
+  /**
+   * <pre>
+   * Custom Affinity.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+   */
+  public boolean hasCustomAffinity() {
+    return criterionCase_ == 36;
+  }
+  /**
+   * <pre>
+   * Custom Affinity.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+   */
+  public com.google.ads.googleads.v2.common.CustomAffinityInfo getCustomAffinity() {
+    if (criterionCase_ == 36) {
+       return (com.google.ads.googleads.v2.common.CustomAffinityInfo) criterion_;
+    }
+    return com.google.ads.googleads.v2.common.CustomAffinityInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Custom Affinity.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+   */
+  public com.google.ads.googleads.v2.common.CustomAffinityInfoOrBuilder getCustomAffinityOrBuilder() {
+    if (criterionCase_ == 36) {
+       return (com.google.ads.googleads.v2.common.CustomAffinityInfo) criterion_;
+    }
+    return com.google.ads.googleads.v2.common.CustomAffinityInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1939,6 +1993,9 @@ private static final long serialVersionUID = 0L;
     }
     if (status_ != com.google.ads.googleads.v2.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.UNSPECIFIED.getNumber()) {
       output.writeEnum(35, status_);
+    }
+    if (criterionCase_ == 36) {
+      output.writeMessage(36, (com.google.ads.googleads.v2.common.CustomAffinityInfo) criterion_);
     }
     unknownFields.writeTo(output);
   }
@@ -2079,6 +2136,10 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.google.ads.googleads.v2.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(35, status_);
+    }
+    if (criterionCase_ == 36) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(36, (com.google.ads.googleads.v2.common.CustomAffinityInfo) criterion_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2225,6 +2286,10 @@ private static final long serialVersionUID = 0L;
         if (!getLocationGroup()
             .equals(other.getLocationGroup())) return false;
         break;
+      case 36:
+        if (!getCustomAffinity()
+            .equals(other.getCustomAffinity())) return false;
+        break;
       case 0:
       default:
     }
@@ -2365,6 +2430,10 @@ private static final long serialVersionUID = 0L;
       case 34:
         hash = (37 * hash) + LOCATION_GROUP_FIELD_NUMBER;
         hash = (53 * hash) + getLocationGroup().hashCode();
+        break;
+      case 36:
+        hash = (37 * hash) + CUSTOM_AFFINITY_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomAffinity().hashCode();
         break;
       case 0:
       default:
@@ -2769,6 +2838,13 @@ private static final long serialVersionUID = 0L;
           result.criterion_ = locationGroupBuilder_.build();
         }
       }
+      if (criterionCase_ == 36) {
+        if (customAffinityBuilder_ == null) {
+          result.criterion_ = criterion_;
+        } else {
+          result.criterion_ = customAffinityBuilder_.build();
+        }
+      }
       result.criterionCase_ = criterionCase_;
       onBuilt();
       return result;
@@ -2943,6 +3019,10 @@ private static final long serialVersionUID = 0L;
         }
         case LOCATION_GROUP: {
           mergeLocationGroup(other.getLocationGroup());
+          break;
+        }
+        case CUSTOM_AFFINITY: {
+          mergeCustomAffinity(other.getCustomAffinity());
           break;
         }
         case CRITERION_NOT_SET: {
@@ -8331,6 +8411,178 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 34;
       onChanged();;
       return locationGroupBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v2.common.CustomAffinityInfo, com.google.ads.googleads.v2.common.CustomAffinityInfo.Builder, com.google.ads.googleads.v2.common.CustomAffinityInfoOrBuilder> customAffinityBuilder_;
+    /**
+     * <pre>
+     * Custom Affinity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+     */
+    public boolean hasCustomAffinity() {
+      return criterionCase_ == 36;
+    }
+    /**
+     * <pre>
+     * Custom Affinity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+     */
+    public com.google.ads.googleads.v2.common.CustomAffinityInfo getCustomAffinity() {
+      if (customAffinityBuilder_ == null) {
+        if (criterionCase_ == 36) {
+          return (com.google.ads.googleads.v2.common.CustomAffinityInfo) criterion_;
+        }
+        return com.google.ads.googleads.v2.common.CustomAffinityInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 36) {
+          return customAffinityBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v2.common.CustomAffinityInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Custom Affinity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+     */
+    public Builder setCustomAffinity(com.google.ads.googleads.v2.common.CustomAffinityInfo value) {
+      if (customAffinityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        customAffinityBuilder_.setMessage(value);
+      }
+      criterionCase_ = 36;
+      return this;
+    }
+    /**
+     * <pre>
+     * Custom Affinity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+     */
+    public Builder setCustomAffinity(
+        com.google.ads.googleads.v2.common.CustomAffinityInfo.Builder builderForValue) {
+      if (customAffinityBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        customAffinityBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 36;
+      return this;
+    }
+    /**
+     * <pre>
+     * Custom Affinity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+     */
+    public Builder mergeCustomAffinity(com.google.ads.googleads.v2.common.CustomAffinityInfo value) {
+      if (customAffinityBuilder_ == null) {
+        if (criterionCase_ == 36 &&
+            criterion_ != com.google.ads.googleads.v2.common.CustomAffinityInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v2.common.CustomAffinityInfo.newBuilder((com.google.ads.googleads.v2.common.CustomAffinityInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 36) {
+          customAffinityBuilder_.mergeFrom(value);
+        }
+        customAffinityBuilder_.setMessage(value);
+      }
+      criterionCase_ = 36;
+      return this;
+    }
+    /**
+     * <pre>
+     * Custom Affinity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+     */
+    public Builder clearCustomAffinity() {
+      if (customAffinityBuilder_ == null) {
+        if (criterionCase_ == 36) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 36) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        customAffinityBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Custom Affinity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+     */
+    public com.google.ads.googleads.v2.common.CustomAffinityInfo.Builder getCustomAffinityBuilder() {
+      return getCustomAffinityFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Custom Affinity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+     */
+    public com.google.ads.googleads.v2.common.CustomAffinityInfoOrBuilder getCustomAffinityOrBuilder() {
+      if ((criterionCase_ == 36) && (customAffinityBuilder_ != null)) {
+        return customAffinityBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 36) {
+          return (com.google.ads.googleads.v2.common.CustomAffinityInfo) criterion_;
+        }
+        return com.google.ads.googleads.v2.common.CustomAffinityInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Custom Affinity.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v2.common.CustomAffinityInfo, com.google.ads.googleads.v2.common.CustomAffinityInfo.Builder, com.google.ads.googleads.v2.common.CustomAffinityInfoOrBuilder> 
+        getCustomAffinityFieldBuilder() {
+      if (customAffinityBuilder_ == null) {
+        if (!(criterionCase_ == 36)) {
+          criterion_ = com.google.ads.googleads.v2.common.CustomAffinityInfo.getDefaultInstance();
+        }
+        customAffinityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v2.common.CustomAffinityInfo, com.google.ads.googleads.v2.common.CustomAffinityInfo.Builder, com.google.ads.googleads.v2.common.CustomAffinityInfoOrBuilder>(
+                (com.google.ads.googleads.v2.common.CustomAffinityInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 36;
+      onChanged();;
+      return customAffinityBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

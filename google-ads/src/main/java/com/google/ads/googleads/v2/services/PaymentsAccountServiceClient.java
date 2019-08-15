@@ -26,7 +26,7 @@ import javax.annotation.Generated;
 
 // AUTO-GENERATED DOCUMENTATION AND SERVICE
 /**
- * Service Description: Service to provide Payments accounts that can be used to set up consolidated
+ * Service Description: Service to provide payments accounts that can be used to set up consolidated
  * billing.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
@@ -149,7 +149,7 @@ public class PaymentsAccountServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns all Payments accounts associated with all managers between the login customer ID and
+   * Returns all payments accounts associated with all managers between the login customer ID and
    * specified serving customer in the hierarchy, inclusive.
    *
    * <p>Sample code:
@@ -173,7 +173,7 @@ public class PaymentsAccountServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns all Payments accounts associated with all managers between the login customer ID and
+   * Returns all payments accounts associated with all managers between the login customer ID and
    * specified serving customer in the hierarchy, inclusive.
    *
    * <p>Sample code:
@@ -198,7 +198,7 @@ public class PaymentsAccountServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns all Payments accounts associated with all managers between the login customer ID and
+   * Returns all payments accounts associated with all managers between the login customer ID and
    * specified serving customer in the hierarchy, inclusive.
    *
    * <p>Sample code:

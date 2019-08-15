@@ -131,35 +131,38 @@ public final class CampaignExperimentServiceProto {
       "\022\021\n\tpage_size\030\003 \001(\005\"h\n)ListCampaignExper" +
       "imentAsyncErrorsResponse\022\"\n\006errors\030\001 \003(\013" +
       "2\022.google.rpc.Status\022\027\n\017next_page_token\030" +
-      "\002 \001(\t2\320\014\n\031CampaignExperimentService\022\315\001\n\025" +
+      "\002 \001(\t2\310\r\n\031CampaignExperimentService\022\315\001\n\025" +
       "GetCampaignExperiment\022>.google.ads.googl" +
       "eads.v2.services.GetCampaignExperimentRe" +
       "quest\0325.google.ads.googleads.v2.resource" +
       "s.CampaignExperiment\"=\202\323\344\223\0027\0225/v2/{resou" +
       "rce_name=customers/*/campaignExperiments" +
-      "/*}\022\301\001\n\030CreateCampaignExperiment\022A.googl" +
+      "/*}\022\237\002\n\030CreateCampaignExperiment\022A.googl" +
       "e.ads.googleads.v2.services.CreateCampai" +
       "gnExperimentRequest\032\035.google.longrunning" +
-      ".Operation\"C\202\323\344\223\002=\"8/v2/customers/{custo" +
-      "mer_id=*}/campaignExperiments:create:\001*\022" +
-      "\351\001\n\031MutateCampaignExperiments\022B.google.a" +
-      "ds.googleads.v2.services.MutateCampaignE" +
-      "xperimentsRequest\032C.google.ads.googleads" +
-      ".v2.services.MutateCampaignExperimentsRe" +
-      "sponse\"C\202\323\344\223\002=\"8/v2/customers/{customer_" +
-      "id=*}/campaignExperiments:mutate:\001*\022\370\001\n\032" +
-      "GraduateCampaignExperiment\022C.google.ads." +
-      "googleads.v2.services.GraduateCampaignEx" +
-      "perimentRequest\032D.google.ads.googleads.v" +
-      "2.services.GraduateCampaignExperimentRes" +
-      "ponse\"O\202\323\344\223\002I\"D/v2/{campaign_experiment=" +
-      "customers/*/campaignExperiments/*}:gradu" +
-      "ate:\001*\022\316\001\n\031PromoteCampaignExperiment\022B.g" +
-      "oogle.ads.googleads.v2.services.PromoteC" +
-      "ampaignExperimentRequest\032\035.google.longru" +
-      "nning.Operation\"N\202\323\344\223\002H\"C/v2/{campaign_e" +
-      "xperiment=customers/*/campaignExperiment" +
-      "s/*}:promote:\001*\022\273\001\n\025EndCampaignExperimen" +
+      ".Operation\"\240\001\202\323\344\223\002=\"8/v2/customers/{cust" +
+      "omer_id=*}/campaignExperiments:create:\001*" +
+      "\312AZ\n\025google.protobuf.Empty\022Agoogle.ads.g" +
+      "oogleads.v2.services.CreateCampaignExper" +
+      "imentMetadata\022\351\001\n\031MutateCampaignExperime" +
+      "nts\022B.google.ads.googleads.v2.services.M" +
+      "utateCampaignExperimentsRequest\032C.google" +
+      ".ads.googleads.v2.services.MutateCampaig" +
+      "nExperimentsResponse\"C\202\323\344\223\002=\"8/v2/custom" +
+      "ers/{customer_id=*}/campaignExperiments:" +
+      "mutate:\001*\022\370\001\n\032GraduateCampaignExperiment" +
+      "\022C.google.ads.googleads.v2.services.Grad" +
+      "uateCampaignExperimentRequest\032D.google.a" +
+      "ds.googleads.v2.services.GraduateCampaig" +
+      "nExperimentResponse\"O\202\323\344\223\002I\"D/v2/{campai" +
+      "gn_experiment=customers/*/campaignExperi" +
+      "ments/*}:graduate:\001*\022\350\001\n\031PromoteCampaign" +
+      "Experiment\022B.google.ads.googleads.v2.ser" +
+      "vices.PromoteCampaignExperimentRequest\032\035" +
+      ".google.longrunning.Operation\"h\202\323\344\223\002H\"C/" +
+      "v2/{campaign_experiment=customers/*/camp" +
+      "aignExperiments/*}:promote:\001*\312A\027\n\025google" +
+      ".protobuf.Empty\022\273\001\n\025EndCampaignExperimen" +
       "t\022>.google.ads.googleads.v2.services.End" +
       "CampaignExperimentRequest\032\026.google.proto" +
       "buf.Empty\"J\202\323\344\223\002D\"?/v2/{campaign_experim" +
@@ -281,6 +284,7 @@ public final class CampaignExperimentServiceProto {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.longrunning.OperationsProto.operationInfo);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.CampaignExperimentProto.getDescriptor();

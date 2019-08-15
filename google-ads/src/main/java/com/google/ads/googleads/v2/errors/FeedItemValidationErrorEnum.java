@@ -880,6 +880,22 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_LONGITUDE_VALUE = 96;</code>
      */
     MISSING_LONGITUDE_VALUE(96),
+    /**
+     * <pre>
+     * Unable to find address.
+     * </pre>
+     *
+     * <code>ADDRESS_NOT_FOUND = 97;</code>
+     */
+    ADDRESS_NOT_FOUND(97),
+    /**
+     * <pre>
+     * Cannot target provided address.
+     * </pre>
+     *
+     * <code>ADDRESS_NOT_TARGETABLE = 98;</code>
+     */
+    ADDRESS_NOT_TARGETABLE(98),
     UNRECOGNIZED(-1),
     ;
 
@@ -1677,6 +1693,22 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_LONGITUDE_VALUE = 96;</code>
      */
     public static final int MISSING_LONGITUDE_VALUE_VALUE = 96;
+    /**
+     * <pre>
+     * Unable to find address.
+     * </pre>
+     *
+     * <code>ADDRESS_NOT_FOUND = 97;</code>
+     */
+    public static final int ADDRESS_NOT_FOUND_VALUE = 97;
+    /**
+     * <pre>
+     * Cannot target provided address.
+     * </pre>
+     *
+     * <code>ADDRESS_NOT_TARGETABLE = 98;</code>
+     */
+    public static final int ADDRESS_NOT_TARGETABLE_VALUE = 98;
 
 
     public final int getNumber() {
@@ -1794,6 +1826,8 @@ private static final long serialVersionUID = 0L;
         case 94: return INVALID_IMAGE_URL;
         case 95: return MISSING_LATITUDE_VALUE;
         case 96: return MISSING_LONGITUDE_VALUE;
+        case 97: return ADDRESS_NOT_FOUND;
+        case 98: return ADDRESS_NOT_TARGETABLE;
         default: return null;
       }
     }

@@ -104,8 +104,8 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Cannot use both an existing Payments account and a new Payments account
-     * when setting up billing.
+     * Cannot specify both an existing payments account and a new payments
+     * account when setting up billing.
      * </pre>
      *
      * <code>CANNOT_USE_EXISTING_AND_NEW_ACCOUNT = 2;</code>
@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
     CANNOT_USE_EXISTING_AND_NEW_ACCOUNT(2),
     /**
      * <pre>
-     * Cannot cancel an APPROVED billing setup whose start time has passed.
+     * Cannot cancel an approved billing setup whose start time has passed.
      * </pre>
      *
      * <code>CANNOT_REMOVE_STARTED_BILLING_SETUP = 3;</code>
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
     CANNOT_REMOVE_STARTED_BILLING_SETUP(3),
     /**
      * <pre>
-     * Cannot perform a Change of Bill-To (CBT) to the same Payments account.
+     * Cannot perform a Change of Bill-To (CBT) to the same payments account.
      * </pre>
      *
      * <code>CANNOT_CHANGE_BILLING_TO_SAME_PAYMENTS_ACCOUNT = 4;</code>
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
     CANNOT_CHANGE_BILLING_TO_SAME_PAYMENTS_ACCOUNT(4),
     /**
      * <pre>
-     * Billing Setups can only be used by customers with ENABLED or DRAFT
+     * Billing setups can only be used by customers with ENABLED or DRAFT
      * status.
      * </pre>
      *
@@ -138,8 +138,8 @@ private static final long serialVersionUID = 0L;
     BILLING_SETUP_NOT_PERMITTED_FOR_CUSTOMER_STATUS(5),
     /**
      * <pre>
-     * Billing Setups must either include a correctly formatted existing
-     * Payments account id, or a non-empty new Payments account name.
+     * Billing setups must either include a correctly formatted existing
+     * payments account id, or a non-empty new payments account name.
      * </pre>
      *
      * <code>INVALID_PAYMENTS_ACCOUNT = 6;</code>
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
     BILLING_SETUP_NOT_PERMITTED_FOR_CUSTOMER_CATEGORY(7),
     /**
      * <pre>
-     * Billing Setup creations can only use NOW for start time type.
+     * Billing setup creations can only use NOW for start time type.
      * </pre>
      *
      * <code>INVALID_START_TIME_TYPE = 8;</code>
@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
     INVALID_START_TIME_TYPE(8),
     /**
      * <pre>
-     * Billing Setups can only be created for a third-party customer if they do
+     * Billing setups can only be created for a third-party customer if they do
      * not already have a setup.
      * </pre>
      *
@@ -172,8 +172,8 @@ private static final long serialVersionUID = 0L;
     THIRD_PARTY_ALREADY_HAS_BILLING(9),
     /**
      * <pre>
-     * Billing Setups cannot be created if there is already a pending billing in
-     * progress, ie. a billing known to Payments.
+     * Billing setups cannot be created if there is already a pending billing in
+     * progress.
      * </pre>
      *
      * <code>BILLING_SETUP_IN_PROGRESS = 10;</code>
@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
     BILLING_SETUP_IN_PROGRESS(10),
     /**
      * <pre>
-     * Billing Setups can only be created by customers who have permission to
+     * Billing setups can only be created by customers who have permission to
      * setup billings. Users can contact a representative for help setting up
      * permissions.
      * </pre>
@@ -191,7 +191,7 @@ private static final long serialVersionUID = 0L;
     NO_SIGNUP_PERMISSION(11),
     /**
      * <pre>
-     * Billing Setups cannot be created if there is already a future-approved
+     * Billing setups cannot be created if there is already a future-approved
      * billing.
      * </pre>
      *
@@ -200,8 +200,7 @@ private static final long serialVersionUID = 0L;
     CHANGE_OF_BILL_TO_IN_PROGRESS(12),
     /**
      * <pre>
-     * Billing Setup creation failed because Payments could not find the
-     * requested Payments profile.
+     * Requested payments profile not found.
      * </pre>
      *
      * <code>PAYMENTS_PROFILE_NOT_FOUND = 13;</code>
@@ -209,8 +208,7 @@ private static final long serialVersionUID = 0L;
     PAYMENTS_PROFILE_NOT_FOUND(13),
     /**
      * <pre>
-     * Billing Setup creation failed because Payments could not find the
-     * requested Payments account.
+     * Requested payments account not found.
      * </pre>
      *
      * <code>PAYMENTS_ACCOUNT_NOT_FOUND = 14;</code>
@@ -218,8 +216,7 @@ private static final long serialVersionUID = 0L;
     PAYMENTS_ACCOUNT_NOT_FOUND(14),
     /**
      * <pre>
-     * Billing Setup creation failed because Payments considers requested
-     * Payments profile ineligible.
+     * Billing setup creation failed because the payments profile is ineligible.
      * </pre>
      *
      * <code>PAYMENTS_PROFILE_INELIGIBLE = 15;</code>
@@ -227,13 +224,21 @@ private static final long serialVersionUID = 0L;
     PAYMENTS_PROFILE_INELIGIBLE(15),
     /**
      * <pre>
-     * Billing Setup creation failed because Payments considers requested
-     * Payments account ineligible.
+     * Billing setup creation failed because the payments account is ineligible.
      * </pre>
      *
      * <code>PAYMENTS_ACCOUNT_INELIGIBLE = 16;</code>
      */
     PAYMENTS_ACCOUNT_INELIGIBLE(16),
+    /**
+     * <pre>
+     * Billing setup creation failed because the payments profile needs internal
+     * approval.
+     * </pre>
+     *
+     * <code>CUSTOMER_NEEDS_INTERNAL_APPROVAL = 17;</code>
+     */
+    CUSTOMER_NEEDS_INTERNAL_APPROVAL(17),
     UNRECOGNIZED(-1),
     ;
 
@@ -255,8 +260,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Cannot use both an existing Payments account and a new Payments account
-     * when setting up billing.
+     * Cannot specify both an existing payments account and a new payments
+     * account when setting up billing.
      * </pre>
      *
      * <code>CANNOT_USE_EXISTING_AND_NEW_ACCOUNT = 2;</code>
@@ -264,7 +269,7 @@ private static final long serialVersionUID = 0L;
     public static final int CANNOT_USE_EXISTING_AND_NEW_ACCOUNT_VALUE = 2;
     /**
      * <pre>
-     * Cannot cancel an APPROVED billing setup whose start time has passed.
+     * Cannot cancel an approved billing setup whose start time has passed.
      * </pre>
      *
      * <code>CANNOT_REMOVE_STARTED_BILLING_SETUP = 3;</code>
@@ -272,7 +277,7 @@ private static final long serialVersionUID = 0L;
     public static final int CANNOT_REMOVE_STARTED_BILLING_SETUP_VALUE = 3;
     /**
      * <pre>
-     * Cannot perform a Change of Bill-To (CBT) to the same Payments account.
+     * Cannot perform a Change of Bill-To (CBT) to the same payments account.
      * </pre>
      *
      * <code>CANNOT_CHANGE_BILLING_TO_SAME_PAYMENTS_ACCOUNT = 4;</code>
@@ -280,7 +285,7 @@ private static final long serialVersionUID = 0L;
     public static final int CANNOT_CHANGE_BILLING_TO_SAME_PAYMENTS_ACCOUNT_VALUE = 4;
     /**
      * <pre>
-     * Billing Setups can only be used by customers with ENABLED or DRAFT
+     * Billing setups can only be used by customers with ENABLED or DRAFT
      * status.
      * </pre>
      *
@@ -289,8 +294,8 @@ private static final long serialVersionUID = 0L;
     public static final int BILLING_SETUP_NOT_PERMITTED_FOR_CUSTOMER_STATUS_VALUE = 5;
     /**
      * <pre>
-     * Billing Setups must either include a correctly formatted existing
-     * Payments account id, or a non-empty new Payments account name.
+     * Billing setups must either include a correctly formatted existing
+     * payments account id, or a non-empty new payments account name.
      * </pre>
      *
      * <code>INVALID_PAYMENTS_ACCOUNT = 6;</code>
@@ -306,7 +311,7 @@ private static final long serialVersionUID = 0L;
     public static final int BILLING_SETUP_NOT_PERMITTED_FOR_CUSTOMER_CATEGORY_VALUE = 7;
     /**
      * <pre>
-     * Billing Setup creations can only use NOW for start time type.
+     * Billing setup creations can only use NOW for start time type.
      * </pre>
      *
      * <code>INVALID_START_TIME_TYPE = 8;</code>
@@ -314,7 +319,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_START_TIME_TYPE_VALUE = 8;
     /**
      * <pre>
-     * Billing Setups can only be created for a third-party customer if they do
+     * Billing setups can only be created for a third-party customer if they do
      * not already have a setup.
      * </pre>
      *
@@ -323,8 +328,8 @@ private static final long serialVersionUID = 0L;
     public static final int THIRD_PARTY_ALREADY_HAS_BILLING_VALUE = 9;
     /**
      * <pre>
-     * Billing Setups cannot be created if there is already a pending billing in
-     * progress, ie. a billing known to Payments.
+     * Billing setups cannot be created if there is already a pending billing in
+     * progress.
      * </pre>
      *
      * <code>BILLING_SETUP_IN_PROGRESS = 10;</code>
@@ -332,7 +337,7 @@ private static final long serialVersionUID = 0L;
     public static final int BILLING_SETUP_IN_PROGRESS_VALUE = 10;
     /**
      * <pre>
-     * Billing Setups can only be created by customers who have permission to
+     * Billing setups can only be created by customers who have permission to
      * setup billings. Users can contact a representative for help setting up
      * permissions.
      * </pre>
@@ -342,7 +347,7 @@ private static final long serialVersionUID = 0L;
     public static final int NO_SIGNUP_PERMISSION_VALUE = 11;
     /**
      * <pre>
-     * Billing Setups cannot be created if there is already a future-approved
+     * Billing setups cannot be created if there is already a future-approved
      * billing.
      * </pre>
      *
@@ -351,8 +356,7 @@ private static final long serialVersionUID = 0L;
     public static final int CHANGE_OF_BILL_TO_IN_PROGRESS_VALUE = 12;
     /**
      * <pre>
-     * Billing Setup creation failed because Payments could not find the
-     * requested Payments profile.
+     * Requested payments profile not found.
      * </pre>
      *
      * <code>PAYMENTS_PROFILE_NOT_FOUND = 13;</code>
@@ -360,8 +364,7 @@ private static final long serialVersionUID = 0L;
     public static final int PAYMENTS_PROFILE_NOT_FOUND_VALUE = 13;
     /**
      * <pre>
-     * Billing Setup creation failed because Payments could not find the
-     * requested Payments account.
+     * Requested payments account not found.
      * </pre>
      *
      * <code>PAYMENTS_ACCOUNT_NOT_FOUND = 14;</code>
@@ -369,8 +372,7 @@ private static final long serialVersionUID = 0L;
     public static final int PAYMENTS_ACCOUNT_NOT_FOUND_VALUE = 14;
     /**
      * <pre>
-     * Billing Setup creation failed because Payments considers requested
-     * Payments profile ineligible.
+     * Billing setup creation failed because the payments profile is ineligible.
      * </pre>
      *
      * <code>PAYMENTS_PROFILE_INELIGIBLE = 15;</code>
@@ -378,13 +380,21 @@ private static final long serialVersionUID = 0L;
     public static final int PAYMENTS_PROFILE_INELIGIBLE_VALUE = 15;
     /**
      * <pre>
-     * Billing Setup creation failed because Payments considers requested
-     * Payments account ineligible.
+     * Billing setup creation failed because the payments account is ineligible.
      * </pre>
      *
      * <code>PAYMENTS_ACCOUNT_INELIGIBLE = 16;</code>
      */
     public static final int PAYMENTS_ACCOUNT_INELIGIBLE_VALUE = 16;
+    /**
+     * <pre>
+     * Billing setup creation failed because the payments profile needs internal
+     * approval.
+     * </pre>
+     *
+     * <code>CUSTOMER_NEEDS_INTERNAL_APPROVAL = 17;</code>
+     */
+    public static final int CUSTOMER_NEEDS_INTERNAL_APPROVAL_VALUE = 17;
 
 
     public final int getNumber() {
@@ -422,6 +432,7 @@ private static final long serialVersionUID = 0L;
         case 14: return PAYMENTS_ACCOUNT_NOT_FOUND;
         case 15: return PAYMENTS_PROFILE_INELIGIBLE;
         case 16: return PAYMENTS_ACCOUNT_INELIGIBLE;
+        case 17: return CUSTOMER_NEEDS_INTERNAL_APPROVAL;
         default: return null;
       }
     }

@@ -9,7 +9,7 @@ public interface ListPaymentsAccountsResponseOrBuilder extends
 
   /**
    * <pre>
-   * The list of accessible Payments accounts.
+   * The list of accessible payments accounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -18,7 +18,7 @@ public interface ListPaymentsAccountsResponseOrBuilder extends
       getPaymentsAccountsList();
   /**
    * <pre>
-   * The list of accessible Payments accounts.
+   * The list of accessible payments accounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -26,7 +26,7 @@ public interface ListPaymentsAccountsResponseOrBuilder extends
   com.google.ads.googleads.v2.resources.PaymentsAccount getPaymentsAccounts(int index);
   /**
    * <pre>
-   * The list of accessible Payments accounts.
+   * The list of accessible payments accounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -34,7 +34,7 @@ public interface ListPaymentsAccountsResponseOrBuilder extends
   int getPaymentsAccountsCount();
   /**
    * <pre>
-   * The list of accessible Payments accounts.
+   * The list of accessible payments accounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -43,7 +43,7 @@ public interface ListPaymentsAccountsResponseOrBuilder extends
       getPaymentsAccountsOrBuilderList();
   /**
    * <pre>
-   * The list of accessible Payments accounts.
+   * The list of accessible payments accounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>

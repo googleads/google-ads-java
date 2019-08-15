@@ -96,7 +96,7 @@ public final class MutateJobServiceProto {
       "operation_index\030\001 \001(\003\022\\\n\031mutate_operatio" +
       "n_response\030\002 \001(\01329.google.ads.googleads." +
       "v2.services.MutateOperationResponse\022\"\n\006s" +
-      "tatus\030\003 \001(\0132\022.google.rpc.Status2\203\010\n\020Muta" +
+      "tatus\030\003 \001(\0132\022.google.rpc.Status2\335\010\n\020Muta" +
       "teJobService\022\302\001\n\017CreateMutateJob\0228.googl" +
       "e.ads.googleads.v2.services.CreateMutate" +
       "JobRequest\0329.google.ads.googleads.v2.ser" +
@@ -112,24 +112,26 @@ public final class MutateJobServiceProto {
       "ds.googleads.v2.services.ListMutateJobRe" +
       "sultsResponse\"@\202\323\344\223\002:\0228/v2/{resource_nam" +
       "e=customers/*/mutateJobs/*}:listResults\022" +
-      "\241\001\n\014RunMutateJob\0225.google.ads.googleads." +
+      "\373\001\n\014RunMutateJob\0225.google.ads.googleads." +
       "v2.services.RunMutateJobRequest\032\035.google" +
-      ".longrunning.Operation\";\202\323\344\223\0025\"0/v2/{res" +
-      "ource_name=customers/*/mutateJobs/*}:run" +
-      ":\001*\022\342\001\n\026AddMutateJobOperations\022?.google." +
-      "ads.googleads.v2.services.AddMutateJobOp" +
-      "erationsRequest\032@.google.ads.googleads.v" +
-      "2.services.AddMutateJobOperationsRespons" +
-      "e\"E\202\323\344\223\002?\":/v2/{resource_name=customers/" +
-      "*/mutateJobs/*}:addOperations:\001*\032\033\312A\030goo" +
-      "gleads.googleapis.comB\374\001\n$com.google.ads" +
-      ".googleads.v2.servicesB\025MutateJobService" +
-      "ProtoP\001ZHgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v2/services;service" +
-      "s\242\002\003GAA\252\002 Google.Ads.GoogleAds.V2.Servic" +
-      "es\312\002 Google\\Ads\\GoogleAds\\V2\\Services\352\002$" +
-      "Google::Ads::GoogleAds::V2::Servicesb\006pr" +
-      "oto3"
+      ".longrunning.Operation\"\224\001\202\323\344\223\0025\"0/v2/{re" +
+      "source_name=customers/*/mutateJobs/*}:ru" +
+      "n:\001*\312AV\n\025google.protobuf.Empty\022=google.a" +
+      "ds.googleads.v2.resources.MutateJob.Muta" +
+      "teJobMetadata\022\342\001\n\026AddMutateJobOperations" +
+      "\022?.google.ads.googleads.v2.services.AddM" +
+      "utateJobOperationsRequest\032@.google.ads.g" +
+      "oogleads.v2.services.AddMutateJobOperati" +
+      "onsResponse\"E\202\323\344\223\002?\":/v2/{resource_name=" +
+      "customers/*/mutateJobs/*}:addOperations:" +
+      "\001*\032\033\312A\030googleads.googleapis.comB\374\001\n$com." +
+      "google.ads.googleads.v2.servicesB\025Mutate" +
+      "JobServiceProtoP\001ZHgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v2/servic" +
+      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
+      ".V2.Services\312\002 Google\\Ads\\GoogleAds\\V2\\S" +
+      "ervices\352\002$Google::Ads::GoogleAds::V2::Se" +
+      "rvicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -207,6 +209,7 @@ public final class MutateJobServiceProto {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.longrunning.OperationsProto.operationInfo);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.MutateJobProto.getDescriptor();

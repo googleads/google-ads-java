@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v2.resources.PaymentsAccount> paymentsAccounts_;
   /**
    * <pre>
-   * The list of accessible Payments accounts.
+   * The list of accessible payments accounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -105,7 +105,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of accessible Payments accounts.
+   * The list of accessible payments accounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of accessible Payments accounts.
+   * The list of accessible payments accounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -126,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of accessible Payments accounts.
+   * The list of accessible payments accounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of accessible Payments accounts.
+   * The list of accessible payments accounts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -506,7 +506,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -534,7 +534,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -548,7 +548,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -569,7 +569,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -587,7 +587,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -628,7 +628,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -646,7 +646,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -664,7 +664,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -683,7 +683,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -700,7 +700,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -717,7 +717,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -728,7 +728,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -742,7 +742,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -757,7 +757,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -768,7 +768,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>
@@ -780,7 +780,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of accessible Payments accounts.
+     * The list of accessible payments accounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;</code>

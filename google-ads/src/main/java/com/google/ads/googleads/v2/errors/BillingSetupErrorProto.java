@@ -31,7 +31,7 @@ public final class BillingSetupErrorProto {
       "\n8google/ads/googleads/v2/errors/billing" +
       "_setup_error.proto\022\036google.ads.googleads" +
       ".v2.errors\032\034google/api/annotations.proto" +
-      "\"\373\004\n\025BillingSetupErrorEnum\"\341\004\n\021BillingSe" +
+      "\"\241\005\n\025BillingSetupErrorEnum\"\207\005\n\021BillingSe" +
       "tupError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\'" +
       "\n#CANNOT_USE_EXISTING_AND_NEW_ACCOUNT\020\002\022" +
       "\'\n#CANNOT_REMOVE_STARTED_BILLING_SETUP\020\003" +
@@ -46,14 +46,15 @@ public final class BillingSetupErrorProto {
       "NGE_OF_BILL_TO_IN_PROGRESS\020\014\022\036\n\032PAYMENTS" +
       "_PROFILE_NOT_FOUND\020\r\022\036\n\032PAYMENTS_ACCOUNT" +
       "_NOT_FOUND\020\016\022\037\n\033PAYMENTS_PROFILE_INELIGI" +
-      "BLE\020\017\022\037\n\033PAYMENTS_ACCOUNT_INELIGIBLE\020\020B\361" +
-      "\001\n\"com.google.ads.googleads.v2.errorsB\026B" +
-      "illingSetupErrorProtoP\001ZDgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v2/" +
-      "errors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
-      "ds.V2.Errors\312\002\036Google\\Ads\\GoogleAds\\V2\\E" +
-      "rrors\352\002\"Google::Ads::GoogleAds::V2::Erro" +
-      "rsb\006proto3"
+      "BLE\020\017\022\037\n\033PAYMENTS_ACCOUNT_INELIGIBLE\020\020\022$" +
+      "\n CUSTOMER_NEEDS_INTERNAL_APPROVAL\020\021B\361\001\n" +
+      "\"com.google.ads.googleads.v2.errorsB\026Bil" +
+      "lingSetupErrorProtoP\001ZDgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v2/er" +
+      "rors;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds" +
+      ".V2.Errors\312\002\036Google\\Ads\\GoogleAds\\V2\\Err" +
+      "ors\352\002\"Google::Ads::GoogleAds::V2::Errors" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

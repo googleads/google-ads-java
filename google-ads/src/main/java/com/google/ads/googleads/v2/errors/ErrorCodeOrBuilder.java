@@ -1775,5 +1775,22 @@ public interface ErrorCodeOrBuilder extends
    */
   com.google.ads.googleads.v2.errors.AccessInvitationErrorEnum.AccessInvitationError getAccessInvitationError();
 
+  /**
+   * <pre>
+   * The reasons for the reach plan error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+   */
+  int getReachPlanErrorValue();
+  /**
+   * <pre>
+   * The reasons for the reach plan error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;</code>
+   */
+  com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError getReachPlanError();
+
   public com.google.ads.googleads.v2.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

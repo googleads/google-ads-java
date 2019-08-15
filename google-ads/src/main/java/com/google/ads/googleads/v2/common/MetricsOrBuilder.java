@@ -1714,6 +1714,34 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The average price difference between the price offered by reporting hotel
+   * advertiser and the cheapest price offered by the competing advertiser.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+   */
+  boolean hasHotelPriceDifferencePercentage();
+  /**
+   * <pre>
+   * The average price difference between the price offered by reporting hotel
+   * advertiser and the cheapest price offered by the competing advertiser.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+   */
+  com.google.protobuf.DoubleValue getHotelPriceDifferencePercentage();
+  /**
+   * <pre>
+   * The average price difference between the price offered by reporting hotel
+   * advertiser and the cheapest price offered by the competing advertiser.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getHotelPriceDifferencePercentageOrBuilder();
+
+  /**
+   * <pre>
    * The creative historical quality score.
    * </pre>
    *

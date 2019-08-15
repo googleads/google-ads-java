@@ -357,8 +357,8 @@
  * <p>Service Description: A service for designating the business entity responsible for accrued
  * costs.
  *
- * <p>A billing setup is associated with a Payments account. Billing-related activity for all
- * billing setups associated with a particular Payments account will appear on a single invoice
+ * <p>A billing setup is associated with a payments account. Billing-related activity for all
+ * billing setups associated with a particular payments account will appear on a single invoice
  * generated monthly.
  *
  * <p>Mutates: The REMOVE operation cancels a pending billing setup. The CREATE operation creates a
@@ -1423,7 +1423,7 @@
  *
  * ============================ PaymentsAccountServiceClient ============================
  *
- * <p>Service Description: Service to provide Payments accounts that can be used to set up
+ * <p>Service Description: Service to provide payments accounts that can be used to set up
  * consolidated billing.
  *
  * <p>Sample for PaymentsAccountServiceClient:
@@ -1464,6 +1464,24 @@
  * try (ProductGroupViewServiceClient productGroupViewServiceClient = ProductGroupViewServiceClient.create()) {
  *   String formattedResourceName = ProductGroupViewServiceClient.formatProductGroupViewName("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
  *   ProductGroupView response = productGroupViewServiceClient.getProductGroupView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ====================== ReachPlanServiceClient ======================
+ *
+ * <p>Service Description: Reach Plan Service gives users information about audience size that can
+ * be reached through advertisement on YouTube. In particular, GenerateReachForecast provides
+ * estimated number of people of specified demographics that can be reached by an ad in a given
+ * market by a campaign of certain duration with a defined budget.
+ *
+ * <p>Sample for ReachPlanServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
+ *   StringValue plannableLocationId = StringValue.newBuilder().build();
+ *   ListPlannableProductsResponse response = reachPlanServiceClient.listPlannableProducts(plannableLocationId);
  * }
  * </code>
  * </pre>

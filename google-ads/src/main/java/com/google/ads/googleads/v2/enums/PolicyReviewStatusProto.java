@@ -31,16 +31,17 @@ public final class PolicyReviewStatusProto {
       "\n8google/ads/googleads/v2/enums/policy_r" +
       "eview_status.proto\022\035google.ads.googleads" +
       ".v2.enums\032\034google/api/annotations.proto\"" +
-      "\204\001\n\026PolicyReviewStatusEnum\"j\n\022PolicyRevi" +
-      "ewStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026" +
-      "\n\022REVIEW_IN_PROGRESS\020\002\022\014\n\010REVIEWED\020\003\022\020\n\014" +
-      "UNDER_APPEAL\020\004B\354\001\n!com.google.ads.google" +
-      "ads.v2.enumsB\027PolicyReviewStatusProtoP\001Z" +
-      "Bgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v2/enums;enums\242\002\003GAA\252\002\035Goog" +
-      "le.Ads.GoogleAds.V2.Enums\312\002\035Google\\Ads\\G" +
-      "oogleAds\\V2\\Enums\352\002!Google::Ads::GoogleA" +
-      "ds::V2::Enumsb\006proto3"
+      "\235\001\n\026PolicyReviewStatusEnum\"\202\001\n\022PolicyRev" +
+      "iewStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
+      "\026\n\022REVIEW_IN_PROGRESS\020\002\022\014\n\010REVIEWED\020\003\022\020\n" +
+      "\014UNDER_APPEAL\020\004\022\026\n\022ELIGIBLE_MAY_SERVE\020\005B" +
+      "\354\001\n!com.google.ads.googleads.v2.enumsB\027P" +
+      "olicyReviewStatusProtoP\001ZBgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v2" +
+      "/enums;enums\242\002\003GAA\252\002\035Google.Ads.GoogleAd" +
+      "s.V2.Enums\312\002\035Google\\Ads\\GoogleAds\\V2\\Enu" +
+      "ms\352\002!Google::Ads::GoogleAds::V2::Enumsb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
