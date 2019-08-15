@@ -1,3 +1,8 @@
+4.1.0 - 2019-08-15
+------------------
+- Added support for Google Ads API v2_1.
+- Exposed the TransportChanelProvider as package private.
+
 4.0.0 - 2019-07-01
 ------------------
 - Added support for Google Ads API v2_0.
