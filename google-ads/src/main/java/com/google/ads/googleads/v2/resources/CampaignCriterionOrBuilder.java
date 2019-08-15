@@ -822,5 +822,30 @@ public interface CampaignCriterionOrBuilder extends
    */
   com.google.ads.googleads.v2.common.LocationGroupInfoOrBuilder getLocationGroupOrBuilder();
 
+  /**
+   * <pre>
+   * Custom Affinity.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+   */
+  boolean hasCustomAffinity();
+  /**
+   * <pre>
+   * Custom Affinity.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+   */
+  com.google.ads.googleads.v2.common.CustomAffinityInfo getCustomAffinity();
+  /**
+   * <pre>
+   * Custom Affinity.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;</code>
+   */
+  com.google.ads.googleads.v2.common.CustomAffinityInfoOrBuilder getCustomAffinityOrBuilder();
+
   public com.google.ads.googleads.v2.resources.CampaignCriterion.CriterionCase getCriterionCase();
 }

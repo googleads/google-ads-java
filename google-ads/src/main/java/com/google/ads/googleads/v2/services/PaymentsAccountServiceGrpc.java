@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Service to provide Payments accounts that can be used to set up consolidated
+ * Service to provide payments accounts that can be used to set up consolidated
  * billing.
  * </pre>
  */
@@ -94,7 +94,7 @@ public final class PaymentsAccountServiceGrpc {
 
   /**
    * <pre>
-   * Service to provide Payments accounts that can be used to set up consolidated
+   * Service to provide payments accounts that can be used to set up consolidated
    * billing.
    * </pre>
    */
@@ -102,7 +102,7 @@ public final class PaymentsAccountServiceGrpc {
 
     /**
      * <pre>
-     * Returns all Payments accounts associated with all managers
+     * Returns all payments accounts associated with all managers
      * between the login customer ID and specified serving customer in the
      * hierarchy, inclusive.
      * </pre>
@@ -127,7 +127,7 @@ public final class PaymentsAccountServiceGrpc {
 
   /**
    * <pre>
-   * Service to provide Payments accounts that can be used to set up consolidated
+   * Service to provide payments accounts that can be used to set up consolidated
    * billing.
    * </pre>
    */
@@ -149,7 +149,7 @@ public final class PaymentsAccountServiceGrpc {
 
     /**
      * <pre>
-     * Returns all Payments accounts associated with all managers
+     * Returns all payments accounts associated with all managers
      * between the login customer ID and specified serving customer in the
      * hierarchy, inclusive.
      * </pre>
@@ -163,7 +163,7 @@ public final class PaymentsAccountServiceGrpc {
 
   /**
    * <pre>
-   * Service to provide Payments accounts that can be used to set up consolidated
+   * Service to provide payments accounts that can be used to set up consolidated
    * billing.
    * </pre>
    */
@@ -185,7 +185,7 @@ public final class PaymentsAccountServiceGrpc {
 
     /**
      * <pre>
-     * Returns all Payments accounts associated with all managers
+     * Returns all payments accounts associated with all managers
      * between the login customer ID and specified serving customer in the
      * hierarchy, inclusive.
      * </pre>
@@ -198,7 +198,7 @@ public final class PaymentsAccountServiceGrpc {
 
   /**
    * <pre>
-   * Service to provide Payments accounts that can be used to set up consolidated
+   * Service to provide payments accounts that can be used to set up consolidated
    * billing.
    * </pre>
    */
@@ -220,7 +220,7 @@ public final class PaymentsAccountServiceGrpc {
 
     /**
      * <pre>
-     * Returns all Payments accounts associated with all managers
+     * Returns all payments accounts associated with all managers
      * between the login customer ID and specified serving customer in the
      * hierarchy, inclusive.
      * </pre>

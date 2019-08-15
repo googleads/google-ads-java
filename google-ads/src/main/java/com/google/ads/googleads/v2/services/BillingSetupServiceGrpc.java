@@ -18,8 +18,8 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  * <pre>
  * A service for designating the business entity responsible for accrued costs.
- * A billing setup is associated with a Payments account.  Billing-related
- * activity for all billing setups associated with a particular Payments account
+ * A billing setup is associated with a payments account.  Billing-related
+ * activity for all billing setups associated with a particular payments account
  * will appear on a single invoice generated monthly.
  * Mutates:
  * The REMOVE operation cancels a pending billing setup.
@@ -137,8 +137,8 @@ public final class BillingSetupServiceGrpc {
   /**
    * <pre>
    * A service for designating the business entity responsible for accrued costs.
-   * A billing setup is associated with a Payments account.  Billing-related
-   * activity for all billing setups associated with a particular Payments account
+   * A billing setup is associated with a payments account.  Billing-related
+   * activity for all billing setups associated with a particular payments account
    * will appear on a single invoice generated monthly.
    * Mutates:
    * The REMOVE operation cancels a pending billing setup.
@@ -190,8 +190,8 @@ public final class BillingSetupServiceGrpc {
   /**
    * <pre>
    * A service for designating the business entity responsible for accrued costs.
-   * A billing setup is associated with a Payments account.  Billing-related
-   * activity for all billing setups associated with a particular Payments account
+   * A billing setup is associated with a payments account.  Billing-related
+   * activity for all billing setups associated with a particular payments account
    * will appear on a single invoice generated monthly.
    * Mutates:
    * The REMOVE operation cancels a pending billing setup.
@@ -240,8 +240,8 @@ public final class BillingSetupServiceGrpc {
   /**
    * <pre>
    * A service for designating the business entity responsible for accrued costs.
-   * A billing setup is associated with a Payments account.  Billing-related
-   * activity for all billing setups associated with a particular Payments account
+   * A billing setup is associated with a payments account.  Billing-related
+   * activity for all billing setups associated with a particular payments account
    * will appear on a single invoice generated monthly.
    * Mutates:
    * The REMOVE operation cancels a pending billing setup.
@@ -288,8 +288,8 @@ public final class BillingSetupServiceGrpc {
   /**
    * <pre>
    * A service for designating the business entity responsible for accrued costs.
-   * A billing setup is associated with a Payments account.  Billing-related
-   * activity for all billing setups associated with a particular Payments account
+   * A billing setup is associated with a payments account.  Billing-related
+   * activity for all billing setups associated with a particular payments account
    * will appear on a single invoice generated monthly.
    * Mutates:
    * The REMOVE operation cancels a pending billing setup.

@@ -36,7 +36,7 @@ public final class CampaignCriterionProto {
       "proto\0322google/ads/googleads/v2/enums/cri" +
       "terion_type.proto\032\036google/protobuf/wrapp" +
       "ers.proto\032\034google/api/annotations.proto\"" +
-      "\365\021\n\021CampaignCriterion\022\025\n\rresource_name\030\001" +
+      "\304\022\n\021CampaignCriterion\022\025\n\rresource_name\030\001" +
       " \001(\t\022.\n\010campaign\030\004 \001(\0132\034.google.protobuf" +
       ".StringValue\0221\n\014criterion_id\030\005 \001(\0132\033.goo" +
       "gle.protobuf.Int64Value\0221\n\014bid_modifier\030" +
@@ -93,14 +93,16 @@ public final class CampaignCriterionProto {
       "le.ads.googleads.v2.common.MobileDeviceI" +
       "nfoH\000\022K\n\016location_group\030\" \001(\01321.google.a" +
       "ds.googleads.v2.common.LocationGroupInfo" +
-      "H\000B\013\n\tcriterionB\203\002\n%com.google.ads.googl" +
-      "eads.v2.resourcesB\026CampaignCriterionProt" +
-      "oP\001ZJgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v2/resources;resources\242" +
-      "\002\003GAA\252\002!Google.Ads.GoogleAds.V2.Resource" +
-      "s\312\002!Google\\Ads\\GoogleAds\\V2\\Resources\352\002%" +
-      "Google::Ads::GoogleAds::V2::Resourcesb\006p" +
-      "roto3"
+      "H\000\022M\n\017custom_affinity\030$ \001(\01322.google.ads" +
+      ".googleads.v2.common.CustomAffinityInfoH" +
+      "\000B\013\n\tcriterionB\203\002\n%com.google.ads.google" +
+      "ads.v2.resourcesB\026CampaignCriterionProto" +
+      "P\001ZJgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v2/resources;resources\242\002" +
+      "\003GAA\252\002!Google.Ads.GoogleAds.V2.Resources" +
+      "\312\002!Google\\Ads\\GoogleAds\\V2\\Resources\352\002%G" +
+      "oogle::Ads::GoogleAds::V2::Resourcesb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -124,7 +126,7 @@ public final class CampaignCriterionProto {
     internal_static_google_ads_googleads_v2_resources_CampaignCriterion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_CampaignCriterion_descriptor,
-        new java.lang.String[] { "ResourceName", "Campaign", "CriterionId", "BidModifier", "Negative", "Type", "Status", "Keyword", "Placement", "MobileAppCategory", "MobileApplication", "Location", "Device", "AdSchedule", "AgeRange", "Gender", "IncomeRange", "ParentalStatus", "UserList", "YoutubeVideo", "YoutubeChannel", "Proximity", "Topic", "ListingScope", "Language", "IpBlock", "ContentLabel", "Carrier", "UserInterest", "Webpage", "OperatingSystemVersion", "MobileDevice", "LocationGroup", "Criterion", });
+        new java.lang.String[] { "ResourceName", "Campaign", "CriterionId", "BidModifier", "Negative", "Type", "Status", "Keyword", "Placement", "MobileAppCategory", "MobileApplication", "Location", "Device", "AdSchedule", "AgeRange", "Gender", "IncomeRange", "ParentalStatus", "UserList", "YoutubeVideo", "YoutubeChannel", "Proximity", "Topic", "ListingScope", "Language", "IpBlock", "ContentLabel", "Carrier", "UserInterest", "Webpage", "OperatingSystemVersion", "MobileDevice", "LocationGroup", "CustomAffinity", "Criterion", });
     com.google.ads.googleads.v2.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v2.enums.CampaignCriterionStatusProto.getDescriptor();
     com.google.ads.googleads.v2.enums.CriterionTypeProto.getDescriptor();

@@ -189,6 +189,15 @@ private static final long serialVersionUID = 0L;
      * <code>DEVELOPER_TOKEN_NOT_APPROVED = 10;</code>
      */
     DEVELOPER_TOKEN_NOT_APPROVED(10),
+    /**
+     * <pre>
+     * The login customer specified does not have access to the account
+     * specified, so the request is invalid.
+     * </pre>
+     *
+     * <code>INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION = 11;</code>
+     */
+    INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION(11),
     UNRECOGNIZED(-1),
     ;
 
@@ -295,6 +304,15 @@ private static final long serialVersionUID = 0L;
      * <code>DEVELOPER_TOKEN_NOT_APPROVED = 10;</code>
      */
     public static final int DEVELOPER_TOKEN_NOT_APPROVED_VALUE = 10;
+    /**
+     * <pre>
+     * The login customer specified does not have access to the account
+     * specified, so the request is invalid.
+     * </pre>
+     *
+     * <code>INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION = 11;</code>
+     */
+    public static final int INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION_VALUE = 11;
 
 
     public final int getNumber() {
@@ -327,6 +345,7 @@ private static final long serialVersionUID = 0L;
         case 24: return CUSTOMER_NOT_ENABLED;
         case 9: return MISSING_TOS;
         case 10: return DEVELOPER_TOKEN_NOT_APPROVED;
+        case 11: return INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION;
         default: return null;
       }
     }

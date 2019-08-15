@@ -31,4 +31,29 @@ public interface ExpandedDynamicSearchAdInfoOrBuilder extends
    * <code>.google.protobuf.StringValue description = 1;</code>
    */
   com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder();
+
+  /**
+   * <pre>
+   * The second description of the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue description2 = 2;</code>
+   */
+  boolean hasDescription2();
+  /**
+   * <pre>
+   * The second description of the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue description2 = 2;</code>
+   */
+  com.google.protobuf.StringValue getDescription2();
+  /**
+   * <pre>
+   * The second description of the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue description2 = 2;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getDescription2OrBuilder();
 }

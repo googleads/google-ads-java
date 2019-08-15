@@ -5,7 +5,7 @@ package com.google.ads.googleads.v2.services;
 
 /**
  * <pre>
- * Request message for fetching all accessible Payments accounts.
+ * Request message for fetching all accessible payments accounts.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v2.services.ListPaymentsAccountsRequest}
@@ -283,7 +283,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for fetching all accessible Payments accounts.
+   * Request message for fetching all accessible payments accounts.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v2.services.ListPaymentsAccountsRequest}

@@ -59,6 +59,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 18: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (description2_ != null) {
+              subBuilder = description2_.toBuilder();
+            }
+            description2_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(description2_);
+              description2_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -124,6 +137,39 @@ private static final long serialVersionUID = 0L;
     return getDescription();
   }
 
+  public static final int DESCRIPTION2_FIELD_NUMBER = 2;
+  private com.google.protobuf.StringValue description2_;
+  /**
+   * <pre>
+   * The second description of the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue description2 = 2;</code>
+   */
+  public boolean hasDescription2() {
+    return description2_ != null;
+  }
+  /**
+   * <pre>
+   * The second description of the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue description2 = 2;</code>
+   */
+  public com.google.protobuf.StringValue getDescription2() {
+    return description2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description2_;
+  }
+  /**
+   * <pre>
+   * The second description of the ad.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue description2 = 2;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getDescription2OrBuilder() {
+    return getDescription2();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -141,6 +187,9 @@ private static final long serialVersionUID = 0L;
     if (description_ != null) {
       output.writeMessage(1, getDescription());
     }
+    if (description2_ != null) {
+      output.writeMessage(2, getDescription2());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -153,6 +202,10 @@ private static final long serialVersionUID = 0L;
     if (description_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getDescription());
+    }
+    if (description2_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getDescription2());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -174,6 +227,11 @@ private static final long serialVersionUID = 0L;
       if (!getDescription()
           .equals(other.getDescription())) return false;
     }
+    if (hasDescription2() != other.hasDescription2()) return false;
+    if (hasDescription2()) {
+      if (!getDescription2()
+          .equals(other.getDescription2())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -188,6 +246,10 @@ private static final long serialVersionUID = 0L;
     if (hasDescription()) {
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+    }
+    if (hasDescription2()) {
+      hash = (37 * hash) + DESCRIPTION2_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription2().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -332,6 +394,12 @@ private static final long serialVersionUID = 0L;
         description_ = null;
         descriptionBuilder_ = null;
       }
+      if (description2Builder_ == null) {
+        description2_ = null;
+      } else {
+        description2_ = null;
+        description2Builder_ = null;
+      }
       return this;
     }
 
@@ -362,6 +430,11 @@ private static final long serialVersionUID = 0L;
         result.description_ = description_;
       } else {
         result.description_ = descriptionBuilder_.build();
+      }
+      if (description2Builder_ == null) {
+        result.description2_ = description2_;
+      } else {
+        result.description2_ = description2Builder_.build();
       }
       onBuilt();
       return result;
@@ -413,6 +486,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v2.common.ExpandedDynamicSearchAdInfo.getDefaultInstance()) return this;
       if (other.hasDescription()) {
         mergeDescription(other.getDescription());
+      }
+      if (other.hasDescription2()) {
+        mergeDescription2(other.getDescription2());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -594,6 +670,159 @@ private static final long serialVersionUID = 0L;
         description_ = null;
       }
       return descriptionBuilder_;
+    }
+
+    private com.google.protobuf.StringValue description2_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> description2Builder_;
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 2;</code>
+     */
+    public boolean hasDescription2() {
+      return description2Builder_ != null || description2_ != null;
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 2;</code>
+     */
+    public com.google.protobuf.StringValue getDescription2() {
+      if (description2Builder_ == null) {
+        return description2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description2_;
+      } else {
+        return description2Builder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 2;</code>
+     */
+    public Builder setDescription2(com.google.protobuf.StringValue value) {
+      if (description2Builder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        description2_ = value;
+        onChanged();
+      } else {
+        description2Builder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 2;</code>
+     */
+    public Builder setDescription2(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (description2Builder_ == null) {
+        description2_ = builderForValue.build();
+        onChanged();
+      } else {
+        description2Builder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 2;</code>
+     */
+    public Builder mergeDescription2(com.google.protobuf.StringValue value) {
+      if (description2Builder_ == null) {
+        if (description2_ != null) {
+          description2_ =
+            com.google.protobuf.StringValue.newBuilder(description2_).mergeFrom(value).buildPartial();
+        } else {
+          description2_ = value;
+        }
+        onChanged();
+      } else {
+        description2Builder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 2;</code>
+     */
+    public Builder clearDescription2() {
+      if (description2Builder_ == null) {
+        description2_ = null;
+        onChanged();
+      } else {
+        description2_ = null;
+        description2Builder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 2;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getDescription2Builder() {
+      
+      onChanged();
+      return getDescription2FieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 2;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getDescription2OrBuilder() {
+      if (description2Builder_ != null) {
+        return description2Builder_.getMessageOrBuilder();
+      } else {
+        return description2_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : description2_;
+      }
+    }
+    /**
+     * <pre>
+     * The second description of the ad.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue description2 = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getDescription2FieldBuilder() {
+      if (description2Builder_ == null) {
+        description2Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getDescription2(),
+                getParentForChildren(),
+                isClean());
+        description2_ = null;
+      }
+      return description2Builder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

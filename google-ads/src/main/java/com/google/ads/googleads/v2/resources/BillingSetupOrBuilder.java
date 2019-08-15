@@ -73,10 +73,10 @@ public interface BillingSetupOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the Payments account associated with this billing
+   * The resource name of the payments account associated with this billing
    * setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-   * When setting up billing, this is used to signup with an existing Payments
+   * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
    * When getting a billing setup, this and payments_account_info will be
    * populated.
@@ -87,10 +87,10 @@ public interface BillingSetupOrBuilder extends
   boolean hasPaymentsAccount();
   /**
    * <pre>
-   * The resource name of the Payments account associated with this billing
+   * The resource name of the payments account associated with this billing
    * setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-   * When setting up billing, this is used to signup with an existing Payments
+   * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
    * When getting a billing setup, this and payments_account_info will be
    * populated.
@@ -101,10 +101,10 @@ public interface BillingSetupOrBuilder extends
   com.google.protobuf.StringValue getPaymentsAccount();
   /**
    * <pre>
-   * The resource name of the Payments account associated with this billing
+   * The resource name of the payments account associated with this billing
    * setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-   * When setting up billing, this is used to signup with an existing Payments
+   * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
    * When getting a billing setup, this and payments_account_info will be
    * populated.
@@ -116,8 +116,8 @@ public interface BillingSetupOrBuilder extends
 
   /**
    * <pre>
-   * The Payments account information associated with this billing setup.
-   * When setting up billing, this is used to signup with a new Payments account
+   * The payments account information associated with this billing setup.
+   * When setting up billing, this is used to signup with a new payments account
    * (and then payments_account should not be set).
    * When getting a billing setup, this and payments_account will be
    * populated.
@@ -128,8 +128,8 @@ public interface BillingSetupOrBuilder extends
   boolean hasPaymentsAccountInfo();
   /**
    * <pre>
-   * The Payments account information associated with this billing setup.
-   * When setting up billing, this is used to signup with a new Payments account
+   * The payments account information associated with this billing setup.
+   * When setting up billing, this is used to signup with a new payments account
    * (and then payments_account should not be set).
    * When getting a billing setup, this and payments_account will be
    * populated.
@@ -140,8 +140,8 @@ public interface BillingSetupOrBuilder extends
   com.google.ads.googleads.v2.resources.BillingSetup.PaymentsAccountInfo getPaymentsAccountInfo();
   /**
    * <pre>
-   * The Payments account information associated with this billing setup.
-   * When setting up billing, this is used to signup with a new Payments account
+   * The payments account information associated with this billing setup.
+   * When setting up billing, this is used to signup with a new payments account
    * (and then payments_account should not be set).
    * When getting a billing setup, this and payments_account will be
    * populated.

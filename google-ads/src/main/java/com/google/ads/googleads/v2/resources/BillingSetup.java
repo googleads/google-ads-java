@@ -5,9 +5,8 @@ package com.google.ads.googleads.v2.resources;
 
 /**
  * <pre>
- * A billing setup across Ads and Payments systems; an association between a
- * Payments account and an advertiser. A billing setup is specific to one
- * advertiser.
+ * A billing setup, which associates a payments account and an advertiser. A
+ * billing setup is specific to one advertiser.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.BillingSetup}
@@ -179,7 +178,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
+     * A 16 digit id used to identify the payments account associated with the
      * billing setup.
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
@@ -189,7 +188,7 @@ private static final long serialVersionUID = 0L;
     boolean hasPaymentsAccountId();
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
+     * A 16 digit id used to identify the payments account associated with the
      * billing setup.
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
@@ -199,7 +198,7 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.StringValue getPaymentsAccountId();
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
+     * A 16 digit id used to identify the payments account associated with the
      * billing setup.
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
@@ -210,8 +209,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
+     * The name of the payments account associated with the billing setup.
+     * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
      * </pre>
@@ -221,8 +220,8 @@ private static final long serialVersionUID = 0L;
     boolean hasPaymentsAccountName();
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
+     * The name of the payments account associated with the billing setup.
+     * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
      * </pre>
@@ -232,8 +231,8 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.StringValue getPaymentsAccountName();
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
+     * The name of the payments account associated with the billing setup.
+     * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
      * </pre>
@@ -244,7 +243,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
+     * A 12 digit id used to identify the payments profile associated with the
      * billing setup.
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
@@ -254,7 +253,7 @@ private static final long serialVersionUID = 0L;
     boolean hasPaymentsProfileId();
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
+     * A 12 digit id used to identify the payments profile associated with the
      * billing setup.
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
@@ -264,7 +263,7 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.StringValue getPaymentsProfileId();
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
+     * A 12 digit id used to identify the payments profile associated with the
      * billing setup.
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
@@ -275,7 +274,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The name of the Payments profile associated with the billing setup.
+     * The name of the payments profile associated with the billing setup.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -283,7 +282,7 @@ private static final long serialVersionUID = 0L;
     boolean hasPaymentsProfileName();
     /**
      * <pre>
-     * The name of the Payments profile associated with the billing setup.
+     * The name of the payments profile associated with the billing setup.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -291,7 +290,7 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.StringValue getPaymentsProfileName();
     /**
      * <pre>
-     * The name of the Payments profile associated with the billing setup.
+     * The name of the payments profile associated with the billing setup.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -328,7 +327,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Container of Payments account information for this billing.
+   * Container of payments account information for this billing.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v2.resources.BillingSetup.PaymentsAccountInfo}
@@ -470,7 +469,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue paymentsAccountId_;
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
+     * A 16 digit id used to identify the payments account associated with the
      * billing setup.
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
@@ -482,7 +481,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
+     * A 16 digit id used to identify the payments account associated with the
      * billing setup.
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
@@ -494,7 +493,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit id used to identify the Payments account associated with the
+     * A 16 digit id used to identify the payments account associated with the
      * billing setup.
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
@@ -509,8 +508,8 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue paymentsAccountName_;
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
+     * The name of the payments account associated with the billing setup.
+     * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
      * </pre>
@@ -522,8 +521,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
+     * The name of the payments account associated with the billing setup.
+     * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
      * </pre>
@@ -535,8 +534,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Payments account associated with the billing setup.
-     * This enables the user to specify a meaningful name for a Payments account
+     * The name of the payments account associated with the billing setup.
+     * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
      * </pre>
@@ -551,7 +550,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue paymentsProfileId_;
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
+     * A 12 digit id used to identify the payments profile associated with the
      * billing setup.
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
@@ -563,7 +562,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
+     * A 12 digit id used to identify the payments profile associated with the
      * billing setup.
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
@@ -575,7 +574,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit id used to identify the Payments profile associated with the
+     * A 12 digit id used to identify the payments profile associated with the
      * billing setup.
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
@@ -590,7 +589,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue paymentsProfileName_;
     /**
      * <pre>
-     * The name of the Payments profile associated with the billing setup.
+     * The name of the payments profile associated with the billing setup.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -600,7 +599,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Payments profile associated with the billing setup.
+     * The name of the payments profile associated with the billing setup.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -610,7 +609,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Payments profile associated with the billing setup.
+     * The name of the payments profile associated with the billing setup.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -881,7 +880,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Container of Payments account information for this billing.
+     * Container of payments account information for this billing.
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v2.resources.BillingSetup.PaymentsAccountInfo}
@@ -1099,7 +1098,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountIdBuilder_;
       /**
        * <pre>
-       * A 16 digit id used to identify the Payments account associated with the
+       * A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
@@ -1111,7 +1110,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the Payments account associated with the
+       * A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
@@ -1127,7 +1126,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the Payments account associated with the
+       * A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
@@ -1149,7 +1148,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the Payments account associated with the
+       * A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
@@ -1169,7 +1168,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the Payments account associated with the
+       * A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
@@ -1193,7 +1192,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the Payments account associated with the
+       * A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
@@ -1213,7 +1212,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the Payments account associated with the
+       * A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
@@ -1227,7 +1226,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the Payments account associated with the
+       * A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
@@ -1244,7 +1243,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the Payments account associated with the
+       * A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
@@ -1270,8 +1269,8 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountNameBuilder_;
       /**
        * <pre>
-       * The name of the Payments account associated with the billing setup.
-       * This enables the user to specify a meaningful name for a Payments account
+       * The name of the payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
@@ -1283,8 +1282,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments account associated with the billing setup.
-       * This enables the user to specify a meaningful name for a Payments account
+       * The name of the payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
@@ -1300,8 +1299,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments account associated with the billing setup.
-       * This enables the user to specify a meaningful name for a Payments account
+       * The name of the payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
@@ -1323,8 +1322,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments account associated with the billing setup.
-       * This enables the user to specify a meaningful name for a Payments account
+       * The name of the payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
@@ -1344,8 +1343,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments account associated with the billing setup.
-       * This enables the user to specify a meaningful name for a Payments account
+       * The name of the payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
@@ -1369,8 +1368,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments account associated with the billing setup.
-       * This enables the user to specify a meaningful name for a Payments account
+       * The name of the payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
@@ -1390,8 +1389,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments account associated with the billing setup.
-       * This enables the user to specify a meaningful name for a Payments account
+       * The name of the payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
@@ -1405,8 +1404,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments account associated with the billing setup.
-       * This enables the user to specify a meaningful name for a Payments account
+       * The name of the payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
@@ -1423,8 +1422,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments account associated with the billing setup.
-       * This enables the user to specify a meaningful name for a Payments account
+       * The name of the payments account associated with the billing setup.
+       * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
@@ -1450,7 +1449,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileIdBuilder_;
       /**
        * <pre>
-       * A 12 digit id used to identify the Payments profile associated with the
+       * A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
@@ -1462,7 +1461,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the Payments profile associated with the
+       * A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
@@ -1478,7 +1477,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the Payments profile associated with the
+       * A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
@@ -1500,7 +1499,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the Payments profile associated with the
+       * A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
@@ -1520,7 +1519,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the Payments profile associated with the
+       * A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
@@ -1544,7 +1543,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the Payments profile associated with the
+       * A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
@@ -1564,7 +1563,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the Payments profile associated with the
+       * A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
@@ -1578,7 +1577,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the Payments profile associated with the
+       * A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
@@ -1595,7 +1594,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the Payments profile associated with the
+       * A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
@@ -1621,7 +1620,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileNameBuilder_;
       /**
        * <pre>
-       * The name of the Payments profile associated with the billing setup.
+       * The name of the payments profile associated with the billing setup.
        * </pre>
        *
        * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -1631,7 +1630,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments profile associated with the billing setup.
+       * The name of the payments profile associated with the billing setup.
        * </pre>
        *
        * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -1645,7 +1644,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments profile associated with the billing setup.
+       * The name of the payments profile associated with the billing setup.
        * </pre>
        *
        * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -1665,7 +1664,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments profile associated with the billing setup.
+       * The name of the payments profile associated with the billing setup.
        * </pre>
        *
        * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -1683,7 +1682,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments profile associated with the billing setup.
+       * The name of the payments profile associated with the billing setup.
        * </pre>
        *
        * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -1705,7 +1704,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments profile associated with the billing setup.
+       * The name of the payments profile associated with the billing setup.
        * </pre>
        *
        * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -1723,7 +1722,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments profile associated with the billing setup.
+       * The name of the payments profile associated with the billing setup.
        * </pre>
        *
        * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -1735,7 +1734,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments profile associated with the billing setup.
+       * The name of the payments profile associated with the billing setup.
        * </pre>
        *
        * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -1750,7 +1749,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the Payments profile associated with the billing setup.
+       * The name of the payments profile associated with the billing setup.
        * </pre>
        *
        * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
@@ -2167,10 +2166,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue paymentsAccount_;
   /**
    * <pre>
-   * The resource name of the Payments account associated with this billing
+   * The resource name of the payments account associated with this billing
    * setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-   * When setting up billing, this is used to signup with an existing Payments
+   * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
    * When getting a billing setup, this and payments_account_info will be
    * populated.
@@ -2183,10 +2182,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the Payments account associated with this billing
+   * The resource name of the payments account associated with this billing
    * setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-   * When setting up billing, this is used to signup with an existing Payments
+   * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
    * When getting a billing setup, this and payments_account_info will be
    * populated.
@@ -2199,10 +2198,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the Payments account associated with this billing
+   * The resource name of the payments account associated with this billing
    * setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-   * When setting up billing, this is used to signup with an existing Payments
+   * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
    * When getting a billing setup, this and payments_account_info will be
    * populated.
@@ -2218,8 +2217,8 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v2.resources.BillingSetup.PaymentsAccountInfo paymentsAccountInfo_;
   /**
    * <pre>
-   * The Payments account information associated with this billing setup.
-   * When setting up billing, this is used to signup with a new Payments account
+   * The payments account information associated with this billing setup.
+   * When setting up billing, this is used to signup with a new payments account
    * (and then payments_account should not be set).
    * When getting a billing setup, this and payments_account will be
    * populated.
@@ -2232,8 +2231,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The Payments account information associated with this billing setup.
-   * When setting up billing, this is used to signup with a new Payments account
+   * The payments account information associated with this billing setup.
+   * When setting up billing, this is used to signup with a new payments account
    * (and then payments_account should not be set).
    * When getting a billing setup, this and payments_account will be
    * populated.
@@ -2246,8 +2245,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The Payments account information associated with this billing setup.
-   * When setting up billing, this is used to signup with a new Payments account
+   * The payments account information associated with this billing setup.
+   * When setting up billing, this is used to signup with a new payments account
    * (and then payments_account should not be set).
    * When getting a billing setup, this and payments_account will be
    * populated.
@@ -2692,9 +2691,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A billing setup across Ads and Payments systems; an association between a
-   * Payments account and an advertiser. A billing setup is specific to one
-   * advertiser.
+   * A billing setup, which associates a payments account and an advertiser. A
+   * billing setup is specific to one advertiser.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v2.resources.BillingSetup}
@@ -3296,10 +3294,10 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountBuilder_;
     /**
      * <pre>
-     * The resource name of the Payments account associated with this billing
+     * The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-     * When setting up billing, this is used to signup with an existing Payments
+     * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
      * When getting a billing setup, this and payments_account_info will be
      * populated.
@@ -3312,10 +3310,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Payments account associated with this billing
+     * The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-     * When setting up billing, this is used to signup with an existing Payments
+     * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
      * When getting a billing setup, this and payments_account_info will be
      * populated.
@@ -3332,10 +3330,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Payments account associated with this billing
+     * The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-     * When setting up billing, this is used to signup with an existing Payments
+     * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
      * When getting a billing setup, this and payments_account_info will be
      * populated.
@@ -3358,10 +3356,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Payments account associated with this billing
+     * The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-     * When setting up billing, this is used to signup with an existing Payments
+     * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
      * When getting a billing setup, this and payments_account_info will be
      * populated.
@@ -3382,10 +3380,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Payments account associated with this billing
+     * The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-     * When setting up billing, this is used to signup with an existing Payments
+     * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
      * When getting a billing setup, this and payments_account_info will be
      * populated.
@@ -3410,10 +3408,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Payments account associated with this billing
+     * The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-     * When setting up billing, this is used to signup with an existing Payments
+     * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
      * When getting a billing setup, this and payments_account_info will be
      * populated.
@@ -3434,10 +3432,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Payments account associated with this billing
+     * The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-     * When setting up billing, this is used to signup with an existing Payments
+     * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
      * When getting a billing setup, this and payments_account_info will be
      * populated.
@@ -3452,10 +3450,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Payments account associated with this billing
+     * The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-     * When setting up billing, this is used to signup with an existing Payments
+     * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
      * When getting a billing setup, this and payments_account_info will be
      * populated.
@@ -3473,10 +3471,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Payments account associated with this billing
+     * The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
-     * When setting up billing, this is used to signup with an existing Payments
+     * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
      * When getting a billing setup, this and payments_account_info will be
      * populated.
@@ -3503,8 +3501,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v2.resources.BillingSetup.PaymentsAccountInfo, com.google.ads.googleads.v2.resources.BillingSetup.PaymentsAccountInfo.Builder, com.google.ads.googleads.v2.resources.BillingSetup.PaymentsAccountInfoOrBuilder> paymentsAccountInfoBuilder_;
     /**
      * <pre>
-     * The Payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new Payments account
+     * The payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
@@ -3517,8 +3515,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new Payments account
+     * The payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
@@ -3535,8 +3533,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new Payments account
+     * The payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
@@ -3559,8 +3557,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new Payments account
+     * The payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
@@ -3581,8 +3579,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new Payments account
+     * The payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
@@ -3607,8 +3605,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new Payments account
+     * The payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
@@ -3629,8 +3627,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new Payments account
+     * The payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
@@ -3645,8 +3643,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new Payments account
+     * The payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
@@ -3664,8 +3662,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new Payments account
+     * The payments account information associated with this billing setup.
+     * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.

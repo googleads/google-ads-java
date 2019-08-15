@@ -112,8 +112,8 @@ private static final long serialVersionUID = 0L;
     INTERNAL_ERROR(2),
     /**
      * <pre>
-     * The intended error code doesn't exist in any API version. This will be
-     * fixed by adding a new error code as soon as possible.
+     * The intended error code doesn't exist in specified API version. It will
+     * be released in a future API version.
      * </pre>
      *
      * <code>ERROR_CODE_NOT_PUBLISHED = 3;</code>
@@ -157,8 +157,8 @@ private static final long serialVersionUID = 0L;
     public static final int INTERNAL_ERROR_VALUE = 2;
     /**
      * <pre>
-     * The intended error code doesn't exist in any API version. This will be
-     * fixed by adding a new error code as soon as possible.
+     * The intended error code doesn't exist in specified API version. It will
+     * be released in a future API version.
      * </pre>
      *
      * <code>ERROR_CODE_NOT_PUBLISHED = 3;</code>

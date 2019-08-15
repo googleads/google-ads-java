@@ -94,6 +94,84 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 50: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (timeZone_ != null) {
+              subBuilder = timeZone_.toBuilder();
+            }
+            timeZone_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(timeZone_);
+              timeZone_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 58: {
+            com.google.protobuf.BoolValue.Builder subBuilder = null;
+            if (testAccount_ != null) {
+              subBuilder = testAccount_.toBuilder();
+            }
+            testAccount_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(testAccount_);
+              testAccount_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 66: {
+            com.google.protobuf.BoolValue.Builder subBuilder = null;
+            if (manager_ != null) {
+              subBuilder = manager_.toBuilder();
+            }
+            manager_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(manager_);
+              manager_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 74: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (descriptiveName_ != null) {
+              subBuilder = descriptiveName_.toBuilder();
+            }
+            descriptiveName_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(descriptiveName_);
+              descriptiveName_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 82: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (currencyCode_ != null) {
+              subBuilder = currencyCode_.toBuilder();
+            }
+            currencyCode_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(currencyCode_);
+              currencyCode_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 90: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (id_ != null) {
+              subBuilder = id_.toBuilder();
+            }
+            id_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(id_);
+              id_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -283,6 +361,207 @@ private static final long serialVersionUID = 0L;
     return getLevel();
   }
 
+  public static final int TIME_ZONE_FIELD_NUMBER = 6;
+  private com.google.protobuf.StringValue timeZone_;
+  /**
+   * <pre>
+   * Common Locale Data Repository (CLDR) string representation of the
+   * time zone of the client, e.g. America/Los_Angeles. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue time_zone = 6;</code>
+   */
+  public boolean hasTimeZone() {
+    return timeZone_ != null;
+  }
+  /**
+   * <pre>
+   * Common Locale Data Repository (CLDR) string representation of the
+   * time zone of the client, e.g. America/Los_Angeles. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue time_zone = 6;</code>
+   */
+  public com.google.protobuf.StringValue getTimeZone() {
+    return timeZone_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : timeZone_;
+  }
+  /**
+   * <pre>
+   * Common Locale Data Repository (CLDR) string representation of the
+   * time zone of the client, e.g. America/Los_Angeles. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue time_zone = 6;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getTimeZoneOrBuilder() {
+    return getTimeZone();
+  }
+
+  public static final int TEST_ACCOUNT_FIELD_NUMBER = 7;
+  private com.google.protobuf.BoolValue testAccount_;
+  /**
+   * <pre>
+   * Identifies if the client is a test account. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue test_account = 7;</code>
+   */
+  public boolean hasTestAccount() {
+    return testAccount_ != null;
+  }
+  /**
+   * <pre>
+   * Identifies if the client is a test account. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue test_account = 7;</code>
+   */
+  public com.google.protobuf.BoolValue getTestAccount() {
+    return testAccount_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : testAccount_;
+  }
+  /**
+   * <pre>
+   * Identifies if the client is a test account. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue test_account = 7;</code>
+   */
+  public com.google.protobuf.BoolValueOrBuilder getTestAccountOrBuilder() {
+    return getTestAccount();
+  }
+
+  public static final int MANAGER_FIELD_NUMBER = 8;
+  private com.google.protobuf.BoolValue manager_;
+  /**
+   * <pre>
+   * Identifies if the client is a manager. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue manager = 8;</code>
+   */
+  public boolean hasManager() {
+    return manager_ != null;
+  }
+  /**
+   * <pre>
+   * Identifies if the client is a manager. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue manager = 8;</code>
+   */
+  public com.google.protobuf.BoolValue getManager() {
+    return manager_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : manager_;
+  }
+  /**
+   * <pre>
+   * Identifies if the client is a manager. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.BoolValue manager = 8;</code>
+   */
+  public com.google.protobuf.BoolValueOrBuilder getManagerOrBuilder() {
+    return getManager();
+  }
+
+  public static final int DESCRIPTIVE_NAME_FIELD_NUMBER = 9;
+  private com.google.protobuf.StringValue descriptiveName_;
+  /**
+   * <pre>
+   * Descriptive name for the client. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+   */
+  public boolean hasDescriptiveName() {
+    return descriptiveName_ != null;
+  }
+  /**
+   * <pre>
+   * Descriptive name for the client. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+   */
+  public com.google.protobuf.StringValue getDescriptiveName() {
+    return descriptiveName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : descriptiveName_;
+  }
+  /**
+   * <pre>
+   * Descriptive name for the client. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getDescriptiveNameOrBuilder() {
+    return getDescriptiveName();
+  }
+
+  public static final int CURRENCY_CODE_FIELD_NUMBER = 10;
+  private com.google.protobuf.StringValue currencyCode_;
+  /**
+   * <pre>
+   * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue currency_code = 10;</code>
+   */
+  public boolean hasCurrencyCode() {
+    return currencyCode_ != null;
+  }
+  /**
+   * <pre>
+   * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue currency_code = 10;</code>
+   */
+  public com.google.protobuf.StringValue getCurrencyCode() {
+    return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
+  }
+  /**
+   * <pre>
+   * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue currency_code = 10;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
+    return getCurrencyCode();
+  }
+
+  public static final int ID_FIELD_NUMBER = 11;
+  private com.google.protobuf.Int64Value id_;
+  /**
+   * <pre>
+   * The ID of the client customer. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value id = 11;</code>
+   */
+  public boolean hasId() {
+    return id_ != null;
+  }
+  /**
+   * <pre>
+   * The ID of the client customer. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value id = 11;</code>
+   */
+  public com.google.protobuf.Int64Value getId() {
+    return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
+  }
+  /**
+   * <pre>
+   * The ID of the client customer. Read only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value id = 11;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
+    return getId();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -309,6 +588,24 @@ private static final long serialVersionUID = 0L;
     if (level_ != null) {
       output.writeMessage(5, getLevel());
     }
+    if (timeZone_ != null) {
+      output.writeMessage(6, getTimeZone());
+    }
+    if (testAccount_ != null) {
+      output.writeMessage(7, getTestAccount());
+    }
+    if (manager_ != null) {
+      output.writeMessage(8, getManager());
+    }
+    if (descriptiveName_ != null) {
+      output.writeMessage(9, getDescriptiveName());
+    }
+    if (currencyCode_ != null) {
+      output.writeMessage(10, getCurrencyCode());
+    }
+    if (id_ != null) {
+      output.writeMessage(11, getId());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -332,6 +629,30 @@ private static final long serialVersionUID = 0L;
     if (level_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getLevel());
+    }
+    if (timeZone_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getTimeZone());
+    }
+    if (testAccount_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getTestAccount());
+    }
+    if (manager_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getManager());
+    }
+    if (descriptiveName_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getDescriptiveName());
+    }
+    if (currencyCode_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getCurrencyCode());
+    }
+    if (id_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getId());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -365,6 +686,36 @@ private static final long serialVersionUID = 0L;
       if (!getLevel()
           .equals(other.getLevel())) return false;
     }
+    if (hasTimeZone() != other.hasTimeZone()) return false;
+    if (hasTimeZone()) {
+      if (!getTimeZone()
+          .equals(other.getTimeZone())) return false;
+    }
+    if (hasTestAccount() != other.hasTestAccount()) return false;
+    if (hasTestAccount()) {
+      if (!getTestAccount()
+          .equals(other.getTestAccount())) return false;
+    }
+    if (hasManager() != other.hasManager()) return false;
+    if (hasManager()) {
+      if (!getManager()
+          .equals(other.getManager())) return false;
+    }
+    if (hasDescriptiveName() != other.hasDescriptiveName()) return false;
+    if (hasDescriptiveName()) {
+      if (!getDescriptiveName()
+          .equals(other.getDescriptiveName())) return false;
+    }
+    if (hasCurrencyCode() != other.hasCurrencyCode()) return false;
+    if (hasCurrencyCode()) {
+      if (!getCurrencyCode()
+          .equals(other.getCurrencyCode())) return false;
+    }
+    if (hasId() != other.hasId()) return false;
+    if (hasId()) {
+      if (!getId()
+          .equals(other.getId())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -389,6 +740,30 @@ private static final long serialVersionUID = 0L;
     if (hasLevel()) {
       hash = (37 * hash) + LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + getLevel().hashCode();
+    }
+    if (hasTimeZone()) {
+      hash = (37 * hash) + TIME_ZONE_FIELD_NUMBER;
+      hash = (53 * hash) + getTimeZone().hashCode();
+    }
+    if (hasTestAccount()) {
+      hash = (37 * hash) + TEST_ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getTestAccount().hashCode();
+    }
+    if (hasManager()) {
+      hash = (37 * hash) + MANAGER_FIELD_NUMBER;
+      hash = (53 * hash) + getManager().hashCode();
+    }
+    if (hasDescriptiveName()) {
+      hash = (37 * hash) + DESCRIPTIVE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDescriptiveName().hashCode();
+    }
+    if (hasCurrencyCode()) {
+      hash = (37 * hash) + CURRENCY_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrencyCode().hashCode();
+    }
+    if (hasId()) {
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -549,6 +924,42 @@ private static final long serialVersionUID = 0L;
         level_ = null;
         levelBuilder_ = null;
       }
+      if (timeZoneBuilder_ == null) {
+        timeZone_ = null;
+      } else {
+        timeZone_ = null;
+        timeZoneBuilder_ = null;
+      }
+      if (testAccountBuilder_ == null) {
+        testAccount_ = null;
+      } else {
+        testAccount_ = null;
+        testAccountBuilder_ = null;
+      }
+      if (managerBuilder_ == null) {
+        manager_ = null;
+      } else {
+        manager_ = null;
+        managerBuilder_ = null;
+      }
+      if (descriptiveNameBuilder_ == null) {
+        descriptiveName_ = null;
+      } else {
+        descriptiveName_ = null;
+        descriptiveNameBuilder_ = null;
+      }
+      if (currencyCodeBuilder_ == null) {
+        currencyCode_ = null;
+      } else {
+        currencyCode_ = null;
+        currencyCodeBuilder_ = null;
+      }
+      if (idBuilder_ == null) {
+        id_ = null;
+      } else {
+        id_ = null;
+        idBuilder_ = null;
+      }
       return this;
     }
 
@@ -590,6 +1001,36 @@ private static final long serialVersionUID = 0L;
         result.level_ = level_;
       } else {
         result.level_ = levelBuilder_.build();
+      }
+      if (timeZoneBuilder_ == null) {
+        result.timeZone_ = timeZone_;
+      } else {
+        result.timeZone_ = timeZoneBuilder_.build();
+      }
+      if (testAccountBuilder_ == null) {
+        result.testAccount_ = testAccount_;
+      } else {
+        result.testAccount_ = testAccountBuilder_.build();
+      }
+      if (managerBuilder_ == null) {
+        result.manager_ = manager_;
+      } else {
+        result.manager_ = managerBuilder_.build();
+      }
+      if (descriptiveNameBuilder_ == null) {
+        result.descriptiveName_ = descriptiveName_;
+      } else {
+        result.descriptiveName_ = descriptiveNameBuilder_.build();
+      }
+      if (currencyCodeBuilder_ == null) {
+        result.currencyCode_ = currencyCode_;
+      } else {
+        result.currencyCode_ = currencyCodeBuilder_.build();
+      }
+      if (idBuilder_ == null) {
+        result.id_ = id_;
+      } else {
+        result.id_ = idBuilder_.build();
       }
       onBuilt();
       return result;
@@ -651,6 +1092,24 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasLevel()) {
         mergeLevel(other.getLevel());
+      }
+      if (other.hasTimeZone()) {
+        mergeTimeZone(other.getTimeZone());
+      }
+      if (other.hasTestAccount()) {
+        mergeTestAccount(other.getTestAccount());
+      }
+      if (other.hasManager()) {
+        mergeManager(other.getManager());
+      }
+      if (other.hasDescriptiveName()) {
+        mergeDescriptiveName(other.getDescriptiveName());
+      }
+      if (other.hasCurrencyCode()) {
+        mergeCurrencyCode(other.getCurrencyCode());
+      }
+      if (other.hasId()) {
+        mergeId(other.getId());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1273,6 +1732,933 @@ private static final long serialVersionUID = 0L;
         level_ = null;
       }
       return levelBuilder_;
+    }
+
+    private com.google.protobuf.StringValue timeZone_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> timeZoneBuilder_;
+    /**
+     * <pre>
+     * Common Locale Data Repository (CLDR) string representation of the
+     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     */
+    public boolean hasTimeZone() {
+      return timeZoneBuilder_ != null || timeZone_ != null;
+    }
+    /**
+     * <pre>
+     * Common Locale Data Repository (CLDR) string representation of the
+     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     */
+    public com.google.protobuf.StringValue getTimeZone() {
+      if (timeZoneBuilder_ == null) {
+        return timeZone_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : timeZone_;
+      } else {
+        return timeZoneBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Common Locale Data Repository (CLDR) string representation of the
+     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     */
+    public Builder setTimeZone(com.google.protobuf.StringValue value) {
+      if (timeZoneBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        timeZone_ = value;
+        onChanged();
+      } else {
+        timeZoneBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Common Locale Data Repository (CLDR) string representation of the
+     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     */
+    public Builder setTimeZone(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (timeZoneBuilder_ == null) {
+        timeZone_ = builderForValue.build();
+        onChanged();
+      } else {
+        timeZoneBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Common Locale Data Repository (CLDR) string representation of the
+     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     */
+    public Builder mergeTimeZone(com.google.protobuf.StringValue value) {
+      if (timeZoneBuilder_ == null) {
+        if (timeZone_ != null) {
+          timeZone_ =
+            com.google.protobuf.StringValue.newBuilder(timeZone_).mergeFrom(value).buildPartial();
+        } else {
+          timeZone_ = value;
+        }
+        onChanged();
+      } else {
+        timeZoneBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Common Locale Data Repository (CLDR) string representation of the
+     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     */
+    public Builder clearTimeZone() {
+      if (timeZoneBuilder_ == null) {
+        timeZone_ = null;
+        onChanged();
+      } else {
+        timeZone_ = null;
+        timeZoneBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Common Locale Data Repository (CLDR) string representation of the
+     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getTimeZoneBuilder() {
+      
+      onChanged();
+      return getTimeZoneFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Common Locale Data Repository (CLDR) string representation of the
+     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getTimeZoneOrBuilder() {
+      if (timeZoneBuilder_ != null) {
+        return timeZoneBuilder_.getMessageOrBuilder();
+      } else {
+        return timeZone_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : timeZone_;
+      }
+    }
+    /**
+     * <pre>
+     * Common Locale Data Repository (CLDR) string representation of the
+     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getTimeZoneFieldBuilder() {
+      if (timeZoneBuilder_ == null) {
+        timeZoneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getTimeZone(),
+                getParentForChildren(),
+                isClean());
+        timeZone_ = null;
+      }
+      return timeZoneBuilder_;
+    }
+
+    private com.google.protobuf.BoolValue testAccount_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> testAccountBuilder_;
+    /**
+     * <pre>
+     * Identifies if the client is a test account. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 7;</code>
+     */
+    public boolean hasTestAccount() {
+      return testAccountBuilder_ != null || testAccount_ != null;
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a test account. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 7;</code>
+     */
+    public com.google.protobuf.BoolValue getTestAccount() {
+      if (testAccountBuilder_ == null) {
+        return testAccount_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : testAccount_;
+      } else {
+        return testAccountBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a test account. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 7;</code>
+     */
+    public Builder setTestAccount(com.google.protobuf.BoolValue value) {
+      if (testAccountBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        testAccount_ = value;
+        onChanged();
+      } else {
+        testAccountBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a test account. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 7;</code>
+     */
+    public Builder setTestAccount(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (testAccountBuilder_ == null) {
+        testAccount_ = builderForValue.build();
+        onChanged();
+      } else {
+        testAccountBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a test account. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 7;</code>
+     */
+    public Builder mergeTestAccount(com.google.protobuf.BoolValue value) {
+      if (testAccountBuilder_ == null) {
+        if (testAccount_ != null) {
+          testAccount_ =
+            com.google.protobuf.BoolValue.newBuilder(testAccount_).mergeFrom(value).buildPartial();
+        } else {
+          testAccount_ = value;
+        }
+        onChanged();
+      } else {
+        testAccountBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a test account. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 7;</code>
+     */
+    public Builder clearTestAccount() {
+      if (testAccountBuilder_ == null) {
+        testAccount_ = null;
+        onChanged();
+      } else {
+        testAccount_ = null;
+        testAccountBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a test account. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 7;</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getTestAccountBuilder() {
+      
+      onChanged();
+      return getTestAccountFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a test account. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 7;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getTestAccountOrBuilder() {
+      if (testAccountBuilder_ != null) {
+        return testAccountBuilder_.getMessageOrBuilder();
+      } else {
+        return testAccount_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : testAccount_;
+      }
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a test account. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue test_account = 7;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getTestAccountFieldBuilder() {
+      if (testAccountBuilder_ == null) {
+        testAccountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getTestAccount(),
+                getParentForChildren(),
+                isClean());
+        testAccount_ = null;
+      }
+      return testAccountBuilder_;
+    }
+
+    private com.google.protobuf.BoolValue manager_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> managerBuilder_;
+    /**
+     * <pre>
+     * Identifies if the client is a manager. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 8;</code>
+     */
+    public boolean hasManager() {
+      return managerBuilder_ != null || manager_ != null;
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a manager. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 8;</code>
+     */
+    public com.google.protobuf.BoolValue getManager() {
+      if (managerBuilder_ == null) {
+        return manager_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : manager_;
+      } else {
+        return managerBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a manager. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 8;</code>
+     */
+    public Builder setManager(com.google.protobuf.BoolValue value) {
+      if (managerBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        manager_ = value;
+        onChanged();
+      } else {
+        managerBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a manager. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 8;</code>
+     */
+    public Builder setManager(
+        com.google.protobuf.BoolValue.Builder builderForValue) {
+      if (managerBuilder_ == null) {
+        manager_ = builderForValue.build();
+        onChanged();
+      } else {
+        managerBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a manager. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 8;</code>
+     */
+    public Builder mergeManager(com.google.protobuf.BoolValue value) {
+      if (managerBuilder_ == null) {
+        if (manager_ != null) {
+          manager_ =
+            com.google.protobuf.BoolValue.newBuilder(manager_).mergeFrom(value).buildPartial();
+        } else {
+          manager_ = value;
+        }
+        onChanged();
+      } else {
+        managerBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a manager. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 8;</code>
+     */
+    public Builder clearManager() {
+      if (managerBuilder_ == null) {
+        manager_ = null;
+        onChanged();
+      } else {
+        manager_ = null;
+        managerBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a manager. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 8;</code>
+     */
+    public com.google.protobuf.BoolValue.Builder getManagerBuilder() {
+      
+      onChanged();
+      return getManagerFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a manager. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 8;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getManagerOrBuilder() {
+      if (managerBuilder_ != null) {
+        return managerBuilder_.getMessageOrBuilder();
+      } else {
+        return manager_ == null ?
+            com.google.protobuf.BoolValue.getDefaultInstance() : manager_;
+      }
+    }
+    /**
+     * <pre>
+     * Identifies if the client is a manager. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue manager = 8;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+        getManagerFieldBuilder() {
+      if (managerBuilder_ == null) {
+        managerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                getManager(),
+                getParentForChildren(),
+                isClean());
+        manager_ = null;
+      }
+      return managerBuilder_;
+    }
+
+    private com.google.protobuf.StringValue descriptiveName_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> descriptiveNameBuilder_;
+    /**
+     * <pre>
+     * Descriptive name for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+     */
+    public boolean hasDescriptiveName() {
+      return descriptiveNameBuilder_ != null || descriptiveName_ != null;
+    }
+    /**
+     * <pre>
+     * Descriptive name for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+     */
+    public com.google.protobuf.StringValue getDescriptiveName() {
+      if (descriptiveNameBuilder_ == null) {
+        return descriptiveName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : descriptiveName_;
+      } else {
+        return descriptiveNameBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Descriptive name for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+     */
+    public Builder setDescriptiveName(com.google.protobuf.StringValue value) {
+      if (descriptiveNameBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        descriptiveName_ = value;
+        onChanged();
+      } else {
+        descriptiveNameBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Descriptive name for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+     */
+    public Builder setDescriptiveName(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (descriptiveNameBuilder_ == null) {
+        descriptiveName_ = builderForValue.build();
+        onChanged();
+      } else {
+        descriptiveNameBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Descriptive name for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+     */
+    public Builder mergeDescriptiveName(com.google.protobuf.StringValue value) {
+      if (descriptiveNameBuilder_ == null) {
+        if (descriptiveName_ != null) {
+          descriptiveName_ =
+            com.google.protobuf.StringValue.newBuilder(descriptiveName_).mergeFrom(value).buildPartial();
+        } else {
+          descriptiveName_ = value;
+        }
+        onChanged();
+      } else {
+        descriptiveNameBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Descriptive name for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+     */
+    public Builder clearDescriptiveName() {
+      if (descriptiveNameBuilder_ == null) {
+        descriptiveName_ = null;
+        onChanged();
+      } else {
+        descriptiveName_ = null;
+        descriptiveNameBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Descriptive name for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getDescriptiveNameBuilder() {
+      
+      onChanged();
+      return getDescriptiveNameFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Descriptive name for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getDescriptiveNameOrBuilder() {
+      if (descriptiveNameBuilder_ != null) {
+        return descriptiveNameBuilder_.getMessageOrBuilder();
+      } else {
+        return descriptiveName_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : descriptiveName_;
+      }
+    }
+    /**
+     * <pre>
+     * Descriptive name for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getDescriptiveNameFieldBuilder() {
+      if (descriptiveNameBuilder_ == null) {
+        descriptiveNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getDescriptiveName(),
+                getParentForChildren(),
+                isClean());
+        descriptiveName_ = null;
+      }
+      return descriptiveNameBuilder_;
+    }
+
+    private com.google.protobuf.StringValue currencyCode_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyCodeBuilder_;
+    /**
+     * <pre>
+     * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     */
+    public boolean hasCurrencyCode() {
+      return currencyCodeBuilder_ != null || currencyCode_ != null;
+    }
+    /**
+     * <pre>
+     * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     */
+    public com.google.protobuf.StringValue getCurrencyCode() {
+      if (currencyCodeBuilder_ == null) {
+        return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
+      } else {
+        return currencyCodeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     */
+    public Builder setCurrencyCode(com.google.protobuf.StringValue value) {
+      if (currencyCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        currencyCode_ = value;
+        onChanged();
+      } else {
+        currencyCodeBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     */
+    public Builder setCurrencyCode(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (currencyCodeBuilder_ == null) {
+        currencyCode_ = builderForValue.build();
+        onChanged();
+      } else {
+        currencyCodeBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     */
+    public Builder mergeCurrencyCode(com.google.protobuf.StringValue value) {
+      if (currencyCodeBuilder_ == null) {
+        if (currencyCode_ != null) {
+          currencyCode_ =
+            com.google.protobuf.StringValue.newBuilder(currencyCode_).mergeFrom(value).buildPartial();
+        } else {
+          currencyCode_ = value;
+        }
+        onChanged();
+      } else {
+        currencyCodeBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     */
+    public Builder clearCurrencyCode() {
+      if (currencyCodeBuilder_ == null) {
+        currencyCode_ = null;
+        onChanged();
+      } else {
+        currencyCode_ = null;
+        currencyCodeBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getCurrencyCodeBuilder() {
+      
+      onChanged();
+      return getCurrencyCodeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
+      if (currencyCodeBuilder_ != null) {
+        return currencyCodeBuilder_.getMessageOrBuilder();
+      } else {
+        return currencyCode_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
+      }
+    }
+    /**
+     * <pre>
+     * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getCurrencyCodeFieldBuilder() {
+      if (currencyCodeBuilder_ == null) {
+        currencyCodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getCurrencyCode(),
+                getParentForChildren(),
+                isClean());
+        currencyCode_ = null;
+      }
+      return currencyCodeBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value id_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
+    /**
+     * <pre>
+     * The ID of the client customer. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 11;</code>
+     */
+    public boolean hasId() {
+      return idBuilder_ != null || id_ != null;
+    }
+    /**
+     * <pre>
+     * The ID of the client customer. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 11;</code>
+     */
+    public com.google.protobuf.Int64Value getId() {
+      if (idBuilder_ == null) {
+        return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
+      } else {
+        return idBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The ID of the client customer. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 11;</code>
+     */
+    public Builder setId(com.google.protobuf.Int64Value value) {
+      if (idBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        id_ = value;
+        onChanged();
+      } else {
+        idBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of the client customer. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 11;</code>
+     */
+    public Builder setId(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (idBuilder_ == null) {
+        id_ = builderForValue.build();
+        onChanged();
+      } else {
+        idBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of the client customer. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 11;</code>
+     */
+    public Builder mergeId(com.google.protobuf.Int64Value value) {
+      if (idBuilder_ == null) {
+        if (id_ != null) {
+          id_ =
+            com.google.protobuf.Int64Value.newBuilder(id_).mergeFrom(value).buildPartial();
+        } else {
+          id_ = value;
+        }
+        onChanged();
+      } else {
+        idBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of the client customer. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 11;</code>
+     */
+    public Builder clearId() {
+      if (idBuilder_ == null) {
+        id_ = null;
+        onChanged();
+      } else {
+        id_ = null;
+        idBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of the client customer. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 11;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getIdBuilder() {
+      
+      onChanged();
+      return getIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The ID of the client customer. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 11;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
+      if (idBuilder_ != null) {
+        return idBuilder_.getMessageOrBuilder();
+      } else {
+        return id_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : id_;
+      }
+    }
+    /**
+     * <pre>
+     * The ID of the client customer. Read only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 11;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getIdFieldBuilder() {
+      if (idBuilder_ == null) {
+        idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getId(),
+                getParentForChildren(),
+                isClean());
+        id_ = null;
+      }
+      return idBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

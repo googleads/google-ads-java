@@ -94,7 +94,7 @@ public final class CampaignDraftServiceProto {
       "n\030\002 \001(\t\022\021\n\tpage_size\030\003 \001(\005\"c\n$ListCampai" +
       "gnDraftAsyncErrorsResponse\022\"\n\006errors\030\001 \003" +
       "(\0132\022.google.rpc.Status\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t2\376\006\n\024CampaignDraftService\022\271\001\n\020Get" +
+      "n\030\002 \001(\t2\230\007\n\024CampaignDraftService\022\271\001\n\020Get" +
       "CampaignDraft\0229.google.ads.googleads.v2." +
       "services.GetCampaignDraftRequest\0320.googl" +
       "e.ads.googleads.v2.resources.CampaignDra" +
@@ -104,26 +104,26 @@ public final class CampaignDraftServiceProto {
       ".MutateCampaignDraftsRequest\032>.google.ad" +
       "s.googleads.v2.services.MutateCampaignDr" +
       "aftsResponse\">\202\323\344\223\0028\"3/v2/customers/{cus" +
-      "tomer_id=*}/campaignDrafts:mutate:\001*\022\272\001\n" +
+      "tomer_id=*}/campaignDrafts:mutate:\001*\022\324\001\n" +
       "\024PromoteCampaignDraft\022=.google.ads.googl" +
       "eads.v2.services.PromoteCampaignDraftReq" +
-      "uest\032\035.google.longrunning.Operation\"D\202\323\344" +
+      "uest\032\035.google.longrunning.Operation\"^\202\323\344" +
       "\223\002>\"9/v2/{campaign_draft=customers/*/cam" +
-      "paignDrafts/*}:promote:\001*\022\367\001\n\034ListCampai" +
-      "gnDraftAsyncErrors\022E.google.ads.googlead" +
-      "s.v2.services.ListCampaignDraftAsyncErro" +
-      "rsRequest\032F.google.ads.googleads.v2.serv" +
-      "ices.ListCampaignDraftAsyncErrorsRespons" +
-      "e\"H\202\323\344\223\002B\022@/v2/{resource_name=customers/" +
-      "*/campaignDrafts/*}:listAsyncErrors\032\033\312A\030" +
-      "googleads.googleapis.comB\200\002\n$com.google." +
-      "ads.googleads.v2.servicesB\031CampaignDraft" +
-      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v2/services;" +
-      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V2" +
-      ".Services\312\002 Google\\Ads\\GoogleAds\\V2\\Serv" +
-      "ices\352\002$Google::Ads::GoogleAds::V2::Servi" +
-      "cesb\006proto3"
+      "paignDrafts/*}:promote:\001*\312A\027\n\025google.pro" +
+      "tobuf.Empty\022\367\001\n\034ListCampaignDraftAsyncEr" +
+      "rors\022E.google.ads.googleads.v2.services." +
+      "ListCampaignDraftAsyncErrorsRequest\032F.go" +
+      "ogle.ads.googleads.v2.services.ListCampa" +
+      "ignDraftAsyncErrorsResponse\"H\202\323\344\223\002B\022@/v2" +
+      "/{resource_name=customers/*/campaignDraf" +
+      "ts/*}:listAsyncErrors\032\033\312A\030googleads.goog" +
+      "leapis.comB\200\002\n$com.google.ads.googleads." +
+      "v2.servicesB\031CampaignDraftServiceProtoP\001" +
+      "ZHgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v2/services;services\242\002\003GAA" +
+      "\252\002 Google.Ads.GoogleAds.V2.Services\312\002 Go" +
+      "ogle\\Ads\\GoogleAds\\V2\\Services\352\002$Google:" +
+      ":Ads::GoogleAds::V2::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -195,6 +195,7 @@ public final class CampaignDraftServiceProto {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.longrunning.OperationsProto.operationInfo);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.CampaignDraftProto.getDescriptor();

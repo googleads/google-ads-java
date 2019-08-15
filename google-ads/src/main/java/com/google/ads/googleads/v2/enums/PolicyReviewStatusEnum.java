@@ -128,6 +128,15 @@ private static final long serialVersionUID = 0L;
      * <code>UNDER_APPEAL = 4;</code>
      */
     UNDER_APPEAL(4),
+    /**
+     * <pre>
+     * The resource is eligible and may be serving but could still undergo
+     * further review.
+     * </pre>
+     *
+     * <code>ELIGIBLE_MAY_SERVE = 5;</code>
+     */
+    ELIGIBLE_MAY_SERVE(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -173,6 +182,15 @@ private static final long serialVersionUID = 0L;
      * <code>UNDER_APPEAL = 4;</code>
      */
     public static final int UNDER_APPEAL_VALUE = 4;
+    /**
+     * <pre>
+     * The resource is eligible and may be serving but could still undergo
+     * further review.
+     * </pre>
+     *
+     * <code>ELIGIBLE_MAY_SERVE = 5;</code>
+     */
+    public static final int ELIGIBLE_MAY_SERVE_VALUE = 5;
 
 
     public final int getNumber() {
@@ -198,6 +216,7 @@ private static final long serialVersionUID = 0L;
         case 2: return REVIEW_IN_PROGRESS;
         case 3: return REVIEWED;
         case 4: return UNDER_APPEAL;
+        case 5: return ELIGIBLE_MAY_SERVE;
         default: return null;
       }
     }

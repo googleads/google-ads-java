@@ -9,7 +9,7 @@ public interface PaymentsAccountOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the Payments account.
+   * The resource name of the payments account.
    * PaymentsAccount resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * </pre>
@@ -19,7 +19,7 @@ public interface PaymentsAccountOrBuilder extends
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the Payments account.
+   * The resource name of the payments account.
    * PaymentsAccount resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * </pre>
@@ -31,7 +31,7 @@ public interface PaymentsAccountOrBuilder extends
 
   /**
    * <pre>
-   * A 16 digit ID used to identify a Payments account.
+   * A 16 digit ID used to identify a payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -39,7 +39,7 @@ public interface PaymentsAccountOrBuilder extends
   boolean hasPaymentsAccountId();
   /**
    * <pre>
-   * A 16 digit ID used to identify a Payments account.
+   * A 16 digit ID used to identify a payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -47,7 +47,7 @@ public interface PaymentsAccountOrBuilder extends
   com.google.protobuf.StringValue getPaymentsAccountId();
   /**
    * <pre>
-   * A 16 digit ID used to identify a Payments account.
+   * A 16 digit ID used to identify a payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -56,7 +56,7 @@ public interface PaymentsAccountOrBuilder extends
 
   /**
    * <pre>
-   * The name of the Payments account.
+   * The name of the payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
@@ -64,7 +64,7 @@ public interface PaymentsAccountOrBuilder extends
   boolean hasName();
   /**
    * <pre>
-   * The name of the Payments account.
+   * The name of the payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
@@ -72,7 +72,7 @@ public interface PaymentsAccountOrBuilder extends
   com.google.protobuf.StringValue getName();
   /**
    * <pre>
-   * The name of the Payments account.
+   * The name of the payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
@@ -81,7 +81,7 @@ public interface PaymentsAccountOrBuilder extends
 
   /**
    * <pre>
-   * The currency code of the Payments account.
+   * The currency code of the payments account.
    * A subset of the currency codes derived from the ISO 4217 standard is
    * supported.
    * </pre>
@@ -91,7 +91,7 @@ public interface PaymentsAccountOrBuilder extends
   boolean hasCurrencyCode();
   /**
    * <pre>
-   * The currency code of the Payments account.
+   * The currency code of the payments account.
    * A subset of the currency codes derived from the ISO 4217 standard is
    * supported.
    * </pre>
@@ -101,7 +101,7 @@ public interface PaymentsAccountOrBuilder extends
   com.google.protobuf.StringValue getCurrencyCode();
   /**
    * <pre>
-   * The currency code of the Payments account.
+   * The currency code of the payments account.
    * A subset of the currency codes derived from the ISO 4217 standard is
    * supported.
    * </pre>
@@ -112,8 +112,8 @@ public interface PaymentsAccountOrBuilder extends
 
   /**
    * <pre>
-   * A 12 digit ID used to identify the Payments profile associated with the
-   * Payments account.
+   * A 12 digit ID used to identify the payments profile associated with the
+   * payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -121,8 +121,8 @@ public interface PaymentsAccountOrBuilder extends
   boolean hasPaymentsProfileId();
   /**
    * <pre>
-   * A 12 digit ID used to identify the Payments profile associated with the
-   * Payments account.
+   * A 12 digit ID used to identify the payments profile associated with the
+   * payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -130,8 +130,8 @@ public interface PaymentsAccountOrBuilder extends
   com.google.protobuf.StringValue getPaymentsProfileId();
   /**
    * <pre>
-   * A 12 digit ID used to identify the Payments profile associated with the
-   * Payments account.
+   * A 12 digit ID used to identify the payments profile associated with the
+   * payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -140,7 +140,7 @@ public interface PaymentsAccountOrBuilder extends
 
   /**
    * <pre>
-   * A secondary Payments profile ID present in uncommon situations, e.g.
+   * A secondary payments profile ID present in uncommon situations, e.g.
    * when a sequential liability agreement has been arranged.
    * </pre>
    *
@@ -149,7 +149,7 @@ public interface PaymentsAccountOrBuilder extends
   boolean hasSecondaryPaymentsProfileId();
   /**
    * <pre>
-   * A secondary Payments profile ID present in uncommon situations, e.g.
+   * A secondary payments profile ID present in uncommon situations, e.g.
    * when a sequential liability agreement has been arranged.
    * </pre>
    *
@@ -158,7 +158,7 @@ public interface PaymentsAccountOrBuilder extends
   com.google.protobuf.StringValue getSecondaryPaymentsProfileId();
   /**
    * <pre>
-   * A secondary Payments profile ID present in uncommon situations, e.g.
+   * A secondary payments profile ID present in uncommon situations, e.g.
    * when a sequential liability agreement has been arranged.
    * </pre>
    *

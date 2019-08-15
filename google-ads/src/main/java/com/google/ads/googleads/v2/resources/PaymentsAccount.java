@@ -5,7 +5,7 @@ package com.google.ads.googleads.v2.resources;
 
 /**
  * <pre>
- * A Payments account, which can be used to set up billing for an Ads customer.
+ * A payments account, which can be used to set up billing for an Ads customer.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.PaymentsAccount}
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the Payments account.
+   * The resource name of the payments account.
    * PaymentsAccount resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * </pre>
@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the Payments account.
+   * The resource name of the payments account.
    * PaymentsAccount resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * </pre>
@@ -200,7 +200,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue paymentsAccountId_;
   /**
    * <pre>
-   * A 16 digit ID used to identify a Payments account.
+   * A 16 digit ID used to identify a payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -210,7 +210,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A 16 digit ID used to identify a Payments account.
+   * A 16 digit ID used to identify a payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -220,7 +220,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A 16 digit ID used to identify a Payments account.
+   * A 16 digit ID used to identify a payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue name_;
   /**
    * <pre>
-   * The name of the Payments account.
+   * The name of the payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
@@ -243,7 +243,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The name of the Payments account.
+   * The name of the payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The name of the Payments account.
+   * The name of the payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
@@ -266,7 +266,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue currencyCode_;
   /**
    * <pre>
-   * The currency code of the Payments account.
+   * The currency code of the payments account.
    * A subset of the currency codes derived from the ISO 4217 standard is
    * supported.
    * </pre>
@@ -278,7 +278,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The currency code of the Payments account.
+   * The currency code of the payments account.
    * A subset of the currency codes derived from the ISO 4217 standard is
    * supported.
    * </pre>
@@ -290,7 +290,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The currency code of the Payments account.
+   * The currency code of the payments account.
    * A subset of the currency codes derived from the ISO 4217 standard is
    * supported.
    * </pre>
@@ -305,8 +305,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue paymentsProfileId_;
   /**
    * <pre>
-   * A 12 digit ID used to identify the Payments profile associated with the
-   * Payments account.
+   * A 12 digit ID used to identify the payments profile associated with the
+   * payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -316,8 +316,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A 12 digit ID used to identify the Payments profile associated with the
-   * Payments account.
+   * A 12 digit ID used to identify the payments profile associated with the
+   * payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -327,8 +327,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A 12 digit ID used to identify the Payments profile associated with the
-   * Payments account.
+   * A 12 digit ID used to identify the payments profile associated with the
+   * payments account.
    * </pre>
    *
    * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -341,7 +341,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue secondaryPaymentsProfileId_;
   /**
    * <pre>
-   * A secondary Payments profile ID present in uncommon situations, e.g.
+   * A secondary payments profile ID present in uncommon situations, e.g.
    * when a sequential liability agreement has been arranged.
    * </pre>
    *
@@ -352,7 +352,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A secondary Payments profile ID present in uncommon situations, e.g.
+   * A secondary payments profile ID present in uncommon situations, e.g.
    * when a sequential liability agreement has been arranged.
    * </pre>
    *
@@ -363,7 +363,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A secondary Payments profile ID present in uncommon situations, e.g.
+   * A secondary payments profile ID present in uncommon situations, e.g.
    * when a sequential liability agreement has been arranged.
    * </pre>
    *
@@ -609,7 +609,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A Payments account, which can be used to set up billing for an Ads customer.
+   * A payments account, which can be used to set up billing for an Ads customer.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v2.resources.PaymentsAccount}
@@ -832,7 +832,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the Payments account.
+     * The resource name of the payments account.
      * PaymentsAccount resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * </pre>
@@ -853,7 +853,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Payments account.
+     * The resource name of the payments account.
      * PaymentsAccount resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * </pre>
@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Payments account.
+     * The resource name of the payments account.
      * PaymentsAccount resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * </pre>
@@ -894,7 +894,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Payments account.
+     * The resource name of the payments account.
      * PaymentsAccount resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * </pre>
@@ -909,7 +909,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Payments account.
+     * The resource name of the payments account.
      * PaymentsAccount resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * </pre>
@@ -933,7 +933,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountIdBuilder_;
     /**
      * <pre>
-     * A 16 digit ID used to identify a Payments account.
+     * A 16 digit ID used to identify a payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -943,7 +943,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a Payments account.
+     * A 16 digit ID used to identify a payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -957,7 +957,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a Payments account.
+     * A 16 digit ID used to identify a payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -977,7 +977,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a Payments account.
+     * A 16 digit ID used to identify a payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -995,7 +995,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a Payments account.
+     * A 16 digit ID used to identify a payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -1017,7 +1017,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a Payments account.
+     * A 16 digit ID used to identify a payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -1035,7 +1035,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a Payments account.
+     * A 16 digit ID used to identify a payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -1047,7 +1047,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a Payments account.
+     * A 16 digit ID used to identify a payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -1062,7 +1062,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a Payments account.
+     * A 16 digit ID used to identify a payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
@@ -1086,7 +1086,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
      * <pre>
-     * The name of the Payments account.
+     * The name of the payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3;</code>
@@ -1096,7 +1096,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Payments account.
+     * The name of the payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3;</code>
@@ -1110,7 +1110,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Payments account.
+     * The name of the payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3;</code>
@@ -1130,7 +1130,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Payments account.
+     * The name of the payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3;</code>
@@ -1148,7 +1148,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Payments account.
+     * The name of the payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3;</code>
@@ -1170,7 +1170,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Payments account.
+     * The name of the payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3;</code>
@@ -1188,7 +1188,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Payments account.
+     * The name of the payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3;</code>
@@ -1200,7 +1200,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Payments account.
+     * The name of the payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3;</code>
@@ -1215,7 +1215,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Payments account.
+     * The name of the payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 3;</code>
@@ -1239,7 +1239,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyCodeBuilder_;
     /**
      * <pre>
-     * The currency code of the Payments account.
+     * The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
@@ -1251,7 +1251,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the Payments account.
+     * The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
@@ -1267,7 +1267,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the Payments account.
+     * The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
@@ -1289,7 +1289,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the Payments account.
+     * The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
@@ -1309,7 +1309,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the Payments account.
+     * The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
@@ -1333,7 +1333,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the Payments account.
+     * The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
@@ -1353,7 +1353,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the Payments account.
+     * The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
@@ -1367,7 +1367,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the Payments account.
+     * The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
@@ -1384,7 +1384,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the Payments account.
+     * The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
@@ -1410,8 +1410,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileIdBuilder_;
     /**
      * <pre>
-     * A 12 digit ID used to identify the Payments profile associated with the
-     * Payments account.
+     * A 12 digit ID used to identify the payments profile associated with the
+     * payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -1421,8 +1421,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the Payments profile associated with the
-     * Payments account.
+     * A 12 digit ID used to identify the payments profile associated with the
+     * payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -1436,8 +1436,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the Payments profile associated with the
-     * Payments account.
+     * A 12 digit ID used to identify the payments profile associated with the
+     * payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -1457,8 +1457,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the Payments profile associated with the
-     * Payments account.
+     * A 12 digit ID used to identify the payments profile associated with the
+     * payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -1476,8 +1476,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the Payments profile associated with the
-     * Payments account.
+     * A 12 digit ID used to identify the payments profile associated with the
+     * payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -1499,8 +1499,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the Payments profile associated with the
-     * Payments account.
+     * A 12 digit ID used to identify the payments profile associated with the
+     * payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -1518,8 +1518,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the Payments profile associated with the
-     * Payments account.
+     * A 12 digit ID used to identify the payments profile associated with the
+     * payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -1531,8 +1531,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the Payments profile associated with the
-     * Payments account.
+     * A 12 digit ID used to identify the payments profile associated with the
+     * payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -1547,8 +1547,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the Payments profile associated with the
-     * Payments account.
+     * A 12 digit ID used to identify the payments profile associated with the
+     * payments account.
      * </pre>
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
@@ -1572,7 +1572,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> secondaryPaymentsProfileIdBuilder_;
     /**
      * <pre>
-     * A secondary Payments profile ID present in uncommon situations, e.g.
+     * A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
@@ -1583,7 +1583,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary Payments profile ID present in uncommon situations, e.g.
+     * A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
@@ -1598,7 +1598,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary Payments profile ID present in uncommon situations, e.g.
+     * A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
@@ -1619,7 +1619,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary Payments profile ID present in uncommon situations, e.g.
+     * A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
@@ -1638,7 +1638,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary Payments profile ID present in uncommon situations, e.g.
+     * A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
@@ -1661,7 +1661,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary Payments profile ID present in uncommon situations, e.g.
+     * A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
@@ -1680,7 +1680,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary Payments profile ID present in uncommon situations, e.g.
+     * A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
@@ -1693,7 +1693,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary Payments profile ID present in uncommon situations, e.g.
+     * A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
@@ -1709,7 +1709,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary Payments profile ID present in uncommon situations, e.g.
+     * A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *

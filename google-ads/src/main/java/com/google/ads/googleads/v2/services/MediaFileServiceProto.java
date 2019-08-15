@@ -52,39 +52,38 @@ public final class MediaFileServiceProto {
       "_file_service.proto\022 google.ads.googlead" +
       "s.v2.services\0322google/ads/googleads/v2/r" +
       "esources/media_file.proto\032\034google/api/an" +
-      "notations.proto\032\036google/protobuf/wrapper" +
-      "s.proto\032\027google/rpc/status.proto\032\027google" +
-      "/api/client.proto\",\n\023GetMediaFileRequest" +
-      "\022\025\n\rresource_name\030\001 \001(\t\"\250\001\n\027MutateMediaF" +
-      "ilesRequest\022\023\n\013customer_id\030\001 \001(\t\022H\n\noper" +
-      "ations\030\002 \003(\01324.google.ads.googleads.v2.s" +
-      "ervices.MediaFileOperation\022\027\n\017partial_fa" +
-      "ilure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"a\n\022Me" +
-      "diaFileOperation\022>\n\006create\030\001 \001(\0132,.googl" +
-      "e.ads.googleads.v2.resources.MediaFileH\000" +
-      "B\013\n\toperation\"\227\001\n\030MutateMediaFilesRespon" +
-      "se\0221\n\025partial_failure_error\030\003 \001(\0132\022.goog" +
-      "le.rpc.Status\022H\n\007results\030\002 \003(\01327.google." +
-      "ads.googleads.v2.services.MutateMediaFil" +
-      "eResult\".\n\025MutateMediaFileResult\022\025\n\rreso" +
-      "urce_name\030\001 \001(\t2\243\003\n\020MediaFileService\022\251\001\n" +
-      "\014GetMediaFile\0225.google.ads.googleads.v2." +
-      "services.GetMediaFileRequest\032,.google.ad" +
-      "s.googleads.v2.resources.MediaFile\"4\202\323\344\223" +
-      "\002.\022,/v2/{resource_name=customers/*/media" +
-      "Files/*}\022\305\001\n\020MutateMediaFiles\0229.google.a" +
-      "ds.googleads.v2.services.MutateMediaFile" +
-      "sRequest\032:.google.ads.googleads.v2.servi" +
-      "ces.MutateMediaFilesResponse\":\202\323\344\223\0024\"//v" +
-      "2/customers/{customer_id=*}/mediaFiles:m" +
-      "utate:\001*\032\033\312A\030googleads.googleapis.comB\374\001" +
-      "\n$com.google.ads.googleads.v2.servicesB\025" +
-      "MediaFileServiceProtoP\001ZHgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v2/" +
-      "services;services\242\002\003GAA\252\002 Google.Ads.Goo" +
-      "gleAds.V2.Services\312\002 Google\\Ads\\GoogleAd" +
-      "s\\V2\\Services\352\002$Google::Ads::GoogleAds::" +
-      "V2::Servicesb\006proto3"
+      "notations.proto\032\027google/rpc/status.proto" +
+      "\032\027google/api/client.proto\",\n\023GetMediaFil" +
+      "eRequest\022\025\n\rresource_name\030\001 \001(\t\"\250\001\n\027Muta" +
+      "teMediaFilesRequest\022\023\n\013customer_id\030\001 \001(\t" +
+      "\022H\n\noperations\030\002 \003(\01324.google.ads.google" +
+      "ads.v2.services.MediaFileOperation\022\027\n\017pa" +
+      "rtial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001" +
+      "(\010\"a\n\022MediaFileOperation\022>\n\006create\030\001 \001(\013" +
+      "2,.google.ads.googleads.v2.resources.Med" +
+      "iaFileH\000B\013\n\toperation\"\227\001\n\030MutateMediaFil" +
+      "esResponse\0221\n\025partial_failure_error\030\003 \001(" +
+      "\0132\022.google.rpc.Status\022H\n\007results\030\002 \003(\01327" +
+      ".google.ads.googleads.v2.services.Mutate" +
+      "MediaFileResult\".\n\025MutateMediaFileResult" +
+      "\022\025\n\rresource_name\030\001 \001(\t2\243\003\n\020MediaFileSer" +
+      "vice\022\251\001\n\014GetMediaFile\0225.google.ads.googl" +
+      "eads.v2.services.GetMediaFileRequest\032,.g" +
+      "oogle.ads.googleads.v2.resources.MediaFi" +
+      "le\"4\202\323\344\223\002.\022,/v2/{resource_name=customers" +
+      "/*/mediaFiles/*}\022\305\001\n\020MutateMediaFiles\0229." +
+      "google.ads.googleads.v2.services.MutateM" +
+      "ediaFilesRequest\032:.google.ads.googleads." +
+      "v2.services.MutateMediaFilesResponse\":\202\323" +
+      "\344\223\0024\"//v2/customers/{customer_id=*}/medi" +
+      "aFiles:mutate:\001*\032\033\312A\030googleads.googleapi" +
+      "s.comB\374\001\n$com.google.ads.googleads.v2.se" +
+      "rvicesB\025MediaFileServiceProtoP\001ZHgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v2/services;services\242\002\003GAA\252\002 Google" +
+      ".Ads.GoogleAds.V2.Services\312\002 Google\\Ads\\" +
+      "GoogleAds\\V2\\Services\352\002$Google::Ads::Goo" +
+      "gleAds::V2::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -99,7 +98,6 @@ public final class MediaFileServiceProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.MediaFileProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
         }, assigner);
@@ -141,7 +139,6 @@ public final class MediaFileServiceProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.MediaFileProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
   }

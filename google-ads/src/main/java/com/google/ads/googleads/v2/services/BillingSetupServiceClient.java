@@ -30,8 +30,8 @@ import javax.annotation.Generated;
 /**
  * Service Description: A service for designating the business entity responsible for accrued costs.
  *
- * <p>A billing setup is associated with a Payments account. Billing-related activity for all
- * billing setups associated with a particular Payments account will appear on a single invoice
+ * <p>A billing setup is associated with a payments account. Billing-related activity for all
+ * billing setups associated with a particular payments account will appear on a single invoice
  * generated monthly.
  *
  * <p>Mutates: The REMOVE operation cancels a pending billing setup. The CREATE operation creates a

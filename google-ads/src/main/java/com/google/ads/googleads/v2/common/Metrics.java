@@ -1087,9 +1087,9 @@ private static final long serialVersionUID = 0L;
           }
           case 800: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField2_ & 0x00000020) != 0)) {
+            if (!((mutable_bitField2_ & 0x00000040) != 0)) {
               interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField2_ |= 0x00000020;
+              mutable_bitField2_ |= 0x00000040;
             }
             interactionEventTypes_.add(rawValue);
             break;
@@ -1099,9 +1099,9 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField2_ & 0x00000020) != 0)) {
+              if (!((mutable_bitField2_ & 0x00000040) != 0)) {
                 interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField2_ |= 0x00000020;
+                mutable_bitField2_ |= 0x00000040;
               }
               interactionEventTypes_.add(rawValue);
             }
@@ -1472,6 +1472,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 1034: {
+            com.google.protobuf.DoubleValue.Builder subBuilder = null;
+            if (hotelPriceDifferencePercentage_ != null) {
+              subBuilder = hotelPriceDifferencePercentage_.toBuilder();
+            }
+            hotelPriceDifferencePercentage_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hotelPriceDifferencePercentage_);
+              hotelPriceDifferencePercentage_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1487,7 +1500,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField2_ & 0x00000020) != 0)) {
+      if (((mutable_bitField2_ & 0x00000040) != 0)) {
         interactionEventTypes_ = java.util.Collections.unmodifiableList(interactionEventTypes_);
       }
       this.unknownFields = unknownFields.build();
@@ -3678,6 +3691,42 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.DoubleValueOrBuilder getHotelAverageLeadValueMicrosOrBuilder() {
     return getHotelAverageLeadValueMicros();
+  }
+
+  public static final int HOTEL_PRICE_DIFFERENCE_PERCENTAGE_FIELD_NUMBER = 129;
+  private com.google.protobuf.DoubleValue hotelPriceDifferencePercentage_;
+  /**
+   * <pre>
+   * The average price difference between the price offered by reporting hotel
+   * advertiser and the cheapest price offered by the competing advertiser.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+   */
+  public boolean hasHotelPriceDifferencePercentage() {
+    return hotelPriceDifferencePercentage_ != null;
+  }
+  /**
+   * <pre>
+   * The average price difference between the price offered by reporting hotel
+   * advertiser and the cheapest price offered by the competing advertiser.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+   */
+  public com.google.protobuf.DoubleValue getHotelPriceDifferencePercentage() {
+    return hotelPriceDifferencePercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : hotelPriceDifferencePercentage_;
+  }
+  /**
+   * <pre>
+   * The average price difference between the price offered by reporting hotel
+   * advertiser and the cheapest price offered by the competing advertiser.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+   */
+  public com.google.protobuf.DoubleValueOrBuilder getHotelPriceDifferencePercentageOrBuilder() {
+    return getHotelPriceDifferencePercentage();
   }
 
   public static final int HISTORICAL_CREATIVE_QUALITY_SCORE_FIELD_NUMBER = 80;
@@ -5988,6 +6037,9 @@ private static final long serialVersionUID = 0L;
     if (messageChatRate_ != null) {
       output.writeMessage(128, getMessageChatRate());
     }
+    if (hotelPriceDifferencePercentage_ != null) {
+      output.writeMessage(129, getHotelPriceDifferencePercentage());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -6445,6 +6497,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(128, getMessageChatRate());
     }
+    if (hotelPriceDifferencePercentage_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(129, getHotelPriceDifferencePercentage());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -6749,6 +6805,11 @@ private static final long serialVersionUID = 0L;
     if (hasHotelAverageLeadValueMicros()) {
       if (!getHotelAverageLeadValueMicros()
           .equals(other.getHotelAverageLeadValueMicros())) return false;
+    }
+    if (hasHotelPriceDifferencePercentage() != other.hasHotelPriceDifferencePercentage()) return false;
+    if (hasHotelPriceDifferencePercentage()) {
+      if (!getHotelPriceDifferencePercentage()
+          .equals(other.getHotelPriceDifferencePercentage())) return false;
     }
     if (historicalCreativeQualityScore_ != other.historicalCreativeQualityScore_) return false;
     if (historicalLandingPageQualityScore_ != other.historicalLandingPageQualityScore_) return false;
@@ -7236,6 +7297,10 @@ private static final long serialVersionUID = 0L;
     if (hasHotelAverageLeadValueMicros()) {
       hash = (37 * hash) + HOTEL_AVERAGE_LEAD_VALUE_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + getHotelAverageLeadValueMicros().hashCode();
+    }
+    if (hasHotelPriceDifferencePercentage()) {
+      hash = (37 * hash) + HOTEL_PRICE_DIFFERENCE_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getHotelPriceDifferencePercentage().hashCode();
     }
     hash = (37 * hash) + HISTORICAL_CREATIVE_QUALITY_SCORE_FIELD_NUMBER;
     hash = (53 * hash) + historicalCreativeQualityScore_;
@@ -7924,6 +7989,12 @@ private static final long serialVersionUID = 0L;
         hotelAverageLeadValueMicros_ = null;
         hotelAverageLeadValueMicrosBuilder_ = null;
       }
+      if (hotelPriceDifferencePercentageBuilder_ == null) {
+        hotelPriceDifferencePercentage_ = null;
+      } else {
+        hotelPriceDifferencePercentage_ = null;
+        hotelPriceDifferencePercentageBuilder_ = null;
+      }
       historicalCreativeQualityScore_ = 0;
 
       historicalLandingPageQualityScore_ = 0;
@@ -7979,7 +8050,7 @@ private static final long serialVersionUID = 0L;
         interactionsBuilder_ = null;
       }
       interactionEventTypes_ = java.util.Collections.emptyList();
-      bitField2_ = (bitField2_ & ~0x00000020);
+      bitField2_ = (bitField2_ & ~0x00000040);
       if (invalidClickRateBuilder_ == null) {
         invalidClickRate_ = null;
       } else {
@@ -8544,6 +8615,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.hotelAverageLeadValueMicros_ = hotelAverageLeadValueMicrosBuilder_.build();
       }
+      if (hotelPriceDifferencePercentageBuilder_ == null) {
+        result.hotelPriceDifferencePercentage_ = hotelPriceDifferencePercentage_;
+      } else {
+        result.hotelPriceDifferencePercentage_ = hotelPriceDifferencePercentageBuilder_.build();
+      }
       result.historicalCreativeQualityScore_ = historicalCreativeQualityScore_;
       result.historicalLandingPageQualityScore_ = historicalLandingPageQualityScore_;
       if (historicalQualityScoreBuilder_ == null) {
@@ -8587,9 +8663,9 @@ private static final long serialVersionUID = 0L;
       } else {
         result.interactions_ = interactionsBuilder_.build();
       }
-      if (((bitField2_ & 0x00000020) != 0)) {
+      if (((bitField2_ & 0x00000040) != 0)) {
         interactionEventTypes_ = java.util.Collections.unmodifiableList(interactionEventTypes_);
-        bitField2_ = (bitField2_ & ~0x00000020);
+        bitField2_ = (bitField2_ & ~0x00000040);
       }
       result.interactionEventTypes_ = interactionEventTypes_;
       if (invalidClickRateBuilder_ == null) {
@@ -9018,6 +9094,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasHotelAverageLeadValueMicros()) {
         mergeHotelAverageLeadValueMicros(other.getHotelAverageLeadValueMicros());
       }
+      if (other.hasHotelPriceDifferencePercentage()) {
+        mergeHotelPriceDifferencePercentage(other.getHotelPriceDifferencePercentage());
+      }
       if (other.historicalCreativeQualityScore_ != 0) {
         setHistoricalCreativeQualityScoreValue(other.getHistoricalCreativeQualityScoreValue());
       }
@@ -9054,7 +9133,7 @@ private static final long serialVersionUID = 0L;
       if (!other.interactionEventTypes_.isEmpty()) {
         if (interactionEventTypes_.isEmpty()) {
           interactionEventTypes_ = other.interactionEventTypes_;
-          bitField2_ = (bitField2_ & ~0x00000020);
+          bitField2_ = (bitField2_ & ~0x00000040);
         } else {
           ensureInteractionEventTypesIsMutable();
           interactionEventTypes_.addAll(other.interactionEventTypes_);
@@ -18853,6 +18932,168 @@ private static final long serialVersionUID = 0L;
       return hotelAverageLeadValueMicrosBuilder_;
     }
 
+    private com.google.protobuf.DoubleValue hotelPriceDifferencePercentage_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> hotelPriceDifferencePercentageBuilder_;
+    /**
+     * <pre>
+     * The average price difference between the price offered by reporting hotel
+     * advertiser and the cheapest price offered by the competing advertiser.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+     */
+    public boolean hasHotelPriceDifferencePercentage() {
+      return hotelPriceDifferencePercentageBuilder_ != null || hotelPriceDifferencePercentage_ != null;
+    }
+    /**
+     * <pre>
+     * The average price difference between the price offered by reporting hotel
+     * advertiser and the cheapest price offered by the competing advertiser.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+     */
+    public com.google.protobuf.DoubleValue getHotelPriceDifferencePercentage() {
+      if (hotelPriceDifferencePercentageBuilder_ == null) {
+        return hotelPriceDifferencePercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : hotelPriceDifferencePercentage_;
+      } else {
+        return hotelPriceDifferencePercentageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The average price difference between the price offered by reporting hotel
+     * advertiser and the cheapest price offered by the competing advertiser.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+     */
+    public Builder setHotelPriceDifferencePercentage(com.google.protobuf.DoubleValue value) {
+      if (hotelPriceDifferencePercentageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        hotelPriceDifferencePercentage_ = value;
+        onChanged();
+      } else {
+        hotelPriceDifferencePercentageBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The average price difference between the price offered by reporting hotel
+     * advertiser and the cheapest price offered by the competing advertiser.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+     */
+    public Builder setHotelPriceDifferencePercentage(
+        com.google.protobuf.DoubleValue.Builder builderForValue) {
+      if (hotelPriceDifferencePercentageBuilder_ == null) {
+        hotelPriceDifferencePercentage_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelPriceDifferencePercentageBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The average price difference between the price offered by reporting hotel
+     * advertiser and the cheapest price offered by the competing advertiser.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+     */
+    public Builder mergeHotelPriceDifferencePercentage(com.google.protobuf.DoubleValue value) {
+      if (hotelPriceDifferencePercentageBuilder_ == null) {
+        if (hotelPriceDifferencePercentage_ != null) {
+          hotelPriceDifferencePercentage_ =
+            com.google.protobuf.DoubleValue.newBuilder(hotelPriceDifferencePercentage_).mergeFrom(value).buildPartial();
+        } else {
+          hotelPriceDifferencePercentage_ = value;
+        }
+        onChanged();
+      } else {
+        hotelPriceDifferencePercentageBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The average price difference between the price offered by reporting hotel
+     * advertiser and the cheapest price offered by the competing advertiser.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+     */
+    public Builder clearHotelPriceDifferencePercentage() {
+      if (hotelPriceDifferencePercentageBuilder_ == null) {
+        hotelPriceDifferencePercentage_ = null;
+        onChanged();
+      } else {
+        hotelPriceDifferencePercentage_ = null;
+        hotelPriceDifferencePercentageBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The average price difference between the price offered by reporting hotel
+     * advertiser and the cheapest price offered by the competing advertiser.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+     */
+    public com.google.protobuf.DoubleValue.Builder getHotelPriceDifferencePercentageBuilder() {
+      
+      onChanged();
+      return getHotelPriceDifferencePercentageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The average price difference between the price offered by reporting hotel
+     * advertiser and the cheapest price offered by the competing advertiser.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getHotelPriceDifferencePercentageOrBuilder() {
+      if (hotelPriceDifferencePercentageBuilder_ != null) {
+        return hotelPriceDifferencePercentageBuilder_.getMessageOrBuilder();
+      } else {
+        return hotelPriceDifferencePercentage_ == null ?
+            com.google.protobuf.DoubleValue.getDefaultInstance() : hotelPriceDifferencePercentage_;
+      }
+    }
+    /**
+     * <pre>
+     * The average price difference between the price offered by reporting hotel
+     * advertiser and the cheapest price offered by the competing advertiser.
+     * </pre>
+     *
+     * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+        getHotelPriceDifferencePercentageFieldBuilder() {
+      if (hotelPriceDifferencePercentageBuilder_ == null) {
+        hotelPriceDifferencePercentageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                getHotelPriceDifferencePercentage(),
+                getParentForChildren(),
+                isClean());
+        hotelPriceDifferencePercentage_ = null;
+      }
+      return hotelPriceDifferencePercentageBuilder_;
+    }
+
     private int historicalCreativeQualityScore_ = 0;
     /**
      * <pre>
@@ -20347,9 +20588,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> interactionEventTypes_ =
       java.util.Collections.emptyList();
     private void ensureInteractionEventTypesIsMutable() {
-      if (!((bitField2_ & 0x00000020) != 0)) {
+      if (!((bitField2_ & 0x00000040) != 0)) {
         interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>(interactionEventTypes_);
-        bitField2_ |= 0x00000020;
+        bitField2_ |= 0x00000040;
       }
     }
     /**
@@ -20441,7 +20682,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearInteractionEventTypes() {
       interactionEventTypes_ = java.util.Collections.emptyList();
-      bitField2_ = (bitField2_ & ~0x00000020);
+      bitField2_ = (bitField2_ & ~0x00000040);
       onChanged();
       return this;
     }
