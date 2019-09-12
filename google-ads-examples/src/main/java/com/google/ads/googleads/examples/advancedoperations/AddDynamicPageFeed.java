@@ -347,14 +347,14 @@ public class AddDynamicPageFeed {
           FeedItemAttributeValue.newBuilder()
               .setFeedAttributeId(Int64Value.of(
                 feedAttributes.get(DsaPageFeedCriterionField.PAGE_URL).getId().getValue()))
-              .setStringValue(StringValue.of(url))
+              .addStringValues(StringValue.of(url))
               .build();
       // Creates a label attribute.
       FeedItemAttributeValue labelAttributeValue =
           FeedItemAttributeValue.newBuilder()
               .setFeedAttributeId(Int64Value.of(
                 feedAttributes.get(DsaPageFeedCriterionField.LABEL).getId().getValue()))
-              .setStringValue(StringValue.of(dsaPageUrlLabel))
+              .addStringValues(StringValue.of(dsaPageUrlLabel))
               .build();
       // Creates a feed item.
       FeedItem feedItem =
