@@ -1,3 +1,7 @@
+4.2.0 - 2019-09-27
+------------------
+- Added support for Google Ads API v2_2.
+
 4.1.0 - 2019-08-15
 ------------------
 - Added support for Google Ads API v2_1.
