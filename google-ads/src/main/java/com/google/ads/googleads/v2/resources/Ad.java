@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
       throw new java.lang.NullPointerException();
     }
     int mutable_bitField0_ = 0;
+    int mutable_bitField1_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -125,9 +126,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 82: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.CustomParameter>();
-              mutable_bitField0_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000080;
             }
             urlCustomParameters_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.CustomParameter.parser(), extensionRegistry));
@@ -314,9 +315,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 210: {
-            if (!((mutable_bitField0_ & 0x00000800) != 0)) {
+            if (!((mutable_bitField0_ & 0x00001000) != 0)) {
               urlCollections_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.UrlCollection>();
-              mutable_bitField0_ |= 0x00000800;
+              mutable_bitField0_ |= 0x00001000;
             }
             urlCollections_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.UrlCollection.parser(), extensionRegistry));
@@ -441,6 +442,19 @@ private static final long serialVersionUID = 0L;
             resourceName_ = s;
             break;
           }
+          case 306: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (finalUrlSuffix_ != null) {
+              subBuilder = finalUrlSuffix_.toBuilder();
+            }
+            finalUrlSuffix_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(finalUrlSuffix_);
+              finalUrlSuffix_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -459,13 +473,13 @@ private static final long serialVersionUID = 0L;
       if (((mutable_bitField0_ & 0x00000004) != 0)) {
         finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
       }
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
+      if (((mutable_bitField0_ & 0x00000080) != 0)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
       if (((mutable_bitField0_ & 0x00000010) != 0)) {
         finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
       }
-      if (((mutable_bitField0_ & 0x00000800) != 0)) {
+      if (((mutable_bitField0_ & 0x00001000) != 0)) {
         urlCollections_ = java.util.Collections.unmodifiableList(urlCollections_);
       }
       if (((mutable_bitField0_ & 0x00000008) != 0)) {
@@ -849,6 +863,39 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.StringValueOrBuilder getTrackingUrlTemplateOrBuilder() {
     return getTrackingUrlTemplate();
+  }
+
+  public static final int FINAL_URL_SUFFIX_FIELD_NUMBER = 38;
+  private com.google.protobuf.StringValue finalUrlSuffix_;
+  /**
+   * <pre>
+   * The suffix to use when constructing a final URL.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   */
+  public boolean hasFinalUrlSuffix() {
+    return finalUrlSuffix_ != null;
+  }
+  /**
+   * <pre>
+   * The suffix to use when constructing a final URL.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   */
+  public com.google.protobuf.StringValue getFinalUrlSuffix() {
+    return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
+  }
+  /**
+   * <pre>
+   * The suffix to use when constructing a final URL.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
+    return getFinalUrlSuffix();
   }
 
   public static final int URL_CUSTOM_PARAMETERS_FIELD_NUMBER = 10;
@@ -1975,6 +2022,9 @@ private static final long serialVersionUID = 0L;
     if (!getResourceNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 37, resourceName_);
     }
+    if (finalUrlSuffix_ != null) {
+      output.writeMessage(38, getFinalUrlSuffix());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2111,6 +2161,10 @@ private static final long serialVersionUID = 0L;
     if (!getResourceNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, resourceName_);
     }
+    if (finalUrlSuffix_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(38, getFinalUrlSuffix());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2143,6 +2197,11 @@ private static final long serialVersionUID = 0L;
     if (hasTrackingUrlTemplate()) {
       if (!getTrackingUrlTemplate()
           .equals(other.getTrackingUrlTemplate())) return false;
+    }
+    if (hasFinalUrlSuffix() != other.hasFinalUrlSuffix()) return false;
+    if (hasFinalUrlSuffix()) {
+      if (!getFinalUrlSuffix()
+          .equals(other.getFinalUrlSuffix())) return false;
     }
     if (!getUrlCustomParametersList()
         .equals(other.getUrlCustomParametersList())) return false;
@@ -2275,6 +2334,10 @@ private static final long serialVersionUID = 0L;
     if (hasTrackingUrlTemplate()) {
       hash = (37 * hash) + TRACKING_URL_TEMPLATE_FIELD_NUMBER;
       hash = (53 * hash) + getTrackingUrlTemplate().hashCode();
+    }
+    if (hasFinalUrlSuffix()) {
+      hash = (37 * hash) + FINAL_URL_SUFFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getFinalUrlSuffix().hashCode();
     }
     if (getUrlCustomParametersCount() > 0) {
       hash = (37 * hash) + URL_CUSTOM_PARAMETERS_FIELD_NUMBER;
@@ -2552,9 +2615,15 @@ private static final long serialVersionUID = 0L;
         trackingUrlTemplate_ = null;
         trackingUrlTemplateBuilder_ = null;
       }
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffix_ = null;
+      } else {
+        finalUrlSuffix_ = null;
+        finalUrlSuffixBuilder_ = null;
+      }
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
       } else {
         urlCustomParametersBuilder_.clear();
       }
@@ -2576,7 +2645,7 @@ private static final long serialVersionUID = 0L;
 
       if (urlCollectionsBuilder_ == null) {
         urlCollections_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
       } else {
         urlCollectionsBuilder_.clear();
       }
@@ -2617,6 +2686,7 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.resources.Ad buildPartial() {
       com.google.ads.googleads.v2.resources.Ad result = new com.google.ads.googleads.v2.resources.Ad(this);
       int from_bitField0_ = bitField0_;
+      int from_bitField1_ = bitField1_;
       int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (idBuilder_ == null) {
@@ -2656,10 +2726,15 @@ private static final long serialVersionUID = 0L;
       } else {
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
+      if (finalUrlSuffixBuilder_ == null) {
+        result.finalUrlSuffix_ = finalUrlSuffix_;
+      } else {
+        result.finalUrlSuffix_ = finalUrlSuffixBuilder_.build();
+      }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
@@ -2678,9 +2753,9 @@ private static final long serialVersionUID = 0L;
       }
       result.devicePreference_ = devicePreference_;
       if (urlCollectionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0)) {
+        if (((bitField0_ & 0x00001000) != 0)) {
           urlCollections_ = java.util.Collections.unmodifiableList(urlCollections_);
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.urlCollections_ = urlCollections_;
       } else {
@@ -2956,11 +3031,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasTrackingUrlTemplate()) {
         mergeTrackingUrlTemplate(other.getTrackingUrlTemplate());
       }
+      if (other.hasFinalUrlSuffix()) {
+        mergeFinalUrlSuffix(other.getFinalUrlSuffix());
+      }
       if (urlCustomParametersBuilder_ == null) {
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -2973,7 +3051,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -2998,7 +3076,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCollections_.isEmpty()) {
           if (urlCollections_.isEmpty()) {
             urlCollections_ = other.urlCollections_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00001000);
           } else {
             ensureUrlCollectionsIsMutable();
             urlCollections_.addAll(other.urlCollections_);
@@ -3011,7 +3089,7 @@ private static final long serialVersionUID = 0L;
             urlCollectionsBuilder_.dispose();
             urlCollectionsBuilder_ = null;
             urlCollections_ = other.urlCollections_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00001000);
             urlCollectionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCollectionsFieldBuilder() : null;
@@ -3147,6 +3225,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private int bitField0_;
+    private int bitField1_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -4543,12 +4622,165 @@ private static final long serialVersionUID = 0L;
       return trackingUrlTemplateBuilder_;
     }
 
+    private com.google.protobuf.StringValue finalUrlSuffix_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> finalUrlSuffixBuilder_;
+    /**
+     * <pre>
+     * The suffix to use when constructing a final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public boolean hasFinalUrlSuffix() {
+      return finalUrlSuffixBuilder_ != null || finalUrlSuffix_ != null;
+    }
+    /**
+     * <pre>
+     * The suffix to use when constructing a final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public com.google.protobuf.StringValue getFinalUrlSuffix() {
+      if (finalUrlSuffixBuilder_ == null) {
+        return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
+      } else {
+        return finalUrlSuffixBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The suffix to use when constructing a final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public Builder setFinalUrlSuffix(com.google.protobuf.StringValue value) {
+      if (finalUrlSuffixBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        finalUrlSuffix_ = value;
+        onChanged();
+      } else {
+        finalUrlSuffixBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The suffix to use when constructing a final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public Builder setFinalUrlSuffix(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffix_ = builderForValue.build();
+        onChanged();
+      } else {
+        finalUrlSuffixBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The suffix to use when constructing a final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public Builder mergeFinalUrlSuffix(com.google.protobuf.StringValue value) {
+      if (finalUrlSuffixBuilder_ == null) {
+        if (finalUrlSuffix_ != null) {
+          finalUrlSuffix_ =
+            com.google.protobuf.StringValue.newBuilder(finalUrlSuffix_).mergeFrom(value).buildPartial();
+        } else {
+          finalUrlSuffix_ = value;
+        }
+        onChanged();
+      } else {
+        finalUrlSuffixBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The suffix to use when constructing a final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public Builder clearFinalUrlSuffix() {
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffix_ = null;
+        onChanged();
+      } else {
+        finalUrlSuffix_ = null;
+        finalUrlSuffixBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The suffix to use when constructing a final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public com.google.protobuf.StringValue.Builder getFinalUrlSuffixBuilder() {
+      
+      onChanged();
+      return getFinalUrlSuffixFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The suffix to use when constructing a final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
+      if (finalUrlSuffixBuilder_ != null) {
+        return finalUrlSuffixBuilder_.getMessageOrBuilder();
+      } else {
+        return finalUrlSuffix_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
+      }
+    }
+    /**
+     * <pre>
+     * The suffix to use when constructing a final URL.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getFinalUrlSuffixFieldBuilder() {
+      if (finalUrlSuffixBuilder_ == null) {
+        finalUrlSuffixBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getFinalUrlSuffix(),
+                getParentForChildren(),
+                isClean());
+        finalUrlSuffix_ = null;
+      }
+      return finalUrlSuffixBuilder_;
+    }
+
     private java.util.List<com.google.ads.googleads.v2.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
        }
     }
 
@@ -4753,7 +4985,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -4865,7 +5097,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.CustomParameter, com.google.ads.googleads.v2.common.CustomParameter.Builder, com.google.ads.googleads.v2.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -5364,9 +5596,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.UrlCollection> urlCollections_ =
       java.util.Collections.emptyList();
     private void ensureUrlCollectionsIsMutable() {
-      if (!((bitField0_ & 0x00000800) != 0)) {
+      if (!((bitField0_ & 0x00001000) != 0)) {
         urlCollections_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.UrlCollection>(urlCollections_);
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
        }
     }
 
@@ -5571,7 +5803,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCollections() {
       if (urlCollectionsBuilder_ == null) {
         urlCollections_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
       } else {
         urlCollectionsBuilder_.clear();
@@ -5683,7 +5915,7 @@ private static final long serialVersionUID = 0L;
         urlCollectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.UrlCollection, com.google.ads.googleads.v2.common.UrlCollection.Builder, com.google.ads.googleads.v2.common.UrlCollectionOrBuilder>(
                 urlCollections_,
-                ((bitField0_ & 0x00000800) != 0),
+                ((bitField0_ & 0x00001000) != 0),
                 getParentForChildren(),
                 isClean());
         urlCollections_ = null;

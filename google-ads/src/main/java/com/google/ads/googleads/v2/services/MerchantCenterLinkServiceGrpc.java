@@ -176,7 +176,7 @@ public final class MerchantCenterLinkServiceGrpc {
 
     /**
      * <pre>
-     * Returns Merchant Center links available tor this customer.
+     * Returns Merchant Center links available for this customer.
      * </pre>
      */
     public void listMerchantCenterLinks(com.google.ads.googleads.v2.services.ListMerchantCenterLinksRequest request,
@@ -255,7 +255,7 @@ public final class MerchantCenterLinkServiceGrpc {
 
     /**
      * <pre>
-     * Returns Merchant Center links available tor this customer.
+     * Returns Merchant Center links available for this customer.
      * </pre>
      */
     public void listMerchantCenterLinks(com.google.ads.googleads.v2.services.ListMerchantCenterLinksRequest request,
@@ -311,7 +311,7 @@ public final class MerchantCenterLinkServiceGrpc {
 
     /**
      * <pre>
-     * Returns Merchant Center links available tor this customer.
+     * Returns Merchant Center links available for this customer.
      * </pre>
      */
     public com.google.ads.googleads.v2.services.ListMerchantCenterLinksResponse listMerchantCenterLinks(com.google.ads.googleads.v2.services.ListMerchantCenterLinksRequest request) {
@@ -364,7 +364,7 @@ public final class MerchantCenterLinkServiceGrpc {
 
     /**
      * <pre>
-     * Returns Merchant Center links available tor this customer.
+     * Returns Merchant Center links available for this customer.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.ListMerchantCenterLinksResponse> listMerchantCenterLinks(

@@ -1792,5 +1792,22 @@ public interface ErrorCodeOrBuilder extends
    */
   com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError getReachPlanError();
 
+  /**
+   * <pre>
+   * The reasons for the invoice error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+   */
+  int getInvoiceErrorValue();
+  /**
+   * <pre>
+   * The reasons for the invoice error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+   */
+  com.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError getInvoiceError();
+
   public com.google.ads.googleads.v2.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

@@ -219,7 +219,7 @@ public final class ReachPlanServiceGrpc {
 
     /**
      * <pre>
-     * Returns the list of plannable locations (e.g. countries, DMAs).
+     * Returns the list of plannable locations (for example, countries &amp; DMAs).
      * </pre>
      */
     public void listPlannableLocations(com.google.ads.googleads.v2.services.ListPlannableLocationsRequest request,
@@ -321,7 +321,7 @@ public final class ReachPlanServiceGrpc {
 
     /**
      * <pre>
-     * Returns the list of plannable locations (e.g. countries, DMAs).
+     * Returns the list of plannable locations (for example, countries &amp; DMAs).
      * </pre>
      */
     public void listPlannableLocations(com.google.ads.googleads.v2.services.ListPlannableLocationsRequest request,
@@ -394,7 +394,7 @@ public final class ReachPlanServiceGrpc {
 
     /**
      * <pre>
-     * Returns the list of plannable locations (e.g. countries, DMAs).
+     * Returns the list of plannable locations (for example, countries &amp; DMAs).
      * </pre>
      */
     public com.google.ads.googleads.v2.services.ListPlannableLocationsResponse listPlannableLocations(com.google.ads.googleads.v2.services.ListPlannableLocationsRequest request) {
@@ -463,7 +463,7 @@ public final class ReachPlanServiceGrpc {
 
     /**
      * <pre>
-     * Returns the list of plannable locations (e.g. countries, DMAs).
+     * Returns the list of plannable locations (for example, countries &amp; DMAs).
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.ListPlannableLocationsResponse> listPlannableLocations(

@@ -32,6 +32,7 @@ private static final long serialVersionUID = 0L;
     hotelCheckInDayOfWeek_ = 0;
     hotelDateSelectionType_ = 0;
     hotelRateType_ = 0;
+    hotelPriceBucket_ = 0;
     monthOfYear_ = 0;
     placeholderType_ = 0;
     productChannel_ = 0;
@@ -927,6 +928,12 @@ private static final long serialVersionUID = 0L;
               geoTargetCountry_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 624: {
+            int rawValue = input.readEnum();
+
+            hotelPriceBucket_ = rawValue;
             break;
           }
           default: {
@@ -2073,6 +2080,31 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType result = com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType.valueOf(hotelRateType_);
     return result == null ? com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType.UNRECOGNIZED : result;
+  }
+
+  public static final int HOTEL_PRICE_BUCKET_FIELD_NUMBER = 78;
+  private int hotelPriceBucket_;
+  /**
+   * <pre>
+   * Hotel price bucket.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+   */
+  public int getHotelPriceBucketValue() {
+    return hotelPriceBucket_;
+  }
+  /**
+   * <pre>
+   * Hotel price bucket.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+   */
+  public com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket getHotelPriceBucket() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket result = com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket.valueOf(hotelPriceBucket_);
+    return result == null ? com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket.UNRECOGNIZED : result;
   }
 
   public static final int HOTEL_STATE_FIELD_NUMBER = 15;
@@ -3630,6 +3662,9 @@ private static final long serialVersionUID = 0L;
     if (geoTargetCountry_ != null) {
       output.writeMessage(77, getGeoTargetCountry());
     }
+    if (hotelPriceBucket_ != com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket.UNSPECIFIED.getNumber()) {
+      output.writeEnum(78, hotelPriceBucket_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -3947,6 +3982,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(77, getGeoTargetCountry());
     }
+    if (hotelPriceBucket_ != com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(78, hotelPriceBucket_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -4094,6 +4133,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getHotelRateRuleId())) return false;
     }
     if (hotelRateType_ != other.hotelRateType_) return false;
+    if (hotelPriceBucket_ != other.hotelPriceBucket_) return false;
     if (hasHotelState() != other.hasHotelState()) return false;
     if (hasHotelState()) {
       if (!getHotelState()
@@ -4398,6 +4438,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + HOTEL_RATE_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + hotelRateType_;
+    hash = (37 * hash) + HOTEL_PRICE_BUCKET_FIELD_NUMBER;
+    hash = (53 * hash) + hotelPriceBucket_;
     if (hasHotelState()) {
       hash = (37 * hash) + HOTEL_STATE_FIELD_NUMBER;
       hash = (53 * hash) + getHotelState().hashCode();
@@ -4851,6 +4893,8 @@ private static final long serialVersionUID = 0L;
       }
       hotelRateType_ = 0;
 
+      hotelPriceBucket_ = 0;
+
       if (hotelStateBuilder_ == null) {
         hotelState_ = null;
       } else {
@@ -5223,6 +5267,7 @@ private static final long serialVersionUID = 0L;
         result.hotelRateRuleId_ = hotelRateRuleIdBuilder_.build();
       }
       result.hotelRateType_ = hotelRateType_;
+      result.hotelPriceBucket_ = hotelPriceBucket_;
       if (hotelStateBuilder_ == null) {
         result.hotelState_ = hotelState_;
       } else {
@@ -5551,6 +5596,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hotelRateType_ != 0) {
         setHotelRateTypeValue(other.getHotelRateTypeValue());
+      }
+      if (other.hotelPriceBucket_ != 0) {
+        setHotelPriceBucketValue(other.getHotelPriceBucketValue());
       }
       if (other.hasHotelState()) {
         mergeHotelState(other.getHotelState());
@@ -10216,6 +10264,71 @@ private static final long serialVersionUID = 0L;
     public Builder clearHotelRateType() {
       
       hotelRateType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int hotelPriceBucket_ = 0;
+    /**
+     * <pre>
+     * Hotel price bucket.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+     */
+    public int getHotelPriceBucketValue() {
+      return hotelPriceBucket_;
+    }
+    /**
+     * <pre>
+     * Hotel price bucket.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+     */
+    public Builder setHotelPriceBucketValue(int value) {
+      hotelPriceBucket_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel price bucket.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+     */
+    public com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket getHotelPriceBucket() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket result = com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket.valueOf(hotelPriceBucket_);
+      return result == null ? com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Hotel price bucket.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+     */
+    public Builder setHotelPriceBucket(com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      hotelPriceBucket_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel price bucket.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+     */
+    public Builder clearHotelPriceBucket() {
+      
+      hotelPriceBucket_ = 0;
       onChanged();
       return this;
     }
